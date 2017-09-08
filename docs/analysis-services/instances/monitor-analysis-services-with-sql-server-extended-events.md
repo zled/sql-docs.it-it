@@ -1,39 +1,44 @@
 ---
-title: "Monitorare Analysis Services con eventi estesi di SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XEvents"
-  - "Sql13.ssms.XeASNewEventSession.General.f1"
-  - "Sql13.ssms.XeASNewEventSession.Events.f1"
-  - "Sql13.ssms.XeASNewEventSession.Targets.f1"
-  - "Sql13.ssms.XeASNewEventSession.Advanced.f1"
+title: Monitoraggio di Analysis Services con eventi estesi di SQL Server | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- XEvents
+- Sql13.ssms.XeASNewEventSession.General.f1
+- Sql13.ssms.XeASNewEventSession.Events.f1
+- Sql13.ssms.XeASNewEventSession.Targets.f1
+- Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Monitorare Analysis Services con eventi estesi di SQL Server
+# <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Monitorare Analysis Services con eventi estesi di SQL Server
   Gli eventi estesi (*xEvents*) rappresentano un sistema di monitoraggio delle prestazioni e di traccia leggero, che usa una quantità molto limitata di risorse di sistema. Sono quindi uno strumento ideale per la diagnosi dei problemi, sia nei server di produzione che in quelli di prova. È anche un sistema altamente scalabile e che offre ampie possibilità di configurazione, oltre a essere più facile da usare in SQL Server 2016 grazie al nuovo supporto predefinito dello strumento. In SQL Server Management Studio, per le connessioni a istanze di Analysis Services, è possibile configurare, eseguire e monitorare una traccia in tempo reale, in modo simile all'uso di SQL Server Profiler. L'aggiunta di strumenti migliori dovrebbe rendere XEvents una sostituzione più ragionevole per SQL Server Profiler e creare maggiore simmetria per le modalità di diagnosi dei problemi nel motore di database e nei carichi di lavoro di Analysis Services.  
   
- Oltre a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per la configurazione delle sessioni di eventi estesi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è anche possibile usare la modalità precedente, tramite script XMLA, supportata nelle versioni precedenti.  
+ Oltre a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per la configurazione delle sessioni di eventi estesi di  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è anche possibile usare la modalità precedente, tramite script XMLA, supportata nelle versioni precedenti.  
   
  Tutti gli eventi di Analysis Services possono essere acquisiti e indirizzati a consumer specifici, come definito in [Eventi estesi](../../relational-databases/extended-events/extended-events.md).  
   
 > [!NOTE]  
->  Per sapere di più su xEvents per Analysis Services in SQL Server 2016, guardare questa [breve introduzione video](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) o leggere il [post di blog di supporto](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx).  
+>  Per sapere di più su xEvents per Analysis Services in SQL Server 2016, guardare questa [breve introduzione video](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) o leggere il [post di blog di supporto](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) .  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 11
   
 -   **CommandBegin** e **CommandEnd**.  
   
--   **QueryBegin**, **QueryEnd** e **QuerySubcubeVerbose** (visualizza l'intera query MDX o DAX inviata al server), oltre a **ResourceUsage** per statistiche sulle risorse usate dalla query e il numero di righe restituite.  
+-   **QueryBegin**, **QueryEnd**e **QuerySubcubeVerbose** (visualizza l'intera query MDX o DAX inviata al server), oltre a **ResourceUsage** per statistiche sulle risorse usate dalla query e il numero di righe restituite.  
   
 -   **ProgressReportBegin** e **ProgressReportEnd** (per operazioni di elaborazione).  
   
@@ -74,11 +79,11 @@ caps.handback.revision: 11
   
  **Configura** è un'opzione all'estrema destra della finestra di dialogo.  
   
- ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
+ ![configurare SSAS-XEvent](../../analysis-services/instances/media/ssas-xevents-configure.PNG "configurazione XEvent ssas")  
   
  Nella configurazione, nella scheda Campi evento, selezionare **TextData** in modo da visualizzare il campo accanto all'evento per mostrare i valori restituiti, incluse le query in esecuzione nel server.  
   
- Dopo aver configurato gli eventi desiderati e la modalità di archiviazione dei dati per una sessione, è possibile fare clic sul pulsante di script per inviare la configurazione a una delle destinazioni supportate, tra cui un file, una nuova query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e gli Appunti.  
+ Dopo aver configurato gli eventi desiderati e la modalità di archiviazione dei dati per una sessione, è possibile fare clic sul pulsante di script per inviare la configurazione a una delle destinazioni supportate, tra cui un file, una nuova query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e gli Appunti.  
   
  **Aggiornare le sessioni**  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Contenuto dell'argomento](#bkmk_top)|  
+|![Icona freccia usata con Back collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Script XMLA per arrestare eventi estesi in Analysis Services  
  Per arrestare l'oggetto traccia di eventi estesi è necessario eliminare tale oggetto utilizzando una specifica XMLA simile per eliminare un comando script dell'oggetto come illustrato di seguito:  
@@ -164,9 +169,9 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Contenuto dell'argomento](#bkmk_top)|  
+|![Icona freccia usata con Back collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento](#bkmk_top)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

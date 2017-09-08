@@ -1,30 +1,35 @@
 ---
-title: "Modellazione multidimensionale (esercitazione di AdventureWorks) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "esercitazioni [Analysis Services]"
-  - "Analysis Services, esercitazioni"
+title: Modellazione multidimensionale (esercitazione di Adventure Works) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- tutorials [Analysis Services]
+- Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eee675f86ab6707346b2789e424bcc1778f111f4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modellazione multidimensionale (esercitazione di AdventureWorks)
+# <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modellazione multidimensionale (esercitazione di AdventureWorks)
 Introduzione all'esercitazione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. In questa esercitazione viene descritto come utilizzare [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per sviluppare e distribuire un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzando la società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] per tutti gli esempi.  
   
-## Lezioni dell'esercitazione  
+## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 In questa esercitazione verranno illustrate le operazioni seguenti:  
   
 -   Come definire origini dati, viste origine dati, dimensioni, attributi, relazioni tra attributi, gerarchie e cubi in un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] all'interno di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -37,8 +42,8 @@ In questa esercitazione verranno illustrate le operazioni seguenti:
   
 Con questa esercitazione viene fornita una descrizione dello scenario in modo da comprendere meglio il contesto di queste lezioni. Per ulteriori informazioni, vedere [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md).  
   
-## Prerequisiti  
-Per completare tutte le lezioni di questa esercitazione sono necessari dati di esempio, file di progetto di esempio e software specifici. Per istruzioni su come trovare e installare i prerequisiti per questa esercitazione, vedere [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install sample data and projects.md).  
+## <a name="prerequisites"></a>Prerequisiti  
+Per completare tutte le lezioni di questa esercitazione sono necessari dati di esempio, file di progetto di esempio e software specifici. Per istruzioni su come trovare e installare i prerequisiti per questa esercitazione, vedere [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md).  
   
 Per completare questa esercitazione sono inoltre necessarie le autorizzazioni seguenti:  
   
@@ -46,7 +51,7 @@ Per completare questa esercitazione sono inoltre necessarie le autorizzazioni se
   
 -   È necessario disporre di autorizzazioni di lettura per il database di esempio **AdventureWorksDW2012** . Questo database di esempio è valido per la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-## Lezioni  
+## <a name="lessons"></a>Lezioni  
 L'esercitazione include le lezioni seguenti.  
   
 |Lezione|Tempo stimato per il completamento|  
@@ -65,8 +70,9 @@ L'esercitazione include le lezioni seguenti.
 > [!NOTE]  
 > Il database del cubo che verrà creato in questa esercitazione è una versione semplificata del progetto di modello multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fa parte dei database di esempio di Adventure Works disponibile per il download sul sito codeplex. La versione per l'esercitazione del database multidimensionale Adventure Works è semplificata per focalizzare maggiormente l'attenzione sulle specifiche competenze con cui si desidera subito familiarizzare. Dopo avere completato l'esercitazione, esplorare il progetto di modello multidimensionale per proprio conto per accrescere la comprensione della modellazione multidimensionale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## Passaggio successivo  
+## <a name="next-step"></a>Passaggio successivo  
 Per iniziare questa esercitazione, passare alla prima lezione: [Lesson 1: Defining a Data Source View within an Analysis Services Project](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   
   
+

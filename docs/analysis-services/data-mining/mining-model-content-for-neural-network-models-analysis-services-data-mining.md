@@ -1,36 +1,41 @@
 ---
-title: "Mining Model Content for Neural Network Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "output neurons [Analysis Services]"
-  - "neural network algorithms [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "input neurons [Analysis Services]"
-  - "mining model content, neural network models"
-  - "neural network model [Analysis Services]"
+title: Contenuto del modello di rete neurale modelli di data mining | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output neurons [Analysis Services]
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- input neurons [Analysis Services]
+- mining model content, neural network models
+- neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4ba3de4a84dfd666e23d9877241f8c444891a0be
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Neural Network. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Informazioni sulla struttura di un modello di rete neurale  
+## <a name="understanding-the-structure-of-a-neural-network-model"></a>Informazioni sulla struttura di un modello di rete neurale  
  Ogni modello di rete neurale presenta un singolo nodo padre che rappresenta il modello e i relativi metadati e un nodo delle statistiche marginali (NODE_TYPE = 24) che fornisce statistiche descrittive sugli attributi di input. Poiché il nodo delle statistiche marginali riepiloga informazioni sugli input, non è necessario eseguire query sui dati dai singoli nodi.  
   
  Sotto questi due nodi, sono presenti almeno altri due nodi, ma potrebbero esservene altri, a seconda del numero di attributi stimabili di cui dispone il modello.  
@@ -39,7 +44,7 @@ caps.handback.revision: 19
   
 -   Ogni nodo successivo contiene una *subnet* diversa (NODE_TYPE = 17). Ogni subnet contiene sempre un livello nascosto (NODE_TYPE = 19) e un livello di output (NODE_TYPE = 20) per quella subnet.  
   
- ![Struttura del contenuto del modello per le reti neurali](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "Struttura del contenuto del modello per le reti neurali")  
+ ![struttura del contenuto del modello per le reti neurali](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "struttura del contenuto del modello per le reti neurali")  
   
  Le informazioni nel livello di input sono chiare: il nodo superiore per ogni livello di input (NODE_TYPE = 18) viene usato come libreria per una raccolta di nodi di input (NODE_TYPE = 21). Il contenuto dei nodi di input viene descritto nella tabella seguente.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 19
   
  Per utilizzare i dati e osservare il modo in cui il modello mette in correlazione gli input con gli output, utilizzare il **Visualizzatore Microsoft Neural Network**. Tramite questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e sui relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di input e valori di output. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
-## Contenuto di un modello di rete neurale  
+## <a name="model-content-for-a-neural-network-model"></a>Contenuto di un modello di rete neurale  
  In questa sezione vengono forniti dettagli ed esempi specifici delle colonne del contenuto dei modelli di data mining particolarmente importanti per le reti neurali. Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, non descritte in questo argomento o per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
@@ -72,7 +77,7 @@ caps.handback.revision: 19
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Nodo nascosto|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Nome dell'attributo di output|  
@@ -112,7 +117,7 @@ caps.handback.revision: 19
 |Statistiche marginali|Sempre 0.|  
 |Livello di input|Indica il numero di coppie attributo-valori di input utilizzate dal modello.|  
 |Nodo di input|Sempre 0.|  
-|Livello nascosto|Indica il numero di nodi nascosti creati dal modello.|  
+|hidden layer|Indica il numero di nodi nascosti creati dal modello.|  
 |Nodo nascosto|Sempre 0.|  
 |Livello di output|Indica il numero di valori di output.|  
 |Nodo di output|Sempre 0.|  
@@ -131,7 +136,7 @@ caps.handback.revision: 19
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Nodo nascosto|Valore intero che indica la sequenza del nodo nascosto nell'elenco dei nodi nascosti.|  
 |Livello di output|Vuoto|  
 |Nodo di output|Se l'attributo di output è continuo, contiene il nome dell'attributo di output.<br /><br /> Se l'attributo di output è discreto o discretizzato, contiene il nome dell'attributo e il valore.|  
@@ -145,7 +150,7 @@ caps.handback.revision: 19
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Frammento XML che contiene le stesse informazioni della colonna NODE_DESCRIPTION.|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Nodo nascosto|Valore intero che indica la sequenza del nodo nascosto nell'elenco dei nodi nascosti.|  
 |Livello di output|Vuoto|  
 |Nodo di output|Frammento XML che contiene le stesse informazioni della colonna NODE_DESCRIPTION.|  
@@ -177,7 +182,7 @@ caps.handback.revision: 19
 |Statistiche marginali|Vuoto|  
 |Livello di input|Vuoto|  
 |Nodo di input|Nome dell'attributo di input.|  
-|Livello nascosto|Vuoto|  
+|hidden layer|Vuoto|  
 |Nodo nascosto|Vuoto|  
 |Livello di output|Vuoto|  
 |Nodo di output|Nome dell'attributo di input.|  
@@ -188,7 +193,7 @@ caps.handback.revision: 19
  MSOLAP_NODE_SHORT_CAPTION  
  Per i modelli di rete neurale, sempre vuoto.  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Lo scopo del training di un modello di rete neurale consiste nel determinare i pesi associati a ogni transizione da un input a un punto medio e da un punto medio a un endpoint. Di conseguenza, il livello di input del modello esiste principalmente per archiviare i valori effettivi utilizzati per la compilazione del modello. Nel livello nascosto vengono archiviati i pesi calcolati e vengono forniti nuovamente i puntatori agli attributi di input. Nel livello di output vengono archiviati i valori stimabili e vengono forniti nuovamente i puntatori ai punti medi nel livello nascosto.  
   
 ##  <a name="bkmk_NodeIDs"></a> Utilizzo dei nomi e degli ID dei nodi  
@@ -213,7 +218,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_NodeDistTable"></a> Interpretazione delle informazioni nella tabella NODE_DISTRIBUTION  
  In alcuni nodi la tabella NODE_DISTRIBUTION può essere vuota. Tuttavia, per nodi di input, nodi del livello nascosto e nodi di output, nella tabella NODE_DISTRIBUTION vengono archiviate informazioni importanti e interessanti sul modello. Per agevolare l'interpretazione di queste informazioni, la tabella NODE_DISTRIBUTION contiene una colonna VALUETYPE per ogni riga che indica se il valore nella colonna ATTRIBUTE_VALUE è discreto (4), discretizzato (5) o continuo (3).  
   
-### Nodi di input  
+### <a name="input-nodes"></a>Nodi di input  
  Il livello di input contiene un nodo per ogni valore dell'attributo utilizzato nel modello.  
   
  **Attributo discreto:** nel nodo di input vengono archiviati solo il nome dell'attributo e il relativo valore nelle colonne ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Ad esempio, se [Work Shift] è la colonna, viene creato un nodo separato per ogni valore di quella colonna utilizzato nel modello, ad esempio AM e PM. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
@@ -222,10 +227,10 @@ caps.handback.revision: 19
   
  **Attributo continuo:** nel nodo di input viene archiviato il valore medio dell'attributo. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
-### Nodi del livello nascosto  
+### <a name="hidden-layer-nodes"></a>Nodi del livello nascosto  
  Il livello nascosto contiene un numero variabile di nodi. In ogni nodo, la tabella NODE_DISTRIBUTION contiene mapping dal livello nascosto ai nodi nel livello di input. La colonna ATTRIBUTE_NAME contiene un ID del nodo che corrisponde a un nodo nel livello di input. La colonna ATTRIBUTE_VALUE contiene il peso associato a tale combinazione di un nodo di input e di un nodo del livello nascosto. L'ultima riga nella tabella contiene un coefficiente che rappresenta il peso di tale nodo nascosto nel livello nascosto.  
   
-### Nodi di output  
+### <a name="output-nodes"></a>Nodi di output  
  Il livello di output contiene un nodo di output per ogni valore di output utilizzato nel modello. In ogni nodo, la tabella NODE_DISTRIBUTION contiene mapping dal livello di output ai nodi nel livello nascosto. La colonna ATTRIBUTE_NAME contiene un ID del nodo che corrisponde a un nodo nel livello nascosto. La colonna ATTRIBUTE_VALUE contiene il peso associato a tale combinazione di un nodo di output e di un nodo del livello nascosto.  
   
  La tabella NODE_DISTRIBUTION contiene le informazioni aggiuntive seguenti, a seconda del tipo di attributo:  
@@ -236,9 +241,9 @@ caps.handback.revision: 19
   
  **Attributo continuo:** le due righe finali della tabella NODE_DISTRIBUTION contengono il valore medio dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

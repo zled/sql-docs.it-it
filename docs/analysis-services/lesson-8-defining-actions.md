@@ -1,25 +1,30 @@
 ---
-title: "Lezione 8: Definizione di azioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lezione 8: Definizione di azioni | Documenti Microsoft'
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c02de459c5c2cbd393a0ee92e1c17faaea480b0
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lezione 8: Definizione di azioni
-In questa lezione verranno descritte le procedure per definire le azioni del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], che può essere incorporata in applicazioni client e avviata da un utente.  
+# <a name="lesson-8-defining-actions"></a>Lezione 8: Definizione di azioni
+In questa lezione verranno descritte le procedure per definire le azioni del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
   
 > [!NOTE]  
 > I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
@@ -41,17 +46,17 @@ In questa lezione verranno descritte le procedure per definire le azioni del pro
 Le azioni consentono agli utenti di avviare un'applicazione o di eseguire altre procedure nell'ambito di un elemento selezionato. Per altre informazioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md), [Azioni nei modelli multidimensionali](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
-> Per ulteriori esempi di azioni, vedere quelli disponibili nella scheda Modelli nel riquadro Strumenti di calcolo oppure nel data warehouse di esempio [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Per altre informazioni sull'installazione di questo database, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../analysis-services/install sample data and projects.md).  
+> Per ulteriori esempi di azioni, vedere quelli disponibili nella scheda Modelli nel riquadro Strumenti di calcolo oppure nel data warehouse di esempio [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Per altre informazioni sull'installazione di questo database, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 Questa lezione include gli argomenti seguenti:  
   
-[Definizione e utilizzo di un'azione drill-through](../analysis-services/defining-and-using-a-drillthrough-action.md)  
+[Definizione e utilizzo di un'azione drill-through](../analysis-services/lesson-8-1-defining-and-using-a-drillthrough-action.md)  
 In questa procedura viene definita, utilizzata e utilizzerà e quindi modificata un'azione drill-through tramite la relazione di tipo Fatti citata precedentemente in questa esercitazione.  
   
-## Lezione successiva  
+## <a name="next-lesson"></a>Lezione successiva  
 [Lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Azioni &#40;Analysis Services - Dati multidimensionali&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
@@ -59,3 +64,4 @@ In questa procedura viene definita, utilizzata e utilizzerà e quindi modificata
   
   
   
+

@@ -1,56 +1,61 @@
 ---
-title: "Propriet&#224; di rete | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LingerTimeout - proprietà"
-  - "EnableNagleAlgorithm - proprietà"
-  - "MinPendingAcceptExCount - proprietà"
-  - "MaxPendingSendCount - proprietà"
-  - "EnableBinaryXML - proprietà"
-  - "MinPendingReceiveCount - proprietà"
-  - "MaxCompletedReceiveCount - proprietà"
-  - "DisableNonblockingMode - proprietà"
-  - "RequestSizeThreshold - proprietà"
-  - "CompressionLevel - proprietà"
-  - "ReceiveBufferSize - proprietà"
-  - "EnableCompression - proprietà"
-  - "ServerSendTimeout - proprietà"
-  - "IPV4Support - proprietà"
-  - "MaxPendingReceiveCount - proprietà"
-  - "MaxPendingAcceptExCount - proprietà"
-  - "IPV6Support - proprietà"
-  - "MaxAllowedRequestSize - proprietà"
-  - "ServerReceiveTimeout - proprietà"
-  - "EnableLingerOnClose - proprietà"
-  - "InitialConnectTimeout - proprietà"
-  - "SendBufferSize - proprietà"
-  - "ScatterReceiveMultiplier - proprietà"
-  - "proprietà di rete [Analysis Services]"
+title: "Proprietà di rete | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LingerTimeout property
+- EnableNagleAlgorithm property
+- MinPendingAcceptExCount property
+- MaxPendingSendCount property
+- EnableBinaryXML property
+- MinPendingReceiveCount property
+- MaxCompletedReceiveCount property
+- DisableNonblockingMode property
+- RequestSizeThreshold property
+- CompressionLevel property
+- ReceiveBufferSize property
+- EnableCompression property
+- ServerSendTimeout property
+- IPV4Support property
+- MaxPendingReceiveCount property
+- MaxPendingAcceptExCount property
+- IPV6Support property
+- MaxAllowedRequestSize property
+- ServerReceiveTimeout property
+- EnableLingerOnClose property
+- InitialConnectTimeout property
+- SendBufferSize property
+- ScatterReceiveMultiplier property
+- network properties [Analysis Services]
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e866ebb50ceb59a43f6d32303aa59092250e230b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriet&#224; di rete
+# <a name="network-properties"></a>Proprietà di rete
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Si applica a:** modalità server multidimensionale e tabulare  
   
-## Generale  
+## <a name="general"></a>Generale  
  **ListenOnlyOnLocalConnections**  
  Proprietà booleana che stabilisce se lo stato di attesa viene applicato solo alle connessioni locali, ad esempio localhost.  
   
-## Listener  
+## <a name="listener"></a>Listener  
  **IPV4Support**  
  Proprietà a valore integer a 32 bit con segno che definisce il supporto per il protocollo IPv4. Questa proprietà può assumere uno dei valori elencati nella tabella seguente:  
   
@@ -81,14 +86,14 @@ caps.handback.revision: 15
  **ServerSendTimeout**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Richieste  
+## <a name="requests"></a>Richieste  
  **EnableBinaryXML**  
  Proprietà booleana che stabilisce se il server riconoscerà il formato xml binario per richieste.  
   
  **EnableCompression**  
  Proprietà booleana che stabilisce se la compressione è abilitata per le richieste.  
   
-## Responses  
+## <a name="responses"></a>Responses  
  **CompressionLevel**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 15
  **EnableCompression**  
  Proprietà booleana che stabilisce se la compressione è abilitata per risposte a richieste client.  
   
-## TCP  
+## <a name="tcp"></a>TCP  
  **InitialConnectTimeout**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -141,8 +146,8 @@ caps.handback.revision: 15
  **SocketOptions\SendBufferSize**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Vedere anche  
- [proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

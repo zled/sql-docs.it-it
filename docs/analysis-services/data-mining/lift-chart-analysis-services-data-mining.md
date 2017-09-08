@@ -1,31 +1,36 @@
 ---
-title: "Grafico di accuratezza (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "test di modelli di data mining"
-  - "accuratezza, grafico"
-  - "accuratezza di modello di data mining - visualizzazione"
-  - "grafici di accuratezza [Analysis Services]"
-  - "grafici profitti [Analysis Services]"
-  - "test di accuratezza [data mining]"
+title: Grafico di accuratezza (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- accuracy, charting
+- viewing mining accuracy
+- lift charts [Analysis Services]
+- profit charts [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Grafico di accuratezza (Analysis Services - Data mining)
-  Un *grafico di accuratezza* rappresenta graficamente i miglioramenti forniti da un modello di data mining rispetto a un'ipotesi casuale. Inoltre, consente di misurare la modifica in termini di punteggio di *accuratezza*. Confrontando i punteggi di accuratezza per modelli differenti, è possibile determinare qual è il modello migliore. È possibile anche determinare il punto in cui le stime del modello diventano meno utili. Ad esempio, esaminando il grafico di accuratezza, si potrebbe accorgersi che una campagna promozionale ha probabilità di essere efficace solo sul 30% dei clienti e usare questa cifra per limitare l'ambito della campagna.  
+# <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
+  Un *grafico di accuratezza* rappresenta graficamente i miglioramenti forniti da un modello di data mining rispetto a un'ipotesi casuale. Inoltre, consente di misurare la modifica in termini di punteggio di *accuratezza* . Confrontando i punteggi di accuratezza per modelli differenti, è possibile determinare qual è il modello migliore. È possibile anche determinare il punto in cui le stime del modello diventano meno utili. Ad esempio, esaminando il grafico di accuratezza, si potrebbe accorgersi che una campagna promozionale ha probabilità di essere efficace solo sul 30% dei clienti e usare questa cifra per limitare l'ambito della campagna.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining un grafico di accuratezza può confrontare l'accuratezza di più modelli aventi lo stesso attributo stimabile. Inoltre, è possibile valutare l'accuratezza della stima per un singolo risultato (un solo valore dell'attributo stimabile) o per tutti i risultati (tutti i valori dell'attributo specificato).  
   
@@ -48,12 +53,12 @@ caps.handback.revision: 55
   
  [Torna all'inizio](#bkmk_Top)  
   
-### Grafico di accuratezza con valore di destinazione  
- Di seguito è riportato un grafico di accuratezza per il modello **Targeted Mailing** creato in [Esercitazione di base sul data mining](../Topic/Basic%20Data%20Mining%20Tutorial.md). In questo grafico, l'attributo di destinazione è [Bike Buyer] e il valore di destinazione è 1, pertanto il cliente è stimato come acquirente di una bicicletta. Il grafico di accuratezza evidenzia quindi come il modello garantisca una migliore individuazione di clienti potenziali.  
+### <a name="lift-chart-with-target-value"></a>Grafico di accuratezza con valore di destinazione  
+ Di seguito è riportato un grafico di accuratezza per il modello **Targeted Mailing** creato in [Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). In questo grafico, l'attributo di destinazione è [Bike Buyer] e il valore di destinazione è 1, pertanto il cliente è stimato come acquirente di una bicicletta. Il grafico di accuratezza evidenzia quindi come il modello garantisca una migliore individuazione di clienti potenziali.  
   
  In questo grafico sono inclusi più modelli basati sugli stessi dati. Uno di questi modelli è stato personalizzato per essere destinato a clienti specifici. È possibile personalizzare un modello aggiungendo filtri sui dati utilizzati per eseguire il training della modalità. Questo filtro consente di limitare i case utilizzati nel training e nella valutazione di clienti al di sotto dei 30 anni. Si noti che un effetto del filtro è che nel modello di base e in quello filtrato vengono utilizzati set di dati diversi e, pertanto, anche il numero di case utilizzati per la valutazione nel grafico di accuratezza è diverso. È importante ricordare questo punto durante l'interpretazione dei risultati della stima e di altre statistiche.  
   
- ![Grafico di accuratezza che visualizza due modelli](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "Grafico di accuratezza che visualizza due modelli")  
+ ![grafico di accuratezza che visualizza due modelli](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "grafico di accuratezza che visualizza due modelli")  
   
  L'asse x del grafico rappresenta la percentuale del set di dati di test utilizzata per confrontare le stime. L'asse y del grafico rappresenta la percentuale di valori stimati.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 55
   
  [Torna all'inizio](#bkmk_Top)  
   
-#### Interpretazione dei risultati  
+#### <a name="interpreting-the-results"></a>Interpretazione dei risultati  
  Da questi risultati si nota che, se misurato sul 30% di tutti i case, il modello generale [Targeted mailing all] può consentire di stimare il comportamento relativo all'acquisto di biciclette del 47,40% della popolazione di destinazione. In altre parole, se si invia un mailing diretto solo al 30% dei clienti presenti nel database, è possibile raggiungere poco meno della metà dei destinatari. Se si utilizza il modello filtrato, è possibile ottenere risultati leggermente migliori e raggiungere circa il 51% dei clienti di destinazione.  
   
  Il valore di **Probabilità stima** rappresenta la soglia richiesta per includere un cliente tra i case di acquisto probabile. Per ogni case, il modello valuta l'accuratezza di ogni stima e archivia il valore, che sarà possibile utilizzare per filtrare o individuare i clienti di destinazione. Ad esempio, per individuare i potenziali acquirenti dal modello di base è possibile utilizzare una query per recuperare i case con un valore di Probabilità stima pari almeno al 61%. Per ottenere i clienti di destinazione del modello filtrato, è possibile usare una query per recuperare i case che soddisfano tutti i criteri: età e valore di **PredictProbability** pari almeno al 46%.  
@@ -84,19 +89,19 @@ caps.handback.revision: 55
   
  Il valore di **Punteggio** consente di confrontare i modelli calcolandone l'efficacia in una popolazione normalizzata. Poiché un punteggio superiore garantisce maggiore efficacia, in questo caso la strategia ottimale potrebbe essere quella di destinare il mailing ai clienti sotto i 30 anni, nonostante la probabilità di stima inferiore.  
   
-#### Come viene calcolato il punteggio?  
+#### <a name="how-is-the-score-calculated"></a>Come viene calcolato il punteggio?  
  Il punteggio viene calcolato come media geometrica di tutti i punti che costituiscono un grafico a dispersione in cui l'asse X contiene i valori effettivi, l'asse Y contiene il valore stimato e ogni punto ha una probabilità associata.  
   
  Il significato statistico di ogni singolo punteggio è l'accuratezza predittiva per il modello misurata in quel punto. La media di tutti i punti costituisce il punteggio per il modello.  
   
  [Torna all'inizio](#bkmk_Top)  
   
-### Grafico di accuratezza per modello senza valore di destinazione  
+### <a name="lift-chart-for-model-with-no-target-value"></a>Grafico di accuratezza per modello senza valore di destinazione  
  Se non si specifica lo stato della colonna stimabile, viene creato il tipo di grafico illustrato nel diagramma seguente. In questo grafico vengono illustrate le prestazioni del modello per tutti gli stati dell'attributo stimabile. Ad esempio, nel grafico viene illustrata la correttezza con cui il modello esegue la stima dei clienti che probabilmente acquisteranno una bicicletta e di quelli che probabilmente non l'acquisteranno.  
   
  L'asse x è lo stesso del grafico con la colonna stimabile specificata, ma in questo caso l'asse y rappresenta la percentuale di stime corrette. La linea ideale pertanto è la diagonale che indica che in corrispondenza del 50% dei dati il modello stima correttamente il 50% dei case, il massimo che è possibile aspettarsi.  
   
- ![Grafico di accuratezza che visualizza le stime corrette](../../analysis-services/data-mining/media/lift1.gif "Grafico di accuratezza che visualizza le stime corrette")  
+ ![Le stime corrette di visualizzazione grafico di accuratezza](../../analysis-services/data-mining/media/lift1.gif "grafico di accuratezza che mostra le stime corrette")  
   
  È possibile fare clic sul grafico per spostare la barra grigia verticale in modo da visualizzare in **Legenda data mining** la percentuale di case complessivi e la percentuale di case stimati correttamente. Ad esempio, se si posiziona la barra di scorrimento grigia in corrispondenza del contrassegno del 50%, in **Legenda data mining** vengono visualizzati i punteggi di accuratezza riportati di seguito. Le cifre sono basate sul modello TM_Decision Tree creato nell'Esercitazione di base sul data mining.  
   
@@ -109,19 +114,20 @@ caps.handback.revision: 55
   
  [Torna all'inizio](#bkmk_Top)  
   
-### Restrizioni sui grafici di accuratezza  
+### <a name="restrictions-on-lift-charts"></a>Restrizioni sui grafici di accuratezza  
  Per i grafici di accuratezza è richiesto che l'attributo stimabile sia un valore discreto. In altre parole, non è possibile utilizzare grafici di accuratezza per misurare l'accuratezza di modelli che consentono di stimare valori numerici continui.  
   
  L'accuratezza della stima per tutti i valori discreti dell'attributo stimabile è visualizzata in una sola linea. Se si desidera vedere le linee di accuratezza della stima per ogni singolo valore dell'attributo stimabile, è necessario creare un grafico di accuratezza separato per ciascun valore di destinazione.  
   
- È possibile aggiungere più modelli a un grafico di accuratezza, purché tutti i modelli dispongano dello stesso attributo stimabile. I modelli che non consentono la condivisione dell'attributo non saranno disponibili per la selezione nella scheda **Input**.  
+ È possibile aggiungere più modelli a un grafico di accuratezza, purché tutti i modelli dispongano dello stesso attributo stimabile. I modelli che non consentono la condivisione dell'attributo non saranno disponibili per la selezione nella scheda **Input** .  
   
  Non è possibile visualizzare modelli Time Series in un grafico di accuratezza o un grafico dei profitti. Una pratica comune per misurare l'accuratezza delle stime basate su serie temporali consiste nel riservare una parte dei dati cronologici e paragonarli con le stime. Per altre informazioni, vedere [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
-### Contenuto correlato  
+### <a name="related-content"></a>Contenuto correlato  
  [Torna all'inizio](#bkmk_Top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

@@ -1,50 +1,55 @@
 ---
-title: "Riferimento tecnico per l&#39;algoritmo Microsoft Logistic Regression | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logistic regression [Analysis Services]"
-  - "MAXIMUM_INPUT_ATTRIBUTES - parametro"
-  - "HOLDOUT_PERCENTAGE parameter"
-  - "parametro MAXIMUM_OUTPUT_ATTRIBUTES"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "algoritmi di regressione [Analysis Services]"
-  - "HOLDOUT_SEED parameter"
+title: Riferimento tecnico l'algoritmo Microsoft Logistic Regression | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logistic regression [Analysis Services]
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- regression algorithms [Analysis Services]
+- HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f258864aae1f2dfbc41ad822d2f7f0793378843
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Riferimento tecnico per l&#39;algoritmo Microsoft Logistic Regression
+# <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, in cui il parametro *HIDDEN_NODE_RATIO* è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
   
-## Implementazione dell'algoritmo Microsoft Logistic Regression  
+## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementazione dell'algoritmo Microsoft Logistic Regression  
  Si supponga che la colonna stimabile contenga solo due stati e che tuttavia si intenda eseguire comunque un'analisi di regressione, stabilendo una relazione tra le colonne di input e la probabilità che la colonna stimabile includa uno stato specifico. Nel diagramma seguente sono illustrati i risultati che si otterranno se si assegnano i valori 1 e 0 agli stati della colonna stimabile, si calcola la probabilità che la colonna contenga uno stato specifico e si esegue una regressione lineare in base a una variabile di input.  
   
- ![Dati modellati in modo insufficiente con regressione lineare](../../analysis-services/data-mining/media/logistic-linear-regression.gif "Dati modellati in modo insufficiente con regressione lineare")  
+ ![Modellati in modo insufficiente con regressione lineare dati](../../analysis-services/data-mining/media/logistic-linear-regression.gif "modellati in modo insufficiente con regressione lineare di dati")  
   
  L'asse x contiene i valori di una colonna di input. L'asse y contiene le probabilità che la colonna stimabile includa solo uno stato o l'altro. In questo caso, il problema è che la regressione lineare non vincola la colonna a valori compresi tra 0 e 1, anche se questi sono rispettivamente il valore minimo e massimo della colonna. Uno dei modi per risolvere tale problema consiste nell'esecuzione della regressione logistica. Anziché creare una linea retta, l'analisi di regressione logistica crea una curva a forma di "S" che contiene i vincoli minimi e massimi. Ad esempio, nel diagramma seguente sono illustrati i risultati che si otterranno se si esegue una regressione logistica in base agli stessi dati utilizzati nell'esempio precedente.  
   
- ![Dati modellati tramite regressione logistica](../../analysis-services/data-mining/media/logistic-regression.gif "Dati modellati tramite regressione logistica")  
+ ![Dati modellati tramite regressione logistica](../../analysis-services/data-mining/media/logistic-regression.gif "dati modellati tramite regressione logistica")  
   
  Si noti che la curva non si sposta mai su valori maggiori di 1 o minori di 0. È possibile utilizzare la regressione logistica per descrivere le colonne di input significative ai fini della determinazione dello stato della colonna stimabile.  
   
-### Selezione funzionalità  
+### <a name="feature-selection"></a>Selezione funzionalità  
  Tutti gli algoritmi di data mining di Analysis Services utilizzano automaticamente la caratteristica di selezione degli attributi per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la caratteristica di selezione degli attributi in un modello di regressione logistica dipende dal tipo di dati dell'attributo. Poiché è basata sull'algoritmo Microsoft Neural Network, la regressione logistica utilizza un subset dei metodi relativi alla caratteristica di selezione degli attributi che si applicano alle reti neurali. Per altre informazioni, vedere [Selezione delle funzionalità &#40;Data mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
-### Valutazione degli input  
- Per *assegnazione di punteggi* nel contesto di un modello di rete neurale o di un modello di regressione logistica si intende la conversione dei valori presenti nei dati in un set di valori che usano la stessa scala e possono quindi essere confrontati tra loro. Si supponga ad esempio che l'intervallo degli input per Income sia compreso tra 0 e 100.000 mentre quello degli input per [Number of Children] sia compreso tra 0 e 5. Questo processo di conversione permette di confrontare l'importanza di ogni input indipendentemente dalla differenza dei valori.  
+### <a name="scoring-inputs"></a>Valutazione degli input  
+ Per*assegnazione di punteggi* nel contesto di un modello di rete neurale o di un modello di regressione logistica si intende la conversione dei valori presenti nei dati in un set di valori che usano la stessa scala e possono quindi essere confrontati tra loro. Si supponga ad esempio che l'intervallo degli input per Income sia compreso tra 0 e 100.000 mentre quello degli input per [Number of Children] sia compreso tra 0 e 5. Questo processo di conversione permette di confrontare l'importanza di ogni input indipendentemente dalla differenza dei valori.  
   
  Per ogni stato visualizzato nel set di training, il modello genera un input. Per gli input discreti o discretizzati, viene creato un input aggiuntivo per rappresentare lo stato Missing, se tale stato è visualizzato almeno una volta nel set di training. Per gli input continui vengono creati al massimo due nodi di input: uno per i valori Missing, se presenti nei dati di training, e uno per tutti i valori esistenti o non Null. Ogni input viene ridimensionato in base a un formato numerico usando il metodo di normalizzazione del punteggio z, `(x – μ)\StdDev`.  
   
@@ -62,11 +67,11 @@ caps.handback.revision: 17
   
  StdDev  `= sqrt(p\(1-p))`  
   
- Il valore è presente:    `\(1 – μ)/σ` (1 meno mu diviso sigma)  
+ Il valore è presente:     `\(1 – μ)/σ` (1 meno mu diviso sigma)  
   
- Il valore è assente:    `(– μ)/σ` (mu negativo diviso sigma)  
+ Il valore è assente:     `(– μ)/σ` (mu negativo diviso sigma)  
   
-### Informazioni sui coefficienti di regressione logistica  
+### <a name="understanding-logistic-regression-coefficients"></a>Informazioni sui coefficienti di regressione logistica  
  Sono disponibili vari metodi nella letteratura statistica per l'esecuzione della regressione logistica, tuttavia un aspetto importante comune a tutti i metodi è la valutazione dell'adattamento del modello. Sono state proposte statistiche con vari livelli di adattamento, tra cui i rapporti di disparità e i criteri covariati. Una descrizione dettagliata delle modalità di misurazione dell'adattamento di un modello esula dall'ambito del presente argomento, tuttavia è possibile recuperare il valore dei coefficienti nel modello e utilizzarli per progettare misure di adattamento personalizzate.  
   
 > [!NOTE]  
@@ -90,10 +95,10 @@ WHERE NODE_TYPE = 23
   
  Per altre informazioni, vedere [Esempi di query sul modello di regressione logica](../../analysis-services/data-mining/logistic-regression-model-query-examples.md).  
   
-## Personalizzazione dell'algoritmo Logistic Regression  
+## <a name="customizing-the-logistic-regression-algorithm"></a>Personalizzazione dell'algoritmo Logistic Regression  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante. È inoltre possibile modificare il comportamento del modello impostando flag di modellazione nelle colonne utilizzate come input.  
   
-### Impostazione dei parametri dell'algoritmo  
+### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
  Nella tabella seguente sono descritti i parametri che possono essere utilizzati con l'algoritmo Microsoft Logistic Regression.  
   
  HOLDOUT_PERCENTAGE  
@@ -128,7 +133,7 @@ WHERE NODE_TYPE = 23
   
  L'impostazione predefinita è 10000.  
   
-### Flag di modellazione  
+### <a name="modeling-flags"></a>Flag di modellazione  
  Di seguito sono indicati i flag di modellazione il cui uso è supportato con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression.  
   
  NOT NULL  
@@ -141,10 +146,10 @@ WHERE NODE_TYPE = 23
   
  Si applica alla colonna del modello di data mining.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Un modello di regressione logistica deve contenere una colonna chiave, le colonne di input e almeno una colonna stimabile.  
   
-### Colonne di input e stimabili  
+### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression supporta i tipi di contenuto delle colonne di input, i tipi di contenuto delle colonne stimabili e i flag di modellazione specifici elencati nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
@@ -152,10 +157,10 @@ WHERE NODE_TYPE = 23
 |Attributo di input|Continuous, Discrete, Discretized, Key, Table|  
 |Attributo stimabile|Continuous, Discrete, Discretized|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
+ [Esempi di Query del modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

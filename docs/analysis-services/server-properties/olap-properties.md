@@ -1,112 +1,117 @@
 ---
-title: "Propriet&#224; OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog - proprietà"
-  - "DefaultPageSizeForProp - proprietà"
-  - "UseSinglePassForDimSecurityAutoExist - proprietà"
-  - "DeepCompressValue - proprietà"
-  - "CacheRowsetRows - proprietà"
-  - "Income - proprietà"
-  - "AggregationNewAlgo - proprietà"
-  - "MemoryAdjustFactor - proprietà"
-  - "DimensionLatencyAccuracy - proprietà"
-  - "InitialBonus - proprietà"
-  - "DefaultPageSizeForDataHeader - proprietà"
-  - "MaxCPUUsage - proprietà"
-  - "DistinctBuffer - proprietà"
-  - "PartitionLatencyAccuracy - proprietà"
-  - "MaxRetries - proprietà"
-  - "UseDataCacheRegistryMultiplyKey - proprietà"
-  - "ConvertDeletedToUnknown - proprietà"
-  - "DatabaseConnectionPoolMax - proprietà"
-  - "DataFileInitEnabled - proprietà"
-  - "DefaultPageSizeForHash - proprietà"
-  - "MaxRolapOrConditions - proprietà"
-  - "UseDataCacheFreeLastPageMemory - proprietà"
-  - "OLAP [Analysis Services], proprietà"
-  - "MapHandleAlgorithm - proprietà"
-  - "IndexBuildEnabled - proprietà"
-  - "MaxObjectsInParallel - proprietà"
-  - "IgnoreNullRolapRows - proprietà"
-  - "DimensionPropertyCacheSize - proprietà"
-  - "DefaultRefreshInterval - proprietà"
-  - "CheckDistinctRecordSortOrder - proprietà"
-  - "BufferMemoryLimit - proprietà"
-  - "EnableTableGrouping - proprietà"
-  - "ExpressNonEmptyUseEnabled - proprietà"
-  - "CopyLinkedDataCacheAndRegistry - proprietà"
-  - "UseDataSlice - proprietà"
-  - "MemoryLimitErrorEnabled - proprietà"
-  - "proprietà Enabled"
-  - "EnableRolapOptimization - proprietà"
-  - "DatabaseConnectionPoolTimeout - proprietà"
-  - "UseDataCacheRegistryHashTable - proprietà"
-  - "AggregationsBuildEnabled - proprietà"
-  - "Tax - proprietà"
-  - "DatabaseConnectionPoolGeneralTimeout - proprietà"
-  - "DefaultPageSizeForString - proprietà"
-  - "DatabaseConnectionPoolConnectTimeout - proprietà"
-  - "MinimumBalance - proprietà"
-  - "OptimizeSchema - proprietà"
-  - "UseCalculationCacheRegistry - proprietà"
-  - "MaxTableDepth - proprietà"
-  - "DataSliceInitEnabled - proprietà"
-  - "PrefetchLowerGranularities - proprietà"
-  - "UseVBANet - proprietà"
-  - "BufferRecordLimit - proprietà"
-  - "DefaultPageSizeForIndexHeader - proprietà"
-  - "MaximumBalance - proprietà"
-  - "CalculationCacheRegistryMaxIterations - proprietà"
-  - "DefaultDrillthroughMaxRows - proprietà"
-  - "IndexBuildThreshold - proprietà"
-  - "UseDataCacheRegistry - proprietà"
-  - "MemoryAdjustConst - proprietà"
-  - "ApplyIntersect - proprietà"
-  - "IndexFileInitEnabled - proprietà"
-  - "CacheRowsetToDisk - proprietà"
-  - "DataCacheRegistryMaxIterations - proprietà"
-  - "AllowSEFiltering - proprietà"
-  - "ForceMultiPass - proprietà"
-  - "ApplySubtract - proprietà"
-  - "IndexUseEnabled - proprietà"
-  - "AggregationsUseEnabled - proprietà"
-  - "DataPlacementOptimization - proprietà"
-  - "UseMaterializedIterators - proprietà"
-  - "CacheRecordLimit - proprietà"
-  - "ROLAPDimensionProcessingEffort - proprietà"
-  - "DefaultPageSizeForIndex - proprietà"
-  - "EnableRolapDimQueryTableGrouping - proprietà"
-  - "DimensionPropertyKeyCache - proprietà"
-  - "SleepIntervalSecs - proprietà"
-  - "DefaultPageSizeForData - proprietà"
-  - "MapFormatMask - proprietà"
-  - "CalculationEvaluationPolicy - proprietà"
-  - "AggregationMemoryLimitMin - proprietà"
-  - "RecordsReportGranularity - proprietà"
-  - "MemoryLimit - proprietà"
-  - "AggregationMemoryLimitMax - proprietà"
+title: "Proprietà OLAP | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- AggregationPerfLog property
+- DefaultPageSizeForProp property
+- UseSinglePassForDimSecurityAutoExist property
+- DeepCompressValue property
+- CacheRowsetRows property
+- Income property
+- AggregationNewAlgo property
+- MemoryAdjustFactor property
+- DimensionLatencyAccuracy property
+- InitialBonus property
+- DefaultPageSizeForDataHeader property
+- MaxCPUUsage property
+- DistinctBuffer property
+- PartitionLatencyAccuracy property
+- MaxRetries property
+- UseDataCacheRegistryMultiplyKey property
+- ConvertDeletedToUnknown property
+- DatabaseConnectionPoolMax property
+- DataFileInitEnabled property
+- DefaultPageSizeForHash property
+- MaxRolapOrConditions property
+- UseDataCacheFreeLastPageMemory property
+- OLAP [Analysis Services], properties
+- MapHandleAlgorithm property
+- IndexBuildEnabled property
+- MaxObjectsInParallel property
+- IgnoreNullRolapRows property
+- DimensionPropertyCacheSize property
+- DefaultRefreshInterval property
+- CheckDistinctRecordSortOrder property
+- BufferMemoryLimit property
+- EnableTableGrouping property
+- ExpressNonEmptyUseEnabled property
+- CopyLinkedDataCacheAndRegistry property
+- UseDataSlice property
+- MemoryLimitErrorEnabled property
+- Enabled property
+- EnableRolapOptimization property
+- DatabaseConnectionPoolTimeout property
+- UseDataCacheRegistryHashTable property
+- AggregationsBuildEnabled property
+- Tax property
+- DatabaseConnectionPoolGeneralTimeout property
+- DefaultPageSizeForString property
+- DatabaseConnectionPoolConnectTimeout property
+- MinimumBalance property
+- OptimizeSchema property
+- UseCalculationCacheRegistry property
+- MaxTableDepth property
+- DataSliceInitEnabled property
+- PrefetchLowerGranularities property
+- UseVBANet property
+- BufferRecordLimit property
+- DefaultPageSizeForIndexHeader property
+- MaximumBalance property
+- CalculationCacheRegistryMaxIterations property
+- DefaultDrillthroughMaxRows property
+- IndexBuildThreshold property
+- UseDataCacheRegistry property
+- MemoryAdjustConst property
+- ApplyIntersect property
+- IndexFileInitEnabled property
+- CacheRowsetToDisk property
+- DataCacheRegistryMaxIterations property
+- AllowSEFiltering property
+- ForceMultiPass property
+- ApplySubtract property
+- IndexUseEnabled property
+- AggregationsUseEnabled property
+- DataPlacementOptimization property
+- UseMaterializedIterators property
+- CacheRecordLimit property
+- ROLAPDimensionProcessingEffort property
+- DefaultPageSizeForIndex property
+- EnableRolapDimQueryTableGrouping property
+- DimensionPropertyKeyCache property
+- SleepIntervalSecs property
+- DefaultPageSizeForData property
+- MapFormatMask property
+- CalculationEvaluationPolicy property
+- AggregationMemoryLimitMin property
+- RecordsReportGranularity property
+- MemoryLimit property
+- AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriet&#224; OLAP
+# <a name="olap-properties"></a>Proprietà OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server OLAP elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Si applica a:** solo in modalità server multidimensionale  
   
-## Memoria  
+## <a name="memory"></a>Memoria  
  **DefaultPageSizeForData**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 18
  **DefaultPageSizeForProp**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## LazyProcessing  
+## <a name="lazyprocessing"></a>LazyProcessing  
  **Abilitata**  
  Proprietà booleana che specifica se l'elaborazione lenta delle aggregazioni è abilitata.  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 18
  **MaxRetries**  
  Proprietà a valore integer a 32 bit con segno che definisce il numero di tentativi prima che venga generato un errore se l'elaborazione lenta ha esito negativo.  
   
-## ProcessPlan  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 18
  **OptimizeSchema**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## ProactiveCaching  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 18
  **PartitionLatencyAccuracy**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Process  
+## <a name="process"></a>Process  
  **AggregationMemoryLimitMax**  
  Proprietà con numero a virgola mobile e precisione doppia a 64 bit con segno che definisce la quantità massima di memoria dedicata all'elaborazione di aggregazioni, espressa come percentuale della memoria fisica.  
   
@@ -286,7 +291,7 @@ caps.handback.revision: 18
  **ROLAPDimensionProcessingEffort**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Query  
+## <a name="query"></a>Query  
  **AggregationsUseEnabled**  
  Proprietà booleana che specifica se le aggregazioni archiviate vengono utilizzate in fase di esecuzione. Questa proprietà consente di disabilitare le aggregazioni senza modificarne la progettazione o rielaborarle. Viene utilizzata per benchmark e raccolta di informazioni.  
   
@@ -430,7 +435,7 @@ caps.handback.revision: 18
  **DataCache\ MemoryModel\ Tax**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Processi  
+## <a name="jobs"></a>Processi  
  **ProcessAggregation\ MemoryModel\ Income**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -476,8 +481,8 @@ caps.handback.revision: 18
  **ProcessAggregation\ ProcessProperty\ Tax**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Vedere anche  
- [proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

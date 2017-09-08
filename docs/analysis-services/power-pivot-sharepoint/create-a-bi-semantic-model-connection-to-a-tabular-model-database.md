@@ -1,27 +1,32 @@
 ---
-title: "Creare una connessione BISM a un database modello tabulare | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare una connessione BI Semantic Model in un Database modello tabulare | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una connessione BISM a un database modello tabulare
+# <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Creare una connessione BISM a un database modello tabulare
   Utilizzare le informazioni fornite in questo argomento per impostare una connessione BISM che esegue il reindirizzamento a un database modello tabulare in esecuzione in un'istanza di Analysis Services esterna alla farm di SharePoint.  
   
- Dopo avere creato una connessione BISM e configurato le autorizzazioni di SharePoint e Analysis Services, sarà possibile utilizzare la connessione come origine dati per i report di Excel o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+ Dopo avere creato una connessione BISM e configurato le autorizzazioni di SharePoint e Analysis Services, sarà possibile utilizzare la connessione come origine dati per i report di Excel o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
  In questo argomento sono incluse le sezioni seguenti. Eseguire ogni attività nell'ordine indicato.  
   
@@ -40,11 +45,11 @@ caps.handback.revision: 16
 ##  <a name="bkmk_prereq"></a> Verificare i prerequisiti  
  Per creare un file di connessione BISM, è necessario disporre delle autorizzazioni di collaborazione.  
   
- È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per altre informazioni, vedere [Aggiungere un tipo di contenuto Connessione BI Semantic Model &#40;BISM&#41; a una raccolta &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md).  
+ È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per altre informazioni, vedere [Aggiungere un tipo di contenuto Connessione BI Semantic Model &#40;BISM&#41; a una raccolta &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
  È necessario conoscere il nome del server e del database per il quale si imposta una connessione BISM. È necessario configurare Analysis Services per la modalità tabulare. I database in esecuzione nel server devono essere database modello tabulare. Per istruzioni su come controllare la modalità server, vedere [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
- In scenari determinati, i servizi condivisi in un ambiente SharePoint devono disporre di autorizzazioni amministrative sull'istanza di Analysis Services. I servizi includono le applicazioni del servizio di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], di Reporting Services e di PerformancePoint. Prima di poter concedere autorizzazioni amministrative, è necessario conoscere l'identità di queste applicazioni di servizio. È possibile utilizzare Amministrazione centrale per determinare l'identità.  
+ In scenari determinati, i servizi condivisi in un ambiente SharePoint devono disporre di autorizzazioni amministrative sull'istanza di Analysis Services. I servizi includono le applicazioni del servizio di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , di Reporting Services e di PerformancePoint. Prima di poter concedere autorizzazioni amministrative, è necessario conoscere l'identità di queste applicazioni di servizio. È possibile utilizzare Amministrazione centrale per determinare l'identità.  
   
  È necessario essere un amministratore del servizio SharePoint per visualizzare informazioni sulla sicurezza in Amministrazione centrale.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 16
  Tutti i computer e gli utenti che partecipano nella sequenza di connessione devono essere nello stesso dominio o nel dominio attendibile (attendibilità bidirezionale).  
   
 ##  <a name="bkmk_ssas"></a> Concedere autorizzazioni amministrative di Analysis Services alle applicazioni di servizi condivisi  
- Le connessioni provenienti da SharePoint a un database modello tabulare su un server Analysis Services vengono talvolta effettuate da un servizio condiviso per conto dell'utente che richiede i dati. Il servizio che effettua la richiesta potrebbe essere un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], Reporting Services o PerformancePoint. Affinché la connessione abbia esito positivo, è necessario che il servizio disponga delle autorizzazioni amministrative sul server Analysis Services. In Analysis Services solo un amministratore può effettuare una connessione rappresentata per conto di un altro utente.  
+ Le connessioni provenienti da SharePoint a un database modello tabulare su un server Analysis Services vengono talvolta effettuate da un servizio condiviso per conto dell'utente che richiede i dati. Il servizio che effettua la richiesta potrebbe essere un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Reporting Services o PerformancePoint. Affinché la connessione abbia esito positivo, è necessario che il servizio disponga delle autorizzazioni amministrative sul server Analysis Services. In Analysis Services solo un amministratore può effettuare una connessione rappresentata per conto di un altro utente.  
   
  Le autorizzazioni amministrative sono necessarie quando la connessione viene utilizzata in presenza delle condizioni indicate di seguito.  
   
@@ -82,9 +87,9 @@ caps.handback.revision: 16
   
  I ruoli e talvolta l'appartenenza ai ruoli sono definiti quando si crea il modello in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Non è possibile utilizzare SQL Server Management Studio per creare ruoli, ma è possibile utilizzarlo per aggiungere membri a un ruolo già definito. Per altre informazioni sulla creazione di ruoli, vedere [Creare e gestire ruoli &#40; SSAS tabulare&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
-#### Assegnare le appartenenze a ruoli  
+#### <a name="assign-role-membership"></a>Assegnare le appartenenze a ruoli  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], espandere il database in Esplora oggetti, quindi espandere **Ruoli**. Sarà visualizzato un ruolo già definito. Se un ruolo non esiste, contattare l'autore del modello e richiedere l'aggiunta o un ruolo. È necessario ridistribuire il modello per rendere visibile il ruolo in Management Studio.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], espandere il database in Esplora oggetti, quindi espandere **Ruoli**. Sarà visualizzato un ruolo già definito. Se un ruolo non esiste, contattare l'autore del modello e richiedere l'aggiunta o un ruolo. È necessario ridistribuire il modello per rendere visibile il ruolo in Management Studio.  
   
 2.  Fare clic con il pulsante destro del mouse sul ruolo, quindi scegliere **Proprietà**.  
   
@@ -97,11 +102,11 @@ caps.handback.revision: 16
   
 2.  Fare clic sulla freccia in giù su Nuovo documento e selezionare **File di connessione BI Semantic Model** per aprire la pagina Nuova connessione BI Semantic Model.  
   
-3.  Impostare le proprietà **Server** e **Database**. In caso di dubbi sul nome del database, utilizzare SQL Server Management Studio per visualizzare un elenco dei database distribuiti nel server.  
+3.  Impostare le proprietà **Server** e **Database** . In caso di dubbi sul nome del database, utilizzare SQL Server Management Studio per visualizzare un elenco dei database distribuiti nel server.  
   
      **Nome server** è il nome di rete del server, l'indirizzo IP o il nome di dominio completo, ad esempio myserver.mydomain.corp.adventure-works.com. Se il server viene installato come istanza denominata, immettere il nome del server nel formato nomecomputer\nomeistanza.  
   
-     **Database** deve essere un database tabulare attualmente disponibile sul server. Non specificare un altro file di connessione BI Semantic Model, un file di connessione dati (con estensione odc), un database OLAP di Analysis Services o una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Per ottenere il nome del database, è possibile utilizzare Management Studio per connettersi al server e visualizzare l'elenco dei database disponibili. Utilizzare la pagina delle proprietà del database per verificare che il nome sia corretto.  
+     **Database** deve essere un database tabulare attualmente disponibile sul server. Non specificare un altro file di connessione BI Semantic Model, un file di connessione dati (con estensione odc), un database OLAP di Analysis Services o una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per ottenere il nome del database, è possibile utilizzare Management Studio per connettersi al server e visualizzare l'elenco dei database disponibili. Utilizzare la pagina delle proprietà del database per verificare che il nome sia corretto.  
   
 4.  Fare clic su **OK** per salvare la pagina. In questa fase l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verifica la connessione.  
   
@@ -143,7 +148,7 @@ caps.handback.revision: 16
 ##  <a name="bkmk_next"></a> Passaggi successivi  
  Dopo avere creato e protetto una connessione BISM è possibile specificarla come origine dati. Per altre informazioni, vedere [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessione BI Semantic Model &#40;con estensione bism&#41; di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

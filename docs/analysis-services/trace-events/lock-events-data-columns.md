@@ -1,22 +1,27 @@
 ---
-title: "Colonne di dati degli eventi di blocco | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Bloccare le colonne di dati degli eventi | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati degli eventi di blocco
+# <a name="lock-events-data-columns"></a>Colonne di dati degli eventi di blocco
   La categoria di eventi di blocco include la classe di evento seguente:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
  Nella tabella seguente sono incluse le colonne di dati per la classe di evento.  
   
-## Deadlock  
+## <a name="deadlock"></a>Deadlock  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Lock Timeout  
+## <a name="lock-timeout"></a>Lock Timeout  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -60,7 +65,7 @@ caps.handback.revision: 5
 |SPID|41|1|ID processo server. Identifica in modo univoco una sessione utente. Corrisponde direttamente al GUID di sessione utilizzato da XML/A.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Lock Acquired  
+## <a name="lock-acquired"></a>Lock Acquired  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Lock Released  
+## <a name="lock-released"></a>Lock Released  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -96,7 +101,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Lock Waiting  
+## <a name="lock-waiting"></a>Lock Waiting  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -114,7 +119,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Categoria di eventi relativa ai blocchi](../../analysis-services/trace-events/lock-events-category.md)  
   
   

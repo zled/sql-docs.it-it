@@ -1,35 +1,40 @@
 ---
-title: "Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "set di elementi [Analysis Services]"
-  - "association algorithms [Analysis Services]"
-  - "contenuto dei modelli di data mining, modelli di associazione"
-  - "regole [data mining]"
-  - "associazioni [Analysis Services]"
+title: Contenuto per i modelli di associazione del modello di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- mining model content, association models
+- rules [Data Mining]
+- associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
-  Questo argomento descrive il contenuto dei modelli di data mining specifico dei modelli che usano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+# <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
+  Questo argomento descrive il contenuto dei modelli di data mining specifico dei modelli che usano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Informazioni sulla struttura di un modello di associazione  
+## <a name="understanding-the-structure-of-an-association-model"></a>Informazioni sulla struttura di un modello di associazione  
  Un modello di associazione ha una struttura semplice. Ogni modello include un singolo nodo padre che rappresenta il modello e i relativi metadati. Ciascun nodo padre è associato a un elenco semplice di set di elementi e regole. I set di elementi e le regole non sono organizzati in alberi, ma sono ordinati come illustrato nel diagramma seguente, ossia con i set di elementi seguiti dalle regole.  
   
- ![Struttura del contenuto del modello per i modelli di associazione](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "Struttura del contenuto del modello per i modelli di associazione")  
+ ![struttura del contenuto del modello per i modelli di associazione](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "struttura del contenuto del modello per i modelli di associazione")  
   
  Ogni set di elementi è contenuto nel proprio nodo (NODE_TYPE = 7). Il *nodo* include la definizione del set di elementi, il numero di case che contengono il set di elementi e altre informazioni.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
  **Nota** Se si vuole estrarre le regole o i set di elementi, è possibile usare una query che restituisca solo i tipi di nodo desiderati. Per altre informazioni, vedere [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md).  
   
-## Contenuto di un modello di associazione  
+## <a name="model-content-for-an-association-model"></a>Contenuto di un modello di associazione  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining pertinenti per i modelli di associazione.  
   
  Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -99,12 +104,12 @@ caps.handback.revision: 17
 |----------|-----------------|  
 |ITEMSET_COUNT|Conteggio di tutti i set di elementi nel modello.|  
 |RULE_COUNT|Conteggio di tutte le regole nel modello.|  
-|MIN_SUPPORT|Supporto minimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MINIMUM_SUPPORT*.|  
-|MAX_SUPPORT|Supporto massimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MAXIMUM_SUPPORT*.|  
+|MIN_SUPPORT|Supporto minimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MINIMUM_SUPPORT* .|  
+|MAX_SUPPORT|Supporto massimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|Dimensione del set di elementi più piccolo, rappresentata come conteggio di elementi.<br /><br /> Il valore 0 indica che lo stato **Mancante** è stato considerato un elemento indipendente.<br /><br /> **Nota** Il valore predefinito del parametro *MINIMUM_ITEMSET_SIZE* è 1.|  
 |MAX_ITEMSET_SIZE|Indica la dimensione del set di elementi più grande individuato.<br /><br /> **Nota** Questo valore è vincolato dal valore impostato per il parametro *MAX_ITEMSET_SIZE* durante la creazione del modello. Non può mai superare tale valore, ma può essere minore. Il valore predefinito è 3.|  
 |MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0,400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* durante la creazione del modello.|  
-|MAX_PROBABILITY|Probabilità massima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 1<br /><br /> **Nota** Non esistono parametri che vincolano la probabilità massima dei set di elementi. Per eliminare gli elementi troppo frequenti, usare il parametro *MAXIMUM_SUPPORT*.|  
+|MAX_PROBABILITY|Probabilità massima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 1<br /><br /> **Nota** Non esistono parametri che vincolano la probabilità massima dei set di elementi. Per eliminare gli elementi troppo frequenti, usare il parametro *MAXIMUM_SUPPORT* .|  
 |MIN_LIFT|Livello minimo di accuratezza fornito dal modello per un set di elementi.<br /><br /> Esempio: 0,4309369632511<br /><br /> Nota: conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
 |MAX_LIFT|Livello massimo di accuratezza fornito dal modello per ogni set di elementi.<br /><br /> Esempio: 1,95758227647523 **Nota** Conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 17
   
  **Nodo padre** Vuoto.  
   
- **Nodo di set di elementi**Vuoto.  
+ **Nodo di set di elementi** Vuoto.  
   
  **Nodo di regola** Il frammento XML include informazioni utili aggiuntive sulla regola, come supporto, confidenza e numero di elementi, insieme all'ID del nodo che rappresenta il lato sinistro della regola.  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 17
   
  La seconda riga è univoca per i modelli di associazione. Contiene un puntatore al set di elementi sul lato destro della regola. Il puntatore è rappresentato nella colonna ATTRIBUTE_VALUE come ID del set di elementi che contiene solo l'elemento di destra.  
   
- Ad esempio, se la regola è `If {A,B} Then {C}`, la tabella contiene il nome dell'elemento `{C}` e l'ID del nodo che contiene il set di elementi per l'elemento C.  
+ Ad esempio, se la regola è `If {A,B} Then {C}`, la tabella contiene il nome dell'elemento `{C}`e l'ID del nodo che contiene il set di elementi per l'elemento C.  
   
  Questo puntatore è utile perché consente di determinare dal nodo di set di elementi la quantità complessiva di case che includono il prodotto del lato destro. I casi soggetti alla regola `If {A,B} Then {C}` sono un subset dei case elencati nel set di elementi per `{C}`.  
   
@@ -175,14 +180,14 @@ caps.handback.revision: 17
   
  **Nodo padre** Vuoto.  
   
- **Nodo di set di elementi**Vuoto.  
+ **Nodo di set di elementi** Vuoto.  
   
  **Nodo di regola** ID del set di elementi che contiene gli elementi nel lato sinistro della regola. Ad esempio, se la regola è `If {A,B} Then {C}`, questa colonna contiene l'ID del set di elementi che include solo `{A,B}`.  
   
  MSOLAP_NODE_SCORE  
  **Nodo padre** Vuoto.  
   
- **Nodo di set di elementi**Punteggio di priorità per il set di elementi.  
+ **Nodo di set di elementi** Punteggio di priorità per il set di elementi.  
   
  **Nodo di regola** Punteggio di priorità per la regola.  
   
@@ -192,7 +197,7 @@ caps.handback.revision: 17
  MSOLAP_NODE_SHORT_CAPTION  
  Vuoto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)  

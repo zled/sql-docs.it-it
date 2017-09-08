@@ -1,25 +1,30 @@
 ---
-title: "Connection String Properties (Analysis Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà della stringa di connessione (Analysis Services) | Documenti Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e939bafc911fd5d8b09b28754aeb6c8f028de6b2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Connection String Properties (Analysis Services)
+# <a name="connection-string-properties-analysis-services"></a>Proprietà delle stringhe di connessione (Analysis Services)
   In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
   
  È consigliabile che gli sviluppatori responsabili della compilazione di stringhe di connessione nel codice delle applicazioni consultino la documentazione dell'API per client ADOMD.NET in cui è disponibile un elenco più dettagliato: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
@@ -47,17 +52,17 @@ caps.handback.revision: 18
   
  Per altre informazioni su come specificare una connessione ad Analysis Services in applicazioni Microsoft esistenti, vedere [Connessione dalle applicazioni client &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md).  
   
-##  <a name="a-namebkmkcommona-connection-parameters-in-common-use"></a><a name="bkmk_common"></a> Parametri di connessione di uso comune  
+##  <a name="bkmk_common"></a> Parametri di connessione di uso comune  
  Nella tabella seguente vengono descritte le proprietà di utilizzo più frequente per la compilazione di una stringa di connessione.  
   
 |Proprietà|Description|Esempio|  
 |--------------|-----------------|-------------|  
 |**Data Source** o **DataSource**|Specifica l'istanza del server. Questa proprietà è obbligatoria per tutte le connessioni. I valori validi includono il nome di rete o l'indirizzo IP del server, local o localhost per le connessioni locali, l'URL se il server è configurato per l'accesso HTTP o HTTPS oppure il nome di un file di cubo locale (con estensione cub).|`Data source=AW-SRV01` per l'istanza e la porta predefinite (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` per un'istanza denominata ($Finance) e una porta fissa.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` per un nome di dominio completo, presupponendo che si utilizzino l'istanza e la porta predefinite.<br /><br /> `Data source=172.16.254.1` per un indirizzo IP del server in modo da ignorare la ricerca nel server DNS, utile per la risoluzione dei problemi di connessione.|  
 |**Initial Catalog** o **Catalog**|Specifica il nome del database di Analysis Services a cui connettersi. Il database deve essere distribuito in Analysis Services e l'utente deve disporre delle autorizzazioni necessarie per la connessione. Questa proprietà è facoltativa per le connessioni AMO, ma obbligatoria per ADOMD.NET.|`Initial catalog=AdventureWorks2016`|  
-|**Provider**|I valori validi includono MSOLAP.\<versione>, dove \<versione> può essere 4, 5, 6 o 7.<br /><br /> -   MSOLAP. 4 rilasciato in SQL Server 2008 e nuovamente in SQL Server 2008 R2. Il nome file è msolap100. dll per SQL Server 2008 e 2008 R2<br />-   MSOLAP.5 rilasciato in SQL Server 2012. Il nome file è msolap110.dll<br />-   MSOLAP.6 rilasciato in SQL Server 2014. Il nome file è msolap1200.dll<br />-   MSOLAP.7 rilasciato in SQL Server 2016. Il nome file è msolap130.dll<br /><br /> Questa proprietà è facoltativa. Per impostazione predefinita, le librerie client leggono la versione corrente del provider OLE DB dal Registro di sistema. È necessario impostare questa proprietà solo se occorre una versione specifica del provider di dati, ad esempio per la connessione a un'istanza di SQL Server 2012.<br /><br /> MSOLAP.4 è stato rilasciato sia in SQL Server 2008 sia in SQL Server 2008 R2. La versione 2008 R2 supporta le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ed è talvolta necessario installarla manualmente nei server di SharePoint. Per distinguere tra queste versioni, è necessario controllare il numero di build nelle proprietà del file del provider. A questo scopo, passare a Programmi\Microsoft Analysis Services\AS OLEDB\10. Fare clic con il pulsante destro del mouse sul file msolap110.dll e scegliere **Proprietà**. Scegliere **Dettagli**. Visualizzare le informazioni sulla versione del file. La versione deve includere 10.50.\<buildnumber> per SQL Server 2008 R2. Per altre informazioni, vedere [Installare il provider OLE DB di Analysis Services nei server di SharePointt](http://msdn.microsoft.com/it-it/2c62daf9-1f2d-4508-a497-af62360ee859) e [Provider di dati usati per le connessioni ad Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` si usa per le connessioni che richiedono la versione di SQL Server 2016 del provider OLE DB per Analysis Services.|  
+|**Provider**|I valori validi includono MSOLAP. \<versione >, dove \<versione > è 4, 5, 6 o 7.<br /><br /> -   MSOLAP. 4 rilasciato in SQL Server 2008 e nuovamente in SQL Server 2008 R2. Il nome file è msolap100. dll per SQL Server 2008 e 2008 R2<br />-   MSOLAP.5 rilasciato in SQL Server 2012. Il nome file è msolap110.dll<br />-   MSOLAP.6 rilasciato in SQL Server 2014. Il nome file è msolap1200.dll<br />-   MSOLAP.7 rilasciato in SQL Server 2016. Il nome file è msolap130.dll<br /><br /> Questa proprietà è facoltativa. Per impostazione predefinita, le librerie client leggono la versione corrente del provider OLE DB dal Registro di sistema. È necessario impostare questa proprietà solo se occorre una versione specifica del provider di dati, ad esempio per la connessione a un'istanza di SQL Server 2012.<br /><br /> MSOLAP.4 è stato rilasciato sia in SQL Server 2008 sia in SQL Server 2008 R2. La versione 2008 R2 supporta le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ed è talvolta necessario installarla manualmente nei server di SharePoint. Per distinguere tra queste versioni, è necessario controllare il numero di build nelle proprietà del file del provider. A questo scopo, passare a Programmi\Microsoft Analysis Services\AS OLEDB\10. Fare clic con il pulsante destro del mouse sul file msolap110.dll e scegliere **Proprietà**. Scegliere **Dettagli**. Visualizzare le informazioni sulla versione del file. La versione deve includere 10.50. \<NumeroBuild > per SQL Server 2008 R2. Per altre informazioni, vedere [Installare il provider OLE DB di Analysis Services nei server di SharePointt](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) e [Provider di dati usati per le connessioni ad Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` si usa per le connessioni che richiedono la versione di SQL Server 2016 del provider OLE DB per Analysis Services.|  
 |**Cube**|Nome del cubo o della prospettiva. Un database può contenere più cubi e prospettive. Se sono possibili più destinazioni, includere il nome del cubo o della prospettiva nella stringa di connessione.|`Cube=SalesPerspective` indica che è possibile usare la proprietà Cube della stringa di connessione per specificare il nome di un cubo o di una prospettiva.|  
   
-##  <a name="a-namebkmkautha-authentication-and-security"></a><a name="bkmk_auth"></a> Autenticazione e sicurezza  
+##  <a name="bkmk_auth"></a> Autenticazione e sicurezza  
  In questa sezione sono illustrate le proprietà delle stringhe di connessione correlate all'autenticazione e alla crittografia. Per Analysis Services si usano solo l'autenticazione di Windows ma è possibile impostare nella stringa di connessione proprietà che consentono di passare una combinazione specifica di nome utente e password.  
   
  Le proprietà sono elencate in ordine alfabetico.  
@@ -71,20 +76,20 @@ caps.handback.revision: 18
 |**Sicurezza integrata**|Per la connessione ad Analysis Services viene usata l'identità di Windows del chiamante. I valori validi sono vuoto, SSPI e BASIC.<br /><br /> **Integrated Security**=**SSPI** è il valore predefinito per le connessioni TCP e consente l'autenticazione NTLM, Kerberos o anonima. Il valore vuoto è quello predefinito per le connessioni HTTP.<br /><br /> Quando si utilizza **SSPI**, è necessario impostare **ProtectionLevel** su uno dei valori seguenti: **Connect**, **PktIntegrity**, **PktPrivacy**.|  
 |**Persist Encrypted**|Impostare questa proprietà se l'applicazione client richiede l'oggetto origine dati per rendere persistenti le informazioni di autenticazione riservate, ad esempio una password, in formato crittografato. Per impostazione predefinita, le informazioni non sono persistenti.|  
 |**Persist Security Info**|I valori validi sono True e False. Se impostata su True, le informazioni di sicurezza quali l'identità dell'utente o la password precedentemente specificate nella stringa di connessione possono essere ottenute dalla connessione dopo che quest'ultima è stata stabilita. Il valore predefinito è False.|  
-|**Livello di protezione**|Determina il livello di sicurezza usato per la connessione. I valori validi sono:<br /><br /> -   **None**. Connessioni non autenticate o anonime. Non viene eseguita alcuna autenticazione per i dati inviati al server.<br />-   **Connect**. Connessioni autenticate. L'autenticazione viene eseguita solo quando il client stabilisce una relazione con un server.<br />-   **Pkt Integrity**. Connessioni crittografate Viene verificato che tutti i dati inviati dal client siano stati ricevuti e che durante il transito non siano state apportate modifiche.<br />-   **Pkt Privacy**. Crittografia con firma, supportata solo per XMLA. Viene verificato che tutti i dati inviati dal client siano stati ricevuti senza modifiche apportate durante il transito e viene assicurata la protezione della privacy dei dati mediante crittografia.<br /><br /> Per altre informazioni, vedere [Establishing Secure Connections in ADOMD.NET](../Topic/Establishing%20Secure%20Connections%20in%20ADOMD.NET.md)|  
+|**Livello di protezione**|Determina il livello di sicurezza usato per la connessione. I valori validi sono:<br /><br /> -   **None**. Connessioni non autenticate o anonime. Non viene eseguita alcuna autenticazione per i dati inviati al server.<br />-   **Connect**. Connessioni autenticate. L'autenticazione viene eseguita solo quando il client stabilisce una relazione con un server.<br />-   **Pkt Integrity**. Connessioni crittografate Viene verificato che tutti i dati inviati dal client siano stati ricevuti e che durante il transito non siano state apportate modifiche.<br />-   **Pkt Privacy**. Crittografia con firma, supportata solo per XMLA. Viene verificato che tutti i dati inviati dal client siano stati ricevuti senza modifiche apportate durante il transito e viene assicurata la protezione della privacy dei dati mediante crittografia.<br /><br /> Per altre informazioni, vedere [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
 |**Roles**|Specificare un elenco con valori delimitati da virgole dei ruoli predefiniti per la connessione a un server o a un database mediante le autorizzazioni trasmesse dal ruolo in questione. Se questa proprietà viene omessa, vengono usati tutti i ruoli e le autorizzazioni valide derivano da una combinazione di tutti i ruoli. Se si imposta la proprietà su un valore vuoto (ad esempio, Roles=' '), la connessione client non presenta appartenenza a ruoli.<br /><br /> Un amministratore che usano questa proprietà si connette con le autorizzazioni trasmesse dal ruolo. Alcuni comandi potrebbero avere esito negativo se il ruolo non fornisce autorizzazioni sufficienti.|  
 |**SSPI**|Specifica in modo esplicito il pacchetto di sicurezza da usare per l'autenticazione client quando **Integrated Security** è impostato su **SSPI**. SSPI supporta più pacchetti, tuttavia è possibile usare questa proprietà per specificare un pacchetto particolare. I valori validi sono Negotiate, Kerberos, NTLM e Anonymous User. Se questa proprietà non è impostata, per la connessione saranno disponibili tutti i pacchetti.|  
 |**Use Encryption for Data**|Crittografa le trasmissioni di dati. I valori validi sono True e False.|  
 |**User ID**=…; **Password**=|Le proprietà**User ID** e **Password** vengono usate insieme. Analysis Services rappresenta l'identità dell'utente specificata tramite queste credenziali. Per le connessioni ad Analysis Services, si ricorre all'inserimento delle credenziali nella riga di comando solo se il server è configurato per l'accesso HTTP e si è specificata l'autenticazione di base invece della sicurezza integrata per la directory virtuale di IIS. Quando ci si connette direttamente al server, i parametri delle stringhe di connessione **UserID** e **Password** vengono ignorati e la connessione viene stabilita usando il contesto dell'utente connesso. <br /><br />Il nome utente e password devono essere le credenziali di un'identità di Windows, ovvero un account utente locale o di dominio. Si noti che **User ID** presenta uno spazio incorporato. Altri alias per questa proprietà includono **UserName** (senza spazio) e **UID**. L'alias per **Password** è **PWD**.|  
   
-##  <a name="a-namebkmkspeciala-special-purpose-parameters"></a><a name="bkmk_special"></a> Parametri per scopi specifici  
+##  <a name="bkmk_special"></a> Parametri per scopi specifici  
  In questa sezione vengono descritti i parametri rimanenti delle stringhe di connessione. Questi parametri vengono usati per assicurare specifici comportamenti di connessione richiesti da un'applicazione.  
   
  Le proprietà sono elencate in ordine alfabetico.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**Application Name**|Imposta il nome dell'applicazione associata alla connessione. Questo valore può essere utile per il monitoraggio degli eventi di traccia, in particolar modo se più applicazioni accedono agli stessi database. Se ad esempio si aggiunge Application Name='test' a una stringa di connessione, nella traccia di SQL Server Profiler verrà indicato 'test', come illustrato nella cattura di schermata seguente:<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.png "SSAS_AppNameExcample")<br /><br /> Gli alias per questa proprietà includono **sspropinitAppName**, **AppName**. Per altre informazioni, vedere la pagina relativa all' [utilizzo del parametro Application Name per la connessione a SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
+|**Application Name**|Imposta il nome dell'applicazione associata alla connessione. Questo valore può essere utile per il monitoraggio degli eventi di traccia, in particolar modo se più applicazioni accedono agli stessi database. Se ad esempio si aggiunge Application Name='test' a una stringa di connessione, nella traccia di SQL Server Profiler verrà indicato 'test', come illustrato nella cattura di schermata seguente:<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Gli alias per questa proprietà includono **sspropinitAppName**, **AppName**. Per altre informazioni, vedere la pagina relativa all' [utilizzo del parametro Application Name per la connessione a SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
 |**AutoSyncPeriod**|Imposta la frequenza (in millisecondi) della sincronizzazione della cache di client e server. ADOMD.NET offre la memorizzazione nella cache del client per oggetti di utilizzo frequente con overhead di memoria minimo. Ciò consente di ridurre il numero di round trip al server. L'impostazione predefinita è 10000 millisecondi (o 10 secondi). Se è impostata su null o 0, la sincronizzazione automatica è disabilitata.|  
 |**Character Encoding**|Definisce la modalità di codifica dei caratteri nella richiesta. I valori validi sono Default o UTF-8 (equivalenti) e UTF-16| 
 |**CommitTimeout**|Proprietà XMLA. Determina il tempo di attesa in millisecondi da parte della fase di commit di un comando attualmente in esecuzione prima dell'esecuzione del rollback. Quando è maggiore di 0, sostituisce il valore della proprietà CommitTimeout corrispondente nella configurazione del server. |   
@@ -104,7 +109,7 @@ caps.handback.revision: 18
 |**UseExistingFile**|Usata per la connessione a un cubo locale. Questa proprietà specifica se il cubo locale viene sovrascritto. I valori validi sono True o False. Se è impostata su true, il file del cubo deve esistere. Il file esistente sarà la destinazione della connessione. Se impostata su False, il file del cubo viene sovrascritto.|  
 |**VisualMode**|Impostare questa proprietà per controllare la modalità di aggregazione dei membri quando si applica la sicurezza delle dimensioni.<br /><br /> Per i dati del cubo visualizzabili da chiunque l'aggregazione di tutti i membri è utile perché sono visibili tutti i valori che contribuiscono al totale. Se tuttavia si applicano filtri o restrizioni alle dimensioni in base all'identità dell'utente, la visualizzazione di un totale basato su tutti i membri (combinando sia valori consentiti che valori con restrizioni in un singolo totale) potrebbe causare confusione o mostrare più informazioni di quante ne dovrebbero essere rivelate.<br /><br /> Per specificare la modalità di aggregazione dei membri in caso di applicazione della sicurezza delle dimensioni, è possibile impostare questa proprietà su True in modo da usare solo in valori consentiti oppure su False per escludere dal totale i valori con restrizioni.<br /><br /> Se impostato nella stringa di connessione, questo valore si applica a livello di cubo o di prospettiva. In un modello è possibile controllare i totali visualizzati a un livello più granulare.<br /><br /> I valori validi sono 0, 1 e 2.<br /><br /> -   0 è il valore predefinito. Attualmente, il comportamento predefinito corrisponde a 2, ovvero le aggregazioni includono valori che sono nascosti all'utente.<br />-   1 esclude i valori nascosti dal totale. Si tratta della configurazione predefinita per Excel.<br />-   2 include i valori nascosti nel totale. Si tratta del valore predefinito nel server.<br /><br /> Gli alias per questa proprietà includono **Visual Total** o **Default MDX Visual Mode**.|  
   
-##  <a name="a-namebkmkreserveda-reserved-for-future-use"></a><a name="bkmk_reserved"></a> Riservate per utilizzo futuro  
+##  <a name="bkmk_reserved"></a> Riservate per utilizzo futuro  
  Le proprietà seguenti sono consentite nelle stringhe di connessione, ma non sono funzionanti nelle versioni correnti di Analysis Services.  
   
 -   Authenticated User  
@@ -129,7 +134,7 @@ caps.handback.revision: 18
   
 -   Use Formula Cache  
   
-##  <a name="a-namebkmkexamplesa-example-connection-strings"></a><a name="bkmk_examples"></a> Esempi di stringhe di connessione  
+##  <a name="bkmk_examples"></a> Esempi di stringhe di connessione  
  In questa sezione è illustrata la stringa di connessione d'uso più probabile per la configurazione di una connessione ad Analysis Services nelle applicazioni di uso comune.  
   
  **Stringa di connessione generica**  
@@ -146,7 +151,7 @@ caps.handback.revision: 18
   
  Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione in SSRS&#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Autenticazione dei dati per Excel Services in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkId=296350).  
   
-##  <a name="a-namebkmksupportedstringsa-connection-string-formats-used-in-analysis-services"></a><a name="bkmk_supportedstrings"></a> Formati di stringa di connessione usati in Analysis Services  
+##  <a name="bkmk_supportedstrings"></a> Formati di stringa di connessione usati in Analysis Services  
  In questa sezione vengono elencati tutti i formati delle stringhe di connessione supportati da Analysis Services. Fatta eccezione per le connessioni ai database [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è possibile specificare queste stringhe di connessione in applicazioni che si connettono ad Analysis Services.  
   
  **Connessioni native (o dirette) al server**  
@@ -165,15 +170,15 @@ caps.handback.revision: 18
   
  **Connessioni http(s) a msmdpump.dll**  
   
- `Data Source=<URL>`, dove l'URL è l'indirizzo HTTP o HTTPS alla cartella IIS virtuale che contiene msmdpump.dll. Per altre informazioni, vedere [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ `Data Source=<URL>`, dove l'URL è l'indirizzo HTTP o HTTPS alla cartella IIS virtuale che contiene msmdpump.dll. Per altre informazioni, vedere [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
  **Connessioni http(s) alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (file con estensione xlsx, xlsb o xlsm)**  
   
- `Data Source=<URL>`, dove l'URL è il percorso di SharePoint a una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta di SharePoint. Ad esempio, "Data Source=http://localhost/Shared Documents/Sales.xlsx".  
+ `Data Source=<URL>`, dove l'URL è il percorso di SharePoint a una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta di SharePoint. Ad esempio, `Data Source=http://localhost/Shared Documents/Sales.xlsx`.  
   
  **Connessioni http(s) a file di connessione BI Semantic Model**  
   
- `Data Source=<URL>` dove l'URL è il percorso di SharePoint al file con estensione bism. Ad esempio, "Data Source=http://localhost/Shared Documents/Sales.bism".  
+ `Data Source=<URL>` dove l'URL è il percorso di SharePoint al file con estensione bism. Ad esempio, `Data Source=http://localhost/Shared Documents/Sales.bism`.  
   
  **Connessioni [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incorporate**  
   
@@ -183,17 +188,17 @@ caps.handback.revision: 18
   
  `Data Source=*`, dove * viene risolto nell'istanza locale.  
   
-##  <a name="a-namebkmkencrypta-encrypting-connection-strings"></a><a name="bkmk_encrypt"></a> Crittografia di stringhe di connessione  
+##  <a name="bkmk_encrypt"></a> Crittografia di stringhe di connessione  
  Analysis Services usa chiavi di crittografia specifiche per crittografare le stringhe di connessione. Non genera un certificato autofirmato.  
   
- In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono crittografate e archiviate le stringhe di connessione usate per la connessione a ognuna delle origini dei dati. Se la connessione a un'origine dei dati richiede un nome utente e una password, è possibile fare in modo che tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il nome e la password vengano archiviati nella stringa di connessione oppure che vengano richiesti ogni volta che è necessario eseguire una connessione all'origine dei dati. Se si configura [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la richiesta delle informazioni utente, tali informazioni non devono essere archiviate e crittografate. Se tali informazioni vengono archiviate nella stringa di connessione, devono invece essere crittografate e protette.  
+ In[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono crittografate e archiviate le stringhe di connessione usate per la connessione a ognuna delle origini dei dati. Se la connessione a un'origine dei dati richiede un nome utente e una password, è possibile fare in modo che tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il nome e la password vengano archiviati nella stringa di connessione oppure che vengano richiesti ogni volta che è necessario eseguire una connessione all'origine dei dati. Se si configura [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la richiesta delle informazioni utente, tali informazioni non devono essere archiviate e crittografate. Se tali informazioni vengono archiviate nella stringa di connessione, devono invece essere crittografate e protette.  
   
  Per crittografare e proteggere le informazioni della stringa di connessione, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa Data Protection API.  
   
- In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene usata una chiave di crittografia separata per crittografare informazioni della stringa di connessione per ogni database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea questa chiave durante la creazione di un database ed esegue la crittografia delle informazioni della stringa di connessione in base all'account di avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. All'avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la chiave crittografata per ogni database viene letta, decrittografata e archiviata. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene quindi usata la chiave decrittografata appropriata per decrittografare le informazioni della stringa di connessione all'origine dati quando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve connettersi a un'origine dati.  
+ In[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene usata una chiave di crittografia separata per crittografare informazioni della stringa di connessione per ogni database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea questa chiave durante la creazione di un database ed esegue la crittografia delle informazioni della stringa di connessione in base all'account di avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . All'avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la chiave crittografata per ogni database viene letta, decrittografata e archiviata. In[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene quindi usata la chiave decrittografata appropriata per decrittografare le informazioni della stringa di connessione all'origine dati quando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve connettersi a un'origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)   
+ [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurare Analysis Services per la delega vincolata Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Provider di dati usati per le connessioni ad Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)   
  [Connettersi ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

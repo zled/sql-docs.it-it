@@ -1,35 +1,40 @@
 ---
-title: "Propriet&#224; della memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit - proprietà"
-  - "MinimumAllocatedMemory - proprietà"
-  - "MidMemoryPrice - proprietà"
-  - "MemoryHeapType - proprietà"
-  - "memoria [Analysis Services]"
-  - "DefaultPagesCountToReuse - proprietà"
-  - "TotalMemoryLimit - proprietà"
-  - "SessionMemoryLimit - proprietà"
-  - "VirtualMemoryLimit - proprietà"
-  - "WaitCountIfHighMemory - proprietà"
-  - "HighMemoryPrice - proprietà"
-  - "HeapTypeForObjects - proprietà"
+title: "Le proprietà della memoria | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriet&#224; della memoria
+# <a name="memory-properties"></a>Proprietà della memoria
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prealloca una modesta quantità di memoria all'avvio in modo che le richieste possano essere gestite immediatamente. La memoria aggiuntiva viene allocata come query e i carichi di lavoro di elaborazione aumentano. 
   
   Tramite la specifica delle impostazioni di configurazione è possibile controllare le soglie di rilascio della memoria. L'impostazione **HardMemoryLimit** consente ad esempio di specificare una condizione di memoria esaurita imposta automaticamente (per impostazione predefinita, questa soglia non è abilitata), in cui le nuove richieste vengono rifiutate completamente finché non diventano disponibili altre risorse.
@@ -101,7 +106,7 @@ Quando è impostata su 1, è meno probabile che l'elaborazione non venga complet
 **-1** | (Impostazione predefinita) Automatico. Il motore stabilirà il valore da usare.
 **1** | Heap Analysis Services.
 **2** | LFH Windows.
-**5** | Allocatore ibrido. Questo allocatore userà LFH Windows per allocazioni \<= 16 KB e heap AS per le allocazioni > 16 KB. 
+**5** | Allocatore ibrido. L'allocatore utilizzerà LFH di Windows per \<= allocazioni 16 KB e l'Heap AS per > le allocazioni di 16 KB. 
 **6** | Allocatore Intel TBB. Disponibile in SQL Server 2016 SP1 e versioni successive di Analysis Services.
   
   
@@ -141,3 +146,4 @@ Quando è impostata su 1, è meno probabile che l'elaborazione non venga complet
  [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

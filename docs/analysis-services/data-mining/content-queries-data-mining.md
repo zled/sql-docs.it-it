@@ -1,23 +1,28 @@
 ---
-title: "Query sul contenuto (Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contenuto di query (Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Query sul contenuto (Data mining)
+# <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
   Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
   
  In questa sezione vengono fornite informazioni generali sui tipi di informazioni che è possibile recuperare tramite una query sul contenuto, nonché la sintassi DMX generale per le query sul contenuto.  
@@ -195,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Per ulteriori informazioni sull'utilizzo di set di righe gerarchici, vedere la specifica OLE DB su MSDN.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sull'istruzione DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
  [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   

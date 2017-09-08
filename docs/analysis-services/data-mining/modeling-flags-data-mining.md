@@ -1,35 +1,40 @@
 ---
-title: "Flag di modellazione (data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributi [data mining]"
-  - "tipi di dati [data mining]"
-  - "REGRESSOR - flag"
-  - "MODEL_EXISTENCE_ONLY - flag"
-  - "REGRESSOR - colonna"
-  - "colonne [data mining], flag di modellazione"
-  - "NOT NULL - flag di modellazione"
-  - "flag di modellazione [data mining]"
-  - "valori Null [Analysis Services]"
-  - "MODEL_EXISTENCE_ONLY - colonna"
-  - "coding [Data Mining]"
+title: Flag di modellazione (Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- data types [data mining]
+- REGRESSOR flag
+- MODEL_EXISTENCE_ONLY flag
+- REGRESSOR column
+- columns [data mining], modeling flags
+- NOT NULL modeling flag
+- modeling flags [data mining]
+- null values [Analysis Services]
+- MODEL_EXISTENCE_ONLY column
+- coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Flag di modellazione (data mining)
+# <a name="modeling-flags-data-mining"></a>Flag di modellazione (data mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile usare flag di modellazione per offrire a un algoritmo di data mining informazioni aggiuntive sui dati definiti in una tabella del case. L'algoritmo può utilizzare tali informazioni per compilare un modello di data mining più accurato.  
   
  Alcuni flag di modellazione sono definiti al livello della struttura di data mining, mentre altri al livello della colonna del modello di data mining. Ad esempio, il flag di modellazione **NOT NULL** viene usato con le colonne della struttura di data mining. È possibile definire flag di modellazione aggiuntivi sulle colonne del modello di data mining, a seconda dell'algoritmo utilizzato per creare il modello.  
@@ -37,7 +42,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  È possibile che i plug-in di terze parti includano flag di modellazione diversi, in aggiunta a quelli predefiniti in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## Elenco dei flag di modellazione  
+## <a name="list-of-modeling-flags"></a>Elenco dei flag di modellazione  
  Nell'elenco seguente sono descritti i flag di modellazione supportati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per informazioni sui flag di modellazione supportati da algoritmi specifici, vedere l'argomento di riferimento tecnico per l'algoritmo utilizzato per creare il modello.  
   
  **NOT NULL**  
@@ -46,17 +51,17 @@ caps.handback.revision: 48
  **MODEL_EXISTENCE_ONLY**  
  Indica che la colonna verrà considerata come se presentasse due stati: **Mancante** ed **Esistente**. Se il valore è **NULL**, viene considerata come Mancante. Il flag MODEL_EXISTENCE_ONLY viene applicato all'attributo stimabile ed è supportato dalla maggior parte degli algoritmi.  
   
- In effetti, l'impostazione del flag MODEL_EXISTENCE_ONLY su **True** consente di modificare la rappresentazione dei valori in modo da avere solo due stati: **Mancante** ed **Esistente**. Tutti gli stati non mancanti sono combinati in un solo valore **Esistente**.  
+ In effetti, l'impostazione del flag MODEL_EXISTENCE_ONLY su **True** consente di modificare la rappresentazione dei valori in modo da avere solo due stati: **Mancante** ed **Esistente**. Tutti gli stati non mancanti sono combinati in un solo valore **Esistente** .  
   
  Questo flag di modellazione viene tipicamente usato negli attributi in cui lo stato **NULL** ha un significato implicito e il valore esplicito dello stato **NOT NULL** può essere meno importante del fatto che la colonna contenga un valore. Ad esempio, una colonna [DateContractSigned] potrebbe essere **NULL** se non è mai stato firmato un contratto e **NOT NULL** se il contratto è stato firmato. Pertanto, se lo scopo del modello è quello di stimare se un contratto verrà firmato, è possibile usare il flag MODEL_EXISTENCE_ONLY per ignorare il valore esatto relativo alla data nei case **NOT NULL** e distinguere solo tra case in cui il contratto è **Mancante** o **Esistente**.  
   
 > [!NOTE]  
->  Missing è uno stato speciale utilizzato dall'algoritmo e si distingue dal valore di testo "Mancante" in una colonna. Per altre informazioni, vedere [Valori mancanti &#40; Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+>  Missing è uno stato speciale utilizzato dall'algoritmo e si distingue dal valore di testo "Mancante" in una colonna. Per altre informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  **REGRESSOR**  
  Indica che la colonna può essere utilizzata come regressore durante l'elaborazione. Questo flag è definito in una colonna del modello di data mining e può essere applicato solo a colonne con tipo di dati numerico continuo. Per altre informazioni sull'utilizzo di questo flag, vedere la sezione in questo argomento, [Utilizzi del flag di modellazione REGRESSOR](#bkmk_UseRegressors).  
   
-## Visualizzazione e modifica dei flag di modellazione  
+## <a name="viewing-and-changing-modeling-flags"></a>Visualizzazione e modifica dei flag di modellazione  
  È possibile visualizzare i flag di modellazione associati a una colonna della struttura di data mining o del modello in Progettazione modelli di data mining visualizzando le proprietà della struttura o del modello.  
   
  Per determinare quali flag di modellazione sono stati applicati alla struttura di data mining corrente, è possibile creare una query sul set di righe dello schema di data mining che restituisce i flag di modellazione solo per le colonne della struttura, tramite una query analoga alla seguente:  
@@ -86,7 +91,7 @@ WHERE MODEL_NAME = '<model name>'
   
  **Nota** Se si modifica un modello di data mining e si cambia il tipo di contenuto di una colonna da continuo a discreto, è necessario modificare manualmente il flag nella colonna di data mining, quindi rielaborare il modello.  
   
-### Regressori nei modelli di regressione lineare  
+### <a name="regressors-in-linear-regression-models"></a>Regressori nei modelli di regressione lineare  
  I modelli di regressione lineare si basano sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Anche se non si utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, qualsiasi modello di albero delle decisioni può contenere un albero o nodi che rappresentano una regressione su un attributo continuo.  
   
  In questi modelli, pertanto, non è necessario specificare che una colonna continua rappresenta un regressore. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees suddividerà il set di dati in aree con modelli significativi anche se non si imposta il flag REGRESSOR nella colonna. La differenza è data dal fatto che quando si imposta il flag di modellazione, l'algoritmo tenterà di trovare equazioni di regressione nel formato seguente per adattare i modelli nei nodi dell'albero.  
@@ -99,7 +104,7 @@ WHERE MODEL_NAME = '<model name>'
   
  È possibile utilizzare il parametro FORCED_REGRESSOR per garantire che l'algoritmo utilizzi un determinato regressore. Questo parametro può essere utilizzato con l'algoritmo Decision Trees e con l'algoritmo Linear Regression.  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Utilizzare i collegamenti seguenti per ulteriori informazioni sull'utilizzo dei flag di modellazione.  
   
 |Attività|Argomento|  

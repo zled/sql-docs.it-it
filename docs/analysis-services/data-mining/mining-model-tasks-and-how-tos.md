@@ -1,29 +1,34 @@
 ---
-title: "Attivit&#224; e procedure relative al modello di data mining | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data mining [Analysis Services], modelli"
-  - "modelli di data mining [Analysis Services], procedure"
+title: "Modello attività e procedure di data mining | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], models
+- mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0ad2ff2582e2b781debd14372614bd0e8c6d2323
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Attivit&#224; e procedure relative al modello di data mining
+# <a name="mining-model-tasks-and-how-tos"></a>Attività e procedure relative al modello di data mining
   La scheda **Modelli di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di gestire ed elaborare i modelli di data mining in una struttura di data mining.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Aggiungere un modello di data mining a una struttura di data mining esistente](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 34
   
 -   [Creare una dimensione di data mining](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Modelli di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [Concetti di data mining](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Misure nel report di convalida incrociata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "radice errore quadratico medio [data mining]"
-  - "convalida incrociata [data mining]"
-  - "errore assoluto medio [data mining]"
-  - "punteggio in forma logaritmica [data mining]"
-  - "probabilità [data mining]"
+title: Misure nel Report di convalida incrociata | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- root mean square error [data mining]
+- cross-validation [data mining]
+- mean absolute error [data mining]
+- log score [data mining]
+- likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Misure nel report di convalida incrociata
+# <a name="measures-in-the-cross-validation-report"></a>Misure nel report di convalida incrociata
   Durante la convalida incrociata, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di dividere i dati di una struttura di data mining in più sezioni trasversali e quindi di eseguire il test della struttura e di tutti i modelli di data mining associati in modo iterativo. In base a questa analisi, viene restituito un set di misure di accuratezza standard per la struttura e ciascun modello.  
   
  Nel report sono contenute alcune informazioni di base sul numero di riduzioni nei dati e la quantità di dati in ciascuna riduzione, nonché un set di metriche generali che consentono di descrivere la distribuzione dei dati. Confrontando la metrica generale per ogni sezione trasversale, è possibile valutare l'affidabilità della struttura o del modello.  
@@ -32,10 +37,10 @@ caps.handback.revision: 28
   
  Questa sezione fornisce un elenco delle misure contenute nel report **Convalida incrociata** e il relativo significato. Per informazioni dettagliate sulla modalità di calcolo di ogni misura, vedere [Formule per la convalida incrociata](../../analysis-services/data-mining/cross-validation-formulas.md).  
   
-## Elenco di misure nel report di convalida incrociata  
+## <a name="list-of-measures-in-the-cross-validation-report"></a>Elenco di misure nel report di convalida incrociata  
  Nella tabella seguente vengono elencate le misure visualizzate nel report di convalida incrociata. Le misure vengono raggruppate per *tipo di test*, specificato nella colonna di sinistra della tabella seguente. Nella colonna di destra viene elencato il nome della misura, come visualizzato nel report, e viene fornita una breve spiegazione del significato.  
   
-|Tipo di test|Misure e descrizioni|  
+|tipo di test|Misure e descrizioni|  
 |---------------|-------------------------------|  
 |Clustering|Misure applicate ai modelli di clustering|  
 ||**Probabilità case**:<br />                      Questa misura indica di solito la probabilità che un case appartenga a un cluster specifico. Per la convalida incrociata, i punteggi vengono sommati, quindi divisi per il numero di case, pertanto il punteggio indicato rappresenta una probabilità del case media.|  
@@ -54,7 +59,7 @@ caps.handback.revision: 28
 ||**Media**:<br />                      Media dei valori della partizione per una misura specifica.|  
 ||**Deviazione standard**:<br />                      Media della deviazione rispetto al valore medio per una misura specifica, calcolata in tutte le partizioni di un modello.<br /><br /> Per la convalida incrociata, un valore superiore per questo punteggio implica una variazione sostanziale tra le riduzioni.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

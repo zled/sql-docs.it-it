@@ -1,30 +1,35 @@
 ---
-title: "Gruppi di misure collegati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di misure collegati [Analysis Services]"
-  - "riferimenti a gruppi di misure"
-  - "Impostazione guidata gruppo di misure collegato"
-  - "gruppi di misure [Analysis Services], collegati"
-  - "dimensioni collegate [Analysis Services]"
+title: Gruppi di misure collegato | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linked measure groups [Analysis Services]
+- referencing measure groups
+- Linked Measure Group Wizard
+- measure groups [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Gruppi di misure collegati
+# <a name="linked-measure-groups"></a>Gruppi di misure collegati
   Un gruppo di misure collegato si basa su un altro gruppo di misure in un cubo diverso all'interno dello stesso database o in un database di Analysis Services diverso. È possibile usare un gruppo di misure collegato se si desidera riusare un set di misure e i valori di dati corrispondenti in più cubi.  
   
  Microsoft consiglia che i gruppi di misure collegati e originali risiedano in soluzioni eseguite sullo stesso server. È prevista la deprecazione del collegamento a un gruppo di misure in un server remoto nelle versioni future, vedere [Funzionalità di Analysis Services deprecate in SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md).  
@@ -32,7 +37,7 @@ caps.handback.revision: 41
 > [!IMPORTANT]  
 >  I gruppi di misure collegati sono di sola lettura. Per visualizzare le modifiche più recenti, è necessario eliminare e ricreare tutti i gruppi di misure collegati basati sull'oggetto di origine modificato. Per questo motivo, copiare e incollare gruppi di misure tra progetti è un approccio alternativo da prendere in considerazione qualora siano necessarie modifiche future al gruppo di misure.  
   
-## Limitazioni all'utilizzo  
+## <a name="usage-limitations"></a>Limitazioni all'utilizzo  
  Come indicato in precedenza, un vincolo importante all'utilizzo delle misure collegate è rappresentato dall'impossibilità di personalizzare direttamente una misura collegata. Le modifiche al tipo di dati, al formato, all'associazione dati e alla visibilità nonché all'appartenenza degli elementi nel gruppo di misure stesso, sono tutte modifiche che devono essere apportate nel gruppo di misure originale.  
   
  Sotto il profilo operativo, i gruppi di misure collegati sono identici agli altri gruppi di misure in termini di accesso da parte di applicazioni client, nonché per l'esecuzione di query.  
@@ -47,11 +52,11 @@ caps.handback.revision: 41
   
 -   Nei gruppi di misure collegati non è supportato il writeback.  
   
--   I gruppi di misure collegati non possono essere utilizzati in più relazioni molti-a-molti, soprattutto quando tali relazioni sono in cubi diversi. Questa operazione può generare aggregazioni ambigue. Per altre informazioni, vedere [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx) (Quantità errate per le misure collegate nei cubi che contengono relazioni molti-a-molti).  
+-   I gruppi di misure collegati non possono essere utilizzati in più relazioni molti-a-molti, soprattutto quando tali relazioni sono in cubi diversi. Questa operazione può generare aggregazioni ambigue. Per altre informazioni, vedere [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantità errate per le misure collegate nei cubi che contengono relazioni molti-a-molti).  
   
- Le misure contenute in un gruppo di misure collegato possono essere organizzate direttamente solo lungo dimensioni collegate recuperate dallo stesso database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È tuttavia possibile usare membri calcolati per correlare le informazioni di gruppi di misure collegati alle altre dimensioni non collegate del cubo, nonché usare una relazione indiretta, ad esempio un riferimento o una relazione molti-a-molti, per correlare dimensioni non collegate a un gruppo di misure collegato.  
+ Le misure contenute in un gruppo di misure collegato possono essere organizzate direttamente solo lungo dimensioni collegate recuperate dallo stesso database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . È tuttavia possibile usare membri calcolati per correlare le informazioni di gruppi di misure collegati alle altre dimensioni non collegate del cubo, nonché usare una relazione indiretta, ad esempio un riferimento o una relazione molti-a-molti, per correlare dimensioni non collegate a un gruppo di misure collegato.  
   
-## Creare o modificare una misura collegata  
+## <a name="create-or-modify-a-linked-measure"></a>Creare o modificare una misura collegata  
  Utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per creare un gruppo di misure collegato.  
   
 1.  Finalizzare ora tutte le modifiche al gruppo di misure originale nel cubo di origine, in modo tale che successivamente non sia necessario ricreare i gruppi di misure collegati nei cubi successivi. È possibile rinominare un oggetto collegato, ma non è possibile modificare altre proprietà.  
@@ -66,12 +71,12 @@ caps.handback.revision: 41
   
 6.  Fare clic su **Fine** per creare l'oggetto collegato. Gli oggetti collegati verranno visualizzati nel riquadro Misure e Dimensioni, indicati dall'icona di collegamento.  
   
-## Proteggere una misura collegata  
+## <a name="secure-a-linked-measure"></a>Proteggere una misura collegata  
  Dopo avere definito il collegamento, l'accesso alle misure in un gruppo di misure collegato viene gestito così come l'accesso agli altri gruppi di misure. Un oggetto collegato viene visualizzato insieme alle relative controparti non collegate in Progettazione ruoli. Per altre informazioni sulla gestione della sicurezza per un gruppo di misure, vedere [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Per definire o usare un gruppo di misure collegato, è necessario che l'account del servizio di Windows per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appartenga a un ruolo di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con diritti di accesso **ReadDefinition** e **Lettura** nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine per il cubo e il gruppo di misure di origine o che appartenga al ruolo Administrators di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Definizione delle dimensioni collegate](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

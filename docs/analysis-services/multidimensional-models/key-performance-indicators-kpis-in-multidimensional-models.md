@@ -1,36 +1,41 @@
 ---
-title: "Indicatori KPI nei modelli multidimensionali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indicatori di prestazioni chiave - visualizzazione"
-  - "indicatori di prestazioni chiave [Analysis Services]"
-  - "Indicatori KPI [Analysis Services]"
-  - "oggetti OLAP [Analysis Services]l indicatori di prestazioni"
-  - "pesi [Analysis Services]"
-  - "visualizzazione di indicatori di prestazioni chiave"
-  - "Indicatori KPI padre [Analysis Services]"
-  - "indicatori KPI figli"
+title: Indicatori di prestazioni (KPI) nei modelli multidimensionali chiave | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing Key Performance Indicators
+- Key Performance Indicators [Analysis Services]
+- KPIs [Analysis Services]
+- OLAP objects [Analysis Services], performance indicators
+- weights [Analysis Services]
+- displaying Key Performance Indicators
+- parent KPIs [Analysis Services]
+- child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Indicatori KPI nei modelli multidimensionali
+# <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicatori KPI nei modelli multidimensionali
   Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e  
   
- In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) o di membri calcolati. Gli indicatori KPI dispongono inoltre di metadati aggiuntivi che offrono informazioni sulla modalità di visualizzazione dei risultati dei calcoli degli indicatori stessi nelle applicazioni client.  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) o di membri calcolati. Gli indicatori KPI dispongono inoltre di metadati aggiuntivi che offrono informazioni sulla modalità di visualizzazione dei risultati dei calcoli degli indicatori stessi nelle applicazioni client.  
   
  Un indicatore KPI gestisce le informazioni su un set di obiettivi, la formula effettiva delle prestazioni registrate nel cubo e la misurazione per la visualizzazione della tendenza e dello stato delle prestazioni. Gli oggetti AMO sono utilizzati per specificare le formule e altre definizioni relative ai valori di un indicatore di prestazioni chiave. Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare i valori KPI ed esporli all'utente finale. Per altre informazioni vedere [Sviluppo con ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
@@ -38,11 +43,11 @@ caps.handback.revision: 43
   
  Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e viene stimato con una frequenza spesso elevata. Il reparto vendite di un'organizzazione potrebbe ad esempio utilizzare il profitto lordo mensile come indicatore di prestazioni chiave, mentre il reparto risorse umane della stessa organizzazione potrebbe basarsi sull'avvicendamento trimestrale dei dipendenti. Ognuno di questi rappresenta un esempio di utilizzo di un indicatore KPI. I dirigenti aziendali utilizzano spesso indicatori di prestazioni chiave raggruppati in una scorecard aziendale per ottenere un riepilogo cronologico immediato e accurato del successo aziendale.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un indicatore KPI è una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) e di membri calcolati. Gli indicatori di prestazioni chiave dispongono inoltre di metadati aggiuntivi che offrono informazioni su come devono venire visualizzati i risultati dei calcoli dell'indicatore nelle applicazioni client.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un indicatore KPI è una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) e di membri calcolati. Gli indicatori di prestazioni chiave dispongono inoltre di metadati aggiuntivi che offrono informazioni su come devono venire visualizzati i risultati dei calcoli dell'indicatore nelle applicazioni client.  
   
  Un vantaggio fondamentale degli indicatori KPI in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consiste nel fatto che si tratta di indicatori basati sul server che possono essere utilizzati da diverse applicazioni client. Un indicatore di prestazioni chiave basato sul server presenta un'unica versione di verità, rispetto alle diverse versioni di verità di più applicazioni client. Si possono inoltre ottenere vantaggi in termini di prestazioni grazie alla possibilità di eseguire calcoli talvolta complessi nel server anziché in ogni computer client.  
   
-## Terminologia comune relativa agli indicatori di prestazioni chiave  
+## <a name="common-kpi-terms"></a>Terminologia comune relativa agli indicatori di prestazioni chiave  
  Nella tabella seguente vengono definiti i termini comuni relativi agli indicatori di prestazioni chiave in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Nome|Definizione|  
@@ -58,15 +63,15 @@ caps.handback.revision: 43
 |Membro temporale corrente|Espressione MDX che restituisce il membro che identifica il contesto temporale dell'indicatore di prestazioni chiave.|  
 |Weight|Espressione numerica MDX che assegna un'importanza relativa a un indicatore di prestazioni chiave. Se l'indicatore di prestazioni chiave è assegnato a un KPI padre, il peso viene utilizzato per modificare in modo proporzionale i risultati del valore dell'indicatore di prestazioni chiave figlio quando si calcola il valore del KPI padre.|  
   
-## Indicatori di prestazioni chiave padre  
+## <a name="parent-kpis"></a>Indicatori di prestazioni chiave padre  
  In un'organizzazione potrebbe essere necessario tenere traccia di metriche aziendali diverse a più livelli. Potrebbero ad esempio venire utilizzati solo due o tre indicatori di prestazioni chiave per valutare il successo aziendale, ma questi indicatori validi per l'intera azienda potrebbero essere basati su altri tre o quattro indicatori di prestazioni chiave calcolati dalle business unit nella società. Le business unit di una società potrebbero inoltre utilizzare dati statistici diversi per calcolare lo stesso indicatore di prestazioni chiave, dei cui risultati è possibile eseguire il rollup nell'indicatore di prestazioni chiave valido per l'intera azienda.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire una relazione padre-figlio tra indicatori di prestazioni chiave. Questa relazione padre-figlio consente di utilizzare i risultati dell'indicatore di prestazioni chiave figlio per calcolare i risultati dell'indicatore di prestazioni chiave padre. Questa relazione può inoltre essere utilizzata dalle applicazioni client per visualizzare in modo corretto gli indicatori di prestazioni chiave padre e figlio.  
   
-## Pesi  
+## <a name="weights"></a>Pesi  
  È possibile assegnare pesi anche agli indicatori di prestazioni chiave figlio. I pesi consentono ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di modificare in modo proporzionale i risultati dell'indicatore di prestazioni chiave figlio quando si calcola il valore dell'indicatore di prestazioni chiave padre.  
   
-## Recupero e visualizzazione di indicatori di prestazioni chiave  
+## <a name="retrieving-and-displaying-kpis"></a>Recupero e visualizzazione di indicatori di prestazioni chiave  
  La visualizzazione degli indicatori di prestazioni chiave dipende dall'implementazione dell'applicazione client. Se, ad esempio, si fa clic su **Visualizzazione Esplorazione** sulla barra degli strumenti nella scheda **KPI** di Progettazione cubi, viene visualizzata una possibile implementazione client, con elementi grafici usati per visualizzare gli indicatori di stato e di tendenza, cartelle di visualizzazione utilizzate per raggruppare gli indicatori di prestazioni chiave e indicatori di prestazioni chiave figlio visualizzati sotto gli indicatori di prestazioni chiave padre.  
   
  È possibile utilizzare le funzioni MDX per recuperare singole sezioni dell'indicatore di prestazioni chiave, ad esempio il valore o l'obiettivo, da utilizzare in script, istruzioni ed espressioni MDX.  

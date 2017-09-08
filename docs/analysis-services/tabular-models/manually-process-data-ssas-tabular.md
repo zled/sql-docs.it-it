@@ -1,26 +1,31 @@
 ---
-title: "Elaborare manualmente i dati (SSAS tabulare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: Elaborare manualmente i dati (SSAS tabulare) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Elaborare manualmente i dati (SSAS tabulare)
+# <a name="manually-process-data-ssas-tabular"></a>Elaborare manualmente i dati (SSAS tabulare)
   In questo argomento viene illustrato come elaborare manualmente i dati dell'area di lavoro in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Quando si crea un modello tabulare in cui vengono utilizzati dati esterni, è possibile aggiornare manualmente i dati tramite il comando Elabora. È possibile elaborare una sola tabella, tutte le tabelle nel modello o una o più partizioni. Ogni volta che si elaborano i dati, potrebbe anche essere necessario ricalcolarli.  Per elaborazione dei dati si intende il recupero dei dati più recenti dalle origini esterne. Con ricalcolo si intende l'aggiornamento del risultato di qualsiasi formula in cui vengono utilizzati i dati.  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> Elaborare manualmente i dati  
   
-#### Per elaborare i dati per una sola tabella o tutte le tabelle in un modello  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>Per elaborare i dati per una sola tabella o tutte le tabelle in un modello  
   
 1.  In Progettazione modelli fare clic sulla tabella che si desidera elaborare.  
   
 2.  Nel menu **Modello** fare clic su **Elabora**, quindi su **Elabora** o **Elabora tutto**.  
   
-#### Per elaborare i dati di tutte le tabelle utilizzando la stessa connessione  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>Per elaborare i dati di tutte le tabelle utilizzando la stessa connessione  
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]fare clic sul menu **Modello** , quindi scegliere **Connessioni esistenti**.  
   
 2.  Nella finestra di dialogo **Connessioni esistenti** selezionare una connessione, quindi fare clic su **Elabora**.  
   
-#### Per elaborare i dati di una o più partizioni  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>Per elaborare i dati di una o più partizioni  
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]scegliere **Elabora** dal menu **Modello**, quindi fare clic su **Elabora partizioni**.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 18
  **Arresta aggiornamento**  
  Fare clic per arrestare l'operazione di elaborazione. Questa opzione è utile se l'operazione è troppo lunga o se si sono verificati troppi errori.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborare dati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Risolvere i problemi relativi all'elaborazione dei dati &#40;SSAS tabulare&#41;](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   

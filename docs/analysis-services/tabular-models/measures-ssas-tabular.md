@@ -1,37 +1,30 @@
 ---
-title: "Misure (SSAS tabulare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Le misure | Documenti Microsoft
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Misure (SSAS tabulare)
+# <a name="measures"></a>Misure
   Nei modelli tabulari una misura è un calcolo creato utilizzando una formula DAX per l'utilizzo in un client di creazione report. Le misure vengono valutate in base ai campi, ai filtri e ai filtri dei dati selezionati dagli utenti nell'applicazione client di creazione report.  
-  
- Sezioni dell'argomento:  
-  
--   [Vantaggi](#bkmk_understanding)  
-  
--   [Definizione delle misure tramite la relativa griglia](#bkmk_def_mg)  
-  
--   [Proprietà delle misure](#bkmk_properties)  
-  
--   [Utilizzo di una misura in un indicatore KPI](#bkmk_KPI)  
-  
--   [Attività correlate](#bkmk_rel_tasks)  
   
 ##  <a name="bkmk_understanding"></a> Vantaggi  
  Le misure possono essere basate sulle funzioni di aggregazione standard, ad esempio AVERAGE, COUNT o SUM. In alternativa, è possibile definire formule personalizzate tramite DAX. Oltre alla formula, ogni misura dispone di proprietà definite dal tipo di dati della misura, ad esempio Nome, Dettagli tabella, Formato e Cifre decimali.  
@@ -62,7 +55,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Tv and Video (Tv e video)|$946,989,702.51|  
 |**Grand Total**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> Definizione delle misure tramite la relativa griglia  
+##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
  Le misure vengono create in fase di progettazione tramite la relativa griglia in Progettazione modelli. Ogni tabella dispone di una griglia delle misure. Per impostazione predefinita, la griglia delle misure viene visualizzata sotto ogni tabella in Progettazione modelli. È inoltre possibile scegliere di non visualizzare la griglia delle misure per una determinata tabella. Per attivare o disattivare la visualizzazione della griglia delle misure di una tabella, fare clic sul menu **Tabella** e quindi su **Mostra griglia delle misure**.  
   
  Nella griglia delle misure è possibile creare misure nelle modalità seguenti:  
@@ -73,12 +66,12 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Per impostazione predefinita, quando si utilizza la somma automatica, il nome della misura viene definito in base al nome della colonna associata, seguito da due punti e successivamente dalla formula. Il nome può essere modificato nella barra della formula o nell'impostazione della proprietà **Nome misura** nella finestra Proprietà. Quando si crea una misura tramite una formula personalizzata, è possibile digitare un nome nella barra della formula, seguito da due punti e successivamente dalla formula oppure è possibile digitare un nome nell'impostazione delle proprietà **Nome misura** della finestra Proprietà.  
   
- È importante denominare accuratamente le misure. Il nome della misura verrà visualizzato con la tabella associata nell'elenco dei campi dello strumento client di creazione report. In base alla misura base verrà denominato anche un indicatore KPI. Una misura non può avere lo stesso nome di una colonna di qualsiasi tabella del modello.  
+ È importante per le misure di nome con attenzione. Il nome della misura verrà visualizzato con la tabella associata nell'elenco dei campi dello strumento client di creazione report. In base alla misura base verrà denominato anche un indicatore KPI. Una misura non può avere lo stesso nome di una colonna di qualsiasi tabella del modello.  
   
 > [!TIP]  
 >  È possibile raggruppare le misure di più tabelle in un'unica tabella creando una tabella vuota e quindi spostando o creando al suo interno le nuove misure. Tenere presente che potrebbe essere necessario includere i nomi di tabella nelle formule DAX per fare riferimento alle colonne in altre tabelle.  
   
- Se sono state definite prospettive per il modello, le misure non vengono aggiunte automaticamente a qualsiasi prospettiva. È necessario aggiungere manualmente misure a una prospettiva tramite la finestra di dialogo Prospettive. Per altre informazioni, vedere [ Prospettive &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
+ Se sono state definite prospettive per il modello, le misure non vengono aggiunte automaticamente a qualsiasi prospettiva. È necessario aggiungere manualmente misure a una prospettiva tramite la finestra di dialogo Prospettive. Per ulteriori informazioni, vedere [prospettive](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Proprietà delle misure  
  Ogni misura dispone di proprietà che ne consentono la definizione. Le proprietà delle misure, insieme a quelle della colonna associata, possono essere modificate nella finestra Proprietà. Di seguito sono riportate le proprietà delle misure:  
@@ -91,19 +84,19 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Nome misura**|Se viene utilizzata la somma automatica, il nome della misura precederà il nome della colonna seguito da due punti. Se viene immessa una formula personalizzata, digitare un nome seguito da due punti, quindi la formula.|Nome della misura come viene visualizzato nell'elenco dei campi di uno strumento client di creazione report.|  
   
 ##  <a name="bkmk_KPI"></a> Utilizzo di una misura in un indicatore KPI  
- Un indicatore KPI (indicatore di prestazioni chiave) viene definito mediante un valore *base*, definito tramite una misura, rispetto a un valore di *destinazione*, anch'esso definito tramite una misura o un valore assoluto. In un indicatore KPI è incluso anche lo *stato*, ovvero un calcolo della restituzione del valore base rispetto al valore di destinazione tra i valori di soglia, visualizzato in formato grafico. Gli indicatori KPI vengono spesso utilizzati dai professionisti aziendali per identificare le tendenze nella metrica aziendale critica.  
+ Un indicatore KPI (indicatore di prestazioni chiave) viene definito mediante un valore *base* , definito tramite una misura, rispetto a un valore di *destinazione* , anch'esso definito tramite una misura o un valore assoluto. In un indicatore KPI è incluso anche lo *stato*, ovvero un calcolo della restituzione del valore base rispetto al valore di destinazione tra i valori di soglia, visualizzato in formato grafico. Gli indicatori KPI vengono spesso utilizzati dai professionisti aziendali per identificare le tendenze nella metrica aziendale critica.  
   
- Qualsiasi misura può essere utilizzata come misura base di un indicatore KPI. Per creare un indicatore KPI, nella griglia delle misure fare clic con il pulsante destro del mouse su una misura e quindi selezionare **Crea KPI**. Verrà visualizzata la finestra di dialogo relativa all'indicatore di prestazioni chiave in cui è possibile specificare un valore di destinazione (definito tramite una misura o un valore assoluto), nonché definire i valori di soglia dello stato e un tipo di grafico. Per altre informazioni, vedere [Indicatori KPI &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
+ Qualsiasi misura può essere utilizzata come misura base di un indicatore KPI. Per creare un indicatore KPI, nella griglia delle misure fare clic con il pulsante destro del mouse su una misura e quindi selezionare **Crea KPI**. Verrà visualizzata la finestra di dialogo relativa all'indicatore di prestazioni chiave in cui è possibile specificare un valore di destinazione (definito tramite una misura o un valore assoluto), nonché definire i valori di soglia dello stato e un tipo di grafico. Per ulteriori informazioni, vedere [gli indicatori KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
 ##  <a name="bkmk_rel_tasks"></a> Attività correlate  
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Creare e gestire misure &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Viene descritto come creare e gestire misure utilizzando la griglia delle misure in Progettazione modelli.|  
+|[Creare e gestire misure](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Viene descritto come creare e gestire misure utilizzando la griglia delle misure in Progettazione modelli.|  
   
-## Vedere anche  
- [Indicatori KPI &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Creare e gestire indicatori KPI &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [Colonne calcolate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Indicatori KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Creare e gestire indicatori KPI.](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
+ [Colonne calcolate](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

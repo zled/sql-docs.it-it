@@ -1,23 +1,28 @@
 ---
-title: "Query di definizione dei dati (Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Query di definizione dei dati (Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a42d980837958ff2b605eeaac01dd61739bc1078
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Query di definizione dei dati (Data mining)
+# <a name="data-definition-queries-data-mining"></a>Query di definizione dei dati (Data mining)
   Per il data mining, la *query di definizione dei dati* della categoria indica le istruzioni DMX o i comandi XMLA usati per eseguire le operazioni seguenti:  
   
 -   Creare o modificare oggetti di data mining, ad esempio un modello.  
@@ -37,7 +42,7 @@ caps.handback.revision: 12
  [Generazione dello script di istruzioni per la definizione dei dati](#bkmk_Export)  
   
 ##  <a name="bkmk_Create"></a> Creazione di query di definizione dei dati  
- È possibile creare query di definizione dei dati (istruzioni) usando il generatore delle query di stima in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite la finestra Query DMX in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le istruzioni DMX per la definizione dei dati fanno parte del linguaggio DDL (Data Definition Language) di Analysis Services.  
+ È possibile creare query di definizione dei dati (istruzioni) usando il generatore delle query di stima in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o tramite la finestra Query DMX in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le istruzioni DMX per la definizione dei dati fanno parte del linguaggio DDL (Data Definition Language) di Analysis Services.  
   
  Per informazioni sulla sintassi di istruzioni per la definizione dei dati specifiche, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 12
 ###  <a name="bkmk_Scripts"></a> Generazione dello script di istruzioni per la definizione dei dati  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce più linguaggi di script e di programmazione che è possibile usare per creare o modificare oggetti di data mining o per definire le origini dati.  Anche se DMX è progettato per facilitare le attività di data mining, è possibile utilizzare inoltre sia XMLA sia AMO per modificare oggetti negli script o in codice personalizzato.  
   
- Nel componente aggiuntivo Data mining per Excel sono inclusi anche molti modelli di query, oltre all'**Editor avanzato query** che consente di comporre istruzioni DMX complesse. È possibile compilare una query in modo interattivo e passare a Visualizzazione SQL per acquisire l'istruzione DMX.  
+ Nel componente aggiuntivo Data mining per Excel sono inclusi anche molti modelli di query, oltre all' **Editor avanzato query**che consente di comporre istruzioni DMX complesse. È possibile compilare una query in modo interattivo e passare a Visualizzazione SQL per acquisire l'istruzione DMX.  
   
 ##  <a name="bkmk_Export"></a> Esportazione e importazione di modelli  
  È possibile utilizzare le istruzioni per la definizione dei dati in DMX per esportare la definizione di un modello e le relative origini dati e struttura necessarie, e importare quindi tale definizione in un server diverso. L'utilizzo dell'esportazione e dell'importazione è il modo più veloce per spostare modelli e strutture di data mining tra istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Gestione degli oggetti e delle soluzioni di data mining](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md).  
@@ -81,14 +86,14 @@ caps.handback.revision: 12
   
 |||  
 |-|-|  
-|Utilizzo di modelli per query DMX.|[Utilizzare i modelli di Analysis Services in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Utilizzo di modelli per query DMX.|[Usare i modelli di Analysis Services in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Progettazione di query di tutti i tipi tramite il generatore delle query di stima.|[Creare una query di stima utilizzando Generatore query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Acquisizione delle definizioni di query tramite SQL Server Profiler e utilizzo delle tracce per monitorare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Acquisizione delle definizioni di query tramite SQL Server Profiler e utilizzo delle tracce per monitorare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Usare SQL Server Profiler per il monitoraggio di Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |Informazioni sui linguaggi di scripting e di programmazione forniti per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Guida di riferimento a XML for Analysis &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Sviluppo con Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |Informazioni sulla gestione di modelli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Esportare e importare gli oggetti di data mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
-|Informazioni su OPENROWSET e su altre modalità per eseguire una query sui dati esterni.|[&#60;query origine dati&#62;](../Topic/%3Csource%20data%20query%3E.md).|  
+|Informazioni su OPENROWSET e su altre modalità per eseguire una query sui dati esterni.|[&#60;query origine dati&#62;](../../dmx/source-data-query.md).|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

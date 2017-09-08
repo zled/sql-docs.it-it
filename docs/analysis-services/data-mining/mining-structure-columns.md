@@ -1,33 +1,38 @@
 ---
-title: "Colonne della struttura di data mining | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data mining [Analysis Services], struttura"
-  - "strutture di data mining [Analysis Services], colonne"
-  - "origini dati [Analysis Services], colonne struttura di data mining"
-  - "colonne [data mining], colonne struttura di data mining"
+title: Le colonne della struttura di data mining | Documenti Microsoft
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], columns
+- data sources [Analysis Services], mining structure columns
+- columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne della struttura di data mining
+# <a name="mining-structure-columns"></a>Colonne della struttura di data mining
   In una struttura di data mining si definiscono le colonne al momento della creazione della struttura, scegliendo colonne di dati esterni e specificando quindi la modalità di utilizzo dei dati per la modellazione. Pertanto, le colonne della struttura di data mining non sono semplici copie dei dati di un'origine dati, ma definiscono la modalità in cui i dati dell'origine devono essere utilizzati dal modello di data mining. È possibile assegnare proprietà che determinano come vengono discretizzati i dati, proprietà che descrivono come sono distribuiti i valori dei dati  
   
  Le colonne della struttura di data mining sono state progettate in modo da risultare flessibili ed estensibili, in quanto ogni algoritmo utilizzato per compilare un modello di data mining può utilizzare colonne diverse della struttura allo scopo di interpretare i dati. Anziché disporre di un set di dati per ogni modello, è possibile utilizzare una sola struttura di data mining e le colonne che contiene per personalizzare i dati per ciascun modello.  
   
-## Definizione di colonne della struttura di data mining  
+## <a name="defining-mining-structure-columns"></a>Definizione di colonne della struttura di data mining  
  I tipi di dati di base e di contenuto che definiscono le colonne della struttura derivano dall'origine dati utilizzata per creare la struttura. È possibile modificare queste impostazioni all'interno della struttura di data mining, nonché impostare i flag di modellazione e la distribuzione per le colonne continue.  
   
  La definizione di una colonna della struttura di data mining deve contenere le informazioni seguenti:  
@@ -50,7 +55,7 @@ caps.handback.revision: 41
   
  Per altre informazioni sulla struttura e il modello di data mining, vedere [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  Per ulteriori informazioni su come definire e utilizzare le colonne della struttura di data mining, vedere gli argomenti seguenti:  
   
 |Argomento|Collegamenti|  
@@ -64,7 +69,7 @@ caps.handback.revision: 41
 |Vengono descritte le colonne classificate, un tipo speciale di colonna, che è possibile utilizzare per correlare una colonna della struttura di data mining a un'altra.|[Colonne classificate &#40;Data Mining&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |Vengono fornite informazioni sull'aggiunta e la modifica delle colonne della struttura di data mining.|[Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)  
   

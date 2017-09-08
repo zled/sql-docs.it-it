@@ -1,27 +1,32 @@
 ---
-title: "Unire partizioni in Analysis Services (SSAS - Multidimensionale) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partizioni [Analysis Services], unione"
-  - "unione di partizioni [Analysis Services]"
+title: Unire partizioni in Analysis Services (SSAS - multidimensionale) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], merging
+- merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Unire partizioni in Analysis Services (SSAS - Multidimensionale)
+# <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Unire partizioni in Analysis Services (SSAS - Multidimensionale)
   È possibile unire partizioni in un database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente per consolidare i dati delle tabelle dei fatti da più partizioni dello stesso gruppo di misure.  
   
  [Scenari comuni](#bkmk_Scenario)  
@@ -70,15 +75,15 @@ caps.handback.revision: 34
 ##  <a name="bkmk_Where"></a> Aggiornare l'origine partizione in seguito all'unione delle partizioni  
  Le partizioni vengono segmentate per query, ad esempio la clausola WHERE di una query SQL utilizzata per elaborare i dati, o per una tabella o query denominata che fornisce dati alla partizione. La proprietà **Source** nella partizione indica se la partizione è associata a una query o una tabella.  
   
- Quando si uniscono partizioni, il contenuto delle partizioni viene consolidato, ma la proprietà **Source** non viene aggiornata per riflettere l'ambito aggiuntivo della partizione. In questo caso, se successivamente si rielaborerà una partizione che mantiene l'elemento **Source** originale, si otterranno dati errati dalla partizione. La partizione aggregherà dati in modo errato al livello padre. Nell'esempio seguente viene illustrato questo comportamento.  
+ Quando si uniscono partizioni, il contenuto delle partizioni viene consolidato, ma la proprietà **Source** non viene aggiornata per riflettere l'ambito aggiuntivo della partizione. In questo caso, se successivamente si rielaborerà una partizione che mantiene l'elemento **Source**originale, si otterranno dati errati dalla partizione. La partizione aggregherà dati in modo errato al livello padre. Nell'esempio seguente viene illustrato questo comportamento.  
   
  **Problema**  
   
- Si supponga di disporre di un cubo contenente informazioni su tre bibite analcoliche. Il cubo include tre partizioni che utilizzano la stessa tabella dei fatti. Queste partizioni sono segmentate per prodotto. La partizione 1 contiene dati relativi a [ColaFull], la partizione 2 dati relativi a [ColaDecaf] e la partizione 3 dati relativi a [ColaDiet]. Se la partizione 3 viene unita alla partizione 2, i dati della partizione risultante (la partizione 2) saranno corretti e i dati del cubo saranno accurati. Tuttavia, quando viene elaborata la partizione 2, il relativo contenuto potrebbe essere determinato dal padre dei membri al livello del prodotto. Questo elemento padre [SoftDrinks] include [ColaFull], il prodotto incluso in Partition 1. L'elaborazione di Partition 2 consente di caricare i dati per tutte le bibite, incluso il prodotto [ColaFull], nella partizione. Il cubo conterrà pertanto dati duplicati per [ColaFull] e restituirà dati non corretti agli utenti finali.  
+ Si supponga di disporre di un cubo contenente informazioni su tre bibite analcoliche. Il cubo include tre partizioni che utilizzano la stessa tabella dei fatti. Queste partizioni sono segmentate per prodotto. La partizione 1 contiene dati relativi a [ColaFull], la partizione 2 dati relativi a [ColaDecaf] e la partizione 3 dati relativi a [ColaDiet]. Se la partizione 3 viene unita alla partizione 2, i dati della partizione risultante (la partizione 2) saranno corretti e i dati del cubo saranno accurati. Tuttavia, quando viene elaborata la partizione 2, il relativo contenuto potrebbe essere determinato dal padre dei membri al livello del prodotto. Questo elemento padre [SoftDrinks] include [ColaFull], il prodotto incluso in Partition 1. L'elaborazione di Partition 2 consente di caricare i dati per tutte le bibite, incluso il prodotto [ColaFull], nella partizione. Il cubo conterrà pertanto dati duplicati per [ColaFull] e restituirà dati non corretti agli utenti finali.  
   
  **Soluzione**  
   
- La soluzione consiste nell'aggiornare la proprietà **Source**, regolando la clausola WHERE o la query denominata oppure unendo manualmente i dati dalle tabelle dei fatti sottostanti, per garantire che l'elaborazione successiva sia accurata per via dell'ambito esteso della partizione.  
+ La soluzione consiste nell'aggiornare la proprietà **Source** , regolando la clausola WHERE o la query denominata oppure unendo manualmente i dati dalle tabelle dei fatti sottostanti, per garantire che l'elaborazione successiva sia accurata per via dell'ambito esteso della partizione.  
   
  In questo esempio, dopo aver unito la partizione 3 alla partizione 2, è possibile applicare il filtro ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') nella partizione 2 risultante per specificare che devono essere estratti dalla tabella dei fatti solo i dati relativi a [ColaDecaf] e a [ColaDiet] e che devono essere esclusi i dati relativi a [ColaFull]. In alternativa, è possibile specificare i filtri per la partizione 2 e la partizione 3 in fase di creazione, in modo che vengano combinati durante il processo di unione. In entrambi i casi, il cubo non conterrà dati duplicati dopo l'elaborazione della partizione.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 34
  Dopo aver unito le partizioni, controllare sempre l'elemento **Source** per verificare che per i dati uniti il filtro sia corretto. Se si inizia con una partizione che include dati cronologici per Q1, Q2 e Q3 e si unisce quindi Q4, è necessario modificare il filtro affinché includa Q4. In caso contrario, la successiva elaborazione della partizione genererà risultati errati. Non sarà corretta per Q4.  
   
 ##  <a name="bkmk_fact"></a> Considerazioni speciali per le partizioni segmentate dalla tabella dei fatti o dalla query denominata  
- Oltre alle query, le partizioni possono essere segmentate anche per tabella o query denominata. Se la partizione di origine e la partizione di destinazione usano la stessa tabella dei fatti in un'origine dati o in una vista origine dati, la proprietà **Source** sarà valida in seguito all'unione delle partizioni. Specifica i dati della tabella dei fatti appropriati alla partizione risultante. Poiché i fatti necessari per la partizione risultante sono contenuti nella tabella dei fatti, non è necessaria alcuna modifica alla proprietà **Source**.  
+ Oltre alle query, le partizioni possono essere segmentate anche per tabella o query denominata. Se la partizione di origine e la partizione di destinazione usano la stessa tabella dei fatti in un'origine dati o in una vista origine dati, la proprietà **Source** sarà valida in seguito all'unione delle partizioni. Specifica i dati della tabella dei fatti appropriati alla partizione risultante. Poiché i fatti necessari per la partizione risultante sono contenuti nella tabella dei fatti, non è necessaria alcuna modifica alla proprietà **Source** .  
   
  Le partizioni che utilizzano dati di più tabelle dei fatti o più query denominate richiedono ulteriori attività. In questo caso è necessario unire in modo manuale i dati della tabella dei fatti della partizione di origine alla tabella dei fatti della partizione di destinazione.  
   
@@ -95,13 +100,13 @@ caps.handback.revision: 34
   
  Per lo stesso motivo, anche le partizioni che ottengono dati segmentati da query denominate richiedono aggiornamenti. La partizione combinata deve disporre ora di una query denominata che restituisce il set di risultati combinati precedentemente ottenuto dalle query denominate distinte.  
   
-## Considerazioni sull'archiviazione di partizioni: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Considerazioni sull'archiviazione di partizioni: MOLAP  
  Quando si uniscono partizioni MOLAP, vengono uniti anche i fatti archiviati nelle strutture multidimensionali delle partizioni. Internamente viene pertanto creata una partizione consistente e completa. I fatti archiviati nelle partizioni MOLAP, tuttavia, sono copie dei fatti presenti nella tabella dei fatti. Durante la successiva elaborazione della partizione, i fatti della struttura multidimensionale vengono eliminati (solo per l'elaborazione completa e di aggiornamento) e i dati vengono copiati dalla tabella dei fatti in base all'origine dei dati e al filtro per la partizione. Se la partizione di origine utilizza una tabella dei fatti diversa da quella della partizione di destinazione, le tabelle dei fatti delle due partizioni devono essere unite manualmente per garantire la disponibilità di un set di dati completo durante l'elaborazione della partizione risultante. Ciò vale anche se le due partizioni sono basate su query denominate diverse.  
   
 > [!IMPORTANT]  
 >  Una partizione MOLAP unita contenente una tabella dei fatti incompleta include una copia unita internamente dei dati delle tabelle dei fatti e funziona in modo corretto fino a quando non viene elaborata.  
   
-## Considerazioni sull'archiviazione di partizioni: partizioni ROLAP e HOLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considerazioni sull'archiviazione di partizioni: partizioni ROLAP e HOLAP  
  Quando si uniscono partizioni HOLAP o ROLAP a cui sono associate tabelle dei fatti diverse, le tabelle dei fatti non vengono unite automaticamente. Se queste tabelle non vengono unite in modo manuale, nella partizione risultante sarà disponibile solo la tabella dei fatti della partizione di destinazione. I fatti associati alla partizione di origine non sono disponibili per il drill-down nella partizione risultante e in fase di elaborazione della partizione le aggregazioni non riepilogheranno i dati della tabella non disponibile.  
   
 > [!IMPORTANT]  
@@ -116,11 +121,11 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  Prima di unire le partizioni, copiare le informazioni relative al filtro dei dati (spesso si tratta della clausola WHERE per filtri basati su query SQL). In seguito, al termine dell'unione, sarà opportuno aggiornare la proprietà di origine della partizione che contiene i dati delle tabelle dei fatti accumulati.  
   
-1.  In Esplora oggetti espandere il nodo **Gruppi di misure** del cubo contenente le partizioni che si desidera unire, quindi espandere **Partizioni** e fare clic con il pulsante destro del mouse sulla partizione di destinazione dell'operazione di unione. Se ad esempio si spostano dati delle tabelle dei fatti trimestrali in una partizione in cui sono archiviati dati delle tabelle dei fatti annuali, selezionare la partizione che contiene i dati delle tabelle dei fatti annuali.  
+1.  In Esplora oggetti espandere il nodo **Gruppi di misure** del cubo contenente le partizioni che si desidera unire, quindi espandere **Partizioni**e fare clic con il pulsante destro del mouse sulla partizione di destinazione dell'operazione di unione. Se ad esempio si spostano dati delle tabelle dei fatti trimestrali in una partizione in cui sono archiviati dati delle tabelle dei fatti annuali, selezionare la partizione che contiene i dati delle tabelle dei fatti annuali.  
   
-2.  Fare clic su **Unisci partizioni** per aprire la finestra di dialogo **Unisci partizione \<nome partizione>**.  
+2.  Fare clic su **Unisci partizioni** per aprire la **Unisci partizione \<nome partizione >** la finestra di dialogo.  
   
-3.  In **Partizioni di origine** selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
+3.  In **Partizioni di origine**selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
   
     > [!NOTE]  
     >  Le partizioni di origine verranno immediatamente eliminate in seguito all'unione con le partizioni di destinazione. Aggiornare la cartella Partizioni per aggiornarne i contenuto in seguito all'unione.  
@@ -132,13 +137,13 @@ caps.handback.revision: 34
 ##  <a name="bkmk_partitionsXMLA"></a> Come unire partizioni mediante XMLA  
  Per informazioni, vedere l'argomento [Unione di partizioni &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborazione di oggetti di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Creare e gestire una partizione remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Creare e gestire una partizione remota &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Impostare tabelle writeback delle partizioni](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Partizioni abilitate per la scrittura](../Topic/Write-Enabled%20Partitions.md)   
- [Configurare l'archivio di stringhe per dimensioni e partizioni](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Configurare l'archiviazione delle stringhe per partizioni e dimensioni](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

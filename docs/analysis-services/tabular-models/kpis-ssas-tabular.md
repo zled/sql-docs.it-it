@@ -1,35 +1,30 @@
 ---
-title: "Indicatori KPI (SSAS tabulare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gli indicatori KPI (SSAS tabulare) | Documenti Microsoft
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Indicatori KPI (SSAS tabulare)
-  In un modello tabulare un indicatore di prestazioni chiave (*KPI*) viene usato per misurare le prestazioni di un valore, definito da una misura di *base*, rispetto a un valore di *destinazione*, definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
-  
- Sezioni dell'argomento:  
-  
--   [Vantaggi](#bkmk_benefits)  
-  
--   [Esempio](#bkmk_example)  
-  
--   [Creare e modificare gli indicatori di prestazioni chiave](#bkmk_create)  
-  
--   [Attività correlate](#bkmk_related_tasks)  
+# <a name="kpis"></a>KPI
+  In un modello tabulare un indicatore di prestazioni chiave ( *KPI* ) viene usato per misurare le prestazioni di un valore, definito da una misura di *base* , rispetto a un valore di *destinazione* , definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Nella terminologia aziendale un indicatore KPI rappresenta una misurazione quantificabile per la valutazione degli obiettivi aziendali e viene stimato con una frequenza spesso elevata. Il reparto vendite di un'organizzazione può ad esempio utilizzare un indicatore KPI per misurare il profitto lordo mensile rispetto al profitto lordo previsto. Il reparto contabilità può misurare le spese mensili rispetto ai ricavi per valutare i costi, mentre un reparto risorse umane può misurare l'avvicendamento trimestrale dei dipendenti. Ognuno di questi rappresenta un esempio di utilizzo di un indicatore KPI. I professionisti aziendali utilizzano spesso gli indicatori di prestazioni chiave raggruppati in una scorecard aziendale per ottenere un riepilogo cronologico immediato e accurato del successo aziendale o per identificare le tendenze.  
@@ -48,7 +43,7 @@ caps.handback.revision: 13
 ##  <a name="bkmk_example"></a> Esempio  
  Il responsabile vendite di Adventure Works desidera creare una tabella pivot da utilizzare per visualizzare rapidamente se i dipendenti addetti alle vendite soddisfano o meno le rispettive quote di vendite per un determinato periodo (anno). Nella tabella pivot dovranno essere visualizzati, per ogni dipendente, l'importo in dollari delle vendite effettive, l'importo in dollari della quota di vendite e un semplice grafico con l'indicazione dello stato, ovvero se la quota di vendite di ognuno è inferiore, uguale o superiore a quella definita. Desidera inoltre poter sezionare i dati per anno.  
   
- A tale scopo, il responsabile vendite supporta lo sviluppatore di soluzioni di Business Intelligence dell'organizzazione aggiungendo un indicatore KPI delle vendite al modello tabulare di AdventureWorks. Il responsabile vendite utilizzerà quindi [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] per connettersi al modello tabulare di Adventure Works come origine dati e creerà una tabella pivot con i campi (misure e KPI) e i filtri dei dati per analizzare se la forza vendita soddisfa o meno le rispettive quote.  
+ A tale scopo, il responsabile vendite supporta lo sviluppatore di soluzioni di Business Intelligence dell'organizzazione aggiungendo un indicatore KPI delle vendite al modello tabulare di AdventureWorks. Il responsabile vendite utilizzerà quindi Excel per connettersi al modello tabulare Adventure Works come origine dati e creare una tabella pivot con i campi (misure e KPI) e i filtri dei dati per analizzare o meno la forza vendita soddisfa rispettive quote.  
   
  Nel modello viene creata una misura nella colonna SalesAmount della tabella FactResellerSales che indica l'importo in dollari delle vendite effettive per ogni dipendente addetto alle vendite. Tale misura definirà il valore di base dell'indicatore KPI.  
   
@@ -75,7 +70,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Il responsabile vendite può quindi sezionare per anno l'importo delle vendite effettive, l'importo della quota di vendite e lo stato per ogni dipendente addetto alle vendite. Può inoltre analizzare le tendenze di vendita negli anni per determinare se è necessario o meno modificare la quota di vendite per un dipendente.  
   
-##  <a name="bkmk_create"></a> Creare e modificare gli indicatori di prestazioni chiave  
+##  <a name="bkmk_create"></a> Create and edit KPIs  
  Per creare gli indicatori di prestazioni chiave in Progettazione modelli, verrà utilizzata la finestra di dialogo relativa al KPI. Dal momento che gli indicatori KPI devono essere associati a una misura, un indicatore KPI viene creato estendendo una misura che restituisce un valore di base, quindi creando una misura che restituisce un valore di destinazione, oppure immettendo un valore assoluto. Dopo aver definito la misura di base (valore) e il valore di destinazione, è possibile definire i parametri della soglia di stato tra i valori di base e di destinazione. Lo stato viene visualizzato in formato grafico tramite icone, barre, grafici o colori selezionabili. I valori di base e di destinazione, nonché lo stato, possono essere aggiunti a un report o a una tabella pivot come valori che possono essere sezionati rispetto ad altri campi dati.  
   
  Per visualizzare la finestra di dialogo dell'indicatore KPI, nella griglia delle misure per una tabella fare clic con il pulsante destro del mouse su una misura che verrà utilizzata come valore di base, quindi fare clic su **Crea KPI**. Dopo che una misura è stata estesa a un indicatore KPI come valore di base, verrà visualizzata un'icona insieme al nome della misura nella griglia delle misure che identifica la misura come associata a un indicatore KPI.  
@@ -84,10 +79,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Creare e gestire indicatori KPI &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Viene descritto come creare un indicatore KPI con una misura di base, una misura di destinazione e soglie di stato.|  
+|[Creare e gestire indicatori KPI.](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Viene descritto come creare un indicatore KPI con una misura di base, una misura di destinazione e soglie di stato.|  
   
-## Vedere anche  
- [Misure &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Prospettive &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Misure](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Prospettive](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

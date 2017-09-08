@@ -1,28 +1,33 @@
 ---
-title: "Creare un report di convalida incrociata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "convalida di modelli di data mining"
-  - "strutture di data mining [Analysis Services], procedure"
-  - "convalida incrociata [data mining]"
-  - "deviazione statistica standard"
+title: Creare un Report di convalida incrociata | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validating data mining models
+- mining structures [Analysis Services], how-to topics
+- cross-validation [data mining]
+- statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare un report di convalida incrociata
+# <a name="create-a-cross-validation-report"></a>Creare un report di convalida incrociata
   In questo argomento viene illustrata la creazione di un report di convalida incrociata utilizzando la scheda Grafico di accuratezza in Progettazione modelli di data mining. Per informazioni generali sui report di convalida incrociata e sulle misure statistiche in esso contenute, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Un report di convalida incrociata è fondamentalmente diverso da un grafico di accuratezza, ad esempio una matrice di classificazione.  
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
 -   È possibile creare un report di convalida incrociata su un modello di clustering che non dispone di un attributo stimabile solo se la struttura di data mining non supporta altri attributi stimabili.  
   
-### Selezionare una struttura di data mining  
+### <a name="select-a-mining-structure"></a>Selezionare una struttura di data mining  
   
 1.  Aprire Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 17
   
 5.  Fare clic sulla scheda **Convalida incrociata** .  
   
-### Impostare le opzioni di convalida incrociata  
+### <a name="set-cross-validation-options"></a>Impostare le opzioni di convalida incrociata  
   
 1.  Nella scheda **Convalida incrociata** per **FoldCount**fare clic sulla freccia giù per selezionare un numero compreso tra 1 e 10. Il valore predefinito è 10.  
   
      **FoldCount** rappresenta il numero di partizioni che verranno create all'interno del set di dati originali. Se si imposta FoldCount su 1, il set di training verrà utilizzato senza partizionamento.  
   
-2.  Per **TargetAttribute**fare clic sulla freccia verso il basso e selezionare una colonna nell'elenco. Se si tratta di un modello di clustering, selezionare **#Cluster** per indicare che il modello non dispone di un modello stimabile. Si noti che il valore **#Cluster** è disponibile solo quando la struttura di data mining non supporta altri tipi di attributi stimabili.  
+2.  Per **TargetAttribute**fare clic sulla freccia verso il basso e selezionare una colonna nell'elenco. Se si tratta di un modello di clustering, selezionare **#Cluster** per indicare che il modello non dispone di un modello stimabile. Si noti che il valore **#Cluster**è disponibile solo quando la struttura di data mining non supporta altri tipi di attributi stimabili.  
   
      È possibile selezionare solo un attributo stimabile per report. Per impostazione predefinita, tutti i modelli correlati che includono lo stesso attributo stimabile vengono inclusi nel report.  
   
@@ -74,15 +79,15 @@ caps.handback.revision: 17
   
 6.  Fare clic su **Ottieni risultati**.  
   
-### Stampare il report di convalida incrociata  
+### <a name="print-the-cross-validation-report"></a>Stampare il report di convalida incrociata  
   
-1.  Fare clic con il pulsante destro del mouse sul report completato nella scheda **Convalida incrociata**.  
+1.  Fare clic con il pulsante destro del mouse sul report completato nella scheda **Convalida incrociata** .  
   
 2.  Scegliere **Stampa** o **Anteprima di stampa** dal menu di scelta rapida per controllare il report prima di stamparlo.  
   
-### Creare una copia del report in Microsoft Excel  
+### <a name="create-a-copy-of-the-report-in-microsoft-excel"></a>Creare una copia del report in Microsoft Excel  
   
-1.  Fare clic con il pulsante destro del mouse sul report completato nella scheda **Convalida incrociata**.  
+1.  Fare clic con il pulsante destro del mouse sul report completato nella scheda **Convalida incrociata** .  
   
 2.  Dal menu di scelta rapida scegliere **Seleziona tutto**.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 17
   
 4.  Incollare la selezione in una cartella di lavoro di Excel aperta. Se si utilizza l'opzione **Incolla** , il report viene incollato in Excel in formato HTML, mantenendo la formattazione di righe e colonne. Se si usano le opzioni **Incolla speciale** per testo o testo Unicode, il report viene incollato in formato delimitato da righe.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

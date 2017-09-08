@@ -1,24 +1,29 @@
 ---
-title: "Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare una connessione BI Semantic Model a una cartella di lavoro di Power Pivot | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f5171b30d867a9e2bd676ff1895ad992b56c5e96
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot
+# <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot
   Usare le informazioni di questo argomento per impostare una connessione BI Semantic Model che reindirizza a una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella stessa farm.  
   
  Dopo avere creato una connessione BISM e configurato le autorizzazioni di SharePoint, sarà possibile utilizzare la connessione come origine dati per i report di Excel o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
@@ -38,9 +43,9 @@ caps.handback.revision: 10
 ##  <a name="bkmk_prereq"></a> Verificare i prerequisiti  
  Per creare un file di connessione BISM, è necessario disporre delle autorizzazioni di collaborazione.  
   
- È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per altre informazioni, vedere [Aggiungere un tipo di contenuto Connessione BI Semantic Model a una raccolta &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md).  
+ È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per altre informazioni, vedere [Aggiungere un tipo di contenuto Connessione BI Semantic Model a una raccolta &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
- È necessario conoscere l'URL della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per cui si imposta una connessione BI Semantic Model, ad esempio http://adventure-works/shared documents/myworkbook.xlsx. La cartella di lavoro deve essere nella stessa farm.  
+ È necessario conoscere l'URL del [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro per cui si imposta una connessione BI semantic model (ad esempio, `http://adventure-works/shared documents/myworkbook.xlsx`). La cartella di lavoro deve essere nella stessa farm.  
   
  Tutti i computer e gli utenti che partecipano nella sequenza di connessione devono essere nello stesso dominio o nel dominio attendibile (attendibilità bidirezionale).  
   
@@ -48,15 +53,15 @@ caps.handback.revision: 10
   
 1.  Nella raccolta che conterrà la connessione BISM, fare clic su **Documenti** sulla barra multifunzione di SharePoint. Fare clic sulla freccia GIÙ su Nuovo documento e selezionare **File di connessione BISM** per aprire la pagina Nuova connessione BISM.  
   
-     ![Sottomenu Nuovo documento in una raccolta di SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "Sottomenu Nuovo documento in una raccolta di SharePoint")  
+     ![Sottomenu nuovo documento in una raccolta di SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "sottomenu nuovo documento in una raccolta di SharePoint")  
   
-2.  Impostare la proprietà **Server** sull'URL di SharePoint della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], ad esempio **http://mysharepoint/shared documents/myWorkbook.xlsx**. In una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint i dati possono essere caricati in qualsiasi server nella farm. Per questo motivo, le connessioni delle origini dati ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consentono di specificare solo il percorso alla cartella di lavoro. Il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] determina il server con cui vengono caricati i dati.  
+2.  Impostare la proprietà **Server** sull'URL di SharePoint della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ad esempio `http://mysharepoint/shared documents/myWorkbook.xlsx`. In una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint i dati possono essere caricati in qualsiasi server nella farm. Per questo motivo, le connessioni delle origini dati ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consentono di specificare solo il percorso alla cartella di lavoro. Il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] determina il server con cui vengono caricati i dati.  
   
      Non usare la proprietà **Database** . Questa proprietà non viene usata quando si specifica il percorso di una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
      La pagina dovrebbe essere simile a quanto illustrato nella figura seguente.  
   
-     ![Pagina della connessione BISM in cui viene mostrato l'URL alla cartella di lavoro](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "Pagina della connessione BISM in cui viene mostrato l'URL alla cartella di lavoro")  
+     ![Pagina di connessione BISM con l'URL alla cartella di lavoro](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "pagina della connessione BISM con l'URL alla cartella di lavoro")  
   
      Facoltativamente, se si dispone di autorizzazioni di SharePoint per la cartella di lavoro, viene eseguito un passaggio di convalida aggiuntivo, per verificare la validità del percorso. Se non si dispone dell'autorizzazione per accedere ai dati, è possibile salvare la connessione BISM senza la risposta della convalida.  
   
@@ -97,9 +102,9 @@ caps.handback.revision: 10
 ##  <a name="bkmk_next"></a> Passaggi successivi  
  Dopo avere creato e protetto una connessione BISM è possibile specificarla come origine dati. Per altre informazioni, vedere [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessione BI Semantic Model di PowerPivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Utilizzare una connessione BI Semantic Model in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Creare una connessione BISM a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

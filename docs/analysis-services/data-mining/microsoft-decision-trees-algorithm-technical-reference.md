@@ -1,38 +1,43 @@
 ---
-title: "Guida di riferimento tecnico per l&#39;algoritmo Microsoft Decision Trees | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MAXIMUM_INPUT_ATTRIBUTES - parametro"
-  - "parametro SPLIT_METHOD"
-  - "MINIMUM_SUPPORT - parametro"
-  - "parametro MAXIMUM_OUTPUT_ATTRIBUTES"
-  - "parametro FORCED_REGRESSOR"
-  - "algoritmi di alberi delle decisioni [Analysis Services]"
-  - "alberi delle decisioni [Analysis Services]"
-  - "COMPLEXITY_PENALTY - parametro"
-  - "parametro SCORE_METHOD"
+title: Microsoft Decision Trees riferimento tecnico per l'algoritmo | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- SPLIT_METHOD parameter
+- MINIMUM_SUPPORT parameter
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- FORCED_REGRESSOR parameter
+- decision tree algorithms [Analysis Services]
+- decision trees [Analysis Services]
+- COMPLEXITY_PENALTY parameter
+- SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c098b5144a06cae6afb5b79ca4bf395a68768bd3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Guida di riferimento tecnico per l&#39;algoritmo Microsoft Decision Trees
+# <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo ibrido che incorpora diversi metodi per la creazione di un albero e supporta più attività analitiche, tra le quali sono incluse la regressione, la classificazione e l'associazione. Tale algoritmo supporta la modellazione di attributi discreti e continui.  
   
  In questo argomento viene illustrata l'implementazione dell'algoritmo, viene mostrato come personalizzarne il comportamento in base alle diverse attività e vengono forniti collegamenti a ulteriori informazioni sull'esecuzione di query sui modelli di albero delle decisioni.  
   
-## Implementazione dell'algoritmo Decision Trees  
+## <a name="implementation-of-the-decision-trees-algorithm"></a>Implementazione dell'algoritmo Decision Trees  
  L'algoritmo Microsoft Decision Trees applica l'approccio Bayes ai modelli di interazione causale apprendimento ottenendo le distribuzioni posteriori approssimative per i modelli. Per una spiegazione dettagliata di questo approccio, vedere il white paper nel sito Microsoft Research relativo alle [informazioni su struttura e parametri](http://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409).  
   
  La metodologia di valutazione del valore informativo delle *conoscenze precedenti* necessarie per l'apprendimento si basa sul presupposto dell' *equivalenza di probabilità*. Questo presupposto indica che i dati non devono permettere la discriminazione delle strutture di rete che altrimenti rappresenterebbero le stesse asserzioni dell'indipendenza condizionale. Si presuppone che per ogni case sia presente una singola rete Bayes con probabilità a priori, cui è associata una sola misura di confidenza.  
@@ -41,26 +46,26 @@ caps.handback.revision: 30
   
  L'algoritmo Microsoft Decision Trees utilizza diversi metodi per calcolare l'albero ideale. Il metodo utilizzato dipende dal tipo di attività, ovvero regressione lineare, classificazione o analisi di associazione. Un solo modello può contenere più alberi per i diversi attributi stimabili. Ogni albero può inoltre contenere più rami, a seconda del numero di attributi e valori presenti nei dati. La forma e la profondità dell'albero incorporato in un determinato modello dipendono dal metodo di valutazione e dagli altri parametri utilizzati. Le modifiche apportate ai parametri possono influire anche sul punto in cui i nodi si dividono.  
   
-### Compilazione dell'albero  
+### <a name="building-the-tree"></a>Compilazione dell'albero  
  Quando l'algoritmo Microsoft Decision Trees crea il set dei possibili valori di input, esegue la *feature selection* per identificare gli attributi e i valori che forniscono il maggior numero di informazioni ignorando i valori che sono molto rari. L'algoritmo inoltre inserisce i valori in *contenitori*per crearne raggruppamenti che possano essere elaborati come singole unità al fine di ottimizzare le prestazioni.  
   
  La compilazione di un albero avviene mediante la definizione delle correlazioni tra un input e il risultato di destinazione. Dopo aver correlato tutti gli attributi, l'algoritmo identifica l'attributo specifico che separa i risultati in modo più netto. Il punto di separazione ideale viene misurato mediante un'equazione che calcola l'Information Gain. L'attributo che presenta il miglior punteggio in termini di Information Gain viene utilizzato per dividere i case in subset che vengono quindi analizzati in modo ricorsivo dallo stesso processo fino a quando non sia possibile suddividere ulteriormente l'albero.  
   
  L'equazione esatta utilizzata per valutare l'Information Gain dipende dai parametri impostati quando è stato creato l'algoritmo, dal tipo di dati della colonna stimabile e dal tipo di dati dell'input.  
   
-### Input discreti e continui  
+### <a name="discrete-and-continuous-inputs"></a>Input discreti e continui  
  Quando sia l'attributo stimabile sia gli input sono discreti, il conteggio dei risultati per input implica la creazione di una matrice e la generazione di punteggi per ogni cella della matrice.  
   
- Quando invece l'attributo stimabile è discreto e gli input sono continui, l'input delle colonne continue viene discretizzato automaticamente. È possibile accettare l'impostazione predefinita e impostare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sulla ricerca automatica del numero ottimale di contenitori o controllare il modo in cui gli input continui vengono discretizzati impostando le proprietà <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> e <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>. Per altre informazioni, vedere [Modificare la discretizzazione di una colonna in un modello di data mining](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
+ Quando invece l'attributo stimabile è discreto e gli input sono continui, l'input delle colonne continue viene discretizzato automaticamente. È possibile accettare l'impostazione predefinita e impostare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sulla ricerca automatica del numero ottimale di contenitori o controllare il modo in cui gli input continui vengono discretizzati impostando le proprietà <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> e <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> . Per altre informazioni, vedere [Modificare la discretizzazione di una colonna in un modello di data mining](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
   
  Per gli attributi continui, l'algoritmo utilizza una regressione lineare per determinare le divisioni dell'albero delle decisioni.  
   
  Quando l'attributo stimabile è un tipo di dati numerico continuo, la funzionalità di selezione degli attributi viene applicata anche agli output in modo da ridurre il numero possibile di risultati e da velocizzare la compilazione del modello. È possibile modificare la soglia per la funzionalità di selezione degli attributi e di conseguenza aumentare o ridurre il numero di valori possibili impostando il parametro MAXIMUM_OUTPUT_ATTRIBUTES.  
   
- Per una spiegazione più dettagliata del funzionamento dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees nel caso di colonne stimabili discrete, vedere l'articolo relativo alle [informazioni sulle reti Bayesiane riguardanti la combinazione di conoscenza e dati statistici](http://go.microsoft.com/fwlink/?LinkId=45963). Per altre informazioni sul funzionamento dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees nel caso di colonne stimabili continue, vedere l'appendice dell'articolo [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966) (Modelli di albero autoregressivi per l'analisi delle serie temporali).  
+ Per una spiegazione più dettagliata del funzionamento dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees nel caso di colonne stimabili discrete, vedere l'articolo relativo alle [informazioni sulle reti Bayesiane riguardanti la combinazione di conoscenza e dati statistici](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf). Per altre informazioni sul funzionamento dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees nel caso di colonne stimabili continue, vedere l'appendice dell'articolo [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(Modelli di albero autoregressivi per l'analisi delle serie temporali).  
   
-### Metodi di valutazione e caratteristica di selezione degli attributi   
- L'algoritmo Microsoft Decision Trees offre tre formule per valutare l'Information Gain, ovvero l'entropia di Shannon, la rete Bayes con probabilità a priori K2 e la rete Bayes Dirichlet con probabilità a priori a distribuzione uniforme. Tutti e tre i metodi sono consolidati nel campo del data mining. È consigliabile provare a utilizzare diversi parametri e metodi di valutazione in modo da individuare quelli che forniscono i migliori risultati. Per ulteriori informazioni sui metodi di valutazione, vedere [Feature Selection](../Topic/Feature%20Selection.md).  
+### <a name="scoring-methods-and-feature-selection"></a>Metodi di valutazione e caratteristica di selezione degli attributi  
+ L'algoritmo Microsoft Decision Trees offre tre formule per valutare l'Information Gain, ovvero l'entropia di Shannon, la rete Bayes con probabilità a priori K2 e la rete Bayes Dirichlet con probabilità a priori a distribuzione uniforme. Tutti e tre i metodi sono consolidati nel campo del data mining. È consigliabile provare a utilizzare diversi parametri e metodi di valutazione in modo da individuare quelli che forniscono i migliori risultati. Per ulteriori informazioni sui metodi di valutazione, vedere [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
  Tutti gli algoritmi di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usano automaticamente la selezione di funzionalità per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la funzionalità di selezione degli attributi dipende dall'algoritmo impiegato per la compilazione del modello. I parametri dell'algoritmo che controllano la caratteristica di selezione degli attributi per un modello di albero delle decisioni sono MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 30
 |Decision Trees|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
 |Linear Regression|Punteggio di interesse|L'algoritmo Linear Regression può utilizzare solo il punteggio di interesse, perché supporta solo colonne continue.|  
   
-### Scalabilità e prestazioni  
+### <a name="scalability-and-performance"></a>Scalabilità e prestazioni  
  La classificazione è un'importante strategia di data mining. In genere, la quantità di informazioni necessaria a classificare i case cresce in modo direttamente proporzionale al numero di record di input. Ciò limita le dimensioni dei dati classificabili. L'algoritmo Microsoft Decision Trees utilizza i metodi seguenti per risolvere questi problemi, migliorare le prestazioni ed eliminare le restrizioni relative alla memoria:  
   
 -   Funzionalità di selezione degli attributi per ottimizzare la scelta degli attributi.  
@@ -93,15 +98,15 @@ caps.handback.revision: 30
 -   Limitare il numero di valori discreti di qualsiasi attributo a 10 o un numero inferiore. È possibile provare a raggruppare i valori in modi e modelli diversi.  
   
     > [!NOTE]  
-    >  È possibile utilizzare gli strumenti di esplorazione dei dati disponibili in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] per visualizzare la distribuzione di valori nei dati e raggruppare i valori in modo appropriato prima di dare inizio al data mining. Per altre informazioni, vedere [Attività Profiling dati e visualizzatore](../../integration-services/control-flow/data-profiling-task-and-viewer.md). È inoltre possibile usare i [componenti aggiuntivi Data Mining per Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51) per esplorare, raggruppare e rietichettare i dati in Microsoft Excel.  
+    >  È possibile utilizzare gli strumenti di esplorazione dei dati disponibili in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] per visualizzare la distribuzione di valori nei dati e raggruppare i valori in modo appropriato prima di dare inizio al data mining. Per altre informazioni, vedere [Attività Profiling dati e visualizzatore](../../integration-services/control-flow/data-profiling-task-and-viewer.md). È inoltre possibile usare i [componenti aggiuntivi Data Mining per Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)per esplorare, raggruppare e rietichettare i dati in Microsoft Excel.  
   
-## Personalizzazione dell'algoritmo Decision Trees  
+## <a name="customizing-the-decision-trees-algorithm"></a>Personalizzazione dell'algoritmo Decision Trees  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees supporta parametri che influiscono sulle prestazioni e sull'accuratezza del modello di data mining risultante. È anche possibile impostare flag di modellazione nelle colonne del modello o della struttura di data mining per controllare la modalità di elaborazione dei dati.  
   
 > [!NOTE]  
 >  L'algoritmo Microsoft Decision Trees è disponibile in tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia alcuni parametri avanzati per la personalizzazione del comportamento dell'algoritmo Microsoft Decision Trees sono disponibili per l'uso solo in versioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
-### Impostazione dei parametri dell'algoritmo  
+### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
  Nella tabella seguente vengono descritti i parametri che è possibile utilizzare con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees.  
   
  *COMPLEXITY_PENALTY*  
@@ -119,7 +124,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Impostando questo parametro, l'algoritmo viene forzato a tentare di utilizzare l'attributo come regressore. L'eventualità che l'attributo venga realmente utilizzato come regressore nel modello finale dipende invece dai risultati dell'analisi. Per individuare le colonne utilizzate come regressori, è possibile eseguire query sul contenuto del modello.  
   
- [Disponibile solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
+ [Disponibile solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ]  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
  Definisce il numero di attributi di input che l'algoritmo è in grado di gestire prima di richiamare la funzionalità di selezione degli attributi.  
@@ -157,7 +162,7 @@ caps.handback.revision: 30
   
  Il valore predefinito è 4 o BDE.  
   
- Per una spiegazione relativa ai metodi di valutazione, vedere [Feature Selection](../Topic/Feature%20Selection.md).  
+ Per una spiegazione relativa ai metodi di valutazione, vedere [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
  *SPLIT_METHOD*  
  Determina il metodo utilizzato per la divisione del nodo. Sono disponibili le opzioni seguenti:  
@@ -170,15 +175,15 @@ caps.handback.revision: 30
   
  Il valore predefinito è 3.  
   
-### Flag di modellazione  
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees supporta i flag di modellazione seguenti. Quando si crea la struttura o il modello di data mining, i flag di modellazione vengono definiti per specificare la modalità di gestione dei valori presenti in ogni colonna durante l'analisi. Per altre informazioni, vedere [Flag di modellazione &#40;Data mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
+### <a name="modeling-flags"></a>Flag di modellazione  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees supporta i flag di modellazione seguenti. Quando si crea la struttura o il modello di data mining, i flag di modellazione vengono definiti per specificare la modalità di gestione dei valori presenti in ogni colonna durante l'analisi. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
 |Flag di modellazione|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Indica che la colonna verrà considerata come se presentasse due stati possibili: **Missing** e **Existing**. Un valore Null è un valore mancante.<br /><br /> Si applica alle colonne del modello di data mining.|  
 |NOT NULL|Indica che la colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alle colonne della struttura di data mining.|  
   
-### Regressori nei modelli di albero delle decisioni  
+### <a name="regressors-in-decision-tree-models"></a>Regressori nei modelli di albero delle decisioni  
  Anche se non si utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, qualsiasi modello di albero delle decisioni con input e output numerici continui può contenere nodi che rappresentano una regressione su un attributo continuo.  
   
  Non è necessario specificare che una colonna di dati numerici continui rappresenta un regressore. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees consentirà di utilizzare automaticamente la colonna come potenziale regressore e di suddividere il set di dati in aree con modelli significativi anche se non si imposta il flag REGRESSOR nella colonna.  
@@ -187,10 +192,10 @@ caps.handback.revision: 30
   
  Se, ad esempio, si stima il comportamento di acquisto dei clienti utilizzando **Income** come attributo ed è stato impostato il flag di modellazione REGRESSOR nella colonna, l'algoritmo tenta innanzitutto di adattare i valori **Income** utilizzando una formula di regressione standard. Se la deviazione è eccessiva, la formula di regressione viene abbandonata e l'albero viene diviso in base a un altro attributo. L'algoritmo Decision Trees tenta quindi di adattare un regressore per il reddito in ognuno dei rami dopo la divisione.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Un modello di albero delle decisioni deve contenere una colonna chiave, le colonne di input e almeno una colonna stimabile.  
   
-### Colonne di input e stimabili  
+### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
@@ -201,9 +206,9 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Esempi di query sul modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
+ [Esempi di Query modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
  [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

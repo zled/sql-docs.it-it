@@ -1,30 +1,35 @@
 ---
-title: "Modelli di data mining (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmi [data mining]"
-  - "mining models [Analysis Services]"
-  - "architettura logica [Analysis Services - Dati multidimensionali]"
-  - "proprietà [Analysis Services]"
-  - "modelli di data mining [Analysis Services], informazioni"
-  - "architettura [Analysis Services]"
+title: Modelli di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services]
+- logical architecture [Analysis Services Multidimensional Data]
+- properties [Analysis Services]
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modelli di data mining (Analysis Services - Data mining)
+# <a name="mining-models-analysis-services---data-mining"></a>Modelli di data mining (Analysis Services - Data mining)
   Un *modello di data mining* viene creato applicando un algoritmo ai dati, ma è molto più di un algoritmo o di un contenitore di metadati: è un set di dati, statistiche e modelli che possono essere applicati a nuovi dati per generare stime ed eseguire inferenze sulle relazioni.  
   
  In questa sezione viene presentato un modello di data mining e vengono illustrati i relativi utilizzi, l'architettura di base di modelli e strutture, le proprietà dei modelli di data mining, nonché le modalità per creare e utilizzare tali modelli.  
@@ -46,7 +51,7 @@ caps.handback.revision: 37
   
  Un modello di data mining rimane vuoto finché i dati forniti dalla struttura di data mining non vengono elaborati e analizzati. Dopo essere stato elaborato, un modello di data mining contiene metadati, risultati e associazioni alla struttura di data mining.  
   
- ![Modello contenente metadati, modelli e associazioni](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "Modello contenente metadati, modelli e associazioni")  
+ ![modello contiene i metadati, i modelli e associazioni](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "modello contiene i metadati, i modelli e associazioni")  
   
  I metadati consentono di specificare il nome del modello e il server in cui è archiviato, nonché una definizione del modello contenente le colonne della struttura di data mining utilizzate per la compilazione del modello, le definizioni dei filtri applicati durante l'elaborazione del modello e l'algoritmo utilizzato per analizzare i dati. Tutte queste scelte, ovvero le colonne dei dati e i relativi tipi di dati, i filtri e gli algoritmi, influiscono in maniera rilevante sui risultati dell'analisi.  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 37
   
 -   **Proprietà Algorithm** Specifica l'algoritmo usato per creare il modello. Gli algoritmi disponibili dipendono dal provider utilizzato. Per un elenco degli algoritmi disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). La proprietà **Algorithm** si applica al modello di data mining e può essere impostata solo una volta per ogni modello. È possibile modificare l'algoritmo in un secondo momento, tuttavia alcune colonne nel modello di data mining potrebbero diventare non valide se non sono supportate dall'algoritmo scelto. È necessario rielaborare sempre il modello dopo aver apportato una modifica a questa proprietà.  
   
--   **Proprietà Usage** Definisce il modo in cui ogni colonna viene usata dal modello. È possibile definire l'utilizzo delle colonne come **Input**, **Stima**, **Solo stima** o **Chiave**. La proprietà **Usage** si applica a singole colonne del modello di data mining e deve essere impostata singolarmente per ogni colonna inclusa in un modello. Se la struttura contiene una colonna che non viene usata nel modello, l'utilizzo è impostato su **Ignora**. I nomi o gli indirizzi di posta elettronica dei clienti possono essere esempi di dati che potrebbero essere inclusi nella struttura di data mining, ma non utilizzati per l'analisi. In questo modo è possibile eseguirvi query in un secondo momento senza dover includerli durante la fase di analisi.  
+-   **Proprietà Usage** Definisce il modo in cui ogni colonna viene usata dal modello. È possibile definire l'utilizzo delle colonne come **Input**, **Stima**, **Solo stima**o **Chiave**. La proprietà **Usage** si applica a singole colonne del modello di data mining e deve essere impostata singolarmente per ogni colonna inclusa in un modello. Se la struttura contiene una colonna che non viene usata nel modello, l'utilizzo è impostato su **Ignora**. I nomi o gli indirizzi di posta elettronica dei clienti possono essere esempi di dati che potrebbero essere inclusi nella struttura di data mining, ma non utilizzati per l'analisi. In questo modo è possibile eseguirvi query in un secondo momento senza dover includerli durante la fase di analisi.  
   
  È possibile modificare il valore delle proprietà del modello di data mining dopo aver creato un modello. Tuttavia, qualsiasi modifica, anche al nome del modello di data mining, richiede la rielaborazione del modello. Dopo aver rielaborato il modello, è possibile visualizzare risultati diversi.  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 37
   
  È inoltre possibile creare query sul modello di data mining per eseguire stime oppure recuperare i metadati o gli schemi creati dal modello. Le query vengono create tramite DMX (Data Mining Extensions).  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
@@ -132,7 +137,7 @@ caps.handback.revision: 37
 |Informazioni sull'utilizzo dei visualizzatori di data mining personalizzati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Esempi di diversi tipi di query che è possibile utilizzare rispetto ai modelli di data mining.|[Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Utilizzare i collegamenti seguenti per ottenere informazioni più specifiche sull'utilizzo dei modelli di data mining  
   
 |Attività|Collegamento|  
@@ -144,7 +149,7 @@ caps.handback.revision: 37
 |Popolare modelli con i dati o aggiornare i dati in un modello|[Elaborare un modello di data mining](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |Utilizzare i modelli OLAP|[Creare una dimensione di data mining](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti di database &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

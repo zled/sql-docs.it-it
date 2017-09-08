@@ -1,38 +1,43 @@
 ---
-title: "Riferimento tecnico per l&#39;algoritmo Microsoft Association Rules | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MINIMUM_ITEMSET_SIZE - parametro"
-  - "MAXIMUM_SUPPORT - parametro"
-  - "association algorithms [Analysis Services]"
-  - "MINIMUM_SUPPORT - parametro"
-  - "OPTIMIZED_PREDICTION_COUNT - parametro"
-  - "associazioni [Analysis Services]"
-  - "MAXIMUM_ITEMSET_COUNT - parametro"
-  - "MAXIMUM_ITEMSET_SIZE - parametro"
-  - "MINIMUM_PROBABILITY - parametro"
+title: Riferimento tecnico per l'algoritmo Microsoft Association Rules | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MINIMUM_ITEMSET_SIZE parameter
+- MAXIMUM_SUPPORT parameter
+- association algorithms [Analysis Services]
+- MINIMUM_SUPPORT parameter
+- OPTIMIZED_PREDICTION_COUNT parameter
+- associations [Analysis Services]
+- MAXIMUM_ITEMSET_COUNT parameter
+- MAXIMUM_ITEMSET_SIZE parameter
+- MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a029a6efad9ebdbc15e42d593db28f9530b1b8e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Riferimento tecnico per l&#39;algoritmo Microsoft Association Rules
+# <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un'implementazione semplice del noto algoritmo Apriori.  
   
  Sia l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees che l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules possono essere usati per analizzare associazioni, ma le regole individuate da ognuno di essi possono essere diverse. In un modello di albero delle decisioni le divisioni che portano a regole specifiche sono basate su Information Gain, mentre in un modello di associazione le regole sono interamente basate sulla confidenza. Pertanto, in un modello di associazione una regola efficace o caratterizzata da una confidenza elevata può non essere necessariamente interessante, in quanto non fornisce nuove informazioni.  
   
-## Implementazione dell'algoritmo Microsoft Association Rules  
+## <a name="implementation-of-the-microsoft-association-algorithm"></a>Implementazione dell'algoritmo Microsoft Association Rules  
  L'algoritmo Apriori non analizza modelli, ma piuttosto genera e quindi conteggia *set di elementi candidati*. Un elemento può rappresentare un evento, un prodotto o il valore di un attributo, a seconda del tipo di dati analizzati.  
   
  Nel tipo più comune di modello di associazione a ogni attributo, quale un nome di prodotto o di evento, vengono associate variabili booleane, che rappresentano un valore Sì/No o Mancante/Esistente. Un'analisi di mercato sugli acquisti è un esempio di modello di regole di associazione che utilizza variabili booleane per rappresentare la presenza o l'assenza di determinati prodotti nel carrello degli acquisti di un cliente.  
@@ -41,8 +46,8 @@ caps.handback.revision: 24
   
  È inoltre possibile creare modelli di associazione per gli attributi numerici. Se gli attributi sono continui, i numeri possono essere *discretizzati* o raggruppati in bucket. I valori discretizzati possono quindi essere gestiti come valori booleani o come coppie attributo-valore.  
   
-### Supporto, probabilità e priorità  
- Il *supporto*, definito a volte *frequenza*, indica il numero di case che contengono l'elemento o la combinazione di elementi di destinazione. Nel modello è possibile includere solo gli elementi che hanno almeno la quantità specificata di supporto.  
+### <a name="support-probability-and-importance"></a>Supporto, probabilità e priorità  
+ Il*supporto*, definito a volte *frequenza*, indica il numero di case che contengono l'elemento o la combinazione di elementi di destinazione. Nel modello è possibile includere solo gli elementi che hanno almeno la quantità specificata di supporto.  
   
  Per *set di elementi frequente* si intende una raccolta di elementi in cui anche la combinazione di elementi dispone di supporto superiore alla soglia definita dal parametro MINIMUM_SUPPORT. Se ad esempio il set di elementi è {A,B,C} e il valore MINIMUM_SUPPORT è 10, ogni singolo elemento A, B e C e la combinazione di elementi {A,B,C} devono trovarsi in almeno 10 case per essere inclusi nel modello.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 24
   
  La priorità di una regola viene calcolata con la probabilità in forma logaritmica del lato destro della regola, dato il lato sinistro. Ad esempio, nella regola `If {A} Then {B}`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcola il rapporto dei case con A e B rispetto ai case con B ma senza A, quindi normalizza tale rapporto usando una scala logaritmica.  
   
-### Selezione caratteristiche  
+### <a name="feature-selection"></a>Selezione caratteristiche  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules non esegue alcun tipo di caratteristica di selezione automatica degli attributi. Al contrario, fornisce i parametri che controllano i dati utilizzati dall'algoritmo, che possono includere limiti sulla dimensione di ogni set di elementi oppure l'impostazione del supporto massimo e minimo richiesto per aggiungere un set di elementi al modello.  
   
 -   Per filtrare gli elementi e gli eventi che sono troppo comuni e pertanto non interessanti, ridurre il valore di MAXIMUM_SUPPORT per rimuovere i set di elementi più frequenti dal modello.  
@@ -69,11 +74,11 @@ caps.handback.revision: 24
   
 -   Per filtrare le regole, aumentare il valore di MINIMUM_PROBABILITY.  
   
-## Personalizzazione dell'algoritmo Microsoft Association Rules  
+## <a name="customizing-the-microsoft-association-rules-algorithm"></a>Personalizzazione dell'algoritmo Microsoft Association Rules  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante.  
   
-### Impostazione dei parametri dell'algoritmo  
- È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È anche possibile modificare i parametri a livello di programmazione usando la raccolta <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> in AMO oppure l'[Elemento MiningModels &#40;ASSL&#41;](../../analysis-services/scripting/collections/miningmodels-element-assl.md) in XMLA. Nella tabella seguente viene descritto ogni parametro.  
+### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
+ È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile modificare i parametri a livello di codice utilizzando il <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> insieme in AMO oppure utilizzando il [elemento MiningModels &#40; ASSL &#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) in XMLA. Nella tabella seguente viene descritto ogni parametro.  
   
 > [!NOTE]  
 >  Non è possibile modificare i parametri in un modello esistente usando un'istruzione DMX. È necessario specificare i parametri nell'istruzione DMX CREATE MODEL o ALTER STRUCTURE… ADD MODEL quando si crea il modello.  
@@ -134,7 +139,7 @@ caps.handback.revision: 24
   
  Se ad esempio si imposta il valore 3, l'algoritmo memorizza nella cache solo 3 elementi per la stima. Non è possibile visualizzare stime aggiuntive che potrebbero essere ugualmente probabili per i 3 elementi restituiti.  
   
-### Flag di modellazione  
+### <a name="modeling-flags"></a>Flag di modellazione  
  I flag di modellazione seguenti sono supportati per l'uso con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  
   
  NOT NULL  
@@ -147,10 +152,10 @@ caps.handback.revision: 24
   
  Si applica alla colonna del modello di data mining.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Un modello di associazione deve contenere una colonna chiave, le colonne di input e una singola colonna stimabile.  
   
-### Colonne di input e stimabili  
+### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta colonne di input e colonne stimabili specifiche, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto di un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
@@ -161,9 +166,9 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)   
+ [Esempi di Query sul modello Association](../../analysis-services/data-mining/association-model-query-examples.md)   
  [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

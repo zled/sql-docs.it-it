@@ -1,46 +1,51 @@
 ---
-title: "Microsoft Neural Network Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDDEN_NODE_RATIO parameter"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "HOLDOUT_PERCENTAGE parameter"
-  - "algoritmi Neural Network [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "neural networks"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "activation function [Data Mining]"
-  - "Back-Propagated Delta Rule network"
-  - "modello di rete neurale [Analysis Services]"
-  - "coding [Data Mining]"
-  - "parametro HOLDOUT_SEED"
+title: Riferimento tecnico l'algoritmo Microsoft Neural Network | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDDEN_NODE_RATIO parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- neural networks
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- activation function [Data Mining]
+- Back-Propagated Delta Rule network
+- neural network model [Analysis Services]
+- coding [Data Mining]
+- HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft Neural Network Algorithm Technical Reference
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato*, chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
+# <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
+  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato* , chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
   
  Una descrizione dettagliata delle reti neurali perceptron multistrato esula dagli argomenti trattati nella presente documentazione. In questo argomento viene illustrata l'implementazione di base dell'algoritmo, inclusi il metodo utilizzato per normalizzare i valori di input e output e i metodi relativi alla caratteristica di selezione degli attributi utilizzati per ridurre la cardinalità degli attributi. Vengono inoltre descritti i parametri e altre impostazioni che è possibile utilizzare per personalizzare il comportamento dell'algoritmo e vengono forniti collegamenti a informazioni aggiuntive relative all'esecuzione di query sul modello.  
   
-## Implementazione dell'algoritmo Microsoft Neural Network  
+## <a name="implementation-of-the-microsoft-neural-network-algorithm"></a>Implementazione dell'algoritmo Microsoft Neural Network  
  In una rete neurale perceptron multistrato ogni neurone riceve uno o più input e produce uno o più output identici. Ogni output è una funzione semplice non lineare della somma degli input ricevuti dal neurone. Gli input passano dai nodi del livello di input ai nodi del livello nascosto, quindi ai nodi del livello di output. Non esistono connessioni tra i neuroni all'interno di un livello. Se non è disponibile un livello nascosto, come accade nei modelli di regressione logistica, gli input passano direttamente dai nodi del livello di input ai nodi del livello di output.  
   
  Una rete neurale creata con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network include tre tipi di neuroni:  
@@ -49,7 +54,7 @@ caps.handback.revision: 26
   
  I neuroni di input forniscono i valori degli attributi per il modello di data mining. Per gli attributi di input discreti, un neurone di input rappresenta generalmente un singolo stato derivato da questo tipo di attributo. Se i dati di training contengono valori Null per l'attributo, sono inclusi anche i valori mancanti. Se nei dati di training sono inclusi valori Null, un attributo di input discreto che include più di due stati genera un neurone di input per ogni stato e un neurone di input per uno stato mancante. Un attributo di input continuo genera due neuroni di input: un neurone per uno stato mancante e uno per il valore dell'attributo continuo stesso. I neuroni di input inviano gli input a uno o più neuroni nascosti.  
   
-**Neuroni nascosti**  
+**Hidden neurons**  
   
  I neuroni nascosti ricevono gli input dai neuroni di input e inviano gli output ai neuroni di output.  
   
@@ -61,9 +66,9 @@ caps.handback.revision: 26
   
  A ogni input viene assegnato un valore, denominato *peso*, che ne rappresenta la pertinenza o la priorità per il neurone nascosto o per il neurone di output. Maggiore è il peso assegnato a un input, più rilevante, o prioritario, è il rispettivo valore. I pesi possono essere negativi, ovvero l'input può inibire un neurone specifico anziché attivarlo. Il valore di ogni input viene moltiplicato per il peso in modo da evidenziare la rispettiva priorità per un neurone specifico. Nel caso di pesi negativi, moltiplicando il valore per il peso si riduce la priorità dell'input.  
   
- A ogni neurone viene assegnata una funzione semplice non lineare, denominata *funzione di attivazione*, che ne rappresenta la pertinenza o la priorità per il livello corrispondente di una rete neurale. Per la funzione di attivazione, i neuroni nascosti usano una funzione di *tangente iperbolica* (tanh), mentre i neuroni di output utilizzano una funzione *sigmoidale*. Entrambe le funzioni sono funzioni non lineari continue che consentono alla rete neurale di modellare relazioni non lineari tra i neuroni di input e di output.  
+ A ogni neurone viene assegnata una funzione semplice non lineare, denominata *funzione di attivazione*, che ne rappresenta la pertinenza o la priorità per il livello corrispondente di una rete neurale. Per la funzione di attivazione, i neuroni nascosti usano una funzione di *tangente iperbolica* (tanh), mentre i neuroni di output utilizzano una funzione *sigmoidale* . Entrambe le funzioni sono funzioni non lineari continue che consentono alla rete neurale di modellare relazioni non lineari tra i neuroni di input e di output.  
   
-### Reti neurali di training  
+### <a name="training-neural-networks"></a>Reti neurali di training  
  Il training di un modello di data mining che utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network implica varie operazioni. Tali operazioni vengono notevolmente influenzate dai valori specificati per i parametri disponibili per l'algoritmo.  
   
  L'algoritmo inizialmente valuta ed estrae i dati di training dall'origine dei dati. Una percentuale dei dati di training, denominati *dati di controllo*, viene riservata per la valutazione dell'accuratezza della rete. Durante il processo di training, la rete viene valutata immediatamente dopo ogni iterazione sui dati di training. Quando l'accuratezza non aumenta più, il processo di training viene arrestato.  
@@ -81,8 +86,8 @@ caps.handback.revision: 26
   
  Il provider dell'algoritmo valuta contemporaneamente il peso di tutti gli input della rete in modo iterativo, considerando il set di dati di training riservato in precedenza e confrontando il valore noto effettivo per ogni case nei dati di controllo con la stima della rete, mediante un processo noto come *apprendimento in batch*. Dopo che l'algoritmo ha valutato l'intero set di dati di training, esamina il valore stimato ed effettivo per ogni neurone. L'algoritmo calcola l'eventuale grado di errore e modifica i pesi associati agli input di tale neurone, procedendo a ritroso dai neuroni di output ai neuroni di input in un processo noto come *retropropagazione*. Successivamente, l'algoritmo ripete il processo sull'intero set di dati di training. Poiché l'algoritmo può supportare molti pesi e neuroni di output, viene utilizzato l'algoritmo basato su gradienti coniugati per gestire il processo di training al fine di assegnare e valutare i pesi per gli input. Una descrizione dettagliata dell'algoritmo basato su gradienti coniugati esula dagli argomenti trattati nella presente documentazione.  
   
-### Selezione caratteristiche  
- Se il numero degli attributi di input è maggiore del valore del parametro *MAXIMUM_INPUT_ATTRIBUTES*, oppure se il numero di attributi stimabili è maggiore del valore del parametro *MAXIMUM_OUTPUT_ATTRIBUTES*, viene usato un algoritmo di selezione delle caratteristiche per ridurre la complessità delle reti incluse nel modello di data mining. La caratteristica di selezione degli attributi riduce il numero degli attributi di input o stimabili, in quanto vengono scelti quelli statisticamente più rilevanti per il modello.  
+### <a name="feature-selection"></a>Selezione caratteristiche  
+ Se il numero degli attributi di input è maggiore del valore del parametro *MAXIMUM_INPUT_ATTRIBUTES* , oppure se il numero di attributi stimabili è maggiore del valore del parametro *MAXIMUM_OUTPUT_ATTRIBUTES* , viene usato un algoritmo di selezione delle caratteristiche per ridurre la complessità delle reti incluse nel modello di data mining. La caratteristica di selezione degli attributi riduce il numero degli attributi di input o stimabili, in quanto vengono scelti quelli statisticamente più rilevanti per il modello.  
   
  Tutti gli algoritmi di data mining [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzano automaticamente la caratteristica di selezione degli attributi per migliorare l'analisi e ridurre il carico di elaborazione. Il metodo utilizzato per la caratteristica di selezione degli attributi nei modelli di reti neurali dipende dal tipo di dati dell'attributo. Nella tabella seguente sono mostrati per riferimento i metodi relativi alla caratteristica di selezione degli attributi utilizzati per i modelli di reti neurali e quelli utilizzati per l'algoritmo Logistic Regression, che si basa sull'algoritmo Neural Network.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 26
   
  I parametri dell'algoritmo che controllano la caratteristica di selezione degli attributi per un modello di rete neurale sono MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES e MAXIMUM_STATES. È inoltre possibile controllare il numero di livelli nascosti impostando il parametro HIDDEN_NODE_RATIO.  
   
-### Metodi di valutazione  
+### <a name="scoring-methods"></a>Metodi di valutazione  
  La*valutazione* è una sorta di normalizzazione che, nel contesto del training di un modello di rete neurale, indica il processo di conversione di un valore, ad esempio un'etichetta di testo discreta, in un valore che può essere confrontato con altri tipi di input e ponderato nella rete. Se ad esempio un attributo di input è Gender e i valori possibili sono Male e Female, mentre un altro attributo di input è Income, con un intervallo variabile di valori, i valori per ogni attributo non sono direttamente confrontabili e pertanto devono essere codificati in una scala comune in modo da consentirne il calcolo del peso. La valutazione è il processo in base al quale tali input vengono normalizzati in valori numerici, nello specifico in un intervallo di probabilità. Le funzioni utilizzate per la normalizzazione consentono inoltre di distribuire in modo più uniforme il valore di input in modo che valori estremi non alterino i risultati dell'analisi.  
   
  Vengono inoltre codificati gli output della rete neurale. Quando per l'output è disponibile una sola destinazione (ovvero la stima) oppure più destinazioni utilizzate esclusivamente per la stima e non per l'input, il modello crea una sola rete e la normalizzazione dei valori potrebbe sembrare non necessaria. Se tuttavia per l'input e la stima vengono utilizzati più attributi, il modello deve creare più reti, pertanto tutti i valori devono essere normalizzati e anche gli output devono essere codificati quando escono dalla rete.  
@@ -116,10 +121,10 @@ caps.handback.revision: 26
   
  Per la codifica degli output viene utilizzata la funzione sigmoidale, le cui proprietà la rendono molto utile per la stima. In base a una di tali proprietà, indipendentemente da come vengono ridimensionati i valori originali e indipendentemente dal fatto che tali valori siano negativi o positivi, l'output di questa funzione è sempre un valore compreso tra 0 e 1, ovvero un valore appropriato per la stima delle probabilità. Un'altra proprietà utile è la funzione sigmoidale con effetto di smussatura, in base alla quale man mano che i valori si allontanano dal punto di flesso, la probabilità del valore si sposta lentamente verso 0 o 1.  
   
-## Personalizzazione dell'algoritmo Neural Network  
+## <a name="customizing-the-neural-network-algorithm"></a>Personalizzazione dell'algoritmo Neural Network  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante. È inoltre possibile modificare la modalità con cui il modello elabora i dati impostando flag di modellazione nelle colonne oppure impostando flag di distribuzione per specificare come devono essere gestiti i valori all'interno della colonna.  
   
-### Impostazione dei parametri dell'algoritmo  
+### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
  Nella tabella seguente vengono descritti i parametri che possono essere utilizzati con l'algoritmo Microsoft Neural Network.  
   
  HIDDEN_NODE_RATIO  
@@ -161,7 +166,7 @@ caps.handback.revision: 26
   
  Il valore predefinito è 10000.  
   
-### Flag di modellazione  
+### <a name="modeling-flags"></a>Flag di modellazione  
  Di seguito sono indicati i flag di modellazione che è possibile utilizzare con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network.  
   
  NOT NULL  
@@ -174,7 +179,7 @@ caps.handback.revision: 26
   
  Si applica alle colonne del modello di data mining.  
   
-### Flag di distribuzione  
+### <a name="distribution-flags"></a>Flag di distribuzione  
  Di seguito sono indicati i flag di distribuzione il cui utilizzo è supportato con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. I flag sono utilizzati solo come hint per il modello. Se l'algoritmo rileva una distribuzione diversa, verrà utilizzata la distribuzione rilevata, non la distribuzione fornita nell'hint.  
   
  Normale  
@@ -184,12 +189,12 @@ caps.handback.revision: 26
  Indica che valori all'interno della colonna devono essere trattati come se fossero distribuiti uniformemente, ovvero la probabilità di qualsiasi valore è approssimativamente uguale ed è una funzione del numero complessivo di valori.  
   
  Logaritmica normale  
- Indica che valori all'interno della colonna devono essere trattati come se fossero distribuiti in base alla curva di *logaritmo normale*, ovvero il logaritmo dei valori è distribuito in modo normale.  
+ Indica che valori all'interno della colonna devono essere trattati come se fossero distribuiti in base alla curva di *logaritmo normale* , ovvero il logaritmo dei valori è distribuito in modo normale.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Un modello di rete neurale deve contenere almeno una colonna di input e una colonna di output.  
   
-### Colonne di input e stimabili  
+### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente.  
   
 |Colonna|Tipi di contenuto|  
@@ -200,9 +205,9 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Esempi di query sul modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Contenuto del modello di data mining per i modelli di rete neurale &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

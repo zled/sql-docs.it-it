@@ -1,36 +1,41 @@
 ---
-title: "Riferimento tecnico per l&#39;algoritmo Microsoft Clustering | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clustering [Data Mining]"
-  - "MAXIMUM_INPUT_ATTRIBUTES - parametro"
-  - "CLUSTER_SEED - parametro"
-  - "MODELLING_CARDINALITY - parametro"
-  - "MINIMUM_SUPPORT - parametro"
-  - "STOPPING_TOLERANCE - parametro"
-  - "MAXIMUM_STATES parameter"
-  - "parametro SAMPLE_SIZE"
-  - "CLUSTERING_METHOD - parametro"
-  - "soft clustering [Data Mining]"
-  - "algoritmi di clustering [Analysis Services]"
-  - "CLUSTER_COUNT - parametro"
+title: Riferimento tecnico per l'algoritmo di Clustering Microsoft | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- CLUSTER_SEED parameter
+- MODELLING_CARDINALITY parameter
+- MINIMUM_SUPPORT parameter
+- STOPPING_TOLERANCE parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- CLUSTERING_METHOD parameter
+- soft clustering [Data Mining]
+- clustering algorithms [Analysis Services]
+- CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0c63e2966073fc045401febb16b1a350e94552c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Riferimento tecnico per l&#39;algoritmo Microsoft Clustering
+# <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
   In questa sezione viene illustrata l'implementazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, inclusi i parametri che è possibile utilizzare per controllare il comportamento dei modelli di clustering. Vengono inoltre fornite istruzioni su come migliorare le prestazioni durante la creazione e l'elaborazione di modelli di clustering.  
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
@@ -39,12 +44,12 @@ caps.handback.revision: 21
   
 -   [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
-## Implementazione dell'algoritmo Microsoft Clustering  
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering rende disponibili due metodi per la creazione di cluster e l'assegnazione di punti dati ai cluster. Il primo, l'algoritmo *K-means*, è un metodo di tipo hard clustering, ovvero un punto dati può appartenere a un unico cluster e viene calcolata una singola probabilità per l'appartenenza di ogni punto dati a tale cluster. Il secondo, *Expectation Maximization* (EM), è un metodo di tipo *soft clustering*, ovvero un punto dati appartiene sempre a più cluster e viene calcolata una probabilità per ogni combinazione di punto dati e cluster.  
+## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Implementazione dell'algoritmo Microsoft Clustering  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering rende disponibili due metodi per la creazione di cluster e l'assegnazione di punti dati ai cluster. Il primo, l'algoritmo *K-means* , è un metodo di tipo hard clustering, ovvero un punto dati può appartenere a un unico cluster e viene calcolata una singola probabilità per l'appartenenza di ogni punto dati a tale cluster. Il secondo, *Expectation Maximization* (EM), è un metodo di tipo *soft clustering* , ovvero un punto dati appartiene sempre a più cluster e viene calcolata una probabilità per ogni combinazione di punto dati e cluster.  
   
- È possibile scegliere l'algoritmo da usare impostando il parametro *CLUSTERING_METHOD*. Il metodo predefinito per il clustering è EM scalabile.  
+ È possibile scegliere l'algoritmo da usare impostando il parametro *CLUSTERING_METHOD* . Il metodo predefinito per il clustering è EM scalabile.  
   
-### Clustering EM  
+### <a name="em-clustering"></a>Clustering EM  
  Nel clustering EM l'algoritmo perfeziona in modo iterativo un modello di cluster iniziale per il fit dei dati e determina la probabilità che un punto dati esista in un cluster. L'algoritmo termina il processo quando si ottiene il fit del modello probabilistico ai dati. La funzione utilizzata per determinare il fit è la probabilità in forma logaritmica dei dati, dato il modello.  
   
  Se durante il processo vengono generati cluster vuoti o se l'appartenenza di uno o più cluster è minore di una data soglia, i cluster con popolazioni basse vengono reinizializzati su nuovi punti e l'algoritmo EM viene rieseguito.  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
   
  Per un report tecnico in cui viene descritta l'implementazione di EM nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, vedere [Adattamento dell'algoritmo di clustering EM (Expectation Maximization) a database di grandi dimensioni](http://go.microsoft.com/fwlink/?LinkId=45964).  
   
-### Clustering K-means  
+### <a name="k-means-clustering"></a>Clustering K-means  
  Il clustering K-means è un metodo noto che consiste nell'assegnare l'appartenenza a un cluster riducendo le differenze tra gli elementi di un cluster e massimizzando allo stesso tempo la distanza tra i cluster. Il termine "means" in K-means fa riferimento al *centroide* del cluster, ovvero un punto dati scelto arbitrariamente e quindi perfezionato in modo iterativo finché non rappresenta la media reale di tutti i punti dati del cluster. La lettera "K" fa riferimento a un numero arbitrario di punti utilizzati per inizializzare il processo di clustering. L'algoritmo K-means calcola le distanze euclidee al quadrato tra i record di dati in un cluster e il vettore che rappresenta la media del cluster, quindi converge su un set finale di K cluster quando la somma raggiunge il valore minimo.  
   
  L'algoritmo K-means assegna ogni punto dati esattamente a un unico cluster e non consente incertezze nell'appartenenza. L'appartenenza a un cluster è espressa come distanza dal centro.  
@@ -79,16 +84,16 @@ caps.handback.revision: 21
   
  L'algoritmo K-means prevede due metodi di campionamento del set di dati: K-means non scalabile, che carica l'intero set di dati ed esegue un unico passaggio di clustering, oppure K-means scalabile, in cui l'algoritmo usa i primi 50.000 case e legge altri case solo se sono necessari più dati per ottenere un modello appropriato ai dati.  
   
-### Aggiornamenti all'algoritmo Microsoft Clustering in SQL Server 2008  
+### <a name="updates-to-the-microsoft-clustering-algorithm-in-sql-server-2008"></a>Aggiornamenti all'algoritmo Microsoft Clustering in SQL Server 2008  
  In SQL Server 2008 la configurazione predefinita dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è stata modificata in modo da usare il parametro interno, NORMALIZATION = 1. La normalizzazione viene eseguita usando le statistiche z-score e presuppone una distribuzione normale. Lo scopo di questa modifica apportata al comportamento predefinito è ridurre l'effetto di attributi che potrebbero avere grandezze eccessive e molti outlier. Tuttavia, è possibile che la normalizzazione z-score alteri i risultati di clustering su distribuzioni che non sono normali (ad esempio, le distribuzioni uniformi). Per impedire la normalizzazione e ottenere lo stesso comportamento dell'algoritmo di clustering K-means di SQL Server 2005, è possibile usare la finestra di dialogo di **impostazione dei parametri** per aggiungere il parametro personalizzato, NORMALIZATION, e impostare il valore corrispondente su 0.  
   
 > [!NOTE]  
 >  Il parametro NORMALIZATION è una proprietà interna dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering e non è supportato. In generale l'uso della normalizzazione è consigliato nei modelli di clustering per migliorare i risultati del modello.  
   
-## Personalizzazione dell'algoritmo Microsoft Clustering  
+## <a name="customizing-the-microsoft-clustering-algorithm"></a>Personalizzazione dell'algoritmo Microsoft Clustering  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante.  
   
-### Impostazione dei parametri dell'algoritmo  
+### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
  Nella tabella seguente sono descritti i parametri che possono essere utilizzati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering. Tali parametri influiscono sia sulle prestazioni che sull'accuratezza del modello di data mining risultante.  
   
  CLUSTERING_METHOD  
@@ -156,7 +161,7 @@ caps.handback.revision: 21
   
  Il valore predefinito è 100.  
   
-### Flag di modellazione  
+### <a name="modeling-flags"></a>Flag di modellazione  
  L'algoritmo supporta i flag di modellazione seguenti. I flag di modellazione, definiti durante la creazione della struttura o del modello di data mining, specificano la modalità di gestione dei valori in ogni colonna durante l'analisi.  
   
 |Flag di modellazione|Description|  
@@ -164,10 +169,10 @@ caps.handback.revision: 21
 |MODEL_EXISTENCE_ONLY|La colonna verrà considerata come se disponesse di due stati possibili: Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
 |NOT NULL|La colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alla colonna della struttura di data mining.|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Un modello di clustering deve contenere una colonna chiave e le colonne di input. È inoltre possibile definire le colonne di input come stimabili. Le colonne impostate su **Solo stima** non vengono usate per la compilazione di cluster. La distribuzione di questi valori nel cluster viene calcolata dopo la compilazione dei cluster.  
   
-### Colonne di input e stimabili  
+### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supporta specifiche colonne di input e colonne stimabili, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
@@ -178,9 +183,9 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)   
+ [Esempi di Query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)   
  [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

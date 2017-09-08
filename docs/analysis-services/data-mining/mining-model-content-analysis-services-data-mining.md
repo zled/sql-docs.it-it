@@ -1,33 +1,38 @@
 ---
-title: "Mining Model Content (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algorithms [data mining]"
-  - "standard deviation"
-  - "confidence scores [data mining]"
-  - "mining models [Analysis Services]"
-  - "variance"
-  - "machine learning algorithms [Analysis Services]"
-  - "model content"
-  - "support [data mining]"
-  - "node distribution"
+title: Contenuto del modello di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- standard deviation
+- confidence scores [data mining]
+- mining models [Analysis Services]
+- variance
+- machine learning algorithms [Analysis Services]
+- model content
+- support [data mining]
+- node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4097a5ab62a6e30f2056216ec83eb0c568547479
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mining Model Content (Analysis Services - Data Mining)
+# <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   In seguito alla progettazione e all'elaborazione di un modello di data mining mediante i dati della struttura di data mining sottostante, il modello di data mining è completo e contiene il *contenuto del modello di data mining*. È possibile utilizzare questo contenuto per eseguire stime o analisi di dati.  
   
  Il contenuto del modello di data mining include i metadati relativi al modello, statistiche sui dati e modelli individuati dall'algoritmo di data mining. A seconda dell'algoritmo utilizzato, il contenuto del modello può includere formule di regressione, le definizioni di regole e set di elementi, o pesi e altre statistiche.  
@@ -68,11 +73,11 @@ caps.handback.revision: 25
   
 -   Frammenti XML che descrivono una parte del modello.  
   
-### Elenco di tipi di nodo del contenuto di data mining  
+### <a name="list-of-mining-content-node-types"></a>Elenco di tipi di nodo del contenuto di data mining  
  Nella tabella seguente sono elencati i diversi tipi di nodo restituiti nei modelli di data mining. Poiché ogni algoritmo elabora in modo diverso le informazioni, ciascun modello genera solo alcuni tipi specifici di nodi. Modificando l'algoritmo, il tipo di nodo potrebbe cambiare. Il contenuto di ogni nodo potrebbe inoltre cambiare se si rielabora il modello.  
   
 > [!NOTE]  
->  Se si usa un servizio di data mining diverso da quelli forniti in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] o se si creano algoritmi plug-in personalizzati, potrebbero essere disponibili altri tipi di nodi personalizzati.  
+>  Se si utilizza un servizio di data mining di dati diversi o se si creano algoritmi plug-in, è possibile che i tipi di nodo personalizzati aggiuntivi potrebbero essere disponibili.  
   
 |ID NODE_TYPE|Etichetta del nodo|Contenuto del nodo|  
 |-------------------|----------------|-------------------|  
@@ -107,12 +112,12 @@ caps.handback.revision: 25
 |30|ArimaMovingAverage|Coefficiente di media mobile per un singolo termine in un modello ARIMA. Si applica solo ai modelli Time Series che utilizzano l'algoritmo ARIMA.|  
 |1000|CustomBase|Punto iniziale dei tipi di nodo personalizzati. I tipi di nodo personalizzati devono essere Integer maggiori di questa costante. Si applica ai modelli creati tramite algoritmi plug-in personalizzati.|  
   
-### ID, nome, didascalia e descrizione dei nodi  
+### <a name="node-id-name-caption-and-description"></a>ID, nome, didascalia e descrizione dei nodi  
  Il valore dell'ID univoco,**NODE_UNIQUE_NAME**, del nodo radice di qualsiasi modello è sempre uguale a 0. Tutti gli ID dei nodi vengono assegnati automaticamente da Analysis Services e non possono essere modificati.  
   
- Il nodo radice di ogni modello contiene anche i metadati di base relativi al modello. Tra i metadati sono inclusi il database di Analysis Services in cui viene archiviato il modello (**MODEL_CATALOG**), lo schema (**MODEL_SCHEMA)** e il nome del modello (**MODEL_NAME)**. Queste informazioni sono ripetute in tutti i nodi del modello, pertanto non è necessario eseguire query sul nodo radice per ottenere i metadati.  
+ Il nodo radice di ogni modello contiene anche i metadati di base relativi al modello. Tra i metadati sono inclusi il database di Analysis Services in cui viene archiviato il modello (**MODEL_CATALOG**), lo schema (**MODEL_SCHEMA)**e il nome del modello (**MODEL_NAME)**. Queste informazioni sono ripetute in tutti i nodi del modello, pertanto non è necessario eseguire query sul nodo radice per ottenere i metadati.  
   
- Oltre al nome usato come identificatore univoco, ogni nodo dispone di un *nome*, **NODE_NAME**, che viene creato automaticamente dall'algoritmo a scopo di visualizzazione e non può essere modificato.  
+ Oltre al nome usato come identificatore univoco, ogni nodo dispone di un *nome* ,**NODE_NAME**, che viene creato automaticamente dall'algoritmo a scopo di visualizzazione e non può essere modificato.  
   
 > [!NOTE]  
 >  L'algoritmo Microsoft Clustering consente di assegnare nomi descrittivi a ogni cluster. Questi nomi descrittivi, tuttavia, non vengono salvati in modo permanente sul server e se si rielabora il modello l'algoritmo genera nuovi nomi per i cluster.  
@@ -122,7 +127,7 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Il server Analysis Services supporta la ridenominazione dei nodi solo se i modelli vengono compilati tramite un algoritmo plug-in personalizzato che implementa la ridenominazione. Per abilitare la ridenominazione, è necessario eseguire l'override dei metodi durante la creazione dell'algoritmo plug-in.  
   
-### Padri, figli e cardinalità dei nodi  
+### <a name="node-parents-node-children-and-node-cardinality"></a>Padri, figli e cardinalità dei nodi  
  La relazione tra nodi padre e nodi figlio in una struttura ad albero è determinata dal valore della colonna PARENT_UNIQUE_NAME. Questo valore è archiviato nel nodo figlio e indica l'ID del nodo padre. Di seguito sono riportati alcuni esempi delle modalità di utilizzo di queste informazioni:  
   
 -   Se il valore della colonna PARENT_UNIQUE_NAME è NULL, il nodo è il nodo di livello superiore del modello.  
@@ -141,7 +146,7 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Alcuni modelli, quali quelli creati dall'algoritmo Microsoft Neural Network, contengono inoltre uno speciale tipo di nodo che fornisce statistiche descrittive sui dati di training per l'intero modello. Per definizione, questi nodi non dispongono mai di nodi figlio.  
   
-### Distribuzione dei nodi  
+### <a name="node-distribution"></a>node distribution  
  Nella colonna NODE_DISTRIBUTION è contenuta una tabella nidificata che fornisce importanti e dettagliate informazioni sui modelli individuati dall'algoritmo per molti nodi. Le statistiche esatte fornite nella tabella variano a seconda del tipo di modello, della posizione del nodo nell'albero e del fatto che l'attributo stimabile sia un valore numerico continuo o un valore discreto; possono tuttavia includere i valori minimo e massimo di un attributo, i pesi assegnati ai valori, il numero di case presenti in un nodo, i coefficienti utilizzati in una formula di regressione e misure statistiche quali deviazione standard e varianza. Per ulteriori informazioni su come interpretare la distribuzione dei nodi, vedere l'argomento relativo al tipo specifico di modello utilizzato.  
   
 > [!NOTE]  
@@ -201,10 +206,10 @@ caps.handback.revision: 25
   
  Dopo l'adattamento le probabilità per tutti i valori sono ancora uguali a 1. La probabilità per il valore senza dati (in questo esempio, [Total Children = '0', '3' o un altro valore]), inizia da un livello molto basso diverso da zero e aumenta lentamente man mano che vengono aggiunti altri case.  
   
- VARIANCE  
+ variance  
  Indica la varianza dei valori all'interno del nodo. Per definizione, la varianza dei valori discreti è sempre 0. Se il modello supporta valori continui, la varianza viene calcolata come σ (sigma), usando il denominatore n o il numero di case presenti nel nodo.  
   
- In generale, la deviazione standard, **StDev**, viene rappresentata tramite due definizioni: un metodo per il calcolo della deviazione standard prende in considerazione la distorsione, mentre l'altro calcola la deviazione standard senza utilizzare la distorsione. In generale, gli algoritmi di data mining di Microsoft non utilizzano la distorsione durante il calcolo della deviazione standard.  
+ In generale, la deviazione standard,**StDev**, viene rappresentata tramite due definizioni: un metodo per il calcolo della deviazione standard prende in considerazione la distorsione, mentre l'altro calcola la deviazione standard senza utilizzare la distorsione. In generale, gli algoritmi di data mining di Microsoft non utilizzano la distorsione durante il calcolo della deviazione standard.  
   
  Il valore visualizzato nella tabella NODE_DISTRIBUTION costituisce il valore effettivo per gli attributi discreti e discretizzati e la media per i valori continui.  
   
@@ -214,7 +219,7 @@ caps.handback.revision: 25
 |ID VALUE_TYPE|Valore dell'etichetta|Nome del tipo di valore|  
 |--------------------|-----------------|---------------------|  
 |1|Missing|Indica che i dati del case non contengono un valore per questo attributo. Lo stato **Missing** è calcolato separatamente dagli attributi con valori.|  
-|2|Esistente|Indica che i dati del case contengono un valore per questo attributo.|  
+|2|Existing|Indica che i dati del case contengono un valore per questo attributo.|  
 |3|Continuo|Indica che il valore dell'attributo è un valore numerico continuo che può pertanto essere rappresentato da una media, insieme alle varianza e deviazione standard.|  
 |4|Discrete|Indica che un valore di testo o numerico viene trattato come discreto.<br /><br /> **Nota** i valori discreti possono anche essere mancanti; tuttavia, vengono gestiti in modo diverso durante l'esecuzione dei calcoli. Per informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
 |5|Discretizzato|Indica che l'attributo contiene valori numerici discretizzati. Il valore sarà una stringa formattata che descrive i bucket di discretizzazione.|  
@@ -234,10 +239,10 @@ caps.handback.revision: 25
   
  I tipi di valore derivano dall'enumerazione ADMOMD.NET. Per altre informazioni, vedere <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
   
-### Punteggio del nodo  
+### <a name="node-score"></a>Punteggio del nodo  
  Il significato del punteggio del nodo varia a seconda del tipo di modello e può anche essere specifico del tipo di nodo. Per informazioni sulla modalità di calcolo di NODE_SCORE per ogni modello e tipo di nodo, vedere [Contenuto del modello di data mining in base al tipo di algoritmo](#bkmk_AlgoType).  
   
-### Probabilità del nodo e probabilità marginale  
+### <a name="node-probability-and-marginal-probability"></a>Probabilità del nodo e probabilità marginale  
  Nel set di righe dello schema del modello di data mining sono incluse le colonne NODE_PROBABILITY e MARGINAL_PROBABILITY per tutti i tipi di modello. Queste colonne contengono valori solo nei nodi che hanno un valore significativo di probabilità. Il nodo radice di un modello, ad esempio, non contiene mai un punteggio di probabilità.  
   
  Nei nodi che forniscono punteggi di probabilità, la probabilità del nodo e le probabilità marginali costituiscono calcoli diversi.  
@@ -250,13 +255,13 @@ caps.handback.revision: 25
   
  Ad esempio, se il popolamento di tutti i clienti in un albero delle decisioni è suddiviso equamente per genere e nessun valore è mancante, la probabilità dei nodi figlio sarà uguale a 0,5. Si supponga ora che ognuno dei nodi di genere venga equamente diviso per i livelli di reddito: alto, medio e basso. In questo caso il punteggio di MARGINAL_PROBABILITY di ciascun nodo figlio deve essere sempre 0,33, ma il valore di NODE_PROBABILTY sarà il prodotto di tutte le probabilità che conducono a quel nodo e pertanto sarà sempre inferiore al valore di MARGINAL_PROBABILITY.  
   
-|Livello e valore del nodo/attributo|Probabilità marginale|probabilità del nodo|  
+|Livello e valore del nodo/attributo|probabilità marginale|probabilità del nodo|  
 |----------------------------------------|--------------------------|----------------------|  
 |Nodo radice del modello<br /><br /> Tutti i clienti di destinazione|1|1|  
 |Clienti di destinazione suddivisi per genere|.5|.5|  
 |Clienti di destinazione suddivisi per genere, quindi suddivisi nuovamente in tre modi in base al reddito|.33|.5 * .33 = .165|  
   
-### Regola del nodo e regola marginale  
+### <a name="node-rule-and-marginal-rule"></a>Regola del nodo e regola marginale  
  Nel set di righe dello schema del modello di data mining sono inoltre incluse le colonne NODE_RULE e MARGINAL_RULE per tutti i tipi di modello. Queste colonne contengono frammenti XML che è possibile utilizzare per serializzare un modello o rappresentare parti della sua struttura. In presenza di valori non significativi le colonne di alcuni nodi possono essere vuote.  
   
  I due tipi di regole XML fornite sono simili ai due tipi di valori di probabilità. Il frammento XML in MARGINAL_RULE definisce l'attributo e il valore del nodo corrente, laddove il frammento XML in NODE_RULE descrive il percorso al nodo corrente dal nodo radice del modello.  
@@ -270,16 +275,16 @@ caps.handback.revision: 25
   
 -   **Argomenti sull'esecuzione di query:** vengono forniti esempi di query su un determinato tipo di modello e istruzioni su come interpretare i risultati.  
   
-|Tipo di modello o di algoritmo|Contenuto del modello|Esecuzione di query sui modelli di data mining|  
+|Tipo di modello o di algoritmo|model content|Esecuzione di query sui modelli di data mining|  
 |-----------------------------|-------------------|----------------------------|  
 |Modelli Association Rules|[Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)|  
 |Modelli di clustering|[Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
 |Modelli di albero delle decisioni|[Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Esempi di query sul modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |Modelli di regressione lineare|[Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Modelli di regressione logistica|[Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)|[Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
+|Modelli di regressione logistica|[Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Modelli Naive Bayes|[Contenuto dei modelli di data mining per i modelli Naive Bayes &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Modelli di rete neurale|[Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Esempi di query sul modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
-|Sequence Clustering|[Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
+|Sequence Clustering|[Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
 |Modelli Time Series|[Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Strumenti per la visualizzazione del contenuto di un modello di data mining  
@@ -302,8 +307,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è inoltre possibile accedere alle informazioni sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ed eseguendo query sulle tabelle di sistema. Per altre informazioni, vedere [Set di righe dello schema di data mining &#40;SSAS&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md).  
   
-## Vedere anche  
- [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

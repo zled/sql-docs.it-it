@@ -1,28 +1,33 @@
 ---
-title: "Spostare un database di Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "spostamento di database [Anlysis Services]"
-  - "spostamento di database"
-  - "operazioni [Analysis Services - dati multidimensionali]"
+title: Spostare un Analysis Services Database | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving databases [Anlysis Services]
+- moving databases
+- operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 73d410fdb16765b5ae1022362f11be8e918140fa
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Spostare un database di Analysis Services
+# <a name="move-an-analysis-services-database"></a>Spostare un database di Analysis Services
   Spesso, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desidera spostare un database multidimensionale o tabulare in un percorso diverso. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto.  
   
  Un database può essere spostato in vari modi. In questo documento vengono illustrati gli scenari comuni seguenti:  
@@ -38,9 +43,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Lo scollegamento di un database senza l'assegnazione di una password lascia il database in uno stato non protetto. Si consiglia di assegnare una password al database per proteggere le informazioni riservate. Inoltre, è necessario applicare la sicurezza dall'accesso corrispondente alla cartella del database, alle sottocartelle e ai file per impedire accessi non autorizzati.  
   
-## Procedure  
+## <a name="procedures"></a>Procedure  
   
-#### Spostamento di un database in modo interattivo tramite SSMS  
+#### <a name="moving-a-database-interactively-using-ssms"></a>Spostamento di un database in modo interattivo tramite SSMS  
   
 1.  Individuare il database da spostare nel riquadro sinistro o destro di SSMS.  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 14
   
 4.  Utilizzare un meccanismo del sistema operativo o un metodo standard di spostamento file per spostare la cartella del database nel nuovo percorso.  
   
-5.  Individuare la cartella **Database**nel riquadro sinistro o destro di SSMS.  
+5.  Individuare la cartella **Database** nel riquadro sinistro o destro di SSMS.  
   
-6.  Fare clic con il pulsante destro del mouse sulla cartella **Database**, quindi scegliere **Collega**.  
+6.  Fare clic con il pulsante destro del mouse sulla cartella **Database** , quindi scegliere **Collega**.  
   
 7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 9. Digitare la password usata nel passaggio 3, quindi fare clic su **OK** per eseguire il comando di collegamento.  
   
-#### Spostamento di un database a livello di programmazione tramite AMO  
+#### <a name="moving-a-database-programmatically-using-amo"></a>Spostamento di un database a livello di programmazione tramite AMO  
   
 1.  Nell'applicazione C# adattare il codice di esempio seguente e completare le attività indicate.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 14
   
 2.  Compilare ed eseguire il codice per spostare il database.  
   
-#### Spostamento di un database tramite script utilizzando XMLA  
+#### <a name="moving-a-database-by-script-using-xmla"></a>Spostamento di un database tramite script utilizzando XMLA  
   
 1.  Aprire una nuova scheda XMLA in SSMS.  
   
@@ -136,19 +141,19 @@ caps.handback.revision: 14
   
  `</Attach>`  
   
-1.  Sostituire `%dbFolder%` con il percorso completo in formato UNC della cartella del database, `%ReadOnlyMode%` con il valore **ReadOnly** o **ReadWrite** corrispondente e `%password%` con la password. I caratteri % fanno parte del modello e devono essere rimossi.  
+1.  Sostituire `%dbFolder%` con il percorso completo in formato UNC della cartella del database, `%ReadOnlyMode%` con il valore **ReadOnly** o **ReadWrite**corrispondente e `%password%` con la password. I caratteri % fanno parte del modello e devono essere rimossi.  
   
 2.  Eseguire il comando XMLA.  
   
-## Vedere anche  
- <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Collegamento e scollegamento di database di Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
- [Percorso di archiviazione dei database](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [Proprietà ReadWriteMode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Percorso di archiviazione del database](../../analysis-services/multidimensional-models/database-storage-location.md)   
+ [Proprietà readwritemode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Elemento ReadWriteMode](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [Elemento DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Dbstoragelocation-elemento](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   

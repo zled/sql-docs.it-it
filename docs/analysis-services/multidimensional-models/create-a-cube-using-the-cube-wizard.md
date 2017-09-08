@@ -1,33 +1,38 @@
 ---
-title: "Creare un cubo mediante la Creazione guidata cubo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cubi [Analysis Services], creazione"
+title: Creare un cubo tramite la creazione guidata cubo | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare un cubo mediante la Creazione guidata cubo
+# <a name="create-a-cube-using-the-cube-wizard"></a>Creare un cubo mediante la Creazione guidata cubo
   È possibile creare un nuovo cubo usando la Creazione guidata cubo in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-### Per creare un nuovo cubo  
+### <a name="to-create-a-new-cube"></a>Per creare un nuovo cubo  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Cubi** e quindi scegliere **Nuovo cubo**.  
+1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Cubi**e quindi scegliere **Nuovo cubo**.  
   
-2.  Nella pagina **Selezione metodo di creazione** della Creazione guidata cubo selezionare **Usa tabelle esistenti** e quindi fare clic su **Avanti**.  
+2.  Nella pagina **Selezione metodo di creazione** della Creazione guidata cubo selezionare **Usa tabelle esistenti**e quindi fare clic su **Avanti**.  
   
     > [!NOTE]  
     >  Si potrebbe dovere creare occasionalmente un cubo senza utilizzare le tabelle esistenti. Per creare un cubo vuoto, selezionare **Crea un cubo vuoto**. Per generare tabelle, selezionare **Genera tabelle nell'origine dati**.  

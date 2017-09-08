@@ -1,56 +1,43 @@
 ---
-title: "Lingue e regole di confronto (Analysis Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Test di Analysis Services"
-helpviewer_keywords: 
-  - "regole di confronto di Windows [Analysis Services]"
-  - "regole di confronto predefinite"
-  - "lingue [Analysis Services]"
-  - "tipi di ordinamento [Analysis Services]"
-  - "identificatori di lingua [Analysis Services]"
-  - "lingue predefinite"
-  - "regole di confronto [Analysis Services]"
+title: Lingue e regole di confronto (Analysis Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Test di Analysis Services
+helpviewer_keywords:
+- Windows collations [Analysis Services]
+- default collations
+- languages [Analysis Services]
+- sort orders [Analysis Services]
+- language identifiers [Analysis Services]
+- default languages
+- collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d2f1ca64cc2c6a3c3d376b47c660598e05227bf8
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lingue e regole di confronto (Analysis Services)
+# <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e le regole di confronto fornite dai sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Le proprietà**Language** e **Collation** vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  
   
  Solo in un modello multidimensionale è possibile impostare queste proprietà in un database o un cubo. È anche possibile impostarle nelle traduzioni create per gli oggetti all'interno di un cubo. In un modello tabulare la lingua e le regole di confronto vengono ereditate dal sistema operativo host.  
   
  Durante l'impostazione di **Language** e **Collation** in un modello multidimensionale, è possibile specificare le impostazioni usate dal modello di dati durante l'elaborazione e l'esecuzione di query oppure creare un modello con più traduzioni in modo che gli utenti di lingua straniera possano usare il modello nella propria lingua. L'impostazione delle proprietà **Language** e **Collation** in modo esplicito in un oggetto (database, modello o cubo) è utile nelle situazioni in cui il server di produzione e l'ambiente di sviluppo sono configurati per impostazioni locali diverse e si vuole essere certi che la lingua e le regole di confronto corrispondano a quelle dell'ambiente di destinazione previsto.  
-  
- Questo argomento include le sezioni seguenti:  
-  
--   [Oggetti che supportano le proprietà Language e Collation](#bkmk_object)  
-  
--   [Supporto della lingua in Analysis Services](#bkmk_lang)  
-  
--   [Supporto delle regole di confronto in Analysis Services](#bkmk_collations)  
-  
--   [Modificare la lingua o le regole di confronto predefinite per l'istanza](#bkmk_defaultLang)  
-  
--   [Modificare la lingua o le regole di confronto per un cubo](#bkmk_cube)  
-  
--   [Modificare la lingua e le regole di confronto all'interno di un modello di dati mediante XMLA](#bkmk_XMLA)  
-  
--   [Ottimizzare le prestazioni per le impostazioni locali inglesi tramite EnableFast1033Locale](#bkmk_enablefast1033)  
-  
--   [Supporto di GB18030 in Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> Oggetti che supportano le proprietà Language e Collation  
  Le proprietà**Language** e **Collation** vengono spesso mostrate insieme: quando è possibile impostare **Language**, sarà possibile impostare anche **Collation**.  
@@ -71,7 +58,7 @@ caps.handback.revision: 26
   
  Inoltre, è possibile impostare la proprietà **Language**da sola in un oggetto **Translation** .  
   
- Un oggetto Translation vien creato quando si aggiungono traduzioni a un cubo o una dimensione. **Language** fa parte della definizione di traduzione. **Collation**invece viene impostato per il cubo o a livello superiore ed è condiviso da tutte le traduzioni. Ciò è evidente nel codice XMLA di un cubo contenente traduzioni, dove si avranno più proprietà della lingua (una per ogni traduzione), ma un solo set di regole di confronto. Si noti che esiste un'eccezione per le traduzioni dell'attributo della dimensione, in cui è possibile eseguire l'override delle regole di confronto del cubo per specificare un set di regole di confronto dell'attributo che corrisponda alla colonna di origine (il motore di database supporta l'impostazione delle regole di confronto per singole colonne ed è frequente configurare le singole traduzioni per ottenere i dati dei membri da colonne di origine diverse). Per tutte le altre traduzioni invece la proprietà **Language** viene usata da sola senza la proprietà **Collation** conseguente. Per maggiori dettagli, vedere [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
+ Un oggetto Translation vien creato quando si aggiungono traduzioni a un cubo o una dimensione. **Language** fa parte della definizione di traduzione. **Collation**invece viene impostato per il cubo o a livello superiore ed è condiviso da tutte le traduzioni. Ciò è evidente nel codice XMLA di un cubo contenente traduzioni, dove si avranno più proprietà della lingua (una per ogni traduzione), ma un solo set di regole di confronto. Si noti che esiste un'eccezione per le traduzioni dell'attributo della dimensione, in cui è possibile eseguire l'override delle regole di confronto del cubo per specificare un set di regole di confronto dell'attributo che corrisponda alla colonna di origine (il motore di database supporta l'impostazione delle regole di confronto per singole colonne ed è frequente configurare le singole traduzioni per ottenere i dati dei membri da colonne di origine diverse). Per tutte le altre traduzioni invece la proprietà **Language** viene usata da sola senza la proprietà **Collation** conseguente. Per maggiori dettagli, vedere [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md) .  
   
 ##  <a name="bkmk_lang"></a> Supporto della lingua in Analysis Services  
  La proprietà **Language** definisce le impostazioni locali di un oggetto usato durante l'elaborazione, l'esecuzione di query e con **Didascalie** e **Traduzioni** supporta gli scenari multilingue. Le impostazioni locali si basano su un identificatore di lingua, ad esempio l'inglese, e su un'area, ad esempio Stati Uniti o Australia, che definiscono ulteriormente le rappresentazioni di data e ora.  
@@ -83,7 +70,7 @@ caps.handback.revision: 26
 ###  <a name="bkmk_lcid"></a> Il valore della proprietà Language è un identificatore delle impostazioni locali (LCID)  
  I valori validi includono qualsiasi LCID visualizzato nell'elenco a discesa. In Management Studio e SQL Server Data Tools, gli LCID sono rappresentati in valori equivalenti in formato stringa. Le stesse lingue vengono visualizzate dovunque sia presente la proprietà **Language** , indipendentemente dallo strumento. Un elenco di lingue identico consente di implementare e testare le traduzioni in modo coerente in tutto il modello.  
   
- Sebbene in Analysis Services le lingue vengono elencate in base al nome, il valore effettivo archiviato per la proprietà è un LCID. Per l'impostazione di una proprietà della lingua a livello di codice o tramite il file msmdsrv.ini, usare l'[identificatore delle impostazioni locali (LCID)](http://en.wikipedia.org/wiki/Locale) come valore. Un LCID è un valore a 32 bit costituito da un ID lingua, un ID di ordinamento e bit riservati che identificano una particolare lingua. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa gli LCID per specificare la lingua selezionata per gli oggetti e le istanze di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+ Sebbene in Analysis Services le lingue vengono elencate in base al nome, il valore effettivo archiviato per la proprietà è un LCID. Per l'impostazione di una proprietà della lingua a livello di codice o tramite il file msmdsrv.ini, usare l' [identificatore delle impostazioni locali (LCID)](http://en.wikipedia.org/wiki/Locale) come valore. Un LCID è un valore a 32 bit costituito da un ID lingua, un ID di ordinamento e bit riservati che identificano una particolare lingua. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa gli LCID per specificare la lingua selezionata per gli oggetti e le istanze di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  È possibile impostare l'identificatore LCID usando il formato decimale o esadecimale. Di seguito sono riportati alcuni esempi di valori validi per la proprietà **Language** :  
   
@@ -103,7 +90,7 @@ caps.handback.revision: 26
 ##  <a name="bkmk_collations"></a> Supporto delle regole di confronto in Analysis Services  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa esclusivamente le regole di confronto binarie e di Windows (versioni _90 e _100). Non usa le regole di confronto datate di SQL Server. Un singolo set di regole di confronto viene usato in tutto il cubo ad eccezione delle traduzioni a livello di attributo. Per altre informazioni sulla definizione di traduzioni per gli attributi, vedere [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
- Le regole di confronto controllano la distinzione tra maiuscole/minuscole di tutte le stringhe di un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti ad eccezione degli identificatori di oggetto. Se si usano caratteri maiuscoli e minuscoli in un identificatore di oggetto, tenere presente che la distinzione tra maiuscole e minuscole degli identificatori di oggetto non è determinata dalle regole di confronto, ma da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per gli identificatori di oggetto creati con l'alfabeto inglese non verrà mai fatta distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Per il cirillico e le altre lingue che usano un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti avviene il contrario, ovvero viene sempre fatta distinzione tra maiuscole/minuscole. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
+ Le regole di confronto controllano la distinzione tra maiuscole/minuscole di tutte le stringhe di un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti ad eccezione degli identificatori di oggetto. Se si usano caratteri maiuscoli e minuscoli in un identificatore di oggetto, tenere presente che la distinzione tra maiuscole e minuscole degli identificatori di oggetto non è determinata dalle regole di confronto, ma da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per gli identificatori di oggetto creati con l'alfabeto inglese non verrà mai fatta distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Per il cirillico e le altre lingue che usano un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti avviene il contrario, ovvero viene sempre fatta distinzione tra maiuscole/minuscole. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
  Le regole di confronto di Analysis Services sono compatibili con quelle del motore di database relazionale di SQL Server, supponendo di mantenere la parità nelle opzioni di ordinamento selezionate per ogni servizio. Se ad esempio il database relazionale fa distinzione tra caratteri accentati e non accentati, è necessario configurare il cubo allo stesso modo. Se le impostazioni delle regole di confronto sono diverse, possono verificarsi dei problemi. Per un esempio e soluzioni alternative, vedere [Gli spazi vuoti in una stringa Unicode restituiscono risultati di elaborazione diversi in base alle regole di confronto](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Per altre informazioni sulle regole di confronto e sul motore di database, vedere [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -137,7 +124,7 @@ caps.handback.revision: 26
 |Ordinamento (suffisso)|Descrizione dell'ordinamento|  
 |---------------------------|----------------------------|  
 |Binario (_BIN) o BIN2 (_BIN2)|Esistono due tipi di regole di confronto binarie in SQL Server: le regole di confronto BIN meno recenti e le regole di confronto BIN2 più recenti. Nelle regole di confronto BIN2 tutti i caratteri vengono ordinati in base ai relativi elementi di codice. Nelle regole di confronto BIN solo il primo carattere viene ordinato in base all'elemento di codice e i restanti caratteri vengono ordinati in base ai relativi valori di byte. Poiché la piattaforma Intel si avvale di un'architettura little endian, i caratteri di codice Unicode vengono sempre scambiati con i byte archiviati.<br /><br /> Per le regole di confronto binarie nei tipi di dati Unicode, le impostazioni locali non vengono considerate ai fini dell'ordinamento dei dati. Ad esempio, l'utilizzo di Latin_1_General_BIN e Japanese_BIN su dati Unicode restituisce risultati di ordinamento identici.<br /><br /> L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
-|Distinzione maiuscole/minuscole (_CS)|Opera una distinzione tra lettere maiuscole e minuscole. Se viene selezionata questa opzione, le lettere minuscole precedono le versioni maiuscole corrispondenti nell'ordinamento. È possibile impostare in modo esplicito di non effettuare la distinzione tra maiuscole e minuscole specificando _CI. Le impostazioni relative ai caratteri maiuscoli/minuscoli specifiche delle regole di confronto non si applicano agli identificatori di oggetto, ad esempio all'ID di una dimensione, a un cubo e ad altri oggetti. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md).|  
+|Distinzione maiuscole/minuscole (_CS)|Opera una distinzione tra lettere maiuscole e minuscole. Se viene selezionata questa opzione, le lettere minuscole precedono le versioni maiuscole corrispondenti nell'ordinamento. È possibile impostare in modo esplicito di non effettuare la distinzione tra maiuscole e minuscole specificando _CI. Le impostazioni relative ai caratteri maiuscoli/minuscoli specifiche delle regole di confronto non si applicano agli identificatori di oggetto, ad esempio all'ID di una dimensione, a un cubo e ad altri oggetti. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
 |Distinzione caratteri accentati/non accentati (_AS)|Opera una distinzione tra caratteri accentati e non accentati. Il carattere 'a', ad esempio, non viene considerato uguale ad 'ấ'. Se questa opzione non è selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera identiche le versioni accentate e non accentate delle lettere ai fini dell'ordinamento. È possibile impostare in modo esplicito di non effettuare la distinzione tra caratteri accentati e non accentati specificando _AI.|  
 |Distinzione Kana (_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi: Hiragana e Katakana. Se questa opzione non è selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera identici i caratteri Hiragana e Katakana ai fini dell'ordinamento. Non è disponibile un suffisso per l'ordinamento senza distinzione Kana.|  
 |Distinzione larghezza (_WS)|Opera una distinzione tra la rappresentazione a un byte di un carattere e la rappresentazione a due byte dello stesso carattere. Se questa opzione non è selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera identica la rappresentazione a un byte e a byte doppio dello stesso carattere ai fini dell'ordinamento. Non è disponibile un suffisso per l'ordinamento senza distinzione di larghezza.|  
@@ -151,7 +138,7 @@ caps.handback.revision: 26
   
 -   Rielaborazione delle partizioni e delle dimensioni dopo l'aggiornamento delle regole di confronto.  
   
- Per modificare la lingua o le regole di confronto predefinite a livello di server, è possibile usare SQL Server Management Studio o PowerShell per AMO. In alternativa, è possibile modificare le impostazioni di **\<Language>** e **\<CollationName>** nel file msmdsrv.ini, specificando l'identificatore LCID della lingua.  
+ Per modificare la lingua o le regole di confronto predefinite a livello di server, è possibile usare SQL Server Management Studio o PowerShell per AMO. In alternativa, è possibile modificare il  **\<lingua >** e  **\<CollationName >** impostazioni nel file msmdsrv.ini, specificando l'identificatore LCID della lingua.  
   
 1.  In Management Studio fare clic con il pulsante destro del mouse sul nome del server | **Proprietà** | **Lingua/Regole di confronto**.  
   
@@ -171,7 +158,7 @@ caps.handback.revision: 26
   
 3.  In Proprietà impostare **Language** e **Collation**. I valori scelti verranno usati da tutti gli oggetti del cubo, incluse le dimensioni e le misure del cubo, e influiranno sulle sull'elaborazione e le operazioni di query.  
   
-     L'unico modo per incorporare proprietà diverse per la lingua e le regole di confronto per gli oggetti all'interno del cubo è tramite le traduzioni. Per maggiori dettagli, vedere [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
+     L'unico modo per incorporare proprietà diverse per la lingua e le regole di confronto per gli oggetti all'interno del cubo è tramite le traduzioni. Per maggiori dettagli, vedere [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md) .  
   
 ##  <a name="bkmk_XMLA"></a> Modificare la lingua e le regole di confronto all'interno di un modello di dati mediante XMLA  
  Le impostazioni della lingua e delle regole di confronto vengono ereditate alla creazione dell'oggetto. Le successive modifiche a tali proprietà devono essere eseguite manualmente. Un approccio per modificare rapidamente le regole di confronto per più oggetti è usare il comando ALTER in uno script XMLA.  
@@ -189,14 +176,14 @@ caps.handback.revision: 26
 4.  Rielaborare il cubo.  
   
 ##  <a name="bkmk_enablefast1033"></a> Ottimizzare le prestazioni per le impostazioni locali inglesi tramite EnableFast1033Locale  
- Se si usa l'identificatore di lingua Inglese (Stati Uniti) (0x0409 o 1033) come lingua predefinita per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è possibile ottenere maggiori miglioramenti delle prestazioni impostando la proprietà di configurazione avanzata **EnableFast1033Locale**, disponibile solo per tale identificatore di lingua. Se si imposta il valore di questa proprietà su **true** , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzerà un algoritmo più veloce per il confronto e l'hashing di stringhe. Per altre informazioni sull'impostazione delle proprietà di configurazione, vedere [Proprietà server in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Se si usa l'identificatore di lingua Inglese (Stati Uniti) (0x0409 o 1033) come lingua predefinita per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è possibile ottenere maggiori miglioramenti delle prestazioni impostando la proprietà di configurazione avanzata **EnableFast1033Locale** , disponibile solo per tale identificatore di lingua. Se si imposta il valore di questa proprietà su **true** , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzerà un algoritmo più veloce per il confronto e l'hashing di stringhe. Per altre informazioni sull'impostazione delle proprietà di configurazione, vedere [Proprietà server in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ##  <a name="bkmk_gb18030"></a> Supporto di GB18030 in Analysis Services  
  GB18030 è uno standard separato usato nella Repubblica popolare Cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. In Analysis Services non viene eseguita alcuna conversione dei dati durante l'elaborazione dei dati da origini esterne. I dati vengono archiviati semplicemente in formato Unicode. In fase di query viene eseguita una conversione GB18030 tramite le librerie client di Analysis Services (in particolare, il provider OLE DB MSOLAP.dll) quando vengono restituiti i dati di testo nei risultati della query, in base alle impostazioni del sistema operativo client. Anche il motore di database supporta GB18030. Per informazioni dettagliate, vedere [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [Suggerimenti per la globalizzazione e procedure consigliate &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

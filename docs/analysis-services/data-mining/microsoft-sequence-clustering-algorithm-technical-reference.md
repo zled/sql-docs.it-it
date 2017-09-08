@@ -1,34 +1,39 @@
 ---
-title: "Riferimento tecnico per l&#39;algoritmo Microsoft Sequence Clustering | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parametro MAXIMUM_SEQUENCE_STATES "
-  - "MINIMUM_SUPPORT - parametro"
-  - "MAXIMUM_STATES - parametro"
-  - "algoritmi Microsoft Sequence Clustering [Analysis Services]"
-  - "CLUSTER_COUNT - parametro"
+title: Riferimento tecnico algoritmo Microsoft Sequence Clustering | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MAXIMUM_SEQUENCE_STATES parameter
+- MINIMUM_SUPPORT parameter
+- MAXIMUM_STATES parameter
+- sequence clustering algorithms [Analysis Services]
+- CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e26ac40b7cb47370107f348548cf2cc7489efa1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Riferimento tecnico per l&#39;algoritmo Microsoft Sequence Clustering
+# <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering
   L'algoritmo Microsoft Sequence Clustering è un algoritmo ibrido in cui viene usata l'analisi delle catene di Markov per identificare le sequenze ordinate e consente di combinare i risultati di tale analisi con le tecniche di clustering per generare cluster in base alle sequenze e agli altri attributi del modello. In questo argomento viene illustrato come implementare e personalizzare l'algoritmo e vengono descritti requisiti speciali per i modelli Sequence Clustering.  
   
  Per informazioni più generali sull'algoritmo, che includono le modalità di esplorazione e di esecuzione di query sui modelli Sequence Clustering, vedere [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
-## Implementazione dell'algoritmo Microsoft Sequence Clustering  
+## <a name="implementation-of-the-microsoft-sequence-clustering-algorithm"></a>Implementazione dell'algoritmo Microsoft Sequence Clustering  
  Il modello Microsoft Sequence Clustering usano i modelli Markov per identificare le sequenze e determinare la probabilità delle sequenze. Un modello Markov è un grafico diretto che archivia le transizioni tra stati diversi. L'algoritmo Microsoft Sequence Clustering usano catene di Markov di ordine n, non un modello Markov nascosto.  
   
  Il numero di ordini di una catena Markov indica quanti stati vengono usati per determinare la probabilità degli stati correnti. In un modello Markov di primo ordine la probabilità dello stato corrente dipende solo dallo stato precedente. In una catena Markov di secondo ordine la probabilità di un stato dipende dai due stati precedenti e così via. Per ogni catena Markov una matrice della transizione archivia le transizioni per ogni combinazione di stati. Con l'aumentare della lunghezza della catena di Markov, aumenta anche la dimensione della matrice in modo esponenziale e la matrice diventa di tipo sparse. Anche il tempo di elaborazione aumenta proporzionalmente.  
@@ -43,7 +48,7 @@ caps.handback.revision: 20
   
  Un modello Sequence Clustering tende a creare molti più cluster rispetto a un tipico modello di clustering. L'algoritmo Microsoft Sequence Clustering esegue pertanto la *decomposizione del cluster*per separare i cluster in base alle sequenze e ad altri attributi.  
   
-### Caratteristica di selezione degli attributi in un modello Sequence Clustering  
+### <a name="feature-selection-in-a-sequence-clustering-model"></a>Caratteristica di selezione degli attributi in un modello Sequence Clustering  
  La caratteristica di selezione degli attributi non viene richiamata in caso di compilazione delle sequenze, tuttavia si applica in fase di clustering.  
   
 |Tipo di modello|Metodo relativo alla caratteristica di selezione degli attributi|Commenti|  
@@ -51,9 +56,9 @@ caps.handback.revision: 20
 |Sequence Clustering|Non usato|La caratteristica di selezione degli attributi non viene richiamata. È tuttavia possibile controllare il comportamento dell'algoritmo impostando i valori dei parametri MINIMUM_SUPPORT e MINIMUM_PROBABILIITY.|  
 |Clustering|Punteggio di interesse|Anche se l'algoritmo Clustering può usare algoritmi discreti o discretizzati, il punteggio di ogni attributo viene calcolato come distanza ed è continuo. Viene pertanto usato il punteggio di interesse.|  
   
- Per altre informazioni, vedere [Feature Selection](../Topic/Feature%20Selection.md).  
+ Per altre informazioni, vedere [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
-### Ottimizzazione delle prestazioni  
+### <a name="optimizing-performance"></a>Ottimizzazione delle prestazioni  
  L'algoritmo Microsoft Sequence Clustering supporta varie modalità di ottimizzazione dell'elaborazione:  
   
 -   Controllo del numero di cluster generati mediante l'impostazione di un valore per il parametro CLUSTER_COUNT.  
@@ -72,10 +77,10 @@ caps.handback.revision: 20
   
  Una descrizione esaustiva di questi metodi esula dall'ambito del presente argomento.  
   
-## Personalizzazione dell'algoritmo Sequence Clustering  
+## <a name="customizing-the-sequence-clustering-algorithm"></a>Personalizzazione dell'algoritmo Sequence Clustering  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante. È inoltre possibile modificare il comportamento del modello completato impostando flag di modellazione che controllano la modalità di elaborazione dei dati di training da parte dell'algoritmo.  
   
-### Impostazione dei parametri dell'algoritmo  
+### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
  Nella tabella seguente sono descritti i parametri che possono essere usati con l'algoritmo Microsoft Sequence Clustering.  
   
  CLUSTER_COUNT  
@@ -103,7 +108,7 @@ caps.handback.revision: 20
   
  Il valore predefinito è 100.  
   
-### Flag di modellazione  
+### <a name="modeling-flags"></a>Flag di modellazione  
  Di seguito sono indicati i flag di modellazione il cui utilizzo è supportato con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering.  
   
  NOT NULL  
@@ -118,7 +123,7 @@ caps.handback.revision: 20
   
  Per altre informazioni sull'uso di valori Missing nei modelli di data mining e su come tali valori influiscono sui punteggi di probabilità, vedere [Valori mancanti &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  La tabella del case deve includere una colonna relativa agli ID e può contenere altre colonne che archiviano attributi sul case.  
   
  L'algoritmo Microsoft Sequence Clustering richiede informazioni sulla sequenza, archiviate come tabella nidificata. Nella tabella nidificata deve essere presente un'unica colonna Key Sequence. Una colonna **Key Sequence** può contenere qualsiasi tipo di dati che è possibile ordinare, inclusi tipi di dati string, ma deve contenere valori univoci per ogni case. Prima di elaborare il modello, è inoltre necessario assicurarsi che sia la tabella del case sia la tabella nidificata vengano ordinate in ordine crescente sulla chiave che correla le tabelle.  
@@ -126,7 +131,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Se si crea un modello che usano l'algoritmo di Microsoft Sequence ma non usano una colonna Sequence, il modello risultante non conterrà alcuna sequenza, ma raggrupperà semplicemente i case in base ad altri attributi inclusi nel modello.  
   
-### Colonne di input e stimabili  
+### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta colonne di input e colonne stimabili specifiche, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
@@ -134,7 +139,7 @@ caps.handback.revision: 20
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized, Table e Ordered|  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
   
 -   Usare la funzione [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) per la stima delle sequenze. Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
@@ -142,9 +147,9 @@ caps.handback.revision: 20
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta il drill-through, l'utilizzo di modelli di data mining OLAP e l'utilizzo di dimensioni di data mining.  
   
-## Vedere anche  
- [Algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+ [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

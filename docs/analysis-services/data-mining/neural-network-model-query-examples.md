@@ -1,27 +1,32 @@
 ---
-title: "Esempi di query sul modello di rete neurale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmi Neural Network [Analysis Services]"
-  - "query sul contenuto [DMX]"
-  - "modello di rete neurale [Analysis Services]"
+title: Esempi di Query del modello di rete neurale | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- neural network algorithms [Analysis Services]
+- content queries [DMX]
+- neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16343214615687c3a2ac39c9083c867c6d1e91c1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Esempi di query sul modello di rete neurale
+# <a name="neural-network-model-query-examples"></a>Esempi di query sul modello di rete neurale
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto che consente di ottenere dettagli sui criteri individuati durante l'analisi oppure una query di stima in cui vengono utilizzati i criteri presenti nel modello per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello di rete neurale potrebbe ad esempio recuperare metadati del modello, quale il numero di livelli nascosti. In alternativa, una query di stima potrebbe suggerire classificazioni basate su un input e, facoltativamente, indicare le probabilità per ogni classificazione.  
   
  In questa sezione viene illustrato come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network.  
@@ -40,13 +45,13 @@ caps.handback.revision: 29
   
  [Creazione di una stima singleton](#bkmk_Query5)  
   
-## Ricerca di informazioni su un modello di rete neurale  
+## <a name="finding-information-about-a-neural-network-model"></a>Ricerca di informazioni su un modello di rete neurale  
  In tutti i modelli di data mining viene esposto il contenuto appreso dall'algoritmo secondo uno schema standardizzato, definito set di righe dello schema del modello di data mining. Queste informazioni forniscono dettagli sul modello e includono i metadati di base, le strutture individuate nell'analisi e i parametri utilizzati in fase di elaborazione. È possibile creare query sul contenuto del modello tramite istruzioni DMX (Data Mining Extension).  
   
 ###  <a name="bkmk_Query1"></a> Esempio di query 1: Recupero di metadati del modello tramite DMX  
  Nella query seguente vengono restituiti metadati di base relativi a un modello compilato tramite l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. In un modello di rete neurale il nodo padre include solo il nome del modello, il nome del database in cui questo è archiviato e il numero di nodi figlio. Il nodo delle statistiche marginali (NODE_TYPE = 24) fornisce tuttavia sia questi metadati di base, sia alcune statistiche derivate relative alle colonne di input utilizzate nel modello.  
   
- La query di esempio seguente è basata sul modello di data mining creato nell' [Esercitazione intermedia sul data mining](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md), denominato `Call Center Default NN`. Il modello utilizza i dati di un call center per esplorare le possibili correlazioni tra personale e numero di chiamate, ordini e problemi. L'istruzione DMX recupera dati dal nodo delle statistiche marginali del modello di rete neurale. La query include la parola chiave FLATTENED, in quanto le statistiche di interesse degli attributi di input vengono archiviate in una tabella nidificata, NODE_DISTRIBUTION. Se tuttavia il provider della query supporta set di righe gerarchici, non è necessario utilizzare la parola chiave FLATTENED.  
+ La query di esempio seguente è basata sul modello di data mining creato nell' [Esercitazione intermedia sul data mining](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b), denominato `Call Center Default NN`. Il modello utilizza i dati di un call center per esplorare le possibili correlazioni tra personale e numero di chiamate, ordini e problemi. L'istruzione DMX recupera dati dal nodo delle statistiche marginali del modello di rete neurale. La query include la parola chiave FLATTENED, in quanto le statistiche di interesse degli attributi di input vengono archiviate in una tabella nidificata, NODE_DISTRIBUTION. Se tuttavia il provider della query supporta set di righe gerarchici, non è necessario utilizzare la parola chiave FLATTENED.  
   
 ```  
 SELECT FLATTENED MODEL_CATALOG, MODEL_NAME,   
@@ -124,7 +129,7 @@ WHERE NODE_TYPE = 21
   
  Risultati dell'esempio:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |-----------------------|------------------------|  
 |Average Time Per Issue|64,7094100096 - 77,4002099712|  
 |Day Of Week|Fri.|  
@@ -171,17 +176,17 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
 -   I nomi univoci dei nodi nel livello di input iniziano sempre con 60000000.  
   
- Questi risultati suggeriscono pertanto che al nodo con ID 70000000200000000 vengono passati sei coefficienti diversi (VALUETYPE = 7), con i valori inclusi nella colonna ATTRIBUTE_VALUE. È possibile determinare esattamente a quale attributo di input si riferisce il coefficiente utilizzando l'ID del nodo presente nella colonna ATTRIBUTE_NAME. L'ID del nodo 6000000000000000a si riferisce, ad esempio, al valore e all'attributo di input `Day of Week = 'Tue.'`. È possibile usare l'ID del nodo per creare una query o passare al nodo usando [Microsoft Generic Content Tree Viewer](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+ Questi risultati suggeriscono pertanto che al nodo con ID 70000000200000000 vengono passati sei coefficienti diversi (VALUETYPE = 7), con i valori inclusi nella colonna ATTRIBUTE_VALUE. È possibile determinare esattamente a quale attributo di input si riferisce il coefficiente utilizzando l'ID del nodo presente nella colonna ATTRIBUTE_NAME. L'ID del nodo 6000000000000000a si riferisce, ad esempio, al valore e all'attributo di input `Day of Week = 'Tue.'` . È possibile usare l'ID del nodo per creare una query o passare al nodo usando [Microsoft Generic Content Tree Viewer](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
  Analogamente, se si esegue una query sulla tabella NODE_DISTRIBUTION dei nodi nel livello di output (NODE_TYPE = 23), è possibile vedere i coefficienti per ogni valore di output. Nel livello di output tuttavia i puntatori si riferiscono nuovamente ai nodi del livello nascosto. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
-## Utilizzo di un modello di rete neurale per eseguire stime  
+## <a name="using-a-neural-network-model-to-make-predictions"></a>Utilizzo di un modello di rete neurale per eseguire stime  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network supporta sia la classificazione sia la regressione. È possibile utilizzare funzioni di stima con questi modelli per fornire nuovi dati e creare stime batch o singleton.  
   
 ###  <a name="bkmk_Query5"></a> Esempio di query 5: Creazione di una stima singleton  
  Il modo più semplice per compilare una query di stima su un modello di rete neurale consiste nell'utilizzare il generatore delle query di stima, disponibile nella scheda **Stima modello di data mining** di Progettazione modelli di data mining sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile esplorare il modello nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network per filtrare gli attributi di interesse e visualizzare le tendenze, quindi passare alla scheda **Stima modello di data mining** per creare una query e stimare i nuovi valori per tali tendenze.  
   
- È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel visualizzatore e in **Input** selezionare **\<Tutto>**.  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
+ È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel visualizzatore e per **Input**selezionare  **\<tutte >**.  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
   
  Esplorando i risultati nel visualizzatore, è possibile notare che in alcuni giorni della settimana i volumi degli ordini sono bassi e che sembra esserci una correlazione tra un aumento delle vendite e un aumento nel numero di operatori. È quindi possibile utilizzare una query di stima sul modello per testare un'ipotesi di simulazione e verificare se un aumento del numero degli operatori del livello 2 in un giorno in cui i volumi di ordini sono bassi comporta un aumento anche degli ordini. A questo scopo, creare una query simile alla seguente:  
   
@@ -203,9 +208,9 @@ NATURAL PREDICTION JOIN
  Il volume delle vendite stimato è più elevato dell'intervallo corrente di vendite per martedì (Tuesday) e la probabilità della stima è molto elevata. Potrebbe tuttavia essere necessario creare più stime tramite un'elaborazione batch per testare una varietà di ipotesi relative al modello.  
   
 > [!NOTE]  
->  I componenti aggiuntivi Data mining per Excel 2007 forniscono procedure guidate di regressione logistica che semplificano la risoluzione di problemi complessi, ad esempio il numero di operatori di livello 2 necessari per migliorare il livello del servizio e raggiungere un livello desiderato per un turno specifico. I componenti aggiuntivi per il data mining sono disponibili gratuitamente per il download e includono procedure guidate basate su algoritmi di rete neurale e o regressione logistica. Per altre informazioni, vedere il sito Web relativo ai [componenti aggiuntivi Data mining per Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790).  
+>  I componenti aggiuntivi Data mining per Excel 2007 forniscono procedure guidate di regressione logistica che semplificano la risoluzione di problemi complessi, ad esempio il numero di operatori di livello 2 necessari per migliorare il livello del servizio e raggiungere un livello desiderato per un turno specifico. I componenti aggiuntivi per il data mining sono disponibili gratuitamente per il download e includono procedure guidate basate su algoritmi di rete neurale e o regressione logistica. Per altre informazioni, vedere il sito Web relativo ai [componenti aggiuntivi Data mining per Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790) .  
   
-## Elenco delle funzioni di stima  
+## <a name="list-of-prediction-functions"></a>Elenco delle funzioni di stima  
  Tutti gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] supportano un set comune di funzioni. Non sono presenti funzioni di stima specifiche dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, tuttavia l'algoritmo supporta le funzioni elencate nella tabella seguente.  
   
 |||  
@@ -221,10 +226,10 @@ NATURAL PREDICTION JOIN
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Guida di riferimento agli algoritmi (Analysis Services - Data Mining)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lezione 5: Compilazione dei modelli di rete neurale e di regressione logistica &#40;Esercitazione intermedia sul data mining&#41;](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenuto del modello di data mining per i modelli di rete neurale &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lezione 5: Compilazione Neural Network e i modelli di regressione logistica &#40; esercitazione intermedia di Data Mining &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
