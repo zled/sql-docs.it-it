@@ -1,29 +1,34 @@
 ---
-title: "Impostare tabelle writeback delle partizioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partizioni abilitate per scrittura [Analysis Services]"
-  - "partizioni [Analysis Services], writeback"
-  - "partizioni [Analysis Services], abilitate per la scrittura"
-  - "writeback [Analysis Services], partizioni"
+title: Impostare tabelle writeback delle partizioni | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- write-enabled partitions [Analysis Services]
+- partitions [Analysis Services], writeback
+- partitions [Analysis Services], write-enabled
+- writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Impostare tabelle writeback delle partizioni
+# <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
   Se si abilita un gruppo di misure per la scrittura, gli utenti finali possono modificare i dati del cubo durante la relativa esplorazione; tuttavia, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nei dati del cubo o nei dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  
   
  È possibile esplorare o eliminare i dati writeback, nonché convertirli in una partizione. In una partizione abilitata per la scrittura, è possibile utilizzare i ruoli dei cubi per concedere l'accesso in lettura/scrittura a singoli utenti e gruppi di utenti, nonché per limitare l'accesso a celle o gruppi di celle specifici nella partizione.  
@@ -31,26 +36,26 @@ caps.handback.revision: 34
  Per un breve video introduttivo al writeback, vedere quello relativo al [writeback in Excel 2010 per Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). Un'analisi più dettagliata di questa funzionalità è disponibile tramite questa serie di post di blog relativi alla [compilazione di un'applicazione di writeback con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
   
 > [!NOTE]  
->  Il writeback è supportato solo per i database relazionali e i data mart di SQL Server e solo per i modelli multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Il writeback è supportato solo per i database relazionali e i data mart di SQL Server e solo per i modelli multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-## Come abilitare una partizione per la scrittura  
+## <a name="how-to-write-enable-a-partition"></a>Come abilitare una partizione per la scrittura  
  È possibile abilitare per la scrittura i gruppi di misure di una partizione abilitando per la scrittura la partizione stessa in Progettazione cubi in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   Nella scheda Partizioni di Progettazione cubi fare clic con il pulsante destro del mouse su una partizione e scegliere **Impostazioni writeback**.  
   
--   In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] espandere il database | cubo | gruppo di misure, quindi fare clic con il pulsante destro del mouse su **Writeback** e scegliere **Abilita writeback**.  
+-   In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]espandere il database | cubo | gruppo di misure, quindi fare clic con il pulsante destro del mouse su **Writeback** e scegliere **Abilita writeback**.  
   
  Il writeback è supportato solo per le misure che utilizzano l'aggregazione SUM. Nel database di esempio AdventureWorks è possibile utilizzare il gruppo di misure Sales Targets per testare i comportamenti del writeback.  
   
  Quando si abilita una partizione per la scrittura, è necessario specificare una tabella e un'origine dei dati per l'archiviazione della tabella di writeback. Le eventuali modifiche apportate successivamente al gruppo di misure vengono registrate in questa tabella.  
   
-## Esplorare i dati writeback in una partizione  
- È possibile visualizzare il contenuto di una tabella writeback di un cubo nella finestra di dialogo **Visualizza dati**, a cui è possibile accedere facendo clic sul pulsante destro del mouse su una partizione abilitata per la lettura nella scheda **Partizioni** di Progettazione cubi.  
+## <a name="browse-writeback-data-in-a-partition"></a>Esplorare i dati writeback in una partizione  
+ È possibile visualizzare il contenuto di una tabella writeback di un cubo nella finestra di dialogo **Visualizza dati** , a cui è possibile accedere facendo clic sul pulsante destro del mouse su una partizione abilitata per la lettura nella scheda **Partizioni** di Progettazione cubi.  
   
-## Eliminare i dati writeback o disabilitare il writeback  
+## <a name="delete-writeback-data-or-disable-writeback"></a>Eliminare i dati writeback o disabilitare il writeback  
  Eliminando i dati writeback si cancella la cache writeback. Non appena i dati vengono eliminati, nello stato pulito vengono eseguite ulteriori operazioni di writeback. Disabilitando il writeback per una partizione del cubo si disattiva semplicemente il writeback per tale partizione.  
   
-## Convertire i dati writeback in una partizione  
+## <a name="convert-writeback-data-to-a-partition"></a>Convertire i dati writeback in una partizione  
  È possibile convertire i dati della tabella writeback di una partizione in una nuova partizione. Questa procedura consente di trasformare la tabella writeback nella tabella dei fatti della nuova partizione.  
   
 > [!CAUTION]  
@@ -60,9 +65,9 @@ caps.handback.revision: 34
   
  Per convertire i dati writeback in una partizione, usare la finestra di dialogo **Converti in partizione**, a cui è possibile accedere facendo clic con il pulsante destro del mouse sulla tabella writeback di una partizione abilitata per la scrittura in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile specificare il nome della partizione e quindi progettare la relativa aggregazione durante la creazione della partizione stessa o in un secondo momento. Per creare l'aggregazione quando si seleziona la partizione, è necessario scegliere di copiare la progettazione dell'aggregazione da una partizione esistente, che in genere, ma non necessariamente, corrisponde alla partizione writeback corrente. È inoltre possibile scegliere di elaborare la partizione durante la creazione.  
   
-## Vedere anche  
- [Partizioni abilitate per la scrittura](../Topic/Write-Enabled%20Partitions.md)   
- [Abilitazione del writeback su un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Abilitazione e protezione dell'immissione di dati con il writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+## <a name="see-also"></a>Vedere anche  
+ [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Abilitazione del writeback in un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Abilitazione e protezione dell'immissione di dati con il Writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

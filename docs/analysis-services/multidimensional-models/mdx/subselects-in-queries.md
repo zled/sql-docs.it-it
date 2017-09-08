@@ -1,27 +1,32 @@
 ---
-title: "Sub-SELECT nelle query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Le sub-SELECT nelle query | Documenti Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sub-SELECT nelle query
+# <a name="subselects-in-queries"></a>Sub-SELECT nelle query
   Le espressioni sub-SELECT sono espressioni SELECT nidificate utilizzate per limitare lo spazio del cubo dal quale viene valutata l'istruzione SELECT esterna. Le sub-SELECT consentono di definire un nuovo spazio sul quale tutti i calcoli vengono valutati.  
   
-## Esempio di sub-SELECT  
+## <a name="subselects-by-example"></a>Esempio di sub-SELECT  
  Si inizia con un esempio di come le sub-SELECT possono consentire di produrre i risultati che si desidera mostrare. Si supponga che sia stato richiesto di produrre una tabella che mostri il comportamento delle vendite, durante gli anni, per i primi 10 prodotti.  
   
  Il risultato sarà simile a quello contenuto nella tabella seguente:  
@@ -158,7 +163,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
  I risultati sopra riportati sono i primi 10 prodotti venduti in Francia tramite il canale Internet.  
   
-## Istruzione sub-SELECT  
+## <a name="subselect-statement"></a>Istruzione sub-SELECT  
  La notazione BNF per la sub-SELECT è:  
   
 ```  
@@ -339,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Come è possibile notare, ci sono differenze nei risultati in entrambi i set. La prima query ha risposto alla domanda sui prodotti più venduti nelle 5 aree principali, la seconda query ha risposto alla domanda sulle aree in cui si è verificato il maggior numero di vendite dei 5 prodotti più venduti.  
   
-### Osservazioni  
+### <a name="remarks"></a>Osservazioni  
  Le sub-SELECT sono sottoposte alle restrizioni e limitazioni seguenti:  
   
 -   La clausola WHERE non filtra il sottospazio.  
@@ -350,6 +355,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La clausola HAVING non è consentita in una clausola dell'asse; usare invece un'espressione della funzione [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) .  
   
--   Per impostazione predefinita i membri calcolati non sono consentiti nelle sub-SELECT. È tuttavia possibile modificare questa restrizione, per ogni singola sessione, assegnando un valore alla proprietà della stringa di connessione **SubQueries** in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o alla proprietà **DBPROP_MSMD_SUBQUERIES** in [Proprietà XMLA supportate &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md). Vedere [Membri calcolati in sub-SELECT e sottocubi](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati in base ai valori di **sottoquery** o **DBPROP_MSMD_SUBQUERIES**.  
+-   Per impostazione predefinita i membri calcolati non sono consentiti nelle sub-SELECT; Tuttavia, questa restrizione può essere modificata, in una base per la sessione, assegnando un valore per il **sottoquery** proprietà stringa di connessione <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** proprietà [ Proprietà XMLA supportate &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Vedere [Membri calcolati in sub-SELECT e sottocubi](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati in base ai valori di **sottoquery** o **DBPROP_MSMD_SUBQUERIES**.  
   
   

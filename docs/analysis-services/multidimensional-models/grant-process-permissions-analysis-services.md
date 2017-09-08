@@ -1,27 +1,32 @@
 ---
-title: "Concedere le autorizzazioni di elaborazione (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorizzazioni [Analysis Services], elaborazione"
-  - "autorizzazioni di elaborazione [Analysis Services]"
+title: Concedere le autorizzazioni di elaborazione (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Analysis Services], process
+- process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f1542d477a10e6a77e67e24d607b7086da1bb55
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Concedere le autorizzazioni di elaborazione (Analysis Services)
+# <a name="grant-process-permissions-analysis-services"></a>Concedere le autorizzazioni di elaborazione (Analysis Services)
   L'amministratore può creare un ruolo dedicato alle operazioni di elaborazione di Analysis Services, consentendo di delegare tale attività specifica ad altri utenti o ad applicazioni usate per l'elaborazione automatica pianificata. Le autorizzazioni di elaborazione possono essere concesse a livello del database, del cubo, della dimensione o della struttura di data mining. A meno che non si usi un cubo o un database tabulare di grandi dimensioni è consigliabile concedere i diritti di elaborazione a livello di database, compresi tutti gli oggetti, anche quelli con dipendenze tra di loro.  
   
  Le autorizzazioni vengono concesse tramite i ruoli che associano gli oggetti alle autorizzazioni e gli account utente e di gruppo di Windows. Tenere presente che le autorizzazioni si sommano tra loro. Si supponga, ad esempio, uno scenario in cui un ruolo concede l'autorizzazione per l'elaborazione di un cubo, mentre un secondo ruolo concede allo stesso utente l'autorizzazione per l'elaborazione di una dimensione. Le autorizzazioni concesse dai due diversi ruoli si sommano, assegnando all'utente l'autorizzazione sia per l'elaborazione del cubo che per l'elaborazione della dimensione specifica all'interno del database.  
@@ -29,31 +34,31 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Un utente il cui ruolo dispone solo delle autorizzazioni di elaborazione non sarà in grado di usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per connettersi a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ed elaborare gli oggetti. Tali strumenti richiedono l'autorizzazione **Lettura definizione** per l'accesso ai metadati degli oggetti. Se non è possibile usare uno dei due strumenti, sarà necessario usare lo script XMLA per eseguire un'operazione di elaborazione.  
 >   
->  È inoltre consigliabile concedere autorizzazioni **Lettura definizione** a scopo di test. Un utente che dispone di entrambe le autorizzazioni **Lettura definizione** ed **Elaborazione database** può elaborare gli oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in modo interattivo. Per informazioni dettagliate, vedere [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
+>  È inoltre consigliabile concedere autorizzazioni **Lettura definizione** a scopo di test. Un utente che dispone di entrambe le autorizzazioni **Lettura definizione** ed **Elaborazione database** può elaborare gli oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in modo interattivo. Per informazioni dettagliate, vedere [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
-## Impostare le autorizzazioni di elaborazione a livello di database  
+## <a name="set-processing-permissions-at-the-database-level"></a>Impostare le autorizzazioni di elaborazione a livello di database  
  Questa sezione descrive come consentire l'elaborazione agli utenti non amministratori per tutti i cubi, le dimensioni, le strutture di data mining e i modelli di data mining all'interno del database.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aprire la cartella Database e selezionare un database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aprire la cartella Database e selezionare un database.  
   
 2.  Fare clic con il pulsante destro del mouse su **Ruoli** | **Nuovo ruolo**. Immettere un nome e una descrizione.  
   
-3.  Nel riquadro **Generale** selezionare la casella di controllo **Elaborazione database**. Inoltre, selezionare **Lettura definizione** per consentire anche l'elaborazione interattiva tramite uno degli strumenti di SQL Server, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+3.  Nel riquadro **Generale** selezionare la casella di controllo **Elaborazione database** . Inoltre, selezionare **Lettura definizione** per consentire anche l'elaborazione interattiva tramite uno degli strumenti di SQL Server, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 4.  Nel riquadro **Appartenenza** aggiungere gli account utente e di gruppo di Windows con l'autorizzazione per l'elaborazione di qualsiasi oggetto all'interno del database.  
   
 5.  Fare clic su **OK** per completare la definizione del ruolo.  
   
-## Impostare le autorizzazioni di elaborazione per singoli oggetti  
+## <a name="set-processing-permissions-on-individual-objects"></a>Impostare le autorizzazioni di elaborazione per singoli oggetti  
  È possibile impostare le autorizzazioni di elaborazione per singoli cubi, dimensioni, strutture o modelli di data mining.  
   
  L'elaborazione può non riuscire se inavvertitamente si escludono gli oggetti che devono essere elaborati insieme, ad esempio se si abilita l'elaborazione per un cubo ma non per le dimensioni correlate. Poiché le dipendenze tra gli oggetti possono sfuggire, è sempre necessario eseguire test approfonditi quando si impostano le autorizzazioni di elaborazione per singoli oggetti.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aprire la cartella Database e selezionare un database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aprire la cartella Database e selezionare un database.  
   
 2.  Fare clic con il pulsante destro del mouse su **Ruoli** | **Nuovo ruolo**. Immettere un nome e una descrizione.  
   
-3.  Nel riquadro **Generale** deselezionare la casella di controllo **Elaborazione database**. Le autorizzazioni di database non consentono di impostare le autorizzazioni per gli oggetti di livello inferiore visualizzando le opzioni per i ruoli in grigio o non selezionabili.  
+3.  Nel riquadro **Generale** deselezionare la casella di controllo **Elaborazione database** . Le autorizzazioni di database non consentono di impostare le autorizzazioni per gli oggetti di livello inferiore visualizzando le opzioni per i ruoli in grigio o non selezionabili.  
   
      Tecnicamente, per i ruoli di elaborazione dedicati non sono necessarie le autorizzazioni di database. Tuttavia, senza l'autorizzazione **Lettura definizione** a livello di database non è possibile visualizzare il database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], rendendo il test più difficile.  
   
@@ -61,13 +66,13 @@ caps.handback.revision: 35
   
     -   Nel riquadro **Cubi** selezionare la casella di controllo **Elabora** per ciascun cubo.  
   
-    -   Nel riquadro **Dimensioni** selezionare **Tutte le dimensioni del database** e quindi selezionare la casella di controllo **Elabora** per ciascuna dimensione. In alternativa, selezionare tutte le righe, quindi usare MAIUSC+clic per disattivare la selezione delle caselle di controllo.  
+    -   Nel riquadro **Dimensioni** selezionare **Tutte le dimensioni del database**e quindi selezionare la casella di controllo **Elabora** per ciascuna dimensione. In alternativa, selezionare tutte le righe, quindi usare MAIUSC+clic per disattivare la selezione delle caselle di controllo.  
   
 5.  Nel riquadro **Appartenenza** aggiungere gli account utente e di gruppo di Windows con l'autorizzazione per l'elaborazione di questi oggetti.  
   
 6.  Fare clic su **OK** per completare la definizione del ruolo.  
   
-## Testare l'elaborazione  
+## <a name="test-processing"></a>Testare l'elaborazione  
   
 1.  Tenere premuto MAIUSC e fare clic con il pulsante destro del mouse su [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], scegliere **Esegui come altro utente** e connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con un account di Windows assegnato al ruolo da testare.  
   
@@ -75,12 +80,12 @@ caps.handback.revision: 35
   
 3.  Fare clic con il pulsante destro del mouse su un cubo o una dimensione e scegliere **Elabora**. Scegliere un'opzione di elaborazione. Testare tutte le opzioni per tutte le combinazioni di oggetti. Se si verificano errori a causa di oggetti mancanti, aggiungere tali oggetti al ruolo.  
   
-## Impostare le autorizzazioni di elaborazione per una struttura di data mining  
+## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Impostare le autorizzazioni di elaborazione per una struttura di data mining  
  È possibile creare un ruolo che conceda l'autorizzazione per l'elaborazione delle strutture di data mining, inclusa l'elaborazione di tutti i modelli di data mining.  
   
- Le autorizzazioni **Drill-through** e **Lettura definizione** usate per la visualizzazione di un modello e una struttura di data mining sono atomiche e possono essere aggiunte allo stesso ruolo o suddivise in ruoli diversi.  
+ Le autorizzazioni**Drill-through** e **Lettura definizione** permissions used for browsing a mining model e structure are atomic e can be added to the same role, or separated out into a different role.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aprire la cartella Database e selezionare un database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aprire la cartella Database e selezionare un database.  
   
 2.  Fare clic con il pulsante destro del mouse su **Ruoli** | **Nuovo ruolo**. Immettere un nome e una descrizione. Nel riquadro **Generale** verificare che le caselle di controllo delle autorizzazioni di database siano deselezionate. Le autorizzazioni di database non consentono di impostare le autorizzazioni per gli oggetti di livello inferiore visualizzando le opzioni per i ruoli in grigio o non selezionabili.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 35
   
 5.  Fare clic su **OK** per completare la definizione del ruolo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborare database, tabelle o partizioni &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Concedere le autorizzazioni per il database &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   

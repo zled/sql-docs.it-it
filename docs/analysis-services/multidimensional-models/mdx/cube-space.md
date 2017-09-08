@@ -1,27 +1,32 @@
 ---
-title: "Spazio del cubo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Spazio del cubo | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16c39c5d1699c69e7f2dc119e90ff975b637d74f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Spazio del cubo
+# <a name="cube-space"></a>Spazio del cubo
   Lo spazio del cubo è il prodotto dei membri delle gerarchie dell'attributo di un cubo per le misure del cubo. Quindi lo spazio del cubo è determinato dal prodotto combinatorio di tutti i membri della gerarchia dell'attributo nel cubo e delle misure del cubo e definisce la dimensione massima del cubo. È importante sottolineare che questo spazio comprende tutte le possibili combinazioni di membri della gerarchia dell'attributo, anche combinazioni che si possono considerare impossibili nel mondo reale, ad esempio combinazioni in cui la città è Parigi e i paesi sono Inghilterra o Spagna o Giappone o India o altro.  
   
-## Spazio del cubo e Auto Exist  
+## <a name="autoexists-and-cube-space"></a>Spazio del cubo e Auto Exist  
  Il concetto di *Auto Exist* limita questo spazio del cubo alle celle effettivamente esistenti. È possibile che membri di una gerarchia dell'attributo non contengano membri di un'altra gerarchia dell'attributo nella stessa dimensione.  
   
  Se, ad esempio, si dispone di un cubo con una gerarchia dell'attributo City, una gerarchia dell'attributo Country e una misura Internet Sales Amount, lo spazio di questo cubo include solo i membri che esistono in ogni livello superiore. Se, ad esempio, la gerarchia dell'attributo City include le città di New York, London, Paris, Tokyo e Melbourne e la gerarchia dell'attributo Country include i paesi United States, United Kingdom, France, Japan e Australia, lo spazio del cubo non include lo spazio (cella) nel punto di intersezione tra Paris e United States.  
@@ -56,7 +61,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Si noti che per designare l'asse delle colonne viene utilizzato 0, la forma abbreviata per Axis(0), indicante l'asse delle colonne.  
   
- La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta con la nuova variante * della funzione [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md).  
+ La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta con la nuova variante * della funzione [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -81,7 +86,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Ognuna delle tre query precedenti dimostra l'effetto del comportamento di Auto Exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## Gerarchie definite dall'utente e spazio del cubo  
+## <a name="user-defined-hierarchies-and-cube-space"></a>Gerarchie definite dall'utente e spazio del cubo  
  Negli esempi precedenti di questo argomento vengono definite le posizioni nello spazio del cubo utilizzando le gerarchie dell'attributo. È tuttavia possibile definire una posizione nello spazio del cubo anche utilizzando gerarchie definite dall'utente in base alle gerarchie dell'attributo in una dimensione. Una gerarchia definita dall'utente è una gerarchia di gerarchie dell'attributo utilizzata per facilitare l'esplorazione dei dati del cubo da parte degli utenti.  
   
  È ad esempio possibile scrivere la query **CROSSJOIN** della sezione precedente anche come segue:  
@@ -113,7 +118,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Si noti che viene utilizzata la parola chiave **WITH** con le funzioni [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) e [Name (MDX)](../../../mdx/name-mdx.md) per creare un membro calcolato da usare nella query. Per altre informazioni, vedere [Query MDX di base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md).  
+>  Si noti che viene utilizzata la parola chiave **WITH** con le funzioni [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) e [Name (MDX)](../../../mdx/name-mdx.md) per creare un membro calcolato da usare nella query. Per altre informazioni, vedere [Query MDX di base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md).  
   
  Nella query precedente, viene restituito il nome del membro della gerarchia dell'attributo Country associata a ogni membro della gerarchia dell'attributo State. Viene visualizzato il membro Country previsto, perché tra gli attributi City e Country è definita una relazione. Se tuttavia tra le gerarchie dell'attributo della stessa dimensione non venisse definita alcuna relazione tra attributi, verrebbe restituito il membro (Totale), come illustrato nella query seguente.  
   
@@ -127,14 +132,14 @@ FROM [Adventure Works]
   
  Nella query precedente viene restituito il membro (Totale) ("All Customers"), perché non esiste alcuna relazione tra Education e City. Pertanto, il membro (Totale) della gerarchia dell'attributo Education sarà il membro predefinito della gerarchia dell'attributo Education utilizzata in qualsiasi tupla con la gerarchia dell'attributo City dove nessun membro Education è specificato in modo esplicito.  
   
-## Contesto di calcolo  
+## <a name="calculation-context"></a>Contesto di calcolo  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Auto Exist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [Utilizzo di membri, tuple e set &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Totali visualizzati e non visualizzati](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
+ [Totali visualizzati e Non totali](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
  [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   

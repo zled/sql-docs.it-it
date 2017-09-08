@@ -1,24 +1,29 @@
 ---
-title: "Avviare o arrestare un server Power Pivot per SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Avviare o arrestare un Power Pivot per SharePoint Server | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Avviare o arrestare un server Power Pivot per SharePoint
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Avviare o arrestare un server Power Pivot per SharePoint
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Il servizio di sistema e un'istanza di [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] vengono usati insieme nello stesso server applicazioni locale per supportare l'elaborazione dati e richieste coordinata in una farm di SharePoint.  
   
  In questo argomento sono incluse le sezioni seguenti:  
@@ -30,26 +35,26 @@ caps.handback.revision: 8
  [Effetti dell'arresto di un server Power Pivot](#effects)  
   
 ##  <a name="dependencies"></a> Dipendenze dei servizi  
- Il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] presenta una dipendenza sull'istanza del server Analysis Services locale installata con il servizio nello stesso server fisico. Se si arresta il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], è necessario arrestare manualmente l'istanza del server Analysis Services locale. Se un servizio viene eseguito senza l'altro, si verificheranno errori di allocazione richieste per l'elaborazione dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ Il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] presenta una dipendenza sull'istanza del server Analysis Services locale installata con il servizio nello stesso server fisico. Se si arresta il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è necessario arrestare manualmente l'istanza del server Analysis Services locale. Se un servizio viene eseguito senza l'altro, si verificheranno errori di allocazione richieste per l'elaborazione dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Il server Analysis Services deve essere eseguito in modalità autonoma durante la diagnostica o la risoluzione di un problema. In tutti gli altri casi, il server richiede che il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] venga eseguito in locale nello stesso server.  
   
 ##  <a name="startstop"></a> Avviare o arrestare i servizi  
  Usare sempre Amministrazione centrale per avviare o arrestare il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o l'istanza del server Analysis Services. Amministrazione centrale consente di avviare o arrestare insieme i servizi dalla stessa pagina. In Amministrazione centrale viene inoltre usato un processo timer denominato **Uno o più servizi sono stati avviati o arrestati** per riavviare servizi che dovrebbero essere in esecuzione. Se si arresta Analysis Services o il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con uno strumento non SharePoint, i servizi verranno riavviati durante l'esecuzione del processo timer.  
   
- L'avvio e l'arresto dei servizi sono azioni che vengono applicate a un'istanza del servizio fisico. Se nella farm sono presenti più server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, gli altri server della farm continueranno ad accettare le richieste di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ L'avvio e l'arresto dei servizi sono azioni che vengono applicate a un'istanza del servizio fisico. Se nella farm sono presenti più server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, gli altri server della farm continueranno ad accettare le richieste di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Non è possibile avviare o arrestare simultaneamente tutti i servizi fisici nella farm. È necessario selezionare ciascun server e avviare o arrestare un determinato servizio.  
   
- Non è possibile avviare, sospendere o arrestare un servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per un'applicazione Web specifica, ma è possibile rimuovere un servizio dall'elenco predefinito di connessioni per renderlo non disponibile. Per altre informazioni, vedere [Connettere un'applicazione del servizio PowerPivot a un'applicazione Web SharePoint in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md).  
+ Non è possibile avviare, sospendere o arrestare un servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per un'applicazione Web specifica, ma è possibile rimuovere un servizio dall'elenco predefinito di connessioni per renderlo non disponibile. Per altre informazioni, vedere [Connettere un'applicazione del servizio PowerPivot a un'applicazione Web SharePoint in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-1.  In **Impostazioni di sistema** di Amministrazione centrale fare clic su **Gestisci servizi nel server**.  
+1.  In **Impostazioni di sistema**di Amministrazione centrale fare clic su **Gestisci servizi nel server**.  
   
 2.  In Server, nella parte superiore della pagina, fare clic sulla freccia giù, quindi scegliere **Cambia server**.  
   
 3.  Selezionare il server SharePoint contenente il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o l'istanza di [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] che si vuole avviare o arrestare.  
   
-4.  Selezionare il servizio, quindi fare clic sull'azione. Ricordarsi di avviare o arrestare i servizi come coppia. Se si avvia o arresta il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], assicurarsi di avviare o arrestare anche l'istanza del server Analysis Services in esecuzione nello stesso computer.  
+4.  Selezionare il servizio, quindi fare clic sull'azione. Ricordarsi di avviare o arrestare i servizi come coppia. Se si avvia o arresta il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , assicurarsi di avviare o arrestare anche l'istanza del server Analysis Services in esecuzione nello stesso computer.  
   
 ##  <a name="effects"></a> Effetti dell'arresto di un server Power Pivot  
  La tabella seguente descrive gli effetti dell'arresto del servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e del servizio Analysis Services in un server SharePoint.  
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |Nuove richieste di query o aggiornamento dati|Se si arresta l'unico server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint nella farm, non verranno gestite nuove richieste di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e una richiesta di dati causerà un errore di dati non trovati.<br /><br /> Se si hanno altri server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, la richiesta verrà inviata a uno dei server disponibili.|  
 |Dati sull'utilizzo|I dati sull'utilizzo non verranno raccolti durante l'arresto dei servizi.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

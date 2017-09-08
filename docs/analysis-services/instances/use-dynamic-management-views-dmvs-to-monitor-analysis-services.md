@@ -1,24 +1,29 @@
 ---
-title: "Utilizzare DMV per monitorare Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzare viste a gestione dinamica (DMV) per monitorare Analysis Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Utilizzare DMV per monitorare Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utilizzare DMV per monitorare Analysis Services
   Le DMV (viste a gestione dinamica) di Analysis Services sono strutture di query che consentono di esporre informazioni sulle operazioni del server locali e sull'integrità del server. La struttura di query è un'interfaccia dei set di righe dello schema tramite cui vengono restituiti i metadati e le informazioni di monitoraggio per un'istanza di Analysis Services.  
   
  Per la maggior parte delle query DMV, vengono usati un'istruzione **SELECT** e lo schema **$System** con un set di righe dello schema XML/A.set.  
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Se per un set di righe specifico non è disponibile una DMV, il server restituisce l'errore seguente "Tipo di richiesta \<schemarowset> non riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
+>  Se una DMV non è disponibile per un determinato set di righe, il server restituirà l'errore seguente: "il \<schemarowset > tipo di richiesta non è stato riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
   
 |Set di righe|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[Set di righe DISCOVER_TRACE_EVENT_CATEGORIES](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Restituisce un elenco di tutte le categorie disponibili.|  
 |[Set di righe DISCOVER_TRACES](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Restituisce un elenco delle tracce in esecuzione attiva nella connessione corrente.|  
 |[Set di righe DISCOVER_TRANSACTIONS](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Restituisce un elenco delle transazioni in esecuzione attiva nella connessione corrente.|  
-|[Set di righe DISCOVER_XEVENT_TRACE_DEFINITION](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|Restituisce un elenco delle tracce XEvent in esecuzione attiva nella connessione corrente.|  
+|[Set di righe DISCOVER_XEVENT_TRACE_DEFINITION](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Restituisce un elenco delle tracce XEvent in esecuzione attiva nella connessione corrente.|  
 |[Set di righe DMSCHEMA_MINING_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Elenca le singole colonne di tutti i modelli di data mining disponibili nella connessione corrente.|  
 |[Set di righe DMSCHEMA_MINING_FUNCTIONS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Restituisce un elenco di funzioni supportate dagli algoritmi di data mining nel server.|  
 |[Set di righe DMSCHEMA_MINING_MODEL_CONTENT](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Restituisce un set di righe composto da colonne che descrivono il modello corrente.|  
@@ -163,9 +168,9 @@ ORDER BY TABLE_NAME ASC
 |[Set di righe MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Restituisce un nome completo di ogni proprietà, insieme a tipo di proprietà, tipo di dati e altri metadati.|  
 |[Set di righe MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Restituisce un elenco di set definiti nella connessione corrente.|  
   
-## Vedere anche  
- [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Nuova DMV System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+## <a name="see-also"></a>Vedere anche  
+ [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [Nuova DMV System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nuova funzione SYSTEMRESTRICTEDSCHEMA per DMV e set di righe con restrizioni](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

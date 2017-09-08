@@ -1,24 +1,29 @@
 ---
-title: "Modificare i mapping di filtri tabella, colonna o riga (SSAS tabulare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modifica tabella, colonna o il mapping dei filtri di riga (SSAS tabulare) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b80323e5aaf1dd6c469ddffefb5d92542e9d3a19
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modificare i mapping di filtri tabella, colonna o riga (SSAS tabulare)
+# <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Modificare i mapping di filtri tabella, colonna o riga (SSAS tabulare)
   Questo argomento descrive come modificare i mapping di filtri tabella, colonna o riga tramite la finestra di dialogo **Modifica proprietà tabella** di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Le opzioni disponibili nella finestra di dialogo **Modifica proprietà tabella** sono diverse, a seconda che i dati siano stati originariamente importati selezionando tabelle da un elenco o usando una query SQL. Se i dati sono stati originariamente importati selezionandoli da un elenco, nella finestra di dialogo **Modifica proprietà tabella** viene visualizzata la modalità Anteprima tabella. Questa modalità consente di visualizzare solo un subset limitato alle prime cinquanta righe della tabella di origine. Se i dati sono stati originariamente importati usando un'istruzione SQL, nella finestra di dialogo **Modifica proprietà tabella** viene visualizzata solo un'istruzione SQL. Utilizzando un'istruzione di query SQL è possibile recuperare un subset di righe progettando un filtro o modificando manualmente l'istruzione SQL.  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  Se nella tabella è presente più di una partizione, non è possibile utilizzare la finestra di dialogo Modifica proprietà tabella per modificare i mapping del filtro di riga. Per modificare i mapping del filtro di riga per le tabelle con più partizioni, utilizzare Gestione partizioni. Per altre informazioni, vedere [Partizioni &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
-#### Per modificare i mapping dei filtri tabella, colonna o riga  
+#### <a name="to-change-table-column-or-row-filter-mappings"></a>Per modificare i mapping dei filtri tabella, colonna o riga  
   
 1.  In Progettazione modelli fare clic su una tabella e quindi scegliere **Proprietà tabella** dal menu **Tabella**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
   
          Se si commette un errore ed è necessario ricominciare, fare clic su **Cancella filtri di riga**.  
   
-## Vedere anche  
- [Finestra di dialogo Modifica proprietà tabella &#40;SSAS&#41;](../Topic/Edit%20Table%20Properties%20Dialog%20Box%20\(SSAS\).md)  
+## <a name="see-also"></a>Vedere anche  
+ [Finestra di dialogo Modifica proprietà tabella &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)  
   
   

@@ -1,44 +1,49 @@
 ---
-title: "Impostare l&#39;archiviazione delle partizioni (Analysis Services - Multidimensionale) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MOLAP a bassa latenza"
-  - "archiviazione standard [Analysis Services]"
-  - "OLAP ibrido"
-  - "MOLAP automatico"
-  - "OLAP relazionale"
-  - "OLAP multidimensionale"
-  - "MOLAP pianificato [Analysis Services]"
-  - "partizioni [Analysis Services], archiviazione"
-  - "HOLAP"
-  - "MOLAP"
-  - "ROLAP in tempo reale"
-  - "HOLAP in tempo reale"
-  - "ROLAP"
-  - "MOLAP a media latenza"
+title: Impostare l'archiviazione della partizione (Analysis Services - multidimensionale) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- low latency MOLAP
+- standard storage [Analysis Services]
+- hybrid OLAP
+- automatic MOLAP
+- relational OLAP
+- multidimensional OLAP
+- scheduled MOLAP [Analysis Services]
+- partitions [Analysis Services], storage
+- HOLAP
+- MOLAP
+- real time ROLAP
+- real time HOLAP
+- ROLAP
+- medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Impostare l&#39;archiviazione delle partizioni (Analysis Services - Multidimensionale)
+# <a name="set-partition-storage-analysis-services---multidimensional"></a>Impostare l'archiviazione delle partizioni (Analysis Services - Multidimensionale)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di memorizzazione nella cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  
   
- È possibile specificare l'archiviazione delle partizioni nella scheda Partizioni del cubo in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o nella pagina delle proprietà delle partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ È possibile specificare l'archiviazione delle partizioni nella scheda Partizioni del cubo in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o nella pagina delle proprietà delle partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## Linee guida per la scelta di una modalità di archiviazione  
+## <a name="guidelines-for-choosing-a-storage-mode"></a>Linee guida per la scelta di una modalità di archiviazione  
  Una prassi comune per gruppi di misure di grandi dimensioni consiste nel configurare tipi di archiviazione diversi per le varie partizioni. Tenere presenti le linee guida seguenti:  
   
 -   Utilizzare l'impostazione ROLAP in tempo reale per i dati correnti che vengono aggiornati continuamente.  
@@ -53,7 +58,7 @@ caps.handback.revision: 31
   
  Quelle indicate sono linee guida generali. Per lo sviluppo dello schema di archiviazione migliore per i dati in uso, è necessario eseguire analisi e test accurati. Se nessuna delle configurazioni standard soddisfa le proprie esigenze, è inoltre possibile configurare manualmente le impostazioni per una partizione.  
   
-## Descrizione delle impostazioni di archiviazione  
+## <a name="storage-settings-descriptions"></a>Descrizione delle impostazioni di archiviazione  
   
 |Impostazione di archiviazione standard|Description|  
 |------------------------------|-----------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 31
 |MOLAP pianificato|I dati dettaglio e le aggregazioni vengono archiviati in formato multidimensionale. Il server non riceve notifiche quando i dati vengono modificati. L'elaborazione avviene automaticamente ogni 24 ore.<br /><br /> Questa impostazione viene in genere utilizzata per un'origine dei dati in cui sono necessari solo aggiornamenti giornalieri. Le query vengono eseguite sempre su dati della cache MOLAP, che non viene scartata fino a quando non è stata compilata una nuova cache e i relativi oggetti non sono stati elaborati.|  
 |MOLAP|La memorizzazione nella cache attiva non è attivata. I dati dettaglio e le aggregazioni vengono archiviati in formato multidimensionale. Il server non riceve notifiche quando i dati vengono modificati. L'elaborazione deve essere pianificata o eseguita manualmente.<br /><br /> Questa impostazione viene in genere utilizzata per un'origine dei dati in cui non sono necessari aggiornamenti periodici per le applicazioni client ma è fondamentale disporre di prestazioni elevate.<br /><br /> L'archiviazione MOLAP senza memorizzazione nella cache attiva garantisce le migliori prestazioni possibili nei casi in cui per le applicazioni non sono necessari i dati più aggiornati. Questa modalità richiede un tempo di inattività per l'elaborazione degli oggetti aggiornati, che può tuttavia essere ridotto al minimo aggiornando ed elaborando i cubi in un server dell'area di gestione temporanea e utilizzando la funzionalità di sincronizzazione del database per copiare gli oggetti MOLAP aggiornati ed elaborati nel server di produzione.|  
   
-## Opzioni di archiviazione personalizzate  
+## <a name="custom-storage-options"></a>Opzioni di archiviazione personalizzate  
  Anziché utilizzare una delle impostazioni di archiviazione standard, è possibile configurare manualmente l'archiviazione e la memorizzazione nella cache attiva. Prima di creare impostazioni di archiviazione personalizzate, è necessario innanzitutto fare clic sull'opzione **Impostazione standard** e spostare il dispositivo di scorrimento sull'impostazione standard che corrisponde maggiormente alla configurazione desiderata. Quindi, per creare una configurazione personalizzata fare clic sull'opzione **Impostazione personalizzata** e quindi su **Opzioni**.  
   
 -   È possibile specificare se le modifiche apportate a un'origine dei dati devono attivare aggiornamenti della cache. Per consentire un livello di trasferimento tollerabile, è possibile specificare un intervallo di inattività minimo dopo gli aggiornamenti all'origine dei dati, nonché un intervallo di attività sostitutivo per l'aggiornamento della cache dopo un periodo specificato nel caso in cui l'intervallo tra le modifiche all'origine dei dati non raggiunga mai il valore minimo.  
@@ -76,9 +81,9 @@ caps.handback.revision: 31
   
 -   Se si desidera aggiornare periodicamente gli oggetti MOLAP memorizzati nella cache indipendentemente dalle modifiche apportate all'origine dei dati, è possibile pianificare aggiornamenti forzati della cache. I vantaggi dell'elaborazione OLAP in tempo reale variano a seconda delle dimensioni del database e del periodo di latenza assegnato in base alla frequenza di modifiche dell'origine dei dati. Gli utenti devono inviare le query a una cache il più spesso possibile, non all'elaborazione ROLAP.  
   
- Se si seleziona la casella di controllo **Applica impostazioni alle dimensioni**, le stesse impostazioni di archiviazione verranno applicate alle dimensioni correlate al gruppo di misure. I valori delle dimensioni sono inizialmente identici ai valori delle partizioni.  
+ Se si seleziona la casella di controllo **Applica impostazioni alle dimensioni** , le stesse impostazioni di archiviazione verranno applicate alle dimensioni correlate al gruppo di misure. I valori delle dimensioni sono inizialmente identici ai valori delle partizioni.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni nei modelli multidimensionali](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "Creare una nuova struttura di data mining OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "strutture di data mining [Analysis Services], OLAP"
-  - "strutture di data mining [Analysis Services], creazione"
-  - "OLAP [Analysis Services], modelli di data mining"
+title: Creare una nuova struttura di Data Mining OLAP | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], OLAP
+- mining structures [Analysis Services], creating
+- OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una nuova struttura di data mining OLAP
-  È possibile usare la Creazione guidata modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare una struttura di data mining che usa dati da un modello multidimensionale. I modelli di data mining basati su cubi OLAP possono utilizzare la colonna e i valori di tabelle dei fatti, dimensioni e gruppi di misure come attributi per l'analisi.  
+# <a name="create-a-new-olap-mining-structure"></a>Creare una nuova struttura di data mining OLAP
+  È possibile usare la Creazione guidata modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare una struttura di data mining che usa dati da un modello multidimensionale. I modelli di data mining basati su cubi OLAP possono utilizzare la colonna e i valori di tabelle dei fatti, dimensioni e gruppi di misure come attributi per l'analisi.  
   
-### Per creare una nuova struttura di data mining OLAP  
+### <a name="to-create-a-new-olap-mining-structure"></a>Per creare una nuova struttura di data mining OLAP  
   
-1.  In Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fare clic con il pulsante destro del mouse sulla cartella **Strutture di data mining** in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], quindi scegliere **Nuova struttura di data mining** per aprire la Creazione guidata modello di data mining.  
+1.  In Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Strutture di data mining** in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , quindi scegliere **Nuova struttura di data mining** per aprire la Creazione guidata modello di data mining.  
   
 2.  Nella pagina iniziale **Creazione guidata modello di data mining** fare clic su **Avanti**.  
   
@@ -44,13 +49,13 @@ caps.handback.revision: 32
   
      Scegliere **Avanti**.  
   
-6.  Nella pagina **Selezione chiave del case**, in **Attributi**, selezionare l'attributo che costituirà la chiave della struttura di data mining, quindi fare clic su **Avanti**.  
+6.  Nella pagina **Selezione chiave del case** , in **Attributi**, selezionare l'attributo che costituirà la chiave della struttura di data mining, quindi fare clic su **Avanti**.  
   
      In genere, l'attributo utilizzato come chiave per la struttura di data mining è anche una chiave per la dimensione e risulterà pre-selezionata.  
   
-7.  Nella pagina **Selezione colonne livello case**, in **Attributi e misure correlati**, selezionare gli attributi e le misure che contengono i valori da aggiungere alla struttura di data mining come dati del case. Scegliere **Avanti**.  
+7.  Nella pagina **Selezione colonne livello case** , in **Attributi e misure correlati**, selezionare gli attributi e le misure che contengono i valori da aggiungere alla struttura di data mining come dati del case. Scegliere **Avanti**.  
   
-8.  Nella pagina **Impostazione utilizzo colonne modello di data mining**, in **Struttura modello di data mining**, impostare la colonna stimabile, quindi scegliere le colonne da usare come input.  
+8.  Nella pagina **Impostazione utilizzo colonne modello di data mining** , in **Struttura modello di data mining**, impostare la colonna stimabile, quindi scegliere le colonne da usare come input.  
   
     -   Selezionare la casella di controllo nella colonna più a sinistra per includere i dati nella struttura di data mining. È possibile includere le colonne nella struttura che verranno utilizzate come riferimento, ma non per l'analisi.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 32
   
     -   Chiave della tabella annidata: deve essere preselezionata nella pagina **Selezione chiave tabella annidata**.  
   
-    -   Attributi o attributi da usare per l'analisi: nella pagina **Selezione colonne tabella annidata** è contenuto un elenco delle misure e degli attributi nella selezione della tabella annidata.  
+    -   Attributi o attributi da usare per l'analisi: nella pagina **Selezione colonne tabella annidata**è contenuto un elenco delle misure e degli attributi nella selezione della tabella annidata.  
   
         -   Per ogni attributo incluso nel modello, selezionare la casella nella colonna sinistra.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 32
   
      Fare clic su **Fine** per chiudere la parte della procedura guidata correlata alle tabelle annidate. È possibile ripetere il processo per aggiungere più colonne nidificate.  
   
-10. Nella pagina **Impostazione tipo di contenuto e dati delle colonne**, in **Struttura modello di data mining**, impostare il tipo di contenuto e il tipo di dati per ogni colonna.  
+10. Nella pagina **Impostazione tipo di contenuto e dati delle colonne** , in **Struttura modello di data mining**, impostare il tipo di contenuto e il tipo di dati per ogni colonna.  
   
     > [!NOTE]  
     >  I modelli di data mining OLAP non supportano l'uso della caratteristica **Rileva** per rilevare automaticamente se una colonna contiene dati continui o discreti.  
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
      **Crea il cubo utilizzando la dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un nome per il nuovo cubo. Quando si utilizza questa opzione, viene creato un nuovo cubo contenente sia le dimensioni esistenti utilizzate nella compilazione della struttura sia la nuova dimensione di data mining contenente i risultati del modello.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

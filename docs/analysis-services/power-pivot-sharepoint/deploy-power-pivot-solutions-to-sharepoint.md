@@ -1,22 +1,27 @@
 ---
-title: "Distribuire soluzioni PowerPivot in SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Distribuire soluzioni PowerPivot per SharePoint | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a9725c24b4cc324db21e9c39cdd9feef0829cae
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Distribuire soluzioni PowerPivot in SharePoint
+# <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
   Usare le istruzioni seguenti per distribuire manualmente due pacchetti di soluzioni che consentono di aggiungere funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a un ambiente SharePoint Server 2010. La distribuzione delle soluzioni è un passaggio obbligatorio per la configurazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in un server SharePoint 2010. Per visualizzare l'elenco completo di procedure necessarie, vedere [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  In alternativa, per distribuire le soluzioni è possibile usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'utilizzo dello strumento di configurazione è più facile e più efficiente per installazione di un unico server, ma è possibile utilizzare Amministrazione centrale e PowerShell se si preferisce utilizzare uno strumento familiare o se si configurano più funzionalità contemporaneamente. Per altre informazioni sull'uso dello strumento di configurazione, vedere [Strumenti di configurazione di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
@@ -38,7 +43,7 @@ caps.handback.revision: 13
  [Informazioni sulle soluzioni PowerPivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è supportato solo per le applicazioni Web che usano l'autenticazione in modalità classica di Windows. Per verificare se l'applicazione usa la modalità classica, eseguire il cmdlet PowerShell riportato di seguito dalla **shell di gestione di SharePoint 2010**, sostituendo **http://<nome sito livello superiore>** con il nome del sito di SharePoint:  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è supportato solo per le applicazioni Web che usano l'autenticazione in modalità classica di Windows. Per controllare se l'applicazione usa la modalità classica, eseguire il seguente cmdlet di PowerShell dal **Shell di gestione SharePoint 2010**, sostituendo **http://\<nome sito di livello superiore >** con il nome del sito di SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -47,7 +52,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  Il valore restituito dovrebbe essere **false**. Se **true**, non è possibile accedere ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con questa applicazione Web.  
   
 ##  <a name="bkmk_farm"></a> Passaggio 1: distribuire la soluzione farm  
- Questa sezione illustra come distribuire le soluzioni usando PowerShell, ma è anche possibile usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per completare questa attività. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/it-it/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Questa sezione illustra come distribuire le soluzioni usando PowerShell, ma è anche possibile usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per completare questa attività. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  È necessario eseguire questa attività una sola volta dopo l'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
   
@@ -118,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Fare clic su **Ritira soluzione**.  
   
- Se si verificano problemi relativi alla distribuzione server che risalgono alla soluzione farm, è possibile ridistribuirla eseguendo l'opzione **Ripristina** nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le operazioni di ripristino tramite lo strumento sono preferibili perché richiedono meno passaggi da parte dell'utente. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/it-it/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Se si verificano problemi relativi alla distribuzione server che risalgono alla soluzione farm, è possibile ridistribuirla eseguendo l'opzione **Ripristina** nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le operazioni di ripristino tramite lo strumento sono preferibili perché richiedono meno passaggi da parte dell'utente. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Se si desidera ridistribuire ancora tutte le soluzioni, assicurarsi di effettuare le operazioni in questo ordine:  
   
@@ -146,7 +151,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |Powerpivotfarm.wsp|Consente di aggiungere il file Microsoft.AnalysisServices.SharePoint.Integration.dll all'assembly globale.<br /><br /> Consente di aggiungere il file Microsoft.AnalysisServices.ChannelTransport.dll all'assembly globale.<br /><br /> Consente di installare funzionalità e file di risorse nonché di registrare i tipi di contenuto.<br /><br /> Aggiunge modelli di raccolta per Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e le raccolte di feed di dati.<br /><br /> Aggiunge pagine dell'applicazione per la configurazione dell'applicazione del servizio, il dashboard di gestione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l'aggiornamento dati e la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |powerpivotwebapp.wsp|Aggiunge i file di risorse Microsoft.AnalysisServices.SharePoint.Integration.dll alla cartella delle estensioni per il server Web nel server Web front-end.<br /><br /> Aggiunge il servizio Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] al server Web front-end.<br /><br /> Aggiunge la generazione di immagini di anteprima per Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornare Power Pivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configurazione di Power Pivot con Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

@@ -1,0 +1,209 @@
+---
+title: CREATE SYNONYM (Transact-SQL) | Documenti Microsoft
+ms.custom: 
+ms.date: 04/11/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CREATE_SYNONYM_TSQL
+- SYNONYM_TSQL
+- SYNONYM
+- CREATE SYNONYM
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- alternate names [SQL Server]
+- names [SQL Server], synonyms
+- CREATE SYNONYM statement
+- synonyms [SQL Server], creating
+ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
+caps.latest.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 065b00489ac2ccd0c86e67719679a0b9cc0ece1b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Crea un nuovo sinonimo.  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+-- SQL Server Syntax  
+  
+CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>  
+  
+<object> :: =  
+{  
+    [ server_name.[ database_name ] . [ schema_name_2 ]. object_name   
+  | database_name . [ schema_name_2 ].| schema_name_2. ] object_name  
+}  
+```  
+  
+```  
+-- Windows Azure SQL Database Syntax  
+  
+CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
+  
+< object > :: =  
+{  
+    [database_name. [ schema_name_2 ].| schema_name_2. ] object_name  
+}  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ *schema_name_1*  
+ Specifica lo schema in cui viene creato il sinonimo. Se *schema* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza lo schema predefinito dell'utente corrente.  
+  
+ *synonym_name*  
+ Nome del nuovo sinonimo.  
+  
+ *nome_server*  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+ Indica il nome del server in cui è archiviato l'oggetto di base.  
+  
+ *database_name*  
+ Indica il nome del database in cui è archiviato l'oggetto di base. Se *database_name* viene omesso, viene utilizzato il nome del database corrente.  
+  
+ *schema_name_2*  
+ Nome dello schema dell'oggetto di base. Se *schema_name* non è specificato viene utilizzato lo schema predefinito dell'utente corrente.  
+  
+ *object_name*  
+ Nome dell'oggetto di base a cui fa riferimento il sinonimo.  
+  
+ Il database SQL di Windows Azure supporta il formato del nome in tre parti, nome_database.[nome_schema].nome_oggetto, quando nome_database è il database corrente oppure nome_database è tempdb e nome_oggetto inizia con #.  
+  
+## <a name="remarks"></a>Osservazioni  
+ Non è necessario che l'oggetto di base sia esistente in fase di creazione del sinonimo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica l'esistenza dell'oggetto di base in fase di esecuzione.  
+  
+ È possibile creare sinonimi per i tipi di oggetti seguenti:  
+  
+|||  
+|-|-|  
+|Stored procedure di assembly (CLR)|Funzione con valori di tabella di assembly (CLR)|  
+|Funzione scalare di assembly (CLR)|Funzioni aggregate di aggregazione assembly (CLR)|  
+|Procedura di filtro della replica|Stored procedure estesa|  
+|Funzione scalare SQL|Funzione con valori di tabella di SQL|  
+|Funzione SQL inline con valori di tabella|Stored procedure di SQL|  
+|Visualizza|Tabella<sup>1</sup> (definita dall'utente)|  
+  
+ <sup>1 include tabelle temporanee globali e locali</sup>  
+  
+ I nomi composti da quattro parti non sono supportati per gli oggetti funzione di base.  
+  
+ È possibile creare, eliminare e fare riferimento ai sinonimi in SQL dinamico.  
+  
+## <a name="permissions"></a>Permissions  
+ Per poter creare un sinonimo in un determinato schema, un utente deve disporre dell'autorizzazione CREATE SYNONYM, oltre a disporre della proprietà dello schema o dell'autorizzazione ALTER SCHEMA.  
+  
+ L'autorizzazione CREATE SYNONYM è un'autorizzazione che può essere concessa.  
+  
+> [!NOTE]  
+>  Per compilare l'istruzione CREATE SYNONYM non è necessaria l'autorizzazione sull'oggetto di base, poiché tutti i controlli delle autorizzazioni sull'oggetto di base sono rimandati fino alla fase di esecuzione.  
+  
+## <a name="examples"></a>Esempi  
+  
+### <a name="a-creating-a-synonym-for-a-local-object"></a>A. Creazione di un sinonimo per un oggetto locale  
+ Nell'esempio seguente viene prima creato un sinonimo per l'oggetto di base `Product` nel database `AdventureWorks2012`, quindi viene eseguita una query sul sinonimo.  
+  
+```  
+-- Create a synonym for the Product table in AdventureWorks2012.  
+CREATE SYNONYM MyProduct  
+FOR AdventureWorks2012.Production.Product;  
+GO  
+  
+-- Query the Product table by using the synonym.  
+SELECT ProductID, Name   
+FROM MyProduct  
+WHERE ProductID < 5;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `-----------------------`  
+  
+ `ProductID   Name`  
+  
+ `----------- --------------------------`  
+  
+ `1           Adjustable Race`  
+  
+ `2           Bearing Ball`  
+  
+ `3           BB Ball Bearing`  
+  
+ `4           Headset Ball Bearings`  
+  
+ `(4 row(s) affected)`  
+  
+### <a name="b-creating-a-synonym-to-remote-object"></a>B. Creazione di un sinonimo per l'oggetto remoto  
+ Nell'esempio seguente, l'oggetto di base, `Contact`, è contenuto in un server remoto denominato `Server_Remote`.  
+  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+```  
+EXEC sp_addlinkedserver Server_Remote;  
+GO  
+USE tempdb;  
+GO  
+CREATE SYNONYM MyEmployee FOR Server_Remote.AdventureWorks2012.HumanResources.Employee;  
+GO  
+```  
+  
+### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>C. Creazione di un sinonimo per una funzione definita dall'utente  
+ Nell'esempio seguente viene creata una funzione denominata `dbo.OrderDozen` che aumenta le quantità degli ordini a una dozzina di unità uniformi. Viene quindi creato il sinonimo `dbo.CorrectOrder` per la funzione `dbo.OrderDozen`.  
+  
+```  
+-- Creating the dbo.OrderDozen function  
+CREATE FUNCTION dbo.OrderDozen (@OrderAmt int)  
+RETURNS int  
+WITH EXECUTE AS CALLER  
+AS  
+BEGIN  
+IF @OrderAmt % 12 <> 0  
+BEGIN  
+    SET @OrderAmt +=  12 - (@OrderAmt % 12)  
+END  
+RETURN(@OrderAmt);  
+END;  
+GO  
+  
+-- Using the dbo.OrderDozen function  
+DECLARE @Amt int;  
+SET @Amt = 15;  
+SELECT @Amt AS OriginalOrder, dbo.OrderDozen(@Amt) AS ModifiedOrder;  
+  
+-- Create a synonym dbo.CorrectOrder for the dbo.OrderDozen function.  
+CREATE SYNONYM dbo.CorrectOrder  
+FOR dbo.OrderDozen;  
+GO  
+  
+-- Using the dbo.CorrectOrder synonym.  
+DECLARE @Amt int;  
+SET @Amt = 15;  
+SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [DROP SYNONYM &#40; Transact-SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+ [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+  
+  
+

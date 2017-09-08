@@ -1,40 +1,45 @@
 ---
-title: "Specificare una colonna da utilizzare come regressore in un modello | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Specificare una colonna da utilizzare come regressore in un modello | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25b142831c6b4cb1dd1afaa25734f0b0435de18c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Specificare una colonna da utilizzare come regressore in un modello
+# <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Specificare una colonna da utilizzare come regressore in un modello
   Un modello di regressione lineare rappresenta il valore dell'attributo stimabile come il risultato di una formula che consente di combinare gli input in modo che i dati si adattino il più possibile a una retta di regressione stimata. L'algoritmo accetta come input sono valori numerici e rileva automaticamente gli input che si adattano meglio.  
   
  Per specificare che una colonna può essere inclusa come regressore, è possibile tuttavia aggiungere il parametro FORCE_REGRESSOR al modello e indicare i regressori da utilizzare. Questa operazione può essere eseguita nei casi in cui l'attributo è significativo anche se l'effetto è insufficiente per essere rilevato dal modello o quando si desidera garantire che l'attributo venga incluso nella formula.  
   
- Di seguito viene descritto come creare un modello di regressione lineare semplice usando gli stessi dati di esempio usati per l'[esercitazione sulle reti neurali](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md). Sebbene non sia necessariamente affidabile, il modello dimostra i concetti di base per utilizzare Progettazione modelli di data mining per personalizzare un modello di regressione lineare.  
+ Di seguito viene descritto come creare un modello di regressione lineare semplice usando gli stessi dati di esempio usati per l' [esercitazione sulle reti neurali](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b). Sebbene non sia necessariamente affidabile, il modello dimostra i concetti di base per utilizzare Progettazione modelli di data mining per personalizzare un modello di regressione lineare.  
   
-### Come creare un semplice modello di regressione lineare  
+### <a name="how-to-create-a-simple-linear-regression-model"></a>Come creare un semplice modello di regressione lineare  
   
-1.  In **Esplora soluzioni** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] espandere **Strutture di data mining**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Esplora soluzioni **di**espandere **Strutture di data mining**.  
   
 2.  Fare doppio clic su Call Center.dmm per aprirlo nella finestra di progettazione.  
   
 3.  Scegliere **Nuovo modello di data mining** dal menu **Modello di data mining**.  
   
-4.  Selezionare **Microsoft Linear Regression** come algoritmo. e digitare **Regressione Call Center** come nome.  
+4.  Selezionare **Microsoft Linear Regression**come algoritmo. e digitare **Regressione Call Center**come nome.  
   
-5.  Nella scheda **Modelli di data mining** modificare l'uso delle colonne come indicato di seguito. È necessario impostare su **Ignora** tutte le colonne non presenti nell'elenco seguente, se tale impostazione non è già specificata.  
+5.  Nella scheda **Modelli di data mining** modificare l'uso delle colonne come indicato di seguito. È necessario impostare su **Ignora**tutte le colonne non presenti nell'elenco seguente, se tale impostazione non è già specificata.  
   
      FactCallCenterID**Key**  
   
@@ -57,12 +62,12 @@ caps.handback.revision: 6
   
 8.  Scegliere **Elabora modello** nel menu **Modello di data mining**.  
   
-     Nel visualizzatore il modello è rappresentato da un nodo singolo che contiene la formula di regressione. È possibile visualizzare la formula in **Legenda data mining** oppure è possibile usare le query per estrarre i coefficienti per la formula.  
+     Nel visualizzatore il modello è rappresentato da un nodo singolo che contiene la formula di regressione. È possibile visualizzare la formula in **Legenda data mining**oppure è possibile usare le query per estrarre i coefficienti per la formula.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
- [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Riferimento tecnico l'algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

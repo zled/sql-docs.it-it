@@ -1,28 +1,33 @@
 ---
-title: "Definire relazioni logiche in una vista origine dati (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aggiunta di relazioni"
-  - "relazioni [Analysis Services], viste origine dati"
-  - "viste origine dati [Analysis Services], relazioni"
+title: Definire relazioni logiche in una vista origine dati (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding relationships
+- relationships [Analysis Services], data source views
+- data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definire relazioni logiche in una vista origine dati (Analysis Services)
+# <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definire relazioni logiche in una vista origine dati (Analysis Services)
   Creazione guidata vista origine dati e Progettazione vista origine dati consentono di definire automaticamente le relazioni tra le tabelle aggiunte a una vista origine dati, in base alle relazioni di database sottostanti o ai criteri di corrispondenza nomi specificati.  
   
  Nei casi in cui si utilizzano dati da più origini dati, può essere necessario definire manualmente le relazioni logiche nella vista origine dati per integrare le relazioni definite automaticamente. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le relazioni sono necessarie per identificare le tabelle dei fatti e delle dimensioni, per costruire query per il recupero di dati e metadati dalle origini dati sottostanti, nonché per sfruttare i vantaggi delle funzionalità avanzate di Business Intelligence.  
@@ -38,7 +43,7 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  Le relazioni definite in una vista origine dati sono logiche e potrebbero non riflettere le relazioni effettive definite nell'origine dati sottostante. In Progettazione vista origine dati è possibile creare relazioni che non esistono nell'origine dei dati sottostante e rimuovere le relazioni create tramite Progettazione vista origine dati dalle relazioni di chiave esterna esistenti nell'origine dei dati sottostante.  
   
- Le relazioni hanno una direzione. Per ogni valore nella colonna di origine esiste un valore corrispondente nella colonna di destinazione. In un diagramma vista origine dati, ad esempio nei diagrammi visualizzati nel riquadro **Diagramma**, una freccia sulla linea tra due tabelle indica la direzione della relazione.  
+ Le relazioni hanno una direzione. Per ogni valore nella colonna di origine esiste un valore corrispondente nella colonna di destinazione. In un diagramma vista origine dati, ad esempio nei diagrammi visualizzati nel riquadro **Diagramma** , una freccia sulla linea tra due tabelle indica la direzione della relazione.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -50,20 +55,20 @@ caps.handback.revision: 37
   
 ##  <a name="bkmk_addRel"></a> Per aggiungere una relazione tra tabelle, query denominate o viste  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto o connettersi al database contenente la vista origine dati in cui si vuole aggiungere una relazione logica.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto o connettersi al database contenente la vista origine dati in cui si vuole aggiungere una relazione logica.  
   
 2.  In Esplora soluzioni espandere la cartella **Viste origine dati** e quindi fare doppio clic sulla vista origine dati per aprirla in **Progettazione vista origine dati**.  
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella, sulla query denominata o sulla vista a cui si vuole aggiungere una relazione nel riquadro **Tabelle** e quindi scegliere **Nuova relazione**.  
   
     > [!NOTE]  
-    >  Per individuare una tabella, una vista o una query denominata, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati** o facendo clic con il pulsante destro del mouse su un'area vuota nel riquadro **Tabella** o **Diagramma**.  
+    >  Per individuare una tabella, una vista o una query denominata, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati** o facendo clic con il pulsante destro del mouse su un'area vuota nel riquadro **Tabella** o **Diagramma** .  
   
 4.  Nella finestra di dialogo **Specifica relazione** eseguire le operazioni seguenti:  
   
-    1.  Selezionare la tabella, la query denominata o la vista appropriata nell'elenco **Tabella di origine (chiave esterna)**.  
+    1.  Selezionare la tabella, la query denominata o la vista appropriata nell'elenco **Tabella di origine (chiave esterna)** .  
   
-    2.  Selezionare la tabella, la query denominata o la vista appropriata negli elenchi **Tabella di destinazione (chiave primaria)**.  
+    2.  Selezionare la tabella, la query denominata o la vista appropriata negli elenchi **Tabella di destinazione (chiave primaria)** .  
   
     3.  Selezionare le colonne negli elenchi **Colonne di origine** e **Colonne di destinazione** per creare una relazione tra le due tabelle.  
   
@@ -71,21 +76,21 @@ caps.handback.revision: 37
   
          Viene anche segnalato se [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] rileva che esiste già una relazione per le colonne selezionate. Non è possibile definire relazioni duplicate.  
   
-    4.  Facoltativamente, digitare una descrizione per la relazione nella casella **Descrizione**.  
+    4.  Facoltativamente, digitare una descrizione per la relazione nella casella **Descrizione** .  
   
 ##  <a name="bkmk_diagrampane"></a> Per visualizzare o modificare una relazione nel riquadro Diagramma  
   
--   Nel riquadro **Diagramma** di **Progettazione vista origine dati** fare clic con il pulsante destro del mouse sulla relazione da visualizzare e scegliere **Modifica relazione** oppure fare semplicemente doppio clic sulla freccia della relazione.  Usare la finestra di dialogo **Modifica relazione** per modificare la relazione.  
+-   Nel riquadro **Diagramma** di **Progettazione vista origine dati**fare clic con il pulsante destro del mouse sulla relazione da visualizzare e scegliere **Modifica relazione** oppure fare semplicemente doppio clic sulla freccia della relazione.  Usare la finestra di dialogo **Modifica relazione** per modificare la relazione.  
   
 ##  <a name="bkmk_tablespane"></a> Per visualizzare o modificare una relazione nel riquadro Tabelle  
   
-1.  Nel riquadro **Tabelle** di **Progettazione vista origine dati** individuare e quindi espandere la tabella, la vista o la query denominata contenente la relazione da visualizzare o modificare.  
+1.  Nel riquadro **Tabelle** di **Progettazione vista origine dati**individuare e quindi espandere la tabella, la vista o la query denominata contenente la relazione da visualizzare o modificare.  
   
-2.  Espandere la cartella **Relazioni**.  Le relazioni tra la tabella, la vista o la query denominata selezionata e altre tabelle, viste e query denominate vengono visualizzate con un elenco delle colonne delle relazioni.  
+2.  Espandere la cartella **Relazioni** .  Le relazioni tra la tabella, la vista o la query denominata selezionata e altre tabelle, viste e query denominate vengono visualizzate con un elenco delle colonne delle relazioni.  
   
 3.  Fare clic con il pulsante destro del mouse sulla relazione da modificare e quindi scegliere **Modifica relazione**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

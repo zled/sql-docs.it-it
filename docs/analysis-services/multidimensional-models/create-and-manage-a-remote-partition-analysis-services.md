@@ -1,34 +1,39 @@
 ---
-title: "Creare e gestire una partizione remota (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partizioni [Analysis Services], remote"
-  - "partizioni remote [Analysis Services]"
+title: Creare e gestire una partizione remota (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], remote
+- remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5c1dc173a2ea724f7542e5ca1f862b4d9df0dad
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare e gestire una partizione remota (Analysis Services)
+# <a name="create-and-manage-a-remote-partition-analysis-services"></a>Creare e gestire una partizione remota (Analysis Services)
   In caso di partizionamento di un gruppo di misure, è possibile configurare un database secondario in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] come archiviazione della partizione.  
   
- Le partizioni remote per un cubo, denominato database master, vengono archiviate in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dedicato nell'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], denominato database secondario.  
+ Le partizioni remote per un cubo, denominato database master, vengono archiviate in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dedicato nell'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , denominato database secondario.  
   
  Un database secondario dedicato può archiviare partizioni remote per un solo database master, ma il database master può utilizzare più database secondari, purché si trovino tutti nella stessa istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le dimensioni in un database dedicato a partizioni remote vengono create come dimensioni collegate.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Prima di creare una partizione remota, è necessario che siano soddisfatte le condizioni seguenti:  
   
 -   È necessario disporre di una seconda istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e di un database dedicato per archiviare partizioni. Il database secondario è finalizzato a un unico scopo: fornire l'archiviazione di partizioni remote per un database master.  
@@ -45,7 +50,7 @@ caps.handback.revision: 30
   
 -   È necessario verificare che il piano di ripristino di emergenza preveda il backup e il ripristino delle partizioni remote. L'utilizzo di partizioni remote può complicare le operazioni di backup e ripristino. Controllare approfonditamente il piano in modo da verificare che sia possibile ripristinare i dati necessari.  
   
-## Configurare partizioni remote  
+## <a name="configure-remote-partitions"></a>Configurare partizioni remote  
  Due computer separati che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devono entrambi creare una disposizione di partizione remota che specifichi uno dei due come server master e l'altro come server subordinato.  
   
  Nella procedura indicata di seguito si presuppone che siano presenti due istanze del server, con un database del cubo distribuito nel server master. Ai fini di questa procedura, il database del cubo viene definito come db-master. Il database di archiviazione contenente le partizioni remote viene definito come db-storage.  
@@ -55,13 +60,13 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Le partizioni remote possono essere unite solo ad altre partizioni remote. Se si utilizza una combinazione di partizioni remote e locali, un approccio alternativo consiste nel creare nuove partizioni contenenti dati combinati, eliminando quelle non più in uso.  
   
-#### Specificare nomi di server validi per la distribuzione del cubo (in SSDT)  
+#### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>Specificare nomi di server validi per la distribuzione del cubo (in SSDT)  
   
 1.  Nel server master: in Esplora soluzioni fare clic con il pulsante destro del mouse sul nome della soluzione e scegliere **Proprietà**. Nella finestra di dialogo **Proprietà** fare clic su **Proprietà di configurazione**, **Distribuzione**e **Server** , quindi impostare il nome del server master.  
   
 2.  Nel server subordinato: in Esplora soluzioni fare clic con il pulsante destro del mouse sul nome della soluzione e scegliere **Proprietà**. Nella finestra di dialogo **Proprietà** fare clic su **Proprietà di configurazione**, **Distribuzione**e **Server** , quindi impostare il nome del server subordinato.  
   
-#### Creare e distribuire un database secondario (in SSDT)  
+#### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>Creare e distribuire un database secondario (in SSDT)  
   
 1.  Nel server subordinato: creare un nuovo progetto Analysis Services per il database di archiviazione.  
   
@@ -69,17 +74,17 @@ caps.handback.revision: 30
   
 3.  Nel server subordinato: distribuire la soluzione.  
   
-#### Abilitare funzionalità (in SSMS)  
+#### <a name="enable-features-in-ssms"></a>Abilitare funzionalità (in SSMS)  
   
-1.  Nel server subordinato: in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sull'istanza connessa di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in Esplora oggetti e scegliere **Proprietà**. Impostare entrambe le proprietà **Feature\LinkToOtherInstanceEnabled** e **Feature\LinkFromOtherInstanceEnabled** su **True**.  
+1.  Nel server subordinato: in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sull'istanza connessa di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in Esplora oggetti e scegliere **Proprietà**. Impostare entrambe le proprietà **Feature\LinkToOtherInstanceEnabled** e **Feature\LinkFromOtherInstanceEnabled** su **True**.  
   
 2.  Nel server subordinato: riavviare il server facendo clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliendo **Riavvia**.  
   
-3.  Nel server master: in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sull'istanza connessa di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in Esplora oggetti e scegliere **Proprietà**. Impostare entrambe le proprietà **Feature\LinkToOtherInstanceEnabled** e **Feature\LinkFromOtherInstanceEnabled** su **True**.  
+3.  Nel server master: in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sull'istanza connessa di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in Esplora oggetti e scegliere **Proprietà**. Impostare entrambe le proprietà **Feature\LinkToOtherInstanceEnabled** e **Feature\LinkFromOtherInstanceEnabled** su **True**.  
   
 4.  Nel server master: per riavviare il server, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliere **Riavvia**.  
   
-#### Impostare la proprietà di database MasterDataSourceID nel server remoto (in SSMS)  
+#### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Impostare la proprietà di database MasterDataSourceID nel server remoto (in SSMS)  
   
 1.  Nel server subordinato: fare clic con il pulsante destro del mouse sul database di archiviazione, db-storage, e scegliere **Crea script per database** | **ALTER in** | **Nuova finestra editor di query**.  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 30
   
 3.  Premere F5 per eseguire lo script.  
   
-#### Configurare la partizione remota (in SSDT)  
+#### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurare la partizione remota (in SSDT)  
   
 1.  Nel server master: aprire il cubo in Progettazione cubi e fare clic sulla scheda **Partizioni** . Espandere il gruppo di misure. Fare clic su **Nuova partizione** se il gruppo di misure è già configurato per più partizioni oppure fare clic sul pulsante Sfoglia (. . ) nella colonna Origine per modificare la partizione esistente.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 30
   
 5.  Nel server master: fare clic con il pulsante destro del mouse sul nome del cubo in Esplora soluzioni, scegliere **Elabora** ed elaborare completamente il cubo.  
   
-## Amministrazione di partizioni remote  
+## <a name="administering-remote-partitions"></a>Amministrazione di partizioni remote  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono supportate sia l'elaborazione parallela sia quella sequenziale di partizioni remote. Nel database master, ovvero dove sono state definite le partizioni, vengono coordinate le transazioni fra tutte le istanze che partecipano all'elaborazione delle partizioni di un cubo. I report di elaborazione vengono inviati quindi a tutte le istanze in cui è stata elaborata una partizione.  
   
  Un cubo contenente partizioni remote può essere amministrato insieme alle relative partizioni in una singola istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tuttavia, i metadati per la partizione remota possono essere visualizzati e aggiornati solo nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dove la partizione e il relativo cubo padre sono stati definiti. La partizione remota non può essere visualizzata o aggiornata nell'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -132,7 +137,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Anche se database dedicati all'archiviazione di partizioni remote non sono esposti a set di righe dello schema, le applicazioni in cui viene utilizzata la libreria AMO (Analysis Management Objects) possono ancora individuare un database dedicato utilizzando il comando di individuazione (Discover) di XML for Analysis. Un comando CREATE o DELETE inviato direttamente a un database dedicato tramite un client TCP o HTTP avrà esito positivo, tuttavia verrà restituito un avviso dal server indicante che l'azione può danneggiare notevolmente questo database gestito.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

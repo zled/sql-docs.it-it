@@ -1,27 +1,32 @@
 ---
-title: "Definire una relazione di tipo Riferimento e le relative propriet&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "relazioni di dimensioni di riferimento"
-  - "relazioni [Analysis Services], dimensioni di riferimento"
+title: "Definire una relazione di riferimento e le relative proprietà | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- referenced dimension relationship
+- relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definire una relazione di tipo Riferimento e le relative propriet&#224;
+# <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Definire una relazione di tipo Riferimento e le relative proprietà
   È possibile definire una relazione di tipo Riferimento per la dimensione tramite la scheda **Utilizzo dimensioni** di Progettazione cubi. La relazione di tipo Riferimento viene definita specificando gli elementi seguenti:  
   
 -   La dimensione intermedia con cui eseguire l'unione in join. A tale scopo, è possibile specificare una dimensione regolare o un'altra dimensione di riferimento.  

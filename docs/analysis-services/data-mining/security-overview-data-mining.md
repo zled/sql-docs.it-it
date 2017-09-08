@@ -1,25 +1,30 @@
 ---
-title: "Panoramica della sicurezza (data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sicurezza [Analysis Services - data mining], informazioni sulla sicurezza"
+title: Cenni preliminari sulla sicurezza (Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Panoramica della sicurezza (data mining)
+# <a name="security-overview-data-mining"></a>Panoramica della sicurezza (data mining)
   Il processo di protezione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avviene su più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
   
 ##  <a name="bkmk_Architecture"></a> Architettura di sicurezza  
@@ -39,7 +44,7 @@ caps.handback.revision: 12
  Per data mining è necessario un diverso set di autorizzazioni per compilare ed elaborare i modelli necessari per la visualizzazione o l'esecuzione di query sui modelli. L'esecuzione di stime su un modello è simile all'esecuzione di query con la differenza che non vengono richieste autorizzazioni amministrative.  
   
 ##  <a name="bkmk_Instance"></a> Sicurezza di un'istanza di Analysis Services  
- È quindi necessario proteggere il computer di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il sistema operativo Windows nel computer di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le origini dei dati usate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ È quindi necessario proteggere il computer di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il sistema operativo Windows nel computer di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le origini dei dati usate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ##  <a name="bkmk_Access"></a> Configurazione dell'accesso ad Analysis Services  
  Quando si configurano e si definiscono gli utenti autorizzati per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario determinare gli utenti a cui è inoltre necessario concedere le autorizzazioni per l'amministrazione di oggetti di database specifici, gli utenti che possono visualizzare la definizione di oggetti o esplorare i modelli e gli utenti che possono accedere direttamente alle origini dati.  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  Se si utilizzano pacchetti di Integration Services per pulire i dati, aggiornare modelli di data mining o eseguire stime, è necessario assicurarsi che il servizio Integration Services disponga delle autorizzazioni appropriate per il database in cui è archiviato il modello e delle autorizzazioni appropriate per i dati di origine.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

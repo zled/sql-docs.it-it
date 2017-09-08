@@ -1,27 +1,32 @@
 ---
-title: "Requisiti e considerazioni sull&#39;elaborazione (data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data mining [Analysis Services], oggetti"
-  - "strutture di data mining [Analysis Services], elaborazione"
-  - "modelli di data mining [Analysis Services], elaborazione"
+title: L'elaborazione di requisiti e considerazioni (Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], objects
+- mining structures [Analysis Services], processing
+- mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a677617feb9ade819df897e2ca2418bfce8d2a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Requisiti e considerazioni sull&#39;elaborazione (data mining)
+# <a name="processing-requirements-and-considerations-data-mining"></a>Requisiti e considerazioni sull'elaborazione (data mining)
   In questo argomento vengono illustrate alcune considerazioni tecniche da tenere presenti quando si elaborano oggetti di data mining. Per una spiegazione generale dell'elaborazione e della modalità di applicazione al data mining, vedere [Elaborazione di oggetti di data mining](../../analysis-services/data-mining/processing-data-mining-objects.md).  
   
  [Query sull'archivio relazionale](#bkmk_QueryReqs)  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
   
  Tuttavia, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], non è possibile selezionare più modelli di data mining da elaborare con la struttura. Se è necessario controllare quali modelli vengono elaborati, è necessario selezionarli singolarmente o utilizzare XMLA o DMX per elaborarli in serie.  
   
-## Necessità di rielaborazione  
+## <a name="when-reprocessing-is-required"></a>Necessità di rielaborazione  
  È necessario elaborare i modelli di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] definiti prima di poter iniziare a usarli. È inoltre necessario rielaborare i modelli di data mining ogni volta che si modifica la struttura del modello di data mining, si aggiornano i dati di training, si modifica un modello di data mining esistente oppure si aggiunge un nuovo modello di data mining alla struttura.  
   
  I modelli di data mining vengono inoltre elaborati in questi scenari:  
@@ -66,7 +71,7 @@ caps.handback.revision: 30
   
  Quando si inizia la distribuzione, l'elaborazione viene avviata automaticamente, a meno che nel server di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vi sia una versione elaborata in precedenza e non siano state apportate modifiche strutturali. È possibile distribuire un progetto selezionando **Distribuisci soluzione** nell'elenco a discesa o premendo F5. È possibile:  
   
- Per altre informazioni sull'impostazione delle proprietà di distribuzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che consentono di controllare la modalità di distribuzione dei modelli di data mining, vedere [Deployment of Data Mining Solutions](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md) (Distribuzione di soluzioni di data mining).  
+ Per altre informazioni sull'impostazione delle proprietà di distribuzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che consentono di controllare la modalità di distribuzione dei modelli di data mining, vedere [Deployment of Data Mining Solutions](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)(Distribuzione di soluzioni di data mining).  
   
  **Spostamento di un modello di data mining**: quando si sposta un modello di data mining tramite il comando EXPORT, viene esportata solo la definizione del modello, incluso il nome della struttura di data mining che si prevede fornisca i dati al modello.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 30
   
  Per altre informazioni, vedere [Esportare e importare gli oggetti di data mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

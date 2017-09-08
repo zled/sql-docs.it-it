@@ -1,35 +1,40 @@
 ---
-title: "Informazioni sugli schemi di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Generazione guidata schema, schema del database"
-  - "schema di database [Analysis Services]"
-  - "schema relazionale [Analysis Services], schema del database"
-  - "opzioni schema area di interesse [Analysis Services]"
-  - "opzioni schema area di gestione temporanea [Analysis Services]"
-  - "schemi denormalizzati"
+title: Comprendere gli schemi di Database | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Schema Generation Wizard, database schema
+- database schema [Analysis Services]
+- relational schema [Analysis Services], database schema
+- subject area schema options [Analysis Services]
+- staging area schema options [Analysis Services]
+- denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Informazioni sugli schemi di database
+# <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
   La Generazione guidata schema consente di generare uno schema relazionale denormalizzato per il database dell'area di interesse in base alle dimensioni e ai gruppi di misure in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La procedura guidata genera una tabella relazionale per ogni dimensione, denominata tabella della dimensione, in cui vengono archiviati i dati della dimensione e una tabella relazionale per ogni gruppo di misure, denominata tabella dei fatti, in cui vengono archiviati i fatti. Durante la generazione di queste tabelle relazionali, la procedura guidata ignora dimensioni collegate, gruppi di misure collegati e dimensioni temporali del server.  
   
-## Convalida  
- Prima di iniziare a generare lo schema relazionale sottostante, la Generazione guidata schema convalida i cubi e le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se vengono rilevati alcuni errori, la procedura guidata viene arrestata e gli errori vengono visualizzati nella finestra Elenco attività di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Di seguito sono riportati alcuni esempi di errori che impediscono la generazione:  
+## <a name="validation"></a>Convalida  
+ Prima di iniziare a generare lo schema relazionale sottostante, la Generazione guidata schema convalida i cubi e le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se vengono rilevati alcuni errori, la procedura guidata viene arrestata e gli errori vengono visualizzati nella finestra Elenco attività di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Di seguito sono riportati alcuni esempi di errori che impediscono la generazione:  
   
 -   Dimensioni con più attributi chiave.  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 28
   
 -   Chiavi surrogate configurate in modo non corretto, ad esempio più attributi con il tipo di attributo **ScdOriginalID** oppure un attributo con **ScdOriginalID** non associato a una colonna con il tipo di dati integer.  
   
-## Tabelle delle dimensioni  
+## <a name="dimension-tables"></a>Tabelle delle dimensioni  
  Per ogni dimensione la Generazione guidata schema genera una tabella della dimensione da includere nel database dell'area di interesse. La struttura della tabella della dimensione dipende dalle scelte effettuate durante la progettazione della dimensione su cui si basa.  
   
  Colonne  
- La procedura guidata genera una colonna per le associazioni di ogni attributo nella dimensione su cui si basa la tabella delle dimensioni, ad esempio le associazioni per le proprietà **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn** e **UnaryOperatorColumn** di ogni attributo.  
+ La procedura guidata genera una colonna per le associazioni di ogni attributo nella dimensione su cui si basa la tabella delle dimensioni, ad esempio le associazioni per le proprietà **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn**e **UnaryOperatorColumn** di ogni attributo.  
   
  Relazioni  
  La procedura guidata genera una relazione tra la colonna di ogni attributo padre e la chiave primaria della tabella della dimensione.  
@@ -61,11 +66,11 @@ caps.handback.revision: 28
  Traduzioni  
  La procedura guidata genera una tabella separata per l'archiviazione dei valori tradotti per ogni attributo che richiede una colonna per la traduzione. La procedura guidata crea inoltre una colonna separata per ogni lingua in cui i valori devono essere tradotti.  
   
-## Tabelle dei fatti  
+## <a name="fact-tables"></a>Tabelle dei fatti  
  Per ogni gruppo di misure in un cubo la Generazione guidata schema genera una tabella dei fatti da includere nel database dell'area di interesse. La struttura della tabella dei fatti dipende dalle scelte effettuate durante la progettazione del gruppo di misure su cui si basa e dalle relazioni stabilite tra il gruppo di misure e qualsiasi dimensione inclusa.  
   
  Colonne  
- La procedura guidata genera una colonna per ogni misura, escluse le misure che usano la funzione di aggregazione **Count**. Queste misure non richiedono una colonna corrispondente nella tabella dei fatti.  
+ La procedura guidata genera una colonna per ogni misura, escluse le misure che usano la funzione di aggregazione **Count** . Queste misure non richiedono una colonna corrispondente nella tabella dei fatti.  
   
  Se applicabile, la procedura guidata genera inoltre una colonna per ogni colonna dell'attributo di granularità di ogni relazione di tipo Regolare tra la dimensione e il gruppo di misure e una o più colonne per le associazioni di ogni attributo di una dimensione collegata da una relazione di tipo Fatti con il gruppo di misure sui cui si basa la tabella.  
   
@@ -82,8 +87,8 @@ caps.handback.revision: 28
  Traduzioni  
  La procedura guidata genera una tabella separata per l'archiviazione dei valori tradotti per ogni proprietà nel gruppo di misure che richiede una colonna per la traduzione. La procedura guidata crea inoltre una colonna separata per ogni lingua in cui i valori devono essere tradotti.  
   
-## Conversione del tipo di dati e lunghezze predefinite  
- La Generazione guidata schema ignora sempre i tipi di dati eccetto che per le colonne che usano il tipo di dati **wchar** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La dimensione dei dati **wchar** viene convertita direttamente nel tipo di dati **nvarchar**. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati **wchar** è maggiore di 4000 byte, la Generazione guidata schema visualizzerà un errore.  
+## <a name="data-type-conversion-and-default-lengths"></a>Conversione del tipo di dati e lunghezze predefinite  
+ La Generazione guidata schema ignora sempre i tipi di dati eccetto che per le colonne che usano il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar** data type. La dimensione dei dati **wchar** viene convertita direttamente nel tipo di dati **nvarchar** . Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati **wchar** è maggiore di 4000 byte, la Generazione guidata schema visualizzerà un errore.  
   
  Se per un elemento di dati, ad esempio l'associazione di un attributo, non è stata specificata la lunghezza, per la colonna verrà utilizzata la lunghezza predefinita specificata nella tabella seguente.  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 28
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla generazione incrementale](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gestire modifiche a viste origine dati e origini dati](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Gestire le modifiche a viste origine dati e origini dati](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

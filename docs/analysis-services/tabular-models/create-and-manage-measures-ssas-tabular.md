@@ -1,24 +1,29 @@
 ---
-title: "Creare e gestire misure (SSAS tabulare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare e gestire misure (SSAS tabulare) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare e gestire misure (SSAS tabulare)
+# <a name="create-and-manage-measures-ssas-tabular"></a>Creare e gestire misure (SSAS tabulare)
   Una misura è una formula creata per l'utilizzo in un report o in una tabella pivot o grafico pivot. Le misure possono essere basate sulle funzioni di aggregazione standard, ad esempio COUNT o SUM. In alternativa, è possibile definire formule personalizzate tramite DAX. Nelle attività contenute in questo argomento viene descritto come creare e gestire misure utilizzando la griglia delle misure di una tabella.  
   
  In questo argomento sono incluse le attività seguenti:  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [Per eliminare una misura](#bkmk_delete)  
   
-## Attività  
+## <a name="tasks"></a>Attività  
  Per creare e gestire misure, sarà necessario utilizzare la griglia delle misure di una tabella. La griglia delle misure per una tabella può essere visualizzata solo in Vista dati di Progettazione modelli. Non è possibile creare misure o visualizzare la griglia delle misure in Vista diagramma; tuttavia, in tale vista è possibile visualizzare misure esistenti. Per visualizzare la griglia delle misure per una tabella, fare clic sul menu **Tabella** , quindi su **Mostra griglia delle misure**.  
   
 ###  <a name="bkmk_create_stand"></a> Per creare una misura tramite una formula di aggregazione standard  
@@ -60,9 +65,9 @@ caps.handback.revision: 18
   
 -   Nella griglia delle misure fare clic con il pulsante destro del mouse su una misura, quindi scegliere **Elimina**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Misure &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Indicatori KPI &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Colonne calcolate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [Colonne calcolate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

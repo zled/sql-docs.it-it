@@ -1,26 +1,31 @@
 ---
-title: "Creare una query di stima utilizzando Generatore query di stima | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query di stima [Analysis Services]"
-  - "Stima modello di data mining [Analysis Services], query di stima"
+title: Creare una Query di stima utilizzando Generatore di Query di stima | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una query di stima utilizzando Generatore query di stima
+# <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Creare una query di stima utilizzando Generatore query di stima
   È possibile creare query di stima mentre si compila una soluzione di data mining in BI Development Studio, o facendo clic con il pulsante destro del mouse su un modello di data mining esistente in SQL Server Management Studio e scegliendo quindi l'opzione **Compila query di stima**.  
   
  Nel **generatore delle query di stima** sono disponibili tre modalità di progettazione che è possibile alternare facendo clic sulle icone nell'angolo in alto a sinistra.  
@@ -37,7 +42,7 @@ caps.handback.revision: 30
  Scegliere l'origine della nuova colonna. È possibile utilizzare le colonne del modello di data mining, le tabelle di input incluse nella vista origine dati, una funzione di stima o un'espressione personalizzata.  
   
  **Campo**  
- Determina la colonna o funzione specifica associata alla selezione nella colonna **Origine**.  
+ Determina la colonna o funzione specifica associata alla selezione nella colonna **Origine** .  
   
  **Alias**  
  Determina il nome della colonna nel set di risultati.  
@@ -54,13 +59,13 @@ caps.handback.revision: 30
  **Criteri/Argomento**  
  Specifica una condizione o espressione dell'utente per la colonna. È possibile trascinare colonne dalle tabelle alla cella.  
   
- La modalità **Query** fornisce un editor di testo che offre accesso diretto al linguaggio DMX (Data Mining Extensions), oltre a una vista dei dati di input e delle colonne del modello. Quando si seleziona la modalità **Query** la griglia utilizzata per definire la query viene sostituita da un editor di testo di base. È possibile utilizzare tale editor per copiare e salvare le query composte o per incollare le query DMX esistenti e presenti negli Appunti ed eseguirle.  
+ La modalità**Query** fornisce un editor di testo che offre accesso diretto al linguaggio DMX (Data Mining Extensions), oltre a una vista dei dati di input e delle colonne del modello. Quando si seleziona la modalità **Query** la griglia utilizzata per definire la query viene sostituita da un editor di testo di base. È possibile utilizzare tale editor per copiare e salvare le query composte o per incollare le query DMX esistenti e presenti negli Appunti ed eseguirle.  
   
  Nella vista**Risultato** viene eseguita la query corrente e vengono visualizzati i risultati in una griglia. Se i dati sottostanti sono stati modificati e si desidera eseguire nuovamente la query, fare clic sul pulsante Esegui sulla barra di stato.  
   
  È possibile progettare una query di data mining utilizzando una combinazione degli strumenti visivi e dell'editor di testo. Se si modifica la query tramite l'editor di testo e si torna quindi alla vista **Progettazione** , le modifiche apportate andranno perse e verrà ripristinata la query originale creata dal generatore di query di stima. In questo argomento viene illustrato l'utilizzo del generatore di query grafico.  
   
-### Per creare una query di stima  
+### <a name="to-create-a-prediction-query"></a>Per creare una query di stima  
   
 1.  Fare clic sulla scheda **Stima modello di data mining** in Progettazione modelli di data mining.  
   
@@ -78,19 +83,19 @@ caps.handback.revision: 30
   
 6.  Nella casella **Nome tabella/vista** selezionare la tabella contenente i dati sui cui si desidera creare una stima e quindi fare clic su **OK**.  
   
-     Dopo aver selezionato la tabella di input, il generatore delle query di stima crea un mapping predefinito tra il modello di data mining e la tabella di input in base ai nomi delle colonne. Per eliminare un mapping, fare clic per selezionare la linea che collega la colonna contenuta nella tabella **Modello di data mining** alla colonna contenuta nella tabella **Seleziona tabelle di input** e quindi premere CANC. È inoltre possibile creare mapping manualmente facendo clic su una colonna nella tabella **Seleziona tabelle di input** e trascinandola sulla colonna corrispondente nella tabella **Modello di data mining**.  
+     Dopo aver selezionato la tabella di input, il generatore delle query di stima crea un mapping predefinito tra il modello di data mining e la tabella di input in base ai nomi delle colonne. Per eliminare un mapping, fare clic per selezionare la linea che collega la colonna contenuta nella tabella **Modello di data mining** alla colonna contenuta nella tabella **Seleziona tabelle di input** e quindi premere CANC. È inoltre possibile creare mapping manualmente facendo clic su una colonna nella tabella **Seleziona tabelle di input** e trascinandola sulla colonna corrispondente nella tabella **Modello di data mining** .  
   
 7.  Aggiungere qualsiasi combinazione dei tre tipi di informazioni seguenti alla griglia del generatore delle query di stima:  
   
     -   Colonne stimabili dalla casella **Modello di data mining** .  
   
-    -   Qualsiasi combinazione di colonne di input dalla casella **Seleziona tabelle di input**.  
+    -   Qualsiasi combinazione di colonne di input dalla casella **Seleziona tabelle di input** .  
   
     -   Funzioni di stima  
   
 8.  Eseguire la query facendo clic sul primo pulsante della barra degli strumenti della scheda **Stima modello di data mining** e quindi selezionando **Risultato**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare una query singleton in Progettazione modelli di data mining](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   

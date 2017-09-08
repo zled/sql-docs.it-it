@@ -1,33 +1,41 @@
 ---
-title: "Abilitare la modalit&#224; DirectQuery in SSMS | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Abilitare la modalità DirectQuery in SQL Server Management Studio | Documenti Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 86bae72aacde357b372e48f83a429e8102553325
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Abilitare la modalit&#224; DirectQuery in SSMS
+# <a name="enable-directquery-mode-in-ssms"></a>Abilitare la modalità DirectQuery in SSMS
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   È possibile modificare le proprietà di accesso ai dati di un modello tabulare già distribuito abilitando la modalità DirectQuery, con la quale le query vengono eseguite su un'origine dati relazionale di back-end e non sui dati memorizzati nella cache che risiedono in memoria.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], i passaggi per la configurazione di DirectQuery variano in base al livello di compatibilità del modello. Di seguito sono elencati i passaggi validi per tutti i livelli di compatibilità.  
   
- In questo argomento si presuppone che sia stato creato e convalidato un modello tabulare in memoria con livello di compatibilità 1200 e che occorra soltanto abilitare l'accesso DirectQuery e aggiornare le stringhe di connessione. Se si inizia da un livello di compatibilità inferiore, è necessario prima di tutto aggiornarlo manualmente. Per informazioni sulla procedura, vedere [Aggiornare Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
+ In questo argomento si presuppone di aver creato e convalidato un modello tabulare in memoria a livello di compatibilità 1200 o superiore ed è solo necessario abilitare l'accesso DirectQuery e aggiornare le stringhe di connessione. Se si inizia da un livello di compatibilità inferiore, è necessario prima di tutto aggiornarlo manualmente. Per informazioni sulla procedura, vedere [Aggiornare Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
   
 > [!IMPORTANT]  
 >  È consigliabile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] anziché Management Studio per alternare le diverse modalità di archiviazione di dati. Quando si usa  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per cambiare modello e poi si esegue la distribuzione nel server, il modello e il database rimangano sincronizzati. Inoltre, la modifica delle modalità di archiviazione nel modello consente di verificare eventuali errori di convalida. Quando si usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] come descritto in questo articolo, gli errori di convalida non vengono segnalati.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  L'abilitazione dell'uso della modalità DirectQuery su un modello tabulare è un processo a più passaggi.  
   
 -   Assicurarsi che il modello non disponga di funzionalità che potrebbero causare errori di convalida in modalità DirectQuery e quindi modificare la modalità di archiviazione di dati del modello in memoria per DirectQuery.  
@@ -44,7 +52,7 @@ caps.handback.revision: 18
   
 -   Infine, confermare l'operatività della modalità DirectQuery eseguendo una query.  
   
-## Passaggio 1: Verifica del livello di compatibilità  
+## <a name="step-1-check-the-compatibility-level"></a>Passaggio 1: Verifica del livello di compatibilità  
  Le proprietà che definiscono l'accesso ai dati sono diverse per i diversi livelli di compatibilità. Un passaggio preliminare consiste nel verificare quale sia il livello di compatibilità del database.  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] connettersi all'istanza che contiene il modello tabulare.  
@@ -55,7 +63,7 @@ caps.handback.revision: 18
   
  Quando si modifica un modello tabulare in modalità DirectQuery, la nuova modalità di archiviazione di dati diventa effettiva immediatamente.  
   
-## Passaggio 2a: Passaggio di un database con modello tabulare 1200 alla modalità DirectQuery  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>Passaggio 2a: Passaggio di un database con modello tabulare 1200 alla modalità DirectQuery  
   
 1.  In Esplora oggetti, fare clic sul database > **Proprietà** > **Modello** > **Modalità predefinita**.  
   
@@ -67,7 +75,7 @@ caps.handback.revision: 18
     |**DirectQuery**|Le query vengono eseguite in un database relazionale di back-end, tramite la connessione all'origine dati definita per il modello.<br /><br /> Le query sul modello vengono convertite in query native di database e reindirizzate all'origine dati.<br /><br /> Quando si elabora un modello impostato sulla modalità DirectQuery, vengono compilati e distribuiti solo i metadati. I dati sono esterni al modello e risiedono nei file di database dell'origine dati operativa.|  
     |**Importa**|Le query vengono eseguite nel database tabulare in MDX o DAX.<br /><br /> Quando si elabora un modello impostato sulla modalità di importazione, i dati vengono recuperati da un'origine dati back-end e archiviati su disco. Quando si carica il database, i dati vengono copiati completamente in memoria, consentendo query e scansioni di tabella rapide.<br /><br /> Si tratta della modalità predefinita per i modelli tabulari ed è l'unica modalità per determinate origini dati (non relazionali).|  
   
-## Passaggio 2b: Passaggio di un database con modello tabulare 1100-1103 alla modalità DirectQuery  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Passaggio 2b: Passaggio di un database con modello tabulare 1100-1103 alla modalità DirectQuery  
   
 1.  In Esplora oggetti fare clic sul database > **Proprietà** > **Database** > **DirectQueryMode**.  
   
@@ -91,16 +99,16 @@ caps.handback.revision: 18
   
 -   È anche possibile configurare le partizioni nella cache in modo che quella primaria usata per la modalità DirectQuery non venga mai elaborata e faccia sempre riferimento all'origine relazionale. Sono disponibili molti modi per utilizzare le partizioni allo scopo di ottimizzare la progettazione dei modelli e la creazione di report. Per altre informazioni, vedere [Definire le partizioni nei modelli DirectQuery &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
--   Dopo avere distribuito il modello, è possibile modificare il metodo di connessione preferito. È ad esempio possibile utilizzare una modalità ibrida per i test e passare alla modalità **Solo DirectQuery** unicamente dopo avere testato accuratamente eventuali report o query che utilizzano il modello. Per altre informazioni, vedere [Impostare o modificare il metodo di connessione preferito per DirectQuery](../Topic/Set%20or%20Change%20the%20Preferred%20Connection%20Method%20for%20DirectQuery.md).  
+-   Dopo avere distribuito il modello, è possibile modificare il metodo di connessione preferito. È ad esempio possibile utilizzare una modalità ibrida per i test e passare alla modalità **Solo DirectQuery** unicamente dopo avere testato accuratamente eventuali report o query che utilizzano il modello. Per altre informazioni, vedere [Impostare o modificare il metodo di connessione preferito per DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
-## Passaggio 3: Controllare le proprietà di connessione del database  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>Passaggio 3: Controllare le proprietà di connessione del database  
  In base all'impostazione della configurazione della connessione all'origine dati, il passaggio a DirectQuery potrebbe modificare il contesto di sicurezza della connessione. Dopo aver modificato la modalità di accesso ai dati, esaminare le proprietà della rappresentazione e della stringa di connessione per verificare che l'account di accesso sia valido per le connessioni in corso al database back-end.  
   
  Esaminare la sezione **Configurare Analysis Services per la delega trusted** in [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) per informazioni sulla delega di un'identità utente per gli scenari di DirectQuery.  
   
 1.  In Esplora oggetti espandere **Connessioni** e fare doppio clic su una connessione per visualizzarne le proprietà.  
   
-     Per i modelli DirectQuery deve essere definita una sola connessione per il database e l'origine dati deve essere relazionale e di un tipo di database supportato. Vedere [Origini dati supportate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     Per i modelli DirectQuery deve essere definita una sola connessione per il database e l'origine dati deve essere relazionale e di un tipo di database supportato. Per informazioni sulla procedura, vedere [Origini dati supportate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  **Stringa di connessione** deve specificare il server, il nome del database e il metodo di autenticazione usati nelle operazioni di DirectQuery. Se si usa l'autenticazione di SQL Server, è possibile specificare qui l'account di accesso al database.  
   
@@ -114,7 +122,7 @@ caps.handback.revision: 18
   
  La rappresentazione non può essere utilizzata se il modello viene utilizzato solo in memoria. L'impostazione **ImpersonateCurrentUser**non è valida, a meno che il modello non utilizzi la modalità DirectQuery.  
   
-## Passaggio 4: Convalidare l'accesso a DirectQuery  
+## <a name="step-4-validate-directquery-access"></a>Passaggio 4: Convalidare l'accesso a DirectQuery  
   
 1.  Avviare una traccia con SQL Server Profiler o XEvent in Management Studio, connesso al database relazionale su SQL Server.  
   
@@ -124,7 +132,7 @@ caps.handback.revision: 18
   
 3.  Nella traccia, l'esecuzione della query viene evidenziata nel database relazionale.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Livello di compatibilità per i modelli tabulari in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Origini dati supportate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   

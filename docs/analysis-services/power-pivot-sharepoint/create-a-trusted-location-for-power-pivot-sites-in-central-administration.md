@@ -1,35 +1,33 @@
 ---
-title: "Creare un percorso attendibile per i siti Power Pivot in Amministrazione centrale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare un percorso attendibile per i siti di Power Pivot in Amministrazione centrale | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare un percorso attendibile per i siti Power Pivot in Amministrazione centrale
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Creare un percorso attendibile per i siti Power Pivot in Amministrazione centrale
   Excel Services consente di specificare i percorsi che rappresentano repository validi per le cartelle di lavoro che vengono aperte in un server SharePoint. Questi percorsi vengono chiamati "percorsi attendibili" ed è possibile utilizzare impostazioni di configurazione diverse per ogni percorso attendibile creato. Per una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, può essere utile creare un percorso attendibile per i siti che contengono cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per poter applicare le impostazioni che funzionano meglio per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mantenendo le impostazioni predefinite per il resto della farm.  
   
- In questo argomento sono incluse le sezioni seguenti:  
   
- [Prerequisiti](#prereq)  
-  
- [Panoramica](#overview)  
-  
- [Creare un percorso attendibile per l'accesso ai dati Power Pivot](#create)  
-  
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario essere un amministratore del servizio o della farm per definire un URL come percorso attendibile.  
   
  È necessario conoscere l'indirizzo URL del sito di SharePoint contenente la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o un'altra raccolta in cui sono archiviate le cartelle di lavoro. Per ottenere l'indirizzo, aprire il sito che contiene la raccolta, fare clic con il pulsante destro del mouse su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, scegliere **Proprietà** e quindi copiare la prima parte dell'indirizzo (URL) che contiene il nome del server e il percorso del sito.  
@@ -37,7 +35,7 @@ caps.handback.revision: 7
 ##  <a name="overview"></a> Panoramica  
  Un'installazione iniziale di Excel Services specifica "http://" come percorso attendibile, pertanto, nel server, possono essere aperte cartelle di lavoro di qualsiasi sito della farm. Se è necessario un controllo più rigido sui percorsi considerati attendibili, è possibile creare nuovi percorsi attendibili che eseguono il mapping a siti specifici della farm, quindi variare le impostazioni e le autorizzazioni per ognuno.  
   
- La creazione di un nuovo percorso attendibile per siti che ospitano cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è utile soprattutto per mantenere i valori predefiniti per il resto della farm e applicare impostazioni diverse ottimali per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Ad esempio, un percorso attendibile ottimizzato per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] potrebbe avere una dimensione massima per le cartelle di lavoro pari a 50 MB, mentre il resto della farm usa il valore predefinito di 10 MB.  
+ La creazione di un nuovo percorso attendibile per siti che ospitano cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è utile soprattutto per mantenere i valori predefiniti per il resto della farm e applicare impostazioni diverse ottimali per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ad esempio, un percorso attendibile ottimizzato per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] potrebbe avere una dimensione massima per le cartelle di lavoro pari a 50 MB, mentre il resto della farm usa il valore predefinito di 10 MB.  
   
  La creazione di un percorso attendibile è consigliata se si usano le librerie della raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per visualizzare in anteprima le cartelle di lavoro pubblicate e vengono visualizzati avvisi di aggiornamento dati invece dell'immagine di anteprima prevista. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La raccolta esegue il rendering delle immagini di anteprima dei report e delle cartelle di lavoro usando i dati e le informazioni di presentazione all'interno del documento. Se l'opzione Avvisa in caso di aggiornamento è abilitata per un percorso attendibile, la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] potrebbe non avere autorizzazioni sufficienti per eseguire l'aggiornamento, con conseguente visualizzazione di un errore al posto dell'immagine di anteprima. L'aggiunta di un sito che contiene la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come nuovo percorso attendibile può risolvere questo problema.  
   
@@ -51,12 +49,12 @@ caps.handback.revision: 7
   
 4.  Fare clic su **Aggiungi posizione attendibile file**.  
   
-5.  Immettere l'URL di un sito che contiene una libreria della raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+5.  Immettere l'URL di un sito che contiene una libreria della raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 6.  In Tipo percorso selezionare **Microsoft SharePoint Foundation**.  
   
     > [!IMPORTANT]  
-    >  I tipi di percorsi UNC e HTTP non sono supportati per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+    >  I tipi di percorsi UNC e HTTP non sono supportati per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 7.  Accettare tutte le impostazioni predefinite per le proprietà in Gestione sessioni, Proprietà cartella di lavoro e Comportamento calcolo.  
   
@@ -68,9 +66,9 @@ caps.handback.revision: 7
   
 11. Scegliere **OK**.  
   
-## Vedere anche  
- [Raccolta Power Pivot](../Topic/Power%20Pivot%20Gallery.md)   
- [Creare e personalizzare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Usare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Raccolta Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
+ [Creare e personalizzare la raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Usare la raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   

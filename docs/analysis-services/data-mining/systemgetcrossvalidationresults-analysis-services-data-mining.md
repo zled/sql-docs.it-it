@@ -1,32 +1,37 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SystemGetCrossValidationResults"
-  - "stored procedure [Analysis Services], data mining"
-  - "convalida incrociata [data mining]"
+title: SystemGetCrossValidationResults (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SystemGetCrossValidationResults
+- stored procedures [Analysis Services], data mining
+- cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8558bacfce7bd6a70b769b42c60d568e76b433e0
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetCrossValidationResults (Analysis Services - Data mining)
+# <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Data mining)
   Partiziona la struttura di data mining nel numero specificato di sezioni incrociate, esegue il training di un modello per ogni partizione, quindi restituisce la metrica di accuratezza per ogni partizione.  
   
 > [!NOTE]  
->  Non è possibile usare questa stored procedure per la convalida incrociata di modelli di clustering o di modelli compilati mediante l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series o l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering. Per eseguire la convalida incrociata di modelli di clustering, usare una stored procedure specifica, ovvero [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
+>  Non è possibile usare questa stored procedure per la convalida incrociata di modelli di clustering o di modelli compilati mediante l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series o l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering. Per eseguire la convalida incrociata di modelli di clustering, usare una stored procedure specifica, ovvero [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetCrossValidationResults(
 [,<test list>])  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *struttura di data mining*  
  Nome di una struttura di data mining nel database corrente.  
   
@@ -55,7 +60,7 @@ SystemGetCrossValidationResults(
  Se non si specifica un elenco di modelli di data mining, la convalida incrociata viene eseguita su tutti i modelli associati alla struttura specificata e che contengono un attributo stimabile.  
   
 > [!NOTE]  
->  Per eseguire la convalida incrociata di modelli di clustering, è necessario usare una stored procedure diversa, ovvero [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
+>  Per eseguire la convalida incrociata di modelli di clustering, è necessario usare una stored procedure diversa, ovvero [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
  (facoltativo).  
   
@@ -71,7 +76,7 @@ SystemGetCrossValidationResults(
   
  (obbligatorio)  
   
- *max cases*  
+ *numero massimo di case*  
  Valore integer che specifica il numero massimo di case che è possibile sottoporre a test in tutte le riduzioni.  
   
  Il valore 0 indica che verranno utilizzati tutti i case nell'origine dati.  
@@ -101,7 +106,7 @@ SystemGetCrossValidationResults(
   
  (facoltativo).  
   
- *target* *threshold*  
+ *target*  *threshold*  
  **Double** è maggiore di 0 e minore di 1. Indica il punteggio di probabilità minimo che deve essere ottenuto per la stima dello stato di destinazione specificato affinché venga conteggiata come corretta.  
   
  Una stima con una probabilità minore o uguale a questo valore viene considerata non corretta.  
@@ -111,7 +116,7 @@ SystemGetCrossValidationResults(
  Il valore predefinito è **Null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non genererà un errore se si imposta la *state threshold* su 0.0, sebbene non sia mai consigliabile usare questo valore. Con una soglia di 0.0, le stime con una probabilità dello 0 percento vengono di fatto conteggiate come corrette.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]non genererà un errore se si imposta *soglia di stato* su 0.0, ma non è necessario utilizzare questo valore. Con una soglia di 0.0, le stime con una probabilità dello 0 percento vengono di fatto conteggiate come corrette.  
   
  (facoltativo).  
   
@@ -122,7 +127,7 @@ SystemGetCrossValidationResults(
   
  (facoltativo).  
   
-## Tipo restituito  
+## <a name="return-type"></a>Tipo restituito  
  Il set di righe restituito contiene punteggi per ogni partizione in ogni modello.  
   
  Nella tabella seguente vengono descritte le colonne nel set di righe.  
@@ -131,19 +136,19 @@ SystemGetCrossValidationResults(
 |-----------------|-----------------|  
 |ModelName|Nome del modello sottoposto a test.|  
 |AttributeName|Nome della colonna stimabile.|  
-|AttributeState|Valore di destinazione specificato nella colonna stimabile. Un valore **Null** indica che è stata usata la stima più probabile.<br /><br /> Se questa colonna contiene un valore, l'accuratezza del modello viene valutata solo rispetto a questo valore.|  
+|AttributeState|Valore di destinazione specificato nella colonna stimabile. Un valore **Null**indica che è stata usata la stima più probabile.<br /><br /> Se questa colonna contiene un valore, l'accuratezza del modello viene valutata solo rispetto a questo valore.|  
 |PartitionIndex|Indice in base 1 che identifica la partizione a cui si applicano i risultati.|  
 |PartitionSize|Valore integer che indica il numero di case inclusi in ogni partizione.|  
 |Test|Categoria del test eseguito. Per una descrizione delle categorie e dei test inclusi in ogni categoria, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo del valore stimabile. Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Valore|Valore della misura di test specificata.|  
   
-## Osservazioni  
- Per restituire la metrica di accuratezza per l'intero set di dati, usare [SystemGetAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
+## <a name="remarks"></a>Osservazioni  
+ Per restituire la metrica di accuratezza per l'intero set di dati, usare [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
- Se il modello di data mining è già stato partizionato in riduzioni, è possibile ignorare l'elaborazione e restituire solo i risultati della convalida incrociata usando [SystemGetAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
+ Se il modello di data mining è già stato partizionato in riduzioni, è possibile ignorare l'elaborazione e restituire solo i risultati della convalida incrociata usando [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come partizionare una struttura di data mining per la convalida incrociata in due riduzioni, quindi come sottoporre a test i due modelli di data mining associati alla struttura di data mining, ovvero `[v Target Mail]`.  
   
  Nella terza riga del codice sono elencati i modelli di data mining che si desidera sottoporre a test. Se non si specifica l'elenco, vengono utilizzati tutti i modelli non di clustering associati alla struttura. La quarta riga del codice specifica il numero di partizioni. Poiché non è stato specificato alcun valore per *numero massimo di case*, tutti i case nella struttura di data mining vengono usati e distribuiti in modo uniforme nelle partizioni.  
@@ -182,13 +187,13 @@ NULL
 |Target Mail DT|Bike Buyer|1|2|500|Probabilità|Accuratezza|0.038997399132084|  
 |Target Mail DT|Bike Buyer|1|2|500|Probabilità|Radice errore quadratico medio|0.342721344892651|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  La convalida incrociata è disponibile solo in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

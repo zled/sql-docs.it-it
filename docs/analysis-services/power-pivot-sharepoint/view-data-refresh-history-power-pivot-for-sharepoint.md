@@ -1,29 +1,34 @@
 ---
-title: "Visualizzare la cronologia dell&#39;aggiornamento dati (Power Pivot per SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aggiornamento dati automatico [Analysis Services con SharePoint]"
-  - "cronologia aggiornamento dati [Analysis Services con SharePoint]"
-  - "aggiornamento dati pianificato [Analysis Services con SharePoint]"
-  - "aggiornamento dati [Analysis Services con SharePoint]"
+title: Visualizzare la cronologia (PowerPivot per SharePoint) di aggiornamento dati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unattended data refresh [Analysis Services with SharePoint]
+- data refresh history [Analysis Services with SharePoint]
+- scheduled data refresh [Analysis Services with SharePoint]
+- data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Visualizzare la cronologia dell&#39;aggiornamento dati (Power Pivot per SharePoint)
+# <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Visualizzare la cronologia dell'aggiornamento dati (Power Pivot per SharePoint)
   La cronologia dell'aggiornamento dati è un record di tutte le attività di aggiornamento dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una cartella di lavoro di Excel. Le operazioni di aggiornamento dati vengono eseguite in un'istanza del server Analysis Services di una farm di SharePoint in base a una pianificazione fornita dall'utente. Per impostazione predefinita, la cronologia dell'aggiornamento dati viene mantenuta per un anno. L'amministratore di una farm può tuttavia specificare criteri di memorizzazione diversi per la cronologia relativa all'utilizzo e agli eventi, in modo da stabilire la durata di mantenimento in memoria dei record dell'aggiornamento dati.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
@@ -41,13 +46,13 @@ caps.handback.revision: 16
 ##  <a name="prereq"></a> Prerequisiti  
  È necessario disporre di autorizzazioni di collaborazione o superiori per visualizzare la cronologia dell'aggiornamento dati.  
   
- È necessario avere abilitato e pianificato l'aggiornamento dei dati in una cartella di lavoro contenente dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Se l'aggiornamento dei dati non è stato pianificato, verrà visualizzata la pagina di definizione della pianificazione anziché le informazioni relative alla cronologia.  
+ È necessario avere abilitato e pianificato l'aggiornamento dei dati in una cartella di lavoro contenente dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se l'aggiornamento dei dati non è stato pianificato, verrà visualizzata la pagina di definizione della pianificazione anziché le informazioni relative alla cronologia.  
   
 ##  <a name="viewhistory"></a> Visualizzare la cronologia dell'aggiornamento dati per una singola cartella di lavoro  
   
-1.  In un sito di SharePoint aprire la raccolta in cui è inclusa una cartella di lavoro di Excel contenente dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+1.  In un sito di SharePoint aprire la raccolta in cui è inclusa una cartella di lavoro di Excel contenente dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-     Non viene visualizzato alcun indicatore che consenta di identificare le cartelle di lavoro di una raccolta di SharePoint contenenti dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. È necessario sapere in anticipo in quale cartella di lavoro sono inclusi dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aggiornabili.  
+     Non viene visualizzato alcun indicatore che consenta di identificare le cartelle di lavoro di una raccolta di SharePoint contenenti dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . È necessario sapere in anticipo in quale cartella di lavoro sono inclusi dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aggiornabili.  
   
 2.  Selezionare la cartella di lavoro, quindi fare clic sulla freccia GIÙ visualizzata sul lato destro.  
   
@@ -56,15 +61,15 @@ caps.handback.revision: 16
  Viene visualizzata la pagina della cronologia in cui è disponibile un record completo per tutte le attività di aggiornamento relative ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella cartella di lavoro di Excel corrente.  
   
 ##  <a name="viewITOps"></a> Visualizzare la cronologia dell'aggiornamento dati per tutte le cartelle di lavoro  
- Usando il dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in Amministrazione centrale, gli amministratori della farm e gli amministratori dell'applicazione di servizio possono ottenere una vista completa della cronologia e dello stato di aggiornamento dei dati per tutte le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Per altre informazioni, vedere [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+ Usando il dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in Amministrazione centrale, gli amministratori della farm e gli amministratori dell'applicazione di servizio possono ottenere una vista completa della cronologia e dello stato di aggiornamento dei dati per tutte le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per altre informazioni, vedere [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="pageelements"></a> Utilizzare le informazioni sulla cronologia  
  Nella pagina della cronologia dell'aggiornamento dati vengono fornite informazioni dettagliate sulle singole operazioni di aggiornamento. È possibile utilizzare le informazioni contenute in questa pagina per verificare se l'aggiornamento è stato eseguito o il motivo per cui non è stato completato correttamente.  
   
 |Elemento|Description|  
 |----------|-----------------|  
-|Nome|Specifica il nome di file della cartella di lavoro di Excel in cui sono contenuti i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|  
-|Stato corrente|I valori disponibili sono **Pianificato**, **Aggiornamento in corso**, **Operazione completata** o **Operazione non riuscita**.<br /><br /> Il valore **Pianificato** viene visualizzato quando si crea per la prima volta la pianificazione. Dopo la prima esecuzione dell'aggiornamento dei dati, questo messaggio di stato non viene più visualizzato.<br /><br /> **Aggiornamento in corso** indica che è in corso l'aggiornamento dei dati. Una richiesta si trova nella coda dei processi o è in esecuzione nel server.<br /><br /> **Operazione completata** indica che l'ultima operazione di aggiornamento dei dati è stata completata e la cartella di lavoro aggiornata viene nuovamente archiviata nella raccolta di SharePoint.<br /><br /> **Operazione non riuscita** indica che l'ultima operazione di aggiornamento dei dati non è stata completata. I dati aggiornati non sono stati salvati. Nella cartella di lavoro sono inclusi gli stessi dati presenti prima dell'inizio dell'aggiornamento.|  
+|Nome|Specifica il nome di file della cartella di lavoro di Excel in cui sono contenuti i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Stato corrente|I valori disponibili sono **Pianificato**, **Aggiornamento in corso**, **Operazione completata**o **Operazione non riuscita**.<br /><br /> Il valore**Pianificato** viene visualizzato quando si crea per la prima volta la pianificazione. Dopo la prima esecuzione dell'aggiornamento dei dati, questo messaggio di stato non viene più visualizzato.<br /><br /> **Aggiornamento in corso** indica che è in corso l'aggiornamento dei dati. Una richiesta si trova nella coda dei processi o è in esecuzione nel server.<br /><br /> **Operazione completata** indica che l'ultima operazione di aggiornamento dei dati è stata completata e la cartella di lavoro aggiornata viene nuovamente archiviata nella raccolta di SharePoint.<br /><br /> **Operazione non riuscita** indica che l'ultima operazione di aggiornamento dei dati non è stata completata. I dati aggiornati non sono stati salvati. Nella cartella di lavoro sono inclusi gli stessi dati presenti prima dell'inizio dell'aggiornamento.|  
 |Ultimo aggiornamento riuscito|Consente di specificare la data in cui l'ultimo aggiornamento dei dati è stato completato correttamente.|  
 |Prossimo aggiornamento pianificazione|Consente di specificare la data in cui è previsto il prossimo aggiornamento dei dati in base alla pianificazione.<br /><br /> Il collegamento **Configura pianificazione** reindirizza l'utente alla pagina di definizione della pianificazione. Se la cartella di lavoro contiene le autorizzazioni di collaborazione, è possibile fare clic sul collegamento per visualizzare e modificare le informazioni sulla pianificazione che regolano l'aggiornamento automatico dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella cartella di lavoro.|  
 |Started|All'interno della sezione relativa ai dettagli della cronologia, **Avvio eseguito** indica il tempo di elaborazione effettivo. Il tempo di elaborazione effettivo potrebbe essere diverso da quello pianificato. L'elaborazione inizierà quando è disponibile memoria sufficiente sul server. Se il server è molto occupato, l'elaborazione potrebbe iniziare diverse ore dopo l'ora di inizio specificata.|  
@@ -72,9 +77,9 @@ caps.handback.revision: 16
 |Time|Viene fornito il tempo totale dall'avvio dell'aggiornamento dei dati fino al completamento.|  
 |Stato|Viene fornito un record cronologico relativo all'esito positivo o negativo di un'operazione di aggiornamento.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Pianificare un aggiornamento dati (Power Pivot per SharePoint)](http://msdn.microsoft.com/it-it/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [Pianificare un aggiornamento di dati (PowerPivot per SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Aggiornamento dati Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

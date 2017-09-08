@@ -1,23 +1,28 @@
 ---
-title: "Installare il provider di dati di Analysis Services (AMO, ADOMD.NET, MSOLAP) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Installare il provider di dati di Analysis Services (AMO, ADOMD.NET, MSOLAP) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7aedabc-6af9-4698-a7a4-98f894001476
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd6aa812228cce132b4180a8537ba853f3ea92a2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Installare il provider di dati di Analysis Services (AMO, ADOMD.NET, MSOLAP)
+# <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>Installare il provider di dati di Analysis Services (AMO, ADOMD.NET, MSOLAP)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] è un aggiornamento di versione dei provider di dati di Analysis Services, composto da ADOMD.Net, AMO e MSOLAP.  
   
  Per la maggior parte degli scenari di accesso ai dati basati su query è possibile usare le versioni esistenti dei provider di dati già installati nei sistemi client per accedere ai modelli tabulari e multidimensionali in un'istanza di SQL Server 2016 Analysis Services, inclusi i modelli tabulari che usano funzionalità esclusive di SQL Server 2016. Come regola generale, le applicazioni client che generano query, ad esempio Excel, Reporting Services o Tableau, non dovrebbero richiedere i provider di dati più recenti quando accedono a un modello di Analysis Services.  
@@ -26,7 +31,7 @@ caps.handback.revision: 12
   
  Uno scenario che richiede l'installazione manuale di un provider di dati è quello relativo alle applicazioni o agli script personalizzati che usano Analysis Services Management Objects (AMO). Questa versione introduce uno spazio dei nomi a cui è stato eseguito il refactoring che consente di spostare gli oggetti principali, ad esempio server e database, a un nuovo spazio dei nomi (Microsoft.AnalysisServices.Core) che fa parte dell'assembly Microsoft.AnalysisServices.dll. Se si dispone di codice personalizzato o script che usano gli oggetti AMO, è necessario ricompilare il codice e aggiornare manualmente gli oggetti AMO in ogni server e workstation client che esegue una connessione diretta tramite AMO a un'istanza di SQL Server 2016 di Analysis Services.  
   
-## Elenco di provider  
+## <a name="provider-list"></a>Elenco di provider  
  La tabella seguente descrive ciascun parametro.  
   
 ||||  
@@ -37,7 +42,7 @@ caps.handback.revision: 12
 |Analysis Services (ADOMD.NET)|Microsoft.AnalysisServices.AdomdClient.dll|13.0.0.0|  
 |Provider OLE DB per Analysis Services (MSOLAP)|MSOLAP130.dll|13.0.0.0|  
   
-## Scaricare e installare il provider di dati  
+## <a name="download-and-install-data-provider"></a>Scaricare e installare il provider di dati  
   
 1.  Andare alla pagina di download per [Feature Pack di SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398150)  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
 5.  Eseguire ogni programma per installare il provider. Gli assembly ADO.MD e AMO vengono installati in C:\Windows\assembly\GAC_MSIL. Il provider OLE DB per Analysis Services è installato in C:\Programmi\Microsoft Analysis Services\AS OLEDB\130.  
   
-## Verificare l'installazione  
+## <a name="verify-installation"></a>Verificare l'installazione  
   
 1.  In Esplora file passare a C:\Windows\Assembly.  
   

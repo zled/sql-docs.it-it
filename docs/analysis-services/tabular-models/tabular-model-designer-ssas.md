@@ -1,26 +1,31 @@
 ---
-title: "Progettazione di modelli tabulari (SSAS) | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1"
+title: Progettazione di modelli tabulari (SSAS) | Documenti Microsoft
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Progettazione di modelli tabulari (SSAS)
-  La progettazione di modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrato con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con modelli di tipi di progetto aggiuntivi espressamente ideati per lo sviluppo di soluzioni di modelli tabulari professionali.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene installato come un download Web gratuito. Per informazioni dettagliate, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).   
+# <a name="tabular-model-designer-ssas"></a>Progettazione di modelli tabulari (SSAS)
+  La progettazione di modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrato con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con modelli di tipi di progetto aggiuntivi espressamente ideati per lo sviluppo di soluzioni di modelli tabulari professionali.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene installato come un download Web gratuito. Per informazioni dettagliate, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) .   
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Quando si installa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], i nuovi modelli di progetto per la creazione di modelli tabulari vengono aggiunti ai tipi di progetto disponibili. Dopo aver creato un nuovo progetto di modello tabulare utilizzando uno dei modelli, è possibile iniziare la creazione di modelli utilizzando gli appositi strumenti e procedure guidate.  
@@ -38,15 +43,15 @@ caps.handback.revision: 22
  **Importa da server (tabulare)**  
  Questo modello può essere utilizzato per creare un nuovo progetto di modello tabulare estraendo i metadati da un modello tabulare esistente in Analysis Services.  
   
- I modelli meno recenti hanno livelli di compatibilità precedenti. È possibile eseguire l'aggiornamento alla versione 1200 modificando la proprietà Livello di compatibilità dopo l'importazione della definizione del modello.  
+ I modelli meno recenti hanno livelli di compatibilità precedenti. È possibile aggiornare modificando la proprietà a livello di compatibilità dopo l'importazione della definizione di modello.  
   
  **Importa da PowerPivot [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**  
- Questo modello viene utilizzato per creare un nuovo progetto di modello tabulare estraendo i metadati e i dati da un file [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)].  
+ Questo modello viene utilizzato per creare un nuovo progetto di modello tabulare estraendo i metadati e i dati da un file [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] .  
   
 ##  <a name="bkmk_wind_men"></a> Finestre e menu  
  Nell'ambiente di creazione di modelli tabulari di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sono inclusi gli elementi seguenti:  
   
-### Finestra di progettazione  
+### <a name="designer-window"></a>Finestra di progettazione  
  La finestra di progettazione viene utilizzata per creare modelli tabulari fornendo una rappresentazione visiva del modello. Quando si apre il file Model.bim, il modello viene visualizzato nella finestra di progettazione. È possibile creare un modello nella finestra di progettazione utilizzando due modalità di visualizzazione diverse:  
   
  **Vista dati**  
@@ -57,32 +62,32 @@ caps.handback.revision: 22
   
  La maggior parte delle attività di creazione dei modelli può essere effettuata con entrambe le viste.  
   
-### Finestra Visualizza codice  
- È possibile visualizzare il codice dietro a un file Model.bim quando si fa clic con il pulsante destro del mouse su **Visualizza codice** nel file in Esplora soluzioni. Per i modelli tabulari con un livello di compatibilità 1200, la definizione del modello viene espressa in JSON.  
+### <a name="view-code-window"></a>Finestra Visualizza codice  
+ È possibile visualizzare il codice dietro a un file Model.bim quando si fa clic con il pulsante destro del mouse su **Visualizza codice** nel file in Esplora soluzioni. Per i modelli tabulari a livello di compatibilità 1200 e versioni successiva, la definizione del modello viene espressa in JSON.  
   
  È necessaria una versione completa di Visual Studio con l'editor JSON. È possibile scaricare e installare l' [edizione gratuita di Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) se non sono necessarie le funzionalità aggiuntive delle edizioni commerciali.  
   
-### Esplora soluzioni  
+### <a name="solution-explorer"></a>Esplora soluzioni  
  Nella finestra Esplora soluzioni viene presentata la soluzione attiva come contenitore logico per un progetto di modello tabulare e gli elementi associati. Nel progetto di modelli (con estensione smproj) sono contenuti solo un oggetto References (vuoto) e il file Model.bim. È possibile aprire elementi di progetto per modificarli ed effettuare altre attività di gestione direttamente da questa vista.  
   
  In genere, nelle soluzioni di modelli tabulari è contenuto un solo progetto; tuttavia in una soluzione possono essere inclusi anche altri progetti, ad esempio un progetto Integration Services o Reporting Services. È possibile aggiungere un qualsiasi numero di file a condizione che non siano dello stesso tipo dei file del progetto di modello tabulare, che la proprietà Azione di compilazione sia impostata su Nessuna o che la proprietà Copia nella directory di output sia impostata su Non copiare.  
   
  Per visualizzare Esplora soluzioni, fare clic sul menu **Visualizza** , quindi su **Esplora soluzioni**.  
 
-### Esplora modelli tabulari
-  Disponibile per la prima volta nella versione di agosto 2016 (14.0.60812.0) di [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Esplora modelli tabulari permette di esplorare gli oggetti di metadati in modelli tabulari 1200.
+### <a name="tabular-model-explorer"></a>Esplora modelli tabulari
+  Primo disponibile nella versione di agosto 2016 (14.0.60812.0) di [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Esplora modello tabulare consente di passare oggetti di metadati nei modelli tabulari.
 
- Per visualizzare Esplora modelli tabulari, fare clic su **Visualizza** > **Altre finestre** e quindi su **Esplora modelli tabulari**.
+ Per visualizzare Esplora modelli tabulari, fare clic su **Visualizza** > **Altre finestre**e quindi su **Esplora modelli tabulari**.
    
   ![Esplora modelli tabulari](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- Esplora modelli tabulari organizza gli oggetti di metadati in una struttura albero che assomiglia molto allo schema di un modello tabulare 1200. Origini dati, Prospettive, Relazioni, Ruoli, Tabelle e Traduzioni corrispondono agli oggetti dello schema di primo livello. Esistono alcune eccezioni, in particolare KPI e Misure, che tecnicamente non sono oggetti di primo livello, ma oggetti figlio delle varie tabelle nel modello. Tuttavia, avendo consolidato contenitori di primo livello per tutti i KPI e tutte le misure, è più facile usare questi oggetti, in particolare se il modello include un numero molto elevato di tabelle. Le misure sono anche elencate all'interno delle tabelle padre corrispondenti, per offrire una visualizzazione chiara delle effettive relazioni padre-figlio. Se si seleziona una misura nel contenitore Misure di primo livello, la stessa misura viene selezionata anche nella raccolta figlio all'interno della tabella e viceversa.  
+ Esplora modello tabulare consente di organizzare gli oggetti di metadati in una struttura ad albero che lo schema di un modello tabulare è molto simile. Origini dati, Prospettive, Relazioni, Ruoli, Tabelle e Traduzioni corrispondono agli oggetti dello schema di primo livello. Esistono alcune eccezioni, in particolare KPI e Misure, che tecnicamente non sono oggetti di primo livello, ma oggetti figlio delle varie tabelle nel modello. Tuttavia, avendo consolidato contenitori di primo livello per tutti i KPI e tutte le misure, è più facile usare questi oggetti, in particolare se il modello include un numero molto elevato di tabelle. Le misure sono anche elencate all'interno delle tabelle padre corrispondenti, per offrire una visualizzazione chiara delle effettive relazioni padre-figlio. Se si seleziona una misura nel contenitore Misure di primo livello, la stessa misura viene selezionata anche nella raccolta figlio all'interno della tabella e viceversa.  
  
  I nodi degli oggetti in Esplora modelli tabulari sono collegati alle opzioni di menu appropriate che fino a questo momento erano nascoste nei menu Modello, Tabella e Colonna in Visual Studio. È possibile fare clic con il pulsante destro del mouse su un oggetto per esplorare le opzioni per il tipo di oggetto. Non tutti i tipi di nodo di oggetto sono già associati a un menu contestuale, ma nelle prossime versioni verranno introdotti altri miglioramenti e opzioni aggiuntive. 
 
  Esplora modelli tabulari offre anche una pratica funzionalità di ricerca. Basta digitare una parte del nome nella casella Cerca perché Esplora modelli tabulari limiti la visualizzazione albero alle corrispondenze. 
   
-### Finestra Proprietà  
+### <a name="properties-window"></a>Finestra Proprietà  
  Nella finestra Proprietà sono elencate le proprietà dell'oggetto selezionato. Gli oggetti seguenti dispongono di proprietà che possono essere visualizzate e modificate nella finestra Proprietà:  
   
 -   Model.bim  
@@ -99,7 +104,7 @@ caps.handback.revision: 22
   
  Per visualizzare la finestra **Proprietà** , fare clic sul menu **Visualizza** , quindi su **Finestra Proprietà**.  
   
-### Elenco errori  
+### <a name="error-list"></a>Elenco errori  
  Nella finestra Elenco errori sono contenuti i messaggi sullo stato del modello:  
   
 -   Notifiche sulle procedure consigliate di sicurezza.  
@@ -112,15 +117,15 @@ caps.handback.revision: 22
   
  Per impostazione predefinita, l' **Elenco errori** non viene visualizzato a meno che non venga restituito un errore. Tuttavia, la finestra **Elenco errori** può essere visualizzata in qualsiasi momento. Per visualizzare la finestra **Elenco errori** , fare clic sul menu **Visualizza** , quindi su **Elenco errori**.  
   
-### Output  
- Le informazioni sulla compilazione e sulla distribuzione vengono visualizzate nella finestra **Output**, oltre che nella finestra di dialogo dello stato di avanzamento modale. Per visualizzare la finestra **Output** , fare clic sul menu **Visualizza** , quindi su Output.  
+### <a name="output"></a>Output  
+ Le informazioni sulla compilazione e sulla distribuzione vengono visualizzate nella finestra **Output** , oltre che nella finestra di dialogo dello stato di avanzamento modale. Per visualizzare la finestra **Output** , fare clic sul menu **Visualizza** , quindi su Output.  
   
-### Voci di menu  
- Quando si installa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vengono aggiunte ulteriori voci di menu specifiche per la creazione di modelli tabulari alla barra dei menu di Visual Studio. Il menu **Modello** può essere utilizzato per avviare l'Importazione guidata dati, visualizzare connessioni esistenti, elaborare dati dell'area di lavoro ed elaborare l'area di lavoro del modello in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Il menu **Tabella** viene utilizzato per creare e gestire relazioni tra tabelle, creare e gestire misure nonché per specificare impostazioni della tabella di dati, opzioni di calcolo ed altre proprietà della tabella. Con il menu **Colonna** è possibile aggiungere ed eliminare colonne in una tabella, nascondere e visualizzare colonne, nonché specificare altre proprietà della colonna quali i tipi di dati e i filtri. È possibile compilare e distribuire soluzioni di modelli tabulari dal menu **Compila** . Le funzioni Copia/Incolla sono incluse nel menu **Modifica**.  
+### <a name="menu-items"></a>Voci di menu  
+ Quando si installa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vengono aggiunte ulteriori voci di menu specifiche per la creazione di modelli tabulari alla barra dei menu di Visual Studio. Il menu **Modello** può essere utilizzato per avviare l'Importazione guidata dati, visualizzare connessioni esistenti, elaborare dati dell'area di lavoro ed elaborare l'area di lavoro del modello in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Il menu **Tabella** viene utilizzato per creare e gestire relazioni tra tabelle, creare e gestire misure nonché per specificare impostazioni della tabella di dati, opzioni di calcolo ed altre proprietà della tabella. Con il menu **Colonna** è possibile aggiungere ed eliminare colonne in una tabella, nascondere e visualizzare colonne, nonché specificare altre proprietà della colonna quali i tipi di dati e i filtri. È possibile compilare e distribuire soluzioni di modelli tabulari dal menu **Compila** . Le funzioni Copia/Incolla sono incluse nel menu **Modifica** .  
   
  Oltre a queste voci di menu, vengono aggiunte ulteriori impostazioni alle opzioni di Analysis Services accessibili tramite le voci del menu Strumenti.  
   
-### Barra degli strumenti  
+### <a name="toolbar"></a>Barra degli strumenti  
  La barra degli strumenti di Analysis Services consente un accesso rapido e semplice ai comandi per la creazione di modelli utilizzati più frequentemente.  
   
 ##  <a name="bkmk_vsint"></a> Visual Studio Integration  
@@ -133,7 +138,7 @@ caps.handback.revision: 22
  **Tasti di scelta rapida**  
  I tasti di scelta rapida di Analysis Services possono essere configurati o mappati di nuovo tramite Strumenti->Opzioni ->finestra di dialogo Tastiera. Alcuni tasti di scelta rapida [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] globali, ad esempio quelli di compilazione, salvataggio, debug, nuovo progetto e così via, sono supportati nel contesto di progettazione di modelli tabulari. Altri collegamenti specifici della progettazione di modelli tabulari sono disponibili nel contesto di Analysis Services.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Progetti di modello tabulare &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
  [Proprietà &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   

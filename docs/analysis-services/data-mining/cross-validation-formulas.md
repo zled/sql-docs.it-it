@@ -1,30 +1,35 @@
 ---
-title: "Formule per la convalida incrociata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Le formule di convalida incrociata | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Formule per la convalida incrociata
+# <a name="cross-validation-formulas"></a>Formule per la convalida incrociata
   Quando viene generato, un report di convalida incrociata contiene misure di accuratezza per ogni modello, a seconda del tipo di modello di data mining (ovvero dell'algoritmo utilizzato per creare il modello), del tipo di dati dell'attributo stimabile e del valore dell'attributo stimabile, se presente.  
   
  In questa sezione vengono elencate le misure utilizzate nel report di convalida incrociata e viene descritto il metodo di calcolo.  
   
  Per un elenco delle misure di accuratezza in base al tipo di modello, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-## Formule utilizzate per le misure di convalida incrociata  
+## <a name="formulas-used-for-cross-validation-measures"></a>Formule utilizzate per le misure di convalida incrociata  
   
 > [!NOTE]  
 >  **Importante:** queste misure di accuratezza vengono calcolate per ogni attributo di destinazione. Per ogni attributo è possibile specificare o omettere un valore di destinazione. Se un case nel set di dati non dispone di alcun valore per l'attributo di destinazione, il case viene trattato come se avesse un valore speciale denominato *valore mancante*. Le righe associate a valori mancanti non vengono conteggiate durante il calcolo della misura di accuratezza per un attributo di destinazione specifico. Si noti che poiché i punteggi vengono calcolati singolarmente per ogni attributo, se i valori sono presenti per l'attributo di destinazione, ma mancanti per altri attributi, questa situazione non influisce sul punteggio per l'attributo di destinazione.  
@@ -44,7 +49,7 @@ caps.handback.revision: 9
 |**Radice errore quadratico medio**|Attributo discreto. Il valore di destinazione può essere specificato ma non è obbligatorio.|Radice quadrata della media dei quadrati di complemento del punteggio di probabilità, divisa per il numero di case nella partizione, escluse le righe con valori mancanti per l'attributo di destinazione.|  
 |**Radice errore quadratico medio**|Attributo discreto, nessuna destinazione specificata.|Radice quadrata della media dei quadrati di complemento del punteggio di probabilità, divisa per il numero di case nella partizione, esclusi i case con valori mancanti per l'attributo di destinazione.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   

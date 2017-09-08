@@ -1,35 +1,40 @@
 ---
-title: "Impostare opzioni di rappresentazione (SSAS - Multidimensionale) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-helpviewer_keywords: 
-  - "Impostazioni di rappresentazione - finestra di dialogo"
+title: Impostare le opzioni di rappresentazione (SSAS - multidimensionale) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords:
+- Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dfd1dbf5f4f514136695dc2bb0d776afda99562
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
+# <a name="set-impersonation-options-ssas---multidimensional"></a>Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
   Quando si crea un oggetto **origine dati** in un modello di Analysis Services, una delle impostazioni da configurare è l'opzione di rappresentazione. Con questa opzione è possibile determinare se in Analysis Services viene acquisita l'identità di uno specifico account utente di Windows quando si eseguono operazioni locali correlate alla connessione, ad esempio il caricamento di un provider di dati OLE DB o la risoluzione di informazioni sul profilo utente in ambienti che supportano profili mobili.  
   
  Per le connessioni in cui viene utilizzata l'autenticazione di Windows, con l'opzione di rappresentazione è possibile inoltre determinare l'identità utente con cui vengono eseguite le query nell'origine dati esterna. Ad esempio, se l'opzione di rappresentazione viene impostata su **contoso\dbuser**, le query usate per recuperare i dati durante l'elaborazione saranno eseguite come **contoso\dbuser** nel server di database.  
   
  Questo argomento illustra come impostare le opzioni di rappresentazione nella finestra di dialogo **Impostazioni di rappresentazione** quando si configura un oggetto origine dati.  
   
-## Impostare le opzioni di rappresentazione in SQL Server Data Tools  
+## <a name="set-impersonation-options-in-sql-server-data-tools"></a>Impostare le opzioni di rappresentazione in SQL Server Data Tools  
   
 1.  Fare doppio clic su un'origine dati in Esplora soluzioni per aprire Progettazione origine dati.  
   
@@ -37,20 +42,20 @@ caps.handback.revision: 27
   
 3.  Scegliere un'opzione descritta nella sezione [Opzioni di rappresentazione](#bkmk_options) di questo argomento.  
   
-## Impostare le opzioni di rappresentazione in Management Studio  
- In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] aprire la finestra di dialogo **Impostazioni di rappresentazione** facendo clic sul pulsante con i puntini di sospensione (**...**) per le proprietà seguenti di queste finestre di dialogo:  
+## <a name="set-impersonation-options-in-management-studio"></a>Impostare le opzioni di rappresentazione in Management Studio  
+ In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aprire la finestra di dialogo **Impostazioni di rappresentazione** facendo clic sul pulsante con i puntini di sospensione (**...**) per le proprietà seguenti di queste finestre di dialogo:  
   
--   Finestra di dialogo **Proprietà database**, attraverso la proprietà Impostazioni di rappresentazione origine dati.  
+-   Finestra di dialogo**Proprietà database** , attraverso la proprietà Impostazioni di rappresentazione origine dati.  
   
--   Finestra di dialogo **Proprietà origine dati**, attraverso la proprietà Impostazioni di rappresentazione.  
+-   Finestra di dialogo**Proprietà origine dati** , attraverso la proprietà Impostazioni di rappresentazione.  
   
--   Finestra di dialogo **Proprietà assembly**, attraverso la proprietà Impostazioni di rappresentazione.  
+-   Finestra di dialogo**Proprietà assembly** , attraverso la proprietà Impostazioni di rappresentazione.  
   
 ##  <a name="bkmk_options"></a> Opzioni di rappresentazione  
  Nella finestra di dialogo sono disponibili tutte le opzioni, ma solo alcune sono appropriate per ogni scenario. Utilizzare le informazioni seguenti per determinare l'opzione più adatta per il proprio scenario.  
   
  **Usa nome utente e password specifici**  
- Selezionare questa opzione per fare in modo che nell'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengano usate le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente: *\<Nome dominio>***\\***\<Nome account utente>*.  
+ Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizzi le credenziali di sicurezza di un account utente di Windows specificato nel formato:  *\<nome di dominio >*  **\\**   *\<Nome dell'account utente >*.  
   
  Scegliere questa opzione per utilizzare un'identità utente di Windows dedicata e con privilegi minimi, creata specificamente a scopo di accesso ai dati. Se, ad esempio, si crea regolarmente un account di uso generale per il recupero dei dati utilizzati nei report, è possibile specificarlo qui.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 27
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a seconda del sistema operativo in uso, l'account del servizio potrebbe essere NetworkService o un account virtuale predefinito creato per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specifica. Se si sceglie l'account del servizio per una connessione in cui viene utilizzata l'autenticazione di Windows, è necessario ricordarsi di creare un account di accesso al database per questo account e di concedere autorizzazioni di lettura, poiché verrà utilizzato per recuperare i dati durante l'elaborazione. Per altre informazioni sull'account del servizio, vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 > [!NOTE]  
->  Quando si usa l'autenticazione del database, è consigliabile scegliere l'opzione di rappresentazione **Usa account del servizio** se il servizio è in esecuzione nell'account virtuale dedicato per Analysis Services. A questo account saranno concesse le autorizzazioni per accedere ai file locali. Se il servizio viene eseguito come NetworkService, un'alternativa migliore consiste nell'usare un account utente di Windows con privilegi minimi a cui siano concesse le autorizzazioni **Consenti accesso locale**. A seconda dell'account fornito, potrebbe anche essere necessario concedere le autorizzazioni di accesso ai file nella cartella dei programmi di Analysis Services.  
+>  Quando si usa l'autenticazione del database, è consigliabile scegliere l'opzione di rappresentazione **Usa account del servizio** se il servizio è in esecuzione nell'account virtuale dedicato per Analysis Services. A questo account saranno concesse le autorizzazioni per accedere ai file locali. Se il servizio viene eseguito come NetworkService, un'alternativa migliore consiste nell'usare un account utente di Windows con privilegi minimi a cui siano concesse le autorizzazioni **Consenti accesso locale** . A seconda dell'account fornito, potrebbe anche essere necessario concedere le autorizzazioni di accesso ai file nella cartella dei programmi di Analysis Services.  
   
  Per i database multidimensionali, le credenziali dell'account del servizio verranno utilizzate per l'elaborazione, le query ROLAP, le partizioni remote, gli oggetti collegati e la sincronizzazione tra un'origine e una destinazione.  
   
@@ -83,13 +88,13 @@ caps.handback.revision: 27
   
  **Origini dati: opzione Eredita**  
   
- A livello di origine dati, con **Eredita** è possibile specificare che in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è consigliabile usare l'opzione di rappresentazione dell'oggetto padre. In un modello multidimensionale, l'oggetto padre è il database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se si sceglie l'opzione **Eredita**, è possibile gestire a livello centrale le impostazioni di rappresentazione per questa e altre origini dati che fanno parte dello stesso database. Affinché l'opzione sia significativa, scegliere un nome utente e una password specifici di Windows a livello di database. In caso contrario, la combinazione di **Eredita** nell'origine dati e di **Predefinito** nel database equivale all'uso dell'opzione relativa all'account del servizio.  
+ A livello di origine dati, con **Eredita** è possibile specificare che in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è consigliabile usare l'opzione di rappresentazione dell'oggetto padre. In un modello multidimensionale, l'oggetto padre è il database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si sceglie l'opzione **Eredita** , è possibile gestire a livello centrale le impostazioni di rappresentazione per questa e altre origini dati che fanno parte dello stesso database. Affinché l'opzione sia significativa, scegliere un nome utente e una password specifici di Windows a livello di database. In caso contrario, la combinazione di **Eredita** nell'origine dati e di **Predefinito** nel database equivale all'uso dell'opzione relativa all'account del servizio.  
   
  Per specificare un nome utente e una password di Windows a livello di database, effettuare le operazioni seguenti:  
   
 1.  Fare clic con il pulsante destro del mouse sul database in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e selezionare **Proprietà**.  
   
-2.  In **Impostazioni di rappresentazione origine dati** specificare un nome utente e una password di Windows.  
+2.  In **Impostazioni di rappresentazione origine dati**specificare un nome utente e una password di Windows.  
   
 3.  Fare clic con il pulsante destro del mouse su ogni origine dati e visualizzare le relative proprietà per assicurarsi che per ognuna sia in uso l'opzione **Eredita**.  
   
@@ -99,9 +104,9 @@ caps.handback.revision: 27
 
  Per i database multidimensionali, l'opzione **Predefinito** comporta l'uso dell'account del servizio e dell'utente corrente per le operazioni di data mining.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Impostare proprietà origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Colonne di dati degli eventi di errore e di avviso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Errori e avvisi - categoria di eventi [SQL Server]"
+title: Errori e avvisi Events Data Columns | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a909f39446c2a90347e8253c7fb54c1abe91c353
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati degli eventi di errore e di avviso
+# <a name="errors-and-warnings-events-data-columns"></a>Colonne di dati degli eventi di errore e di avviso
   La categoria di eventi Errori e avvisi include la classe di evento seguente:  
   
 -   Classe Error  
   
  Nella tabella seguente sono incluse le colonne di dati per la classe di evento.  
   
-## Colonne di dati della classe di evento Error  
+## <a name="error-event-classdata-columns"></a>Colonne di dati della classe di evento Error  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 24
 |TextData|42|9|Contiene i dati di tipo text associati all'evento di errore.|  
 |ServerName|43|8|Contiene il nome del server in esecuzione sull'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di errore del server.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Categoria di eventi Controllo di sicurezza](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

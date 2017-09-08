@@ -1,31 +1,36 @@
 ---
-title: "Scenari di globalizzazione per Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "supporto di più lingue [Analysis Services]"
-  - "lingue [Analysis Services]"
-  - "SSAS, considerazioni su funzionalità internazionali"
-  - "considerazioni su funzionalità internazionali [Analysis Services]"
-  - "considerazioni per ambienti globali [Analysis Services]"
-  - "SQL Server Analysis Services, considerazioni su funzionalità internazionali"
-  - "Analysis Services, considerazioni su funzionalità internazionali"
+title: Scenari di globalizzazione per Analysis Services | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple language support [Analysis Services]
+- languages [Analysis Services]
+- SSAS, international considerations
+- international considerations [Analysis Services]
+- global considerations [Analysis Services]
+- SQL Server Analysis Services, international considerations
+- Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 23602752bf7a996b66974ce3d5dcf9c8bf6389cd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Scenari di globalizzazione per Analysis Services
+# <a name="globalization-scenarios-for-analysis-services"></a>Scenari di globalizzazione per Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] archivia e gestisce dati e metadati multilingue per i modelli di dati tabulari e multidimensionali. L'archiviazione dei dati è in formato Unicode (UTF-16) nei set di caratteri che usano la codifica Unicode. Se in un modello di dati si caricano dati ANSI, i caratteri vengono archiviati usando elementi di codice Unicode equivalenti.  
   
  Le implicazioni del supporto Unicode consentono a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di archiviare i dati in una qualsiasi lingua supportata dai sistemi operativi client e server Windows, permettendo la lettura, la scrittura, l'ordinamento e il confronto dei dati in qualsiasi set di caratteri usato in un computer Windows. Le applicazioni client BI che utilizzano i dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono rappresentare i dati nella lingua scelta dall'utente, supponendo che i dati esistano in tale lingua nel modello.  
@@ -50,7 +55,7 @@ caps.handback.revision: 39
   
 -   Un unico modello di dati fornisce più didascalie tradotte in modo che i nomi dei campi e i valori vengono visualizzati nella lingua scelta dall'utente. Per le società che operano in paesi bilingue come Canada, Belgio o Svizzera, il supporto di più lingue nelle applicazioni client e server è un requisito di codifica standard. Questo scenario viene abilitato tramite traduzioni e conversioni di valuta. Per altre informazioni e collegamenti, vedere la sezione [Funzionalità](#bkmk_features) di seguito.  
   
--   Gli ambienti di sviluppo e di produzione sono posizionati geograficamente in diversi paesi. È sempre più comune sviluppare una soluzione in un paese e quindi distribuirla in un altro. È essenziale sapere impostare le proprietà della lingua e delle regole di confronto se occorre preparare una soluzione sviluppata in una lingua, per distribuirla in un server che usa un altro Language Pack. L'impostazione di queste proprietà consente di eseguire l'override delle impostazioni predefinite ereditate che vengono recuperate dal sistema host originale. Vedere [Lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md) per informazioni dettagliate sull'impostazione delle proprietà.  
+-   Gli ambienti di sviluppo e di produzione sono posizionati geograficamente in diversi paesi. È sempre più comune sviluppare una soluzione in un paese e quindi distribuirla in un altro. È essenziale sapere impostare le proprietà della lingua e delle regole di confronto se occorre preparare una soluzione sviluppata in una lingua, per distribuirla in un server che usa un altro Language Pack. L'impostazione di queste proprietà consente di eseguire l'override delle impostazioni predefinite ereditate che vengono recuperate dal sistema host originale. Per altre informazioni, vedere la sezione [Lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md) per informazioni dettagliate sull'impostazione delle proprietà.  
   
 ##  <a name="bkmk_features"></a> Funzionalità per la creazione di una soluzione multilingue globalizzata  
  A livello di client, le applicazioni globalizzate che usano o gestiscono dati multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono usare le funzionalità multilingue e multiculturali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -67,11 +72,11 @@ caps.handback.revision: 39
 |Implementazione del supporto di traduzione|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per generare file di traduzione da completare e quindi importare nuovamente nel modello.<br /><br /> Per informazioni dettagliate, vedere [Traduzioni in modelli tabulari &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per la didascalia, la descrizione e i tipi di account per cubi, misure, dimensioni e attributi.<br /><br /> Per altre informazioni, vedere [Translations in Multidimensional Models &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) [Traduzioni nei modelli multidimensionali &#40;Analysis Services&#41;]. Una lezione su come usare questa funzionalità è disponibile nella [Lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md) dell'esercitazione su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |Conversione di valuta|Non disponibile.|La conversione di valuta viene eseguita tramite script MDX specializzati che convertono le misure contenenti dati di valuta. È possibile usare la Configurazione guidata funzionalità di Business Intelligence in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per generare uno script MDX che utilizzi una combinazione di dati e metadati di dimensioni, attributi e gruppi di misure per la conversione di misure contenenti dati di valuta. Vedere [Conversioni di valuta &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
- [Internazionalizzazione per le applicazioni di Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Developer Center sulla globalizzazione delle applicazioni](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Scrittura di app di Windows Store con progettazione adattiva basata sulle impostazioni locali](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Sviluppo di app di Windows universali con C# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Internazionalizzazione delle applicazioni Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Passare Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Applicazioni Windows Store di scrittura con progettazione adattiva basata sulle impostazioni locali](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Sviluppo di applicazioni Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

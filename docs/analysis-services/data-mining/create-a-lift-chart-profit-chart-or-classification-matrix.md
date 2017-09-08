@@ -1,25 +1,30 @@
 ---
-title: "Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grafico accuratezza modello di data mining [Analysis Services], strutture di data mining"
+title: Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
+# <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
   È possibile creare un grafico di accuratezza per un modello di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cinque passaggi fondamentali:  
   
 -   Selezionare la struttura di data mining che contiene i modelli di data mining da confrontare.  
@@ -34,7 +39,7 @@ caps.handback.revision: 20
   
  Questi passaggi di base sono identici per il grafico di accuratezza, il grafico di profitti e la matrice di classificazione. Nelle procedure seguenti vengono descritti i passaggi per configurare le opzioni di base per questi tipi di grafico. Per altre informazioni su come creare un report di convalida incrociata, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-### Aprire la struttura di data mining nella Finestra di progettazione Grafico di accuratezza  
+### <a name="open-the-mining-structure-in-the-accuracy-chart-designer"></a>Aprire la struttura di data mining nella Finestra di progettazione Grafico di accuratezza  
   
 1.  Aprire Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -42,9 +47,9 @@ caps.handback.revision: 20
   
 3.  Fare clic sulla scheda **Grafico accuratezza modello di data mining** .  
   
-### Selezionare i modelli di data mining da includere nel grafico  
+### <a name="select-mining-models-for-inclusion-in-the-chart"></a>Selezionare i modelli di data mining da includere nel grafico  
   
-1.  Nella scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fare clic sulla scheda **Selezione input**.  
+1.  Nella scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare clic sulla scheda **Selezione input** .  
   
      Nell'elenco verranno visualizzati tutti i modelli presenti nella struttura corrente con lo stesso attributo stimabile.  
   
@@ -61,32 +66,32 @@ caps.handback.revision: 20
   
      Per altre informazioni, vedere [Scegliere la colonna da usare per il test di un modello di data mining](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md).  
   
-### Selezionare i dati di test  
+### <a name="select-testing-data"></a>Selezionare i dati di test  
   
 1.  Nella scheda **Selezione input** della scheda **Grafico accuratezza modello di data mining** specificare l'origine dei dati che verranno usati per generare il grafico selezionando una delle opzioni del gruppo **Seleziona set di dati da utilizzare per il grafico di accuratezza**.  
   
-    -   Selezionare l'opzione **Usa test case del modello di data mining** se si intende usare il subset di case definiti tramite l'intersezione dei test case della struttura di data mining ed eventuali filtri applicati durante la creazione del modello.  
+    -   Selezionare l'opzione **Usa test case del modello di data mining**se si intende usare il subset di case definiti tramite l'intersezione dei test case della struttura di data mining ed eventuali filtri applicati durante la creazione del modello.  
   
-    -   Selezionare l'opzione **Usa test case della struttura di data mining** per usare il set completo di test case definiti come parte del set di dati di controllo delle strutture di data mining.  
+    -   Selezionare l'opzione **Usa test case della struttura di data mining**per usare il set completo di test case definiti come parte del set di dati di controllo delle strutture di data mining.  
   
-    -   Selezionare l'opzione **Specifica un set di dati diverso** se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic sul pulsante sfoglia (**...**) per scegliere le tabelle di dati da usare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
+    -   Selezionare l'opzione **Specifica un set di dati diverso**se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic sul pulsante sfoglia (**...**) per scegliere le tabelle di dati da usare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
   
          Se si utilizza un set di dati esterno, è possibile scegliere di filtrare il set di dati di input. Per altre informazioni, vedere [Applicare filtri ai dati di test del modello](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md).  
   
 > [!NOTE]  
->  Non è possibile creare un filtro sui test case del modello o sui test case della struttura di data mining nella scheda **Selezione input**. Per creare un filtro sul modello di data mining, modificare la proprietà Filter del modello. Per altre informazioni, vedere [Applicare un filtro a un modello di data mining](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
+>  Non è possibile creare un filtro sui test case del modello o sui test case della struttura di data mining nella scheda **Selezione input** . Per creare un filtro sul modello di data mining, modificare la proprietà Filter del modello. Per altre informazioni, vedere [Applicare un filtro a un modello di data mining](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
   
-### Configurare le impostazioni e generare il grafico  
+### <a name="configure-chart-settings-and-generate-the-chart"></a>Configurare le impostazioni e generare il grafico  
   
 1.  Nella scheda **Grafico accuratezza modello di data mining** fare clic sulla scheda relativa al grafico da creare.  
   
-2.  Per un **grafico di accuratezza**, fare clic sulla scheda **Grafico di accuratezza**. Il grafico viene generato automaticamente in base al modello, agli attributi stimabili e ai dati di input selezionati.  
+2.  Per un **grafico di accuratezza**, fare clic sulla scheda **Grafico di accuratezza** . Il grafico viene generato automaticamente in base al modello, agli attributi stimabili e ai dati di input selezionati.  
   
-3.  Per una **matrice di classificazione**, fare clic sulla scheda **Matrice di classificazione**. Non sono necessarie ulteriori impostazioni. Il grafico viene generato automaticamente in base al modello e ai dati di input selezionati.  
+3.  Per una **matrice di classificazione**, fare clic sulla scheda **Matrice di classificazione** . Non sono necessarie ulteriori impostazioni. Il grafico viene generato automaticamente in base al modello e ai dati di input selezionati.  
   
-4.  Per un **grafico dei profitti**, fare clic sulla scheda **Grafico di accuratezza**. Selezionare **Grafico profitti** nell'elenco a discesa **Tipo di grafico**.  
+4.  Per un **grafico dei profitti**, fare clic sulla scheda **Grafico di accuratezza** . Selezionare **Grafico profitti** nell'elenco a discesa **Tipo di grafico**.  
   
-     Immettere le impostazioni seguenti nella finestra di dialogo **Impostazioni grafico profitti**.  
+     Immettere le impostazioni seguenti nella finestra di dialogo **Impostazioni grafico profitti** .  
   
      **Popolazione**  
      Numero di case del set di dati che si desidera utilizzare per la creazione del grafico di accuratezza.  
@@ -110,7 +115,7 @@ caps.handback.revision: 20
      **Ricavi per singolo contatto**  
      Importo dei ricavi associati a ogni vendita effettuata.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   

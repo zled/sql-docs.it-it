@@ -1,23 +1,28 @@
 ---
-title: "Creare una struttura di data mining OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare una struttura di Data Mining OLAP | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una struttura di data mining OLAP
+# <a name="create-an-olap-mining-structure"></a>Creare una struttura di data mining OLAP
   La creazione di un modello di data mining basato su un cubo OLAP o un altro archivio dati multidimensionale presenta numerosi vantaggi. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
   
  In questo argomento viene descritto come creare una struttura di data mining OLAP, basata su una dimensione e misure correlate in una soluzione multidimensionale esistente.  
@@ -37,12 +42,12 @@ caps.handback.revision: 12
 ##  <a name="bkmk_Reqs"></a> Requisiti per la struttura e i modelli di data mining OLAP  
  Se si progetta un modello di data mining OLAP, l'origine dati esiste già nel database utilizzato per compilare il cubo. Non è possibile connettersi a un cubo remoto e compilare oggetti di data mining; gli oggetti del cubo devono essere disponibili all'interno della stessa soluzione di database della struttura di data mining che viene compilata.  
   
- Se non si dispone dei file di progetto originali o non si vuole modificarli, è possibile usare l'opzione di Visual Studio **Importa da server (multidimensionale o data mining)** per ottenere una copia dei metadati e degli oggetti della soluzione. È quindi possibile modificare la destinazione di distribuzione e le origini dati e utilizzare gli oggetti del cubo senza influire sugli oggetti esistenti.  
+ Se non si dispone dei file di progetto originali o non si vuole modificarli, è possibile usare l'opzione di Visual Studio **Importa da server (multidimensionale o data mining)**per ottenere una copia dei metadati e degli oggetti della soluzione. È quindi possibile modificare la destinazione di distribuzione e le origini dati e utilizzare gli oggetti del cubo senza influire sugli oggetti esistenti.  
   
  Per altre informazioni, vedere [Importare un progetto di data mining usando l'Importazione guidata di Analysis Services](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ##  <a name="bkmk_Overview"></a> Cenni preliminari sul processo di data mining OLAP  
- Avviare la Creazione guidata modello di data mining facendo clic con il pulsante destro del mouse sul nodo **Strutture di data mining** in Esplora soluzioni e scegliendo **Nuova struttura di data mining**. La procedura guidata consente di eseguire in modo semplificato i passaggi indicati di seguito per la creazione di una nuova struttura e un nuovo modello:  
+ Avviare la Creazione guidata modello di data mining facendo clic con il pulsante destro del mouse sul nodo **Strutture di data mining** in Esplora soluzioni e scegliendo  **Nuova struttura di data mining**. La procedura guidata consente di eseguire in modo semplificato i passaggi indicati di seguito per la creazione di una nuova struttura e un nuovo modello:  
   
 1.  **Selezione metodo di definizione**: consente di selezionare un tipo di origine dati e scegliere **Da cubo esistente**.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |Ricerca di celle interessanti o anomale|Identificare le vendite dei negozi che risultano controcorrente rispetto alle tendenze tipiche registrate nel tempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series|  
 |Trovare le correlazioni|Identificare i fattori correlati al tempo di inattività del server, tra cui area, tipo di computer, sistema operativo o data di acquisto.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes|  
   
-##  <a name="bkmk_Filters"></a> Sezionamento di un cubo e applicazione di filtri ai modelli  
+##  <a name="bkmk_Filters"></a>Un cubo e di sezionamento. applicazione di filtri ai modelli  
  Il sezionamento del cubo mentre si compila un modello equivale alla creazione di un filtro su un modello di data mining relazionale. In un modello relazionale il filtro sull'origine dati è definito come clausola WHERE su un'istruzione SQL; in un cubo si usa l'editor per creare istruzioni di filtro mediante MDX.  
   
  Ad esempio, un cubo potrebbe contenere informazioni sugli acquisti di prodotti in tutto il mondo, ma per una campagna di marketing si desidera creare un modello basato sull'analisi dei clienti di sesso femminile oltre i 30 anni che vivono nel Regno Unito.  
@@ -124,7 +129,7 @@ caps.handback.revision: 12
   
 -   Per il secondo filtro scegliere la dimensione Customer, selezionare l'attributo Gender e quindi "Female" dall'elenco di valori di attributo.  
   
- Dopo avere creato la struttura di data mining, è possibile modificare sia la definizione dei dati del cubo sia i criteri di filtro. Per altre informazioni, vedere [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md).  
+ Dopo avere creato la struttura di data mining, è possibile modificare sia la definizione dei dati del cubo sia i criteri di filtro. Per ulteriori informazioni, vedere [filtri per i modelli di Data Mining](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  Sia la scheda **Struttura di data mining** che la scheda **Modello di data mining** contengono un'opzione per l'aggiunta di un filtro a una struttura di data mining esistente, facendo clic su **Definisci una sezione del cubo**. Nella finestra di dialogo **Seziona cubo** è possibile compilare un'espressione di filtro MDX valida scegliendo un valore dagli elenchi a discesa.  
   
@@ -158,11 +163,12 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  Solo questi tipi di modelli supportano la creazione di dimensioni di data mining: modelli basati sull'algoritmo Microsoft Clustering, Microsoft Decision Trees o Microsoft Association.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)   
- [Proprietà dei modelli di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
- [Proprietà delle strutture di data mining e delle colonne delle strutture di data mining](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Proprietà modello di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
+ [Proprietà per la struttura di Data Mining e le colonne della struttura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+
