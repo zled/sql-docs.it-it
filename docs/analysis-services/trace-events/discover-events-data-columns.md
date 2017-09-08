@@ -1,24 +1,29 @@
 ---
-title: "Colonne di dati degli eventi di individuazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "categoria di eventi di individuazione"
+title: Colonne di dati di eventi individuazione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Events event category
 ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d4275dc8ed85c907a458c5772a57153dc88fa0e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati degli eventi di individuazione
+# <a name="discover-events-data-columns"></a>Colonne di dati degli eventi di individuazione
   La categoria degli eventi di individuazione include le classi di eventi seguenti:  
   
 -   Classe Discover Begin  
@@ -27,7 +32,7 @@ caps.handback.revision: 29
   
  Nelle tabelle seguenti vengono elencate le colonne di dati per ognuna di queste classi di eventi.  
   
-## Colonne di dati della classe Discover Begin  
+## <a name="discover-begin-classdata-columns"></a>Colonne di dati della classe Discover Begin  
   
 |||||  
 |-|-|-|-|  
@@ -49,7 +54,7 @@ caps.handback.revision: 29
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di individuazione.|  
 |RequestProperties|45|9|Contiene le proprietà della richiesta XMLA (XML for Analysis) associata all'evento di individuazione.|  
   
-## Colonne di dati della classe Discover End  
+## <a name="discover-end-classdata-columns"></a>Colonne di dati della classe Discover End  
   
 |||||  
 |-|-|-|-|  
@@ -77,7 +82,7 @@ caps.handback.revision: 29
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di individuazione.|  
 |RequestProperties|45|9|Contiene le proprietà nella richiesta XMLA.|  
   
-## Vedere anche  
- [Categoria di eventi Eventi di individuazione](../../analysis-services/trace-events/discover-events-event-category.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

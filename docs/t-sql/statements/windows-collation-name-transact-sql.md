@@ -1,0 +1,238 @@
+---
+title: Windows_collation_name (Transact-SQL) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Windows collations [SQL Server]
+- names [SQL Server], collations
+- collations [SQL Server], Windows collations
+- Collation Designator
+ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
+caps.latest.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 7898592af503300cb1bea261d8809a81fa568155
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Specifica il nome delle regole di confronto Windows nella clausola COLLATE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nome delle regole di confronto Windows è composto dalla designazione delle regole di confronto e dagli stili di confronto.  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+<Windows_collation_name> :: =   
+CollationDesignator_<ComparisonStyle>  
+  
+<ComparisonStyle> :: =   
+{ CaseSensitivity_AccentSensitivity  [ _KanatypeSensitive ] [ _WidthSensitive ]    
+}  
+| { _BIN | _BIN2 }  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ *CollationDesignator*  
+ Specifica le regole alla base delle regole di confronto Windows, ovvero:  
+  
+-   Regole di ordinamento applicate quando si specifica l'ordinamento del dizionario. Le regole di ordinamento si basano sull'alfabeto o sulla lingua.  
+  
+-   La tabella codici usata per archiviare dati di tipo carattere non Unicode.  
+  
+ Ad esempio:  
+  
+-   Latin1_General o francese: per entrambe le lingue viene utilizzata la tabella codici 1252.  
+  
+-   Turco: viene utilizzata la tabella codici 1254.  
+  
+ *CaseSensitivity*  
+ **CI** specifica tra maiuscole e minuscole, **CS** specifica tra maiuscole e minuscole.  
+  
+ *AccentSensitivity*  
+ **AI** specifica accentati, **AS** specifica accentati.  
+  
+ *KanatypeSensitive*  
+ **Omesso** specifica distinzione, senza distinzione Kana **KS** specifica kana.  
+  
+ *WidthSensitivity*  
+ **Omesso** specifica senza distinzione di larghezza, **WS** specifica distinzione di larghezza.  
+  
+ **BIN**  
+ Specifica che deve essere usato il tipo di ordinamento binario compatibile con le versioni precedenti.  
+  
+ **BIN2**  
+ Specifica l'ordinamento binario che utilizza la semantica del confronto dei punti di codice.  
+  
+## <a name="remarks"></a>Osservazioni  
+ A seconda della versione delle regole di confronto è possibile che alcuni punti di codice non siano definiti. Confrontare ad esempio quanto segue:  
+  
+```  
+SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);   
+SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);  
+GO  
+```  
+  
+ La prima riga restituisce un carattere maiuscolo quando la regola di confronto è Latin1_General_CI_AS, poiché questo punto di codice non è definito nella regola di confronto.  
+  
+ Con alcune lingue può essere fondamentale evitare le regole di confronto precedenti. Ad esempio, questo vale per il telugu.  
+  
+ In alcuni casi, le regole di confronto di Windows e le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono generare piani di query diversi per la stessa query.  
+  
+## <a name="examples"></a>Esempi  
+ Di seguito sono riportati alcuni esempi di nomi delle regole di confronto di Windows:  
+  
+-   **Latin1_General_100_**  
+  
+ Le regole di confronto utilizzano le regole di ordinamento del dizionario Latin1 General, tabella codici 1252. La distinzione tra maiuscole e minuscole non è rilevante, mentre è rilevante la distinzione tra caratteri accentati e non accentati. Le regole di confronto utilizzano le regole di ordinamento del dizionario Latin1 General ed eseguono il mapping alla tabella codici 1252. Viene visualizzato il numero di versione delle regole di confronto se sono regole di Windows: _90 o _100. La distinzione tra maiuscole e minuscole (CI) non è rilevante, mentre è rilevante la distinzione tra caratteri accentati e non accentati (AS).  
+  
+-   **Estonian_CS_AS**  
+  
+     Le regole di confronto utilizzano le regole di ordinamento del dizionario estone, tabella codici 1257. La distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati è rilevante.  
+  
+-   **Latin1_General_BIN**  
+  
+     Nelle regole di confronto vengono usate la tabella codici 1252 e le regole di ordinamento binario. Le regole di ordinamento del dizionario Latin1 General vengono ignorate.  
+  
+## <a name="windows-collations"></a>Regole di confronto di Windows  
+ Per elencare le regole di confronto di Windows supportate dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire la query seguente.  
+  
+```  
+SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';  
+```  
+  
+ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows supportate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+|Impostazioni locali di Windows|Regole di confronto versione 100|Regole di confronto 90|  
+|--------------------|---------------------------|--------------------------|  
+|Alsaziano (Francia)|Latin1_General_100_|Non disponibile|  
+|Amarico (Etiopia)|Latin1_General_100_|Non disponibile|  
+|Armeno (Armenia)|Cyrillic_General_100_|Non disponibile|  
+|Assamese (India)|Assamese_100_ <sup>1</sup>|Non disponibile|  
+|Baschiro (Russia)|Bashkir_100_|Non disponibile|  
+|Basco (Basco)|Latin1_General_100_|Non disponibile|  
+|Bengalese (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponibile|  
+|Bengali (India)|Bengali_100_<sup>1</sup>|Non disponibile|  
+|Bosniaco (Bosnia ed Erzegovina, alfabeto cirillico)|Bosnian_Cyrillic_100_|Non disponibile|  
+|Bosniaco (Bosnia ed Erzegovina, alfabeto latino)|Bosnian_Latin_100_|Non disponibile|  
+|Bretone (Francia)|Breton_100_|Non disponibile|  
+|Cinese (Macao - R.A.S.)|Chinese_Traditional_Pinyin_100_|Non disponibile|  
+|Cinese (Macao - R.A.S.)|Chinese_Traditional_Stroke_Order_100_|Non disponibile|  
+|Cinese (Singapore)|Chinese_Simplified_Stroke_Order_100_|Non disponibile|  
+|Corso (Francia)|Corsican_100_|Non disponibile|  
+|Croato (Bosnia ed Erzegovina, alfabeto latino)|Croatian_100_|Non disponibile|  
+|Dari (Afghanistan)|Dari_100_|Non disponibile|  
+|Inglese (India)|Latin1_General_100_|Non disponibile|  
+|Inglese (Malesia)|Latin1_General_100_|Non disponibile|  
+|Inglese (Singapore)|Latin1_General_100_|Non disponibile|  
+|Pilipino (Filippine)|Latin1_General_100_|Non disponibile|  
+|Frisone (Paesi Bassi)|Frisian_100_|Non disponibile|  
+|Georgiano (Georgia)|Cyrillic_General_100_|Non disponibile|  
+|Groenlandese (Groenlandia)|Danish_Greenlandic_100_|Non disponibile|  
+|Gujarati (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Hausa (Nigeria, alfabeto latino)|Latin1_General_100_|Non disponibile|  
+|Hindi (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Ibo (Nigeria)|Latin1_General_100_|Non disponibile|  
+|Inuktitut (Canada, alfabeto latino)|Latin1_General_100_|Non disponibile|  
+|Inuktitut (alfabeto sillabico) Canada|Latin1_General_100_|Non disponibile|  
+|Irlandese (Irlanda)|Latin1_General_100_|Non disponibile|  
+|Giapponese (Giappone XJIS)|Japanese_XJIS_100_|Japanese_90_, Japanese_|  
+|Giapponese (Giappone)|Japanese_Bushu_Kakusu_100_|Non disponibile|  
+|Kannada (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Khmer (Cambogia)|Khmer_100_<sup>1</sup>|Non disponibile|  
+|Quiché (Guatemala)|Modern_Spanish_100_|Non disponibile|  
+|Kinyarwanda (Ruanda)|Latin1_General_100_|Non disponibile|  
+|Konkani (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Lao (Repubblica popolare democratica del Laos)|Lao_100_<sup>1</sup>|Non disponibile|  
+|Basso sorabo (Germania)|Latin1_General_100_|Non disponibile|  
+|Lussemburghese (Lussemburgo)|Latin1_General_100_|Non disponibile|  
+|Malayalam (India)|Indic_General_100_<sup>1</sup>|Non disponibile|  
+|Maltese (Malta)|Maltese_100_|Non disponibile|  
+|Maori (Nuova Zelanda)|Maori_100_|Non disponibile|  
+|Mapudungun (Cile)|Mapudungan_100_|Non disponibile|  
+|Marathi (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Mohawk (Canada)|Mohawk_100_|Non disponibile|  
+|Mongolo (RPC)|Cyrillic_General_100_|Non disponibile|  
+|Nepalese (Nepal)|Nepali_100_<sup>1</sup>|Non disponibile|  
+|Norvegese (Bokmål, Norvegia)|Norwegian_100_|Non disponibile|  
+|Norvegese (Nynorsk, Norvegia)|Norwegian_100_|Non disponibile|  
+|Occitano (Francia)|French_100_|Non disponibile|  
+|Oriya (India)|Indic_General_100_<sup>1</sup>|Non disponibile|  
+|Pashto (Afghanistan)|Pashto_100_<sup>1</sup>|Non disponibile|  
+|Persiano (Iran)|Persian_100_|Non disponibile|  
+|Punjabi (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Quechua (Bolivia)|Latin1_General_100_|Non disponibile|  
+|Quechua (Ecuador)|Latin1_General_100_|Non disponibile|  
+|Quechua (Perù)|Latin1_General_100_|Non disponibile|  
+|Romancio (Svizzera)|Romansh_100_|Non disponibile|  
+|Sami (Inari, Finlandia)|Sami_Sweden_Finland_100_|Non disponibile|  
+|Sami (Lule, Norvegia)|Sami_Norway_100_|Non disponibile|  
+|Sami (Lule, Svezia)|Sami_Sweden_Finland_100_|Non disponibile|  
+|Sami (settentrionale, Finlandia)|Sami_Sweden_Finland_100_|Non disponibile|  
+|Sami (settentrionale, Norvegia)|Sami_Norway_100_|Non disponibile|  
+|Sami (settentrionale, Svezia)|Sami_Sweden_Finland_100_|Non disponibile|  
+|Sami (Skolt, Finlandia)|Sami_Sweden_Finland_100_|Non disponibile|  
+|Sami (meridionale, Norvegia)|Sami_Norway_100_|Non disponibile|  
+|Sami (meridionale, Svezia)|Sami_Sweden_Finland_100_|Non disponibile|  
+|Sanscrito (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Serbo (Bosnia ed Erzegovina, alfabeto cirillico)|Serbian_Cyrillic_100_|Non disponibile|  
+|Serbo (Bosnia ed Erzegovina, alfabeto latino)|Serbian_Latin_100_|Non disponibile|  
+|Serbo (Serbia, alfabeto cirillico)|Serbian_Cyrillic_100_|Non disponibile|  
+|Serbo (Serbia, alfabeto latino)|Serbian_Latin_100_|Non disponibile|  
+|Sesotho sa Leboa/Sotho settentrionale (Sudafrica)|Latin1_General_100_|Non disponibile|  
+|SeTswana/Tswana (Sudafrica)|Latin1_General_100_|Non disponibile|  
+|Singalese (Sri Lanka)|Indic_General_100_<sup>1</sup>|Non disponibile|  
+|Swahili (Kenya)|Latin1_General_100_|Non disponibile|  
+|Siriano (Siria)|Syriac_100_<sup>1</sup>|Syriac_90_|  
+|Tagico (Tajikistan)|Cyrillic_General_100_|Non disponibile|  
+|Tamazight (Algeria, alfabeto latino)|Tamazight_100_|Non disponibile|  
+|Tamil (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Telugu (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|Tibetano (RPC)|Tibetan_100_<sup>1</sup>|Non disponibile|  
+|Turkmeno (Turkmenistan)|Turkmen_100_|Non disponibile|  
+|Uiguro (RPC)|Uighur_100_|Non disponibile|  
+|Alto sorabo (Germania)|Upper_Sorbian_100_|Non disponibile|  
+|Urdu (Pakistan)|Urdu_100_|Non disponibile|  
+|Gallese (Regno Unito)|Welsh_100_|Non disponibile|  
+|Wolof (Senegal)|French_100_|Non disponibile|  
+|Xhosa/isiXhosa (Sudafrica)|Latin1_General_100_|Non disponibile|  
+|Jakuto (Russia)|Yakut_100_|Non disponibile|  
+|Yi (RPC)|Latin1_General_100_|Non disponibile|  
+|Yoruba (Nigeria)|Latin1_General_100_|Non disponibile|  
+|Zulu/isiZulu (Sudafrica)|Latin1_General_100_|Non disponibile|  
+|Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Hindi|Hindi|  
+|Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Korean_Wansung_Unicode|Korean_Wansung_Unicode|  
+|Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Lithuanian_Classic|Lithuanian_Classic|  
+|Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Macedonian|Macedonian|  
+  
+ <sup>1</sup>regole di confronto solo Unicode di Windows può essere applicati solo ai dati a livello di colonna o a livello di espressione. Tali regole non possono essere usate come regole di confronto del server o del database.  
+  
+ <sup>2</sup>come regole di confronto cinese (Taiwan), cinese (Macao) utilizza le regole del cinese semplificato, a differenza del cinese (Taiwan), ma usa la tabella codici 950.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+ [Costanti &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [tabella &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
+  
+  

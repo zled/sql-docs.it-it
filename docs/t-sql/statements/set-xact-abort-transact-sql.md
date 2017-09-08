@@ -1,0 +1,146 @@
+---
+title: SET XACT_ABORT (Transact-SQL) | Documenti Microsoft
+ms.custom: 
+ms.date: 07/07/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- XACT_ABORT_TSQL
+- XACT_ABORT
+- SET XACT_ABORT
+- SET_XACT_ABORT_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- transaction rollbacks [SQL Server]
+- XACT_ABORT option
+- automatic transaction roll backs
+- transactions [SQL Server], rolling back
+- rolling back transactions, SET XACT_ABORT
+- roll back transactions [SQL Server]
+- SET XACT_ABORT statement
+ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
+caps.latest.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 3262e9dcbc40aeadf840181d9be5711858f08ec6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+    
+> [!NOTE]  
+>  Il **generare** rispetta istruzione **SET XACT_ABORT RAISERROR** non. Nuove applicazioni devono utilizzare **generare** anziché **RAISERROR**.  
+  
+ Specifica se in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito automaticamente il rollback della transazione corrente quando un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] genera un errore di run-time.  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+-- Syntax for SQL Server and Azure SQL Database  
+  
+SET XACT_ABORT { ON | OFF }  
+```  
+  
+```  
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+SET XACT_ABORT ON   
+```  
+  
+## <a name="remarks"></a>Osservazioni  
+ Quando l'opzione SET XACT_ABORT è impostata su ON, se un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] genera un errore di run-time l'intera transazione viene terminata e viene eseguito il rollback.  
+  
+ Quando l'opzione SET XACT_ABORT è impostata su OFF, in alcuni casi viene eseguito il rollback solo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che ha generato l'errore e l'elaborazione della transazione continua. In base alla gravità dell'errore, viene eseguito il rollback dell'intera transazione anche se l'opzione SET XACT_ABORT è impostata su OFF. OFF è l'impostazione predefinita.  
+  
+ L'opzione SET XACT_ABORT non ha alcun effetto sugli errori di compilazione, quali gli errori di sintassi.  
+  
+ L'opzione XACT_ABORT deve essere impostata su ON per le istruzioni di modifica dei dati, in una transazione implicita o esplicita, eseguite sulla maggior parte dei provider OLE DB, compreso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'unico caso in cui questa opzione non è necessaria è quando il provider supporta transazioni nidificate.  
+  
+ Quando ANSI_WARNINGS=OFF, le violazioni delle autorizzazioni causano l'interruzione delle transazioni.  
+  
+ L'opzione SET XACT_ABORT viene impostata in fase di esecuzione, non in fase di analisi.  
+  
+ Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query riportata di seguito.  
+  
+```  
+DECLARE @XACT_ABORT VARCHAR(3) = 'OFF';  
+IF ( (16384 & @@OPTIONS) = 16384 ) SET @XACT_ABORT = 'ON';  
+SELECT @XACT_ABORT AS XACT_ABORT;  
+  
+```  
+  
+## <a name="examples"></a>Esempi  
+ In questo esempio di codice viene generato un errore di violazione della chiave esterna in una transazione che include altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'errore viene generato nel primo set di istruzioni, ma le altre istruzioni vengono eseguite completamente e viene eseguito il commit completo della transazione. Nel secondo set di istruzioni l'opzione `SET XACT_ABORT` viene impostata su `ON`. In seguito all'errore di istruzione il batch viene pertanto interrotto e viene eseguito il rollback della transazione.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID(N't2', N'U') IS NOT NULL  
+    DROP TABLE t2;  
+GO  
+IF OBJECT_ID(N't1', N'U') IS NOT NULL  
+    DROP TABLE t1;  
+GO  
+CREATE TABLE t1  
+    (a INT NOT NULL PRIMARY KEY);  
+CREATE TABLE t2  
+    (a INT NOT NULL REFERENCES t1(a));  
+GO  
+INSERT INTO t1 VALUES (1);  
+INSERT INTO t1 VALUES (3);  
+INSERT INTO t1 VALUES (4);  
+INSERT INTO t1 VALUES (6);  
+GO  
+SET XACT_ABORT OFF;  
+GO  
+BEGIN TRANSACTION;  
+INSERT INTO t2 VALUES (1);  
+INSERT INTO t2 VALUES (2); -- Foreign key error.  
+INSERT INTO t2 VALUES (3);  
+COMMIT TRANSACTION;  
+GO  
+SET XACT_ABORT ON;  
+GO  
+BEGIN TRANSACTION;  
+INSERT INTO t2 VALUES (4);  
+INSERT INTO t2 VALUES (5); -- Foreign key error.  
+INSERT INTO t2 VALUES (6);  
+COMMIT TRANSACTION;  
+GO  
+-- SELECT shows only keys 1 and 3 added.   
+-- Key 2 insert failed and was rolled back, but  
+-- XACT_ABORT was OFF and rest of transaction  
+-- succeeded.  
+-- Key 5 insert error with XACT_ABORT ON caused  
+-- all of the second transaction to roll back.  
+SELECT *  
+    FROM t2;  
+GO  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [GENERA &#40; Transact-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
+ [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
+  
+  
+

@@ -1,30 +1,35 @@
 ---
-title: "Introduzione al monitoraggio di Analysis Services tramite SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "monitoraggio di Analysis Services [SQL Server]"
-  - "prestazioni [Analysis Services]"
-  - "prestazioni [Analysis Services], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], Analysis Services"
+title: Introduzione al monitoraggio di Analysis Services con SQL Server Profiler | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services]
+- performance [Analysis Services], SQL Server Profiler
+- Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b4073390d14a50948ad7cf023a394c3f1ef683
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Introduzione al monitoraggio di Analysis Services tramite SQL Server Profiler
+# <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introduzione al monitoraggio di Analysis Services tramite SQL Server Profiler
   Tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è possibile monitorare eventi generati da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile eseguire le operazioni seguenti:  
   
 -   Monitorare le prestazioni di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -41,7 +46,7 @@ caps.handback.revision: 28
   
 -   Visualizzare dati sugli eventi acquisiti o acquisire e salvare dati su ciascun evento su un file o una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per consentirne l'analisi o l'esecuzione in futuro. Durante la riproduzione dei dati è possibile rieseguire fedelmente gli eventi salvati in tempo reale o passaggio per passaggio.  
   
-## Utilizzo di SQL Server Profiler  
+## <a name="using-sql-server-profiler"></a>Utilizzo di SQL Server Profiler  
  Per creare o riprodurre tracce utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , è necessario essere membro del ruolo di server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si è membri del ruolo di server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dal gruppo di programmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del menu **Start** .  
   
  Quando si utilizza [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], notare quanto segue:  
@@ -59,7 +64,7 @@ caps.handback.revision: 28
   
  Per ottenere prestazioni ottimali, utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per monitorare solo gli eventi a cui si è maggiormente interessati. Il monitoraggio di un numero troppo elevato di eventi determina un aumento dell'overhead e può portare alla creazione di una tabella o di un file di traccia di grandi dimensioni, soprattutto quando il monitoraggio viene eseguito per un lungo periodo di tempo. È inoltre consigliabile utilizzare filtri per limitare la quantità di dati raccolta ed evitare che le tracce diventino troppo grandi.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi di traccia di Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
  [Creare tracce del profiler per la riproduzione &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   

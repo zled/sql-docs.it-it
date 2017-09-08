@@ -1,0 +1,117 @@
+---
+title: "+ (Operatore più unario) (Transact-SQL) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to:
+- Azure SQL Database
+- SQL Server (starting with 2008)
+f1_keywords:
+- + (positive)
+- +
+- positive
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- + (positive operator)
+- positive operator (+)
+- positive values [SQL Server]
+ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
+caps.latest.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 2a0e451cc1e4341d7e516733ab8d82efe09b1be7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="unary-operators---positive"></a>Operatori unari - positivo
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Restituisce il valore di un'espressione numerica (operatore unario). Gli operatori unari eseguono un'operazione in una sola espressione di un tipo di dati della categoria numerici.   
+  
+|Operatore|Significato|  
+|--------------|-------------|  
+|[+ (positivo)](../../t-sql/language-elements/unary-operators-positive.md)|Valore numerico positivo.|  
+|[- (negativo)](../../t-sql/language-elements/unary-operators-negative.md)|Valore numerico negativo.|  
+|[~ (NOT bit per bit)](../../t-sql/language-elements/bitwise-not-transact-sql.md)|Restituisce il complemento a uno del numero.|  
+  
+ Gli operatori + (positivo) e - (negativo) possono essere utilizzati in qualsiasi espressione di un tipo di dati della categoria numerici. L'operatore ~ (NOT bit per bit) può essere utilizzato solo in espressioni di un tipo di dati della categoria integer.  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
++ numeric_expression  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ *numeric_expression*  
+ È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi uno dei dati di tipi nella categoria di tipi di dati numerici, ad eccezione di **datetime** e **smalldatetime** tipi di dati.  
+  
+## <a name="result-types"></a>Tipi restituiti  
+ Restituisce il tipo di dati di *numeric_expression*.  
+  
+## <a name="remarks"></a>Osservazioni  
+ Sebbene sia possibile aggiungere un operatore più unario prima di qualsiasi espressione numerica, in questo caso non viene eseguita alcuna operazione sul valore restituito dall'espressione. In particolare, non verrà restituito il valore positivo di un'espressione negativa. Per restituire un valore positivo di un'espressione negativa, utilizzare il [ABS](../../t-sql/functions/abs-transact-sql.md) (funzione).  
+  
+## <a name="examples"></a>Esempi  
+  
+### <a name="a-setting-a-variable-to-a-positive-value"></a>A. Impostazione di una variabile su un valore positivo  
+ Nell'esempio seguente una variabile viene impostata su un valore positivo.  
+  
+```  
+DECLARE @MyNumber decimal(10,2);  
+SET @MyNumber = +123.45;  
+SELECT @MyNumber;  
+GO  
+```  
+  
+ Set di risultati:  
+  
+```  
+-----------   
+123.45            
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>B. Utilizzo dell'operatore più unario con un valore negativo  
+ Nell'esempio seguente viene illustrato l'utilizzo dell'operatore più unario con un'espressione negativa e della funzione ABS() sulla stessa espressione negativa. L'operatore più unario non influisce sull'espressione, ma la funzione ABS restituisce il valore positivo dell'espressione.  
+  
+```  
+USE tempdb;  
+GO  
+DECLARE @Num1 int;  
+SET @Num1 = -5;  
+SELECT +@Num1, ABS(@Num1);  
+GO  
+```  
+  
+ Set di risultati:  
+  
+```  
+----------- -----------  
+-5          5  
+  
+(1 row(s) affected)  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ABS &#40; Transact-SQL &#41;](../../t-sql/functions/abs-transact-sql.md)  
+  
+  

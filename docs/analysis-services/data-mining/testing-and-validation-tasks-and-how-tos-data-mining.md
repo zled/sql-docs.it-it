@@ -1,31 +1,36 @@
 ---
-title: "Attivit&#224; e procedure di test e convalida (data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grafico accuratezza modello di data mining [Analysis Services]"
-  - "modellazione predittiva [Analysis Services]"
-  - "strutture di data mining [Analysis Services], modellazione predittiva"
-  - "Grafico accuratezza modello di data mining [Analysis Services], procedure"
-  - "modelli di data mining [Analysis Services], modellazione predittiva"
-  - "accuratezza predittiva [data mining]"
+title: "Test e convalida le attività e procedure dettagliate (Data Mining) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services]
+- predictive modeling [Analysis Services]
+- mining structures [Analysis Services], predictive modeling
+- Mining Accuracy Chart [Analysis Services], how-to topics
+- mining models [Analysis Services], predictive modeling
+- predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Attivit&#224; e procedure di test e convalida (data mining)
-  Per mettere a confronto l'accuratezza predittiva dei modelli di data mining in una struttura di data mining, è possibile usare la scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+# <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Attività e procedure di test e convalida (data mining)
+  Per mettere a confronto l'accuratezza predittiva dei modelli di data mining in una struttura di data mining, è possibile usare la scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  È possibile creare quattro tipi di grafici:  
   
@@ -39,11 +44,11 @@ caps.handback.revision: 41
   
  I primi tre grafici usano la scheda **Selezione input** per definire i dati usati per la generazione del grafico.  
   
- Il grafico di convalida incrociata viene creato usando input aggiuntivi, disponibili nella scheda **Convalida incrociata**. Per altre informazioni, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+ Il grafico di convalida incrociata viene creato usando input aggiuntivi, disponibili nella scheda **Convalida incrociata** . Per altre informazioni, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Per altre informazioni su come usare il grafico di accuratezza del modello di data mining, vedere [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   

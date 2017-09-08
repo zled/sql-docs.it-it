@@ -1,33 +1,38 @@
 ---
-title: "Creare una dimensione utilizzando la Creazione guidata dimensione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensioni [Analysis Services], creazione"
+title: Creare una dimensione utilizzando la creazione guidata dimensione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], creating
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff4a16fdc7f18eae35de5023116a11179fb11c5b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una dimensione utilizzando la Creazione guidata dimensione
+# <a name="create-a-dimension-using-the-dimension-wizard"></a>Creare una dimensione utilizzando la Creazione guidata dimensione
   È possibile creare una nuova dimensione utilizzando Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-### Per creare una nuova dimensione  
+### <a name="to-create-a-new-dimension"></a>Per creare una nuova dimensione  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Dimensioni** e quindi scegliere **Nuova dimensione**.  
+1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Dimensioni**e quindi scegliere **Nuova dimensione**.  
   
-2.  Nella pagina **Selezione metodo di creazione** della Creazione guidata dimensione selezionare **Utilizza una tabella esistente** e quindi fare clic su **Avanti**.  
+2.  Nella pagina **Selezione metodo di creazione** della Creazione guidata dimensione selezionare **Utilizza una tabella esistente**e quindi fare clic su **Avanti**.  
   
     > [!NOTE]  
     >  Si potrebbe dovere creare occasionalmente una dimensione senza utilizzare una tabella esistente. Per altre informazioni, vedere [Creare una dimensione generando una tabella non temporale nell'origine dati](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md) e [Creare una dimensione temporale generando una tabella dei tempi](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md).  
@@ -58,11 +63,11 @@ caps.handback.revision: 17
      Facoltativamente, è possibile modificare i nomi di attributo, abilitare o disabilitare l'esplorazione e specificare il tipo di attributo.  
   
     > [!NOTE]  
-    >  Per rendere attivi i campi **Consenti esplorazione** e **Tipo attributo**, l'attributo deve essere selezionato in modo da essere incluso nella dimensione.  
+    >  Per rendere attivi i campi **Consenti esplorazione** e **Tipo attributo** , l'attributo deve essere selezionato in modo da essere incluso nella dimensione.  
   
 6.  Nella pagina **Funzionalità di Business Intelligence per la contabilità** selezionare il tipo di conto nella colonna **Tipi di conto predefiniti** e quindi fare clic su **Avanti**.  
   
-     Il tipo di conto deve corrispondere a quello della tabella di origine elencato nella colonna **Tipi di conto tabella di origine**.  
+     Il tipo di conto deve corrispondere a quello della tabella di origine elencato nella colonna **Tipi di conto tabella di origine** .  
   
     > [!NOTE]  
     >  La pagina **Funzionalità di Business Intelligence per la contabilità** è visualizzata se è stato definito un attributo di dimensione **Tipo conto** nella pagina **Selezione attributi dimensione** della procedura guidata.  
@@ -72,7 +77,7 @@ caps.handback.revision: 17
     > [!NOTE]  
     >  È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare una dimensione utilizzando una tabella esistente](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

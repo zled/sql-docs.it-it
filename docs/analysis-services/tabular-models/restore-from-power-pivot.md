@@ -1,27 +1,32 @@
 ---
-title: "Eseguire il ripristino da PowerPivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql11.asvs.ssmsimbi.RestoreFromPP.f1"
+title: Eseguire il ripristino da PowerPivot | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27541f0f58b11367994d2131eb95b63cbf55a4af
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Eseguire il ripristino da PowerPivot
-  È possibile usare la funzionalità Ripristina da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SQL Server Management Studio per creare un nuovo database modello tabulare in un'istanza di Analysis Services in esecuzione in modalità tabulare oppure per eseguire il ripristino a un database esistente da una cartella di lavoro con estensione xlsx di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+# <a name="restore-from-power-pivot"></a>Eseguire il ripristino da PowerPivot
+  È possibile usare la funzionalità Ripristina da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SQL Server Management Studio per creare un nuovo database modello tabulare in un'istanza di Analysis Services in esecuzione in modalità tabulare oppure per eseguire il ripristino a un database esistente da una cartella di lavoro con estensione xlsx di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
 >  Il modello di progetto Importa da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SQL Server Data Tools offre funzionalità simili. Per altre informazioni, vedere [Importare da Power Pivot &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   I dati nel modello di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono copiati in un database modello tabulare nuovo o esistente nell'istanza di Analysis Services. Se la cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contiene tabelle collegate, queste verranno ricreate come tabelle senza origine dati, analogamente alle tabelle create con Incolla in nuova tabella.  
   
-### Per eseguire il ripristino da PowerPivot  
+### <a name="to-restore-from-power-pivot"></a>Per eseguire il ripristino da PowerPivot  
   
 1.  Nell'istanza di Active Directory di SSMS in cui si vuole eseguire il ripristino fare clic con il pulsante destro del mouse su **Database** e quindi scegliere **Ripristina da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 5.  Nella casella **Opzioni**lasciare **Includi informazioni di sicurezza** selezionato. Quando si esegue il ripristino da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , questa impostazione non è applicabile.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Database modello tabulare &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
  [Importare da Power Pivot &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   

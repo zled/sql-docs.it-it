@@ -1,28 +1,33 @@
 ---
-title: "Scegliere ed eseguire il mapping dei dati di test del modello | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne [data mining], grafici accuratezza modelli di data mining"
-  - "Grafico accuratezza modello di data mining [Analysis Services], mapping delle colonne"
-  - "mapping colonne di input [Analysis Services]"
-  - "mapping di colonne di input [Analysis Services]"
+title: Scegliere ed eseguire il mapping dei dati di test del modello | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Scegliere ed eseguire il mapping dei dati di test del modello
+# <a name="choose-and-map-model-testing-data"></a>Scegliere ed eseguire il mapping dei dati di test del modello
   Per creare un grafico di accuratezza in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario scegliere i dati che verranno utilizzati per il test del modello ed eseguire il mapping dei dati al modello.  
   
  Per impostazione predefinita, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verranno utilizzati i dati di test del modello di data mining, a condizione che sia stato creato un set di dati di controllo al momento della compilazione della struttura di data mining. La creazione di un set di test di controllo rappresenta il modo più semplice per testare i modelli basati sulla stessa struttura di data mining perché i nomi delle colonne e i tipi di dati corrisponderanno sempre al modello e si può essere ragionevolmente certi che la distribuzione dei dati sia simile. Nella finestra di progettazione verranno inoltre create automaticamente le relazioni tra le colonne di input e le colonne del modello.  
@@ -51,7 +56,7 @@ caps.handback.revision: 44
   
 ##  <a name="bkmk_SelectInputs"></a> Per selezionare le tabelle di input per testare l'accuratezza di un modello di data mining  
   
-1.  Nella Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fare doppio clic sulla struttura di data mining che contiene i modelli di cui tracciare il grafico.  
+1.  Nella Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare doppio clic sulla struttura di data mining che contiene i modelli di cui tracciare il grafico.  
   
 2.  Selezionare la scheda **Grafico di accuratezza modello di data mining** .  
   
@@ -79,13 +84,13 @@ caps.handback.revision: 44
   
 5.  Nella finestra di dialogo **Seleziona struttura di data mining** selezionare la struttura di data mining contenente i modelli che si desidera utilizzare e quindi fare clic su **OK**.  
   
-6.  Nella tabella **Seleziona tabelle di input** della scheda **Grafico accuratezza modello di data mining** fare clic su **Seleziona tabella del case** per aprire la finestra di dialogo **Seleziona tabella**.  
+6.  Nella tabella **Seleziona tabelle di input** della scheda **Grafico accuratezza modello di data mining** fare clic su **Seleziona tabella del case** per aprire la finestra di dialogo **Seleziona tabella** .  
   
 7.  Nella finestra di dialogo **Seleziona tabella** selezionare un'origine dati nell'elenco **Origine dati** . Scegliere una tabella contenente i dati che si desidera utilizzare nella query di stima per determinare l'accuratezza dei modelli.  
   
 8.  Nella casella **Nome tabella/vista** selezionare la tabella contenente i dati che si desidera usare per testare i modelli.  
   
-9. Modificare i mapping, se necessario. Verrà automaticamente eseguito il mapping tra le colonne della struttura di data mining e le colonne con lo stesso nome incluse nella tabella di input. Per creare mapping manualmente, fare clic su una colonna nella tabella **Seleziona tabelle di input** e trascinarla sulla colonna corrispondente nella tabella **Struttura di data mining**. Per eliminare un mapping, fare clic sulla linea che collega la colonna contenuta nella tabella **Struttura di data mining** alla colonna contenuta nella tabella **Seleziona tabelle di input**, quindi premere CANC.  
+9. Modificare i mapping, se necessario. Verrà automaticamente eseguito il mapping tra le colonne della struttura di data mining e le colonne con lo stesso nome incluse nella tabella di input. Per creare mapping manualmente, fare clic su una colonna nella tabella **Seleziona tabelle di input** e trascinarla sulla colonna corrispondente nella tabella **Struttura di data mining** . Per eliminare un mapping, fare clic sulla linea che collega la colonna contenuta nella tabella **Struttura di data mining** alla colonna contenuta nella tabella **Seleziona tabelle di input** , quindi premere CANC.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -117,9 +122,9 @@ caps.handback.revision: 44
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     I nuovi mapping delle colonna verranno visualizzati nella finestra di dialogo **Specifica mapping colonne** . È possibile rimuovere un mapping selezionando la linea tra le colonne e premendo CANC. È possibile creare una nuova connessione selezionando una colonna nella tabella **Struttura di data mining**, quindi trascinandola nella colonna corrispondente della tabella **Seleziona tabelle di input**.  
+     I nuovi mapping delle colonna verranno visualizzati nella finestra di dialogo **Specifica mapping colonne** . È possibile rimuovere un mapping selezionando la linea tra le colonne e premendo CANC. È possibile creare una nuova connessione selezionando una colonna nella tabella **Struttura di data mining** , quindi trascinandola nella colonna corrispondente della tabella **Seleziona tabelle di input** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

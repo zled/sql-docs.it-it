@@ -1,23 +1,28 @@
 ---
-title: "Componenti aggiuntivi Data mining di SQL Server per Office 2007 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Dati di SQL Server, componenti aggiuntivi Data Mining per Office | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Componenti aggiuntivi Data mining di SQL Server per Office 2007
+# <a name="sql-server-data-mining-add-ins-for-office"></a>Componenti aggiuntivi Data mining di SQL Server per Office 2007
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componenti aggiuntivi Data mining di SQL Server per Office è un semplice set di strumenti per l'analisi predittiva che consente l'utilizzo dei dati in Excel al fine di compilare modelli analitici per stima, indicazioni o esplorazione.  
   
  Le procedure guidate e gli strumenti per la gestione dei dati nei componenti aggiuntivi forniscono istruzioni dettagliate per le seguenti attività comuni di data mining:  
@@ -40,7 +45,7 @@ caps.handback.revision: 10
   
      Se non si ha alcuna familiarità con il data mining, utilizzare la procedura guidata **Query** per la compilazione delle query di stima.  
   
-     Gli utenti esperti possono compilare le query DMX personalizzate con l'**Editor avanzato query** con trascinamento della selezione o automatizzare le stime usando VBA di Excel.  
+     Gli utenti esperti possono compilare le query DMX personalizzate con l' **Editor avanzato query**con trascinamento della selezione o automatizzare le stime usando VBA di Excel.  
   
 -   **Documentare e gestire.** Dopo avere creato un set di dati e compilato alcuni modelli, documentare il lavoro e le informazioni essenziali generando un riepilogo statistico dei parametri del modello e dei dati.  
   
@@ -52,10 +57,10 @@ caps.handback.revision: 10
   
      Gli utenti esperti apprezzeranno la funzionalità **Traccia** che consente di visualizzare le istruzioni XMLA e DMX inviate al server.  
   
-## Introduzione  
+## <a name="getting-started"></a>Introduzione  
  Per altre informazioni, vedere [Elementi inclusi nei componenti aggiuntivi Data mining per Office](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
-## Supporto e requisiti  
+## <a name="support-and-requirements"></a>Supporto e requisiti  
  I componenti aggiuntivi Data mining di SQL Server per Office sono disponibili per il download gratuito. Per utilizzare questi strumenti, è necessario che sia già installata una delle seguenti versioni di Office:  
   
 -   Office 2010, versione a 32 bit o a 64 bit  
@@ -73,7 +78,7 @@ caps.handback.revision: 10
   
 -   Standard  
   
- A seconda dell'edizione di SQL Server Analysis Services a cui ci si connette, alcuni algoritmi avanzati potrebbero non essere disponibili. Per informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ A seconda dell'edizione di SQL Server Analysis Services a cui ci si connette, alcuni algoritmi avanzati potrebbero non essere disponibili. Per informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
  Per altre informazioni sull'installazione, vedere questa pagina nell'Area download: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

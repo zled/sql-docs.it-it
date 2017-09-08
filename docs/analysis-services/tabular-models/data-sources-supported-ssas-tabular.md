@@ -1,24 +1,29 @@
 ---
-title: "Data Sources Supported (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Le origini dati supportate (SSAS tabulare) | Documenti Microsoft
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e5457f0c2abf5f1b7cdae5ff2ae57b5298a72d82
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Sources Supported (SSAS Tabular)
+# <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati con i modelli tabulari.  
   
 ##  <a name="bkmk_supported_ds"></a> Origini dati supportate per i modelli in memoria  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
 |-|-|-|-|  
 |Origine|Versioni|Tipo di file|Provider|  
 |Database di Access|Microsoft Access 2010 e versioni successive.|Estensione accdb o mdb|Provider OLE DB per ACE 14|  
-|Database relazionali di SQL Server|Microsoft SQL Server 2008 e versioni successive, Microsoft SQL Server Data Warehouse 2008 e versioni successive, Database SQL di Microsoft Azure, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Piattaforma di strumenti analitici era precedentemente noto come SQL Server Parallel Data Warehouse (PDW). Originariamente la connessione a PDW da Analysis Services richiedeva un provider di dati speciale. Questo provider è stato sostituito in SQL Server 2012. A partire da SQL Server 2012, per le connessioni a PDW/piattaforma di strumenti analitici viene usato SQL Server Native Client. Per altre informazioni su APS, visitare il sito Web di [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(non applicabile)|Provider OLE DB per SQL Server<br /><br /> Provider OLE DB di SQL Server Native Client<br /><br /> Provider OLE DB per SQL Server Native Client 10.0<br /><br /> Provider di dati .NET Framework per SQL Client|  
+|Database relazionali di SQL Server|SQL Server 2008 e versioni successive, Warehouse dati di SQL Server 2008 e versioni successive, Azure SQL Database Azure SQL Data Warehouse, Analitica piattaforma di strumenti analitici<br /><br /> <br /><br /> Piattaforma di strumenti analitici era precedentemente noto come SQL Server Parallel Data Warehouse (PDW). Originariamente la connessione a PDW da Analysis Services richiedeva un provider di dati speciale. Questo provider è stato sostituito in SQL Server 2012. A partire da SQL Server 2012, per le connessioni a PDW/piattaforma di strumenti analitici viene usato SQL Server Native Client. |(non applicabile)|Provider OLE DB per SQL Server<br /><br /> Provider OLE DB di SQL Server Native Client<br /><br /> Provider OLE DB per SQL Server Native Client 10.0<br /><br /> Provider di dati .NET Framework per SQL Client|  
 |Database relazionali Oracle|Oracle 9i e versioni successive.|(non applicabile)|Provider OLE DB Oracle<br /><br /> Provider di dati .NET Framework per il client Oracle<br /><br /> Provider di dati .NET Framework per SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Database relazionali di Teradata|Teradata V2R6 e versioni successive|(non applicabile)|Provider OLE DB TDOLEDB<br /><br /> Provider di dati .NET per Teradata|  
 |Database relazionali di Informix||(non applicabile)|Provider OLE DB per Informix|  
@@ -66,8 +71,9 @@ Le colonne in cui sono contenuti dati simili in origini dati diverse costituisco
   
 I provider OLE DB offrono talvolta prestazioni migliori in termini di velocità per dati in larga scala. Quando si sceglie tra provider diversi per la stessa origine dati, provare innanzitutto il provider OLE DB.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Origini dati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Importare dati &#40;SSAS tabulare&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [Importare dati &#40;SSAS tabulare&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
+

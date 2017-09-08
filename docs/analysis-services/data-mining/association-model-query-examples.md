@@ -1,29 +1,34 @@
 ---
-title: "Esempi di query sul modello di associazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "set di elementi [Analysis Services]"
-  - "association algorithms [Analysis Services]"
-  - "regole [data mining]"
-  - "regole di associazione"
-  - "query sul contenuto [DMX]"
+title: Esempi di Query sul modello Association | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- rules [Data Mining]
+- association rules
+- content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7e1bd8f5d4b6b70c0d31f1fc4a9e1c06da088e3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Esempi di query sul modello di associazione
+# <a name="association-model-query-examples"></a>Esempi di query sul modello di associazione
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, tramite cui vengono forniti dettagli sulle regole e i set di elementi individuati durante l'analisi oppure una query di stima, in cui vengono utilizzate le associazioni individuate nei dati per eseguire stime. Per un modello di associazione, le stime sono in genere basate su regole e possono essere utilizzate per fornire indicazioni, mentre le query sul contenuto solitamente esplorano la relazione tra set di elementi. È anche possibile recuperare metadati relativi al modello.  
   
  Questa sezione illustra come creare questi tipi di query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  
@@ -47,7 +52,7 @@ caps.handback.revision: 25
  [Determinazione della confidenza per i set di elementi correlati](#bkmk_Query7)  
   
 ##  <a name="bkmk_top2"></a> Ricerca di informazioni sul modello  
- In tutti i modelli di data mining viene esposto il contenuto appreso dall'algoritmo secondo uno schema standardizzato, definito set di righe dello schema del modello di data mining. È possibile creare query sul set di righe dello schema del modello di data mining tramite istruzioni Data Mining Extensions (DMX) oppure utilizzando stored procedure [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è anche possibile eseguire query sui set di righe dello schema direttamente come tabelle di sistema, utilizzando una sintassi simile a SQL.  
+ In tutti i modelli di data mining viene esposto il contenuto appreso dall'algoritmo secondo uno schema standardizzato, definito set di righe dello schema del modello di data mining. È possibile creare query sul set di righe dello schema del modello di data mining tramite istruzioni Data Mining Extensions (DMX) oppure utilizzando stored procedure [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è anche possibile eseguire query sui set di righe dello schema direttamente come tabelle di sistema, utilizzando una sintassi simile a SQL.  
   
 ###  <a name="bkmk_Query1"></a> Esempio di query 1: Recupero di metadati del modello tramite DMX  
  Con la query seguente vengono restituiti i metadati relativi al modello di associazione `Association`, ad esempio il nome del modello, il database in cui è archiviato e il numero di nodi figlio del modello. Questa query utilizza una query contenuto DMX per recuperare i metadati dal nodo padre del modello:  
@@ -115,7 +120,7 @@ WHERE MODEL_NAME = 'Association'
   
  [Torna all'inizio](#bkmk_top2)  
   
-## Ricerca di informazioni su regole e set di elementi  
+## <a name="finding-information-about-rules-and-itemsets"></a>Ricerca di informazioni su regole e set di elementi  
  Un modello di associazione viene utilizzato in genere per individuare informazioni sui set di elementi frequenti e per estrarre dettagli su regole e set di elementi specifici. Ad esempio, è possibile che si desideri estrarre un elenco di regole classificate come particolarmente interessanti o creare un elenco dei set di elementi più comuni. Tali informazioni vengono recuperate tramite una query sul contenuto DMX. È anche possibile esplorare queste informazioni usando il **Visualizzatore Microsoft Association Rules**.  
   
 ###  <a name="bkmk_Query4"></a> Esempio di query 4: Recupero di un elenco di set di elementi e prodotti  
@@ -160,13 +165,13 @@ WHERE NODE_TYPE = 7
   
  [Torna all'inizio](#bkmk_top2)  
   
-## Esecuzione di stime tramite il modello  
+## <a name="making-predictions-using-the-model"></a>Esecuzione di stime tramite il modello  
  Un modello di regole di associazione viene spesso utilizzato per generare indicazioni basate sulle correlazioni individuate nei set di elementi. Pertanto, quando si crea una query di stima basata su un modello di regole di associazione, si utilizzano in genere le regole nel modello per fare supposizioni basate sui nuovi dati.  [PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md) è la funzione che restituisce indicazioni e dispone di diversi argomenti utilizzabili per personalizzare i risultati della query.  
   
  Le query su un modello di associazione possono anche risultare utili, ad esempio, per restituire la confidenza di varie regole e di vari set di elementi, in modo da confrontare l'efficacia di diverse strategie di cross-selling. Negli esempi seguenti viene illustrato come creare tali query.  
   
 ###  <a name="bkmk_Query6"></a> Esempio di query 6: Stima degli elementi associati  
- Questo esempio illustra il modello di associazione creato in [Esercitazione intermedia sul data mining &#40;Analysis Services - Data mining&#41;](../Topic/Intermediate%20Data%20Mining%20Tutorial%20\(Analysis%20Services%20-%20Data%20Mining\).md). Viene illustrato come creare una query di stima che indica quali prodotti consigliare a un cliente che ha acquistato un determinato prodotto. Questo tipo di query, in cui i valori vengono forniti al modello in un'istruzione **SELECT…UNION**, è denominata query singleton. Poiché la colonna del modello stimabile che corrisponde ai nuovi valori è una tabella annidata, è necessario usare una clausola **SELECT** per eseguire il mapping del nuovo valore alla colonna della tabella annidata, `[Model]` e un'altra clausola **SELECT** per eseguire il mapping della colonna della tabella annidata alla colonna a livello di case, `[v Assoc Seq Line Items]`. L'aggiunta della parola chiave INCLUDE-STATISTICS alla query consente di vedere la probabilità e il supporto per le indicazioni.  
+ Questo esempio illustra il modello di associazione creato in [Esercitazione intermedia sul data mining &#40;Analysis Services - Data mining&#41;](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b). Viene illustrato come creare una query di stima che indica quali prodotti consigliare a un cliente che ha acquistato un determinato prodotto. Questo tipo di query, in cui i valori vengono forniti al modello in un'istruzione **SELECT…UNION** , è denominata query singleton. Poiché la colonna del modello stimabile che corrisponde ai nuovi valori è una tabella annidata, è necessario usare una clausola **SELECT** per eseguire il mapping del nuovo valore alla colonna della tabella annidata, `[Model]`e un'altra clausola **SELECT** per eseguire il mapping della colonna della tabella annidata alla colonna a livello di case, `[v Assoc Seq Line Items]`. L'aggiunta della parola chiave INCLUDE-STATISTICS alla query consente di vedere la probabilità e il supporto per le indicazioni.  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -219,7 +224,7 @@ ORDER BY NODE_SUPPORT DESC
   
  [Torna all'inizio](#bkmk_top2)  
   
-## Elenco di funzioni  
+## <a name="function-list"></a>Elenco di funzioni  
  Tutti gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] supportano un set comune di funzioni. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta tuttavia le funzioni aggiuntive elencate nella tabella seguente.  
   
 |||  
@@ -235,7 +240,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Viene restituita la varianza per il valore stimato.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

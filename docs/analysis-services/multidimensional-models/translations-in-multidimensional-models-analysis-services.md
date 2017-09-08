@@ -1,30 +1,35 @@
 ---
-title: "Traduzioni nei modelli multidimensionali (Analysis Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.dimensiondesigner.deletelanguagefirm.f1"
+title: Traduzioni nei modelli multidimensionali (Analysis Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f826e36a3fb58cfb1adba2b30a1375e3b84e71
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Traduzioni nei modelli multidimensionali (Analysis Services)
+# <a name="translations-in-multidimensional-models-analysis-services"></a>Traduzioni nei modelli multidimensionali (Analysis Services)
   È possibile definire le traduzioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mediante la finestra di progettazione appropriata per l'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da tradurre. Mediante la definizione di una traduzione viene creato un oggetto **Translation** associato all'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appropriato con i valori letterali espliciti specificati, nella lingua indicata, per le proprietà dell'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] correlato.  
   
-## Elementi di un modello di dati multilingue  
+## <a name="elements-of-a-multi-lingual-data-model"></a>Elementi di un modello di dati multilingue  
  Un modello di dati usato in una soluzione multilingue non richiede solo le etichette tradotte (nomi di campo e descrizioni), ma è necessario fornire anche i valori dei dati articolati in vari alfabeti. Per ottenere una soluzione multilingue è necessario che i singoli attributi associati alle colonne in un database esterno restituiscano i dati.  
   
  I database di esempio Adventure Works (multidimensionale e data warehouse relazionale) illustrano la funzionalità di traduzione di Analysis Services. Il modello di esempio include didascalie e descrizioni tradotte. Il data warehouse relazionale di esempio contiene le colonne dei valori tradotti che forniscono i membri degli attributi localizzati nel modello.  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
   
 1.  Aprire il modello multidimensionale Adventure Works nella finestra di progettazione.  
   
-2.  In Esplora soluzioni aprire Viste origine dati e fare doppio clic su Adventure Works DW\<versione>.dsv.  
+2.  In Esplora soluzioni aprire viste origine dati e fare doppio clic su Adventure Works DW\<versione > DSV.  
   
 3.  Trovare dimDate, dimProduct, dimProductCategory o dimProductSubcateogry. Tutte queste dimensioni contengono gli attributi dei membri tradotti per mese, giorno della settimana, nome del prodotto, nome della categoria e così via.  
   
@@ -43,9 +48,9 @@ caps.handback.revision: 11
   
  [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) nelle Esercitazioni su Analysis Services illustrerà in dettaglio i passaggi per creare e testare le traduzioni.  
   
-## Definizione di traduzioni  
+## <a name="defining-translations"></a>Definizione di traduzioni  
   
-### Aggiungere le traduzioni a un cubo  
+### <a name="add-translations-to-a-cube"></a>Aggiungere le traduzioni a un cubo  
  È possibile aggiungere le traduzioni al cubo, ai gruppi di misure, alle misure, alla dimensione del cubo, alle prospettive, agli indicatori KPI, alle azioni, ai set denominati e ai membri calcolati.  
   
 1.  In Esplora soluzioni fare doppio clic sul nome del cubo per aprire Progettazione cubi.  
@@ -60,7 +65,7 @@ caps.handback.revision: 11
   
 5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
   
-### Aggiungere le traduzioni per una dimensione e gli attributi  
+### <a name="add-translations-to-a-dimension-and-attributes"></a>Aggiungere le traduzioni per una dimensione e gli attributi  
  È possibile aggiungere le traduzioni per le dimensioni del database, gli attributi, le gerarchie e i livelli all'interno di una gerarchia.  
   
  Le didascalie tradotte vengono aggiunte al modello manualmente usando la tastiera o la funzione di copia e incolla, mentre per i membri degli attributi della dimensione è possibile ottenere i valori tradotti da un database esterno. In particolare, è possibile associare la proprietà **CaptionColumn** di un attributo a una colonna in una vista origine dati.  
@@ -75,7 +80,7 @@ caps.handback.revision: 11
   
 3.  Per associare un attributo a una colonna che fornisce valori tradotti:  
   
-    1.  In Progettazione dimensioni | **Traduzioni** aggiungere una nuova traduzione. Scegliere la lingua. Una nuova colonna verrà visualizzata nella pagina per accettare i valori tradotti.  
+    1.  In Progettazione dimensioni | **Traduzioni**aggiungere una nuova traduzione. Scegliere la lingua. Una nuova colonna verrà visualizzata nella pagina per accettare i valori tradotti.  
   
     2.  Posizionare il cursore in una cella vuota accanto a quella degli attributi. L'attributo non può essere la chiave, ma tutti gli altri attributi sono scelte possibili. Verrà visualizzato un piccolo pulsante con un punto. Fare clic sul pulsante per aprire la finestra di dialogo **Traduzione dati attributo**.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 11
   
 5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
   
-### Aggiungere una traduzione del nome del database  
+### <a name="add-a-translation-of-the-database-name"></a>Aggiungere una traduzione del nome del database  
  A livello di database, è possibile aggiungere le traduzioni per il nome e la descrizione del database. Il nome del database tradotto potrebbe essere visibile nelle connessioni client che specificano l'identificatore LCID della lingua, ma questo dipende dallo strumento. Ad esempio, se si visualizza il database in Management Studio il nome tradotto non sarà visibile anche se si specifica l'identificatore delle impostazioni locali per la connessione. L'API usata da Management Studio per connettersi ad Analysis Services non legge la proprietà **Language** .  
   
 1.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul nome del progetto | **Modifica database** per aprire la finestra Progettazione database.  
@@ -100,10 +105,10 @@ caps.handback.revision: 11
   
 4.  Compilare e distribuire il database.  
   
-## Eliminazione di oggetti Translation  
+## <a name="deleting-translation-objects"></a>Eliminazione di oggetti Translation  
  È possibile fare clic con il pulsante destro del mouse su un oggetto di questo tipo in Progettazione dimensioni o Progettazione cubi per rimuoverlo definitivamente. Non è possibile ripristinare o riciclare un oggetto eliminato, quindi è opportuno accertarsi di controllare l'elenco degli oggetti interessati prima di continuare.  
   
-## Risoluzione di traduzioni  
+## <a name="resolving-translations"></a>Risoluzione di traduzioni  
  Se un'applicazione client richiede informazioni corrispondenti all'identificatore di lingua specificato, l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta di risolvere i dati e i metadati per gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] approssimandoli all'identificatore di lingua più vicino. Se l'applicazione client non specifica una lingua predefinita oppure specifica l'identificatore delle impostazioni locali neutro (0) o l'identificatore della lingua predefinita (1024), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce i dati e i metadati per l'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nella lingua predefinita.  
   
  Se l'applicazione client specifica un identificatore di lingua diverso da quello della lingua predefinita, l'istanza scorre tutte le traduzioni disponibili per tutti gli oggetti disponibili. Se l'identificatore di lingua specificato corrisponde all'identificatore di lingua di una traduzione, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce tale traduzione. Nel caso in cui non sia possibile trovare una corrispondenza, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta di utilizzare uno dei metodi seguenti per restituire l'identificatore di lingua più vicino a quello specificato.  
@@ -121,8 +126,8 @@ caps.handback.revision: 11
   
 -   Per tutti gli altri identificatori di lingua specificati, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] estrae la lingua principale dell'identificatore specificato e recupera l'identificatore indicato da Windows come corrispondenza più appropriata per la lingua principale. Se non è possibile trovare una traduzione per l'identificatore di lingua che rappresenta la corrispondenza più appropriata o se l'identificatore specificato è la corrispondenza più appropriata per la lingua principale, viene utilizzata la lingua predefinita.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Lingue e regole di confronto &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [Lingue e regole di confronto &#40; Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

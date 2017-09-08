@@ -1,29 +1,34 @@
 ---
-title: "Query di data mining | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query di stima [Analysis Services]"
-  - "query [DMX], creazione"
-  - "query di stima [DMX]"
-  - "Generatore delle query di stima"
-  - "modelli di data mining [Analysis Services], query"
+title: Query di Data Mining | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- queries [DMX], creating
+- prediction queries [DMX]
+- Prediction Query Builder
+- mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Query di data mining
+# <a name="data-mining-queries"></a>Query di data mining
   Le query di data mining sono utili per molti scopi. È possibile effettuare le operazioni seguenti:  
   
 -   Applicare il modello ai nuovi dati per eseguire una o più stime. È possibile fornire valori di input come parametri o in un batch.  
@@ -76,13 +81,13 @@ caps.handback.revision: 44
 -   Verificare il contenuto di ogni tipo di modello tramite **Microsoft Generic Content Tree Viewer**. Per interpretare queste informazioni, consultare [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ##  <a name="bkmk_Interfaces"></a> Interfacce e strumenti di query  
- È possibile compilare in modo interattivo query di data mining tramite uno degli strumenti di query forniti da SQL Server. Il generatore delle query di stima con interfaccia grafica è disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se si utilizza il generatore delle query di stima per la prima volta, è consigliabile attenersi ai passaggi descritti in [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md) per acquisire familiarità con l'interfaccia. Per una rapida panoramica dei passaggi, vedere la sezione relativa alla creazione di una Query in [Creare una query di stima utilizzando Generatore query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
+ È possibile compilare in modo interattivo query di data mining tramite uno degli strumenti di query forniti da SQL Server. Il generatore delle query di stima con interfaccia grafica è disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se si utilizza il generatore delle query di stima per la prima volta, è consigliabile attenersi ai passaggi descritti in [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) per acquisire familiarità con l'interfaccia. Per una rapida panoramica dei passaggi, vedere la sezione relativa alla creazione di una Query in [Creare una query di stima utilizzando Generatore query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
   
  Il generatore delle query di stima è utile per avviare le query che verranno personalizzate in un secondo momento. È possibile aggiungere facilmente origini dati ed eseguire il relativo mapping alle colonne, quindi passare alla vista DMX e personalizzare la query aggiungendo una clausola WHERE o altre funzioni.  
   
- Una volta acquisita familiarità con i modelli di data mining e con la compilazione di query, queste ultime possono anche essere scritte direttamente tramite DMX (Data Mining Extensions). DMX è un linguaggio di query simile a Transact-SQL che può essere utilizzato da molti client diversi ed è lo strumento ideale per la creazione sia di stime personalizzate sia di query complesse. Per un'introduzione a DMX, vedere [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services - Data mining&#41;](../Topic/Creating%20and%20Querying%20Data%20Mining%20Models%20with%20DMX:%20Tutorials%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ Una volta acquisita familiarità con i modelli di data mining e con la compilazione di query, queste ultime possono anche essere scritte direttamente tramite DMX (Data Mining Extensions). DMX è un linguaggio di query simile a Transact-SQL che può essere utilizzato da molti client diversi ed è lo strumento ideale per la creazione sia di stime personalizzate sia di query complesse. Per un'introduzione a DMX, vedere [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services - Data mining&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0).  
   
- Gli editor DMX sono forniti sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Il generatore delle query di stima può essere utilizzato anche per avviare le query, quindi per modificare la vista nell'editor di testo e copiare l'istruzione DMX in un altro client. Per altre informazioni, vedere [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md) (Strumenti query di data mining).  
+ Gli editor DMX sono forniti sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Il generatore delle query di stima può essere utilizzato anche per avviare le query, quindi per modificare la vista nell'editor di testo e copiare l'istruzione DMX in un altro client. Per altre informazioni, vedere [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md)(Strumenti query di data mining).  
   
  È possibile comporre a livello di codice istruzioni DMX e inviarle dal client al server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite AMO o XMLA. Tuttavia, DMX è il linguaggio che è necessario utilizzare per creare query su un modello di data mining.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 44
   
  Per altre informazioni sui contesti di protezione richiesti per eseguire query di data mining, vedere [Panoramica della sicurezza &#40;data mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Negli argomenti di questa sezione viene presentato dettagliatamente ogni tipo di query di data mining e vengono forniti collegamenti a esempi dettagliati di creazione di query sui modelli di data mining.  
   
  [Query di stima &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -150,24 +155,24 @@ caps.handback.revision: 44
   
  [Query di definizione dei dati &#40;Data mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
- [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md)  
+ [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Utilizzare questi collegamenti per informazioni sulla creazione e sull'utilizzo di query di data mining.  
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Visualizzare esercitazioni e procedure dettagliate su query di data mining|[Lezione 6: Creazione e utilizzo di stime &#40;Esercitazione di base sul data mining&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)<br /><br /> [Esercitazione su DMX per le stime basate su serie temporali](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md)|  
+|Visualizzare esercitazioni e procedure dettagliate su query di data mining|[Lezione 6: Creazione e utilizzo di stime &#40;Esercitazione di base sul data mining&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [Esercitazione su DMX per le stime basate su serie temporali](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
 |Utilizzare strumenti query di data mining in SQL Server Management Studio e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Creare una query DMX in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Creare una query di stima utilizzando Generatore query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Applicare le funzioni di stima a un modello](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Modificare manualmente un query di stima](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Utilizzare i dati esterni presenti nelle query di stima|[Scegliere ed eseguire il mapping di dati di input per una query di stima](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Scegliere ed eseguire il mapping di dati di input per una query di stima](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Utilizzo dei risultati delle query|[Visualizzare e salvare i risultati di una query di stima](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |Utilizzare modelli di query DMX e XMLA forniti in Management Studio|[Creare una query di stima singleton da un modello](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Utilizzare i modelli di Analysis Services in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Acquisire ulteriori informazioni sulle query sul contenuto e visualizzare esempi|[Creare una query sul contenuto di un modello di data mining](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [Eseguire query sui parametri utilizzati per creare un modello di data mining](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Query sul contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |Impostare opzioni di query e risolvere problemi relativi ad autorizzazioni ed errori attinenti alle query|[Modificare il valore di timeout per le query di data mining](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
-|Utilizzare i componenti di data mining in Integration Services|[Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Trasformazione Query di data mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Utilizzare i componenti di data mining in Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

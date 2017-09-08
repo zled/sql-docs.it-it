@@ -1,28 +1,33 @@
 ---
-title: "Passare un database di Analysis Services tra le modalit&#224; ReadOnly e ReadWrite | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ReadOnly - proprietà"
-  - "ReadWriteMode - comando"
-  - "operazioni [Analysis Services - dati multidimensionali]"
+title: "Passare a un database di Analysis Services tra le modalità ReadOnly e ReadWrite | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ReadOnly property
+- ReadWriteMode command
+- operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11eaa65564dcd59442bd8b111c0de009b00e8fd4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Passare un database di Analysis Services tra le modalit&#224; ReadOnly e ReadWrite
+# <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gli amministratori del database possono cambiare la modalità di lettura/scrittura di un database tabulare o multidimensionale nell'ambito di un'operazione di più ampio respiro per la distribuzione di un carico di lavoro di query tra più server usati solo per le query.  
   
  In un database è possibile passare da una modalità all'altra in vari modi. In questo documento vengono illustrati gli scenari comuni seguenti:  
@@ -33,7 +38,7 @@ caps.handback.revision: 16
   
 -   Tramite script usando XMLA o TMSL  
   
-## Attivare la modalità lettura/scrittura di un database in modo interattivo tramite Management Studio  
+## <a name="switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>Attivare la modalità lettura/scrittura di un database in modo interattivo tramite Management Studio  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database, quindi scegliere **Proprietà**.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 7.  Digitare la password e fare clic su **OK** per eseguire il comando di collegamento.  
   
-## Attivare la modalità lettura/scrittura di un database a livello di programmazione tramite AMO  
+## <a name="switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Attivare la modalità lettura/scrittura di un database a livello di programmazione tramite AMO  
  Nell'applicazione C# richiamare `SwitchReadWrite()` con i parametri necessari. Compilare ed eseguire il codice per spostare il database.  
   
 ```  
@@ -91,7 +96,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
 ```  
   
-## Attivare la modalità lettura/scrittura di un database tramite script usando XMLA  
+## <a name="switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>Attivare la modalità lettura/scrittura di un database tramite script usando XMLA  
  Le istruzioni seguenti si applicano a database multidimensionali e tabulari in modalità di compatibilità 1050, 1100 o 1103.  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database, quindi scegliere **Proprietà**.  
@@ -126,19 +131,19 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
     </Attach>  
     ```  
   
-8.  Sostituire `%dbFolder%` con il percorso completo in formato UNC della cartella del database, `%ReadOnlyMode%` con il valore **ReadOnly** o **ReadWrite** corrispondente e `%password%` con la password. I caratteri % fanno parte del modello e devono essere rimossi.  
+8.  Sostituire `%dbFolder%` con il percorso completo in formato UNC della cartella del database, `%ReadOnlyMode%` con il valore **ReadOnly** o **ReadWrite**corrispondente e `%password%` con la password. I caratteri % fanno parte del modello e devono essere rimossi.  
   
 9. Eseguire il comando XMLA.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Disponibilità elevata e scalabilità in Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [Collegamento e scollegamento di database di Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
- [Percorso di archiviazione dei database](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [Proprietà ReadWriteMode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Percorso di archiviazione del database](../../analysis-services/multidimensional-models/database-storage-location.md)   
+ [Proprietà readwritemode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Elemento ReadWriteMode](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [Elemento DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Dbstoragelocation-elemento](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   

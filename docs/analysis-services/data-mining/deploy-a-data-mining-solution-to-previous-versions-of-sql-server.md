@@ -1,31 +1,36 @@
 ---
-title: "Distribuire una soluzione di data mining in versioni precedenti di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compatibilità con versioni precedenti [Analysis Services]"
-  - "controllo [data mining]"
-  - "distribuzione [Analysis Services]"
-  - "time series [Analysis Services]"
-  - "distribuzione [Analysis Services - data mining]"
-  - "sincronizzazione [Analysis Services]"
-  - "distribuzione [Analysis Services]"
+title: Distribuire una soluzione di Data Mining in versioni precedenti di SQL Server | Documenti Microsoft
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Distribuire una soluzione di data mining in versioni precedenti di SQL Server
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Distribuire una soluzione di data mining in versioni precedenti di SQL Server
   In questa sezione vengono descritti i problemi di compatibilità noti che possono verificarsi quando si tenta di distribuire in un database che utilizza SQL Server 2005 Analysis Services una struttura o un modello di data mining creato in un'istanza di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] oppure quando si distribuiscono in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]modelli creati in SQL Server 2005.  
   
  La distribuzione in un'istanza di SQL Server 2000 Analysis Services non è supportata.  
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  Se viene utilizzato il provider dati di SqlClient 10 come provider per l'origine dei dati del modello, è necessario modificare anche la definizione dell'origine dati per specificare la versione precedente di SQL Server Native Client. In caso contrario, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] viene generato un errore indicante che il provider non è registrato.  
   
 ##  <a name="bkmk_Holdout"></a> Distribuzione di modelli con dati di controllo  
- Se si utilizza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] per creare una struttura di data mining che contiene una partizione di dati di controllo utilizzata per testare i modelli di data mining, è possibile distribuire la struttura di data mining in un'istanza di SQL Server 2005, ma le informazioni sulle partizioni andranno perse.  
+ Se si crea una struttura di data mining che contiene una partizione di controllo utilizzata per il testing di modelli di data mining, la struttura di data mining può essere distribuita a un'istanza di SQL Server 2005, ma le informazioni sulle partizioni andranno perse.  
   
  Quando si apre la struttura di data mining in SQL Server 2005 Analysis Services, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] viene generato un errore e la struttura viene rigenerata per rimuovere la partizione di dati di controllo.  
   
- Al termine della ricompilazione della struttura, la dimensione della partizione di dati di controllo non è più disponibile nella finestra delle proprietà, tuttavia il valore \<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent> potrebbe essere ancora presente nel file script ASSL.  
+ Dopo la struttura è stata ricostruita, le dimensioni della partizione di controllo non sono più disponibile nella finestra Proprietà. Tuttavia, il valore \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) potrebbe essere ancora presente nel file di script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Distribuzione di modelli con filtri  
- Se si utilizza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] per applicare un filtro a un modello di data mining, è possibile distribuire il modello in un'istanza di SQL Server 2005, ma il filtro non verrà applicato.  
+ Se si applica un filtro a un modello di data mining, il modello può essere distribuito a un'istanza di SQL Server 2005, ma il filtro non verrà applicato.  
   
  Quando si apre il modello di data mining, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene generato un errore e il modello viene rigenerato per rimuovere il filtro.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  Se si tenta di sincronizzare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , il server restituisce un errore e la sincronizzazione del database non riesce.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

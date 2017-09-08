@@ -1,29 +1,34 @@
 ---
-title: "Creare membri calcolati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "membri calcolati [Analysis Services]"
-  - "misure personalizzate [Analysis Services]"
-  - "membri [Analysis Services], calcolati"
-  - "calcoli [Analysis Services], membri calcolati"
+title: Creare membri calcolati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare membri calcolati
+# <a name="create-calculated-members"></a>Creare membri calcolati
   È possibile creare misure o membri di dimensioni personalizzati, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
   
  Le definizioni dei membri calcolati vengono archiviate, mentre i relativi valori sono presenti solo in memoria. Nell'esempio precedente, i valori convertiti vengono visualizzati agli utenti finali, ma non sono archiviati come dati del cubo.  
@@ -76,12 +81,12 @@ caps.handback.revision: 26
   
  È possibile trascinare o copiare componenti del cubo dalla scheda **Metadati** del riquadro **Strumenti di calcolo** alla casella **Espressione** nel riquadro Espressioni di calcolo. È possibile trascinare o copiare funzioni dalla scheda **Funzioni** del riquadro **Strumenti di calcolo** alla casella **Espressione** nel riquadro Espressioni di calcolo.  
   
-## Indirizzamento dei membri calcolati  
+## <a name="addressing-calculated-members"></a>Indirizzamento dei membri calcolati  
  Quando si crea un membro calcolato nella scheda **Calcoli** di **Progettazione cubi**, occorre specificare la gerarchia padre in cui tale membro viene archiviato. La gerarchia padre determina come è possibile indirizzare il membro calcolato, in base alle regole seguenti:  
   
 -   Se un membro calcolato viene creato nella dimensione delle misure, sarà indirizzabile in tale dimensione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Calcoli nei modelli multidimensionali](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

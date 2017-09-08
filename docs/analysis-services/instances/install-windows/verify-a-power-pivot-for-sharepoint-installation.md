@@ -1,27 +1,32 @@
 ---
-title: "Verificare un&#39;installazione Power Pivot per SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verificare di PowerPivot per SharePoint | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verificare un&#39;installazione Power Pivot per SharePoint
+# <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Verificare un'installazione Power Pivot per SharePoint
   Per amministrare un'istanza di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint installata in una farm di SharePoint, usare Amministrazione centrale SharePoint. Come minimo, è possibile controllare le pagine in Amministrazione centrale e nei siti di SharePoint per verificare che le funzionalità e i componenti server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] siano disponibili. Tuttavia, per verificare completamente un'installazione, è necessario disporre di una cartella di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pubblicabile in SharePoint e accessibile da una raccolta. A scopo di test, è possibile pubblicare una cartella di lavoro di esempio già contenente dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usarla per confermare la corretta configurazione dell'integrazione SharePoint.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
 ##  <a name="verifyinstall"></a> Verifica dell'integrazione con Amministrazione centrale  
  Per verificare l'integrazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con Amministrazione centrale, eseguire queste operazioni:  
@@ -32,13 +37,13 @@ caps.handback.revision: 15
   
      Facoltativamente, è possibile modificare le impostazioni del browser per evitare di dover immettere un nome utente e una password a ogni apertura di Amministrazione centrale. Per aggiungere Amministrazione centrale come sito attendibile, effettuare le operazioni seguenti.  
   
-    1.  In Internet Explorer fare clic su **Opzioni Internet** dal menu Strumenti.  
+    1.  In Internet Explorer fare clic su **Opzioni Internet**dal menu Strumenti.  
   
     2.  Nella scheda Sicurezza della sezione **Selezionare l'area di cui visualizzare o modificare le impostazioni** fare clic su Siti attendibili, quindi su Siti.  
   
-    3.  Deselezionare la casella di controllo **Richiedi verifica server (https:) per tutti i siti compresi nell'area**.  
+    3.  Deselezionare la casella di controllo **Richiedi verifica server (https:) per tutti i siti compresi nell'area** .  
   
-    4.  In **Aggiungi il sito Web all'area** digitare l'URL al sito, quindi fare clic su **Aggiungi**.  
+    4.  In **Aggiungi il sito Web all'area**digitare l'URL al sito, quindi fare clic su **Aggiungi**.  
   
     5.  Fare clic su **Chiudi**, quindi su **OK**.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 15
   
 5.  In Impostazioni sistema di Amministrazione centrale fare clic su **Gestisci servizi nel server**.  
   
-6.  Verificare che il **Servizio di sistema[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] di SQL Server ** sia avviato.  
+6.  Verificare che il **Servizio di sistema[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] di SQL Server**  sia avviato.  
   
      In una farm SharePoint a più server potrebbe essere necessario cambiare il server visualizzato per verificare che tutti i server in cui è stato distribuito [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] siano in esecuzione.  
   
@@ -61,27 +66,27 @@ caps.handback.revision: 15
   
      In alternativa, fare clic sullo spazio vuoto accanto a **Applicazione di servizio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] predefinita** per selezionare la riga e su **Proprietà** per visualizzare le impostazioni di configurazione per questa applicazione di servizio. È possibile modificare sia le impostazioni di configurazione che le proprietà dell'applicazione per modificare la configurazione del server. Per altre informazioni, vedere [Creare e configurare un'applicazione del servizio Power Pivot](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
-## Verifica dell'integrazione a livello di sito  
+## <a name="verify-integration-at-the-site-level"></a>Verifica dell'integrazione a livello di sito  
  Per verificare l'integrazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con un sito di SharePoint, eseguire queste operazioni:  
   
-1.  In un browser aprire l'applicazione Web creata. Se si sono usati valori predefiniti, è possibile specificare http://\<nome del computer> nell'indirizzo URL.  
+1.  In un browser aprire l'applicazione Web creata. Se si utilizza valori predefiniti, è possibile specificare http://\<il nome del computer > nell'indirizzo URL.  
   
 2.  Verificare che le funzionalità di elaborazione e di accesso ai dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] siano disponibili nell'applicazione. È possibile eseguire questa operazione verificando la presenza di modelli di libreria forniti da [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]:  
   
     1.  Selezionare **Contenuto del sito**.  
   
-    2.  L'elenco delle app dovrebbe includere **Libreria feed di dati** e **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Raccolta**. Questi modelli di raccolta vengono forniti dalla funzionalità [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e saranno visibili nell'elenco delle raccolte se la funzionalità è integrata correttamente.  
+    2.  L'elenco delle app dovrebbe includere **Libreria feed di dati** e **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Raccolta**. Questi modelli di raccolta vengono forniti dalla funzionalità [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e saranno visibili nell'elenco delle raccolte se la funzionalità è integrata correttamente.  
   
-## Verifica dell'accesso a dati in un server  
+## <a name="verify-data-access-on-the-server"></a>Verifica dell'accesso a dati in un server  
  Per verificare l'accesso ai dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] nel server, eseguire queste operazioni:  
   
-1.  [Scaricare](http://go.microsoft.com/fwlink/?LinkID=219108) i dati di esempio Picnic forniti con l'esercitazione Reporting Services. La cartella di lavoro di esempio contenuta in questo download sarà usata per verificare l'accesso ai dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]. Estrarre i file.  
+1.  [Scaricare](http://go.microsoft.com/fwlink/?LinkID=219108) i dati di esempio Picnic forniti con l'esercitazione Reporting Services. La cartella di lavoro di esempio contenuta in questo download sarà usata per verificare l'accesso ai dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Estrarre i file.  
   
 2.  Caricare la cartella di lavoro di Excel (con estensione xlsx) in Documenti condivisi. La cartella di lavoro contiene dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] incorporati.  
   
 3.  Fare clic sul documento per aprirlo dalla raccolta.  
   
-4.  Fare clic su un filtro dei dati o un filtro nella parte superiore della cartella di lavoro. Mese, colore e tipo sono filtri dei dati in questa cartella di lavoro. Facendo clic su un filtro dei dati viene avviata una query [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], dimostrando che il server è operativo. Il server caricherà i dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in background e restituirà i risultati.  
+4.  Fare clic su un filtro dei dati o un filtro nella parte superiore della cartella di lavoro. Mese, colore e tipo sono filtri dei dati in questa cartella di lavoro. Facendo clic su un filtro dei dati viene avviata una query [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , dimostrando che il server è operativo. Il server caricherà i dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in background e restituirà i risultati.  
   
 5.  Tornare alla raccolta. Selezionare la freccia in giù a destra della cartella di lavoro, quindi fare clic su **Avvia Power View**. Con questo passaggio viene confermata l'operatività della funzionalità [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] in Reporting Services. Se Reporting Services non è stato installato, ignorare questo passaggio.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 15
   
 7.  In Tipo di server selezionare **Analysis Services**.  
   
-8.  In Nome server immettere **\<nome-server>\powerpivot**, dove **\<nome-server>** è il nome del computer contenente l'installazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint.  
+8.  In nome Server immettere  **\<nome server > \powerpivot**, dove  **\<nome server >** è il nome del computer in cui è il [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint installazione.  
   
 9. Fare clic su **Connetti**. Viene verificata la disponibilità del server Analysis Services.  
   

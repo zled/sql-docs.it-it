@@ -1,24 +1,29 @@
 ---
-title: "Colonne di dati degli eventi di report di stato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "categoria di eventi di report di stato"
+title: Colonne di dati di report di stato | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati degli eventi di report di stato
+# <a name="progress-reports-data-columns"></a>Colonne di dati degli eventi di report di stato
   La categoria di eventi di report di stato include le classi di eventi seguenti:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
@@ -30,7 +35,7 @@ caps.handback.revision: 34
   
  Nelle tabelle seguenti vengono elencate le colonne di dati per ognuna di queste classi di eventi.  
   
-## Colonne di dati dell'evento Progress Report Begin  
+## <a name="progress-report-begindata-columns"></a>Colonne di dati dell'evento Progress Report Begin  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -55,7 +60,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene i dati di tipo text associati all'evento restituito.|  
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento restituito.|  
   
-## Colonne di dati dell'evento Progress Report End  
+## <a name="progress-report-enddata-columns"></a>Colonne di dati dell'evento Progress Report End  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene i dati di tipo text associati all'evento restituito.|  
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento restituito.|  
   
-## Colonne di dati dell'evento Progress Report Current  
+## <a name="progress-report-currentdata-columns"></a>Colonne di dati dell'evento Progress Report Current  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -112,7 +117,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene i dati di tipo text associati all'evento restituito.|  
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento restituito.|  
   
-## Colonne di dati dell'evento Progress Report Error  
+## <a name="progress-report-errordata-columns"></a>Colonne di dati dell'evento Progress Report Error  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -140,7 +145,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene i dati di tipo text associati all'evento restituito.|  
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento restituito.|  
   
-## Vedere anche  
- [Categoria di eventi di report di stato](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

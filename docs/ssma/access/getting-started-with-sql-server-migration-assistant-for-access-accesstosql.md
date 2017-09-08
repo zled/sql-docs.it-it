@@ -23,14 +23,14 @@ helpviewer_keywords:
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: dfec6c6fdcf4640199c08190b558e68f63cfec1f
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
 ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introduzione a SQL Server Migration Assistant per Access (AccessToSQL)
@@ -114,7 +114,7 @@ La barra degli strumenti di migrazione include i comandi seguenti:
   
 |Pulsante|Funzione|  
 |----------|------------|  
-|**Converti, carica ed eseguire la migrazione**|Converte i database di Access, carica oggetti convertiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, e viene eseguita la migrazione di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, un'unica operazione.|  
+|**Convertire, caricare ed eseguire la migrazione**|Converte i database di Access, carica oggetti convertiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, e viene eseguita la migrazione di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, un'unica operazione.|  
 |**Creazione di Report**|Converte lo schema di accesso selezionato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o sintassi di database SQL di Azure e quindi crea un report che mostra come esito positivo della conversione.<br /><br />Questo comando è disponibile solo quando gli oggetti selezionati in Visualizzatore metadati di accesso.|  
 |**Converti Schema**|Consente di convertire lo schema di accesso selezionato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o degli schemi di database SQL di Azure.<br /><br />Questo comando è disponibile solo quando gli oggetti selezionati in Visualizzatore metadati di accesso.|  
 |**La migrazione dei dati**|Esegue la migrazione di dati dal database di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Prima di eseguire questo comando, è necessario convertire gli schemi di accesso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o schemi di database SQL di Azure, quindi caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure.<br /><br />Questo comando è disponibile solo quando gli oggetti selezionati in Visualizzatore metadati di accesso.|  

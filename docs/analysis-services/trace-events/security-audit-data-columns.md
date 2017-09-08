@@ -1,24 +1,29 @@
 ---
-title: "Colonne di dati degli eventi di controllo di sicurezza | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Controllo di sicurezza - categoria di eventi [SQL Server]"
+title: Colonne di dati di controllo di sicurezza | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati degli eventi di controllo di sicurezza
+# <a name="security-audit-data-columns"></a>Colonne di dati degli eventi di controllo di sicurezza
   La categoria di eventi Controllo di sicurezza include le classi di eventi seguenti:  
   
 ||||  
@@ -32,7 +37,7 @@ caps.handback.revision: 36
   
  Nelle tabelle seguenti vengono elencate le colonne di dati per ognuna di queste classi di eventi.  
   
-## Audit Login  
+## <a name="audit-login"></a>Audit Login  
   
 |||||  
 |-|-|-|-|  
@@ -52,7 +57,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|Nome dell'utente in forma canonica. Ad esempio, engineering.microsoft.com/software/someone.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Audit Logout  
+## <a name="audit-logout"></a>Audit Logout  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -61,7 +66,7 @@ caps.handback.revision: 36
 |EndTime|4|5|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |Durata|5|2|Durata dell'evento in millisecondi.|  
 |CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
-|Esito positivo|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
+|Operazione completata|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |NTUserName|32|8|Nome utente di Windows.|  
 |NTDomainName|33|8|Dominio Windows di appartenenza dell'utente.|  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|Nome dell'utente in forma canonica. Ad esempio, engineering.microsoft.com/software/someone.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Audit Server Starts And Stops  
+## <a name="audit-server-starts-and-stops"></a>Audit Server Starts And Stops  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 36
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Audit Object Permission Event  
+## <a name="audit-object-permission-event"></a>Audit Object Permission Event  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -109,7 +114,7 @@ caps.handback.revision: 36
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Audit Admin Operations Event  
+## <a name="audit-admin-operations-event"></a>Audit Admin Operations Event  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 36
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Categoria di eventi Controllo di sicurezza](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

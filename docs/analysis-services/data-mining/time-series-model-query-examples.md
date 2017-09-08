@@ -1,33 +1,38 @@
 ---
-title: "Esempi di query sul modello di serie temporale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "time series algorithms [Analysis Services]"
-  - "MISSING_VALUE_SUBSTITUTION"
-  - "serie temporale [Analysis Services]"
-  - "predictions [Analysis Services], time series"
-  - "EXTEND_MODEL_CASES parameter"
-  - "REPLACE_MODEL_CASES parameter"
-  - "prediction queries [DMX]"
-  - "PREDICTION_SMOOTHING"
-  - "query sul contenuto [DMX]"
+title: Esempi di Query del modello Time Series | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time series algorithms [Analysis Services]
+- MISSING_VALUE_SUBSTITUTION
+- time series [Analysis Services]
+- predictions [Analysis Services], time series
+- EXTEND_MODEL_CASES parameter
+- REPLACE_MODEL_CASES parameter
+- prediction queries [DMX]
+- PREDICTION_SMOOTHING
+- content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b43b6b6144931dea129aeb82531fdbc5204121d0
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Esempi di query sul modello di serie temporale
+# <a name="time-series-model-query-examples"></a>Esempi di query sul modello di serie temporale
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che consente di fornire dettagli sui criteri individuati durante l'analisi, o una query di stima, che consente di utilizzare i criteri presenti nel modello di data mining per eseguire stime relative ai nuovi dati. Una query sul contenuto per un modello Time Series, ad esempio, potrebbe fornire dettagli aggiuntivi sulle strutture periodiche rilevate, mentre una query di stima potrebbe fornire stime per i 5-10 intervalli di tempo successivi. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
   
  In questa sezione viene illustrato come creare entrambi i tipi di query per i modelli basati sull'algoritmo Microsoft Time Series.  
@@ -50,7 +55,7 @@ caps.handback.revision: 34
   
  [Sostituzione di valori mancanti nei modelli Time Series](#bkmk_MissingValues)  
   
-## Recupero di informazioni su un modello Time Series  
+## <a name="getting-information-about-a-time-series-model"></a>Recupero di informazioni su un modello Time Series  
  Una query sul contenuto del modello può fornire informazioni di base sul modello, ad esempio i parametri utilizzati durante la creazione del modello o l'ora dell'ultima volta in cui è stato elaborato il modello. Nell'esempio seguente viene illustrata la sintassi di base per l'esecuzione di una query sul contenuto del modello utilizzando i set di righe dello schema di data mining.  
   
 ###  <a name="bkmk_Query1"></a> Query di esempio 1: Recupero di hint di periodicità per il modello  
@@ -73,7 +78,6 @@ WHERE MODEL_NAME = '<model name>'
 > [!NOTE]  
 >  Nell'esempio i risultati sono stati troncati per una maggiore leggibilità.  
   
- [Torna all'inizio](#bkmk_Top)  
   
 ###  <a name="bkmk_Query2"></a> Query di esempio 2: Recupero dell'equazione per un modello ARIMA  
  È possibile recuperare l'equazione per un modello ARIMA eseguendo una query su qualsiasi nodo in un singolo albero. Ogni albero all'interno di un modello ARIMA rappresenta una periodicità diversa e, in presenza di più serie di dati, ciascuna serie di dati disporrà di un set di alberi di periodicità. Per recuperare l'equazione per una serie di dati specifica, pertanto, è innanzitutto necessario identificare l'albero.  
@@ -107,7 +111,6 @@ WHERE NODE_NAME = 'TA00000007'
   
  Per altre indicazioni su come interpretare queste informazioni, vedere [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
- [Torna all'inizio](#bkmk_Top)  
   
 ###  <a name="bkmk_Query3"></a> Query di esempio 3: Recupero dell'equazione per un modello ARTxp  
  Per un modello ARTxp, a ogni livello dell'albero vengono archiviate informazioni diverse. Per altre informazioni sulla struttura di un modello ARTxp e su come interpretare le informazioni nell'equazione, vedere [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
@@ -129,9 +132,8 @@ AND NODE_TYPE = 15
   
  Per altre indicazioni su come interpretare queste informazioni, vedere [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
- [Torna all'inizio](#bkmk_Top)  
   
-## Creazione di stime in un modello Time Series  
+## <a name="creating-predictions-on-a-time-series-model"></a>Creazione di stime in un modello Time Series  
  A partire da [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]è possibile aggiungere nuovi dati a un modello Time Series e incorporarli automaticamente nel modello. I nuovi dati possono essere aggiunti a un modello di data mining Time Series in uno dei due modi indicati di seguito:  
   
 -   Usando **PREDICTION JOIN** per unire in join i dati in un'origine esterna ai dati di training.  
@@ -145,13 +147,13 @@ AND NODE_TYPE = 15
   
      L'estensione dei case del modello risulta utile per l'aggiornamento continuo del modello con i dati nuovi. Se, ad esempio, si desidera aumentare il training set nel tempo, è sufficiente estendere il modello.  
   
-     Per estendere i dati, creare un'istruzione **PREDICTION JOIN** in un modello Time Series, specificare l'origine dei nuovi dati e usare l'argomento **EXTEND_MODEL_CASES**.  
+     Per estendere i dati, creare un'istruzione **PREDICTION JOIN** in un modello Time Series, specificare l'origine dei nuovi dati e usare l'argomento **EXTEND_MODEL_CASES** .  
   
 -   **Sostituisci:** : quando si sostituiscono i dati della serie di dati, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il modello per il quale è stato eseguito il training viene mantenuto, ma i nuovi valori vengono utilizzati per sostituire alcuni o tutti i case di training esistenti. La dimensione dei dati di training pertanto non viene mai modificata, mentre i case vengono sostituiti continuamente con dati più aggiornati. Se si forniscono dati abbastanza nuovi, è possibile sostituire i dati di training con una serie completamente nuova.  
   
      La sostituzione dei case del modello risulta utile qualora si desideri eseguire il training per un modello in un case set, quindi applicare il modello a una serie di dati diversa.  
   
-     Per sostituire i dati, creare un'istruzione **PREDICTION JOIN** in un modello Time Series, specificare l'origine dei nuovi dati e usare l'argomento **REPLACE_MODEL_CASES**.  
+     Per sostituire i dati, creare un'istruzione **PREDICTION JOIN** in un modello Time Series, specificare l'origine dei nuovi dati e usare l'argomento **REPLACE_MODEL_CASES** .  
   
 > [!NOTE]  
 >  Non è possibile eseguire stime cronologiche quando si aggiungono nuovi dati.  
@@ -164,7 +166,6 @@ AND NODE_TYPE = 15
   
  Per esempi di query e altre informazioni sulla sintassi per l'uso di **REPLACE_MODEL_CASES** ed **EXTEND_MODEL_CASES**, vedere [PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md).  
   
- [Torna all'inizio](#bkmk_Top)  
   
 ###  <a name="bkmk_EXTEND"></a> Esecuzione di stime con EXTEND_MODEL_CASES  
  Il comportamento delle stime varia a seconda se si esegue l'estensione o la sostituzione dei case del modello. Se si estende un modello, i nuovi dati vengono aggiunti alla fine della serie e le dimensioni del set di training aumentano. Gli intervalli di tempo utilizzati per le query di stima iniziano tuttavia sempre alla fine della serie originale. Se si aggiungono pertanto tre nuovi punti dati e si richiedono sei stime, le prime tre stime restituite si sovrappongono tuttavia ai nuovi dati. In questo caso, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce i nuovi punti dati effettivi anziché eseguire una stima, finché non vengono utilizzati tutti i nuovi punti dati. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono quindi eseguite le stime in base alla serie composta.  
@@ -183,20 +184,19 @@ AND NODE_TYPE = 15
   
      Le cifre relative alle vendite effettive vengono restituite per i primi tre intervalli di tempo, mentre le stime basate sul modello esteso vengono restituite per i tre intervalli di tempo successivi.  
   
- [Torna all'inizio](#bkmk_Top)  
   
 ###  <a name="bkmk_REPLACE"></a> Esecuzione di stime con REPLACE_MODEL_CASES  
  Se si sostituiscono i case in un modello, le dimensioni del modello rimangono invariate, ma i singoli case nel modello vengono sostituiti in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ciò risulta utile per le stime incrociate e scenari in cui è importante mantenere dimensioni consistenti del set di dati di training.  
   
  Si supponga ad esempio che i dati relativi alle vendite di uno dei negozi non siano sufficienti. È possibile creare un modello generale calcolando la media delle vendite per tutti i negozi in una particolare regione, quindi eseguire il training di un modello. Per eseguire stime per il negozio i cui dati relativi alle vendite non sono sufficienti, creare quindi un'istruzione **PREDICTION JOIN** sui nuovi dati di vendita solo per il negozio in questione. In questo caso, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono mantenuti i modelli che derivano dal modello regionale, mentre i case di training esistenti vengono sostituiti con i dati del singolo negozio. Si otterrà pertanto una maggiore corrispondenza tra i valori della stima e le linee di tendenza del singolo negozio.  
   
- Quando si usa l'argomento **REPLACE_MODEL_CASES**, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono continuamente aggiunti nuovi case alla fine del case set, mentre un numero corrispondente di case viene eliminato dall'inizio del case set. Se si aggiunge una quantità di nuovi dati maggiore rispetto a quella nel set di training originale, i dati meno recenti vengono eliminati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si specifica un numero sufficiente di nuovi valori, le stime possono essere basate sui dati completamente nuovi.  
+ Quando si usa l'argomento **REPLACE_MODEL_CASES** , in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono continuamente aggiunti nuovi case alla fine del case set, mentre un numero corrispondente di case viene eliminato dall'inizio del case set. Se si aggiunge una quantità di nuovi dati maggiore rispetto a quella nel set di training originale, i dati meno recenti vengono eliminati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si specifica un numero sufficiente di nuovi valori, le stime possono essere basate sui dati completamente nuovi.  
   
  Si supponga ad esempio di avere eseguito il training per il modello in un set di dati di case contenente 1000 righe. Si aggiungono quindi 100 righe di nuovi dati. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eliminate le prime 100 righe dal set di training e le 100 righe di nuovi dati vengono aggiunte alla fine del set, in modo da ottenere un totale di 1000. Se si aggiungono 1100 righe di dati nuovi, vengono utilizzate solo le 1000 righe più recenti.  
   
  Per fare un altro esempio, si supponga di volere aggiungere nuovi dati relativi a tre mesi ed eseguire tre nuove stime. In tal caso, effettuare quanto segue:  
   
--   Creare un'istruzione **PREDICTION JOIN** in un modello Time Series e usare l'argomento **REPLACE_MODEL_CASE**.  
+-   Creare un'istruzione **PREDICTION JOIN** in un modello Time Series e usare l'argomento **REPLACE_MODEL_CASE** .  
   
 -   Specificare l'origine dei nuovi dati relativi a tre mesi. È possibile che tali dati provengano da un'origine completamente diversa da quella dei dati di training originali.  
   
@@ -210,12 +210,11 @@ AND NODE_TYPE = 15
   
  Per esempi di query e altre informazioni sulla sintassi per l'uso di **REPLACE_MODEL_CASES** ed **EXTEND_MODEL_CASES**, vedere [PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md).  
   
- [Torna all'inizio](#bkmk_Top)  
   
 ###  <a name="bkmk_MissingValues"></a> Sostituzione di valori mancanti nei modelli Time Series  
- Quando si aggiungono nuovi dati a un modello Time Series usando un'istruzione **PREDICTION JOIN** , nel nuovo set di dati non può mancare alcun valore. Se una serie è incompleta, il modello deve fornire i valori mancanti utilizzando un valore Null, più medie numeriche, una media numerica specifica o un valore stimato. Se si specifica **EXTEND_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sostituisce i valori mancanti con stime basate sul modello originale. Quando si usa **REPLACE_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sostituisce i valori mancanti con il valore specificato nel parametro *MISSING_VALUE_SUBSTITUTION*.  
+ Quando si aggiungono nuovi dati a un modello Time Series usando un'istruzione **PREDICTION JOIN** , nel nuovo set di dati non può mancare alcun valore. Se una serie è incompleta, il modello deve fornire i valori mancanti utilizzando un valore Null, più medie numeriche, una media numerica specifica o un valore stimato. Se si specifica **EXTEND_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sostituisce i valori mancanti con stime basate sul modello originale. Quando si usa **REPLACE_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sostituisce i valori mancanti con il valore specificato nel parametro *MISSING_VALUE_SUBSTITUTION* .  
   
-## Elenco delle funzioni di stima  
+## <a name="list-of-prediction-functions"></a>Elenco delle funzioni di stima  
  Tutti gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] supportano un set comune di funzioni. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series, tuttavia, supporta funzioni aggiuntive, elencate nella tabella seguente.  
   
 |||  
@@ -229,12 +228,11 @@ AND NODE_TYPE = 15
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima generali &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
- [Torna all'inizio](#bkmk_Top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Riferimento tecnico per algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

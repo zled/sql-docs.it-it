@@ -1,24 +1,29 @@
 ---
-title: "Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzare una connessione BI Semantic Model in Excel o Reporting Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services
+# <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services
   In questo argomento viene illustrato come utilizzare le connessioni BISM create utilizzando le istruzioni in altri argomenti. Se non è ancora stato creato un modello BI Semantic Model, vedere [Creare una connessione BI Semantic Model a una cartella di lavoro di](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [Creare una connessione BI Semantic Model a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Connessione da Excel  
@@ -30,7 +35,7 @@ caps.handback.revision: 9
   
 -   Fare clic con il pulsante destro del mouse su una connessione BI Semantic Model in una raccolta e selezionare **Avvia Excel**.  
   
- ![Schermata del comando di avvio rapido BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "Schermata del comando di avvio rapido BISM")  
+ ![Il comando di avvio rapido di schermata di BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "il comando di avvio rapido di schermata di BISM")  
   
  Fare clic su **Abilita** quando viene richiesto di abilitare le connessioni dati. In Excel verrà aperta una cartella di lavoro che contiene un elenco dei campi della tabella pivot in cui sono indicati i campi dell'origine dati sottostante.  
   
@@ -40,11 +45,11 @@ caps.handback.revision: 9
   
 2.  Fare clic su **Da Analysis Services** e usare la Connessione guidata dati per importare i dati.  
   
-3.  Immettere l'URL di SharePoint del file di connessione BI Semantic Model (ad esempio, **http://mysharepoint/shared documents/myData.bism**). Accettare l'opzione predefinita delle credenziali di accesso, **Usa autenticazione di Windows**. Scegliere **Avanti**.  
+3.  Immettere l'URL di SharePoint del file di connessione BI Semantic Model (ad esempio, `http://mysharepoint/shared documents/myData.bism`). Accettare l'opzione predefinita delle credenziali di accesso, **Usa autenticazione di Windows**. Scegliere **Avanti**.  
   
-4.  Nella pagina successiva fare clic di nuovo su **Avanti**. Anche se viene richiesto di selezionare un database, è possibile utilizzare solo quello specificato nella connessione BISM.  
+4.  Nella pagina successiva fare clic di nuovo su **Avanti** . Anche se viene richiesto di selezionare un database, è possibile utilizzare solo quello specificato nella connessione BISM.  
   
-5.  Nell'ultima pagina è possibile fornire un nome descrittivo e una descrizione. Fare clic su **Fine** e quindi fare clic su **OK** nella finestra di dialogo Importa dati per importare i dati.  
+5.  Nell'ultima pagina è possibile fornire un nome descrittivo e una descrizione. Fare clic su **Fine**e quindi fare clic su **OK** nella finestra di dialogo Importa dati per importare i dati.  
   
  Affinché le connessioni vengano eseguite correttamente, è necessario che sul computer client siano installati Excel 2010 e MSOLAP.5.dll. È possibile ottenere il provider installando la versione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel corrente per questa versione oppure è possibile scaricare solo il provider OLE DB per Analysis Services dalla [pagina di download del Feature Pack](http://go.microsoft.com/fwlink/?linkid=214066).  
   

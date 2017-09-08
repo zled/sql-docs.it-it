@@ -1,22 +1,27 @@
 ---
-title: "Colonne di dati relative agli eventi di elaborazione delle query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Colonne di dati degli eventi di elaborazione delle query | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati relative agli eventi di elaborazione delle query
+# <a name="query-processing-events-data-columns"></a>Colonne di dati relative agli eventi di elaborazione delle query
   La categoria degli eventi di elaborazione query include le classi di eventi seguenti:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
  Nelle tabelle seguenti vengono elencate le colonne di dati per ognuna di queste classi di eventi.  
   
-## Query Cube Begin  
+## <a name="query-cube-begin"></a>Query Cube Begin  
   
 |||||  
 |-|-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Query Cube End  
+## <a name="query-cube-end"></a>Query Cube End  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Calculate Non Empty Begin  
+## <a name="calculate-non-empty-begin"></a>Calculate Non Empty Begin  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -110,7 +115,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Calculate Non Empty Current  
+## <a name="calculate-non-empty-current"></a>Calculate Non Empty Current  
   
 |||||  
 |-|-|-|-|  
@@ -133,7 +138,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Calculate Non Empty End  
+## <a name="calculate-non-empty-end"></a>Calculate Non Empty End  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -154,7 +159,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Serialize Results Begin  
+## <a name="serialize-results-begin"></a>Serialize Results Begin  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -175,7 +180,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Serialize Results Current  
+## <a name="serialize-results-current"></a>Serialize Results Current  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -197,7 +202,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Serialize Results End  
+## <a name="serialize-results-end"></a>Serialize Results End  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -218,50 +223,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Execute MDX Script Begin  
-  
-|**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|La classe di evento viene utilizzata per suddividere gli eventi in categorie.|  
-|EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento:<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
-|CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|EndTime|4|5|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Durata dell'evento in millisecondi.|  
-|CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
-|ProgressTotal|9|1|Stato complessivo.|  
-|IntegerData|10|1|Dati di tipo integer.|  
-|ObjectType|12|1|Tipo di oggetto.|  
-|ObjectPath|14|8|Percorso dell'oggetto. Elenco delimitato da virgole di elementi padre, a partire dall'elemento padre dell'oggetto.|  
-|ConnectionID|25|1|ID connessione univoco.|  
-|DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  
-|NTCanonicalUserName|40|8|Nome dell'utente in forma canonica. Ad esempio, engineering.microsoft.com/software/someone.|  
-|SPID|41|1|ID processo server. Identifica in modo univoco una sessione utente. Corrisponde direttamente al GUID di sessione utilizzato da XML/A.|  
-|TextData|42|9|Dati di testo associati all'evento.|  
-|ServerName|43|8|Nome del server che produce l'evento.|  
-  
-## Execute MDX Script Current  
-  
-|**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|La classe di evento viene utilizzata per suddividere gli eventi in categorie.|  
-|CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|EndTime|4|5|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Durata dell'evento in millisecondi.|  
-|CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
-|ProgressTotal|9|1|Stato complessivo.|  
-|IntegerData|10|1|Dati di tipo integer.|  
-|ObjectType|12|1|Tipo di oggetto.|  
-|ObjectPath|14|8|Percorso dell'oggetto. Elenco delimitato da virgole di elementi padre, a partire dall'elemento padre dell'oggetto.|  
-|ConnectionID|25|1|ID connessione univoco.|  
-|DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  
-|NTCanonicalUserName|40|8|Nome dell'utente in forma canonica. Ad esempio, engineering.microsoft.com/software/someone.|  
-|SPID|41|1|ID processo server. Identifica in modo univoco una sessione utente. Corrisponde direttamente al GUID di sessione utilizzato da XML/A.|  
-|TextData|42|9|Dati di testo associati all'evento.|  
-|ServerName|43|8|Nome del server che produce l'evento.|  
-  
-## Execute MDX Script End  
+## <a name="execute-mdx-script-begin"></a>Execute MDX Script Begin  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -283,7 +245,50 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Query Dimension  
+## <a name="execute-mdx-script-current"></a>Execute MDX Script Current  
+  
+|**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|La classe di evento viene utilizzata per suddividere gli eventi in categorie.|  
+|CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|EndTime|4|5|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|Durata|5|2|Durata dell'evento in millisecondi.|  
+|CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
+|ProgressTotal|9|1|Stato complessivo.|  
+|IntegerData|10|1|Dati di tipo integer.|  
+|ObjectType|12|1|Tipo di oggetto.|  
+|ObjectPath|14|8|Percorso dell'oggetto. Elenco delimitato da virgole di elementi padre, a partire dall'elemento padre dell'oggetto.|  
+|ConnectionID|25|1|ID connessione univoco.|  
+|DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  
+|NTCanonicalUserName|40|8|Nome dell'utente in forma canonica. Ad esempio, engineering.microsoft.com/software/someone.|  
+|SPID|41|1|ID processo server. Identifica in modo univoco una sessione utente. Corrisponde direttamente al GUID di sessione utilizzato da XML/A.|  
+|TextData|42|9|Dati di testo associati all'evento.|  
+|ServerName|43|8|Nome del server che produce l'evento.|  
+  
+## <a name="execute-mdx-script-end"></a>Execute MDX Script End  
+  
+|**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|La classe di evento viene utilizzata per suddividere gli eventi in categorie.|  
+|EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento:<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|EndTime|4|5|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|Durata|5|2|Durata dell'evento in millisecondi.|  
+|CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
+|ProgressTotal|9|1|Stato complessivo.|  
+|IntegerData|10|1|Dati di tipo integer.|  
+|ObjectType|12|1|Tipo di oggetto.|  
+|ObjectPath|14|8|Percorso dell'oggetto. Elenco delimitato da virgole di elementi padre, a partire dall'elemento padre dell'oggetto.|  
+|ConnectionID|25|1|ID connessione univoco.|  
+|DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  
+|NTCanonicalUserName|40|8|Nome dell'utente in forma canonica. Ad esempio, engineering.microsoft.com/software/someone.|  
+|SPID|41|1|ID processo server. Identifica in modo univoco una sessione utente. Corrisponde direttamente al GUID di sessione utilizzato da XML/A.|  
+|TextData|42|9|Dati di testo associati all'evento.|  
+|ServerName|43|8|Nome del server che produce l'evento.|  
+  
+## <a name="query-dimension"></a>Query Dimension  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -305,7 +310,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Query Subcube  
+## <a name="query-subcube"></a>Query Subcube  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -325,7 +330,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Query Subcube Verbose  
+## <a name="query-subcube-verbose"></a>Query Subcube Verbose  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -345,7 +350,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Get Data From Aggregation  
+## <a name="get-data-from-aggregation"></a>Get Data From Aggregation  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -364,7 +369,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Get Data From Cache  
+## <a name="get-data-from-cache"></a>Get Data From Cache  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -384,7 +389,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## VertiPaq SE Query Begin  
+## <a name="vertipaq-se-query-begin"></a>VertiPaq SE Query Begin  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -409,7 +414,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## VertiPaq SE Query End  
+## <a name="vertipaq-se-query-end"></a>VertiPaq SE Query End  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -442,7 +447,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Resource Usage  
+## <a name="resource-usage"></a>Resource Usage  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -460,7 +465,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## VertiPaq SE Query Cache Match  
+## <a name="vertipaq-se-query-cache-match"></a>VertiPaq SE Query Cache Match  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -484,7 +489,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Direct Query Begin  
+## <a name="direct-query-begin"></a>Direct Query Begin  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -512,7 +517,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Direct Query End  
+## <a name="direct-query-end"></a>Direct Query End  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -540,7 +545,7 @@ caps.handback.revision: 6
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Categoria degli eventi di elaborazione delle query](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

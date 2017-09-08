@@ -1,41 +1,46 @@
 ---
-title: "Creare e gestire una partizione locale (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partizioni locali [Analysis Services]"
-  - "partizioni [Analysis Services], locali"
-  - "partizioni [Analysis Services], creazione"
+title: Creare e gestire una partizione locale (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- local partitions [Analysis Services]
+- partitions [Analysis Services], local
+- partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ebc3093a0e030aca329338359be2a6f256c24fe7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare e gestire una partizione locale (Analysis Services)
+# <a name="create-and-manage-a-local-partition-analysis-services"></a>Creare e gestire una partizione locale (Analysis Services)
   Per migliorare le prestazioni di elaborazione è possibile creare partizioni aggiuntive per un gruppo di misure. Con più partizioni è possibile allocare le tabelle dei fatti in un numero corrispondente di file di dati fisici sia su server locali che su server remoti. In Analysis Services le partizioni possono essere elaborate in modo indipendente e in parallelo, offrendo maggiore controllo sull'elaborazione dei carichi di lavoro sul server.  
   
  È possibile creare le partizioni in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante la progettazione dei modelli o dopo la distribuzione della soluzione usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o XMLA. Si consiglia di scegliere un unico approccio. Se si alterna tra gli strumenti, è possibile che le modifiche apportate a un database distribuito in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono sovrascritte quando si ridistribuisce successivamente la soluzione da [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## Prima di iniziare  
- Verificare di disporre della Business Intelligence Edition o della Enterprise Edition. La Standard Edition non supporta più partizioni. Per controllare l'edizione, fare clic con il pulsante destro del mouse sul nodo server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e selezionare **Report** | **Generale**. Per altre informazioni sulle funzionalità disponibili, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+## <a name="before-you-start"></a>Prima di iniziare  
+ Verificare di disporre della Business Intelligence Edition o della Enterprise Edition. La Standard Edition non supporta più partizioni. Per controllare l'edizione, fare clic con il pulsante destro del mouse sul nodo server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e selezionare **Report** | **Generale**. Per altre informazioni sulle funzionalità disponibili, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
  È importante tenere presente che, per poter unire le partizioni in secondo momento, è necessario che queste condividano la stessa progettazione delle aggregazioni. Le partizioni possono essere unite solo se dispongono della stessa modalità di archiviazione e della medesima progettazione delle aggregazioni.  
   
 > [!TIP]  
 >  Esplorare i dati nella vista origine dati per determinare l'intervallo e la profondità dei dati da partizionare. Ad esempio, se si esegue il partizionamento in base alla data, è possibile effettuare l'ordinamento in base a una colonna di date per determinare i limiti superiore e inferiore di ogni partizione.  
   
-## Scegliere un approccio  
+## <a name="choose-an-approach"></a>Scegliere un approccio  
  L'aspetto più importante per la creazione di partizioni è segmentare i dati in modo che non siano presenti righe duplicate. I dati devono essere archiviati in un'unica partizione per evitare il doppio conteggio delle righe. Per questo è abbastanza frequente utilizzare il partizionamento per data, in modo da definire limiti chiari tra ogni partizione.  
   
  È possibile utilizzare qualsiasi tecnica per distribuire le tabelle dei fatti tra più partizioni. Per segmentare i dati è possibile utilizzare le tecniche riportate di seguito.  
@@ -45,18 +50,18 @@ caps.handback.revision: 22
 |Utilizzare query SQL per segmentare le tabelle dei fatti|Le partizioni possono essere originate da query SQL. Durante l'elaborazione, la query SQL recupera i dati. Con la clausola WHERE della query viene specificato il filtro che segmenta i dati per ogni partizione. In Analysis Services la query viene generata automaticamente, ma è necessario compilare la clausola WHERE per segmentare i dati in modo corretto.<br /><br /> Il vantaggio principale di questo approccio consiste nella semplicità con cui è possibile partizionare i dati da una singola tabella di origine. Se tutti i dati di origine provengono da una tabella dei fatti di grandi dimensioni, è possibile query per filtrare i dati in partizioni distinte, senza dover creare strutture dei dati aggiuntive nella vista origine dati.<br /><br /> Lo svantaggio è che l'utilizzo delle query interrompe l'associazione tra la partizione e la vista origine dati. Se in un secondo momento si effettua l'aggiornamento della vista origine dati nel progetto di Analysis Services, ad esempio aggiungendo colonne alla tabella dei fatti, è necessario modificare manualmente le query per ogni partizione in modo da includere la nuova colonna. Il secondo approccio, descritto di seguito, non presenta questo svantaggio.|  
 |Utilizzare le tabelle nella vista origine dati per segmentare le tabelle dei fatti|È possibile associare una partizione a una tabella, una query denominata o una vista nella vista origine dati. Come base di una partizione, tutte e tre sono equivalenti dal punto di vista funzionale. L'intera tabella, query denominata o vista fornisce tutti i dati per una singola partizione.<br /><br /> L'utilizzo di una tabella, una vista o una query denominata comporta l'inclusione dell'intera logica di selezione di dati nella vista origine dati, facilitando la gestione e il mantenimento nel tempo. Un importante vantaggio offerto da questo approccio è che le associazioni di tabella vengono mantenute. Se si aggiorna tabella di origine in un secondo momento, non è necessario modificare le partizioni che la utilizzano. In secondo luogo tutte le tabelle, le query denominate e le viste si trovano in un'area di lavoro comune, rendendo gli aggiornamenti più pratici rispetto all'apertura e alla modifica delle singole query per le partizioni.|  
   
-## Opzione 1: filtrare una tabella dei fatti per più partizioni  
+## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>Opzione 1: filtrare una tabella dei fatti per più partizioni  
  Per creare più partizioni, iniziare modificando la proprietà **Origine** della partizione predefinita. Per impostazione predefinita, un gruppo di misure viene creato utilizzando una sola partizione associata a una singola tabella della vista origine dati. Prima di poter aggiungere ulteriori partizioni è necessario modificare la partizione originale in modo che contenga solo una parte delle tabelle dei fatti. È quindi possibile continuare a creare partizioni aggiuntive per archiviare il resto dei dati.  
   
  Costruire i filtri in modo che i dati non vengano duplicati tra le partizioni. Un filtro di una partizione indica i dati della tabella dei fatti utilizzati nella partizione. È importante che i filtri di tutte le partizioni di un cubo estraggano dalla tabella dei fatti set di dati che si escludono reciprocamente. La stessa tabella dei fatti potrebbe essere conteggiata due volte se si trova in più partizioni.  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], in Esplora soluzioni fare doppio clic sul cubo per aprirlo in Progettazione cubi, quindi scegliere la scheda **Partizioni**.  
+1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], in Esplora soluzioni fare doppio clic sul cubo per aprirlo in Progettazione cubi, quindi scegliere la scheda **Partizioni** .  
   
 2.  Espandere il gruppo di misure per il quale vengono aggiunte le partizioni. Per impostazione predefinita, ogni gruppo di misure dispone di una partizione, associata a una tabella dei fatti nella vista origine dati.  
   
 3.  Nella colonna di origine fare clic sul pulsante Sfoglia (. .) per aprire la finestra di dialogo Origine partizione.  
   
-     ![Colonna di origine nel riquadro Partizione](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "Colonna di origine nel riquadro Partizione")  
+     ![Colonna di origine nel riquadro partizione](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "colonna di origine nel riquadro partizione")  
   
 4.  In Tipo di associazione selezionare **Associazione di query**. La query SQL per la selezione dei dati viene automaticamente visualizzata.  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  Anziché filtrare i dati di una partizione, è possibile utilizzare la stessa query per creare una query denominata nella vista origine dati e quindi basare la partizione sulla query denominata.  
   
-## Opzione 2: utilizzare tabelle, viste o query denominate  
+## <a name="option-2-use-tables-views-or-named-queries"></a>Opzione 2: utilizzare tabelle, viste o query denominate  
  Se nella vista origine dati i fatti sono già organizzati in singole tabelle, ad esempio per anno o trimestre, è possibile creare partizioni basate su una singola tabella, in modo che ogni partizione disponga della propria tabella di origine dati. Questa è essenzialmente la modalità predefinita di partizionamento dei gruppi di misure, ma nel caso di più partizioni si suddivide la partizione originale in più partizioni e si esegue il mapping di ogni nuova partizione alla tabella di origine che fornisce dati specifici.  
   
  Viste e query denominate sono funzionalmente equivalenti alle tabelle, in quanto tutti e tre gli oggetti vengono definiti nella vista origine dati e associati a una partizione utilizzando l'opzione Associazione tabella nella finestra di dialogo Origine partizione. È possibile creare una vista o una query denominata per generare il segmento di dati necessario per ogni partizione. Per altre informazioni, vedere [Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md).  
@@ -97,7 +102,7 @@ caps.handback.revision: 22
   
      La query denominata deve essere basata sulla tabella dei fatti associata al gruppo di misure. Ad esempio, se si sta effettuando il partizionamento del gruppo di misure FactInternetSales, nelle query denominate nella vista origine dati deve essere specificata la tabella FactInternetSales nell'istruzione FROM.  
   
-2.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], in Esplora soluzioni fare doppio clic sul cubo per aprirlo in Progettazione cubi, quindi scegliere la scheda **Partizioni**.  
+2.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], in Esplora soluzioni fare doppio clic sul cubo per aprirlo in Progettazione cubi, quindi scegliere la scheda **Partizioni** .  
   
 3.  Espandere il gruppo di misure per il quale vengono aggiunte le partizioni.  
   
@@ -117,14 +122,14 @@ caps.handback.revision: 22
   
 11. Esplorare il cubo per verificare che vengano restituiti i dati corretti.  
   
-## Passaggio successivo  
+## <a name="next-step"></a>Passaggio successivo  
  Quando si creano query che si escludono reciprocamente per le partizioni, verificare che i dati combinati delle partizioni includano tutti i dati che si desidera inserire nel cubo.  
   
  Come passaggio finale in genere si rimuove la partizione predefinita basata sulla tabella stessa (se ancora esistente) per evitare che le query basate sulle partizioni si sovrappongano alla query basata sulla tabella completa.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Partizioni remote](../Topic/Remote%20Partitions.md)   
+ [Partizioni remote](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Unire partizioni in Analysis Services &#40;SSAS - Multidimensionale&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Disponibilit&#224; elevata e scalabilit&#224; in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Disponibilità elevata e scalabilità in Analysis Services | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Disponibilit&#224; elevata e scalabilit&#224; in Analysis Services
+# <a name="high-availability-and-scalability-in-analysis-services"></a>Disponibilità elevata e scalabilità in Analysis Services
   Questo articolo descrive le tecniche usate più di frequente per garantire ai database di Analysis Services disponibilità elevata e scalabilità. Ognuno di questi obiettivi potrebbe essere affrontato separatamente ma, in realtà, questi sono spesso correlati: una distribuzione scalabile per carichi di lavoro di elaborazione o di query di grandi dimensioni in genere prevede una disponibilità elevata.  
   
  Non è sempre vero il contrario, tuttavia. La disponibilità elevata, senza scalabilità, può essere l'unico obiettivo nel caso di contratti di servizio rigidi per carichi di lavoro di query di importanza critica, ma con volumi moderati.  
   
  Le tecniche per garantire disponibilità elevata e scalabilità ad Analysis Services tendono a essere le stesse per tutte le modalità server (multidimensionale, tabulare e integrazione con SharePoint). Se non specificato diversamente, le informazioni contenute in questo articolo si applicano a tutte le modalità.  
   
-## Punti chiave  
+## <a name="key-points"></a>Punti chiave  
  Poiché le tecniche per la disponibilità e la scalabilità sono diverse da quelle del motore di database relazionale, può essere efficace presentare le tecniche usate con Analysis Services con un breve riepilogo dei punti chiave:  
   
 -   Analysis Services usa i meccanismi di disponibilità elevata e scalabilità integrati nella piattaforma Windows Server: Bilanciamento carico di rete, clustering di failover di Window Server (WSFC, Window Server Failover Clustering) o entrambi.  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
  Un'altra strategia per soddisfare requisiti di disponibilità elevata prevede l'uso di macchine virtuali. Se per soddisfare i requisiti di disponibilità è sufficiente che un server sostitutivo sia pronto nel giro di qualche ora anziché di pochi minuti, è possibile usare macchine virtuali da avviare su richiesta e nelle quali siano caricati database recuperati da una posizione centrale.  
   
-## Scalabilità tramite database di sola lettura e di lettura e scrittura  
+## <a name="scalability-using-read-only-and-read-write-databases"></a>Scalabilità tramite database di sola lettura e di lettura e scrittura  
  Bilanciamento carico di rete è una funzionalità consigliata per carichi di lavoro di elaborazione e query elevati o in crescita. In una soluzione che prevede l'uso di Bilanciamento carico di rete, per garantire la coerenza delle query i database di Analysis Services devono essere definiti come database di sola lettura.  
   
  Anche se le indicazioni presentate nell'articolo [Aumentare il numero di istanze per l'esecuzione di query in Analysis Services tramite database di sola lettura](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) (pubblicato nel 2008) risalgono a molto tempo fa, in genere sono ancora valide. I sistemi operativi server e i componenti hardware dei computer si sono evoluti e i riferimenti specifici alle piattaforme e ai limiti dei diversi tipi di CPU sono obsoleti, ma la tecnica di base dell'uso di database di sola lettura e di lettura e scrittura per volumi di query di grandi dimensioni non è cambiata.  
@@ -73,7 +78,7 @@ caps.handback.revision: 14
   
 -   Usare robocopy per copiare un'intera directory di dati dal server di elaborazione a ogni server di query e collegare lo stesso database in modalità di sola lettura a tutti i server di query. È anche possibile usare snapshot SAN, eseguire una sincronizzazione o usare qualsiasi altro strumento o metodo tra quelli usati per lo spostamento di database di produzione.  
   
-## Domanda di risorse per carichi di lavoro tabulari e multidimensionali  
+## <a name="resource-demands-for-tabular-and-multidimensional-workloads"></a>Domanda di risorse per carichi di lavoro tabulari e multidimensionali  
  La tabella seguente è un riepilogo generale dei modi in cui Analysis Services usa le risorse di sistema per le operazioni di query ed elaborazione, distinti per modalità server e archiviazione. Questo riepilogo può essere utile per capire a cosa dare maggiore importanza in una distribuzione multiserver che gestisce un carico di lavoro distribuito.  
   
 |||  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 |Modelli multidimensionali tramite archiviazione MOLAP|Scegliere una configurazione bilanciata che supporti le operazioni di I/O del disco per il caricamento rapido di dati e una quantità di RAM sufficiente per la memorizzazione di dati nella cache.|  
 |Modelli multidimensionali tramite archiviazione ROLAP.|Ottimizzare le operazioni di I/O e ridurre al minimo la latenza di rete.|  
   
-## Disponibilità elevata e ridondanza tramite la funzionalità di cluster di failover di Windows Server  
+## <a name="highly-availability-and-redundancy-through-wsfc"></a>Disponibilità elevata e ridondanza tramite la funzionalità di cluster di failover di Windows Server  
  È possibile installare Analysis Services in un cluster di failover di Windows Server esistente per ottenere disponibilità elevata in grado di ripristinare il servizio nel minor tempo possibile.  
   
  I cluster di failover garantiscono accesso completo (in lettura e writeback) al database ma solo per un nodo alla volta. Database secondari in esecuzione all'interno di nodi aggiuntivi del cluster come server sostitutivi se il primo nodo diventa inattivo.  
@@ -97,11 +102,11 @@ caps.handback.revision: 14
 - Quando si esegue il clustering di Analysis Services, assicurarsi che tutti i nodi coinvolti nel cluster vengano eseguiti su hardware identico o simile e che il contesto operativo di ciascun nodo sia lo stesso in termini di versione del sistema operativo e dei relativi Service Pack, di versione di Analysis Services e dei relativi Service Pack (o aggiornamenti cumulativi) e della modalità server.
 - Evitare il reimpiego di un nodo passivo come nodo attivo di un altro carico di lavoro. Se il nodo non è in grado di gestire entrambi i carichi di lavoro, qualsiasi vantaggio a breve termine riguardo l'utilizzo del computer si traduce in una perdita in caso di un'effettiva situazione di failover.
  
- Istruzioni approfondite e informazioni di base per la distribuzione di Analysis Services in un cluster di failover sono disponibili nel white paper relativo a [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) (Come implementare cluster in SQL Server Analysis Services). Anche se scritte per SQL Server 2012, queste indicazioni sono ancora valide per le versioni più recenti di Analysis Services.  
+ Istruzioni approfondite e informazioni di base per la distribuzione di Analysis Services in un cluster di failover sono disponibili nel white paper relativo a [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(Come implementare cluster in SQL Server Analysis Services). Anche se scritte per SQL Server 2012, queste indicazioni sono ancora valide per le versioni più recenti di Analysis Services.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sincronizzare database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Forzare l'affinità NUMA per i database tabulari di Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Case study di Analysis Services: uso di modelli tabulari in una soluzione commerciale su vasta scala](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Case Study un Analysis Services: Uso di modelli tabulari in una soluzione commerciale su vasta scala](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

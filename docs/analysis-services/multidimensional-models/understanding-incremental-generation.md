@@ -1,29 +1,34 @@
 ---
-title: "Informazioni sulla generazione incrementale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "generazione incrementale [Analysis Services]"
-  - "Generazione guidata schema, generazione incrementale"
-  - "schema relazionale [Analysis Services], generazione incrementale"
+title: Informazioni sulla generazione incrementale | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental generation [Analysis Services]
+- Schema Generation Wizard, incremental generation
+- relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Informazioni sulla generazione incrementale
-  Dopo la generazione iniziale dello schema, è possibile modificare le definizioni dei cubi e delle dimensioni mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e quindi eseguire di nuovo la Generazione guidata schema. La procedura guidata aggiorna lo schema nel database dell'area di interesse e nella vista origine dati associata in base alle modifiche apportate, mantenendo i dati attualmente esistenti nelle tabelle da rigenerare nella misura massima consentita. Se dopo la generazione iniziale le tabelle sono state modificate, la Generazione guidata schema mantiene tali modifiche in base alle regole seguenti:  
+# <a name="understanding-incremental-generation"></a>Informazioni sulla generazione incrementale
+  Dopo la generazione iniziale dello schema, è possibile modificare le definizioni dei cubi e delle dimensioni mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e quindi eseguire di nuovo la Generazione guidata schema. La procedura guidata aggiorna lo schema nel database dell'area di interesse e nella vista origine dati associata in base alle modifiche apportate, mantenendo i dati attualmente esistenti nelle tabelle da rigenerare nella misura massima consentita. Se dopo la generazione iniziale le tabelle sono state modificate, la Generazione guidata schema mantiene tali modifiche in base alle regole seguenti:  
   
 -   Le tabelle generate in precedenza dalla procedura guidata vengono sovrascritte. Per evitare che una tabella generata dalla procedura guidata venga sovrascritta, impostare la proprietà **AllowChangesDuringGeneration** della tabella nella vista origine dati su **false**. Le tabelle di cui si assume il controllo tramite questa proprietà vengono trattate come qualsiasi altra tabella definita dall'utente e non subiscono modifiche durante la rigenerazione. Dopo avere escluso una tabella dalla generazione, è possibile reimpostare la proprietà **AllowChangesDuringGeneration** della tabella nella vista origine dati su **true** e riaprire la tabella in modo che la procedura guidata implementi di nuovo le modifiche. Per altre informazioni, vedere [Modificare le proprietà in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   
@@ -31,13 +36,13 @@ caps.handback.revision: 29
   
  Quando la Generazione guidata schema rigenera le tabelle generate in precedenza nel database dell'area di interesse, è possibile scegliere di mantenere i dati esistenti in tali tabelle.  
   
-## Supporto del mantenimento dei dati  
+## <a name="supporting-data-preservation"></a>Supporto del mantenimento dei dati  
  Come regola generale, la Generazione guidata schema mantiene i dati archiviati nelle tabelle generate. Inoltre, in caso di aggiunta di nuove colonne alle tabelle generate dalla procedura guidata, vengono mantenuti anche tali dati. Questa funzionalità può essere sfruttata per aggiungere o modificare le dimensioni e i cubi e quindi rigenerare gli oggetti sottostanti senza dover ricaricare i dati archiviati nelle tabelle sottostanti.  
   
 > [!NOTE]  
 >  Quando si caricano dati da file di testo delimitati, è inoltre possibile scegliere se la Generazione guidata schema dovrà sovrascrivere tali file e i dati in essi contenuti durante la rigenerazione. I file di testo possono essere solo sovrascritti completamente oppure non sovrascritti affatto in quanto la Generazione guidata schema non consente di sovrascrivere parzialmente tali file. Per impostazione predefinita, questi file non vengono sovrascritti.  
   
-### Mantenimento parziale  
+### <a name="partial-preservation"></a>Mantenimento parziale  
  In alcune circostanze la Generazione guidata schema non è in grado di mantenere i dati esistenti. Nella tabella seguente vengono descritte alcune situazioni esemplificative in cui non è possibile mantenere tutti i dati esistenti nelle tabelle sottostanti durante le rigenerazione.  
   
 |Tipo di modifica dei dati|Modalità di gestione|  
@@ -48,7 +53,7 @@ caps.handback.revision: 29
   
  Prima di eliminare qualsiasi dato, la Generazione guidata schema visualizza un messaggio di avviso per consentire all'utente di annullare la procedura guidata senza perdere alcun dato. La Procedura guidata schema, tuttavia, non è in grado di distinguere le perdite di dati previste da quelle non previste. Quando si esegue la procedura guidata, le tabelle e le colonne contenenti dati che verranno eliminati vengono elencate in una finestra di dialogo. È possibile scegliere se continuare la procedura guidata ed eliminare i dati oppure se annullare la procedura guidata e ricontrollare le modifiche apportate alle tabelle e alle colonne.  
   
-## Supporto delle modifiche dei cubi e delle dimensioni  
+## <a name="supporting-cube-and-dimension-changes"></a>Supporto delle modifiche dei cubi e delle dimensioni  
  Quando si modificano le proprietà di dimensioni e cubi, la Generazione guidata schema rigenera gli oggetti appropriati nel database dell'area di interesse sottostante nonché nella vista origine dati correlata come descritto di seguito.  
   
  Eliminazione di un oggetto, ad esempio una dimensione, un cubo o un attributo.  
@@ -65,7 +70,7 @@ caps.handback.revision: 29
   
  Se la Generazione guidata schema non può implementare la modifica richiesta a causa di un errore restituito dal Motore di database per la presenza di un oggetto utente nel database dell'area di interesse, la procedura guidata verrà interrotta e verrà visualizzato l'errore restituito dal Motore di database. Se, ad esempio, si crea un vincolo di chiave primaria o un indice non cluster su una tabella generata in precedenza dalla procedura guidata, la tabella non verrà eliminata perché il vincolo o l'indice non è stato creato dalla Generazione guidata schema.  
   
-## Supporto delle modifiche dello schema  
+## <a name="supporting-schema-changes"></a>Supporto delle modifiche dello schema  
  Quando si modificano le proprietà delle tabelle o delle colonne nel database dell'area di interesse o nella vista origine dati associata, la Generazione guidata schema gestisce le modifiche come descritto di seguito.  
   
  Eliminazione di una tabella o una colonna generata dalla Generazione guidata schema.  
@@ -75,16 +80,16 @@ caps.handback.revision: 29
  Se si modificano le proprietà di una tabella o una colonna generata dalla Generazione guidata schema, la procedura guidata rigenererà la tabella modificata senza la modifica. Se, ad esempio, si modifica il tipo di dati o il supporto di valori Null per una colonna oppure il filegroup di una tabella generata dalla Generazione guidata schema, la modifica non verrà mantenuta al termine della rigenerazione e non verrà visualizzato alcun messaggio di avviso.  
   
  Aggiunta di una colonna a una tabella generata dalla Generazione guidata schema o aggiunta di una tabella nel database dell'area di interesse o nel database dell'area di gestione temporanea.  
- Se si aggiunge una colonna a una tabella generata dalla Generazione guidata schema, la procedura guidata manterrà la colonna aggiuntiva nonché tutti i dati in essa archiviati durante la rigenerazione. Se, tuttavia, si aggiunge una tabella nel database dell'area di interesse o nel database dell'area di gestione temporanea, la nuova tabella non verrà incorporata. La colonna o la tabella aggiunta non viene inclusa nel progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], nel database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], nei pacchetti DTS, nella vista origine dati né in qualsiasi altra posizione dello schema generato.  
+ Se si aggiunge una colonna a una tabella generata dalla Generazione guidata schema, la procedura guidata manterrà la colonna aggiuntiva nonché tutti i dati in essa archiviati durante la rigenerazione. Se, tuttavia, si aggiunge una tabella nel database dell'area di interesse o nel database dell'area di gestione temporanea, la nuova tabella non verrà incorporata. La colonna o la tabella aggiunta non viene inclusa nel progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nel database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nei pacchetti DTS, nella vista origine dati né in qualsiasi altra posizione dello schema generato.  
   
-## Supporto delle modifiche dell'origine dei dati e della vista origine dati  
+## <a name="supporting-data-source-and-data-source-view-changes"></a>Supporto delle modifiche dell'origine dei dati e della vista origine dati  
  Quando si riesegue la Generazione guidata schema, vengono riutilizzate la stessa origine dei dati e la stessa vista origine dati utilizzate durante la generazione originale. Se si aggiunge un'origine dei dati oppure una vista origine dati, il nuovo elemento verrà ignorato dalla procedura guidata. Se si elimina l'origine dei dati o la vista origine dati originale dopo la generazione iniziale, sarà necessario eseguire la procedura guidata dall'inizio. Verranno inoltre eliminate tutte le impostazioni precedenti della procedura guidata. Tutti gli oggetti esistenti in un database sottostante associati a un'origine dei dati o una vista origine dati eliminata verranno considerati come oggetti creati dall'utente durante la successiva esecuzione della Generazione guidata schema.  
   
- Se la vista origine dati non corrisponde allo stato effettivo del database sottostante al momento della generazione, è possibile che si verifichino errori durante la generazione degli schemi per il database dell'area di interesse e il database dell'area di gestione temporanea. Se, ad esempio, nella vista origine dati il tipo di dati di una colonna risulta **int** mentre il tipo di dati effettivo della colonna è **string**, la Generazione guidata schema imposterà il tipo di dati della chiave esterna su **int** in conformità con la vista origine dati e si verificherà un errore durante la creazione della relazione perché il tipo di dati effettivo è **string**.  
+ Se la vista origine dati non corrisponde allo stato effettivo del database sottostante al momento della generazione, è possibile che si verifichino errori durante la generazione degli schemi per il database dell'area di interesse e il database dell'area di gestione temporanea. Se, ad esempio, nella vista origine dati il tipo di dati di una colonna risulta **int**mentre il tipo di dati effettivo della colonna è **string**, la Generazione guidata schema imposterà il tipo di dati della chiave esterna su **int** in conformità con la vista origine dati e si verificherà un errore durante la creazione della relazione perché il tipo di dati effettivo è **string**.  
   
  Se invece si modifica la stringa di connessione dell'origine dei dati impostando un database diverso rispetto alla generazione precedente, non verrà generato alcun errore. Verrà utilizzato il nuovo database senza alcuna modifica al database precedente.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire modifiche a viste origine dati e origini dati](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
  [Generazione guidata schema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   

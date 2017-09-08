@@ -1,30 +1,35 @@
 ---
-title: "Rinominare un&#39;istanza di Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "istanze di Analysis Services, ridenominazione"
-  - "ridenominazione di istanze di Analysis Services"
-  - "nomi [Analysis Services], ridenominazione di istanze"
-  - "nomi [Analysis Services]"
+title: Rinominare un'istanza di Analysis Services | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of Analysis Services, renaming
+- renaming instances of Analysis Services
+- names [Analysis Services], renaming instances
+- names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 53
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Rinominare un&#39;istanza di Analysis Services
+# <a name="rename-an-analysis-services-instance"></a>Rinominare un'istanza di Analysis Services
   È possibile rinominare un'istanza esistente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite lo strumento **Rinomina istanza** installato con Management Studio (installazione Web).  
   
 > [!IMPORTANT]  
@@ -35,19 +40,19 @@ caps.handback.revision: 53
 > [!NOTE]  
 >  L’uso dello strumento Rinomina istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è supportato in un ambiente cluster.  
   
-### Per rinominare un'istanza di Analysis Services  
+### <a name="to-rename-an-instance-of-analysis-services"></a>Per rinominare un'istanza di Analysis Services  
   
-1.  Avviare lo strumento **Rinomina istanza**, **asinstancerename.exe**, da C:\Programmi(x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
+1.  Avviare lo strumento **Rinomina istanza** , **asinstancerename.exe**, da C:\Programmi(x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
   
 2.  Nell'elenco **Istanza da rinominare** della finestra di dialogo **Rinomina istanza** selezionare l'istanza che si desidera rinominare.  
   
-3.  Immettere il nuovo nome dell'istanza nella casella **Nuovo nome istanza**.  
+3.  Immettere il nuovo nome dell'istanza nella casella **Nuovo nome istanza** .  
   
 4.  Verificare che il nome utente e la password siano corretti e quindi fare clic su **Rinomina**.  
   
      L'istanza di Analysis Services verrà arrestata e riavviata come parte della modifica del nome.  
   
-### Elenco di controllo successivo alla ridenominazione  
+### <a name="post-rename-checklist"></a>Elenco di controllo successivo alla ridenominazione  
   
 1.  Per riprendere l'accesso ai database in esecuzione nell'istanza rinominata, sarà necessario aggiornare manualmente le connessioni dati in Excel o in altre applicazioni client. Verificare inoltre eventuali connessioni predefinite, ad esempio origini dati condivise di Reporting Services, file ODC di Excel o file di connessione BI Semantic Model che potrebbero fare riferimento all'istanza rinominata. Per altre informazioni, vedere [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 53
   
      Di seguito ne viene illustrato un esempio. Si supponga di avere installato un server in modalità tabulare come istanza denominata "Tabular" tramite l'account virtuale predefinito, che determina la configurazione seguente:  
   
-    1.  Nome istanza = \<server>\TABULAR  
+    1.  Nome istanza = \<server > \TABULAR  
   
     2.  Nome servizio = MSOLAP$TABULAR  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 53
   
      Si supponga ora di rinominare l'istanza in "TAB2". Come un risultato della modifica del nome, la configurazione sarà simile alla seguente:  
   
-    1.  Nome istanza = \<server>\TAB2  
+    1.  Nome istanza = \<server > \TAB2  
   
     2.  Nome servizio = MSOLAP$TAB2  
   

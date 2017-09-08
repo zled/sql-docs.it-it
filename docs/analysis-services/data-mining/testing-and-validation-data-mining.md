@@ -1,46 +1,51 @@
 ---
-title: "Test e convalida (Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "test di modelli di data mining"
-  - "confronto di modelli di data mining"
-  - "grafici di attributi continui"
-  - "data mining [Analysis Services], modelli"
-  - "grafici [Analysis Services]"
-  - "modellazione predittiva [Analysis Services]"
-  - "modelli di data mining [Analysis Services], convalida"
-  - "convalida di modelli di data mining"
-  - "accuratezza di modello di data mining - visualizzazione"
-  - "confidence scores [data mining]"
-  - "visualizzazione accuratezza di modello di data mining"
-  - "stime [Analysis Services], confronto dei modelli di data mining"
-  - "punteggio [data mining]"
-  - "grafici di accuratezza [Analysis Services]"
-  - "matrice di classificazione [Analysis Services]"
-  - "CRISP-DM"
-  - "test di accuratezza [data mining]"
+title: Test e convalida (Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- comparing mining models
+- continuous attribute charts
+- data mining [Analysis Services], models
+- charts [Analysis Services]
+- predictive modeling [Analysis Services]
+- mining models [Analysis Services], validating
+- validating data mining models
+- viewing mining accuracy
+- confidence scores [data mining]
+- displaying mining accuracy
+- predictions [Analysis Services], comparing mining models
+- scoring [data mining]
+- lift charts [Analysis Services]
+- classification matrix [Analysis Services]
+- CRISP-DM
+- accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f796cc3a84537df09060cd578a7ed1eb3a9649ed
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Test e convalida (Data mining)
+# <a name="testing-and-validation-data-mining"></a>Test e convalida (Data mining)
   La convalida è il processo che consente di valutare le prestazioni dei modelli di data mining rispetto ai dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  
   
  Questa sezione introduce alcuni concetti di base relativi alla qualità dei modelli e descrive le strategie per la convalida dei modelli fornite in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per una panoramica sullo scopo della convalida dei modelli nel contesto più ampio del processo di data mining, vedere [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md).  
   
-## Metodi di test e convalida dei modelli di data mining  
+## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Metodi di test e convalida dei modelli di data mining  
  La valutazione della qualità e delle caratteristiche di un modello di data mining può essere eseguita in base ad approcci diversi.  
   
 -   Utilizzare varie misure della validità statistica per determinare se sono presenti problemi nei dati o nel modello.  
@@ -51,7 +56,7 @@ caps.handback.revision: 61
   
  Tutti questi metodi risultano utili nella metodologia di data mining e vengono utilizzati in maniera iterativa durante la creazione, l'esecuzione di test e l'ottimizzazione di modelli per rispondere a un problema specifico. Non esiste alcuna regola completa in grado di stabilire quando un modello è affidabile o quando si dispone di dati sufficienti.  
   
-## Definizione dei criteri per la convalida dei modelli di data mining  
+## <a name="definition-of-criteria-for-validating-data-mining-models"></a>Definizione dei criteri per la convalida dei modelli di data mining  
  Le misure relative al data mining rientrano generalmente nelle categorie di accuratezza, affidabilità e utilità.  
   
  L'*accuratezza* consente di misurare il livello di correlazione tra il risultato e gli attributi nei dati specificati fornito dal modello. Sebbene siano disponibili diverse misure di accuratezza, tutte dipendono dai dati utilizzati. Nelle situazioni reali i valori potrebbero non essere disponibili o essere approssimati oppure è possibile che i dati siano stati modificati da più processi. In particolare, nella fase di esplorazione e sviluppo è possibile decidere di accettare una certa quantità di errore nei dati, soprattutto se questi ultimi sono equamente uniformi nelle caratteristiche. Ad esempio, un modello che stima le vendite per un negozio specifico in base alle vendite precedenti può essere strettamente correlato ed estremamente accurato, anche se tale negozio ha utilizzato in modo costante un metodo contabile non corretto. Di conseguenza, le misure dell'accuratezza devono essere bilanciate da valutazioni dell'affidabilità.  
@@ -60,7 +65,7 @@ caps.handback.revision: 61
   
  L'*utilità* include diverse metriche che indicano se il modello fornisce informazioni vantaggiose. Un modello di data mining che correla ad esempio l'ubicazione di un negozio con le vendite potrebbe essere accurato e affidabile, ma potrebbe non essere utile, poiché non è possibile generalizzare tale risultato aggiungendo altri negozi nella stessa ubicazione. Tale modello inoltre non risponde alla domanda aziendale fondamentale, ovvero non indica perché a ubicazioni specifiche è associato un numero maggiore di vendite. È possibile anche rilevare che un modello apparentemente positivo non è in effetti significativo, poiché si basa su correlazioni incrociate dei dati.  
   
-## Strumenti per il test e la convalida dei modelli di data mining  
+## <a name="tools-for-testing-and-validation-of-mining-models"></a>Strumenti per il test e la convalida dei modelli di data mining  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta più approcci per la convalida di soluzioni di data mining e consente di gestire tutte le fasi della metodologia di test del data mining.  
   
 -   Partizionamento dei dati in set di training e di testing.  
@@ -81,16 +86,16 @@ caps.handback.revision: 61
   
  Negli argomenti di questa sezione viene fornita una panoramica di ogni metodo e viene descritto il processo di misurazione dell'accuratezza di modelli compilati utilizzando Data mining di SQL Server.  
   
-### Argomenti correlati  
+### <a name="related-topics"></a>Argomenti correlati  
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
 |Informazioni sulla configurazione di un set di dati di test tramite una procedura guidata o comandi DMX|[Set di dati di training e di testing](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
 |Informazioni sul test della distribuzione e della rappresentatività dei dati in una struttura di data mining|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Informazioni sui tipi di grafici di accuratezza forniti in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Informazioni sui tipi di grafico di accuratezza forniti.|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Informazioni sulla creazione di una matrice di classificazione, talvolta denominata matrice di confusione, per valutare il numero di veri e falsi positivi e di veri e falsi negativi.|[Matrice di classificazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)   
  [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  

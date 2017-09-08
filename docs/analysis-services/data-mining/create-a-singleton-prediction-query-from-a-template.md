@@ -1,25 +1,30 @@
 ---
-title: "Creare una query di stima singleton da un modello | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "stime basate su query singleton [DMX]"
+title: Creare una Query di stima Singleton da un modello | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c54b65567095408f66c01d22b7f39d839ae939b2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una query di stima singleton da un modello
+# <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
   Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non si desidera eseguire il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
   
  Ad esempio, la query DMX seguente rappresenta una query singleton sul modello di mailing diretto, TM_Decision_Tree.  
@@ -33,15 +38,15 @@ AS [t]
   
  La procedura che segue descrive come usare Esplora modelli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare rapidamente questa query.  
   
-### Per aprire i modelli di Analysis Services in SQL Server Management Studio  
+### <a name="to-open-the-analysis-services-templates-in-sql-server-management-studio"></a>Per aprire i modelli di Analysis Services in SQL Server Management Studio  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **Esplora modelli** dal menu **Visualizza**.  
   
 2.  Fare clic sull'icona del cubo per aprire i modelli di **Analysis Server**.  
   
-### Per aprire un modello di query di stima  
+### <a name="to-open-a-prediction-query-template"></a>Per aprire un modello di query di stima  
   
-1.  Nell'elenco di modelli di Analysis Server in **Esplora modelli** espandere **DMX**, quindi espandere **Query di stima**.  
+1.  Nell'elenco di modelli di Analysis Server in **Esplora modelli**espandere **DMX**, quindi espandere **Query di stima**.  
   
 2.  Fare doppio clic su **Query di stima singleton**.  
   
@@ -51,7 +56,7 @@ AS [t]
   
 5.  Il modello si apre nel database specificato, insieme con un Visualizzatore oggetti del modello di data mining che contiene le funzioni del data mining e un elenco di strutture di data mining e i modelli correlati.  
   
-### Per personalizzare il modello della query singleton  
+### <a name="to-customize-the-singleton-query-template"></a>Per personalizzare il modello della query singleton  
   
 1.  Nel modello fare clic sull'elenco a discesa **Database disponibili** e quindi selezionare un'istanza di Analysis Services dall'elenco.  
   
@@ -61,11 +66,11 @@ AS [t]
   
 3.  Scegliere **Imposta valori per parametri modello** dal menu **Query**.  
   
-4.  Nella riga dell'**elenco di selezione** digitare * per ottenere tutte le colonne oppure digitare un elenco delimitato da virgole di colonne ed espressioni per ottenere colonne specifiche.  
+4.  Nella riga dell' **elenco di selezione** digitare * per ottenere tutte le colonne oppure digitare un elenco delimitato da virgole di colonne ed espressioni per ottenere colonne specifiche.  
   
      Se si digita *, viene restituita la colonna stimabile, insieme con le colonne per le quali vengono forniti nuovi valori nel passaggio 6.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la riga dell'**elenco di selezione** è stata impostata su *.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la riga dell' **elenco di selezione** è stata impostata su *.  
   
 5.  Nella riga del **modello di data mining** digitare il nome del modello di data mining tra quelli presenti nell'elenco dei modelli di data mining visualizzati in **Esplora oggetti**.  
   
@@ -80,9 +85,9 @@ AS [t]
      Per il codice di esempio mostrato all'inizio di questo argomento, la riga della **colonna** è stata impostata su **Number Children at Home**.  
   
     > [!NOTE]  
-    >  Quando si usa la finestra di dialogo **Specifica valori per parametri modello**, non è necessario racchiudere il nome della colonna tra parentesi quadre. Le parentesi verranno aggiunte automaticamente.  
+    >  Quando si usa la finestra di dialogo **Specifica valori per parametri modello** , non è necessario racchiudere il nome della colonna tra parentesi quadre. Le parentesi verranno aggiunte automaticamente.  
   
-8.  Lasciare l'**alias di input** su **t**.  
+8.  Lasciare l' **alias di input** su **t**.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,7 +97,7 @@ AS [t]
   
 11. Fare clic su **Esegui**.  
   
-## Vedere anche  
- [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../Topic/Creating%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+## <a name="see-also"></a>Vedere anche  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

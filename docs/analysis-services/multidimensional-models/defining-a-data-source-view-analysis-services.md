@@ -1,30 +1,35 @@
 ---
-title: "Definizione di una vista origine dati (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomi [Analysis Services], viste origine dati"
-  - "criteri di corrispondenza nomi [Analysis Services]"
-  - "Creazione guidata vista origine dati"
-  - "viste origine dati [Analysis Services], creazione"
+title: Definizione di un tipo di dati di origine vista (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [Analysis Services], data source views
+- name matching criteria [Analysis Services]
+- Data Source View Wizard
+- data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3aae9714c37d9bd4272add2829d4cdef8f2d9c9d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definizione di una vista origine dati (Analysis Services)
-  Una vista origine dati include il modello logico dello schema usato dagli oggetti di database multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
+# <a name="defining-a-data-source-view-analysis-services"></a>Definizione di una vista origine dati (Analysis Services)
+  Una vista origine dati include il modello logico dello schema usato dagli oggetti di database multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
   
 -   Include i metadati che rappresentano oggetti selezionati da una o più origini dati sottostanti oppure i metadati che verranno utilizzati per generare un archivio dati relazionale sottostante, se per la generazione dello schema viene seguito l'approccio dall'alto verso il basso.  
   
@@ -101,14 +106,14 @@ caps.handback.revision: 42
   
 4.  **Filtrare gli oggetti disponibili**  
   
-     Se l'elenco Oggetti disponibili include un numero molto elevato di oggetti, è possibile ridurlo applicando un semplice filtro che consente di specificare una stringa come criteri di selezione. Ad esempio, se si digita **dbo** e si fa clic sul pulsante **Filtro**, nell'elenco **Oggetti disponibili** verranno visualizzati soltanto gli elementi che iniziano con "dbo". Il filtro può essere una stringa parziale, ad esempio se si immette "sal" vengono restituiti gli elementi "sales" e "salary", ma non può includere più stringhe o operatori.  
+     Se l'elenco Oggetti disponibili include un numero molto elevato di oggetti, è possibile ridurlo applicando un semplice filtro che consente di specificare una stringa come criteri di selezione. Ad esempio, se si digita **dbo** e si fa clic sul pulsante **Filtro** , nell'elenco **Oggetti disponibili** verranno visualizzati soltanto gli elementi che iniziano con "dbo". Il filtro può essere una stringa parziale, ad esempio se si immette "sal" vengono restituiti gli elementi "sales" e "salary", ma non può includere più stringhe o operatori.  
   
 5.  Per le origini dati relazionali che non dispongono di relazioni tra tabelle definite, viene visualizzata una pagina **Corrispondenza nomi** che consente di selezionare il metodo di corrispondenza nomi appropriato. Per altre informazioni, vedere la sezione [Impostare i criteri di corrispondenza nomi per le relazioni](#bkmk_NameMatch) di questo argomento.  
   
 ##  <a name="bkmk_secondaryDS"></a> Aggiungere un'origine dati secondaria  
  Quando si definisce una vista origine dati contenente tabelle, viste o colonne di più origini dei dati, la prima origine dei dati da cui vengono aggiunti oggetti alla vista origine dati viene designata come origine dei dati primaria. Dopo che è stata definita, l'origine dei dati primaria non può essere modificata. Dopo aver definito una vista origine dati basata su oggetti di una singola origine dei dati, è successivamente possibile aggiungere oggetti di altre origini dei dati.  
   
- Se per una query di data mining o elaborazione OLAP sono necessari dati di più origini dati in una singola query, l'origine dati primaria deve supportare query remote tramite **OpenRowset**. Si tratterà in genere di un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ad esempio si progetta una dimensione OLAP contenente attributi associati a colonne di più origini dati, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà costruita una query **OpenRowset** per popolare la dimensione durante l'elaborazione. Non verrà invece costruita una query **OpenRowset** se è possibile popolare un oggetto OLAP o risolvere una query di data mining da una singola origine dati. In determinate situazioni è possibile eliminare l'esigenza di una query **OpenRowset** definendo relazioni tra attributi. Per altre informazioni sulle relazioni tra attributi, vedere [Relazioni tra attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) e [Definire relazioni tra attributi](../../analysis-services/multidimensional-models/define-attribute-relationships.md).  
+ Se per una query di data mining o elaborazione OLAP sono necessari dati di più origini dati in una singola query, l'origine dati primaria deve supportare query remote tramite **OpenRowset**. Si tratterà in genere di un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se ad esempio si progetta una dimensione OLAP contenente attributi associati a colonne di più origini dati, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà costruita una query **OpenRowset** per popolare la dimensione durante l'elaborazione. Non verrà invece costruita una query **OpenRowset** se è possibile popolare un oggetto OLAP o risolvere una query di data mining da una singola origine dati. In determinate situazioni è possibile eliminare l'esigenza di una query **OpenRowset** definendo relazioni tra attributi. Per altre informazioni sulle relazioni tra attributi, vedere [Relazioni tra attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) e [Definire relazioni tra attributi](../../analysis-services/multidimensional-models/attribute-relationships-define.md).  
   
  Per aggiungere tabelle e colonne da un'origine dati secondaria, fare doppio clic sulla vista origine dati in Esplora soluzioni per aprirla in Progettazione vista origine dati, quindi utilizzare la finestra di dialogo Aggiungi/Rimuovi tabelle per includere oggetti di altre origini dati definite nel progetto. Per altre informazioni, vedere [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
@@ -131,15 +136,15 @@ caps.handback.revision: 42
 > [!NOTE]  
 >  Al termine della Creazione guidata vista origine dati, è possibile aggiungere o rimuovere le relazioni nel riquadro degli schemi di Progettazione vista origine dati. Per altre informazioni, vedere [Definire relazioni logiche in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Definire chiavi primarie logiche in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Sostituire una tabella o una query denominata in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [Eliminare una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [Definire chiavi primarie logiche in una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Definire calcoli denominati in una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Definire query denominate in una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Sostituire una tabella o una Query denominata in una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Utilizzare diagrammi in Progettazione vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Esplorare i dati in una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [Eliminare una vista origine dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Aggiornare lo schema in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

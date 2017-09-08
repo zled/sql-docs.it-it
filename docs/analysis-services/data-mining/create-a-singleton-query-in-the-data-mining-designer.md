@@ -1,26 +1,31 @@
 ---
-title: "Creare una query singleton in Progettazione modelli di data mining | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query singleton [Analysis Services]"
-  - "Stima modello di data mining [Analysis Services], query singleton"
+title: Creare una Query Singleton in Progettazione modelli di Data Mining | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una query singleton in Progettazione modelli di data mining
+# <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Creare una query singleton in Progettazione modelli di data mining
   Una query singleton è utile quando si desidera creare una stima per un singolo case. Per altre informazioni sulle query singleton, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
   
  Nella scheda **Stima modello di data mining** della Progettazione modelli di data mining è possibile creare diversi tipi di query. È possibile creare una query utilizzando la finestra di progettazione oppure digitando istruzioni Data Mining Extensions (DMX). È anche possibile iniziare con la finestra di progettazione e modificare la query creata cambiando le istruzioni DMX o aggiungendo una clausola WHERE o ORDER BY.  
@@ -39,7 +44,7 @@ AS [t]
   
  Nei passaggi seguenti viene descritta la creazione della query di stima.  
   
-### Per creare una query singleton utilizzando la Progettazione modelli di data mining  
+### <a name="to-create-a-singleton-query-by-using-the-data-mining-designer"></a>Per creare una query singleton utilizzando la Progettazione modelli di data mining  
   
 1.  Fare clic sulla scheda **Stima modello di data mining** in Progettazione modelli di data mining.  
   
@@ -51,9 +56,9 @@ AS [t]
   
      Ad esempio, per creare il codice di esempio mostrato all'inizio di questo argomento, selezionare TM_Decision_Tree, quindi fare clic su **OK**.  
   
-3.  Fare clic su **Query singleton** sulla barra degli strumenti della scheda **Stima modello di data mining**.  
+3.  Fare clic su **Query singleton** sulla barra degli strumenti della scheda **Stima modello di data mining** .  
   
-     Nella scheda verrà visualizzata la tabella **Input query singleton** sulle cui colonne viene eseguito il mapping automaticamente alle colonne della tabella **Modello di data mining**.  
+     Nella scheda verrà visualizzata la tabella **Input query singleton** sulle cui colonne viene eseguito il mapping automaticamente alle colonne della tabella **Modello di data mining** .  
   
 4.  Nella tabella **Input query singleton** selezionare nella colonna **Valore** i valori adatti a descrivere il caso per creare una stima.  
   
@@ -61,11 +66,11 @@ AS [t]
   
 5.  Trascinare una colonna stimabile dalla tabella **Modello di data mining** alla colonna **Origine** nella parte inferiore della scheda. Facoltativamente, è possibile digitare un alias per la colonna.  
   
-     Ad esempio, trascinare **Bike Buyer** nella colonna **Origine**.  
+     Ad esempio, trascinare **Bike Buyer** nella colonna **Origine** .  
   
-6.  Aggiungere eventuali funzionalità aggiuntive alla query selezionando **Funzione di stima** o **Espressione personalizzata** nell'elenco a discesa nella colonna **Origine**.  
+6.  Aggiungere eventuali funzionalità aggiuntive alla query selezionando **Funzione di stima** o **Espressione personalizzata** nell'elenco a discesa nella colonna **Origine** .  
   
-     Ad esempio, fare clic su **Funzione di stima** e selezionare **PredictProbability**.  
+     Ad esempio, fare clic su **Funzione di stima**e selezionare **PredictProbability**.  
   
 7.  Fare clic su **Criteri/Argomento** nella riga **PredictProbability** e digitare il nome della colonna da stimare e facoltativamente un valore specifico da stimare.  
   
@@ -75,11 +80,11 @@ AS [t]
   
      Ad esempio, digitare **ProbableBuyer**.  
   
-9. Fare clic su **Passa alla visualizzazione dei risultati della query** sulla barra degli strumenti della scheda **Stima modello di data mining**.  
+9. Fare clic su **Passa alla visualizzazione dei risultati della query** sulla barra degli strumenti della scheda **Stima modello di data mining** .  
   
      Verrà visualizzata una nuova schermata con il risultato della query. Per visualizzare l'istruzione DMX appena creata, fare clic su **SQL**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di stima &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

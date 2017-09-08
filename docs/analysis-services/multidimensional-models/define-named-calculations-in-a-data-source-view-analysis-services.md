@@ -1,28 +1,33 @@
 ---
-title: "Definire calcoli denominati in una vista origine dati (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modifica di calcoli denominati"
-  - "viste origine dati [Analysis Services], calcoli denominati"
-  - "calcoli denominati [Analysis Services]"
+title: Definire calcoli denominati in una vista origine dati (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying named calculations
+- data source views [Analysis Services], named calculations
+- named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d74a249e280b0c6b31c970638e3c47b3e6327c5f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definire calcoli denominati in una vista origine dati (Analysis Services)
+# <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definire calcoli denominati in una vista origine dati (Analysis Services)
   Un calcolo denominato è un'espressione SQL rappresentata come colonna calcolata. Tale espressione presenta l'aspetto e il comportamento di una colonna della tabella. Un calcolo denominato consente di estendere lo schema relazionale delle tabelle o delle viste esistenti in una vista origine dati senza modificare le tabelle o le viste nell'origine dei dati sottostante. Si considerino gli esempi seguenti:  
   
 -   Creare un singolo calcolo denominato derivato da più colonne in una tabella dei fatti, ad esempio moltiplicando un'aliquota di imposta per un prezzo di vendita per ottenere l'ammontare delle imposte.  
@@ -31,7 +36,7 @@ caps.handback.revision: 34
   
 -   Come miglioramento delle prestazioni delle query, creare un calcolo denominato nella vista origine dati anziché creare un membro calcolato in un cubo. I calcoli denominati vengono calcolati durante l'elaborazione, mentre i membri calcolati vengono calcolati in fase di query.  
   
-## Creazione di calcoli denominati  
+## <a name="creating-named-calculations"></a>Creazione di calcoli denominati  
   
 > [!NOTE]  
 >  Non è possibile aggiungere un calcolo denominato a una query denominata, né basare una query denominata su una tabella contenente un calcolo denominato.  
@@ -48,26 +53,26 @@ FROM
   
  Il tipo di dati della colonna viene determinato in base al tipo di dati del valore scalare restituito dall'espressione. Se il provider non rileva errori nell'espressione, la colonna viene aggiunta alla tabella.  
   
- È necessario che le colonne a cui fa riferimento l'espressione non siano qualificate oppure siano qualificate solo in base al nome della tabella. Per fare riferimento alla colonna SaleAmount di una tabella, ad esempio, è possibile utilizzare `SaleAmount` o `Sales.SaleAmount`, mentre `dbo.Sales.SaleAmount` genera un errore.  
+ È necessario che le colonne a cui fa riferimento l'espressione non siano qualificate oppure siano qualificate solo in base al nome della tabella. Per fare riferimento alla colonna SaleAmount di una tabella, ad esempio, è possibile utilizzare `SaleAmount` o `Sales.SaleAmount` , mentre `dbo.Sales.SaleAmount` genera un errore.  
   
- L'espressione non viene racchiusa automaticamente tra parentesi. Se pertanto un'espressione, ad esempio un'istruzione SELECT, richiede le parentesi, è necessario digitarle nella casella **Espressione**. Ad esempio, l'espressione seguente è valida solo se si digitano le parentesi.  
+ L'espressione non viene racchiusa automaticamente tra parentesi. Se pertanto un'espressione, ad esempio un'istruzione SELECT, richiede le parentesi, è necessario digitarle nella casella **Espressione** . Ad esempio, l'espressione seguente è valida solo se si digitano le parentesi.  
   
 ```  
 (SELECT Description FROM Categories WHERE Categories.CategoryID = CategoryID)  
 ```  
   
-## Aggiungere o modificare un calcolo denominato  
+## <a name="add-or-edit-a-named-calculation"></a>Aggiungere o modificare un calcolo denominato  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto o connettersi al database contenente la vista origine dati in cui si desidera definire un calcolo denominato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto o connettersi al database contenente la vista origine dati in cui si desidera definire un calcolo denominato.  
   
-2.  In Esplora soluzioni espandere la cartella **Viste origine dati**, quindi fare doppio clic sulla vista origine dati.  
+2.  In Esplora soluzioni espandere la cartella **Viste origine dati** , quindi fare doppio clic sulla vista origine dati.  
   
-3.  Fare clic con il pulsante destro del mouse sulla tabella in cui si desidera definire il calcolo denominato all'interno del riquadro **Tabelle** o **Diagramma**, quindi scegliere **Nuovo calcolo denominato**. Assicurarsi di fare clic con il pulsante destro del mouse sul nome della tabella e non su un attributo. Il menu sarà simile al seguente:  
+3.  Fare clic con il pulsante destro del mouse sulla tabella in cui si desidera definire il calcolo denominato all'interno del riquadro **Tabelle** o **Diagramma** , quindi scegliere **Nuovo calcolo denominato**. Assicurarsi di fare clic con il pulsante destro del mouse sul nome della tabella e non su un attributo. Il menu sarà simile al seguente:  
   
-     ![Schermata dell'area di lavoro del diagramma, menu di scelta rapida](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "Schermata dell'area di lavoro del diagramma, menu di scelta rapida")  
+     ![Schermata dell'area di lavoro di diagramma, menu di scelta rapida](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "schermata dell'area di lavoro di diagramma, menu di scelta rapida")  
   
     > [!NOTE]  
-    >  Per individuare una tabella o una vista, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati** o facendo clic con il pulsante destro del mouse su un'area vuota nei riquadri **Tabelle** o **Diagramma**.  
+    >  Per individuare una tabella o una vista, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati** o facendo clic con il pulsante destro del mouse su un'area vuota nei riquadri **Tabelle** o **Diagramma** .  
   
 4.  Nella finestra di dialogo **Create Named Calculations (Crea calcolo denominato)** effettuare le operazioni seguenti:  
   
@@ -81,10 +86,10 @@ FROM
   
      La colonna del calcolo denominato viene visualizzata come ultima colonna nella tabella della vista origine dati. L'icona della calcolatrice indica che nella colonna è contenuto un calcolo denominato.  
   
-## Eliminare un calcolo denominato  
+## <a name="delete-a-named-calculation"></a>Eliminare un calcolo denominato  
  Quando si tenta di eliminare un calcolo denominato, viene visualizzato un elenco degli oggetti definiti nel progetto o nel database che verranno invalidati dall'eliminazione. Esaminare attentamente l'elenco prima di eliminare il calcolo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

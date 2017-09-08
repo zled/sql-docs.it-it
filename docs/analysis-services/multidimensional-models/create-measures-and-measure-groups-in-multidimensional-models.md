@@ -1,26 +1,31 @@
 ---
-title: "Creare misure e gruppi di misure nei modelli multidimensionali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di misure [Analysis Services], definizione"
+title: Creare misure e gruppi di misure nei modelli multidimensionali | Documenti Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8dc45f7d47484dbc3b1d5e7684f4e3a5d3075dc2
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare misure e gruppi di misure nei modelli multidimensionali
+# <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Creare misure e gruppi di misure nei modelli multidimensionali
   Una *misura* è un'aggregazione di valori di dati numerici, ad esempio somme, conteggi, valori minimi, valori massimi, medie o un'espressione MDX personalizzata creata. Un *gruppo di misure* è un contenitore per una o più misure. Tutte le misure sono disponibili in un gruppo di misure, anche se esiste una sola misura. Un cubo deve avere almeno una misura e un gruppo di misure.  
   
  In questo argomento sono contenute le sezioni seguenti:  
@@ -42,7 +47,7 @@ caps.handback.revision: 17
 |-|-|  
 |Creazione guidata cubo|Eseguire la creazione guidata cubo in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare un cubo.<br /><br /> In Esplora soluzioni fare clic con il pulsante destro del mouse su **Cubi** e scegliere **Nuovo cubo**. Per altre informazioni su questi passaggi, vedere [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> Quando si crea un cubo basato su tabelle da un data warehouse esistente, le definizioni per le misure e un gruppo di misure materializzare come parte del processo di creazione del cubo. Nella procedura guidata, scegliendo i fatti e delle tabelle dei fatti per usare come base per la misura e misurare gli oggetti gruppo nel cubo.|  
 |Finestra di dialogo Nuova misura|Supponendo che il cubo già esiste [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare doppio clic sul nome del cubo in Esplora soluzioni per aprirlo in Progettazione cubi. Nel riquadro misure destro del mouse sul nodo principale per creare un nuovo gruppo di misure o nuove misure specificando una tabella di origine, la colonna e il tipo di aggregazione. Utilizzando questo approccio, è necessario scegliere il metodo di aggregazione da un elenco fisso di funzioni predefinite. Vedere [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) per una discussione più comunemente utilizzati aggregazioni.|  
-|membro calcolato|Membri calcolati aggiungono funzionalità di analisi e la flessibilità di un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché è possibile controllare come e quando vengono creati. In alcuni casi è sufficiente una misura temporaneamente, per la durata di una sessione utente o in Management Studio come parte di un'indagine.<br /><br /> In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire la scheda calcoli per creare un nuovo membro calcolato.<br /><br /> Scegliere questo approccio quando basare una misura su un'espressione MDX. Per altre informazioni, vedere gli argomenti seguenti: [Compilazione di misure in MDX](../../analysis-services/multidimensional-models/mdx/building-measures-in-mdx.md), [Calcoli](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Calcoli nei modelli multidimensionali](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) e [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
+|membro calcolato|Membri calcolati aggiungono funzionalità di analisi e la flessibilità di un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché è possibile controllare come e quando vengono creati. In alcuni casi è sufficiente una misura temporaneamente, per la durata di una sessione utente o in Management Studio come parte di un'indagine.<br /><br /> In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire la scheda calcoli per creare un nuovo membro calcolato.<br /><br /> Scegliere questo approccio quando basare una misura su un'espressione MDX. Per altre informazioni, vedere gli argomenti seguenti: [Compilazione di misure in MDX](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [Calcoli](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Calcoli nei modelli multidimensionali](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) e [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX o XMLA|In SQL Server Management Studio, è possibile eseguire MDX o XMLA per modificare un database per includere una nuova misura calcolata. Questo approccio è utile per test ad hoc dei dati, dopo la soluzione viene distribuita a un server. Vedere [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md).|  
   
 ##  <a name="bkmk_comps"></a> Componenti di una misura  
@@ -61,7 +66,7 @@ caps.handback.revision: 17
   
  Nella figura seguente vengono rappresentate la tabella dei fatti **FactSalesQuota** e le due tabelle delle dimensioni associate **DimTime** e **DimEmployee**. Cubo di esempio Adventure Works, queste tabelle vengono utilizzate come base per il gruppo di misure Sales Quotas e le dimensioni Time ed Employee.  
   
- ![Tabella FactSalesQuota con due tabelle della dimensione](../../analysis-services/multidimensional-models/media/factsalesquota.gif "Tabella FactSalesQuota con due tabelle della dimensione")  
+ ![Tabella FactSalesQuota con due tabelle delle dimensioni](../../analysis-services/multidimensional-models/media/factsalesquota.gif "tabella FactSalesQuota con due tabelle delle dimensioni")  
   
  La tabella dei fatti contiene due tipi di colonne di base: le colonne degli attributi e le colonne delle misure.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 17
  Il punto a questa discussione è che non tutte le colonne offerte dalla procedura guidata sono utili come una misura. Utilizzare la comprensione dei dati e come utilizzarlo quando decidere le colonne da usare come misura. Tenere presente che è possibile fare doppio clic su una tabella nella vista origine dati per esplorare i dati, che consentono di identificare le colonne da usare come misure. Per altre informazioni, vedere [Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md).  
   
 > [!NOTE]  
->  Non tutte le misure derivano direttamente da un valore archiviato in una colonna della tabella dei fatti. Ad esempio, la misura **Sales Person Count** definita nel gruppo di misure **Sales Quota** del cubo di esempio Adventure Works si basa in realtà sul conteggio di valori univoci, o Distinct Count, nella colonna **EmployeeKey** della tabella dei fatti **FactSalesQuota**.  
+>  Non tutte le misure derivano direttamente da un valore archiviato in una colonna della tabella dei fatti. Ad esempio, la misura **Sales Person Count** definita nel gruppo di misure **Sales Quota** del cubo di esempio Adventure Works si basa in realtà sul conteggio di valori univoci, o Distinct Count, nella colonna **EmployeeKey** della tabella dei fatti **FactSalesQuota** .  
   
 ##  <a name="bkmk_grain"></a> Granularità di un gruppo di misure  
  Gruppi di misure hanno un livello di dettaglio associato indica il livello di dettaglio supportato da una tabella dei fatti. La granularità viene impostata tramite la relazione di chiave esterna a una dimensione.  
@@ -85,8 +90,8 @@ caps.handback.revision: 17
   
  Per specificare la granularità di un gruppo di misure in relazione a una dimensione specifica, usare la scheda **Utilizzo dimensioni** di Progettazione cubi. Per altre informazioni sulle relazioni tra dimensioni, vedere [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+ [Le misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   

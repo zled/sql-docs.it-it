@@ -1,43 +1,36 @@
 ---
-title: "Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traduzioni [Analysis Services], applicazioni client"
-  - "confronti basati su date"
-  - "confronti basati su giorni di settimana [Analysis Services]"
-  - "tempo [Analysis Services]"
-  - "confronti basati su mesi [Analysis Services]"
+title: Suggerimenti per la globalizzazione e procedure consigliate (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- translations [Analysis Services], client applications
+- date comparisons
+- day-of-week comparisons [Analysis Services]
+- time [Analysis Services]
+- month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
+# <a name="globalization-tips-and-best-practices-analysis-services"></a>Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] solo a Multidimensional  
   
  Questi suggerimenti e linee guida consentono di aumentare la portabilità delle soluzioni di Business Intelligence e di evitare errori direttamente correlati alle impostazioni relative alla lingua e alle regole di confronto.  
-  
--   [Usare regole di confronto simili in tutto lo stack](#bkmk_sameColl)  
-  
--   [Indicazioni comuni per le regole di confronto](#bkmk_recos)  
-  
--   [Distinzione tra maiuscole/minuscole degli identificatori di oggetto](#bkmk_objid)  
-  
--   [Test delle impostazioni locali con Excel e SQL Server Profiler](#bkmk_test)  
-  
--   [Scrittura di query MDX in una soluzione contenente traduzioni](#bkmk_mdx)  
-  
--   [Scrittura di query MDX contenenti valori di data e ora](#bkmk_datetime)  
   
 ##  <a name="bkmk_sameColl"></a> Usare regole di confronto simili in tutto lo stack  
  Se possibile, provare a usare le stesse impostazioni delle regole di confronto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usate per il motore di database, cercando di ottenere una corrispondenza nella distinzione tra maiuscole/minuscole, caratteri accentati/non accentati e di larghezza.  
@@ -57,7 +50,7 @@ caps.handback.revision: 32
   
  Considerare questo elenco come un punto di partenza per un'analisi più approfondita anziché un suggerimento definitivo che esclude le altre opzioni. Potrebbe essere possibile che un set di regole di confronto non specificamente consigliato sia la soluzione più adatta per i dati usati. Solo tramite test approfonditi è possibile verificare se i valori dei dati vengono ordinati e confrontati in modo appropriato. Come sempre, assicurarsi di eseguire carichi di lavoro di query ed elaborazione durante il test delle regole di confronto.  
   
--   Latin1_General_100_AS viene spesso usato per applicazioni che usano i 26 caratteri dell'[alfabeto latino di base ISO](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet).  
+-   Latin1_General_100_AS viene spesso usato per applicazioni che usano i 26 caratteri dell' [alfabeto latino di base ISO](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet).  
   
 -   Le lingue dell'Europa settentrionale che includono le lettere scandinave, ad esempio ø, possono usare Finnish_Swedish_100.  
   
@@ -90,7 +83,7 @@ caps.handback.revision: 32
  Il comportamento dei caratteri maiuscoli/minuscoli descritto nella tabella riguarda solo gli identificatori di oggetto e non i nomi degli oggetti. Se si noterà una differenza nella modalità di funzionamento della soluzione (dopo l'installazione di SQL Server 2012 SP2 o versioni successive), sarà probabilmente un problema di elaborazione. Le query non sono interessate dagli identificatori di oggetto. Per entrambi linguaggi di query (DAX e MDX), il motore delle formule usa il nome dell'oggetto (non l'identificatore).  
   
 > [!NOTE]  
->  Le modifiche al codice correlate alla distinzione maiuscole/minuscole sono state considerate una modifica di rilievo per alcune applicazioni. Per altre informazioni, vedere [Modifiche di rilievo nelle funzionalità di Analysis Services in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md).  
+>  Le modifiche al codice correlate alla distinzione maiuscole/minuscole sono state considerate una modifica di rilievo per alcune applicazioni. Per altre informazioni, vedere [Modifiche di rilievo nelle funzionalità di Analysis Services in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) .  
   
 ##  <a name="bkmk_test"></a> Test delle impostazioni locali con Excel, SQL Server Profiler e SQL Server Management Studio  
  Durante il test delle traduzioni, la connessione deve specificare l'identificatore LCID della traduzione. Come illustrato nell'argomento relativo a come [ottenere una lingua diversa da SSAS in Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)è possibile usare Excel per testare le traduzioni.  
@@ -105,19 +98,19 @@ caps.handback.revision: 32
   
      Verranno visualizzate le traduzioni francesi dal database di esempio Adventure Works.  
   
-     ![Tabella pivot di Excel con traduzioni in francese](../analysis-services/media/ssas-localetest-excel.png "Tabella pivot di Excel con traduzioni in francese")  
+     ![Tabella pivot di Excel con traduzioni in francese](../analysis-services/media/ssas-localetest-excel.png "tabella pivot di Excel con traduzioni in francese")  
   
  È possibile poi usare SQL Server Profiler per verificare le impostazioni locali. Fare clic su un evento `Session Initialize` e quindi controllare l'elenco delle proprietà nell'area di testo sottostante per trovare `<localeidentifier>1036</localeidentifier>`.  
   
  In Management Studio è possibile specificare l'identificatore delle impostazioni locali in una connessione al server.  
   
--   In Esplora oggetti | **Connetti** | **Analysis Services** | **Opzioni** fare clic sulla scheda **Parametri aggiuntivi per la connessione**.  
+-   In Esplora oggetti | **Connetti** | **Analysis Services** | **Opzioni**fare clic sulla scheda **Parametri aggiuntivi per la connessione** .  
   
 -   Immettere `Local Identifier=1036` , quindi fare clic su **Connetti**.  
   
 -   Eseguire una query MDX sul database Adventure Works. I risultati della query saranno le traduzioni francesi.  
   
-     ![Query MDX con traduzioni in francese in SSMS](../analysis-services/media/ssas-localetest-ssms.png "Query MDX con traduzioni in francese in SSMS")  
+     ![Query MDX con traduzioni in francese in SSMS](../analysis-services/media/ssas-localetest-ssms.png "query MDX con traduzioni in francese in SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Scrittura di query MDX in una soluzione contenente traduzioni  
  Le traduzioni forniscono informazioni visualizzate relative ai nomi degli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma gli identificatori degli oggetti corrispondenti non vengono tradotti. Se possibile, per gli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è preferibile usare gli identificatori e le chiavi anziché didascalie e nomi tradotti. Per istruzioni e script DMX (Multidimensional Expressions), ad esempio, è consigliabile usare chiavi di membri anziché nomi di membri al fine di assicurare la portabilità in contesti con più lingue.  
@@ -144,8 +137,7 @@ caps.handback.revision: 32
   
      La query MDX seguente, presa in prestito da un post del forum, illustra come usare la funzione Format per restituire le date in un formato specifico, indipendentemente dalle impostazioni internazionali sottostanti.  
   
-     Per il post originale, vedere il [post relativo a SSAS 2012 che genera date non valide nel forum di Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2).  
-  
+
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
     member [LinkTimeAdd15Date_Manual] as Format(dateadd("d",11,"2014-12-13"), "mm/dd/yyyy")  
@@ -158,7 +150,7 @@ caps.handback.revision: 32
   
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Scrittura di istruzioni Transact-SQL internazionali](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

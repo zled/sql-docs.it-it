@@ -1,0 +1,124 @@
+---
+title: Funzione Concat (XQuery) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- fn:concat function
+- concat function [XQuery]
+ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
+caps.latest.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: eed49c93e3f5754ad3c6a2d6b503ce0546cf9b34
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="functions-on-string-values---concat"></a>Funzioni su valori stringa - concat
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+  Accetta zero o più stringhe come argomenti e restituisce una stringa creata concatenando i valori di ognuno di questi argomenti.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+fn:concat ($string as xs:string?  
+           ,$string as xs:string?  
+           [, ...]) as xs:string  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ *$string*  
+ Stringa facoltativa per la concatenazione.  
+  
+## <a name="remarks"></a>Osservazioni  
+ La funzione richiede almeno due argomenti. Se un argomento è costituito da una sequenza vuota, viene considerato come stringa di lunghezza zero.  
+  
+## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
+ Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [del livello di compatibilità di ALTER DATABASE &#40; Transact-SQL &#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+  
+## <a name="examples"></a>Esempi  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database di esempio AdventureWorks.  
+  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  
+ Per un modello di prodotto specifico, questa query restituisce una stringa creata concatenando il periodo di validità e la descrizione della garanzia. Nel documento della descrizione di catalogo, l'elemento <`Warranty`> è costituito dagli elementi figlio <`WarrantyPeriod`> e <`Description`>.  
+  
+```  
+WITH XMLNAMESPACES (  
+'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
+'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
+SELECT CatalogDescription.query('  
+    <Product   
+        ProductModelID= "{ (/pd:ProductDescription/@ProductModelID)[1] }"  
+        ProductModelName = "{ sql:column("PD.Name") }" >  
+        {   
+          concat( string((/pd:ProductDescription/pd:Features/wm:Warranty/wm:WarrantyPeriod)[1]), "-",  
+                  string((/pd:ProductDescription/pd:Features/wm:Warranty/wm:Description)[1]))   
+         }   
+     </Product>  
+ ') as Result  
+FROM Production.ProductModel PD  
+WHERE  PD.ProductModelID=28  
+  
+```  
+  
+ Dalla query precedente si noti quanto segue:  
+  
+-   Nella clausola SELECT, CatalogDescription è una **xml** colonna di tipo. Pertanto, il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md), ovvero Instructions, viene utilizzato. L'istruzione XQuery viene specificata come argomento per il metodo di query.  
+  
+-   Nel documento sul quale viene eseguita la query vengono utilizzati spazi dei nomi. Pertanto, il **dello spazio dei nomi** parola chiave viene utilizzata per definire il prefisso dello spazio dei nomi. Per ulteriori informazioni, vedere [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
+  
+ Risultato:  
+  
+```  
+<Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
+```  
+  
+ La query precedente recupera le informazioni relative a un prodotto specifico. La query seguente recupera le stesse informazioni per tutti i prodotti per i quali vengono archiviate descrizioni di catalogo XML. Il **exist ()** metodo il **xml** tipo di dati nella clausola WHERE restituisce True se il documento XML nelle righe ha un <`ProductDescription`> elemento.  
+  
+```  
+WITH XMLNAMESPACES (  
+'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
+'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
+  
+SELECT CatalogDescription.query('  
+    <Product   
+        ProductModelID= "{ (/pd:ProductDescription/@ProductModelID)[1] }"   
+        ProductName = "{ sql:column("PD.Name") }" >  
+        {   
+          concat( string((/pd:ProductDescription/pd:Features/wm:Warranty/wm:WarrantyPeriod)[1]), "-",  
+                  string((/pd:ProductDescription/pd:Features/wm:Warranty/wm:Description)[1]))   
+         }   
+     </Product>  
+ ') as Result  
+FROM Production.ProductModel PD  
+WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1  
+  
+```  
+  
+ Si noti che il valore booleano restituito dal **exist ()** metodo il **xml** tipo viene confrontato con 1.  
+  
+### <a name="implementation-limitations"></a>Limitazioni di implementazione  
+ Limitazioni:  
+  
+-   Il **Concat ()** funzione in SQL Server accetta solo valori di tipo xs: String. Per gli altri valori è necessario eseguire il cast esplicito al tipo xs:string o al tipo xdt:untypedAtomic.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+  
+  

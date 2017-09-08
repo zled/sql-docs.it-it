@@ -1,22 +1,27 @@
 ---
-title: "Categoria degli eventi di elaborazione delle query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Categoria di eventi di elaborazione delle query | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e583b0b0a6985ec4c91090b9009df6924c25c75
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Categoria degli eventi di elaborazione delle query
+# <a name="query-processing-events-category"></a>Categoria degli eventi di elaborazione delle query
   Nella categoria di eventi relativa all'elaborazione di query sono incluse le classi di eventi descritte nella tabella seguente.  
   
 |**Event Class**|**ID evento**|**Description**|  
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
  Per informazioni sulle colonne associate a ogni classe di evento di elaborazione query, vedere [Query Processing Events Data Columns](../../analysis-services/trace-events/query-processing-events-data-columns.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi di traccia di Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

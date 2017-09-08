@@ -1,36 +1,41 @@
 ---
-title: "Set di righe dello schema di data mining (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "set di righe dello schema [Analysis Services], data mining"
-  - "data mining [Analysis Services], query"
-  - "contenuto di modelli di data mining"
-  - "data mining [Analysis Services], set di righe dello schema"
-  - "set di righe dello schema [Analysis Services], recupero"
-  - "data mining [Analysis Services], risoluzione dei problemi"
+title: Data Mining Schema Rowsets (SSAs) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema rowsets [Analysis Services], data mining
+- data mining [Analysis Services], queries
+- mining model content
+- data mining [Analysis Services], schema rowsets
+- schema rowsets [Analysis Services], retrieving
+- data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Set di righe dello schema di data mining (SSAS)
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] molti dei set di righe esistenti dello schema di data mining OLE DB sono esposti come set di tabelle di sistema su cui è possibile eseguire query tramite istruzioni DMX (Data Mining Extensions). Mediante la creazione di query sul set di righe dello schema di data mining, è possibile identificare i servizi disponibili, ottenere aggiornamenti sullo stato dei modelli e delle strutture e trovare dettagli sul contenuto del modello o sui parametri. Per una descrizione dei set di righe dello schema di data mining, vedere [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+# <a name="data-mining-schema-rowsets-ssas"></a>Set di righe dello schema di data mining (SSAS)
+  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]molti dei set di righe esistenti dello schema di data mining OLE DB sono esposti come set di tabelle di sistema su cui è possibile eseguire query tramite istruzioni DMX (Data Mining Extensions). Mediante la creazione di query sul set di righe dello schema di data mining, è possibile identificare i servizi disponibili, ottenere aggiornamenti sullo stato dei modelli e delle strutture e trovare dettagli sul contenuto del modello o sui parametri. Per una descrizione dei set di righe dello schema di data mining, vedere [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
 >  È anche possibile eseguire una query sul set di righe dello schema di data mining utilizzando l'analisi XMLA. Per altre informazioni sull'esecuzione di questa operazione in SQL Server Management Studio, vedere [Creare una query di data mining utilizzando XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  
   
-## Elenco di set di righe dello schema di data mining  
+## <a name="list-of-data-mining-schema-rowsets"></a>Elenco di set di righe dello schema di data mining  
  Nella tabella seguente sono elencati i set di righe dello schema di data mining che possono essere utili per l'esecuzione delle query e il monitoraggio.  
   
 |Nome del set di righe|Description|  
@@ -48,10 +53,10 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  L'elenco nella tabella non è completo in quanto contiene solo i set di righe che possono essere utili per la risoluzione dei problemi.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Nella sezione seguente sono riportati alcuni esempi di query sui set di righe dello schema di data mining.  
   
-### Esempio 1: Elenco di servizi di data mining  
+### <a name="example-1-list-data-mining-services"></a>Esempio 1: Elenco di servizi di data mining  
  Nella query seguente viene restituito un elenco di servizi di data mining disponibili sul server corrente, che indica gli algoritmi abilitati. Le colonne specificate per ogni servizio di data mining includono i flag di modellazione e i tipi di contenuto che possono essere utilizzati con ogni algoritmo, il GUID di ogni servizio e gli eventuali limiti di stima che potrebbero essere stati specificati per ogni servizio.  
   
 ```  
@@ -59,7 +64,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### Esempio 2: Elenco di parametri del modello di data mining  
+### <a name="example-2-list-mining-model-parameters"></a>Esempio 2: Elenco di parametri del modello di data mining  
  Nell'esempio seguente vengono restituiti i parametri utilizzati per creare uno specifico modello di data mining:  
   
 ```  
@@ -68,7 +73,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### Esempio 3: Elenco di tutti i set di righe  
+### <a name="example-3-list-all-rowsets"></a>Esempio 3: Elenco di tutti i set di righe  
  Nell'esempio seguente viene restituito un elenco completo di set di righe disponibili nel server corrente:  
   
 ```  
@@ -77,3 +82,4 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
+

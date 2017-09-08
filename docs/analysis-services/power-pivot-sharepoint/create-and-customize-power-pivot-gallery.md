@@ -1,25 +1,30 @@
 ---
-title: "Creare e personalizzare la Raccolta Power Pivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare e personalizzare la raccolta Power Pivot | Documenti Microsoft
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare e personalizzare la Raccolta Power Pivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La Raccolta è un tipo particolare di raccolta documenti di SharePoint che fornisce un'anteprima dettagliata e la gestione dei documenti per le cartelle di lavoro pubblicate di Excel e per i report di Reporting Services contenenti dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+# <a name="create-and-customize-power-pivot-gallery"></a>Creare e personalizzare la Raccolta Power Pivot
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La Raccolta è un tipo particolare di raccolta documenti di SharePoint che fornisce un'anteprima dettagliata e la gestione dei documenti per le cartelle di lavoro pubblicate di Excel e per i report di Reporting Services contenenti dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 16
     >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
     > Per visualizzare il contenuto della raccolta in Edge, fare clic sulla scheda **Raccolta** nella raccolta di Power Pivot e quindi impostare la visualizzazione della raccolta documenti su **Tutti i documenti**.    
     > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
-    >  Per altre informazioni sulle funzionalità supportate in Edge, vedere il post di blog di Windows sulle [differenze tra Edge e i browser precedenti e sul supporto di ActiveX, VBScript e altri componenti](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/).  
+    >  Per altre informazioni sulle funzionalità supportate in Edge, vedere il post di blog di Windows sulle [differenze tra Edge e i browser precedenti e sul supporto di ActiveX, VBScript e altri componenti](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/).  
   
 -   Per creare una raccolta, è necessario essere proprietari del sito.  
   
@@ -51,12 +56,12 @@ caps.handback.revision: 16
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non può trovarsi in un sito con restrizioni. Il sito padre che contiene la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve essere aggiunto al sito attendibile o all'area Intranet locale.  
   
--   Per l'applicazione in uso deve essere stata distribuita la soluzione dell'applicazione Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mentre per la raccolta siti deve essere stata attivata la funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per altre informazioni, vedere [Distribuire soluzioni PowerPivot in SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) e [Attivare l'integrazione delle funzionalità di Power Pivot per le raccolte siti in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md).  
+-   Per l'applicazione in uso deve essere stata distribuita la soluzione dell'applicazione Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mentre per la raccolta siti deve essere stata attivata la funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per altre informazioni, vedere [Distribuire soluzioni PowerPivot in SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) e[Attivare l'integrazione delle funzionalità di Power Pivot per le raccolte siti in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Per visualizzare o creare un report Reporting Services basato su una cartella di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , sia la cartella di lavoro sia il report devono trovarsi nella stessa Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il report deve usare una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contenente dati incorporati oppure la cartella di lavoro deve contenere al massimo un'origine dati esterna costituita da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="overview"></a> Panoramica  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un modello di raccolta disponibile quando si installa [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] in un server SharePoint. La raccolta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consente di combinare un'anteprima accurata del contenuto dei file e informazioni relative all'origine dei documenti. È possibile dedurre immediatamente l'utente che ha creato il documento e la data dell'ultima modifica. Per creare immagini di anteprima, la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usa un servizio snapshot in grado di leggere le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e i report di Reporting Services che contengono dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Se si pubblica un file che il servizio snapshot non è in grado di leggere, nessuna immagine di anteprima sarà disponibile per quel file.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un modello di raccolta disponibile quando si installa [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] in un server SharePoint. La raccolta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consente di combinare un'anteprima accurata del contenuto dei file e informazioni relative all'origine dei documenti. È possibile dedurre immediatamente l'utente che ha creato il documento e la data dell'ultima modifica. Per creare immagini di anteprima, la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usa un servizio snapshot in grado di leggere le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e i report di Reporting Services che contengono dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se si pubblica un file che il servizio snapshot non è in grado di leggere, nessuna immagine di anteprima sarà disponibile per quel file.  
   
  Le immagini di anteprima si basano sul modo in cui viene eseguito il rendering della cartella di lavoro mediante Excel Services. La rappresentazione nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve corrispondere a ciò che viene visualizzato quando si apre una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un browser. L'anteprima tuttavia presenta una superficie di attacco limitata. Parti di una cartella di lavoro o di un report potrebbero essere tagliate per adattarsi allo spazio disponibile. Per visualizzare il documento completo potrebbe essere necessario aprire una cartella di lavoro o un report.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 16
   
     3.  In Raccolte fare clic su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
   
-    1.  **SharePoint 2013**: fare clic sull'icona delle impostazioni ![Impostazioni di SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.png "Impostazioni di SharePoint"). Fare clic su **Contenuto sito**.  
+    1.  **SharePoint 2013**: fare clic sull'icona impostazioni ![impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint"). Fare clic su **Contenuto sito**.  
   
     2.  Fare clic su **Aggiungi applicazione**.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 16
   
  Non è possibile modificare le impostazioni che controllano le informazioni relative all'origine dei documenti. I fatti visualizzati relativi a documenti singoli, ad esempio l'utente che ha apportato l'ultima modifica o ha aggiunto l'ultima cartella di lavoro, sono determinati da un set di colonne fisso che non può essere modificato.  
   
-#### Modificare l'ordinamento, aggiungere filtri o limitare il numero di documenti  
+#### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>Modificare l'ordinamento, aggiungere filtri o limitare il numero di documenti  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono sempre visualizzati i valori "Data ultima modifica" e "Creato da". Non è possibile disabilitare queste colonne. Non è possibile abilitare altre colonne per la raccolta. Utilizzare le istruzioni seguenti per modificare l'ordinamento, aggiungere un filtro o limitare il numero di documenti visibili.  
   
 1.  In un sito di SharePoint aprire Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -120,7 +125,7 @@ caps.handback.revision: 16
 ####  <a name="bkmk_hide_refresh_button"></a> Disabilitare o nascondere il pulsante Aggiorna  
  Non è possibile nascondere il pulsante **Gestisci aggiornamento dati** . Il pulsante è tuttavia disabilitato se l'utente non dispone di autorizzazioni sufficienti.  
   
- ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.png "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  Gli autori o i proprietari delle cartelle di lavoro devono disporre dell'autorizzazione **Collaborazione** per pianificare l'aggiornamento dati in una cartella di lavoro. Gli utenti che dispongono di autorizzazioni di collaborazione possono aprire e modificare la pagina di configurazione dell'aggiornamento dati della cartella di lavoro per specificare le credenziali e le informazioni di pianificazione usate per aggiornare i dati.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 16
 |Tutti i documenti|Si tratta del layout standard per le raccolte documenti. È possibile scegliere questa vista per gestire singoli documenti o visualizzare il contenuto delle raccolte in un formato elenco.<br /><br /> Utilizzare questa vista per modificare le proprietà ed eliminare o spostare singoli documenti.<br /><br /> Se è stato abilitato il controllo delle versioni, è necessario utilizzare questa vista per archiviare o estrarre i documenti dalla raccolta.|  
 |Vista teatro e vista sequenza|Si tratta di viste specializzate molto utili se si sta illustrando un piccolo numero di documenti correlati. Nella rotazione completa delle anteprime sono incluse tutte le pagine di tutti i documenti della raccolta. Se si dispone di molti documenti, queste viste potrebbero non risultare utili per gli utenti che desiderano individuare o aprire una specifica cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Vista teatro: l'area di anteprima è centrata. Le anteprime più piccole di ogni foglio di lavoro vengono visualizzate nella parte inferiore della pagina, su uno qualsiasi dei lati.<br /><br /> Vista sequenza: l'area di anteprima è centrata. Le anteprime che precedono e seguono immediatamente l'anteprima corrente sono adiacenti all'area di anteprima.|  
   
-### Passare a una vista diversa  
+### <a name="switch-to-a-different-view"></a>Passare a una vista diversa  
   
 1.  In un sito di SharePoint aprire Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -147,10 +152,11 @@ caps.handback.revision: 16
   
 3.  In Gestione visualizzazioni, in Vista corrente, selezionare la vista che si desidera usare dall'elenco. Le viste predefinite includono Raccolta, Teatro e Sequenza video. In alternativa, è possibile scegliere Tutti i documenti se si desidera spostare, eliminare o gestire documenti nella raccolta.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Risolvere i problemi relativi all'installazione di PowerPivot per SharePoint](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
- [Usare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [Creare un percorso attendibile per i siti Power Pivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Usare la raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
+ [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Eliminare una raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
+

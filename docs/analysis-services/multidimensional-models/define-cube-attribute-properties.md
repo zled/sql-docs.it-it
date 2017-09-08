@@ -1,26 +1,31 @@
 ---
-title: "Definire le propriet&#224; degli attributi dei cubi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cubi [Analysis Services], definizione"
+title: "Definire le proprietà di attributo del cubo | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], defining
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe36e6ba9ff002706260e2e195adb292ba19b085
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definire le propriet&#224; degli attributi dei cubi
+# <a name="define-cube-attribute-properties"></a>Definire le proprietà degli attributi dei cubi
   Le proprietà degli attributi dei cubi consentono di specificare impostazioni univoche per gli attributi delle dimensioni dei cubi basate sulla stessa dimensione di database. Nella tabella seguente vengono descritte le proprietà di un attributo del cubo.  
   
 |Proprietà|Description|  
@@ -31,8 +36,8 @@ caps.handback.revision: 13
 |**AttributeHierarchyVisible**|Indica se la gerarchia dell'attributo è visibile in questa dimensione del cubo. Questa proprietà consente di rendere visibili le gerarchie in cubi o ruoli di dimensione specifici. Questa impostazione non produce alcun effetto se la gerarchia dell'attributo sottostante non è visibile. Il valore predefinito è **True**.|  
 |**AttributeID**|Contiene l'identificatore univoco (ID) dell'attributo.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Definire le proprietà delle dimensioni del cubo](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
- [Definire le proprietà della gerarchia del cubo](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
+ [Definire le proprietà di gerarchia del cubo](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   
   

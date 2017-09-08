@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Delimiters** Per impostazione predefinita, l'elenco dei delimitatori contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
--   **Symbols** Per impostazione predefinita, l'elenco **Symbols** contiene i caratteri seguenti: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`", il valore "(425) 123-4567" viene suddiviso in token come ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Simboli** per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Se, ad esempio, i simboli sono "`()-`", il valore "(425) 123-4567" viene suddiviso in token come ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un carattere non può essere simultaneamente un delimitatore e un simbolo.  
   
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  Per ulteriori informazioni, tornare alla sezione "Utilizzo della tabella dei tag" di questo argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati di profilatura Editor attività &#40; Pagina generale &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor attività Profiling dati &#40;pagina Generale&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Form profilo rapido singola tabella &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

@@ -1,24 +1,33 @@
 ---
-title: "Connessione dalle applicazioni client (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Connessione dalle applicazioni client (Analysis Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connection.login.analysisserver.f1
+- sql13.swb.connecttoas.connectionproperties.f1
+- sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Connessione dalle applicazioni client (Analysis Services)
+# <a name="connect-from-client-applications-analysis-services"></a>Connessione dalle applicazioni client (Analysis Services)
   Se non si ha familiarità con Analysis Services, utilizzare le informazioni contenute in questo argomento per connettersi a un'istanza esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando strumenti e applicazioni comuni. In questo argomento viene inoltre illustrato come connettersi con identità utente diverse a scopo di test.  
   
 -   [Connettersi tramite SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
@@ -42,7 +51,7 @@ caps.handback.revision: 9
   
  È possibile testare le autorizzazioni eseguendo SSMS con un'identità utente specifica e connettersi ad Analysis Services come tale utente.  
   
- Tenere premuto il tasto MAIUSC e fare clic con il pulsante destro del mouse sul collegamento **SQL Server Management Studio** per accedere all'opzione **Esegui come altro utente**.  
+ Tenere premuto il tasto MAIUSC e fare clic con il pulsante destro del mouse sul collegamento **SQL Server Management Studio** per accedere all'opzione **Esegui come altro utente** .  
   
 1.  Avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nella finestra di dialogo **Connetti al server** selezionare il tipo di server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -69,7 +78,7 @@ caps.handback.revision: 9
     ```  
   
 ##  <a name="bkmk_excel"></a> Connettersi tramite Excel  
- Microsoft Excel viene spesso utilizzato per analizzare i dati aziendali. Come parte di un'installazione di Excel, in Office vengono installati il provider OLE DB per Analysis Services (MSOLAP DLL), ADOMD.NET e altri provider di dati che consentono di utilizzare i dati in modo più immediato nei server di rete. Se si utilizza una versione più recente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con una versione meno recente di Excel, probabilmente sarà necessario installare provider di dati più recenti in ciascuna workstation che si connette a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Provider di dati utilizzati per le connessioni ad Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).  
+ Microsoft Excel viene spesso utilizzato per analizzare i dati aziendali. Come parte di un'installazione di Excel, in Office vengono installati il provider OLE DB per Analysis Services (MSOLAP DLL), ADOMD.NET e altri provider di dati che consentono di utilizzare i dati in modo più immediato nei server di rete. Se si utilizza una versione più recente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con una versione meno recente di Excel, probabilmente sarà necessario installare provider di dati più recenti in ciascuna workstation che si connette a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Provider di dati utilizzati per le connessioni ad Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md) .  
   
  Quando si imposta una connessione su un cubo di Analysis Services o su un database modello tabulare, in Excel le informazioni di connessione vengono salvate in un file con estensione odc per l'utilizzo futuro. La connessione viene stabilita nel contesto di sicurezza dell'utente di Windows corrente. Per l'esito positivo della connessione è necessario che l'account utente disponga di autorizzazioni di lettura per il database.  
   
@@ -77,7 +86,7 @@ caps.handback.revision: 9
   
  È possibile testare le autorizzazioni avviando Excel con un'identità utente specifica.  
   
- Tenere premuto il tasto MAIUSC e fare clic con il pulsante destro del mouse sul collegamento **Excel** per accedere all'opzione **Esegui come altro utente**.  
+ Tenere premuto il tasto MAIUSC e fare clic con il pulsante destro del mouse sul collegamento **Excel** per accedere all'opzione **Esegui come altro utente** .  
   
 1.  Nella scheda Dati di Excel, fare clic su **Da altre origini**, quindi scegliere **Da Analysis Services**. Immettere il nome del server e quindi selezionare un cubo o una prospettiva per la query.  
   
@@ -120,7 +129,7 @@ caps.handback.revision: 9
   
      Per testare, utilizzare Excel o SSMS in un computer remoto, specificando l'indirizzo IP e la porta utilizzati dall'istanza di Analysis Services. Se è possibile connettersi, le regole del firewall sono valide per l'istanza e l'istanza consente le connessioni remote.  
   
-     Inoltre, quando si utilizza TCP/IP per il protocollo di connessione, Analysis Services richiede connessioni client che provengono dallo stesso dominio o da un dominio trusted. Se le connessioni vengono propagate attraverso i limiti di sicurezza, è necessario configurare l'accesso HTTP. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+     Inoltre, quando si utilizza TCP/IP per il protocollo di connessione, Analysis Services richiede connessioni client che provengono dallo stesso dominio o da un dominio trusted. Se le connessioni vengono propagate attraverso i limiti di sicurezza, è necessario configurare l'accesso HTTP. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 -   È possibile connettersi utilizzando solo alcuni strumenti ma non altri? Il problema potrebbe essere costituito dall'errata versione di una libreria client. È possibile recuperare le librerie client dalla pagina di download di SQL Server Feature Pack.  
   
@@ -128,10 +137,10 @@ caps.handback.revision: 9
   
  [Risoluzione di problemi di connettività comuni negli scenari di connettività di SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx). Il documento è stato scritto da alcuni anni, ma le informazioni e le metodologie sono comunque valide.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Rappresentazione &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [Rappresentazione &#40; SSAS tabulare &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Elaborazione di oggetti di Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "oggetti OLAP [Analysis Services], elaborazione"
-  - "oggetti OLAP [Analysis Services]"
+title: L'elaborazione di Analysis Services oggetti | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP objects [Analysis Services], processing
+- OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Elaborazione di oggetti di Analysis Services
-  L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+# <a name="processing-analysis-services-objects"></a>Elaborazione di oggetti di Analysis Services
+  L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  È importante conoscere le conseguenze dell'elaborazione per ridurre l'occorrenza di ripercussioni negative. Ad esempio, l'elaborazione completa di una dimensione imposta automaticamente tutte le partizioni dipendenti da tale dimensione su uno stato di non elaborazione. In tal modo i cubi interessati diventano non disponibili per l'esecuzione di query fino all'elaborazione delle partizioni dipendenti.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 44
  [Elaborazione di strutture e modelli di data mining](#bkmk_procdm)  
   
 ##  <a name="bkmk_procdb"></a> Elaborazione di un database  
- In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un database contiene oggetti, ma non dati. Quando si elabora un database, si indica al server di elaborare in modo ricorsivo gli oggetti in cui sono archiviati i dati del modello, ad esempio dimensioni, partizioni, strutture di data mining e modelli di data mining.  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un database contiene oggetti, ma non dati. Quando si elabora un database, si indica al server di elaborare in modo ricorsivo gli oggetti in cui sono archiviati i dati del modello, ad esempio dimensioni, partizioni, strutture di data mining e modelli di data mining.  
   
  Quando si elabora un database, vengono elaborati tutti i modelli di data mining, le partizioni e le dimensioni corrispondenti o solo alcuni di questi elementi. Il tipo di elaborazione varia a seconda dello stato di ogni oggetto e dell'opzione di elaborazione selezionata. Per altre informazioni, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
@@ -93,9 +98,9 @@ caps.handback.revision: 44
   
  Per altre informazioni sull'elaborazione di strutture e modelli di data mining, vedere [Requisiti e considerazioni sull'elaborazione &#40;Data mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Elaborazione batch &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [L'elaborazione batch &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

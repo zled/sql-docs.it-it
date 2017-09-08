@@ -1,34 +1,39 @@
 ---
-title: "Impostare la propriet&#224; Slice delle partizioni (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partizioni [Analysis Services], sezioni di dati"
-  - "sezioni di dati [Analysis Services]"
+title: "Impostare la proprietà Slice delle partizioni (Analysis Services) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], data slices
+- data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0dc6d3620e26186c57a78ddb88e44548384c7b7d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Impostare la propriet&#224; Slice delle partizioni (Analysis Services)
+# <a name="set-the-partition-slice-property-analysis-services"></a>Impostare la proprietà Slice delle partizioni (Analysis Services)
   Una sezione di dati è una funzionalità di ottimizzazione importante che semplifica l'indirizzamento delle query sui dati delle partizioni appropriate. Impostare in modo esplicito la proprietà Slice può migliorare le prestazioni delle query tramite l'override delle sezioni predefinite generate per le partizioni MOLAP e HOLAP. Inoltre, la proprietà Slice offre un ulteriore controllo di convalida durante l'elaborazione della partizione.  
   
  È possibile specificare una sezione di dati dopo avere creato una partizione, ma prima di elaborarla, utilizzando la proprietà Slice. Nella scheda Partizioni espandere un gruppo di misure, fare clic con il pulsante destro del mouse su una partizione e selezionare **Proprietà**.  
   
  Per una illustrazione dei vantaggi delle sezioni di dati, vedere l'articolo relativo all' [impostazione di una sezione nella partizione del cubo SSAS](http://go.microsoft.com/fwlink/?LinkId=317783).  
   
-## Definizione di una proprietà Slice  
+## <a name="defining-a-slice"></a>Definizione di una proprietà Slice  
  I valori validi per una proprietà Slice sono un membro, un set o una tupla MDX. Negli esempi seguenti viene illustrata la sintassi valida per la proprietà Slice:  
   
 |Sezione|Membro, set o tupla|  
@@ -40,13 +45,13 @@ caps.handback.revision: 33
  Una sezione di dati di una partizione deve riflettere quanto più accuratamente possibile i dati della partizione. Se ad esempio una partizione contiene solo i dati relativi al 2012, la sezione di dati corrispondente deve specificare il membro 2012 della dimensione temporale. Non è tuttavia possibile specificare sempre una sezione di dati che rifletta il contenuto esatto di una partizione. Se ad esempio una partizione contiene solo i dati relativi ai mesi di gennaio e febbraio ma i livelli della dimensione temporale sono Anno, Trimestre e Mese, nella Creazione guidata partizione non è possibile selezionare entrambi i membri Gennaio e Febbraio. In tali casi, selezionare il padre dei membri che riflettono il contenuto della partizione, che in questo esempio è Trimestre 1.  
   
 > [!NOTE]  
->  Si noti che le funzioni MDX dinamiche, ad esempio [Generate &#40;MDX&#41;](../../mdx/generate-mdx.md) o [Except &#40;MDX&#41;](../Topic/Except%20\(MDX\).md) non sono supportate nella proprietà Slice per le partizioni. È necessario definire la sezione usando tuple esplicite o riferimenti ai membri.  
+>  Si noti che le funzioni MDX dinamiche, ad esempio [Generate &#40;MDX&#41;](../../mdx/generate-mdx.md) o [Except &#40;MDX&#41;](../../mdx/except-mdx-function.md) non sono supportate nella proprietà Slice per le partizioni. È necessario definire la sezione usando tuple esplicite o riferimenti ai membri.  
 >   
 >  Ad esempio, invece di usare l'operatore di intervallo (:) per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
 >   
 >  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. È quindi possibile usare lo strumento da riga di comando ascmd o [Attività Esegui DDL Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) in Integration Services per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

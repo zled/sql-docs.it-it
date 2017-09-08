@@ -1,26 +1,31 @@
 ---
-title: "Modificare una connessione all&#39;origine dati esistente (SSAS tabulare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: Modificare una connessione all'origine dati esistente (SSAS tabulare) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modificare una connessione all&#39;origine dati esistente (SSAS tabulare)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Modificare una connessione all'origine dati esistente (SSAS tabulare)
   In questo argomento viene descritto come modificare le proprietà di una connessione all'origine dati esistente in un modello tabulare.  
   
  Dopo aver creato una connessione a un'origine dati esterna, è possibile modificarla in un secondo momento nei modi seguenti:  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   È possibile modificare le tabelle, le viste o le colonne ottenute dall'origine dati esterna.  
   
-## Modificare una connessione  
+## <a name="modify-a-connection"></a>Modificare una connessione  
  In questa procedura viene descritto come modificare una connessione all'origine dati di un database. Alcune opzioni per l'utilizzo delle origini dati differiscono in base al tipo di origine dati; tuttavia, si dovrebbe essere in grado di identificare facilmente tali differenze.  
   
-#### Per modificare l'origine dati esterna utilizzata da una connessione corrente  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>Per modificare l'origine dati esterna utilizzata da una connessione corrente  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]scegliere **Connessioni esistenti** dal menu **Modello**.  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  Se nella nuova origine dati sono incluse le tabelle aggiuntive che non erano presenti nell'origine dati originale, è necessario aprire nuovamente la connessione modificata e aggiungere le tabelle.  
   
-## Modificare i mapping (associazioni) di tabelle e colonne  
+## <a name="edit-table-and-column-mappings-bindings"></a>Modificare i mapping (associazioni) di tabelle e colonne  
  In questa procedura viene descritto come modificare i mapping dopo avere modificato un'origine dati.  
   
-#### Per modificare i mapping delle colonne quando viene modificata un'origine dati  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>Per modificare i mapping delle colonne quando viene modificata un'origine dati  
   
 1.  In Progettazione modelli selezionare una tabella.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      Quando si salva il set corrente di proprietà della tabella, è possibile che venga visualizzato un messaggio che indica la necessità di elaborare le tabelle. Fare clic su **Elabora** per caricare dati aggiornati nel modello.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborare dati &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Origini dati supportate &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

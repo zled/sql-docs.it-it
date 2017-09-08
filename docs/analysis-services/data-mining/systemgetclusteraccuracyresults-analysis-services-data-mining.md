@@ -1,26 +1,31 @@
 ---
-title: "SystemGetClusterAccuracyResults (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "stored procedure [Analysis Services], data mining"
-  - "SystemGetClusterAccuracyResults"
-  - "convalida incrociata [data mining]"
+title: SystemGetClusterAccuracyResults (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [Analysis Services], data mining
+- SystemGetClusterAccuracyResults
+- cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e31548023acfa5ef3c202b978d7be3c46d788a0
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetClusterAccuracyResults (Analysis Services - Data mining)
+# <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Data mining)
   Restituisce la metrica di accuratezza per la convalida incrociata di una struttura di data mining e dei modelli di clustering correlati.  
   
  Questa stored procedure restituisce la metrica per l'intero set di dati come un'unica partizione. Per partizionare il set di dati in sezioni trasversali e restituire la metrica per ogni partizione, usare [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 18
 > [!NOTE]  
 >  Questa stored procedure può essere utilizzata solo per modelli di clustering. Per i modelli non di clustering, usare [SystemGetAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -39,7 +44,7 @@ SystemGetClusterAccuracyResults(
 ,<test list>])  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *struttura di data mining*  
  Nome di una struttura di data mining nel database corrente.  
   
@@ -48,7 +53,7 @@ SystemGetClusterAccuracyResults(
  *elenco di modelli data mining*  
  Elenco delimitato da virgole dei modelli da convalidare.  
   
- L'impostazione predefinita è **null** e indica che vengono usati tutti i modelli applicabili. Se si utilizza l'impostazione predefinita, i modelli non di clustering vengono esclusi automaticamente dall'elenco di candidati per l'elaborazione.  
+ L'impostazione predefinita è **null**e indica che vengono usati tutti i modelli applicabili. Se si utilizza l'impostazione predefinita, i modelli non di clustering vengono esclusi automaticamente dall'elenco di candidati per l'elaborazione.  
   
  (Facoltativo)  
   
@@ -68,9 +73,9 @@ SystemGetClusterAccuracyResults(
  *elenco di test*  
  Stringa che specifica le opzioni di testing. Questo parametro è riservato per usi futuri.  
   
- (facoltativo).  
+ (Facoltativo)  
   
-## Tipo restituito  
+## <a name="return-type"></a>Tipo restituito  
  Tabella che contiene i punteggi per ogni singola partizione e le aggregazioni per tutti i modelli.  
   
  Nella tabella seguente vengono elencate le colonne restituite da **SystemGetClusterAccuracyResults**. Per altre informazioni sull'interpretazione delle informazioni restituite dalla stored procedure, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
@@ -86,7 +91,7 @@ SystemGetClusterAccuracyResults(
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo di modello e dal tipo del valore stimabile.<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Valore|Punteggio di probabilità che indica la probabilità del case di cluster.|  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono forniti esempi dei valori che è possibile utilizzare per specificare i dati nella struttura di data mining utilizzata per la convalida incrociata. Se si desidera utilizzare test case per la convalida incrociata, è necessario che la struttura di data mining contenga già un set di dati di testing. Per informazioni sulla definizione di un set di dati di testing quando si crea una struttura di data mining, vedere [Set di dati di training e di testing](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 |Valore integer|Description|  
@@ -101,7 +106,7 @@ SystemGetClusterAccuracyResults(
   
  Per altre informazioni sugli scenari in cui è possibile usare la convalida incrociata, vedere [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  In questo esempio vengono restituite le misure di accuratezza per due modelli di clustering, denominati `Cluster 1` e `Cluster 2`, associati alla struttura di data mining vTargetMail. Il codice nella quarta riga indica che i risultati devono essere basati solo sui test case, senza l'utilizzo di eventuali filtri associati a ogni modello.  
   
 ```  
@@ -119,13 +124,13 @@ CALL SystemGetClusterAccuracyResults (
 |Cluster 1|||0|5545|Clustering|Probabilità del case|0.796514342249313|  
 |Cluster 2|||0|5545|Clustering|Probabilità del case|0.732122471228572|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  La convalida incrociata è disponibile solo in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

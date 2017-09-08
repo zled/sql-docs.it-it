@@ -1,35 +1,46 @@
 ---
-title: "Cmdlet Invoke-ProcessCube | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Cmdlet Invoke-ProcessCube | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: b10ba7c1-8f10-4e72-9626-f9285e4341fd
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e54ec7316c74bd1551194c318e9a981dff341b72
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cmdlet Invoke-ProcessCube
+# <a name="invoke-processcube-cmdlet"></a>Cmdlet Invoke-ProcessCube
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Elaborare un cubo utilizzando una variabile di tipo di elaborazione specifica.  
   
-## Sintassi  
+>[!NOTE] 
+>In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.
+  
+## <a name="syntax"></a>Sintassi  
  `Invoke-ProcessCube [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
  `Invoke-ProcessCube –DatabaseCube <Microsoft.AnalysisServices.Cube> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Il cmdlet Invoke-ProcessCube elabora un cubo al livello specificato. Ad esempio, ProcessFull sovrascrive dati esistenti con tutti dati nuovi. Quando si elabora un cubo, è necessario specificare il tipo di elaborazione. Per altre informazioni, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-## Parametri  
+## <a name="parameters"></a>Parametri  
   
-### -Name \<string>  
+### <a name="-name-string"></a>-Nome \<stringa >  
  Specifica il cubo da elaborare.  
   
 |||  
@@ -40,7 +51,7 @@ caps.handback.revision: 9
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-Database \<stringa >  
  Specifica il database a cui appartiene il cubo.  
   
 |||  
@@ -51,7 +62,7 @@ caps.handback.revision: 9
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### -ProcessType \<Microsoft.AnalysisServices.ProcessType>  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
  Specifica il tipo di processo: ProcessFull, ProcessAdd, ProcessUpdate, ProcessIndexes, ProcessData, ProcessDefault, ProcessClear, ProcessStructure, ProcessCelarStructureOnly, ProcessScriptCache, ProcessRecalc.  
   
 |||  
@@ -62,7 +73,7 @@ caps.handback.revision: 9
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### -DatabaseCube \<Microsoft.AnalysisSevices.Cube>  
+### <a name="-databasecube-microsoftanalysissevicescube"></a>-DatabaseCube \<Microsoft.AnalysisSevices.Cube >  
  Specifica un oggetto Microsoft.AnalysisServices.Cube da elaborare. Utilizzare questo parametro se si desidera passare il nome del cubo tramite pipeline.  
   
 |||  
@@ -73,10 +84,10 @@ caps.handback.revision: 9
 |Accettare input da pipeline?|True (ByPropertyName)|  
 |Accettare caratteri jolly?|false|  
   
-### \<CommonParameters>  
+### <a name="commonparameters"></a>\<Parametricomuni >  
  In questo cmdlet vengono supportati i parametri comuni: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer e -OutVariable. Per altre informazioni, vedere [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Input e output  
+## <a name="inputs-and-outputs"></a>Input e output  
  Il tipo di input è il tipo degli oggetti che è possibile inoltrare tramite pipe al cmdlet. Il tipo restituito è il tipo degli oggetti restituiti dal cmdlet.  
   
 |||  
@@ -84,18 +95,14 @@ caps.handback.revision: 9
 |Input|Nessuno|  
 |Output|Nessuno|  
   
-## Esempio 1  
+## <a name="example-1"></a>Esempio 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works > Get-Item .| Invoke-ProcessCube–ProcessType:ProcessDefault`  
   
  Questo comando reindirizza l'identità del cubo da elaborare.  
   
-## Esempio 2  
+## <a name="example-2"></a>Esempio 2  
  `PS SQL SERVER:\sqlas\locahost\default > Invoke-ProcessCube “Adventure Works” –database AWTEST –ProcessType:ProcessDefault`  
   
- Questo comando elabora il cubo Adventure Works nel database AWTEST.  
-  
-## Vedere anche  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Post sulla gestione dei modelli tabulari tramite PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+ Questo comando elabora il cubo Adventure Works nel database AWTEST.   
   
   

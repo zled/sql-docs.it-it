@@ -1,31 +1,36 @@
 ---
-title: "SystemGetClusterCrossValidationResults (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SystemGetClusterCrossValidationResults"
-  - "stored procedure [Analysis Services], data mining"
-  - "convalida incrociata [data mining]"
+title: SystemGetClusterCrossValidationResults (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SystemGetClusterCrossValidationResults
+- stored procedures [Analysis Services], data mining
+- cross-validation [data mining]
 ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c1a4bf1ffb2768e21c323fd8abc80c1e0706b7b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetClusterCrossValidationResults (Analysis Services - Data mining)
+# <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Data mining)
   Partiziona la struttura di data mining nel numero specificato di sezioni incrociate, esegue il training di un modello per ogni partizione, quindi restituisce la metrica di accuratezza per ogni partizione.  
   
  **Nota** Questa stored procedure può essere usata solo con una struttura di data mining contenente almeno un modello di clustering. Per eseguire la convalida incrociata di modelli non di clustering, è necessario usare [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,7 +42,7 @@ SystemGetClusterCrossValidationResults(
 <test list>])  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *struttura di data mining*  
  Nome di una struttura di data mining nel database corrente.  
   
@@ -54,9 +59,9 @@ SystemGetClusterCrossValidationResults(
  (facoltativo).  
   
  *conteggio di riduzione*  
- Valore integer che specifica il numero di partizioni in cui separare il set di dati. Il valore minimo è 2. Il numero massimo di riduzioni è il **numero intero massimo** o il numero di casi, a seconda del valore inferiore.  
+ Valore integer che specifica il numero di partizioni in cui separare il set di dati. Il valore minimo è 2. Il numero massimo di riduzioni è il **numero intero massimo** o il numero di case, a seconda di quale valore è inferiore.  
   
- Ogni partizione conterrà all'incirca questo numero di casi: *max cases*/*fold count*.  
+ Ogni partizione conterrà all'incirca questo numero di case: *numero massimo di case*/*conteggio di riduzione*.  
   
  Nessun valore predefinito.  
   
@@ -81,7 +86,7 @@ SystemGetClusterCrossValidationResults(
   
  (facoltativo).  
   
-## Tipo restituito  
+## <a name="return-type"></a>Tipo restituito  
  La tabella dei tipi restituiti contiene i punteggi per ogni singola partizione e le aggregazioni per tutti i modelli.  
   
  Nella tabella seguente vengono descritte le colonne restituite.  
@@ -90,19 +95,19 @@ SystemGetClusterCrossValidationResults(
 |-----------------|-----------------|  
 |ModelName|Nome del modello sottoposto a test.|  
 |AttributeName|Nome della colonna stimabile. Per i modelli del cluster, è sempre **null**.|  
-|AttributeState|Valore di destinazione specificato nella colonna stimabile. Per i modelli del cluster, è sempre **null**.|  
+|AttributeState|Valore di destinazione specificato nella colonna stimabile. Per i modelli del cluster, è sempre **null.**|  
 |PartitionIndex|Indice in base 1 che identifica la partizione a cui si applicano i risultati.|  
 |PartitionSize|Valore integer che indica il numero di case inclusi in ogni partizione.|  
 |Test|Tipo di test eseguito.|  
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo del valore stimabile. Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Valore|Valore della misura di test specificata.|  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Per restituire la metrica di accuratezza per l'intero set di dati, usare [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
  Se il modello di data mining è già stato partizionato in riduzioni, è inoltre possibile ignorare l'elaborazione e restituire solo i risultati di convalida incrociata usando [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come partizionare una struttura di data mining per la convalida incrociata in tre riduzioni, quindi come sottoporre a test due modelli di clustering associati alla struttura di data mining.  
   
  Nella terza riga del codice sono specificati i modelli di data mining che si desidera sottoporre a test. Se non si specifica l'elenco, vengono utilizzati tutti i modelli di clustering associati alla struttura.  
@@ -131,12 +136,12 @@ CALL SystemGetClusterCrossValidationResults(
 |Cluster 2|||2|1288|Clustering|Probabilità del case|0.934865535691068|  
 |Cluster 2|||3|1288|Clustering|Probabilità del case|0.924724595688798|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  La convalida incrociata è disponibile solo in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   

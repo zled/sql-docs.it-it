@@ -1,24 +1,29 @@
 ---
-title: "Contatori delle prestazioni (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: I contatori delle prestazioni (SSAS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contatori delle prestazioni (SSAS)
+# <a name="performance-counters-ssas"></a>Contatori delle prestazioni (SSAS)
   Con Performance Monitor è possibile monitorare le prestazioni di un'istanza di Microsoft SQL Server Analysis Services (SSAS) tramite i contatori delle prestazioni.  
   
  Performance Monitor è uno snap-in di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) che consente di tenere traccia dell'utilizzo delle risorse. È possibile avviare lo snap-in MMC digitando **PerfMon** al prompt dei comandi o dal Pannello di controllo facendo clic su **Strumenti di amministrazione**, quindi su **Performance Monitor**. Performance Monitor consente di tenere traccia delle prestazioni e delle attività del server e dei processi tramite oggetti e contatori predefiniti, nonché monitorare eventi tramite contatori definiti dall'utente. Tramite Performance Monitor vengono raccolti i conteggi anziché i dati sugli eventi, ad esempio l'utilizzo della memoria, il numero di transazioni attive o l'attività della CPU. È inoltre possibile impostare valore soglia per contatori specifici allo scopo di generare avvisi per la notifica agli operatori.  
@@ -29,7 +34,7 @@ caps.handback.revision: 14
   
  I contatori sono stati raggruppati in modo da agevolare la ricerca dei contatori correlati.  
   
-## Contatori per gruppi  
+## <a name="counters-by-groups"></a>Contatori per gruppi  
   
 |Gruppo|Description|  
 |-----------|-----------------|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Cache dei file - errori di pagina/sec|Frequenza degli errori di pagina nella cache dei file.|  
 |Cache dei file - letture/sec|Numero delle operazioni di lettura eseguite nella cache dei file al secondo.|  
 |Cache dei file - letture in KB/sec|Frequenza delle operazioni di lettura eseguite nella cache dei file, in KB al secondo.|  
-|Cache dei file - scritture/sec|Numero delle operazioni di scrittura eseguite nella cache dei file al secondo.  Le operazioni di scrittura sono asincrone.|  
-|Cache dei file - scritture in KB/sec|Frequenza delle operazioni di scrittura eseguite nella cache dei file, in KB al secondo.  Le operazioni di scrittura sono asincrone.|  
+|Cache dei file - scritture/sec|Scrittura pagine nella cache dei file al secondo.  Le operazioni di scrittura sono asincrone.|  
+|Cache dei file - scritture in KB/sec|KB cache dei file scritti/sec.  Le operazioni di scrittura sono asincrone.|  
 |Cache dei file - errori di I/O/sec|Frequenza degli errori di I/O nella cache dei file.|  
 |Cache dei file - errori di I/O|Totale degli errori di I/O nella cache dei file.|  
 |Cache dei file - pagine clock esaminate/sec|Frequenza con cui il servizio di pulitura della memoria in background esamina le pagine per determinare quelle da eliminare.|  
@@ -262,7 +267,7 @@ caps.handback.revision: 14
 |Partizioni correnti|Numero corrente delle partizioni da elaborare.|  
 |Totale partizioni|Numero totale delle partizioni elaborate (con esito positivo o negativo).|  
 |Righe/sec|Numero delle righe di file MOLAP utilizzate al secondo per la creazione degli indici.|  
-|Totale righe|Totale delle righe di file MOLAP utilizzate per la creazione degli indici.|  
+|Righe del totale|Totale delle righe di file MOLAP utilizzate per la creazione degli indici.|  
   
 ###  <a name="bkmk_Processing"></a> Elaborazione  
  Statistiche correlate all'elaborazione dei dati di Microsoft Analysis Services.  

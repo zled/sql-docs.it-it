@@ -1,29 +1,34 @@
 ---
-title: "Creare una dimensione generando una tabella non temporale nell&#39;origine dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "origini dati [Analysis Services], dimensioni senza origine dati"
-  - "dimensioni [Analysis Services], standard"
-  - "dimensioni [Analysis Services], creazione senza origine dati"
-  - "dimensioni standard [Analysis Services]"
+title: Creare una dimensione generando una tabella Non temporale nell'origine dati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data sources [Analysis Services], dimensions without data source
+- dimensions [Analysis Services], standard
+- dimensions [Analysis Services], creating without data source
+- standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20035f6d8fff0c5d45b4c807cf6202531156741d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creare una dimensione generando una tabella non temporale nell&#39;origine dati
+# <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Creare una dimensione generando una tabella non temporale nell'origine dati
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione senza usare un'origine dati esistente. A questo scopo, selezionare l'opzione **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** della pagina **Seleziona metodo di creazione** della procedura guidata. Per creare una nuova tabella della dimensione nell'origine dati sottostanti è necessario disporre delle autorizzazioni per creare oggetti nell'origine dati sottostanti. In caso di definizione di una dimensione senza una vista origine dati predefinita, è possibile sia definire la dimensione da zero sia definirla in base a un modello di dimensione.  
   
  Creazione guidata dimensione offre modelli di dimensione in base ai quali è possibile compilare un tipo di dimensione comune. È possibile scegliere tra i tipi di dimensione seguenti:  
@@ -74,21 +79,21 @@ caps.handback.revision: 41
   
  Quando si crea una dimensione non temporale senza utilizzare un'origine dati, Creazione guidata dimensione descrive i passaggi per specificare il tipo di dimensione ed identifica l’attributo chiave e le dimensioni a modifica lenta.  
   
-## Impostazione del tipo di dimensione  
+## <a name="specify-dimension-type"></a>Impostazione del tipo di dimensione  
  Nella pagina **Impostazione tipo di dimensione** della Creazione guidata dimensione è possibile specificare il tipo di dimensione. Se si sta compilando la dimensione basata su un modello, il tipo di dimensione viene definito automaticamente. In questa pagina è inoltre possibile selezionare gli attributi standard del tipo di dimensione specificato, se disponibili.  
   
- Se è stato selezionato un modello che corrisponde a un tipo di dimensione, questa pagina viene popolata con le opzioni di quel tipo di dimensione. Se non è stato selezionato un modello o se non esiste un tipo di dimensione corrispondente, il tipo di dimensione predefinito è **Regolare**. Se non è già stato selezionato un tipo di dimensione, scegliere il tipo più appropriato per la dimensione da creare. Se nell'elenco **Tipo di dimensione** non è disponibile alcun tipo appropriato, selezionare **Regolare**.  
+ Se è stato selezionato un modello che corrisponde a un tipo di dimensione, questa pagina viene popolata con le opzioni di quel tipo di dimensione. Se non è stato selezionato un modello o se non esiste un tipo di dimensione corrispondente, il tipo di dimensione predefinito è **Regolare**. Se non è già stato selezionato un tipo di dimensione, scegliere il tipo più appropriato per la dimensione da creare. Se nell'elenco **Tipo di dimensione**non è disponibile alcun tipo appropriato, selezionare **Regolare**.  
   
- Quando si seleziona un tipo di dimensione, durante la procedura guidata in **Attributi dimensione** vengono elencati i tipi di attributi che possono essere applicati alla dimensione. Per selezionare un tipo di attributo, spuntare la casella di controllo **Includi** accanto al tipo di attributo e inserire il nome dell'attributo in **Attributo dimensione**. Il nome predefinito è lo stesso visualizzato in **Tipo di attributo**.  
+ Quando si seleziona un tipo di dimensione, durante la procedura guidata in **Attributi dimensione**vengono elencati i tipi di attributi che possono essere applicati alla dimensione. Per selezionare un tipo di attributo, spuntare la casella di controllo **Includi** accanto al tipo di attributo e inserire il nome dell'attributo in **Attributo dimensione**. Il nome predefinito è lo stesso visualizzato in **Tipo di attributo**.  
   
-## Identificazione di attributi chiave e dimensioni modificabili  
+## <a name="identify-key-attribute-and-changing-dimensions"></a>Identificazione di attributi chiave e dimensioni modificabili  
  Nella pagina **Impostazione chiave e tipo della dimensione** selezionare l'attributo da impostare come attributo chiave della dimensione. L'attributo chiave generalmente corrisponde alla colonna chiave primaria nella tabella principale della dimensione e indicizza i membri foglia della dimensione.  
   
- Se è stato selezionato un modello, nel quale viene poi definito un attributo chiave, tale attributo sarà l'attributo chiave predefinito. Se è stato selezionato un modello, ma in esso non è stato definito un attributo chiave, il primo attributo dell’elenco sarà l'attributo chiave predefinito. L'elenco contiene tutti gli attributi selezionati nella pagina **Impostazione tipo di dimensione**. Nella pagina **Impostazione tipo di dimensione** è possibile selezionare uno degli attributi selezionati come attributo chiave della dimensione. Se non è stato selezionato alcun attributo, verrà creato automaticamente un attributo chiave il cui nome verrà determinato concatenando il nome e l'"ID" della dimensione.  
+ Se è stato selezionato un modello, nel quale viene poi definito un attributo chiave, tale attributo sarà l'attributo chiave predefinito. Se è stato selezionato un modello, ma in esso non è stato definito un attributo chiave, il primo attributo dell’elenco sarà l'attributo chiave predefinito. L'elenco contiene tutti gli attributi selezionati nella pagina **Impostazione tipo di dimensione** . Nella pagina **Impostazione tipo di dimensione** è possibile selezionare uno degli attributi selezionati come attributo chiave della dimensione. Se non è stato selezionato alcun attributo, verrà creato automaticamente un attributo chiave il cui nome verrà determinato concatenando il nome e l'"ID" della dimensione.  
   
  Definire infine se la dimensione è una dimensione modificabile. I membri di una dimensione modificabile possono spostarsi, nel tempo, in posizioni diverse all'interno della gerarchia. Durante la procedura guidata vengono generate colonne aggiuntive e vengono creati attributi che corrispondono a queste colonne. Queste colonne permettono agli utenti di consultare la dimensione in tale modalità come fattore nella modifica. Tutti i pacchetti creati successivamente con Generazione guidata schema gestiscono chiavi surrogate basate sulle caratteristiche della dimensione a modifica lenta.  
   
- Selezionando la casella di controllo **Dimensione modificabile**, la Creazione guidata dimensione definisce gli attributi indicati nella seguente tabella:  
+ Selezionando la casella di controllo **Dimensione modificabile** , la Creazione guidata dimensione definisce gli attributi indicati nella seguente tabella:  
   
 |Attribute|Tipo|  
 |---------------|----------|  
@@ -101,11 +106,11 @@ caps.handback.revision: 41
   
  È possibile utilizzare Progettazione dimensioni per configurare le proprietà di una dimensione a modifica lenta.  
   
-## Completamento di Creazione guidata dimensione  
+## <a name="completing-the-dimension-wizard"></a>Completamento di Creazione guidata dimensione  
  Nella pagina **Completamento procedura guidata** assegnare un nome alla nuova dimensione e quindi verificarne la struttura. Selezionare la casella di controllo **Genera schema adesso** per avviare Generazione guidata schema dopo avere fatto clic su **Fine**. Nella maggior parte dei casi non è necessario selezionare questa casella di controllo quando si pianifica la creazione di oggetti aggiuntivi. Se non si seleziona questa casella di controllo, è possibile utilizzare Progettazione dimensioni per generare lo schema in un secondo momento.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
+ [Creare una dimensione temporale generando una tabella dei tempi](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   

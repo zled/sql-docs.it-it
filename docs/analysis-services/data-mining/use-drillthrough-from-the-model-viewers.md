@@ -1,28 +1,33 @@
 ---
-title: "Utilizzare il drill-through dai visualizzatori modello | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzare il drill-through dai visualizzatori modello | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed4254b34f570f37761001542d67e94c02e70a84
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Utilizzare il drill-through dai visualizzatori modello
+# <a name="use-drillthrough-from-the-model-viewers"></a>Utilizzare il drill-through dai visualizzatori modello
   A seconda del tipo di modello, è possibile utilizzare il drill-through dai visualizzatori nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining per esplorare i case utilizzati nel modello di data mining o per visualizzare colonne aggiuntive nella struttura di data mining. Sebbene molti tipi di modello non supportino il drill-through perché gli schemi del modello non possono essere collegati direttamente a case specifici, i tipi di modello seguenti supportano il drill-through.  
   
  Ricordare che è necessario abilitare il drill-through per il modello e disporre delle autorizzazioni appropriate. L'opzione di drill-through deve invece essere disabilitata se il modello si trova in uno stato non elaborato, indipendentemente dal fatto che il modello sia stato elaborato o meno in precedenza e disponga di contenuto. Per recuperare i dati del case del modello tramite il drill-through, la cache della struttura e del modello deve essere quella corrente.  
   
-### Utilizzare il drill-through nel Visualizzatore Microsoft Decision Trees  
+### <a name="use-drillthrough-in-the-microsoft-tree-viewer"></a>Utilizzare il drill-through nel Visualizzatore Microsoft Decision Trees  
   
 1.  In Progettazione modello di data mining selezionare un modello di albero delle decisioni e selezionare **Esplora modello** per aprire il modello nel **Visualizzare Microsoft Decision Trees**. In SQL Server Management Studio fare clic con il pulsante destro del mouse sul modello e selezionare **Sfoglia**  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 6
   
 5.  Fare clic con il pulsante destro del mouse in qualsiasi punto nei risultati e selezionare **Copia tutto** per salvare i risultati negli Appunti.  
   
-### Utilizzare il drill-through nel Visualizzatore Microsoft Clustering  
+### <a name="use-drillthrough-in-the-microsoft-cluster-viewer"></a>Utilizzare il drill-through nel Visualizzatore Microsoft Clustering  
   
 1.  In Progettazione modello di data mining selezionare un modello di clustering e selezionare **Esplora modello** per aprire il modello nel **Visualizzare Microsoft Clustering**. In SQL Server Management Studio fare clic con il pulsante destro del mouse sul modello e selezionare **Sfoglia**.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
 5.  Fare clic con il pulsante destro del mouse in qualsiasi punto nei risultati e selezionare **Copia tutto** per salvare i risultati negli Appunti.  
   
-### Utilizzare il drill-through nel Visualizzatore Microsoft Association Rules  
+### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>Utilizzare il drill-through nel Visualizzatore Microsoft Association Rules  
   
 1.  In Progettazione modello di data mining selezionare un modello di associazione e selezionare **Esplora modello** per aprire il modello nel **Visualizzare Microsoft Association Rules**. In SQL Server Management Studio fare clic con il pulsante destro del mouse sul modello e selezionare **Sfoglia**  
   
@@ -58,11 +63,11 @@ caps.handback.revision: 6
   
 5.  Fare clic con il pulsante destro del mouse in qualsiasi punto nei risultati e selezionare **Copia tutto** per salvare i risultati dei case completi negli Appunti. È anche possibile selezionare **Copia** per copiare soltanto il case selezionato. Se il modello contiene una colonna di una tabella nidificata, verrà incollato solo il nome della colonna della tabella nidificata. Per recuperare i valori dei dati all'interno della colonna della tabella nidificata per ogni case, è necessario creare una query sul contenuto del modello.  
   
-### Utilizzare il drill-through nel Visualizzatore Microsoft Sequence Clustering  
+### <a name="use-drillthrough-in-the-microsoft-sequence-cluster-viewer"></a>Utilizzare il drill-through nel Visualizzatore Microsoft Sequence Clustering  
   
 1.  In Progettazione modello di data mining selezionare un modello di clustering e selezionare **Esplora modello** per aprire il modello nel **Visualizzare Microsoft Clustering**. In SQL Server Management Studio fare clic con il pulsante destro del mouse sul modello e selezionare **Sfoglia**.  
   
-2.  Nella scheda **Diagramma dei cluster** fare clic con il pulsante destro del mouse su qualsiasi nodo che rappresenta un cluster. Nella scheda **Profili cluster** fare clic in qualsiasi punto di un profilo cluster o nel cluster che rappresenta il popolamento totale del modello.  
+2.  Nella scheda **Diagramma dei cluster**fare clic con il pulsante destro del mouse su qualsiasi nodo che rappresenta un cluster. Nella scheda **Profili cluster** fare clic in qualsiasi punto di un profilo cluster o nel cluster che rappresenta il popolamento totale del modello.  
   
 3.  Selezionare **Drill-through**, quindi scegliere una delle opzioni seguenti: **Solo colonne modello** o **Colonne struttura e modello**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 6
   
 5.  Fare clic con il pulsante destro del mouse in qualsiasi punto nei risultati e selezionare **Copia tutto** per salvare i risultati negli Appunti. Se il modello contiene una colonna di una tabella nidificata, verrà incollato solo il nome della colonna della tabella nidificata. Per recuperare i valori dei dati all'interno della colonna della tabella nidificata per ogni case, è necessario creare una query sul contenuto del modello.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Drill-through sui modelli di data mining](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
+ [Drill-through sui modelli di Data Mining](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
  [Drill-through sulle strutture di data mining](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

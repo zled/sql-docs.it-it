@@ -1,0 +1,162 @@
+---
+title: "Le autorizzazioni di elenco proprietà di ricerca GRANT (Transact-SQL) | Documenti Microsoft"
+ms.custom: 
+ms.date: 07/26/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- full-text search [SQL Server], permissions
+- search property lists [SQL Server], permissions
+- granting permissions [SQL Server], search property lists
+- GRANT statement, search property list permissions
+ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
+caps.latest.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f004c02e0461eeeffadf3b30bae90426e081faef
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="grant-search-property-list-permissions-transact-sql"></a>Autorizzazioni per l'elenco delle proprietà di ricerca GRANT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+
+  Concede le autorizzazioni per un elenco di proprietà di ricerca.  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+GRANT permission [ ,...n ] ON   
+    SEARCH PROPERTY LIST :: search_property_list_name  
+    TO database_principal [ ,...n ]  
+    [ WITH GRANT OPTION ]  
+    [ AS granting_principal ]  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ *autorizzazione*  
+ Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
+  
+ ELENCO delle proprietà di ricerca **::***search_property_list_name*  
+ Specifica l'elenco delle proprietà di ricerca per cui viene concessa l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
+  
+ **Per visualizzare le proprietà di ricerca esistente elenchi**  
+  
+-   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
+  
+ *database_principal*  
+ Specifica l'entità a cui viene concessa l'autorizzazione. Le possibili entità sono le seguenti:  
+  
+-   utente del database  
+  
+-   ruolo del database  
+  
+-   ruolo dell'applicazione  
+  
+-   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un certificato  
+  
+-   utente del database mappato a una chiave asimmetrica  
+  
+-   utente del database non mappato ad alcuna entità server.  
+  
+ GRANT OPTION  
+ Indica che l'entità potrà inoltre concedere l'autorizzazione specificata ad altre entità.  
+  
+ AS *granting_principal*  
+ Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione. Le possibili entità sono le seguenti:  
+  
+-   utente del database  
+  
+-   ruolo del database  
+  
+-   ruolo dell'applicazione  
+  
+-   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un certificato  
+  
+-   utente del database mappato a una chiave asimmetrica  
+  
+-   utente del database non mappato ad alcuna entità server.  
+  
+## <a name="remarks"></a>Osservazioni  
+  
+## <a name="search-property-list-permissions"></a>Autorizzazioni SEARCH PROPERTY LIST  
+ Un elenco di proprietà di ricerca è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un elenco di proprietà di ricerca, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+  
+|Autorizzazioni per l'elenco delle proprietà di ricerca|Autorizzazioni dell'elenco delle proprietà di ricerca in cui è inclusa|Autorizzazione del database in cui è inclusa|  
+|-------------------------------------|------------------------------------------------|------------------------------------|  
+|ALTER|CONTROL|ALTER ANY FULLTEXT CATALOG|  
+|CONTROL|CONTROL|CONTROL|  
+|REFERENCES|CONTROL|REFERENCES|  
+|TAKE OWNERSHIP|CONTROL|CONTROL|  
+|VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
+  
+## <a name="permissions"></a>Permissions  
+ L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
+  
+ Se si utilizza l'opzione AS, sono previsti i requisiti aggiuntivi seguenti.  
+  
+|AS *granting_principal*|Autorizzazione aggiuntiva necessaria|  
+|------------------------------|------------------------------------|  
+|Utente del database|Autorizzazione IMPERSONATE per l'utente, appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+|Utente del database di cui è stato eseguito il mapping a un account di accesso di Windows|Autorizzazione IMPERSONATE per l'utente, appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+|Utente del database di cui è stato eseguito il mapping a un gruppo di Windows|Appartenenza al gruppo di Windows, appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+|Utente del database di cui è stato eseguito il mapping a un certificato|Appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+|Utente del database di cui è stato eseguito il mapping a una chiave asimmetrica|Appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+|Utente del database di cui non è stato eseguito il mapping ad alcuna entità server|Autorizzazione IMPERSONATE per l'utente, appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+|Ruolo del database|Autorizzazione ALTER per il ruolo, appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+|Ruolo applicazione|Autorizzazione ALTER per il ruolo, appartenenza al ruolo predefinito del database db_securityadmin, appartenenza al ruolo predefinito del database db_owner o appartenenza al ruolo predefinito del server sysadmin.|  
+  
+ I proprietari degli oggetti possono concedere autorizzazioni per gli oggetti di cui sono proprietari. Le entità con l'autorizzazione CONTROL per un'entità a sicurezza diretta possono concedere l'autorizzazione per quella entità.  
+  
+ Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membri del ruolo predefinito del server sysadmin, possono concedere qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel server. Gli utenti che dispongono dell'autorizzazione CONTROL in un database, ad esempio i membri del ruolo predefinito del database db_owner, possono concedere qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel database. Gli utenti che dispongono dell'autorizzazione CONTROL in uno schema, possono concedere qualsiasi autorizzazione per qualsiasi oggetto all'interno dello schema.  
+  
+## <a name="examples"></a>Esempi  
+  
+### <a name="granting-permissions-to-a-search-property-list"></a>Concessione di autorizzazioni a un elenco di proprietà di ricerca  
+ Nell'esempio seguente, a `Mary` viene concessa l'autorizzazione `VIEW DEFINITION` per l'elenco delle proprietà di ricerca `DocumentTablePropertyList`.  
+  
+```  
+GRANT VIEW DEFINITION  
+    ON SEARCH PROPERTY LIST :: DocumentTablePropertyList  
+    TO Mary ;  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [CREATE APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+ [NEGARE autorizzazioni Search Property List &#40; Transact-SQL &#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)   
+ [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
+ [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [REVOCARE autorizzazioni Search Property List &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)   
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+  
+  
+

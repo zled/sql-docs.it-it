@@ -1,29 +1,34 @@
 ---
-title: "Archivio di stringhe e regole di confronto nei modelli tabulari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Archivio di stringhe e regole di confronto nei modelli tabulari | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Archivio di stringhe e regole di confronto nei modelli tabulari
+# <a name="string-storage-and-collation-in-tabular-models"></a>Archivio di stringhe e regole di confronto nei modelli tabulari
   Le stringhe (valori di testo) vengono archiviate in un formato altamente compresso nei modelli tabulari. A causa di questa compressione, è possibile ottenere risultati imprevisti quando si recuperano stringhe intere o parziali. Inoltre, poiché le regole di confronto e le impostazioni locali delle stringhe vengono ereditate in modo gerarchico dall'oggetto padre più prossimo, se la lingua della stringa non viene definita in modo esplicito, le impostazioni locali e le regole di confronto dell'oggetto padre possono influire sulla modalità di archiviazione di ogni stringa e determinare se la stringa è univoca o unita a stringhe simili secondo quanto definito nelle regole di confronto padre.  
   
  In questo argomento viene illustrato il meccanismo in base al quale le stringhe vengono compresse e archiviate. Inoltre vengono forniti esempi su come le regole di confronto e la lingua influiscono sui risultati delle formule di testo nei modelli tabulari.  
   
-## Archiviazione  
+## <a name="storage"></a>Archiviazione  
  Nei modelli tabulari tutti i dati sono altamente compressi affinché si adattino alla memoria. Di conseguenza, tutte le stringhe che possono essere considerate equivalenti dal punto di vista lessicale vengono archiviate una sola volta. La prima istanza della stringa viene utilizzata come rappresentazione canonica, dopodiché ogni stringa equivalente viene indicizzata allo stesso valore compresso della prima occorrenza.  
   
  La domanda cruciale è la seguente: cosa si intende per stringa equivalente dal punto di vista lessicale? Due stringhe sono considerate equivalenti dal punto di vista lessicale se possono essere considerate la stessa parola. Ad esempio, in inglese quando si cerca la parola **violin** in un dizionario, è possibile trovare la voce **Violin** o **violin**, a seconda dei criteri editoriali del dizionario, ma in genere le parole possono risultare equivalenti e la differenza nell'utilizzo delle maiuscole può essere ignorata. In un modello tabulare, il fattore che determina se due stringhe sono equivalenti dal punto di vista lessicale non è un criterio editoriale o una preferenza dell'utente, ma le impostazioni locali e l'ordine delle regole di confronto assegnato alla colonna.  
@@ -36,15 +41,15 @@ caps.handback.revision: 10
 |-------------------------------|  
 |trEE|  
 |PlAnT|  
-|ALBERO|  
-|PLANT|  
-|Plant|  
-|Tree|  
-|plant|  
-|tReE|  
-|tree|  
-|pLaNt|  
-|tREE|  
+|trEE|  
+|PlAnT|  
+|PlAnT|  
+|trEE|  
+|PlAnT|  
+|trEE|  
+|trEE|  
+|PlAnT|  
+|trEE|  
   
  I dati probabilmente provengono da molte origini diverse, pertanto l'utilizzo delle maiuscole e minuscole e degli accenti non è coerente e queste differenze sono state archiviate così come sono nel database relazionale. In generale i valori sono **Plant** o **Tree**, solo con maiuscole e minuscole diverse.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 10
 > [!WARNING]  
 >  È possibile decidere quale stringa sarà la prima a essere archiviata, in base a ciò che viene considerato corretto, ma tale operazione potrebbe risultare molto difficile. Non esiste un modo semplice per determinare in anticipo quale riga deve essere elaborata per prima dal motore, considerando che tutti i valori vengono considerati equivalenti. In alternativa, se è necessario impostare il valore standard, è necessario eseguire la pulizia di tutte le stringhe prima di caricare il modello.  
   
-## Impostazioni locali e ordinamento delle regole di confronto  
+## <a name="locale-and-collation-order"></a>Impostazioni locali e ordinamento delle regole di confronto  
  Quando si confrontano le stringhe (valori di testo), ciò che definisce l'equivalenza è in genere l'aspetto culturale della modalità di interpretazione di tali stringhe. In alcune culture un accento o l'utilizzo delle maiuscole e maiuscole per un carattere può modificare completamente il significato della stringa. Di conseguenza, tali differenze vengono prese in considerazione per determinare l'equivalenza per un'area o una lingua particolare.  
   
  In genere, il computer è già configurato in base alla propria cultura e al proprio comportamento linguistico e le operazioni eseguite sulle stringhe, ad esempio l'ordinamento e il confronto di valori del testo, generano i risultati previsti. Le impostazioni che controllano il comportamento specifico della lingua vengono definite tramite le **impostazioni locali e della lingua** di Windows. Le applicazioni leggono queste impostazioni e modificano di conseguenza il loro comportamento. In alcuni casi, un'applicazione potrebbe disporre di una caratteristica che consente di modificare il comportamento culturale dell'applicazione o il modo in cui vengono confrontate le stringhe.  
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
 -   Le regole di confronto definiscono l'ordinamento dei caratteri e la relativa equivalenza.  
   
- È importante notare che un identificatore della lingua non identifica soltanto una lingua, ma anche il paese o l'area geografica in cui tale lingua viene utilizzata. Ogni identificatore della lingua è associato anche a regole di confronto specificate. Per ulteriori informazioni sugli identificatori di lingua, vedere la pagina relativa agli [ID delle impostazioni locali assegnati da Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). È possibile utilizzare la colonna LCID Dec per ottenere l'ID corretto quando si inserisce manualmente un valore. Per altre informazioni sul concetto SQL delle regole di confronto, vedere [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md). Per informazioni sulle designazioni delle regole di confronto e sugli stili di confronto per i nomi delle regole di confronto di Windows, vedere [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). L'argomento [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) offre una mappa dei nomi delle regole di confronto di Windows e i nomi usati per SQL.  
+ È importante notare che un identificatore della lingua non identifica soltanto una lingua, ma anche il paese o l'area geografica in cui tale lingua viene utilizzata. Ogni identificatore della lingua è associato anche a regole di confronto specificate. Per ulteriori informazioni sugli identificatori di lingua, vedere la pagina relativa agli [ID delle impostazioni locali assegnati da Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). È possibile utilizzare la colonna LCID Dec per ottenere l'ID corretto quando si inserisce manualmente un valore. Per altre informazioni sul concetto SQL delle regole di confronto, vedere [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md). Per informazioni sulle designazioni delle regole di confronto e sugli stili di confronto per i nomi delle regole di confronto di Windows, vedere [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). L'argomento [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) offre una mappa dei nomi delle regole di confronto di Windows e i nomi usati per SQL.  
   
  Dopo avere creato il database del modello tabulare, tutti i nuovi oggetti del modello erediteranno gli attributi della lingua e delle regole di confronto dagli attributi del database. Questo vale per tutti gli oggetti. Il percorso di ereditarietà ha inizio dall'oggetto. Nell'elemento padre vengono cercati eventuali attributi della lingua e delle regole di confronto da ereditare e se non ne vengono trovati la ricerca di tali attributi viene spostata al livello del database. In altre parole, se non si specificano gli attributi della lingua e delle regole di confronto per un oggetto, per impostazione predefinita l'oggetto eredita gli attributi dall'elemento padre più prossimo.  
   

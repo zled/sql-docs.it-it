@@ -1,24 +1,29 @@
 ---
-title: "Colonne di dati degli eventi di query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Eventi di query - categoria di eventi"
+title: Esegue una query di colonne di dati degli eventi | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati degli eventi di query
+# <a name="queries-events-data-columns"></a>Colonne di dati degli eventi di query
   La categoria di eventi Eventi di query include le classi di eventi seguenti:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
   
  Nelle tabelle seguenti vengono elencate le colonne di dati per ognuna di queste classi di eventi.  
   
-## Colonne di dati della classe Query Begin  
+## <a name="query-begin-classdata-columns"></a>Colonne di dati della classe Query Begin  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 33
 |RequestParameters|44|9|Contiene i parametri per i comandi e le query con parametri associati all'evento di query.|  
 |RequestProperties|45|9|Contiene le proprietà della richiesta XMLA.|  
   
-## Colonne di dati della classe Query End  
+## <a name="query-end-classdata-columns"></a>Colonne di dati della classe Query End  
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -76,7 +81,7 @@ caps.handback.revision: 33
 |TextData|42|9|Contiene i dati di tipo text associati all'evento di query.|  
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di query.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Categoria degli eventi di query](../../analysis-services/trace-events/queries-events-category.md)  
   
   

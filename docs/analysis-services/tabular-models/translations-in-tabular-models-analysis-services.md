@@ -1,24 +1,29 @@
 ---
-title: "Traduzioni in modelli tabulari (Analysis Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Traduzioni nei modelli tabulari (Analysis Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 28ff4ea7472597ae86b426ec0a15de399f56d14f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Traduzioni in modelli tabulari (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aggiunge il supporto della stringa di traduzione per i modelli tabulari creati al livello di compatibilità 1200. Un singolo oggetto nel modello può avere più traduzioni di un nome o di una descrizione, rendendo possibile supportare versioni multilingue all'interno della definizione di modello.  
+# <a name="translations-in-tabular-models-analysis-services"></a>Traduzioni in modelli tabulari (Analysis Services)
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Aggiunge il supporto di stringa di traduzione per i modelli tabulari. Un singolo oggetto nel modello può avere più traduzioni di un nome o di una descrizione, rendendo possibile supportare versioni multilingue all'interno della definizione di modello.  
   
  Le stringhe tradotte valgono esclusivamente per i metadati dell'oggetto (nomi e descrizioni di tabelle e colonne) che vengono visualizzati in uno strumento client come un elenco di tabella pivot di Excel.  Per usare le stringhe tradotte, la connessione client specifica le impostazioni cultura. Nella funzionalità **Analisi in Excel** è possibile scegliere la lingua da un elenco a discesa. Per altri strumenti, potrebbe essere necessario specificare le impostazioni cultura nella stringa di connessione.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 -   Connettersi al modello usando un'applicazione client che consenta un LCID sulla stringa di connessione  
   
-## Creazione di un file di traduzione vuoto  
+## <a name="create-an-empty-translation-file"></a>Creazione di un file di traduzione vuoto  
  Usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per aggiungere le traduzioni.  
   
 1.  Fare clic su **Modello** > **Traduzioni** > **Gestisci traduzioni**.  
@@ -49,9 +54,9 @@ caps.handback.revision: 13
   
 4.  Fare clic su **Esporta file lingua**.  Specificare un nome e un percorso file.  
   
- ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
+ ![SSAS-tabulare-tradurre-esportazione](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabulare-tradurre-esportazione")  
   
-## Aggiunta di traduzioni  
+## <a name="add-translations"></a>Aggiunta di traduzioni  
  Un file di traduzione JSON vuoto include metadati per le traduzioni in una lingua specifica. I segnaposti di traduzione per i nomi e le descrizioni degli oggetti vengono specificati nella sezione **Culture** alla fine della definizione del modello. È possibile aggiungere traduzioni per quanto segue:  
   
 |||  
@@ -65,12 +70,12 @@ caps.handback.revision: 13
   
  Nell'esempio seguente vengono visualizzate le didascalie tradotte e la descrizione per le tabelle **DimProduct** e **DimCustomer** .  
   
- ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
+ ![SSAS-tabulare-tradurre-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabulare-tradurre-json")  
   
 > [!TIP]  
 >  È possibile usare qualsiasi editor di JSON per aprire il file, ma è consigliabile l'editor JSON in Visual Studio in modo da poter usare il comando Visualizza codice in Esplora soluzioni per visualizzare la definizione di modello tabulare in SSDT. Per disporre dell'editor JSON, è necessaria un' [installazione della versione completa di Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). L'edizione gratuita Community include l'editor JSON.  
   
-## Importazione di un file di traduzione  
+## <a name="import-a-translation-file"></a>Importazione di un file di traduzione  
  Le stringhe di traduzione che vengono importate diventano parte permanente della definizione del modello. Dopo aver importato le stringhe, non esistono più riferimenti al file di traduzione.  
   
 1.  Fare clic su **Modello** > **Traduzioni** > **Importa traduzioni**.  
@@ -83,7 +88,7 @@ caps.handback.revision: 13
     |-|-|  
     |Sovrascrivi le traduzioni esistenti|Sostituisce tutte le didascalie o le descrizioni esistenti della stessa lingua del file che viene importato.|  
     |Ignora oggetti non validi|Specifica se le discrepanze dei metadati devono essere ignorate o contrassegnate come errore.|  
-    |Registra i risultati dell'importazione in un file di log|I file di log vengono salvati nella cartella di progetto per impostazione predefinita. Il percorso esatto del file viene fornito al termine dell'importazione. Il nome del file di log è SSDT_Translations_Log_\<timestamp>.|  
+    |Registra i risultati dell'importazione in un file di log|I file di log vengono salvati nella cartella di progetto per impostazione predefinita. Il percorso esatto del file viene fornito al termine dell'importazione. Il nome di file di log è SSDT_Translations_Log_\<timestamp >.|  
     |Esegui il backup delle traduzioni in un file JSON prima dell'importazione|Esegue il backup di una traduzione esistente che corrisponde alle impostazioni cultura delle stringhe importate.  Se le impostazioni cultura importate non sono presenti nel modello, il backup sarà vuoto.<br /><br /> Se è necessario ripristinare questo file in un secondo momento, è possibile sostituire il contenuto di model.bim con questo file JSON.|  
   
 4.  Fare clic su **Importa**.  
@@ -96,7 +101,7 @@ caps.handback.revision: 13
   
     -   Cercare **Impostazioni cultura** o una specifica stringa tradotta per verificare se le stringhe previste sono effettivamente presenti.  
   
-## Connessione tramite un identificatore delle impostazioni locali  
+## <a name="connect-using-a-locale-identifier"></a>Connessione tramite un identificatore delle impostazioni locali  
  In questa sezione viene descritto un approccio per la convalida delle stringhe corrette restituite dal modello.  
   
 1.  In Excel connettersi al modello tabulare. Arrivati a questo passaggio si presuppone che il modello sia stato distribuito. Se il modello esiste solo nell'area di lavoro, distribuirlo in un'istanza di Analysis Services per completare il controllo di convalida.  
@@ -105,11 +110,11 @@ caps.handback.revision: 13
   
 2.  Nella finestra di dialogo di connessione di Excel, scegliere le impostazioni cultura per cui le traduzioni delle stringhe esistono nel modello. Excel rileva le impostazioni cultura definite nel modello e popola di conseguenza l'elenco a discesa.  
   
-     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
+     ![SSAS-tabulare-traduzioni-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabulare-traduzioni-excel")  
   
      Dopo aver creato una tabella pivot, dovrebbero essere visualizzati i nomi della colonna e della tabella tradotti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Livello di compatibilità per i modelli tabulari in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Scenari di globalizzazione per Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Analizzare in Excel &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  

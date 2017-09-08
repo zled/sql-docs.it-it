@@ -1,31 +1,36 @@
 ---
-title: "propriet&#224; server in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, proprietà di configurazione"
-  - "Analysis Services, proprietà di configurazione"
-  - "SQL Server Analysis Services, proprietà di configurazione"
-  - "opzioni di configurazione [Analysis Services]"
-  - "proprietà server [Analysis Services]"
-  - "proprietà [Analysis Services], configurazione"
-  - "proprietà [Analysis Services]"
+title: "Le proprietà del server in Analysis Services | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# propriet&#224; server in Analysis Services
-  Un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può modificare le proprietà di configurazione del server predefinite di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ogni istanza ha proprietà di configurazione proprie, impostate in modo indipendente rispetto ad altre istanze presenti nello stesso server.  
+# <a name="server-properties-in-analysis-services"></a>proprietà server in Analysis Services
+  Un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può modificare le proprietà di configurazione del server predefinite di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ogni istanza ha proprietà di configurazione proprie, impostate in modo indipendente rispetto ad altre istanze presenti nello stesso server.  
   
  Per configurare il server, usare SQL Server Management Studio oppure modificare il file msmdsrv.ini di un'istanza specifica.  
  
@@ -34,11 +39,11 @@ Le pagine delle proprietà di SQL Server Management Studio mostrano un subset di
 > [!NOTE]  
 >  In un'installazione predefinita il file msmdsrv.ini si trova nella cartella \Programmi\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config.
 > 
-> Altre proprietà in grado di influenzare la configurazione del server includono le proprietà di distribuzione della configurazione riportate in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni su queste proprietà, vedere [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md).
+> Altre proprietà in grado di influenzare la configurazione del server includono le proprietà di distribuzione della configurazione riportate in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni su queste proprietà, vedere [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
 ##  <a name="bkmk_config"></a> Configurare le proprietà in Management Studio 
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 2. In Esplora oggetti di fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi scegliere **Proprietà**. Viene visualizzata la pagina Generale con le proprietà più di uso comune.  
 
@@ -67,7 +72,7 @@ Le pagine delle proprietà di SQL Server Management Studio mostrano un subset di
   
 ##  <a name="bkmk_ref"></a> Guida di riferimento alle proprietà del server  
   
- Gli argomenti seguenti descrivono le varie proprietà di configurazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ Gli argomenti seguenti descrivono le varie proprietà di configurazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 |Argomento|Description|  
 |-----------|-----------------|  
@@ -85,8 +90,8 @@ Le pagine delle proprietà di SQL Server Management Studio mostrano un subset di
 |[Proprietà di sicurezza](../../analysis-services/server-properties/security-properties.md)|La sezione sulla sicurezza comprende proprietà di base e proprietà avanzate che consentono di definire le autorizzazioni di accesso. Comprendono anche proprietà riguardanti amministratori ed utenti.|  
 |[Proprietà dei pool di thread](../../analysis-services/server-properties/thread-pool-properties.md)|Le proprietà di pooling dei thread controllano il numero di thread creati dal server. Queste proprietà sono destinate principalmente ad utenti esperti.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di un'istanza di Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   
