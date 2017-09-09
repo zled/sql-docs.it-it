@@ -348,7 +348,7 @@
                 - name: restazioni
                   href: /sql/integration-services/performance/
                   homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-                - name: Sicurezza
+                - name: Security
                   href: /sql/integration-services/security/
                   homepage: /sql/integration-services/security/security-overview-integration-services
                 - name: Servizio
@@ -633,7 +633,7 @@
                 - name: Pubblicazione
                   href: /sql/relational-databases/replication/publish/
                   homepage: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-                - name: Sicurezza
+                - name: Security
                   href: /sql/relational-databases/replication/security/
                   homepage: /sql/relational-databases/replication/security/security-overview-replication
                 - name: Transazionale
@@ -648,7 +648,7 @@
             - name: Cerca
               href: /sql/relational-databases/search/
               homepage: /sql/relational-databases/search/full-text-search
-            - name: Sicurezza
+            - name: Security
               href: /sql/relational-databases/security/
               homepage: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
               items:
@@ -825,7 +825,7 @@
                     - name: Transazioni
                       href: /sql/relational-databases/clr-integration-data-access-transactions/
                       homepage: /sql/relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions
-                - name: Sicurezza
+                - name: Security
                   href: /sql/relational-databases/clr-integration/security/
                   homepage: /sql/relational-databases/clr-integration/security/clr-integration-code-access-security
                   items:
@@ -1007,9 +1007,6 @@
                         - name: Security
                           href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
                           homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-        - name: SQL Server Release Notes
-          href: /sql/release-notes/
-          homepage: /sql/release-notes/sql-server-release-notes
         - name: DMX
           href: /sql/dmx/
           homepage: /sql/dmx/data-mining-extensions-dmx-reference
