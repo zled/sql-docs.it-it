@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   Se il numero di spindle è pari, a differenza di SQL Server 2014 i file del checkpoint vengono distribuiti in modo uniforme tra tutti gli spindle.  
   
 ## <a name="encryption"></a>Crittografia  
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lo spazio di archiviazione per le tabelle con ottimizzazione per la memoria viene crittografato come parte dell'abilitazione di Transparent Data Encryption nel database. Per altre informazioni, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lo spazio di archiviazione per le tabelle con ottimizzazione per la memoria viene crittografato come parte dell'abilitazione di Transparent Data Encryption nel database. Per altre informazioni, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

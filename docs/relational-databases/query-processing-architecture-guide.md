@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
@@ -1035,5 +1035,6 @@ GO
 ##  <a name="Additional_Reading"></a> Ulteriori informazioni  
  [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)  
- [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)
+ [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Stima della cardinalità](../relational-databases/performance/cardinality-estimation-sql-server.md)  
 

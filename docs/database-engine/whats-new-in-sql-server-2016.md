@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novità del motore di database - SQL Server 2016
@@ -38,14 +38,15 @@ Per informazioni sulle novità negli altri componenti di SQL Server, vedere [Nov
 
 #### <a name="try-it-out"></a>Per provarlo
 
-- Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
+- Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
 
 - Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .
 
-![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Per le note sulla versione corrente, vedere [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> [!NOTE]
+> Per le note sulla versione corrente, vedere [Note sulla versione di SQL server 2016](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  La sintassi `CREATE OR ALTER <object>` è ora disponibile per [procedure](../t-sql/statements/create-procedure-transact-sql.md), [viste](../t-sql/statements/create-view-transact-sql.md), [funzioni](../t-sql/statements/create-function-transact-sql.md) e [trigger](../t-sql/statements/create-trigger-transact-sql.md).
+-  La sintassi`CREATE OR ALTER <object>` è ora disponibile per [procedure](../t-sql/statements/create-procedure-transact-sql.md), [viste](../t-sql/statements/create-view-transact-sql.md), [funzioni](../t-sql/statements/create-function-transact-sql.md)e [trigger](../t-sql/statements/create-trigger-transact-sql.md).
 -   È stato aggiunto il supporto per un modello di hint per query più generico: `OPTION (USE HINT('<hint1>', '<hint2>'))`. Per altre informazioni, vedere [Hint per la query (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).  
 - È stata aggiunta la DMV [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) per elencare gli hint.  
 - È stata aggiunta la DMV [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) per restituire le statistiche temporanee dello showplan XML.  
@@ -175,7 +176,7 @@ Numerosi elementi di Transact-SQL non supportati per le tabelle con ottimizzazio
 
 - Una tabella con ottimizzazione per la memoria può ora includere più colonne la cui lunghezza complessiva supera la lunghezza della pagina da 8.060 byte. Un esempio è una tabella con tre colonne di tipo `nvarchar(4000)`. In questi esempi, alcune colonne vengono ora archiviate all'esterno di righe. Le query non rilevano alcuna differenza tra colonne all'interno di righe e all'esterno di righe.
 
-- [I tipi LOB (Large Object)](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`, `nvarchar(max)` e `varchar(max)` ora sono supportati nelle tabelle con ottimizzazione per la memoria.
+- [I tipi LOB (Large Object)](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`, `nvarchar(max)`e `varchar(max)` ora sono supportati nelle tabelle con ottimizzazione per la memoria.
 
 
 Per informazioni generali, vedere:
@@ -209,8 +210,8 @@ Alcuni elementi di Transact-SQL non supportati per i moduli compilati in modo na
 - Le funzioni scalari definite dall'utente (UDF) possono ora essere compilate in modo nativo.
 
 - Maggiore supporto per le chiamate seguenti da una procedura nativa:
-  - [Funzioni di sicurezza ](../t-sql/functions/security-functions-transact-sql.md) predefinite.
-  - [Funzioni matematiche ](../t-sql/functions/mathematical-functions-transact-sql.md) predefinite.
+  - [Funzioni di sicurezza](../t-sql/functions/security-functions-transact-sql.md)predefinite.
+  - [Funzioni matematiche](../t-sql/functions/mathematical-functions-transact-sql.md)predefinite.
   - Funzione predefinita `@@SPID`.
 
 
@@ -220,7 +221,7 @@ Alcuni elementi di Transact-SQL non supportati per i moduli compilati in modo na
 Per informazioni generali, vedere:
 
 - [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md) (Modifica dei moduli T-SQL compilati in modo nativo)
+- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 
 ##### <a name="performance-and-scaling-improvements"></a>Miglioramenti delle prestazioni e della scalabilità
@@ -229,14 +230,14 @@ Per informazioni generali, vedere:
 
 - Sono ora disponibili più thread simultanei responsabili della [persistenza nel disco delle modifiche nelle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/scalability.md).
 
-- Supporto dei piani paralleli per l'[accesso alle tabelle con ottimizzazione per la memoria tramite codice Transact-SQL interpretato](../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).
+- Supporto dei piani paralleli per l' [accesso alle tabelle con ottimizzazione per la memoria tramite codice Transact-SQL interpretato](../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).
 
 
 ##### <a name="enhancements-in-sql-server-management-studio"></a>Miglioramenti in SQL Server Management Studio
 
 - L'operazione per [determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) non richiede più la configurazione di agenti di raccolta dati o del data warehouse di gestione. Il report può ora essere eseguito direttamente in un database di produzione.
 
-- [Cmdlet di PowerShell per la valutazione della migrazione](../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md) per valutare l'idoneità della migrazione di più oggetti in un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+- [Cmdlet di PowerShell per la valutazione della migrazione](../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md) per valutare l'idoneità della migrazione di più oggetti in un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
 
 - Generazione di elenchi di controllo della migrazione facendo clic con il pulsante destro del mouse su un database e scegliendo Attività -> Generazione guidata elenchi di controllo per migrazione OLTP in memoria.
 
@@ -250,7 +251,7 @@ Per informazioni generali, vedere:
 
 - Le connessioni con [Multiple Active Result Set &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)possono ora accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo.
 
-- Supporto di [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md). Se un database è configurato per la crittografia, ora i file del [filegroup con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) vengono anch'essi crittografati.
+- Supporto di [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md). Se un database è configurato per la crittografia, ora i file del [filegroup con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) vengono anch'essi crittografati.
 
 Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).
 
@@ -280,13 +281,13 @@ L'archivio query è una nuova funzionalità che mette a disposizione degli ammin
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] supporta ora tabelle temporali con controllo delle versioni di sistema. Una tabella temporale è un nuovo tipo di tabella che fornisce informazioni corrette sui fatti archiviati in qualsiasi momento. In realtà, ogni tabella temporale è costituita da due tabelle, una per i dati correnti e una per i dati cronologici. Il sistema garantisce che quando i dati cambiano nella tabella con i dati correnti, i valori precedenti vengono archiviati nella tabella di dati cronologici. Vengono forniti costrutti di query per evitare agli utenti di affrontare questa complessità. Per altre informazioni, vedere [Temporal Tables](../relational-databases/tables/temporal-tables.md).
 
 ####  <a name="StripedBackupToAzure"></a> Backup con striping in Archiviazione BLOB di Microsoft Azure
-In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] il backup di SQL Server in un URL con il servizio Archiviazione BLOB di Microsoft Azure supporta ora set di backup con striping con BLOB in blocchi per supportare dimensioni massime di backup pari a 12,8 TB. Per gli esempi, vedere [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples).
+In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]il backup di SQL Server in un URL con il servizio Archiviazione BLOB di Microsoft Azure supporta ora set di backup con striping con BLOB in blocchi per supportare dimensioni massime di backup pari a 12,8 TB. Per gli esempi, vedere [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples).
 
 ####  <a name="FileSnapshotBackup"></a> Backup di snapshot dei file in Archiviazione BLOB di Microsoft Azure
- In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] il backup di SQL Server in un URL ora supporta l'uso di snapshot di Azure per il backup di database in cui tutti i file di database vengono archiviati usando il servizio Archiviazione BLOB di Microsoft Azure. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
+ In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]il backup di SQL Server in un URL ora supporta l'uso di snapshot di Azure per il backup di database in cui tutti i file di database vengono archiviati usando il servizio Archiviazione BLOB di Microsoft Azure. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
 
 ####  <a name="ManagedBackup"></a> Backup gestito
-In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], il backup gestito da SQL Server in Microsoft Azure usa il nuovo archivio BLOB in blocchi per i file di backup. Sono stati apportati anche numerosi miglioramenti e modifiche al backup gestito.
+In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , il backup gestito da SQL Server in Microsoft Azure usa il nuovo archivio BLOB in blocchi per i file di backup. Sono stati apportati anche numerosi miglioramenti e modifiche al backup gestito.
 
 -   Supporto per la pianificazione personalizzata e automatica dei backup.
 
@@ -330,10 +331,10 @@ SQL Server 2016 aggiunge il supporto predefinito per l'importazione e l'esportaz
 ####  <a name="bkPolyBase"></a> PolyBase
  PolyBase consente di usare le istruzioni T-SQL per accedere ai dati archiviati in Hadoop o nell'archivio BLOB di Azure ed eseguire query su di essi in modalità ad hoc. Consente anche di eseguire query sui dati semistrutturati e unire i risultati con set di dati relazionali archiviati in SQL Server. PolyBase è ottimizzato per carichi di lavoro di data warehouse e destinato a scenari di query di analisi.
 
- Per altre informazioni, vedere [PolyBase Guide](../relational-databases/polybase/polybase-guide.md) (Guida a PolyBase).
+ Per altre informazioni, vedere [PolyBase Guide](../relational-databases/polybase/polybase-guide.md)(Guida a PolyBase).
 
 ####  <a name="stretch"></a> Estensione database
- L'estensione database è una nuova funzionalità di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]dei dati cronologici in modo trasparente e sicuro nel cloud di Microsoft Azure. È possibile accedere direttamente ai dati di SQL Server a prescindere che si trovino in locale o che siano stati estesi nel cloud. Impostare i criteri che determinano le posizioni di archiviazione dei dati e SQL Server gestisce il trasferimento dei dati in background. L'intera tabella è sempre online e disponibile per le query. L'estensione database non richiede modifiche alle query o alle applicazioni esistenti: il percorso dei dati è completamente trasparente per l'applicazione. Per ulteriori informazioni, vedere [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ L'estensione database è una nuova funzionalità di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] dei dati cronologici in modo trasparente e sicuro nel cloud di Microsoft Azure. È possibile accedere direttamente ai dati di SQL Server a prescindere che si trovino in locale o che siano stati estesi nel cloud. Impostare i criteri che determinano le posizioni di archiviazione dei dati e SQL Server gestisce il trasferimento dei dati in background. L'intera tabella è sempre online e disponibile per le query. L'estensione database non richiede modifiche alle query o alle applicazioni esistenti: il percorso dei dati è completamente trasparente per l'applicazione. Per ulteriori informazioni, vedere [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ####  <a name="UTF8"></a> Supporto per UTF-8
 [L'utilità bcp](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) supportano ora la tabella codici UTF-8. Per altre informazioni, vedere questi argomenti in [Creare un file di formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -395,7 +396,7 @@ La maschera dati dinamica limita l'esposizione dei dati sensibili nascondendoli 
 - L'autorizzazione **ALTER ANY SECURITY POLICY** è disponibile come parte dell'implementazione della sicurezza a livello di riga.
 - Le autorizzazioni **ALTER ANY MASK** e **UNMASK** sono disponibili come parte dell'implementazione della maschera dati dinamica.
 - Le autorizzazioni **ALTER ANY COLUMN ENCRYPTION KEY**, **VIEW ANY COLUMN ENCRYPTION KEY**, **ALTER ANY COLUMN MASTER KEY DEFINITION**e **VIEW ANY COLUMN MASTER KEY DEFINITION** sono disponibili come parte dell'implementazione della funzionalità Crittografia sempre attiva.
-- Le autorizzazioni **ALTER ANY EXTERNAL DATA SOURCE** e **ALTER ANY EXTERNAL FILE FORMAT** sono visibili in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], ma si applicano solo alla [!INCLUDE[ssAPS](../includes/ssaps-md.md)] ([!INCLUDE[ssDW](../includes/ssdw-md.md)]).
+- Le autorizzazioni **ALTER ANY EXTERNAL DATA SOURCE** e **ALTER ANY EXTERNAL FILE FORMAT** sono visibili in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , ma si applicano solo alla [!INCLUDE[ssAPS](../includes/ssaps-md.md)] ([!INCLUDE[ssDW](../includes/ssdw-md.md)]).
 - Le autorizzazioni **EXECUTE ANY EXTERNAL SCRIPT** sono disponibili come parte del supporto per gli script R.
  - L'autorizzazione **ALTER ANY DATABASE SCOPED CONFIGURATION** è disponibile per autorizzare l'uso dell'istruzione [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 

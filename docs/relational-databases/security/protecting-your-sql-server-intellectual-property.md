@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Protezione della proprietà intellettuale di SQL Server
@@ -34,7 +34,7 @@ Il proprietario o l'amministratore di un computer può accedere sempre all'istan
 
 Le stored procedure e i dati possono essere crittografati, ma la struttura dei dati non può essere nascosta. Pertanto, gli utenti in grado di associare un debugger al processo server possono recuperare procedure e dati decrittografati dalla memoria durante il runtime.
 
-Se i client non sono amministratori dei computer, è possibile impedire loro l'accesso. È possibile usare la [crittografia dati trasparente](../../relational-databases/security/encryption/transparent-data-encryption-tde.md) per crittografare i file di dati e i backup, nonché per controllare le azioni di tutti gli utenti. Tuttavia, gli amministratori di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e gli amministratori del computer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] possono annullare queste azioni.
+Se i client non sono amministratori dei computer, è possibile impedire loro l'accesso. È possibile usare la [crittografia dati trasparente](../../relational-databases/security/encryption/transparent-data-encryption.md) per crittografare i file di dati e i backup, nonché per controllare le azioni di tutti gli utenti. Tuttavia, gli amministratori di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e gli amministratori del computer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] possono annullare queste azioni.
 
 ## <a name="solution"></a>Soluzione
 Sono disponibili vari modi per configurare l'accesso ai dati client senza installare [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] nel computer client. Il modo più semplice prevede l'uso di [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] (in questo caso i client non sono amministratori), in combinazione con la crittografia [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Per altre informazioni sui concetti introduttivi di [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vedere [Informazioni sul database SQL Introduzione al database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview).  

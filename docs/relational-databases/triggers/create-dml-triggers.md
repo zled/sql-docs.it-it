@@ -1,7 +1,7 @@
 ---
 title: Creare trigger DML | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,11 +23,11 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 8ccace315bef092b7f93b11cd935460ee03cf726
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="create-dml-triggers"></a>Creare trigger DML.
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  Nell' **Editor di query**sostituire il commento `-- Insert statements for trigger here` con l'istruzione seguente:  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio vengono creati gli stessi trigger DML archiviati indicati in precedenza.  
   
-    ```  
+    ```sql  
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
     USE AdventureWorks2012;  
@@ -141,6 +141,6 @@ ms.lasthandoff: 06/22/2017
     END;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> [Prima di iniziare](#Top)  
+ 
   
-  
+
