@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione di SQL Server 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: cd57edcb06ea6d9baced3ce5765743769caba04e
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: it-it
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Note sulla versione di SQL Server 2017
 Questo argomento descrive i limiti e i problemi relativi a [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Per informazioni correlate, vedere:
 - [Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-  
-[![Download da Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477).  Scaricare [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] da **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**.
+
+[![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [scaricare la versione più recente di SQL Server 2017: RC2, agosto 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2, agosto 2017)
 Non sono disponibili note sulla versione di SQL Server in Windows per questa versione. Vedere [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -109,14 +109,16 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 
    Viene recuperata l'istanza di SQL Server che ospitava la replica secondaria.
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Coinvolgimento del team di progettazione di SQL Server 
-- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Supporto 
+- [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server) (Domande sullo sviluppo in SQL)
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/) (Discussione generale su SQL Server)
+- [Condizioni di licenza e informazioni per Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>Ulteriori informazioni
 - [note sulla versione di SQL Server Reporting Services](../reporting-services/reporting-services-release-notes.md).
 - [Problemi noti di Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+

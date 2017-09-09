@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 8b8796e2bda252800c836cf7f10cc20f8b7d593c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
 ms.contentlocale: it-it
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Documentazione tecnica di SQL Server
@@ -46,15 +46,12 @@ Documentazione per installare, configurare e usare SQL Server. Il contenuto incl
 - [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 - [Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
-**Prova SQL Server2016**    
-- [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [**Scaricare SQL Server 2017**](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download da Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [**Scaricare SQL Server 2016**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**   
-- [![Download da Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Scaricare SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx)   
-- [![Download da Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [**Scaricare SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md)
- 
-**Informazioni di supporto**
-- [Condizioni di licenza e informazioni per Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+**Prova SQL Server&2016;**    
+- [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Scaricare SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download da Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Scaricare SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+- [Accedere a una macchina virtuale con SQL Server 2016 già installato](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Download da Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [Scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![Download da Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>Tecnologie di SQL Server    
     
@@ -93,8 +90,8 @@ Documentazione per installare, configurare e usare SQL Server. Il contenuto incl
 + [SQL Server Update Center (Centro aggiornamenti di SQL Server): collegamenti e informazioni per tutte le versioni supportate](https://msdn.microsoft.com/library/ff803383.aspx)
   
 ##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Supporto 
-- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
+- [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server) (Domande sullo sviluppo in SQL)
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/) (Discussione generale su SQL Server)
-
+- [Condizioni di licenza e informazioni per Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
