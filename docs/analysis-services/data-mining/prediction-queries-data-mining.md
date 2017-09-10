@@ -1,23 +1,28 @@
 ---
-title: "Prediction Queries (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Query di stima (Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Prediction Queries (Data Mining)
+# <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   L'obiettivo di un progetto di data mining tipico consiste nell'utilizzare il modello di data mining per eseguire stime. Ad esempio, potrebbe essere necessario stimare la quantità di tempo di inattività prevista per un determinato cluster di server o generare un punteggio che indichi se è probabile che segmenti di clienti rispondano a una campagna pubblicitaria. Per effettuare tutte queste operazioni, è necessario creare una query di stima.  
   
  A livello funzionale esistono diversi tipi di query di stima supportati in SQL Server, a seconda del tipo di input per la query:  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 > [!WARNING]  
 >  Se si usa la finestra di progettazione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'origine dati esterna deve innanzitutto essere definita come una vista origine dati.  
   
- Se si utilizza DMX per creare un prediction join, è possibile specificare l'origine dati esterna utilizzando il comando OPENQUERY, OPENROWSET o SHAPE. Il metodo predefinito di accesso ai dati nei modelli DMX è OPENQUERY. Per informazioni su questi metodi, vedere [&#60;source data query&#62;](../Topic/%3Csource%20data%20query%3E.md).  
+ Se si utilizza DMX per creare un prediction join, è possibile specificare l'origine dati esterna utilizzando il comando OPENQUERY, OPENROWSET o SHAPE. Il metodo predefinito di accesso ai dati nei modelli DMX è OPENQUERY. Per informazioni su questi metodi, vedere [&#60;source data query&#62;](../../dmx/source-data-query.md).  
   
 ###  <a name="bkmk_TSQuery"></a> Stime nei modelli di data mining Time Series  
  I modelli Time Series sono diversi dagli altri tipi di modelli. È possibile utilizzare il modello originale per creare stime oppure fornire nuovi dati al modello per aggiornarlo e creare stime basate sulle tendenze recenti. Se si aggiungono nuovi dati, è possibile specificare la modalità di utilizzo dei nuovi dati.  
@@ -147,7 +152,7 @@ FROM
   
  Se il provider non è in grado di gestire i set di righe gerarchici, è possibile fare in modo che i risultati vengano restituiti in formato flat utilizzando la parola chiave FLATTEN nella query di stima. Per altre informazioni, inclusi esempi di set di righe bidimensionali, vedere [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Query sul contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [Query di definizione dei dati &#40;Data mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

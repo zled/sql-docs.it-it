@@ -1,33 +1,38 @@
 ---
-title: "Aggiungere un&#39;azione standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere un'azione Standard | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Aggiungere un&#39;azione standard
+# <a name="add-a-standard-action"></a>Aggiungere un'azione standard
   Utilizzando la visualizzazione Azioni in Progettazione cubi è possibile aggiungere un'azione a un database. L'accesso a tale visualizzazione può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una volta creata, un'azione diventa disponibile agli utenti dopo aver rielaborato il cubo attinente. Per altre informazioni, vedere [Elaborazione di oggetti di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
-### Per creare un'azione  
+### <a name="to-create-an-action"></a>Per creare un'azione  
   
-1.  Aprire il cubo per il quale si desidera creare un'azione, quindi fare clic sulla scheda **Azioni**.  
+1.  Aprire il cubo per il quale si desidera creare un'azione, quindi fare clic sulla scheda **Azioni** .  
   
-2.  Nella barra degli strumenti fare clic sull'icona **Nuova azione**, quindi effettuare i passaggi seguenti nel riquadro dell'espressione:  
+2.  Nella barra degli strumenti fare clic sull'icona **Nuova azione** , quindi effettuare i passaggi seguenti nel riquadro dell'espressione:  
   
-    -   In **Nome** digitare un nome per l'azione.  
+    -   In **Nome**digitare un nome per l'azione.  
   
     -   Nell'elenco a discesa **Tipo di destinazione** selezionare il tipo di oggetto al quale si desidera collegare l'azione. L'oggetto selezionato in **Tipo di destinazione** consente di determinare gli oggetti disponibili e il tipo di selezione che è possibile effettuare in **Oggetto di destinazione**. Nella tabella seguente sono elencate le selezioni **Oggetto di destinazione** valide per ogni tipo di destinazione.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 7
         |Istruzione|Esegue un comando OLE DB.|  
         |URL|Consente di visualizzare una pagina Web in un browser Internet.|  
   
-    -   In **Espressione azione** creare un'espressione che definisca l'azione. L'espressione deve restituire una stringa. È possibile digitare manualmente l'espressione oppure trascinare gli elementi dalle schede **Metadati** e **Funzioni**.  
+    -   In **Espressione azione**creare un'espressione che definisca l'azione. L'espressione deve restituire una stringa. È possibile digitare manualmente l'espressione oppure trascinare gli elementi dalle schede **Metadati** e **Funzioni**.  
   
 3.  Facoltativo. Espandere **Proprietà aggiuntive**, quindi effettuare uno dei passaggi seguenti:  
   
@@ -68,16 +73,16 @@ caps.handback.revision: 7
         |Batch|L'azione viene eseguita come operazione batch.|  
         |Su apertura|L'azione viene eseguita in seguito all'apertura del cubo da parte dell'utente.|  
   
-    -   In **Applicazione** digitare il nome dell'applicazione associata all'azione. Ad esempio, se si crea un'azione che consente a un utente di visualizzare un particolare sito Web, l'applicazione associata all'azione deve essere Microsoft Internet Explorer o un altro Web browser.  
+    -   In **Applicazione**digitare il nome dell'applicazione associata all'azione. Ad esempio, se si crea un'azione che consente a un utente di visualizzare un particolare sito Web, l'applicazione associata all'azione deve essere Microsoft Internet Explorer o un altro Web browser.  
   
         > [!NOTE]  
         >  Le azioni proprietarie non vengono restituite al server a meno che l'applicazione client non consenta di limitare in modo esplicito il set di righe dello schema in modo da restituire solo le azioni che corrispondono al nome specificato in **Applicazione**.  
   
-    -   Se si usa il tipo URL, in **Contenuto azione** racchiudere l'indirizzo Internet tra virgolette, ad esempio "http://www.adventure-works.com".  
+    -   Se si usa il tipo URL, in **Contenuto azione**racchiudere l'indirizzo Internet tra virgolette, ad esempio "http://www.adventure-works.com".  
   
-    -   In **Descrizione** digitare una descrizione per l'azione.  
+    -   In **Descrizione**digitare una descrizione per l'azione.  
   
-    -   In **Didascalia** digitare una didascalia o un'espressione MDX che consenta la restituzione di una didascalia. Questa didascalia viene visualizzata agli utenti finali all'avvio dell'azione. Se non si specifica nessuna didascalia, viene utilizzato il nome dell'azione.  
+    -   In **Didascalia**digitare una didascalia o un'espressione MDX che consenta la restituzione di una didascalia. Questa didascalia viene visualizzata agli utenti finali all'avvio dell'azione. Se non si specifica nessuna didascalia, viene utilizzato il nome dell'azione.  
   
     -   Nell'elenco a discesa **Didascalia MDX** specificare se la didascalia è MDX. Questo campo consente di indicare al server se restituire il contenuto di **Didascalia** come espressione MDX.  
   

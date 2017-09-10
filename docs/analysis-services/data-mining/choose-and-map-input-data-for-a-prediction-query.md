@@ -1,26 +1,31 @@
 ---
-title: "Scegliere ed eseguire il mapping di dati di input per una query di stima | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelle [Analysis Services], query di stima"
-  - "Stima modello di data mining [Analysis Services], tabelle di input"
+title: Scegliere ed eseguire il mapping di dati di Input per una Query di stima | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], prediction queries
+- Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Scegliere ed eseguire il mapping di dati di input per una query di stima
+# <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
   Quando si creano stime da un modello di data mining, generalmente si procede inserendo nuovi dati nel modello. (L'eccezione è rappresentata dai modelli Time Series che eseguono stime unicamente in base ai dati cronologici.) Per fornire al modello nuovi dati, è necessario assicurarsi che i dati siano disponibili in una vista origine dati. Se si sa in anticipo quali dati si utilizzeranno per la stima, è possibile includerli nella vista origine dati utilizzata per la creazione del modello. In caso contrario, potrebbe essere necessario creare una nuova vista origine dati. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  È talvolta possibile che i dati necessari siano contenuti in più di una tabella in un join uno-a-molti. È il caso dei dati utilizzati per i modelli di associazione o Sequence Clustering che utilizzano una tabella del case collegata a una tabella nidificata che contiene i dettagli sul prodotto o la transazione. Se il modello utilizza una struttura di tabelle del case nidificate, i dati utilizzati per la stima devono anch'essi presentare una struttura di tabelle del case nidificate.  
@@ -32,33 +37,33 @@ caps.handback.revision: 16
   
  Quando si scelgono i dati da utilizzare per la stima, è possibile che venga eseguito il mapping automatico delle colonne dell'origine dati selezionata alle colonne del modello di data mining, in base alla somiglianza del nome e al tipo di dati corrispondente. È possibile utilizzare la finestra di dialogo **Modifica mapping** in **Stima modello di data mining** per cambiare le colonne di cui è stato eseguito il mapping, eliminare i mapping non appropriati o creare nuovi mapping per le colonne esistenti. L'area di progettazione **Stima modello di data mining** supporta anche il trascinamento delle connessioni selezionate.  
   
--   Per creare una nuova connessione, selezionare una colonna nella tabella **Modello di data mining** e trascinarla nella colonna corrispondente della tabella **Seleziona tabelle di input**.  
+-   Per creare una nuova connessione, selezionare una colonna nella tabella **Modello di data mining** e trascinarla nella colonna corrispondente della tabella **Seleziona tabelle di input** .  
   
 -   Per rimuovere una connessione, selezionare la linea di connessione e premere CANC.  
   
  Nella procedura seguente viene illustrata la modifica dei join creati tra la tabella del case e una tabella nidificata utilizzate come input di una query di stima utilizzando la finestra di dialogo **Specifica join nidificato** .  
   
-### Selezionare una tabella di input  
+### <a name="select-an-input-table"></a>Selezionare una tabella di input  
   
-1.  Nella tabella **Seleziona tabelle di input** della scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fare clic su **Seleziona tabella del case**.  
+1.  Nella tabella **Seleziona tabelle di input** della scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare clic su **Seleziona tabella del case**.  
   
      Verrà visualizzata la finestra di dialogo **Seleziona tabella** , in cui è possibile selezionare la tabella contenente i dati su cui basare le query.  
   
 2.  Nella finestra di dialogo **Seleziona tabella** selezionare un'origine dati nell'elenco **Origine dati** .  
   
-3.  In **Nome tabella/vista** selezionare la tabella contenente i dati che si vogliono usare per testare i modelli.  
+3.  In **Nome tabella/vista**selezionare la tabella contenente i dati che si vogliono usare per testare i modelli.  
   
 4.  Scegliere **OK**.  
   
      Verrà automaticamente eseguito il mapping tra le colonne della struttura di data mining e le colonne con lo stesso nome contenute nella tabella di input.  
   
-### Modificare la modalità di mapping dei dati di input al modello  
+### <a name="change-the-way-that-input-data-is-mapped-to-the-model"></a>Modificare la modalità di mapping dei dati di input al modello  
   
 1.  In Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]selezionare la scheda **Stima modello di data mining** .  
   
 2.  Scegliere **Modifica connessioni** dal menu **Modello di data mining**.  
   
-     Verrà visualizzata la finestra di dialogo **Modifica mapping** . In questa finestra di dialogo la colonna **Colonna modello di data mining** riporta le colonne della struttura di data mining selezionata. La colonna **Colonna tabella** riporta le colonne nell'origine dati esterna scelta nella finestra di dialogo **Seleziona tabelle di input**. Sulle colonne dell'origine dati esterna viene eseguito il mapping a quelle del modello di data mining.  
+     Verrà visualizzata la finestra di dialogo **Modifica mapping** . In questa finestra di dialogo la colonna **Colonna modello di data mining** riporta le colonne della struttura di data mining selezionata. La colonna **Colonna tabella** riporta le colonne nell'origine dati esterna scelta nella finestra di dialogo **Seleziona tabelle di input** . Sulle colonne dell'origine dati esterna viene eseguito il mapping a quelle del modello di data mining.  
   
 3.  In **Colonna tabella**selezionare la riga che corrisponde alla colonna del modello di data mining a cui si desidera effettuare il mapping.  
   
@@ -68,9 +73,9 @@ caps.handback.revision: 16
   
      I nuovi mapping delle colonne verranno visualizzati nella finestra di progettazione.  
   
-### Rimuovere una relazione tra tabelle di input  
+### <a name="remove-a-relationship-between-input-tables"></a>Rimuovere una relazione tra tabelle di input  
   
-1.  Nella tabella **Seleziona tabelle di input** della scheda **Stima modello di data mining** in Progettazione modelli di data mining di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fare clic su **Modifica join**.  
+1.  Nella tabella **Seleziona tabelle di input** della scheda **Stima modello di data mining** in Progettazione modelli di data mining di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare clic su **Modifica join**.  
   
      Verrà visualizzata la finestra di dialogo **Specifica join nidificato** .  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
      Verrà rimossa la relazione tra la tabella del case e la tabella nidificata.  
   
-### Creare una nuova relazione tra tabelle di input  
+### <a name="create-a-new-relationship-between-input-tables"></a>Creare una nuova relazione tra tabelle di input  
   
 1.  Nella tabella **Seleziona tabelle di input** della scheda **Stima modello di data mining** in Progettazione modelli di data mining fare clic su **Modifica join**.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 16
   
      È stata creata una nuova relazione tra la tabella del case e la tabella nidificata.  
   
-### Aggiungere una tabella nidificata alle tabelle di input di una query di stima  
+### <a name="add-a-nested-table-to-the-input-tables-of-a-prediction-query"></a>Aggiungere una tabella nidificata alle tabelle di input di una query di stima  
   
 1.  Nella scheda **Stima modello di data mining** in Progettazione modelli di data mining fare clic su **Seleziona tabella del case** per aprire la finestra di dialogo **Seleziona tabella** .  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 16
   
      Se esiste già una relazione, viene eseguito il mapping automatico tra le colonne del modello di data mining e le colonne con lo stesso nome della tabella di input. È possibile modificare la relazione tra la tabella nidificata e la tabella del case facendo clic su **Modifica join**, che consente di aprire la finestra di dialogo **Crea relazione** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di stima &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

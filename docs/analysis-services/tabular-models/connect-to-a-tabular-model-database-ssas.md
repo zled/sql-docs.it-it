@@ -1,24 +1,29 @@
 ---
-title: "Connettersi a un database modello tabulare (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Connettersi a un Database modello tabulare (SSAS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Connettersi a un database modello tabulare (SSAS)
+# <a name="connect-to-a-tabular-model-database-ssas"></a>Connettersi a un database modello tabulare (SSAS)
   Dopo aver compilato un modello tabulare e averlo distribuito in un server modello tabulare di Analysis Services, è necessario impostare le autorizzazioni per renderlo disponibile ad applicazioni client. In questo argomento verrà illustrata la modalità di impostazione delle autorizzazioni e di connessione a un database da applicazioni client.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 19
   
  Per la visualizzazione delle cartelle di lavoro di Excel o dei report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] in cui sono contenuti i dati tabulari, è necessario che l'account utilizzato per eseguire Excel Services o Reporting Services disponga di autorizzazioni di amministratore sull'istanza di Analysis Services. Le autorizzazioni amministrative sono necessarie affinché tali servizi siano considerati attendibili dall'istanza di Analysis Services.  
   
-#### Concedere accesso come amministratore sul server  
+#### <a name="grant-administrative-access-on-the-server"></a>Concedere accesso come amministratore sul server  
   
 1.  Aprire la pagina Configura account di servizio in Amministrazione centrale.  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 19
   
      Nei passaggi seguenti si aggiungeranno questi account al ruolo server nell'istanza di Analysis Services.  
   
-3.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], fare clic con il pulsante destro del mouse sull'istanza del server e selezionare **Proprietà**. Fare clic con il pulsante destro del mouse su **Ruoli** in Esplora oggetti e scegliere **Nuovo ruolo**.  
+3.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], fare clic con il pulsante destro del mouse sull'istanza del server e selezionare **Proprietà**. Fare clic con il pulsante destro del mouse su **Ruoli** in Esplora oggetti e scegliere **Nuovo ruolo**.  
   
 4.  Nella pagina Proprietà di Analysis Services fare clic su **Sicurezza**.  
   
@@ -76,13 +81,13 @@ caps.handback.revision: 19
   
 -   Creare un'origine dati condivisa di Reporting Services che fa riferimento a un database tabulare come origine dati. È possibile creare l'origine dati condivisa in SharePoint e utilizzarla per avviare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
-#### Connessione da Excel  
+#### <a name="connect-from-excel"></a>Connessione da Excel  
   
 1.  In **Carica dati esterni** nella scheda **Dati**di Excel fare clic su **Da altre origini**.  
   
 2.  Selezionare **Da Analysis Services**.  
   
-3.  In **Nome server**specificare l'istanza di Analysis Services in cui viene ospitato il database. Il nome del server è spesso il nome del computer in cui è in esecuzione il software del server. Se il server è stato installato come istanza denominata, è necessario specificare il nome usando il formato \<nomeserver>\\\<nomeistanza\>.  
+3.  In **Nome server**specificare l'istanza di Analysis Services in cui viene ospitato il database. Il nome del server è spesso il nome del computer in cui è in esecuzione il software del server. Se il server è stato installato come istanza denominata, è necessario specificare il nome nel formato: \<nomeserver >\\< NomeIstanza\>.  
   
      L'istanza del server deve essere configurata per la distribuzione tabulare autonoma e deve disporre di una regola in ingresso che consenta l'accesso. Per altre informazioni, vedere [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) e [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 19
   
 5.  Selezionare il database. Una selezione valida sarà quella in cui verrà mostrato un solo cubo **Modello** per il database. Fare clic su **Avanti** , quindi su **Fine**.  
   
- Dopo aver stabilito la connessione, è possibile utilizzare i dati per creare una tabella pivot o un grafico pivot. Per altre informazioni, vedere [Analizzare in Excel &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Dopo aver stabilito la connessione, è possibile utilizzare i dati per creare una tabella pivot o un grafico pivot. Per altre informazioni, vedere la sezione [Analizzare in Excel &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Connessione da SharePoint  
  Se si usa [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, è possibile creare un file di connessione BI Semantic Model in SharePoint che fornisce il reindirizzamento a un database in esecuzione in un server in modalità tabulare di Analysis Services. Tramite una connessione BISM viene fornito un endpoint HTTP a un database. Inoltre viene semplificato l'accesso al modello tabulare per i knowledge worker che utilizzano regolarmente documenti su un sito di SharePoint. I knowledge worker devono conoscere solo il percorso del file di connessione BISM o del relativo URL per accedere ai database modello tabulare. I dettagli sul percorso server o sul nome del database sono incapsulati nella connessione BISM. Per altre informazioni sulla creazione e l'uso di file connessione BI Semantic Model, vedere [Connessione BI Semantic Model di PowerPivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [Creare una connessione BI Semantic Model a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -102,19 +107,19 @@ caps.handback.revision: 19
   
  Durante l'importazione di dati, questo errore di Microsoft Excel si verifica quando si tenta di utilizzare la procedura guidata per connettersi a un database modello tabulare su un server Analysis Services remoto e non si dispone di autorizzazioni sufficienti. Per risolvere l'errore, è necessario disporre di diritti di accesso utente sul database. Fare riferimento alle istruzioni fornite precedentemente in questo argomento per concedere accesso utente ai dati.  
   
- **Errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: \<nome modello> Sandbox**  
+ **Errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: \<nome modello > Sandbox**  
   
  In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché non si dispone di autorizzazioni sufficienti sul server Analysis Services remoto. Per risolvere l'errore, è necessario disporre di diritti di accesso utente sul database. Fare riferimento alle istruzioni fornite precedentemente in questo argomento per concedere accesso utente ai dati.  
   
- **Errore durante l'operazione. Ricaricare la cartella di lavoro, quindi eseguire di nuovo l'operazione.**  
+ **Errore durante l'operazione. Ricaricare la cartella di lavoro e quindi provare a eseguire nuovamente l'operazione.**  
   
  In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché Excel Services non è considerato attendibile dall'istanza di Analysis Services nella quale vengono distribuiti i dati del modello. Per risolvere l'errore, concedere autorizzazioni amministrative di Excel Services sull'istanza di Analysis Services. Per concedere autorizzazioni di amministratore, fare riferimento alle istruzioni fornite precedentemente in questo argomento. Se l'errore persiste, riciclare il pool di applicazioni di Excel Services.  
   
  **Errore durante il tentativo di stabilire una connessione all'origine dati esterna utilizzata nella cartella di lavoro.**  
   
- In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché l'utente non dispone di autorizzazioni di SharePoint sufficienti sulla cartella di lavoro. L'utente deve disporre di autorizzazioni **Lettura** o superiori. Le autorizzazioni **Sola visualizzazione** non sono sufficienti per l'accesso ai dati.  
+ In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché l'utente non dispone di autorizzazioni di SharePoint sufficienti sulla cartella di lavoro. L'utente deve disporre di autorizzazioni **Lettura** o superiori. Le autorizzazioni**Sola visualizzazione** non sono sufficienti per l'accesso ai dati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

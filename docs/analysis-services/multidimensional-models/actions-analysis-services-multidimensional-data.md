@@ -1,30 +1,35 @@
 ---
-title: "Azioni (Analysis Services - Dati multidimensionali) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "azioni [Analysis Services]"
-  - "azioni [Analysis Services], informazioni sulle azioni"
-  - "MDX [Analysis Services], azioni"
-  - "cubi [Analysis Services], azioni"
-  - "oggetti OLAP [Analysis Services], azioni"
+title: Azioni (Analysis Services - dati multidimensionali) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services]
+- actions [Analysis Services], about actions
+- MDX [Analysis Services], actions
+- cubes [Analysis Services], actions
+- OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Azioni (Analysis Services - Dati multidimensionali)
+# <a name="actions-analysis-services---multidimensional-data"></a>Azioni (Analysis Services - Dati multidimensionali)
   Sono disponibili azioni di diverso tipo, le quali devono pertanto essere create in modo appropriato. Di seguito vengono indicati i diversi tipi di azione.  
   
 -   Azioni drill-through, che restituiscono il set di righe che rappresenta i dati sottostanti delle celle selezionate del cubo in cui si verifica l'azione.  
@@ -41,9 +46,9 @@ caps.handback.revision: 34
   
  La condizione è un'espressione MDX **Boolean** valutata nell'evento relativo all'azione. Se la condizione restituisce **true**, l'azione viene eseguita. In caso contrario, l'azione non viene eseguita.  
   
- Il tipo rappresenta il tipo di azione da eseguire. Poiché <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction>.  
+ Il tipo rappresenta il tipo di azione da eseguire. <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un'azione è un'istruzione MDX archiviata che può essere presentata e utilizzata da applicazioni client. In altre parole, un'azione è un comando client definito e archiviato nel server. Un'azione contiene inoltre informazioni che specificano quando e come l'istruzione MDX dovrà essere visualizzata e gestita dall'applicazione client. L'operazione specificata dall'azione consente di avviare un'applicazione, utilizzando le informazioni dell'azione come parametro, o di recuperare informazioni basate sui criteri indicati dall'azione.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un'azione è un'istruzione MDX archiviata che può essere presentata e utilizzata da applicazioni client. In altre parole, un'azione è un comando client definito e archiviato nel server. Un'azione contiene inoltre informazioni che specificano quando e come l'istruzione MDX dovrà essere visualizzata e gestita dall'applicazione client. L'operazione specificata dall'azione consente di avviare un'applicazione, utilizzando le informazioni dell'azione come parametro, o di recuperare informazioni basate sui criteri indicati dall'azione.  
   
  Le azioni consentono agli utenti aziendali di eseguire operazioni sui risultati delle analisi svolte. Salvando e riutilizzando le azioni, gli utenti finali possono eseguire operazioni aggiuntive rispetto all'analisi tradizionale, che termina in genere con la presentazione dei dati, e avviare soluzioni a problemi o carenze individuate, estendendo in questo modo gli effetti dell'applicazione di Business Intelligence al di fuori del cubo. Le azioni possono trasformare l'applicazione client da un sofisticato strumento di rendering dei dati in una parte integrante del sistema operativo aziendale. Invece di occuparsi dell'invio di tali dati come input ad applicazioni operative, gli utenti finali possono chiudere il ciclo del processo decisionale. Questa possibilità di trasformare i dati analitici in decisioni riveste un'importanza fondamentale per un'efficace applicazione di Business Intelligence.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  Affinché un utente aziendale possa utilizzare le azioni, è necessario che le azioni siano supportate dall'applicazione client utilizzata dall'utente aziendale.  
   
-## Tipi di azioni  
+## <a name="types-of-actions"></a>Tipi di azioni  
  La tabella seguente elenca i tipi di azioni inclusi in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 |Tipo di azione|Description|  
@@ -69,10 +74,10 @@ caps.handback.revision: 34
 |Istruzione|Esegue un comando OLE DB.|  
 |URL|Visualizza una pagina Web dinamica in un browser Internet|  
   
-## Risoluzione ed esecuzione di azioni  
+## <a name="resolving-and-executing-actions"></a>Risoluzione ed esecuzione di azioni  
  Quando un utente aziendale accede all'oggetto per cui l'oggetto comando è stato definito, l'istruzione associata all'azione viene risolta automaticamente, in modo da renderla disponibile all'applicazione client, ma l'azione non viene eseguita automaticamente. L'azione viene eseguita solo quando l'utente finale esegue l'operazione specifica del client che avvia tale azione. In un'applicazione client può ad esempio essere visualizzato un elenco di azioni sotto forma di menu popup quando l'utente aziendale fa clic con il pulsante destro del mouse su un membro o una cella particolare.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Azioni nei modelli multidimensionali](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

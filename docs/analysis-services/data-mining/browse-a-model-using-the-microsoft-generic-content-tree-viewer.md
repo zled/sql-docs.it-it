@@ -1,25 +1,30 @@
 ---
-title: "Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contenuto del modello di data mining, visualizzazione"
+title: Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dcb5c01581dd9d42e7504dc00f514544479b27fc
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer
+# <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer visualizza informazioni dettagliate sui modelli individuati dall'algoritmo di data mining e fornisce anche l'accesso a varie statistiche generate durante il processo di analisi. La quantità e il tipo di informazioni variano a seconda dell'algoritmo utilizzato, ma è possibile includere le categorie seguenti:  
   
 -   Segmenti di dati e relative caratteristiche.  
@@ -32,15 +37,15 @@ caps.handback.revision: 23
   
  La visualizzazione di queste informazioni consente di interpretare in modo più efficace i risultati dell'analisi. È inoltre possibile identificare le modalità per ottimizzare il modello e quindi ripeterne il training. In alternativa, è possibile decidere di ripetere il training utilizzando un algoritmo diverso.  
   
-## Visualizzazione del contenuto di un modello di data mining  
+## <a name="viewing-mining-model-content"></a>Visualizzazione del contenuto di un modello di data mining  
  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer vengono visualizzati elementi quali colonne, regole, proprietà, attributi, nodi e altro contenuto dal *set di righe dello schema relativo al contenuto* del modello di data mining. Il set di righe dello schema relativo al contenuto è un framework generico per la presentazione di informazioni dettagliate sul contenuto di un modello di data mining.  
   
  Queste informazioni dettagliate sono contenute in una tabella HTML che rappresenta gli schemi, i cluster o gli alberi del modello come nodi. È possibile fare clic su ogni nodo ed espanderlo per visualizzare più dettagli, ad esempio le formule o il conteggio di valori distinti per un attributo numerico. È anche possibile esplorare le relazioni padre-figlio tra i nodi.  
   
  Per altre informazioni sul significato generale dei termini usato nel contenuto di un modello di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). In questo argomento sono inoltre contenuti i collegamenti a informazioni sul contenuto del modello di data mining per tipi di modelli specifici. Poiché ogni tipo di modello di data mining contiene informazioni specifiche dell'algoritmo e degli schemi trovati nei dati, si consiglia di consultare l'argomento di riferimento tecnico per ogni tipo di modello per comprendere pienamente ogni tipo di modello.  
   
-## Esecuzione di query sul contenuto di un modello di data mining  
- Le stesse informazioni fornite in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer sono anche disponibili eseguendo una query sul modello di data mining. È possibile creare query sul contenuto del modello di data mining tramite istruzioni DMX (Data Mining Extension). Ad esempio, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile eseguire una query sul contenuto tramite l'istruzione DMX seguente:  
+## <a name="querying-mining-model-content"></a>Esecuzione di query sul contenuto di un modello di data mining  
+ Le stesse informazioni fornite in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer sono anche disponibili eseguendo una query sul modello di data mining. È possibile creare query sul contenuto del modello di data mining tramite istruzioni DMX (Data Mining Extension). Ad esempio, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è possibile eseguire una query sul contenuto tramite l'istruzione DMX seguente:  
   
 ```  
 SELECT * FROM [<mining model name>].CONTENT  
@@ -48,8 +53,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  Per altre informazioni, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## Vedere anche  
- [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Cancellare le cache di Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cancella la cache di Analysis Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cancellare le cache di Analysis Services
+# <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
   Analysis Services consente di memorizzare i dati nella cache per migliorare le prestazioni delle query. In questo argomento vengono forniti consigli per l'utilizzo del comando XMLA ClearCache con cui cancellare le cache create in risposta a una query MDX. Gli effetti dell'esecuzione di ClearCache variano a seconda che si utilizzi un modello tabulare o multidimensionale.  
   
  **Quando cancellare la cache per i modelli multidimensionali**  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
  Rispetto ai consigli relativi alla cancellazione delle cache dei modelli multidimensionali durante i test delle prestazioni, non è specificamente consigliato di cancellare le cache dei modelli tabulari. Se non si gestisce la distribuzione di un modello tabulare che contiene dati sensibili, non c'è nessuna attività amministrativa specifica che richiede la cancellazione della cache.  
   
-## Cancellare la cache per i modelli di Analysis Services  
+## <a name="clear-the-cache-for-analysis-services-models"></a>Cancellare la cache per i modelli di Analysis Services  
  Per cancellare la cache, utilizzare XMLA e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile cancellare la cache a livello di database, cubo, dimensione o tabella oppure gruppo di misure. I passaggi seguenti per la cancellazione della cache a livello di database si applicano sia ai modelli multidimensionali che ai modelli tabulari.  
   
 > [!NOTE]  
@@ -47,15 +52,15 @@ caps.handback.revision: 11
   
  La cancellazione della cache richiede che si fornisca un identificatore di oggetto all'istruzione **ClearCache** in una query XMLA. Nel primo passaggio di questo argomento viene illustrato come ottenere un identificatore di oggetto.  
   
-#### Passaggio 1: ottenere l'identificatore di oggetto  
+#### <a name="step-1-get-the-object-identifier"></a>Passaggio 1: ottenere l'identificatore di oggetto  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fare clic con il pulsante destro del mouse su un oggetto, selezionare **Proprietà** e copiare il valore dell'ID proprietà nel riquadro **Proprietà**. Questo approccio funziona per database, cubi, dimensioni o tabelle.  
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un oggetto, selezionare **Proprietà**e copiare il valore dell'ID proprietà nel riquadro **Proprietà** . Questo approccio funziona per database, cubi, dimensioni o tabelle.  
   
 2.  Per ottenere l'ID del gruppo di misure, fare clic con il pulsante destro del mouse sul gruppo di misure e selezionare **Crea script per gruppo di misure**. Scegliere **Crea** o **Modifica**e inviare la query a una finestra. L'ID del gruppo di misure sarà visibile nella definizione dell'oggetto. Copiare l'ID della definizione dell'oggetto.  
   
-#### Passaggio 2: eseguire la query  
+#### <a name="step-2-run-the-query"></a>Passaggio 2: eseguire la query  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fare clic con il pulsante destro del mouse su un database, scegliere **Nuova query**, quindi **XMLA**.  
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un database, scegliere **Nuova query**, quindi **XMLA**.  
   
 2.  Copiare l'esempio di codice seguente nella finestra di query XMLA. Sostituire **DatabaseID** con l'ID del database nella connessione corrente.  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## Vedere anche  
- [Creare script per le attività amministrative in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>Vedere anche  
  [Monitorare un'istanza di Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

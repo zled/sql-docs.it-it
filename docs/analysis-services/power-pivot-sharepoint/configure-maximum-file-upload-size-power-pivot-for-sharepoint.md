@@ -1,24 +1,29 @@
 ---
-title: "Configurare la dimensione massima per il caricamento dei file (PowerPivot per SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurare le dimensioni di caricamento massime del File (PowerPivot per SharePoint) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e79739162ee4eba9fde6af1efddd7b5b273b73d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurare la dimensione massima per il caricamento dei file (PowerPivot per SharePoint)
+# <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configurare la dimensione massima per il caricamento dei file (PowerPivot per SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nelle cartelle di lavoro sono spesso contenute grandi quantità di dati che comportano il superamento della dimensione massima di file consentita per il caricamento in SharePoint. Quando si tenta di caricare un file che supera il limite massimo, verrà visualizzato l'errore seguente in SharePoint:  
   
 -   "Le dimensioni del file specificato superano le dimensioni massime supportate".  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
  Per modificare le dimensioni massime di caricamento del file è necessario essere un amministratore di SharePoint.  
   
-### Configurare le dimensioni massime del file per Excel Services  
+### <a name="configure-maximum-file-size-for-excel-services"></a>Configurare le dimensioni massime del file per Excel Services  
   
 1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 9
   
 7.  Scegliere **OK**.  
   
-### Configurare le dimensioni massime del file per un'applicazione Web di SharePoint  
+### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Configurare le dimensioni massime del file per un'applicazione Web di SharePoint  
   
 1.  In Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni Web**.  
   

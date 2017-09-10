@@ -1,38 +1,43 @@
 ---
-title: "Collegamento e scollegamento di database di Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.AttachDatabase.f1"
-  - "sql13.asvs.ssms.attachdatabase.f1"
-  - "sql13.asvs.ssmsimbi.DetachDatabase.f1"
-  - "sql13.asvs.ssms.detachdatabase.f1"
-helpviewer_keywords: 
-  - "database [Analysis Services], collegamento"
-  - "database [Analysis Services], scollegamento"
+title: Collegamento e scollegamento di database di Analysis Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.AttachDatabase.f1
+- sql13.asvs.ssms.attachdatabase.f1
+- sql13.asvs.ssmsimbi.DetachDatabase.f1
+- sql13.asvs.ssms.detachdatabase.f1
+helpviewer_keywords:
+- databases [Analysis Services], attach
+- databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Collegamento e scollegamento di database di Analysis Services
+# <a name="attach-and-detach-analysis-services-databases"></a>Collegamento e scollegamento di database di Analysis Services
   Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole portare un database offline per un determinato periodo e quindi riportarlo online nella stessa istanza del server o in una diversa. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. In questi e in molti altri casi, i comandi **Attach** e **Detach** consentono agli amministratori di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di portare il database offline e di riportarlo online con pochi passaggi.  
   
-## Comandi Attach e Detach  
+## <a name="attach-and-detach-commands"></a>Comandi Attach e Detach  
  Il comando **Attach** consente di portare online un database in precedenza portato offline. È possibile collegare il database all'istanza del server originale o a un'altra istanza. Quando si collega un database, l'utente può specificare l'impostazione **ReadWriteMode** per il database. Il comando **Detach** consente di portare un database offline dal server.  
   
-## Utilizzo di Attach e Detach  
+## <a name="attach-and-detach-usage"></a>Utilizzo di Attach e Detach  
  Il comando **Attach** consente di portare online una struttura del database esistente. Se il database è collegato in modalità **ReadWrite** , può essere collegato solo una volta a un'istanza del server. Se invece è collegato in modalità **ReadOnly** , può essere collegato più volte a diverse istanze del server. Tuttavia, non è possibile collegare lo stesso database più di una volta alla stessa istanza del server. Se si tenta di collegare lo stesso database più di una volta, verrà generato un errore, anche se i dati sono stati copiati in cartelle distinte.  
   
 > [!IMPORTANT]  
@@ -52,16 +57,16 @@ caps.handback.revision: 24
  I comandi **Attach** e **Detach** devono essere eseguiti come singole operazioni. Non possono essere combinati con altre operazioni nella stessa transazione. Inoltre, i comandi **Attach** e **Detach** sono comandi transazionali atomici, ovvero l'operazione avrà esito positivo o negativo. Nessun database verrà lasciato in uno stato incompleto.  
   
 > [!IMPORTANT]  
->  Per eseguire il comando **Detach**, sono necessari privilegi di amministratore del database o di amministratore del server.  
+>  Per eseguire il comando **Detach** , sono necessari privilegi di amministratore del database o di amministratore del server.  
   
 > [!IMPORTANT]  
->  Per eseguire il comando **Attach**, sono necessari privilegi di amministratore del server.  
+>  Per eseguire il comando **Attach** , sono necessari privilegi di amministratore del server.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Spostare un database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Proprietà ReadWriteMode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Spostare un Database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
+ [Proprietà readwritemode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Passare a un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   

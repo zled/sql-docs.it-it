@@ -1,24 +1,29 @@
 ---
-title: "Configurare Analysis Services per la delega vincolata Kerberos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurare Analysis Services per la delega vincolata Kerberos | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6158c7263fcd620f1ac577522b09f8ac4b9e08d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurare Analysis Services per la delega vincolata Kerberos
+# <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurare Analysis Services per la delega vincolata Kerberos
   Quando si configura Analysis Services per l'autenticazione Kerberos, è probabile che si desideri ottenere uno o entrambi i seguenti risultati: che Analysis Services rappresenti un'identità utente per l'esecuzione di query sui dati oppure che Analysis Services deleghi un'identità utente per un servizio di livello inferiore. Ogni scenario prevede requisiti di configurazione lievemente diversi. Entrambi gli scenari richiedono che si verifichi la correttezza della configurazione.  
   
 > [!TIP]  
@@ -44,9 +49,9 @@ caps.handback.revision: 14
   
 |Attività|Description|  
 |----------|-----------------|  
-|Passaggio 1: Verificare che gli account siano idonei per la delega|Assicurarsi che gli account usati per eseguire i servizi siano provvisti delle proprietà corrette in Active Directory. Gli account di servizio in Active Directory non devono essere contrassegnati come account sensibili o essere esplicitamente esclusi dagli scenari di delega. Per altre informazioni, vedere [Informazioni sugli account utente](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Nota: in genere, tutti gli account e i server devono appartenere allo stesso dominio di Active Directory o a domini trusted nella stessa foresta. Tuttavia, poiché Windows Server 2012 supporta la delega tra i limiti di dominio, è possibile configurare la delega vincolata Kerberos in un limite di dominio se il livello funzionale del dominio è Windows Server 2012. Un'altra alternativa consiste nel configurare Analysis Services per l'accesso HTTP e usare i metodi di autenticazione di IIS per la connessione client. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).|  
+|Passaggio 1: Verificare che gli account siano idonei per la delega|Assicurarsi che gli account usati per eseguire i servizi siano provvisti delle proprietà corrette in Active Directory. Gli account di servizio in Active Directory non devono essere contrassegnati come account sensibili o essere esplicitamente esclusi dagli scenari di delega. Per altre informazioni, vedere [Informazioni sugli account utente](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Nota: in genere, tutti gli account e i server devono appartenere allo stesso dominio di Active Directory o a domini trusted nella stessa foresta. Tuttavia, poiché Windows Server 2012 supporta la delega tra i limiti di dominio, è possibile configurare la delega vincolata Kerberos in un limite di dominio se il livello funzionale del dominio è Windows Server 2012. Un'altra alternativa consiste nel configurare Analysis Services per l'accesso HTTP e usare i metodi di autenticazione di IIS per la connessione client. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).|  
 |Passaggio 2: Registrare il nome SPN|Prima di impostare una delega vincolata, è necessario registrare un nome SPN per l'istanza di Analysis Services. Il nome SPN di Analysis Services sarà necessario quando si configura la delega vincolata Kerberos per i servizi di livello intermedio. Per istruzioni, vedere [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md) .<br /><br /> Un nome SPN specifica l'identità univoca di un servizio in un dominio configurato per l'autenticazione Kerberos. Le connessioni client in cui viene usata la sicurezza integrata spesso richiedono un nome SPN nell'ambito dell'autenticazione SSPI. La richiesta viene inoltrata a un controller di dominio Active Directory e la delega vincolata Kerberos concede un ticket se al nome SPN presentato dal client corrisponde una registrazione del nome SPN in Active Directory.|  
-|Passaggio 3: Configurare la delega vincolata|Dopo avere convalidato gli account che si desidera usare e averne registrato i relativi nomi SPN, il passaggio successivo consiste nel configurare i servizi di livello superiore, quali IIS, Reporting Services o i servizi Web di SharePoint, per la delega vincolata, specificando il nome SPN di Analysis Services come servizio specifico per cui la delega è consentita.<br /><br /> I servizi eseguiti in SharePoint, ad esempio Excel Services o Reporting Services in modalità SharePoint, spesso ospitano cartelle di lavoro e report che usano dati tabulari o multidimensionali di Analysis Services. La configurazione della delega vincolata per tali servizi è una normale attività necessaria per supportare l'aggiornamento dei dati da Excel Services. I collegamenti riportati di seguito forniscono istruzioni per i servizi di SharePoint e per altri servizi che con tutta probabilità presentano una richiesta di connessione dati a valle per i dati di Analysis Services:<br /><br /> [Delega dell'identità per Excel Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) o [How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication](http://support.microsoft.com/kb/2466519) (Come configurare Excel Services in SharePoint Server 2010 per l'autenticazione Kerberos)<br /><br /> [Delega dell'identità per PerformancePoint Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Delega dell'identità per SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> Per IIS 7.0, vedere [Configure Windows Authentication (IIS 7)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) [Configurare l'autenticazione di Windows (IIS 7)] o [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409) (Come configurare SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services per usare l'autenticazione Kerberos).|  
+|Passaggio 3: Configurare la delega vincolata|Dopo avere convalidato gli account che si desidera usare e averne registrato i relativi nomi SPN, il passaggio successivo consiste nel configurare i servizi di livello superiore, quali IIS, Reporting Services o i servizi Web di SharePoint, per la delega vincolata, specificando il nome SPN di Analysis Services come servizio specifico per cui la delega è consentita.<br /><br /> I servizi eseguiti in SharePoint, ad esempio Excel Services o Reporting Services in modalità SharePoint, spesso ospitano cartelle di lavoro e report che usano dati tabulari o multidimensionali di Analysis Services. La configurazione della delega vincolata per tali servizi è una normale attività necessaria per supportare l'aggiornamento dei dati da Excel Services. I collegamenti riportati di seguito forniscono istruzioni per i servizi di SharePoint e per altri servizi che con tutta probabilità presentano una richiesta di connessione dati a valle per i dati di Analysis Services:<br /><br /> [Delega dell'identità per Excel Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) o [How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication](http://support.microsoft.com/kb/2466519)<br /><br /> [Delega dell'identità per PerformancePoint Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Delega dell'identità per SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> Per IIS 7.0, vedere [Configure Windows Authentication (IIS 7)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) [Configurare l'autenticazione di Windows (IIS 7)] o [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409)(Come configurare SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services per usare l'autenticazione Kerberos).|  
 |Passaggio 4: Test delle connessioni|Durante i test, connettersi da computer remoti usando identità differenti ed eseguire le query su Analysis Services usando le stesse applicazioni degli utenti aziendali. È possibile usare SQL Server Profiler per il monitoraggio della connessione. Nella richiesta verrà visualizzata l'identità dell'utente. Per altre informazioni, vedere [Verificare l'identità rappresentata o delegata](#bkmk_test) in questa sezione.|  
   
 ##  <a name="bkmk_delegate"></a> Configurare Analysis Services per la delega trusted  
@@ -77,25 +82,25 @@ caps.handback.revision: 14
   
      La scheda Delega è disponibile solo se l'account utente (OlapSvc) viene assegnato a un servizio (Analysis Services) e il servizio dispone di un nome SPN registrato. Per registrare il nome SPN è necessario che il servizio sia in esecuzione.  
   
-     ![SSAS_Kerberos_1_AccountProperties](../../analysis-services/instances/media/ssas-kerberos-1-accountproperties.png "SSAS_Kerberos_1_AccountProperties")  
+     ![SSAS_Kerberos_1_AccountProperties](../../analysis-services/instances/media/ssas-kerberos-1-accountproperties.gif "SSAS_Kerberos_1_AccountProperties")  
   
 3.  Nella pagina Aggiungi servizi, fare clic su **Utenti o computer**.  
   
-     ![SSAS_Kerberos_2_](../../analysis-services/instances/media/ssas-kerberos-2.png "SSAS_Kerberos_2_")  
+     ![SSAS_Kerberos_2_](../../analysis-services/instances/media/ssas-kerberos-2.gif "SSAS_Kerberos_2_")  
   
 4.  Nella pagina Seleziona utenti o computer immettere l'account usato per eseguire l'istanza di SQL Server che fornisce i dati ai database del modello tabulare di Analysis Services. Fare clic su **OK** per accettare l'account del servizio.  
   
      Se non è possibile selezionare l'account desiderato, verificare che SQL Server sia in esecuzione e disponga di un nome SPN registrato per tale account. Per altre informazioni sui nomi SPN per il motore di database, vedere [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
-     ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.png "SSAS_Kerberos_3_SelectUsers")  
+     ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   
 5.  L'istanza di SQL Server dovrebbe ora apparire in Aggiungi servizi. Nell'elenco saranno inoltre presente gli altri eventuali servizi che usano l'account in questione. Scegliere l'istanza di SQL Server da usare. Fare clic su **OK** per accettare l'istanza.  
   
-     ![SSAS_Kerberos_4_](../../analysis-services/instances/media/ssas-kerberos-4.png "SSAS_Kerberos_4_")  
+     ![SSAS_Kerberos_4_](../../analysis-services/instances/media/ssas-kerberos-4.gif "SSAS_Kerberos_4_")  
   
 6.  La pagina delle proprietà dell'account del servizio di Analysis Services dovrebbe apparire analoga a quella nella cattura di schermata seguente. Scegliere **OK** per salvare le modifiche.  
   
-     ![SSAS_Kerberos_5_Finished](../../analysis-services/instances/media/ssas-kerberos-5-finished.png "SSAS_Kerberos_5_Finished")  
+     ![SSAS_Kerberos_5_Finished](../../analysis-services/instances/media/ssas-kerberos-5-finished.gif "SSAS_Kerberos_5_Finished")  
   
 7.  Verificare che la delega avvenga in modo corretto eseguendo la connessione a un computer client remoto, con un'identità diversa ed eseguendo una query sul modello tabulare. L'identità utente dovrebbe essere presente nella richiesta in SQL Server Profiler.  
   
@@ -112,11 +117,11 @@ caps.handback.revision: 14
   
  Vedere inoltre [La finestra di dialogo che più disorienta in Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) per una descrizione dettagliata di ciascuna opzione nella scheda Delega della finestra di dialogo delle proprietà dell'oggetto di Active Directory. Questo articolo spiega inoltre come usare LDP per eseguire i test e interpretarne i relativi risultati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Delega dell'identità e autenticazione di Microsoft Business Intelligence](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticazione reciproca tramite Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Registrazione del nome SPN per un'istanza di Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [Proprietà delle stringhe di connessione &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Connection String Properties &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

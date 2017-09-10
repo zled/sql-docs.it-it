@@ -1,38 +1,43 @@
 ---
-title: "Scenario di Analysis Services Tutorial | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: Scenario dell'esercitazione di Analysis Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 933a07504d0237d67becb2d98e1f5271548cb14a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Scenario di Analysis Services Tutorial
+# <a name="analysis-services-tutorial-scenario"></a>Scenario di Analysis Services Tutorial
 Questa esercitazione si riferisce alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
   
-Negli ultimi anni [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha acquistato un piccolo impianto di produzione in Messico, Importadores Neptuno, presso il quale vengono realizzati diversi componenti di assemblaggio essenziali per la gamma di prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. Tali componenti vengono quindi consegnati alla sede di Bothell per l'assemblaggio finale dei prodotti. Nel 2005, tutte le attività di produzione e distribuzione relative al gruppo di prodotti delle biciclette da turismo sono state concentrate nell'impianto Importadores Neptuno.  
+Negli ultimi anni [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha acquistato un piccolo impianto di produzione in Messico, Importadores Neptuno, presso il quale vengono realizzati diversi componenti di assemblaggio essenziali per la gamma di prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Tali componenti vengono quindi consegnati alla sede di Bothell per l'assemblaggio finale dei prodotti. Nel 2005, tutte le attività di produzione e distribuzione relative al gruppo di prodotti delle biciclette da turismo sono state concentrate nell'impianto Importadores Neptuno.  
   
 Dopo un anno di esercizio particolarmente favorevole, la società [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] intende ora ampliare la sua quota di mercato puntando sull'invio di messaggi pubblicitari mirati ai clienti migliori, sull'incremento della disponibilità dei prodotti tramite un sito Web esterno e sulla riduzione dei prezzi di vendita ottenuto grazie a un abbattimento dei costi di produzione.  
   
-## Ambiente di analisi attuale  
-Per supportare la necessità di analisi dei dati dei reparti vendite e marketing nonché della direzione, la società attualmente estrae i dati transazionali dal database [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] e le informazioni non transazionali, come ad esempio gli obiettivi di vendita, da fogli di calcolo. Tali informazioni vengono poi consolidate nel data warehouse relazionale **AdventureWorksDW2012**. Il data warehouse, tuttavia, presenta i seguenti problemi:  
+## <a name="current-analysis-environment"></a>Ambiente di analisi attuale  
+Per supportare la necessità di analisi dei dati dei reparti vendite e marketing nonché della direzione, la società attualmente estrae i dati transazionali dal database [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] e le informazioni non transazionali, come ad esempio gli obiettivi di vendita, da fogli di calcolo. Tali informazioni vengono poi consolidate nel data warehouse relazionale **AdventureWorksDW2012** . Il data warehouse, tuttavia, presenta i seguenti problemi:  
   
--   I report sono statici. Gli utenti non possono esplorare i dati in modo interattivo nei report per ottenere informazioni più dettagliate, come è invece possibile fare utilizzando una tabella pivot di [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Sebbene il set di report predefiniti esistente si riveli sufficiente per molti utenti, gli utenti più esperti devono disporre di accesso diretto alle query del database per generare query interattive e report specializzati. Data la complessità del database **AdventureWorksDW2012**, tali utenti, tuttavia, impiegano una quantità eccessiva di tempo per capire come creare query efficienti.  
+-   I report sono statici. Gli utenti non possono esplorare i dati in modo interattivo nei report per ottenere informazioni più dettagliate, come è invece possibile fare utilizzando una tabella pivot di [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Sebbene il set di report predefiniti esistente si riveli sufficiente per molti utenti, gli utenti più esperti devono disporre di accesso diretto alle query del database per generare query interattive e report specializzati. Data la complessità del database **AdventureWorksDW2012** , tali utenti, tuttavia, impiegano una quantità eccessiva di tempo per capire come creare query efficienti.  
   
 -   Le prestazioni delle query sono estremamente variabili. Alcune query, ad esempio, restituiscono i risultati molto rapidamente, in pochi secondi, mentre altre impiegano molti minuti.  
   
--   Le tabelle di aggregazione sono difficili da gestire. Per migliorare i tempi di risposta alle query, il team del data warehouse di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] ha compilato numerose tabelle di aggregazione nel database **AdventureWorksDW2012**. Ad esempio, è stata compilata una tabella riepilogativa delle vendite in base al mese. Tuttavia, se da un lato le tabelle di aggregazione consentono di migliorare in modo significativo le prestazioni delle query, l'infrastruttura che mantiene le tabelle nel tempo è fragile e soggetta a errori.  
+-   Le tabelle di aggregazione sono difficili da gestire. Per migliorare i tempi di risposta alle query, il team del data warehouse di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] ha compilato numerose tabelle di aggregazione nel database **AdventureWorksDW2012** . Ad esempio, è stata compilata una tabella riepilogativa delle vendite in base al mese. Tuttavia, se da un lato le tabelle di aggregazione consentono di migliorare in modo significativo le prestazioni delle query, l'infrastruttura che mantiene le tabelle nel tempo è fragile e soggetta a errori.  
   
 -   La logica per i calcoli complessi è nascosta nelle definizioni dei report ed è di difficile condivisione tra i report. Poiché la logica di business viene generata separatamente per ogni report, le informazioni di riepilogo risultano talvolta diverse tra i report. La direzione non ritiene pertanto totalmente attendibili i report del data warehouse.  
   
@@ -46,8 +51,8 @@ Per supportare la necessità di analisi dei dati dei reparti vendite e marketing
   
 -   È difficile controllare le informazioni. L'ufficio finanziario attualmente usa il database **AdventureWorksDW2012** solo come origine dati per l'esecuzione bulk delle query. I dati vengono quindi scaricati in fogli di calcolo separati e viene impiegata una notevole quantità di tempo per preparare i dati ed elaborare i fogli di calcolo. I report finanziari della società sono pertanto difficili da preparare, controllare e gestire.  
   
-## Soluzione  
-Il team del data warehouse ha eseguito recentemente una verifica della progettazione del sistema di analisi corrente. La verifica include un'analisi della relazione tra le problematiche correnti e le necessità future. Il team del data warehouse ha concluso che il database **AdventureWorksDW2012** rappresenta un database dimensionale progettato correttamente con dimensioni conformi e chiavi sostitutive. Le dimensioni conformi consento di utilizzare la dimensione in più data mart, ad esempio una dimensione temporale o del prodotto. Le chiavi surrogate sono chiavi artificiali che consentono il collegamento delle tabelle dei fatti e delle dimensioni e che vengono utilizzate per assicurare univocità e il miglioramento delle prestazioni. Il team del data warehouse ha anche determinato che non esistono attualmente problemi significativi relativi al carico e alla gestione delle tabelle di base nel database **AdventureWorksDW2012**. Il team ha pertanto deciso di usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per ottenere quanto segue:  
+## <a name="the-solution"></a>Soluzione  
+Il team del data warehouse ha eseguito recentemente una verifica della progettazione del sistema di analisi corrente. La verifica include un'analisi della relazione tra le problematiche correnti e le necessità future. Il team del data warehouse ha concluso che il database **AdventureWorksDW2012** rappresenta un database dimensionale progettato correttamente con dimensioni conformi e chiavi sostitutive. Le dimensioni conformi consento di utilizzare la dimensione in più data mart, ad esempio una dimensione temporale o del prodotto. Le chiavi surrogate sono chiavi artificiali che consentono il collegamento delle tabelle dei fatti e delle dimensioni e che vengono utilizzate per assicurare univocità e il miglioramento delle prestazioni. Il team del data warehouse ha anche determinato che non esistono attualmente problemi significativi relativi al carico e alla gestione delle tabelle di base nel database **AdventureWorksDW2012** . Il team ha pertanto deciso di usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per ottenere quanto segue:  
   
 -   Rendere disponibile un accesso ai dati unificato tramite un livello di metadati comune per l'esecuzione di analisi e la creazione di report.  
   
@@ -63,8 +68,9 @@ Il team del data warehouse ha eseguito recentemente una verifica della progettaz
   
 Nelle lezioni dell'esercitazione su Analysis Services vengono fornite istruzioni sulla compilazione di un database del cubo che soddisfa tutti questi obiettivi. Per iniziare, passare alla prima lezione: [Lezione 1: Creare un nuovo modello di progetto tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
+

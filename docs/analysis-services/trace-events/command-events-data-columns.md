@@ -1,25 +1,30 @@
 ---
-title: "Colonne di dati degli eventi di comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Eventi di comando - categoria di eventi"
+title: Colonne di dati degli eventi di comando | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonne di dati degli eventi di comando
-  Nella tabella seguente vengono descritte le colonne di dati per ogni classe di evento della categoria di eventi **Eventi di comando**.  
+# <a name="command-events-data-columns"></a>Colonne di dati degli eventi di comando
+  Nella tabella seguente vengono descritte le colonne di dati per ogni classe di evento della categoria di eventi **Eventi di comando** .  
   
  La categoria di eventi **Eventi di comando** include le classi di eventi seguenti:  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTDomainName|Contiene l'account di dominio di Windows associato all'evento di comando.|  
 |ClientProcessID|Contiene l'ID del processo client univoco associato all'evento di comando.|  
   
-## Vedere anche  
- [Categoria di eventi Eventi di comando](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

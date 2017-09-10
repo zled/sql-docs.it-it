@@ -1,28 +1,33 @@
 ---
-title: "Applicare un filtro a un modello di data mining | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/19/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtro dei modelli [data mining]"
-  - "filtri [data mining]"
-  - "filtraggio delle righe di input [Analysis Services]"
-  - "applicazione di filtri ai dati [Analysis Services]"
+title: Applicare un filtro a un modello di Data Mining | Documenti Microsoft
+ms.custom: 
+ms.date: 03/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filters [data mining]
+- filtering input rows [Analysis Services]
+- filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Applicare un filtro a un modello di data mining
+# <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
   Se la struttura di data mining contiene una tabella nidificata, è possibile applicare un filtro alla tabella del case, alla tabella nidificata o a entrambe.  
   
  Nella procedura seguente viene illustrato come creare entrambi i tipi di filtro: filtri di case e filtri sulle righe della tabella nidificata.  
@@ -38,7 +43,7 @@ AND EXISTS (SELECT * FROM [<nested table name>]
 WHERE [Model] <> 'Water Bottle' )   
 ```  
   
-### Per creare un filtro di case su un modello di data mining  
+### <a name="to-create-a-case-filter-on-a-mining-model"></a>Per creare un filtro di case su un modello di data mining  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Esplora soluzioni, fare clic sulla struttura di data mining che contiene il modello di data mining da filtrare.  
   
@@ -84,9 +89,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 13. La condizione di filtro nella casella di testo Espressione viene aggiornata automaticamente per includere la nuova condizione. L'espressione completa è la seguente: `[Income] > '30000'AND [Income] < '40000'`  
   
-### Per aggiungere un filtro nella tabella nidificata in un modello di data mining  
+### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Per aggiungere un filtro nella tabella nidificata in un modello di data mining  
   
-1.  Nella finestra di dialogo **Filtro modello \<nome>** fare clic in una riga vuota della griglia sotto **Colonna struttura di data mining**.  
+1.  Nel  **\<nome > filtro modello** finestra di dialogo fare clic su una riga vuota nella griglia in **colonna della struttura di Data Mining**.  
   
 2.  Selezionare il nome della tabella nidificata dall'elenco a discesa.  
   
@@ -96,9 +101,9 @@ WHERE [Model] <> 'Water Bottle' )
   
      Queste sono le uniche condizioni disponibili per la tabella nidificata nella finestra di dialogo **Filtro modello** , perché la tabella del case è stata limitata solo ai case che contengono un determinato valore nella tabella nidificata. Il valore per la condizione nella tabella nidificata verrà impostato nel passaggio successivo.  
   
-4.  Fare clic sulla casella **Valore** e quindi sul pulsante (**…**) per creare un'espressione.  
+4.  Fare clic sulla casella **Valore** e quindi sul pulsante ( **…** ) per creare un'espressione.  
   
-     Verrà visualizzata la finestra di dialogo **Filtro \<nome>**. Questa finestra di dialogo consente di impostare condizioni solo nella tabella corrente, che in questo caso è la tabella nidificata.  
+     Il  **\<nome > filtro** verrà visualizzata la finestra di dialogo. Questa finestra di dialogo consente di impostare condizioni solo nella tabella corrente, che in questo caso è la tabella nidificata.  
   
 5.  Fare clic sulla casella **Colonna struttura di data mining** e selezionare un nome di colonna dagli elenchi a discesa di colonne della tabella nidificata.  
   
@@ -106,7 +111,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Fare clic su **Valore** e digitare un valore.  
   
-     Ad esempio, per **Colonna struttura di data mining** selezionare **Model**. Per **Operatore**, selezionare **<>** e digitare il valore **Water Bottle**. Questa condizione crea l'espressione di filtro seguente:  
+     Ad esempio, per **Colonna struttura di data mining** selezionare **Model**. Per **Operatore**, selezionare **<>**e digitare il valore **Water Bottle**. Questa condizione crea l'espressione di filtro seguente:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +120,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Poiché il numero di attributi della tabella nidificata è potenzialmente illimitato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non viene fornito un elenco di valori possibili da cui effettuare una selezione. È necessario digitare il valore esatto. Inoltre, non è possibile utilizzare un operatore LIKE in una tabella nidificata.  
   
-1.  Se necessario, aggiungere altre condizioni. Per combinare le condizioni, selezionare **AND** o **OR** nella casella **AND/OR** a sinistra della griglia **Condizioni**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Se necessario, aggiungere altre condizioni. Per combinare le condizioni, selezionare **AND** o **OR** nella casella **AND/OR** a sinistra della griglia **Condizioni** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Nella finestra di dialogo **Filtro modello** esaminare le condizioni create utilizzando la finestra di dialogo **Filtro** . Le condizioni per la tabella nidificata vengono aggiunte alle condizioni per la tabella del case e il set completo di condizioni di filtro viene visualizzato nella casella di testo **Espressione** .  
   
@@ -124,11 +129,10 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     > [!NOTE]  
     >  Se si modifica manualmente una parte di un'espressione di filtro, la griglia verrà disabilitata e da quel momento sarà necessario utilizzare l'espressione di filtro solo in modalità di modifica di testo. Per ripristinare la modalità di modifica della griglia, è necessario cancellare l'espressione di filtro e ricominciare.  
   
-4.  
-  
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
+

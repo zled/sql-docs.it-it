@@ -1,36 +1,41 @@
 ---
-title: "Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "strutture di data mining [Analysis Services], creazione"
-  - "modelli di data mining [Analysis Services], creazione"
-  - "modelli di data mining [Analysis Services], modifica"
+title: Aggiungere modelli di Data Mining a una struttura (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], creating
+- mining models [Analysis Services], creating
+- mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30fab0ce534bc76456f6876c1432feeb3de2de03
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining)
+# <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining)
   Una struttura di data mining può supportare più modelli di data mining. Pertanto dopo avere completato la procedura guidata è possibile aprire la struttura e aggiungere nuovi modelli di data mining. Ogni volta che si crea un modello, è possibile utilizzare un algoritmo diverso, modificare i parametri o applicare filtri per utilizzare un subset di dati diverso.  
   
-## Aggiunta di nuovi modelli di data mining  
+## <a name="adding-new-mining-models"></a>Aggiunta di nuovi modelli di data mining  
  Quando si utilizza Creazione guidata modello di data mining per creare un nuovo modello di data mining, per impostazione predefinita è sempre necessario creare prima una struttura di data mining. Tramite la procedura guidata è quindi possibile aggiungere un modello di data mining iniziale alla struttura. Tuttavia, non è necessario creare immediatamente un modello. Se si crea solo la struttura, non è necessario prendere una decisione in merito alla colonna da utilizzare come attributo stimabile o su come utilizzare i dati in un determinato modello. Al contrario, è sufficiente impostare la struttura dei dati generale da utilizzare in futuro e in seguito utilizzare [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) per aggiungere nuovi modelli di data mining basati su tale struttura.  
   
 > [!NOTE]  
 >  In DMX l'istruzione CREATE MINING MODEL inizia con il modello di data mining. Ovvero, si definisce il modello di data mining prescelto e la struttura sottostante viene automaticamente generata in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In seguito è possibile continuare ad aggiungere nuovi modelli di data mining alla struttura usando l'istruzione ALTER STRUCTURE… ADD MODEL.  
   
-## Scelta di un algoritmo  
+## <a name="choosing-an-algorithm"></a>Scelta di un algoritmo  
  Quando si aggiunge un nuovo modello a una struttura esistente, la prima operazione da eseguire è la selezione di un algoritmo di data mining da utilizzare in tale modello. La scelta dell'algoritmo è importante perché ogni algoritmo esegue un tipo diverso di analisi e presenta requisiti diversi.  
   
  Quando si seleziona un algoritmo incompatibile con i dati, viene visualizzato un avviso. In alcuni casi, potrebbe essere necessario ignorare le colonne che non è possibile elaborare tramite l'algoritmo. In altri casi le modifiche verranno effettuate automaticamente dall'algoritmo. Ad esempio, se la struttura contiene dati numerici e l'algoritmo può funzionare solo con valori discreti, i valori numerici verranno automaticamente raggruppati in intervalli discreti. In alcuni casi, potrebbe essere necessario correggere prima i dati manualmente, scegliendo una chiave o un attributo stimabile.  
@@ -39,7 +44,7 @@ caps.handback.revision: 16
   
  Si noti che tutti i nuovi modelli devono essere elaborati prima di poterli utilizzare.  
   
-## Specifica dell'utilizzo di colonne in un nuovo modello di data mining  
+## <a name="specifying-the-usage-of-columns-in-a-new-mining-model"></a>Specifica dell'utilizzo di colonne in un nuovo modello di data mining  
  Quando si aggiungono nuovi modelli di data mining a una struttura di data mining esistente, è necessario specificare come ciascuna colonna di dati dovrà essere utilizzata dal modello. A seconda del tipo di algoritmo scelto per il modello, è possibile che alcune scelte siano effettuate per impostazione predefinita. Le colonne di cui non si specifica la modalità di utilizzo non vengono incluse nella struttura di data mining. Tuttavia, i dati nella colonna possono essere ancora disponibili per il drill-through, se è supportato dal modello.  
   
  Le colonne della struttura di data mining utilizzate dal modello (se non impostate su Ignora) devono essere una chiave, una colonna di input, una colonna stimabile o una colonna stimabile i cui valori vengono anche utilizzati come input nel modello.  
@@ -54,13 +59,13 @@ caps.handback.revision: 16
   
      A seconda del tipo di modello, può essere necessario che la colonna stimabile sia un tipo di dati specifico: ad esempio un modello di regressione lineare richiede una colonna numerica come valore stimato; l'algoritmo Naive Bayes richiede un valore discreto (anche tutti gli input devono essere discreti).  
   
-## Specifica del contenuto delle colonne  
+## <a name="specifying-column-content"></a>Specifica del contenuto delle colonne  
  In alcuni casi può anche essere necessario specificare il *contenuto della colonna*. Nel data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la proprietà Tipo di contenuto di ogni colonna di dati indica all'algoritmo come devono essere elaborati i dati in tale colonna. Se ad esempio i dati includono una colonna Income, è necessario specificare che la colonna contiene numeri continui impostando il tipo di contenuto su Continuous. Tuttavia, è anche possibile specificare che i numeri della colonna Income devono essere raggruppati in bucket impostando il tipo di contenuto su Discretized e, se si desidera, specificando il numero esatto di bucket. È possibile creare modelli diversi che gestiscono le colonne in modo diverso. Ad esempio, è possibile provare con un modello che raggruppa i clienti in tre bucket di età e un altro che li raggruppa in 10 bucket di età.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Creare una struttura di data mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Proprietà dei modelli di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
+ [Proprietà modello di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

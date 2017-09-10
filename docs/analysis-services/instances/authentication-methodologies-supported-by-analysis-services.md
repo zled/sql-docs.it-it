@@ -1,24 +1,29 @@
 ---
-title: "Metodologie di autenticazione supportate da Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Le metodologie di autenticazione supportate da Analysis Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Metodologie di autenticazione supportate da Analysis Services
+# <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologie di autenticazione supportate da Analysis Services
   Per la connessione a un'istanza di Analysis Services da un'applicazione client è necessaria l'autenticazione di Windows (integrata). È possibile fornire un'identità utente di Windows utilizzando uno dei metodi seguenti:  
   
 -   NTLM  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
   
  Si noti che l'autenticazione delle attestazioni non è supportata. Non è possibile utilizzare i token delle attestazioni di Windows per accedere ad Analysis Services. Le librerie client di Analysis Services supportano solo i principi di sicurezza di Windows. Se la soluzione di Business Intelligence include le identità delle attestazioni, sarà necessario disporre di account shadow di identità di Windows per ogni utente oppure utilizzare le credenziali archiviate per accedere ai dati di Analysis Services.  
   
- Per altre informazioni sui flussi di autenticazione di Analysis Services e Business Intelligence, vedere [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576) (Autenticazione di Microsoft Business Intelligence e la delega dell'identità).  
+ Per altre informazioni sui flussi di autenticazione di Analysis Services e Business Intelligence, vedere [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576)(Autenticazione di Microsoft Business Intelligence e la delega dell'identità).  
   
 ##  <a name="bkmk_auth"></a> Individuazione delle possibilità di autenticazione  
  Per la connessione a un database di Analysis Services è necessaria un'identità di gruppo o utente Windows e le relative autorizzazioni associate. L'identità può essere costituita da un account di accesso generico utilizzato da chiunque voglia visualizzare un report o, più probabilmente, dall'identità di singoli utenti.  
@@ -71,17 +76,17 @@ caps.handback.revision: 8
   
  Per l'autenticazione anonima, è possibile impostare l'identità utente anonimo su un account utente di Windows specifico (IUSR_GUEST per impostazione predefinita) o su un'identità del pool di applicazioni. L'account utente anonimo verrà utilizzato per la connessione ad Analysis Services e deve disporre di autorizzazioni di accesso ai dati nell'istanza di Analysis Services. Con questo approccio, nella connessione viene utilizzata unicamente l'identità utente associata all'account anonimo. Se l'applicazione richiede una ulteriore gestione dell'identità, è necessario scegliere un altro approccio o fornire una ulteriore gestione dell'identità.  
   
- L'autenticazione di base e quella anonima sono disponibili solo quando si configura Analysis Services per l'accesso HTTP, utilizzando IIS e msmdpump.dll per stabilire la connessione. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ L'autenticazione di base e quella anonima sono disponibili solo quando si configura Analysis Services per l'accesso HTTP, utilizzando IIS e msmdpump.dll per stabilire la connessione. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)(Autenticazione di Microsoft Business Intelligence e la delega dell'identità).  
   
- **Credenziali archiviate**  
+ **Stored Credentials**  
   
  La maggior parte dei servizi dell'applicazione di livello intermedio include funzionalità di memorizzazione di nomi utente e password utilizzati successivamente per recuperare dati da un archivio dati legacy, ad esempio Analysis Services o il motore relazionale di SQL Server. Di conseguenza, le credenziali archiviate forniscono una ulteriore alternativa per il recupero dei dati. Tra i limiti di questo approccio vi sono l'overhead di manutenzione associato all'aggiornamento di nomi utente e password e l'utilizzo di una identità singola per la connessione. Se la soluzione in uso richiede l'identità del chiamante originale, le credenziali archiviate non sono la scelta giusta.  
   
  Per altre informazioni sulle credenziali archiviate, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869) (Utilizzare Excel Services con il servizio di archiviazione sicura in SharePoint Server 2013).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della rappresentazione con la sicurezza del trasporto](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)   
+ [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurare Analysis Services per la delega vincolata Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Registrazione del nome SPN per un'istanza di Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

@@ -1,35 +1,40 @@
 ---
-title: "Aggiornamento dati PowerPivot con SharePoint 2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Risparmio energia di aggiornamento dati PowerPivot con SharePoint 2013 | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 30482b2c269a3d73bd6ef4852d295ae37e52c5e3
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Aggiornamento dati PowerPivot con SharePoint 2013
+# <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Aggiornamento dati PowerPivot con SharePoint 2013
   L'aggiornamento dei modelli di dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint 2013 prevede l'utilizzo di Excel Services come componente principale per caricare e aggiornare i modelli di dati in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguita in modalità SharePoint. Il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito esternamente alla farm di SharePoint. L'architettura in SharePoint 2013 Excel Services supporta sia l' **aggiornamento dati interattivo** che l' **aggiornamento dati pianificato**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
  **Contenuto dell'argomento:**  
   
--   [Aggiornamento dati interattivo](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [Autenticazione di Windows con connessioni dati della cartella di lavoro e aggiornamento dati interattivo](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [aggiornamento dati pianificato](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [Architettura dell'aggiornamento dati pianificato in SharePoint 2013](#bkmk_refresh_architecture)  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
 -   [Ulteriori informazioni](#bkmk_moreinformation)  
   
-## Informazioni preliminari  
+## <a name="background"></a>Informazioni preliminari  
  SharePoint Server 2013 Excel Services gestisce l'aggiornamento dei dati per le cartelle di lavoro di Excel 2013 e attiva l'elaborazione del modello di dati in un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità SharePoint. In caso di cartelle di lavoro di Excel 2010, tramite Excel Services è inoltre possibile gestire il caricamento e il salvataggio delle cartelle di lavoro e dei modelli di dati. Tuttavia, Excel Services si basa sul servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per inviare i comandi di elaborazione al modello di dati. Nella tabella seguente sono riepilogati i componenti mediante i quali vengono inviati i comandi di elaborazione per l'aggiornamento dati in base alla versione della cartella di lavoro. L'ambiente considerato è una farm di SharePoint 2013 configurata per usare un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services in modalità SharePoint.  
   
 ||||  
@@ -52,7 +57,7 @@ caps.handback.revision: 14
   
  Nella tabella seguente sono riepilogate le funzionalità di aggiornamento supportate in una farm di SharePoint 2013 configurata per usare un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services in modalità SharePoint:  
   
-|Cartella di lavoro creata in|Aggiornamento dati pianificato|Aggiornamento interattivo|  
+|Cartella di lavoro creata in|aggiornamento dati pianificato|Aggiornamento interattivo|  
 |-------------------------|----------------------------|-------------------------|  
 |2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Non supportato. Aggiornare la cartella di lavoro **(\*)**|Non supportato. Aggiornare la cartella di lavoro **(\*)**|  
 |2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Supportato|Non supportato. Aggiornare la cartella di lavoro **(\*)**|  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
  **(\*)** Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
-##  <a name="bkmk_interactive_refresh"></a> Aggiornamento dati interattivo  
+##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  L'aggiornamento dati interattivo o manuale in SharePoint Server Excel Services 2013 consente di aggiornare i modelli di dati con dati dell'origine dati originale. L'aggiornamento dati interattivo è disponibile dopo la configurazione di un'applicazione Excel Services registrando un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità SharePoint. Per altre informazioni, vedere [Gestire le impostazioni del modello di dati di Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
 > [!NOTE]  
@@ -70,7 +75,7 @@ caps.handback.revision: 14
   
 -   L'aggiornamento dati interattivo viene eseguito solo per i dati nella sessione utente corrente. I dati non vengono salvati di nuovo automaticamente nell'elemento della cartella di lavoro nel database del contenuto di SharePoint.  
   
--   **Credenziali**: per l'aggiornamento dati interattivo è possibile usare l'identità dell'utente attualmente connesso come credenziali o credenziali archiviate per connettersi all'origine dati. Le credenziali utilizzate dipendono dalle impostazioni di autenticazione di Excel Services definite per la connessione della cartella di lavoro all'origine dati esterna.  
+-   **Credenziali** : per l'aggiornamento dati interattivo è possibile usare l'identità dell'utente attualmente connesso come credenziali o credenziali archiviate per connettersi all'origine dati. Le credenziali utilizzate dipendono dalle impostazioni di autenticazione di Excel Services definite per la connessione della cartella di lavoro all'origine dati esterna.  
   
 -   **Cartelle di lavoro supportate:**  cartelle di lavoro create in Excel 2013.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 14
   
  **Con SQL Native Client:**  
   
--   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider - L'oggetto out-of-line "DataSource", che fa riferimento all'ID "20102481-39c8-4d21-bf63-68f583ad22bb", è stato specificato ma non è stato utilizzato. Errore OLE DB o ODBC:  Errore OLE DB oppure ODBC - Si è verificato un errore specifico dell'istanza o relativo alla rete durante il tentativo di stabilire una connessione a SQL Server. Server non trovato o non accessibile. Verificare che il nome dell'istanza sia corretto e che il server sia configurato in modo da consentire connessioni remote. Per ulteriori informazioni, vedere la documentazione online di SQL Server; 08001; Provider SSL - Il pacchetto di sicurezza richiesto non esiste; 08001; Il client non è in grado di effettuare la connessione; 08001; Crittografia non supportata dal client; 08001.  , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: book1.xlsx.  
+-   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider - L'oggetto out-of-line "DataSource", che fa riferimento all'ID "20102481-39c8-4d21-bf63-68f583ad22bb", è stato specificato ma non è stato utilizzato. Errore OLE DB o ODBC:  Errore OLE DB oppure ODBC - Si è verificato un errore specifico dell'istanza o relativo alla rete durante il tentativo di stabilire una connessione a SQL Server. Server non trovato o non accessibile. Verificare che il nome dell'istanza sia corretto e che il server sia configurato in modo da consentire connessioni remote. Per ulteriori informazioni, vedere la documentazione online di SQL Server; 08001; Provider SSL - Il pacchetto di sicurezza richiesto non esiste; 08001; Il client non è in grado di effettuare la connessione; 08001; Crittografia non supportata dal client; 08001.  , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: book1.xlsx.  
   
  **Con il provider Microsoft OLE DB per SQL Server:**  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 14
   
  Per altre informazioni, vedere [Agire come parte del sistema operativo](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx).  
   
-##  <a name="bkmk_scheduled_refresh"></a> Aggiornamento dati pianificato  
+##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Punti chiave di interesse dell'aggiornamento dati pianificato:**  
   
 -   È richiesta la distribuzione del componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
@@ -162,7 +167,7 @@ caps.handback.revision: 14
   
     -   Salvare di nuovo la cartella di lavoro nel database di contenuto.  
   
- ![menu di scelta rapida Gestisci aggiornamento dati](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "menu di scelta rapida Gestisci aggiornamento dati")  
+ ![gestire il menu di scelta rapida aggiornamento dati](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "gestire il menu di scelta rapida aggiornamento dati")  
   
 > [!TIP]  
 >  Per informazioni sull'aggiornamento delle cartelle di lavoro da SharePoint Online, vedere [Refreshing Excel workbooks with embedded Power Pivot models from SharePoint Online (white paper)](http://technet.microsoft.com/library/jj992650.aspx) (Aggiornamento delle cartelle di lavoro di Excel con modelli Power Pivot incorporati da SharePoint Online) (http://technet.microsoft.com/library/jj992650.aspx).  
@@ -170,7 +175,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_refresh_architecture"></a> Architettura dell'aggiornamento dati pianificato in SharePoint 2013  
  Nell'illustrazione seguente è riepilogata l'architettura dell'aggiornamento dati in SharePoint 2013 e SQL Server 2012 SP1.  
   
- ![architettura dell'aggiornamento dati di SQL Server 2012 SP1](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "architettura dell'aggiornamento dati di SQL Server 2012 SP1")  
+ ![architettura dell'aggiornamento di dati di SQL Server 2012 SP1](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "architettura dell'aggiornamento di dati di SQL Server 2012 SP1")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -189,9 +194,9 @@ caps.handback.revision: 14
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono necessari librerie client e provider di dati appropriati affinché sia possibile accedere alle origini dati tramite il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint.  
   
 > [!NOTE]  
->  Dato che il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non carica o salva più modelli [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], la maggior parte delle impostazioni per memorizzare i modelli nella cache in un server applicazioni non si applica a una farm di SharePoint 2013.  
+>  Dato che il servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non carica o salva più modelli [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la maggior parte delle impostazioni per memorizzare i modelli nella cache in un server applicazioni non si applica a una farm di SharePoint 2013.  
   
-## Dati del log di aggiornamento dati  
+## <a name="data-refresh-log-data"></a>Dati del log di aggiornamento dati  
  **Dati di utilizzo:** è possibile visualizzare i dati di utilizzo per l'aggiornamento dati nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per visualizzare i dati di utilizzo:  
   
 1.  Nel gruppo **Impostazioni generali applicazione** di Amministrazione centrale SharePoint fare clic su **Dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
@@ -208,7 +213,7 @@ caps.handback.revision: 14
   
 -   La categoria **Aggiornamento dati**.  
   
- Controllare **Configura registrazione diagnostica**. Per altre informazioni, vedere [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;Power Pivot per SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+ Controllare **Configura registrazione diagnostica**. Per altre informazioni, vedere [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).
   
 ##  <a name="datarefresh_additional_authentication"></a> Considerazioni aggiuntive sull'autenticazione  
  Tramite le impostazioni della finestra di dialogo **Impostazioni autenticazione Excel Services** in Excel 2013 è possibile stabilire l'identità Windows utilizzata da Excel Services e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'aggiornamento dati.  
@@ -229,7 +234,7 @@ caps.handback.revision: 14
   
 4.  Nella finestra di dialogo **Proprietà connessione** fare clic su **Definizione**, quindi fare clic sul pulsante **Impostazioni di autenticazione** .  
   
- ![impostazioni di autenticazione di Excel Services](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "impostazioni di autenticazione di Excel Services")  
+ ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
  Per altre informazioni sull'autenticazione dell'aggiornamento dati e sull'utilizzo di credenziali, vedere il post del blog sull' [aggiornamento dei dati PowerPivot in SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx).  
   
@@ -238,7 +243,7 @@ caps.handback.revision: 14
   
  [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Installazione di Analisi Services in modalità Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

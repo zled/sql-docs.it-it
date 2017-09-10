@@ -1,27 +1,32 @@
 ---
-title: "Contesto di calcolo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contesto di calcolo | Documenti Microsoft
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6101305123e48bf5194313c852f2a24e45e5847a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contesto di calcolo
+# <a name="calculation-context"></a>Contesto di calcolo
   Il contesto di calcolo è il sottospazio noto del cubo in cui viene valutata un'espressione e in cui tutte le coordinate sono note in modo esplicito o si possono derivare dall'espressione.  
   
-## Determinazione del contesto di calcolo  
+## <a name="determining-the-calculation-context"></a>Determinazione del contesto di calcolo  
  Ogni set, membro, tupla o funzione numerica viene eseguita nel contesto dell'intera istruzione o espressione MDX. Quando un argomento, ad esempio una tupla, viene passato a una funzione, vengono specificate in modo esplicito solo alcune delle coordinate dello spazio del cubo. Le altre coordinate vengono ottenute in base al contesto di calcolo corrente.  
   
  Il contesto di calcolo per le coordinate di celle e i membri dell'attributo non specificati viene determinato nell'ordine seguente:  
@@ -50,7 +55,7 @@ WHERE (Customer.Country.France, [Date].[Calendar].[Calendar Year].[CY 2004],
    Measures.[Internet Sales Amount])  
 ```  
   
- Se, tuttavia, si modifica questa query specificando la funzione **FILTER** sull'asse delle righe e si usa un membro della gerarchia dell'attributo Calendar Year nella funzione **FILTER**, è possibile modificare il membro dell'attributo della gerarchia dell'attributo Calendar Year usato per specificare il contesto di calcolo per i membri del set sull'asse delle righe.  
+ Se, tuttavia, si modifica questa query specificando la funzione **FILTER** sull'asse delle righe e si usa un membro della gerarchia dell'attributo Calendar Year nella funzione **FILTER** , è possibile modificare il membro dell'attributo della gerarchia dell'attributo Calendar Year usato per specificare il contesto di calcolo per i membri del set sull'asse delle righe.  
   
 ```  
 SELECT FILTER  
@@ -70,9 +75,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  Per migliorare le prestazioni delle query, è consigliabile eliminare i membri e le tuple quanto prima durante il processo di risoluzione. In questo modo, i calcoli complessi in fase di query nel set finale di membri vengono eseguiti sul minor numero possibile di celle.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Definizione del contesto di cubo in una query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Nozioni fondamentali sulle Query MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

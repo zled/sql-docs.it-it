@@ -1,37 +1,42 @@
 ---
-title: "Auto Exist | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Auto Exist | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Auto Exist
+# <a name="autoexists"></a>Auto Exist
   Il concetto di *Auto Exist* limita lo spazio del cubo a quelle celle che esistono effettivamente nel cubo, in contrapposizione con quelle che potrebbero esistere come risultato della creazione di tutte le possibili combinazioni di membri delle gerarchie di attributi dalla medesima gerarchia. La distinzione è necessaria perché i membri di una gerarchia di attributi non possono coesistere con membri di un'altra gerarchia di attributi nella stessa dimensione. Quando in un'istruzione SELECT si utilizzano due o più gerarchie di attributi della medesima dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi.  
   
  Si supponga ad esempio di utilizzare gli attributi della dimensione Geografia. Se una delle espressioni restituisce tutti i membri dell'attributo Città e un'altra limita i membri dell'attributo Paese a tutti i paesi europei, allora i membri di Città saranno limitati alle sole città che appartengono a paesi europei. Ciò è dovuto alla caratteristica Auto Exist in Analysis Services. un quanto tenta di impedire che i record di dimensioni esclusi nell'espressione di un attributo vengano inclusi dalle espressioni di altri attributi. La caratteristica Auto Exist può inoltre essere interpretata come l'intersezione risultante da diverse espressioni di attributi su righe di dimensioni.  
   
-## Esistenza della cella  
+## <a name="cell-existence"></a>Esistenza della cella  
  Le celle seguenti esistono sempre:  
   
 -   Il membro (Totale), di ogni gerarchia, quando incrociato con membri di altre gerarchie nella stessa dimensione.  
   
 -   Membri calcolati quando incrociati con gli elementi di pari livello non calcolati o con i padri o discendenti degli elementi di pari livello non calcolati.  
   
-## Celle non esistenti  
+## <a name="providing-non-existing-cells"></a>Celle non esistenti  
  Una cella non esistente è una cella fornita dal sistema in risposta a una query o a un calcolo che richiede una cella che non esiste nel cubo. Se, ad esempio, si dispone di un cubo con una gerarchia dell'attributo City e una gerarchia dell'attributo Country che appartiene alla dimensione Geography e una misura Internet Sales Amount, lo spazio di questo cubo include solo i membri che esistono in ogni livello superiore. Se, ad esempio, la gerarchia dell'attributo City include le città di New York, London, Paris, Tokyo e Melbourne e la gerarchia dell'attributo Country include i paesi United States, United Kingdom, France, Japan e Australia, lo spazio del cubo non include lo spazio (cella) nel punto di intersezione tra Paris e United States.  
   
  Quando si esegue una query su celle inesistenti, tali celle restituiscono valori Null, cioè non possono contenere calcoli e non è possibile definire un calcolo esegua operazioni di scrittura in questo spazio. L'istruzione seguente, ad esempio, include celle che non esistono.  
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Si noti che per designare l'asse delle colonne viene utilizzato 0, la forma abbreviata per Axis(0), indicante l'asse delle colonne.  
   
- La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta con la nuova variante * della funzione [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md).  
+ La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta con la nuova variante * della funzione [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -89,7 +94,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Ognuna delle tre query precedenti dimostra l'effetto del comportamento di Auto Exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## Auto Exist completo e superficiale  
+## <a name="deep-and-shallow-autoexists"></a>Auto Exist completo e superficiale  
  La caratteristica Auto Exist può essere applicata in modo completo o superficiale alle espressioni. **Auto Exist completo** significa che tutte le espressioni verranno valutate per soddisfare lo spazio più completo possibile dopo l'applicazione delle espressioni di sezionamento, delle espressioni sub SELECT nell'asse e così via. **Auto Exist superficiale** significa che le espressioni esterne vengono valutate prima dell'espressione corrente e i risultati vengono passati all'espressione corrente. Per impostazione predefinita la caratteristica Auto Exist viene applicata in modo completo.  
   
  Lo scenario e gli esempi riportati di seguito consentiranno di illustrare i tipi diversi di Auto Exist. Negli esempi riportati di seguito verranno creati due set, uno come espressione calcolata e l'altro come espressione costante.  
@@ -285,7 +290,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Questo set di risultati viene interpretato anche come Auto Exist superficiale, in quanto l'espressione viene valutata prima della clausola di sezionamento. Nell'esempio precedente, l'espressione è un'espressione costante a scopo illustrativo, al fine di presentare il concetto.  
   
- Il comportamento di Auto Exist può essere modificato a livello di sessione usando la proprietà della stringa di connessione **Autoexists**. L'esempio seguente inizia con l'apertura di una nuova sessione e l'aggiunta della proprietà *Autoexists=3* alla stringa di connessione. Per eseguire l'esempio, è necessario aprire una nuova connessione. Una volta stabilita la connessione con l'impostazione Auto Exist, quest'ultima rimarrà effettiva fino al termine della connessione.  
+ Il comportamento di Auto Exist può essere modificato a livello di sessione usando la proprietà della stringa di connessione **Autoexists** . L'esempio seguente inizia con l'apertura di una nuova sessione e l'aggiunta della proprietà *Autoexists=3* alla stringa di connessione. Per eseguire l'esempio, è necessario aprire una nuova connessione. Una volta stabilita la connessione con l'impostazione Auto Exist, quest'ultima rimarrà effettiva fino al termine della connessione.  
   
  `with member [Measures].[PCT Discount] AS '[Measures].[Discount Amount]/[Measures].[Reseller Sales Amount]', FORMAT_STRING = 'Percent'`  
   
@@ -310,14 +315,14 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Il comportamento di Auto Exist può essere modificato usando il parametro AUTOEXISTS = [1 | 2 | 3] nella stringa di connessione. Per informazioni sull'uso del parametro, vedere [Proprietà XMLA supportate &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+ Comportamento di Auto Exist può essere modificato tramite la caratteristica Auto Exist = [1 | 2 | 3]. parametro nella stringa di connessione. vedere [supportate proprietà XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo del parametro.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Spazio del cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Uso di membri, tuple e set &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Totali visualizzati e non visualizzati](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
+ [Utilizzo di membri, tuple e set &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Totali visualizzati e Non totali](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
  [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   

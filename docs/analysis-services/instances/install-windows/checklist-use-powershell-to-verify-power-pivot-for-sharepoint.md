@@ -1,27 +1,32 @@
 ---
-title: "Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Elenco di controllo: Utilizzare PowerShell per verificare PowerPivot per SharePoint | Documenti Microsoft'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint
+# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint
   Senza il superamento della prova di verifica con cui viene confermata l'operatività dei servizi e dei dati in uso, non vengono completate né le installazioni di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] né le operazioni di recupero. In questo articolo viene illustrata la modalità di esecuzione di queste procedure tramite Windows PowerShell. Ogni passaggio è inserito nella relativa sezione in modo da poter accedere direttamente ad attività specifiche. Ad esempio, eseguire lo script nella sezione [Database](#bkmk_databases) di questo argomento per verificare il nome dell'applicazione di servizio e i database del contenuto, se si desidera programmarli per la manutenzione o il backup.  
   
 |||  
 |-|-|  
-|![Contenuto correlato di PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Contenuto correlato di PowerShell")|Alla fine dell'argomento è disponibile uno script completo di PowerShell. Utilizzare questo script come punto di partenza per compilarne uno personalizzato per il controllo della distribuzione completa di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
+|![Contenuto correlato di PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell")|Alla fine dell'argomento è disponibile uno script completo di PowerShell. Utilizzare questo script come punto di partenza per compilarne uno personalizzato per il controllo della distribuzione completa di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
   
 ||  
 |-|  
@@ -31,7 +36,7 @@ caps.handback.revision: 25
   
 |||  
 |-|-|  
-|[Preparazione dell'ambiente di PowerShell](#bkmk_prerequisites)<br /><br /> [Sintomi e azioni consigliate](#bkmk_symptoms)<br /><br /> **(A)** [Servizio Windows Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService e PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Proxy e applicazioni del servizio Power Pivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Database](#bkmk_databases)<br /><br /> [Funzionalità di SharePoint](#bkmk_features)<br /><br /> [Processi timer](#bkmk_timer_jobs)<br /><br /> [Regole di integrità](#bkmk_health_rules)<br /><br /> **(E)** [Log di Servizio di registrazione unificato e di Windows](#bkmk_logs)<br /><br /> [Provider MSOLAP](#bkmk_msolap)<br /><br /> [Libreria client ADOMD.NET](#bkmk_adomd)<br /><br /> [Regole di raccolta dati di integrità](#bkmk_health_collection)<br /><br /> [Soluzioni](#bkmk_solutions)<br /><br /> [Passaggi di verifica manuali](#bkmk_manual)<br /><br /> [Altre risorse](#bkmk_more_resources)<br /><br /> [Script completo di PowerShell](#bkmk_full_script)|![powershell verification of powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
+|[Preparazione dell'ambiente di PowerShell](#bkmk_prerequisites)<br /><br /> [Sintomi e azioni consigliate](#bkmk_symptoms)<br /><br /> **(A)** [Servizio Windows Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService e PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Proxy e applicazioni del servizio Power Pivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Database](#bkmk_databases)<br /><br /> [Funzionalità di SharePoint](#bkmk_features)<br /><br /> [Processi timer](#bkmk_timer_jobs)<br /><br /> [Regole di integrità](#bkmk_health_rules)<br /><br /> **(E)** [Log di Servizio di registrazione unificato e di Windows](#bkmk_logs)<br /><br /> [Provider MSOLAP](#bkmk_msolap)<br /><br /> [Libreria client ADOMD.NET](#bkmk_adomd)<br /><br /> [Regole di raccolta dati di integrità](#bkmk_health_collection)<br /><br /> [Soluzioni](#bkmk_solutions)<br /><br /> [Passaggi di verifica manuali](#bkmk_manual)<br /><br /> [Altre risorse](#bkmk_more_resources)<br /><br /> [Script completo di PowerShell](#bkmk_full_script)|![verifica di PowerShell di powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "verifica di powershell di powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Preparazione dell'ambiente di PowerShell  
  Con i passaggi descritti in questa sezione viene preparato l'ambiente di PowerShell. I passaggi possono non essere necessari, a seconda dell'ambiente di scripting attualmente configurato.  
@@ -58,7 +63,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![powerpivot in sharepoint general application set](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot in sharepoint general application set")|È possibile verificare facoltativamente la maggior parte dei componenti in Amministrazione centrale utilizzando il dashboard di gestione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Per aprire il dashboard in Amministrazione centrale, fare clic su **Impostazioni generali applicazione**, quindi scegliere **Dashboard di gestione** in **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Per ulteriori informazioni sul dashboard, vedere [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot nel set di applicazioni generali sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot nel set di applicazioni generali sharepoint")|È possibile verificare facoltativamente la maggior parte dei componenti in Amministrazione centrale utilizzando il dashboard di gestione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Per aprire il dashboard in Amministrazione centrale, fare clic su **Impostazioni generali applicazione**, quindi scegliere **Dashboard di gestione** in **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Per ulteriori informazioni sul dashboard, vedere [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Sintomi e azioni consigliate  
  Nella tabella seguente è riportato un elenco di sintomi o problemi e la sezione suggerita di questo argomento da consultare per consentire la risoluzione del problema.  
@@ -67,7 +72,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |Aggiornamento dati non in fase di esecuzione|Vedere la sezione [Processi timer](#bkmk_timer_jobs) e verificare che **Processo timer di aggiornamento dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** sia online.|  
 |Dati del dashboard di gestione obsoleti|Vedere la sezione [Processi timer](#bkmk_timer_jobs) e verificare che **Processo timer di elaborazione dashboard di gestione dati PowerPivot** sia online.|  
-|Alcune parti del dashboard di gestione|Se si installa [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint in una farm con la topologia di Amministrazione centrale, senza Excel Services o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint, è necessario scaricare e installare la libreria client Microsoft ADOMD.NET per ottenere l'accesso completo ai report predefiniti nel dashboard di gestione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]. Alcuni report nel dashboard usano ADOMD.NET per accedere ai dati interni che forniscono dati per la creazione di report sull'integrità del server e sull'elaborazione di query di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] nella farm. Vedere la sezione [Libreria client ADOMD.NET](#bkmk_adomd) e l'argomento [Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale](http://msdn.microsoft.com/it-it/c2372180-e847-4cdb-b267-4befac3faf7e).|  
+|Alcune parti del dashboard di gestione|Se si installa [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint in una farm con la topologia di Amministrazione centrale, senza Excel Services o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint, è necessario scaricare e installare la libreria client Microsoft ADOMD.NET per ottenere l'accesso completo ai report predefiniti nel dashboard di gestione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Alcuni report nel dashboard usano ADOMD.NET per accedere ai dati interni che forniscono dati per la creazione di report sull'integrità del server e sull'elaborazione di query di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] nella farm. Vedere la sezione [Libreria client ADOMD.NET](#bkmk_adomd) e l'argomento [Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
 ##  <a name="bkmk_windows_service"></a> Servizio Windows Analysis Services  
  Con lo script in questa sezione viene verificata l'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Verificare che il servizio sia in **esecuzione**.  
@@ -84,7 +89,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotEngineService e PowerPivotSystemService  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService e PowerPivotEngineService  
  Con gli script in questa sezione si verificano i servizi di sistema [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Sono disponibili un servizio di sistema per una distribuzione di SharePoint 2013 e due servizi per una distribuzione di SharePoint 2010.  
   
  **PowerPivotSystemService**  
@@ -126,7 +131,7 @@ Instances : {POWERPIVOT}
 Farm      : SPFarm Name=SharePoint_Config  
 ```  
   
-##  <a name="bkmk_powerpivot_service_application"></a> Proxy e applicazioni del servizio PowerPivot  
+##  <a name="bkmk_powerpivot_service_application"></a> Proxy e applicazioni del servizio Power Pivot  
  Verificare che lo stato sia **Online**. Tramite l'applicazione Excel Services non viene utilizzato un database dell'applicazione di servizio e pertanto il cmdlet non restituisce un nome di database. Si prenda nota del database utilizzato dall'applicazione di servizio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in modo da poter verificare che sia online nella sezione del database più avanti in questo argomento.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ed Excel: applicazioni del servizio**  
@@ -159,7 +164,7 @@ Status      : Online
 > [!NOTE]  
 >  Nell'esempio di codice seguente viene restituita innanzitutto la proprietà applicationpool dell'applicazione di servizio [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] predefinita. Il nome viene analizzato dalla stringa e viene utilizzato per ottenere lo stato dell'oggetto pool di applicazioni.  
 >   
->  Verificare che lo stato sia **Online**. Se lo stato non è online o viene visualizzato "Errore HTTP" quando si esplora il sito [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], verificare che le credenziali di identità nei pool di applicazioni IIS siano ancora corrette. Il nome del pool IIS è il valore della proprietà ID restituita dal comando Get-SPServiceApplicationPool.  
+>  Verificare che lo stato sia **Online**. Se lo stato non è online o viene visualizzato "Errore HTTP" quando si esplora il sito [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , verificare che le credenziali di identità nei pool di applicazioni IIS siano ancora corrette. Il nome del pool IIS è il valore della proprietà ID restituita dal comando Get-SPServiceApplicationPool.  
   
 ```  
 $poolname=[string](Get-PowerPivotServiceApplication | select -property applicationpool)  
@@ -177,7 +182,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![nota](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota")Il pool di applicazioni può essere verificato anche nella pagina **Gestisci applicazioni di servizio** di Amministrazione centrale. Fare clic sul nome dell'applicazione di servizio, quindi su **Proprietà** sulla barra multifunzione.  
+ ![Nota](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota")il pool di applicazioni può essere verificato anche nella pagina Amministrazione centrale **Gestisci applicazioni di servizio**. Fare clic sul nome dell'applicazione di servizio, quindi su **Proprietà** sulla barra multifunzione.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ed Excel**  
   
@@ -281,11 +286,11 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Log di Servizio di registrazione unificato e di Windows  
  **Registro eventi di Windows**  
   
- Tramite il comando seguente verrà ricercato il registro eventi di Windows per eventi correlati all'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Per informazioni su come disabilitare gli eventi o modificare il livello di evento, vedere [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;Power Pivot per SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
-  
+ Tramite il comando seguente verrà ricercato il registro eventi di Windows per eventi correlati all'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Per informazioni sulla disabilitazione degli eventi o la modifica del livello di eventi, vedere [configurare e visualizzare i file di Log di SharePoint e la registrazione diagnostica &#40; PowerPivot per SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 
  **Nome servizio:** MSOLAP$POWERPIVOT  
   
- **Nome visualizzato nei servizi Windows**: SQL Server Analysis Services (POWERPIVOT)  
+ **Nome visualizzato nei servizi Windows** : SQL Server Analysis Services (POWERPIVOT)  
   
 ```  
 Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*"}  |select timegenerated, entrytype , source, message | format-table -property * -autosize | out-default  
@@ -360,7 +365,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/it-it/2c62daf9-1f2d-4508-a497-af62360ee859) e [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+ Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) e [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 ##  <a name="bkmk_adomd"></a> Libreria client ADOMD.NET  
   
@@ -377,7 +382,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- Per altre informazioni, vedere [Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale](http://msdn.microsoft.com/it-it/c2372180-e847-4cdb-b267-4befac3faf7e).  
+ Per altre informazioni, vedere [Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).  
   
 ##  <a name="bkmk_health_collection"></a> Regole di raccolta dati di integrità  
  Verificare che lo **Stato** sia online e **Abilitato** sia True.  
@@ -430,10 +435,10 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_manual"></a> Passaggi di verifica manuali  
  In questa sezione vengono descritti i passaggi di verifica che non possono essere completati con i cmdlet di PowerShell.  
   
- **Aggiornamento dati pianificato:** configurare la pianificazione dell'aggiornamento di una cartella di lavoro su **Aggiorna anche appena possibile**.  Per altre informazioni, vedere la sezione relativa alla verifica dell'aggiornamento dati in [Pianificare l'aggiornamento dati e origini dati che non supportano l'autenticazione di Windows &#40;Power Pivot per SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/schedule data refresh and data sources - no windows authentication.md).  
+ **Aggiornamento dati pianificato:** configurare la pianificazione dell'aggiornamento di una cartella di lavoro su **Aggiorna anche appena possibile**.  Per altre informazioni, vedere la sezione relativa alla verifica dell'aggiornamento dati in [Pianificare l'aggiornamento dati e origini dati che non supportano l'autenticazione di Windows &#40;Power Pivot per SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).  
   
 ##  <a name="bkmk_more_resources"></a> Altre risorse  
- [Web Server (IIS) Administration Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/ee790599.aspx) (Cmdlet di amministrazione di server Web IIS in Windows PowerShell).  
+ [Web Server (IIS) Administration Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/ee790599.aspx)(Cmdlet di amministrazione di server Web IIS in Windows PowerShell).  
   
  [PowerShell per controllare i servizi, i siti di IIS e il pool di applicazioni in SharePoint](http://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0).  
   
@@ -448,7 +453,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
  [Utilizzare il cmdlet Get-EvenLog](http://technet.microsoft.com/library/ee176846.aspx)  
   
 ##  <a name="bkmk_full_script"></a> Script completo di PowerShell  
- Nello script seguente sono contenuti tutti i comandi delle sezioni precedenti. Tramite lo script vengono eseguiti i comandi nello stesso ordine di presentazione in questo argomento. Nello script sono contenute alcune variazioni facoltative dei comandi riportati in questo argomento nel caso sia necessario il filtro aggiuntivo. Le variazioni sono disabilitate con un indicatore di commento (#). Nello script sono inoltre incluse alcune istruzioni per verificare la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Le istruzioni di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disabilitate con un indicatore di commento (#).  
+ Nello script seguente sono contenuti tutti i comandi delle sezioni precedenti. Tramite lo script vengono eseguiti i comandi nello stesso ordine di presentazione in questo argomento. Nello script sono contenute alcune variazioni facoltative dei comandi riportati in questo argomento nel caso sia necessario il filtro aggiuntivo. Le variazioni sono disabilitate con un indicatore di commento (#). Nello script sono inoltre incluse alcune istruzioni per verificare la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Le istruzioni di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disabilitate con un indicatore di commento (#).  
   
 ```  
 # This script audits services related to PowerPivot for SharePoint  

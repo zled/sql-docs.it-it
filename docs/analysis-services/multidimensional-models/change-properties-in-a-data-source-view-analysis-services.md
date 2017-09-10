@@ -1,31 +1,36 @@
 ---
-title: "Modificare le propriet&#224; in una vista origine dati (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomi descrittivi [Analysis Services]"
-  - "nomi [Analysis Services], viste origine dati"
-  - "visualizzazione di tabelle"
-  - "visualizzazione di tabelle"
-  - "viste origine dati [Analysis Services], tabelle"
-  - "tabelle [Analysis Services], viste origine dati"
+title: "Modificare le proprietà in una vista origine dati (Analysis Services) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modificare le propriet&#224; in una vista origine dati (Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modificare le proprietà in una vista origine dati (Analysis Services)
   Dopo aver definito una vista origine dati mediante la Creazione guidata vista origine dati e aver aggiunto tabelle, viste, calcoli denominati e query denominate alla vista origine dati, può rivelarsi utile modificare le proprietà relative a:  
   
 -   Criteri di corrispondenza della vista origine dati  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  È inoltre possibile visualizzare metadati degli oggetti che vengono recuperati dall'origine dei dati e non possono essere modificati.  
   
-## Visualizzazione o modifica delle proprietà di una vista origine dati  
+## <a name="viewing-or-changing-data-source-view-properties"></a>Visualizzazione o modifica delle proprietà di una vista origine dati  
  Le proprietà di una vista origine dati diverse dalla relativa descrizione vengono impostate nella Creazione guidata vista origine dati quando viene inizialmente definita la vista origine dati. Nella tabella seguente vengono elencate e descritte le proprietà di una vista origine dati.  
   
 > [!NOTE]  
@@ -53,8 +58,8 @@ caps.handback.revision: 34
 |RetrieveRelationships|Specifica se vengono recuperate relazioni dal database. Il valore predefinito è True.|  
 |SchemaRestriction|Specifica le eventuali restrizioni relative agli schemi recuperati da un'origine dei dati. Per impostazione predefinita, non esistono restrizioni dello schema.|  
   
-## Visualizzazione o modifica delle proprietà di DataTable  
- Le proprietà di **DataTable** sono le proprietà di tabelle, viste e query denominate di una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati. La tabella seguente elenca e descrive le proprietà degli oggetti **DataTable** di una vista origine dati.  
+## <a name="viewing-or-changing-datatable-properties"></a>Visualizzazione o modifica delle proprietà di DataTable  
+ Le proprietà di**DataTable** sono le proprietà di tabelle, viste e query denominate di una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati. La tabella seguente elenca e descrive le proprietà degli oggetti **DataTable** di una vista origine dati.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -67,20 +72,20 @@ caps.handback.revision: 34
 |Schema|Specifica lo schema di database applicabile alla tabella, alla vista o alla query denominata. Questa proprietà non è modificabile.|  
 |TableType|Specifica il tipo di tabella per la tabella, la vista o la query denominata. Questa proprietà non è modificabile.|  
   
-## Visualizzazione o modifica delle proprietà di DataColumn  
- Le proprietà di **DataColumn** sono le proprietà delle colonne di tabelle, viste e query denominate di una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati, dalla vista o dalla tabella sottostante, da una query denominata o in base alle definizione di un calcolo denominato. La tabella seguente elenca e descrive le proprietà degli oggetti **DataColumn** di una vista origine dati.  
+## <a name="viewing-or-changing-datacolumn-properties"></a>Visualizzazione o modifica delle proprietà di DataColumn  
+ Le proprietà di**DataColumn** sono le proprietà delle colonne di tabelle, viste e query denominate di una vista origine dati. Queste proprietà vengono impostate quando uno di questi oggetti viene aggiunto alla vista origine dati, dalla vista o dalla tabella sottostante, da una query denominata o in base alle definizione di un calcolo denominato. La tabella seguente elenca e descrive le proprietà degli oggetti **DataColumn** di una vista origine dati.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
 |AllowNull|Specifica la proprietà di supporto di valori Null della colonna in base alla colonna della query denominata, della vista o della tabella sottostante. Questa proprietà non è modificabile.|  
 |DataType|Specifica il tipo di dati della colonna in base alla colonna della query denominata, della vista o della tabella sottostante. Questa proprietà non è direttamente modificabile. Se è tuttavia necessario modificare il tipo di dati di una colonna di una tabella o una vista, sostituire la tabella con una query denominata in grado di convertire la colonna nel tipo di dati desiderato.|  
-|DateTimeMode|Specifica il formato di serializzazione della data per le colonne **DateTime**. Il valore predefinito è **UnspecifiedLocal**. Questa proprietà è modificabile.|  
+|DateTimeMode|Specifica il formato di serializzazione della data per le colonne **DateTime** . Il valore predefinito è **UnspecifiedLocal**. Questa proprietà è modificabile.|  
 |Description|Specifica la descrizione della colonna. Se per la colonna di database sottostante è stata archiviata una descrizione come proprietà estesa, verrà visualizzato tale valore. Questa proprietà è modificabile.|  
 |FriendlyName|Specifica un nome per una colonna di una tabella o una vista più facilmente comprensibile per gli utenti o più pertinente per l'area di interesse. Per impostazione predefinita, la proprietà **FriendlyName** di una colonna di una tabella o una vista corrisponde alla proprietà **Name** della colonna. La proprietà **FriendlyName** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a colonne di tabelle o viste. Questa proprietà è modificabile.|  
 |Length|Specifica la lunghezza massima della colonna, in base ai dati nella colonna della vista o della tabella sottostante.|  
 |Nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

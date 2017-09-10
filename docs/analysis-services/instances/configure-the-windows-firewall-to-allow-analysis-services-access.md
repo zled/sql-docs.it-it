@@ -1,28 +1,33 @@
 ---
-title: "Configurare Windows Firewall per consentire l&#39;accesso ad Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "porte [Analysis Services]"
-  - "Windows Firewall [Analysis Services]"
-  - "sistemi firewall [Analysis Services]"
+title: Configurare Windows Firewall per consentire l'accesso ad Analysis Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [Analysis Services]
+- Windows Firewall [Analysis Services]
+- firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 caps.latest.revision: 47
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 47
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurare Windows Firewall per consentire l&#39;accesso ad Analysis Services
+# <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurare Windows Firewall per consentire l'accesso ad Analysis Services
   Un primo passaggio importante per rendere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponibile nella rete consiste nel determinare se è necessario sbloccare le porte in un firewall. Per la maggior parte delle installazioni è necessario creare almeno una regola del firewall in entrata per consentire le connessioni a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  I requisiti di configurazione del firewall variano in base alla modalità di installazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
@@ -33,13 +38,13 @@ caps.handback.revision: 47
   
 -   Aprire la porta TCP 2382 quando si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint per supportare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. In [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è esterna a SharePoint. Le richieste in ingresso all'istanza denominata '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]' provengono da applicazioni Web di SharePoint su una connessione di rete e richiedono una porta aperta. Come per altre istanze denominate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , creare una regola in ingresso per il servizio SQL Server Browser sulla porta TCP 2382 per consentire l'accesso a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 non aprire porte in Windows Firewall. Come componente aggiuntivo per SharePoint, il servizio utilizza porte configurate per SharePoint e stabilisce solo connessioni locali all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che carica ed esegue query sui modelli di dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+-   Per [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 non aprire porte in Windows Firewall. Come componente aggiuntivo per SharePoint, il servizio utilizza porte configurate per SharePoint e stabilisce solo connessioni locali all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che carica ed esegue query sui modelli di dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 -   Per le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in Macchine virtuali di Windows Azure, utilizzare istruzioni alternative per configurare l'accesso al server. Vedere [SQL Server Business Intelligence in Macchine virtuali di Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
- Anche se l'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta TCP 2383, è possibile configurare il server per l'ascolto su una porta fissa diversa, stabilendo la connessione al server nel formato \<nomeserver>:\<numeroporta>.  
+ Anche se l'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta TCP 2383, è possibile configurare il server per l'ascolto su una porta fissa diversa, la connessione al server in questo formato: \<nomeserver >:\<NumeroPorta >.  
   
- È possibile utilizzare una sola porta TCP per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In computer che dispongono di più schede di rete o più indirizzi IP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto su una porta TCP per tutti gli indirizzi IP assegnati o con alias al computer. In caso di requisiti specifici per più porte, provare a configurare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'accesso HTTP. In questo modo è possibile configurare più endpoint HTTP su qualsiasi porta si desideri. Vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ È possibile utilizzare una sola porta TCP per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In computer che dispongono di più schede di rete o più indirizzi IP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto su una porta TCP per tutti gli indirizzi IP assegnati o con alias al computer. In caso di requisiti specifici per più porte, provare a configurare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'accesso HTTP. In questo modo è possibile configurare più endpoint HTTP su qualsiasi porta si desideri. Vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
 -   Eseguire **netstat –ao –p TCP** dalla riga di comando per visualizzare le informazioni sulla porta TCP per tale PID.  
   
--   Verificare la porta usando SQL Server Management Studio e connettersi a un server Analysis Services usando il formato \<IndirizzoIP>:\<numeroporta>.  
+-   Verificare la porta usando SQL Server Management Studio e connettersi a un server Analysis Services in questo formato: \<IPAddress >:\<NumeroPorta >.  
   
  Sebbene un'applicazione possa essere in ascolto su una porta specifica, le connessioni non riescono se l'accesso è bloccato da un firewall. Per consentire alle connessioni di raggiungere un'istanza denominata di Analysis Services, è necessario sbloccare nel firewall l'accesso a msmdsrv.exe o alla porta fissa su cui è in ascolto. Nelle restanti sezioni di questo argomento vengono fornite le istruzioni necessarie per questa operazione.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 47
   
  Quando si specifica una regola in ingresso, adottare una convenzione di denominazione che consenta di individuare in modo semplice le regole in un secondo momento, ad esempio **SQL Server Analysis Services (TCP-in) 2383**.  
   
-#### Windows Firewall con sicurezza avanzata  
+#### <a name="windows-firewall-with-advanced-security"></a>Windows Firewall con sicurezza avanzata  
   
 1.  Nel Pannello di controllo di Windows 7 o Windows Vista fare clic su **Sistema e sicurezza**, selezionare **Windows Firewall**, quindi fare clic su **Impostazioni avanzate**. In Windows Server 2008 o 2008 R2 aprire Strumenti di amministrazione e fare clic su **Windows Firewall con protezione avanzata**. In Windows Server 2012 aprire la pagina Applicazioni e digitare **Windows Firewall**.  
   
@@ -107,7 +112,7 @@ caps.handback.revision: 47
     > [!NOTE]  
     >  Gli altri utenti non potranno accedere a questo server fino a quando non riceveranno le autorizzazioni. Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
-#### Sintassi di netsh advfirewall  
+#### <a name="netsh-advfirewall-syntax"></a>Sintassi di netsh advfirewall  
   
 -   Tramite il comando seguente è possibile creare una regola per le connessioni in ingresso che consente le richieste in ingresso sulla porta TCP 2383.  
   
@@ -122,9 +127,9 @@ caps.handback.revision: 47
   
  Scegliere uno degli approcci seguenti per abilitare l'accesso remoto a un'istanza denominata di Analysis Services:  
   
--   Utilizzare assegnazioni di porta dinamiche e il servizio SQL Server Browser. Sbloccare la porta utilizzata dal servizio SQL Server Browser in Windows Firewall. Connettersi al server nel formato seguente: \<nomeserver>\\<nomeistanza\>.  
+-   Utilizzare assegnazioni di porta dinamiche e il servizio SQL Server Browser. Sbloccare la porta utilizzata dal servizio SQL Server Browser in Windows Firewall. Connettersi al server in questo formato: \<nomeserver >\\< NomeIstanza\>.  
   
--   Utilizzare insieme una porta fissa e il servizio SQL Server Browser. Questo approccio consente la connessione usando il formato \<nomeserver>\\<nomeistanza\>, in modo identico a quanto avviene per l'assegnazione di porta dinamica, tranne per il fatto che in questo caso il server è in attesa su una porta fissa. In questo scenario, il servizio SQL Server Browser fornisce la risoluzione dei nomi all'istanza di Analysis Services che è in attesa sulla porta fissa. Per utilizzare questo approccio, configurare il server in modo che sia in attesa su una porta fissa, sbloccare l'accesso a tale porta e sbloccare l'accesso alla porta utilizzata dal servizio SQL Server Browser.  
+-   Utilizzare insieme una porta fissa e il servizio SQL Server Browser. Questo approccio consente la connessione con questo formato: \<nomeserver >\\< NomeIstanza\>, identico all'approccio di assegnazione di porte dinamiche, ad eccezione del fatto che in questo caso il server è in ascolto su una porta fissa. In questo scenario, il servizio SQL Server Browser fornisce la risoluzione dei nomi all'istanza di Analysis Services che è in attesa sulla porta fissa. Per utilizzare questo approccio, configurare il server in modo che sia in attesa su una porta fissa, sbloccare l'accesso a tale porta e sbloccare l'accesso alla porta utilizzata dal servizio SQL Server Browser.  
   
  Il servizio SQL Server Browser viene utilizzato solo con istanze denominate, mai con l'istanza predefinita. Il servizio viene installato automaticamente ed è abilitato quando si installa una qualsiasi funzionalità di SQL Server come istanza denominata. Se si sceglie un approccio che richiede il servizio SQL Server Browser, accertarsi che rimanga abilitato e avviato nel server.  
   
@@ -139,11 +144,11 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  Il servizio SQL Server Browser è in ascolto su entrambe le porte UDP 1434 e TCP 2382, rispettivamente per il Motore di database e per Analysis Services. Anche se è già stata sbloccata la porta UDP 1434 per il servizio SQL Server Browser, è comunque necessario sbloccare anche la porta TCP 2382 per Analysis Services.  
   
-#### Windows Firewall con sicurezza avanzata  
+#### <a name="windows-firewall-with-advanced-security"></a>Windows Firewall con sicurezza avanzata  
   
 1.  Nel Pannello di controllo di Windows 7 o Windows Vista fare clic su **Sistema e sicurezza**, selezionare **Windows Firewall**, quindi fare clic su **Impostazioni avanzate**. In Windows Server 2008 o 2008 R2 aprire Strumenti di amministrazione e fare clic su **Windows Firewall con protezione avanzata**. In Windows Server 2012 aprire la pagina Applicazioni e digitare **Windows Firewall**.  
   
-2.  Per sbloccare l'accesso al servizio SQL Server Browser, fare clic con il pulsante destro del mouse su **Regole connessioni in entrata**, quindi scegliere **Nuova regola**.  
+2.  Per sbloccare l'accesso al servizio SQL Server Browser, fare clic con il pulsante destro del mouse su **Regole connessioni in entrata** , quindi scegliere **Nuova regola**.  
   
 3.  In Tipo di regola fare clic su **Porta** , quindi su **Avanti**.  
   
@@ -155,7 +160,7 @@ caps.handback.revision: 47
   
 7.  In Nome digitare un nome descrittivo per questa regola, ad esempio **Servizio SQL Server Browser (tcp-in) 2382**, quindi fare clic su **Fine**.  
   
-8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi ad Analysis Services specificando il nome di rete del server e il nome dell'istanza nel formato \<nomeserver>\\<nomeistanza\>. Ad esempio, su un server denominato **AW-SRV01** con un'istanza denominata **Finance**, il nome server è **AW-SRV01\Finance**.  
+8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi ad Analysis Services specificando il nome di rete del server e il nome dell'istanza nel formato: \<nomeserver > \\< NomeIstanza\>. Ad esempio, su un server denominato **AW-SRV01** con un'istanza denominata **Finance**, il nome server è **AW-SRV01\Finance**.  
   
  **Opzione 2: Utilizzare una porta fissa per un'istanza denominata**  
   
@@ -163,11 +168,11 @@ caps.handback.revision: 47
   
  Per assegnare una porta fissa, seguire le istruzioni in [Utilizzare una porta fissa per un'istanza predefinita o denominata di Analysis Services](#bkmk_fixed) in questo argomento, quindi tornare a questa sezione per sbloccare la porta.  
   
-#### Windows Firewall con sicurezza avanzata  
+#### <a name="windows-firewall-with-advanced-security"></a>Windows Firewall con sicurezza avanzata  
   
 1.  Nel Pannello di controllo di Windows 7 o Windows Vista fare clic su **Sistema e sicurezza**, selezionare **Windows Firewall**, quindi fare clic su **Impostazioni avanzate**. In Windows Server 2008 o 2008 R2 aprire Strumenti di amministrazione e fare clic su **Windows Firewall con protezione avanzata**. In Windows Server 2012 aprire la pagina Applicazioni e digitare **Windows Firewall**.  
   
-2.  Per sbloccare l'accesso ad Analysis Services, fare clic con il pulsante destro del mouse su **Regole connessioni in entrata**, quindi scegliere **Nuova regola**.  
+2.  Per sbloccare l'accesso ad Analysis Services, fare clic con il pulsante destro del mouse su **Regole connessioni in entrata** , quindi scegliere **Nuova regola**.  
   
 3.  In Tipo di regola fare clic su **Porta** , quindi su **Avanti**.  
   
@@ -179,9 +184,9 @@ caps.handback.revision: 47
   
 7.  In Nome digitare un nome descrittivo per questa regola, ad esempio **SQL Server Analysis Services sulla porta 54321**, quindi fare clic su **Fine**.  
   
-8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi ad Analysis Services specificando il nome di rete del server e il numero di porta nel formato \<nomeserver>:\<numeroporta>.  
+8.  Per verificare che le connessioni remote siano abilitate, aprire SQL Server Management Studio o Excel in un computer diverso e connettersi ad Analysis Services specificando il nome di rete del server e il numero di porta nel formato: \<nomeserver >: \<NumeroPorta >.  
   
-#### Sintassi di netsh advfirewall  
+#### <a name="netsh-advfirewall-syntax"></a>Sintassi di netsh advfirewall  
   
 -   I comandi seguenti consentono di creare regole per le connessioni in entrata per sbloccare la porta TCP 2382 per il servizio SQL Server Browser e la porta fissa specificata per l'istanza di Analysis Services. È possibile eseguire uno qualsiasi dei due comandi per consentire l'accesso a un'istanza denominata di Analysis Services.  
   
@@ -200,7 +205,7 @@ caps.handback.revision: 47
   
  Si noti che l'utilizzo di una porta fissa implica la modifica della sintassi di connessione per l'istanza predefinita, in quanto è necessario aggiungere il numero di porta al nome del server. Per la connessione a un'istanza locale predefinita di Analysis Services in attesa sulla porta 54321 in SQL Server Management Studio, sarebbe ad esempio necessario digitare localhost:54321 come nome del server nella finestra di dialogo Connetti al server di Management Studio.  
   
- Se si usa un'istanza denominata, è possibile assegnare una porta fissa senza modificare la modalità con cui si specifica il nome del server (più specificatamente, è possibile usare \<nomeserver\nomeistanza> per la connessione a un'istanza denominata in ascolto su una porta fissa). Tale operazione funziona solo se il servizio SQL Server Browser è in esecuzione ed è stata sbloccata la porta sulla quale è in attesa. Tramite il servizio SQL Server Browser viene fornito il reindirizzamento alla porta fissa in base a \<nomeserver\nomeistanza>. Se si aprono le porte sia per il servizio SQL Server Browser che per l'istanza denominata di Analysis Services in ascolto sulla porta fissa, tramite il servizio SQL Server Browser la connessione viene risolta in un'istanza denominata.  
+ Se si utilizza un'istanza denominata, è possibile assegnare una porta fissa senza modifiche per la modalità con cui si specifica il nome del server (in particolare, è possibile utilizzare \<nomeserver\nomeistanza > per connettersi a un'istanza denominata in ascolto su una porta fissa). Tale operazione funziona solo se il servizio SQL Server Browser è in esecuzione ed è stata sbloccata la porta sulla quale è in attesa. Servizio SQL Server Browser viene fornito il reindirizzamento alla porta fissa in base a \<nomeserver\nomeistanza >. Se si aprono le porte sia per il servizio SQL Server Browser che per l'istanza denominata di Analysis Services in ascolto sulla porta fissa, tramite il servizio SQL Server Browser la connessione viene risolta in un'istanza denominata.  
   
 1.  Determinare una porta TCP/IP disponibile da utilizzare.  
   
@@ -212,7 +217,7 @@ caps.handback.revision: 47
   
 4.  Configurare Windows Firewall per sbloccare la porta TCP specificata. In alternativa, se si sta utilizzando una porta fissa per un'istanza denominata, sbloccare sia la porta TCP specificata per tale istanza sia la porta TCP 2382 per il servizio SQL Server Browser.  
   
-5.  Effettuare una verifica connettendosi localmente (in Management Studio) e, successivamente, in remoto da un'applicazione client in un altro computer. Per usare Management Studio, connettersi a un'istanza predefinita di Analysis Services specificando un nome server nel formato \<nomeserver>:\<numeroporta>. Per un'istanza denominata, specificare il nome del server \<nomeserver>\\<nomeistanza\>.  
+5.  Effettuare una verifica connettendosi localmente (in Management Studio) e, successivamente, in remoto da un'applicazione client in un altro computer. Per utilizzare Management Studio, connettersi a un'istanza predefinita di Analysis Services specificando un nome di server nel formato: \<nomeserver >:\<NumeroPorta >. Per un'istanza denominata, specificare il nome del server come \<nomeserver >\\< NomeIstanza\>.  
   
 ##  <a name="bkmk_cluster"></a> Configurazione delle porte per un cluster di Analysis Services  
  Un cluster di failover di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è sempre in ascolto sulla porta TCP 2383, indipendentemente da come è stato installato, istanza predefinita o denominata. Le assegnazioni di porta dinamiche non vengono utilizzate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se è installato in un cluster di failover Windows. Aprire TCP 2383 in ogni nodo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel cluster. Per ulteriori informazioni sul clustering di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Come eseguire il clustering di SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
@@ -232,9 +237,9 @@ caps.handback.revision: 47
   
  Se si utilizza SharePoint 2010, non è necessario aprire le porte in Windows Firewall. In SharePoint vengono aperte le porte necessarie, mentre i componenti aggiuntivi, ad esempio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, vengono eseguiti nell'ambiente SharePoint. In un'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2010, il Servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ha l'uso esclusivo dell'istanza locale del servizio SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) installata nello stesso computer. Per l'accesso al servizio del motore Analysis Services locale, che consente operazioni di caricamento, esecuzione di query ed elaborazione di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nel server SharePoint, vengono usate connessioni locali e non di rete. Per le richieste di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da applicazioni client viene eseguito il routing con le porte aperte dal programma di installazione di SharePoint. In particolare, vengono definite regole per le connessioni in entrata in modo da consentire l'accesso a SharePoint – 80, Amministrazione centrale SharePoint v4, servizi Web di SharePoint e SPUserCodeV4. I servizi Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono eseguiti in una farm di SharePoint, quindi le regole del firewall di SharePoint sono sufficienti per l'accesso remoto ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm di SharePoint.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizio SQL Server Browser &#40;motore di database e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)   
+ [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   

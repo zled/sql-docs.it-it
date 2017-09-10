@@ -1,24 +1,29 @@
 ---
-title: "Configurare l&#39;archivio di stringhe per dimensioni e partizioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurare l'archiviazione delle stringhe per partizioni e dimensioni | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurare l&#39;archivio di stringhe per dimensioni e partizioni
+# <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurare l'archivio di stringhe per dimensioni e partizioni
   È possibile riconfigurare l'archiviazione di stringhe per contenere stringhe molto grandi in attributi di dimensione o partizioni che superano il limite di dimensioni del file di 4 GB impostato per gli archivi di stringhe. Se nelle dimensioni o partizioni sono inclusi archivi di stringhe di queste dimensioni, è possibile risolvere il problema del vincolo delle dimensioni file modificando la proprietà **StringStoresCompatibilityLevel** a livello di dimensione o di partizione, per oggetti locali nonché collegati (locali o remoti).  
   
  Si noti che è possibile aumentare l'archivio di stringhe solo per gli oggetti che richiedono una capacità aggiuntiva. Nella maggior parte dei modelli multidimensionali i dati di tipo stringa sono associati alle dimensioni. Tuttavia, anche le partizioni che contengono misure Distinct Count basate su stringhe possono trarre vantaggio da questa impostazione. Poiché l'impostazione è relativa alle stringhe, i dati numerici non sono interessati.  
@@ -51,32 +56,32 @@ caps.handback.revision: 21
   
  In un database multidimensionale di Analysis Services le stringhe vengono archiviate separatamente dai dati numerici per consentire l'ottimizzazione in base alle caratteristiche dei dati. I dati in formato stringa sono contenuti in genere negli attributi di dimensione che rappresentano nomi o descrizioni, ma possono essere presenti anche nelle misure Distinct Count o essere utilizzati nelle chiavi.  
   
- È possibile identificare un archivio di stringhe in base all'estensione file (ad esempio, file con estensione asstore, bstore, ksstore o string). Per impostazione predefinita, ognuno di questi file è soggetto a un limite massimo di 4 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è possibile ignorare le dimensioni massime del file specificando un meccanismo di archiviazione alternativo che consente di aumentare le dimensioni dell'archivio di stringhe in base alle necessità.  
+ È possibile identificare un archivio di stringhe in base all'estensione file (ad esempio, file con estensione asstore, bstore, ksstore o string). Per impostazione predefinita, ognuno di questi file è soggetto a un limite massimo di 4 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]è possibile ignorare le dimensioni massime del file specificando un meccanismo di archiviazione alternativo che consente di aumentare le dimensioni dell'archivio di stringhe in base alle necessità.  
   
  Diversamente dall'architettura dell'archivio di stringhe predefinita che comporta un limite delle dimensioni fisiche del file, l'archivio di stringhe più ampio è basato su un numero massimo di stringhe. Il limite massimo per questo tipo di archivio è 4 miliardi di stringhe univoche o 4 miliardi di record, a seconda della condizione che si verifica per prima. L'archivio di stringhe più ampio consente di creare record di dimensioni pari, dove ogni record corrisponde a una pagina di 64 KB. Se si dispone di stringhe molto lunghe che non rientrano in un solo record, il limite effettivo sarà minore di 4 miliardi di stringhe.  
   
 ##  <a name="bkmk_prereq"></a> Prerequisiti  
- È necessario disporre della versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o di una versione successiva.  
+ È necessario disporre della versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o di una versione successiva.  
   
  Per le dimensioni e le partizioni deve essere utilizzata l'archiviazione MOLAP.  
   
- Il livello di compatibilità del database deve essere impostato su 1100. Se è stato creato o distribuito un database usando [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o una versione successiva, il livello di compatibilità del database è già impostato su 1100. Se è stato spostato un database creato in una versione precedente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in ssSQL11 o versione successiva, è necessario aggiornare il livello di compatibilità. Per database spostati ma non ridistribuiti è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per impostare il livello di compatibilità. Per altre informazioni, vedere [Livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Il livello di compatibilità del database deve essere impostato su 1100. Se è stato creato o distribuito un database usando [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o una versione successiva, il livello di compatibilità del database è già impostato su 1100. Se è stato spostato un database creato in una versione precedente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in ssSQL11 o versione successiva, è necessario aggiornare il livello di compatibilità. Per database spostati ma non ridistribuiti è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per impostare il livello di compatibilità. Per altre informazioni, vedere la pagina [Livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)(Aggiornamento di una dimensione collegata in SSAS).  
   
 ##  <a name="bkmk_step1"></a> Passaggio 1: Impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools  
   
-1.  Se si usa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto contenente le dimensioni o le partizioni che si desidera modificare.  
+1.  Se si usa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto contenente le dimensioni o le partizioni che si desidera modificare.  
   
 2.  Per modificare l'archivio di stringhe per le dimensioni, aprire Esplora soluzioni. Fare doppio clic sulla dimensione per cui modificare l'archivio di stringhe.  
   
 3.  Nel riquadro Attributi di Progettazione dimensioni assicurarsi che sia selezionato il nodo padre della dimensione, ad esempio, se la dimensione è Customers, selezionare Customers e non uno degli attributi figlio.  
   
-4.  Nel riquadro Proprietà della sezione Avanzate impostare **StringStoresCompatibilityLevel** su **1100**. Ripetere questa procedura per le altre dimensioni che richiedono un archivio più ampio. In caso contrario, lasciare le dimensioni rimanenti sul valore **1050**.  
+4.  Nel riquadro Proprietà della sezione Avanzate impostare **StringStoresCompatibilityLevel** su **1100**. Ripetere questa procedura per le altre dimensioni che richiedono un archivio più ampio. In caso contrario, lasciare le dimensioni rimanenti sul valore **1050** .  
   
 5.  Per le partizioni, aprire un cubo da Esplora soluzioni.  
   
 6.  Fare clic sulla scheda Partizioni.  
   
-7.  Espandere la partizione, selezionare la partizione che richiede capacità di memoria aggiuntiva, quindi modificare la proprietà **StringStoresCompatibilityLevel**.  
+7.  Espandere la partizione, selezionare la partizione che richiede capacità di memoria aggiuntiva, quindi modificare la proprietà **StringStoresCompatibilityLevel** .  
   
 8.  Salvare il file.  
   
@@ -87,10 +92,10 @@ caps.handback.revision: 21
   
  È necessario utilizzare l'opzione Elaborazione completa su ogni oggetto in cui viene utilizzata la nuova architettura dell'archivio di stringhe. Prima dell'elaborazione, assicurarsi di eseguire un'analisi di impatto sulla dimensione per controllare se anche per gli oggetti dipendenti è necessaria la rielaborazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Elaborazione e modalità di archiviazione delle partizioni](../Topic/Partition%20Storage%20Modes%20and%20Processing.md)   
- [Archiviazione di dimensioni](../Topic/Dimension%20Storage.md)  
+ [Elaborazione e modalità di archiviazione di partizioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Archiviazione della dimensione](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

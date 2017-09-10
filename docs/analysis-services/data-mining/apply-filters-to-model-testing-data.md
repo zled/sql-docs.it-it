@@ -1,27 +1,32 @@
 ---
-title: "Applicare filtri ai dati di test del modello | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtraggio delle righe di input [SQL Server]"
-  - "filtraggio delle righe di input [Analysis Services]"
-  - "Grafico accuratezza modello di data mining [Analysis Services], filtro delle righe di input"
+title: Applicare filtri ai dati di Testing del modello | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input row filtering [SQL Server]
+- filtering input rows [Analysis Services]
+- Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Applicare filtri ai dati di test del modello
+# <a name="apply-filters-to-model-testing-data"></a>Applicare filtri ai dati di test del modello
   Quando si specifica un'origine dati esterna da usare per il test di un modello, è possibile applicare un filtro per limitare i dati di input. È ad esempio possibile testare il modello in modo specifico per le stime sui clienti in una determinata fascia di reddito.  
   
  Ad esempio, in uno scenario di mailing diretto di AdventureWorks, è possibile creare un'espressione di filtro come la seguente in ProspectiveBuyer, ovvero la tabella che contiene i dati di test, e limitare i test case in base alla fascia di reddito:  
@@ -34,7 +39,7 @@ caps.handback.revision: 44
   
 -   Quando si applica un filtro su un modello di data mining, l'espressione di filtro creata viene convertita in un'istruzione DMX (Data Mining Extensions) e applicata al singolo modello. Di conseguenza, quando si applica un filtro a un modello, solo un subset dei dati originali viene utilizzato per il training del modello. Questo può essere causa di problemi se il modello di training viene filtrato con un set di criteri in modo che il modello venga ottimizzato in base a un determinato set di dati, e quindi testato con un altro set di criteri.  
   
--   Se durante la creazione della struttura è stato definito un set di dati di test, i case del modello usati per il training includono solo quelli presenti nel set di training della struttura di data mining **e** che soddisfano le condizioni del filtro. Pertanto, quando si testa un modello e si seleziona l'opzione **Usa test case del modello di data mining** i test case includono solo i case presenti nel set di test della struttura di data mining che soddisfano le condizioni del filtro. Se, tuttavia, non è stato definito un set di dati di controllo, i case del modello utilizzati per il test includono tutti i case presenti nel set di dati che soddisfano le condizioni del filtro.  
+-   Se durante la creazione della struttura è stato definito un set di dati di test, i case del modello usati per il training includono solo quelli presenti nel set di training della struttura di data mining **e** che soddisfano le condizioni del filtro. Pertanto, quando si testa un modello e si seleziona l'opzione **Usa test case del modello di data mining**i test case includono solo i case presenti nel set di test della struttura di data mining che soddisfano le condizioni del filtro. Se, tuttavia, non è stato definito un set di dati di controllo, i case del modello utilizzati per il test includono tutti i case presenti nel set di dati che soddisfano le condizioni del filtro.  
   
 -   Le condizioni del filtro che si applicano a un modello influiscono anche sulle query drill-through sui case del modello.  
   
@@ -53,13 +58,13 @@ caps.handback.revision: 44
   
  Per altre informazioni sui tipi di filtri che è possibile applicare e sulle modalità di valutazione delle espressioni di filtro, vedere [Sintassi ed esempi di filtri dei modelli &#40;Analysis Services – Data mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
-### Creare un filtro sui dati di test esterni  
+### <a name="create-a-filter-on-external-testing-data"></a>Creare un filtro sui dati di test esterni  
   
 1.  Fare doppio clic sulla struttura di data mining che contiene il modello che si desidera testare per aprire Progettazione modelli di data mining.  
   
 2.  Selezionare la scheda **Grafico di accuratezza modello di data mining** , quindi selezionare la scheda **Selezione input** .  
   
-3.  Nell'area **Seleziona set di dati da usare per il grafico di accuratezza** della scheda **Selezione input** selezionare l'opzione **Specifica un set di dati diverso**.  
+3.  Nell'area **Seleziona set di dati da usare per il grafico di accuratezza** della scheda **Selezione input**selezionare l'opzione **Specifica un set di dati diverso**.  
   
 4.  Fare clic sul pulsante sfoglia **(…)** per aprire una finestra di dialogo e scegliere il set di dati esterno.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 44
   
 6.  Fare clic su **Apri editor filtri** per definire un filtro per il set di dati.  
   
-     Verrà visualizzata la finestra di dialogo **Filtro dei set di dati**. Se la struttura contiene una tabella nidificata, è possibile creare un filtro in due parti. Per prima cosa, impostare le condizioni sulla tabella del case usando la finestra di dialogo **Filtro dei set di dati**, quindi impostare le condizioni sulle righe annidate usando la finestra di dialogo **Filtro**.  
+     Verrà visualizzata la finestra di dialogo **Filtro dei set di dati** . Se la struttura contiene una tabella nidificata, è possibile creare un filtro in due parti. Per prima cosa, impostare le condizioni sulla tabella del case usando la finestra di dialogo **Filtro dei set di dati** , quindi impostare le condizioni sulle righe annidate usando la finestra di dialogo **Filtro** .  
   
 7.  Nella finestra di dialogo **Filtro dei set di dati** fare clic sulla riga superiore della griglia, in **Colonna struttura di data mining**, quindi selezionare una tabella o una colonna dall'elenco.  
   
@@ -75,23 +80,23 @@ caps.handback.revision: 44
   
      Aggiungere una nuova riga per ogni colonna che si desidera filtrare.  
   
-8.  Usare le colonne **Operator** e **Value** per definire il modo in cui la colonna viene filtrata.  
+8.  Usare le colonne **Operator**e **Value** per definire il modo in cui la colonna viene filtrata.  
   
-     **Note** Digitare i valori senza usare le virgolette.  
+     **Note** Digitare i valori senza usare le virgolette.  
   
 9. Fare clic sulla casella di testo **And/Or** e selezionare un operatore logico per definire la modalità di combinazione di più condizioni.  
   
 10. Facoltativamente, fare clic sul pulsante sfoglia **(…)** a destra della casella di testo **Valore** per aprire la finestra di dialogo **Filtro** e impostare le condizioni nella tabella annidata o nelle singole colonne della tabella del case.  
   
-11. Verificare la correttezza delle condizioni di filtro completate visualizzando il testo nel riquadro**Espressione**.  
+11. Verificare la correttezza delle condizioni di filtro completate visualizzando il testo nel riquadro **Espressione** .  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      La condizione di filtro viene applicata all'origine dati quando si crea il grafico di accuratezza.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Scegliere ed eseguire il mapping dei dati di test del modello](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Utilizzo di dati di tabelle nidificate come Input per un grafico di accuratezza](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

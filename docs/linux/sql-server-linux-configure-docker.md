@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
 ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurare le immagini contenitore di SQL Server 2017 in Docker
@@ -139,7 +139,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 Questa tecnica consente anche di condividere e visualizzare i file nell'host all'esterno di Docker.
 
 > [!IMPORTANT]
-> Mapping del volume host per Docker su Mac con SQL Server in Linux immagine non è supportato in questo momento. Utilizzare contenitori di volumi di dati. Questa restrizione è specifica di `/var/opt/msql` directory. Durante la lettura da una directory montata di funziona correttamente. Ad esempio, è possibile montare una directory host utilizzando – v su Mac e ripristinare un backup da un file con estensione bak che risiede nell'host.
+> Mapping del volume host per Docker su Mac con SQL Server in Linux immagine non è supportato in questo momento. Utilizzare contenitori di volumi di dati. Questa restrizione è specifica di `/var/opt/mssql` directory. Durante la lettura da una directory montata di funziona correttamente. Ad esempio, è possibile montare una directory host utilizzando – v su Mac e ripristinare un backup da un file con estensione bak che risiede nell'host.
 
 ### <a name="use-data-volume-containers"></a>Usare i contenitori di volumi di dati
 

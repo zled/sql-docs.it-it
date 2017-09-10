@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [Confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Suggerimenti dei clienti](#customerfeedback) | Scegliere se SQL Server Invia commenti e suggerimenti a Microsoft. |
+| [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux |
 | [Directory predefinita dei dati](#datadir) | Modificare la directory predefinita per i nuovi file di dati SQL Server database (con estensione mdf). |
 | [Directory predefinita log](#datadir) | Modifica la directory predefinita per i nuovi file di log (ldf) di database di SQL Server. |
 | [Directory dump predefinita](#dumpdir) | Modificare la directory predefinita per nuovi dump della memoria e altri file di risoluzione dei problemi. |
@@ -214,6 +215,13 @@ La prima acquisizione fase viene controllata dal **coredump.coredumptype** impos
     | **filtrati** | Progettazione filtrato viene utilizzata una sottrazione basate su tutta la memoria del processo in cui è inclusa specificamente esclusi. La struttura in grado di comprendere le caratteristiche interne di SQLPAL e l'ambiente host, escludendo il dump di determinate aree geografiche.
     | **completo** | Completa un dump del processo completo che include tutte le aree si trova **/proc/$ pid e mappe**. Non è controllato dalla **coredump.captureminiandfull** impostazione. |
 
+## <a id="dbmail"></a>Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux
+
+Il **sqlpagent.databasemailprofile** consente di impostare il profilo di posta elettronica database predefinito per gli avvisi di posta elettronica.
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>Disponibilità elevata
 
 Il **hadr.hadrenabled** opzione Abilita gruppi di disponibilità nell'istanza di SQL Server. Il seguente comando abilita gruppi di disponibilità impostando **hadr.hadrenabled** su 1. È necessario riavviare SQL Server per l'impostazione per rendere effettive.

@@ -1,27 +1,32 @@
 ---
-title: "Esempi di query sul modello di clustering | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clustering [Data Mining]"
-  - "query sul contenuto [DMX]"
-  - "algoritmi di clustering [Analysis Services]"
+title: Esempi di Query sul modello di clustering | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- content queries [DMX]
+- clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Esempi di query sul modello di clustering
+# <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
   Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
   
  Questa sezione illustra come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering.  
@@ -51,12 +56,12 @@ caps.handback.revision: 28
  [Restituzione di tutti i cluster possibili con probabilità e distanza](#bkmk_Query10)  
   
 ##  <a name="bkmk_top2"></a> Ricerca di informazioni sul modello  
- In tutti i modelli di data mining viene esposto il contenuto appreso dall'algoritmo secondo uno schema standardizzato, definito set di righe dello schema del modello di data mining. È possibile creare query sul set di righe dello schema del modello di data mining tramite istruzioni DMX (Data Mining Extension). In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è anche possibile eseguire una query direttamente sui set di righe dello schema come tabelle di sistema.  
+ In tutti i modelli di data mining viene esposto il contenuto appreso dall'algoritmo secondo uno schema standardizzato, definito set di righe dello schema del modello di data mining. È possibile creare query sul set di righe dello schema del modello di data mining tramite istruzioni DMX (Data Mining Extension). In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è anche possibile eseguire una query direttamente sui set di righe dello schema come tabelle di sistema.  
   
  [Torna all'inizio](#bkmk_top2)  
   
 ###  <a name="bkmk_Query1"></a> Esempio di query 1: Recupero di metadati del modello tramite DMX  
- Con la query seguente vengono restituiti i metadati di base sul modello di clustering `TM_Clustering` creato nell'Esercitazione di base sul data mining. I metadati disponibili nel nodo padre di un modello di clustering includono il nome del modello, il database in cui è archiviato e il numero di nodi figlio del modello. Questa query utilizza una query contenuto DMX per recuperare i metadati dal nodo padre del modello:  
+ Con la query seguente vengono restituiti i metadati di base sul modello di clustering `TM_Clustering`creato nell'Esercitazione di base sul data mining. I metadati disponibili nel nodo padre di un modello di clustering includono il nome del modello, il database in cui è archiviato e il numero di nodi figlio del modello. Questa query utilizza una query contenuto DMX per recuperare i metadati dal nodo padre del modello:  
   
 ```  
 SELECT MODEL_CATALOG, MODEL_NAME, NODE_CAPTION,   
@@ -106,7 +111,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
   
  [Torna all'inizio](#bkmk_top2)  
   
-## Ricerca di informazioni sui cluster  
+## <a name="finding-information-about-clusters"></a>Ricerca di informazioni sui cluster  
  Tramite le query contenuto più utili sui modelli di clustering generalmente viene restituito lo stesso tipo di informazioni che è possibile esplorare usando il **Visualizzatore cluster**. ovvero i profili e le caratteristiche del cluster e l'analisi discriminante tra cluster. In questa sezione vengono forniti esempi di query che recuperano queste informazioni.  
   
 ###  <a name="bkmk_Query3"></a> Esempio di query 3: Restituzione di un cluster o di un elenco di cluster  
@@ -131,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   La colonna NODE_DESCRIPTION contiene un elenco delimitato da virgole di attributi. Si noti che l'elenco di attributi potrebbe essere abbreviato ai fini della visualizzazione.  
   
--   La tabella nidificata nella colonna NODE_DISTRIBUTION contiene l'elenco completo di attributi per il cluster. Se il client non supporta set di righe gerarchici, è possibile restituire la tabella nidificata aggiungendo la parola chiave FLATTENED prima dell'elenco di colonne SELECT. Per altre informazioni sull'uso della parola chiave FLATTENED, vedere [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CONTENT%20\(DMX\).md).  
+-   La tabella nidificata nella colonna NODE_DISTRIBUTION contiene l'elenco completo di attributi per il cluster. Se il client non supporta set di righe gerarchici, è possibile restituire la tabella nidificata aggiungendo la parola chiave FLATTENED prima dell'elenco di colonne SELECT. Per altre informazioni sull'uso della parola chiave FLATTENED, vedere [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../../dmx/select-from-model-content-dmx.md).  
   
  [Torna all'inizio](#bkmk_top2)  
   
@@ -249,7 +254,7 @@ WHERE IsInNode('001')
   
  [Torna all'inizio](#bkmk_top2)  
   
-## Esecuzione di stime tramite il modello  
+## <a name="making-predictions-using-the-model"></a>Esecuzione di stime tramite il modello  
  Anche se il clustering viene solitamente usato per descrivere e comprendere i dati, l'implementazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] consente anche di eseguire una stima sull'appartenenza al cluster e di restituire le probabilità associate alla stima. In questa sezione vengono forniti alcuni esempi su come creare query di stima sui modelli di clustering. È possibile eseguire stime per più case, specificando un'origine dati tabulare, oppure fornire nuovi valori contemporaneamente creando una query singleton. Per maggiore chiarezza, negli esempi di questa sezione vengono usate tutte query singleton.  
   
  Per altre informazioni sulla creazione di query di stima tramite DMX, vedere [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md).  
@@ -283,7 +288,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- In questo esempio la differenza nel modello non è significativa. Tuttavia, talvolta può essere importante individuare le differenze tra la distribuzione effettiva dei valori e le stime del modello. La funzione [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) è utile in questo scenario, perché indica il livello di probabilità di un case, dato il modello.  
+ In questo esempio la differenza nel modello non è significativa. Tuttavia, talvolta può essere importante individuare le differenze tra la distribuzione effettiva dei valori e le stime del modello. La scheda [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) è utile in questo scenario, perché indica il livello di probabilità di un case, dato il modello.  
   
  Il numero restituito dalla funzione PredictCaseLikelihood è una probabilità e pertanto è sempre compreso tra 0 e 1, con il valore 0,5 che rappresenta il risultato casuale. Pertanto, un punteggio minore di 0,5 significa che il case stimato è improbabile, dato il modello, mentre un punteggio maggiore di 0,5 indica che è molto probabile ottenere un fit tra il case stimato e il modello.  
   
@@ -360,11 +365,11 @@ NATURAL PREDICTION JOIN
   
  Per impostazione predefinita, i risultati sono classificati per probabilità. I risultati indicano che, anche se la probabilità per Cluster 2 è relativamente bassa, Cluster 2 rappresenta comunque il miglior fit per il nuovo punto dati.  
   
- **Nota** La colonna aggiuntiva, `$DISTANCE`, rappresenta la distanza tra il punto dati e il cluster. Per impostazione predefinita, l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering usa il clustering EM scalabile, che usa più cluster a ogni punto dati e classifica i cluster possibili.  Tuttavia, se si crea il modello di clustering utilizzando l'algoritmo K-medie, è possibile assegnare un unico cluster a ogni punto dati e questa query restituisce solo una riga. Per interpretare i risultati della funzione [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md), è necessario comprendere queste differenze. Per altre informazioni sulle differenze tra i clustering EM e K-medie, vedere [Riferimento tecnico per l'algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
+ **Nota** La colonna aggiuntiva, `$DISTANCE`, rappresenta la distanza tra il punto dati e il cluster. Per impostazione predefinita, l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering usa il clustering EM scalabile, che usa più cluster a ogni punto dati e classifica i cluster possibili.  Tuttavia, se si crea il modello di clustering utilizzando l'algoritmo K-medie, è possibile assegnare un unico cluster a ogni punto dati e questa query restituisce solo una riga. Per interpretare i risultati della funzione [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) . Per altre informazioni sulle differenze tra i clustering EM e K-medie, vedere [Riferimento tecnico per l'algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
   
  [Torna all'inizio](#bkmk_top2)  
   
-## Elenco di funzioni  
+## <a name="function-list"></a>Elenco di funzioni  
  Tutti gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] supportano un set comune di funzioni. Tuttavia, i modelli compilati usando l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supportano le funzioni aggiuntive elencate nella tabella seguente.  
   
 |||  
@@ -387,9 +392,9 @@ NATURAL PREDICTION JOIN
   
  Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
- [Riferimento tecnico per l'algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Riferimento tecnico per Microsoft Clustering algoritmo](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   

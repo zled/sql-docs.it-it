@@ -1,33 +1,38 @@
 ---
-title: "Eventi di traccia di Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "monitoraggio di Analysis Services [SQL Server]"
-  - "prestazioni [Analysis Services], SQL Server Profiler"
-  - "eventi [Analysis Services]"
-  - "classi di eventi [Analysis Services], informazioni sulle classi di eventi"
-  - "Profiler [SQL Server Profiler], Analysis Services"
-  - "classi di eventi [Analysis Services]"
+title: Eventi di traccia di Analysis Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Eventi di traccia di Analysis Services
+# <a name="analysis-services-trace-events"></a>Eventi di traccia di Analysis Services
   È possibile seguire l'attività di un'istanza di Microsoft SQL Server Analysis Services (SSAS) acquisendo e analizzando gli eventi di traccia generati dall'istanza.  Gli eventi di traccia vengono raggruppati in modo da trovare più facilmente gli eventi di traccia correlati.  Ogni evento di traccia contiene un set di dati attinente all'evento. Non tutti i dati sono attinenti a tutti gli eventi.  
   
- Gli eventi di traccia possono essere avviati e acquisiti usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, vedere [Utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md) oppure possono essere avviati da un comando XMLA come **SQL Server Extended Events** e analizzati in un secondo momento, vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+ Gli eventi di traccia possono essere avviati e acquisiti usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, vedere [Utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)oppure possono essere avviati da un comando XMLA come **SQL Server Extended Events** e analizzati in un secondo momento, vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
  Nelle tabelle seguenti viene descritta ogni categoria insieme agli eventi in essa contenuti. Ogni tabella contiene le colonne seguenti:  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|Existing Session|Sessione esistente.|  
 |43|Session Initialize|Inizializzazione della sessione.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   
