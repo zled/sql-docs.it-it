@@ -360,7 +360,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  Per altre informazioni sulla scelta di un account per l'esecuzione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
   
 ## <a name="database-engine-configuration---tempdb"></a>Configurazione del motore di database - TempDB
-  Usare questa pagina per specificare posizione, dimensione, impostazioni di espansione e numero di file di log e di dati **tempdb** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server  
+  Usare questa pagina per specificare posizione, dimensione, impostazioni di espansione e numero di file di log e di dati **tempdb** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
   
  Per specificare una condivisione file SMB come directory, è necessario immettere manualmente il percorso UNC supportato. La selezione di una condivisione file SMB non è supportata. Il formato di un percorso UNC supportato di una condivisione file SMB è \\\NomeServer\NomeCondivisione\\...  
   
