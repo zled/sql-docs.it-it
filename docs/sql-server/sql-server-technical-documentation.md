@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
 ms.contentlocale: it-it
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Documentazione tecnica di SQL Server
@@ -46,7 +46,7 @@ Documentazione per installare, configurare e usare SQL Server. Il contenuto incl
 - [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 - [Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
-**Prova SQL Server&2016;**    
+**Prova SQL Server 2016;**    
 - [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Scaricare SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download da Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Scaricare SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
 - [Accedere a una macchina virtuale con SQL Server 2016 già installato](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
@@ -85,13 +85,8 @@ Documentazione per installare, configurare e usare SQL Server. Il contenuto incl
 - [Esempi di SQL Server in GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>Ulteriori informazioni   
-+ Per visualizzare offline la documentazione di SQL Server, vedere [Help Viewer e contenuto offline per SQL Server](../release-notes/sql-server-help-installation.md).
++ Per visualizzare offline la documentazione di SQL Server, vedere [Help Viewer e contenuto offline per SQL Server](sql-server-help-installation.md).
 + [Gestione configurazione SQL Server](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server Update Center (Centro aggiornamenti di SQL Server): collegamenti e informazioni per tutte le versioni supportate](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Supporto 
-- [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server) (Domande sullo sviluppo in SQL)
-- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/) (Discussione generale su SQL Server)
-- [Condizioni di licenza e informazioni per Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
