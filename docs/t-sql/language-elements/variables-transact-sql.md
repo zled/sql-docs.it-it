@@ -1,7 +1,7 @@
 ---
 title: Variabili (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,7 +24,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>Variabili (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Una variabile locale di Transact-SQL è un oggetto che può contenere un singolo valore di dati di un tipo specifico. Le variabili vengono in genere utilizzate in batch e script per gli scopi seguenti: 
 
@@ -39,8 +39,9 @@ Lo script seguente crea e popola con 26 righe una piccola tabella di prova. Lo s
 
 * Controllare il numero di righe inserite verificando il numero di esecuzioni del ciclo.
 * Specificare il valore inserito nella colonna integer.
-* Funzionare come parte dell'espressione che genera le lettere da inserire nella colonna di tipo carattere.
-```
+* Funzionare come parte dell'espressione che genera le lettere da inserire nella colonna di tipo carattere.  
+
+```sql
 -- Create the table.
 CREATE TABLE TestTable (cola int, colb char(3));
 GO
@@ -87,19 +88,19 @@ L'istruzione DECLARE Inizializza una variabile Transact-SQL tramite:
 * Assegnazione di un tipo di dati definito dall'utente o di sistema, nonché la lunghezza del tipo di dati. Alle variabili numeriche vengono inoltre assegnate precisione e scala. Alle variabili XML è possibile assegnare una raccolta di schemi facoltativa.
 * Impostazione del valore su NULL.
 
-Ad esempio, **DECLARE** istruzione crea una variabile locale denominata  **@mycounter**  con un tipo di dati int.
-```
+Ad esempio, **DECLARE** istruzione crea una variabile locale denominata  **@mycounter**  con un tipo di dati int.  
+```sql
 DECLARE @MyCounter int;
 ```
 Per dichiarare più variabili locali, è necessario inserire una virgola dopo la prima variabile locale e quindi specificare il nome della variabile locale successiva con il tipo di dati corrispondente.
 
-Ad esempio, **DECLARE** istruzione crea le tre variabili locali  **@LastName** ,  **@FirstName**  e  **@StateProvince** e la inizializza con il valore NULL:
-```
+Ad esempio, **DECLARE** istruzione crea le tre variabili locali  **@LastName** ,  **@FirstName**  e  **@StateProvince** e la inizializza con il valore NULL:  
+```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-L'ambito di una variabile è le istruzioni di intervallo di Transact-SQL che possono fare riferimento alla variabile. L'ambito inizia in corrispondenza del punto in cui la variabile è stata dichiarata e termina alla fine del batch o della stored procedure che include la dichiarazione. Lo script seguente, ad esempio, genera un errore di sintassi, perché la variabile viene dichiarata in un batch ma vi viene fatto riferimento in un altro batch:
-```
+L'ambito di una variabile è le istruzioni di intervallo di Transact-SQL che possono fare riferimento alla variabile. L'ambito inizia in corrispondenza del punto in cui la variabile è stata dichiarata e termina alla fine del batch o della stored procedure che include la dichiarazione. Lo script seguente, ad esempio, genera un errore di sintassi, perché la variabile viene dichiarata in un batch ma vi viene fatto riferimento in un altro batch:  
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @MyVariable int;
@@ -115,9 +116,9 @@ FROM HumanResources.Employee
 WHERE BusinessEntityID = @MyVariable;
 ```
 
-Le variabili hanno un ambito locale e sono disponibili unicamente nel batch o nella stored procedure in cui sono state definite. Nell'esempio seguente, l'ambito nidificato creato per l'esecuzione di sp_executesql non può accedere alla variabile dichiarata nell'ambito superiore e pertanto viene restituito un errore.
+Le variabili hanno un ambito locale e sono disponibili unicamente nel batch o nella stored procedure in cui sono state definite. Nell'esempio seguente, l'ambito nidificato creato per l'esecuzione di sp_executesql non può accedere alla variabile dichiarata nell'ambito superiore e pertanto viene restituito un errore.  
 
-```
+```sql
 DECLARE @MyVariable int;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
@@ -127,9 +128,9 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 
 Quando si dichiara una variabile, il valore corrispondente viene impostato su NULL. Per assegnare un valore alla variabile, utilizzare l'istruzione SET. È consigliabile adottare sempre questo metodo. Per assegnare un valore a una variabile, è inoltre possibile fare riferimento alla variabile stessa nell'elenco di selezione di un'istruzione SELECT.
 
-Se si desidera utilizzare l'istruzione SET per assegnare un valore a una variabile, specificare il nome della variabile e il valore da assegnarvi. È consigliabile adottare sempre questo metodo. Nel batch seguente vengono dichiarate due variabili, alle quali vengono quindi assegnati valori, utilizzati successivamente nella clausola `WHERE` di un'istruzione `SELECT`:
+Se si desidera utilizzare l'istruzione SET per assegnare un valore a una variabile, specificare il nome della variabile e il valore da assegnarvi. È consigliabile adottare sempre questo metodo. Nel batch seguente vengono dichiarate due variabili, alle quali vengono quindi assegnati valori, utilizzati successivamente nella clausola `WHERE` di un'istruzione `SELECT`:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
@@ -148,9 +149,9 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-Quando si assegna un valore a una variabile tramite un riferimento in un elenco di selezione, è necessario assegnare un valore scalare oppure l'istruzione SELECT deve restituire una sola riga. Esempio:
+Quando si assegna un valore a una variabile tramite un riferimento in un elenco di selezione, è necessario assegnare un valore scalare oppure l'istruzione SELECT deve restituire una sola riga. Esempio:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -163,9 +164,9 @@ GO
 > [!WARNING]
 > Se in una singola istruzione SELECT sono presenti più clausole di assegnazione, l'ordine di valutazione delle espressioni non viene garantito. Si noti che gli effetti sono visibili sole se sono presenti riferimenti per le assegnazioni.
 
-Se un'istruzione SELECT restituisce più di una riga e la variabile fa riferimento a un'espressione non scalare, la variabile è impostata sul valore restituito per l'espressione nell'ultima riga del set di risultati. Ad esempio, nel batch seguente  **@EmpIDVariable**  è impostato sul **BusinessEntityID** valore dell'ultima riga restituita, ovvero 1:
+Se un'istruzione SELECT restituisce più di una riga e la variabile fa riferimento a un'espressione non scalare, la variabile è impostata sul valore restituito per l'espressione nell'ultima riga del set di risultati. Ad esempio, nel batch seguente  **@EmpIDVariable**  è impostato sul **BusinessEntityID** valore dell'ultima riga restituita, ovvero 1:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -186,3 +187,4 @@ GO
  [SELEZIONARE@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
   
+
