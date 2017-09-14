@@ -1,5 +1,5 @@
 ---
-title: "Entità (Master Data Services) | Documenti Microsoft"
+title: "Entità (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d59e75dac7220c1ce03913c0c765e816623cc2a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ae0e3ae300d2b896261e7426491448989a5e0f45
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="entities-master-data-services"></a>Entità (Master Data Services)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-entities-relate-to-other-model-objects"></a>Correlazione tra entità e gli altri oggetti modello  
  Un'entità può essere considerata come una tabella che contiene dati master, dove le righe rappresentano i membri e le colonne rappresentano gli attributi.  
   
- ![Entità master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "entità Master Data Services rappresentata come tabella")  
+ ![Entità Master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "Entità Master Data Services rappresentata come tabella")  
   
  Popolare l'entità con un elenco di dati master che si desidera gestire.  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 08/02/2017
 ## <a name="entity-examples"></a>Esempi di entità  
  Nell'esempio seguente viene illustrata un'entità che dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
- ![Tabella entità Product bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike tabella entità Product")  
+ ![Tabella dell'entità prodotto bicicletta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
   
  Nel seguente esempio, l'entità Product è l'entità centrale. L'entità Subcategory è un attributo basato su dominio dell'entità Product. L'entità Category è un attributo basato su dominio dell'entità Subcategory. StandardCost e ListPrice sono attributi in formato libero dell'entità Product mentre FilePhoto è un attributo di file dell'entità Product.  
   
- ![Struttura ad albero di entità Product](../master-data-services/media/mds-conc-entity-ui.gif "struttura ad albero di entità Product")  
+ ![Struttura ad albero dell'entità prodotto](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità prodotto")  
   
 > [!NOTE]  
 >  Si tratta di un esempio basato sull'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . La struttura ad albero gerarchica mostra le relazioni tra le entità e gli attributi basati su dominio. Lo scopo è illustrare le relazioni anziché rappresentare i livelli di importanza.  

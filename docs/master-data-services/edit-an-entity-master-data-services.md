@@ -1,5 +1,5 @@
 ---
-title: "Modificare un'entità (Master Data Services) | Documenti Microsoft"
+title: "Modificare un'entità (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modificare un'entità (Master Data Services)
@@ -63,19 +63,19 @@ ms.lasthandoff: 08/02/2017
 ## <a name="status"></a>Stato  
  La colonna Stato nella griglia mostra lo stato dell'operazione sull'entità. Quando si fa clic su **Salva entità**, viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.  
   
- ![Icona per l'aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "icona per l'aggiornamento dello stato")  
+ ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")  
   
  Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.  
   
- ![Icona di stato di errore](../master-data-services/media/mds-statusicon-error.png "icona di stato di errore")  
+ ![Icona dello stato di errore](../master-data-services/media/mds-statusicon-error.png "Icona dello stato di errore")  
   
  Quando lo stato è OK, viene visualizzata l'immagine seguente.  
   
- ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "icona per lo stato OK")  
+ ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Eliminare un'entità &#40; Master Data Services &#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [Eliminare un'entità &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

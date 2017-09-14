@@ -1,7 +1,7 @@
 ---
 title: Dati gerarchici (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 6f4cd91c26935f93d99e2a23965c3c256e2e5bbd
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
@@ -247,7 +247,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Si noti che la gerarchia è una struttura valida, anche se non è coerente internamente. Bahia è l'unico stato. Viene visualizzato nella gerarchia come peer della città Brasilia. Analogamente, McMurdo Station non dispone di un paese padre. Gli utenti dovranno decidere se questo tipo di gerarchia è appropriato per l'utilizzo.  
+ Si noti che la gerarchia ha una struttura valida, anche se non è coerente internamente. Bahia è l'unico stato. Viene visualizzato nella gerarchia come peer della città Brasilia. Analogamente, McMurdo Station non dispone di un paese padre. Gli utenti dovranno decidere se questo tipo di gerarchia è appropriato per l'utilizzo.  
   
  Aggiungere un'altra riga e selezionare i risultati.  
   
@@ -533,3 +533,4 @@ GO
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
+

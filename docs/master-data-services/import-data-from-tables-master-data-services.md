@@ -1,5 +1,5 @@
 ---
-title: Importare dati dalle tabelle (Master Data Services) | Documenti Microsoft
+title: Importare dati dalle tabelle (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 47c83a225b97e203875f940a03fe52db80525060
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7d059b2852c864f734c924383a115e61431bcccc
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importare dati dalle tabelle (Master Data Services)
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/02/2017
   
  **Prerequisiti**  
   
--   È necessario disporre dell'autorizzazione per inserire dati di stg.\<nome > _Leaf, stg il.\<nome > _Consolidated, stg.\<nome > _Relationship tabella il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
+-   È necessario avere l'autorizzazione per inserire dati nella tabella stg.\<name>_Leaf, stg.\<name>_Consolidated o stg.\<name>_Relationship del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
--   È necessario disporre delle autorizzazioni per eseguire entrambi gli stg. udp_\<nome > _Leaf, stg.udp\_\<nome > _Consolidated, o il stg.udp\_\<nome > _Relationship stored procedure di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
+-   È necessario avere l'autorizzazione per eseguire la stored procedure stg.udp_\<name>_Leaf, stg.udp\_\<name>_Consolidated o stg.udp\_\<name>_Relationship nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 -   Il modello non deve avere uno stato di **Commit completato**.  
   
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/02/2017
   
 1.  Preparare i membri da importare nella tabella di gestione temporanea appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , ad esempio fornire valori per i campi obbligatori. Per una panoramica sulle tabelle di gestione temporanea, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-    -   Per i membri foglia la tabella è stg.\<nome > _Leaf, dove \<nome > fa riferimento all'entità corrispondente. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   Per i membri foglia la tabella è stg.\<name>_Leaf, dove \<name> si riferisce all'entità corrispondente. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   Per i membri consolidati, la tabella è stg.\<nome > _Consolidated. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Per i membri consolidati la tabella è stg.\<name>_Consolidated. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Per spostare la posizione dei membri in gerarchie esplicite, la tabella è stg.\<nome > _Relationship. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Per spostare la posizione dei membri nelle gerarchie esplicite, la tabella è stg.\<name>_Relationship. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
   
          Per una panoramica sullo spostamento dei membri nelle gerarchie esplicite, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/02/2017
   
          Nella pagina **Batch di gestione temporanea** selezionare dall'elenco a discesa il modello al quale si aggiungeranno dati e quindi fare clic su **Avvia batch**. Lo stato dell'elaborazione batch è indicato nel campo **Stato** . Per altre informazioni sugli stati, vedere [Stati di importazione &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Pagina in Gestione dati Master di batch di gestione temporanea](../master-data-services/media/mds-stagingbatchespage.png "pagina in Gestione dati Master di batch di gestione temporanea")  
+         ![Pagina Batch di gestione temporanea in Gestione dati master](../master-data-services/media/mds-stagingbatchespage.png "Pagina Batch di gestione temporanea in Gestione dati master")  
   
          Il processo di gestione temporanea viene avviato a intervalli determinati dall'impostazione **Intervallo batch di gestione temporanea** in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   

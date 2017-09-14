@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: fc3420c4b87cc1d304e7a58b540d7f9210aac18a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importare i criteri della gestione basata su criteri
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi criteri che possono essere utilizzati per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, questi criteri non vengono installati nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], ma possono essere importati dal percorso predefinito C:\Programmi\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi criteri che possono essere utilizzati per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, questi criteri non vengono installati nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], ma possono essere importati dal percorso predefinito C:\Programmi\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 o C:\Programmi (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 nelle installazioni a 64 bit.
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -65,3 +65,4 @@ ms.lasthandoff: 06/22/2017
 6.  Al termine, fare clic su **OK**.  
   
   
+

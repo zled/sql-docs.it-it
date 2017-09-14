@@ -1,5 +1,5 @@
 ---
-title: Suddivisi in categorie di operazioni del servizio Web (Master Data Services) | Documenti Microsoft
+title: Operazioni del servizio Web per categoria (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operazioni del servizio Web per categoria (Master Data Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
   
 ## <a name="entity-operations"></a>Operazioni di entità  
- Queste operazioni vengono utilizzate per creare, aggiornare ed eliminare i membri di una singola entità. Per ulteriori informazioni, vedere [entità &#40; Master Data Services &#41; ](../../master-data-services/entities-master-data-services.md) e [membri &#40; Master Data Services &#41; ](../../master-data-services/members-master-data-services.md).  
+ Queste operazioni vengono utilizzate per creare, aggiornare ed eliminare i membri di una singola entità. Per altre informazioni, vedere [Entità &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md) e [Membri &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md).  
   
 ||  
 |-|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
   
 ## <a name="attribute-and-hierarchy-operations"></a>Operazioni di attributi e gerarchie  
- Queste operazioni vengono utilizzate per ottenere informazioni su attributi e gerarchie. Gli attributi e le gerarchie possono essere modificati anche mediante le operazioni di modelli, ad esempio <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>. Per ulteriori informazioni, vedere [attributi &#40; Master Data Services &#41; ](../../master-data-services/attributes-master-data-services.md) e [gerarchie &#40; Master Data Services &#41; ](../../master-data-services/hierarchies-master-data-services.md).  
+ Queste operazioni vengono utilizzate per ottenere informazioni su attributi e gerarchie. Gli attributi e le gerarchie possono essere modificati anche mediante le operazioni di modelli, ad esempio <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>. Per altre informazioni, vedere [Attributi &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md) e [Gerarchie &#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md).  
   
 ||  
 |-|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
   
 ## <a name="annotation-operations"></a>Operazioni di annotazioni  
- Queste operazioni vengono utilizzate per creare, aggiornare ed eliminare le annotazioni. Per ulteriori informazioni, vedere [annotazioni &#40; Master Data Services &#41; ](../../master-data-services/annotations-master-data-services.md).  
+ Queste operazioni vengono utilizzate per creare, aggiornare ed eliminare le annotazioni. Per altre informazioni, vedere [Annotazioni &#40;Master Data Services&#41;](../../master-data-services/annotations-master-data-services.md).  
   
 ||  
 |-|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
   
 ## <a name="version-and-validation-operations"></a>Operazioni di versioni e convalida  
- Queste operazioni vengono utilizzate per copiare e convalidare le versioni. Per ulteriori informazioni, vedere [versioni &#40; Master Data Services &#41; ](../../master-data-services/versions-master-data-services.md) e [convalida &#40; Master Data Services &#41; ](../../master-data-services/validation-master-data-services.md).  
+ Queste operazioni vengono utilizzate per copiare e convalidare le versioni. Per altre informazioni, vedere [Versioni &#40;Master Data Services&#41;](../../master-data-services/versions-master-data-services.md) e [Convalida &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md).  
   
 ||  
 |-|  

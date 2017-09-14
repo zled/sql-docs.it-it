@@ -1,5 +1,5 @@
 ---
-title: Attributi (Master Data Services) | Documenti Microsoft
+title: Attributi (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>Attributi (Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Correlazione tra attributi e altri oggetti modello  
  Un attributo può essere considerato come una colonna in una tabella entità. Un valore di attributo è il valore utilizzato per descrivere un membro specifico.  
   
- ![Entità master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "entità Master Data Services rappresentata come tabella")  
+ ![Entità Master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "Entità Master Data Services rappresentata come tabella")  
   
  Quando si crea un'entità che contiene molti attributi, è possibile organizzare gli attributi in gruppi di attributi. Per altre informazioni, vedere [Gruppi di attributi &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>Esempi di attributo  
  Nell'esempio seguente l'entità dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
- ![Tabella entità Product bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike tabella entità Product")  
+ ![Tabella dell'entità prodotto bicicletta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
   
  Nell'esempio seguente l'entità Product include:  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
  Subcategory è un'entità utilizzata come attributo basato su dominio di Product. Category è un'entità utilizzata come attributo basato su dominio di Subcategory. Come l'entità Product, le entità Category e Subcategory includono ciascuna gli attributi predefiniti Name e Code.  
   
- ![Struttura ad albero di entità Product](../master-data-services/media/mds-conc-entity-ui.gif "struttura ad albero di entità Product")  
+ ![Struttura ad albero dell'entità prodotto](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità prodotto")  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

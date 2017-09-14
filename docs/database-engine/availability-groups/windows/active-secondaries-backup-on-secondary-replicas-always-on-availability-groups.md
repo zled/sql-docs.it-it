@@ -1,8 +1,10 @@
 ---
 title: "Repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità Always On) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/01/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,17 +25,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c3645d6ab80136fc110c85315ba8dfc36e500eb3
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 2d54e433746548bcef8cb0780f8586ec2568d898
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità Always On)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Nelle funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è incluso il supporto per l'esecuzione di operazioni di backup nelle repliche secondarie. Le operazioni di backup possono richiedere considerevoli risorse a livello di I/O e di CPU (con compressione dei backup). La ripartizione dei backup su una replica secondaria sincronizzata o in sincronizzazione consente di utilizzare le risorse sull'istanza del server che ospita la replica primaria per i carichi di lavoro di livello 1.  
-  
+
 > [!NOTE]  
 >  Le istruzioni RESTORE non sono consentite nei database primari o secondari di un gruppo di disponibilità.  
   
@@ -54,7 +56,9 @@ ms.lasthandoff: 08/02/2017
      È garantita una catena di log coerente tra i backup di log eseguiti nelle repliche (primarie e secondarie), indipendentemente dalla relativa modalità di disponibilità (commit sincrono o asincrono).  
   
 -   Per eseguire il backup di un database secondario, è necessario che una replica secondaria riesca a comunicare con la replica primaria e sia nello stato **SYNCHRONIZED** o **SYNCHRONIZING**.  
-  
+
+In un gruppo di disponibilità distribuito è possibile eseguire i backup sulle repliche secondarie nello stesso gruppo di disponibilità della replica primaria attiva oppure sulla replica primaria di qualsiasi gruppo di disponibilità secondario. Non è possibile eseguire i backup su una replica secondaria in un gruppo di disponibilità secondario perché le repliche secondarie comunicano solo con la replica primaria nel proprio gruppo di disponibilità. Solo le repliche che comunicano direttamente con la replica primaria globale possono eseguire le operazioni di backup.
+
 ##  <a name="WhereBuJobsRun"></a> Configurazione del percorso di esecuzione dei processi di backup  
  L'esecuzione di backup su una replica secondaria per ripartire il carico di lavoro di backup dal server di produzione primario comporta notevoli vantaggi, tuttavia rende più complessa la selezione dei percorsi di esecuzione dei processi di backup. Per risolvere questo problema, configurare dove eseguire i processi di backup come segue:  
   

@@ -1,5 +1,5 @@
 ---
-title: Gerarchie derivate (Master Data Services) | Documenti Microsoft
+title: Gerarchie derivate (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a960ab217ff83af957bbf3a738372dd0c83de98
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3c29bf064f8f7c07d7b053dc08f71b443dc75dc4
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Gerarchie derivate (Master Data Services)
@@ -60,40 +60,40 @@ ms.lasthandoff: 08/02/2017
   
  La struttura della gerarchia illustra il raggruppamento dei membri. L'entità con il maggiore numero di membri è in fondo.  
   
- ![Gerarchia derivata dalla struttura del modello](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "gerarchia derivata dalla struttura del modello")  
+ ![Gerarchia derivata dalla struttura del modello](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Gerarchia derivata dalla struttura del modello")  
   
  In una gerarchia derivata è possibile evidenziare la relazione tra Product e Subcategory, quindi tra Subcategory e Category. Quando si visualizzano i membri in questa gerarchia, ogni livello nell'albero contiene i membri della stessa entità.  
   
- ![Esempio di gerarchia derivata di mountain Bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "esempio di gerarchia derivata di Mountain Bike")  
+ ![Esempio di gerarchia derivata relativo alla mountain bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Esempio di gerarchia derivata relativo alla mountain bike")  
   
  Questo tipo di gerarchia non consente lo spostamento di un membro in un livello non valido. È ad esempio possibile spostare la bicicletta Road-650 da una sottocategoria, Road Bikes, in un'altra, Mountain Bikes. Non è possibile spostare Road-650 direttamente in una categoria, ad esempio 1 {Bikes}. Ogni volta che si sposta un membro nell'albero gerarchico, il valore dell'attributo basato su dominio del membro viene modificato in modo da riflettere lo spostamento.  
   
 ## <a name="notes"></a>Note  
  Tutti i membri di un albero gerarchico derivato vengono ordinati in base al codice. Non è possibile modificare l'ordinamento.  
   
- Se un attributo basato su dominio di un membro è vuoto e l'attributo viene utilizzato per una gerarchia derivata, il membro non verrà visualizzato nella gerarchia. Creare regole business per richiedere il popolamento degli attributi. Per ulteriori informazioni, vedere [richiedono valori di attributo &#40; Master Data Services &#41; ](../master-data-services/require-attribute-values-master-data-services.md).  
+ Se un attributo basato su dominio di un membro è vuoto e l'attributo viene utilizzato per una gerarchia derivata, il membro non verrà visualizzato nella gerarchia. Creare regole business per richiedere il popolamento degli attributi. Per altre informazioni, vedere [Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Creare una nuova gerarchia derivata.|[Creare una gerarchia derivata &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Nascondere o eliminare i livelli in una gerarchia derivata esistente.|[Nascondere o eliminare i livelli in una gerarchia derivata &#40; Master Data Services &#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|Modificare il nome di una gerarchia derivata esistente.|[Modificare il nome di una gerarchia derivata &#40; Master Data Services &#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|Eliminare una gerarchia derivata esistente.|[Eliminare una gerarchia derivata &#40; Master Data Services &#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|Creare una nuova gerarchia derivata.|[Creare una gerarchia derivata &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Nascondere o eliminare i livelli in una gerarchia derivata esistente.|[Nascondere o eliminare livelli di una gerarchia derivata &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|Modificare il nome di una gerarchia derivata esistente.|[Modificare il nome di una gerarchia derivata &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Eliminare una gerarchia derivata esistente.|[Eliminare una gerarchia derivata &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Attributi basati su dominio &#40; Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Attributi basati su dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Gerarchie esplicite &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Gerarchie ricorsive &#40; Master Data Services &#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [Gerarchie ricorsive &#40;Master Data Services&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Gerarchie derivate con estremità esplicite &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Gerarchie derivate con estremità esplicite &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Mostrare le relazioni molti-a-molti nelle gerarchie derivate &#40; Master Data Services &#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
+-   [Mostrare le relazioni molti-a-molti nelle gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
--   [Raccolte &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Raccolte &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

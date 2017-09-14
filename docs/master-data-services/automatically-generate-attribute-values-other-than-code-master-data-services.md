@@ -1,5 +1,5 @@
 ---
-title: Generare automaticamente valori per attributi diversi da Code (Master Data Services) | Documenti Microsoft
+title: Generare automaticamente valori di attributi diversi da Code (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa9f904e870324a51ae46e94986c3b20cd84f354
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2709d8389e92b9688e18fba0a055263fa67e33e7
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Generare automaticamente valori per attributi diversi da Code (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono automaticamente generati valori per l'attributo di un'entità quando si vuole che un valore intero venga assegnato automaticamente come valore ogni volta che viene applicata una regola di business.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono automaticamente generati valori per l'attributo di un'entità quando si vuole che un valore intero venga assegnato automaticamente come valore ogni volta che viene applicata una regola di business.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   [Convalidare membri specifici rispetto a regole Business &#40; Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [Convalidare membri specifici rispetto a regole business &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
--   [Convalidare una versione rispetto a regole Business &#40; Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di codice automatica &#40; Master Data Services &#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [Le regole di business &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
- [Convalida &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+ [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Convalida &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
   

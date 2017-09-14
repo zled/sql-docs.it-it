@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
 ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
@@ -45,8 +45,7 @@ La figura seguente mostra una panoramica generale di un gruppo di disponibilità
 <a name="fig1"></a>
 ![Panoramica generale di un gruppo di disponibilità distribuito][1]
 
-È possibile configurare lo spostamento dei dati nei gruppi di disponibilità distribuiti come sincrono o asincrono. Tuttavia, lo spostamento dei dati all'interno di gruppi di disponibilità distribuiti è leggermente diverso rispetto a quanto avviene in un gruppo di disponibilità tradizionale. Anche se ogni gruppo di disponibilità ha una replica primaria, solo una copia dei database fa parte di un gruppo di disponibilità distribuito che può accettare inserimenti, aggiornamenti ed eliminazioni. Come illustra la figura seguente, AG 1 è il gruppo di disponibilità primario. La relativa replica primaria invia transazioni sia alle repliche secondarie di AG 1 che alla replica primaria di AG 2. Successivamente, la replica primaria di AG 2 mantiene aggiornate le repliche secondarie di AG 2. 
-
+È possibile configurare lo spostamento dei dati nei gruppi di disponibilità distribuiti come sincrono o asincrono. Tuttavia, lo spostamento dei dati all'interno di gruppi di disponibilità distribuiti è leggermente diverso rispetto a quanto avviene in un gruppo di disponibilità tradizionale. Anche se ogni gruppo di disponibilità ha una replica primaria, solo una copia dei database fa parte di un gruppo di disponibilità distribuito che può accettare inserimenti, aggiornamenti ed eliminazioni. Come illustra la figura seguente, AG 1 è il gruppo di disponibilità primario. La relativa replica primaria invia transazioni sia alle repliche secondarie di AG 1 che alla replica primaria di AG 2. La replica primaria di AG 2 è anche nota come *server di inoltro*. Un server di inoltro è una replica primaria in un gruppo di disponibilità secondario in un gruppo di disponibilità distribuito. Il server di inoltro riceve le transazioni dalla replica primaria nel gruppo di disponibilità primario e le inoltra alle repliche secondarie nel proprio gruppo di disponibilità.  Il server di inoltro mantiene quindi aggiornate le repliche secondarie di AG 2. 
 
 ![Gruppo di disponibilità distribuito e relativo spostamento dei dati][2]
 
@@ -136,7 +135,7 @@ I gruppi di disponibilità distribuiti consentono un maggiore aumento delle ista
 * È possibile usare la replica primaria del secondo gruppo di disponibilità in un gruppo di disponibilità distribuito per creare un altro gruppo di disponibilità distribuito, anche se il database non è in RECOVERY.
 * È anche possibile usare la replica primaria del primo gruppo di disponibilità per creare un altro gruppo di disponibilità distribuito.
 
-In altre parole, una replica primaria può far parte di due diversi gruppi di disponibilità distribuiti. La figura seguente mostra che AG 1 e AG 2 fanno parte di Distributed AG 1, mentre AG 2 e AG 3 fanno parte di Distributed AG 2. La replica primaria di AG 2 è una replica secondaria per Distributed AG 1, ma è anche una replica primaria per Distributed AG 2.
+In altre parole, una replica primaria può far parte di due diversi gruppi di disponibilità distribuiti. La figura seguente mostra che AG 1 e AG 2 fanno parte di Distributed AG 1, mentre AG 2 e AG 3 fanno parte di Distributed AG 2. La replica primaria (o server di inoltro) di AG 2 è una replica secondaria per Distributed AG 1, ma è anche una replica primaria per Distributed AG 2.
 
 ![Aumento delle istanze di lettura con gruppi di disponibilità distribuiti][5]
 

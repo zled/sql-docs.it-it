@@ -1,5 +1,5 @@
 ---
-title: Regole di business (Master Data Services) | Documenti Microsoft
+title: Regole di business (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/18/2017
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c8929bcaf6bc937ae6c8bf4bdb0e1b0d2e02f64
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f28a6820698413cd3e5b2a6f827fd7b5a055d7c1
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rules-master-data-services"></a>Regole business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]una regola business è una regola utilizzata per garantire la qualità e l'accuratezza dei dati master. È possibile utilizzare una regola business per aggiornare automaticamente i dati, inviare posta elettronica o per avviare un processo aziendale o un flusso di lavoro.  
   
- Per visualizzare esempi di regole di business, vedere [esempi di regole di Business &#40; Master Data Services &#41; ](../master-data-services/business-rule-examples-master-data-services.md).  
+ Per visualizzare esempi di regole di business, vedere [Esempi di regole di business &#40;Master Data Services&#41;](../master-data-services/business-rule-examples-master-data-services.md).  
   
 ## <a name="create-and-publish-business-rules"></a>Creare e pubblicare regole business  
  Le regole business sono istruzioni **If/Then/Else** create in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Se un valore di attributo soddisfa una condizione specificata, viene eseguita una determinata azione. In caso contrario, viene eseguita un'azione Else. Tra le possibili azioni è inclusa l'impostazione di un valore predefinito o la modifica di un valore. Queste azioni possono essere combinate con l'invio di una notifica tramite posta elettronica.  
   
- Le regole business possono essere basate su valori di attributo specifici, ad esempio eseguire un'azione se Color=Blue, o quando i valori di attributo vengono modificati, ad esempio eseguire un'azione se l'attributo Color viene modificato. Per ulteriori informazioni sul rilevamento delle modifiche non specifiche, vedere [rilevamento delle modifiche &#40; Master Data Services &#41; ](../master-data-services/change-tracking-master-data-services.md).  
+ Le regole business possono essere basate su valori di attributo specifici, ad esempio eseguire un'azione se Color=Blue, o quando i valori di attributo vengono modificati, ad esempio eseguire un'azione se l'attributo Color viene modificato. Per altre informazioni sul rilevamento di modifiche non specifiche, vedere [Rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md).  
   
  Per utilizzare regole business, è necessario prima crearle e pubblicarle, quindi applicare le regole pubblicate ai dati. È possibile applicare regole a subset di dati o a tutti i dati di una versione convalidando la versione. Il commit di una versione non può essere eseguito finché tutti gli attributi non hanno superato la convalida tramite regole business.  
   
@@ -77,26 +77,26 @@ ms.lasthandoff: 08/02/2017
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Creare e pubblicare una nuova regola business.|[Creare e pubblicare una regola Business &#40; Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola Business &#40; Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Creare una regola business affinché gli attributi dispongano di valori.|[Richiedere valori di attributo &#40; Master Data Services &#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Creare una regola business per eseguire un'azione basata su modifiche dei valori di attributo.|[Inizializzare azioni basate su Cambia valore di attributo &#40; Master Data Services &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Creare una regola business per eseguire uno script definito dall'utente come condizione|[Estensione delle regole business &#40; Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Creare una regola business per eseguire uno script definito dall'utente come azione|[Estensione delle regole business &#40; Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Modificare il nome di una regola business esistente.|[Modificare il nome di una regola di Business &#40; Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Configurare [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per inviare notifiche quando vengono applicate le regole business.|[Configurare le regole di Business per l'invio di notifiche &#40; Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Applicare le regole business a membri specifici.|[Convalidare membri specifici rispetto a regole Business &#40; Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|Escludere una regola business in modo che non venga utilizzata.|[Escludere una regola Business &#40; Master Data Services &#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|Eliminare una regola business esistente.|[Eliminare una regola Business &#40; Master Data Services &#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|Creare e pubblicare una nuova regola business.|[Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola di business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Creare una regola business affinché gli attributi dispongano di valori.|[Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Creare una regola business per eseguire un'azione basata su modifiche dei valori di attributo.|[Inizializzare azioni basate su modifiche dei valori di attributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Creare una regola business per eseguire uno script definito dall'utente come condizione|[Estensione delle regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Creare una regola business per eseguire uno script definito dall'utente come azione|[Estensione delle regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Modificare il nome di una regola business esistente.|[Modificare il nome di una regola di business &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Configurare [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per inviare notifiche quando vengono applicate le regole business.|[Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Applicare le regole business a membri specifici.|[Convalidare membri specifici rispetto a regole business &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Escludere una regola business in modo che non venga utilizzata.|[Escludere una regola di business &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|Eliminare una regola business esistente.|[Eliminare una regola di business &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
 -   [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Versioni &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+-   [Versioni &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Convalida &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Convalida &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Rilevamento delle modifiche &#40; Master Data Services &#41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [Rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

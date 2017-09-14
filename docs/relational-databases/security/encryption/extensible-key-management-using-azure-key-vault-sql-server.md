@@ -22,11 +22,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  Questo argomento descrive il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Altre informazioni sono disponibili in [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)e [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
 ##  <a name="Uses"></a> Che cos'è Extensible Key Management (EKM) e perché usarlo?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include diversi tipi di crittografia che consentono di proteggere i dati sensibili, inclusi [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md), [Crittografia a livello di colonna](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) e [Crittografia dei backup](../../../relational-databases/backup-restore/backup-encryption.md). Nella gerarchia delle chiavi tradizionale di tutti questi casi i dati vengono crittografati usando una chiave (DEK) simmetrica. Per proteggerla ulteriormente, tale chiave viene crittografata con una gerarchia di chiavi archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'alternativa a questo modello è il modello di provider EKM. L'architettura del provider EKM consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di proteggere le chiavi DEK usando una chiave asimmetrica archiviata all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un provider del servizio di crittografia esterno. Questo modello aggiunge un altro livello di sicurezza e separa la gestione delle chiavi e dei dati.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include diversi tipi di crittografia che consentono di proteggere i dati sensibili, inclusi [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md), [Crittografia a livello di colonna](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) e [Crittografia dei backup](../../../relational-databases/backup-restore/backup-encryption.md). Nella gerarchia delle chiavi tradizionale di tutti questi casi i dati vengono crittografati usando una chiave (DEK) simmetrica. Per proteggerla ulteriormente, tale chiave viene crittografata con una gerarchia di chiavi archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'alternativa a questo modello è il modello di provider EKM. L'architettura del provider EKM consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di proteggere le chiavi DEK usando una chiave asimmetrica archiviata all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un provider del servizio di crittografia esterno. Questo modello aggiunge un altro livello di sicurezza e separa la gestione delle chiavi e dei dati.  
    
  L'immagine seguente confronta la tradizionale gerarchia delle chiavi con la gestione del servizio al sistema dell'insieme di credenziali delle chiavi di Azure.  
   

@@ -1,5 +1,5 @@
 ---
-title: Database requisiti (Master Data Services) | Documenti Microsoft
+title: Requisiti del database (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 caps.latest.revision: 18
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9f48345ef6fb8bd0a27bf2d40a829e53e2eae308
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 16858dc8ab6dcad69792697b88811cba2689b1fe
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-requirements-master-data-services"></a>Requisiti del database (Master Data Services)
@@ -73,9 +73,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione di Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
- [Creare un Database Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Creare un database Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Master Data Services Database](../../master-data-services/master-data-services-database.md)   
- [Connettersi a una finestra di dialogo Database Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
- [Creazione guidata Database &#40; Gestione configurazione master Data Services &#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
+ [Finestra di dialogo Connessione a un database Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
+ [Procedura guidata Crea database &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   
   

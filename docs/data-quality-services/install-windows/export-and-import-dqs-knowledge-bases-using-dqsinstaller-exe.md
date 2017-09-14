@@ -1,5 +1,5 @@
 ---
-title: Esportare e importare una Knowledge base di DQS utilizzando DQSInstaller.exe | Documenti Microsoft
+title: Esportare e importare le Knowledge Base di DQS con DQSInstaller.exe | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e85b9553a3300f51f52fab300642f15f3f08617f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Esportare e importare le Knowledge Base di DQS utilizzando DQSInstaller.exe
@@ -59,9 +59,9 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  Se vi sono Knowledge Base in [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] con lo stesso nome di quelle che si stanno importando, i nomi delle Knowledge Base importate saranno accodati con un carattere di sottolineatura (_) seguito da un valore intero che inizia con 1. Ad esempio, se il dominio "CompanyName" è duplicato, il nome di dominio importato sarà "CompanyName_1."  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire DQSInstaller.exe per completare l'installazione del Server DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Esportare una Knowledge Base in un File DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
- [Importare una Knowledge Base da un File DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
+ [Esportare una Knowledge Base in un file DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
+ [Importare una Knowledge Base da un file DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   
