@@ -1,7 +1,7 @@
 ---
 title: CREARE la chiave SIMMETRICA (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/11/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb573578b51b2e6bf4c5cbedf7ef5bc509523903
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -97,26 +97,28 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
- Crea una nuova chiave sul dispositivo EKM.  Se nel dispositivo esiste già una chiave, l'istruzione genererà un errore.  
+ CREATION_DISPOSITION ** = ** CREATE_NEW  
+ Crea una nuova chiave nel dispositivo EKM.  Se nel dispositivo esiste già una chiave, l'istruzione genererà un errore.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
  Definisce il mapping di una chiave simmetrica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una chiave EKM esistente. Se non si specifica CREATION_DISPOSITION = OPEN_EXISTING, l'impostazione predefinita sarà CREATE_NEW.  
   
  *nome_certificato*  
  Specifica il nome del certificato che verrà utilizzato per crittografare la chiave simmetrica. Il certificato deve esistere nel database corrente.  
   
  **'** *password* **'**  
- Specifica una password dalla quale derivare una chiave TRIPLE_DES con cui proteggere la chiave simmetrica. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario usare sempre password complesse.  
+ Specifica una password dalla quale derivare una chiave TRIPLE_DES con cui proteggere la chiave simmetrica. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare sempre password complesse.  
   
  *symmetric_key_name*  
- Specifica una chiave simmetrica da utilizzare per crittografare la chiave creata. La chiave specificata deve esistere nel database ed essere aperta.  
+ Specifica una chiave simmetrica utilizzata per crittografare la chiave che viene creata. La chiave specificata deve esistere nel database ed essere aperta.  
   
  *asym_key_name*  
- Specifica una chiave asimmetrica da utilizzare per crittografare la chiave creata. Tale chiave asimmetrica deve esistere nel database.  
+ Specifica una chiave asimmetrica utilizzata per crittografare la chiave che viene creata. Tale chiave asimmetrica deve esistere nel database.  
   
  \<algoritmo >  
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da AES_128, AES_192 e AES_256 sono deprecati. Per usare algoritmi meno recenti (sconsigliato), è necessario impostare il database sul livello di compatibilità del database 120 o su uno inferiore.  
+Specificare l'algoritmo di crittografia.   
+> [!WARNING]  
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da AES_128, AES_192 e AES_256 sono deprecati. Per usare algoritmi meno recenti (sconsigliato), è necessario impostare il livello di compatibilità del database per database 120 o inferiore.  
   
 ## <a name="remarks"></a>Osservazioni  
  Quando si crea una chiave simmetrica è necessario crittografarla con almeno uno degli elementi seguenti: certificato, password, chiave simmetrica, chiave asimmetrica o PROVIDER. Una chiave può essere crittografata con più elementi di ogni tipo, ovvero una singola chiave simmetrica può essere crittografata contemporaneamente con più certificati, password, chiavi simmetriche e chiavi asimmetriche.  
@@ -128,7 +130,7 @@ CREATE SYMMETRIC KEY key_name
   
  Le chiavi temporanee sono di proprietà dell'utente che le crea e sono valide solo per la sessione corrente.  
   
- La clausola IDENTITY_VALUE genera un GUID per contrassegnare i dati crittografati con la nuova chiave simmetrica. Tale contrassegno può essere utilizzato per eseguire il mapping delle chiavi ai dati crittografati. Il GUID generato da una frase specifica sarà sempre uguale. Dopo aver utilizzato una frase per generare un GUID, non è possibile utilizzare di nuovo la stessa frase finché viene utilizzata in modo attivo da almeno una sessione. IDENTITY_VALUE è una clausola facoltativa, ma è consigliabile utilizzarla per l'archiviazione di dati crittografati con una chiave temporanea.  
+ La clausola IDENTITY_VALUE genera un GUID per contrassegnare i dati crittografati con la nuova chiave simmetrica. Tale contrassegno può essere utilizzato per eseguire il mapping delle chiavi ai dati crittografati. Il GUID generato da una frase specifica è sempre lo stesso. Dopo aver utilizzato una frase per generare un GUID, non è possibile utilizzare di nuovo la stessa frase finché viene utilizzata in modo attivo da almeno una sessione. IDENTITY_VALUE è una clausola facoltativa, ma è consigliabile utilizzarla per l'archiviazione di dati crittografati con una chiave temporanea.  
   
  Non è previsto un algoritmo di crittografia predefinito.  
   
@@ -142,14 +144,12 @@ CREATE SYMMETRIC KEY key_name
  **Chiarimento relativo agli algoritmi DES:**  
   
 -   La crittografia DESX è stata menzionata erroneamente. Le chiavi simmetriche create con ALGORITHM = DESX utilizzano in realtà la crittografia TRIPLE DES con una chiave a 192 bit. L'algoritmo DESX non è disponibile. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   Le chiavi simmetriche create con ALGORITHM = TRIPLE_DES_3KEY utilizzano TRIPLE DES con una chiave a 192 bit.  
-  
 -   Le chiavi simmetriche create con ALGORITHM = TRIPLE_DES utilizzano TRIPLE DES con una chiave a 128 bit.  
   
  **Deprecazione dell'algoritmo RC4:**  
   
- L'utilizzo ripetuto della stessa funzione KEY_GUID RC4 o RC4_128 su blocchi di dati diversi produrrà la stessa chiave RC4 perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce automaticamente un valore salt. L'utilizzo ripetuto della stessa chiave RC4 è un errore noto che comporta una crittografia molto debole. Per questo motivo le parole chiave RC4 e RC4_128 sono deprecate. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ Uso ripetuto della stessa RC4 o RC4_128 KEY_GUID su blocchi di dati, diversi comporta la stessa chiave RC4 perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce automaticamente un valore salt. L'utilizzo ripetuto della stessa chiave RC4 è un errore noto che comporta una crittografia molto debole. Per questo motivo le parole chiave RC4 e RC4_128 sono deprecate. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
