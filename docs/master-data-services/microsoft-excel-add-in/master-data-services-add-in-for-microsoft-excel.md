@@ -1,5 +1,5 @@
 ---
-title: Il componente aggiuntivo Master Data Services per Microsoft Excel | Documenti Microsoft
+title: Componente aggiuntivo Master Data Services per Microsoft Excel | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Componente aggiuntivo Master Data Services per Microsoft Excel
@@ -30,8 +30,8 @@ ms.lasthandoff: 08/02/2017
  In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è possibile utilizzare Data Quality Services (DQS) per la corrispondenza dei dati prima del caricamento in MDS. In tal modo si impedisce la duplicazione dei dati in MDS.  
 
 ## <a name="downloads"></a>Download 
->*  Scaricare il componente aggiuntivo Master Data Services per Excel per SQL Server 2016 SP1 da [questa pagina Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836866). 
->* Scaricare il [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] per SQL Server 2017 CTP1 da [questa pagina Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836867). Questo componente aggiuntivo funziona anche per SQL Server 2017 RC1.
+>*  Scaricare il componente aggiuntivo Master Data Services di Master Data Services per Excel per SQL Server 2016 SP1 da [questa pagina dell'Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=836866). 
+>* Scaricare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] per SQL Server 2017 CTP1 da [questa pagina dell'Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=836867). Questo componente aggiuntivo funziona anche per SQL Server 2017 RC1.
 
  
   

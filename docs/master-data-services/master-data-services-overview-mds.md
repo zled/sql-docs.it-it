@@ -1,5 +1,5 @@
 ---
-title: Panoramica di master Data Services (MDS) | Documenti Microsoft
+title: Panoramica di Master Data Services (MDS) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/14/2017
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-overview-mds"></a>Panoramica di Master Data Services (MDS)
   In questo argomento sono descritte le principali funzionalità di organizzazione e gestione dei dati di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]Consente di gestire un set di dati dell'organizzazione principale. È possibile organizzare i dati in modelli, creare regole per l'aggiornamento dei dati e controllare che aggiorna i dati. Con Excel, è possibile condividere il set di dati master con altri utenti nell'organizzazione. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] consente di gestire un set di dati master dell'organizzazione. È possibile organizzare i dati in modelli, creare regole per l'aggiornamento dei dati e controllare chi aggiorna i dati. Con Excel è possibile condividere il set di dati master con altri utenti nell'organizzazione. 
   
  >  Per una descrizione dell'architettura di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , vedere l'articolo [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services -- Nozioni di base) in simple-talk.com. Per informazioni sulle nuove funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere [Novità in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Per istruzioni su come installare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], impostare il database e il sito Web e distribuire i modelli di esempio, vedere** [Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
@@ -39,17 +39,17 @@ ms.lasthandoff: 08/02/2017
   
  Ad esempio, il modello di prodotto online può contenere entità come Product, Color e Style. L'entità Color può contenere membri per i colori rosso, argento e nero.  
   
- ![Colore entità](../master-data-services/media/mds-productmodel-colorentity-composite.png "colore entità")  
+ ![Entità Color](../master-data-services/media/mds-productmodel-colorentity-composite.png "Entità Color")  
   
  I modelli contengono anche attributi definiti all'interno delle entità. Un attributo contiene i valori che consentono di descrivere i membri dell'entità. Gli attributi possono essere di tipo freeform o basati su dominio.  Un attributo basato su dominio contiene valori popolati dai membri di un'entità e che possono essere usati come valori di attributo per altre entità.  
   
- Ad esempio, l'entità Product potrebbe avere attributi freeform per il costo e il peso. Inoltre, è presente un attributo basato su dominio per il colore ![numero 1](../master-data-services/media/mds-number1.png "numero 1") che contiene i valori popolati dai membri dell'entità color. Questo elenco principale di colori viene usato come valori di attributo per l'entità Product ![numero 2](../master-data-services/media/mds-number2.png "2 numero").  
+ Ad esempio, l'entità Product potrebbe avere attributi freeform per il costo e il peso. È anche presente un attributo basato su dominio per il colore ![Numero 1](../master-data-services/media/mds-number1.png "Numero 1") che contiene i valori popolati dai membri dell'entità Color. Questo elenco principale di colori viene usato per i valori di attributo dell'entità Product ![Numero 2](../master-data-services/media/mds-number2.png "Numero 2").  
   
- ![Attributo basato su dominio per il colore](../master-data-services/media/mds-productentity-color-domainattribute.png "attributo basato su dominio per il colore")  
+ ![Attributo basato su dominio per il colore](../master-data-services/media/mds-productentity-color-domainattribute.png "Attributo basato su dominio per il colore")  
   
- Le gerarchie derivate provengono dalle relazioni tra entità in un modello. Si tratta delle relazioni tra attributi basati su dominio. Nel modello di prodotto, ad esempio, si può avere una gerarchia derivata dai colori ![numero 1](../master-data-services/media/mds-number1.png "numero 1") proveniente dalla relazione tra il colore ![numero 2](../master-data-services/media/mds-number2.png "numero 2") e prodotto ![numero 3](../master-data-services/media/mds-number3.png "numero 3") entità.  
+ Le gerarchie derivate provengono dalle relazioni tra entità in un modello. Si tratta delle relazioni tra attributi basati su dominio. Nel modello di prodotto, ad esempio, si può avere una gerarchia derivata dai colori ![Numero 1](../master-data-services/media/mds-number1.png "Numero 1") proveniente dalla relazione tra le entità Color ![Numero 2](../master-data-services/media/mds-number2.png "Numero 2") e Product ![Numero 3](../master-data-services/media/mds-number3.png "Numero 3").  
   
- ![Colore di gerarchia derivata](../master-data-services/media/mds-derivedhierarchy.png "gerarchia derivata di Color")  
+ ![Gerarchia derivata di Color](../master-data-services/media/mds-derivedhierarchy.png "Gerarchia derivata di Color")  
   
  Dopo aver definito una struttura di base per i dati, è possibile iniziare ad aggiungere record di dati (membri) usando la funzionalità di importazione. Caricare i dati nelle tabelle di gestione temporanea, convalidarli usando le regole business e caricarli nelle tabelle MDS.  Le regole business possono essere usate anche per impostare i valori dell'attributo.  
   

@@ -1,5 +1,5 @@
 ---
-title: Modificare un nome di versione (Master Data Services) | Documenti Microsoft
+title: Modificare il nome di una versione (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c00530ff2b9938314e50cdde09e6f9fc33791fd8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 52436cbd38e92c97ce939af21eacb089f3b4797f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-a-version-name-master-data-services"></a>Modificare il nome di una versione (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] modificare il nome della versione per personalizzarlo per l'organizzazione.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]modificare il nome della versione per personalizzarlo per l'organizzazione.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/02/2017
 4.  Premere INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare una versione rispetto a regole Business &#40; Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [Bloccare una versione &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [Eseguire il commit di una versione &#40; Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)   
- [Versioni &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [Bloccare una versione &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
+ [Eseguire il commit di una versione &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
+ [Versioni &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

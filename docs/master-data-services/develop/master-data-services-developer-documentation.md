@@ -1,5 +1,5 @@
 ---
-title: Documentazione per sviluppatori di master Data Services | Documenti Microsoft
+title: Documentazione per gli sviluppatori di Master Data Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 46b9d4302eb2ba1133fb1840c29112aaebad22b4
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-developer-documentation"></a>Guida per gli sviluppatori
@@ -38,17 +38,17 @@ ms.lasthandoff: 08/02/2017
  Il servizio Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] consente di utilizzare a livello di codice le caratteristiche di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] da qualsiasi computer che può accedere al sito Web di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Prima di iniziare a scrivere il codice per accedere al servizio Web, è necessario generare le classi proxy, che sono contenute in uno spazio dei nomi specificato dall'utente. Nella presente documentazione viene utilizzato <xref:Microsoft.MasterDataServices> come spazio dei nomi del proxy. La classe proxy principale utilizzata per eseguire le operazioni del servizio Web è la classe <xref:Microsoft.MasterDataServices.ServiceClient>, che implementa l'interfaccia <xref:Microsoft.MasterDataServices.IService>. Dal codice, chiamare i metodi della classe <xref:Microsoft.MasterDataServices.ServiceClient> per accedere al servizio Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Il resto delle classi nello spazio dei nomi viene utilizzato dalle operazioni del servizio Web.  
   
 ### <a name="web-service-content"></a>Contenuto del servizio Web  
- [Creare le classi Proxy servizio Web gestione dati Master](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
+ [Creare le classi proxy del servizio Web Gestione dati master](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
  Viene descritto come abilitare la pubblicazione dei metadati dal sito Web di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e come creare le classi proxy che possono essere utilizzate per accedere a livello di programmazione alle operazioni del servizio Web.  
   
- [Operazioni del servizio Web per categoria &#40; Master Data Services &#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [Operazioni del servizio Web per categoria &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
  Elenco per categoria delle operazioni del servizio Web della classe <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Flussi di lavoro personalizzati  
  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate le regole business per creare soluzioni di base per il flusso di lavoro. È possibile aggiornare e convalidare automaticamente i dati, nonché inviare notifiche mediante posta elettronica in base alle condizioni specificate. Le regole business in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate per gestire gli scenari di flussi di lavoro più comuni. Se il flusso di lavoro richiede l'elaborazione di eventi più complessi, ad esempio approvazioni multilivello o alberi delle decisioni complessi, è possibile configurare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in modo da inviare i dati a un assembly personalizzato creato. Per gestire i flussi di lavoro personalizzati, è necessario configurare e avviare SQL Server MDS Workflow Integration Service sul computer dell'applicazione Web e creare un assembly che implementi l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Contenuto del flusso di lavoro personalizzato  
- [Creare un flusso di lavoro personalizzato &#40; Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [Creare un flusso di lavoro personalizzato &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  Istruzioni sulla creazione di un assembly del gestore dei flussi di lavoro, sulla configurazione e l'avvio di SQL Server MDS Workflow Integration Service e sulla creazione di una regola business in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per avviare un flusso di lavoro personalizzato.  
   
 ## <a name="web-server-namespaces"></a>Spazi dei nomi del server Web  

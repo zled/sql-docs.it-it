@@ -1,5 +1,5 @@
 ---
-title: Creare una vista sottoscrizioni per esportare i dati (Master Data Services) | Documenti Microsoft
+title: Creare una vista sottoscrizioni per esportare i dati (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 863c5976f20cda1edc4ecba9ae81db599ec94d99
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Creare una vista sottoscrizioni per esportare i dati (Master Data Services)
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
   
 |Colonna|Description|  
 |------------|-----------------|  
-|Stato|Stato della vista.<br /><br /> Quando fa clic su **salvare**, ![icona per l'aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "icona per l'aggiornamento dello stato") immagine, che indica che la vista sta aggiornando.<br /><br /> Se si verificano errori durante la creazione o la modifica di una vista, la ![icona di stato di errore](../master-data-services/media/mds-statusicon-error.png "icona di stato di errore") immagine consente di visualizzare.<br /><br /> In caso contrario, lo stato è OK e ![icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "icona per lo stato OK") immagine consente di visualizzare.|  
+|Stato|Stato della vista.<br /><br /> Quando si fa clic su **Salva** viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento della visualizzazione.<br /><br /> Se si verificano errori durante la creazione o la modifica di una vista viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "icona di stato OK").|  
 |Nome|Nome della vista sottoscrizioni.|  
 |Modello|Nome del modello.|  
 |Versione|Nome della versione.|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica: Esportazione di dati &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [Eliminare una vista sottoscrizioni &#40; Master Data Services &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [Creare un Flag di versione &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [Eliminare una vista sottoscrizioni &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [Creare un flag di versione &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

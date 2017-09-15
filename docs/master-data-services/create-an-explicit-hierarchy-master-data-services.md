@@ -1,5 +1,5 @@
 ---
-title: Creare una gerarchia esplicita (Master Data Services) | Documenti Microsoft
+title: Creare una gerarchia esplicita (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/01/2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 62f9ade96cdeeb658681abd16c81b48edbd84c1a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1bbc9d8a78915c3be4a5530c3d47909505dea599
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Creare una gerarchia esplicita (Master Data Services)
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/02/2017
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona per l'aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "icona per l'aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di stato di errore](../master-data-services/media/mds-statusicon-error.png "icona di stato di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "icona per lo stato OK")|  
+|Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")|  
 |Nome|Il nome della gerarchia esplicita.|  
 |Obbligatorio|Specifica se la gerarchia esplicita è obbligatoria.|  
 |Creato da|Nome utente dell'utente che ha creato la gerarchia esplicita.|  
@@ -77,9 +77,9 @@ ms.lasthandoff: 08/02/2017
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Gerarchie esplicite &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Gerarchie derivate con estremità esplicite &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Modificare il nome di una gerarchia esplicita &#40; Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Gerarchie derivate con estremità esplicite &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [Modificare il nome di una gerarchia esplicita &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   
 

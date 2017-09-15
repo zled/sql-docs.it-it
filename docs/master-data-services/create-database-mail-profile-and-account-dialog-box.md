@@ -1,5 +1,5 @@
 ---
-title: Creare il profilo di posta elettronica Database e la finestra di dialogo Account | Documenti Microsoft
+title: Finestra di dialogo Crea account e profili di Posta elettronica database | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e8f05588d7ad0a4ab6b723f495a34b5343caab63
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Finestra di dialogo Crea account e profili di Posta elettronica database
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 |------------------|-----------------|  
 |**Indirizzo di posta elettronica**|Digitare il nome associato all'indirizzo di posta elettronica relativo all'account. Questo è l'indirizzo di posta elettronica dal quale viene inviata la posta elettronica e deve essere nel formato *nome_posta_elettronica*@*nome_dominio*. Un esempio di indirizzo di posta elettronica è sales@contoso.com.|  
 |**Nome visualizzato**|Impostazione facoltativa. Digitare il nome da visualizzare nei messaggi di posta elettronica inviati dall'account. Un esempio di nome visualizzato è Contoso Sales Group.|  
-|**Indirizzo di posta elettronica risposte**|Impostazione facoltativa. Digitare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati dall'account. È un indirizzo di posta elettronica di risposta di esempio admin@contoso.com.|  
+|**Indirizzo di posta elettronica risposte**|Impostazione facoltativa. Digitare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati dall'account. Un esempio di indirizzo di posta elettronica per le risposte è admin@contoso.com.|  
 |**Server SMTP**|Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Un esempio di formato del server SMTP è **smtp.***<nome_società>***.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.|  
 |**Numero di porta**|Digitare il numero di porta del server SMTP per l'account. Il numero di porta per SMTP predefinito è 25.|  
 |**Il server necessita di una connessione sicura (SSL)**|Consente di crittografare le comunicazioni mediante SSL (Secure Sockets Layer).|  
@@ -62,6 +62,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagina Configurazione database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Configurazione e installazione di Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
+[Installazione e configurazione di Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
   
   

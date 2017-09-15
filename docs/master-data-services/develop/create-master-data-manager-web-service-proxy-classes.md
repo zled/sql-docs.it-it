@@ -1,5 +1,5 @@
 ---
-title: Creare le classi Proxy servizio Web gestione dati Master | Documenti Microsoft
+title: Creare le classi proxy del servizio Web Gestione dati master | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a45cd15ced90aef95feb03f8fbaafd5aa70cb746
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ba3b315cc62ce64da9212ef3d00b60ec1a303e33
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Creare le classi proxy del servizio Web Gestione dati master
@@ -29,12 +29,12 @@ ms.lasthandoff: 08/02/2017
 ## <a name="enable-web-service-metadata-publishing"></a>Abilitare la pubblicazione dei metadati del servizio Web  
  Prima di generare le classi proxy, è necessario abilitare la pubblicazione dei metadati del servizio Web. A tale scopo, effettuare le operazioni seguenti:  
   
-1.  Aprire il [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] file Web. config in un editor di testo. Il file Web.config si trova nella cartella WebApplication del percorso di installazione di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  Aprire il file Web.config di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in un editor di testo. Il file Web.config si trova nella cartella WebApplication del percorso di installazione di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Trovare il **mdsWsHttpBehavior** sezione nel  **\<serviceBehaviors >**. Per il  **\<serviceMetadata >** elemento, impostare **httpGetEnabled** a **true**.  
+2.  Trovare la sezione **mdsWsHttpBehavior** in **\<serviceBehaviors>**. Per l'elemento **\<serviceMetadata>**, impostare **httpGetEnabled** su **true**.  
   
     > [!NOTE]  
-    >  Se si desidera abilitare i servizi Web tramite Secure Sockets Layer (SSL), impostare **httpsGetEnabled** a **true** nel **mdsWsHttpBehavior** sezione del file Web. config. È inoltre necessario modificare **mdsWsHTTPBinding** in modo che sia configurato per SSL, nonché e impostare come commento la sezione non SSL.  
+    >  Per abilitare servizi Web tramite Secure Sockets Layer (SSL), impostare **httpsGetEnabled** su **true** nella sezione **mdsWsHttpBehavior** del file web.config. È anche necessario modificare **mdsWsHTTPBinding** in modo che sia configurato per SSL e impostare come commento la sezione non SSL.  
   
 3.  Salvare le modifiche apportate al file.  
   
@@ -42,10 +42,10 @@ ms.lasthandoff: 08/02/2017
     "È stato creato un servizio".  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Creazione di classi proxy tramite Visual Studio  
- Se si dispone di Visual Studio 2010 installato, il modo più semplice per generare classi proxy consiste nell'aggiungere un **riferimento al servizio** al progetto. L'indirizzo del riferimento al servizio è l'URL dell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiunto a /service/service.svc, Esempio: `http://yourserver/MDS/service/service.svc`. Per ulteriori informazioni, vedere [procedura: aggiungere, aggiornare o rimuovere un riferimento al servizio](http://go.microsoft.com/fwlink/?LinkId=221167).  
+ Se è installato Visual Studio 2010, il modo più semplice per generare le classi proxy è aggiungere un **Riferimento al servizio** al progetto. L'indirizzo del riferimento al servizio è l'URL dell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiunto a /service/service.svc, Esempio: `http://yourserver/MDS/service/service.svc`. Per altre informazioni, vedere [Procedura: Aggiungere, aggiornare o rimuovere un riferimento al servizio](http://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Creazione di classi proxy tramite Svcutil.exe  
- È necessario disporre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] per utilizzare Svcutil.exe nel computer è installato Windows SDK. Se si utilizza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], per eseguire il comando sarà necessario utilizzare il prompt dei comandi di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per ulteriori informazioni, vedere [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) e [la generazione di un Client WCF dai metadati del servizio](http://go.microsoft.com/fwlink/?LinkId=164821).  
+ Per usare Svcutil.exe è necessario che nel computer sia installato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK. Se si utilizza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], per eseguire il comando sarà necessario utilizzare il prompt dei comandi di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per altre informazioni, vedere [Strumento ServiceModel Metadata Utility (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) e [Generazione di un client WCF dai metadati del servizio](http://go.microsoft.com/fwlink/?LinkId=164821).  
   
  Per creare un set di classi proxy in C# tramite Svcutil.exe, utilizzare un comando analogo al seguente:  
   
@@ -58,13 +58,13 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  Dove:  
   
--   *ServerName*:*porta* sono il nome del computer e il numero di computer che ospita porta [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
+-   *servername*:*port* corrispondono al nome del computer e al numero della porta del computer host di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
   
--   *virtual_path* è il percorso virtuale della [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in Internet Information Services (IIS).  
+-   *virtual_path* è il percorso virtuale di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in Internet Information Services (IIS).  
   
 -   *proxy_name* è il nome del file proxy generato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operazioni del servizio Web per categoria &#40; Master Data Services &#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [Operazioni del servizio Web per categoria &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   

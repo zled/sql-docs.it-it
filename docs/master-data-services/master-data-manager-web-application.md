@@ -1,5 +1,5 @@
 ---
-title: Applicazione Web gestione dati master | Documenti Microsoft
+title: Applicazione Web Gestione dati master | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 12/20/2016
@@ -12,21 +12,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0bf0c49ad1e5c10176a7a399f6ea608a7bf205
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 269fbc636345b0313c07812cb8475afb6d1ab238
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-manager-web-application"></a>Applicazione Web Gestione dati master
   L'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] viene usata principalmente dagli amministratori per eseguire attività amministrative. Ad esempio, solo gli amministratori possono creare modelli, regole business o versioni di dati. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versione successiva. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
 
 > **Non è possibile creare un sito Web MDS?**
 >>Leggere quest'articolo del supporto tecnico Microsoft per istruzioni sulla risoluzione del problema.
@@ -34,15 +34,15 @@ ms.lasthandoff: 08/02/2017
   
  L'area funzionale Esplora risorse dell'applicazione Web è la sola area non utilizzata dagli amministratori. Esplora risorse è pensata per quegli utenti che aggiornano i dati master frequentemente. Questi utenti dispongono delle autorizzazioni per i dati necessari per l'esecuzione dei processi.  
   
- [Area funzionale Esplora risorse &#40; Gestione dati master &#41;](../master-data-services/explorer-functional-area-master-data-manager.md)  
+ [Area funzionale Esplora risorse &#40;Gestione dati master&#41;](../master-data-services/explorer-functional-area-master-data-manager.md)  
   
- [Area funzionale Gestione versioni &#40; Gestione dati master &#41;](../master-data-services/version-management-functional-area-master-data-manager.md)  
+ [Area funzionale Gestione versioni &#40;Gestione dati master&#41;](../master-data-services/version-management-functional-area-master-data-manager.md)  
   
- [Area funzionale Gestione integrazione &#40; Gestione dati master &#41;](../master-data-services/integration-management-functional-area-master-data-manager.md)  
+ [Area funzionale Gestione integrazione &#40;Gestione dati master&#41;](../master-data-services/integration-management-functional-area-master-data-manager.md)  
   
- [Area funzionale Amministrazione sistema &#40; Gestione dati master &#41;](../master-data-services/system-administration-functional-area-master-data-manager.md)  
+ [Area funzionale Amministrazione sistema &#40;Gestione dati master&#41;](../master-data-services/system-administration-functional-area-master-data-manager.md)  
   
- [Utente e l'Area funzionale autorizzazioni di gruppo &#40; Gestione dati master &#41;](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
+ [Area funzionale Autorizzazioni utenti e gruppi &#40;Gestione dati master&#41;](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   
 

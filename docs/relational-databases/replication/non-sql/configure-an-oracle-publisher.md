@@ -1,7 +1,7 @@
 ---
 title: Configurare un server di pubblicazione Oracle | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurazione di un server di pubblicazione Oracle
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  Creare un utente di amministrazione della replica nel database Oracle utilizzando l'apposito script.  
   
-2.  Concedere direttamente, anziché tramite un ruolo, all'utente di amministrazione di Oracle creato nel passaggio 1 l'autorizzazione SELECT per ogni tabella che verrà pubblicata.  
+2.  Concedere direttamente (invece che con un ruolo) all'utente di amministrazione di Oracle creato nel passaggio 1 l'autorizzazione SELECT per ogni tabella pubblicata.  
   
-3.  Installare il software client Oracle e il provider OLE DB nel server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi arrestare e riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se il server di distribuzione viene eseguito su una piattaforma a 64 bit, è necessario utilizzare la versione a 64 bit del provider OLE DB Oracle.  
+3.  Installare il software client Oracle e il provider OLE DB nel server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi arrestare e riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se il server di distribuzione viene eseguito su una piattaforma a 64 bit è necessario usare la versione a 64 bit del provider OLE DB Oracle.  
   
 4.  Configurare il database Oracle come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli scenari eterogenei seguenti per la replica transazionale e snapshot:  
   
+-   Pubblicazione di dati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   Pubblicazione di dati da e verso Oracle con le limitazioni seguenti:  
+  | |2016 o versioni precedenti |2017 o versioni successive |
+  |-------|-------|--------|
+  |Replica da Oracle |Supporta solo Oracle 10g o versioni precedenti |Supporta solo Oracle 10g o versioni precedenti |
+  |Replica verso Oracle |Fino a Oracle 12c |Non supportato |
+
+ La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+
  Per un elenco di oggetti che possono essere replicati da un database Oracle, vedere [Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  È disponibile uno script di esempio che consente di agevolare la configurazione dello schema utente di replica Oracle. Lo script viene incluso nella directory seguente dopo l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unità>*:\\\Programmi\Microsoft SQL Server\\*\<NomeIstanza>*\MSSQL\Install\oracleadmin.sql. È inoltre descritto in [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
- Connettersi al database Oracle utilizzando un account con privilegi DBA ed eseguire lo script. Lo script richiede l'indicazione del nome utente e della password per lo schema utente di amministrazione della replica e dello spazio tabella in cui creare gli oggetti (lo spazio tabella deve essere già disponibile nel database Oracle). Per informazioni sull'impostazione di altri spazi tabella per gli oggetti, vedere [Gestire spazi di tabella Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Scegliere un nome utente e una password complessa e prenderne nota poiché verranno richiesti durante la configurazione del database Oracle come server di pubblicazione. È consigliabile utilizzare lo schema solo per gli oggetti necessari alla replica ed evitare di creare tabelle da pubblicare in questo schema.  
+ Connettersi al database Oracle utilizzando un account con privilegi DBA ed eseguire lo script. Lo script richiede l'indicazione del nome utente e della password per lo schema utente di amministrazione della replica e dello spazio tabella in cui creare gli oggetti (lo spazio tabella deve essere già disponibile nel database Oracle). Per informazioni sull'impostazione di altri spazi tabella per gli oggetti, vedere [Gestire spazi di tabella Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Scegliere un nome utente e una password complessa e prenderne nota perché vanno specificati durante la configurazione del database Oracle come server di pubblicazione. È consigliabile utilizzare lo schema solo per gli oggetti necessari alla replica ed evitare di creare tabelle da pubblicare in questo schema.  
   
 ### <a name="creating-the-user-schema-manually"></a>Creazione manuale di uno schema utente  
  Se si crea manualmente uno schema utente di amministrazione della replica, è necessario concedere allo schema le autorizzazioni seguenti, in modo diretto o tramite un ruolo di database.  
@@ -76,7 +89,7 @@ ms.lasthandoff: 06/22/2017
   
  Il modo più diretto per installare e configurare il software di rete client consiste nell'utilizzare Oracle Universal Installer e Net Configuration Assistant dal disco del client Oracle.  
   
- In Oracle Universal Installer, è necessario inserire le informazioni seguenti:  
+ In Oracle Universal Installer è necessario inserire le informazioni seguenti:  
   
 |Informazioni|Descrizione|  
 |-----------------|-----------------|  
@@ -109,9 +122,9 @@ ms.lasthandoff: 06/22/2017
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Ad esempio `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Ad esempio: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  Se la configurazione di rete è riuscita, sarà possibile accedere e verrà visualizzato il prompt `SQL` .  
+4.  Se la configurazione di rete è riuscita è possibile accedere e viene visualizzato il prompt `SQL`.  
   
 5.  Se si verificano problemi durante la connessione al database Oracle, vedere la sezione relativa ai problemi di connessione del server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] all'istanza di database Oracle in [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

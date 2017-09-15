@@ -1,5 +1,5 @@
 ---
-title: "Creare un'entità (Master Data Services) | Documenti Microsoft"
+title: "Creare un'entità (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2766ad2cb250200e7fbb3f19f96eab7b5f748a9a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 9b081ac7c85401a43533863f2495dad9032c7ba0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona per l'aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "icona per l'aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di stato di errore](../master-data-services/media/mds-statusicon-error.png "icona di stato di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "icona per lo stato OK")|  
+|Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")|  
 |Nome|Nome dell'entità.|  
 |Descrizione|Descrizione dell'entità.|  
 |Tabella di gestione temporanea|Nome di prefisso della tabella usata per l'archiviazione dei dati.|  
@@ -95,8 +95,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Gerarchie esplicite &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Modificare un'entità &#40; Master Data Services &#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Modificare un'entità &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
  [Eliminare un'entità &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

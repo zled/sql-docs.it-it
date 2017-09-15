@@ -1,5 +1,5 @@
 ---
-title: Creare un modello (Master Data Services) | Documenti Microsoft
+title: Creare un modello (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1a32cc8f778496f5609d44c17b69623b75b8c240
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-master-data-services"></a>Creare un modello (Master Data Services)
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
   
  Per ogni modello creato, viene aggiunta una riga con otto colonne alla griglia. Le otto colonne sono:  
   
--   **Stato**: stato del modello. Quando si fa clic il **Salva modello** pulsante, il ![aggiornamento](../master-data-services/media/mds-model-status-updating.png "aggiornamento") viene visualizzata l'immagine, che indica che il modello sta aggiornando. Se si verificano errori durante la creazione o modifica di un modello, il ![errore](../master-data-services/media/mds-model-status-error.png "errore") viene visualizzata l'immagine. In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
+-   **Stato**: stato del modello. Quando si fa clic sul pulsante **Salva modello**, viene visualizzata l'immagine ![Aggiornamento](../master-data-services/media/mds-model-status-updating.png "Aggiornamento") che indica che il modello è in fase di aggiornamento. Se si verificano errori durante la creazione o la modifica di un modello, viene visualizzata l'immagine ![Errore](../master-data-services/media/mds-model-status-error.png "Errore"). In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
 -   **Nome**: nome del modello.  
   
@@ -79,9 +79,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Entità &#40; Master Data Services &#41;](../master-data-services/entities-master-data-services.md)   
- [Eliminare un modello di &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Modifica modello &#40; Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [Eliminare un modello &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Modifica modello &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   
