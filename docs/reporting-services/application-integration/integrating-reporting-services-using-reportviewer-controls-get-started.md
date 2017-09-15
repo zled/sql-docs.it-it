@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>L'integrazione di Reporting Services utilizzando i controlli ReportViewer - introduzione
 
-Informazioni su come gli sviluppatori possono incorporare report impaginati in siti web ASP.Net e le applicazioni di Windows forms, tramite il controllo ReportViewer di Reporting Services 2016. È possibile aggiungere il controllo a un progetto nuovo o aggiornare un progetto esistente.
+Informazioni su come gli sviluppatori possono incorporare report impaginati in siti web ASP.NET e App di Windows Form, tramite il controllo ReportViewer di Reporting Services 2016. È possibile aggiungere il controllo a un progetto nuovo o aggiornare un progetto esistente.
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Aggiunta del controllo ReportViewer a un nuovo progetto web
 
@@ -242,7 +242,7 @@ Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet. Per 
 
     ![ssRS-remove-vecchio-rvcontrol-della casella degli strumenti](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Fare clic in un punto qualsiasi nella casella degli strumenti e quindi selezionare **Scegli elementi...** .
+3. Fare clic in un punto qualsiasi nella casella degli strumenti e quindi selezionare **Scegli elementi... **.
 
     ![ssRS--scegliere-elemento](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -281,6 +281,6 @@ Informare il team sui problemi riscontrati con il controllo sul [forum di Report
 ## <a name="see-also"></a>Vedere anche
 
 [Raccolta dei dati nel controllo ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
 
 
