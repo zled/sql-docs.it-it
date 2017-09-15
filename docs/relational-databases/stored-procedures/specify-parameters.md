@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.translationtype: HT
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
@@ -89,7 +89,7 @@ GO
   
  Se per il parametro non può essere specificato in modo appropriato alcun valore come predefinito, specificare come tale NULL. È consigliabile la restituzione di un messaggio personalizzato da parte della procedura se quest'ultima viene eseguita senza un valore per il parametro.  
   
- Nell'esempio seguente viene creata la procedura `usp_GetSalesYTD` con un parametro di input, `@SalesPerson`. NULL viene assegnato come valore predefinito per il parametro e utilizzato nelle istruzioni di gestione degli errori per restituire un messaggio di errore personalizzato nei casi in cui la procedura venga eseguita senza un valore per il parametro `@SalesPerson` .  
+ Nell'esempio seguente viene creata la procedura `uspGetSalesYTD` con un parametro di input, `@SalesPerson`. NULL viene assegnato come valore predefinito per il parametro e utilizzato nelle istruzioni di gestione degli errori per restituire un messaggio di errore personalizzato nei casi in cui la procedura venga eseguita senza un valore per il parametro `@SalesPerson` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,10 +123,10 @@ GO
   
 ```  
 -- Run the procedure without specifying an input value.  
-EXEC Sales.usp_GetSalesYTD;  
+EXEC Sales.uspGetSalesYTD;  
 GO  
 -- Run the procedure with an input value.  
-EXEC Sales.usp_GetSalesYTD N'Blythe';  
+EXEC Sales.uspGetSalesYTD N'Blythe';  
 GO  
 ```  
   
@@ -210,3 +210,4 @@ These items can be purchased for less than $700.00.
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+
