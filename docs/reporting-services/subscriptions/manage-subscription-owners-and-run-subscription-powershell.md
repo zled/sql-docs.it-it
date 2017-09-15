@@ -66,11 +66,11 @@ ms.lasthandoff: 08/09/2017
   
 -   List Subscriptions: [Enunmerazione ReportOperation](http://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sul report E (l'utente è proprietario della sottoscrizione) O ReadAnySubscription.  
   
--   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
+-   Change Subscriptions: l'utente deve essere membro del gruppo BUILTIN\Administrators  
   
--   List Children: ReadProperties on Item  
+-   Elenco figli: ReadProperties su Item  
   
--   Fire Event: GenerateEvents (System)  
+-   Evento di attivazione: GenerateEvents (System)  
   
  **Modalità SharePoint:**  
   
