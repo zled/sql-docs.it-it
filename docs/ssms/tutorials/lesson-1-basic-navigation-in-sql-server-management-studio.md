@@ -1,51 +1,51 @@
 ---
 title: 'Lezione 1: Navigazione di base in SQL Server Management Studio | Microsoft Docs'
 ms.custom: 
-ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.date: 08/30/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- database-engine
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 8ef902752c9ea7ead6129b0009f6762bc0457047
+ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
+ms.openlocfilehash: 28a91a6c2e41a7c360c484d8c34e5ee52761e865
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lezione 1: Navigazione di base in SQL Server Management Studio
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è uno strumento potente e flessibile. Tuttavia, gli utenti che non hanno familiarità con Microsoft Visual Studio talvolta incontrano difficoltà nell'individuare il modo più rapido per accedere alle caratteristiche desiderate. Questa lezione illustra in che modo le finestre interagiscono per offrire una superficie di progettazione di semplice utilizzo. Al termine di questa lezione si sarà in grado di eliminare finestre indesiderate, visualizzare finestre contenenti le informazioni necessarie e configurare la superficie predefinita per supportare le operazioni che vengono eseguite più spesso.  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) è uno strumento potente e flessibile. Questa lezione illustra in che modo le finestre interagiscono per offrire una superficie di progettazione di semplice utilizzo. Al termine di questa lezione si sarà in grado di eliminare finestre indesiderate, visualizzare finestre contenenti le informazioni necessarie e configurare la superficie predefinita per supportare le operazioni che vengono eseguite più spesso.  
   
 In questa lezione sono inclusi gli argomenti seguenti:  
   
--   [Avvio di SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms166996.aspx)  
+-   [Avvio di SQL Server Management Studio (SSMS)](lesson-1-1-start-sql-server-management-studio.md)  
   
--   [Connessione con Server registrati e Esplora oggetti](https://msdn.microsoft.com/library/ms170681.aspx)  
+-   [Connessione con Server registrati e Esplora oggetti](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
   
--   [Modifica del layout ambiente](https://msdn.microsoft.com/library/ms170069.aspx)  
+-   [Modifica del layout ambiente](lesson-1-3-change-the-environment-layout.md)  
   
--   [Visualizzare la finestra Query](https://msdn.microsoft.com/library/ms169823.aspx)  
+-   [Visualizzare la finestra Query](lesson-1-4-display-the-query-window.md)  
   
--   [Visualizzare la pagina Dettagli Esplora oggetti](https://msdn.microsoft.com/library/ms170076.aspx)  
+-   [Visualizzare la pagina Dettagli Esplora oggetti](lesson-1-5-show-the-object-explorer-details-page.md)  
   
--   [Selezionare lo schema dei tasti di scelta rapida](https://msdn.microsoft.com/library/ms167416.aspx)  
+-   [Selezionare lo schema dei tasti di scelta rapida](lesson-1-6-select-the-keyboard-shortcut-scheme.md)  
   
--   [Impostare le opzioni di avvio](https://msdn.microsoft.com/library/ms166556.aspx) 
+-   [Impostare le opzioni di avvio](lesson-1-7-set-the-startup-options.md) 
   
--   [Ripristinare la configurazione predefinita di SQL Server Management Studio](https://msdn.microsoft.com/library/ms166550.aspx)  
+-   [Ripristinare la configurazione predefinita di SQL Server Management Studio](lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  
   
--   [Riepilogo: Navigazione di base](https://msdn.microsoft.com/library/ms170043.aspx)  
+-   [Riepilogo: Navigazione di base](lesson-1-9-summary-basic-navigation.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Avviare SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-1-start-sql-server-management-studio.md)  
+[Avviare SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
   
   
   

@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Articoli nuovi e aggiornati di recente: documentazione di SQL Server
@@ -69,9 +69,9 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
-Gli estratti visualizzati qui sono separati dal relativo contesto semantico. Un estratto talvolta può anche essere separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti devono essere usati solo come indicazioni generali. Gli estratti consentono solo di sapere se per un argomento che interessa vale la pena fare clic e visitare l'articolo effettivo.
+Gli estratti visualizzati qui sono separati dal relativo contesto semantico. Inoltre è possibile che un estratto sia talvolta separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti devono essere usati solo come indicazioni generali. Gli estratti consentono solo di comprendere se sia utile o meno consultare l'articolo completo.
 
-Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità assoluta ciò che si legge negli estratti. Consultare gli articoli completi.
+Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità assoluta ciò che si legge negli estratti. Visitare piuttosto gli articoli veri e propri.
 
 
 
@@ -131,7 +131,7 @@ Per queste e altre ragioni, non copiare codice da questi estratti e non prendere
 
 ### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [Edizioni e funzionalità supportate di SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 
-*Articolo aggiornato: 16/06/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Precedente](#TitleNum_1))
+*Aggiornamento: 16/06/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Precedente](#TitleNum_1))
 
 <!-- Source markdown line 113.  ms.author= "mikeray".  -->
 
@@ -169,13 +169,13 @@ L'edizione Developer continua a supportare un solo client per [SQL Server Distri
 
 ## <a name="similar-articles"></a>Articoli simili
 
-In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno dello stesso repository GitHub: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno dello stesso repository GitHub: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/).
 
 <!--  20170717-1101  -->
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (4+4): documentazione di **Advanced Analytics per SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (4+4): **Advanced Analytics per SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Nuovo + aggiornato (2+0): documentazione di **Analysis Services per SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Nuovo + aggiornato (1+2): documentazione di **Connetti a SQL Server**](../connect/new-updated-connect.md)
 - [Nuovo + aggiornato (6+0): documentazione di **Motore di database per SQL**](../database-engine/new-updated-database-engine.md)
@@ -186,7 +186,7 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 - [Nuovo + aggiornato (2+2): documentazione di **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Nuovo + aggiornato (0+1): documentazione di **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
 - [Nuovo + aggiornato (1+0): documentazione di **Transact-SQL**](../t-sql/new-updated-t-sql.md)
-- [Nuovo + aggiornato (1+0): documentazione degli **strumenti per SQL**](../tools/new-updated-tools.md)
+- [Nuovo + aggiornato (1+0): **Strumenti per SQL** Docs](../tools/new-updated-tools.md)
 
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
@@ -194,12 +194,12 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
-- [Nuovo + aggiornato (0+0): documentazione di **Integration Services per SQL**](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (0+0): **Integration Services per SQL** Docs](../integration-services/new-updated-integration-services.md)
 - [Nuovo + aggiornato (0+0): **Multidimensional Expressions (MDX) for SQL(Espressioni MDX per SQL)** Docs](../mdx/new-updated-mdx.md)
 - [Nuovo + aggiornato (0+0): **PowerShell for SQL (PowerShell per SQL)** Docs](../powershell/new-updated-powershell.md)
-- [Nuovo + aggiornato (0+0): documentazione di **Reporting Services per SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (0+0): **Reporting Services per SQL** Docs](../reporting-services/new-updated-reporting-services.md)
 - [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
-- [Nuovo + aggiornato (0+0): documentazione di **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (0+0): **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
 - [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
 - [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
 
