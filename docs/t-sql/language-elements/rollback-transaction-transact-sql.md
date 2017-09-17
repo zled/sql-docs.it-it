@@ -1,7 +1,7 @@
 ---
 title: ROLLBACK TRANSACTION (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -55,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argomenti  
  *transaction_name*  
- Nome assegnato alla transazione su BEGIN TRANSACTION. *transaction_name* deve essere conforme alle regole per gli identificatori, ma vengono utilizzati solo i primi 32 caratteri del nome della transazione. Quando si nidificano transazioni, *transaction_name* deve essere il nome dell'istruzione BEGIN TRANSACTION più esterna. *transaction_name* è sempre distinzione maiuscole/minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene fatta distinzione tra maiuscole e minuscole.  
+ Nome assegnato alla transazione su BEGIN TRANSACTION. *transaction_name* deve essere conforme alle regole per gli identificatori, ma vengono utilizzati solo i primi 32 caratteri del nome della transazione. Quando si nidificano transazioni, *transaction_name* deve essere il nome dell'istruzione BEGIN TRANSACTION più esterna. *transaction_name* è sempre distinzione maiuscole/minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è tra maiuscole e minuscole.  
   
  **@***tran_name_variable*  
  Nome di una variabile definita dall'utente contenente un nome di transazione valido. La variabile deve essere dichiarata con un **char**, **varchar**, **nchar**, o **nvarchar** tipo di dati.  
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION non può fare riferimento un *savepoint_name* nelle transazioni distribuite avviate in modo esplicito con BEGIN DISTRIBUTED TRANSACTION o alzate di livello da una transazione locale.  
   
- Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION, tranne quando l'istruzione COMMIT TRANSACTION viene associata a una transazione nidificata contenuta all'interno della transazione sottoposta a rollback. In tal caso, verrà eseguito il rollback anche della transazione nidificata, sebbene sia stata eseguita un'istruzione COMMIT TRANSACTION.  
+ Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION, tranne quando l'istruzione COMMIT TRANSACTION viene associata a una transazione nidificata contenuta all'interno della transazione sottoposta a rollback. In questo caso, verrà eseguito il transazione nidificata è rollback, anche se è stata eseguita un'istruzione COMMIT TRANSACTION per tale.  
   
  In una transazione sono consentiti nomi di punti di salvataggio duplicati. In tal caso il rollback viene tuttavia eseguito solo fino all'istruzione SAVE TRANSACTION più recente che utilizza il punto di salvataggio.  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   Le istruzioni del batch successive all'istruzione che ha attivato il trigger non vengono eseguite.  
   
- @@TRANCOUNT viene incrementato di uno quando si immette un trigger, anche quando è in modalità autocommit. Il sistema considera il trigger come transazione nidificata implicita.  
+@@TRANCOUNT viene incrementato di uno quando si immette un trigger, anche quando è in modalità autocommit. Il sistema considera il trigger come transazione nidificata implicita.  
   
- Le istruzioni ROLLBACK TRANSACTION nelle stored procedure non hanno alcun effetto sulle istruzioni successive del batch che hanno richiamato la procedura. Tali istruzioni pertanto vengono eseguite. Le istruzioni ROLLBACK TRANSACTION nei trigger comportano l'interruzione del batch contenente l'istruzione che ha attivato il trigger. Le successive istruzioni del batch pertanto non vengono eseguite.  
+Le istruzioni ROLLBACK TRANSACTION nelle stored procedure non hanno alcun effetto sulle istruzioni successive del batch che hanno richiamato la procedura. Tali istruzioni pertanto vengono eseguite. Le istruzioni ROLLBACK TRANSACTION nei trigger comportano l'interruzione del batch contenente l'istruzione che ha attivato il trigger. Le successive istruzioni del batch pertanto non vengono eseguite.  
   
- L'effetto di ROLLBACK sui cursori viene definito dalle tre regole seguenti:  
+L'effetto di ROLLBACK sui cursori viene definito dalle tre regole seguenti:  
   
 1.  Se CURSOR_CLOSE_ON_COMMIT è impostato su ON, i cursori aperti vengono chiusi, ma non deallocati.  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato l'effetto dell'esecuzione del rollback di una transazione denominata.  
+ Nell'esempio seguente viene illustrato l'effetto dell'esecuzione del rollback di una transazione denominata. Dopo aver creato una tabella, le istruzioni seguenti avviare una transazione denominata, inserire due righe e quindi il rollback della transazione denominata nella variabile @TransactionName. Un'altra istruzione all'esterno della transazione denominata vengono inserite due righe. La query restituisce i risultati delle istruzioni precedente.   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>Vedere anche  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
