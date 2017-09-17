@@ -1,45 +1,50 @@
 ---
-title: "Matrice di classificazione (Analysis Services - Data mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelli di data mining [Analysis Services], convalida"
-  - "convalida di modelli di data mining"
-  - "accuratezza di modello di data mining - visualizzazione"
-  - "visualizzazione accuratezza di modello di data mining"
-  - "matrice di confusione [data mining]"
-  - "matrice di classificazione [Analysis Services]"
-  - "test di accuratezza [data mining]"
+title: Matrice di classificazione (Analysis Services - Data Mining) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], validating
+- validating data mining models
+- viewing mining accuracy
+- displaying mining accuracy
+- confusion matrix [data mining]
+- classification matrix [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccf1a17862dd132865111d6ab7c6c5175bf86c0d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Matrice di classificazione (Analysis Services - Data mining)
+# <a name="classification-matrix-analysis-services---data-mining"></a>Matrice di classificazione (Analysis Services - Data mining)
   Una *matrice di classificazione* consente di ordinare tutti i case del modello in categorie, determinando se il valore stimato corrisponde a quello effettivo. Vengono calcolati tutti i case di ogni categoria, quindi vengono visualizzati i totali nella matrice. La matrice di classificazione è uno strumento standard per la valutazione di modelli statistici, talvolta definita *matrice di confusione*.  
   
- Nel grafico creato quando si sceglie l'opzione **Matrice di classificazione** è possibile confrontare i valori effettivi con quelli stimati per ogni stato stimato specificato. Le righe nella matrice rappresentano i valori stimati per il modello, mentre le colonne rappresentano i valori effettivi. Le categorie usate nell'analisi sono *falso positivo*, *vero positivo*, *falso negativo* e *vero negativo*.  
+ Nel grafico creato quando si sceglie l'opzione **Matrice di classificazione** è possibile confrontare i valori effettivi con quelli stimati per ogni stato stimato specificato. Le righe nella matrice rappresentano i valori stimati per il modello, mentre le colonne rappresentano i valori effettivi. Le categorie usate nell'analisi sono *falso positivo*, *vero positivo*, *falso negativo*e *vero negativo*.  
   
  Una matrice di classificazione è uno strumento importante per valutare i risultati di una stima in quanto facilita la comprensione e la spiegazione degli effetti delle stime errate. Visualizzando la quantità e le percentuali in ogni cella di questa matrice, è possibile vedere con quale frequenza vengano eseguite stime accurate da parte del modello.  
   
  In questa sezione viene illustrato come creare una matrice di classificazione e come interpretarne i risultati.  
   
-## Informazioni sulla matrice di classificazione  
+## <a name="understanding-the-classification-matrix"></a>Informazioni sulla matrice di classificazione  
  Si consideri il modello creato durante l'Esercitazione di base sul data mining. Il modello [TM_DecisionTree] consente di semplificare la creazione di una campagna di mailing diretto e può essere utilizzato per eseguire una stima dei clienti che con maggiore probabilità acquisteranno una bicicletta. Per testare l'utilità prevista di questo modello, è necessario utilizzare un set di dati per il quale i valori dell'attributo, [Bike Buyer], sono già noti. A tale scopo, viene in genere utilizzato il set di dati di testing riservato durante la creazione della struttura di data mining utilizzata per il training del modello.  
   
  È possibile ottenere solo due risultati, ovvero sì (è probabile che il cliente acquisti una bicicletta) e no (è probabile che il cliente non acquisti una bicicletta). Pertanto, la matrice di classificazione risultante è relativamente semplice.  
   
-## Interpretazione dei risultati  
+## <a name="interpreting-the-results"></a>Interpretazione dei risultati  
  Nella tabella seguente viene mostrata la matrice di classificazione per il modello TM_DecisionTree. Per questo attributo stimabile, 0 indica No mentre 1 indica Sì.  
   
 |Stimati|0 (valore effettivo)|1 (valore effettivo)|  
@@ -57,10 +62,10 @@ caps.handback.revision: 43
   
  Sommando i valori nelle celle adiacenti in diagonale, è possibile determinare l'accuratezza complessiva del modello. Una diagonale indica il numero complessivo di stime accurate, mentre l'altra indica il numero totale di stime errate.  
   
-### Utilizzo di più valori stimabili  
+### <a name="using-multiple-predictable-values"></a>Utilizzo di più valori stimabili  
  Il case [Bike Buyer] è particolarmente semplice da interpretare perché vi sono solo due valori possibili. Quando l'attributo stimabile ha più valori possibili, la matrice di classificazione aggiunge una nuova colonna per ogni valore effettivo possibile, quindi conteggia il numero di corrispondenze per ciascun valore stimato. Nella tabella seguente vengono illustrati i risultati di un modello diverso in cui sono possibili tre valori: 0, 1 e 2.  
   
-|Valore stimato|0 (valore effettivo)|1 (valore effettivo)|2 (valore effettivo)|  
+|Stimati|0 (valore effettivo)|1 (valore effettivo)|2 (valore effettivo)|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
 |1|2|123|17|  
@@ -68,22 +73,22 @@ caps.handback.revision: 43
   
  Benché l'aggiunta di più colonne renda più complesso l'aspetto del report, il dettaglio aggiuntivo può rivelarsi molto utile quando si desidera valutare il costo cumulativo di una stima errata. Per creare somme sulle diagonali o confrontare i risultati per diverse combinazioni di righe, è possibile fare clic sul pulsante **Copia** disponibile nella scheda **Matrice di classificazione** e incollare il report in Excel. In alternativa, è possibile usare un client, ad esempio il client di data mining per Excel, che supporta [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, per creare direttamente in Excel un report di classificazione contenente sia conteggi sia percentuali. Per altre informazioni, vedere [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733).  
   
-## Restrizioni sulla matrice di classificazione  
+## <a name="restrictions-on-the-classification-matrix"></a>Restrizioni sulla matrice di classificazione  
  Una matrice di classificazione può essere utilizzata solo con attributi stimabili discreti.  
   
- Anche se è possibile aggiungere più modelli quando si selezionano modelli nella scheda **Selezione input** della finestra di progettazione **Grafico accuratezza modello di data mining**, nella scheda **Matrice di classificazione** verrà visualizzata una matrice separata per ogni modello.  
+ Anche se è possibile aggiungere più modelli quando si selezionano modelli nella scheda **Selezione input** della finestra di progettazione **Grafico accuratezza modello di data mining** , nella scheda **Matrice di classificazione** verrà visualizzata una matrice separata per ogni modello.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  Negli argomenti seguenti sono contenute ulteriori informazioni su come sia possibile compilare e utilizzare le matrici di classificazione ed altri grafici.  
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](../Topic/Basic%20Data%20Mining%20Tutorial.md)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)|  
+|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
 |Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

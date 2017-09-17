@@ -1,0 +1,136 @@
+---
+title: REVOKE Schema autorizzazioni (Transact-SQL) | Documenti Microsoft
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- REVOKE statement, schema
+- schemas [SQL Server], permissions
+- permissions [SQL Server], schemas
+ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
+caps.latest.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 5519096183afdc88ed800dfb7aa97539499abbe5
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="revoke-schema-permissions-transact-sql"></a>REVOKE (autorizzazioni per schemi) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Revoca autorizzazioni per uno schema.  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
+    ON SCHEMA :: schema_name   
+    { TO | FROM } database_principal [ ,...n ]  
+    [ CASCADE ]  
+    [ AS revoking_principal ]  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ *autorizzazione*  
+ Specifica un'autorizzazione che può essere revocata per uno schema. Le autorizzazioni che possono essere revocate per uno schema sono elencate nella sezione "Osservazioni" più avanti in questo argomento.  
+  
+ GRANT OPTION FOR  
+ Indica che il diritto a concedere l'autorizzazione specificata ad altre entità verrà rimosso. L'autorizzazione stessa non verrà revocata.  
+  
+> [!IMPORTANT]  
+>  Se l'autorizzazione specificata è stata concessa all'entità senza l'opzione GRANT, l'autorizzazione stessa verrà revocata.  
+  
+ ON SCHEMA **::** schema*Name*  
+ Specifica lo schema a cui vengono revocate le autorizzazioni. Il qualificatore di ambito **::** è obbligatorio.  
+  
+ *database_principal*  
+ Specifica l'entità da cui viene revocata l'autorizzazione. I tipi validi sono:  
+  
+-   utente del database  
+  
+-   ruolo del database  
+  
+-   ruolo dell'applicazione  
+  
+-   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un certificato  
+  
+-   utente del database mappato a una chiave asimmetrica  
+  
+-   utente del database non mappato ad alcuna entità server.  
+  
+ CASCADE  
+ Indica che l'autorizzazione che viene revocata viene revocata anche ad altre entità a cui è stata concessa da questa entità.  
+  
+> [!CAUTION]  
+>  Indica che l'autorizzazione che viene revocata anche ad altre entità a cui è stata concessa o negata da questa entità.  
+  
+ AS *revoking_principal*  
+ Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione. I tipi validi sono:  
+  
+-   utente del database  
+  
+-   ruolo del database  
+  
+-   ruolo dell'applicazione  
+  
+-   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+  
+-   utente del database sul quale viene eseguito il mapping a un certificato  
+  
+-   utente del database mappato a una chiave asimmetrica  
+  
+-   utente del database non mappato ad alcuna entità server.  
+  
+## <a name="remarks"></a>Osservazioni  
+ Uno schema è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per uno schema, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+  
+|Autorizzazione dello schema|Autorizzazione dello schema in cui è inclusa|Autorizzazione del database in cui è inclusa|  
+|-----------------------|----------------------------------|------------------------------------|  
+|ALTER|CONTROL|ALTER ANY SCHEMA|  
+|CONTROL|CONTROL|CONTROL|  
+|CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
+|DELETE|CONTROL|DELETE|  
+|Eseguire|CONTROL|Eseguire|  
+|INSERT|CONTROL|INSERT|  
+|REFERENCES|CONTROL|REFERENCES|  
+|SELECT|CONTROL|SELECT|  
+|TAKE OWNERSHIP|CONTROL|CONTROL|  
+|UPDATE|CONTROL|UPDATE|  
+|VIEW CHANGE TRACKING|CONTROL|CONTROL|  
+|VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
+  
+## <a name="permissions"></a>Permissions  
+ È richiesta l'autorizzazione CONTROL per lo schema.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [CREAZIONE dello SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+  
+  
+

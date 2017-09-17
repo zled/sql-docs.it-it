@@ -1,27 +1,32 @@
 ---
-title: "Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurare la raccolta di dati di utilizzo per (Power Pivot per SharePoint | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
+ms.contentlocale: it-it
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
+# <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Per informazioni sui dati di utilizzo nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], vedere [Dati di utilizzo e dashboard di gestione PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+ Per informazioni sui dati di utilizzo nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vedere [Dati di utilizzo e dashboard di gestione PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
  **Contenuto dell'argomento:**  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 9
   
 6.  Scegliere **OK** per salvare le modifiche.  
   
-7.  Facoltativamente, è possibile specificare se registrare tutti i messaggi o solo gli errori. Per altre informazioni su come limitare i messaggi di evento, vedere [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;Power Pivot per SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+7.  Facoltativamente, è possibile specificare se registrare tutti i messaggi o solo gli errori. Per altre informazioni su come limitare i messaggi di evento, vedere [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Impostare il percorso del file di log  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono inizialmente archiviati nei file di log dei dati di utilizzo nel server locale e, successivamente, spostati a intervalli regolari nel database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il percorso del file di log viene impostato in Amministrazione centrale. Il percorso predefinito è:  
@@ -89,7 +94,7 @@ caps.handback.revision: 9
   
 -   Tramite il processo timer "Importazione dati di utilizzo di Microsoft SharePoint Foundation" i dati di utilizzo di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono spostati nel database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
--   Tramite "Processo timer di elaborazione dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]" i dati vengono spostati in una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] che rappresenta l'origine dati per report amministrativi predefiniti.  
+-   Tramite "Processo timer di elaborazione dashboard di gestione[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] " i dati vengono spostati in una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] che rappresenta l'origine dati per report amministrativi predefiniti.  
   
  Se è necessario aggiornare i report amministrativi visualizzati più frequentemente nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , seguire questa procedura.  
   
@@ -137,13 +142,13 @@ caps.handback.revision: 9
   
 1.  [Aprire la pagina dell'applicazione del servizio PowerPivot](#openconfig).  
   
-2.  Nella sezione **Raccolta dati di utilizzo**, in **Limite massimo risposta semplice**, immettere un valore (in millisecondi) per impostare il limite massimo per il completamento di una risposta semplice. Le richieste che rientrano in questa categoria includono in genere ping del server, inizializzazioni di sessioni e query di metadati. L'impostazione predefinita è 500 millisecondi (o mezzo secondo).  
+2.  Nella sezione **Raccolta dati di utilizzo** , in **Limite massimo risposta semplice** , immettere un valore (in millisecondi) per impostare il limite massimo per il completamento di una risposta semplice. Le richieste che rientrano in questa categoria includono in genere ping del server, inizializzazioni di sessioni e query di metadati. L'impostazione predefinita è 500 millisecondi (o mezzo secondo).  
   
 3.  In Limite massimo risposta rapida immettere un valore (in millisecondi) per impostare il limite massimo per il completamento di una risposta rapida. Le richieste che rientrano in questa categoria includono le query di set di dati molto piccoli o di server dei metadati di set di dati di grandi dimensioni. L'impostazione predefinita è 1000 millisecondi (o un secondo).  
   
-4.  In **Limite massimo risposta prevista** immettere un valore (in millisecondi) per impostare il limite massimo per il completamento di una risposta in un periodo di tempo medio o previsto. Le richieste che rientrano in questa categoria includono il caricamento di dati in un visualizzatore. L'impostazione predefinita è 3000 millisecondi (o 3 secondi).  
+4.  In **Limite massimo risposta prevista**immettere un valore (in millisecondi) per impostare il limite massimo per il completamento di una risposta in un periodo di tempo medio o previsto. Le richieste che rientrano in questa categoria includono il caricamento di dati in un visualizzatore. L'impostazione predefinita è 3000 millisecondi (o 3 secondi).  
   
-5.  In **Limite massimo risposta lunga** immettere un valore (in millisecondi) per impostare il limite massimo per il completamento di una risposta con esecuzione prolungata. Le richieste che rientrano in questa categoria richiedono un'esecuzione più lunga, ma in un intervallo di tempo comunque accettabile. L'impostazione predefinita è 10000 millisecondi (o 10 secondi).  
+5.  In **Limite massimo risposta lunga**immettere un valore (in millisecondi) per impostare il limite massimo per il completamento di una risposta con esecuzione prolungata. Le richieste che rientrano in questa categoria richiedono un'esecuzione più lunga, ma in un intervallo di tempo comunque accettabile. L'impostazione predefinita è 10000 millisecondi (o 10 secondi).  
   
      Le richieste che superano questo limite rientrano nella categoria *Superato*. Non è prevista alcuna soglia configurabile per *Superato*. Deriva dal limite superiore specificato in Limite massimo risposta lunga. Le richieste che rientrano nella categoria Superato hanno un'esecuzione più lunga di quanto non sia consentito dallo SLA definito.  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 9
   
 1.  [Aprire la pagina dell'applicazione del servizio PowerPivot](#openconfig).  
   
-2.  Nella sezione **Raccolta dati di utilizzo**, in **Intervallo di report query**, immettere il numero di secondi dopo i quali le statistiche sulle query di tutte le categorie (semplice, rapida, prevista, esecuzione prolungata e superata) verranno segnalate dal server come singolo evento nel sistema di raccolta dati di utilizzo.  
+2.  Nella sezione **Raccolta dati di utilizzo** , in **Intervallo di report query**, immettere il numero di secondi dopo i quali le statistiche sulle query di tutte le categorie (semplice, rapida, prevista, esecuzione prolungata e superata) verranno segnalate dal server come singolo evento nel sistema di raccolta dati di utilizzo.  
   
     -   L'intervallo è compreso tra 1 e qualsiasi numero intero positivo.  
   
@@ -182,15 +187,15 @@ caps.handback.revision: 9
   
 |Impostazione|Valore predefinito|Tipo|Intervallo valido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato>|Boolean|Questi valori sono abilitati o disabilitati.|  
-|**Intervallo di report query**|300 (in secondi)|Valore intero|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
-|**Cronologia dei dati di utilizzo**|365 (in giorni)|Valore intero|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
+|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato >|Boolean|Questi valori sono abilitati o disabilitati.|  
+|**Query Reporting interval**|300 (in secondi)|Valore intero|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
+|**Usage data history**|365 (in giorni)|Valore intero|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
 |Limite massimo risposta semplice|500 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
 |Limite massimo risposta rapida|1000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  
 |Limite massimo risposta prevista|3000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
 |Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Documentazione di riferimento per le impostazioni di configurazione &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Raccolta dati di utilizzo di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
