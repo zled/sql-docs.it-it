@@ -1,0 +1,7 @@
+# [Accesso al contesto di query nelle stored procedure](accessing-query-context-in-stored-procedures.md)
+# [Esecuzione di chiamate a stored procedure](calling-stored-procedures.md)
+# [Creazione di stored procedure](creating-stored-procedures.md)
+# [Debug di stored procedure](debugging-stored-procedures.md)
+# [Definizione delle stored procedure](defining-stored-procedures.md)
+# [Progettazione di stored procedure](designing-stored-procedures.md)
+# [Impostazione della sicurezza per stored procedure](setting-security-for-stored-procedures.md)

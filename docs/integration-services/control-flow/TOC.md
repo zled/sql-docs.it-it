@@ -16,6 +16,7 @@
 ## [Attività di creazione cluster di Azure HDInsight](azure-hdinsight-create-cluster-task.md)  
 ## [Attività di eliminazione cluster di Azure HDInsight](azure-hdinsight-delete-cluster-task.md)  
 ## [Attività di caricamento di Azure SQL DW](azure-sql-dw-upload-task.md)  
+## [Attività File system di Azure Data Lake Store](azure-data-lake-store-file-system-task.md) 
 ## [Attività Backup database](back-up-database-task.md)  
 ## [Attività Inserimento bulk](bulk-insert-task.md)  
 ## [Attività di controllo CDC](cdc-control-task.md)  
