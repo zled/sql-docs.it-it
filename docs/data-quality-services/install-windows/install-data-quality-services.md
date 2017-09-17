@@ -1,5 +1,5 @@
 ---
-title: Installare Data Quality Services | Documenti Microsoft
+title: Installare Data Quality Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c5b6c77d5a7b08a7fd497278d4f858f34be776e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="install-data-quality-services"></a>Installare Data Quality Services
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installato durante l'installazione di [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , se non è già presente)<br /><br /> Internet Explorer 6.0 SP1 o versione successiva|  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]e [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] può risiedere sullo stesso computer, o in computer diversi. Entrambi i componenti inoltre possono essere installati indipendentemente l'uno dall'altro e in qualsiasi sequenza. Per utilizzare [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], tuttavia, sarà necessario aver installato [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] a cui eseguire la connessione.  
+>  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] e [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] possono essere installati nello stesso computer o in computer diversi. Entrambi i componenti inoltre possono essere installati indipendentemente l'uno dall'altro e in qualsiasi sequenza. Per utilizzare [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], tuttavia, sarà necessario aver installato [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] a cui eseguire la connessione.  
 >   
 >  È possibile connettersi alla versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] utilizzando la versione corrente o una precedente di [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] e trasformazione DQS Cleansing. Per informazioni sull'aggiornamento della versione esistente di DQS a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Aggiornare Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md).  
 >   
@@ -118,12 +118,12 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>Vedere anche  
  [Video su come installare e configurare DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
  [Aggiornare gli assembly SQLCLR dopo l'aggiornamento di .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Esportare e importare una Knowledge base di DQS utilizzando DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [Esportare e importare le Knowledge Base di DQS con DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Aggiornare Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
- [Rimuovere oggetti Server Data Quality](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Installare funzionalità di Business Intelligence SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+ [Rimuovere oggetti server Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [Installare le funzionalità di business intelligence di SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Disinstallare SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Risolvere i problemi di installazione e configurazione in DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Troubleshoot Installation and Configuration Issues in DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx) (Risolvere i problemi di installazione e configurazione in DQS)  
   
   

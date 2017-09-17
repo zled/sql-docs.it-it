@@ -1,5 +1,5 @@
 ---
-title: "Novità &#39; s New in Master Data Services (MDS) | Documenti Microsoft"
+title: "Novità in Master Data Services (MDS) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/08/2016
@@ -12,17 +12,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 32a43f651f20ca257837de0440505b9ac4179708
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="what39s-new-in-master-data-services-mds"></a>Novità &#39; s New in Master Data Services (MDS)
+# <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Questo argomento riepiloga le modifiche e gli aggiornamenti disponibili nella versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
  **Download**  
   
--   Scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]dalla pagina  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
 -   Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   

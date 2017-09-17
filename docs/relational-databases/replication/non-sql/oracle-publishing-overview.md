@@ -1,7 +1,7 @@
 ---
 title: Panoramica della pubblicazione Oracle | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,20 +20,31 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a7e0593342073272cfe3aae01ea4c28e5e2304
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5574123253385152cc04e879439b8ea8b26b3b27
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="oracle-publishing-overview"></a>Panoramica della pubblicazione Oracle
-  Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]è possibile includere server di pubblicazione Oracle nella topologia di replica, a partire da Oracle versione 9i. I server di pubblicazione possono essere distribuiti su qualsiasi hardware e sistema operativo supportato da Oracle. La funzionalità è compilata sulla base del consolidato meccanismo della replica snapshot e della replica transazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è in grado di offrire prestazioni e facilità d'uso analoghe.  
+# <a name="oracle-publishing-overview"></a>Panoramica della pubblicazione Oracle  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]è possibile includere server di pubblicazione Oracle nella topologia di replica, a partire da Oracle versione 9i. I server di pubblicazione possono essere distribuiti su qualsiasi hardware e sistema operativo supportato da Oracle. La funzionalità è compilata sulla base del consolidato meccanismo della replica snapshot e della replica transazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è in grado di offrire prestazioni e facilità d'uso analoghe.  
   
- La pubblicazione Oracle è deprecata. La replica eterogenea a Sottoscrittori non SQL Server è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli scenari eterogenei seguenti per la replica transazionale e snapshot:  
   
-> [!CAUTION]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   Pubblicazione di dati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   Pubblicazione di dati da e verso Oracle con le limitazioni seguenti:  
+  | |2016 o versioni precedenti |2017 o versioni successive |
+  |-------|-------|--------|
+  |Replica da Oracle |Supporta solo Oracle 10g o versioni precedenti |Supporta solo Oracle 10g o versioni precedenti |
+  |Replica verso Oracle |Fino a Oracle 12c |Non supportato |
+
+
+ La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
   
 ## <a name="snapshot-replication-for-oracle"></a>Replica snapshot per Oracle  
  Le pubblicazioni snapshot Oracle vengono implementate in maniera analoga alle pubblicazioni snapshot di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quando l'agente snapshot viene eseguito per una pubblicazione Oracle, si connette al server di pubblicazione Oracle ed elabora ogni tabella della pubblicazione. Durante l'elaborazione di ogni tabella, l'agente recupera le righe della tabella e crea script dello schema, i quali vengono archiviati nella condivisione snapshot della pubblicazione. L'intero set di dati viene creato ogni volta che l'agente snapshot viene eseguito, quindi i trigger per il rilevamento delle modifiche non vengono aggiunti alle tabelle Oracle, come avviene nella replica transazionale. La replica snapshot rappresenta una soluzione pratica per eseguire la migrazione dei dati con un impatto minimo sul sistema di pubblicazione.  
@@ -49,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [Replica di database eterogenei](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

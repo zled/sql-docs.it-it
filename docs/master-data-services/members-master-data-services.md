@@ -1,5 +1,5 @@
 ---
-title: Membri (Master Data Services) | Documenti Microsoft
+title: Membri (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="members-master-data-services"></a>Membri (Master Data Services)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  In questo esempio, la tabella rappresenta un'entità, le righe della tabella rappresentano i membri e le colonne della tabella rappresentano gli attributi. Ogni cella rappresenta un valore di attributo per un membro specifico.  
   
- ![Entità master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "entità Master Data Services rappresentata come tabella")  
+ ![Entità Master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "Entità Master Data Services rappresentata come tabella")  
   
 ## <a name="member-types"></a>Tipi di membri  
  Sono disponibili tre tipi di membri: membri foglia, membri consolidati e membri raccolta.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="member-example"></a>Esempio di membro  
  Nell'esempio seguente ogni membro è costituito da un valore di attributo Name, Code, Subcategory StandardCost, ListPrice e FilePhoto.  
   
- ![Tabella entità Product bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike tabella entità Product")  
+ ![Tabella dell'entità prodotto bicicletta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

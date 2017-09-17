@@ -1,7 +1,7 @@
 ---
 title: Sottoscrittori non SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,15 +24,17 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cae789ce180c32c4651f967a7d7fdc246effe2
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-subscribers"></a>Sottoscrittori non SQL Server
-  Tramite i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] riportati di seguito è possibile eseguire la sottoscrizione di pubblicazioni snapshot e transazionali utilizzando sottoscrizioni push. Le sottoscrizioni sono supportate per le due versioni più recenti di ogni database elencato utilizzando la versione più recente del provider OLE DB elencato.  
+# <a name="non-sql-server-subscribers"></a>Sottoscrittori non SQL Server  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+Tramite i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] riportati di seguito è possibile eseguire la sottoscrizione di pubblicazioni snapshot e transazionali utilizzando sottoscrizioni push. Le sottoscrizioni sono supportate per le due versioni più recenti di ogni database elencato utilizzando la versione più recente del provider OLE DB elencato.  
   
  La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -43,8 +45,22 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------------|--------------|  
 |Oracle|Tutte le piattaforme supportate da Oracle|Provider Oracle OLE DB (fornito da Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows escluso 9.x|Provider Microsoft Host Integration Server (HIS) OLE DB|  
+
+Informazioni sulla versione di Oracle:  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli scenari eterogenei seguenti per la replica transazionale e snapshot:  
   
- Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, vedere [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+-   Pubblicazione di dati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   Pubblicazione di dati da e verso Oracle con le limitazioni seguenti:  
+  | |2016 o versioni precedenti |2017 o versioni successive |
+  |-------|-------|--------|
+  |Replica da Oracle |Supporta solo Oracle 10g o versioni precedenti |Supporta solo Oracle 10g o versioni precedenti |
+  |Replica verso Oracle |Fino a Oracle 12c |Non supportato |
+
+
+ La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, vedere [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Considerazioni sui Sottoscrittori non SQL Server  
  Durante la replica in Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenere presente quanto segue:  
@@ -57,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Se una pubblicazione include Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario abilitarla per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prima di creare le sottoscrizioni per i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Per impostazione predefinita, gli script generati dall'agente snapshot per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzano identificatori non racchiusi tra virgolette nella sintassi CREATE TABLE. Pertanto, una tabella pubblicata denominata 'test' viene replicata come 'TEST'. Per usare la stessa combinazione di maiuscole e minuscole della tabella nel database di pubblicazione, specificare il parametro **-QuotedIdentifier** per l'agente di distribuzione. Il parametro **-QuotedIdentifier** deve essere usato anche se i nomi degli oggetti pubblicati, ad esempio tabelle, colonne e vincoli, includono spazi o parole riservate nella versione del database nel Sottoscrittore non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni su questo parametro, vedere [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   Per impostazione predefinita, gli script generati dall'agente snapshot per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzano identificatori non racchiusi tra virgolette nella sintassi `CREATE TABLE`. Pertanto, una tabella pubblicata denominata 'test' viene replicata come 'TEST'. Per usare la stessa combinazione di maiuscole e minuscole della tabella nel database di pubblicazione, specificare il parametro **-QuotedIdentifier** per l'agente di distribuzione. Il parametro **-QuotedIdentifier** deve essere usato anche se i nomi degli oggetti pubblicati, ad esempio tabelle, colonne e vincoli, includono spazi o parole riservate nella versione del database nel Sottoscrittore non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni su questo parametro, vedere [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   L'account con il quale viene eseguito l'agente di distribuzione deve disporre di accesso in lettura alla directory di installazione del provider OLE DB.  
   
@@ -104,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

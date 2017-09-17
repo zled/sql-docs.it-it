@@ -1,5 +1,5 @@
 ---
-title: Tabella di gestione temporanea di membri (Master Data Services) di foglia | Documenti Microsoft
+title: Tabella di gestione temporanea dei membri foglia (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - database [Master Data Services], members staging table
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ba0bd81b0838494b69735826a9f5c09371d1003c
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4854cd3ee6157cf58fed539f28488d3a450a3cbe
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>Tabella di gestione temporanea dei membri foglia (Master Data Services)
-  Utilizzare i membri foglia (stg.name_Leaf) nella tabella di gestione temporanea nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database per creare, aggiornare, disattivare ed eliminare membri foglia. Inoltre, è possibile utilizzarla per aggiornare i valori degli attributi per i membri foglia.  
+  Utilizzare la tabella di gestione temporanea dei membri foglia (stg.name_Leaf) nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per creare, aggiornare, disattivare ed eliminare i membri foglia. Inoltre, è possibile utilizzarla per aggiornare i valori degli attributi per i membri foglia.  
   
 ##  <a name="TableColumns"></a> Colonne della tabella  
  Nella seguente tabella viene illustrato il motivo per cui viene utilizzato ogni campo della tabella di gestione temporanea Foglia.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Visualizzare gli errori che si verificano durante il processo di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Errori del processo di gestione temporanea &#40; Master Data Services &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [Errori del processo di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
 

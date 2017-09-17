@@ -1,8 +1,10 @@
 ---
-title: Installare SQL Server con l'opzione di archiviazione su condivisione file SMB | Microsoft Docs
+title: Installare SQL Server con l'archiviazione su condivisione file SMB | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,28 +17,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB
-  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sistema (Master, Model, MSDB e TempDB) e i database utente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] possono essere installati con il file server SMB (Server Message Block) come opzione di archiviazione. Questa condizione è valida per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome e per le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>Installare SQL Server con l'archiviazione su condivisione file SMB
+A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sistema (Master, Model, MSDB e TempDB) e i database utente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] possono essere installati con il file server SMB (Server Message Block) come opzione di archiviazione. Questa condizione è valida per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome e per le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Filestream non è attualmente supportato in una condivisione file SMB.  
   
 ## <a name="installation-considerations"></a>Considerazioni sull'installazione  
   
-### <a name="smb-file-share-formats"></a>Formati di condivisione di file SMB:  
+### <a name="smb-fileshare-formats"></a>Formati di condivisione file SMB:  
  Quando si specifica la condivisione file SMB, sono supportati i seguenti formati di percorso UNC (Universal Naming Convention) per database autonomi e dell'istanza del cluster di failover:  
   
 -   \\\NomeServer\NomeCondivisione\  
   
 -   \\\NomeServer\NomeCondivisione  
   
- Per altre informazioni su Universal Naming Convention, vedere [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Per altre informazioni su Universal Naming Convention, vedere [UNC](http://msdn.microsoft.com/library/gg465305.aspx).  
   
  Il percorso UNC del loopback (percorso UNC il cui nome del server è localhost, 127.0.0.1 o il nome del computer locale) non è supportato. In un caso speciale, non è supportato neanche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene utilizzato il cluster di file server ospitato nello stesso nodo eseguito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per evitare questa situazione, è consigliabile che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il cluster di file server vengano creati in cluster Windows separati.  
   
@@ -61,11 +63,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
-5.  [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
-  
-### <a name="installation-options"></a>Opzioni di installazione  
+### <a name="installation-options"></a>Opzione di installazione  
   
 -   Nella scheda "Directory dati" della pagina "Configurazione del motore di database" del programma di installazione, impostare il parametro "Directory radice dati" su "\\\fileserver1\share1\".  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 08/02/2017
   
      Per altre informazioni sull'uso di varie opzioni per i parametri della riga di comando in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Installare SQL Server 2016 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considerazioni relative al sistema operativo (protocollo SMB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considerazioni sul sistema operativo (protocollo SMB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Sistemi operativi Windows diversi dispongono di versioni diverse del protocollo SMB e la versione del protocollo SMB è trasparente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile individuare i vantaggi delle varie versioni del protocollo SMB in relazione a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Sistema operativo|Versione del protocollo SMB2|Vantaggi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -102,12 +100,12 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  Le autorizzazioni di condivisione Controllo completo e le autorizzazioni NTFS sulle cartelle condivise SMB devono essere limitate a: account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e utenti di Windows con ruoli di amministratore del server.  
   
-     Si consiglia per utilizzare un account di dominio come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di sistema viene usato come account del servizio, concedere le autorizzazioni per l'account del computer nel formato: *<nome_dominio>***\\***<nome_computer>***$**.  
+     Si consiglia per utilizzare un account di dominio come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di sistema viene usato come account del servizio, concedere le autorizzazioni per l'account del computer nel formato: \<*nome_dominio*>\\<*nome_computer*>\*$*.  
   
     > [!NOTE]  
     >  Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario specificare l'account di dominio come account del servizio se la condivisione file SMB viene specificata come opzione di archiviazione. Con le condivisioni file SMB, è possibile specificare l'account di sistema come account del servizio solo dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Gli account virtuali non possono essere autenticati a un percorso remoto. Per tutti gli account virtuali viene usata l'autorizzazione dell'account del computer. Eseguire il provisioning dell'account del computer nel formato *<nome_dominio>***\\***<nome_computer>***$**.  
+    >  Gli account virtuali non possono essere autenticati a un percorso remoto. Per tutti gli account virtuali viene usata l'autorizzazione dell'account del computer. Eseguire il provisioning dell'account del computer nel formato \<*nome_dominio*>\\<*nome_computer*>\*$*.  
   
 -   L'account utilizzato per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre di autorizzazioni FULL CONTROL sulla cartella della condivisione file SMB utilizzata come directory dei dati o su qualsiasi altra cartella dei dati (directory del database utente, directory del log del database utente, directory TempDB, directory del log TempDB, directory di backup) durante l'Installazione del cluster.  
   

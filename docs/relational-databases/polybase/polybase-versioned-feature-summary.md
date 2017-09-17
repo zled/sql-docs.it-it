@@ -1,7 +1,7 @@
 ---
 title: "Riepilogo delle funzionalità con controllo delle versioni di PolyBase | Microsoft Docs"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase Versioned Feature Summary (Riepilogo delle funzionalità con controllo delle versioni di PolyBase)
@@ -44,8 +44,20 @@ Riepilogo delle funzionalità di PolyBase disponibili per i prodotti e servizi d
 |Eseguire query PolyBase da strumenti di Business Intelligence di Microsoft|sì|no|sì|sì|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>Operatori T-SQL supportati per il calcolo della distribuzione dinamica
+In SQL Server e APS, non tutti gli operatori T-SQL possono essere distribuiti sul cluster hadoop. Nella tabella seguente sono elencati tutti gli operatori supportati e un subset degli operatori non supportati. 
 
-  
+||||
+|-|-|-| 
+|**Tipo di operatore**|**Distribuibile su hadoop**|**Distribuibile nell'archiviazione BLOB**|
+|Proiezioni di colonna|sì|no|
+|Predicati|sì|no|
+|Aggregazioni|parziale|no|
+|Crea un join tra le tabelle esterne|no|no|
+|Crea un join tra le tabelle esterne e locali|no|no|
+|Ordina|no|no|
+
+Aggregazione parziale significa che deve verificarsi un'aggregazione finale una volta che i dati raggiungono SQL Server, ma che si verifica una parte dell'aggregazione in Hadoop. Si tratta di un metodo comune di calcolo delle aggregazioni nei sistemi con la funzionalità di elaborazione parallela massiva.  
 ## <a name="see-also"></a>Vedere anche  
  [Guida a PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

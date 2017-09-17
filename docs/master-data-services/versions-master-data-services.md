@@ -1,5 +1,5 @@
 ---
-title: Versioni (Master Data Services) | Documenti Microsoft
+title: Versioni (Master Data Services) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="versions-master-data-services"></a>Versioni (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile creare più versioni dei dati master all'interno di un modello. È possibile bloccare le versioni mentre si convalidano i dati ed è possibile eseguire il commit dopo la convalida dei dati. Le versioni di cui si è eseguito il commit costituiscono un record controllabile di modifiche. Ogni versione creata contiene tutti i membri, i valori di attributo, i membri della gerarchia, le relazioni della gerarchia e le raccolte per il modello.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile creare più versioni dei dati master all'interno di un modello. È possibile bloccare le versioni mentre si convalidano i dati ed è possibile eseguire il commit dopo la convalida dei dati. Le versioni di cui si è eseguito il commit costituiscono un record controllabile di modifiche. Ogni versione creata contiene tutti i membri, i valori di attributo, i membri della gerarchia, le relazioni della gerarchia e le raccolte per il modello.  
   
 ## <a name="when-to-use-versions"></a>Situazioni in cui utilizzare le versioni  
  Utilizzare le versioni per gli scopi seguenti:  
@@ -74,23 +74,23 @@ ms.lasthandoff: 08/02/2017
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Modificare il nome di una versione esistente.|[Modificare un nome di versione &#40; Master Data Services &#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|Bloccare una versione così solo gli amministratori possono modificare i dati.|[Bloccare una versione &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|Sbloccare una versione così solo gli amministratori possono modificare i dati.|[Sbloccare una versione &#40; Master Data Services &#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Eseguire il commit di una versione dopo la convalida di tutti i dati.|[Eseguire il commit di una versione &#40; Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Creare un nuovo flag per contrassegnare una versione.|[Creare un Flag di versione &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Modificare il nome di un flag di versione esistente.|[Modificare il nome di un Flag di versione &#40; Master Data Services &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Assegnare un flag esistente a una versione.|[Assegnare un Flag a una versione &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Creare una nuova copia di una versione esistente|[Copiare una versione &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Modificare il nome di una versione esistente.|[Modificare il nome di una versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Bloccare una versione così solo gli amministratori possono modificare i dati.|[Bloccare una versione &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|Sbloccare una versione così solo gli amministratori possono modificare i dati.|[Sbloccare una versione &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|Eseguire il commit di una versione dopo la convalida di tutti i dati.|[Eseguire il commit di una versione &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Creare un nuovo flag per contrassegnare una versione.|[Creare un flag di versione &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Modificare il nome di un flag di versione esistente.|[Modificare il nome di un flag di versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Assegnare un flag esistente a una versione.|[Assegnare un flag a una versione &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Creare una nuova copia di una versione esistente|[Copiare una versione &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminare una versione esistente.|[Eliminare una versione &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |Eliminare i membri eliminati temporaneamente da una versione|[Ripulire i membri di versione &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Invertire una transazione &#40; Master Data Services &#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Invertire una transazione &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Le notifiche &#40; Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Le regole di business &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

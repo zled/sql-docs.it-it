@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento guidato Database (Gestione configurazione Master Data Services) | Documenti Microsoft
+title: Aggiornamento guidato database (Gestione configurazione Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7823eb8d6b5b4a591f38e0e6dae1a4f8fdbadb80
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1b43487f640dea05d9d29c195cd660db8bd24574
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)
-  Usare l'**Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+  Usare l' **Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="action"></a>Azione  
  Si tratta della pagina introduttiva della procedura guidata. Fare clic su **Avanti** per iniziare il processo di aggiornamento del database.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/02/2017
   
 |Nome del controllo|Description|  
 |------------------|-----------------|  
-|**Istanza di SQL Server**|Il nome dell'oggetto attualmente selezionato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] istanza.|  
+|**Istanza di SQL Server**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] attualmente selezionata.|  
 |**Database Master Data Services**|Nome del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] attualmente selezionato.|  
   
 ## <a name="progress-and-finish"></a>Continua e termina  
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagina Configurazione database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Configurazione e installazione di Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
+[Installazione e configurazione di Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Aggiornare Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

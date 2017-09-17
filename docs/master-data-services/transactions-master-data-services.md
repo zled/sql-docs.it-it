@@ -1,5 +1,5 @@
 ---
-title: Transazioni (Master Data Services) | Documenti Microsoft
+title: Transazioni (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>Transazioni (Master Data Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  Nell'area funzionale **Gestione versioni** gli amministratori possono visualizzare tutte le transazioni per tutti gli utenti per i modelli a cui possono accedere e invertire una di queste transazioni.
  
 > [!NOTE]  
->  Gli amministratori possono visualizzare tutte le transazioni per tutti gli utenti fino a quando non dispongono dell'autorizzazione di sola lettura livello applicata nel **Gestione versioni** area funzionale. Ad esempio, se di sola lettura dell'autorizzazione e l'aggiornamento livello di autorizzazione è impostato per l'amministratore, l'amministratore non sarà in grado di visualizzare altre transazioni utente perché l'autorizzazione di sola lettura avranno la precedenza sull'autorizzazione update.
+>  Gli amministratori possono visualizzare tutte le transazioni per tutti gli utenti a condizione che non dispongano dell'autorizzazione di sola lettura applicata nell'area funzionale **Gestione versioni**. Ad esempio, se è impostato il livello di autorizzazione di sola lettura e aggiornamento per l'amministratore, l'amministratore non può visualizzare altre transazioni utente perché l'autorizzazione di sola lettura ha la precedenza sull'autorizzazione di aggiornamento.
   
  È possibile configurare il periodo di conservazione dei dati del log delle transazioni impostando la proprietà **Conservazione log in giorni** nelle impostazioni di sistema per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e impostando **Giorni di conservazione log** quando si crea o si modifica un modello. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) e [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Gli amministratori &#40; Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)  
+-   [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [Annotazioni &#40; Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Annotazioni &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   
 
