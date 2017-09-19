@@ -1,7 +1,7 @@
 ---
 title: "Novità di SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,13 +15,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
 ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
+
 SQL Server 2017 rappresenta un importante passo avanti verso una piattaforma che offre opzioni di linguaggi di sviluppo, tipi di dati, memorizzazione in locale e nel cloud e sistemi operativi rendendo disponibili le funzionalità di SQL Server in Linux, nei contenitori Docker basati su Linux e in Windows. Questo argomento include un riepilogo delle novità di specifiche aree funzionali delle ultime versioni di SQL Server 2017 Release Candidate (RC2, agosto 2017) e Community Technical Preview (CTP).
 
 [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [scaricare la versione più recente di SQL Server 2017: RC2, agosto 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
@@ -29,7 +30,8 @@ Questa versione contiene correzioni di bug e miglioramenti delle prestazioni.
 
 >**Eseguire SQL Server in Linux.** Per altre informazioni, vedere la documentazione di [SQL Server in Linux](https://docs.microsoft.com/sql/linux/).
 
-## <a name="sql-server-2017-database-engine"></a>Motore di database di SQL Server 2017  
+## <a name="sql-server-2017-database-engine"></a>Motore di database di SQL Server 2017
+
 SQL Server 2017 include numerose nuove funzionalità del motore di database, miglioramenti e aumenti delle prestazioni. 
 - Gli **assembly CLR** possono ora essere aggiunti a un elenco elementi consentiti come soluzione alternativa per la funzionalità `clr strict security` descritta in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) e [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) sono stati aggiunti per supportare l'elenco elementi consentiti di assembly attendibili (RC1).  
 - La **ricompilazione dell'indice online ripristinabile** consente di ripristinare un'operazione di ricompilazione dell'indice online dal punto in cui è stata arrestata a causa di un errore, ad esempio un failover in una replica o lo spazio su disco insufficiente, o di sospendere e successivamente ripristinare l'operazione. Vedere [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) e [Linee guida per le operazioni sugli indici online](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
@@ -101,15 +103,20 @@ A partire dalla versione CTP 2.1, SSRS non può più essere installato tramite l
 
 Per altre informazioni, vedere [Novità di SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 Machine Learning Services
+## <a name="machine-learning-in-sql-server-2017"></a>Machine Learning in SQL Server 2017 
+
 SQL Server R Services è stato rinominato **SQL Server Machine Learning Services** per indicare il supporto per Python in aggiunta al linguaggio R. È possibile usare Machine Learning Services (In-Database) per eseguire script R o Python in SQL Server o installare **Microsoft Machine Learning Server (Standalone)** per distribuire e usare modelli R e Python che non richiedono SQL Server. 
 
-Gli sviluppatori di SQL Server ora hanno accesso alle ampie librerie Python di Machine Learning e intelligenza artificiale, disponibili nell'ecosistema open source insieme alle innovazioni più recenti di Microsoft: 
+Gli sviluppatori di SQL Server ora hanno accesso alle ampie librerie Python di Machine Learning e intelligenza artificiale, disponibili nell'ecosistema open source insieme alle innovazioni più recenti di Microsoft:
 
-- **revoscalepy**: questa versione Python di RevoScaleR include algoritmi paralleli per la regressione lineare e logistica, albero delle decisioni, alberi con boosting e foreste casuali, nonché una vasta gamma di API per la trasformazione e lo spostamento dei dati, contesti di calcolo remoti e origini dati.
+- **revoscalepy**: questa versione Python equivalente di RevoScaleR include algoritmi paralleli per la regressione lineare e logistica, albero delle decisioni, alberi con boosting e foreste casuali, nonché una vasta gamma di API per la trasformazione e lo spostamento dei dati, contesti di calcolo remoti e origini dati.
 - **microsoftml**: questo pacchetto all'avanguardia di algoritmi di apprendimento automatico e trasformazioni con associazioni Python include reti neurali profonde, alberi delle decisioni e foreste delle decisioni veloci e algoritmi ottimizzati per la regressione lineare e logistica. Vengono anche modelli già sottoposti a training basati su modelli ResNet che è possibile usare per l'estrazione di immagini o l'analisi del sentiment.
 - **Messa in funzione di Python con T-SQL**: è possibile distribuire facilmente il codice Python con la stored procedure `sp_execute_external_script`. Il flusso dei dati dai processi SQL ai processi Python e la parallelizzazione dei segnali MPI permettono di ottenere prestazioni ottimali.
 - **Python in contesti di calcolo di SQL Server**: data scientist e sviluppatori possono eseguire il codice Python in remoto dai relativi ambienti di sviluppo per esplorare i dati e sviluppare modelli senza dover spostare i dati.
+- **Punteggio nativo**: è possibile usare la funzione PREDICT in Transact-SQL per eseguire l'assegnazione dei punteggi in qualsiasi istanza di SQL Server 2017, anche se non è installato R. Tutto ciò che serve è l'esecuzione del training del modello tramite uno degli algoritmi supportati RevoScaleR e revoscalepy e il successivo salvataggio del modello in un nuovo formato binario compatto.
+- **Gestione dei pacchetti**: T-SQL supporta ora l'istruzione CREATE EXTERNAL LIBRARY per offrire agli amministratori di database maggiori capacità di gestione per i pacchetti R. Usare i ruoli per controllare l'accesso ai pacchetti privati o condivisi, archiviare pacchetti R nel database e condividerli tra gli utenti.
+- **Miglioramenti delle prestazioni**: la stored procedure `sp_execute_external_script` è stata ottimizzata per supportare l'esecuzione in modalità batch per i dati columnstore.
+
 
 Per altre informazioni, vedere [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) (Novità di SQL Server Machine Learning Services).
 
@@ -119,3 +126,4 @@ Per altre informazioni, vedere [What's new in SQL Server Machine Learning Servic
 - Vedere [Novità di SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
