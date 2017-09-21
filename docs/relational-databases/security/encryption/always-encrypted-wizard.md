@@ -21,17 +21,17 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e2d16b6082708a23bb83de101bc6d8d16251027
 ms.contentlocale: it-it
 ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="always-encrypted-wizard"></a>Procedura guidata Always Encrypted
+# <a name="always-encrypted-wizard"></a>Procedura guidata Crittografia sempre attiva
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Usare la **procedura guidata Always Encrypted** per proteggere i dati sensibili archiviati in un database di SQL Server. Always Encrypted consente ai client di eseguire la crittografia dei dati sensibili all'interno delle applicazioni client e non rivelare le chiavi di crittografia di SQL Server. Di conseguenza, Always Encrypted crea una separazione tra chi possiede i dati (e può visualizzarli) e chi gestisce i dati (ma non può accedervi).  Per una descrizione completa della funzionalità, vedere [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+  Usare la **procedura guidata Always Encrypted** per proteggere i dati sensibili archiviati in un database di SQL Server. Always Encrypted consente ai client di eseguire la crittografia dei dati sensibili all'interno delle applicazioni client e non rivelare le chiavi di crittografia di SQL Server. Di conseguenza, Crittografia sempre attiva crea una separazione tra chi possiede i dati (e può visualizzarli) e chi gestisce i dati (ma non può accedervi).  Per una descrizione completa della funzionalità, vedere [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
  Per una procedura dettagliata end-to-end che spiega come configurare Always Encrypted con la procedura guidata e come usarlo in un'applicazione client, vedere [Always Encrypted - Proteggere i dati sensibili nel database SQL con la crittografia del database e archiviare le chiavi di crittografia nell'archivio certificati di Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 07/31/2017
   
  **Autorizzazioni:** per eseguire query su colonne crittografate e selezionare chiavi usando la procedura guidata è necessario avere le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Per creare nuove chiavi, sono necessarie anche le autorizzazioni `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
   
-#### <a name="to-open-the-always-encrypted-wizard"></a>Per aprire la procedura guidata Always Encrypted  
+#### <a name="to-open-the-always-encrypted-wizard"></a>Per aprire la procedura guidata Crittografia sempre attiva  
   
 1.  Connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il componente Esplora oggetti di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 07/31/2017
   
  La procedura guidata supporta solo queste due opzioni. I moduli di protezione hardware e gli archivi dei clienti devono essere configurati con [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## <a name="always-encrypted-terms"></a>Terminologia relativa Always Encrypted  
+## <a name="always-encrypted-terms"></a>Terminologia relativa a Crittografia sempre attiva  
   
 -   La**crittografia deterministica** usa un metodo che genera sempre lo stesso valore crittografato per qualsiasi valore di testo normale specificato. L'uso della crittografia deterministica consente di eseguire operazioni di raggruppamento, filtro di uguaglianza e join di tabelle in base ai valori crittografati, ma può anche consentire a utenti non autorizzati di indovinare le informazioni sui valori crittografati esaminando i criteri nella colonna crittografata. Questa vulnerabilità aumenta quando è presente un piccolo set di possibili valori crittografati, ad esempio True/False o area geografica Nord/Sud/Est/Ovest. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.  
   

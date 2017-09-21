@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Ripristino della topologia originale del gruppo di disponibilità](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> Risposta all'errore irreversibile del data center principale  
  Nella figura seguente viene illustrata la serie di azioni eseguite nel data center remoto in risposta a un errore irreversibile nel data center principale.  
   
  ![Passaggi per la risposta all'errore del data center principale](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Passaggi per la risposta all'errore del data center principale")  
