@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire processi di SQL Server Agent in Linux
@@ -35,7 +35,7 @@ I passaggi seguenti forniscono un esempio di come creare un processo di agente S
 > [!TIP]
 > È possibile utilizzare qualsiasi client di T-SQL per eseguire questi comandi. In Linux, ad esempio, è possibile utilizzare [sqlcmd](sql-server-linux-setup-tools.md) o [codice di Visual Studio](sql-server-linux-develop-use-vscode.md). Da un Server remoto di Windows, è anche possibile eseguire query in SQL Server Management Studio (SSMS) o usare l'interfaccia dell'interfaccia utente per la gestione dei processi, descritto nella sezione successiva.
 
-1. **Creare il processo**. L'esempio seguente usa [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) per creare un processo denominato `Daily AdventureWorks Backup`.
+1. **Creare il processo**. L'esempio seguente usa [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) per creare un processo denominato `Daily AdventureWorks Backup`.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ I passaggi seguenti forniscono un esempio di come creare un processo di agente S
 
     ```
 
-2. **Aggiungere uno o più passaggi di processo**. Il seguente script Transact-SQL Usa [sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) per creare un passaggio di processo che consente di creare un backup del `AdventureWlorks2014` database.
+2. **Aggiungere uno o più passaggi di processo**. Il seguente script Transact-SQL Usa [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) per creare un passaggio di processo che consente di creare un backup del `AdventureWlorks2014` database.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ I passaggi seguenti forniscono un esempio di come creare un processo di agente S
     GO
     ```
 
-3. **Creare una pianificazione di processo**. Questo esempio viene utilizzato [sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) per creare una pianificazione giornaliera per il processo.
+3. **Creare una pianificazione di processo**. Questo esempio viene utilizzato [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) per creare una pianificazione giornaliera per il processo.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ I passaggi seguenti forniscono un esempio di come creare un processo di agente S
    GO
     ```
 
-4. **Collegare la pianificazione del processo al processo**. Utilizzare [sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) per collegare la pianificazione del processo al processo.
+4. **Collegare la pianificazione del processo al processo**. Utilizzare [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) per collegare la pianificazione del processo al processo.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ I passaggi seguenti forniscono un esempio di come creare un processo di agente S
     GO
     ```
 
-5. **Assegnare il processo a un server di destinazione**. Assegnare il processo a un server di destinazione con [sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx). In questo esempio, il server locale è la destinazione.
+5. **Assegnare il processo a un server di destinazione**. Assegnare il processo a un server di destinazione con [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). In questo esempio, il server locale è la destinazione.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

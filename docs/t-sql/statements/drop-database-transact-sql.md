@@ -2,7 +2,7 @@
 title: ELIMINARE il DATABASE (Transact-SQL) | Documenti Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 09/15/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -30,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 347995e21c5930007404fd8a9dd8bb29d9879981
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Rimuove uno o più database utente o snapshot di database da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,7 +51,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```  
   
 ```  
--- Azure SQL Database and Parallel Data Warehouse Syntax   
+-- Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse Syntax   
 DROP DATABASE database_name [;]  
 ```  
   
@@ -82,7 +82,7 @@ DROP DATABASE database_name [;]
 >  Rimozione di un database con FILE_SNAPSHOT associati backup avrà esito positivo, ma non verranno eliminati i file di database a cui sono associati snapshot per evitare di invalidare i backup che fa riferimento a questi file di database. Il file verrà troncato, ma non verranno fisicamente eliminato per mantenere i backup FILE_SNAPSHOT intatto. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- La rimozione di uno snapshot di database comporta l'eliminazione dello snapshot del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei file sparse fisici del file system NTFS utilizzati dallo snapshot. Per informazioni sull'utilizzo dei file sparse dagli snapshot del database, vedere [snapshot del Database &#40; SQL Server &#41; ](../../relational-databases/databases/database-snapshots-sql-server.md). La rimozione di uno snapshot del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
+ La rimozione di uno snapshot di database comporta l'eliminazione dello snapshot del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei file sparse fisici del file system NTFS utilizzati dallo snapshot. Per informazioni sull'utilizzo dei file sparse dagli snapshot del database, vedere [snapshot del Database & #40; SQL Server & #41; ](../../relational-databases/databases/database-snapshots-sql-server.md). La rimozione di uno snapshot del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
   
 ## <a name="interoperability"></a>Interoperabilità  
   
@@ -105,10 +105,15 @@ DROP DATABASE database_name [;]
  Eliminazione di un database per abilitare per l'estensione Database non rimuove i dati remoti. Se si desidera eliminare i dati remoti, è necessario rimuoverlo manualmente.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- È necessario essere connessi al database master per eliminare un database.  
+ È necessario essere connessi al database master per eliminare un database.
   
- L'istruzione DROP DATABASE deve essere l'unica istruzione in un batch SQL ed è possibile eliminare un solo database alla volta.  
+ L'istruzione DROP DATABASE deve essere l'unica istruzione in un batch SQL ed è possibile eliminare un solo database alla volta.
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ È necessario essere connessi al database master per eliminare un database.
+  
+ L'istruzione DROP DATABASE deve essere l'unica istruzione in un batch SQL ed è possibile eliminare un solo database alla volta.
+
 ## <a name="permissions"></a>Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

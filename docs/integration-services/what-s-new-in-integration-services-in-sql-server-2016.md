@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
 ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità &#39; s New in Integration Services in SQL Server 2016
@@ -154,7 +154,7 @@ ms.lasthandoff: 08/21/2017
  Per altre informazioni, vedere [catalogo SSIS &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Supporto per Always On nel catalogo SSIS  
- I gruppi di disponibilità Always On sono una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Un gruppo di disponibilità supporta un ambiente di failover per un set discreto di database utente, noti come database di disponibilità, su cui si verifica il failover. Per altre informazioni, vedere [Gruppi di disponibilità Always On](https://msdn.microsoft.com/library/hh510230.aspx).  
+ I gruppi di disponibilità Always On sono una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Un gruppo di disponibilità supporta un ambiente di failover per un set discreto di database utente, noti come database di disponibilità, su cui si verifica il failover. Per altre informazioni, vedere [Gruppi di disponibilità Always On](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
   
  In SQL Server 2016, SSIS introduce nuove funzionalità che consentono di distribuire facilmente a un catalogo SSIS centralizzato (ad esempio il database utente SSISDB). Per garantire una disponibilità elevata per il database SSISDB e il relativo contenuto (progetti, pacchetti, log di esecuzione e così via) è possibile aggiungere il database SSISDB a un gruppo di disponibilità AlwaysOn, esattamente come qualsiasi altro database utente. Quando si verifica un failover, uno dei nodi secondari diventa automaticamente il nuovo nodo primario.  
   
@@ -313,7 +313,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
 ### <a name="better-design-experience"></a>Migliore esperienza di progettazione
 
 ####  <a name="OneDesigner"></a> Supporto di più destinazioni e versioni in Progettazione SSIS  
- È ora possibile usare Progettazione SSIS in SQL Server Data Tools (SSDT) per Visual Studio 2015 per creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Per ottenere SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx). 
+ È ora possibile usare Progettazione SSIS in SQL Server Data Tools (SSDT) per Visual Studio 2015 per creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Per ottenere SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). 
 
  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
    

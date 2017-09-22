@@ -1,7 +1,7 @@
 ---
 title: '@@DATEFIRST (Transact-SQL) | Documenti Microsoft'
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -36,26 +36,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 951628293157784f522a262a1017b5b8b7f4bd83
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 2dfe63f2d59cb3e3a1b563d524693af0d3dd1b51
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="datefirst-transact-sql"></a>@@DATEFIRST (Transact-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>& #x 40; & #x 40; DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Restituisce il valore corrente, per una sessione, di [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni & #40; Transact-SQL & #41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
+```
 @@DATEFIRST  
 ```  
   
@@ -102,7 +100,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni di configurazione &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
+[Funzioni di configurazione & #40; Transact-SQL & #41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 

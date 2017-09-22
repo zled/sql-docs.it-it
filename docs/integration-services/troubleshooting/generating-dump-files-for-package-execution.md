@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
      Chiamare questa stored procedure per interrompere un pacchetto in esecuzione e creare un file di dump.  
   
- Se si usa il modello di distribuzione del pacchetto, si creano i file di dump del debug usando l'utilità **dtexec** o **dtutil** per specificare un'opzione di dump del debug nella riga di comando. Per altre informazioni, vedere [Utilità dtexec](../../integration-services/packages/dtexec-utility.md) e [Utilità til dtutil](../../integration-services/dtutil-utility.md). Per altre informazioni sul modello di distribuzione del pacchetto, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) e [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ Se si usa il modello di distribuzione del pacchetto, si creano i file di dump del debug usando l'utilità **dtexec** o **dtutil** per specificare un'opzione di dump del debug nella riga di comando. Per ulteriori informazioni, vedere [utilità dtexec](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) e [distribuzione del pacchetto Legacy &#40; SSIS &#41; ](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>Formato del file di dump del debug  
  Quando si specifica un'opzione di dump del debug, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea i file di dump del debug seguenti:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 -   File di dump del debug con estensione tmp. Si tratta di un file in formato testo.  
   
- Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file nella cartella  *\<unità >:*\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file nella cartella * \<unità >:*\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  Nella tabella seguente sono descritte solo determinate sezioni del file con estensione tmp. Il file tmp include altri dati non riportati nella tabella.  
   

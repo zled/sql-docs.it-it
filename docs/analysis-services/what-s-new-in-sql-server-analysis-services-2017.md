@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>Novità &#39; s novità di SQL Server 2017 Analysis Services
@@ -110,7 +110,7 @@ In SSDT è possibile selezionare il nuovo livello di compatibilità 1400 durante
 >[!NOTE]
 > L'area di lavoro integrata nella versione di dicembre di SQL Server Data Tools (SSDT) supporta il livello di compatibilità 1400. Se si creano nuovi progetti di modelli tabulari in un'istanza del server dell'area di lavoro, tale istanza (o qualsiasi istanza in cui si esegue la distribuzione) deve essere [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1. 
 
-Per aggiornare un modello tabulare esistente in SSDT, in Esplora soluzioni fare doppio clic su **Model.bim**, quindi nel **proprietà**, impostare il **livello di compatibilità** proprietà  **SQL Server 2017 (1400)**. 
+Per aggiornare un modello tabulare esistente in SSDT, in Esplora soluzioni fare doppio clic su **Model.bim**, quindi nel **proprietà**, impostare il **livello di compatibilità** proprietà ** SQL Server 2017 (1400)**. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>Miglioramenti apportati a DAX
-Questa versione include un operatore `IN` per le espressioni DAX. È simile all'operatore [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) comunemente usato per specificare più valori in una clausola `WHERE` .
+Questa versione include un operatore `IN` per le espressioni DAX. È simile all'operatore [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) comunemente usato per specificare più valori in una clausola `WHERE`.
 
 In precedenza, era pratica comune specificare filtri con più valori usando l'operatore logico `OR` , come illustrato nell'espressione di misura seguente:
 

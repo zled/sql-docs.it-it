@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0a59b89b558922f27c91fb2452df157f7baa3918
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Pianificare la progettazione e la distribuzione di report | Reporting Services
@@ -96,7 +96,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
 -   [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
+-   [SQL Server Data Tools per Visual Studio 2015](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
   
 ##  <a name="bkmk_reportviewer"></a> Controlli ReportViewer  
  Un controllo ReportViewer di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] può visualizzare un report con estensione RDLC in modalità di anteprima locale o in modalità remota, il controllo può visualizzare un file con estensione RDL ospitato in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nella tabella seguente è riportato l'elenco delle versioni di RDL supportate dai controlli ReportViewer per l'elaborazione locale (con estensione RDLC). Il supporto RDL lato server è riepilogato nella sezione [Server di report e supporto dello schema RDL](#bkmk_report_server_rdl_schema_support).  
@@ -117,7 +117,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
 ## <a name="see-also"></a>Vedere anche  
  [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
- [Report Definition Language &#40; SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

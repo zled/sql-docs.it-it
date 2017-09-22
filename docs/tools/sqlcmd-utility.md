@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>Utilità sqlcmd
@@ -177,10 +177,10 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 **-j** Visualizza sullo schermo messaggi di errore non elaborati.
   
  **-K** *application_intent*  
- Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)](https://msdn.microsoft.com/library/ff878253.aspx)  
+ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)  
   
  **-M** *multisubnet_failover*  
- Specificare sempre **- M** quando ci si connette al listener del gruppo di disponibilità di un gruppo di disponibilità di SQL Server o un'istanza Cluster di Failover di SQL Server. Tramite**-M** viene fornito un rilevamento più veloce di una connessione al server attualmente attivo. Se non si specifica **–M**, significa che l'opzione **-M** è disattivata. Per altre informazioni su [!INCLUDE[ssHADR](../includes/sshadr-md.md)], vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità Always On (SQL Server)](https://msdn.microsoft.comlibrary/ff929171.aspx, e [Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)](https://msdn.microsoft.com/library/ff878253.aspx.  
+ Specificare sempre **- M** quando ci si connette al listener del gruppo di disponibilità di un gruppo di disponibilità di SQL Server o un'istanza Cluster di Failover di SQL Server. Tramite**-M** viene fornito un rilevamento più veloce di una connessione al server attualmente attivo. Se non si specifica **–M** , significa che l'opzione **-M** è disattivata. Per ulteriori informazioni su [! INCLUDERE[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover), [creazione e configurazione di gruppi di disponibilità & #40; SQL Server & #41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di Failover e gruppi di disponibilità AlwaysOn (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx, e [repliche secondarie attive: repliche secondarie leggibili (gruppi di disponibilità) Always On](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  Questa opzione viene utilizzata dal client per richiedere una connessione crittografata.  
@@ -215,11 +215,11 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  Specifica l'istanza di SQL Server a cui connettersi. Imposta la variabile di scripting SQLCMDSERVER di **sqlcmd** .  
   
- Specificare *nome_server* per connettersi all'istanza predefinita di SQL Server nel computer server. Specificare *nome_server* [  **\\**  *instance_name* ] per connettersi a un'istanza denominata di SQL Server nel computer server. Se si specifica alcun server, **sqlcmd** si connette all'istanza predefinita di SQL Server nel computer locale. Questa opzione è necessaria per l'esecuzione di **sqlcmd** da un computer remoto in rete.  
+ Specificare *nome_server* per connettersi all'istanza predefinita di SQL Server nel computer server. Specificare *nome_server* [ ** \\ ** *instance_name* ] per connettersi a un'istanza denominata di SQL Server nel computer server. Se si specifica alcun server, **sqlcmd** si connette all'istanza predefinita di SQL Server nel computer locale. Questa opzione è necessaria per l'esecuzione di **sqlcmd** da un computer remoto in rete.  
   
  *protocol* può essere **tcp** (TCP/IP), **lpc** (memoria condivisa) o **np** (named pipe).  
   
- Se non si specifica un *nome_server* [  **\\**  *instance_name* ] quando si avvia **sqlcmd**, SQL Server cerca e Usa la variabile di ambiente SQLCMDSERVER.  
+ Se non si specifica un *nome_server* [ ** \\ ** *instance_name* ] quando si avvia **sqlcmd**, SQL Server cerca e Usa la variabile di ambiente SQLCMDSERVER.  
   
 > [!NOTE]  
 >  La variabile di ambiente OSQLSERVER è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDSERVER è prioritaria rispetto alla variabile di ambiente OSQLSERVER. Questo significa che è possibile usare **sqlcmd** e **osql** insieme senza creare conflitti e che gli script precedenti continueranno a funzionare correttamente.  
@@ -685,7 +685,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  **Comandi vari**  
   **:r \<** *filename***>**  
- Analizza le istruzioni Transact-SQL aggiuntive e **sqlcmd** comandi dal file specificato da  **\<**  *filename***>**nella cache dell'istruzione.  
+ Analizza le istruzioni Transact-SQL aggiuntive e **sqlcmd** comandi dal file specificato da ** \< ** *filename***>**nella cache dell'istruzione.  
   
  Se il file contiene istruzioni Transact-SQL che non sono seguite da **passare**, è necessario immettere **passare** nella riga che segue **: r**.  
   

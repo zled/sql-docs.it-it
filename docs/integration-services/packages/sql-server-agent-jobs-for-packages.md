@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 88c4fec1697c91daa3cb97fe61d76f75a67546f3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 009c30b7f14fe10099257c97a5a310aa41df71b0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
@@ -133,7 +133,7 @@ ms.lasthandoff: 08/03/2017
     |**Catalogo SSIS**|Pacchetti archiviati nel database SSISDB. I pacchetti sono contenuti nei progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Pacchetti archiviati nel database MSDB. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.|  
     |**Archivio pacchetti SSIS**|Pacchetti archiviati nella cartella predefinita nel computer. La cartella predefinita è * \<unità >*: \Programmi\Microsoft SQL Server\110\DTS\Packages. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.<br /><br /> Nota: è possibile specificare un'altra cartella o cartelle aggiuntive nel file system da gestire con il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modificando il file di configurazione per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
-    |**File system**|Pacchetti archiviati in qualsiasi cartella nel computer locale.|  
+    |**File System**|Pacchetti archiviati in qualsiasi cartella nel computer locale.|  
   
      **Nelle tabelle seguenti vengono descritte le opzioni di configurazione disponibili per il passaggio di processo in base all'origine del pacchetto selezionata.**  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 08/03/2017
     >  Quando si assegna un nome alla pianificazione, utilizzare un nome univoco e descrittivo in modo da distinguere più facilmente la pianificazione da altre pianificazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx)  
+ [Esecuzione di progetti e pacchetti](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
 
 ## <a name="external-resources"></a>Risorse esterne  
   

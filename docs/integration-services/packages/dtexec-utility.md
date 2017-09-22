@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0f9706a6faa2743091db5f65853a173a7215aaf7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
@@ -66,7 +66,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> Considerazioni sull'installazione in computer a 64 bit  
  In un computer a 64 bit, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa una versione a 64 bit dell'utilità **dtexec** (dtexec.exe). Se è necessario eseguire alcuni pacchetti nella modalità a 32 bit, installare la versione a 32 bit dell'utilità **dtexec** . Per installare la versione a 32 bit dell'utilità **dtexec** , è necessario selezionare gli strumenti client o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
   
- Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. (In genere, il percorso della directory a 32 bit è  *\<unità >*: \Programmi file (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso di directory a 64 bit è  *\<unità >*: \Programmi\Microsoft SQL Server\110\DTS\Binn.)  
+ Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. (In genere, il percorso della directory a 32 bit è * \<unità >*: \Programmi file (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso di directory a 64 bit è * \<unità >*: \Programmi\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **NOTA:** se si usa SQL Server Agent per eseguire l'utilità, SQL Server Agent usa automaticamente la versione a 64 bit dell'utilità. Per trovare l'eseguibile corretto per l'utilità, SQL Server Agent utilizza il Registro di sistema, non la variabile di ambiente PATH.  
   
@@ -217,9 +217,9 @@ dtexec /option [value] [/option [value]]...
   
      Per esempi relativi all'opzione **/ConsoleLog** , vedere la sezione **Osservazioni** .  
   
--   **/D[ts]** *package_path*: (facoltativo). Carica un pacchetto dall'archivio pacchetti SSIS. I pacchetti archiviati nell'archivio pacchetti SSIS vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+-   * * /D[Servizi terminal](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
-     L'argomento *package_path* consente di specificare il percorso relativo del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] a partire dalla radice dell'archivio pacchetti SSIS e include il nome del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
+     L'argomento *package_path* consente di specificare il percorso relativo del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] a partire dalla radice dell'archivio pacchetti SSIS e include il nome del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
   
      L'opzione **/DTS** non può essere usata in combinazione con l'opzione **/File** o **/SQL** . Se si specificano più opzioni, l'esecuzione di **dtexec** avrà esito negativo.  
   
@@ -233,7 +233,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/ Dump** *codice di errore*: per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella  *\<unità >*: \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/ Dump** *codice di errore*: per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella * \<unità >*: \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **NOTA:** i file di dump del debug possono contenere informazioni riservate. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato. Ad esempio, prima di inviare i file del debug al supporto tecnico Microsoft, si consiglia di rimuovere eventuali informazioni sensibili o riservate.  
   
@@ -245,7 +245,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (facoltativo). Consente di creare i file di dump del debug, con estensione mdmp e tpm, quando si verifica un errore durante l'esecuzione del pacchetto.  
   
-     Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella  *\<unità >*: cartella \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella * \<unità >*: cartella \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **NOTA:** i file di dump del debug possono contenere informazioni riservate. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato. Ad esempio, prima di inviare i file del debug al supporto tecnico Microsoft, si consiglia di rimuovere eventuali informazioni sensibili o riservate.  
   
@@ -263,7 +263,7 @@ dtexec /option [value] [/option [value]]...
   
      Questo parametro viene utilizzato da SQL Server Agent.  
   
--   **/F[ile]** *filespec*: (facoltativo). Carica un pacchetto salvato nel file system. I pacchetti salvati nel file system vengono distribuiti tramite il modello di distribuzione del pacchetto legacy. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+-   * * /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
   
      L'argomento *filespec* specifica il percorso e il nome file del pacchetto. È possibile specificare il percorso in formato UNC (Universal Naming Convention) o come percorso locale. Se nel percorso o nel nome file specificato nell'argomento *filespec* è contenuto uno spazio, è necessario racchiudere l'argomento *filespec* tra virgolette.  
   
@@ -273,7 +273,7 @@ dtexec /option [value] [/option [value]]...
   
      Se si specifica un argomento *option_name* , **dtexec** avvia la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e visualizza l'argomento relativo all'utilità dtexec.  
   
--   **/ISServer** *packagepath*: (facoltativo). Esegue un pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con l'argomento *PackagePath* vengono specificati il percorso completo e il nome file del pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se nel percorso o nel nome file specificato nell'argomento *PackagePath* è contenuto uno spazio, è necessario racchiudere l'argomento *PackagePath* tra virgolette.  
+-   **/ISServer** *packagepath*: (facoltativo). Esegue un pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con l'argomento *PackagePath* vengono specificati il percorso completo e il nome file del pacchetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se nel percorso o nel nome file specificato nell'argomento *PackagePath* è contenuto uno spazio, è necessario racchiudere l'argomento *PackagePath* tra virgolette.  
   
      Il formato del pacchetto è il seguente:  
   
@@ -413,13 +413,13 @@ dtexec /option [value] [/option [value]]...
   
      L'opzione **/Ser[ver]** è obbligatoria se è specificata l'opzione **/ISServer** .  
   
--   **/SQ[L]** *package_path*: carica un pacchetto archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nel database **msdb** . I pacchetti archiviati nel database **msdb** vengono distribuiti tramite il modello di distribuzione del pacchetto. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+-   * * /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
      Con l'argomento *package_path* viene specificato il nome del pacchetto da recuperare. Se nel percorso vengono incluse cartelle, queste sono seguite da una barra rovesciata ("\\"). Il valore *package_path* può essere racchiuso fra virgolette. Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
   
      È possibile usare le opzioni **/User**, **/Password**e **/Server** in combinazione con l'opzione **/SQL** .  
   
-     Se si omette l'opzione **/User** , per accedere al pacchetto verrà usata l'autenticazione di Windows. Se si usa l'opzione **/User**, il nome dell'account di accesso **/User** specificato viene associato all'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Se si omette l'opzione **/User** , per accedere al pacchetto verrà usata l'autenticazione di Windows. Se si usa l'opzione **/User** , il nome dell'account di accesso **/User** specificato viene associato all'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      L'opzione **/Password** viene usata solo in combinazione con l'opzione **/User** . Se si usa l'opzione **/Password** , l'accesso al pacchetto avviene in base alle informazioni sul nome utente e sulla password specificate. Se si omette l'opzione **/Password** , verrà usata una password vuota.  
   

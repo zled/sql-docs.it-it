@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="database-catalog"></a>Catalogo del database
@@ -33,7 +33,7 @@ WideWorldImporters utilizza gli schemi per scopi diversi, ad esempio l'archiviaz
 
 Questi schemi contengono i dati. Un numero di tabelle necessarie per tutti gli altri schemi e si trova nello schema dell'applicazione.
 
-|Schema|Description|
+|schema|Description|
 |-----------------------------|---------------------|
 |Applicazione|Livello di applicazione utenti, contatti e i parametri. Contiene anche le tabelle di riferimento con i dati che viene utilizzati da più schemi|
 |Purchasing|Magazzino acquisti da fornitori e i dettagli relativi ai fornitori.|  
@@ -44,7 +44,7 @@ Questi schemi contengono i dati. Un numero di tabelle necessarie per tutti gli a
 
 Questi schemi vengono utilizzati per le applicazioni esterne che non è consentite accedere direttamente alle tabelle di dati. Contengono viste e stored procedure utilizzate da applicazioni esterne.
 
-|Schema|Description|
+|schema|Description|
 |-----------------------------|---------------------|
 |Sito Web|Accesso al database dal sito Web aziendale avviene totalmente tramite questo schema.|
 |Report|Accesso al database dai report di Reporting Services avviene totalmente tramite questo schema.|
@@ -56,7 +56,7 @@ Si noti che i report e Power BI gli schemi non vengono utilizzati nella versione
 
 Schemi speciale
 
-|Schema|Description|
+|schema|Description|
 |-----------------------------|---------------------|
 |Integrazione|Gli oggetti e le procedure necessari per l'integrazione di data warehouse (ad esempio la migrazione dei dati al database WideWorldImportersDW).|
 |Sequenze|Contiene le sequenze utilizzate da tutte le tabelle nell'applicazione.|
@@ -181,7 +181,7 @@ Queste sono le procedure utilizzate da un'applicazione client, ad esempio un fro
 
 ### <a name="integration-schema"></a>Schema di integrazione
 
-Le stored procedure in questo schema vengono utilizzate dal processo ETL. Ottenere i dati necessari da diverse tabelle per l'intervallo di tempo necessari per il [pacchetto ETL](https://msdn.microsoft.com/library/mt734218.aspx).
+Le stored procedure in questo schema vengono utilizzate dal processo ETL. Ottenere i dati necessari da diverse tabelle per l'intervallo di tempo necessari per il [pacchetto ETL](/sql-docs/docs/sample/world-wide-importers/etl-workflow).
 
 ### <a name="dataloadsimulation-schema"></a>Schema DataLoadSimulation
 

@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata End-to-end
@@ -37,11 +37,11 @@ Questo argomento illustra le operazioni seguenti:
 ## <a name="before-we-start"></a>Prima di iniziare  
 Per proseguire, sono necessari questi prodotti:  
   
-* Per creare origini dati e indicatori KPI e pubblicare i set di dati e report per dispositivi mobili, è necessario accedere a un [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [server di report in modalità nativa](https://msdn.microsoft.com/library/ms143711.aspx).  
-* Per [creare set di dati condivisi](#shared-dataset), è necessario [installare Generatore report](https://msdn.microsoft.com/library/ff519551.aspx).  
+* Per creare origini dati e indicatori KPI e pubblicare i set di dati e report per dispositivi mobili, è necessario accedere a una [! INCLUDERE[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server).  
+* Per [creare set di dati condivisi](/sql-docs/docs/reporting-services/install-windows/install-report-builder).  
 * Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Script e database di esempio di AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
-*  OPPURE: database di esempio World Wide Importers disponibile alla pagina [Microsoft SQL Server Samples](https://msdn.microsoft.com/library/mt748083.aspx) (Esempi di Microsoft SQL Server).
+*  OR: World Wide Importers database di esempio disponibile il [Microsoft SQL Server Samples](/sql-docs/docs/sample/microsoft-sql-server-samples) pagina.
 * Per visualizzare il risultato: 
   *   [Iscriversi al servizio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) e
   *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
@@ -49,7 +49,7 @@ Per proseguire, sono necessari questi prodotti:
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
   
-È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l' [elenco delle origini dati supportate](https://msdn.microsoft.com/library/ms159219.aspx).  
+È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere il [elenco delle origini dati supportate](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).  
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Origine dati**.  
   
@@ -66,11 +66,11 @@ Per proseguire, sono necessari questi prodotti:
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-Altre informazioni sulle [origini dati condivise in Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
+Altre informazioni sulle [origini dati condivise in Reporting Services](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs).  
    
 ## <a name="shared-dataset">Creare un set di dati condiviso</a>  
   
-Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] esistente, ad esempio Progettazione Report in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  Questa procedura dettagliata usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installare Generatore report](https://msdn.microsoft.com/library/ff519551.aspx)oppure avviarlo dal portale Web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.   
+Utilizzare un oggetto esistente [! INCLUDERE[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder), oppure avviarlo dal portale web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.   
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Report impaginato** per avviare [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

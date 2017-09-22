@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: b9fc5e53400fb83006d47213c84541dadfb11b38
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5f7c0f61cf9f441c56529ddaaddc96a0c318ce59
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Scegliere lo strumento appropriato per la gestione di SQL Server in Linux
@@ -28,7 +28,7 @@ Il **mssql conf** strumento consente di configurare SQL Server in Linux. Per ult
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Quasi tutte le operazioni eseguite in uno strumento client può essere eseguita anche con istruzioni Transact-SQL. SQL Server fornisce [viste a gestione dinamica (DMV)](https://msdn.microsoft.com/library/ms188754.aspx) di query che lo stato e configurazione di SQL Server. Sono inoltre disponibili [comandi Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) per attività di gestione di database. È possibile eseguire questi comandi in qualsiasi strumento client che supporta la connessione a SQL Server e l'esecuzione di query Transact-SQL. Gli esempi includono [sqlcmd](sql-server-linux-setup-tools.md), [codice di Visual Studio](sql-server-linux-develop-use-vscode.md), e [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
+Quasi tutte le operazioni eseguite in uno strumento client può essere eseguita anche con istruzioni Transact-SQL. SQL Server fornisce [viste a gestione dinamica (DMV)](/sql-docs/docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views) di query che lo stato e configurazione di SQL Server. Sono inoltre disponibili [comandi Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) per attività di gestione di database. È possibile eseguire questi comandi in qualsiasi strumento client che supporta la connessione a SQL Server e l'esecuzione di query Transact-SQL. Gli esempi includono [sqlcmd](sql-server-linux-setup-tools.md), [codice di Visual Studio](sql-server-linux-develop-use-vscode.md), e [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio in Windows
 

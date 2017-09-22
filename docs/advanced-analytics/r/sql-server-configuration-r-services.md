@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 912e0180acf95e2788213a7febd9361f4d4d6990
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: d581d48098ab1ee1b983a98a18d53ba68b1e8728
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
@@ -96,7 +96,7 @@ Per altre informazioni, vedere i documenti seguenti:
 
 + [Abilitare la compressione in una tabella o un indice](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Guida agli indici ColumnStore](https://msdn.microsoft.com/library/gg492088.aspx)
++ [Guida agli indici ColumnStore](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)
 
 ### <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria
 

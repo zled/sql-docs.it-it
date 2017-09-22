@@ -4,16 +4,16 @@ description: In questa esercitazione introduttiva viene illustrato come usare Do
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 10623562f57ae1b4b571dd2e5b7dad56b81b8f8b
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 7fe6626cf8c5b9b348e95b956cee9ac67db16f97
 ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Eseguire l'immagine di SQL Server 2017 contenitore con Docker
@@ -73,13 +73,13 @@ I passaggi seguenti aumentare la memoria di Docker per Windows a 4 GB.
 1. Per eseguire l'immagine contenitore con Docker, è possibile utilizzare il comando seguente da una shell bash (Linux/macOS):
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
     ```
 
     Se si usa Docker per Windows, utilizzare il comando seguente da un comando-prompt di PowerShell con privilegi elevati:
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
     ```
 
     > [!NOTE]
@@ -92,9 +92,10 @@ I passaggi seguenti aumentare la memoria di Docker per Windows a 4 GB.
     | **-e ' ACCEPT_EULA = Y'** |  Impostare il **ACCEPT_EULA** variabile qualsiasi valore per confermare l'accettazione del [il contratto di licenza dell'utente finale](http://go.microsoft.com/fwlink/?LinkId=746388). È necessario impostare per l'immagine di SQL Server. |
     | **-e ' MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>'** | Specificare una password complessa è composta da almeno 8 caratteri e soddisfa [requisiti di password del Server SQL](../relational-databases/security/password-policy.md). È necessario impostare per l'immagine di SQL Server. |
     | **-e ' MSSQL_PID = sviluppatore '** | Specifica la chiave edition o prodotto. In questo esempio, l'edizione Developer liberamente con licenza viene utilizzato per il test non di produzione. Per altri valori, vedere [le impostazioni di configurazione SQL Server con le variabili di ambiente in Linux](sql-server-linux-configure-environment-variables.md). |
-    | **-aggiunta SYS_PTRACE perno** | Aggiunge la funzionalità di Linux per tracciare un processo. Ciò consente a SQL Server generare dump in un'eccezione. |
     | **1401:1433 -p** | Mapping di una porta TCP per l'ambiente host (il primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio, SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questa funzionalità è esposta alla porta, 1401, nell'host. |
+    | **-nome sqlcontainer1** | Specificare un nome personalizzato per il contenitore invece uno generato casualmente. Se si esecuzione più di un contenitore, è possibile riutilizzare questo stesso nome. |
     | **Microsoft/mssql-server-per linux** | L'immagine di contenitore di SQL Server per Linux. Se non diversamente specificato, l'impostazione predefinita il **più recente** immagine. |
+
 
 1. Per visualizzare i contenitori di Docker, usare il `docker ps` comando.
 
@@ -108,7 +109,7 @@ I passaggi seguenti aumentare la memoria di Docker per Windows a 4 GB.
 
 1. Se il **stato** colonna viene visualizzato lo stato **backup**, quindi viene eseguito SQL Server nel contenitore e in ascolto sulla porta specificata nella **porte** colonna. Se il **stato** colonna per il contenitore di SQL Server viene illustrata **Exited**, vedere il [sezione della Guida alla configurazione di risoluzione dei problemi](sql-server-linux-configure-docker.md#troubleshooting).
 
-Esistono due utile `docker run` opzioni non utilizzate nell'esempio precedente, per semplicità. Il `-h` parametro (nome host) cambia il nome interno del contenitore su un valore personalizzato. Si tratta del nome che verrà restituito nella query Transact-SQL seguente:
+Il `-h` è utile anche il parametro (nome host), ma non viene utilizzato in questa esercitazione per motivi di semplicità. Questa modifica il nome interno del contenitore su un valore personalizzato. Si tratta del nome che verrà restituito nella query Transact-SQL seguente:
 
 ```sql
 SELECT @@SERVERNAME,
@@ -117,7 +118,7 @@ SELECT @@SERVERNAME,
     SERVERPROPERTY('ServerName')
 ```
 
-È inoltre possibile trovare il `--name` parametro utile per assegnare un nome di contenitore anziché un nome di contenitore generato. Impostazione `-h` e `--name` sullo stesso valore è un buon metodo per identificare facilmente il contenitore di destinazione.
+Impostazione `-h` e `--name` sullo stesso valore è un buon metodo per identificare facilmente il contenitore di destinazione.
 
 ## <a name="change-the-sa-password"></a>Modificare la password SA
 
@@ -125,24 +126,25 @@ L'account SA è un amministratore di sistema nell'istanza di SQL Server che vien
 
 1. Scegliere una password complessa da utilizzare per l'utente SA.
 
-1. Utilizzare `docker exec` eseguire **sqlcmd** per modificare la password tramite Transact-SQL. Sostituire `<Old Password>` e `<New Password>` con i valori della password.
+1. Utilizzare `docker exec` eseguire **sqlcmd** per modificare la password tramite Transact-SQL. Sostituire `<YourStrong!Passw0rd>` e `<YourNewStrong!Passw0rd>` con valori di password.
 
-> ```bash
-> docker exec -it <Container ID> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<Old Password>' -Q 'ALTER LOGIN SA WITH PASSWORD="<New Password>";'
-> ```
+   ```bash
+   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourStrong!Passw0rd>' -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+   ```
+
+   ```PowerShell
+   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourStrong!Passw0rd>" -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+   ```
 
 ## <a name="connect-to-sql-server"></a>Connessione a SQL Server
 
 La procedura seguente utilizza lo strumento da riga di comando di SQL Server, **sqlcmd**, all'interno del contenitore per la connessione a SQL Server.
 
-1. Utilizzare il `docker exec -it` comando per avviare una shell bash interattiva all'interno del contenitore in esecuzione. Nell'esempio seguente `e69e056c702d` è l'ID del contenitore.
+1. Utilizzare il `docker exec -it` comando per avviare una shell bash interattiva all'interno del contenitore in esecuzione. Nell'esempio seguente `sqlcontainer1` nome specificato da di `--name` parametro al momento della creazione del contenitore.
 
     ```bash
-    docker exec -it e69e056c702d "bash"
+    docker exec -it sqlcontainer1 "bash"
     ```
-
-    > [!TIP]
-    > Sempre necessario specificare l'id intero contenitore. È necessario solo specificare un numero di caratteri sufficiente per identificarla in modo univoco. In questo esempio, potrebbe pertanto essere sufficienti per utilizzare `e6` o `e69` anziché l'id completo.
 
 1. Una volta all'interno del contenitore, la connessione in locale con sqlcmd. SQLCMD non è il percorso per impostazione predefinita, è necessario specificare il percorso completo.
 

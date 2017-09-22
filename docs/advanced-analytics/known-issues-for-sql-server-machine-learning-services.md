@@ -2,7 +2,7 @@
 title: Problemi noti di Machine Learning Services | Documenti Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/16/2017
+ms.date: 09/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,15 +16,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: d5d36a57d73bd0f37d9e8aee6a4d154fb096f375
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2d21756a05e9e51379faa194ec331517e510988d
 ms.contentlocale: it-it
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti in servizi di Machine Learning
 
-Questo articolo descrive i problemi noti o limitazioni con i componenti di Machine Learning forniti come un'opzione in SQL Server 2016 e SQL Server 2017.
+Questo articolo descrive i problemi noti o limitazioni con i componenti che vengono forniti come un'opzione in SQL Server 2016 e SQL Server 2017 di apprendimento automatico.
 
 Le informazioni riportate di seguito si applicano a tutte le operazioni seguenti, a meno che non indicato in particolare:
 
@@ -75,13 +75,13 @@ Quando si esegue codice R in un contesto di calcolo di SQL Server 2016, e una de
 
 >*Si esegue la versione 9.0.0 del Client di Microsoft R nel computer, non è compatibile con la versione 8.0.3 Microsoft R Server. Download and install a compatible version.* (Sul computer è in esecuzione la versione 9.0.0 di Microsoft R, che non è compatibile con Microsoft R Server versione 8.0.3. Scaricare e installare una versione compatibile.)
 
-Lo strumento SqlBindR.exe viene fornito nella Microsoft R Server versione 9.0 per supportare l'aggiornamento delle istanze di SQL Server a una versione compatibile di Analysis Services 9.0. Verrà aggiunto il supporto per l'aggiornamento di istanze di R services 9.0 in SQL Server come parte di una prossima service release. Le versioni di candidati per l'aggiornamento futuro includono SQL Server 2016 RTM CU3 e + SP1 e SQL Server 2017 CTP 1.1.
+È possibile utilizzare _associazione_ in Microsoft R Server 9.0 e versioni successive, per aggiornare i componenti di R in istanze di SQL Server 2016. Per determinare se il supporto per gli aggiornamenti disponibili per la versione di R Services, vedere [aggiornare un'istanza di servizi di R usando SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 **Si applica a:** SQL Server 2016 R Services, con R Server versione 9.0.0 o versioni precedenti
 
 ### <a name="setup-for-sql-server-2016-service-releases-might-fail-to-install-newer-versions-of-r-components"></a>Durante l'installazione di alcune versioni del servizio SQL Server 2016 è possibile che le versioni più recenti dei componenti R non vengano installate
 
-Quando si installa un aggiornamento cumulativo o installare un service pack per SQL Server 2016 in un computer che non è connesso a internet, l'installazione guidata potrebbe non riuscire a visualizzare il prompt che consente di aggiornare i componenti di R usando il file CAB scaricati. In genere questo errore si verifica quando più componenti sono installati con il motore di database.
+Quando si installa un aggiornamento cumulativo o installare un service pack per SQL Server 2016 in un computer che non è connesso a internet, l'installazione guidata potrebbe non riuscire a visualizzare il prompt che consente di aggiornare i componenti di R usando il file CAB scaricati. In genere questo errore si verifica quando più componenti sono stati installati con il motore di database.
 
 In alternativa, è possibile installare la versione del servizio tramite la riga di comando e specificando la */MRCACHEDIRECTORY* argomento, come illustrato in questo esempio, che consente di installare gli aggiornamenti CU1:
 
@@ -93,11 +93,11 @@ Per ottenere i programmi di installazione più recente, vedere [installare i com
 
 ### <a name="launchpad-services-fails-to-start-if-the-version-is-different-from-the-r-version"></a>Servizi di finestra di avvio non viene avviato se la versione è diversa dalla versione di R
 
-Se si installa R services separatamente dal motore di database e le versioni di compilazione sono diverse, si potrebbe vedere il seguente errore nel registro eventi di sistema: 
+Se si installa SQL Server R Services separatamente dal motore di database e le versioni di compilazione sono diverse, si potrebbe vedere il seguente errore nel registro eventi di sistema:
 
 >_Il servizio Launchpad di SQL Server non è stato possibile avviare a causa del seguente errore: il servizio non ha risposto alla richiesta di avvio o di controllo in modo tempestivo._
 
-Ad esempio, questo errore potrebbe verificarsi se si installa il motore di database utilizzando la versione, applicare una patch per aggiornare il motore di database e quindi aggiungere R services utilizzando la versione di rilascio.
+Ad esempio, questo errore potrebbe verificarsi se si installa il motore di database utilizzando la versione di rilascio, applicare una patch per aggiornare il motore di database e quindi aggiungere la funzionalità di R Services utilizzando la versione di rilascio.
 
 Per evitare questo problema, assicurarsi che tutti i componenti abbiano lo stesso numero di versione. Se si aggiorna un componente, assicurarsi di applicare lo stesso aggiornamento a tutti gli altri componenti installati.
 
@@ -105,9 +105,9 @@ Per visualizzare un elenco dei numeri di versione di R che sono necessari per og
 
 ### <a name="remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>Contesti di calcolo remoto bloccati da un firewall nelle istanze di SQL Server in esecuzione in macchine virtuali di Azure
 
-Se è stato installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] in una macchina virtuale Windows Azure, potrebbe non essere in grado di utilizzare i contesti di calcolo che richiedono l'uso dell'area di lavoro della macchina virtuale. Il motivo è che, per impostazione predefinita, il firewall della macchina virtuale di Azure include una regola che blocca l'accesso alla rete per gli account utente di R locali.
+Se è stato installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] in una macchina virtuale Windows Azure, potrebbe non essere in grado di utilizzare i contesti di calcolo che richiedono l'uso dell'area di lavoro della macchina virtuale. Il motivo è che, per impostazione predefinita, il firewall in macchine virtuali di Azure include una regola che blocca l'accesso per gli account utente di R locali rete.
 
-In alternativa, nella macchina virtuale di Azure, aprire **Windows Firewall con sicurezza avanzata**selezionare **regole in uscita**e disabilitare la regola seguente: **bloccare l'accesso di rete per gli account utente locale di R in SQL Server instance MSSQLSERVER**.
+In alternativa, nella macchina virtuale di Azure, aprire **Windows Firewall con sicurezza avanzata**selezionare **regole in uscita**e disabilitare la regola seguente: **bloccare l'accesso di rete per gli account utente locale di R in SQL Server instance MSSQLSERVER**. È anche possibile lasciare la regola attivata, ma modificare la proprietà di sicurezza in **Consenti se sicura**.
 
 ### <a name="implied-authentication-in-sqlexpress"></a>Autenticazione implicita in SQLEXPRESS
 
@@ -119,11 +119,11 @@ In alternativa, è possibile usare un account di accesso SQL per eseguire proces
 
 **Si applica a:** SQL Server 2016 R Services Express Edition
 
-### <a name="performance-limits-when-r-libraries-are-called-from-standalone-r-tools"></a>Limiti sulle prestazioni quando vengono chiamate librerie R da strumenti Standalone R
+### <a name="performance-limits-when-r-libraries-are-called-from-other-r-tools"></a>Limiti sulle prestazioni quando vengono chiamate librerie R tramite altri strumenti di R
 
-È possibile chiamare R strumenti e librerie che vengono installate per SQL Server R Services da un'applicazione esterna R, ad esempio RGui. Questa chiamata potrebbe essere utile quando si installano nuovi pacchetti, o quando si eseguono test ad hoc su molto brevi esempi di codice.
+È possibile chiamare R strumenti e librerie che vengono installate per SQL Server da un'applicazione esterna R, ad esempio RGui. Questa chiamata potrebbe essere utile quando si installano nuovi pacchetti, o quando si eseguono test ad hoc su molto brevi esempi di codice.
 
-Tuttavia, tenere presente che all'esterno di SQL Server, delle prestazioni sarà limitata. Ad esempio, anche se è stata acquistata l'edizione Enterprise di SQL Server, R verrà eseguito in modalità a thread singolo quando si esegue il codice R con strumenti esterni. Le prestazioni sono migliori se si esegue il codice R iniziando una connessione di SQL Server e utilizzando [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), verrà chiamato librerie R per l'utente.
+Tuttavia, tenere presente che all'esterno di SQL Server, delle prestazioni potrebbero risultare limitata. Ad esempio, anche se è stata acquistata l'edizione Enterprise di SQL Server, R viene eseguito in modalità a thread singolo quando si esegue il codice R con strumenti esterni. Le prestazioni dovrebbero essere migliori se si esegue il codice R iniziando una connessione di SQL Server e utilizzando [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), che richiede le librerie di R.
 
 * Evitare di chiamare le librerie di R usati da SQL Server da strumenti esterni di R.
 * Se è necessario eseguire codice R esteso nel computer SQL Server con SQL Server, installare un'istanza separata di R, ad esempio, Client di Microsoft R e quindi verificare che gli strumenti di sviluppo R facciano riferimento alla nuova libreria.
@@ -148,7 +148,7 @@ Per altri problemi noti che potrebbero influire sulle soluzioni R, visitare il [
 
 Nelle build di rilascio iniziale di SQL Server 2016, è possibile impostare l'affinità del processore solo per le CPU nel primo gruppo k. Ad esempio, se il server è un computer 2 socket con due gruppi k, processori soli del primo gruppo k vengono utilizzati per i processi R. La stessa limitazione si applica quando si configura la governance delle risorse per i processi di script R.
 
-Questo problema è stato risolto in SQL Server 2016 Service Pack 1.
+Questo problema è stato risolto in SQL Server 2016 Service Pack 1. È consigliabile eseguire l'aggiornamento alla versione più recente del servizio.
 
 **Si applica a:** versione RTM di SQL Server 2016 R Services
 
@@ -158,13 +158,11 @@ Se il contesto di calcolo è impostato sull'istanza di SQL Server, non è possib
 
 L'istruzione seguente, ad esempio, causerebbe un errore se la colonna CRSDepTimeStr non fosse già un numero intero:
 
-~~~~
+```r
 data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall",
                                 connectionString = connectionString,
                                 colClasses = c(CRSDepTimeStr = "integer"))
-~~~~
-
-Questo problema verrà risolto in una versione futura.
+```
 
 In alternativa, è possibile riscrivere la query SQL per l'utilizzo di CAST o CONVERTIRE e presentare i dati in R, utilizzando il tipo di dati corretto. In generale, le prestazioni sono migliori quando si lavora con i dati utilizzando SQL invece la modifica dei dati nel codice R.
 
@@ -178,7 +176,7 @@ Se si utilizza il comando di R per cancellare l'area di lavoro degli oggetti dur
 
 `revoScriptConnection` è un oggetto dell'area di lavoro R che contiene informazioni su una sessione R chiamata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se, tuttavia, il codice R include un comando per cancellare i dati dell'area di lavoro, ad esempio `rm(list=ls()))`, anche tutte le informazioni relative alla sessione e altri oggetti presenti nell'area di lavoro R vengono cancellati.
 
-In alternativa, evitare di cancellazione indiscriminata di variabili e altri oggetti durante l'esecuzione R [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Anche se è un'operazione comune nella console R, la cancellazione dei dati dell'area di lavoro può avere conseguenze impreviste.
+In alternativa, evitare di cancellazione indiscriminata di variabili e altri oggetti durante l'esecuzione R [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Anche se l'area di lavoro di cancellazione è comune quando si utilizza la console di R, può avere conseguenze impreviste.
 
 * Per eliminare variabili specifiche, utilizzare l'oggetto R *rimuovere* funzione: `remove('name1', 'name2', ...)`.
 * Se devono essere eliminate più variabili, salvare i nomi delle variabili temporanee in un elenco ed eseguire periodicamente operazioni di Garbage Collection.
@@ -195,13 +193,13 @@ Non è possibile usare in uno script R i tipi seguenti di risultati delle query:
 
 ### <a name="arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>Argomenti *varsToKeep* e *varsToDrop* non sono supportati per le origini dati di SQL Server
 
-Quando si utilizza la funzione rxDataStep per scrivere i risultati in una tabella, usando il *varsToKeep* e *varsToDrop* è un modo pratico per specificare le colonne da includere o escludere come parte dell'operazione. Questi argomenti non sono attualmente supportati per le origini dati di SQL Server.
+Quando si utilizza la funzione rxDataStep per scrivere i risultati in una tabella, usando il *varsToKeep* e *varsToDrop* è un modo pratico per specificare le colonne da includere o escludere come parte dell'operazione. Tuttavia, questi argomenti non sono supportati per le origini dati di SQL Server.
 
 ### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>Supporto limitato per tipi di dati SQL`sp_execute_external_script`
 
 Non tutti i tipi di dati supportati in SQL possono essere usati in R. Come soluzione alternativa, valutare la possibilità di eseguire il cast del tipo di dati non supportato in un tipo di dati supportato prima di passare i dati a sp_execute_external_script.
 
-Per ulteriori informazioni, vedere [tipi di dati e delle librerie R](r/r-libraries-and-data-types.md).
+Per ulteriori informazioni, vedere [R librerie e tipi di dati](r/r-libraries-and-data-types.md).
 
 ### <a name="possible-string-corruption"></a>Possibile danneggiamento della stringa
 
@@ -209,21 +207,21 @@ Qualsiasi andata e ritorno di dati di tipo stringa [!INCLUDE[tsql](../includes/t
 
 Quando si invia dati di tipo stringa a R, convertirli in una rappresentazione ASCII, se possibile.
 
+Questa limitazione si applica ai dati passati tra SQL Server e Python, nonché. Caratteri multibyte devono essere passati come UTF-8 e archiviati in formato Unicode.
+
 ### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>Un solo valore di tipo `raw` può essere restituito da`sp_execute_external_script`
 
-Quando un tipo di dati binari (il tipo di dati **raw** di R) viene restituito da R, il valore deve essere il valore nel frame dei dati di output.
+Quando un tipo di dati binari (R **raw** tipo di dati) viene restituito da R, il valore deve essere inviato nel frame di dati di output.
 
-Il supporto per più output di **raw** verrà aggiunti nelle versioni successive.
+Con i dati di tipi diversi da **raw**, è possibile restituire i valori dei parametri e i risultati della stored procedure semplicemente aggiungendo la parola chiave OUTPUT. Per ulteriori informazioni, vedere [restituire dati utilizzando i parametri di OUTPUT](https://technet.microsoft.com/library/ms187004.aspx).
 
-Se si desidera utilizzare più set di output, una possibile soluzione alternativa consiste nell'effettuare più chiamate della stored procedure e inviare il risultato set nuovamente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite ODBC.
-
-È possibile restituire i valori dei parametri e i risultati della stored procedure semplicemente aggiungendo la parola chiave OUTPUT. Per ulteriori informazioni, vedere [restituire dati utilizzando i parametri di OUTPUT](https://technet.microsoft.com/library/ms187004.aspx).
+Se si desidera utilizzare più set di output che includono valori di tipo **raw**, una possibile soluzione alternativa è effettuare più chiamate della stored procedure o il risultato di inviare set nuovamente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite ODBC.
 
 ### <a name="loss-of-precision"></a>Perdita di precisione
 
 Poiché [!INCLUDE[tsql](../includes/tsql-md.md)] e R supportano diversi tipi di dati, tipi di dati numerici possono subire una perdita di precisione durante la conversione.
 
-Per ulteriori informazioni sulla conversione implicita del tipo di dati, vedere [di lavoro con tipi di dati R](r/r-libraries-and-data-types.md).
+Per ulteriori informazioni sulla conversione implicita del tipo di dati, vedere [R librerie e tipi di dati](r/r-libraries-and-data-types.md).
 
 ### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter-the-sample-data-set-for-the-analysis-has-no-variables"></a>Variabile di errore dell'ambito quando si usa il parametro transformFunc: *il set di dati di esempio per l'analisi non dispone di variabili*
 
@@ -235,26 +233,23 @@ Se si verifica questo problema, è possibile risolverlo incorporando la definizi
 
 Esempio:
 
-```  
+```r
 f <- function(x) { 2*x * 3 }  
 g <- function(y) {   
               a <- 10 * y  
                f(a)  
-}  
-  
-```  
-
+}
+```
 
 Per evitare l'errore, riscrivere la definizione come indicato di seguito:
 
-```  
+```r
 g <- function(y){  
               f <- function(x) { 2*x +3}  
               a <- 10 * y  
               f(a)  
-}  
-  
-```  
+}
+```
 
 ### <a name="data-import-and-manipulation-using-revoscaler"></a>Importazione e modifica dei dati con RevoScaleR
 
@@ -268,7 +263,7 @@ L'uso di una trasformazione per modificare il tipo di dati di una variabile non 
 
 In SQL Server 2016, il `rxExec` funzione che viene fornito per il RevoScaleR pacchetto può essere utilizzato solo in modalità a thread singolo.
 
-Il parallelismo di `rxExec` tra più processi verrà aggiunto in una versione futura.
+Parallelismo per `rxExec` tra più processi è pianificata per una versione futura.
 
 ### <a name="increase-the-maximum-parameter-size-to-support-rxgetvarinfo"></a>Aumentare le dimensioni massime di parametro per supportare rxGetVarInfo
 
@@ -276,25 +271,25 @@ Se si utilizzano set di dati con un numero molto elevato di variabili (ad esempi
 
 Se si usa la console di R (ad esempio, in rgui.exe o rterm.exe), è possibile impostare il valore di max-ppsize su 500000 digitando:
 
-```  
-R --max-ppsize=500000  
-```  
-  
+```r
+R --max-ppsize=500000
+```
+
 Se si utilizza il [!INCLUDE[rsql_developr](../includes/rsql-developr-md.md)] ambiente, è possibile impostare il `max-ppsize` flag effettuando la chiamata seguente al file eseguibile RevoIDE:
 
-```  
+```
 RevoIDE.exe /RCommandLine --max-ppsize=500000  
-```  
+```
 
 ### <a name="issues-with-the-rxdtree-function"></a>Problemi con la funzione rxDTree
 
-La funzione `rxDTree` attualmente non supporta le trasformazioni nella formula. In particolare, l'uso della sintassi `F()` per la creazione di fattori in tempo reale non è supportata. Tuttavia, i dati numerici verranno automaticamente categorizzati.
+La funzione `rxDTree` attualmente non supporta le trasformazioni nella formula. In particolare, l'uso della sintassi `F()` per la creazione di fattori in tempo reale non è supportata. Tuttavia, i dati numerici vengano automaticamente categorizzati.
 
 I fattori ordinati vengono trattati proprio come i fattori in tutte le funzioni di analisi RevoScaleR eccetto `rxDTree`.
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise e Microsoft R Open
 
-Questa sezione elenca i problemi specifici di connettività R, sviluppo e gli strumenti di prestazioni forniti da Revolution Analitica. Questi strumenti sono stati forniti nelle versioni definitive precedenti di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+Questa sezione elenca i problemi specifici di connettività R, sviluppo e gli strumenti di prestazioni forniti da Revolution Analitica. Questi strumenti sono stati forniti nelle versioni definitive precedenti di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 In generale, è consigliabile disinstallare le versioni precedenti e installare la versione più recente di SQL Server o Microsoft R Server.
 
@@ -308,14 +303,20 @@ Se si ha una licenza per usare una versione diversa di Revolution R Enterprise, 
 
 Alcune versioni non definitive di [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] incluso un ambiente di sviluppo R per Windows che è stato creato da Revolution Analitica. Questo strumento non viene più fornito e non è supportata.
 
-Per la compatibilità con [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], si consiglia di installare Microsoft R Client o Microsoft R Server anziché gli strumenti di Revolution Analitica. [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) è un altro client consigliato per il supporto di soluzioni Microsoft R.
+Per la compatibilità con [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], si consiglia di installare Microsoft R Client o Microsoft R Server anziché gli strumenti di Revolution Analitica. [Strumenti R per Visual Studio](https://www.visualstudio.com/vs/rtvs/) e [codice di Visual Studio](https://code.visualstudio.com/) supporta anche le soluzioni di Microsoft R.
 
 ### <a name="compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>Problemi di compatibilità con il driver ODBC di SQLite e RevoScaleR
 
 Revisione 0.92 del driver ODBC di SQLite è incompatibile con RevoScaleR. Le revisioni 0.88-0.91 e 0.93 e versioni successive sono noti per essere compatibili.
 
+## <a name="python-code-execution-or-python-package-issues"></a>Esecuzione del codice Python o problemi di pacchetti Python
+
+In questa sezione contiene i problemi noti specifici all'esecuzione di Python su SQL Server, nonché i problemi relativi ai pacchetti Python pubblicati da Microsoft, tra cui [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) e [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+
+
 ## <a name="see-also"></a>Vedere anche
 
 [Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
 
+[Risoluzione dei problemi di apprendimento in SQL Server](machine-learning-troubleshooting-faq.md)
 

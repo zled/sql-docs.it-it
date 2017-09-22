@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71ad4edf319134eb347b0df26bf6878ccc4a9dcc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1a74389ea12c6c8987246946a9c81d8aeb3851cf
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="creating-tabular-models"></a>Creazione di modelli tabulari
@@ -58,12 +58,12 @@ ms.lasthandoff: 09/01/2017
   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
- [Analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Modello](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Distribuzione della soluzione di modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione di una soluzione del modello tabulare](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)   
+ [Scaricare SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)   
  [Strumenti e applicazioni usate in Analysis Services](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   

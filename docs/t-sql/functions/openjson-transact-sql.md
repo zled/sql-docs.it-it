@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -67,7 +67,7 @@ Per impostazione predefinita, il **OPENJSON** funzione con valori di tabella res
   
 ![Sintassi per la clausola OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON con sintassi")
 
-*with_clause* contiene un elenco di colonne con i relativi tipi per **OPENJSON** da restituire. Per impostazione predefinita, **OPENJSON** corrisponde chiavi *jsonExpression* con i nomi delle colonne *with_clause*. Se un nome di colonna non corrisponde a un nome di chiave, è possibile fornire un parametro facoltativo *column_path*, ovvero un [espressione di percorso JSON](../../relational-databases/json/json-path-expressions-sql-server.md) che fa riferimento una chiave all'interno di *jsonExpression*. 
+*with_clause* contiene un elenco di colonne con i relativi tipi per **OPENJSON** da restituire. Per impostazione predefinita, **OPENJSON** corrisponde chiavi *jsonExpression* con i nomi delle colonne *with_clause* (in questo caso, le chiavi di corrispondenze implica che sia tra maiuscole e minuscole). Se un nome di colonna non corrisponde a un nome di chiave, è possibile fornire un parametro facoltativo *column_path*, ovvero un [espressione di percorso JSON](../../relational-databases/json/json-path-expressions-sql-server.md) che fa riferimento una chiave all'interno di *jsonExpression*. 
 
 ## <a name="arguments"></a>Argomenti  
 ### <a name="jsonexpression"></a>*jsonExpression*  

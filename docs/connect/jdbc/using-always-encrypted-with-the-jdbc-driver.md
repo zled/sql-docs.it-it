@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ddf82a6ef055d951c987c8bc156f025c1162f6c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 4bc5be85fddcc86de0a3fe845620f5152b568015
 ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilizzo di Always Encrypted con il JDBC Driver
@@ -152,7 +152,7 @@ L'esempio seguente illustra come filtrare i dati in base ai valori crittografati
 - Tutti i valori stampati dal programma saranno in testo non crittografato, come Microsoft JDBC Driver per SQL Server decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
 
 > [!NOTE]  
->  Le query possono eseguire confronti di uguaglianza nelle colonne se sono crittografate tramite crittografia deterministica. Per ulteriori informazioni, vedere il **crittografia selezionando deterministica o casuale** sezione la [Always Encrypted (motore di Database)](https://msdn.microsoft.com/library/mt163865.aspx) argomento.  
+>  Le query possono eseguire confronti di uguaglianza nelle colonne se sono crittografate tramite crittografia deterministica. Per ulteriori informazioni, vedere il **crittografia selezionando deterministica o casuale** sezione la [Always Encrypted (motore di Database)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) argomento.  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -214,7 +214,7 @@ Questa sezione vengono descritte le categorie di errori durante l'esecuzione di 
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Errori di conversione di tipo di dati non supportato
 
-Always Encrypted supporta alcune conversioni per i tipi di dati crittografati. Vedere [Always Encrypted (motore di Database)](https://msdn.microsoft.com/library/mt163865.aspx) per un elenco dettagliato delle conversioni di tipo supportato. Per evitare errori di conversione di tipo di dati, verificare quanto segue:
+Always Encrypted supporta alcune conversioni per i tipi di dati crittografati. Vedere [Always Encrypted (motore di Database)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) per un elenco dettagliato delle conversioni di tipo supportato. Per evitare errori di conversione di tipo di dati, verificare quanto segue:
 
 - Utilizzare i metodi di impostazione appropriato quando si passa i valori per i parametri destinati alle colonne crittografate, in modo che il tipo di dati di SQL Server del parametro è esattamente come il tipo di colonna di destinazione o una conversione del tipo di dati di SQL Server del parametro alla destinazione del tipo della colonna è supportato. Si noti che siano stati aggiunti nuovi metodi API per le classi SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet per passare i parametri corrispondenti a specifici tipi di dati di SQL Server. Ad esempio, se una colonna non crittografata setTimestamp() metodo consente di passare un parametro a un datetime2 o a una colonna datetime. Tuttavia, quando una colonna è crittografata è necessario utilizzare il metodo esatto che rappresenta il tipo della colonna nel database. Ad esempio, utilizzare setTimestamp() per passare i valori a una colonna crittografata datetime2 e utilizzare setDateTime() per passare valori a una colonna datetime crittografati. Vedere [sempre crittografato riferimento all'API per il Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) per un elenco completo delle nuove API. 
 - La precisione e la scala dei parametri destinati alle colonne dei tipi di dati di SQL Server decimali e numerici sono uguali a quelle configurate per la colonna di destinazione. Si noti che siano stati aggiunti nuovi metodi API per le classi SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet per accettare precisione e scala insieme ai valori di dati per i parametri o colonne che rappresentano i tipi di dati decimali e numerici. Vedere [sempre crittografato riferimento all'API per il Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) per un elenco completo di API/nuovo di overload.  
@@ -314,7 +314,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [librerie di Azure-activedirectory-libreria-per-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>Utilizzando il Provider di archivio certificati di Windows
-Il SQLServerColumnEncryptionCertificateStoreProvider utilizzabile per archiviare chiavi master della colonna nell'archivio certificati Windows. Utilizzare la procedura guidata crittografia sempre attiva SQL Server Management Studio (SSMS) o altri strumenti supportati per creare la chiave master della colonna e la crittografia di colonna le definizioni chiave nel database. La stessa procedura guidata consente di generare un certificato autofirmato nell'archivio certificati di Windows che è utilizzato come chiave master della colonna per i dati sempre crittografati. Per ulteriori informazioni sulla chiave master della colonna e di crittografia della colonna chiave sintassi T-SQL, visitare [CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx) e [CREATE COLUMN ENCRPTION KEY](https://msdn.microsoft.com/library/mt146372.aspx) rispettivamente.
+Il SQLServerColumnEncryptionCertificateStoreProvider utilizzabile per archiviare chiavi master della colonna nell'archivio certificati Windows. Utilizzare la procedura guidata crittografia sempre attiva SQL Server Management Studio (SSMS) o altri strumenti supportati per creare la chiave master della colonna e la crittografia di colonna le definizioni chiave nel database. La stessa procedura guidata consente di generare un certificato autofirmato nell'archivio certificati di Windows che è utilizzato come chiave master della colonna per i dati sempre crittografati. Per ulteriori informazioni sulla chiave master della colonna e di crittografia della colonna chiave sintassi T-SQL, visitare [CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) e [CREATE COLUMN ENCRPTION KEY](/sql-docs/docs/t-sql/statements/create-column-encryption-key-transact-sql) rispettivamente.
 
 Il nome del SQLServerColumnEncryptionCertificateStoreProvider è "MSSQL_CERTIFICATE_STORE" e può eseguire query per l'API getName() dell'oggetto provider. Viene registrato automaticamente dal driver e possono essere utilizzato facilmente senza la modifica di qualsiasi applicazione.
 
@@ -356,7 +356,7 @@ Si noti che se l'archivio è di tipo PKCS12 quindi l'utilità keytool non viene 
 
 È inoltre possibile esportare un certificato dall'archivio certificati di Windows nel formato PFX e che utilizzano il SQLServerColumnEncryptionJavaKeyStoreProvider. Il certificato esportato può anche essere importato per l'archivio di chiavi di Java come un tipo di archivio chiavi JKS. 
 
-Dopo aver creato la voce keytool sarà necessario creare i metadati di chiave master della colonna nel database di cui necessita il nome del provider di archivio chiavi e il percorso della chiave. Per ulteriori informazioni su come creare i metadati di chiave master della colonna visitare [CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx). Per SQLServerColumnEncryptionJavaKeyStoreProvider, il percorso della chiave è semplicemente l'alias della chiave. E il nome del SQLServerColumnEncryptionJavaKeyStoreProvider è 'MSSQL_JAVA_KEYSTORE'. È inoltre possibile cercare il nome mediante l'API pubblica getName() della classe SQLServerColumnEncryptionJavaKeyStoreProvider. 
+Dopo aver creato la voce keytool sarà necessario creare i metadati di chiave master della colonna nel database di cui necessita il nome del provider di archivio chiavi e il percorso della chiave. Per ulteriori informazioni su come creare i metadati di chiave master della colonna visitare [CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql). Per SQLServerColumnEncryptionJavaKeyStoreProvider, il percorso della chiave è semplicemente l'alias della chiave. E il nome del SQLServerColumnEncryptionJavaKeyStoreProvider è 'MSSQL_JAVA_KEYSTORE'. È inoltre possibile cercare il nome mediante l'API pubblica getName() della classe SQLServerColumnEncryptionJavaKeyStoreProvider. 
 
 La sintassi T-SQL per la creazione della chiave master di colonna è:
 
@@ -429,7 +429,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Uso di provider di archivi chiavi master della colonna per il provisioning di chiavi a livello di codice
 
-Quando si accede a colonne crittografate, il Driver JDBC di Microsoft per SQL Server consente di individuare in modo trasparente e chiama il provider di archivio di chiave master della colonna a destra per decrittografare le chiavi di crittografia di colonna. In genere, il codice dell'applicazione normale non chiama direttamente i provider di archivio delle chiavi master delle colonne. È tuttavia possibile creare un'istanza e chiamare un provider in modo esplicito a livello di codice e gestire le chiavi Always Encrypted per generare la chiave di crittografia di una colonna crittografata e decrittografare la chiave di crittografia di una colonna (ad esempio nell'ambito della rotazione della chiave master della colonna). Per altre informazioni, vedere [Panoramica della gestione delle chiavi per Always Encrypted](https://msdn.microsoft.com/library/mt708953.aspx).
+Quando si accede a colonne crittografate, il Driver JDBC di Microsoft per SQL Server consente di individuare in modo trasparente e chiama il provider di archivio di chiave master della colonna a destra per decrittografare le chiavi di crittografia di colonna. In genere, il codice dell'applicazione normale non chiama direttamente i provider di archivio delle chiavi master delle colonne. È tuttavia possibile creare un'istanza e chiamare un provider in modo esplicito a livello di codice e gestire le chiavi Always Encrypted per generare la chiave di crittografia di una colonna crittografata e decrittografare la chiave di crittografia di una colonna (ad esempio nell'ambito della rotazione della chiave master della colonna). Per altre informazioni, vedere [Panoramica della gestione delle chiavi per Always Encrypted](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted).
 Si noti che l'implementazione dei propri strumenti di gestione delle chiavi potrebbe essere necessaria solo se si usa un provider di archivio delle chiavi personalizzato. Quando si utilizzano chiavi archiviate nell'archivio certificati Windows o in insieme di credenziali chiave di Azure, è possibile utilizzare gli strumenti esistenti, ad esempio SQL Server Management Studio o PowerShell per gestire ed eseguire il provisioning di chiavi. Quando si utilizzano chiavi archiviate nell'archivio chiavi Java, è necessario eseguire il provisioning di chiavi a livello di codice. L'esempio seguente viene illustrato l'utilizzo di classe SQLServerColumnEncryptionJavaKeyStoreProvider per crittografare la chiave con una chiave archiviata nell'archivio di chiavi di Java.
 
 ```  
@@ -650,6 +650,6 @@ Con SQLServerBulkCopy, è possibile copiare dati, che sono già crittografati e 
 Nota: Prestare attenzione quando si specifica AllowEncryptedValueModifications come questo potrebbe causare il danneggiamento del database perché il Driver JDBC di Microsoft per SQL Server non verifica se i dati vengono effettivamente crittografati o se vengono crittografati correttamente usando la stessa crittografia tipo di algoritmo e chiave come colonna di destinazione.
 
 ## <a name="see-also"></a>Vedere anche  
- [Always Encrypted (Motore di database)](https://msdn.microsoft.com/library/mt163865.aspx)  
+ [Always Encrypted (Motore di database)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)  
   
   

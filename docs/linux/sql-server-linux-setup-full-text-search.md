@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
 ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installazione di ricerca Full-Text SQL Server in Linux
@@ -86,9 +86,9 @@ Se occorre un'installazione offline, individuare il download del pacchetto nella
 
 ## <a name="supported-languages"></a>Lingue supportate
 
-Ricerca full-Text utilizza [word breaker](https://msdn.microsoft.com/library/ms142509.aspx) che determinano come identificare singole parole basate sul linguaggio. È possibile ottenere un elenco di word breaker registrati eseguendo una query di **Sys. fulltext_languages** vista del catalogo. Con SQL Server 2017 RC2 vengono installati i Word breaker per le lingue seguenti:
+Ricerca full-Text utilizza [word breaker](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) che determinano come identificare singole parole basate sul linguaggio. È possibile ottenere un elenco di word breaker registrati eseguendo una query di **Sys. fulltext_languages** vista del catalogo. Con SQL Server 2017 RC2 vengono installati i Word breaker per le lingue seguenti:
 
-| Lingua | ID di lingua |
+| Linguaggio | ID di lingua |
 |---|---|
 | Lingua neutra | 0 |
 | Arabo | 1025 |
@@ -146,11 +146,11 @@ Ricerca full-Text utilizza [word breaker](https://msdn.microsoft.com/library/ms1
 
 ## <a id="filters"></a>Filtri
 
-Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in questo caso, un filtro installato è necessario elaborare il file. Per ulteriori informazioni sui filtri, vedere [configurare e gestire i filtri per la ricerca](https://msdn.microsoft.com/library/ms142499.aspx).
+Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in questo caso, un filtro installato è necessario elaborare il file. Per ulteriori informazioni sui filtri, vedere [configurare e gestire i filtri per la ricerca](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
 
 È possibile visualizzare un elenco di filtri installati chiamando **sp_help_fulltext_system_components 'filter'**. Per SQL Server 2017 RC2, vengono installati i seguenti filtri:
 
-| Nome componente | ID classe | Version |
+| Nome componente | ID classe | Versione |
 |---|---|---|
 |con estensione | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -258,9 +258,9 @@ Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in q
 |xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Ricerca semantica
-[Ricerca semantica](https://msdn.microsoft.com/library/gg492075.aspx) si basa sulla funzionalità di ricerca Full-Text per estrarre e indice statisticamente pertinenti *frasi chiave*. Ciò consente di eseguire una query il significato all'interno di documenti nel database. Consente inoltre di identificare documenti simili.
+[Ricerca semantica](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) si basa sulla funzionalità di ricerca Full-Text per estrarre e indice statisticamente pertinenti *frasi chiave*. Ciò consente di eseguire una query il significato all'interno di documenti nel database. Consente inoltre di identificare documenti simili.
 
-Per utilizzare la ricerca semantica, è innanzitutto necessario scaricare e collegare il [database di statistiche lingua semantica](https://msdn.microsoft.com/library/gg509085.aspx).
+Per utilizzare la ricerca semantica, è innanzitutto necessario scaricare e collegare il [database di statistiche lingua semantica](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
 
 1. In un computer Windows, [scaricare la. File con estensione MSI per il database di statistiche lingua semantica](https://www.microsoft.com/download/details.aspx?id=54277).
 

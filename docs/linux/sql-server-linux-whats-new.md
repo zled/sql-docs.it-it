@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novità di SQL Server 2017 su Linux
@@ -131,7 +131,7 @@ In modalità di compatibilità 140:
 [Miglioramenti di Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in questa versione CTP1.1:
 - Clonazione del database per CLR, Filestream o Filetable, gli oggetti In memoria e l'archivio Query.
 - **CREARE** o **ALTER** operatori per gli oggetti di programmabilità.
-- Nuovo **HINT USE** opzione per fornire suggerimenti per la query processor di query. Altre informazioni: [hint per la Query](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- Nuovo **HINT USE** opzione per fornire suggerimenti per la query processor di query. Altre informazioni: [hint per la Query](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
 - Account del servizio SQL possono ora identificare a livello di programmazione abilitare blocco di pagine in memoria e l'inizializzazione immediata dei File di autorizzazioni.
 - Supporto per numero di file TempDB, dimensioni del file e le impostazioni di aumento delle dimensioni di file.
 - Diagnostica estesa in showplan XML.

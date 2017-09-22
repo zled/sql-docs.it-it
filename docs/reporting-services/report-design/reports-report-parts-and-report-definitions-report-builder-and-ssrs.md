@@ -18,11 +18,11 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c5a2673c5e38d6bd216116cd14225f1ed064487
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1ad3eee80539ea31af3ccf9e117b2f39b4921846
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Report, parti del report e definizioni dei report (Generatore report e SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
  Un report pubblicato viene protetto mediante l'assegnazioni di ruolo utilizzando il modello di sicurezza basata sui ruoli di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'accesso ai report pubblicati viene eseguito tramite URL, web part di SharePoint o il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . In alternativa, è possibile passare ai report pubblicati e aprirli in Generatore report.  
   
 ### <a name="report-snapshots"></a>Snapshot del report  
- I report possono essere pubblicati anche sotto forma di snapshot che contiene sia informazioni sul layout che dati, ad esempio l'ora di inizio di esecuzione del report. Gli snapshot dei report non vengono salvati in un formato di rendering specifico, ma ne viene eseguito il rendering nel formato di visualizzazione finale, ad esempio HTML, solo quando vengono richiesti da un utente o un'applicazione. Per altre informazioni, vedere [Ricerca e visualizzazione di report in Gestione report &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ I report possono essere pubblicati anche sotto forma di snapshot che contiene sia informazioni sul layout che dati, ad esempio l'ora di inizio di esecuzione del report. Gli snapshot dei report non vengono salvati in un formato di rendering specifico, ma ne viene eseguito il rendering nel formato di visualizzazione finale, ad esempio HTML, solo quando vengono richiesti da un utente o un'applicazione. Per ulteriori informazioni, vedere [ricerca e visualizzazione dei report in Gestione Report &#40; Generatore report e SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
 ## <a name="rendered-reports"></a>Report visualizzabili  
  Un report visualizzabile è un report completamente elaborato che include i dati e le informazioni sul layout in un formato appropriato per la visualizzazione, ad esempio HTML. Non è possibile visualizzare un report fino a quando non ne viene eseguito il rendering in un formato di output. È possibile eseguire il rendering di un report eseguendo una delle operazioni seguenti:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vedere anche  
  [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

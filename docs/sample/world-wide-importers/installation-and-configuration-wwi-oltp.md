@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4102284612e0838fb876708b959266994a0f2b96
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
@@ -28,7 +28,7 @@ Wide World Importers OLTP istruzioni di installazione e configurazione del datab
 ## <a name="prerequisites"></a>Prerequisiti
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (o versione successiva) o [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, utilizzare SQL Server Evaluation o Developer o Enterprise Edition.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Per risultati ottimali utilizzano la versione di giugno 2016 o versione successiva.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Per risultati ottimali utilizzano la versione di giugno 2016 o versione successiva.
 
 ## <a name="download"></a>Scarica
 
@@ -56,7 +56,7 @@ Per ripristinare un backup a un'istanza di SQL Server, è possibile utilizzare M
 5. Se necessario, modificare il percorso di destinazione per i dati e file di log, nel **file** riquadro. Si noti che è quindi consigliabile inserire i dati e file di registro in unità differenti.
 6. Scegliere **OK**. Verrà avviato il ripristino di database. Una volta completato, si disporrà del database WideWorldImporters installati nell'istanza del Server SQL.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Database SQL di Azure
 
 Per importare un file bacpac in un nuovo Database SQL, è possibile utilizzare Management Studio.
 

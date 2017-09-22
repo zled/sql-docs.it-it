@@ -1,7 +1,7 @@
 ---
 title: '@@CPU_BUSY (Transact-SQL) | Documenti Microsoft'
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,13 +28,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 165aef4dc063f9487c5ee581981fc013d6f40ff0
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: f01d73c9ec0a0aca7237603169f8a290af0ce225
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cpubusy-transact-sql"></a>@@CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpubusy-transact-sql"></a>& #x 40; & #x 40; Cpu_busy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Restituisce il tempo di attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo l'ultimo avvio. Il risultato è in incrementi di tempo di CPU, o "tick" ed è cumulativo per tutte le CPU, pertanto può essere maggiore del tempo trascorso effettivo. Moltiplicare per@TIMETICKS per convertire i microsecondi.
@@ -46,7 +46,7 @@ Restituisce il tempo di attività di [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```
 @@CPU_BUSY  
 ```  
   

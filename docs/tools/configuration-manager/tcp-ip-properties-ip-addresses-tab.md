@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 581215c25f688b2f1e5661d370a31b5de4aed652
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Proprietà TCP/IP
   La finestra di dialogo **Proprietà TCP/IP** (scheda Indirizzi IP) consente di configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico. Solo le opzioni **Porte dinamiche TCP** e **Porta TCP** possono essere configurate contemporaneamente per tutti gli indirizzi selezionando **IPAll**.  
   
- Le modifiche hanno effetto dopo il riavvio di SQL Server. Per informazioni sull'avvio e l'arresto del servizio SQL Server Browser, vedere [Avvio e arresto del servizio SQL Server Browser](https://msdn.microsoft.com/library/hh403394.aspx).  
+ Le modifiche hanno effetto dopo il riavvio di SQL Server. Per informazioni sull'avvio e l'arresto del servizio SQL Server Browser, vedere [Avvio e arresto del servizio SQL Server Browser](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).  
   
 ## <a name="static-vs-dynamic-ports"></a>Porte statiche e Porte dinamiche  
  L'istanza predefinita di SQL Server resta in attesa di connessioni in ingresso sulla porta 1433. È possibile cambiare la porta per ragioni di sicurezza oppure per soddisfare i requisiti di un'applicazione client. Per impostazione predefinita, le istanze denominate, incluso SQL Server Express, sono configurate per l'attesa su porte dinamiche. Per configurare una porta statica, lasciare vuota la casella **Porte dinamiche TCP** e fornire un numero di porta disponibile nella casella **Porta TCP** . Per ulteriori informazioni sull'apertura di porte nel firewall, vedere Configurazione di Windows Firewall per consentire l'accesso a SQL Server nella documentazione online.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Creazione di una stringa di connessione valida con TCP/IP](https://msdn.microsoft.com/library/ms191260.aspx)   
+ [Creazione di una stringa di connessione valida con TCP/IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
  [Servizio SQL Server Browser](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

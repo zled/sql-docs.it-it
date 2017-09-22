@@ -1,19 +1,19 @@
 ---
 title: Configurare le impostazioni di SQL Server in Linux | Documenti Microsoft
 description: In questo argomento viene descritto come utilizzare lo strumento mssql conf per configurare le impostazioni di SQL Server 2017 in Linux.
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>Modificare le regole di confronto di SQL Server
 
-Il **set di regole di confronto** opzione consente di modificare il valore delle regole di confronto per le regole di confronto supportate:
+Il **set di regole di confronto** opzione consente di modificare il valore delle regole di confronto per le regole di confronto supportate.
+
+1. Primo [backup di tutti i database utente](sql-server-linux-backup-and-restore-database.md) sul server.
+
+1. Utilizzare quindi la [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) stored procedure per scollegare i database utente.
 
 1. Eseguire il **set di regole di confronto** opzione e seguire le istruzioni:
 
@@ -61,7 +65,9 @@ Il **set di regole di confronto** opzione consente di modificare il valore delle
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. L'utilità mssql conf tenta di ripristinare i database utilizzando le regole di confronto specificato e riavviare il servizio. Se sono presenti errori, viene eseguito il rollback nuovamente le regole di confronto per il valore precedente.
+1. L'utilità mssql conf tenterà di modificare il valore di regole di confronto specificate e riavviare il servizio. Se sono presenti errori, viene eseguito il rollback nuovamente le regole di confronto per il valore precedente.
+
+1. Ripristinare i backup dei database utente.
 
 Per un elenco di regole di confronto supportate, eseguire il [fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) funzione: `SELECT Name from sys.fn_helpcollations()`.
 

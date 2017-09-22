@@ -1,8 +1,8 @@
 ---
 title: Eseguire Python con T-SQL | Documenti Microsoft
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,10 +18,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ab513960d3e102725bde6762fcf4de117554db
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f2eba50d5c5e57025462c46b38fc0ddbfc947ea0
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-python-using-t-sql"></a>Eseguire Python con T-SQL
@@ -57,7 +57,7 @@ GO
 
 Il codice seguente viene caricato il file eseguibile di Python, passa i dati di input e per ogni riga di dati di input, aggiorna il nome del giorno nella tabella con un numero che rappresenta l'indice del giorno della settimana.
 
-Prendere nota del parametro  *@RowsPerRead* . Questo parametro specifica il numero di righe che vengono passati al runtime di Python da SQL Server.
+Prendere nota del parametro * @RowsPerRead *. Questo parametro specifica il numero di righe che vengono passati al runtime di Python da SQL Server.
 
 La libreria di analisi dati di Python, noto come **pandas**, è necessario per passare dati a SQL Server ed è incluso per impostazione predefinita con servizi di Machine Learning.
 
@@ -127,7 +127,7 @@ GO
 
 ## <a name="step-3-view-the-results"></a>Passaggio 3. Visualizzare i risultati
 
-La stored procedure restituisce i dati originali, lo script viene applicato e quindi restituisce i dati modificati nel **risultati** riquadro di Management Studio o un altro strumento di query SQL.
+La stored procedure Ottiene i dati originali, si applica lo script Python e quindi restituisce i dati modificati nel **risultati** riquadro di Management Studio o un altro strumento di query SQL.
 
 
 |DayOfWeek (prima)| Amount|DayOfWeek (dopo) |
@@ -173,9 +173,11 @@ ParamINT=2
 ParamCharN=OUTPUT
 ```
 
-+ L'output del messaggio include la directory di lavoro utilizzata per l'esecuzione di script. In questo esempio, MSSQLSERVER01 fa riferimento all'account di lavoro allocati da SQL Server per gestire il processo. Il GUID è il nome di una cartella temporanea viene creata durante l'esecuzione di script per archiviare gli elementi di dati e script. Le cartelle temporanee sono protetti da SQL Server e pulite per l'oggetto processo di Windows dopo il completamento dello script è terminata.
++ Il **messaggio** output include la directory di lavoro utilizzata per l'esecuzione di script. In questo esempio, MSSQLSERVER01 fa riferimento all'account di lavoro allocati da SQL Server per gestire il processo. 
 
-+ La sezione che contiene il messaggio "Hello World" visualizzato due volte. Ciò accade perché il valore di  *@RowsPerRead*  è stato impostato su 5 e sono presenti 10 righe nella tabella; pertanto, in cui sono necessarie due chiamate di Python per elaborare tutte le righe nella tabella.
+    Il GUID è il nome di una cartella temporanea viene creata durante l'esecuzione di script per archiviare gli elementi di dati e script. Le cartelle temporanee sono protetti da SQL Server e pulite per l'oggetto processo di Windows dopo il completamento dello script è terminata.
+
++ La sezione che contiene il messaggio "Hello World" visualizzato due volte. Ciò accade perché il valore di * @RowsPerRead * è stato impostato su 5 e sono presenti 10 righe nella tabella; pertanto, in cui sono necessarie due chiamate di Python per elaborare tutte le righe nella tabella.
 
     Le esecuzioni di produzione, è consigliabile sperimentare valori diversi per determinare il numero massimo di righe che devono essere passati in ogni batch. Il numero ottimale di righe è dipendente dai dati e è influenzato dal entrambi il numero di colonne nel set di dati e il tipo di dati che si siano passando.
 
@@ -184,9 +186,9 @@ ParamCharN=OUTPUT
 Vedere questi ulteriori esempi di Python e le esercitazioni per suggerimenti avanzati e demo end-to-end.
 
 + [Utilizzare revoscalepy Python per creare un modello](use-python-revoscalepy-to-create-model.md)
-+ [Nel Database Python per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md)
++ [Nel Database di Python per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md)
 + [Compilare un modello predittivo con Python e SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Se non è possibile trovare la stored procedure, `sp_execute_external_script`, significa che probabile che non è stata completata la configurazione di istanza per il supporto runtime esterni. Dopo l'installazione di SQL Server 2017 e selezionando Python come di machine learning language, è necessario abilitare anche in modo esplicito la funzionalità mediante `sp_configure`e quindi riavviare l'istanza. Per informazioni dettagliate, vedere [programma di installazione di Machine Learning Services con Python](../python/setup-python-machine-learning-services.md).
+Se non è possibile trovare la stored procedure, `sp_execute_external_script`, significa che probabile che non è stata completata la configurazione di istanza per supportare l'esecuzione dello script esterno. Dopo l'installazione di SQL Server 2017 e selezionando Python come di machine learning language, è necessario abilitare anche in modo esplicito la funzionalità mediante `sp_configure`e quindi riavviare l'istanza. Per informazioni dettagliate, vedere [programma di installazione di Machine Learning Services con Python](../python/setup-python-machine-learning-services.md).

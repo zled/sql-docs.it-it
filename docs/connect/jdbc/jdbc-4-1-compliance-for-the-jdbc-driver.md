@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Conformità con JDBC 4.1 per il driver JDBC
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |Nuova funzionalità|Description|  
 |-----------------|-----------------|  
-|Nuova funzione di escape<br /><br /> Escape di righe restituite limitate|Parzialmente supportato<br /><br /> Sintassi di escape: limite \<righe > [OFFSET < offset_righe >]<br /><br /> La sintassi di escape è costituita da due parti: la parte obbligatoria 'righe' specifica il numero di righe da restituire, la parte facoltativa 'offset_righe' specifica il numero di righe da ignorare prima di iniziare a restituire le righe<br /><br /> Il driver supporta solo la parte obbligatoria trasformando la query per l'utilizzo di 'TOP' anziché LIMIT (SQL Server non supporta 'LIMIT').<br /><br /> Il driver genera un'eccezione se viene utilizzata la parte facoltativa 'offset_righe', dal momento che SQL Server non dispone di un costrutto predefinito per il supporto di tale parte.<br /><br /> Per informazioni dettagliate, vedere [utilizzando sequenze di Escape SQL](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+|Nuova funzione di escape<br /><br /> Escape di righe restituite limitate|Parzialmente supportato<br /><br /> Sintassi di escape: limite \<righe > [OFFSET < offset_righe >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
   
  La specifica Java Database Connectivity API 4.1 è supportata da Microsoft JDBC Driver 4.2 per SQL Server, con i mapping dei tipi di dati seguenti.  
   

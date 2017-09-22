@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e867bb283434a6a7ae515823b370c73e4df4e131
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
 ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ODBC è l'API di accesso ai dati nativa principale per le applicazioni scritte in C e C++ per SQL Server. È un driver ODBC per la maggior parte delle origini dati. Altri linguaggi che è possono utilizzare ODBC includono COBOL, Perl, PHP e Python. ODBC viene ampiamente impiegato negli scenari di integrazione dati.
 
-Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](https://msdn.microsoft.com/library/ms162773.aspx) e [ **bcp**](https://msdn.microsoft.com/library/ms162802.aspx). Il **sqlcmd** utilità consente di eseguire istruzioni Transact-SQL, procedure di sistema e gli script SQL. Il **bcp** utilità copia bulk dei dati tra un'istanza di Microsoft SQL Server e un file di dati in un formato scelto. È possibile utilizzare **bcp** per importare di nuovo numero di righe in tabelle di SQL Server oppure per esportare dati dalle tabelle in file di dati.  
+Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility) e [ **bcp**](/sql-docs/docs/tools/bcp-utility). Il **sqlcmd** utilità consente di eseguire istruzioni Transact-SQL, procedure di sistema e gli script SQL. Il **bcp** utilità copia bulk dei dati tra un'istanza di Microsoft SQL Server e un file di dati in un formato scelto. È possibile utilizzare **bcp** per importare di nuovo numero di righe in tabelle di SQL Server oppure per esportare dati dalle tabelle in file di dati.  
 
 ## <a name="code-example-in-c"></a>Esempio di codice in C++
 

@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f564922466740d2410f686651d889e7a3fec5fe9
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
 ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemi comuni con l'esecuzione dello script esterno in SQL Server
@@ -64,7 +64,7 @@ Il servizio Launchpad (Launchpad.exe) viene eseguito utilizzando un account di s
 - Ignorare controllo incrociato (SeChangeNotifyPrivilege)
 - Regolazione limite risorse memoria per un processo (SeIncreaseQuotaSizePrivilege)
 
-Per informazioni su questi diritti, vedere la sezione "diritti e privilegi di Windows" in [Windows configurare account del servizio e autorizzazioni](https://msdn.microsoft.com/library/ms143504.aspx).
+Per informazioni su questi diritti, vedere la sezione "diritti e privilegi di Windows" in [Windows configurare account del servizio e autorizzazioni](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
 
 > [!TIP]
 > Se si ha familiarità con l'utilizzo dello strumento di supporto diagnostica piattaforma SDP () per la diagnostica di SQL Server, è possibile utilizzare SDP per esaminare il file di output con il nome MachineName_UserRights.txt.
@@ -329,7 +329,7 @@ Per risolvere il problema, è necessario reinstallare il pacchetto nella raccolt
 
 [Raccolta dei dati per la risoluzione dei problemi di Machine Learning](data-collection-ml-troubleshooting-process.md)
 
-[Domande frequenti sull'installazione e aggiornamento](r/upgrade-and-installation-faq-sql-server-r-services.md)
+[Domande frequenti sull'installazione e sull'aggiornamento](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Risolvere i problemi relativi a connessioni al motore di database](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
 

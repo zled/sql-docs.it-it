@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 917329cd5305aac791629300f5a90bf52d9d9ce4
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -44,11 +44,11 @@ ms.lasthandoff: 09/01/2017
   
 - Impostare il modello di stima della cardinalità di Query Optimizer su un livello di compatibilità, indipendentemente dal database.  
   
-- Abilitare o disabilitare l'analisi dei parametri a livello di database.  
+- Abilitare o disabilitare l'analisi dei parametri a livello di database.
   
-- Abilitare o disabilitare gli hotfix di ottimizzazione query a livello di database.  
+- Abilitare o disabilitare gli hotfix di ottimizzazione query a livello di database.
 
-- Abilitare o disabilitare la cache delle identità a livello di database.  
+- Abilitare o disabilitare la cache delle identità a livello di database.
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,44 +80,54 @@ PER I DATABASE SECONDARI
  
 Specifica le impostazioni per i database secondari (tutti i database secondari devono avere valori identici).  
   
-MAXDOP  **=**  {\<valore > | PRIMARIO}  
+MAXDOP ** = ** {\<valore > | PRIMARIO}  
 **\<valore >**  
   
 Specifica il valore predefinito MAXDOP impostazione che deve essere utilizzato per le istruzioni. 0 è il valore predefinito e indica che la configurazione del server verrà utilizzata. Esegue l'override di MAXDOP nell'ambito del database (a meno che non è impostata su 0) di **massimo grado di parallelismo** impostato a livello di server da sp_configure. Hint per la query può comunque eseguire l'override del database con ambito MAXDOP per ottimizzare le query specifiche che è necessario modificare questa impostazione. Tutte queste impostazioni sono limitate di MAXDOP impostate per il gruppo di carico di lavoro.   
 
 Grazie all'opzione max degree of parallelism è possibile limitare il numero di processori da utilizzare nell'esecuzione di piani paralleli. SQL Server considera piani di esecuzione parallela per query, operazioni di indice data definition language (DDL), inserimento parallelo, in linea alter column, collectiion statistiche parallela e popolamento dei cursori statici e basati su keyset.
  
-Per impostare questa opzione a livello di istanza, vedere [il max degree of parallelism opzione di configurazione Server Configurare](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). A tale scopo a livello di query, aggiungere il **QUERYTRACEON** [hint per la query](https://msdn.microsoft.com/library/ms181714.aspx)  
+Per impostare questa opzione a livello di istanza, vedere [il max degree of parallelism opzione di configurazione Server Configurare](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
+
+> [!TIP] 
+> A tale scopo a livello di query, aggiungere il **MAXDOP** [hint per la query](../../t-sql/queries/hints-transact-sql-query.md).  
   
 PRIMARY  
   
-Può essere impostato solo per i database secondari e indica che la configurazione sarà quello impostato per il database primario. Se la configurazione per le modifiche primarie, secondarie verrà regolate anche sullo stesso valore. **PRIMARIO** è l'impostazione predefinita per i database secondari  
+Può essere impostato solo per i database secondari, mentre il database nel sistema primario e indica che la configurazione sarà quello impostato per il database primario. Se la configurazione per le principali modifiche, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostare i database secondari valore in modo esplicito. **PRIMARIO** è l'impostazione predefinita per i database secondari.  
   
-LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRIMARIO}  
+LEGACY_CARDINALITY_ESTIMATION ** = ** {ON | **OFF** | PRIMARIO}  
 
-Consente di impostare il modello di stima della cardinalità di query optimizer di SQL Server 2012 e versione precedente, indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**, che imposta il modello di stima della cardinalità di query optimizer in base al livello di compatibilità del database. L'impostazione di **ON** equivale a [Flag di traccia 9481](https://support.microsoft.com/en-us/kb/2801413). Per impostare il livello di istanza, vedere [i flag di traccia (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). A tale scopo a livello di query, aggiungere il **QUERYTRACEON** [hint per la query](https://msdn.microsoft.com/library/ms181714.aspx).  
+Consente di impostare il modello di stima della cardinalità di query optimizer di SQL Server 2012 e versione precedente, indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**, che imposta il modello di stima della cardinalità di query optimizer in base al livello di compatibilità del database. L'impostazione di **ON** equivale ad abilitare [Flag di traccia 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+
+> [!TIP] 
+> A tale scopo a livello di query, aggiungere il **QUERYTRACEON** [hint per la query](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere il **HINT USE** [hint per la query](../../t-sql/queries/hints-transact-sql-query.md) anziché utilizzare il flag di traccia. 
   
 PRIMARY  
   
-Questo valore è valido solo per i database secondari e specifica che l'impostazione del modello query optimizer cardinalità stima in tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione del server primario per il modello di stima della cardinalità di query optimizer viene modificata, è possibile che il valore nel database secondario verrà modificato di conseguenza. **PRIMARIO** è l'impostazione predefinita per i database secondari.  
+Questo valore è valido solo per i database secondari, mentre il database nel server primario e specifica che l'impostazione del modello query optimizer cardinalità stima in tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione del server primario per il modello di stima della cardinalità di query optimizer viene modificata, è possibile che il valore nel database secondario verrà modificato di conseguenza. **PRIMARIO** è l'impostazione predefinita per i database secondari.  
   
-PARAMETER_SNIFFING  **=**  { **ON** | OFF | PRIMARIO}  
+PARAMETER_SNIFFING ** = ** { **ON** | OFF | PRIMARIO}  
 
-Abilita o disabilita l'analisi dei parametri. Il valore predefinito è ON. Equivale a [Flag di traccia 4136](https://support.microsoft.com/en-us/kb/980653). Per impostare il livello di istanza, vedere [i flag di traccia (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Per impostare il livello di query, vedere il **OPTIMIZE FOR UNKNOWN** [hint per la query](https://msdn.microsoft.com/library/ms181714.aspx).  
+Abilita o disabilita [lo sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Il valore predefinito è ON. Equivale a [Flag di traccia 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+
+> [!TIP] 
+> A tale scopo a livello di query, vedere il **OPTIMIZE FOR UNKNOWN** [hint per la query](../../t-sql/queries/hints-transact-sql-query.md). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, il **HINT USE** [hint per la query](../../t-sql/queries/hints-transact-sql-query.md) è disponibile. 
   
 PRIMARY  
   
-Questo valore è valido solo per i database secondari e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione per le principali modifiche, il valore nel database secondario verrà modificato. Questo è l'impostazione predefinita per i database secondari.  
+Questo valore è valido solo per i database secondari, mentre il database nel server primario e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione del server primario per l'utilizzo di [lo sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) modifiche, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostare i database secondari valore in modo esplicito. Questo è l'impostazione predefinita per i database secondari.  
   
-QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRIMARIO}  
+QUERY_OPTIMIZER_HOTFIXES ** = ** {ON | **OFF** | PRIMARIO}  
 
-Abilita o disabilita gli hotfix di ottimizzazione di query indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**. Equivale a [Flag di traccia 4199](https://support.microsoft.com/en-us/kb/974006).   
+Abilita o disabilita gli hotfix di ottimizzazione di query indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**. Ciò equivale ad abilitare [Flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
-Per impostare il livello di istanza, vedere [i flag di traccia (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). A tale scopo a livello di query, aggiungere il **QUERYTRACEON** [hint per la query](https://msdn.microsoft.com/library/ms181714.aspx).  
+> [!TIP] 
+> A tale scopo a livello di query, aggiungere il **QUERYTRACEON** [hint per la query](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'HINT USE [hint per la query](../../t-sql/queries/hints-transact-sql-query.md) anziché utilizzare il flag di traccia.  
   
 PRIMARY  
   
-Questo valore è valido solo per i database secondari e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione per le principali modifiche, il valore nel database secondario verrà modificato. Questo è l'impostazione predefinita per i database secondari.  
+Questo valore è valido solo per i database secondari, mentre il database nel server primario e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione per le principali modifiche, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostare i database secondari valore in modo esplicito. Questo è l'impostazione predefinita per i database secondari.  
   
 CANCELLA PROCEDURE_CACHE  
 
@@ -171,7 +181,7 @@ nel database. Questa autorizzazione può essere concessa da un utente con autori
   
  **DacFx**  
   
- Poiché una nuova funzionalità di Database SQL di Azure e SQL Server 2016 che interessa lo schema del database, ALTER DATABASE SCOPED CONFIGURATION esportazioni dello schema (con o senza dati) non sarà in grado di essere importati in una versione precedente di SQL Server, ad esempio SQL Server 2012 o SQ L Server 2014.   Ad esempio, un'esportazione in un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) da un Database SQL di Azure o SQL Server 2016 database in cui questa nuova funzionalità non sarebbe in grado di essere importati in un server di livello inferiore.  
+ Poiché una nuova funzionalità di Database SQL di Azure e SQL Server 2016 che interessa lo schema del database, ALTER DATABASE SCOPED CONFIGURATION esportazioni dello schema (con o senza dati) non sarà in grado di essere importati in una versione precedente di SQL Server, ad esempio [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o < C2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Ad esempio, un'esportazione in un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) da un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database in cui questa nuova funzionalità non sarebbe in grado di essere importati in un server di livello inferiore.  
   
 ## <a name="metadata"></a>Metadati  
 
@@ -198,10 +208,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
-In questo esempio imposta MAXDOP per un database secondario, come per il database primario in uno scenario di replica geografica.  
+In questo esempio imposta MAXDOP per un database secondario per corrispondere a quello impostato per il database primario in uno scenario di replica geografica.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
 ### <a name="c-set-legacycardinalityestimation"></a>C. Set LEGACY_CARDINALITY_ESTIMATION  
@@ -209,15 +219,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY
 In questo esempio imposta LEGACY_CARDINALITY_ESTIMATION su ON per un database secondario in uno scenario di replica geografica.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY  
-SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 In questo esempio imposta LEGACY_CARDINALITY_ESTIMATION per un database secondario, come per il database primario in uno scenario di replica geografica.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
 ### <a name="d-set-parametersniffing"></a>D. Set PARAMETER_SNIFFING  
@@ -231,16 +239,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
 In questo esempio imposta PARAMETER_SNIFFING su OFF per un database primario in uno scenario di replica geografica.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING=OFF  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 In questo esempio imposta PARAMETER_SNIFFING per database secondario perché si trova nel database primario   
 in uno scenario di replica geografica.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING =PRIMARY  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Set QUERY_OPTIMIZER_HOTFIXES  
@@ -276,8 +282,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Indicazioni e linee guida per l'opzione di configurazione "max degree of parallelism" in SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>Risorse LEGACY_CARDINALITY_ESTIMATION    
-* [Stima della cardinalità (SQL Server)](https://msdn.microsoft.com/library/dn600374.aspx)
-* [Ottimizzazione delle Query i piani con SQL Server 2014 strumento di stima della cardinalità](https://msdn.microsoft.com/library/dn673537.aspx)
+* [Stima della cardinalità (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)
 
 ### <a name="parametersniffing-resources"></a>Risorse PARAMETER_SNIFFING    
 * ["Dell'odore parametro!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)

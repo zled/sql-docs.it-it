@@ -34,10 +34,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe808df2a3d0f55ab00946db2bd86aa8d9fb3511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cccf648270523e86e502caebfbc7f6ba6a55cfd7
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Database di SQL Azure)
@@ -130,11 +130,11 @@ Specifica le regole di confronto predefinito per il catalogo dei metadati. *DATA
 |150 GB|N/D|√|√|√|√|  
 |200 GB|N/D|√|√|√|√|  
 |250 GB|N/D|√ (P)|√ (P)|√|√|  
-|300 GB|N/D|√|√|√|√|  
-|400 GB|N/D|√|√|√|√|
-|500 GB|N/D|√|√|√ (P)|√|
-|750 GB|N/D|√|√|√|√|
-|1024 GB|N/D|√|√|√|√ (P)|
+|300 GB|N/D|N/D|√|√|√|  
+|400 GB|N/D|N/D|√|√|√|
+|500 GB|N/D|N/D|√|√ (P)|√|
+|750 GB|N/D|N/D|√|√|√|
+|1024 GB|N/D|N/D|√|√|√ (P)|
 |Da 1024 GB fino a 4096 GB con incrementi di 256 GB * |N/D|N/D|N/D|N/D|√|√|  
   
  \*P11 e P15 consentono MAXSIZE fino a 4 TB con 1024 GB da quelle predefinite.  P11 e P15 possono utilizzare fino a 4 TB di spazio di archiviazione incluse senza costi aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle seguenti aree: ci East2, Stati Uniti occidentali, ci Gov Virginia, Europa occidentale, Germania centrale, Sud Asia sudorientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per le limitazioni attuali, vedere [singolo database](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
@@ -292,7 +292,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 -  [Sys.dm database_copies &#40; Database SQL di Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE &#40; Database SQL di Azure &#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
+-   [ALTER DATABASE &#40; Database SQL di Azure &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)   
     
   
 

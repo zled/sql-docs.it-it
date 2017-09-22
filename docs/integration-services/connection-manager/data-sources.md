@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e5e277b421f98dbabedcb4df80ee902ea87fbd1
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-sources"></a>Origini dei dati
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 > **NOTA:** è possibile aggiungere origini dati solo a progetti configurati per l'uso del modello di distribuzione del pacchetto. Se un progetto è configurato per utilizzare il modello di distribuzione del progetto, è possibile utilizzare le gestioni connessioni create a livello di progetto per condividere le connessioni anziché le origini dati.  
 >   
->  Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx). Per altre informazioni sulla conversione di un progetto nel modello di distribuzione del progetto, vedere [Distribuire progetti nel server Integration Services](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages). Per altre informazioni sulla conversione di un progetto nel modello di distribuzione del progetto, vedere [Distribuire progetti nel server Integration Services](https://msdn.microsoft.com/library/hh231102.aspx).  
   
  L'utilizzo di origini dei dati nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre i vantaggi seguenti:  
   

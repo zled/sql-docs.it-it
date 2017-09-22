@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Se il progetto e tutti i pacchetti superano la verifica di compatibilità, fare clic su **OK** per convertire il pacchetto.  
   
-> **NOTA:** per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTA:** per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
 
 ## <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   La **Distribuzione guidata Integration Services** supporta due modelli di distribuzione:
@@ -309,7 +309,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
  La pagina consente di controllare le impostazioni selezionate. È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro. Fare clic su **Distribuisci** per avviare il processo di distribuzione.  
   
 #### <a name="results"></a>Risultati  
- Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **salvare Report...**  per salvare i risultati in un file XML oppure fare clic su **Chiudi** chiudere la procedura guidata.
+ Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **salvare Report... ** per salvare i risultati in un file XML oppure fare clic su **Chiudi** chiudere la procedura guidata.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,14 +403,14 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 14. Fare clic su **OK** due volte per salvare le modifiche.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure
-  Quando un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene configurato in modo da utilizzare il relativo modello di distribuzione, è possibile utilizzare le stored procedure nel catalogo di [!INCLUDE[ssIS](../../includes/ssis-md.md)] per distribuire il progetto ed eseguire i pacchetti. Per informazioni sui modelli di distribuzione di progetti, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).  
+  Quando si configura un [! INCLUDERE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
- Per distribuire il progetto ed eseguire i pacchetti, è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere gli argomenti nella sezione **Vedere anche** .  
+ Per distribuire il progetto ed eseguire i pacchetti, è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Per altre informazioni, vedere gli argomenti nella sezione **Vedere anche** .  
   
 > [!TIP]  
 >  Ad eccezione di catalog.deploy_project, è possibile generare facilmente le istruzioni Transact-SQL per le stored procedure elencate nella procedura descritta di seguito effettuando le operazioni seguenti:  
 >   
->  1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere il nodo **Cataloghi di Integration Services** in Esplora oggetti e selezionare il pacchetto che si desidera eseguire.  
+>  1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il nodo **Cataloghi di Integration Services** in Esplora oggetti e selezionare il pacchetto che si desidera eseguire.  
 > 2.  Fare clic con il pulsante destro del mouse sul pacchetto, quindi scegliere **Esegui**.  
 > 3.  In base alle esigenze, impostare i valori dei parametri, le proprietà di gestione connessione e le opzioni nella scheda **Avanzate** , ad esempio il livello di registrazione.  
 >   
@@ -421,9 +421,9 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 1.  Chiamare [catalog.deploy_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) per distribuire il progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto sul server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-     Per recuperare il contenuto binario del [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] file di distribuzione, di progetto per il  *@project_stream*  parametro, utilizzare un'istruzione SELECT con la funzione OPENROWSET e il provider BULK per set di righe. Questo provider consente di leggere i dati da un file. Tramite l'argomento SINGLE_BLOB per il provider BULK per set di righe, il contenuto del file di dati viene restituito come un set di righe a riga e colonna singole di tipo varbinary(max). Per altre informazioni, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     Per recuperare il contenuto binario del file di distribuzione del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , per il parametro *@project_stream* usare un'istruzione SELECT con la funzione OPENROWSET e il provider BULK per set di righe. Questo provider consente di leggere i dati da un file. Tramite l'argomento SINGLE_BLOB per il provider BULK per set di righe, il contenuto del file di dati viene restituito come un set di righe a riga e colonna singole di tipo varbinary(max). Per altre informazioni, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     Nell'esempio seguente, il progetto SSISPackages_ProjectDeployment viene distribuito nella cartella di pacchetti SSIS nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. I dati binari vengono letti dal file di progetto (SSISPackage_ProjectDeployment.ispac) e archiviati nel parametro *@ProjectBinary* di tipo varbinary(max). Il valore del parametro *@ProjectBinary* viene assegnato al parametro *@project_stream* .  
+     Nell'esempio seguente, il progetto SSISPackages_ProjectDeployment viene distribuito nella cartella di pacchetti SSIS nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I dati binari vengono letti dal file di progetto (SSISPackage_ProjectDeployment.ispac) e archiviati nel parametro *@ProjectBinary* di tipo varbinary(max). Il valore del parametro *@ProjectBinary* viene assegnato al parametro *@project_stream* .  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  

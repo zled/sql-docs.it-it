@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 411086a4a75b002faa7e07befa77e7277a494bab
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Esecuzione di pacchetti e altre operazioni di monitoraggio
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  Per informazioni su altri metodi utilizzabili per visualizzare l'elenco di pacchetti in esecuzione, vedere gli argomenti seguenti.  
   
- Accesso [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] accesso  
  Per visualizzare l'elenco di pacchetti in esecuzione nel server, eseguire una query sulla vista [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) per i pacchetti con stato 2.  
   
  Accesso a livello di codice tramite l'API gestita  
@@ -105,7 +105,7 @@ ms.lasthandoff: 08/03/2017
   
  Per informazioni su altri metodi utilizzabili per arrestare un pacchetto in esecuzione, vedere gli argomenti seguenti.  
   
- Accesso [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] accesso  
  Per arrestare un pacchetto in esecuzione nel server, chiamare la stored procedure [catalog.stop_operation &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
   
  Accesso a livello di codice tramite l'API gestita  
@@ -116,14 +116,14 @@ ms.lasthandoff: 08/03/2017
   
  Per informazioni su altri metodi utilizzabili per visualizzare la cronologia di pacchetti in esecuzione, vedere gli argomenti seguenti.  
   
- Accesso [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] accesso  
  Per visualizzare le informazioni sui pacchetti eseguiti, eseguire una query sulla vista [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
   
  Accesso a livello di codice tramite l'API gestita  
  Vedere il <xref:Microsoft.SqlServer.Management.IntegrationServices> dello spazio dei nomi e le relative classi.  
 
 ## <a name="reports"></a> report per il server Integration Services
-  Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sono disponibili report standard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per monitorare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progetti che sono stati distribuiti i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
+  Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per monitorare i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
   
  All'inizio di ogni pagina dei report sono disponibili l'icona che consente di tornare alla pagina precedentemente visualizzata, l'icona tramite cui viene eseguito l'aggiornamento delle informazioni visualizzate nella pagina e l'icona che consente all'utente di stampare la pagina corrente.  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
  Per istruzioni su come creare e aggiungere un report personalizzato, vedere [Aggiunta di un report personalizzato a Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Visualizzare i report per il server Integration Services
-  Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sono disponibili report standard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per monitorare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progetti che sono stati distribuiti i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  Per altre informazioni sui report, vedere [Report per il server Integration Services](#reports).  
+  Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per semplificare il monitoraggio di progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  Per altre informazioni sui report, vedere [Report per il server Integration Services](#reports).  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Per visualizzare i report per il server Integration Services  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 08/03/2017
     -   **Tutte le connessioni**  
 
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx)   
- [Risoluzione dei problemi di report per l'esecuzione del pacchetto](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [Esecuzione di progetti e pacchetti](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
+ [Report per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
 

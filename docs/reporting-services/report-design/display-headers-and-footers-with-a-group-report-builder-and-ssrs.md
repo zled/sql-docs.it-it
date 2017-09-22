@@ -15,24 +15,24 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
   È possibile stabilire se di una riga statica, ad esempio l'intestazione o il piè di pagina di un gruppo, viene eseguito il rendering con righe dinamiche associate a un gruppo in un'area dati Tablix.  
   
- Per ripetere tutte le intestazioni di colonna o di riga su più pagine, è possibile impostare proprietà per l'area dati Tablix. Per altre informazioni, vedere [Visualizzazione delle intestazioni di riga e colonna in più pagine Generatore report e SSRS](https://msdn.microsoft.com/library/dd207045.aspx).  
+ Per ripetere tutte le intestazioni di colonna o di riga su più pagine, è possibile impostare proprietà per l'area dati Tablix. Per ulteriori informazioni, vedere [visualizzazione di riga e intestazioni di colonna in più pagine (Generatore Report e SSRS)](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs).  
   
- Per controllare il comportamento di rendering per righe e colonne dinamiche associate a gruppi nidificati oppure per righe e colonne statiche associate a etichette o subtotali, è necessario impostare proprietà per il membro Tablix. Un membro Tablix rappresenta una riga o una colonna statica o dinamica. Un membro statico si ripete una sola volta. Ad esempio, la riga di un totale complessivo è una riga statica. Un membro dinamico si ripete una sola volta per ogni istanza di un gruppo. Ad esempio, una riga associata a un gruppo che include l'espressione di raggruppamento [Territory] si ripete una sola volta per ogni valore univoco relativo al territorio. Per altre informazioni sui membri Tablix, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Per controllare il comportamento di rendering per righe e colonne dinamiche associate a gruppi nidificati oppure per righe e colonne statiche associate a etichette o subtotali, è necessario impostare proprietà per il membro Tablix. Un membro Tablix rappresenta una riga o una colonna statica o dinamica. Un membro statico si ripete una sola volta. Ad esempio, la riga di un totale complessivo è una riga statica. Un membro dinamico si ripete una sola volta per ogni istanza di un gruppo. Ad esempio, una riga associata a un gruppo che include l'espressione di raggruppamento [Territory] si ripete una sola volta per ogni valore univoco relativo al territorio. Per ulteriori informazioni sui membri tablix, vedere [celle dell'area dati Tablix, righe e colonne &#40; Generatore report &#41; SSRS e](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
- È possibile selezionare un membro Tablix nel riquadro di raggruppamento e impostare le proprietà **KeepWithGroup**, **KeepTogether** e **RepeatOnNewPage** nel riquadro Proprietà. Usare **KeepWithGroup** per visualizzare intestazioni e piè di pagina di gruppo nella stessa pagina del gruppo. Usa **KeepTogether** per visualizzare membri statici con le righe o colonne di un gruppo. Usare **RepeatOnNewPage** per ripetere l'intestazione di gruppo o il piè di pagina in ogni pagina che visualizza almeno un'istanza completa del membro del gruppo di righe definito dal valore **KeepWithGroup** . La proprietà**RepeatOnNewPage** non è supportata per i membri del gruppo di colonne.  
+ È possibile selezionare un membro Tablix nel riquadro di raggruppamento e impostare le proprietà **KeepWithGroup**, **KeepTogether**e **RepeatOnNewPage** nel riquadro Proprietà. Usare **KeepWithGroup** per visualizzare intestazioni e piè di pagina di gruppo nella stessa pagina del gruppo. Usa **KeepTogether** per visualizzare membri statici con le righe o colonne di un gruppo. Usare **RepeatOnNewPage** per ripetere l'intestazione di gruppo o il piè di pagina in ogni pagina che visualizza almeno un'istanza completa del membro del gruppo di righe definito dal valore **KeepWithGroup** . La proprietà**RepeatOnNewPage** non è supportata per i membri del gruppo di colonne.  
   
 > [!NOTE]  
->  **KeepWithGroup**, **KeepTogether** e **RepeatOnNewPage** sono proprietà dei membri del gruppo che è possibile impostare usando l'opzione **Modalità avanzata** del riquadro di raggruppamento. Per altre informazioni, vedere [Riquadro di raggruppamento &#40;Generatore report&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  **KeepWithGroup**, **KeepTogether**, e **RepeatOnNewPage** sono proprietà di membro di gruppo che è possibile impostare utilizzando il **modalità avanzata** del raggruppamento riquadro. Per ulteriori informazioni, vedere [riquadro raggruppamento &#40; Generatore report &#41; ](../../reporting-services/report-design/grouping-pane-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
 5.  (Facoltativo) Visualizzare l'anteprima del report. Laddove possibile, il renderer del report mantiene il membro con i membri del gruppo di colonne specificati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
+ [Celle dell'area dati Tablix, righe e colonne (Generatore Report) e SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
  
   
   

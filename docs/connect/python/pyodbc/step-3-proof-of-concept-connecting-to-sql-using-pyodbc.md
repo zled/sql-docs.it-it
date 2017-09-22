@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b71b6e4f40e4f1910d825071b8a0d86db4987624
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a93a7d4c341cd035faba52e5626608ef362359cd
 ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Passaggio 3: Modello di connessione a SQL tramite pyodbc prova
@@ -63,7 +63,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>Passaggio 3: Inserire una riga  
   
-In questo esempio verrà visualizzato come eseguire un [inserire](https://msdn.microsoft.com/library/ms174335.aspx) istruzione in modo sicuro, passare parametri che la protezione dell'applicazione da [attacchi SQL injection](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerabilità e recuperare il generatoautomaticamente[Chiave primaria](https://msdn.microsoft.com/library/ms179610.aspx) valore.    
+In questo esempio verrà visualizzato come eseguire un [inserire](/sql-docs/docs/t-sql/statements/insert-transact-sql) istruzione in modo sicuro, passare parametri che la protezione dell'applicazione da [attacchi SQL injection](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valore.    
   
   
 ```python

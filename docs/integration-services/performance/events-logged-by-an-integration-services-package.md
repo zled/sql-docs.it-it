@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: e16cfa9447a63e1bb9b627bc3045727e7f481ef3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventi registrati da un pacchetto di Integration Services
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  In questo argomento vengono fornite informazioni sui messaggi di evento comuni registrati da un pacchetto nel registro eventi applicazioni. Alcuni di questi messaggi vengono registrati per impostazione predefinita, anche se per il pacchetto non è stata abilitata la funzione di registrazione. Altri messaggi, invece, vengono registrati solo se tale funzione è stata abilitata. L'origine eventi per i messaggi è SQLISPackage, indipendentemente dal fatto che la registrazione avvenga per impostazione predefinita o perché è stata abilitata la funzione di registrazione.  
   
- Per informazioni generali sull'esecuzione dei pacchetti SSIS, vedere [Esecuzione di progetti e pacchetti](https://msdn.microsoft.com/library/ms141708.aspx).  
+ Per informazioni generali sull'esecuzione dei pacchetti SSIS, vedere [Esecuzione di progetti e pacchetti](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages).  
   
  Per informazioni sulla risoluzione dei problemi relativi all'esecuzione dei pacchetti, vedere [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/03/2017
 |12249|DTS_MSG_EVENTLOGENTRY_WARNING|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Questo messaggio segnala un avviso.|  
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Questo messaggio segnala informazioni non associate a un errore o a un avviso.|  
 
-## <a name="view-log-entries-in-the-log-events-window"></a>Visualizzazione delle voci di log nella finestra Registra eventi
+## <a name="view-log-entries-in-the-log-events-window"></a>Visualizzare le voci di log nella finestra Registra eventi
   In questo argomento viene descritta la procedura per eseguire un pacchetto e visualizzare le voci di log scritte da tale pacchetto. È possibile visualizzare le voci di log in tempo reale. Le voci di log scritte nella finestra **Registra eventi** possono inoltre essere copiate e salvate per analisi ulteriori.  
   
  Per scrivere le voci di log nella finestra **Registra eventi** non è necessario scriverle in un log.  

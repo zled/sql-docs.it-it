@@ -11,17 +11,17 @@ ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 174a686a069e4b68958a33bc881f8183c3a32798
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ef4a59f57f0bd99951297733e51bbc02b81e78ef
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Esportare e importare un database in Linux con SQL Server Management Studio o SqlPackage.exe in Windows
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In questo argomento viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) e [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) per esportare e importare un database in SQL Server 2017 RC2 in Linux. SQL Server Management Studio e SqlPackage.exe sono applicazioni di Windows, pertanto usare questa tecnica quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
+In questo argomento viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) e [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) per esportare e importare un database in SQL Server 2017 RC2 in Linux. SQL Server Management Studio e SqlPackage.exe sono applicazioni di Windows, pertanto usare questa tecnica quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
 È sempre necessario installare e utilizzare la versione più recente di SQL Server Management Studio (SSMS), come descritto in [utilizzare SQL Server Management Studio in Windows per connettersi a SQL Server in Linux](sql-server-linux-develop-use-ssms.md)
 

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7317cad5aa1e77653431c128ce1549bc4349e18
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 736b7e0744a95d859bd25a6c7974dc13e79d4bb7
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Estrarre, trasformare e caricare i dati in Linux con SSIS
@@ -79,10 +79,10 @@ SSIS include le funzionalità seguenti:
 - un'ampia gamma di trasformazioni per la pulizia, aggregazione, l'unione e la copia dei dati
 - application programming interface (API) per l'estensione SSIS con script personalizzati e i componenti personalizzati
 
-Per informazioni introduttive su SSIS, scaricare la versione più recente di [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). Seguire l'esercitazione [SSIS come creare un pacchetto ETL](https://msdn.microsoft.com/en-us/library/ms169917.aspx).
+Per informazioni introduttive su SSIS, scaricare la versione più recente di [SQL Server Data Tools (SSDT)](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package).
 
 ## <a name="see-also"></a>Vedere anche
-- [Altre informazioni su SQL Server Integration Services](https://msdn.microsoft.com/en-us/library/ms141026.aspx)
-- [Strumenti di gestione e sviluppo di SQL Server Integration Services (SSIS)](https://msdn.microsoft.com/en-us/library/ms140028.aspx)
-- [Esercitazioni su SQL Server Integration Services](https://msdn.microsoft.com/en-us/library/jj720568.aspx)
+- [Altre informazioni su SQL Server Integration Services](/sql-docs/docs/integration-services/sql-server-integration-services)
+- [Strumenti di gestione e sviluppo di SQL Server Integration Services (SSIS)](/sql-docs/docs/integration-services/integration-services-ssis-development-and-management-tools)
+- [Esercitazioni su SQL Server Integration Services](/sql-docs/docs/integration-services/integration-services-tutorials)
 

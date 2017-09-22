@@ -1,8 +1,8 @@
 ---
 title: Punteggio nativa | Documenti Microsoft
 ms.custom: 
-ms.date: 07/16/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,10 +13,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1cb06223e5274c1fa439eb9f7d82a005e93a47d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -30,25 +30,26 @@ In questo argomento vengono descritte funzionalità SQL Server 2017 che fornisco
 
 ## <a name="what-is-native-scoring-and-how-is-it-different-from-realtime-scoring"></a>Che cos'è il punteggio nativo e come è diversa dall'assegnazione dei punteggi in tempo reale?
 
-In SQL Server 2016, Microsoft ha creato un framework di estendibilità che consentono agli script R di essere eseguite da T-SQL. Questo framework supporta qualsiasi operazione effettuata in R, comprese tra funzioni semplici e formazione complesso modelli di machine learning. L'architettura dual-process che le coppie di R con SQL Server, tuttavia, significa che i processi R esterni devono essere richiamati per ogni chiamata, indipendentemente dalla complessità dell'operazione. Se si sta caricando un modello con training preliminare da una tabella e l'assegnazione dei punteggi rispetto ai dati già in SQL Server, l'overhead della chiamata al processo R esterno rappresenta una riduzione delle prestazioni non necessari.
+In SQL Server 2016, Microsoft ha creato un framework di estendibilità che consentono agli script R di essere eseguite da T-SQL. Questo framework supporta qualsiasi operazione effettuata in R, comprese tra funzioni semplici e formazione complesso modelli di machine learning. Tuttavia, l'architettura dual-process richiede richiamare un processo esterno R per ogni chiamata, indipendentemente dalla complessità dell'operazione. Se si sta caricando un modello con training preliminare da una tabella e l'assegnazione dei punteggi rispetto ai dati già in SQL Server, l'overhead della chiamata al processo R esterno rappresenta una riduzione delle prestazioni non necessari.
 
-_Assegnazione dei punteggi_ è un processo in due fasi: un modello con training preliminare viene caricato da una tabella, e nuovi dati di input, le righe tabulari o singole, viene passati al modello, che genera i nuovi valori (o _punteggi_). L'output potrebbe essere un valore di colonna singola che rappresenta una probabilità o più valori, inclusi altri complemento utile per la stima, errore o un intervallo di confidenza.
+_Assegnazione dei punteggi_ è un processo in due passaggi. È possibile specificare un modello con training preliminare per il caricamento da una tabella. In secondo luogo, nuovo passaggio di dati rispetto alla funzione, per generare i valori di stima di input (o _punteggi_). L'input può essere righe tabulari o singole. È possibile scegliere di restituire un valore di colonna singola che rappresenta una probabilità o si potrebbero restituire valori diversi, ad esempio un intervallo di confidenza, errore o altri complemento utile per la stima.
 
-Quando l'assegnazione dei punteggi di numerose righe di dati, i nuovi valori vengono inseriti in genere in una tabella come parte della procedura di assegnazione dei punteggi.  Tuttavia, è inoltre possibile recuperare un singolo punteggio in tempo reale. Quando l'assegnazione dei punteggi di input successivo, il modello può essere memorizzati nella cache in modo che possa essere ricaricato in memoria rapida.
+Quando l'input include molte righe di dati, è in genere più veloce per inserire i valori di stima in una tabella come parte del processo di assegnazione dei punteggi.  Generazione di un singolo punteggio è più comune di comunicazione in uno scenario in cui ottenere i valori di input da una richiesta di modulo o un utente e restituire il punteggio a un'applicazione client. Per migliorare le prestazioni durante la generazione di punteggi successivi, SQL Server potrebbe memorizzare nella cache del modello in modo che possa essere ricaricato in memoria.
 
 Per supportare il punteggio veloce, servizi di SQL Server Machine Learning (e i Server di Microsoft Machine Learning) forniscono librerie punteggio incorporate che funzionano in R o in T-SQL. Esistono diverse opzioni a seconda della versione.
 
-**Assegnazione dei punteggi nativo**
+**Punteggio nativo**
 
-+ La funzione di stima in Transact-SQL può essere utilizzata per _punteggio native_ da qualsiasi istanza di SQL Server 2017. Richiede solo la presenza di un modello già eseguito il training e salvato in una tabella o possono essere chiamati tramite T-SQL. È un tipo di assegnazione dei punteggi in tempo reale che Usa funzioni native di T-SQL. non è stata necessaria alcuna configurazione aggiuntiva.
++ La funzione di stima in Transact-SQL supporta _punteggio native_ in qualsiasi istanza di SQL Server 2017. Richiede solo che si dispone di un modello già eseguito il training, che è possibile chiamare utilizzando T-SQL. Punteggio nativa utilizzando T-SQL è i seguenti vantaggi:
 
-   Il runtime di R non viene chiamato e non devono essere installati.
+    + Non è richiesta alcuna configurazione aggiuntiva.
+    + Il runtime di R non viene chiamato. Non è necessario per installare R.
 
 **Assegnazione dei punteggi in tempo reale**
 
 + **sp_rxPredict** è una stored procedure per in tempo reale di punteggio che può essere utilizzato per generare punteggi da qualsiasi tipo di modello supportati, senza chiamare il runtime di R.
 
-  Questa opzione per utilizzare l'assegnazione dei punteggi in tempo reale è anche disponibile in SQL Server 2016, se si aggiornano i componenti di R usando il programma di installazione autonomo di Microsoft R Server. sp_rxPredict è supportato anche in SQL Server 2017 e potrebbe essere un'ottima scelta se si assegna un punteggio a un tipo di modello non è supportato dalla funzione di stima.
+  Questa stored procedure è anche disponibile in SQL Server 2016, se si aggiornano i componenti di R usando il programma di installazione autonomo di Microsoft R Server. sp_rxPredict è supportato anche in SQL Server 2017. Pertanto, è possibile utilizzare questa funzione per la generazione di punteggi con un tipo di modello non è supportato dalla funzione di stima.
 
 + La funzione rxPredict utilizzabile per il punteggio rapido all'interno del codice R.
 
@@ -58,7 +59,7 @@ Per un esempio di in tempo reale di punteggio in azione, vedere [End-to End pres
 
 ## <a name="how-native-scoring-works"></a>Funzionamento del punteggio nativo
 
-Punteggio nativa Usa librerie native di C++ di Microsoft che è possibile leggere il modello da un particolare formato binario e generare punteggi. Poiché un modello può essere pubblicato e utilizzato per il punteggio senza necessità di chiamare l'interprete R, viene ridotto l'overhead delle interazioni di processo più. Negli scenari di produzione enterprise supporta ottenere migliori prestazioni di stima.
+Punteggio nativa Usa librerie native di C++ di Microsoft che è possibile leggere il modello da un particolare formato binario e generare punteggi. Poiché un modello può essere pubblicato e utilizzato per il punteggio senza necessità di chiamare l'interprete R, viene ridotto l'overhead delle interazioni di processo più. Di conseguenza, punteggio native supporta ottenere migliori prestazioni di stima in scenari di produzione dell'organizzazione.
 
 Per generare punteggi tramite questa raccolta, chiamare la funzione di assegnazione dei punteggi e passare l'input obbligatori seguenti:
 
@@ -71,6 +72,11 @@ Per esempi di codice, oltre a istruzioni su come preparare i modelli nel formato
 
 + [Come eseguire l'assegnazione dei punteggi in tempo reale](r/how-to-do-realtime-scoring.md)
 
+Per una soluzione completa che include il punteggio nativo, vedere questi esempi dal team di sviluppo di SQL Server:
+
++ Distribuire lo script di ML: [utilizzando un modello di Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Distribuire lo script di ML: [utilizzando un modello R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
+
 ## <a name="requirements"></a>Requisiti
 
 Piattaforme supportate sono i seguenti:
@@ -80,11 +86,11 @@ Piattaforme supportate sono i seguenti:
     Punteggio nativa utilizzando PREDICT richiede SQL Server 2017.
     Funziona in qualsiasi versione di SQL Server 2017, tra cui Linux.
 
-    È inoltre possibile eseguire in tempo reale di punteggio usando sp_rxPredict, che richiede l'abilitazione di CLR SQL.
+    È inoltre possibile eseguire in tempo reale di punteggio usando sp_rxPredict. Per utilizzare questa stored procedure, è necessario abilitare [integrazione CLR di SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
 + SQL Server 2016
 
-   E in tempo reale di punteggio usando sp_rxPredict è possibile con SQL Server 2016, può anche essere eseguito su Microsoft R Server. Questa opzione richiede SQLCLR deve essere abilitata e che si installa l'aggiornamento di Microsoft R Server.
+   In tempo reale di punteggio usando sp_rxPredict è possibile con SQL Server 2016 e può anche essere eseguito su Microsoft R Server. Questa opzione richiede SQLCLR deve essere abilitata e che si installa l'aggiornamento di Microsoft R Server.
    Per ulteriori informazioni, vedere [assegnazione dei punteggi in tempo reale](Real-time-scoring.md)
 
 ### <a name="model-preparation"></a>Preparazione del modello
@@ -100,7 +106,7 @@ Piattaforme supportate sono i seguenti:
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
 Se è necessario utilizzare i modelli dalla MicrosoftML, utilizzare in tempo reale con sp_rxPredict di punteggio.
 
@@ -112,5 +118,5 @@ Non sono supportati i tipi di modello seguenti:
 + Modelli di utilizzo di `rxGlm` o `rxNaiveBayes` algoritmi RevoScaleR
 + Modelli PMML
 + Modelli creati utilizzando altre librerie di R da CRAN o altri repository
-+ Modelli che contiene qualsiasi altro tipo di trasformazione di R
++ Modelli che contiene tutte le altre trasformazioni di R
 
