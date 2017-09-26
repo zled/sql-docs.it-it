@@ -16,11 +16,11 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.translationtype: HT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
     
 [![Macchina virtuale di Azure piccola](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** per creare rapidamente una macchina virtuale in cui è già installato SQL Server 2016 SP1.
     
-[![Download di SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** Per ottenere la versione più recente di SQL Server Management Studio, vedere **[Scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
+[![Download di SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS:** Per ottenere la versione più recente di SQL Server Management Studio, vedere **[Scaricare SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**.   
     
  Per informazioni sulle novità, vedere [Novità di SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Motore di database (GA)](#bkmk_ga_instalpatch) 
 
--   [Estensione database (GA)](#bkmk_ga_stretch)
+-   [Stretch Database (GA)](#bkmk_ga_stretch)
 
 -   [Archivio query (GA)](#bkmk_ga_query_store)
 
@@ -89,15 +89,15 @@ ms.lasthandoff: 06/22/2017
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Problema con un carattere specifico in un nome di database o tabella
 
-**Problema e impatto per i clienti:** se si cerca di abilitare Estensione database in un database o in una tabella, l'operazione non riesce e viene visualizzato un errore se il nome dell'oggetto include un carattere che viene considerato come carattere diverso quando viene convertito da minuscolo a maiuscolo. Un esempio di un carattere che causa questo problema è il carattere "ƒ" (creato digitando ALT+159).
+**Problema e impatto per i clienti:** se si cerca di abilitare Stretch Database in un database o in una tabella, l'operazione non riesce e viene visualizzato un errore se il nome dell'oggetto include un carattere che viene considerato come carattere diverso quando viene convertito da minuscolo a maiuscolo. Un esempio di un carattere che causa questo problema è il carattere "ƒ" (creato digitando ALT+159).
 
-**Soluzione alternativa:** se si vuole abilitare Estensione database nel database o nella tabella, l'unica possibilità è rinominare l'oggetto e rimuovere il carattere che causa il problema.
+**Soluzione alternativa:** se si vuole abilitare Stretch Database nel database o nella tabella, l'unica possibilità è rinominare l'oggetto e rimuovere il carattere che causa il problema.
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>Problema relativo a un indice che usa la parola chiave INCLUDE
 
-**Problema e impatto per i clienti:** se si cerca di abilitare Estensione database in una tabella che include un indice che usa la parola chiave INCLUDE per includere altre colonne nell'indice, l'operazione non riesce e viene visualizzato un errore.
+**Problema e impatto per i clienti:** se si cerca di abilitare Stretch Database in una tabella che include un indice che usa la parola chiave INCLUDE per includere altre colonne nell'indice, l'operazione non riesce e viene visualizzato un errore.
 
-**Soluzione alternativa:** eliminare l'indice che include la parola chiave INCLUDE, abilitare Estensione database nella tabella, quindi ricreare l'indice. In questo caso, assicurarsi di seguire i criteri e le procedure di manutenzione dell'organizzazione per eliminare o ridurre al minimo l'impatto per gli utenti della tabella interessata.
+**Soluzione alternativa:** eliminare l'indice che include la parola chiave INCLUDE, abilitare Stretch Database nella tabella, quindi ricreare l'indice. In questo caso, assicurarsi di seguire i criteri e le procedure di manutenzione dell'organizzazione per eliminare o ridurre al minimo l'impatto per gli utenti della tabella interessata.
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 

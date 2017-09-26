@@ -1,52 +1,72 @@
 ---
-title: "Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.selectsourcetablesandviews.f1"
+title: Selezionare le tabelle di origine e le viste (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 caps.latest.revision: 96
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 88
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9a0c3c4fc8d41206ea077498dafb755e7b433a78
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
 ---
-# Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
+# <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
   Dopo aver specificato che si vuole copiare un'intera tabella o dopo aver specificato una query, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Seleziona tabelle e viste di origine**. In questa pagina è possibile selezionare le tabelle e le viste esistenti da copiare. Viene poi eseguito il mapping delle tabelle di origine in tabelle di destinazione nuove o esistenti. Facoltativamente, è anche possibile esaminare il mapping di singole colonne e visualizzare in anteprima i dati di esempio.
 
-> [!TIP] Se è necessario copiare più di un database oppure oggetti di database diversi da tabelle e viste, usare Copia guidata database anziché l'Importazione/Esportazione guidata. Per altre informazioni, vedere [Utilizzo di Copia guidata database](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+> [!TIP]
+> Se è necessario copiare più di un database di SQL Server o gli oggetti di database di SQL Server diverso da tabelle e viste, è possibile utilizzare Copia guidata Database anziché l'importazione / esportazione guidata. Per altre informazioni, vedere [Utilizzo di Copia guidata database](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="screen-shot---what-you-see-if-youre-going-to-copy-tables"></a>Screenshot degli elementi visualizzati quando si copiano le tabelle  
- Lo screenshot seguente illustra la pagina **Seleziona tabelle e viste di origine** della procedura guidata dopo aver selezionato l'opzione **Copia i dati da una o più tabelle o viste** nella pagina **Impostazione copia tabella o query**. L'elenco visualizza tutte le tabelle e le viste disponibili dall'origine dati.
+## <a name="screen-shot---if-youre-going-to-copy-tables"></a>Cattura di schermata - se si intende copiare tabelle  
+ La schermata seguente mostra un esempio del **Selezione origine tabelle e viste** pagina della procedura guidata quando si è scelto di **copiare i dati da uno o più tabelle o viste** opzione il ** Impostazione copia tabella o Query** pagina. L'elenco visualizza tutte le tabelle e le viste disponibili dall'origine dati.
  
-In questo esempio, l'utente vuole copiare la tabella **Sales.Customer** dall'origine nella nuova tabella **Sales.CustomerNew** di destinazione. 
+In questo esempio, il **origine** elenco contiene tutte le tabelle nel database di esempio AdventureWorks. La riga selezionata indica che l'utente desidera copiare il **Sales. Customer** tabella dall'origine alla nuova **Sales.CustomerNew** tabella nella destinazione. 
    
- ![Select tables page of the Import and Export Wizard](../../integration-services/import-export-data/media/select-tables1.png "Select tables page of the Import and Export Wizard")
+ ![Pagina selezionare le tabelle di importazione / esportazione guidata](../../integration-services/import-export-data/media/select-tables1.png "pagina selezionare le tabelle di importazione / esportazione guidata")
   
-## <a name="screen-shot---what-you-see-if-you-provided-a-query"></a>Screenshot degli elementi visualizzati quando si specifica una query  
- Lo screenshot seguente illustra la pagina **Seleziona tabelle e viste di origine** della procedura guidata dopo aver selezionato l'opzione **Scrivi una query per specificare i dati da trasferire** nella pagina **Impostazione copia tabella o query** e aver specificato la query nella pagina **Impostazione query di origine**. L'elenco visualizza un'unica riga in cui l'elemento nella colonna di origine rappresenta la query specificata.
+## <a name="screen-shot---if-you-provided-a-query"></a>Cattura di schermata - se si fornisce una query  
+ La schermata seguente mostra un esempio del **Selezione origine tabelle e viste** pagina della procedura guidata quando si è scelto di **scrivere una query per specificare i dati da trasferire** opzione il **Impostazione copia tabella o Query** pagina. Il **origine** elenco contiene solo una singola riga, in cui l'elemento denominato `[Query]` rappresenta la query che si è specificato nella **query di origine** pagina.
  
 In questo esempio, l'utente vuole copiare i risultati della query dall'origine dati nella tabella **Sales.CustomerNew** di destinazione.  
     
- ![Select tables page of the Import and Export Wizard](../../integration-services/import-export-data/media/select-tables2.png "Select tables page of the Import and Export Wizard")  
+ ![Pagina selezionare le tabelle di importazione / esportazione guidata](../../integration-services/import-export-data/media/select-tables2.png "pagina selezionare le tabelle di importazione / esportazione guidata")  
 
 ## <a name="select-source-and-destination-tables"></a>Selezionare le tabelle di origine e di destinazione 
 **Origine**  
-Mediante le caselle di controllo, selezionare dall'elenco di tabelle e viste disponibili quelle da copiare nella destinazione. Per impostazione predefinita, i dati dell'origine dati vengono copiati senza modifiche. Se si crea una nuova tabella di destinazione, viene copiato anche lo schema senza apportare modifiche rispetto all'origine dati.
+Mediante le caselle di controllo, selezionare dall'elenco di tabelle e viste disponibili quelle da copiare nella destinazione. Per impostazione predefinita, i dati dell'origine dati vengono copiati senza modifiche. Se si crea una nuova tabella di destinazione, viene copiato anche lo schema per la nuova tabella, l'elenco di colonne e le relative proprietà - senza modifiche dall'origine dati.
 
-Se si esegue una query, l'elenco conterrà un solo elemento denominato \[Query\]. 
+Se una query, l'elenco contiene solo un elemento con il nome `[Query]`. 
 
 **Destinazione**  
  Selezionare una tabella di destinazione dall'elenco per ogni tabella di origine o query oppure immettere il nome di una nuova tabella da creare con la procedura guidata. Se si seleziona una tabella di destinazione esistente, è necessario che la tabella abbia colonne con tipi di dati compatibili con i dati di origine.  
 
-> [!NOTE] Se la procedura guidata viene sospesa a questo punto per creare manualmente una nuova tabella nel database di destinazione tramite uno strumento esterno, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], la nuova tabella non sarà subito visibile nell'elenco delle tabelle di destinazione disponibili. Per aggiornare l'elenco delle tabelle di destinazione, tornare indietro alla pagina **Scelta destinazione**, selezionare di nuovo il database di destinazione per aggiornare l'elenco delle tabelle e delle viste disponibili e quindi avanzare fino alla pagina **Selezione tabelle e viste di origine**.  
+> [!NOTE]
+> Se la procedura guidata viene sospesa a questo punto per creare manualmente una nuova tabella nel database di destinazione tramite uno strumento esterno, ad esempio  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], la nuova tabella non sarà subito visibile nell'elenco delle tabelle di destinazione disponibili. Per aggiornare l'elenco delle tabelle di destinazione, tornare indietro alla pagina **Scelta destinazione** , selezionare di nuovo il database di destinazione per aggiornare l'elenco delle tabelle e delle viste disponibili e quindi avanzare fino alla pagina **Selezione tabelle e viste di origine** .  
+
+## <a name="optionally-review-column-mappings-and-preview-data"></a>Facoltativamente, rivedere i mapping delle colonne e visualizzare l'anteprima dati
+**Modifica mapping**   
+Facoltativamente, fare clic su **modificare i mapping** per visualizzare il **i mapping delle colonne** la finestra di dialogo per la tabella selezionata. Nella finestra di dialogo **Mapping colonne** eseguire le operazioni seguenti,
+-   Esaminare il mapping di singole colonne tra l'origine e la destinazione.
+-   Copiare solo un subset di colonne selezionando **ignora** per le colonne da non copiare.
+
+Per altre informazioni, vedere [Mapping colonne](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
+
+**Anteprima**  
+Facoltativamente, fare clic su **anteprima** per visualizzare in anteprima fino a 200 righe di dati di esempio nel **Anteprima dati** la finestra di dialogo. Questo permette di verificare che la procedura guidata sta per copiare i dati desiderati. Per altre informazioni, vedere [Anteprima dati](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+  
+Dopo aver visualizzato i dati in anteprima, potrebbe essere necessario modificare le opzioni selezionate nelle pagine precedenti della procedura guidata. Per apportare queste modifiche, tornare alla pagina **Seleziona tabelle e viste di origine** e quindi fare clic su **Indietro** per tornare alle pagine precedenti nelle quali modificare le opzioni selezionate.  
 
 ## <a name="select-source-and-destination-tables-for-excel"></a>Selezionare le tabelle di origine e di destinazione per Excel
 
@@ -57,6 +77,7 @@ L'elenco delle tabelle e delle viste di origine di un'origine dati Excel include
 
 Se si vuole caricare i dati da o in uno specifico intervallo di celle senza nome, ad esempio **[Foglio1$A1:B4]**, è necessario scrivere una query. Tornare alla pagina **Impostazione copia tabella o query** e selezionare **Scrivi una query per specificare i dati da trasferire**.
 
+#### <a name="prepare-the-excel-source-data"></a>Preparare i dati di origine Excel
 Quando si specifica un foglio di lavoro o un intervallo come tabella di origine, il driver legge il blocco di celle *contigue* che inizia con la prima cella non vuota nell'angolo superiore sinistro del foglio di lavoro o dell'intervallo. Per questa ragione, i dati di origine non possono includere righe vuote. Ad esempio, non può essere presente una riga vuota tra le intestazioni di colonna e le righe di dati. Se è presente un titolo seguito da righe vuote nella parte superiore del foglio di lavoro sopra i dati, non è possibile eseguire query nel foglio di lavoro. In Excel è necessario assegnare un nome all'intervallo di dati ed eseguire una query nell'intervallo denominato anziché nel foglio di lavoro.
 
 ### <a name="excel-destination-tables"></a>Tabelle di destinazione Excel
@@ -66,39 +87,32 @@ Se si esportano dati in Excel, è possibile specificare la destinazione in uno d
 -   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]**.
 
 ## <a name="special-considerations-for-excel-sources-and-destinations"></a>Considerazioni speciali per origini e destinazioni Excel
-Quando si usa Excel come origine o destinazione, è consigliabile fare clic su **Modifica mapping** e rivedere i mapping dei tipi di dati nella pagina **Mapping colonne**. 
+Quando si usa Excel come origine o destinazione, è consigliabile fare clic su **Modifica mapping** e rivedere i mapping dei tipi di dati nella pagina **Mapping colonne** . 
 
-**Tipi di dati in cartelle di lavoro di Excel**. Excel non è un database tipico. Le colonne di Excel non hanno tipi di dati fissi. La procedura guidata riconosce solo un set limitato di tipi di dati in Excel: numeric, currency, Boolean, date/time, string (255 caratteri o meno) e memo (più di 255 caratteri). Per determinare il tipo di dati di ogni colonna, la procedura guidata legge un determinato numero di righe (8 righe per impostazione predefinita) nell'origine dati Excel.
+**Tipi di dati in cartelle di lavoro di Excel**. Excel non è un database tipico. Le colonne di Excel non hanno tipi di dati fissi. La procedura guidata riconosce solo un set limitato di tipi di dati in Excel: numeric, currency, Boolean, date/time, string (255 caratteri o meno) e memo (più di 255 caratteri). La procedura guidata campiona un determinato numero di righe (impostazione predefinita, le prime otto righe) in un'origine dati di Excel esistente per determinare il tipo di dati di ogni colonna.
 
 Quando la procedura guidata deve eseguire conversioni esplicite dei tipi di dati per caricare i dati da o in Excel, viene in genere visualizzata la pagina **Verifica mapping tra i tipi di dati** nella quale è possibile verificare le conversioni. Le conversioni possono essere le seguenti.
 -   Conversione tra colonne di Excel di tipo numerico a precisione doppia e colonne numeriche di altro tipo
--   Conversione tra colonne di Excel di tipo stringa Unicode e colonne di tipo stringa non Unicode con tabelle codici specifiche
 -   Conversione tra colonne di Excel di tipo stringa di 255 caratteri e colonne di tipo stringa di lunghezze diverse
+-   Conversione tra colonne di tipo stringa Unicode Excel e le colonne stringa non Unicode che utilizzano tabelle codici specifiche.
 
 ### <a name="special-considerations-for-excel-sources"></a>Considerazioni speciali per le origini Excel
-**Valori Null o mancanti nei dati importati**. Quando una colonna di Excel sembra contenere tipi di dati diversi, ad esempio valori di tipo numeric e di tipo text, nelle prime otto righe campionate, la procedura guidata considera il tipo di dati della maggior parte dei dati come tipo di dati della colonna e restituisce valori Null per le celle contenenti dati di altri tipi. Questo funzionamento della procedura guidata non può essere modificato.
+**Valori Null o mancanti nei dati importati**. Quando viene visualizzata una colonna di Excel per contenere tipi di dati misti nelle prime otto righe campionate dalla procedura guidata - ad esempio, valori numerici con valori di testo - la procedura guidata Seleziona il tipo di dati della maggior parte come il tipo di dati della colonna e restituisce i valori null per le celle che Sub dati di altri tipi. Questo funzionamento della procedura guidata non può essere modificato.
 
-**Stringhe troncate nei dati importati**. Quando la procedura guidata individua una colonna di Excel che contiene dati di tipo text, determina il tipo di dati della colonna (string o memo) in base al valore più lungo delle prime otto righe campionate. Se la procedura guidata non individua valori contenenti più di 255 caratteri nelle righe campionate, gestirà la colonna come una colonna di stringhe di 255 caratteri anziché come una colonna con tipo di dati memo e troncherà i valori che superano i 255 caratteri. Per importare dati da una colonna memo senza troncamento, è necessario assicurarsi che la colonna di tipo memo contenga almeno un valore più lungo di 255 caratteri nelle prime otto righe.
+**Stringhe troncate nei dati importati**. Quando la procedura guidata individua una colonna di Excel che contiene dati di tipo text, determina il tipo di dati della colonna (string o memo) in base al valore più lungo delle prime otto righe campionate. Se la procedura guidata non individua valori contenenti più di 255 caratteri nelle righe campionate, gestirà la colonna come una colonna di stringhe di 255 caratteri anziché come una colonna con tipo di dati memo e troncherà i valori che superano i 255 caratteri. Per importare dati da una colonna di dati memo senza troncamento, è necessario assicurarsi che la colonna di tipo memo contenga almeno un valore più di 255 caratteri nelle prime otto righe campionate dalla procedura guidata.
 
 ### <a name="special-considerations-for-excel-destinations"></a>Considerazioni speciali per le destinazioni Excel
-**Specifica di un intervallo esistente**. Quando si specifica un intervallo esistente come destinazione, viene visualizzato un errore se l'intervallo non è abbastanza largo, ovvero se include meno colonne dei dati di origine. Tuttavia, se l'intervallo specificato non è sufficiente, ovvero include meno righe dei dati di origine, la procedura guidata continua la scrittura delle righe ed estende la definizione dell'intervallo in base al nuovo numero di righe.
+**Specifica di un intervallo esistente**. Quando si specifica un intervallo esistente come destinazione, si verifica un errore se l'intervallo con meno *colonne* rispetto ai dati di origine. Tuttavia, se l'intervallo specificato presenta meno *righe* rispetto ai dati di origine, la procedura guidata continua con la scrittura delle righe e si estende la definizione dell'intervallo in modo che corrisponda il nuovo numero di righe.
 
 **Salvataggio di dati memo (ntext)**. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, la procedura guidata deve riconoscere il tipo di dati della colonna di destinazione come **memo** anziché **string**.
--   Se la tabella di destinazione contiene già righe di dati, le prime otto righe campionate dalla procedura guidata devono contenere almeno una riga con un valore più lungo di 255 caratteri nella colonna di tipo memo.
--   Se la tabella di destinazione viene creata dalla procedura guidata, l'istruzione **CREATE TABLE** deve usare **LONGTEXT** (o uno dei sinonimi) come tipo di dati della colonna di tipo memo. Rivedere l'istruzione **CREATE TABLE** facendo clic su **Modifica SQL** accanto all'opzione **Crea tabella di destinazione** nella pagina **Mapping colonne**.
-
-## <a name="optionally-edit-column-mappings-and-preview-sample-data"></a>Modificare i mapping delle colonne e visualizzare in anteprima i dati di esempio
-**Modifica mapping**   
-Facoltativamente, fare clic su **Modifica mapping** per visualizzare la finestra di dialogo **Mapping colonne** per la tabella selezionata. Nella finestra di dialogo **Mapping colonne** eseguire le operazioni seguenti,
--   Esaminare il mapping di singole colonne tra l'origine e la destinazione.
--   Copiare solo un subset di colonne selezionando **ignora** per le colonne da non copiare.
-
-Per altre informazioni, vedere [Mapping colonne](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
-
-**Anteprima**  
-Facoltativamente, fare clic su **Anteprima** per visualizzare in anteprima fino a 200 righe di dati di esempio nella finestra di dialogo **Anteprima dati**. Questo permette di verificare che la procedura guidata sta per copiare i dati desiderati. Per altre informazioni, vedere [Anteprima dati](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
-  
-Dopo aver visualizzato i dati in anteprima, potrebbe essere necessario modificare le opzioni selezionate nelle pagine precedenti della procedura guidata. Per apportare queste modifiche, tornare alla pagina **Seleziona tabelle e viste di origine** e quindi fare clic su **Indietro** per tornare alle pagine precedenti nelle quali modificare le opzioni selezionate.  
+-   Se la tabella di destinazione contiene già righe di dati, le prime otto righe campionate dalla procedura guidata devono contenere almeno una riga con un valore più di 255 caratteri nella colonna di dati memo.
+-   Se la tabella di destinazione viene creata dalla procedura guidata, il **CREATE TABLE** deve utilizzare l'istruzione **LONGTEXT** (o uno dei sinonimi) come tipo di dati della colonna di dati memo. Controllare il **CREATE TABLE** istruzione e rivedere, se necessario, facendo clic su **modifica SQL** accanto al **Crea tabella di destinazione** opzione il **colonna Mapping** pagina.
 
 ## <a name="whats-next"></a>Operazioni successive  
- Dopo aver selezionato le tabelle e le viste esistenti da copiare e sottoporre a mapping nelle rispettive destinazioni, la pagina successiva è **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare il pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creato dalla procedura guidata per personalizzarlo e usarlo di nuovo in seguito. Per altre informazioni, vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+ Dopo aver selezionato le tabelle e le viste esistenti da copiare e sottoporre a mapping nelle rispettive destinazioni, la pagina successiva è **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare il pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creato dalla procedura guidata per personalizzarlo e usarlo di nuovo in seguito. Per altre informazioni, vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+ 
+ ## <a name="see-also"></a>Vedere anche
+[Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+
+
+

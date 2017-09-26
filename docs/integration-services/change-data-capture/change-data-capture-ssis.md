@@ -1,41 +1,46 @@
 ---
-title: "Change Data Capture (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caricamenti incrementali [Change Data Capture di SQL Server]"
-  - "Change Data Capture [SQL Server], Integration Services e"
+title: Change Data Capture (SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental loads [SQL Server change data capture]
+- change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
 ---
-# Change Data Capture (SSIS)
-  Change Data Capture in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una soluzione efficace alla sfida posta dall'esecuzione di caricamenti incrementali da tabelle di origine in data mart e data warehouse.  
+# <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
+  Change Data Capture in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre una soluzione efficace alla sfida posta dall'esecuzione di caricamenti incrementali da tabelle di origine in data mart e data warehouse.  
   
-## Informazioni su Change Data Capture  
+## <a name="what-is-change-data-capture"></a>Informazioni su Change Data Capture  
  Le tabelle di origine vengono modificate nel tempo. Un data mart o un data warehouse basato su tali tabelle deve riflettere le modifiche. Un processo di copia periodica di uno snapshot dell'intera origine, tuttavia, richiede troppo tempo e l'utilizzo di una quantità eccessiva di risorse. Approcci alternativi che includono colonne di tipo timestamp, trigger o query complesse riducono spesso le prestazioni e aumentano la complessità. È necessario un flusso affidabile di dati delle modifiche strutturato in modo che possa essere applicato con facilità dagli utenti alle rappresentazioni di destinazione dei dati. Change Data Capture in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di offrire tale soluzione.  
   
  La funzionalità Change Data Capture di [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente di acquisire attività di inserimento, aggiornamento ed eliminazione applicate a tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e rende disponibili i dettagli relativi alle modifiche in un formato relazionale semplice da utilizzare. Le tabelle delle modifiche utilizzate da Change Data Capture contengono colonne che riflettono la struttura di colonne delle tabelle di origine rilevate, insieme ai metadati necessari per comprendere le modifiche apportate riga per riga.  
   
 > [!NOTE]  
->  Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## Funzionamento di Change Data Capture in Integration Services  
+## <a name="how-change-data-capture-works-in-integration-services"></a>Funzionamento di Change Data Capture in Integration Services  
  Tramite un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile raccogliere facilmente i dati delle modifiche nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire caricamenti incrementali efficaci in un data warehouse. Prima che sia possibile utilizzare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per caricare i dati delle modifiche, un amministratore deve tuttavia abilitare Change Data Capture nel database e nelle tabelle da cui si desidera acquisire le modifiche. Per altre informazioni su come configurare Change Data Capture in un database, vedere [Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md).  
   
  Dopo che un amministratore ha abilitato Change Data Capture nel database, è possibile creare un pacchetto per l'esecuzione del caricamento incrementale di tali dati. Nel diagramma seguente vengono illustrati i passaggi per la creazione di tale pacchetto che esegue un caricamento incrementale da una singola tabella:  
   
- ![Passaggi di creazione del pacchetto di Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Passaggi di creazione del pacchetto di Change Data Capture")  
+ ![Modificare i passaggi di creazione del pacchetto di dati acquisizione](../../integration-services/change-data-capture/media/cdc-package-creation.gif "modificare passaggi di creazione del pacchetto acquisizione dei dati")  
   
  Come illustrato nel diagramma precedente, la creazione di un pacchetto per l'esecuzione di un caricamento incrementale dei dati modificati comporta i passaggi seguenti:  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 38
   
 -   Calcolare i valori **datetime** di inizio e di fine per l'intervallo di modifiche apportate ai dati di origine da recuperare.  
   
-     Per calcolare tali valori, usare un'attività Esegui SQL o espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con funzioni **datetime**. È quindi necessario archiviare gli endpoint in variabili del pacchetto da utilizzare in seguito nel pacchetto.  
+     Per calcolare tali valori, usare un'attività Esegui SQL o espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con funzioni **datetime** . È quindi necessario archiviare gli endpoint in variabili del pacchetto da utilizzare in seguito nel pacchetto.  
   
      **Per altre informazioni:** [Definizione di un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
@@ -88,17 +93,17 @@ caps.handback.revision: 38
   
      **Per altre informazioni:** [Applicazione delle modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-### Modificare i dati di più tabelle  
+### <a name="change-data-from-multiple-tables"></a>Modificare i dati di più tabelle  
  Il processo illustrato nel diagramma e nei passaggi precedenti prevede un caricamento incrementale da una singola tabella. Il processo per eseguire un caricamento incrementale da più tabelle è identico. È tuttavia necessario modificare la progettazione del pacchetto per adattarlo all'elaborazione di più tabelle. Per altre informazioni su come creare un pacchetto che esegue un caricamento incrementale da più tabelle, vedere [Esecuzione di un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
-## Esempi di pacchetti Change Data Capture  
+## <a name="samples-of-change-data-capture-packages"></a>Esempi di pacchetti Change Data Capture  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre due esempi che illustrano come usare la funzionalità Change Data Capture nei pacchetti. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [File Leggimi relativo al pacchetto di esempio di un intervallo di tempo specificato in Change Data Capture](http://go.microsoft.com/fwlink/?LinkId=133507)  
   
 -   [File Leggimi relativo al pacchetto di esempio dall'ultima richiesta in Change Data Capture](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Definizione di un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
@@ -116,7 +121,8 @@ caps.handback.revision: 38
   
 -   [Esecuzione di un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
-## Contenuto correlato  
- Intervento nel blog sul [carico incrementale con schema progettuale di SSIS](http://go.microsoft.com/fwlink/?LinkId=217679) su sqlblog.com  
+## <a name="related-content"></a>Contenuto correlato  
+ Intervento nel blog sul [carico incrementale con schema progettuale di SSIS](http://go.microsoft.com/fwlink/?LinkId=217679)su sqlblog.com  
   
   
+

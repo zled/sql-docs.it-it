@@ -1,27 +1,32 @@
 ---
-title: "Creare e modificare un servizio Oracle CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: Creare e modificare un servizio Oracle CDC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
 ---
-# Creare e modificare un servizio Oracle CDC
+# <a name="create-and-edit-an-oracle-cdc-service"></a>Creare e modificare un servizio Oracle CDC
   Da CDC Service Configuration Console viene creato e modificato un nuovo servizio Windows di Oracle CDC.  
   
- Per creare un nuovo servizio Windows di Oracle CDC, selezionare **Local CDC Services** dal riquadro sinistro, quindi fare clic su **New service** nel riquadro **Actions** . È inoltre possibile fare clic con il pulsante destro del mouse su **Local CDC Services** (Servizi CDC locali) e selezionare **New Service** (Nuovo servizio). Verrà aperta la finestra di dialogo New Oracle CDC Windows Service.  
+ Per creare un nuovo servizio Windows di Oracle CDC, selezionare **Local CDC Services** dal riquadro sinistro, quindi fare clic su **New service** nel riquadro **Actions** . È inoltre possibile fare clic con il pulsante destro del mouse su **Local CDC Services** (Servizi CDC locali) e selezionare **New Service**(Nuovo servizio). Verrà aperta la finestra di dialogo New Oracle CDC Windows Service.  
   
  **OPPURE**  
   
@@ -29,12 +34,11 @@ caps.handback.revision: 8
   
  Immettere le informazioni seguenti nella finestra di dialogo New Oracle CDC Windows Service CDC o la finestra di dialogo CDC Service Properties.  
   
- Nome servizio  
+* * Nome servizio * *  
  Digitare il nome del nuovo servizio Windows di Oracle CDC. Non utilizzare nomi lunghi, se possibile. Non è possibile utilizzare i caratteri / e \ nel nome del servizio.  
   
 > [!NOTE]  
-  
- Questa opzione non è disponibile quando si modifica il servizio. Non è possibile modificare il nome di un servizio Windows già esistente.  
+> Questa opzione non è disponibile quando si modifica il servizio. Non è possibile modificare il nome di un servizio Windows già esistente.  
   
  **Description**  
  Digitare una descrizione del servizio per consentirne l'identificazione.  
@@ -56,7 +60,7 @@ caps.handback.revision: 8
   
      È possibile utilizzare un account di Windows locale o di dominio per l'account del servizio. In questo caso, è necessario immettere un valore in **Password** per l'account. Questo account può essere per l'host locale o un account di dominio. Assicurarsi di aggiornare la password quando viene modificata utilizzando Servizi locali nel Pannello di controllo di Windows.  
   
- **Nome server**: selezionare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione a cui connettersi, ad esempio, **\\\\<nome_computer>\\<nome_istanza>**). Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
+ **Nome del server**: selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza a cui connettersi (ad esempio, ** \\ \\< nome_computer >\\< instance_name >**). Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
  **Autenticazione**  
  Selezionare una delle opzioni seguenti:  
@@ -87,7 +91,7 @@ caps.handback.revision: 8
   
  La stessa password master deve inoltre essere utilizzata quando le altre istanze dello stesso servizio sono configurate in altri nodi di un cluster con configurazione di disponibilità elevata. Se si perde o si modifica la password master, è necessario immettere nuovamente tutte le password di log mining archiviate nei database dell'istanza di Oracle CDC utilizzando CDC Designer Console.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura di creazione e modifica di un servizio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

@@ -1,0 +1,118 @@
+---
+title: Catalog.add_data_tap_by_guid | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
+caps.latest.revision: 15
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9bd4ecb4a6a419f1965a349d46d16d764dd83708
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
+---
+# <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+  Aggiunge una scelta dei dati a uno specifico percorso del flusso di dati in un flusso di dati del pacchetto, per un'istanza dell'esecuzione.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```tsql  
+add_data_tap_by_guid [ @execution_id = ] execution_id  
+[ @dataflow_task_guid = ] dataflow_task_guid   
+[ @dataflow_path_id_string = ] dataflow_path_id_string  
+[ @data_filename = ] data_filename  
+[ @max_rows = ] max_rows  
+[ @data_tap_id = ] data_tap_id  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ [ @execution_id =] *valore di execution_id*  
+ ID dell'esecuzione che contiene il pacchetto. Il *valore di execution_id* è un **bigint**.  
+  
+ [ @dataflow_task_guid =] *dataflow_task_guid*  
+ ID dell'attività Flusso di dati nel pacchetto che contiene il percorso del flusso di dati da scegliere. Il *dataflow_task_guid* è un**uniqueidentifier**.  
+  
+ [ @dataflow_path_id_string =] *dataflow_path_id_string*  
+ Stringa di identificazione per il percorso del flusso di dati. Un percorso connette due componenti flusso di dati. Il **IdentificationString** proprietà per il percorso Specifica la stringa.  
+  
+ Per individuare la stringa di identificazione, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] destro il percorso tra due componenti flusso dati e quindi fare clic su **proprietà**. Il **IdentificationString** proprietà viene visualizzata nel **proprietà** finestra.  
+  
+ Il *dataflow_path_id_string* è un **nvarchar (4000)**.  
+  
+ [ @data_filename =] *data_filename*  
+ Nome del file in cui sono archiviati i data tap. Se l'attività Flusso di dati viene eseguita in un contenitore Ciclo Foreach o Ciclo For, i data tap per ogni iterazione del ciclo vengono archiviati in file separati. Ogni file ha un prefisso dato da un numero corrispondente a un'iterazione. File di scelta dei dati vengono scritti nella cartella "*\<cartella di installazione di SQL Server >*\130\DTS\\". Il *data_filename* è un **nvarchar (4000)**.  
+  
+ [ @max_rows =] max_rows  
+ Numero di righe acquisite durante la scelta dei dati. Se questo valore non è specificato, vengono acquisite tutte le righe. Il valore max_rows è un **int**.  
+  
+ [ @data_tap_id =] *data_tap_id*  
+ L'ID della scelta dei dati. Il *data_tap_id* è un **bigint**.  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene creata una scelta dei dati nel percorso del flusso di dati, `Paths[SRC DimDCVentor.OLE DB Source Output]`, nell'attività flusso di dati `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. I dati scelti vengono archiviati nel file DCVendorOutput.csv.  
+  
+```  
+exec catalog.add_data_tap_by_guid   @execution_id,   
+'{D978A2E4-E05D-4374-9B05-50178A8817E8}',   
+'Paths[SRC DimDCVentor.OLE DB Source Output]',   
+'D:\demos\datafiles\DCVendorOutput.csv'  
+  
+```  
+  
+## <a name="remarks"></a>Osservazioni  
+ Per aggiungere le scelte dei dati, l'istanza dell'esecuzione deve essere nello stato di creazione (valore 1 nella **stato** colonna del [Catalog. Operations &#40; Database SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)Vista). Il valore dello stato viene modificato in seguito all'esecuzione. È possibile creare un'esecuzione chiamando [Catalog. create_execution &#40; Database SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+  
+ Di seguito sono riportate alcune considerazioni relative alla stored procedure add_data_tap_by_guid.  
+  
+-   Quando si aggiunge la scelta dei dati, la convalida non avviene prima dell'esecuzione del pacchetto.  
+  
+-   È consigliabile limitare il numero di righe acquisite durante la scelta dei dati per evitare di generare file di dati di grandi dimensioni. Se nel computer in cui viene eseguita la stored procedure si esaurisce lo spazio di archiviazione per i file di dati, l'esecuzione della stored procedure viene arrestata.  
+  
+-   L'esecuzione della stored procedure add_data_tap_by_guid influisce sulle prestazioni del pacchetto. È consigliabile eseguire la stored procedure solo per risolvere problemi relativi ai dati.  
+  
+-   Per accedere al file in cui vengono archiviati i dati scelti, è necessario disporre delle autorizzazioni di amministratore sul computer in cui viene eseguita la stored procedure o essere l'utente che ha avviato l'esecuzione che contiene il pacchetto con la scelta dei dati.  
+  
+## <a name="return-codes"></a>Codici restituiti  
+ 0 (esito positivo)  
+  
+ Quando la stored procedure ha esito negativo viene generato un errore.  
+  
+## <a name="result-set"></a>Set di risultati  
+ Nessuno  
+  
+## <a name="permissions"></a>Permissions  
+ Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
+  
+-   Autorizzazione MODIFY per l'istanza di esecuzione  
+  
+-   L'appartenenza al **ssis_admin** ruolo del database  
+  
+-   L'appartenenza al **sysadmin** ruolo del server  
+  
+## <a name="errors-and-warnings"></a>Errori e avvisi  
+ Nell'elenco seguente vengono descritte le condizioni che causano la mancata riuscita della stored procedure.  
+  
+-   L'utente non dispone delle autorizzazioni MODIFY.  
+  
+-   Il data tap per il componente specificato, nel pacchetto specificato, è già stato aggiunto.  
+  
+-   Il valore specificato per il numero di righe da acquisire non è valido.  
+  
+## <a name="requirements"></a>Requisiti  
+  
+## <a name="see-also"></a>Vedere anche  
+ [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
+  
+  

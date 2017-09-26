@@ -1,36 +1,44 @@
 ---
-title: "Query di Integration Services (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.querybuilder.f1"
-helpviewer_keywords: 
-  - "Generatore query [Integration Services]"
-  - "query [Integration Services]"
-  - "istruzioni [Integration Services]"
-  - "query [Integration Services], informazioni sulle query in pacchetti"
+title: Integration Services (SSIS) query | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.querybuilder.f1
+helpviewer_keywords:
+- Query Builder [Integration Services]
+- queries [Integration Services]
+- statements [Integration Services]
+- queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
 ---
-# Query di Integration Services (SSIS)
+# <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
   L'attività Esegui SQL, l'origine OLE DB, la destinazione OLE DB e la trasformazione Ricerca possono utilizzare query SQL. Nell'attività Esegui SQL, tramite le istruzioni SQL vengono creati, aggiornati ed eliminati dati e oggetti di database e vengono eseguite stored procedure e istruzioni SELECT. Nell'origine OLE DB e nella trasformazione Ricerca, le istruzioni SQL sono solitamente istruzioni SELECT o EXEC. Queste ultime eseguono in genere stored procedure che restituiscono set di risultati.  
   
  Le query possono essere analizzate per stabilire se sono valide. Quando si analizza una query che utilizza una connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la query viene analizzata ed eseguita e il risultato dell'esecuzione, ovvero esito positivo o negativo, viene assegnato al risultato dell'analisi. Se la query utilizza una connessione a dati diversi da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'istruzione viene semplicemente analizzata.  
   
- È possibile definire l'istruzione SQL immettendola direttamente nella finestra di progettazione oppure specificando una connessione file o una variabile contenente l'istruzione.  
+È possibile specificare l'istruzione SQL nei modi seguenti:
+1.   Immetterlo direttamente nella finestra di progettazione.
+2.   Specificare che una connessione a un file contenente l'istruzione.
+3.   Specificare una variabile che contiene l'istruzione.  
   
-## SQL a input diretto  
+## <a name="direct-input-sql"></a>SQL a input diretto  
  Generatore query è disponibile nell'interfaccia utente per l'attività Esegui SQL, l'origine OLE DB, la destinazione OLE DB e la trasformazione Ricerca. Tramite Generatore query è possibile:  
   
 -   Lavorare in modo visivo o con comandi SQL.  
@@ -53,12 +61,61 @@ caps.handback.revision: 57
   
  È inoltre possibile fornire input diretto digitando la query nella finestra di dialogo dell'attività o del componente del flusso di dati oppure nella finestra Proprietà.  
   
- Per altre informazioni, vedere [Generatore di query](../Topic/Query%20Builder.md).  
+ Per altre informazioni, vedere [Generatore di query](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
   
-## SQL nei file  
+## <a name="sql-in-files"></a>SQL nei file  
  L'istruzione SQL dell'attività Esegui SQL può essere inclusa inoltre in un file distinto. È possibile, ad esempio, scrivere query utilizzando strumenti quali l'editor di query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], salvare la query in un file e quindi leggere la query dal file durante l'esecuzione di un pacchetto. Il file può contenere soltanto le istruzioni SQL da eseguire e commenti. Per eseguire un'istruzione SQL archiviata in un file, è necessario fornire una connessione file che specifica il nome e la posizione del file. Per altre informazioni, vedere [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
-## SQL nelle variabili  
- Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../Topic/Use%20Variables%20in%20Packages.md).  
+## <a name="sql-in-variables"></a>SQL nelle variabili  
+ Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+
+## <a name="query-builder-dialog-box"></a>Generatore query - finestra di dialogo
+Utilizzare la finestra di dialogo **Generatore query** per creare una query da utilizzare nell'attività Esegui SQL, nell'origine e nella destinazione OLE DB, nonché nella trasformazione Ricerca.  
   
+ È possibile utilizzare Generatore query per eseguire le attività seguenti:  
+  
+-   **Utilizzare la rappresentazione grafica di una query o comandi SQL** Generatore query include un riquadro che contiene una rappresentazione grafica della query e un riquadro in cui viene visualizzato il testo SQL della query. È possibile utilizzare indifferentemente il riquadro del grafico o il riquadro del testo. Generatore query sincronizza le visualizzazioni in modo che siano sempre aggiornate.  
+  
+-   **Unire in join tabelle correlate** Se in una query si aggiungono più tabelle, Generatore query determina automaticamente il tipo di relazione tra le tabelle e formula il comando di join appropriato.  
+  
+-   **Aggiornare o eseguire query di database** È possibile usare Generatore query per restituire dati usando istruzioni Transact-SQL di tipo SELECT e creare query per l'aggiornamento, l'inserimento e l'eliminazione di record in un database.  
+  
+-   **Visualizzare e modificare immediatamente i risultati** È possibile eseguire una query ed eseguire operazioni su un recordset in una griglia che consente di scorrere e modificare i record nel database.  
+  
+ Gli strumenti grafici inclusi nella finestra di dialogo **Generatore query** consentono di costruire query mediante operazioni di trascinamento. Per impostazione predefinita, la finestra di dialogo Generatore query consente di compilare query SELECT, ma è possibile creare anche query INSERT, UPDATE o DELETE. Nella finestra di dialogo **Generatore query** è inoltre possibile analizzare ed eseguire tutti i tipi di istruzioni SQL. Per altre informazioni sulle istruzioni SQL nei pacchetti, vedere [Query di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-queries.md).  
+  
+ Per sapere di più sul linguaggio di query Transact-SQL e la relativa sintassi, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../t-sql/transact-sql-reference-database-engine.md).  
+  
+ È inoltre possibile utilizzare variabili in una query per specificare i valori per un parametro di input, acquisire i valori dei parametri di output e memorizzare i codici restituiti. Per sapere di più sull'uso delle variabili nelle query usate dai pacchetti, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md), [Origine OLE DB](../integration-services/data-flow/ole-db-source.md)e [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Per sapere di più sull'uso delle variabili nell'attività Esegui SQL, vedere [Parametri e codici restituiti nell'attività Esegui SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) e [Set di risultati nell'attività Esegui SQL](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+  
+ Anche nelle trasformazioni Ricerca e Ricerca fuzzy è possibile utilizzare le variabili con parametri e codici restituiti. Le informazioni relative all'origine OLE DB si applicano anche a queste due trasformazioni.  
+  
+### <a name="options"></a>Opzioni  
+ **Barra degli strumenti**  
+ Utilizzare la barra degli strumenti per gestire set di dati, selezionare i riquadri da visualizzare e controllare le funzioni di query.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Mostra/Nascondi riquadro Diagramma**|Consente di visualizzare o nascondere il riquadro ** ** diagramma.|  
+|**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro griglia. ****|  
+|**Mostra/Nascondi riquadro SQL**|Consente di visualizzare o nascondere il riquadro SQL. ****|  
+|**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il riquadro dei risultati. ****|  
+|**Correre**|Consente di eseguire la query. I risultati verranno visualizzati nel riquadro dei risultati.|  
+|**Verifica istruzione SQL**|Consente di verificare che l'istruzione sia valida.|  
+|**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel riquadro griglia.|  
+|**Ordinamento decrescente**|Consente di disporre in ordine decrescente le righe di output della colonna selezionata nel riquadro griglia.|  
+|**Rimuovi filtro**|Selezionare un nome di colonna nel riquadro griglia e quindi fare clic su **Rimuovi filtro** per rimuovere i criteri di ordinamento per la colonna.|  
+|**Usa Group By**|Consente di aggiungere funzionalità di raggruppamento GROUP BY alla query.|  
+|**Aggiungere una tabella**|Consente di aggiungere una nuova tabella alla query.|  
+  
+ **Definizione della query**  
+ Questa opzione mette a disposizione una barra degli strumenti e riquadri in cui è possibile definire e testare la query.  
+  
+|Riquadro|Description|  
+|----------|-----------------|  
+|**Riquadro diagramma**|Visualizza la query in un diagramma. Nel diagramma vengono visualizzate le tabelle incluse nella query e indicate le relative modalità di unione in join. Selezionare o deselezionare la casella di controllo accanto a una colonna nella tabella per aggiungere o rimuovere la colonna dall'output della query.<br /><br /> Quando si aggiungono tabelle alla query, in Generatore query vengono creati join tra le tabelle basati sulle tabelle, in base alle chiavi della tabella. Per aggiungere un join, trascinare un campo da una tabella in un campo di un'altra tabella. Per gestire un join, fare clic su di esso con il pulsante destro del mouse e quindi scegliere un'opzione dal menu.<br /><br /> Fare clic con il pulsante destro del mouse sul riquadro **Diagramma** per aggiungere o rimuovere tabelle, selezionare tutte le tabelle e visualizzare o nascondere i riquadri.|  
+|**Riquadro griglia**|Visualizza la query in una griglia. È possibile utilizzare questo riquadro per aggiungere o rimuovere colonne da un query e modificare le impostazioni per ogni colonna.|  
+|**Riquadro SQL**|Visualizza la query come testo di istruzione SQL. Le modifiche apportate nei riquadri ** ** diagramma e ** ** griglia vengono visualizzati qui e viceversa, le modifiche apportate qui vengono visualizzate nei riquadri ** ** diagramma e ** ** griglia.|  
+|Riquadro**Risultati** |Visualizza i risultati della query quando si fa clic su **Esegui** sulla barra degli strumenti.| 
+
   

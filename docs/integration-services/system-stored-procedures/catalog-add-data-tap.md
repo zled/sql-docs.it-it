@@ -1,0 +1,136 @@
+---
+title: add_data_tap | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
+caps.latest.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
+---
+# <a name="catalogadddatatap"></a>catalog.add_data_tap
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+  Aggiunge una scelta dei dati sull'output di un componente in un flusso di dati del pacchetto, per un'istanza dell'esecuzione.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```tsql  
+add_data_tap [ @execution_id = ] execution_id  
+[ @task_package_path = ] task_package_path  
+[ @dataflow_path_id_string = ] dataflow_path_id_string  
+[ @data_filename = ] data_filename  
+[ @max_rows = ] max_rows  
+[ @data_tap_id = ] data_tap_id  
+OUTPUT  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ [ @execution_id =] *valore di execution_id*  
+ ID dell'esecuzione che contiene il pacchetto. Il *valore di execution_id* è un **bigint**.  
+  
+ [ @task_package_path =] *task_package_path*  
+ Percorso del pacchetto per l'attività Flusso di dati. Il **PackagePath** proprietà per l'attività flusso di dati specifica il percorso. Per il percorso viene applicata la distinzione tra maiuscole e minuscole. Per individuare il percorso del pacchetto, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] destro attività flusso di dati e quindi fare clic su **proprietà**. Il **PackagePath** proprietà viene visualizzata nel **proprietà** finestra.  
+  
+ Il *task_package_path* è un **nvarchar (max)**.  
+  
+ [ @dataflow_path_id_string =] *dataflow_path_id_string*  
+ Stringa di identificazione per il percorso del flusso di dati. Un percorso connette due componenti flusso di dati. Il **IdentificationString** proprietà per il percorso Specifica la stringa.  
+  
+ Per individuare la stringa di identificazione, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] destro il percorso tra due componenti flusso dati e quindi fare clic su **proprietà**. Il **IdentificationString** proprietà viene visualizzata nel **proprietà** finestra.  
+  
+ Il *dataflow_path_id_string* è un **nvarchar (4000)**.  
+  
+ [ @data_filename =] *data_filename*  
+ Nome del file in cui sono archiviati i data tap. Se l'attività Flusso di dati viene eseguita in un contenitore Ciclo Foreach o Ciclo For, i data tap per ogni iterazione del ciclo vengono archiviati in file separati. Ogni file ha un prefisso dato da un numero corrispondente a un'iterazione.  
+  
+ Per impostazione predefinita, il file è archiviato nel \< *unità*>: la cartella \Programmi\Microsoft SQL Server\130\DTS\DataDumps.  
+  
+ Il *data_filename* è un **nvarchar (4000)**.  
+  
+ [ @max_rows =] *max_rows*  
+ Numero di righe acquisite durante la scelta dei dati. Se questo valore non è specificato, vengono acquisite tutte le righe. Il *max_rows* è un **int**.  
+  
+ [ @data_tap_id =] *data_tap_id*  
+ Restituisce l'ID della scelta dei dati. Il *data_tap_id* è un **bigint**.  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene creata una scelta dei dati nel percorso del flusso di dati `'Paths[OLE DB Source.OLE DB Source Output]` nell'attività Flusso di dati `\Package\Data Flow Task`. I dati scelti vengono archiviati nel `output0.txt` file nella cartella DataDumps (\<*unità*>: \Programmi\Microsoft SQL Server\130\DTS\DataDumps).  
+  
+```  
+Declare @execution_id bigint  
+Exec SSISDB.Catalog.create_execution @folder_name='Packages',@project_name='SSISPackages', @package_name='Package.dtsx',@reference_id=Null, @use32bitruntime=False, @execution_id=@execution_id OUTPUT  
+  
+Exec SSISDB.Catalog.set_execution_parameter_value @execution_id,50, 'LOGGING_LEVEL', 0  
+  
+Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[OLE DB Source.OLE DB Source Output]', @data_filename = 'output0.txt'  
+  
+Exec SSISDB.Catalog.start_execution @execution_id  
+  
+```  
+  
+## <a name="remarks"></a>Osservazioni  
+ Per aggiungere le scelte dei dati, l'istanza dell'esecuzione deve essere nello stato di creazione (valore 1 nella **stato** colonna del [Catalog. Operations &#40; Database SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)Vista). Il valore dello stato viene modificato in seguito all'esecuzione. È possibile creare un'esecuzione chiamando [Catalog. create_execution &#40; Database SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+  
+ Di seguito sono riportate alcune considerazioni relative alla stored procedure add_data_tap.  
+  
+-   Se un'esecuzione contiene un pacchetto padre e uno o più pacchetti figlio, è necessario aggiungere un data tap per ogni pacchetto per il quale si desidera creare data tap.  
+  
+-   Se un pacchetto contiene più di un'attività Flusso di dati con lo stesso nome, task_package_path identifica in modo univoco l'attività Flusso di dati che contiene l'output del componente di cui è stato creato un data tap.  
+  
+-   Quando si aggiunge la scelta dei dati, la convalida non avviene prima dell'esecuzione del pacchetto.  
+  
+-   È consigliabile limitare il numero di righe acquisite durante la scelta dei dati per evitare di generare file di dati di grandi dimensioni. Se nel computer in cui viene eseguita la stored procedure si esaurisce lo spazio di archiviazione per i file di dati, l'esecuzione del pacchetto viene arrestata e nel log viene scritto un messaggio di errore.  
+  
+-   L'esecuzione della stored procedure add_data_tap influisce sulle prestazioni del pacchetto. È consigliabile eseguire la stored procedure solo per risolvere problemi relativi ai dati.  
+  
+-   Per accedere al file in cui sono archiviati i data tap, è necessario essere un amministratore nel computer in cui viene eseguita la stored procedure. È anche necessario essere l'utente che ha avviato l'esecuzione che contiene il pacchetto con il data tap.  
+  
+## <a name="return-codes"></a>Codici restituiti  
+ 0 (esito positivo)  
+  
+ Quando la stored procedure ha esito negativo viene generato un errore.  
+  
+## <a name="result-set"></a>Set di risultati  
+ Nessuno  
+  
+## <a name="permissions"></a>Permissions  
+ Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
+  
+-   Autorizzazione MODIFY per l'istanza di esecuzione  
+  
+-   L'appartenenza al **ssis_admin** ruolo del database  
+  
+-   L'appartenenza al **sysadmin** ruolo del server  
+  
+## <a name="errors-and-warnings"></a>Errori e avvisi  
+ Nell'elenco seguente vengono descritte le condizioni che causano la mancata riuscita della stored procedure.  
+  
+-   L'utente non dispone delle autorizzazioni MODIFY.  
+  
+-   Il data tap per il componente specificato, nel pacchetto specificato, è già stato aggiunto.  
+  
+-   Il valore specificato per il numero di righe da acquisire non è valido.  
+  
+## <a name="requirements"></a>Requisiti  
+  
+## <a name="external-resources"></a>Risorse esterne  
+ Post di blog, [SSIS 2012: scelte dei dati di anteprima A](http://go.microsoft.com/fwlink/?LinkId=239983), su rafael-salas.com.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
+  
+  

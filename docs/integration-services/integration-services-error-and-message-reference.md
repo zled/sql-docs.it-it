@@ -1,32 +1,37 @@
 ---
-title: "Guida di riferimento ai messaggi e agli errori di Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "numeri di errore [Integration Services]"
-  - "HRESULT [Integration Services]"
-  - "errori [Integration Services], elencati"
+title: Errori di Integration Services e riferimento ai messaggi | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error numbers [Integration Services]
+- hresults [Integration Services]
+- errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
 ---
-# Guida di riferimento ai messaggi e agli errori di Integration Services
+# <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
   Nelle tabelle seguenti vengono riportati gli errori, gli avvisi e i messaggi informativi predefiniti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , elencati in ordine numerico crescente all'interno di ciascuna categoria. Vengono inoltre indicati i codici numerici e nomi simbolici corrispondenti. Ognuno degli errori è definito come campo nella classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> nello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> .  
   
  Questo elenco può essere utile quando viene visualizzato un codice di errore privo di descrizione. Al momento, nell'elenco non sono incluse informazioni per la risoluzione dei problemi.  
   
 > [!IMPORTANT]  
->  Molti dei messaggi di errore visualizzati quando si utilizza [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provengono da altri componenti. In questo argomento sono inclusi tutti gli errori generati dai componenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Se l'errore desiderato non è visualizzato nell'elenco, è stato generato da un componente esterno a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ad esempio provider OLE DB, altri componenti di database, quali [!INCLUDE[ssDE](../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], o altri servizi o componenti, quali il file system, il server SMTP o Microsoft Message Queuing (anche noto come MSMQ) e così via. Per informazioni su questi messaggi di errore esterni, vedere la documentazione specifica del componente.  
+>  Molti dei messaggi di errore visualizzati quando si utilizza [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provengono da altri componenti. In questo argomento sono inclusi tutti gli errori generati dai componenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Se l'errore desiderato non è visualizzato nell'elenco, è stato generato da un componente esterno a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ad esempio provider OLE DB, altri componenti di database, quali [!INCLUDE[ssDE](../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , o altri servizi o componenti, quali il file system, il server SMTP o Microsoft Message Queuing (anche noto come MSMQ) e così via. Per informazioni su questi messaggi di errore esterni, vedere la documentazione specifica del componente.  
   
  In questo elenco sono contenuti i gruppi di messaggi seguenti:  
   
@@ -357,7 +362,7 @@ caps.handback.revision: 44
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Il nome dell'oggetto "%1" non è valido. I nomi devono iniziare con un carattere alfabetico.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Il nome dell'oggetto "%1" non è valido. Il nome deve iniziare con un carattere alfabetico o con il carattere di sottolineatura "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Il nome dell'oggetto "%1" non è valido. Il nome deve contenere solo caratteri alfanumerici o caratteri di sottolineatura "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Il nome dell'oggetto "%1" non è valido. I nomi non possono contenere i seguenti caratteri: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Il nome dell'oggetto "%1" non è valido. I nomi non possono contenere i seguenti caratteri: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Impossibile caricare la proprietà Value "%1" utilizzando la persistenza predefinita.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|La gestione connessione "%1" non è di tipo "%2".|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" vuota|  
@@ -2317,7 +2322,7 @@ caps.handback.revision: 44
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|Il numero totale di output e output degli errori, %1!lu!, non è corretto. Devono essere esattamente %2!lu!.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Impossibile recuperare l'output con indice %1!lu!.|  
 |0xC8000005|-939524091|DTSBC_E_INCORRECTEXACTNUMBEROFERROROUTPUTS|Il numero di output degli errori, %1!lu!, non è corretto. Devono essere esattamente %2!lu!.|  
-|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|Il valore dello stato di convalida "%1!lu!" non è corretto .  Deve essere uno dei valori disponibili nell'enumerazione DTSValidationStatus.|  
+|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|Il valore dello stato di convalida "%1!lu!" non è corretto ".  Deve essere uno dei valori disponibili nell'enumerazione DTSValidationStatus.|  
 |0xC8000007|-939524089|DTSBC_E_INPUTHASNOOUTPUT|Per l'input "%1!lu!" non ha un output sincrono.|  
 |0xC8000008|-939524088|DTSBC_E_INPUTHASNOERROROUTPUT|Per l'input "%1!lu!" non dispone di un output degli errori sincrono.|  
 |0xC8000009|-939524087|DTSBC_E_INVALIDHTPIVALUE|Il valore HowToProcessInput %1!lu! non è valido. Deve essere uno dei valori disponibili nell'enumerazione HowToProcessInput.|  
@@ -2336,3 +2341,4 @@ caps.handback.revision: 44
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 non consente l'inserimento di colonne di metadati esterne.|  
   
   
+

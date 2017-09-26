@@ -1,39 +1,44 @@
 ---
-title: "Mapping tra i tipi di dati nell&#39;Importazione/Esportazione guidata SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mapping dei tipi di dati in SQL Server importazione / esportazione guidata | Documenti Microsoft
+ms.custom: 
+ms.date: 01/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 caps.latest.revision: 2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4eca10e506087ee5d8106cb05c861c4efa49a65d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
 ---
-# Mapping tra i tipi di dati nell&#39;Importazione/Esportazione guidata SQL Server
+# <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server
  Nell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile impostare il nome, il tipo di dati e le proprietà del tipo di dati delle colonne nei nuovi file e tabelle di destinazione, ma non è possibile specificare conversioni personalizzate per i valori di colonna. Il mapping dei tipi di dati dall'origine alla destinazione risulta quindi di primaria importanza.  
   
-##  <a name="a-namewizardmappinga-how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> Come viene eseguito il mapping dei tipi di dati tra origine e destinazione durante la procedura guidata?
+##  <a name="wizardMapping"></a> Come viene eseguito il mapping dei tipi di dati tra origine e destinazione durante la procedura guidata?
 La procedura guidata usa file di mapping installati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping dei tipi di dati da un tipo o una versione di database a un altro. Ad esempio, può eseguire il mapping da tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipi di dati Oracle. Per impostazione predefinita, i file di mapping in formato XML sono installati nelle cartelle seguenti.
--   **C:\Programmi\Microsoft SQL Server\130\DTS\MappingFiles** (per 64 bit)
--   **C:\Programmi (x86)\Microsoft SQL Server\130\DTS\MappingFiles** (per 32 bit).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (per 64 bit)
+-   **C:\Programmi\Microsoft file (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * (per i 32 bit).  
   
  Se si modifica un file di mapping esistente o si aggiunge un nuovo file di mapping alla cartella, è necessario chiudere e riaprire l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per caricare il file di mapping nuovo o modificato.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>È possibile modificare un file di mapping esistente
-Se sono necessari modelli di mapping diversi tra i tipi di dati, è possibile aggiornare i file di mapping per modificare i modelli di mapping usati dalla procedura guidata. Se ad esempio si vuole eseguire il mapping del tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** al tipo di dati DB2 **GRAPHIC** anziché al tipo di dati DB2 **VARGRAPHIC** durante il trasferimento di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il mapping di **nchar** nel file di mapping **SqlClientToIBMDB2.xml** in modo da usare **GRAPHIC** anziché **VARGRAPHIC**.  
+Se sono necessari modelli di mapping diversi tra i tipi di dati, è possibile aggiornare i file di mapping per modificare i modelli di mapping usati dalla procedura guidata. Se ad esempio si vuole eseguire il mapping del tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** al tipo di dati DB2 **GRAPHIC** anziché al tipo di dati DB2 **VARGRAPHIC** durante il trasferimento di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il mapping di **nchar** nel file di mapping **SqlClientToIBMDB2.xml** in modo da usare **GRAPHIC** anziché **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>È possibile aggiungere un nuovo file di mapping
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa i tipi di mapping tra le combinazioni di origine e destinazione più comuni. È comunque possibile aggiungere nuovi file di mapping alla directory **MappingFiles** per supportare anche altre combinazioni di origine e destinazione. I nuovi file di mapping devono essere conformi allo schema XSD pubblicato ed eseguire il mapping tra una combinazione univoca di origine e destinazione. Lo schema per i file di mapping, **DataTypeMapping.xsd**, è disponibile [qui](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
  
 ## <a name="sample-mapping-file"></a>Esempio di file di mapping
-Di seguito è riportata una parte del file di mapping XML che esegue il mapping tra tipi di dati SQL Server (o, più precisamente, tra i tipi di dati usati dal provider di dati .Net Framework per SQL Server) e tipi di dati Oracle. Nell'esempio viene eseguito il mapping di un tipo di dati SQL Server **int** a un tipo di dati Oracle **INTEGER**.
+Di seguito è riportata una parte del file di mapping XML che esegue il mapping tra tipi di dati SQL Server (o, più precisamente, tra i tipi di dati usati dal provider di dati .Net Framework per SQL Server) e tipi di dati Oracle. Nell'esempio viene eseguito il mapping di un tipo di dati SQL Server **int** a un tipo di dati Oracle **INTEGER** .
   
 ```xml  
   
@@ -76,3 +81,5 @@ Di seguito è riportata una parte del file di mapping XML che esegue il mapping 
 </dtm:DataTypeMappings>  
   
 ```  
+
+

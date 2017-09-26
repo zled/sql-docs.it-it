@@ -1,35 +1,40 @@
 ---
-title: "Tipi di dati di Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modifica di tipi di dati"
-  - "tipi di dati [Integration Services], elencati"
-  - "tipi di dati [Integration Services]"
-  - "tipi di dati delle colonne [Integration Services]"
-  - "SSIS, tipi di dati"
-  - "Integration Services, tipi di dati"
-  - "SQL Server Integration Services, tipi di dati"
+title: Tipi di dati di Integration Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- data types [Integration Services], listed
+- data types [Integration Services]
+- column data types [Integration Services]
+- SSIS, data types
+- Integration Services, data types
+- SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 98
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 98
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 272d0442798d1968a50c124e8422011c2f174718
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
+
 ---
-# Tipi di dati di Integration Services
-  Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], verrà generato un errore.  
+# <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
+  Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  
   
  Alcuni componenti flusso di dati consentono di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i tipi di dati gestiti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Per altre informazioni sul mapping tra [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e tipi di dati gestiti, vedere [Utilizzo di tipi di dati nel flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
- La tabella seguente elenca i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Alcuni dei tipi di dati nella tabella dispongono di informazioni sulla precisione e sulla scala. Per altre informazioni su precisione e scala, vedere [Precisione, scala e lunghezza &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+ La tabella seguente elenca i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Alcuni dei tipi di dati nella tabella dispongono di informazioni sulla precisione e sulla scala. Per altre informazioni su precisione e scala, vedere [Precisione, scala e lunghezza &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 |Tipo di dati|Description|  
 |---------------|-----------------|  
@@ -63,7 +68,7 @@ caps.handback.revision: 98
 |DT_NTEXT|Stringa di caratteri Unicode con lunghezza massima di 2^30–1 (1.073.741.823) caratteri.|  
 |DT_TEXT|Stringa di caratteri [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/Multibyte Character Set con lunghezza massima di 2^31-1 (2.147.483.647) caratteri.|  
   
-## Conversione di tipi di dati  
+## <a name="conversion-of-data-types"></a>Conversione di tipi di dati  
  Se i dati in una colonna non richiedono l'intera larghezza allocata dal tipo di dati di origine, sarà possibile modificare il tipo di dati della colonna. Riducendo il più possibile la larghezza delle singole righe di dati è possibile ottimizzare le prestazioni delle operazioni di trasferimento dei dati, perché minore è la larghezza della riga, più rapido sarà lo spostamento dei dati dall'origine alla destinazione.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set completo di tipi di dati numerici ed è pertanto possibile scegliere quello più appropriato alle dimensioni dei dati. Se ad esempio i valori di una colonna con tipo di dati DT_UI8 sono sempre numeri interi da 0 a 3000, sarà possibile modificare il tipo di dati in DT_UI2. Analogamente, se una colonna con tipo di dati DT_CY può soddisfare i requisiti di dati del pacchetto anche utilizzando un tipo di dati Integer, sarà possibile modificare il tipo di dati in DT_I4.  
@@ -78,7 +83,7 @@ caps.handback.revision: 98
   
 -   Utilizzare la trasformazione Colonna derivata per creare una copia di una colonna con un tipo di dati diverso rispetto alla colonna originale. Per altre informazioni, vedere [trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-### Conversione tra stringhe e tipi di dati di data e ora  
+### <a name="converting-between-strings-and-datetime-data-types"></a>Conversione tra stringhe e tipi di dati di data e ora  
  Nella tabella seguente sono elencati i risultati di esecuzione del cast o di conversione tra stringhe e tipi di dati di data e ora:  
   
 -   Quando si utilizza l'operatore cast o la trasformazione Conversione dati, i dati di tipo data e ora vengono convertiti nel formato stringa corrispondente. Ad esempio, il tipo di data DT_DBTIME sarà convertito in una stringa nel formato "hh:mm:ss".  
@@ -101,10 +106,10 @@ caps.handback.revision: 98
   
  Il formato di data per DT_DBTIMESTAMPOFFSET include anche un elemento relativo al fuso orario. Tra l'elemento relativo all'ora e quello relativo al fuso orario è presente uno spazio.  
   
-### Conversione dei tipi di dati di data e ora  
+### <a name="converting-datetime-data-types"></a>Conversione dei tipi di dati di data e ora  
  È possibile modificare il tipo di dati di una colonna contenente informazioni di data e ora in modo da estrarre la parte di dati relativa alla data o all'ora. Nella tabella seguente sono illustrati i risultati della conversione da un tipo di dati di data e ora a un altro tipo di dati di data e ora.  
   
-#### Conversione da DT_FILETIME  
+#### <a name="converting-from-dtfiletime"></a>Conversione da DT_FILETIME  
   
 |Conversione di DT_FILETIME in|Risultato|  
 |-----------------------------|------------|  
@@ -117,7 +122,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Conversione da DT_DATE  
+#### <a name="converting-from-dtdate"></a>Conversione da DT_DATE  
   
 |Conversione di DT_DATE in|Risultato|  
 |-------------------------|------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Conversione del tipo di dati.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.|  
   
-#### Conversione da DT_DBDATE  
+#### <a name="converting-from-dtdbdate"></a>Conversione da DT_DBDATE  
   
 |Conversione di DT_DBDATE in|Risultato|  
 |---------------------------|------------|  
@@ -143,7 +148,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Impostazione dei campi dell'ora nel tipo di dati DT_DBTIMESTAMP su zero.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione dei campi dell'ora e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.|  
   
-#### Conversione da DT_DBTIME  
+#### <a name="converting-from-dtdbtime"></a>Conversione da DT_DBTIME  
   
 |Conversione di DT_DBTIME in|Risultato|  
 |---------------------------|------------|  
@@ -156,7 +161,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Impostazione del campo della data nel tipo di dati DT_DBTIMESTAMP2 sulla data corrente.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo della data e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET rispettivamente sulla data corrente e su zero.|  
   
-#### Conversione da DT_DBTIME2  
+#### <a name="converting-from-dtdbtime2"></a>Conversione da DT_DBTIME2  
   
 |Conversione di DT_DBTIME2 in|Risultato|  
 |----------------------------|------------|  
@@ -169,7 +174,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Impostazione del campo della data nel tipo di dati DT_DBTIMESTAMP2 sulla data corrente.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo della data e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET rispettivamente sulla data corrente e su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Conversione da DT_DBTIMESTAMP  
+#### <a name="converting-from-dtdbtimestamp"></a>Conversione da DT_DBTIMESTAMP  
   
 |Conversione di DT_DBTIMESTAMP in|Risultato|  
 |--------------------------------|------------|  
@@ -182,7 +187,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Conversione da DT_DBTIMESTAMP2  
+#### <a name="converting-from-dtdbtimestamp2"></a>Conversione da DT_DBTIMESTAMP2  
   
 |Conversione di DT_DBTIMESTAMP2 in|Risultato|  
 |---------------------------------|------------|  
@@ -195,7 +200,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 di destinazione può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### Conversione da DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dtdbtimestampoffset"></a>Conversione da DT_DBTIMESTAMPOFFSET  
   
 |Conversione di DT_DBTIMESTAMPOFFSET in|Risultato|  
 |--------------------------------------|------------|  
@@ -208,8 +213,8 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|Modifica del valore di ora rappresentato dal tipo di dati DT_DBTIMESTAMPOFFSET in ora UTC.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET di destinazione può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-## Mapping dei tipi di dati di Integration Services ai tipi di dati di database  
- Nella tabella seguente sono incluse informazioni sul mapping tra i tipi di dati utilizzati in alcuni database e i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Questi mapping sono riepilogati nei file di mapping utilizzati dall'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'importazione dei dati da queste origini. Per altre informazioni su questi file di mapping, vedere [Importazione/Esportazione guidata SQL Server](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md).  
+## <a name="mapping-of-integration-services-data-types-to-database-data-types"></a>Mapping dei tipi di dati di Integration Services ai tipi di dati di database  
+ Nella tabella seguente sono incluse informazioni sul mapping tra i tipi di dati utilizzati in alcuni database e i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Questi mapping sono riepilogati nei file di mapping utilizzati dall'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'importazione dei dati da queste origini. Per altre informazioni su questi file di mapping, vedere [Importazione/Esportazione guidata SQL Server](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
 > [!IMPORTANT]  
 >  Questi mapping non rappresentano una rigida corrispondenza, ma offrono solo informazioni generali. In alcuni casi potrebbe essere necessario utilizzare un tipo di dati diverso rispetto a quello indicato nella tabella.  
@@ -219,7 +224,7 @@ caps.handback.revision: 98
   
 |Tipo di dati|SQL Server<br /><br /> (SQLOLEDB, SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
-|DT_BOOL|bit|bit|Bit||||  
+|DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|Currency||||  
 |DT_DATE|||||||  
@@ -233,13 +238,13 @@ caps.handback.revision: 98
 |DT_FILETIME|||||||  
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
+|DT_I2|smallint|smallint|Short||smallint|smallint|  
 |DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
-|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|DECIMAL, NUMERIC|DECIMAL, NUMERIC|  
-|DT_R4|real|real|Singolo||REAL|REAL|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
+|DT_R4|real|real|Singolo||real|real|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||VarChar||CHAR, VARCHAR|CHAR, VARCHAR|  
+|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
@@ -251,10 +256,11 @@ caps.handback.revision: 98
   
  Per informazioni sul mapping di tipi di dati nel flusso di dati, vedere [Utilizzo di tipi di dati nel flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati nei flussi di dati](../../integration-services/data-flow/data-in-data-flows.md)  
   
   
+
