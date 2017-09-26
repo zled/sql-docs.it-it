@@ -112,26 +112,26 @@ ALTER USER userName
  *nome utente*  
  Specifica il nome con cui viene identificato l'utente all'interno del database.  
   
- Account di accesso ** = ** *loginName*  
+ Account di accesso **=***loginName*  
  Modifica il mapping di un utente associandolo a un altro account di accesso, modificando l'ID di sicurezza (SID) dell'utente in modo che corrisponda all'ID di sicurezza dell'account di accesso.  
   
  Se l'istruzione ALTER USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione ALTER USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
- NOME ** = ** *newUserName*  
+ NOME **=***newUserName*  
  Specifica il nuovo nome dell'utente. *newUserName* non deve essere già presente nel database corrente.  
   
- DEFAULT_SCHEMA ** = ** { *schemaName* | NULL}  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL}  
  Specifica il primo schema nel quale il server eseguirà una ricerca durante la risoluzione dei nomi di oggetti per l'utente. L'impostazione dello schema predefinito su NULL comporta la rimozione di uno schema predefinito da un gruppo di Windows.   Non è possibile usare NULL con un utente di Windows.  
   
- PASSWORD ** = ** '*password*'  
+ PASSWORD **=** ‘*password*'  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica la password per l'utente che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.  
   
 > [!NOTE]  
->  Questa opzione è disponibile solo per gli utenti contenuti. Vedere [database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained & #40; Transact-SQL & #41; ](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) per ulteriori informazioni.  
+>  Questa opzione è disponibile solo per gli utenti contenuti. Vedere [database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) per ulteriori informazioni.  
   
- OLD_PASSWORD ** = ** *'oldpassword'*  
+ OLD_PASSWORD **=** *'oldpassword'*  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  La password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si dispone **ALTER ANY USER** autorizzazione. Richiedere *OLD_PASSWORD* impedisce agli utenti con **rappresentazione** autorizzazioni per la modifica della password.  
@@ -139,7 +139,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Questa opzione è disponibile solo per gli utenti contenuti.  
   
- DEFAULT_LANGUAGE ** = ** *{NONE | \<lcid > | \<nome lingua > | \<alias di lingua >}*  
+ DEFAULT_LANGUAGE **=***{NONE | \<lcid > | \<nome lingua > | \<alias di lingua >}*  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica una lingua predefinita da assegnare all'utente. Se questa opzione è impostata su NONE, la lingua predefinita viene impostata sulla lingua predefinita corrente del database. Se la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente rimarrà invariata. *DEFAULT_LANGUAGE* può essere l'ID locale (lcid), il nome della lingua o l'alias della lingua.  
@@ -239,10 +239,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_migrate_user_to_contained & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
+ [sp_migrate_user_to_contained &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
   
   
 
