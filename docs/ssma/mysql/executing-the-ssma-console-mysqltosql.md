@@ -678,7 +678,7 @@ Convert-istruzione
   
 8.  `write-summary-report-to`Specifica il percorso in cui verrà generato il report di riepilogo. Se viene specificato il percorso della cartella, solo file in base al nome **ConvertSQLReport.XML** viene creato. (attributo facoltativo)  
   
-    Report creazione è 2 ulteriormente mediante le sottocategorie,..,:  
+    Report creazione è 2 ulteriormente mediante le sottocategorie..,:  
   
     -   report-errori (= "true/false" con valore predefinito è "false" (attributi facoltativi)).  
   

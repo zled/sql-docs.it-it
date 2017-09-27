@@ -6,6 +6,28 @@
 ## [Articoli nuovi e aggiornati di recente](new-updated-integration-services.md)
 ## [Funzionalità di Integration Services supportate dalle edizioni di SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Compatibilità con le versioni precedenti di Integration Services](integration-services-backward-compatibility.md)
+
+# Guide introduttive
+## Distribuzione
+### [Eseguire la distribuzione con SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Eseguire la distribuzione con Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Eseguire la distribuzione con Transact-SQL (Visual Studio Code)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Eseguire la distribuzione dal prompt dei comandi](./ssis-quickstart-deploy-cmdline.md)
+### [Eseguire la distribuzione con PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Eseguire la distribuzione con C#](./ssis-quickstart-deploy-dotnet.md) 
+## Esegui
+### [Esecuzione con SSMS](./ssis-quickstart-run-ssms.md)
+### [Esecuzione con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Esecuzione con Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
+### [Esecuzione dal prompt dei comandi](./ssis-quickstart-run-cmdline.md)
+### [Esecuzione con PowerShell](ssis-quickstart-run-powershell.md)
+### [Esecuzione con C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Migrazione lift and shift di pacchetti SSIS in Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Esercitazione: distribuire, eseguire e monitorare un pacchetto in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Connettersi al catalogo SSIS in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Pianificare l'esecuzione di pacchetti in Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Connettersi a origini dati con l'autenticazione di Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [Installare o aggiornare](../integration-services/install-windows/install-integration-services.md)
 
 # [Strumenti di sviluppo e gestione](integration-services-ssis-development-and-management-tools.md)
