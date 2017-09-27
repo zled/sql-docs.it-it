@@ -1,22 +1,27 @@
 ---
-title: "Profiling di dati e notifiche in DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Profiling di dati e notifiche in DQS | Microsoft Docs
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Profiling di dati e notifiche in DQS
+# <a name="data-profiling-and-notifications-in-dqs"></a>Profiling di dati e notifiche in DQS
   Il profiling dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) è il processo di analisi dei dati in un'origine dati esistente e la visualizzazione di statistiche sui dati nelle attività DQS. L'attività consente di eseguire la misurazione automatizzata della qualità dei dati. Il profiling in DQS è integrato nei progetti di gestione e di qualità dei dati di DQS e si tratta di una funzionalità dinamica e adattabile. Gli obiettivi principali del profiling sono due: semplificare l'esecuzione dei processi relativi alla qualità dei dati, supportando il processo decisionale, e valutare l'efficacia di tali processi. Il profiling DQS offre i vantaggi seguenti:  
   
 -   Il profiling fornisce informazioni dettagliate sulla qualità dei dati di origine e consente di identificare problemi relativi a tale qualità.  
@@ -63,13 +68,13 @@ caps.handback.revision: 25
   
  Per ulteriori informazioni sulle statistiche di profiling specifiche correlate a un'attività, vedere le sezioni Profiling negli argomenti seguenti:  
   
--   [Esecuzione dell'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Pulire i dati utilizzando DQS & #40; interno & #41; Knowledge Base](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)  
   
 ##  <a name="Monitoring"></a> Profiling dei dati nel monitoraggio delle attività  
  Il profiling delle informazioni per le attività Individuazione informazioni, Criteri di corrispondenza, Corrispondenza e Pulizia sono disponibili non solo nelle pagine delle attività del client Data Quality, ma anche nel monitoraggio delle attività. Il monitoraggio delle attività fornisce una panoramica sulle attività correnti e precedenti. Oltre alle proprietà e ai processi di calcolo correlati delle attività, è possibile visualizzare le informazioni di profiling generate per ogni attività in una data posizione. Selezionare un'attività nella tabella delle attività per visualizzare i risultati del profiling in una tabella sottostante. È inoltre possibile esportare i risultati del profiling. Per altre informazioni, vedere [DQS Administration](../data-quality-services/dqs-administration.md).  
@@ -81,22 +86,22 @@ caps.handback.revision: 25
   
  Una notifica viene indicata da una descrizione comando con un punto esclamativo nella scheda **Profiling** . Le statistiche associate alla notifica sono colorate in rosso per indicare la giustificazione statistica per la notifica.  
   
- È possibile abilitare (impostazione predefinita) o disabilitare le notifiche nel **Impostazioni generali** scheda della finestra di **amministrazione** sezione della home page del Client Data Quality. Quando le notifiche sono disabilitate, le descrizioni comandi non vengono visualizzate e le statistiche non verranno visualizzate in colore rosso. La disabilitazione delle notifiche non comporta miglioramenti significativi delle prestazioni. Il profiling resta operativo anche qualora si disabilitino le notifiche.  
+ È possibile abilitare (valore predefinito) o disabilitare le notifiche nella scheda **Impostazioni generali** della sezione **Amministrazione** della home page del client Data Quality. Quando le notifiche sono disabilitate, le descrizioni comandi non vengono visualizzate e le statistiche non verranno visualizzate in colore rosso. La disabilitazione delle notifiche non comporta miglioramenti significativi delle prestazioni. Il profiling resta operativo anche qualora si disabilitino le notifiche.  
   
  Per condizioni specifiche associate alle notifiche per un'attività, vedere gli argomenti seguenti:  
   
--   [Esecuzione dell'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Pulire i dati utilizzando DQS & #40; interno & #41; Knowledge Base](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come abilitare o disabilitare le notifiche in DQS.|[Enable or Disable Profiling Notifications in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|Viene descritto come abilitare o disabilitare le notifiche in DQS.|[Abilitare o disabilitare le notifiche di profiling in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

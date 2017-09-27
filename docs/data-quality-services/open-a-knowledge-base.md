@@ -1,24 +1,29 @@
 ---
-title: "Apertura di una Knowledge Base | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.openkb.f1"
+title: Aprire una Knowledge Base | Microsoft Docs
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Apertura di una Knowledge Base
+# <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
   In questo argomento viene descritto come aprire una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
@@ -31,9 +36,9 @@ caps.handback.revision: 20
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per aprire una Knowledge Base è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Open"></a> Apertura di una Knowledge Base  
+##  <a name="Open"></a> Open a knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Client Data Quality](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Apri Knowledge Base**.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 20
     > [!NOTE]  
     >  Se non è possibile aprire la Knowledge Base perché bloccata, vedere la sezione seguente.  
   
-## Apertura di una Knowledge Base recente  
+## <a name="open-a-recent-knowledge-base"></a>Apertura di una Knowledge Base recente  
  Le cinque Knowledge Base aperte più recentemente sono visualizzate nell'elenco **Knowledge Base recente** nella home page di DQS. Ciò consente di aprire una Knowledge Base con cui si è lavorato recentemente senza passare per la pagina **Apri Knowledge Base** .  
   
 -   Per aprire una Knowledge Base non bloccata e presente nell'elenco delle Knowledge Base recenti, fare clic sulla freccia destra relativa alla Knowledge Base desiderata, quindi selezionare l'attività nella quale avviare la Knowledge Base.  
@@ -68,23 +73,23 @@ caps.handback.revision: 20
 -   Per aprire una Knowledge Base presente nell'elenco delle Knowledge Base recenti ma che è stata bloccata da un altro utente, contattare l'utente per richiederne lo sblocco.  
   
 ##  <a name="FollowUp"></a> Completamento: Operazioni successive all'apertura di una Knowledge Base  
- Dopo avere aperto una Knowledge Base, questa viene collocata nello stato indicato nella colonna Stato della relativa tabella. Per le attività di individuazione delle informazioni e quelle relative ai criteri di corrispondenza, la Knowledge Base verrà aperta in una pagina di procedura guidata specifica. Per l'attività di gestione del dominio, la Knowledge Base verrà aperta nella pagina di gestione del dominio. Per ulteriori informazioni sugli stati di, vedere [eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [gestione di un dominio](../data-quality-services/managing-a-domain.md), o [creare un criterio di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
+ Dopo avere aperto una Knowledge Base, questa viene collocata nello stato indicato nella colonna Stato della relativa tabella. Per le attività di individuazione delle informazioni e quelle relative ai criteri di corrispondenza, la Knowledge Base verrà aperta in una pagina di procedura guidata specifica. Per l'attività di gestione del dominio, la Knowledge Base verrà aperta nella pagina di gestione del dominio. Per altre informazioni sugli stati, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Locked"></a> Se la Knowledge Base è bloccata  
- L'icona di blocco nella prima colonna indica se la Knowledge Base è bloccata. Il nome di una Knowledge Base bloccata verrà visualizzato in colore rosso. Una Knowledge Base in corso di modifica da parte di un utente specifico tramite un'attività di Knowledge Base, viene contrassegnata come Bloccata. Una Knowledge Base bloccata non può essere modificata da un secondo utente. L'utente che si occupa della knowledge base può sbloccarla facendo la knowledge base nella tabella nella pagina Apri Knowledge Base e facendo clic su **Unlock**, o mediante la pubblicazione. Quando si posiziona il cursore su una Knowledge Base bloccata, viene visualizzato un suggerimento in DQS che indica chi ha bloccato la Knowledge Base e quando.  
+ L'icona di blocco nella prima colonna indica se la Knowledge Base è bloccata. Il nome di una Knowledge Base bloccata verrà visualizzato in colore rosso. Una Knowledge Base in corso di modifica da parte di un utente specifico tramite un'attività di Knowledge Base, viene contrassegnata come Bloccata. Una Knowledge Base bloccata non può essere modificata da un secondo utente. L'utente che sta lavorando alla Knowledge Base può sbloccarla facendo clic su di essa con il pulsante destro del mouse nella tabella presente nella pagina Apri Knowledge Base, quindi scegliendo **Sblocca**, oppure può sbloccarla effettuandone la pubblicazione. Quando si posiziona il cursore su una Knowledge Base bloccata, viene visualizzato un suggerimento in DQS che indica chi ha bloccato la Knowledge Base e quando.  
   
 ##  <a name="State"></a> Stato di una Knowledge Base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
--   **\< vuoto>**: il campo stato è vuoto per una knowledge base se è stata pubblicata la knowledge base facendo **Pubblica** nell'attività Gestione dominio e fare clic su **Sì-pubblica la knowledge base e Chiudi**.  
+-   **\<Vuoto>**: il campo Stato è vuoto se la Knowledge Base è stata pubblicata facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **Yes – Publish the knowledge base and exit** (Sì - Pubblica la Knowledge Base e chiudi).  
   
 -   **In lavorazione**: il lavoro sulla Knowledge Base è stato salvato facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **No - Salva il lavoro relativo alla Knowledge Base e chiudi**.  
   
 -   **Gestione dominio**: sono stati immessi dati per un dominio nella Knowledge Base, ma la Knowledge Base non è stata pubblicata e il lavoro rimane nell'attività Gestione dominio. L'attività Individuazione informazioni non è disponibile. Ciò si verifica quando si fa clic su **Chiudi** nella schermata **Gestione dominio** .  
   
--   **Individuazione - Mapping**: la knowledge base è stata chiusa nella **Gestione Knowledge Base: Mapping** pagina. La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle corrispondenze non sono disponibili.  
+-   **Individuazione - Mapping**: l'attività della Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Mapping** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle corrispondenze non sono disponibili.  
   
--   **Individuazione - individuazione**: la knowledge base è stata chiusa nella **Gestione Knowledge Base: analizzare** pagina. La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
+-   **Individuazione - Individuazione**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Analizza** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   
 -   **Individuazione - Gestione valore**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Gestisci termini di dominio** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   

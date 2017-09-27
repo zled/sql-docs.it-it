@@ -1,22 +1,27 @@
 ---
-title: "Backup e ripristino di database DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Backup e ripristino di database DQS | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Backup e ripristino di database DQS
+# <a name="backing-up-and-restoring-dqs-databases"></a>Backup e ripristino di database DQS
   In questo argomento viene descritto come eseguire il backup e il ripristino dei database DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  In Esplora oggetti espandere il nodo **Database** .  
   
-3.  Eseguire il backup del database DQS_STAGING_DATA. Per istruzioni dettagliate per il backup di un database di SQL Server, vedere [Crea un Backup completo del Database & #40; SQL Server & #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+3.  Eseguire il backup del database DQS_STAGING_DATA. Per istruzioni dettagliate per il backup di un database di SQL Server, vedere [Creare un backup completo del database &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Eseguire il backup del database DQS_PROJECTS.  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  Disconnettersi dall'istanza corrente di SQL Server e connettersi all'istanza di SQL Server in cui si desidera ripristinare i database.  
   
-7.  Ripristinare il database DQS_MAIN. Per istruzioni dettagliate ripristinare un database di SQL Server, vedere [ripristinare un Database di Backup utilizzando SQL Server Management Studio](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Ripristinare il database DQS_MAIN. Per istruzioni dettagliate per il ripristino di un database di SQL Server, vedere [Ripristinare un backup del database tramite SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Ripristinare il database DQS_PROJECTS.  
   
 9. Ripristinare il database DQS_STAGING_DATA.  
   
-10. In Esplora oggetti, fare doppio clic su server e quindi fare clic su **Nuova Query**.  
+10. In Esplora oggetti fare clic con il pulsante destro del mouse sul server, quindi fare clic su **Nuova query**.  
   
-11. Nella finestra dell'Editor di Query, copiare le istruzioni SQL e sostituire *\< PASSWORD>* con la password fornita durante l'installazione di DQS per la chiave master del database:  
+11. Nella finestra Editor di query copiare le istruzioni SQL seguenti sostituendo *\<PASSWORD>* con la password specificata per la chiave master del database durante l'installazione di DQS:  
   
     ```  
     USE [DQS_MAIN]  
@@ -69,9 +74,9 @@ caps.handback.revision: 12
   
     ```  
   
-12. Premere F5 per eseguire le istruzioni. Esaminare il riquadro dei risultati ** ** per verificare che le istruzioni siano state eseguite correttamente.  
+12. Premere F5 per eseguire le istruzioni. Esaminare il riquadro **Risultati** per verificare che le istruzioni siano state eseguite correttamente.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire i database DQS](../data-quality-services/manage-dqs-databases.md)  
   
   

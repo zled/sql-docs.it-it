@@ -1,27 +1,32 @@
 ---
-title: "Monitorare le attivit&#224; DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.administration.activitymonitoring.f1"
-helpviewer_keywords: 
-  - "attività di monitoraggio"
-  - "monitoraggio di attività"
+title: "Monitorare le attività DQS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.administration.activitymonitoring.f1
+helpviewer_keywords:
+- monitoring activity
+- activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46c5abb9edd4e854609a1854ab6d6d8d6622b4fe
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Monitorare le attivit&#224; DQS
+# <a name="monitor-dqs-activities"></a>Monitorare le attività DQS
   In questo argomento viene descritto come monitorare a livello centrale le attività seguenti in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): individuazione delle informazioni, gestione del dominio, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e pulizia SSIS.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
@@ -39,7 +44,7 @@ caps.handback.revision: 16
   
 ##  <a name="View"></a> Visualizzare le attività DQS  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Client Data Quality](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Monitoraggio attività**. Verrà visualizzata la schermata Monitoraggio attività.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 16
   
      **DQKB**: nome della Knowledge Base usata per l'attività.  
   
-     **Utente**: il nome dell'utente che ha avviato l'attività o dell'ultimo utente che ha utilizzato l'attività (nel caso in cui non sono uguali).  
+     **Utente**: nome dell'utente che ha iniziato l'attività oppure dell'ultimo utente che l'ha usata, se non corrispondono.  
   
      **Ora di inizio attività**: data e ora di inizio dell'attività  
   
@@ -102,13 +107,13 @@ caps.handback.revision: 16
      **Ora di fine attività**: data e ora di fine dell'attività.  
   
 ##  <a name="Filter"></a> Filtrare le informazioni delle attività DQS  
- È possibile utilizzare il riquadro dei filtri (**Filtra per**, **valore**, **da data**, e **To Date**) nella schermata per filtrare e visualizzare le attività necessarie in base a determinate criterio di filtro di Monitoraggio attività. Per filtrare i record dell'attività:  
+ È possibile utilizzare il riquadro dei filtri (**Filtra per**, **Valore**, **Da data**e **A data**) nella schermata Monitoraggio attività per filtrare e visualizzare le attività necessarie in base a un determinato criterio di filtro. Per filtrare i record dell'attività:  
   
 1.  Decidere il criterio di filtro: specificare se si desidera filtrare i record dell'attività in base a un valore di una delle colonne nella griglia di attività (basato su valori) o in base a un intervallo di date oppure in base a entrambi i criteri.  
   
-    1.  **Il filtro basato sul valore**: selezionare un criterio di filtro nel **Filtra per** elenco e quindi selezionare il valore appropriato da applicare il filtro nel **valore** elenco. Dopo aver selezionato un'opzione nell'elenco **Filtra per** , l'elenco **Valore** viene aggiornato con i valori possibili. È possibile applicare un filtro in base ai campi seguenti nei record dell'attività: **Attivo**, **Tipo**, **Sottotipo**, **Stato corrente**, **DQKB**e **Utente**.  
+    1.  **Filtro in base a un valore**: selezionare un criterio di filtro nell'elenco **Filtra per** , quindi selezionare il valore appropriato in base a cui applicare il filtro nell'elenco **Valore** . Dopo aver selezionato un'opzione nell'elenco **Filtra per** , l'elenco **Valore** viene aggiornato con i valori possibili. È possibile applicare un filtro in base ai campi seguenti nei record dell'attività: **Attivo**, **Tipo**, **Sottotipo**, **Stato corrente**, **DQKB**e **Utente**.  
   
-    2.  **Il filtro basato su intervallo di date**: selezionando le date appropriate nel **da data** e **To Date** controlli di Data. Per impostazione predefinita, la data visualizzata in **Da data** precede di due giorni la data corrente e la data visualizzata in **A data** è la data corrente. Il filtro non viene applicato in base alle date di *inizio* e di *fine* , ma in base all'intervallo. Questo significa che verranno visualizzate tutte le attività in esecuzione durante l'intervallo di date selezionato.  
+    2.  **Filtro in base a intervallo di date**: selezionare le date appropriate nei controlli di data **Da data** e **A data** . Per impostazione predefinita, la data visualizzata in **Da data** precede di due giorni la data corrente e la data visualizzata in **A data** è la data corrente. Il filtro non viene applicato in base alle date di *inizio* e di *fine* , ma in base all'intervallo. Questo significa che verranno visualizzate tutte le attività in esecuzione durante l'intervallo di date selezionato.  
   
 2.  Fare clic sull'icona **Aggiorna l'elenco di attività** per applicare il filtro e visualizzare solo le attività DQS filtrate.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 16
   
 2.  Nel riquadro inferiore vengono visualizzati i dettagli dell'attività selezionata nelle 2 schede seguenti:  
   
-    -   **Fasi attività**: consente di visualizzare una griglia dei processi di calcolo (fasi attività) associati all'attività selezionata. In questa scheda è possibile che vengano visualizzate diverse fasi per un'attività. Ciò può verificarsi quando la stessa fase dell'attività è stata eseguita più volte dall'utente. Ad esempio, nel caso in cui la fase dell'attività è stata arrestata e avviata di nuovo. Nella griglia in questa scheda vengono visualizzate le informazioni seguenti per ogni fase associata all'attività: **Tipo**, **Stato corrente**, **Ora di inizio**, **Tempo trascorso**e **Ora di fine**.  
+    -   **Fasi attività**: viene visualizzata una griglia dei processi di calcolo (fasi attività) associati all'attività selezionata. In questa scheda è possibile che vengano visualizzate diverse fasi per un'attività. Ciò può verificarsi quando la stessa fase dell'attività è stata eseguita più volte dall'utente. Ad esempio, nel caso in cui la fase dell'attività è stata arrestata e avviata di nuovo. Nella griglia in questa scheda vengono visualizzate le informazioni seguenti per ogni fase associata all'attività: **Tipo**, **Stato corrente**, **Ora di inizio**, **Tempo trascorso**e **Ora di fine**.  
   
     -   **Profiler**: vengono visualizzate le informazioni di profiling per le attività correnti e passate. Per le attività correnti, contiene informazioni parziali ma coerenti. Le informazioni di profiling di un'attività vengono esportate in un file di Excel quando si esportano i dettagli dell'attività corrispondenti in un file di Excel. Le informazioni sono disponibili nei fogli **Profiler - Origine** e **Profiler - Campi** del file di Excel esportato.  
   
@@ -128,32 +133,32 @@ caps.handback.revision: 16
   
 1.  Selezionare un'attività nella griglia di attività (nel riquadro superiore).  
   
-2.  Fare clic sull'icona **Esportare l'attività selezionata in Excel** . In alternativa, fare clic su qualsiasi attività nella griglia di attività e quindi fare clic su **Esporta attività** nel menu di scelta rapida.  
+2.  Fare clic sull'icona **Esportare l'attività selezionata in Excel** . In alternativa, fare clic con il pulsante destro del mouse su un'attività nella griglia di attività, quindi scegliere **Esporta attività** nel menu di scelta rapida.  
   
 3.  Viene richiesto di specificare un nome e un percorso per il file di Excel da salvare. Il file di Excel esportato contiene i fogli seguenti:  
   
     |Nome foglio|Descrizione|  
     |----------------|-----------------|  
     |Attività|Contiene le informazioni (colonne) sull'attività come riportato nella griglia di attività.|  
-    |Processi|Contiene le informazioni (colonne) sui processi per l'attività come la **fasi attività** scheda.|  
+    |Processi|Contiene le informazioni (colonne) sui processi nell'attività come riportato nella scheda **Fasi attività** .|  
     |Profiler - Origine|Per il sottotipo **Pulizia** contiene le informazioni seguenti sull'attività: Record, Record corretti, Record con correzione e Record non validi.<br /><br /> Per i sottotipi **Individuazione informazioni**, **Gestione dominio**, **Criteri di corrispondenza**e **Corrispondenza** contiene le informazioni seguenti sull'attività: Record, Valori totali, Nuovi valori, Valori univoci e Nuovi valori univoci.|  
     |Profiler - Campi|Per i sottotipi **Pulizia** e **Pulizia SSIS** contiene le informazioni seguenti sull'attività: Campo, Dominio, Valori con correzione, Valori consigliati, Completezza e Accuratezza.<br /><br /> Per i sottotipi **Individuazione informazioni**, **Gestione dominio**, **Criteri di corrispondenza**e **Corrispondenza** contiene le informazioni seguenti sull'attività: Campo, Dominio, Nuovo, Univoco, Valido nel dominio e Completezza.|  
   
 ##  <a name="Terminate"></a> Terminare un'attività DQS  
- Gli amministratori DQS (ruolo dqs_administrator) possono terminare un'attività in esecuzione (attiva) che non è del tipo **pulizia SSIS**. Quando viene terminata un'attività, vengono arrestati tutti i processi in esecuzione nell'attività e viene rimosso tutto ciò che è correlato all'attività. Questa operazione non può essere annullata. Terminare un'attività nella schermata Monitoraggio attività equivale ad annullare la rispettiva attività facendo clic su **Annulla** durante l'esecuzione nell'area funzionale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Per terminare un'attività:  
+ Gli amministratori DQS (ruolo dqs_administrator) possono terminare un'attività in esecuzione (attiva) non di tipo **Pulizia SSIS**. Quando viene terminata un'attività, vengono arrestati tutti i processi in esecuzione nell'attività e viene rimosso tutto ciò che è correlato all'attività. Questa operazione non può essere annullata. Terminare un'attività nella schermata Monitoraggio attività equivale ad annullare la rispettiva attività facendo clic su **Annulla** durante l'esecuzione nell'area funzionale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Per terminare un'attività:  
   
 1.  Selezionare un'attività in esecuzione nella griglia di attività (nel riquadro superiore).  
   
-2.  Fare clic sull'icona **Termina l'attività selezionata** . In alternativa, fare clic sull'attività nella griglia di attività e quindi fare clic su **Termina attività** nel menu di scelta rapida.  
+2.  Fare clic sull'icona **Termina l'attività selezionata** . In alternativa, fare clic con il pulsante destro del mouse sull'attività nella griglia di attività, quindi scegliere **Termina attività** nel menu di scelta rapida.  
   
 3.  Verrà visualizzato un messaggio per confermare l'azione. Scegliere **Sì**.  
   
 ##  <a name="Stop"></a> Arrestare un processo in un'attività DQS  
- Gli amministratori DQS (ruolo dqs_administrator) possono arrestare un processo di esecuzione (attivo) in un'attività che non è del tipo **pulizia SSIS**. Arrestare un processo nella schermata Monitoraggio attività equivale ad arrestare il processo all'interno della rispettiva attività nell'area funzionale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Ad esempio, è possibile arrestare il processo di pulizia computerizzato all'interno di un'attività di pulizia o arrestare il processo di corrispondenza all'interno di un'attività corrispondente. Un processo arrestato non può essere riavviato dalla schermata Monitoraggio attività. È necessario riavviare il processo dall'area funzionale corrispondente nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In tal caso, viene aggiunta una riga alla griglia dei processi nella scheda **Fasi attività** . Lo stato del processo arrestato continua a essere visualizzato come **Arrestato**. Per arrestare un processo:  
+ Gli amministratori DQS (ruolo dqs_administrator) possono arrestare un processo in esecuzione (attivo) in un'attività non di tipo **Pulizia SSIS**. Arrestare un processo nella schermata Monitoraggio attività equivale ad arrestare il processo all'interno della rispettiva attività nell'area funzionale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Ad esempio, è possibile arrestare il processo di pulizia computerizzato all'interno di un'attività di pulizia o arrestare il processo di corrispondenza all'interno di un'attività corrispondente. Un processo arrestato non può essere riavviato dalla schermata Monitoraggio attività. È necessario riavviare il processo dall'area funzionale corrispondente nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In tal caso, viene aggiunta una riga alla griglia dei processi nella scheda **Fasi attività** . Lo stato del processo arrestato continua a essere visualizzato come **Arrestato**. Per arrestare un processo:  
   
 1.  Selezionare un processo in esecuzione nella griglia Dettagli attività (nel riquadro inferiore).  
   
-2.  Fare clic sull'icona **Arresta il processo selezionato** . In alternativa, fare clic sul processo nella griglia dettagli attività e quindi fare clic su **Arresta processo** nel menu di scelta rapida.  
+2.  Fare clic sull'icona **Arresta il processo selezionato** . In alternativa, fare clic con il pulsante destro del mouse sul processo nella griglia Dettagli attività, quindi scegliere **Arresta processo** nel menu di scelta rapida.  
   
 3.  Verrà visualizzato un messaggio per confermare l'azione. Scegliere **Sì**.  
   

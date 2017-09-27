@@ -1,29 +1,34 @@
 ---
-title: "Schermata iniziale del client Data Quality | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/29/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
+title: Schermata iniziale di Data Quality Client | Microsoft Docs
+ms.custom: 
+ms.date: 02/29/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Schermata iniziale del client Data Quality
+# <a name="data-quality-client-home-screen"></a>Schermata iniziale del client Data Quality
   Questa schermata consente di accedere alle interfacce utente per ciascuno dei tre gruppi principali di attività [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): gestione della Knowledge Base, progetti Data Quality e amministrazione.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
-### Gestione Knowledge Base  
+### <a name="knowledge-base-management"></a>Gestione Knowledge Base  
  Una Knowledge Base DQS è un repository di metadati utilizzati da DQS per migliorare la qualità dei dati. Questi metadati vengono creati sia dalla piattaforma DQS in un processo computerizzato di individuazione delle informazioni che dall'amministratore dei dati in un processo interattivo di gestione del dominio.  
   
  **Nuova Knowledge Base**  
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
  È possibile aprire una Knowledge Base bloccata e modificarla solo se si è gli autori del blocco. In tal caso, la Knowledge Base verrà aperta nello stato in cui era al momento della chiusura, indicato in parentesi. Se una Knowledge Base è bloccata e non si è gli autori del blocco, è possibile aprirla solo in sola lettura.  
   
-### Progetti Data Quality  
+### <a name="data-quality-projects"></a>Progetti Data Quality  
  Un progetto Data Quality è il processo tramite cui viene eseguita la pulizia o la corrispondenza dei dati in DQS, sia attraverso un'attività di correzione dei dati assistita da computer che attraverso la pulizia interattiva dei dati.  
   
  **Nuovo progetto Data Quality**  
@@ -49,18 +54,18 @@ caps.handback.revision: 14
  **Progetto Data Quality recente**  
  Dall'elenco visualizzato, selezionare un progetto già creato. È possibile aprire un progetto bloccato solo se si è gli autori del blocco. In tal caso, il progetto verrà aperto nello stato in cui era al momento della chiusura, indicato in parentesi. Se il progetto è stato completato, verrà aperto nel passaggio Esporta dell'attività.  
   
-### Amministrazione  
+### <a name="administration"></a>Amministrazione  
  L'amministrazione DQS consente di monitorare, configurare e gestire DQS.  
   
  **Monitoraggio attività**  
- Consente di visualizzare lo stato di tutte le attività (sia correnti che passate) correlate al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] connesso. I tipi di attività monitorati includono Gestione informazioni, Progetto Data Quality e la correzione dei dati basata su SSIS.  
+ Consente di visualizzare lo stato di tutte le attività (sia correnti che passate) correlate al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connesso. I tipi di attività monitorati includono Gestione informazioni, Progetto Data Quality e la correzione dei dati basata su SSIS.  
   
  **Configurazione**  
  Visualizza le proprietà di configurazione per gli account del servizio dati di riferimento (sia tramite Windows Azure Marketplace che direttamente ai servizi dati di riferimento), le impostazioni generali (pulizia interattiva, corrispondenza e profiling) e le impostazioni di gravità dei log.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Knowledge Base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Progetti Data Quality & #40; DQS & #41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [Progetti Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Amministrazione DQS](../data-quality-services/dqs-administration.md)  
   
   

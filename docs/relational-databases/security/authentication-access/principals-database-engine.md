@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
@@ -83,6 +83,8 @@ Ogni account di accesso appartiene al ruolo predefinito del server `public` e og
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ Questi account principali non hanno password che possono essere modificate dagli amministratori poiché si basano sui certificati rilasciati a Microsoft.
   
 ## <a name="the-guest-user"></a>L'utente Guest  
  Ogni database include un `guest`. Le autorizzazioni garantite all'utente `guest` sono ereditate dagli utenti che hanno accesso al database ma non dispongono di un account utente nel database. Non è possibile eliminare l'utente `guest`, ma è possibile disabilitarlo revocando la relativa autorizzazione CONNECT. L'autorizzazione CONNECT può essere revocata eseguendo `REVOKE CONNECT FROM GUEST;` all'interno di qualsiasi database diverso da `master` o `tempdb`.  

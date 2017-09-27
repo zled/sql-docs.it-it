@@ -1,26 +1,31 @@
 ---
-title: "Eseguire un progetto corrispondente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.matchingproject.map.f1"
-  - "sql13.dqs.matchingproject.matching.f1"
-  - "sql13.dqs.matchingproject.export.f1"
+title: Eseguire un progetto corrispondente| Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.matchingproject.map.f1
+- sql13.dqs.matchingproject.matching.f1
+- sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Eseguire un progetto corrispondente
+# <a name="run-a-matching-project"></a>Eseguire un progetto corrispondente
   In questo argomento viene descritto come eseguire la corrispondenza dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di corrispondenza identifica i cluster di record corrispondenti in base alle regole di corrispondenza nei criteri di corrispondenza, definisce un record da ogni cluster come superstite in base a una regola di sopravvivenza ed esporta i risultati. In DQS il processo di corrispondenza, definito anche deduplicazione, è computerizzato ma è possibile creare alcune regole di corrispondenza in modo interattivo e selezionare la regola di sopravvivenza tra diverse opzioni, in modo da controllare comunque il processo.  
   
  La corrispondenza viene eseguita in tre fasi: un processo di mapping in cui si identifica l'origine dati e si esegue il mapping dei domini all'origine dati; un processo di corrispondenza in cui si esegue l'analisi di corrispondenza; un processo di sopravvivenza ed esportazione in cui si definisce la regola di sopravvivenza e si esportano i risultati di corrispondenza. Ognuno di questi processi viene eseguito in una pagina separata della procedura guidata relativa all'attività di corrispondenza, consentendo all'utente di spostarsi da una pagina a un'altra al fine di rieseguire il processo, completare un processo di corrispondenza specifico e tornare nuovamente a una fase specifica. DQS fornisce statistiche relative ai dati di origine, alle regole e ai risultati di corrispondenza. Tali statistiche consentono di prendere decisioni informate sulla corrispondenza e di ridefinire il processo di corrispondenza.  
@@ -43,11 +48,11 @@ caps.handback.revision: 36
 ##  <a name="StartingaMatchingProject"></a> Primo passaggio: avvio di un progetto corrispondente  
  L'attività di corrispondenza viene eseguita in un progetto Data Quality creato nell'applicazione client DQS.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Client Data Quality](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Nuovo progetto Data Quality** per eseguire la corrispondenza in un nuovo progetto Data Quality. Immettere un nome per il progetto Data Quality, immettere una descrizione e selezionare la Knowledge Base che si desidera utilizzare per la corrispondenza in **Usa Knowledge Base**. Fare clic su **Corrispondenza** per l'attività. Fare clic su **Avanti** per passare alla fase di mapping.  
   
-3.  Fare clic su **Apri progetto Data Quality** per eseguire la corrispondenza in un progetto Data Quality esistente. Selezionare il progetto, quindi fare clic su **Avanti**. (È possibile fare clic su un progetto in **Progetto Data Quality recente**.) Se si apre un progetto corrispondente è stata chiusa, si procederà con la fase in cui tale attività è stata chiusa in (come indicato dal **stato** colonna nella tabella progetto o nel nome del progetto in **progetto Data Quality recente**). Se si apre un progetto corrispondente è stato completato, si passerà al **esportare** pagina (ed è possibile tornare alle schermate precedenti).  
+3.  Fare clic su **Apri progetto Data Quality** per eseguire la corrispondenza in un progetto Data Quality esistente. Selezionare il progetto, quindi fare clic su **Avanti**. In alternativa, è possibile fare clic su un progetto in **Progetto Data Quality recente**. Se si apre un progetto corrispondente chiuso, si procederà con la fase in cui tale attività è stata chiusa, come indicato dalla colonna **Stato** nella tabella o nel nome del progetto in **Progetto Data Quality recente**. Se si apre un progetto corrispondente completato, si passerà alla pagina **Esporta** e non sarà più possibile tornare alle schermate precedenti.  
   
 ##  <a name="MappingStage"></a> Fase di mapping  
  Nella fase di mapping si identifica l'origine dei dati in cui verrà eseguita l'analisi di corrispondenza e si esegue il mapping delle colonne di origine ai domini per rendere tali domini disponibili per l'attività di corrispondenza.  
@@ -61,11 +66,11 @@ caps.handback.revision: 36
     > [!NOTE]  
     >  È possibile eseguire il mapping dei dati di origine a un dominio DQS solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati in DQS, vedere [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Fare clic su di **segno più (+)** controllo per aggiungere una riga alla tabella mapping o **meno (-)** controllo per rimuovere una riga.  
+4.  Fare clic sul controllo **Più (+)** per aggiungere una riga alla tabella Mapping o sul controllo **Meno (-)** per rimuovere una riga.  
   
 5.  Fare clic su **Anteprima origine dati** per visualizzare i dati nella tabella o vista di SQL Server selezionata o nel foglio di lavoro di Excel selezionato.  
   
-6.  Fare clic su **Visualizza/seleziona domini compositi** per visualizzare un elenco di domini compositi disponibili nella knowledge base e selezionare come appropriato per il mapping.  
+6.  Fare clic su **Visualizza/Seleziona domini compositi** per visualizzare un elenco dei domini compositi disponibili nella Knowledge Base e selezionarli in base alle esigenze per l'esecuzione del mapping.  
   
 7.  Fare clic su **Avanti** per passare alla fase di corrispondenza.  
   
@@ -77,9 +82,9 @@ caps.handback.revision: 36
   
  Nei risultati di corrispondenza è possibile applicare un filtro per i dati desiderati e rifiutare le corrispondenze non desiderate. È possibile visualizzare i dati di profiling per il processo di corrispondenza nel loro insieme, le specifiche sulle regole di corrispondenza applicate e le statistiche sui risultati di corrispondenza nel loro insieme. Il processo di corrispondenza può identificare i cluster sovrapposti e quelli non sovrapposti e in caso di più esecuzioni può essere eseguito sui dati appena copiati dall'origine e reindicizzati o sui dati precedenti.  
   
-1.  Nel **pagina corrispondente**, selezionare **sovrapposti cluster** dall'elenco a discesa per visualizzare i record pivot e i record successivi per tutti i cluster quando viene eseguita la corrispondenza, anche se i gruppi di cluster presentino record in comune. Selezionare **Cluster non sovrapposti** per visualizzare i cluster che presentano record in comune come cluster singolo all'esecuzione della corrispondenza.  
+1.  Nella pagina **Corrispondenza**selezionare **Cluster sovrapposti** dall'elenco a discesa per visualizzare i record pivot e i record successivi per tutti i cluster quando viene eseguita la corrispondenza, anche qualora i gruppi di cluster presentino record in comune. Selezionare **Cluster non sovrapposti** per visualizzare i cluster che presentano record in comune come cluster singolo all'esecuzione della corrispondenza.  
   
-2.  Fare clic su **Ricarica dati di origine** (impostazione predefinita) per copiare i dati dall'origine dati nella tabella di gestione temporanea e reindicizzarli quando si esegue il progetto corrispondente. Fare clic su **Esegui sui dati precedenti** per eseguire un progetto corrispondente senza copiare i dati nella tabella di gestione temporanea e reindicizzazione dei dati. L'opzione**Esegui sui dati precedenti** è disabilitata per la prima esecuzione del progetto corrispondente o quando si modifica il mapping nella pagina **Mappa** e si preme **Sì** nella finestra popup successiva. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se il progetto corrispondente non viene modificato, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
+2.  Fare clic su **Ricarica dati di origine** (valore predefinito) per copiare i dati dall'origine dati nella tabella di gestione temporanea e reindicizzarli quando si esegue il progetto corrispondente. Fare clic su **Esegui sui dati precedenti** per eseguire il progetto corrispondente senza copiare i dati nella tabella di gestione temporanea e senza reindicizzare i dati. L'opzione**Esegui sui dati precedenti** è disabilitata per la prima esecuzione del progetto corrispondente o quando si modifica il mapping nella pagina **Mappa** e si preme **Sì** nella finestra popup successiva. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se il progetto corrispondente non viene modificato, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
   
 3.  Fare clic su **Avvia** per avviare la corrispondenza sull'origine dati selezionata.  
   
@@ -89,13 +94,13 @@ caps.handback.revision: 36
   
 6.  Se si dispone di più regole di corrispondenza nei criteri di corrispondenza, fare clic sulla scheda **Regole di corrispondenza** per identificare l'icona per ogni regola, quindi verificare quale regola ha identificato un record come corrispondenza identificando la regola nella colonna **Regola** della tabella **Risultati corrispondenza** .  
   
-7.  Se si seleziona un record non pivot nella tabella e fare clic sul **Visualizza dettagli** icona (o fare doppio clic sul record), DQS verrà visualizzato un **Dettagli punteggio corrispondente** finestra popup che consente di visualizzare il record di fatto doppio clic e il relativo record pivot (e i valori in tutti i relativi campi), il punteggio tra loro e un drill-down dei corrispondenti punteggio contributi di ogni campo. Se si fa doppio clic su un record pivot, non verrà visualizzata alcuna finestra popup.  
+7.  Se si seleziona un record non pivot nella tabella e si fa clic sull'icona **Visualizza dettagli** , o si fa doppio clic sul record, in DQS viene visualizzata la finestra popup **Dettagli punteggio corrispondente** in cui sono visibili il record su cui si è fatto doppio clic e il relativo record pivot, nonché i valori in tutti i relativi campi, il punteggio tra tali record e un drill-down dei contributi del punteggio corrispondente di ciascun campo. Se si fa doppio clic su un record pivot, non verrà visualizzata alcuna finestra popup.  
   
 8.  Fare clic sull'icona **Comprimi tutto** per comprimere i record visualizzati nella tabella **Risultati corrispondenza** per includere solo i record pivot e non i record duplicati. Fare clic sull'icona **Espandi tutto** per espandere i record visualizzati nella tabella Risultati corrispondenza per includere tutti i record duplicati.  
   
 9. Per rifiutare un record dai risultati corrispondenti, fare clic sulla casella di controllo **Rifiutato** del record.  
   
-10. Per modificare il punteggio corrispondente minimo che determina il livello di corrispondenza che un record deve essere visualizzato, selezionare il **Min. Punteggio di corrispondenza** icona sul lato destro della tabella, quindi immettere un numero più alto. Il punteggio corrispondente minimo è impostato su 80% per impostazione predefinita. Fare clic su **Aggiorna** per modificare il contenuto della tabella.  
+10. Per modificare il punteggio corrispondente minimo che determina il livello di corrispondenza da applicare a un record perché questo venga visualizzato, selezionare l'icona **Punteggio corrispondente minimo** sul lato destro della tabella e immettere un numero maggiore. Il punteggio corrispondente minimo è impostato su 80% per impostazione predefinita. Fare clic su **Aggiorna** per modificare il contenuto della tabella.  
   
 11. Una volta completata l'analisi, il pulsante **Avvia** viene sostituito dal pulsante **Riavvia** . Fare clic su **Riavvia** per eseguire di nuovo il progetto di analisi. Se i risultati dall'analisi precedente non sono stati ancora salvati, facendo clic su **Riavvia** si causerà la perdita di tali dati non salvati. Per continuare, fare clic su **Sì** nella finestra popup. Durante l'esecuzione dell'analisi, non lasciare la pagina o il processo di analisi verrà interrotto.  
   
@@ -116,7 +121,7 @@ caps.handback.revision: 36
     > [!IMPORTANT]  
     >  Il database di destinazione deve trovarsi nella stessa istanza di SQL Server del server DQS. in caso contrario, non verrà visualizzato nell'elenco a discesa.  
   
-3.  Selezionare la casella di controllo **risultati corrispondenti** per esportare i risultati corrispondenti (vedere sopra per una spiegazione) nella tabella definita in un database di SQL Server o il file CSV o Excel. Selezionare la casella di controllo **risultati sopravvivenza** per esportare i risultati di sopravvivenza (vedere sopra per una spiegazione) nella tabella definita in un database di SQL Server o il file CSV o Excel.  
+3.  Selezionare la casella di controllo per **Risultati corrispondenza** per esportare i risultati corrispondenti (vedere la descrizione riportata in precedenza) nella tabella definita in un database di SQL Server o nel file CSV o di Excel specificato. Selezionare la casella di controllo per **Risultati sopravvivenza** per esportare i risultati di sopravvivenza (vedere la descrizione riportata in precedenza) nella tabella definita in un database di SQL Server o nel file CSV o di Excel specificato.  
   
      Per i risultati corrispondenti verranno esportati gli elementi seguenti:  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 36
   
 7.  Selezionare la regola di sopravvivenza come segue:  
   
-    -   Selezionare **record Pivot** (impostazione predefinita) per identificare il record superstite come record pivot iniziale scelto arbitrariamente da DQS.  
+    -   Selezionare **Record pivot** (valore predefinito) per identificare il record superstite come record pivot iniziale scelto arbitrariamente da DQS.  
   
     -   Selezionare **Il record più completo e più lungo** per identificare il record superstite come il record con il maggior numero di campi popolati e con il maggior numero di termini in ogni campo. Vengono controllati tutti i campi di origine, anche quelli di cui non è stato eseguito il mapping a un dominio nella pagina **Mappa** .  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 36
 ##  <a name="Profiler"></a> Schede Profiler e Risultati  
  Le schede Profiler e Risultati contengono le statistiche del processo di corrispondenza.  
   
-### Scheda Profiler  
+### <a name="profiler-tab"></a>Scheda Profiler  
  Fare clic sulla scheda **Profiler** per visualizzare statistiche per il database di origine e per ogni campo incluso nella regola dei criteri. Le statistiche verranno aggiornate all'esecuzione della regola dei criteri. Il profiling consente di valutare il livello di efficacia del processo di deduplicazione, determinando in che misura tale processo è in grado di migliorare la qualità dei dati. L'accuratezza nel profiling non è importante per un progetto corrispondente.  
   
  Le statistiche relative al database di origine includono:  
@@ -196,7 +201,7 @@ caps.handback.revision: 36
   
 -   **Completezza**: percentuale di completamento dell'esecuzione della regola  
   
-### Notifiche relative ai criteri di corrispondenza  
+### <a name="matching-policy-notifications"></a>Notifiche relative ai criteri di corrispondenza  
  Per l'attività relativa ai criteri di corrispondenza, le condizioni seguenti generano notifiche:  
   
 -   Il campo è vuoto in tutti i record; è consigliabile eliminarlo dal mapping.  
@@ -209,7 +214,7 @@ caps.handback.revision: 36
   
 -   Vi è un livello elevato di unicità nel campo. L'utilizzo del campo nei criteri di corrispondenza può diminuire i risultati di corrispondenza.  
   
-### Scheda Regole di corrispondenza  
+### <a name="matching-rules-tab"></a>Scheda Regole di corrispondenza  
  Fare clic su questa scheda per visualizzare un elenco di regole nei criteri di corrispondenza e le condizioni in una regola.  
   
  **Elenco di regole**  
@@ -218,7 +223,7 @@ caps.handback.revision: 36
  **Tabella delle regole di corrispondenza**  
  Visualizza ogni condizione nella regola selezionata, inclusi dominio, valore di somiglianza, peso e prerequisito.  
   
-### Scheda Risultati corrispondenza  
+### <a name="matching-results-tab"></a>Scheda Risultati corrispondenza  
  Fare clic sulla scheda **Risultati corrispondenza** per visualizzare le statistiche dell'analisi dell'origine dati utilizzando la Knowledge Base selezionata per il progetto e la regola o le regole di corrispondenza presenti nella Knowledge Base. Le statistiche includono gli elementi seguenti:  
   
 -   Numero complessivo di record nel database  

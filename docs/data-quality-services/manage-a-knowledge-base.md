@@ -1,22 +1,27 @@
 ---
-title: "Gestire una Knowledge Base | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestire una Knowledge Base | Microsoft Docs
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Gestire una Knowledge Base
+# <a name="manage-a-knowledge-base"></a>Gestire una Knowledge Base
   In questo argomento viene descritto come eseguire le funzioni di gestione su una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). È possibile eliminare una Knowledge Base, sbloccarla, annullare le modifiche apportatevi, rinominarla e visualizzarne le proprietà.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
@@ -31,7 +36,7 @@ caps.handback.revision: 9
   
 ##  <a name="Manage"></a> Gestire una Knowledge Base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Client Data Quality](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Apri Knowledge Base**.  
   
@@ -39,33 +44,33 @@ caps.handback.revision: 9
   
 4.  Nel menu di scelta rapida è possibile scegliere tra le opzioni seguenti:  
   
-    1.  **Aprire**: fare clic per aprire la knowledge base nell'attività selezionata nel **selezionare attività** riquadro.  
+    1.  **Apri**: fare clic per aprire la Knowledge Base nell'attività selezionata nel riquadro **Seleziona attività** .  
   
-    2.  **Sbloccare**: È possibile sbloccare la knowledge base se si è l'utente che ha usato la knowledge base in una delle operazioni di gestione del dominio, l'individuazione e l'attività di criteri di corrispondenza e chiuso. Se si sblocca la Knowledge Base, un altro utente potrà aprirla e utilizzarla. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività. Per ulteriori informazioni, vedere [aprire una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    2.  **Sblocca**: è possibile sbloccare la Knowledge Base se si è l'utente che ha utilizzato la Knowledge Base in uno dei passaggi dell'attività di gestione del dominio, individuazione delle informazioni e criteri di corrispondenza, e l'ha chiusa. Se si sblocca la Knowledge Base, un altro utente potrà aprirla e utilizzarla. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività. Per altre informazioni, vedere [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Ignorare operazioni**: fare clic su quando la knowledge base è in uno stato di lavorazione, indicato con una voce nel campo stato nella tabella. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività e se la Knowledge Base è bloccata. Per ulteriori informazioni, vedere [aprire una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    3.  **Annulla modifiche apportate**: fare clic quando la Knowledge Base si trova in uno stato di elaborazione, indicato con una voce nel campo Stato della tabella. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività e se la Knowledge Base è bloccata. Per altre informazioni, vedere [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    4.  **Rinominare**: fare clic per rendere modificabile per la knowledge base selezionata il campo della Knowledge Base della tabella. Modificare il nome, quindi fare clic sulla Knowledge Base e nel campo per accettare la modifica del nome.  
+    4.  **Rinomina**: fare clic per potere modificare il campo della tabella per la Knowledge Base selezionata. Modificare il nome, quindi fare clic sulla Knowledge Base e nel campo per accettare la modifica del nome.  
   
-    5.  **Eliminare**: fare clic per rimuovere la knowledge base dal database DQS_MAIN su [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
+    5.  **Elimina**: fare clic per rimuovere la Knowledge Base dal database DQS_MAIN del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
     6.  **Proprietà**: fare clic per visualizzare le proprietà del database in sola lettura.  
   
-        1.  **Knowledge Base origine**: la knowledge base su cui si basa questo database. Operazione facoltativa.  
+        1.  **Knowledge Base origine**: Knowledge Base su cui si basa questo database Operazione facoltativa.  
   
-        2.  **Stato**: indica se la knowledge base è **In lavorazione** e se si trova in un'attività di gestione informazioni specifiche, come indicato dopo l'ultima chiusura. Lo stato può essere **In lavorazione**, in cui la knowledge base viene aperta in una sessione di Gestione Knowledge Base, ma non in un'attività specifica, o **In fase di elaborazione** con un'attività di gestione di informazioni, in cui la knowledge base viene aperta in una sessione di gestione di informazioni e in un'attività specifica.  
+        2.  **Stato**: indica se la Knowledge Base è **In lavorazione** e se si trova in un'attività di gestione delle informazioni specifica, come indicato dopo l'ultima chiusura. Lo stato può essere **In lavorazione**in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni, ma non in un'attività specifica, o **In lavorazione** con un'attività di gestione delle informazioni in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni e in un'attività specifica.  
   
-        3.  **È bloccato**: **True** Se la knowledge base è stata bloccata, **False** in caso contrario  
+        3.  **Bloccato**: **True** se la Knowledge Base è bloccata, **False** se non lo è.  
   
-        4.  **Contiene contenuto non pubblicato**: True se la knowledge base contiene contenuto non è stato salvato dalla pubblicazione, False se non  
+        4.  **Contiene contenuto non pubblicato**: True se la Knowledge Base contiene contenuto non salvato tramite pubblicazione, False se non lo contiene.  
   
-        5.  **Bloccato da**: il nome dell'utente che ha chiuso la knowledge base, Bloccandola.  
+        5.  **Bloccato da**: nome dell'utente che ha chiuso la Knowledge Base, bloccandola.  
   
-        6.  **Data blocco**: data del blocco  
+        6.  **Data blocco**: data del blocco.  
   
-        7.  **Creato da**: il nome dell'utente che ha creato la knowledge base, con la rete che appartiene a  
+        7.  **Creato da**: nome dell'utente che creato la Knowledge Base, con la rete a cui l'utente appartiene.  
   
-        8.  **Data di creazione**: data della creazione  
+        8.  **Data creazione**: data della creazione.  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive alla gestione di una Knowledge Base  
  Dopo avere gestito una Knowledge Base, il passaggio successivo dipende dall'azione intrapresa sulla Knowledge Base:  

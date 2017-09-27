@@ -1,22 +1,27 @@
 ---
-title: "Corrispondenza di dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Corrispondenza di dati | Microsoft Docs
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Corrispondenza di dati
+# <a name="data-matching"></a>Corrispondenza di dati
   Il processo di corrispondenza tra dati [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di ridurre la duplicazione dei dati e di migliorarne l'accuratezza in un'origine dati. Il processo analizza il livello di duplicazione in tutti i record di una singola origine dati, restituendo le probabilità ponderate di una corrispondenza per ciascun set di record confrontato. È possibile quindi decidere quali record corrispondono ed eseguire le azioni appropriate sui dati di origine.  
   
  Il processo di corrispondenza DQS offre i vantaggi seguenti:  
@@ -31,7 +36,7 @@ caps.handback.revision: 29
   
 -   È possibile reindicizzare dati copiati dall'origine alla tabella di gestione temporanea oppure non reindicizzarli, a seconda dello stato dei criteri di corrispondenza e dei dati di origine. Le prestazioni potrebbero risultare migliorate se si evita la reindicizzazione.  
   
- È possibile eseguire il processo di corrispondenza insieme agli altri processi di pulizia dei dati per migliorare la qualità generale dei dati. È inoltre possibile eseguire la deduplicazione dei dati utilizzando la funzionalità DQS incorporata in Master Data Services. Per ulteriori informazioni, vedere [Panoramica di Master Data Services & #40; MDS & #41;](../master-data-services/master-data-services-overview-mds.md).  
+ È possibile eseguire il processo di corrispondenza insieme agli altri processi di pulizia dei dati per migliorare la qualità generale dei dati. È inoltre possibile eseguire la deduplicazione dei dati utilizzando la funzionalità DQS incorporata in Master Data Services. Per altre informazioni, vedere [Panoramica di Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
  Nella figura seguente viene illustrata la modalità di individuazione delle corrispondenze tra dati in DQS:  
   
@@ -67,12 +72,12 @@ caps.handback.revision: 29
   
  È possibile esportare i risultati del processo di corrispondenza in una tabella di SQL Server o in un file csv. È possibile esportare risultati della corrispondenza in due modi: record corrispondenti e record non corrispondenti, oppure record superstiti che includono solo il record superstite per un cluster nonché i risultati non corrispondenti. Nei record superstiti, se lo stesso record viene identificato come superstite per più cluster, tale record verrà esportato solo una volta.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  È possibile eseguire le attività seguenti in relazione all'individuazione di corrispondenze in DQS:  
   
 |||  
 |-|-|  
-|Creare e testare regole di corrispondenza in criteri di corrispondenza|[Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)|  
-|Eseguire l'individuazione delle corrispondenze in un progetto Data Quality|[Run a Matching Project](../data-quality-services/run-a-matching-project.md)|  
+|Creare e testare regole di corrispondenza in criteri di corrispondenza|[Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)|  
+|Eseguire l'individuazione delle corrispondenze in un progetto Data Quality|[Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)|  
   
   

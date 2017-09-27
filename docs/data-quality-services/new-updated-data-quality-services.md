@@ -1,28 +1,28 @@
 ---
-title: 'Articolo aggiornato: documentazione dei database relazionali | Microsoft Docs'
-description: Visualizza frammenti di contenuto aggiornato relativi alle modifiche recenti alla documentazione dei database relazionali.
+title: 'Aggiornato: documentazione di Data Quality Services per SQL Server |Microsoft Docs'
+description: Visualizza frammenti di contenuto aggiornato per modifiche recenti nella documentazione di Data Quality Services per SQL Server.
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
-editor: BYHAM
+editor: 
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
+ms.workload: data-quality-services
 ms.translationtype: HT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.openlocfilehash: c28c7e0a78c4fbbed04e2b30b7bdaff2638163ad
 ms.contentlocale: it-it
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-relational-databases-docs"></a>Articoli nuovi e aggiornati di recente: documentazione dei database relazionali
+# <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Articoli nuovi e aggiornati di recente: Data Quality Services per SQL Server
 
 
 
@@ -35,7 +35,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 
 - *Intervallo di date degli aggiornamenti:* &nbsp; **18/07/2017** &nbsp; - &nbsp; **11/09/2017**
-- *Area di interesse:* &nbsp; **database relazionali**.
+- *Area di interesse:* &nbsp; **Data Quality Services per SQL Server**.
 
 
 
@@ -47,18 +47,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
-1. [Importare dati da Excel a SQL Server o al database SQL di Azure](import-export/import-data-from-excel-to-sql.md)
-2. [Risolvere i problemi di connettività di PolyBase Kerberos](polybase/polybase-troubleshoot-connectivity.md)
-3. [Transparent Data Encryption (TDE)](security/encryption/transparent-data-encryption.md)
-4. [Transparent Data Encryption per il database SQL di Azure e Azure SQL Data Warehouse](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Transparent Data Encryption con supporto Bring Your Own Key per database SQL di Azure e SQL Data Warehouse](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [PowerShell: abilitare Transparent Data Encryption usando la propria chiave di Azure Key Vault](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [Ruotare la protezione Transparent Data Encryption (TDE) con PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [Rimuovere una protezione Transparent Data Encryption (TDE) con PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [SQL Server Shared Management Objects (SMO) License Terms](server-management-objects-smo/smo-license-terms.md) (Condizioni di licenza di SQL Server Shared Management Objects (SMO))
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+***Nessun nuovo articolo da visualizzare.***
 
 
 
@@ -84,56 +73,13 @@ Per queste e altre ragioni, non copiare codice da questi estratti e non prendere
 
 Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
-1. [Ottimizzazione automatica](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [Ottimizzazione automatica](automatic-tuning/automatic-tuning.md)
-
-*Aggiornamento: 16-08-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
-
-
-
-**Correzione scelta del piano automatica**
-
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] può passare automaticamente al miglior piano più recente ogni volta in cui viene rilevata una regressione della scelta del piano.
-
-![SQL plan choice correction--media/force-last-good-plan.png "SQL plan choice correction")
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] rileva automaticamente le regressioni della scelta del piano potenziali che comprendono il piano che deve essere usato al posto del piano errato.
-Quando .!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] applica il miglior piano più recente, monitora automaticamente le prestazioni del piano forzato. Se il piano forzato non è migliore del piano regredito, la forzatura sarà annullata e.... Includi-NotShown - ssde_md-... /.. /Includes/ssde_md.MD)] compila un nuovo piano. Se ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] rileva che il piano forzato è migliore di quello regredito, il piano forzato viene mantenuto fino a una ricompilazione, ad esempio alla successiva modifica dello schema o delle statistiche.
-
-**Abilitazione della correzione della scelta del piano automatica**
-
-
-È possibile abilitare l'ottimizzazione automatica per ogni database e specificare che il miglior piano più recente deve essere forzato ogni volta in cui viene rilevata una regressione della modifica del piano. L'ottimizzazione automatica viene abilitata con il comando seguente:
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-Una volta attivata l'opzione,..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] forza automaticamente le indicazioni se il miglioramento della CPU stimato è superiore a 10 secondi o il numero di errori nel nuovo piano è maggiore del numero di errori nel piano consigliato e verifica che il piano forzato sia migliore rispetto a quello corrente.
-
-**Opzione alternativa: correzione manuale della scelta del piano**
-
-
-Senza l'ottimizzazione automatica, gli utenti devono monitorare il sistema periodicamente e cercare le query regredite. Se viene rilevato un piano regredito, l'utente deve sostituirlo
-
+***Nessun articolo aggiornato di recente in quest'area.***
 
 
 

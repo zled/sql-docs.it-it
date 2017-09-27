@@ -1,7 +1,7 @@
 ---
 title: Abilitazione di connessioni crittografate al Motore di database | Microsoft Docs
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5dba6e8516e97ce603b529b8ad4c07eac0db2981
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitazione di connessioni crittografate al Motore di database
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/02/2017
 > Se si creano connessioni crittografate per un indicizzatore di ricerca di Azure a SQL Server in una macchina virtuale di Azure, vedere [Configurare una connessione da un indicizzatore di Ricerca di Azure a SQL Server in una VM Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
   
  
-##  <a name="SSMSProcedure"></a>  
-  
-###  <a name="Provision"></a> Per installare e rendere disponibile un certificato nel server  
+##  <a name="Provision"></a> Per installare e rendere disponibile un certificato nel server  
   
 1.  Fare clic sul menu **Start** , scegliere **Esegui**, digitare **MMC** nella casella **Apri** e fare clic su **OK**.  
   
@@ -74,23 +72,28 @@ ms.lasthandoff: 08/02/2017
   
 10. Completare l' **Importazione guidata certificati**per aggiungere un certificato al computer e chiudere la console MMC. Per ulteriori informazioni sull'aggiunta di un certificato a un computer, vedere la documentazione di Windows.  
   
-###  <a name="Export"></a> Per esportare il certificato del server  
+##  <a name="Export"></a> Per esportare il certificato del server  
   
 1.  Nello snap-in **Certificati** individuare il certificato nella cartella **Certificati** / **Personale** , fare clic con il pulsante destro del mouse su **Certificato**, scegliere **Tutte le attività**e quindi fare clic su **Esporta**.  
   
 2.  Completare l' **Esportazione guidata certificati**e archiviare il file di certificato in una posizione appropriata.  
   
-###  <a name="ConfigureServerConnections"></a> Per configurare il server in modo che accetti connessioni crittografate  
+##  <a name="ConfigureServerConnections"></a> Per configurare il server in modo che accetti connessioni crittografate  
   
 1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** *\<istanza server>* e quindi scegliere **Proprietà**.  
   
-2.  Nella scheda **Certificato** della finestra di dialogo **Proprietà - Protocolli per***\<nome istanza>* **** selezionare il certificato desiderato nell'elenco a discesa per la casella **Certificato** e quindi fare clic su **OK**.  
+2.  Nella scheda **Certificato** della finestra di dialogo **Proprietà - Protocolli per***\<nome istanza>* ** **selezionare il certificato desiderato nell'elenco a discesa per la casella **Certificato** e quindi fare clic su **OK**.  
   
 3.  Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì**e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   
 4.  Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+### <a name="wildcard-certificates"></a>Certificati con caratteri jolly  
+A partire da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supportano i certificati con caratteri jolly. È possibile che altri client non supportino i certificati con caratteri jolly. Per altre informazioni, vedere la documentazione del client. Non è possibile selezionare il certificato con caratteri jolly usando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per usare un certificato con caratteri jolly, è necessario modificare la chiave del Registro di sistema `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e immettere l'identificazione personale del certificato, senza spazi, nel valore **Certificato**.  
+> [!WARNING]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
   
-###  <a name="ConfigureClientConnections"></a> Per configurare il client in modo che richieda connessioni crittografate  
+##  <a name="ConfigureClientConnections"></a> Per configurare il client in modo che richieda connessioni crittografate  
   
 1.  Copiare il certificato originale o il file di certificato esportato nel computer client.  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  Nella casella **Imponi crittografia protocolli** della pagina **Flag** fare clic su **Sì**.  
   
-###  <a name="EncryptConnection"></a> Per crittografare una connessione da SQL Server Management Studio  
+##  <a name="EncryptConnection"></a> Per crittografare una connessione da SQL Server Management Studio  
   
 1.  Nella barra degli strumenti di Esplora oggetti fare clic su **Connetti**e quindi su **Motore di database**.  
   

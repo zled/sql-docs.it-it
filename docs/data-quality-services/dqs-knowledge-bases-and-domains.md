@@ -1,22 +1,27 @@
 ---
-title: "Knowledge Base e domini DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Knowledge Base e domini DQS | Microsoft Docs
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Knowledge Base e domini DQS
+# <a name="dqs-knowledge-bases-and-domains"></a>Knowledge Base e domini DQS
   In questo argomento viene descritto che cos'è una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Per pulire i dati, è necessario avere informazioni su di essi. Per preparare le informazioni per un progetto Data Quality, è necessario compilare e mantenere una Knowledge Base (KB) che è possibile utilizzare in DQS per identificare dati errati o non validi. DQS consente di utilizzare sia processi assistiti da computer che interattivi per creare, compilare e aggiornare la Knowledge Base. Le informazioni in una Knowledge Base sono mantenute in domini, ognuno dei quali è specifico per un campo dati. La Knowledge Base è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità.  
   
  Le Knowledge Base DQS offrono i vantaggi seguenti:  
@@ -61,10 +66,10 @@ caps.handback.revision: 32
   
  Non è necessario eseguire il processo di individuazione delle informazioni sugli stessi dati su cui viene eseguita la correzione dei dati. Grazie alla flessibilità di DQS, è possibile creare le informazioni da un set di campi di database e applicarle a un secondo set di dati correlati che deve essere pulito. L'amministratore dei dati può creare una Knowledge Base completamente nuova o basarla su una Knowledge Base esistente oppure può importare una Knowledge Base da un file di dati. È inoltre possibile eseguire nuovamente l'individuazione delle informazioni su una Knowledge Base esistente. In un singolo [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]possono essere presenti più Knowledge Base. È inoltre possibile connettere più istanze di un'applicazione alla stessa Knowledge Base. DQS consente di impedire i conflitti di concorrenza grazie al blocco della Knowledge Base per l'utente che la apre in una sessione di gestione delle informazioni.  
   
-### Assenza di distinzione maiuscole/minuscole in DQS  
+### <a name="case-insensitivity-in-dqs"></a>Assenza di distinzione maiuscole/minuscole in DQS  
  Per i valori in DQS non viene fatta distinzione tra maiuscole e minuscole. In altre parole, quando vengono eseguite le attività di individuazione delle informazioni, gestione del dominio o corrispondenza, i valori non vengono distinti in base alla presenza di maiuscole o minuscole. Se nella gestione dei valori si aggiunge un valore che differisce da un altro valore solo per le maiuscole/minuscole, il valore verrà considerato lo stesso e non un sinonimo. Se nel processo di corrispondenza vengono confrontati due valori che differiscono solo per le maiuscole/minuscole, vengono considerati una corrispondenza esatta.  
   
- Tuttavia, è possibile controllare le maiuscole/minuscole dei valori che si esportano nei risultati della pulizia. Eseguire questa operazione impostando il **formato Output in** proprietà di dominio (vedere [impostare le proprietà di dominio](../data-quality-services/set-domain-properties.md)) e utilizzando il **standardizzare Output** casella di controllo quando si esportano i risultati della pulizia (vedere [pulire i dati tramite DQS & #40; interno & #41; Knowledge Base](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
+ Tuttavia, è possibile controllare le maiuscole/minuscole dei valori che si esportano nei risultati della pulizia. A tale scopo, impostare la proprietà di dominio **Formato output in** (vedere [Impostare le proprietà di un dominio](../data-quality-services/set-domain-properties.md)) e usare la casella di controllo **Standardizzare output** quando si esportano i risultati della pulizia (vedere [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
 ##  <a name="Domains"></a> Gestione dominio  
  L'attività di gestione del dominio consente all'amministratore dei dati di modificare e aumentare in modo interattivo i metadati generati dall'attività di individuazione delle informazioni assistita da computer. Ogni modifica apportata è destinata a un dominio della Knowledge Base. Nell'attività di gestione del dominio è possibile effettuare le operazioni seguenti:  
@@ -89,18 +94,18 @@ caps.handback.revision: 32
   
  Quando viene completata l'attività di gestione del dominio, è possibile pubblicare la Knowledge Base per utilizzarla in un progetto di dati.  
   
-### Impostazione delle proprietà del dominio  
+### <a name="setting-domain-properties"></a>Impostazione delle proprietà del dominio  
  Con le proprietà del dominio si definisce e si controlla l'elaborazione dei valori associati. È possibile impostare il tipo di dati e la lingua dei valori, specificare che i dati di origine verranno puliti utilizzando il valore iniziale (se questa opzione è deselezionata, i dati di origine verranno puliti utilizzando il termine corretto, ma non il valore iniziale), verificare la standardizzazione dei dati configurando la formattazione che verrà applicata alla restituzione dei valori dei dati nel dominio e definire quali algoritmi (errore di sintassi, correttore ortografico e normalizzazione di stringhe) verranno applicati.  
   
-### Servizi dati di riferimento  
+### <a name="reference-data-services"></a>Servizi dati di riferimento  
  Nel processo di gestione del dominio, è possibile collegare dati di riferimento online a un dominio. In questo modo i dati nel dominio vengono confrontati con i dati gestiti da un provider di dati di riferimento. È innanzi tutto necessario configurare il provider di dati di riferimento tramite le funzionalità di configurazione di DQS nella sezione **Amministrazione** dell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Per altre informazioni, vedere [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
-### Applicazione delle regole di dominio  
+### <a name="applying-domain-rules"></a>Applicazione delle regole di dominio  
  È possibile creare regole di dominio per la convalida dei dati. Una regola di dominio assicura l'accuratezza di dati, includendo sia vincoli di base, quali i possibili termini di un valore stringa, sia espressioni regolari più complesse, quali i formati validi di un indirizzo di posta elettronica.  
   
  Per un dominio composito, è possibile creare una regola CD che specifica una relazione tra un valore in un dominio singolo e un valore in un altro dominio singolo, entrambi parte di un dominio composito.  
   
-### Impostazione dei valori di dominio  
+### <a name="setting-domain-values"></a>Impostazione dei valori di dominio  
  Dopo avere compilato una Knowledge Base, è possibile inserire valori di dati in ciascun dominio e visualizzarli. Dopo l'individuazione delle informazioni, in DQS verrà mostrato il numero di volte in cui ogni termine viene visualizzato, lo stato di ogni termine ed eventuali correzioni proposte. È possibile gestire queste informazioni come segue:  
   
 -   Modificare lo stato di un valore, contrassegnandolo come corretto, errato o non valido  
@@ -115,10 +120,10 @@ caps.handback.revision: 32
   
  I valori di dominio possono essere impostati nel corso dell'attività di gestione del dominio o nel passaggio Gestisci valori di dominio al termine dell'attività di individuazione delle informazioni. La funzionalità è la stessa in entrambe le attività.  
   
-### Impostazione di relazioni basate su termini  
+### <a name="setting-term-relations"></a>Impostazione di relazioni basate su termini  
  Nella gestione del dominio è possibile specificare una relazione basata su termini per un dominio singolo, specificando una modifica a un valore singolo.  
   
-### Domini compositi  
+### <a name="composite-domains"></a>Domini compositi  
  Un dominio composito è una struttura che comprende due o più domini singoli, ciascuno contenente informazioni su dati comuni. Esempi di dati che possono essere gestiti in domini compositi sono il nome e il cognome in un campo di nome e la via, il numero civico, la città, la provincia il CAP e lo stato in un campo di indirizzo. Quando si esegue il mapping di un campo singolo a un dominio composito, in DQS vengono analizzati i dati di quel campo nei domini che costituiscono il dominio composito.  
   
  Qualche volta un dominio singolo non rappresenta completamente i dati del campo. Il raggruppamento di due o più domini in un dominio composito consente di rappresentare i dati in modo efficiente. Di seguito sono illustrati i vantaggi dell'utilizzo di domini compositi:  
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
 -   I dati nei domini compositi possono essere collegati a un'origine dati di riferimento, nel qual caso il dominio composito sarà inviato al provider di dati di riferimento. Questo accade spesso con i dati di indirizzo.  
   
- Il modo in cui i dati rappresentati da un dominio composito vengono analizzati dipende dalle proprietà del dominio stesso. I dati possono essere analizzati da un delimitatore, dall'ordine dei domini, o in base alle informazioni nei domini associati al dominio composito (selezionando il **Usa analisi Knowledge Base** proprietà nel dominio composito). Per altre informazioni, vedere [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties).  
+ Il modo in cui i dati rappresentati da un dominio composito vengono analizzati dipende dalle proprietà del dominio stesso. I dati possono essere analizzati da un delimitatore, dall'ordine dei domini oppure in base alle informazioni incluse nei domini associati al dominio composito (selezionando la proprietà **Utilizza analisi Knowledge Base** nel dominio composito). Per altre informazioni, vedere [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties).  
   
  I domini compositi sono gestiti in modo diverso rispetto ai domini singoli. Non si gestiscono i valori in un dominio composito, ma i valori nei domini singoli che costituiscono il dominio composito. Tuttavia, dall'elenco di domini nell'attività di gestione del dominio è possibile vedere le relazioni tra i differenti valori in un dominio composito e le statistiche che vi si applicano. Ad esempio, è possibile visualizzare il numero di istanze di un indirizzo composto degli stessi cinque valori stringa. Nel passaggio Individua dell'attività di individuazione delle informazioni viene eseguito il profiling sui domini singoli all'interno di un dominio composito, non sul dominio composito. Tuttavia, nella pulizia interattiva, si puliscono dati nel dominio composito, non nei domini singoli.  
   
@@ -138,9 +143,9 @@ caps.handback.revision: 32
 ##  <a name="Matching"></a> Corrispondenza di dati  
  Oltre ad apportare modifiche manuali a una Knowledge Base tramite la gestione del dominio, è possibile aggiungere informazioni di corrispondenza a una Knowledge Base. Per preparare DQS al processo di deduplicazione dei dati, è necessario creare criteri di corrispondenza che verranno utilizzati per calcolare la probabilità di una corrispondenza. I criteri includono una o più regole di corrispondenza create dall'amministratore dei dati per definire il modo in cui le righe di dati vengono confrontate in DQS. L'amministratore dei dati determina quali campi dati nella riga devono essere confrontati e il peso di ciascun campo nel confronto. Determina inoltre il livello di probabilità al quale si può definire una corrispondenza. Le regole di corrispondenza vengono aggiunte alla Knowledge Base per essere utilizzate nell'attività di corrispondenza nel progetto Data Quality.  
   
- Per ulteriori informazioni sulla Knowledge Base e sulla corrispondenza dei dati, vedere [Corrispondenza di dati](../data-quality-services/data-matching.md).  
+ Per ulteriori informazioni sulla Knowledge Base e sulla corrispondenza dei dati, vedere [Corrispondenza di dati](../data-quality-services/data-matching.md)possono essere presenti più Knowledge Base.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  È possibile eseguire le operazioni seguenti su una Knowledge Base e sui relativi domini:  
   
 |||  
@@ -149,6 +154,6 @@ caps.handback.revision: 32
 |Eseguire operazioni di importazione ed esportazione su domini e Knowledge Base|[Importazione ed esportazione delle informazioni](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Creare un dominio singolo, una regola di dominio e relazioni basate su termini, nonché modificare valori di dominio|[Gestione di un dominio](../data-quality-services/managing-a-domain.md)|  
 |Creare un dominio composito, creare una regola tra domini e utilizzare relazioni tra valori|[Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md)|  
-|Utilizzare la Knowledge Base predefinita incorporata in DQS, Dati DQS.|[Utilizzo della Knowledge Base predefinita di DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
+|Utilizzare la Knowledge Base predefinita incorporata in DQS, Dati DQS.|[Uso della Knowledge Base predefinita di DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

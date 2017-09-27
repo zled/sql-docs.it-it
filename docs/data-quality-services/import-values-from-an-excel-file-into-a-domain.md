@@ -1,27 +1,32 @@
 ---
-title: "Importare i valori da un file di Excel in un dominio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importfailing.f1"
-  - "sql13.dqs.kb.importselect.f1"
-  - "sql13.dqs.kb.failingvalues.f1"
+title: Importare i valori da un file di Excel in un dominio | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importfailing.f1
+- sql13.dqs.kb.importselect.f1
+- sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
+ms.contentlocale: it-it
+ms.lasthandoff: 09/09/2017
+
 ---
-# Importare i valori da un file di Excel in un dominio
-  In questo argomento viene descritto come importare i valori da un file di Excel in un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilizzo di un file di Excel per importare valori di dominio nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] semplifica il processo della generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile di importare un elenco di valori di dati validi da un file di Excel o un file di testo in un dominio. Da un file di Excel è possibile importare i valori di dominio in uno o più domini in una Knowledge Base. (Vedere [Importazione di domini da un File di Excel in individuazione delle informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) Per ulteriori informazioni sull'importazione di domini in una knowledge base.) L'esportazione in un file di Excel non è supportata.  
+# <a name="import-values-from-an-excel-file-into-a-domain"></a>Importare i valori da un file di Excel in un dominio
+  In questo argomento viene descritto come importare i valori da un file di Excel in un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilizzo di un file di Excel per importare valori di dominio nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] semplifica il processo della generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile di importare un elenco di valori di dati validi da un file di Excel o un file di testo in un dominio. Da un file di Excel è possibile importare i valori di dominio in uno o più domini in una Knowledge Base. Per altre informazioni sull'importazione di domini in una Knowledge Base, vedere [Importare i domini da un file di Excel in Individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md). L'esportazione in un file di Excel non è supportata.  
   
  È possibile importare i valori di dati in due modi:  
   
@@ -32,16 +37,16 @@ caps.handback.revision: 26
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
- Per importare i domini da un file di Excel, è necessario Excel sia installato nel computer che il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] applicazione sia installata per importare i valori di dominio o un dominio completo, è necessario avere creato un file di Excel con i valori di dominio (vedere [funzionamento dell'importazione](#How)); ed è necessario avere creato e aperto una knowledge base per importare il dominio.  
+ Per importare i domini da un file di Excel, è necessario che Excel sia installato nel computer in cui è installata l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] in modo da potere importare i valori di dominio o un dominio completo. È necessario avere creato un file di Excel con i valori di dominio (vedere [How the import works](#How)). Infine, è necessario avere creato e aperto una Knowledge Base in cui importarvi il dominio.  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per importare i valori di dominio da un file di Excel.  
   
-##  <a name="Import"></a> Importare i valori da un file di Excel in un dominio  
+##  <a name="Import"></a> Import values from an Excel file into a domain  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Client Data Quality](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire una Knowledge Base nell'attività Gestione dominio.  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 26
   
 6.  Nella finestra di dialogo **Importa valori di dominio** fare clic su **Sfoglia**.  
   
-7.  Nel **Selezionare il file** nella finestra di dialogo spostarsi nella cartella che contiene il file di Excel che si desidera importare i valori dominio, selezionare il file (con estensione xlsx, xls o csv) e quindi fare clic su **aprire**. Il file deve trovarsi nel client dal quale si esegue DQS o in un file della condivisione a cui l'utente può accedere.  
+7.  Nella finestra di dialogo **Seleziona file** spostarsi nella cartella che contiene il file di Excel dal quale si desidera importare i valori di dominio, selezionare il file (con estensione XLSX, XLS o CSV), quindi fare clic su **Apri**. Il file deve trovarsi nel client dal quale si esegue DQS o in un file della condivisione a cui l'utente può accedere.  
   
-8.  Dal **foglio di lavoro** elenco a discesa, selezionare il foglio di lavoro che si sta importando dall'elenco.  
+8.  Nell'elenco a discesa **Foglio di lavoro** selezionare il foglio di lavoro da cui eseguire l'importazione.  
   
 9. Selezionare **Utilizza la prima riga come intestazione** se la prima riga del foglio di calcolo rappresenta il nome di dominio e tutte le altre righe rappresentano valori di dominio validi.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 26
 14. Fare clic su **Fine** per aggiungere i valori alla Knowledge Base.  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive all'importazione dei valori da un file di Excel in un dominio  
- Dopo avere importato i valori in un dominio, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per ulteriori informazioni, vedere [eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [gestione di un dominio](../data-quality-services/managing-a-domain.md), o [creare un criterio di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
+ Dopo avere importato i valori in un dominio, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Importazione di sinonimi  
  I sinonimi vengono importati come segue:  
@@ -87,7 +92,7 @@ caps.handback.revision: 26
   
 -   Se per qualsiasi motivo i valori non possono essere connessi manualmente nell'applicazione, l'operazione non potrà essere eseguita tramite l'operazione di importazione.  
   
-##  <a name="How"></a> Funzionamento dell'importazione  
+##  <a name="How"></a> How the import works  
  Con questa operazione vengono importati i valori seguenti:  
   
  In DQS l'operazione di importazione da un file di Excel viene effettuata come segue:  
@@ -102,11 +107,11 @@ caps.handback.revision: 26
   
 -   Ogni riga rappresenta un valore di dominio.  
   
--   La prima riga rappresenta nomi di dominio o è il primo record o valore di dati, a seconda dell'impostazione della casella di controllo **Utilizza la prima riga come intestazione** . Se si seleziona **Utilizza la prima riga come intestazione** con un file XLSX o XLS, tutti i nomi di colonna null verranno convertiti automaticamente in F*n*e a tutte le colonne duplicate verrà aggiunto un numero.  
+-   La prima riga rappresenta nomi di dominio o è il primo record o valore di dati, a seconda dell'impostazione della casella di controllo **Utilizza la prima riga come intestazione** . Se si seleziona **Use First Row as header** con un file XLSX o XLS, tutti i nomi di colonna null verranno convertiti automaticamente in F*n*e a tutte le colonne duplicate verrà aggiunto un numero.  
   
 -   Se si annulla l'operazione di importazione prima del completamento, verrà eseguito il rollback dell'operazione e non verrà importato alcun dato.  
   
--   I valori nella prima colonna vengono importati nel dominio. Se, oltre alla prima colonna, una o più colonne aggiuntive vengono popolate, quindi i valori di tali colonne verranno aggiunti come sinonimi (vedere [l'importazione di sinonimi](#Synonyms)).  
+-   I valori nella prima colonna vengono importati nel dominio. Se oltre alla prima colonna, vengono popolate una o più colonne aggiuntive, i valori in tali colonne verranno aggiunti come sinonimi (vedere [Importazione di sinonimi](#Synonyms)).  
   
     -   Il formato previsto è che i valori della prima colonna saranno valori iniziali, mentre dalla seconda colonna in poi saranno sinonimi.  
   
