@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 su Linux
@@ -22,7 +22,7 @@ Le note sulla versione seguenti si applicano a 2017 di SQL Server in esecuzione 
 
 La tabella seguente elenca le versioni di SQL Server 2017 trattate in questo argomento.
 
-| Versione | Version | Data di rilascio |
+| Versione | Versione | Data di rilascio |
 |-----|-----|-----|
 | [RC2](#RC2) | 14.0.900.75 | 8-2017 |
 | [RC1](#RC1) | 14.0.800.90 | 7-2017 |
@@ -73,7 +73,7 @@ Nella tabella seguente sono elencati i dettagli del pacchetto e i percorsi di do
 | [SQL Server Data Tools per Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Codice di Visual Studio](https://code.visualstudio.com) con il [estensione mssql](https://aka.ms/mssql-marketplace) | Più recente |
 
-### <a name="unsupported-features-and-services"></a>Servizi e funzionalità non supportate
+### <a name="Unsupported"></a>Servizi e funzionalità non supportate
 
 Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo momento. Il supporto di queste funzionalità verrà sempre abilitato durante la cadenza mensile gli aggiornamenti del programma di anteprima.
 
@@ -810,7 +810,7 @@ Nelle sezioni seguenti vengono descritti problemi noti con questa versione di SQ
 
 - Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
 
-- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\>**  metodo invece per il momento. 
+- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\> ** metodo invece per il momento. 
 
 #### <a name="databases"></a>Database
 - Impossibile spostare i database di sistema con l'utilità mssql conf.
@@ -987,7 +987,7 @@ Nelle sezioni seguenti vengono descritti problemi noti con questa versione di SQ
 
 - Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
 
-- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\>**  metodo invece per il momento. 
+- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\> ** metodo invece per il momento. 
 
 #### <a name="databases"></a>Database
 - Non è possibile modificare i percorsi dei file di dati e di log TempDB.
@@ -1147,7 +1147,7 @@ Nelle sezioni seguenti vengono descritti problemi noti con questa versione di SQ
 
 - Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
 
-- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\>**  metodo invece per il momento. 
+- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\> ** metodo invece per il momento. 
 
 #### <a name="databases"></a>Database
 - Non è possibile modificare i percorsi dei file di dati e di log TempDB.
@@ -1292,7 +1292,7 @@ Nelle sezioni seguenti vengono descritti problemi noti con questa versione di SQ
 
 - Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
 
-- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\>**  metodo invece per il momento. 
+- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\> ** metodo invece per il momento. 
 
 #### <a name="databases"></a>Database
 - Non è possibile modificare i percorsi dei file di dati e di log TempDB.
@@ -1424,7 +1424,7 @@ Nelle sezioni seguenti vengono descritti problemi noti con questa versione di SQ
 
 - Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
 
-- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\>**  metodo invece per il momento.
+- **CREATE ASSEMBLY** non funzionerà durante il tentativo di utilizzare un file. Utilizzare il **FROM \<bit\> ** metodo invece per il momento.
 
 #### <a name="databases"></a>Database
 - Non è possibile modificare i percorsi dei file di dati e di log TempDB.
