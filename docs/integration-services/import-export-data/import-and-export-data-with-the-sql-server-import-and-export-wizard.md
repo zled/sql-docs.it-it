@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
@@ -41,11 +41,11 @@ ms.lasthandoff: 09/21/2017
  L'Importazione/Esportazione guidata[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare facilmente i dati da un'origine a una destinazione. Questa panoramica descrive le origini dati che la procedura guidata è possibile utilizzare come origini e destinazioni, nonché le autorizzazioni che necessarie per eseguire la procedura guidata.
 
 ## <a name="get-the-wizard"></a>Ottenere la procedura guidata
-Se si desidera eseguire la procedura guidata, ma non è necessario [! INCLUDERE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>Cosa accade quando si esegue la procedura guidata?
 -    **Vedere l'elenco dei passaggi.** Per una descrizione dei passaggi della procedura guidata, vedere [i passaggi in SQL Server importazione / esportazione guidata](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). È inoltre disponibile una pagina separata della documentazione per ogni pagina della procedura guidata.  
-    \- o \-
+    \-o\-
 -   **Visualizzare un semplice esempio.** Per un rapido controllo le schermate visualizzate diverse in una sessione tipica, esaminiamo questo semplice esempio end-to-end in una singola pagina - [iniziare con questo semplice esempio di importazione / esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a>Informazioni sulle origini e destinazioni è possibile utilizzare?  

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Pacchetto di Integration Services (SSIS) e i parametri del progetto
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [Stored procedure &#40; catalogo di Integration Services &#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [Finestra di dialogo Configura](../integration-services/service/configure-dialog-box.md)  
+-   [Configurare la finestra di dialogo](../integration-services/service/configure-dialog-box.md)  
   
 -   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -165,7 +165,7 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
     > **AVVISO.** È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)**. Usando l'ultimo pulsante della barra degli strumenti per aprire la finestra di dialogo **Gestione dei valori dei parametri**, è possibile specificare un valore per un parametro usato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-Il **imposta parametri** la finestra di dialogo consente di associare un parametro nuovo o esistente a una proprietà di un'attività. Si apre la finestra di dialogo facendo clic su un'attività o nella scheda flusso di controllo [! INCLUDERE[ssIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).
+Il **imposta parametri** la finestra di dialogo consente di associare un parametro nuovo o esistente a una proprietà di un'attività. È possibile aprire la finestra di dialogo facendo clic con il pulsante destro del mouse su un'attività o sulla scheda Flusso di controllo in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], quindi selezionando **Imposta parametri**. Nell'elenco seguente vengono descritti gli elementi dell'interfaccia utente della finestra di dialogo. Per altre informazioni sui parametri, vedere [Parametri di Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
 ### <a name="options"></a>Opzioni  
  **Proprietà**  
@@ -195,7 +195,7 @@ Il **imposta parametri** la finestra di dialogo consente di associare un paramet
  **Sensibili**  
  Specificare se il parametro è sensibile selezionando o deselezionando la casella di controllo. I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.  
   
- **Obbligatorio**  
+ **Required**  
  Specificare se il parametro richiede che un valore diverso dal valore predefinito per la progettazione venga specificato prima dell'esecuzione del pacchetto.  
  
 ## <a name="set-parameter-values-after-the-project-is-deployed"></a>Impostare i valori dei parametri dopo la distribuzione del progetto

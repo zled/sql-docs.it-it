@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Iniziare con questo semplice esempio di importazione / esportazione guidata
 Informazioni su cosa accade in SQL Server importazione / esportazione guidata, illustrando in uno scenario comune - importazione di dati da un foglio di calcolo di Excel a un database di SQL Server. Anche se si prevede di utilizzare un'origine diversa e una destinazione diversa, in questo argomento illustra la maggior parte di ciò che è necessario conoscere l'esecuzione della procedura guidata.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prerequisito: È la procedura guidata installata nel computer?
-Se si desidera eseguire la procedura guidata, ma non è necessario [! INCLUDERE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Di seguito è l'origine dati di Excel per questo esempio
 Ecco i dati di origine che si intende copiare - una piccola tabella a due colonne nel foglio di lavoro WizardWalkthrough della cartella di lavoro di WizardWalkthrough.xlsx Excel.

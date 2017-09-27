@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   OLTP in memoria viene installato come parte dei **servizi del motore di database**.  
   
-     Per installare la generazione del report ([Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (per gestire OLTP In memoria tramite Esplora oggetti [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
+     Per installare la generazione del report ([Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (per gestire OLTP In memoria tramite Esplora oggetti [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Note importanti sull'uso di [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
