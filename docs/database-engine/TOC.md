@@ -14,7 +14,8 @@
 ## [Articoli nuovi e aggiornati di recente](new-updated-database-engine.md)
 
 # [Installare](../database-engine/install-windows/installation-for-sql-server-2016.md)
-# [Gruppi di disponibilità](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 # [Configurare](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
-# [Mirroring del database](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
-# [Log shipping](../database-engine/log-shipping/about-log-shipping-sql-server.md)
+# [Disponibilità elevata](sql-server-business-continuity-dr.md)
+## [Gruppi di disponibilità](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+## [Mirroring del database](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+## [Log shipping](../database-engine/log-shipping/about-log-shipping-sql-server.md)
