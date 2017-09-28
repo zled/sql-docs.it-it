@@ -41,8 +41,6 @@ Restituisce il nome di una colonna corrispondente al numero di identificazione d
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COL_NAME ( table_id , column_id )  
 ```  
   

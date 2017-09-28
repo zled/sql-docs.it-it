@@ -43,8 +43,6 @@ Restituisce il numero di identificazione (ID) del database.
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DB_ID ( [ 'database_name' ] )   
 ```  
   

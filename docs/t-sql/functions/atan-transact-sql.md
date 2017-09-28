@@ -40,8 +40,6 @@ Restituisce l'angolo in radianti, la cui tangente è un oggetto specificato **fl
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATAN ( float_expression )  
 ```  
   

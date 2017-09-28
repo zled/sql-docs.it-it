@@ -34,8 +34,6 @@ Visualizza il numero di righe, lo spazio su disco riservato e spazio su disco ut
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  

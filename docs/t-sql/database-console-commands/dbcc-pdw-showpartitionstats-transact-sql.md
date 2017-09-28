@@ -33,8 +33,6 @@ Visualizza le dimensioni e il numero di righe per ogni partizione di una tabella
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  

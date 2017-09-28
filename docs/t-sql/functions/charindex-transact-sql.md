@@ -41,8 +41,6 @@ Consente di cercare in un'espressione un'altra espressione e restituisce la posi
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   

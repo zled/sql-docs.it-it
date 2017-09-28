@@ -40,8 +40,6 @@ Funzione matematica che restituisce l'angolo, espresso in radianti, il cui cosen
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ACOS ( float_expression )  
 ```  
   

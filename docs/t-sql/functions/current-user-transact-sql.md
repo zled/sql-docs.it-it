@@ -42,8 +42,6 @@ Restituisce il nome dell'utente corrente. Questa funzione equivale a USER_NAME()
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CURRENT_USER  
 ```  
 

@@ -39,8 +39,6 @@ Funzione matematica che restituisce il coseno dell'angolo specificato, espresso 
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COS ( float_expression )  
 ```  
   

@@ -39,8 +39,6 @@ Restituisce la proprietà delle regole di confronto specificate in [!INCLUDE[ssC
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   

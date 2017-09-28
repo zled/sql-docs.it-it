@@ -40,8 +40,6 @@ Restituisce il più piccolo intero maggiore o uguale all'espressione numerica sp
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CEILING ( numeric_expression )  
 ```  
   

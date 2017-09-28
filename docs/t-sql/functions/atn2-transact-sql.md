@@ -40,8 +40,6 @@ Restituisce l'angolo, in radianti, tra l'asse X positivo e il raggio dall'origin
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   

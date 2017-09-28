@@ -39,8 +39,6 @@ Funzione matematica che restituisce la cotangente trigonometrica dell'angolo spe
 ## <a name="syntax"></a>Sintassi  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COT ( float_expression )  
 ```  
   
