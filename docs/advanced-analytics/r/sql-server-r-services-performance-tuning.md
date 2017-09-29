@@ -91,7 +91,7 @@ Configurazione e ottimizzazione delle prestazioni richiede la creazione di una b
 
 + [Ottimizzazione delle prestazioni di R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Vengono fornite indicazioni per la configurazione dell'hardware che [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md) ] è installato e per la configurazione dell'istanza di SQL Server per supportare meglio gli script esterni. È particolarmente utile per **gli amministratori del database**.
+    Vengono fornite indicazioni per la configurazione dell'hardware che [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] è installato e per la configurazione dell'istanza di SQL Server per supportare meglio gli script esterni. È particolarmente utile per **gli amministratori del database**.
 
 + [Ottimizzazione delle prestazioni di R in SQL Server - codice e i dati ottimizzazione](..\r\r-and-data-optimization-r-services.md)
 
