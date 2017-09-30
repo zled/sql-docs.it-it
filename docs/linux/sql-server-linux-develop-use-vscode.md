@@ -26,7 +26,7 @@ In questo argomento viene illustrato come utilizzare il **mssql** estensione per
 Codice di Visual Studio è un editor di codice con interfaccia grafica per Linux, macOS e Windows che supporta le estensioni. Il [**mssql** estensione per il codice di Visual Studio] consente di connettersi a SQL Server, query Transact-SQL (T-SQL) e visualizzare i risultati.
 
 ## <a name="install-vs-code"></a>Installare Visual Studio Code
-1. Se non è già installato Visual Studio Code, [scaricare e installare Visual Studio Code] nel computer.
+1. Se non è già installato Visual Studio Code, [Scaricare e installare Visual Studio Code] nel computer.
 
 2. Avviare Visual Studio Code.
 
@@ -257,7 +257,7 @@ Per ulteriori informazioni su utilizzando o che hanno contribuito all'estensione
 Per ulteriori informazioni sull'utilizzo di codice di Visual Studio, vedere il [documentazione di Visual Studio Code](https://code.visualstudio.com/docs).
 
 [**mssql** estensione per il codice di Visual Studio]:https://aka.ms/mssql-marketplace
-[scaricare e installare Visual Studio Code]:https://code.visualstudio.com/Download
+[Scaricare e installare Visual Studio Code]:https://code.visualstudio.com/Download
 [.Net Core istruzioni]:https://www.microsoft.com/net/core
 [gestire i profili di connessione]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [consigli per la risoluzione dei problemi di connessione]:./sql-server-linux-troubleshooting-guide.md#connection
