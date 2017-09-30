@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. Nella sezione **crittografia** usare la casella di controllo **Crittografa backup** per decidere se utilizzare la crittografia per il backup. Usare l'elenco a discesa **Algoritmo** per selezionare un algoritmo di crittografia.  Usare l'elenco a discesa **Certificato o chiave asimmetrica** per selezionare un certificato o una chiave asimmetrica esistente. La crittografia è supportata in SQL Server 2014 o versioni successive. Per altre informazioni sulle opzioni di crittografia, vedere [Eseguire il backup di database &#40;pagina Opzioni di backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
-È possibile creare i backup di database tramite [Creazione guidata piano di manutenzione](https://msdn.microsoft.com/library/ms191002.aspx) . 
+È possibile creare i backup di database tramite [Creazione guidata piano di manutenzione](../maintenance-plans/use-the-maintenance-plan-wizard.md) . 
 
 ### <a name="examples"></a>Esempi  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Eseguire il backup completo su disco nel percorso predefinito**

@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 5736d22a7ce8bf9c1269677c6d5df02b1b1282d8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fb74c78868691c1a59a132eb637dedbfebec41e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote access
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/11/2017
   
 -   [Procedura: Connettersi a SQL Server con l'autenticazione SQL in ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
   
--   [Connessione a un'istanza di SQL Server](https://msdn.microsoft.com/library/ms162132.aspx)  
+-   [Connessione a un'istanza di SQL Server](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
 -   [Procedura: Creare connessioni a database di SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 08/11/2017
 ####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-access-option"></a>Per configurare l'opzione remote access  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/11/2017
   
 3.  In **Connessioni remote**selezionare o deselezionare la casella di controllo **Consenti connessioni remote al server** .  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-configure-the-remote-access-option"></a>Per configurare l'opzione remote access  
   
@@ -112,7 +112,7 @@ GO
   
 ```  
   
- Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)sia installato il servizio WMI.  
+ Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione remote access  
  Questa impostazione ha effetto solo dopo il riavvio di SQL Server.  

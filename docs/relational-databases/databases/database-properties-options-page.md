@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  Specificare il modello di stima di cardinalità di Query Optimizer per gli eventuali database secondari indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 9481](https://support.microsoft.com/en-us/kb/2801413).  
   
  **Massimo grado di parallelismo**  
- Specificare l'impostazione [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) predefinita per il database primario da usare per le istruzioni.  
+ Specificare l'impostazione [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) predefinita per il database primario da usare per le istruzioni.  
   
  **Massimo grado di parallelismo per database secondario**  
- Specificare l'impostazione [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) predefinita per gli eventuali database secondari da usare per le istruzioni.  
+ Specificare l'impostazione [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) predefinita per gli eventuali database secondari da usare per le istruzioni.  
   
  **Analisi dei parametri**  
  Abilita o disabilita l'analisi dei parametri sul database primario. Equivale a [Flag di traccia 4136](https://support.microsoft.com/en-us/kb/980653).  

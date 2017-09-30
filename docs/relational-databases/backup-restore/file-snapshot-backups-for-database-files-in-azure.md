@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backup di snapshot di file per i file di database in Azure
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  Dopo il backup completo iniziale che è necessario per stabilire la catena dei backup del log delle transazioni (che può essere un backup di snapshot di file), è sufficiente eseguire i backup del log delle transazioni perché ogni set di backup di snapshot di file del log delle transazioni contiene snapshot di file di tutti i file di database e può essere usato per eseguire un ripristino del database o un ripristino del log. Dopo il backup del database completo iniziale, non sono necessari altri backup completi o differenziali perché il servizio di archiviazione BLOB di Azure gestisce le differenze tra ogni snapshot di file e lo stato corrente del BLOB di base per ogni file di database.  
   
 > [!NOTE]  
->  Per un'esercitazione sull'uso di SQL Server 2016 con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)(Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server)  
+>  Per un'esercitazione sull'uso di SQL Server 2016 con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server)  
   
 ### <a name="restore-using-file-snapshot-backups"></a>Eseguire il ripristino con i backup di snapshot di file  
  Ogni set di backup di snapshot di file contiene uno snapshot di file di ogni file di database, quindi un processo di ripristino richiede al massimo due set di backup di snapshot di file adiacenti. Questo vale indipendentemente dal fatto che il set di backup provenga da un backup di database completo o da un backup del log. Si tratta di un processo molto diverso rispetto al ripristino eseguito con i file di backup di flusso tradizionale. Con il backup di flusso tradizionale il processo di ripristino richiede l'uso di un'intera catena dei set di backup: il backup completo, un backup differenziale e uno o più backup del log delle transazioni. La parte di recupero del processo di ripristino rimane invariata indipendentemente dal fatto che il ripristino usi un backup di snapshot di file o un set di backup di flusso.  
@@ -181,10 +181,10 @@ GO
 ```  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
- Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare i propri commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
+ Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Esercitazione: Uso del servizio di archiviazione BLOB di Windows Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

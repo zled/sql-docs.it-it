@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
@@ -45,7 +45,7 @@ Nella tabella seguente vengono elencati i tipi di pagina usati nei file di dati 
 |-------|-------|
 |Dati |Righe di dati con tutti i dati, ad eccezione di dati text, ntext, image, nvarchar (max), varchar (max), varbinary (max) e xml, quando il testo nella riga è impostato su ON. |
 |Indice |Voci di indice. |
-|Test/Image |Tipi di dati Large Object: (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) e dati xml) <br> Colonne a lunghezza variabile quando la riga di dati supera 8 KB: (varchar, nvarchar, varbinary e sql_variant) |
+|Text/Image |Tipi di dati Large Object: (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) e dati xml) <br> Colonne a lunghezza variabile quando la riga di dati supera 8 KB: (varchar, nvarchar, varbinary e sql_variant) |
 |Mappa di allocazione globale (GAM, Global Allocation Map), Mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) |Informazioni che indicano se gli extent sono allocati. |
 |Spazio libero nella pagina (PFS, Page Free Space) |Informazioni sull'allocazione delle pagine e sullo spazio disponibile nelle pagine. |
 |Index Allocation Map |Informazioni sugli extent utilizzati da una tabella o da un indice per unità di allocazione. |

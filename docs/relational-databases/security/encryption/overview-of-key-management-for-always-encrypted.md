@@ -14,11 +14,11 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted (Panoramica della gestione delle chiavi per Always Encrypted)
@@ -70,7 +70,7 @@ Se le chiavi Always Encrypted vengono gestite senza separazione dei ruoli, un un
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Strumenti per la gestione delle chiavi Always Encrypted
 
-Le chiavi Always Encrypted possono essere gestite tramite [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) e [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx):
+Le chiavi Always Encrypted possono essere gestite tramite [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) e [PowerShell](../../scripting/sql-server-powershell.md):
 
 - **SQL Server Management Studio (SSMS)** : fornisce finestre di dialogo e procedure guidate che consentono di combinare attività legate all'accesso all'archivio delle chiavi e all'accesso al database. SSMS quindi non supporta la separazione dei ruoli ma semplifica la configurazione delle chiavi. Per altre informazioni sulla gestione delle chiavi con SSMS, vedere:
     - [Provisioning delle chiavi master della colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)

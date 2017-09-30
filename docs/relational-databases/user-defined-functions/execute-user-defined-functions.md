@@ -17,18 +17,18 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="execute-user-defined-functions"></a>Eseguire funzioni definite dall'utente
   Eseguire una funzione definita dall'utente con Transact-SQL.
   
 
-> **Nota:** per altre informazioni, vedere l'argomento sulle  [funzioni definite dall'utente](https://msdn.microsoft.com/library/ms191007.aspx) e [Create Function (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) . 
+> **Nota:** per altre informazioni, vedere l'argomento sulle  [funzioni definite dall'utente](user-defined-functions.md) e [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) . 
   
  
 ##  <a name="BeforeYouBegin"></a> Operazioni preliminari  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> Sicurezza  
   
- Per eseguire l'istruzione [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) non sono necessarie autorizzazioni specifiche. Sono tuttavia **obbligatorie** autorizzazioni per le entità a protezione diretta a cui si fa riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) , il chiamante dell'istruzione EXECUTE deve avere l'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
+ Per eseguire l'istruzione [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) non sono necessarie autorizzazioni specifiche. Sono tuttavia **obbligatorie** autorizzazioni per le entità a protezione diretta a cui si fa riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) , il chiamante dell'istruzione EXECUTE deve avere l'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

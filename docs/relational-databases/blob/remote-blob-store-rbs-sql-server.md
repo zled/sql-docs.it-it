@@ -17,11 +17,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 11edeb0ba81666ecf64adf189bd704de81af5a32
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Archivio Blob remoto (RBS) (SQL Server)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  Molti fornitori di soluzioni di archiviazione di terze parti hanno sviluppato provider RBS conformi a queste API standard e in grado di supportare l'archiviazione BLOB su varie piattaforme di archiviazione.  
   
 ## <a name="rbs-requirements"></a>Requisiti di RBS  
- Per RBS è necessaria l'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise per il server di database principale in cui vengono archiviati i metadati BLOB.  Tuttavia, se si utilizza il provider FILESTREAM fornito, è possibile archiviare BLOB nell'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS richiede almeno la versione 11 del driver ODBC per [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] e la versione 13 del driver ODBC per [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. I driver sono disponibili all'indirizzo [Download di driver ODBC per SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).   
+ - Per RBS è necessaria l'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise per il server di database principale in cui vengono archiviati i metadati BLOB.  Tuttavia, se si utilizza il provider FILESTREAM fornito, è possibile archiviare BLOB nell'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS richiede almeno la versione 11 del driver ODBC per [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] e la versione 13 del driver ODBC per [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. I driver sono disponibili all'indirizzo [Download di driver ODBC per SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).    
   
  In RBS è incluso un provider FILESTREAM che consente di utilizzare tale componente per l'archiviazione di BLOB in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si desidera utilizzare RBS per l'archiviazione di BLOB in una soluzione di archiviazione diversa, è necessario utilizzare un provider RBS di terze parti sviluppato per tale soluzione di archiviazione o sviluppare un provider RBS personalizzato utilizzando l'API di RBS. Un provider di esempio che consenta di archiviare BLOB nel file system NTFS è disponibile come risorsa per l'apprendimento in [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
  Durante l'uso di RBS è consigliabile ruotare periodicamente la chiave simmetrica dell'archivio delle credenziali. Si tratta di una comune procedura consigliata di sicurezza per soddisfare i criteri di sicurezza dell'organizzazione.  Un modo per eseguire la rotazione della chiave simmetrica dell'archivio delle credenziali di RBS consiste nell'usare lo [script riportato di seguito](#Key_rotation) nel database di RBS.  È anche possibile usare questo script per eseguire la migrazione a proprietà per aumentare la sicurezza della crittografia, come l'algoritmo o la lunghezza della chiave. Eseguire il backup del database prima della rotazione della chiave.  Al termine dello script sono previsti alcuni passaggi di verifica.  
 Se i criteri di sicurezza in uso richiedono proprietà diverse per la chiave (ad esempio, algoritmo o lunghezza della chiave) da quelle specificate, lo script può essere usato come modello. È possibile modificare le proprietà della chiave in due posizioni: 1) creazione della chiave temporanea 2) creazione della chiave permanente.  
   
-##  <a name="rbsresources"></a> RBS resources  
+##  <a name="rbsresources"></a> Risorse di RBS  
   
  **Esempi di RBS**  
  Negli esempi di RBS disponibili in [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) viene illustrato come sviluppare un'applicazione RBS e come sviluppare e installare un provider RBS personalizzato.  
@@ -85,7 +85,7 @@ Se i criteri di sicurezza in uso richiedono proprietà diverse per la chiave (ad
  **Blog di RBS**  
  Nel [blog di RBS](http://go.microsoft.com/fwlink/?LinkId=210315) sono disponibili informazioni aggiuntive sulla distribuzione e gestione di RBS.  
   
-##  <a name="Key_rotation"></a> Key rotation script  
+##  <a name="Key_rotation"></a> Script di rotazione della chiave  
  In questo esempio viene creata una stored procedure denominata `sp_rotate_rbs_symmetric_credential_key` per sostituire la chiave simmetrica dell'archivio delle credenziali di RBS in uso  
 con una di propria scelta.  Si consiglia di eseguire questa operazione se esiste un criterio di sicurezza che richiede   
 la rotazione periodica della chiave o se sono presenti requisiti specifici per gli algoritmi.  

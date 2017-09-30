@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
@@ -48,7 +48,7 @@ ms.lasthandoff: 07/31/2017
 
  In ogni approccio la logica per la migrazione o la pulizia dei dati cronologici è basata sulla colonna che corrisponde alla fine del periodo nella tabella corrente. Il valore relativo alla fine del periodo per ogni riga determina il momento in cui la versione della riga diventa "chiusa", ovvero quando viene inserita nella tabella di cronologia. Ad esempio, la condizione `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifica che i dati cronologici più vecchi di un mese devono essere rimossi o spostati dalla tabella di cronologia.  
   
-> **NOTA:**  gli esempi in questo argomento usano questo [esempio di tabella temporale](https://msdn.microsoft.com/library/mt590957.aspx).  
+> **NOTA:**  gli esempi in questo argomento usano questo [esempio di tabella temporale](creating-a-system-versioned-temporal-table.md).  
   
 ## <a name="using-stretch-database-approach"></a>Uso dell'approccio con Estensione database  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 07/31/2017
   
 -   **Estensione di una parte della tabella di cronologia:** configurare Estensione database solo per una parte della tabella di cronologia per migliorare le prestazioni se lo scenario principale prevede principalmente l'esecuzione di query sui dati cronologici recenti, ma si vuole mantenere l'opzione per l'esecuzione di query su dati cronologici precedenti se necessario, archiviando al tempo stesso questi dati in modalità remota a un costo inferiore. Transact-SQL consente di ottenere questo risultato specificando una funzione di predicato per selezionare le righe di cui verrà eseguita la migrazione dalla tabella di cronologia, invece di eseguire la migrazione di tutte le righe.  Quando si utilizzano le tabelle temporali, è in genere consigliabile spostare i dati in base alla condizione temporale, ovvero in base all'età della versione della riga nella tabella di cronologia.    
     L'uso di una funzione di predicato deterministica consente di mantenere una parte della cronologia nello stesso database con i dati correnti, mentre viene eseguita la migrazione del resto della cronologia in Azure.    
-    Per esempi e limitazioni, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database)](https://msdn.microsoft.com/library/mt613432.aspx). Poiché le funzioni non deterministiche non sono valide, per trasferire i dati cronologici usando una finestra temporale scorrevole è necessario modificare in modo regolare la definizione della funzione di predicato inline, in modo che la finestra di righe mantenuta in locale sia costante a livello di età. La finestra temporale scorrevole consente di spostare in modo costante i dati temporali più vecchi di un mese in Azure. Ecco un esempio di questo approccio.  
+    Per esempi e limitazioni, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Poiché le funzioni non deterministiche non sono valide, per trasferire i dati cronologici usando una finestra temporale scorrevole è necessario modificare in modo regolare la definizione della funzione di predicato inline, in modo che la finestra di righe mantenuta in locale sia costante a livello di età. La finestra temporale scorrevole consente di spostare in modo costante i dati temporali più vecchi di un mese in Azure. Ecco un esempio di questo approccio.  
   
 > **NOTA:** Estensione database esegue la migrazione dei dati in Azure. È quindi necessario avere un account Azure e una sottoscrizione per la fatturazione. Per ottenere un account di valutazione gratuito di Azure, fare clic sulla [versione di valutazione gratuita di un mese](https://azure.microsoft.com/pricing/free-trial/).  
   
@@ -111,7 +111,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Uso di Transact-SQL per estendere una parte della tabella di cronologia  
- Per estendere solo una parte della tabella di cronologia, creare prima di tutto una [funzione di predicato inline](https://msdn.microsoft.com/library/mt613432.aspx). Per questo esempio si presupponga di aver configurato la funzione di predicato inline per la prima volta il 1° dicembre 2015 e di voler estendere in Azure tutta la cronologia precedente al 1° novembre 2015. Per ottenere questo risultato, creare prima di tutto la funzione seguente:  
+ Per estendere solo una parte della tabella di cronologia, creare prima di tutto una [funzione di predicato inline](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Per questo esempio si presupponga di aver configurato la funzione di predicato inline per la prima volta il 1° dicembre 2015 e di voler estendere in Azure tutta la cronologia precedente al 1° novembre 2015. Per ottenere questo risultato, creare prima di tutto la funzione seguente:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -165,7 +165,7 @@ COMMIT ;
  Usare SQL Server Agent o un altro meccanismo di pianificazione per assicurare una definizione valida per la funzione di predicato in ogni momento.  
   
 ## <a name="using-table-partitioning-approach"></a>Uso dell'approccio con partizionamento delle tabelle  
- Il[partizionamento delle tabelle](https://msdn.microsoft.com/library/ms188730.aspx) può semplificare la gestione e il ridimensionamento di tabelle di grandi dimensioni. L'approccio con partizionamento delle tabelle consente di usare le partizioni delle tabelle di cronologia per implementare la pulizia dei dati personalizzata o l'archiviazione offline in base a una condizione temporale. Il partizionamento delle tabelle offrirà anche vantaggi a livello di prestazioni in caso di query su tabelle temporali relative a un subset di cronologia dei dati mediante l'eliminazione delle partizioni.  
+ Il[partizionamento delle tabelle](../partitions/create-partitioned-tables-and-indexes.md) può semplificare la gestione e il ridimensionamento di tabelle di grandi dimensioni. L'approccio con partizionamento delle tabelle consente di usare le partizioni delle tabelle di cronologia per implementare la pulizia dei dati personalizzata o l'archiviazione offline in base a una condizione temporale. Il partizionamento delle tabelle offrirà anche vantaggi a livello di prestazioni in caso di query su tabelle temporali relative a un subset di cronologia dei dati mediante l'eliminazione delle partizioni.  
   
  Il partizionamento delle tabelle consente di implementare un approccio con finestra temporale scorrevole per spostare le parti più vecchie dalla tabella di cronologia e mantenere costanti le dimensioni della parte conservata in termini di età, mantenendo i dati della tabella di cronologia uguali al periodo di conservazione necessario. L'operazione di disattivazione dei dati dalla tabella di cronologia è supportata se SYSTEM_VERSIONING è ON, ovvero è possibile pulire una parte dei dati di cronologia senza introdurre una finestra di manutenzione o bloccare i carichi di lavoro normali.  
   

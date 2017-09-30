@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Questo articolo descrive le operazioni necessarie per la configurazione di Always Encrypted e la gestione dei database che usano Always Encrypted con [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+Questo articolo descrive le operazioni necessarie per la configurazione di Always Encrypted e la gestione dei database che usano Always Encrypted con [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
 Quando viene usato per configurare Always Encrypted, SSMS gestisce sia le chiavi che i dati sensibili di Always Encrypted in modo tale che vengano visualizzati in testo non crittografato all'interno del processo di SSMS. È quindi importante eseguire SSMS in un computer protetto. Se il database è ospitato in SQL Server, verificare che SSMS venga eseguito in un computer diverso da quello che ospita l'istanza di SQL Server. Poiché l'obiettivo principale di Always Encrypted è garantire la sicurezza dei dati sensibili crittografati anche se il sistema di database viene compromesso, eseguire uno script di PowerShell che elabora le chiavi o i dati sensibili nel computer SQL Server può ridurre o annullare i vantaggi della funzionalità. Per altre indicazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
@@ -89,7 +89,7 @@ Supponendo che `SSN` sia una colonna crittografata `char(11)` nella tabella `Pat
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> Abilitazione e disabilitazione di Always Encrypted per una connessione di database   
 
 Quando si abilita Always Encrypted per una connessione di database, si indica al provider di dati .NET Framework per SQL Server, usato da SQL Server Management Studio, di provare a eseguire le operazioni seguenti in modo trasparente:   
 -   Decrittografare tutti i valori recuperati dalle colonne crittografate e restituiti nei risultati della query.   
@@ -105,7 +105,7 @@ Per disabilitare Always Encrypted per una connessione di database, specificare `
 >  4.   Selezionare la scheda **Proprietà aggiuntive** e digitare `Column Encryption Setting=Enabled` (per abilitare il comportamento di Always Encrypted) o rimuovere l'impostazione (per disabilitare il comportamento di Always Encrypted).   
 >  5.   Fare clic su **Connetti**.   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Parametrizzazione per Always Encrypted   
  
 Parametrizzazione per Always Encrypted è una funzionalità di SQL Server Management Studio che converte automaticamente le variabili Transact-SQL in parametri di query (istanze della [classe SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). Richiede almeno SSMS versione 17.0. Ciò consente al provider di dati .NET Framework per SQL Server di rilevare i dati destinati alle colonne crittografate e di crittografare tali dati prima di inviarli al database. 
   

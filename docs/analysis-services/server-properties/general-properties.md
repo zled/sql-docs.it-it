@@ -161,7 +161,7 @@ ms.lasthandoff: 09/01/2017
  **Porta**  
  Proprietà Integer che definisce il numero di porta su cui il server rimarrà in attesa di connessioni client. Se questa proprietà non viene impostata, il server trova in modo dinamico la prima porta non utilizzata.  
   
- Il valore predefinito di questa proprietà è zero (0) al quale per impostazione predefinita viene assegnata la porta 2383. Per altre informazioni sulla configurazione della porta, vedere [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Il valore predefinito di questa proprietà è zero (0) al quale per impostazione predefinita viene assegnata la porta 2383. Per altre informazioni sulla configurazione della porta, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  **ServerTimeout**  
  Proprietà Integer che definisce il timeout, in secondi, per le query. L'impostazione predefinita è 3600 secondi (o 60 minuti). Il valore zero (0) indica che non si verificherà alcun timeout per le query.  

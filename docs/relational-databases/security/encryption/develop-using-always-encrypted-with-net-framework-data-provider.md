@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Sviluppare con Always Encrypted e il provider di dati .NET Framework
@@ -289,7 +289,7 @@ Il provider di dati .NET Framework per SQL Server viene fornito con i seguenti p
   
 Per usare questi provider non è necessario apportare alcuna modifica del codice dell'applicazione, ma tenere presente quanto segue:
 
-- È necessario che l'utente (o l'amministratore del database) verifichi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master sia conforme al formato del percorso della chiave valido per un determinato provider. È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) . Per altre informazioni, vedere [Configurare Always Encrypted usando SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) e [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
+- È necessario che l'utente (o l'amministratore del database) verifichi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master sia conforme al formato del percorso della chiave valido per un determinato provider. È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) . Per altre informazioni, vedere [Configurare Always Encrypted usando SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) e [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 - È necessario verificare che l'applicazione possa accedere alla chiave nell'archivio delle chiavi. Questa operazione potrebbe comportare l'accesso da parte dell'applicazione alla chiave e/o all'archivio delle chiavi, a seconda dell'archivio, o l'esecuzione di altri passaggi di configurazione specifici dell'archivio delle chiavi. Ad esempio, per accedere a un archivio delle chiavi che implementa CNG o CAPI (come un modulo di protezione hardware), è necessario assicurarsi che una libreria di implementazione di CNG o CAPI per l'archivio sia installata nel computer dell'applicazione. Per informazioni dettagliate, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-azure-key-vault-provider"></a>Uso del provider dell'insieme di credenziali delle chiavi di Azure
@@ -373,7 +373,7 @@ Questa sezione descrive le ottimizzazioni delle prestazioni predefinite nel prov
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controllo dei round trip per recuperare i metadati per i parametri di query
 
-Se Always Encrypted è abilitato per una connessione, per impostazione predefinita il provider di dati .NET Framework per SQL Server chiamerà [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. **sys.sp_describe_parameter_encryption** analizza l'istruzione di query per verificare se sono presenti parametri da crittografare e, in tal caso, restituisce le informazioni relative alla crittografia che consentiranno al provider di dati .NET Framework per SQL Server di crittografare i valori dei parametri. Il comportamento descritto garantisce all'applicazione client un elevato livello di trasparenza. Non è necessario che l'applicazione (e lo sviluppatore dell'applicazione) sappiano quali query accedono alle colonne crittografate, a condizione che i valori destinati alle colonne crittografate vengano passati al provider di dati .NET Framework per SQL Server negli oggetti SqlParameter.
+Se Always Encrypted è abilitato per una connessione, per impostazione predefinita il provider di dati .NET Framework per SQL Server chiamerà [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. **sys.sp_describe_parameter_encryption** analizza l'istruzione di query per verificare se sono presenti parametri da crittografare e, in tal caso, restituisce le informazioni relative alla crittografia che consentiranno al provider di dati .NET Framework per SQL Server di crittografare i valori dei parametri. Il comportamento descritto garantisce all'applicazione client un elevato livello di trasparenza. Non è necessario che l'applicazione (e lo sviluppatore dell'applicazione) sappiano quali query accedono alle colonne crittografate, a condizione che i valori destinati alle colonne crittografate vengano passati al provider di dati .NET Framework per SQL Server negli oggetti SqlParameter.
 
 
 ### <a name="query-metadata-caching"></a>Memorizzazione nella cache dei metadati di query
@@ -392,7 +392,7 @@ Per controllare l'impatto sulle prestazioni del recupero dei metadati di crittog
 > [!NOTE]
 > L'impostazione di Always Encrypted a livello di query offre vantaggi limitati per le prestazioni in .NET 4.6.2 e versioni successive, che implementano la memorizzazione nella cache dei metadati di crittografia dei parametri.
 
-Per controllare il comportamento di Always Encrypted per le singole query, è necessario usare questo costruttore di  [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) e [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx). Di seguito sono riportate alcune linee guida utili:
+Per controllare il comportamento di Always Encrypted per le singole query, è necessario usare questo costruttore di [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) e [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx). Di seguito sono riportate alcune linee guida utili:
 - Se la maggior parte delle query che un'applicazione client invia alla connessione del database accede alle colonne crittografate:
     - Impostare la parola chiave della stringa di connessione di **Impostazione di crittografia di colonna** su *Abilitata*.
     - Impostare **SqlCommandColumnEncryptionSetting.Disabled** per le singole query che non accedono alle colonne crittografate. In questo modo verranno disabilitati sia la chiamata di sys.sp_describe_parameter_encryption chiamante che il tentativo di decrittografare tutti i valori nel set di risultati.
@@ -544,7 +544,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>Riferimento all'API di Always Encrypted
 
-**Namespace:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**Spazio dei nomi:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
 
 **Assembly:** System.Data (in System.Data.dll)
 

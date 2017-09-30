@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 284ecb40056837fac33f71bcadf0a886293db6f6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0cd72ac1a99d3a2ccf121b4b659229b2fc6117c0
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Informazioni sull'importazione ed esportazione bulk di dati (SQL Server)
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 |[utilità bcp](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilità della riga di comando (Bcp.exe) che esegue l'esportazione e l'importazione bulk dei dati e genera file di formato.|Sì|Sì|  
 |[BULK INSERT - istruzione](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che importa i dati direttamente da un file di dati in una tabella di database o in una vista non partizionata.|Sì|No|  
 |[INSERT ... Istruzione SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che utilizza il provider di set di righe con lettura bulk OPENROWSET per eseguire l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificando la funzione OPENROWSET(BULK…) per selezionare i dati in un'istruzione INSERT.|Sì|No| 
-|[Importazione/Esportazione guidata SQL Server](https://msdn.microsoft.com/library/ms141209.aspx)|La procedura guidata crea pacchetti semplici che importano ed esportano dati tra numerosi formati di dati comuni, inclusi database, fogli di calcolo e file di testo.|Sì|Sì|  
+|[Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|La procedura guidata crea pacchetti semplici che importano ed esportano dati tra numerosi formati di dati comuni, inclusi database, fogli di calcolo e file di testo.|Sì|Sì|  
   
 > [!IMPORTANT]
 > I file con valori delimitati da virgole (CSV) non sono supportati nelle operazioni di importazione bulk di SQL Server. In alcuni casi, tuttavia, è possibile usare un file CSV come file di dati per un'importazione bulk di dati in SQL Server. Si noti che il carattere di terminazione del campo di un file CSV non può essere una virgola. Per altre informazioni, vedere [Preparazione dei dati per l'importazione o l'esportazione bulk (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).

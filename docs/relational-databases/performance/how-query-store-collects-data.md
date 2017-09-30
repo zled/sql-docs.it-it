@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Come Archivio query raccoglie i dati
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|Archivio query divide il tempo in finestre temporali (intervalli) generate automaticamente e archivia le statistiche aggregate per tale intervallo per ogni piano eseguito. La dimensione dell'intervallo è controllata dall'opzione di configurazione Intervallo raccolta statistiche (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` usando [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Statistiche di runtime aggregate per i piani eseguiti. Tutte le metriche acquisite sono espresse nella forma di quattro funzioni statistiche: media, minimo, massimo e deviazione standard.|  
   
- Per ulteriori informazioni sulle viste di Archivio query, vedere la sezione **Viste, funzioni e procedure correlate** di [Monitoraggio delle prestazioni tramite Archivio query](https://msdn.microsoft.com/library/dn817826.aspx).  
+ Per ulteriori informazioni sulle viste di Archivio query, vedere la sezione **Viste, funzioni e procedure correlate** di [Monitoraggio delle prestazioni tramite Archivio query](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Elaborazione delle query  
  Archivio query interagisce con la pipeline di elaborazione delle query nei seguenti punti chiave:  

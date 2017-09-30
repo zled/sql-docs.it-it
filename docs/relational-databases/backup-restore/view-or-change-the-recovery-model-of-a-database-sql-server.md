@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Visualizzazione o modifica del modello di recupero di un database (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   Un *modello di recupero* è una proprietà del database che determina la modalità di registrazione delle transazioni, se è necessario e possibile eseguire il backup del log delle transazioni e quali tipi di operazioni di ripristino sono disponibili. Sono tre i modelli di recupero disponibili: con registrazione minima, con registrazione completa e con registrazione minima delle operazioni bulk. In genere, un database utilizza il modello di recupero con registrazione completa o con registrazione minima. In un database è possibile passare a un modello di recupero diverso in qualsiasi momento. Il database **modello** imposta il modello di recupero predefinito dei nuovi database.  
   
-  Per una spiegazione più dettagliata dei [modelli di recupero](https://msdn.microsoft.com/library/ms189275.aspx), vedere [SQL Server Recovery Models (Modelli di recupero di SQL Server)](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) a cura degli esperti di [MSSQLTips!](https://www.mssqltips.com/)
+  Per una spiegazione più dettagliata dei [modelli di recupero](recovery-models-sql-server.md), vedere [SQL Server Recovery Models (Modelli di recupero di SQL Server)](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) a cura degli esperti di [MSSQLTips!](https://www.mssqltips.com/)
   
   
 ##  <a name="BeforeYouBegin"></a> Operazioni preliminari  
   
 
--   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   **Prima** di passare dal [modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk](recovery-models-sql-server.md), [eseguire il backup del log delle transazioni](back-up-a-transaction-log-sql-server.md).  
   
 -   Il recupero temporizzato non è possibile con il modello di recupero con registrazione minima delle operazioni bulk. L'esecuzione di transazioni nel modello di recupero con registrazione minima delle operazioni bulk che richiedono il ripristino di un log delle transazioni potrebbe esporle alla perdita di dati. Per ottimizzare la recuperabilità in uno scenario di recupero di emergenza, passare al modello di recupero con registrazione minima delle operazioni bulk esclusivamente nelle condizioni seguenti:  
   
