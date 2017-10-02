@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Verifica dell'integrità dei dati tramite transazioni**. Per altre informazioni, vedere [Transazioni di Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Riavvio dei pacchetti dal punto di errore tramite checkpoint**. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Riavvio dei pacchetti dal punto di errore tramite checkpoint**. Per ulteriori informazioni, vedere [Riavvio dei pacchetti tramite checkpoint](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Intercettazione e gestione degli errori dei pacchetti tramite gestori di eventi  
  I gestori degli eventi consentono di rispondere ai molti eventi generati dal pacchetto e dai relativi oggetti.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite la registrazione  
  Abilitando la registrazione è possibile tenere traccia di ciò che avviene durante l'esecuzione dei pacchetti. I provider di log consentono di acquisire informazioni sugli eventi specificati da utilizzare per un'analisi successiva e di salvare tali informazioni in una tabella di database, in un file flat, in un file XML o in un altro formato di output supportato.  
   
--   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Registrazione di Integration Services (SSIS)](https://msdn.microsoft.com/library/ms140246.aspx).  
+-   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Registrazione di Integration Services (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
   
--   **Selezionare l'evento Diagnostic del pacchetto per risolvere i problemi relativi al provider.** Sono presenti messaggi di registrazione per il supporto della risoluzione dei problemi relativi all'interazione di un pacchetto con origini dati esterne. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](https://msdn.microsoft.com/library/cc879309.aspx).  
+-   **Selezionare l'evento Diagnostic del pacchetto per risolvere i problemi relativi al provider.** Sono presenti messaggi di registrazione per il supporto della risoluzione dei problemi relativi all'interazione di un pacchetto con origini dati esterne. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
   
 -   **Miglioramento dell'output di registrazione predefinito**. La registrazione comporta in genere l'accodamento di righe alla destinazione di registrazione ogni volta che viene eseguito un pacchetto. Sebbene ogni riga dell'output di registrazione identifichi il pacchetto in base al nome e all'identificatore univoco e identifichi inoltre l'esecuzione del pacchetto tramite un identificatore ExecutionID univoco, una grande quantità di output di registrazione in un unico elenco può essere difficile da analizzare.  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/03/2017
  Se viene generato un errore di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza descrizione, è possibile individuare la descrizione in [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md) cercando l'errore in base al numero corrispondente. Al momento, nell'elenco non sono incluse informazioni per la risoluzione dei problemi.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Debug del flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md)  
+ [Debug di un flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog relativo all' [aggiunta del nome della colonna di errore a un output degli errori](http://go.microsoft.com/fwlink/?LinkId=261546)nel sito dougbert.com.  
