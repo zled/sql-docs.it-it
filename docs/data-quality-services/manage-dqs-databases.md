@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Esistono alcune entità al di fuori dei database di DQS che devono essere presenti affinché i database di questo tipo funzionino come [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], in particolare i due account di accesso di SQL Server (##MS_dqs_db_owner_login## e ##MS_dqs_service_login##) e una stored procedure di inizializzazione (DQInitDQS_MAIN) nel database master.  
   
- Per informazioni dettagliate sul backup e il ripristino in SQL Server, vedere [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ Per informazioni dettagliate sul backup e il ripristino in SQL Server, vedere [Backup e ripristino di database SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>Impostare in modo predefinito l'aumento automatico delle dimensioni e il modello di recupero per i database di DQS  
  Per impedire una crescita smisurata dei database di DQS e dei log delle transazioni e un conseguente riempimento potenziale del disco rigido:  

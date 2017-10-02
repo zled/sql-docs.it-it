@@ -36,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 |Importare un dominio da un file di dati DQS in una Knowledge Base esistente|[Importare un dominio da un file DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
 |Esportare un'intera Knowledge Base in un file di dati DQS|[Esportare una Knowledge Base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
 |Importare un'intera Knowledge Base in un file di dati DQS|[Importare una Knowledge Base da un file DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
-|Importare i valori da un file di Excel in un dominio|[Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
+|Importare i valori da un file di Excel in un dominio|[Importare i valori da un file di Excel in un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Importare i domini da un file di Excel in una Knowledge Base|[Importare i domini da un file di Excel in Individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Importare le informazioni raccolte durante la pulizia in una Knowledge Base|[Importare i valori di un progetto di pulizia in un dominio](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
