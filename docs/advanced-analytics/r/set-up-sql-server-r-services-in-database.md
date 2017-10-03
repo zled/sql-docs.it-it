@@ -1,7 +1,7 @@
 ---
 title: Configurare SQL Server Machine Learning Services (In-Database) | Documenti Microsoft
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurare SQL Server Machine Learning Services (In-Database)
@@ -97,15 +97,15 @@ Per utilizzare l'apprendimento, è necessario installare SQL Server 2016 o versi
 
 6. Nel **pronto per l'installazione** pagina, verificare che gli elementi seguenti sono inclusi e quindi selezionano **installare**.
 
-   **SQL Server 2016**
-   - Servizi motore di database
-   - R Services (In-Database)
-
    **SQL Server 2017**
    - Servizi motore di database
    - Machine Learning Services (In-Database)
    - R Python e/o
-    
+
+   **SQL Server 2016**
+   - Servizi motore di database
+   - R Services (In-Database)
+
 7. Una volta completato l'installazione, riavviare il computer.
 
 ##  <a name="bkmk_enableFeature"></a>Passaggio 2: Abilitare i servizi di script esterni
@@ -189,12 +189,15 @@ Tuttavia, se è necessario eseguire gli script R da un client di analisi scienti
 
 1. In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso**e quindi scegliere **Nuovo account di accesso**.
 2. Nel **accesso - nuovo** nella finestra di dialogo **ricerca**.
-3. Selezionare il **tipi di oggetto** e **gruppi** caselle di controllo e deselezionare tutte le altre caselle di controllo. 
-4. In **immettere il nome di oggetto da selezionare**, tipo **SQLRUserGroup**, quindi selezionare **Controlla nomi**.  
-    Il nome del gruppo locale associata con il servizio di avvio dell'istanza deve restituire un risultato simile *instancename\SQLRUserGroup*. 
-5. Fare clic su **OK**.
-6. Per impostazione predefinita, l'account di accesso viene assegnato al ruolo **public** e dispone dell'autorizzazione per connettersi al motore di database.
-7. Fare clic su **OK**.
+3. Selezionare il **tipi di oggetto** e **gruppi** caselle di controllo e deselezionare tutte le altre caselle di controllo.
+4. Fare clic su **avanzate**, verificare che il percorso per la ricerca del computer corrente e quindi fare clic su **trova**.
+5. Scorrere l'elenco di account di gruppo nel server finché non si trova un a partire da `SQLRUserGroup`.
+    
+    + Il nome del gruppo a cui è associato al servizio di avvio per il _istanza predefinita_ è sempre solo **SQLRUserGroup**. Selezionare questo account solo per l'istanza predefinita.
+    + Se si utilizza un _istanza denominata_, il nome dell'istanza viene aggiunto al nome predefinito, `SQLRUserGroup`. Di conseguenza, se l'istanza è denominata "MLTEST", il nome di gruppo utente predefinito per questa istanza sarà **SQLRUserGroupMLTest**.
+5. Fare clic su **OK** per chiudere la finestra di dialogo Ricerca avanzata, verificare di aver selezionato l'account corretto per l'istanza. Ogni istanza può utilizzare solo il proprio servizio di avvio e il gruppo creato per tale servizio.
+6. Fare clic su **OK** per chiudere la **Seleziona utente o gruppo** la finestra di dialogo.
+7. Nel **accesso - nuovo** la finestra di dialogo, fare clic su **OK**. Per impostazione predefinita, l'account di accesso viene assegnato al ruolo **public** e dispone dell'autorizzazione per connettersi al motore di database.
 
 ### <a name="bkmk_AllowLogon"></a>Consentire agli utenti di eseguire gli script esterni
 

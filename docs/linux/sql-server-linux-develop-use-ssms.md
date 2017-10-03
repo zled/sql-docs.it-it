@@ -4,29 +4,29 @@ description: In questa esercitazione viene illustrato come utilizzare SQL Server
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 3c48596ed8bb4b4febc5982a3f37609f2ef4281f
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Utilizzare SQL Server Management Studio (SSMS) in Windows per la gestione di SQL Server in Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In questo argomento viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) per connettersi a SQL Server 2017 RC2 in Linux. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux. 
+In questo argomento viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) per connettersi a SQL Server 2017 in Linux. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
 Dopo avere stabilito la connessione, si esegue una semplice query Transact-SQL (T-SQL) per verificare la comunicazione con il database.
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>Installare la versione più recente di SQL Server Management Studio
 
-Quando si utilizza SQL Server, è consigliabile utilizzare sempre la versione più recente di SQL Server Management Studio (SSMS). La versione più recente di SQL Server Management Studio viene aggiornata continuamente, ottimizzazione e attualmente funziona con SQL Server Linux su 2017. Per scaricare e installare la versione più recente, vedere [scaricare SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Per rimanere aggiornati, la versione più recente di SSMS chiede di quando è disponibile una nuova versione disponibile per il download. 
+Quando si utilizza SQL Server, è consigliabile utilizzare sempre la versione più recente di SQL Server Management Studio (SSMS). La versione più recente di SQL Server Management Studio viene aggiornata continuamente, ottimizzazione e attualmente funziona con SQL Server Linux su 2017. Per scaricare e installare la versione più recente, vedere [scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per rimanere aggiornati, la versione più recente di SSMS chiede di quando è disponibile una nuova versione disponibile per il download. 
 
 ## <a name="connect-to-sql-server-on-linux"></a>Connettersi a SQL Server in Linux
 
@@ -59,9 +59,9 @@ La procedura seguente viene illustrato come connettersi a SQL Server 2017 in Lin
      
 ## <a name="run-sample-queries"></a>Eseguire query di esempio
 
-Dopo la connessione al server, è possibile connettersi a un database ed eseguire una query di esempio. Se si ha familiarità con la scrittura di query, vedere [la scrittura di istruzioni Transact-SQL](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements).
+Dopo la connessione al server, è possibile connettersi a un database ed eseguire una query di esempio. Se si ha familiarità con la scrittura di query, vedere [la scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-1. Identificare un database da utilizzare per eseguire una query. Potrebbe trattarsi di un nuovo database creato nel [esercitazione Transact-SQL](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements). Oppure potrebbe trattarsi di **AdventureWorks** database di esempio che si [scaricato e ripristinato](sql-server-linux-migrate-restore-database.md).
+1. Identificare un database da utilizzare per eseguire una query. Potrebbe trattarsi di un nuovo database creato nel [esercitazione Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). Oppure potrebbe trattarsi di **AdventureWorks** database di esempio che si [scaricato e ripristinato](sql-server-linux-migrate-restore-database.md).
 2. In **Esplora oggetti**, passare al database di destinazione nel server.
 2. Il database e quindi scegliere **nuova Query**:
 
@@ -81,7 +81,7 @@ Dopo la connessione al server, è possibile connettersi a un database ed eseguir
 
 Oltre alle query, è possibile utilizzare le istruzioni T-SQL per creare e gestire i database.
 
-Se si ha familiarità con T-SQL, vedere [esercitazione: scrittura di istruzioni Transact-SQL](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements) e [riferimento a Transact-SQL (motore di Database)](https://msdn.microsoft.com/library/bb510741.aspx).
+Se si ha familiarità con T-SQL, vedere [esercitazione: scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) e [riferimento a Transact-SQL (motore di Database)](https://msdn.microsoft.com/library/bb510741.aspx).
 
 Per ulteriori informazioni sull'utilizzo di SQL Server Management Studio, vedere [utilizzare SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).
 

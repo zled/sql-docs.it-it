@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: reporting-services
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 690b622224a31f4327b6dc199b1687f1726937c2
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b4a8b5b8db36f4ae7418934311eb6706de0ea43a
 ms.contentlocale: it-it
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Nuovi e aggiornati: Reporting Services per SQL Server
@@ -34,7 +34,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 
 
-- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-07-18** &nbsp; - a - &nbsp; **2017-09-11**
+- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-09-11** &nbsp; - a - &nbsp; **2017-09-27**
 - *Area di interesse:* &nbsp; **Reporting Services per SQL Server**.
 
 
@@ -44,10 +44,11 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 ## <a name="new-articles-created-recently"></a>Nuovi articoli creati di recente
 
-I collegamenti seguenti portano a nuovi articoli che sono stati aggiunti di recente.
+I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
-***Nessun nuovo articolo da visualizzare.***
+1. [Aggiungere web part Visualizzatore Report a una pagina di SharePoint](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
+2. [Distribuire la web part di Visualizzatore Report in un sito di SharePoint](report-server-sharepoint/deploy-report-viewer-web-part.md)
 
 
 
@@ -55,7 +56,7 @@ I collegamenti seguenti portano a nuovi articoli che sono stati aggiunti di rece
 
 ## <a name="updated-articles-with-excerpts"></a>Articoli aggiornati con estratti
 
-In questa sezione vengono estratti gli aggiornamenti raccolti dagli articoli di cui si sono verificati recentemente un aggiornamento di grandi dimensioni.
+In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
 Gli estratti visualizzati qui sono separati dal relativo contesto semantico. Inoltre è possibile che un estratto sia talvolta separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti devono essere usati solo come indicazioni generali. Gli estratti consentono solo di comprendere se sia utile o meno consultare l'articolo completo.
 
@@ -69,47 +70,17 @@ Per queste e altre ragioni, non copiare codice da questi estratti e non prendere
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
+### <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
 
-Questo elenco compact vengono forniti collegamenti a tutti gli articoli aggiornati che sono elencati nella sezione estratti.
-
-1. [Proprietà server (pagina avanzate) - Reporting Services](#TitleNum_1)
+Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
 
 
 
-&nbsp;
 
 &nbsp;
 
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-server-properties-advanced-page---reporting-servicestoolsserver-properties-advanced-page-reporting-servicesmd"></a>1. &nbsp;[Proprietà server (pagina avanzate) - Reporting Services](tools/server-properties-advanced-page-reporting-services.md)
-
-*Ultimo aggiornamento: 2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 122.  ms.author= "asaxton".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 92858a7e7239197af4ac2745ffc857d8c04f55cd e86bd4767f668b4ce80dc70056181d001f8e1b89  (PR=2953  ,  Filename=server-properties-advanced-page-reporting-services.md  ,  Dirpath=docs\reporting-services\tools\  ,  MergeCommitSha40=c003d58dd887ce1eddc142fa62f8050b73c0c935) -->
-
-
-
-**AccessControlAllowCredentials** indica se la risposta alla richiesta del client può essere esposta quando il flag 'credenziali' è impostato su true. Il valore predefinito è **false**.
-
-**AccessControlAllowHeaders** un elenco separati da virgole delle intestazioni che il server consentirà quando un client effettua una richiesta. Questa proprietà può essere una stringa vuota, specifica * consentirà tutte le intestazioni.
-
-**AccessControlAllowMethods** un elenco separati da virgole dei metodi HTTP che il server consentirà quando un client effettua una richiesta. I valori predefiniti sono (GET, PUT, POST, PATCH, DELETE), specificando * consentirà a tutti i metodi.
-
-**AccessControlAllowOrigin** un elenco separati da virgole di origini che il server consentirà quando un client effettua una richiesta. Il valore predefinito è vuoto che impedisce tutte le richieste, specificando * consentirà tutte le origini quando le credenziali non sono impostate; Se vengono specificate credenziali, è necessario specificare un elenco esplicito di origine.
-
-**AccessControlExposeHeaders** un elenco separati da virgole delle intestazioni che il server dovrà esporre ai client. Il valore predefinito è vuoto.
-
-**AccessControlMaxAge** specifica il numero di secondi che possono essere memorizzati nella cache i risultati della richiesta preliminare. Il valore predefinito è 600 (10 minuti).
-
-
+***Nessun articolo aggiornato di recente in quest'area.***
 
 
 
@@ -123,35 +94,35 @@ Questo elenco compact vengono forniti collegamenti a tutti gli articoli aggiorna
     Then run Run-533-*.BAT
 -->
 
-Questa sezione sono elencati gli articoli molto simili per gli articoli aggiornati di recente in altre aree di interesse, entro l'archivio pubblico di GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno del repository GitHub pubblico di Microsoft: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (3 + 12): **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (5 + 0): **Connect to SQL** documenti](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (5 + 1): **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (19 + 82): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
-- [Nuovo + aggiornato (1 + 8): **Linux per SQL** documenti](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (12 + 1): **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (0 + 1): **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
-- [Nuovo + aggiornato (7 + 1): **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
-- [Nuovo + aggiornato (1 + 1): **SQL Server Data Tools (SSDT)** documenti](../ssdt/new-updated-ssdt.md)
-- [Nuovo + aggiornato (0 + 2): **SQL Server Migration Assistant (SSMA)** documenti](../ssma/new-updated-ssma.md)
-- [Nuovo + aggiornato (1 + 4): **SQL Server Management Studio (SSMS)** documenti](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornati (4 + 1): **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
-- [Nuovo + aggiornato (0 + 1): **Tools per SQL** documenti](../tools/new-updated-tools.md)
+- [Nuovo + aggiornato (0 + 1): **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (0 + 1): **Analysis Services per SQL** documenti](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornati (4 + 1): **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (17 + 0): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (3 + 0): **Linux per SQL** documenti](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (1 + 1): **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (2 + 0): **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (0 + 1): **SQL Server Management Studio (SSMS)** documenti](../ssms/new-updated-ssms.md)
+- [Nuovo + aggiornato (0 + 1): **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
 
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
-- [Nuovo + aggiornato (0 + 0): **Analysis Services per SQL** documenti](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (0 + 0): **Connect to SQL** documenti](../connect/new-updated-connect.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
-- [Nuovo + aggiornato (0 + 0): **Master Data Services (MDS) per SQL** documenti](../master-data-services/new-updated-master-data-services.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Master Data Services (MDS) per SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuovo + aggiornato (0+0): **Multidimensional Expressions (MDX) for SQL(Espressioni MDX per SQL)** Docs](../mdx/new-updated-mdx.md)
 - [Nuovo + aggiornato (0+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL)** Docs](../odbc/new-updated-odbc.md)
 - [Nuovo + aggiornato (0+0): **PowerShell for SQL (PowerShell per SQL)** Docs](../powershell/new-updated-powershell.md)
 - [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
+- [Nuovo + aggiornato (0 + 0): **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (0+0): documentazione di **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
+- [Nuovo + aggiornato (0 + 0): **Tools per SQL** documenti](../tools/new-updated-tools.md)
 - [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
 
 

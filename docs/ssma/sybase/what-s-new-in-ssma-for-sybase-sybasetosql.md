@@ -1,7 +1,7 @@
 ---
 title: "Novità &#39; s di SSMA per SAP ASE (SybaseToSQL) | Documenti Microsoft"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: ceb656fe1a2a210f26ce9f548a6c5ab7c68a29f7
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
 ms.contentlocale: it-it
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>Novità &#39; s di SSMA per SAP ASE (SybaseToSQL)
 Questo argomento elenca SSMA per SAP ASE (in precedenza SSMA per Sybase) le modifiche in ogni versione. 
+
+## <a name="ssma-v76"></a>SSMA v7.6
+La versione v7.6 di SSMA per SAP ASE contiene le seguenti modifiche:
+- SSMA per SAP ASE è stata migliorata con le correzioni di destinazione che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere utilizzato per le migrazioni di produzione.
+- SSMA per SAP ASE è stata aggiornata per fornire supporto per la conversione delle funzioni di Sybase.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 e versioni successive, .net 4.5.2 è un prerequisito di installazione e la versione a 32 bit dello strumento è stata interrotta.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 La versione v7.5 di SSMA per SAP ASE contiene le seguenti modifiche:

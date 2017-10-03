@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -80,7 +80,7 @@ PER I DATABASE SECONDARI
  
 Specifica le impostazioni per i database secondari (tutti i database secondari devono avere valori identici).  
   
-MAXDOP ** = ** {\<valore > | PRIMARIO}  
+MAXDOP  **=**  {\<valore > | PRIMARIO}  
 **\<valore >**  
   
 Specifica il valore predefinito MAXDOP impostazione che deve essere utilizzato per le istruzioni. 0 è il valore predefinito e indica che la configurazione del server verrà utilizzata. Esegue l'override di MAXDOP nell'ambito del database (a meno che non è impostata su 0) di **massimo grado di parallelismo** impostato a livello di server da sp_configure. Hint per la query può comunque eseguire l'override del database con ambito MAXDOP per ottimizzare le query specifiche che è necessario modificare questa impostazione. Tutte queste impostazioni sono limitate di MAXDOP impostate per il gruppo di carico di lavoro.   
@@ -96,7 +96,7 @@ PRIMARY
   
 Può essere impostato solo per i database secondari, mentre il database nel sistema primario e indica che la configurazione sarà quello impostato per il database primario. Se la configurazione per le principali modifiche, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostare i database secondari valore in modo esplicito. **PRIMARIO** è l'impostazione predefinita per i database secondari.  
   
-LEGACY_CARDINALITY_ESTIMATION ** = ** {ON | **OFF** | PRIMARIO}  
+LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRIMARIO}  
 
 Consente di impostare il modello di stima della cardinalità di query optimizer di SQL Server 2012 e versione precedente, indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**, che imposta il modello di stima della cardinalità di query optimizer in base al livello di compatibilità del database. L'impostazione di **ON** equivale ad abilitare [Flag di traccia 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
@@ -107,7 +107,7 @@ PRIMARY
   
 Questo valore è valido solo per i database secondari, mentre il database nel server primario e specifica che l'impostazione del modello query optimizer cardinalità stima in tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione del server primario per il modello di stima della cardinalità di query optimizer viene modificata, è possibile che il valore nel database secondario verrà modificato di conseguenza. **PRIMARIO** è l'impostazione predefinita per i database secondari.  
   
-PARAMETER_SNIFFING ** = ** { **ON** | OFF | PRIMARIO}  
+PARAMETER_SNIFFING  **=**  { **ON** | OFF | PRIMARIO}  
 
 Abilita o disabilita [lo sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Il valore predefinito è ON. Equivale a [Flag di traccia 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -118,7 +118,7 @@ PRIMARY
   
 Questo valore è valido solo per i database secondari, mentre il database nel server primario e specifica che il valore per questa impostazione su tutti i database secondari sarà il valore impostato per il database primario. Se la configurazione del server primario per l'utilizzo di [lo sniffing dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) modifiche, il valore nel database secondario verrà modificato di conseguenza senza la necessità di impostare i database secondari valore in modo esplicito. Questo è l'impostazione predefinita per i database secondari.  
   
-QUERY_OPTIMIZER_HOTFIXES ** = ** {ON | **OFF** | PRIMARIO}  
+QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRIMARIO}  
 
 Abilita o disabilita gli hotfix di ottimizzazione di query indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**. Ciò equivale ad abilitare [Flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
@@ -282,7 +282,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Indicazioni e linee guida per l'opzione di configurazione "max degree of parallelism" in SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>Risorse LEGACY_CARDINALITY_ESTIMATION    
-* [Stima della cardinalità (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [Stima della cardinalità (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)
 
 ### <a name="parametersniffing-resources"></a>Risorse PARAMETER_SNIFFING    

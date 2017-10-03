@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12ac0e3b42b647d90af01a96b8e9d2e8571447d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de48d6e15cdb165e865d13a00b6f956816e46e39
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/21/2017
 > Questo articolo descrive solo la **prima pagina** della procedura guidata. Se si sta cercando un altro elemento, vedere [correlati e i contenuti](#related).
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prerequisito: È la procedura guidata installata nel computer?
-Se si desidera eseguire la procedura guidata, ma non è necessario [! INCLUDERE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Se si desidera eseguire la procedura guidata, ma non è necessario [! INCLUDERE[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="screen-shot-of-the-welcome-page"></a>Screenshot della pagina iniziale  
 Lo screenshot seguente illustra la pagina **Importazione/Esportazione guidata SQL Server** della procedura guidata.  
@@ -62,7 +62,7 @@ Lo screenshot seguente illustra la pagina **Importazione/Esportazione guidata SQ
 
 -   **Avviare la procedura guidata.** Se si è pronti per eseguire la procedura guidata e servono solo le istruzioni per iniziare, vedere [Avviare l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **Ottenere la procedura guidata.** Se si desidera eseguire la procedura guidata, ma non è necessario [! INCLUDERE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+-  **Ottenere la procedura guidata.**  Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 
 

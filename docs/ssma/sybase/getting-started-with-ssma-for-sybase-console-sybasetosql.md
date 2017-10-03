@@ -1,7 +1,7 @@
 ---
 title: Introduzione a SSMA per Sybase Console (SybaseToSQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -22,47 +22,47 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 239b7a8f4dbc3069e67d680b319bf426a0f917e6
+ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
+ms.openlocfilehash: bf54eb7974cfdf42314959a4f8907750863af079
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/03/2017
 
 ---
-# <a name="getting-started-with-ssma-for-sybase-console-sybasetosql"></a>Introduzione a SSMA per Sybase Console (SybaseToSQL)
-In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di Sybase. Elencati, anche nel presente documento, vengono usate le convenzioni in una finestra di output della Console di SSMA tipico.  
+# <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introduzione a SSMA per Sybase Console (SybaseToSQL)
+In questa sezione viene descritta la procedura per l'avvio e introduzione di SSMA per l'applicazione console di Sybase. Inoltre elencati nel presente documento vengono usate le convenzioni in una finestra di output della Console di SSMA tipico.  
   
-## <a name="launching-ssma-console"></a>Avviare la Console di SSMA  
+## <a name="launching-the-ssma-console"></a>Avviare la Console di SSMA  
 Utilizzare la procedura seguente per avviare l'applicazione console SSMA:  
   
-1.  Andare a Start e selezionare tutti i programmi.  
+1.  Andare a Start e quindi scegliere tutti i programmi.  
   
 2.  Fare clic su di **SQL Server Migration Assistant per Sybase Prompt dei comandi** scelta rapida.  
   
     Viene visualizzato il menu di utilizzo della Console di SSMA e `(/? Help)`, che consentono di iniziare a utilizzare l'applicazione console.  
   
-## <a name="procedure-for-using-the-ssma-console"></a>Procedura per utilizzare la Console SSMA  
+## <a name="using-the-ssma-console"></a>Utilizzando la Console di SSMA  
 Dopo la console viene avviata correttamente nel sistema Windows, è possibile utilizzare la procedura seguente per lavorare su di esso:  
   
-1.  Configurare la Console di SSMA tramite i file di script. Per ulteriori informazioni su questa sezione, vedere [creazione di file di Script &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-script-files-sybasetosql.md) .  
+1.  Configurare la Console di SSMA tramite i file di script. Per ulteriori informazioni su questa sezione, vedere [creazione di file di Script &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
 2.  [Creazione di valore della variabile file &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
 3.  [Creare i file di connessione del Server &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-4.  [L'esecuzione la Console SSMA &#40; SybaseToSQL &#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md) in base alle esigenze del progetto  
+4.  [L'esecuzione la Console SSMA &#40; SybaseToSQL &#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md) in base alle esigenze del progetto. 
   
 Altre funzionalità:  
   
-1.  [Specificare una password](http://msdn.microsoft.com/en-us/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) e l'esportazione / importazione in altri computer della finestra  
+1.  [Specificare una password](http://msdn.microsoft.com/en-us/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) e l'esportazione/importazione, altri computer della finestra.  
   
-2.  [Generare report](http://msdn.microsoft.com/en-us/19278f6a-6d58-4867-9d71-c6228040466e) per visualizzare il codice xml dettagliate l'output di report per la migrazione di dati e /conversion di valutazione. I report di errore dettagliato possono essere generati anche per i comandi di aggiornamento e la sincronizzazione.  
+2.  [Generare report](http://msdn.microsoft.com/en-us/19278f6a-6d58-4867-9d71-c6228040466e) per visualizzare il codice xml dettagliate l'output di report per la migrazione di dati e di conversione o di valutazione. È anche possibile generare report di errore dettagliati per i comandi di aggiornamento e la sincronizzazione.  
   
-## <a name="ssma-console-output-conventions"></a>Convenzioni di Output di Console SSMA  
-Durante l'esecuzione di comandi script SSMA e le opzioni, il programma di console consente di visualizzare i risultati e messaggi (le informazioni, errore e così via) per l'utente nella console o se necessario, reindirizza a un file di output xml. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo di colore bianco indica i comandi di file di script. quello di colore verde rappresenta un prompt dei comandi per l'input dell'utente e così via.  
+## <a name="ssma-console-output-conventions"></a>Convenzioni di output di Console di SSMA  
+Durante l'esecuzione di comandi script SSMA e le opzioni, il programma di console consente di visualizzare i risultati e messaggi (le informazioni, errore e così via) per l'utente nella console o, se necessario, reindirizza a un file di output xml. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo di colore bianco indica i comandi di file di script. quello di colore verde rappresenta un prompt dei comandi per l'input dell'utente e così via.  
   
 ![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
-Colore interpretazione dell'output di console nella tabella seguente:  
+Interpretazione di colore dell'output di console viene visualizzato nella tabella seguente:  
   
 |Colore|Description|  
 |---------|---------------|  
@@ -71,9 +71,7 @@ Colore interpretazione dell'output di console nella tabella seguente:
 |bianco|Comandi nel file di script, il tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
-|azzurro|Inizio, fine e il risultato di un'operazione|  
+|azzurro|Inizio, fine e risultato di un'operazione|  
   
 ## <a name="see-also"></a>Vedere anche  
-[L'installazione di SSMA per Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
-  
-
+[L'installazione di SSMA per SAP ASE &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

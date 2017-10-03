@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modificare l'altezza di riga o la larghezza di colonna (Generatore report e SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 09/21/2017
 3.  Fare clic per selezionare il bordo della colonna e spostarlo verso sinistra o verso destra per regolare la larghezza della colonna.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Area dati Tablix (Generatore Report e SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
- [Celle dell'area dati Tablix, righe e colonne (Generatore Report) e SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
+ [Area dati Tablix (Generatore Report e SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Celle dell'area dati Tablix, righe e colonne (Generatore Report) e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tabelle (Generatore Report e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrici (Generatore Report e SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
- [Elenchi (Generatore Report e SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
+ [Matrici (Generatore Report e SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [Elenchi (Generatore Report e SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi (Generatore Report e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

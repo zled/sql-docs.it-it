@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 02cf781a1035326ad5073f6a6d3219e8a7d9c070
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi SLES per SQL Server
@@ -23,9 +23,6 @@ ms.lasthandoff: 08/02/2017
 Questa guida fornisce istruzioni su come creare un cluster di dischi condivisi due nodi per SQL Server su SUSE Linux Enterprise Server (SLES). Il livello di clustering si basa su SUSE [estensione a disponibilità elevata (Georgiano)](https://www.suse.com/products/highavailability) compilato in cima [Pacemaker](http://clusterlabs.org/). 
 
 Per ulteriori informazioni su configurazione cluster, le opzioni di agente di risorse, gestione, procedure consigliate e indicazioni, vedere [SUSE Linux Enterprise ad alta disponibilità estensione 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
-
-> [!NOTE]
-> A questo punto, integrazione di SQL Server con Pacemaker in Linux non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato come istanza autonoma da Pacemaker. Inoltre, il nome di rete virtuale è specifico di WSFC, è disponibile un equivalente dello stesso in Pacemaker. È previsto che @@servername e Sys. Servers per restituire il nome del nodo, mentre lo Sys.dm os_cluster_nodes DMV di cluster e Sys.dm os_cluster_properties non sarà alcun record. Per utilizzare una stringa di connessione che punta al nome di un server di stringa e non usa l'indirizzo IP, sarà necessario registrare in un server DNS l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come illustrato di seguito) con il nome del server selezionato.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
@@ -88,7 +88,7 @@ ms.lasthandoff: 09/21/2017
  Per un server di report in modalità nativa l'estensione per il recapito della posta elettronica viene configurata con Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa e la modifica dei file di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per un server di report in modalità SharePoint, l'estensione per il recapito della posta elettronica è configurata nella pagine di gestione di SharePoint e negli script di PowerShell.  
   
  
- Per informazioni su come configurare un server di report in modalità nativa, vedere [impostazioni di posta elettronica - modalità nativa di Reporting Services (Gestione configurazione)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
+ Per informazioni su come configurare un server di report in modalità nativa, vedere [impostazioni di posta elettronica - modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  Per informazioni su come configurare un server di report in modalità SharePoint, vedere quanto segue:  

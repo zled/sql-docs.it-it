@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 54d2ef0f186916fa79f7af606b33e42e8f241cb7
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="legacy-package-deployment-ssis"></a>distribuzione del pacchetto legacy (SSIS)
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/21/2017
 ## <a name="package-configurations"></a>SSIS
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dispone di configurazioni di pacchetto che è possibile usare per aggiornare i valori delle proprietà in fase di esecuzione.  
   
-> **NOTA:** le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Il modello di distribuzione del progetto consente di distribuire [! INCLUDERE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **NOTA:** le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).   
   
  Una configurazione è una coppia proprietà/valore che viene aggiunta a un pacchetto completo. In genere, si crea un pacchetto, si impostano le proprietà per gli oggetti di pacchetto durante lo sviluppo del pacchetto e quindi si aggiunge la configurazione al pacchetto. Quando il pacchetto viene eseguito, ottiene i nuovi valori della proprietà dalla configurazione. Utilizzando ad esempio una configurazione, è possibile modificare la stringa di connessione di una gestione connessione o aggiornare il valore di una variabile.  
   
@@ -181,7 +181,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **NOTE**
 >Per accedere a **Libreria configurazioni pacchetto** è anche possibile fare clic sul pulsante con i puntini di sospensione accanto alla proprietà **Configuration** . Quest'ultima viene visualizzata nella finestra delle proprietà del pacchetto.  
   
->Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Il modello di distribuzione del progetto consente di distribuire [! INCLUDERE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+>Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).    
   
 >Nella finestra di dialogo **Libreria configurazioni pacchetto** è possibile abilitare l'uso delle configurazione da parte dei pacchetti, aggiungere ed eliminare configurazioni, nonché impostare l'ordine preferito di caricamento delle configurazioni. 
  
@@ -256,7 +256,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>Libreria configurazioni pacchetto
   Usare la finestra di dialogo **Libreria configurazioni pacchetto** per abilitare le configurazioni dei pacchetti, visualizzarne un elenco per il pacchetto corrente e specificare l'ordine desiderato in base a cui devono essere caricate.  
   
-> **NOTA:** le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Il modello di distribuzione del progetto consente di distribuire [! INCLUDERE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **NOTA:** le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).    
   
  Se più configurazioni aggiornano la stessa proprietà, i valori delle configurazioni che si trovano nella parte inferiore dell'elenco sostituiscono quelli delle configurazioni nelle posizioni superiori nell'elenco. L'ultimo valore caricato nella proprietà è quello utilizzato all'esecuzione del pacchetto. Se il pacchetto utilizza una combinazione di configurazione diretta, ad esempio un file di configurazione XML, e indiretta, ad esempio una variabile di ambiente, la configurazione indiretta che punta al percorso della configurazione diretta deve trovarsi in una posizione superiore nell'elenco.  
   
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>Riferimento all'interfaccia utente della Configurazione guidata pacchetti
   Usare la **Configurazione guidata pacchetto** per creare configurazioni tramite cui è possibile aggiornare le proprietà di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i relativi oggetti in fase di esecuzione. Questa procedura guidata viene eseguita quando si aggiunge una nuova configurazione o se ne modifica una esistente nella finestra di dialogo **Libreria configurazioni pacchetto** . Per aprire la finestra di dialogo **Libreria configurazioni pacchetto** , selezionare **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../integration-services/packages/create-package-configurations.md).  
   
-> **NOTA:** le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Il modello di distribuzione del progetto consente di distribuire [! INCLUDERE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **NOTA:** le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  Nelle sezioni seguenti vengono descritte le pagine della procedura guidata.  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Fare clic con il pulsante destro del mouse sul progetto e quindi scegliere **Proprietà**.  
   
-3.  Nel ** \<nome progetto > pagine delle proprietà** la finestra di dialogo, fare clic su **utilità di distribuzione**.  
+3.  Nel  **\<nome progetto > pagine delle proprietà** la finestra di dialogo, fare clic su **utilità di distribuzione**.  
   
 4.  Per aggiornare le configurazioni di pacchetto in fase di distribuzione del pacchetto, impostare **AllowConfigurationChanges** su **True**.  
   

@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>Scheda Parametri  
  I parametri di Integration Services (SSIS) consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare parametri di progetto al livello del progetto e parametri di pacchetto al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire. Questa scheda consente di gestire i parametri del pacchetto.  
   
- Per altre informazioni sui parametri, vedere [Parametri di Integration Services (SSIS)](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).  
+ Per altre informazioni sui parametri, vedere [Parametri di Integration Services (SSIS)](integration-services-ssis-package-and-project-parameters.md).  
   
 > **IMPORTANTE**  I parametri sono disponibili solo per i progetti sviluppati per il modello di distribuzione del progetto. Pertanto, la scheda Parametri sarà disponibile solo per i pacchetti che fanno parte di un progetto configurato per l'utilizzo del modello di distribuzione del progetto.  
   

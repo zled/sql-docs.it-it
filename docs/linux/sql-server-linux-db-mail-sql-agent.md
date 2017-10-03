@@ -4,16 +4,16 @@ description: In questo argomento viene descritto come utilizzare posta elettroni
 author: meet-bhagdev
 ms.author: meetb
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 838a7d492f9826d966da205fc4727eae48ff6e42
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux
@@ -23,11 +23,12 @@ ms.lasthandoff: 08/02/2017
 La procedura seguente mostra come impostare posta elettronica database e usarlo con SQL Server Agent (**mssql-server agent**) in Linux. 
 
 > [!NOTE]
-> Per utilizzare posta elettronica database con SQL Server in Linux, è necessario utilizzare SQL Server 2017 RC2 o versioni successive.
+> Per utilizzare posta elettronica database con SQL Server in Linux, è necessario utilizzare SQL Server 2017 RC1 o versioni successive.
 
 ## <a name="prerequisites"></a>Prerequisiti
--   SQL Server 2017 RC2 e versioni successive
--   SQL Server Agent v14.0.800.90-2 e versioni successive (se si prevede di utilizzare la posta elettronica per gli avvisi)
+
+- SQL Server 2017 RC1 e versioni successive
+- SQL Server Agent v14.0.800.90-2 e versioni successive (se si prevede di utilizzare la posta elettronica per gli avvisi)
 
 ## <a name="1-enable-db-mail"></a>1. Abilitare posta elettronica database
 

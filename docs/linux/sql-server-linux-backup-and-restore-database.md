@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database di SQL Server in Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-È possibile eseguire i backup dei database SQL Server 2017 RC2 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile utilizzare `sqlcmd` per connettersi a SQL Server ed eseguire il backup. Da Windows, è possibile connettersi a SQL Server in Linux ed eseguire i backup con l'interfaccia utente. La funzionalità di backup è lo stesso tra le piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
+È possibile eseguire i backup dei database SQL Server 2017 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile utilizzare `sqlcmd` per connettersi a SQL Server ed eseguire il backup. Da Windows, è possibile connettersi a SQL Server in Linux ed eseguire i backup con l'interfaccia utente. La funzionalità di backup è lo stesso tra le piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## <a name="backup-with-sqlcmd"></a>Backup con sqlcmd
 
@@ -75,7 +75,7 @@ sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/m
 
 I passaggi seguenti eseguendo un backup con SQL Server Management Studio. 
 
-1. Avviare SQL Server Management Studio e connettersi al server in SQL Server 2017 RC2 in Linux.
+1. Avviare SQL Server Management Studio e connettersi al server in SQL Server 2017 in Linux.
 
 1. In Esplora oggetti fare clic sul database, fare clic su **attività**, quindi fare clic su **eseguire il backup...** .
 

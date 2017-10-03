@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 105284d935888db46be8081bfca0c181eb920636
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 2a3ad57f9cd898d4c059df725b380be28622035e
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
@@ -43,7 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 OPENQUERY ( linked_server ,'query' )  
 ```  
   
@@ -59,7 +58,7 @@ OPENQUERY ( linked_server ,'query' )
   
  OPENQUERY non può essere utilizzata per eseguire stored procedure estese in un server collegato. È tuttavia possibile eseguire una stored procedure estesa in un server collegato utilizzando un nome in quattro parti, Esempio:  
   
-```  
+```t-sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
@@ -73,7 +72,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. Esecuzione di una query pass-through UPDATE  
  Nell'esempio seguente viene eseguita una query pass-through `UPDATE` sul server collegato creato nell'esempio A.  
   
-```  
+```t-sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +80,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. Esecuzione di una query pass-through INSERT  
  Nell'esempio seguente viene eseguita una query pass-through `INSERT` sul server collegato creato nell'esempio A.  
   
-```  
+```t-sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,10 +88,17 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. Esecuzione di una query pass-through DELETE  
  Nell'esempio seguente viene eseguita una query pass-through `DELETE` per eliminare la riga inserita nell'esempio C.  
   
-```  
+```t-sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
+### <a name="d-executing-a-select-pass-through-query"></a>D. Esecuzione di una query pass-through SELECT  
+ L'esempio seguente usa pass-through `SELECT` query per selezionare la riga inserita nell'esempio C.  
+  
+```t-sql  
+SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
+```  
+    
 ## <a name="see-also"></a>Vedere anche  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
@@ -107,3 +113,4 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
  [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
+

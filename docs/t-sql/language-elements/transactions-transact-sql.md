@@ -1,7 +1,7 @@
 ---
 title: Transazioni (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8660d0ac8d6205a94fdab24f41e41bac40a8671e
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: c09104746dff6c34d94192217b8f2635cb0adc67
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="transactions-transact-sql"></a>Transazioni (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Una transazione corrisponde a una singola unità di lavoro. Se la transazione viene eseguita correttamente, viene eseguito il commit di tutte le modifiche dei dati apportate durante la transazione e tali modifiche diventano parte permanente del database. Se si verificano errori durante l'esecuzione della transazione ed è necessario annullarla o eseguirne il rollback, verranno cancellate tutte le modifiche dei dati.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le modalità per le transazioni seguenti.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]funziona in modalità di transazione seguenti:  
   
  Transazioni con autocommit  
  Ogni istruzione corrisponde a una transazione.  
@@ -49,19 +49,23 @@ ms.lasthandoff: 09/01/2017
   
  Transazioni definite a livello di ambito di batch  
  Applicabile solo a MARS (Multiple Active Result Set). Una transazione definita a livello di ambito di batch è una transazione [!INCLUDE[tsql](../../includes/tsql-md.md)] esplicita o implicita che inizia in una sessione MARS. Se per una transazione definita a livello di ambito di batch non è stato eseguito il commit o il rollback quando il batch è completato, il rollback viene eseguito automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+> [!NOTE] 
+> Per considerazioni speciali relative ai prodotti di Data Warehouse, vedere [transazioni (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+
 ## <a name="in-this-section"></a>Argomenti della sezione  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le seguenti istruzioni Transaction.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce le seguenti istruzioni transaction:  
   
 |||  
 |-|-|  
-|[INIZIO DELLA TRANSAZIONE DISTRIBUITA](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK DELLA TRANSAZIONE](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
-|[INIZIO DELLA TRANSAZIONE](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
-|[ESEGUIRE IL COMMIT DELLE TRANSAZIONI](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SALVATAGGIO DELLE TRANSAZIONI](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
-|[ESEGUIRE IL COMMIT DI LAVORO](../../t-sql/language-elements/commit-work-transact-sql.md)||  
+|[BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
+|[BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
+|[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
+|[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
  [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
+

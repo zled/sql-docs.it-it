@@ -2,7 +2,7 @@
 title: "Novità &#39; s New in Integration Services in SQL Server 2016 | Documenti Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/16/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,18 +19,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità &#39; s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- In questo argomento vengono descritte le funzionalità che sono stati aggiunti o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
-## <a name="improvements-grouped-by-category"></a>Miglioramenti raggruppati per categoria  
+In questo argomento vengono descritte le funzionalità che sono stati aggiunti o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Include inoltre funzionalità aggiunte o aggiornate nel [Azure Feature Pack for Integration Services &#40; SSIS &#41; ](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante l'intervallo di tempo di SQL Server 2016.  
+
+## <a name="new-for-ssis-in-azure-data-factory"></a>Novità di SSIS nella Data Factory di Azure
+
+Con l'anteprima pubblica di Azure Data Factory versione 2 nel mese di settembre 2017, è ora possibile eseguire le operazioni seguenti:
+-   Distribuire i pacchetti per il database del catalogo SSIS (SSISDB) nel Database SQL Azure.
+-   Eseguire i pacchetti distribuiti in Azure nel Runtime di integrazione di Azure SSIS, un componente di Data Factory di Azure versione 2.
+
+Per altre informazioni, vedere [accuratezza MAIUSC SQL Server Integration Services carichi di lavoro e nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Queste nuove funzionalità richiedono SQL Server Data Tools (SSDT) 17.2 per o versione successiva, ma non richiedono 2017 di SQL Server o SQL Server 2016. Quando si distribuiscono pacchetti in Azure, la distribuzione guidata pacchetto Aggiorna sempre i pacchetti per il formato più recente del pacchetto.
+
+## <a name="2016-improvements-by-category"></a>miglioramenti di 2016 per categoria  
   
 -   **Gestione**  
   
@@ -154,7 +164,7 @@ ms.lasthandoff: 09/21/2017
  Per altre informazioni, vedere [catalogo SSIS &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Supporto per Always On nel catalogo SSIS  
- I gruppi di disponibilità Always On sono una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Un gruppo di disponibilità supporta un ambiente di failover per un set discreto di database utente, noti come database di disponibilità, su cui si verifica il failover. Per altre informazioni, vedere [Gruppi di disponibilità Always On](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
+ I gruppi di disponibilità Always On sono una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Un gruppo di disponibilità supporta un ambiente di failover per un set discreto di database utente, noti come database di disponibilità, su cui si verifica il failover. Per altre informazioni, vedere [Gruppi di disponibilità Always On](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  In SQL Server 2016, SSIS introduce nuove funzionalità che consentono di distribuire facilmente a un catalogo SSIS centralizzato (ad esempio il database utente SSISDB). Per garantire una disponibilità elevata per il database SSISDB e il relativo contenuto (progetti, pacchetti, log di esecuzione e così via) è possibile aggiungere il database SSISDB a un gruppo di disponibilità AlwaysOn, esattamente come qualsiasi altro database utente. Quando si verifica un failover, uno dei nodi secondari diventa automaticamente il nuovo nodo primario.  
   
@@ -313,7 +323,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
 ### <a name="better-design-experience"></a>Migliore esperienza di progettazione
 
 ####  <a name="OneDesigner"></a> Supporto di più destinazioni e versioni in Progettazione SSIS  
- È ora possibile usare Progettazione SSIS in SQL Server Data Tools (SSDT) per Visual Studio 2015 per creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Per ottenere SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). 
+ È ora possibile usare Progettazione SSIS in SQL Server Data Tools (SSDT) per Visual Studio 2015 per creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Per ottenere SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
    

@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b9f6ceba4d3609a7e7ff816d31446a77c4fea64c
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>Installare Microsoft R Server dalla riga di comando
@@ -83,7 +83,7 @@ Per impostazione predefinita, tutti del programma di installazione dei riepilogh
 
 Per ogni funzionalità installata viene creata una sottocartella separata.
 
-Per configurare un'altra istanza di Microsoft R Server con gli stessi parametri, è possibile utilizzare nuovamente il file di configurazione che viene creato durante l'installazione. Per ulteriori informazioni, vedere [installare SQL Server tramite un File di configurazione](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
+Per configurare un'altra istanza di Microsoft R Server con gli stessi parametri, è possibile utilizzare nuovamente il file di configurazione che viene creato durante l'installazione. Per ulteriori informazioni, vedere [installare SQL Server tramite un File di configurazione](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)
 
 
 ## <a name="customize-your-r-environment"></a>Personalizzare l'ambiente R

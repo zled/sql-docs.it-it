@@ -11,19 +11,19 @@ ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 8772b1f3dd4562f778f9dc0ca6be53168925d6d9
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: eaf6ab8c21c6a0685886d2c031434a68ff2cb8b8
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Automatizzare la migrazione del database con SQL Server Migration Assistant per Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Questo argomento vengono presentate [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) che consente di eseguire facilmente la migrazione database a SQL Server 2017 RC2 in Linux da Microsoft Access, DB2, MySQL, Oracle e Sybase. SSMA è un'applicazione Windows, pertanto usare SSMA quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux. 
+Questo argomento vengono presentate [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) che consente di eseguire facilmente la migrazione i database di SQL Server 2017 in Linux da Microsoft Access, DB2, MySQL, Oracle e Sybase. SSMA è un'applicazione Windows, pertanto usare SSMA quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux. 
 
-SSMA supporta un'ampia gamma di database di origine, tra cui Oracle, MySQL, Sybase, DB2 e Microsoft Access a SQL Server 2017 RC2 in Linux e consente di automatizzare le attività di migrazione, ad esempio:
+SSMA supporta un'ampia gamma di database di origine, tra cui Oracle, MySQL, Sybase, DB2 e Microsoft Access a SQL Server 2017 su Linux e consente di automatizzare le attività di migrazione, ad esempio:
 
 - valutare il database di origine
 - convertire lo schema di database di origine allo schema di Microsoft SQL Server

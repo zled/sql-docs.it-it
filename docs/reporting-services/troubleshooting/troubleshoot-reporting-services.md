@@ -16,16 +16,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a48df35dacab91324966eff5c26609c00ecfbfe6
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Risoluzione dei problemi di Reporting Services
   Gli argomenti di questa sezione consentono di identificare e risolvere i problemi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
-![Icona della cartella File piccola](../../reporting-services/troubleshooting/media/filefolder-small.png)**risolvere i problemi di Reporting Services   **  
+![Icona della cartella File piccola](../../reporting-services/troubleshooting/media/filefolder-small.png)**risolvere i problemi di Reporting Services**   
 + [Risoluzione dei problemi dei servizi Report di Reporting](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Risolvere i problemi di sottoscrizioni e recapito di Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,14 +39,14 @@ ms.lasthandoff: 09/21/2017
 
 +  [Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Risolvere i problemi di connessione di Database con Reporting Serivces e Server](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
++  [Risolvere i problemi di connessione di Database con Reporting Serivces e Server](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
- ![Icona della cartella File di piccole dimensioni](../../reporting-services/troubleshooting/media/filefolder-small.png)**errore riferimenti ed eventi   **  
+ ![Icona della cartella File di piccole dimensioni](../../reporting-services/troubleshooting/media/filefolder-small.png)**errore riferimenti ed eventi**   
  + [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Causa e risoluzione degli errori di Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>Vedere anche  
  [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Attivare eventi di Reporting Services per il log di traccia SharePoint & #40; ULS & #41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [Attivare eventi di Reporting Services per il log di traccia SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
 

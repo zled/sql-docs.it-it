@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **Si applica a**: (a partire da SQL Server 2008) di SQL Server e Database SQL di Azure.  
   
- L'opzione SORT_IN_TEMPDB, MAXDOP e DATA_COMPRESSION sono riportate le opzioni che possono essere specificate quando si ricompila una singola partizione (PARTITION = * n *). Gli indici XML non possono essere specificati in un'operazione di ricompilazione di una singola partizione.  
+ L'opzione SORT_IN_TEMPDB, MAXDOP e DATA_COMPRESSION sono riportate le opzioni che possono essere specificate quando si ricompila una singola partizione (PARTITION =  *n* ). Gli indici XML non possono essere specificati in un'operazione di ricompilazione di una singola partizione.  
   
  DISABLE  
  Contrassegna l'indice come disabilitato e non disponibile per l'utilizzo nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È possibile disabilitare qualsiasi indice. La definizione di un indice disabilitato rimane nel catalogo di sistema senza i dati dell'indice sottostante. La disabilitazione di un indice cluster impedisce all'utente di accedere ai dati della tabella sottostante. Per abilitare un indice, utilizzare ALTER INDEX REBUILD oppure CREATE INDEX WITH DROP_EXISTING. Per ulteriori informazioni, vedere [disabilitazione di indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md) e [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -356,7 +356,7 @@ Fattore di riempimento = *fattore di riempimento*
   
  Per ulteriori informazioni, vedere [opzione SORT_IN_TEMPDB per indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY ** = ** {ON | OFF}  
+ IGNORE_DUP_KEY  **=**  {ON | OFF}  
  Specifica l'errore restituito quando un'operazione di inserimento tenta di inserire valori di chiave duplicati in un indice univoco. L'opzione IGNORE_DUP_KEY viene applicata solo alle operazioni di inserimento eseguite dopo la creazione o la ricompilazione dell'indice. Il valore predefinito è OFF.  
   
  ON  
@@ -371,7 +371,7 @@ Fattore di riempimento = *fattore di riempimento*
   
  Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH IGNORE_DUP_KEY equivale a WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE ** = ** {ON | OFF}  
+ STATISTICS_NORECOMPUTE  **=**  {ON | OFF}  
  Specifica se le statistiche di distribuzione vengono ricalcolate. Il valore predefinito è OFF.  
   
  ON  
@@ -407,7 +407,7 @@ Fattore di riempimento = *fattore di riempimento*
  
 **Si applica a**: (a partire da SQL Server 2014) di SQL Server e Database SQL di Azure.  
   
- ONLINE ** = ** {ON | **OFF** } \<come si applica a rebuild_index_option >  
+ ONLINE  **=**  {ON | **OFF** } \<come si applica a rebuild_index_option >  
  Specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF.  
   
  Per un indice XML o spaziale, è supportata solo l'opzione ONLINE = OFF e se ONLINE è impostata su ON viene generato un errore.  
@@ -431,9 +431,9 @@ Fattore di riempimento = *fattore di riempimento*
   
 -   Un subset di un indice partizionato (è possibile ricompilare online un intero indice partizionato).  
 
--  Database SQL precedenti alla versione 12 e SQL Server precedenti a SQL Server 2012, non consentono il `ONLINE` opzione per la compilazione di indice cluster o ricompilare operazioni quando la tabella di base contiene **varchar (max)** o **varbinary (max) ** colonne.
+-  Database SQL precedenti alla versione 12 e SQL Server precedenti a SQL Server 2012, non consentono il `ONLINE` opzione per la compilazione di indice cluster o ricompilare operazioni quando la tabella di base contiene **varchar (max)** o **varbinary (max)**  colonne.
 
-PUÒ ESSERE RIPRISTINATO ** = ** {ON | **OFF**}
+PUÒ ESSERE RIPRISTINATO  **=**  {ON | **OFF**}
 
 **Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)  
 
@@ -443,13 +443,13 @@ PUÒ ESSERE RIPRISTINATO ** = ** {ON | **OFF**}
 
  Operazione non è ripristinabile OFF indice.
 
-MAX_DURATION ** = ** *ora* [**minuti**] utilizzato con **può essere RIPRISTINATO = ON** (richiede **ONLINE = ON**).
+MAX_DURATION  **=**  *ora* [**minuti**] utilizzato con **può essere RIPRISTINATO = ON** (richiede **ONLINE = ON**).
  
 **Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)  
 
 Indica il tempo (valore intero specificato in minuti) che un ripristinabili online operazione di indice viene eseguita prima di essere stato sospeso. 
 
-ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}  
+ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
  
 **Si applica a**: (a partire da SQL Server 2008) di SQL Server e Database SQL di Azure.  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}
  OFF  
  I blocchi di riga non vengono utilizzati.  
   
-ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}  
+ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}  
   
 **Si applica a**: (a partire da SQL Server 2008) di SQL Server e Database SQL di Azure.
   
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}
 > [!NOTE]
 >  Quando l'opzione ALLOW_PAGE_LOCKS è impostata su OFF, non è possibile eseguire operazioni di riorganizzazione degli indici.  
   
- MAXDOP ** = ** max_degree_of_parallelism  
+ MAXDOP  **=**  max_degree_of_parallelism  
  
 **Si applica a**: (a partire da SQL Server 2008) di SQL Server e Database SQL di Azure.  
   
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}
 > [!NOTE]
 >  Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- COMPRESSION_DELAY ** = ** { **0** |*durata [minuti]* }  
+ COMPRESSION_DELAY  **=**  { **0** |*durata [minuti]* }  
  Questa funzionalità è disponibile a partire da SQL Server 2016  
   
  Per una tabella basata su disco, ritardo specifica il numero minimo di minuti che un rowgroup delta in stato di chiusura deve rimanere in rowgroup delta prima di SQL Server può ridurre in rowgroup compressi. Poiché le tabelle basate su disco non tenere traccia delle insert e update volte su singole righe, SQL Server si applica il ritardo in rowgroup delta nello stato CLOSED.  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE ** = ** {ON | **OFF** } \<come si applica a single_partition_rebuild_index_option >  
+ ONLINE  **=**  {ON | **OFF** } \<come si applica a single_partition_rebuild_index_option >  
  Specifica se un indice o una partizione dell'indice di una tabella sottostante può essere ricompilata online o offline. Se **RICOMPILARE** viene eseguita online (**ON**) i dati in questa tabella sono disponibili per query e modifica dei dati durante l'operazione sull'indice.  Il valore predefinito è **OFF**.  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **Si applica a**: (a partire da SQL Server 2014) di SQL Server e Database SQL di Azure.
   
- Per una ricompilazione di indice online è necessario attendere il blocco delle operazioni su questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione indice online rimarrà in attesa dei blocchi con priorità bassa, consentendo alle altre operazioni di continuare mentre è in attesa che l'operazione di compilazione indice online. L'omissione di **WAIT AT LOW PRIORITY** equivale all'opzione `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Per ulteriori informazioni, vedere [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
+ Per una ricompilazione di indice online è necessario attendere il blocco delle operazioni su questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione indice online rimarrà in attesa dei blocchi con priorità bassa, consentendo alle altre operazioni di continuare mentre è in attesa che l'operazione di compilazione indice online. L'omissione di **WAIT AT LOW PRIORITY** equivale all'opzione `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Per ulteriori informazioni, vedere [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *ora* [**minuti**]  
   
@@ -618,7 +618,7 @@ WAIT_AT_LOW_PRIORITY utilizzato con **può essere RIPRISTINATO = ON** e **ONLINE
   
 **Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)
   
- Ripresa di una ricompilazione dell'indice online dopo una pausa deve rimanere in attesa per le operazioni di blocco in questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione indice online rimarrà in attesa dei blocchi con priorità bassa, consentendo alle altre operazioni di continuare mentre è in attesa che l'operazione di compilazione indice online. L'omissione di **WAIT AT LOW PRIORITY** equivale all'opzione `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Per ulteriori informazioni, vedere [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
+ Ripresa di una ricompilazione dell'indice online dopo una pausa deve rimanere in attesa per le operazioni di blocco in questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione indice online rimarrà in attesa dei blocchi con priorità bassa, consentendo alle altre operazioni di continuare mentre è in attesa che l'operazione di compilazione indice online. L'omissione di **WAIT AT LOW PRIORITY** equivale all'opzione `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Per ulteriori informazioni, vedere [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 SOSPENDI

@@ -1,19 +1,19 @@
 ---
-title: "Novità di SQL Server 2017 RC1 in Linux | Documenti Microsoft"
+title: "Novità di SQL Server, 2017 in Linux | Documenti Microsoft"
 description: "Questo argomento sono incluse nuove funzionalità per la versione corrente di SQL Server 2017 in Linux."
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novità di SQL Server 2017 su Linux
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In questo argomento vengono descritte le novità di SQL Server 2017 su Linux.
+
+## <a name="ga"></a>VERSIONE GA
+
+La versione Availaiblity generale (GA) contiene gli aggiornamenti e i miglioramenti seguenti:
+
+- File di database ora possono essere ospitati su NFS. Consente di correggere i problemi con gli scenari di disco condivise NFS, archiviazione remota per le piattaforme di contenitore di montaggio e montaggio delle cartelle di Docker per Windows.
+- Altri miglioramenti e correzioni di bug varie.
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ In modalità di compatibilità 140:
 [Miglioramenti di Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in questa versione CTP1.1:
 - Clonazione del database per CLR, Filestream o Filetable, gli oggetti In memoria e l'archivio Query.
 - **CREARE** o **ALTER** operatori per gli oggetti di programmabilità.
-- Nuovo **HINT USE** opzione per fornire suggerimenti per la query processor di query. Altre informazioni: [hint per la Query](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
+- Nuovo **HINT USE** opzione per fornire suggerimenti per la query processor di query. Altre informazioni: [hint per la Query](../t-sql/queries/hints-transact-sql-query.md).
 - Account del servizio SQL possono ora identificare a livello di programmazione abilitare blocco di pagine in memoria e l'inizializzazione immediata dei File di autorizzazioni.
 - Supporto per numero di file TempDB, dimensioni del file e le impostazioni di aumento delle dimensioni di file.
 - Diagnostica estesa in showplan XML.

@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6aa23c7a8f2daefcf0b138bb39926eb2e377c22b
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6db9cc485778e4074b5b648b23572edee3a0f42e
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="work-with-sql-server-data-using-r"></a>Lavorare con i dati di SQL Server con R
@@ -100,7 +100,7 @@ In questa sezione sono elencati alcuni problemi comuni che possono verificarsi d
 
 - **Come è possibile verificare la connettività del database e controllare le query SQL?**
   
-    È possibile che, prima di eseguire il codice R tramite il server, si voglia controllare che il database sia raggiungibile dall'ambiente di sviluppo R. Entrambi [Esplora Server di Visual Studio](https://msdn.microsoft.com/library/x603htbk.aspx) e [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) sono strumenti gratuiti con connettività di database e funzionalità di gestione molto efficienti.
+    È possibile che, prima di eseguire il codice R tramite il server, si voglia controllare che il database sia raggiungibile dall'ambiente di sviluppo R. Entrambi [Esplora Server di Visual Studio](https://msdn.microsoft.com/library/x603htbk.aspx) e [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) sono strumenti gratuiti con connettività di database e funzionalità di gestione molto efficienti.
   
     Se non si vogliono installare altri strumenti di gestione del database, è possibile creare una connessione di test per l'istanza di SQL Server usando l' [Amministrazione origine dati ODBC](https://msdn.microsoft.com/library/ms714024.aspx) in Pannello di controllo. Se il database è configurato correttamente e il nome utente e la password specificati sono corretti, sarà possibile visualizzare il database appena creato e selezionarlo come database predefinito.
   

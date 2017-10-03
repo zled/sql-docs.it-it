@@ -4,23 +4,23 @@ description: In questa esercitazione introduttiva viene illustrato come installa
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Installazione di SQL Server e creare un database in SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In questa esercitazione introduttiva, installare innanzitutto RC2 2017 di SQL Server in SUSE Linux Enterprise Server (SLES) v12 SP2. Connettiti con **sqlcmd** per creare il primo database ed eseguire query.
+In questa esercitazione introduttiva, installare innanzitutto 2017 di SQL Server in SUSE Linux Enterprise Server (SLES) v12 SP2. Connettiti con **sqlcmd** per creare il primo database ed eseguire query.
 
 > [!TIP]
 > Questa esercitazione richiede input dell'utente e una connessione internet. Se si è interessati di [automatica](sql-server-linux-setup.md#unattended) o [offline](sql-server-linux-setup.md#offline) procedure di installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).
@@ -37,12 +37,18 @@ Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in L
 
 Per configurare SQL Server in SLES, eseguire i comandi seguenti in un terminal per installare il **mssql server** pacchetto:
 
+> [!IMPORTANT]
+> Se si è precedentemente installato una versione CTP o candidata di SQL Server 2017, è innanzitutto necessario rimuovere il repository precedente prima di registrare uno degli archivi di GA. Per ulteriori informazioni, vedere [modificare repository dal repository di anteprima per il repository GA](sql-server-linux-change-repo.md)
+
 1. Scaricare il file di configurazione di Microsoft SQL Server SLES repository:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+   > [!NOTE]
+   > Questo è il repository di aggiornamento cumulativo (CU). Per ulteriori informazioni sulle opzioni di repository e le differenze, vedere [modificare repository del codice sorgente](sql-server-linux-setup.md#repositories).
 
 1. Eseguire i comandi seguenti per installare SQL Server:
 
@@ -57,14 +63,10 @@ Per configurare SQL Server in SLES, eseguire i comandi seguenti in un terminal p
    ```
 
    > [!TIP]
-   > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
+   > Se si sta tentando 2017 di SQL Server in questa esercitazione, sono liberamente concessi in licenza le seguenti edizioni: Evaluation, Developer ed Express.
 
-   > [!TIP]
-   > Quando si installa RC2, licenze acquistate non deve provare a eseguire una delle edizioni. Poiché si tratta di una versione finale candidata, indipendentemente dall'edizione selezionato viene visualizzato il messaggio seguente:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > Questo messaggio non riflette l'edizione selezionata. Si riferisce al periodo di anteprima per RC2.
+   > [!NOTE]
+   > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
 
 1. Al termine della configurazione, verificare che il servizio sia in esecuzione:
 

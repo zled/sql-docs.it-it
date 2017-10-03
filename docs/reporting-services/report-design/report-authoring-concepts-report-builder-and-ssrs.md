@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concetti relativi alla creazione di report (Generatore report e SSRS)
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
  [Aree dati e mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Vengono descritti i tipi di aree dati che è possibile aggiungere a un layout del report. Le aree dati determinano l'aspetto di un report, ovvero tabella, matrice, elenco o grafico.  
   
- [Concetto dei parametri di report (Generatore Report e SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [Concetto dei parametri di report (Generatore Report e SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Vengono descritte le modalità in cui definire e utilizzare i parametri del report e come questi vengono gestiti in modo indipendente dalla definizione del report nel server di report.  
   
 ## <a name="see-also"></a>Vedere anche  

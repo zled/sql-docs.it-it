@@ -21,16 +21,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
 
-In questa esercitazione, si utilizza Progettazione Report in SQL Server Data Tools per creare un [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] impaginati report con una tabella, sulla base di ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] ** database. È inoltre possibile creare [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report con Generatore Report impaginati. 
+In questa esercitazione, si utilizza Progettazione Report in SQL Server Data Tools per creare un [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] impaginati report con una tabella, sulla base di  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  database. È inoltre possibile creare [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report con Generatore Report impaginati. 
 
 Durante questa esercitazione, si verrà creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare e totale alcuni campi e visualizzare in anteprima il report.  
   
@@ -43,7 +43,7 @@ Per utilizzare l'esercitazione è necessario che nel sistema siano installati i 
   
 -   Database [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Per altre informazioni, vedere la pagina relativa ai [database di esempio AdventureWorks 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
- -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) con i componenti di "SQL Server Reporting Services" installati in modo che sia la finestra di progettazione di Report.    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) con i componenti di "SQL Server Reporting Services" installati in modo che sia la finestra di progettazione di Report.    
   
 Per il recupero dei dati dal database [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] è anche necessario avere autorizzazioni di sola lettura.
 

@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemi comuni con l'esecuzione dello script esterno in SQL Server
@@ -64,7 +64,7 @@ Il servizio Launchpad (Launchpad.exe) viene eseguito utilizzando un account di s
 - Ignorare controllo incrociato (SeChangeNotifyPrivilege)
 - Regolazione limite risorse memoria per un processo (SeIncreaseQuotaSizePrivilege)
 
-Per informazioni su questi diritti, vedere la sezione "diritti e privilegi di Windows" in [Windows configurare account del servizio e autorizzazioni](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
+Per informazioni su questi diritti, vedere la sezione "diritti e privilegi di Windows" in [Windows configurare account del servizio e autorizzazioni](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 > [!TIP]
 > Se si ha familiarità con l'utilizzo dello strumento di supporto diagnostica piattaforma SDP () per la diagnostica di SQL Server, è possibile utilizzare SDP per esaminare il file di output con il nome MachineName_UserRights.txt.

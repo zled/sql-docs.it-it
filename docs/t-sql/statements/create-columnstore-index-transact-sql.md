@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -54,12 +54,12 @@ Ignora agli esempi:
 -   [Esempi per gli indici columnstore non cluster](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Passare a scenari:  
--   [Indici ColumnStore per analitica operativa in tempo reale](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
--   [Indici ColumnStore per il data warehouse](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
+-   [Indici ColumnStore per analitica operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Indici ColumnStore per il data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Ulteriori informazioni:  
--   [Guida agli indici ColumnStore](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
--   [Riepilogo delle funzionalità degli indici ColumnStore](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
+-   [Guida agli indici ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Riepilogo delle funzionalità degli indici ColumnStore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -298,14 +298,14 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 ##  <a name="LimitRest"></a> Limitazioni e restrizioni  
 
 **Ogni colonna in un indice columnstore deve essere uno dei seguenti tipi di dati di business comuni:** 
--   DateTimeOffset [( * n * )]  
--   datetime2 [( * n * )]  
+-   DateTimeOffset [(  *n*  )]  
+-   datetime2 [(  *n*  )]  
 -   datetime  
 -   smalldatetime  
 -   data  
--   tempo [( * n * )]  
--   float [( * n * )]  
--   reale [( * n * )]  
+-   tempo [(  *n*  )]  
+-   float [(  *n*  )]  
+-   reale [(  *n*  )]  
 -   decimale [( *precisione* [ *, scala* ] **)** ]
 -   numerico [( *precisione* [ *, scala* ] **)** ]    
 -   money  
@@ -315,15 +315,15 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [( * n * )] 
+-   nvarchar [(  *n*  )] 
 -   nvarchar (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)   
--   nchar [( * n * )]  
--   varchar [( * n * )]  
+-   nchar [(  *n*  )]  
+-   varchar [(  *n*  )]  
 -   varchar (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)
--   Char [( * n * )]  
--   varbinary [( * n * )] 
+-   Char [(  *n*  )]  
+-   varbinary [(  *n*  )] 
 -   varbinary (max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e Database SQL di Azure a premium tariffario, solo gli indici columnstore cluster)
--   binario [( * n * )]  
+-   binario [(  *n*  )]  
 -   uniqueidentifier (si applica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
   
 Se la tabella sottostante contiene una colonna di un tipo di dati che non è supportata per gli indici columnstore, è necessario omettere la colonna dall'indice columnstore non cluster.  

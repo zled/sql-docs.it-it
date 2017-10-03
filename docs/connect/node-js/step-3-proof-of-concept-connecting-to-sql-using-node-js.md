@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 783e6bc2e9dd928aaef2b5ecfb71efe47588a9b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1d25bbbad2e6506e505125e2aa9de6212298b4b3
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Passaggio 3: Modello di prova di connessione a SQL tramite Node.js
@@ -101,7 +101,7 @@ Tutte le istruzioni SQL vengono eseguite utilizzando il **Request () nuovo** (fu
   
 ## <a name="step-3-insert-a-row"></a>Passaggio 3: Inserire una riga  
   
-In questo esempio verrà visualizzato come eseguire un [inserire](/sql-docs/docs/t-sql/statements/insert-transact-sql) istruzione in modo sicuro, passare parametri che la protezione dell'applicazione da [attacchi SQL injection](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valore.    
+In questo esempio verrà visualizzato come eseguire un [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare parametri che la protezione dell'applicazione da [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
   
   
 ```javascript  

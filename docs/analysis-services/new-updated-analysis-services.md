@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: analysis-services
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: a0657f87ae8ab0280ca904947ffa257c3e666538
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a21f82dd5a0bd4ef59abc639d9441be25191a21b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Nuovi e aggiornati: Analysis Services per SQL Server
@@ -34,7 +34,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 
 
-- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-07-18** &nbsp; - a - &nbsp; **2017-09-11**
+- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-09-11** &nbsp; - a - &nbsp; **2017-09-27**
 - *Area di interesse:* &nbsp; **Analysis Services per SQL Server**.
 
 
@@ -44,7 +44,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 ## <a name="new-articles-created-recently"></a>Nuovi articoli creati di recente
 
-I collegamenti seguenti portano a nuovi articoli che sono stati aggiunti di recente.
+I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
 ***Nessun nuovo articolo da visualizzare.***
@@ -55,7 +55,7 @@ I collegamenti seguenti portano a nuovi articoli che sono stati aggiunti di rece
 
 ## <a name="updated-articles-with-excerpts"></a>Articoli aggiornati con estratti
 
-In questa sezione vengono estratti gli aggiornamenti raccolti dagli articoli di cui si sono verificati recentemente un aggiornamento di grandi dimensioni.
+In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
 Gli estratti visualizzati qui sono separati dal relativo contesto semantico. Inoltre è possibile che un estratto sia talvolta separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti devono essere usati solo come indicazioni generali. Gli estratti consentono solo di comprendere se sia utile o meno consultare l'articolo completo.
 
@@ -69,17 +69,69 @@ Per queste e altre ragioni, non copiare codice da questi estratti e non prendere
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
+### <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
 
-Questo elenco compact vengono forniti collegamenti a tutti gli articoli aggiornati che sono elencati nella sezione estratti.
+Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
+1. [Novità &#39; s novità di SQL Server 2017 Analysis Services](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***Nessun articolo aggiornato di recente in quest'area.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### <a name="1-nbsp-what39s-new-in-sql-server-2017-analysis-serviceswhat-s-new-in-sql-server-analysis-services-2017md"></a>1. &nbsp;[Novità &#39; s novità di SQL Server 2017 Analysis Services](what-s-new-in-sql-server-analysis-services-2017.md)
+
+*Ultimo aggiornamento: 2017-09-22* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+
+<!-- Source markdown line 143.  ms.author= "owend".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 c8d75883f07e6e32859728d09139920eb9bf65c5 d206e83413d15a6e6116120e4a98dda9c8ce81d8  (PR=3278  ,  Filename=what-s-new-in-sql-server-analysis-services-2017.md  ,  Dirpath=docs\analysis-services\  ,  MergeCommitSha40=656e62f36446db4ef5b232129130a0253d2aebdf) -->
+
+
+
+**Sicurezza a livello di oggetto**
+
+Questa versione introduce [sicurezza a livello di oggetto, ma... / analysis-services/tabular-models/object-level-security.md) per le tabelle e colonne. Oltre a limitare l'accesso ai dati di tabelle e colonne, nomi di tabella e colonna sensibili possono essere protette. Ciò consente di impedire a un utente malintenzionato di individuare una tabella esistente.
+
+Sicurezza a livello di oggetto deve essere impostata utilizzando i metadati basato su JSON, Tabular Model Scripting Language (TMSL) o tabulare oggetto modello TOM ().
+
+Ad esempio, il codice seguente consente di proteggere la tabella Product del modello tabulare di esempio di AdventureWorks impostando la proprietà **MetadataPermission** della classe **TablePermission** su **None**.
+
+```
+//Find the Users role in Adventure Works and secure the Product table
+ModelRole role = db.Model.Roles.Find("Users");
+Table productTable = db.Model.Tables.Find("Product");
+if (role != null && productTable != null)
+{
+    TablePermission tablePermission;
+    if (role.TablePermissions.Contains(productTable.Name))
+    {
+        tablePermission = role.TablePermissions[productTable.Name];
+    }
+    else
+    {
+        tablePermission = new TablePermission();
+        role.TablePermissions.Add(tablePermission);
+        tablePermission.Table = productTable;
+    }
+    tablePermission.MetadataPermission = MetadataPermission.None;
+}
+db.Update(UpdateOptions.ExpandFull);
+```
+
+**Viste a gestione dinamica (DMV)**
+
+[DMV,... / analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) sono query che restituiscono informazioni sulle operazioni del server locale e l'integrità del server in SQL Server Profiler.
+Questa versione include miglioramenti apportati alla [viste a gestione dinamica](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) per i modelli tabulari a livello di compatibilità 1200 e 1400 di.
+
 
 
 
@@ -93,35 +145,35 @@ Questo elenco compact vengono forniti collegamenti a tutti gli articoli aggiorna
     Then run Run-533-*.BAT
 -->
 
-Questa sezione sono elencati gli articoli molto simili per gli articoli aggiornati di recente in altre aree di interesse, entro l'archivio pubblico di GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno del repository GitHub pubblico di Microsoft: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (3 + 12): **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (5 + 0): **Connect to SQL** documenti](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (5 + 1): **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (19 + 82): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
-- [Nuovo + aggiornato (1 + 8): **Linux per SQL** documenti](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (12 + 1): **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (0 + 1): **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
-- [Nuovo + aggiornato (7 + 1): **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
-- [Nuovo + aggiornato (1 + 1): **SQL Server Data Tools (SSDT)** documenti](../ssdt/new-updated-ssdt.md)
-- [Nuovo + aggiornato (0 + 2): **SQL Server Migration Assistant (SSMA)** documenti](../ssma/new-updated-ssma.md)
-- [Nuovo + aggiornato (1 + 4): **SQL Server Management Studio (SSMS)** documenti](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornati (4 + 1): **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
-- [Nuovo + aggiornato (0 + 1): **Tools per SQL** documenti](../tools/new-updated-tools.md)
+- [Nuovo + aggiornato (0 + 1): **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (0 + 1): **Analysis Services per SQL** documenti](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornati (4 + 1): **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (17 + 0): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (3 + 0): **Linux per SQL** documenti](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (1 + 1): **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (2 + 0): **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (0 + 1): **SQL Server Management Studio (SSMS)** documenti](../ssms/new-updated-ssms.md)
+- [Nuovo + aggiornato (0 + 1): **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
 
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
-- [Nuovo + aggiornato (0 + 0): **Analysis Services per SQL** documenti](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (0 + 0): **Connect to SQL** documenti](../connect/new-updated-connect.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
-- [Nuovo + aggiornato (0 + 0): **Master Data Services (MDS) per SQL** documenti](../master-data-services/new-updated-master-data-services.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Master Data Services (MDS) per SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuovo + aggiornato (0+0): **Multidimensional Expressions (MDX) for SQL(Espressioni MDX per SQL)** Docs](../mdx/new-updated-mdx.md)
 - [Nuovo + aggiornato (0+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL)** Docs](../odbc/new-updated-odbc.md)
 - [Nuovo + aggiornato (0+0): **PowerShell for SQL (PowerShell per SQL)** Docs](../powershell/new-updated-powershell.md)
 - [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
+- [Nuovo + aggiornato (0 + 0): **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (0+0): documentazione di **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
+- [Nuovo + aggiornato (0 + 0): **Tools per SQL** documenti](../tools/new-updated-tools.md)
 - [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
 
 

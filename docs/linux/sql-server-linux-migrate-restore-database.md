@@ -1,6 +1,6 @@
 ---
 title: Eseguire la migrazione di un database di SQL Server da Windows per Linux | Documenti Microsoft
-description: In questo argomento viene illustrato come eseguire un database di SQL Server backup in Windows e ripristinarlo in un computer Linux in esecuzione SQL Server 2017 RC2.
+description: In questa esercitazione viene illustrato come eseguire un database di SQL Server backup in Windows e ripristinarlo in un computer Linux in esecuzione SQL Server 2017.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Eseguire la migrazione di un database di SQL Server da Windows per Linux tramite backup e ripristino
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-SQL Server di backup e ripristino è il modo consigliato per eseguire la migrazione di un database da SQL Server in Windows a SQL Server 2017 RC2 in Linux. In questa esercitazione verrà illustrata i passaggi necessari per spostare un database in Linux con backup e ripristino tecniche.
+SQL Server di backup e ripristino è il modo consigliato per la migrazione di un database da SQL Server in Windows a 2017 di SQL Server in Linux. In questa esercitazione verrà illustrata i passaggi necessari per spostare un database in Linux con backup e ripristino tecniche.
 
 > [!div class="checklist"]
 > * Creare un file di backup in Windows con SQL Server Management Studio
@@ -39,8 +39,7 @@ Per completare questa esercitazione, sono necessari i seguenti prerequisiti:
   * Database di destinazione per eseguire la migrazione.
 
 * Computer Linux con installati i componenti seguenti:
-  * SQL Server 2017 RC2. Vedere la Guida introduttiva di installazione per [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), o [Ubuntu](quickstart-install-connect-ubuntu.md).
-  * SQL Server 2017 RC2 [strumenti da riga di comando](sql-server-linux-setup-tools.md).
+  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), o [Ubuntu](quickstart-install-connect-ubuntu.md)) con gli strumenti da riga di comando.
 
 ## <a name="create-a-backup-on-windows"></a>Creare un backup in Windows
 
@@ -182,7 +181,7 @@ Per ripristinare il backup del database, è possibile utilizzare il **RESTORE DA
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione è stato descritto come eseguire il backup di un database in Windows e spostarlo in un server Linux in esecuzione SQL Server 2017 RC2. Si è appreso per:
+In questa esercitazione è stato descritto come eseguire il backup di un database in Windows e spostarlo in un server Linux in esecuzione SQL Server 2017. Si è appreso per:
 > [!div class="checklist"]
 > * Utilizzare SQL Server Management Studio e Transact-SQL per creare un file di backup in Windows
 > * Installare una shell Bash in Windows

@@ -4,23 +4,23 @@ description: In questa esercitazione introduttiva viene illustrato come installa
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5309c2884fa4bf46a4c9c7224f4c1f21be23e7e6
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
 ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Installazione di SQL Server e creare un database in Red Hat
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In questa esercitazione introduttiva, installare innanzitutto RC2 2017 di SQL Server su Red Hat Enterprise Linux (RHEL) 7.3. Connettiti con **sqlcmd** per creare il primo database ed eseguire query.
+In questa esercitazione introduttiva, installare innanzitutto 2017 di SQL Server su Red Hat Enterprise Linux (RHEL) 7.3. Connettiti con **sqlcmd** per creare il primo database ed eseguire query.
 
 > [!TIP]
 > Questa esercitazione richiede input dell'utente e una connessione internet. Se si è interessati di [automatica](sql-server-linux-setup.md#unattended) o [offline](sql-server-linux-setup.md#offline) procedure di installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).
@@ -37,11 +37,17 @@ Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in L
 
 Per configurare SQL Server su RHEL, eseguire i comandi seguenti in un terminal per installare il **mssql server** pacchetto:
 
+> [!IMPORTANT]
+> Se si è precedentemente installato una versione CTP o candidata di SQL Server 2017, è innanzitutto necessario rimuovere il repository precedente prima di registrare uno degli archivi di GA. Per ulteriori informazioni, vedere [modificare repository dal repository di anteprima per il repository GA](sql-server-linux-change-repo.md)
+
 1. Scaricare il file di configurazione di Microsoft SQL Server Red Hat repository:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
+
+   > [!NOTE]
+   > Questo è il repository di aggiornamento cumulativo (CU). Per ulteriori informazioni sulle opzioni di repository e le differenze, vedere [modificare repository del codice sorgente](sql-server-linux-setup.md#repositories).
 
 1. Eseguire i comandi seguenti per installare SQL Server:
 
@@ -56,14 +62,10 @@ Per configurare SQL Server su RHEL, eseguire i comandi seguenti in un terminal p
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
+   > Se si sta tentando 2017 di SQL Server in questa esercitazione, sono liberamente concessi in licenza le seguenti edizioni: Evaluation, Developer ed Express.
 
-   > [!TIP]
-   > Quando si installa RC2, licenze acquistate non deve provare a eseguire una delle edizioni. Poiché si tratta di una versione finale candidata, indipendentemente dall'edizione selezionato viene visualizzato il messaggio seguente:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > Questo messaggio non riflette l'edizione selezionata. Si riferisce al periodo di anteprima per RC2.
+   > [!NOTE]
+   > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
 
 1. Al termine della configurazione, verificare che il servizio sia in esecuzione:
 

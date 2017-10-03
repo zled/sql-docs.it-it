@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Mappa ad albero e grafici radiali in Reporting Services
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  Un grafico della mappa ad albero divide l'area del grafico in rettangoli che rappresentano i diversi livelli e le relative dimensioni della gerarchia dei dati. La mappa è simile ai rami degli alberi che iniziano dal tronco e si suddividono via via in rami sempre più piccoli. Ogni rettangolo viene suddiviso in rettangoli più piccoli che rappresentano il livello successivo nella gerarchia. I rettangoli della mappa ad albero al livello superiore presentano il rettangolo più grande nell'angolo superiore sinistro del grafico e il rettangolo più piccolo nell'angolo inferiore destro.  All'interno di ogni rettangolo, il livello successivo del rettangolo superiore presenta rettangoli dalla parte superiore sinistra fino in basso a destra.  
   
- Ad esempio, nell'immagine seguente della mappa ad albero di esempio, il territorio Sud-Ovest rappresenta il rettangolo più grande, mentre la Germania quello più piccolo. All'interno di del quadrato Sud-Ovest, il rettangolo Road Bikes è più grande del rettangolo Mountain Bikes.  
+ Ad esempio, nell'immagine seguente della mappa ad albero di esempio, il territorio Sud-Ovest è il più grande e Germania è il più piccolo. All'interno di del quadrato Sud-Ovest, il rettangolo Road Bikes è più grande del rettangolo Mountain Bikes.  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Per inserire un grafico della mappa ad albero e configurare i dati Adventureworks di esempio  
- **Nota:** prima di aggiungere un grafico al report, creare un'origine dati e un set di dati.  Per i dati e una query di esempio, vedere la sezione [Dati Adventureworks di esempio](#bkmk_sample_data) in questo argomento.  
+   
+[!NOTE] Prima di aggiungere un grafico al report, creare un'origine dati e set di dati.  Per i dati e una query di esempio, vedere la sezione [Dati Adventureworks di esempio](#bkmk_sample_data) in questo argomento.  
   
 1.  Fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Inserisci**, quindi selezionare **Grafico** .  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Per inserire un grafico radiale e configurare i dati Adventureworks di esempio  
- **Nota:** prima di aggiungere un grafico al report, creare un'origine dati e un set di dati.  Per i dati e una query di esempio, vedere la sezione [Dati Adventureworks di esempio](#bkmk_sample_data) in questo argomento.  
+ [!NOTE] Prima di aggiungere un grafico al report, creare un'origine dati e set di dati.  Per i dati e una query di esempio, vedere la sezione [Dati Adventureworks di esempio](#bkmk_sample_data) in questo argomento.  
   
 1.  Fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Inserisci**, quindi selezionare **Grafico** .  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  Modificare il titolo predefinito del grafico su "Categorized Sales by Territory, with sales reason".  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Per aggiungere i valori dei gruppi di categoria al grafico radiale come etichette, impostare la proprietà dell'etichetta come segue: **Visible** = true e **UseValueAsLabel**=False.<br /><br /> I valori di etichetta visualizzati dipendono dalle dimensioni del carattere, dalle dimensioni dell'area totale del grafico e dalle dimensioni dei rettangoli specifici.  Per visualizzare più etichette, impostare la proprietà del carattere Etichetta di LineTotal su 8 pt invece del valore predefinito di 10 pt.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Per aggiungere i valori dei gruppi di categoria al grafico radiale come etichette, impostare la proprietà dell'etichetta come segue: **Visible** = true e **UseValueAsLabel**=False.<br /><br /> I valori di etichetta visualizzati dipendono dalle dimensioni del carattere, dalle dimensioni dell'area totale del grafico e dalle dimensioni dei rettangoli specifici.  Per visualizzare più etichette, impostare la proprietà del carattere Etichetta di LineTotal su 8 pt invece del valore predefinito di 10 pt.|
   
 7.  Se si desidera una combinazione di colori diversa, modificare la proprietà **Tavolozza** del grafico.  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
@@ -171,7 +174,7 @@ ms.lasthandoff: 08/09/2017
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    -   scegliere **OK**.  
+    -   Scegliere **OK**.  
   
      Per altre informazioni sulla creazione di un set di dati, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   

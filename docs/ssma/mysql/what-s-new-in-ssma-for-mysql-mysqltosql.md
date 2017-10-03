@@ -2,7 +2,7 @@
 title: "Novità &#39; s di SSMA per MySQL (MySQLToSql) | Documenti Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: e5d5ca50b24eb8c7d21fa2058e9be6fed0af2270
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
 ms.contentlocale: it-it
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>Novità &#39; s di SSMA per MySQL (MySQLToSql)
 Questo argomento elenca SSMA per le modifiche di MySQL in ogni versione. 
+
+## <a name="ssma-v76"></a>SSMA v7.6
+La versione v7.6 di SSMA per MySQL è stata migliorata con le correzioni di destinazione che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere utilizzato per le migrazioni di produzione.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 e versioni successive, .net 4.5.2 è un prerequisito di installazione e la versione a 32 bit dello strumento è stata interrotta.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 La versione v7.5 di SSMA per MySQL è stata migliorata con numerosi miglioramenti per garantire maggiore accessibilità per persone affette da disabilità.

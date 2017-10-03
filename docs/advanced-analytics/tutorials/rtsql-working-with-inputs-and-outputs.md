@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Utilizzo di input e output (R nella Guida rapida SQL)
 
-Quando si desidera eseguire il codice R in SQL Server, è necessario eseguire il wrapping dello script R in una stored procedure di sistema [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Questa stored procedure permette di avviare il runtime R nel contesto di SQL Server, che passa i dati a R, gestisce le sessioni utente di R in modo sicuro e restituisce gli eventuali risultati al client.
+Quando si desidera eseguire il codice R in SQL Server, è necessario eseguire il wrapping dello script R in una stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Questa stored procedure permette di avviare il runtime R nel contesto di SQL Server, che passa i dati a R, gestisce le sessioni utente di R in modo sicuro e restituisce gli eventuali risultati al client.
 
 ## <a name="bkmk_SSMSBasics"></a>Creare alcuni semplici dati di prova
 

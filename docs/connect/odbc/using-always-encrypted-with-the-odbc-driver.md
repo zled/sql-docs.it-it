@@ -15,18 +15,18 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d0ac1f1a8e9a78539a2c7824f06d3ed3507c0b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d28b647de71c5064dfbe0d49f399119f6a9ac283
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Utilizzo di Always Encrypted with the ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-Questo articolo fornisce informazioni su come sviluppare applicazioni ODBC che utilizzano [Always Encrypted (motore di Database)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) e [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+Questo articolo fornisce informazioni su come sviluppare applicazioni ODBC che utilizzano [Always Encrypted (motore di Database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
-Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un Always Encrypted abilitato driver, ad esempio ODBC Driver 13.1 for SQL Server, a tale scopo in modo trasparente la crittografia e decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine).
+Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un Always Encrypted abilitato driver, ad esempio ODBC Driver 13.1 for SQL Server, a tale scopo in modo trasparente la crittografia e decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 ### <a name="prerequisites"></a>Prerequisiti
 
@@ -240,7 +240,7 @@ Questa sezione vengono descritte le categorie di errori durante l'esecuzione di 
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>Errori di conversione dei tipi di dati non supportati
 
-Always Encrypted supporta alcune conversioni per i tipi di dati crittografati. Vedere [Always Encrypted (motore di Database)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) per un elenco dettagliato delle conversioni di tipo supportato. Per evitare errori di conversione di tipo di dati, assicurarsi di osservare i seguenti punti quando si utilizza la funzione SQLBindParameter con parametri destinati alle colonne crittografate:
+Always Encrypted supporta alcune conversioni per i tipi di dati crittografati. Vedere [Always Encrypted (motore di Database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) per un elenco dettagliato delle conversioni di tipo supportato. Per evitare errori di conversione di tipo di dati, assicurarsi di osservare i seguenti punti quando si utilizza la funzione SQLBindParameter con parametri destinati alle colonne crittografate:
 
 - Il tipo SQL del parametro è esattamente uguale al tipo della colonna di destinazione o la conversione dal tipo di SQL per il tipo della colonna è supportata.
 
@@ -284,7 +284,7 @@ Questa sezione descrive le ottimizzazioni delle prestazioni predefinite in ODBC 
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Il controllo di round trip per recuperare i metadati per i parametri di Query
 
-Se Always Encrypted è abilitato per una connessione, ODBC Driver 13.1 per SQL Server, per impostazione predefinita, chiamare [sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql) per ogni query con parametri, passando l'istruzione di query (senza alcun parametro i valori) a SQL Server. Questa stored procedure consente di analizzare l'istruzione di query per scoprire se i parametri devono essere crittografati e in tal caso, restituisce le informazioni relative alla crittografia per ogni parametro per consentire al driver di crittografarli. Il comportamento descritto garantisce un elevato livello di trasparenza per l'applicazione client: l'applicazione (e lo sviluppatore dell'applicazione) non è necessario essere a conoscenza di quali query accedono alle colonne crittografate, purché i valori destinati alle colonne crittografate vengano passati per il driver nei parametri.
+Se Always Encrypted è abilitato per una connessione, ODBC Driver 13.1 per SQL Server, per impostazione predefinita, chiamare [sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza alcun parametro i valori) a SQL Server. Questa stored procedure consente di analizzare l'istruzione di query per scoprire se i parametri devono essere crittografati e in tal caso, restituisce le informazioni relative alla crittografia per ogni parametro per consentire al driver di crittografarli. Il comportamento descritto garantisce un elevato livello di trasparenza per l'applicazione client: l'applicazione (e lo sviluppatore dell'applicazione) non è necessario essere a conoscenza di quali query accedono alle colonne crittografate, purché i valori destinati alle colonne crittografate vengano passati per il driver nei parametri.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Per ogni istruzione Always Encrypted comportamento
 
@@ -344,7 +344,7 @@ ODBC Driver 13.1 for SQL Server viene fornito con i provider di archivio chiavi 
 |Insieme di credenziali chiave di Azure |CMK archivi in un insieme di credenziali chiave di Azure | `AZURE_KEY_VAULT` |Windows, Mac OS, Linux|
 |Archivio certificati di Windows|Archivia CMK localmente nell'archivio di Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- È necessario assicurarsi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master di colonna conformi al formato del percorso della chiave per il provider è (o l'amministratore del database). È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) .
+- È necessario assicurarsi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master di colonna conformi al formato del percorso della chiave per il provider è (o l'amministratore del database). È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
 - È necessario verificare che l'applicazione può accedere alla chiave nell'archivio. Questa operazione potrebbe comportare concedendo l'accesso dell'applicazione per la chiave e/o dell'archivio chiavi, a seconda dell'archivio chiavi, o eseguire altri passaggi di configurazione specifica dell'archivio chiavi. Ad esempio, per accedere a un insieme di credenziali chiave di Azure, è necessario fornire le credenziali corrette per il file keystore.
 
@@ -514,10 +514,10 @@ Per un esempio di implementazione di un provider di archivio chiavi, vedere [pro
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitazioni del driver ODBC quando si Usa crittografia sempre attiva
 
 ### <a name="bulk-copy-function-usage"></a>Utilizzo della funzione di copia bulk
-Utilizzare il [funzioni di copia Bulk SQL](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc) non è supportato quando si utilizza il driver ODBC con crittografia sempre attiva. Si verificherà alcuna crittografia/decrittografia trasparente nelle colonne crittografate utilizzate con le funzioni di copia Bulk di SQL.
+Utilizzare il [funzioni di copia Bulk SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) non è supportato quando si utilizza il driver ODBC con crittografia sempre attiva. Si verificherà alcuna crittografia/decrittografia trasparente nelle colonne crittografate utilizzate con le funzioni di copia Bulk di SQL.
 
 ### <a name="asynchronous-operations"></a>Operazioni asincrone
-Mentre il driver ODBC consentirà l'utilizzo di [operazioni asincrone](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel) con crittografia sempre attiva, è un impatto sulle prestazioni delle operazioni quando Always Encrypted è abilitato. La chiamata a `sys.sp_describe_parameter_encryption` per determinare i metadati di crittografia per l'istruzione blocca e causerà il driver di attesa per il server restituire i metadati prima della restituzione `SQL_STILL_EXECUTING`.
+Mentre il driver ODBC consentirà l'utilizzo di [operazioni asincrone](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) con crittografia sempre attiva, è un impatto sulle prestazioni delle operazioni quando Always Encrypted è abilitato. La chiamata a `sys.sp_describe_parameter_encryption` per determinare i metadati di crittografia per l'istruzione blocca e causerà il driver di attesa per il server restituire i metadati prima della restituzione `SQL_STILL_EXECUTING`.
 
 ## <a name="always-encrypted-api-summary"></a>Riepilogo delle API crittografia sempre attiva
 
@@ -552,7 +552,7 @@ Mentre il driver ODBC consentirà l'utilizzo di [operazioni asincrone](/sql-docs
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Always Encrypted (motore di database)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
+- [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog sulla Crittografia sempre attiva](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
 

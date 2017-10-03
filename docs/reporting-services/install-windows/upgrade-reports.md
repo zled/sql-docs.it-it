@@ -25,10 +25,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/21/2017
   
  Dopo l'aggiornamento di un report localmente o nel server di report, è possibile riscontrare errori, avvisi e messaggi aggiuntivi. Le modifiche apportate internamente al modello a oggetti e ai componenti di elaborazione interni dei report determinano infatti la visualizzazione di messaggi in caso di rilevamento di problemi sottostanti nel report. Per ulteriori informazioni, vedere [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "compatibilità con le versioni precedenti | Reporting Services").  
   
- Per ulteriori informazioni sulle nuove funzionalità per [! INCLUDERE[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).  
+ Per ulteriori informazioni sulle nuove funzionalità per [! INCLUDERE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versioni supportate per l'aggiornamento  
  I report creati in qualsiasi versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere aggiornati. Sono incluse le versioni seguenti:  
@@ -138,7 +138,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **No** Scegliere **No** se non si desidera convertire gli elementi del report personalizzati nel report. Gli elementi non possono essere visualizzati da Elaborazione report nella versione corrente. Se l'amministratore del sistema prevede di installare una nuova versione dell'elemento del report personalizzato del fornitore di software di terze parti compatibile con il nuovo formato di definizione del report, è necessario scegliere **No**. Fino a quando non diventano disponibili nuove versioni, gli elementi del report personalizzati vengono visualizzati nel report come una casella di testo vuota con una X rossa.  
   
- In entrambi i casi, il report viene aggiornato al nuovo formato di definizione di report e una copia di backup del report originale viene salvata come * \<Nome Report >* `-` Backup.rdl. Se il report viene salvato nello strumento per la creazione dei report, in pratica viene salvato il report aggiornato nel nuovo formato di definizione del report. Se si pubblica il report, esso viene prima salvato nel computer, quindi pubblicato nel server di report. La versione aggiornata del report viene pubblicata nel server di report.  
+ In entrambi i casi, il report viene aggiornato al nuovo formato di definizione di report e una copia di backup del report originale viene salvata come  *\<Nome Report >* `-` Backup.rdl. Se il report viene salvato nello strumento per la creazione dei report, in pratica viene salvato il report aggiornato nel nuovo formato di definizione del report. Se si pubblica il report, esso viene prima salvato nel computer, quindi pubblicato nel server di report. La versione aggiornata del report viene pubblicata nel server di report.  
   
  Se non si salva il report, il report originale resta immutato. Tuttavia, è possibile modificare il report nella versione di SQL Server 2016 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o in un ambiente che utilizza un formato di definizione del report più recente di creazione di report. È possibile continuare a eseguire la versione originale del report caricandolo in un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] server di report tramite il portale web. Per ulteriori informazioni, vedere [portale Web](../../reporting-services/web-portal-ssrs-native-mode.md).  
   

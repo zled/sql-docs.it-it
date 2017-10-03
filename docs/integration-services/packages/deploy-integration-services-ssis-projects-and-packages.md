@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Se il progetto e tutti i pacchetti superano la verifica di compatibilità, fare clic su **OK** per convertire il pacchetto.  
   
-> **NOTA:** per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **NOTA:** per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   La **Distribuzione guidata Integration Services** supporta due modelli di distribuzione:
@@ -309,7 +309,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
  La pagina consente di controllare le impostazioni selezionate. È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro. Fare clic su **Distribuisci** per avviare il processo di distribuzione.  
   
 #### <a name="results"></a>Risultati  
- Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **salvare Report... ** per salvare i risultati in un file XML oppure fare clic su **Chiudi** chiudere la procedura guidata.
+ Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **salvare Report...**  per salvare i risultati in un file XML oppure fare clic su **Chiudi** chiudere la procedura guidata.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,7 +403,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 14. Fare clic su **OK** due volte per salvare le modifiche.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure
-  Quando si configura un [! INCLUDERE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+  Quando un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene configurato in modo da utilizzare il relativo modello di distribuzione, è possibile utilizzare le stored procedure nel catalogo di [!INCLUDE[ssIS](../../includes/ssis-md.md)] per distribuire il progetto ed eseguire i pacchetti. Per informazioni sui modelli di distribuzione di progetti, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  Per distribuire il progetto ed eseguire i pacchetti, è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Per altre informazioni, vedere gli argomenti nella sezione **Vedere anche** .  
   

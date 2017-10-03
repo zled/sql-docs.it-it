@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
 
  ## <a name="where-is-the-profiler"></a>Dove si trova il Profiler?
  
- È possibile avviare il Profiler in molti modi da SQL Server Management Studio. [Di seguito è un argomento che elenca le modalità per avviare il Profiler.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ È possibile avviare il Profiler in molti modi da SQL Server Management Studio. [Di seguito è un argomento che elenca le modalità per avviare il Profiler.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>Acquisire e riprodurre i dati di traccia 
 Nella tabella seguente vengono mostrate le funzionalità che si consiglia di usare in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per acquisire e riprodurre i dati di traccia.
@@ -57,8 +57,8 @@ Nella tabella seguente vengono mostrate le funzionalità che si consiglia di usa
 ||||  
 |-|-|-|  
 |**\ Carico di lavoro**|**Motore relazionale**|**Analysis Services**|  
-|**Acquisizione traccia**|Interfaccia utente grafica degli[eventi estesi](/sql-docs/docs/relational-databases/extended-events/extended-events) in SQL Server Management Studio|SQL Server Profiler|  
-|**Riproduzione della traccia**|[Riesecuzione distribuita](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server Profiler|  
+|**Acquisizione traccia**|Interfaccia utente grafica degli[eventi estesi](../../relational-databases/extended-events/extended-events.md) in SQL Server Management Studio|SQL Server Profiler|  
+|**Riproduzione della traccia**|[Riesecuzione distribuita](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è un'interfaccia utente grafica della funzionalità Traccia SQL che consente di monitorare un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di Analysis Services. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare quali stored procedure hanno effetto sulle prestazioni a causa di un'esecuzione troppo lenta. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]viene usato per attività quali:  

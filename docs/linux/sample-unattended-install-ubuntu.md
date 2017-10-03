@@ -4,22 +4,22 @@ description: Esempio di Script SQL Server - installazione automatica in Ubuntu
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 191d39779fd38fcf342dcbeae1ee3a14632ab59a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Esempio: Script di installazione automatica di SQL Server per Ubuntu
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Questo script di esempio Bash installa SQL Server 2017 RC2 in Ubuntu 16.04 senza input interattivo. Fornisce esempi di installazione del motore di database, gli strumenti da riga di comando di SQL Server, SQL Server Agent e vengono eseguiti i passaggi di post-installazione. Facoltativamente, è possibile installare la ricerca full-text e creare un utente amministratore.
+Questo script di esempio Bash installa SQL Server 2017 in Ubuntu 16.04 senza input interattivo. Fornisce esempi di installazione del motore di database, gli strumenti da riga di comando di SQL Server, SQL Server Agent e vengono eseguiti i passaggi di post-installazione. Facoltativamente, è possibile installare la ricerca full-text e creare un utente amministratore.
 
 > [!TIP]
 > Se non è necessario uno script di installazione automatica, il modo più rapido per installare SQL Server consiste nel seguire il [esercitazione introduttiva di Ubuntu](quickstart-install-connect-ubuntu.md). Per altre informazioni sull'installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).

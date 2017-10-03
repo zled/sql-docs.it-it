@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c4ab2ed64eaaf970057987c7169d12e93c4380ad
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>Librerie di R e i tipi di dati
@@ -80,9 +80,9 @@ La tabella seguente mostra le modifiche del tipo di dati e dei valori quando i d
 
 ## <a name="data-types-not-supported-by-r"></a>Tipi di dati non supportati da R
 
-Tra le categorie di tipi di dati supportati dal [sistema di tipi di SQL Server](/sql-docs/docs/t-sql/data-types/data-types-transact-sql), i tipi seguenti possono porre problemi se passati al codice R:
+Tra le categorie di tipi di dati supportati dal [sistema di tipi di SQL Server](../../t-sql/data-types/data-types-transact-sql.md), i tipi seguenti possono porre problemi se passati al codice R:
 
-+ Tipi di dati elencati nel **altri** sezione dell'argomento di sistema di tipo SQL: **cursore**, **timestamp**, **hierarchyid**, ** uniqueidentifier**, **sql_variant**, **xml**, **tabella**
++ Tipi di dati elencati nel **altri** sezione dell'argomento di sistema di tipo SQL: **cursore**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabella**
 + Tutti i tipi spaziali
 + **image**
 
@@ -111,7 +111,7 @@ In genere, ogni volta che si hanno dubbi sull'uso di una particolare struttura d
 
 Nel recuperare dati da un database per usarli nel codice R, è sempre consigliabile eliminare le colonne che non possono essere usate in R, nonché quelle che non sono utili per l'analisi, come i GUID (identificatori univoci), i timestamp e altre colonne usate per il controllo o le informazioni sulla derivazione create dai processi ETL. 
 
-L'inclusione di colonne non necessarie può ridurre notevolmente le prestazioni del codice R, in particolare se vengono usate colonne con cardinalità elevata come fattori. Di conseguenza, è consigliabile usare le stored procedure e le viste di informazioni di sistema di SQL Server per ottenere in anticipo i tipi di dati per una tabella specifica ed eliminare o convertire le colonne non compatibili. Per altre informazioni, vedere [Viste degli schemi delle informazioni del sistema (Transact-SQL)](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)
+L'inclusione di colonne non necessarie può ridurre notevolmente le prestazioni del codice R, in particolare se vengono usate colonne con cardinalità elevata come fattori. Di conseguenza, è consigliabile usare le stored procedure e le viste di informazioni di sistema di SQL Server per ottenere in anticipo i tipi di dati per una tabella specifica ed eliminare o convertire le colonne non compatibili. Per altre informazioni, vedere [Viste degli schemi delle informazioni del sistema (Transact-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
 Se un determinato tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportato da R, ma è necessario usare le colonne di dati nello script R, è consigliabile usare le funzioni [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) per assicurarsi che le conversioni dei tipi di dati vengano eseguite come previsto prima di usare i dati nello script R.  
 

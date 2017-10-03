@@ -1,7 +1,7 @@
 ---
 title: "Novità &#39; s New in Integration Services in SQL Server 2017 | Documenti Microsoft"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
 ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novità &#39; s New in Integration Services in SQL Server 2017
@@ -29,13 +29,23 @@ Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate 
 
 ## <a name="highlights-of-this-release"></a>Caratteristiche salienti di questa versione
 
-Ecco le nuove funzionalità più importanti in servizi di integrazione per SQL Server 2017.
+Ecco le principali nuove funzionalità di Integration Services in SQL Server 2017.
 
 -   **Scalabilità orizzontale**. Distribuire più facilmente di esecuzione del pacchetto SSIS tra più computer di lavoro e gestire le esecuzioni e processi di lavoro da un singolo computer master. Per altre informazioni, vedere [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
 
 -   **Integration Services in Linux**. Eseguire pacchetti SSIS nel computer Linux. Per altre informazioni, vedere [di estrazione, trasformazione e caricamento dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 -   **Miglioramenti di connettività**. Connettersi al feed OData di Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online con i componenti aggiornati di OData. 
+
+## <a name="new-in-azure-data-factory"></a>Novità di Data Factory di Azure
+
+Con l'anteprima pubblica di Azure Data Factory versione 2 nel mese di settembre 2017, è ora possibile eseguire le operazioni seguenti:
+-   Distribuire i pacchetti per il database del catalogo SSIS (SSISDB) nel Database SQL Azure.
+-   Eseguire i pacchetti distribuiti in Azure nel Runtime di integrazione di Azure SSIS, un componente di Data Factory di Azure versione 2.
+
+Per altre informazioni, vedere [accuratezza MAIUSC SQL Server Integration Services carichi di lavoro e nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Queste nuove funzionalità richiedono SQL Server Data Tools (SSDT) 17.2 per o versione successiva, ma non richiedono 2017 di SQL Server o SQL Server 2016. Quando si distribuiscono pacchetti in Azure, la distribuzione guidata pacchetto Aggiorna sempre i pacchetti per il formato più recente del pacchetto.
 
 ## <a name="new-in-the-azure-feature-pack"></a>Novità di Azure Feature Pack
 

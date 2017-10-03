@@ -4,23 +4,23 @@ description: Installare, aggiornare e disinstallare SQL Server in Linux. Questo 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
 ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In questo argomento viene illustrato come installare, aggiornare e disinstallare 2017 di SQL Server in Linux. SQL Server 2017 RC2 è supportato in Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. È inoltre disponibile come un'immagine di Docker, che può essere eseguita nel motore Docker in Linux o Docker per Windows/Mac.
+In questo argomento viene illustrato come installare, aggiornare e disinstallare 2017 di SQL Server in Linux. 2017 di SQL Server è supportato in Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. È inoltre disponibile come un'immagine di Docker, che può essere eseguita nel motore Docker in Linux o Docker per Windows/Mac.
 
 > [!TIP]
 > Per iniziare rapidamente, passare a una delle esercitazioni di avvio rapido per [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), o [Docker](quickstart-install-connect-docker.md).
@@ -43,7 +43,7 @@ SQL Server 2017 presenta i requisiti di sistema seguenti per Linux:
 |||
 |-----|-----|
 | **Memoria** | 3.25 GB |
-| **File system** | **XFS** o **EXT4** (altri file System, ad esempio **BTRFS**, non sono supportati) |
+| **File System** | **XFS** o **EXT4** (altri file System, ad esempio **BTRFS**, non sono supportati) |
 | **Spazio su disco** | 6 GB |
 | **Velocità del processore** | 2 GHz |
 | **Core del processore** | 2 core |
@@ -51,6 +51,12 @@ SQL Server 2017 presenta i requisiti di sistema seguenti per Linux:
 
 > [!NOTE]
 > Motore di SQL Server è stato testato fino a 1 TB di memoria in questo momento.
+
+Se si utilizza **File System NFS (Network)** condivisioni remote nell'ambiente di produzione, tenere presente i requisiti di supporto seguenti:
+
+- Utilizzare la versione NFS **4.2 o versioni successive**. Le versioni precedenti di NFS non supportano le funzionalità necessarie, ad esempio fallocate e creazione di file sparse, comune a sistemi di file più recenti.
+- Individuare solo i **/var/opt/mssql** directory di montaggio NFS. Altri file, ad esempio i file binari del sistema di SQL Server, non sono supportati.
+- Assicurarsi che i client NFS utilizzino l'opzione 'nolock' durante il montaggio condivisione remota.
 
 ## <a id="platforms"></a> Installare SQL Server
 
@@ -91,7 +97,55 @@ Per eseguire il rollback o il downgrade da SQL Server a una versione precedente,
 > È supportato solo per effettuare il downgrade a una versione all'interno della stessa versione principale, ad esempio SQL Server 2017.
 
 > [!IMPORTANT]
-> Downgrade è supportato solo tra RC2 e RC1 in questo momento.
+> Downgrade è supportato solo tra RTM, RC2 e RC1 in questo momento.
+
+## <a id="repositories"></a>Modificare il repository di origine
+
+Quando si installa o si aggiorna SQL Server, ottenere la versione più recente di SQL Server dal repository Microsoft configurato. È importante notare che esistono due tipi principali di repository per ogni distribuzione:
+
+- **Gli aggiornamenti cumulativi (CU)**: l'aggiornamento cumulativo (CU) repository contiene i pacchetti per la versione di SQL Server base ed eventuali correzioni o miglioramenti Release. Gli aggiornamenti cumulativi sono specifici di una versione di rilascio, ad esempio SQL Server 2017. Essi vengono rilasciati a un ritmo regolare.
+
+- **GDR**: GDR il repository contiene i pacchetti per la versione di SQL Server base solo gli aggiornamenti critici e aggiornamenti della sicurezza perché tale versione. Questi aggiornamenti vengono inoltre aggiunti alla versione di aggiornamento Cumulativo successiva.
+
+Ogni versione CU e GDR contiene il pacchetto di SQL Server completo e tutti gli aggiornamenti precedenti per il repository. L'aggiornamento da una versione GDR a una versione aggiornamento Cumulativo è supportato modificando il repository configurato per SQL Server. È anche possibile [effettuare il downgrade](#rollback) per qualsiasi versione entro il numero di versione principale (ad esempio: 2017).
+
+> [!NOTE]
+> L'aggiornamento da un pacchetto CU versione a una versione GDR non è supportata.
+
+Per modificare il repository GDR nel repository CU procedere come segue:
+
+1. Rimuovere il repository di anteprima configurate in precedenza.
+
+   | Piattaforma | Comando di rimozione del repository |
+   |-----|-----|
+   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+
+1. Configurare il nuovo repository.
+
+   | Piattaforma | Archivio | Command |
+   |-----|-----|-----|
+   | RHEL | AGGIORNAMENTO CUMULATIVO | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES | AGGIORNAMENTO CUMULATIVO  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017.repo` |
+   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017-gdr.repo` |
+   | Ubuntu | AGGIORNAMENTO CUMULATIVO | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+
+1. Aggiornamento del sistema.
+
+   | Piattaforma | Comando Update |
+   |-----|-----|
+   | RHEL | `sudo yum update` |
+   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
+   | Ubuntu | `sudo apt-get update` |
+
+
+1. [Installare](#platforms) o [aggiornare](#upgrade) SQL Server dal nuovo repository.
+
+   > [!IMPORTANT]
+   > A questo punto, se si sceglie di eseguire un'installazione completa utilizzando il [esercitazioni delle Guide rapide](#platforms), tenere presente che si è appena configurato del repository di destinazione. Non ripetere il passaggio nelle esercitazioni. Ciò vale soprattutto se si configura il repository GDR, poiché le esercitazioni utilizzano il repository CU.
 
 ## <a id="uninstall"></a>Disinstallare SQL Server
 

@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>Catalogo del database
@@ -181,7 +181,7 @@ Queste sono le procedure utilizzate da un'applicazione client, ad esempio un fro
 
 ### <a name="integration-schema"></a>Schema di integrazione
 
-Le stored procedure in questo schema vengono utilizzate dal processo ETL. Ottenere i dati necessari da diverse tabelle per l'intervallo di tempo necessari per il [pacchetto ETL](/sql-docs/docs/sample/world-wide-importers/etl-workflow).
+Le stored procedure in questo schema vengono utilizzate dal processo ETL. Ottenere i dati necessari da diverse tabelle per l'intervallo di tempo necessari per il [pacchetto ETL](etl-workflow.md).
 
 ### <a name="dataloadsimulation-schema"></a>Schema DataLoadSimulation
 

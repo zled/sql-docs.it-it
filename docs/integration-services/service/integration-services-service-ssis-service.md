@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Servizio Integration Services (servizio SSIS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/21/2017
  Quando viene installato il componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene installato anche il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene avviato e impostato per l'avvio automatico. È tuttavia necessario installare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per utilizzare il servizio per la gestione di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archiviati e in esecuzione.  
   
 > [!NOTE]
-> Per connettersi direttamente a un'istanza del servizio Integration Services legacy, è necessario usare la versione di SQL Server Management Studio (SSMS) allineata alla versione di SQL Server in cui è in esecuzione il servizio Integration Services. Ad esempio, per connettersi al servizio Integration Services legacy in esecuzione in un'istanza di SQL Server 2016, è necessario usare la versione di SQL Server Management Studio rilasciata per SQL Server 2016. [Scaricare SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+> Per connettersi direttamente a un'istanza del servizio Integration Services legacy, è necessario usare la versione di SQL Server Management Studio (SSMS) allineata alla versione di SQL Server in cui è in esecuzione il servizio Integration Services. Ad esempio, per connettersi al servizio Integration Services legacy in esecuzione in un'istanza di SQL Server 2016, è necessario usare la versione di SQL Server Management Studio rilasciata per SQL Server 2016. [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >   Nella finestra di dialogo **Connetti al server** di SQL Server Management Studio non è possibile specificare il nome di un server sul quale è in esecuzione una versione precedente del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per gestire i pacchetti archiviati in un server remoto, tuttavia, non è necessario connettersi all'istanza del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel server remoto in questione. Modificare, invece, il file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in modo che in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengano visualizzati i pacchetti archiviati nel server remoto.   
   
@@ -278,7 +278,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
  Per la connessione a un'istanza di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un server remoto da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o da un'altra applicazione di gestione, è necessario un set specifico di diritti nel server per gli utenti dell'applicazione.  
   
 > [!IMPORTANT]
-> Per connettersi direttamente a un'istanza del servizio Integration Services legacy, è necessario usare la versione di SQL Server Management Studio (SSMS) allineata alla versione di SQL Server in cui è in esecuzione il servizio Integration Services. Ad esempio, per connettersi al servizio Integration Services legacy in esecuzione in un'istanza di SQL Server 2016, è necessario usare la versione di SQL Server Management Studio rilasciata per SQL Server 2016. [Scaricare SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+> Per connettersi direttamente a un'istanza del servizio Integration Services legacy, è necessario usare la versione di SQL Server Management Studio (SSMS) allineata alla versione di SQL Server in cui è in esecuzione il servizio Integration Services. Ad esempio, per connettersi al servizio Integration Services legacy in esecuzione in un'istanza di SQL Server 2016, è necessario usare la versione di SQL Server Management Studio rilasciata per SQL Server 2016. [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >  Per gestire i pacchetti archiviati in un server remoto, non è necessario connettersi all'istanza del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul server remoto in questione. Modificare, invece, il file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in modo che in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengano visualizzati i pacchetti archiviati nel server remoto.
   

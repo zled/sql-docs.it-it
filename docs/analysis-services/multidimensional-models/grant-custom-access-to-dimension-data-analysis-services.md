@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/21/2017
  La sicurezza delle dimensioni di base è la più semplice. È sufficiente selezionare gli attributi della dimensione e le gerarchie di attributi da includere o escludere nel ruolo. La sicurezza avanzata è più complessa e richiede una certa esperienza nella creazione di script MDX. Di seguito vengono descritti entrambi gli approcci.  
 
 > [!NOTE]  
->  Le istruzioni seguenti presuppongono una connessione client che esegue query in MDX. Se il client usa DAX, ad esempio Power View in Power BI, la sicurezza delle dimensioni non è evidente nei risultati della query. Per altre informazioni, vedere [Informazioni su Power View per modelli multidimensionali](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models) .
+>  Le istruzioni seguenti presuppongono una connessione client che esegue query in MDX. Se il client usa DAX, ad esempio Power View in Power BI, la sicurezza delle dimensioni non è evidente nei risultati della query. Per altre informazioni, vedere [Informazioni su Power View per modelli multidimensionali](understanding-power-view-for-multidimensional-models.md) .
       
 ## <a name="prerequisites"></a>Prerequisiti  
  Negli scenari di accesso personalizzati non è possibile usare tutte le misure e i membri della dimensione. La connessione non riesce se un ruolo limita l'accesso a una misura o un membro predefinito oppure limita l'accesso a misure che fanno parte di espressioni di misura.  

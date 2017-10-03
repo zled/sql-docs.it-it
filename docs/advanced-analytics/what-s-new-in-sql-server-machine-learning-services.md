@@ -2,7 +2,7 @@
 title: "Novità &#39; s novità di servizi di Machine Learning | Documenti Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: it-it
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novità di servizi di Machine Learning in SQL Server
@@ -30,16 +30,13 @@ In SQL Server 2017, l'apprendimento diventa ancora più potente, con l'aggiunta 
 
 Rilevare l'annuncio più recente qui! [Python in SQL Server 2017: avanzato nel database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> Ora è possibile eseguire R in database SQL di Azure. Per ulteriori informazioni, vedere [questo articolo](r/using-r-in-azure-sql-database.md), o in questo blog dal team di sviluppo di SQL Server: [Announcing anteprima di Machine Learning Services con supporto di R in Database SQL di Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
+
 ## <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 
 Server Microsoft di Machine Learning in SQL Server fornisce ora supporto completo per la compilazione e distribuzione di soluzioni di machine learning in R o Python. Di seguito vengono evidenziate di questa versione:
 
-> [!IMPORTANT]
-> 
-> Servizi di Machine learning, incluso l'uso di R o Python, non sono attualmente supportati quando si esegue SQL Server in Linux o in database SQL di Azure. Cercare le modifiche in una versione successiva.
-> 
-> Punteggio nativa utilizzando la funzione di stima è attualmente supportato nell'edizione Linux.
- 
 ### <a name="in-database-python-integration"></a>Integrazione di Python nel database
 
 È possibile eseguire Python nelle stored procedure, o eseguire Python in remoto utilizzando il computer SQL Server come contesto di calcolo. Questa integrazione apre nuove strade per la vasta community di sviluppatori di Python e gli esperti di dati per utilizzare le funzionalità di SQL Server. 
@@ -60,9 +57,13 @@ Python in esecuzione nel database non è quasi di machine learning, dalla modali
 
 + Supporto Python in Microsoft Machine Learning Server (Standalone)
 
-    SQL Server 2017 include l'opzione per installare una versione autonoma di Microsoft machine learning piattaforma. Tramite i Server di Machine Learning, è possibile distribuire e scalare R o Python codice senza l'utilizzo di SQL Server.
+    SQL Server 2017 include l'opzione per installare una versione autonoma di Microsoft Machine Learning Server. Tramite i Server di Machine Learning, è possibile distribuire e scalare R o Python codice senza l'utilizzo di SQL Server.
 
-    Per un esempio di codice Python in esecuzione nel Server di Microsoft Machine Learning, vedere [pubblica e utilizzare il codice Python](python/publish-consume-python-code.md).
+### <a name="linux-support"></a>Supporto Linux
+
+Machine learning che usano R o Python nel database non è attualmente supportato in SQL Server in Linux. Cercare gli annunci in una versione successiva.
+
+In Linux, tuttavia, è possibile eseguire [punteggio native](sql-native-scoring.md) utilizzando la funzione di stima di T-SQL. Punteggio nativa consente di assegnare un punteggio da un modello con training preliminare molto veloce, senza chiamare o anche un runtime di R. Ciò significa che è possibile utilizzare SQL Server in Linux per generare stime molto veloci, per gestire le applicazioni client.
 
 ### <a name="new-algorithms"></a>Nuovi algoritmi
 

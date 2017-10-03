@@ -4,22 +4,22 @@ description: Esempio di Script SQL Server - installazione automatica in Red Hat 
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8b97ec59acf463f73a9277566a89f32a2498a856
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Esempio: Script di installazione automatica di SQL Server per Red Hat Enterprise Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Questo script di esempio Bash installa SQL Server 2017 RC2 in Red Hat Enterprise Linux (RHEL) senza input interattivo. Fornisce esempi di installazione del motore di database, gli strumenti da riga di comando di SQL Server, SQL Server Agent e vengono eseguiti i passaggi di post-installazione. Facoltativamente, è possibile installare la ricerca full-text e creare un utente amministratore.
+Questo script di esempio Bash installa 2017 di SQL Server su Red Hat Enterprise Linux (RHEL) senza input interattivo. Fornisce esempi di installazione del motore di database, gli strumenti da riga di comando di SQL Server, SQL Server Agent e vengono eseguiti i passaggi di post-installazione. Facoltativamente, è possibile installare la ricerca full-text e creare un utente amministratore.
 
 > [!TIP]
 > Se non è necessario uno script di installazione automatica, il modo più rapido per installare SQL Server consiste nel seguire il [esercitazione introduttiva di Red Hat](quickstart-install-connect-red-hat.md). Per altre informazioni sull'installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).

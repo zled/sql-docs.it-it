@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fc31861f7eef73a2ddb88faa4aa59b1bf289d2ea
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Utilizzo della cartella Report personali (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
   
  Concettualmente, la cartella Report personali è simile alla cartella Documenti del file system di Windows. Nonostante ogni utente sia proprietario di una cartella Report personali, la cartella di ciascuno è diversa da quelle di tutti gli altri utenti. L'accesso alla cartella Report personali di un determinato utente è consentito solo all'utente stesso e agli amministratori del server di report.  
   
- La caratteristica funzionalità Report personali è facoltativa e può essere disabilitata da un amministratore del server di report. Se è abilitata, viene visualizzata una cartella Report personali nella cartella Home, alla quale è possibile accedere tramite Gestione report o un Web browser. Per ulteriori informazioni, vedere [ricerca e visualizzazione dei report in Gestione Report &#40; Generatore report e SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
+ La caratteristica funzionalità Report personali è facoltativa e può essere disabilitata da un amministratore del server di report. Se è abilitata, viene visualizzata una cartella Report personali nella cartella Home, alla quale è possibile accedere tramite Gestione report o un Web browser. Per ulteriori informazioni, vedere [ricerca e visualizzazione dei report in Gestione Report &#40; Generatore report e SSRS &#41; ](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
  In un server di report configurato nella modalità integrata SharePoint, non esiste una cartella Report personali equivalente. Per altre informazioni, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   

@@ -4,21 +4,21 @@ description: In questo argomento viene descritto come SQL Server viene eseguita 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1192afb7032f34f0af98c3c1051808e89dc22b63
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 6fdb36fbf294ea1f109728a1f304b5a3f3662122
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
-Ora viene eseguito SQL Server in Linux. Questa versione più recente, SQL Server 2017 RC2, viene eseguito in Linux ed è in molti modi semplicemente a SQL Server. È lo stesso motore di database di SQL Server, molte funzionalità e i servizi indipendentemente dal sistema operativo simili.
+SQL Server 2017 viene ora eseguito in Linux. È lo stesso motore di database di SQL Server, molte funzionalità e i servizi indipendentemente dal sistema operativo simili.
 
 ## <a name="install"></a>Install
 
