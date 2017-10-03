@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8b56417b89b618598f716245e7562f5986a911b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5b9e63d4c7cdc57814b04b2e96e52bda17a25f5a
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Strumenti e applicazioni usati in Analysis Services
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
  SQL Server Management Studio (SSMS) è lo strumento di amministrazione principale per tutte le funzionalità di SQL Server, inclusi Analysis Services. SQL Server Management Studio è disponibile come download web gratuito aggiornati ogni mese. 
   
-**[Scaricare SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)** 
+**[Scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** 
   
  SQL Server Management Studio include gli eventi estesi (XEvent), che fornisce un'alternativa semplificata alle tracce di SQL Server Profiler utilizzato per attività di monitoraggio e diagnosi di problemi nei server di Azure Analysis Services e SQL Server 2016. Per altre informazioni, vedere [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) .  
   

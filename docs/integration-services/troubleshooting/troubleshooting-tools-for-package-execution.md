@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-bad-data-by-using-error-outputs"></a>Risoluzione dei problemi relativi ai dati errati tramite output degli errori  
  È possibile utilizzare l'output degli errori disponibile in numerosi componenti flusso di dati per indirizzare le righe contenenti errori a una destinazione distinta, per un'analisi successiva. Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).  
   
--   **Acquisizione dei dati errati tramite output degli errori**. È possibile inviare le righe contenenti errori a una destinazione distinta, ad esempio una tabella degli errori o un file di testo. Tramite l'output degli errori vengono aggiunte automaticamente due colonne numeriche contenenti il numero dell'errore a causa del quale la riga è stata rifiutata e l'ID della colonna in cui si è verificato l'errore.  
+-   **Acquisizione dei dati errati tramite output degli errori.**. È possibile inviare le righe contenenti errori a una destinazione distinta, ad esempio una tabella degli errori o un file di testo. Tramite l'output degli errori vengono aggiunte automaticamente due colonne numeriche contenenti il numero dell'errore a causa del quale la riga è stata rifiutata e l'ID della colonna in cui si è verificato l'errore.  
   
 -   **Aggiunta di informazioni descrittive agli output degli errori**. Per semplificare l'analisi dell'output degli errori, oltre ai due identificatori numerici specificati dall'output stesso è possibile aggiungere il messaggio di errore e il nome della colonna. Per un esempio di come aggiungere queste due colonne supplementari mediante scripting, vedere [Ottimizzazione di un output degli errori con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite la registrazione  
  Abilitando la registrazione è possibile tenere traccia di ciò che avviene durante l'esecuzione dei pacchetti. I provider di log consentono di acquisire informazioni sugli eventi specificati da utilizzare per un'analisi successiva e di salvare tali informazioni in una tabella di database, in un file flat, in un file XML o in un altro formato di output supportato.  
   
--   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Registrazione di Integration Services (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
+-   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Registrazione di Integration Services (SSIS)](../performance/integration-services-ssis-logging.md).  
   
--   **Selezionare l'evento Diagnostic del pacchetto per risolvere i problemi relativi al provider.** Sono presenti messaggi di registrazione per il supporto della risoluzione dei problemi relativi all'interazione di un pacchetto con origini dati esterne. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
+-   **Selezionare l'evento Diagnostic del pacchetto per risolvere i problemi relativi al provider.** Sono presenti messaggi di registrazione per il supporto della risoluzione dei problemi relativi all'interazione di un pacchetto con origini dati esterne. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Miglioramento dell'output di registrazione predefinito**. La registrazione comporta in genere l'accodamento di righe alla destinazione di registrazione ogni volta che viene eseguito un pacchetto. Sebbene ogni riga dell'output di registrazione identifichi il pacchetto in base al nome e all'identificatore univoco e identifichi inoltre l'esecuzione del pacchetto tramite un identificatore ExecutionID univoco, una grande quantità di output di registrazione in un unico elenco può essere difficile da analizzare.  
   

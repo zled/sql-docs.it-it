@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
@@ -315,7 +315,7 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
    sudo pcs cluster start --all
    ```
 
-   > RHEL a disponibilità elevata include conflitti agenti per KVM e VMWare. Fencing deve essere disabilitata in tutti gli altri hypervisor. Non è consigliabile disabilitare gli agenti fencing negli ambienti di produzione. A partire da intervallo di tempo RC2, non esistono Nessun agente fencing per gli ambienti Hyper-v o il cloud. Se si esegue una di queste configurazioni, è necessario disabilitare fencing. \**Questa operazione è sconsigliata in un sistema di produzione.**
+   > RHEL a disponibilità elevata include conflitti agenti per KVM e VMWare. Fencing deve essere disabilitata in tutti gli altri hypervisor. Non è consigliabile disabilitare gli agenti fencing negli ambienti di produzione. A partire da intervallo di tempo, non sono agenti fencing per gli ambienti Hyper-v o il cloud. Se si esegue una di queste configurazioni, è necessario disabilitare fencing. \**Questa operazione è sconsigliata in un sistema di produzione.**
 
    Il comando seguente disabilita gli agenti di geofencing.
 
