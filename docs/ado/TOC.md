@@ -1,6 +1,7 @@
 # [Microsoft ActiveX Data Objects (ADO)](microsoft-activex-data-objects-ado.md)
+# [Articoli nuovi e aggiornati di recente](new-updated-ado.md)
 
-# [ADO Development Guide +](./guide/ado-programmer-s-guide.md)
-# [ADO Reference +](./reference/ado-glossary.md)
+# [Guida di sviluppo in ADO +](./guide/ado-programmer-s-guide.md)
+# [Riferimento ADO +](./reference/ado-glossary.md)
 
-# [ADO Glossary](ado-glossary.md)
+# [Glossario ADO](ado-glossary.md)
