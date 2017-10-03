@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
 ms.contentlocale: it-it
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
-# <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Log delle modifiche (SSMS)
+# <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
 Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS. Scaricare le [versioni precedenti di SSMS indicate di seguito](#previous-ssms-releases).
 
@@ -36,7 +36,7 @@ Disponibile a livello generale | Numero di build: 14.0.17177.0
   - Aggiunto un nuovo campo di input delle credenziali utente per l'autenticazione universale con MFA per supportare l'autenticazione multiutente.
 - La finestra di dialogo di connessione supporta ora i cinque metodi di autenticazione seguenti:
   - Autenticazione di Windows
-  - Autenticazione di SQL Server
+  - autenticazione di SQL Server
   - Active Directory - Universale con supporto MFA
   - Active Directory - Password
   - Active Directory - Integrata
@@ -174,7 +174,7 @@ Disponibile a livello generale | Numero di build: 14.0.17119.0
 ### <a name="bug-fixes"></a>Correzioni di bug
 - Always On:
   - È stato risolto un problema a causa del quale le proprietà di una replica di disponibilità erano sempre visualizzate come modalità di "failover automatico" per gruppi di disponibilità di WSFC.
-  - È stato risolto un problema a causa del quale è stato sovrascritto l'elenco di routing di sola lettura durante l'aggiornamento del gruppo di disponibilità
+  - È stato risolto un problema in cui veniva sovrascritto l'elenco di routing di sola lettura durante l'aggiornamento del gruppo di disponibilità
 - Always Encrypted: è stato risolto un problema a causa del quale nel file di log generato mancavano le informazioni generate da DacFx.
 - ShowPlan: è stato risolto un problema a causa del quale nell'interfaccia utente era sempre visualizzato l'attributo Tipo di join effettivo per gli operatori di unione non adattivi.
 - Installazione:
@@ -355,7 +355,7 @@ In questa versione sono stati risolti i problemi seguenti:
 
 * Risolto un problema introdotto in SSMS 16.5.2 che causava l'espansione del nodo 'Tabella' quando la tabella aveva più di una colonna di tipo sparse.
 
-* Gli utenti possono distribuire pacchetti SSIS contenenti Gestione connessione OData per connettere una risorsa Microsoft Dynamics AX/CRM Online al catalogo SSIS. Per altre informazioni, vedere [Gestione connessione OData](https://msdn.microsoft.com/library/dn584133.aspx).
+* Gli utenti possono distribuire pacchetti SSIS contenenti Gestione connessione OData per connettere una risorsa Microsoft Dynamics AX/CRM Online al catalogo SSIS. Per altre informazioni, vedere [Gestione connessione OData](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
 
 * La configurazione di Always Encrypted per una tabella esistente ha esito negativo con errori per gli oggetti correlati. [ID Connect 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ Disponibile a livello generale | Numero di versione: 13.0.15700.28
 
 * [Nuova opzione di autenticazione **'Autenticazione universale di Active Directory'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Si tratta di un meccanismo di autenticazione basato su token di Azure Active Directory che supporta autenticazione a più fattori, password e meccanismi di autenticazione integrati.
 
-* Nuovi modelli di eventi estesi corrispondenti alla funzionalità dei modelli di SQL Server Profiler [(Argomento Microsoft Connect N. 2543925)](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). Altre informazioni sui [modelli di SQL Server Profiler](https://msdn.microsoft.com/library/ms190176.aspx)inclusi.
+* Nuovi modelli di eventi estesi corrispondenti alla funzionalità dei modelli di SQL Server Profiler [(Argomento Microsoft Connect N. 2543925)](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
 
 * Nuove finestre di dialogo Crea database e Proprietà database per i database SQL di Azure.
 
