@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbd9bb9d0edbbeae81ebc074f28386476fd8635f
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cb4fd4eebca0f88f1b630598be30bca780fad3b9
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI)
@@ -27,10 +27,10 @@ SQL Server Data Tools (SSDT) fornisce modelli di progetto e aree di progettazion
   
 È basato su una shell di Visual Studio e rilasciato con SQL Server. Le nuove versioni di SSDT integrano le funzionalità più recenti di SQL Server. Le versioni precedenti includono i modelli e l'ambiente di progettazione aggiornati alle singole versioni.  
   
-Poiché SSDT è compatibile con le versioni precedenti, è sempre possibile usare [la versione più recente di SSDT](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) per la progettazione e la distribuzione di database, modelli, report e pacchetti eseguiti in versioni precedenti di SQL Server.  
+Poiché SSDT è compatibile con le versioni precedenti, è sempre possibile usare [la versione più recente di SSDT](download-sql-server-data-tools-ssdt.md) per la progettazione e la distribuzione di database, modelli, report e pacchetti eseguiti in versioni precedenti di SQL Server.  
   
 > [!NOTE]  
-> In passato, la shell di Visual Studio usata per la creazione di tipi di contenuto di SQL Server è stata rilasciata con nomi diversi, ad esempio **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**e **Business Intelligence Development Studio**. Le versioni precedenti erano fornite con specifici set di modelli di progetto. Per ottenere tutti i modelli di progetto insieme in un unico SSDT è necessario usare [la versione più recente](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). In caso contrario, sarà probabilmente necessario installare più versioni precedenti per ottenere tutti i modelli usati in SQL Server.  Per ogni versione di Visual Studio viene installata una sola shell. L'installazione di un secondo SSDT aggiunge soltanto i modelli mancanti.  
+> In passato, la shell di Visual Studio usata per la creazione di tipi di contenuto di SQL Server è stata rilasciata con nomi diversi, ad esempio **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**e **Business Intelligence Development Studio**. Le versioni precedenti erano fornite con specifici set di modelli di progetto. Per ottenere tutti i modelli di progetto insieme in un unico SSDT è necessario usare [la versione più recente](download-sql-server-data-tools-ssdt.md). In caso contrario, sarà probabilmente necessario installare più versioni precedenti per ottenere tutti i modelli usati in SQL Server.  Per ogni versione di Visual Studio viene installata una sola shell. L'installazione di un secondo SSDT aggiunge soltanto i modelli mancanti.  
 
 ## <a name="recent-downloads"></a>Download recenti
 

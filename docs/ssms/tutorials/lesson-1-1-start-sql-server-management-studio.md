@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lezione 1-1 - Avviare SQL Server Management Studio
@@ -35,7 +35,7 @@ Prima di iniziare questa esercitazione è opportuno esaminare brevemente [!INCLU
   * Se si usano versioni precedenti di Windows, scegliere **Tutti i programmi** dal menu **Start**, selezionare [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e fare clic su **SQL Server Management Studio**. In alternativa, nella finestra di dialogo **Esegui** digitare **SSMS.exe** e fare clic su **OK**.  
   
     > [!NOTE]  
-    >  Se SSMS non si apre è possibile che non sia stato installato correttamente. Installare SSMS dall' [Area download](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). SSMS non viene installato automaticamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Usare l'ultima versione per accedere a tutte le funzionalità.  
+    >  Se SSMS non si apre è possibile che non sia stato installato correttamente. Installare SSMS dall' [Area download](../download-sql-server-management-studio-ssms.md). SSMS non viene installato automaticamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Usare l'ultima versione per accedere a tutte le funzionalità.  
   
 2.  Nel passaggio successivo viene definita la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il componente **Esplora oggetti** di SSMS. Se il riquadro Esplora oggetti non viene visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza**. Sulla barra degli strumenti di Esplora oggetti fare clic sul pulsante **Connetti** e selezionare **Motore di database**. Si aprirà la finestra di dialogo **Connetti al server** . Se SSMS è già stato installo, è possibile che, in base alle impostazioni utenti, la finestra di dialogo **Connetti al server** si apra automaticamente.  
   

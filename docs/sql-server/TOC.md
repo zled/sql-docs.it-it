@@ -9,6 +9,11 @@
 ## [Limiti della capacità di calcolo per edizione di SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Analisi utilizzo software](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [Configurare SQL Server per inviare commenti e suggerimenti a Microsoft](sql-server-customer-feedback.md)
+### Partner
+#### [Monitoraggio](partner-monitor-sql-server.md)
+#### [Disponibilità elevata e ripristino di emergenza](partner-hadr-sql-server.md)
+#### [Gestione](partner-management-sql-server.md)
+#### [Sviluppo](partner-dev-sql-server.md)
 
 # [Articoli nuovi e aggiornati di recente](sql-server-new-updated-sql-docs-pr.md)
 
