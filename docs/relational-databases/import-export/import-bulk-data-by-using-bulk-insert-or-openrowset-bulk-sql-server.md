@@ -25,11 +25,11 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3abb7e7f582c7699b128d8b9d70b4aec34041424
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET(BULK...) (SQL Server)
@@ -59,9 +59,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
  Ad esempio, l'istruzione `BULK INSERT` seguente esegue l'importazione bulk dei dati nella tabella `SalesOrderDetail` del database `AdventureWorks` da un file di dati denominato `newdata.txt`. Tale file di dati è memorizzato in una cartella condivisa denominata `\dailyorders` e presente in una directory condivisa di rete denominata `salesforce` in un sistema denominato `computer2`.  
   
-```  
+```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
    FROM '\\computer2\salesforce\dailyorders\neworders.txt';  
 GO  
