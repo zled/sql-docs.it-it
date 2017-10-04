@@ -160,7 +160,7 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
 4. **Installare l'agente delle risorse FCI per SQL Server**. Eseguire i comandi seguenti in entrambi i nodi:
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```
