@@ -1,7 +1,7 @@
 ---
 title: "Avvio di SQL Server in modalità utente singolo | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a68b8a10ce5ecc12ee43bdbc7349d76c25a0f3be
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bf04867e8e9a0e913d09c58598d10994d771adb2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Avvio di SQL Server in modalità utente singolo
@@ -38,9 +38,14 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Arrestare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prima di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo. In caso contrario, il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizzerà la connessione, bloccandola.  
   
- Quando si avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] può connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In Esplora oggetti in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] potrebbe verificarsi un errore perché per alcune operazioni sono necessarie più connessioni. Per gestire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo, eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] stabilendo la connessione solo tramite l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oppure usare l'utilità [sqlcmd](../../tools/sqlcmd-utility.md).  
+Quando si avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] può connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In Esplora oggetti in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] potrebbe verificarsi un errore perché per alcune operazioni sono necessarie più connessioni. Per gestire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo, eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] stabilendo la connessione solo tramite l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oppure usare l'utilità [sqlcmd](../../tools/sqlcmd-utility.md).  
   
- Quando si usa l'opzione **-m** con **sqlcmd** o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile limitare le connessioni a un'applicazione client specifica. Ad esempio, **-m"sqlcmd"** limita le connessioni a una singola connessione, che deve identificarsi come programma client **sqlcmd** . Utilizzare questa opzione quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo e un'applicazione client sconosciuta accede all'unica connessione disponibile. Per connettersi con l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare **-m"Microsoft SQL Server Management Studio - Query"**.  
+Quando si usa l'opzione **-m** con **SQLCMD** o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile limitare le connessioni a un'applicazione client specifica. 
+
+> [!NOTE]
+> In Linux **SQLCMD** deve essere scritto in maiuscolo come illustrato.
+
+Ad esempio, **-m"SQLCMD"** limita le connessioni a una singola connessione che deve identificarsi come programma client **SQLCMD**. Utilizzare questa opzione quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo e un'applicazione client sconosciuta accede all'unica connessione disponibile. Per connettersi con l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  Non utilizzare tale opzione come caratteristica di sicurezza. L'applicazione client fornisce il nome dell'applicazione client stessa e può indicare un nome falso come parte della stringa di connessione.  
@@ -72,3 +77,4 @@ ms.lasthandoff: 08/02/2017
  [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
+

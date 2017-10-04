@@ -1,7 +1,7 @@
 ---
 title: Scrittura di eventi di controllo di SQL Server nel registro di sicurezza | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza
-  In un ambiente con sicurezza elevata il registro di sicurezza di Windows rappresenta la posizione appropriata per la scrittura di eventi che registrano l'accesso agli oggetti. Sono supportati altre posizioni di controllo che tuttavia sono più soggette alla manomissione.  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+In un ambiente con sicurezza elevata il registro di sicurezza di Windows rappresenta la posizione appropriata per la scrittura di eventi che registrano l'accesso agli oggetti. Sono supportati altre posizioni di controllo che tuttavia sono più soggette alla manomissione.  
   
  La scrittura dei controlli del server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel registro di sicurezza di Windows prevede due requisiti fondamentali:  
   
 -   È necessario configurare l'impostazione di controllo dell'accesso agli oggetti per l'acquisizione degli eventi. Lo strumento dei criteri di controllo (`auditpol.exe`) espone varie impostazioni di criteri secondari nella categoria **controllo dell'accesso agli oggetti** . Per consentire il controllo dell'accesso agli oggetti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , configurare l'impostazione **generata dall'applicazione** .  
-  
 -   L'account in cui viene eseguito il servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve disporre dell'autorizzazione **generazione controlli di sicurezza** per scrivere nel registro di sicurezza di Windows. Per impostazione predefinita, gli account LOCAL SERVICE e NETWORK SERVICE dispongono di questa autorizzazione. Questo passaggio non è obbligatorio se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito in uno di questi account.  
+-   Concedere l'autorizzazione completa per l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]all'hive del Registro di sistema `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`.  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- I criteri di controllo di Windows possono influire sul controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se sono configurati per scrivere nel registro di sicurezza di Windows. Se i criteri di controllo non sono configurati in modo corretto, potrebbe verificarsi la perdita di eventi. In genere il registro di sicurezza di Windows è impostato in modo che gli eventi meno recenti vengano sovrascritti e vengano mantenuti quelli più recenti. Tuttavia, se il registro di sicurezza di Windows è impostato in modo diverso e il registro di sicurezza è pieno, verrà generato l'evento di Windows 1104 che indica che il registro è pieno. A questo punto si verificano le situazioni seguenti:  
-  
+I criteri di controllo di Windows possono influire sul controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se sono configurati per scrivere nel registro di sicurezza di Windows. Se i criteri di controllo non sono configurati in modo corretto, potrebbe verificarsi la perdita di eventi. In genere il registro di sicurezza di Windows è impostato in modo che gli eventi meno recenti vengano sovrascritti e vengano mantenuti quelli più recenti. Tuttavia, se il registro di sicurezza di Windows è impostato in modo diverso e il registro di sicurezza è pieno, verrà generato l'evento di Windows 1104 che indica che il registro è pieno. A questo punto si verificano le situazioni seguenti:  
 -   Non verranno registrati ulteriori eventi di sicurezza  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non potrà rilevare che il sistema non è in grado di registrare gli eventi nel registro di sicurezza, causando una perdita potenziale di eventi di controllo  
-  
 -   Dopo che l'amministratore ha apportato correzioni al registro di sicurezza, il comportamento relativo alla registrazione tornerà normale.  
-  
- **Contenuto dell'argomento**  
-  
--   **Prima di iniziare:**  
-  
-     [Limitazioni e restrizioni](#Restrictions)  
-  
-     [Sicurezza](#Security)  
-  
--   **Per registrare eventi di controllo di SQL Server nel registro di sicurezza:**  
-  
-     [Configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante auditpol](#auditpolAccess)  
-  
-     [Configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante secpol](#secpolAccess)  
-  
-     [Concedere l'autorizzazione di generazione dei controlli di sicurezza a un account mediante secpol](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

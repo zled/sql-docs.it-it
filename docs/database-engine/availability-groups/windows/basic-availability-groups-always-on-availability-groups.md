@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fa15061db3da820bccfa15c6ad197611b8af0287
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Gruppi di disponibilità di base (gruppi di disponibilità AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  I gruppi di disponibilità di base AlwaysOn sono una soluzione a disponibilità elevata per SQL Server 2016 Standard Edition. Un gruppo di disponibilità di base supporta un ambiente di failover per un singolo database e viene creato e gestito in modo molto simile ai tradizionali [gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) (avanzati) con Enterprise Edition. In questo documento sono riepilogate differenze e limitazioni dei gruppi di disponibilità di base.  
+  I gruppi di disponibilità di base AlwaysOn sono una soluzione a disponibilità elevata per SQL Server 2016 e SQL Server 2017 Standard Edition. Un gruppo di disponibilità di base supporta un ambiente di failover per un singolo database e viene creato e gestito in modo molto simile ai tradizionali [gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) (avanzati) con Enterprise Edition. In questo documento sono riepilogate differenze e limitazioni dei gruppi di disponibilità di base.  
   
 ## <a name="features"></a>Funzionalità  
  I gruppi di disponibilità di base AlwaysOn sono la funzionalità deprecata di mirroring del database e garantiscono un livello simile di supporto della funzionalità. I gruppi di disponibilità di base consentono a un database primario di mantenere una singola replica. Questa replica può usare la modalità commit asincrono o la modalità commit sincrono. Per altre informazioni sulle modalità di disponibilità, vedere [Modalità di disponibilità&#40; (gruppi di disponibilità AlwaysOn)&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). La replica secondaria rimane inattiva a meno che non sia necessario eseguire il failover. Questo failover inverte le assegnazioni di ruolo primario e secondario, pertanto la replica secondaria diventerà il database attivo primario. Per altre informazioni sul failover, vedere [Failover e modalità di failover&#40;(gruppi di disponibilità AlwaysOn)&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md). I gruppi di disponibilità di base possono operare in un ambiente ibrido che si estende in locale e su Microsoft Azure.  

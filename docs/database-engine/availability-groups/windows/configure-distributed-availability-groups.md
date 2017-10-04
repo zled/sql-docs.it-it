@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ In questo momento è supportato solo il failover manuale. L'istruzione Transact-
         );  
        
       ```  
-  
+   >[!NOTE]
+   >In modo analogo ai gruppi di disponibilità, lo stato di sincronizzazione tra due repliche di gruppi di disponibilità parte di un gruppo di disponibilità distribuito dipende dalla modalità di disponibilità di entrambe le repliche. Ad esempio, affinché si verifichi il commit sincrono, sia il gruppo di disponibilità primario corrente sia il gruppo di disponibilità secondario devono essere configurati con modalità di disponibilità con commit sincrono.  
+
+
 1. Attendere che lo stato del gruppo di disponibilità distribuito diventi `SYNCHRONIZED`. Eseguire la query seguente nell'istanza di SQL Server che ospita la replica primaria del gruppo di disponibilità primario. 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

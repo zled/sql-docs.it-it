@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
@@ -74,11 +74,9 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
      Quando i criteri automatici non sono abilitati, la gestione basata su criteri non influisce sulle prestazioni del sistema.  
   
 ## <a name="terms"></a>Termini  
- **Destinazione gestita della gestione basata su criteri** 
- Entità gestite tramite la gestione basata su criteri, ad esempio un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], un database, una tabella o un indice. Tutte le destinazioni in un'istanza del server formano una gerarchia di destinazioni. Un set di destinazioni è il set risultante dall'applicazione di un set di filtri di destinazione alla gerarchia di destinazioni, ad esempio tutte le tabelle del database di proprietà dello schema HumanResources.  
+ **Destinazione gestita della gestione basata su criteri** Entità gestite tramite la gestione basata su criteri, ad esempio un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], un database, una tabella o un indice. Tutte le destinazioni in un'istanza del server formano una gerarchia di destinazioni. Un set di destinazioni è il set risultante dall'applicazione di un set di filtri di destinazione alla gerarchia di destinazioni, ad esempio tutte le tabelle del database di proprietà dello schema HumanResources.  
   
- **Facet della gestione basata su criteri**
- Set di proprietà logiche che definiscono il comportamento o le caratteristiche di certi tipi di destinazioni gestite. Il numero e le caratteristiche delle proprietà vengono incorporati nel facet e possono essere aggiunti o rimossi solo dal creatore del facet. Un tipo di destinazione può implementare uno o più facet di gestione e un facet di gestione può essere implementato da uno o più tipi di destinazione. Alcune proprietà di un facet possono essere valide solo per una versione specifica.  
+ **Facet della gestione basata su criteri** Set di proprietà logiche che definiscono il comportamento o le caratteristiche di certi tipi di destinazioni gestite. Il numero e le caratteristiche delle proprietà vengono incorporati nel facet e possono essere aggiunti o rimossi solo dal creatore del facet. Un tipo di destinazione può implementare uno o più facet di gestione e un facet di gestione può essere implementato da uno o più tipi di destinazione. Alcune proprietà di un facet possono essere valide solo per una versione specifica.  
   
  **Condizione della gestione basata su criteri**  
  Espressione booleana che specifica un set di stati consentiti per una destinazione gestita tramite la gestione basata su criteri in relazione a un facet di gestione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di osservare le regole di confronto in caso di valutazione di una condizione. Quando le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non corrispondono esattamente a quelle di Windows, testare la condizione per determinare come risolvere i conflitti dell'algoritmo.  
@@ -108,7 +106,7 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
   
 ## <a name="links-to-specific-tasks"></a>Collegamenti a specifiche attività 
 
- - [Archiviare i criteri della gestione basata su criteri](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [Archiviare i criteri della gestione basata su criteri](policy-based-management-storage.md)|  
  - [Configurare avvisi per notificare agli amministratori eventuali errori dei criteri](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [Creare una nuova condizione della gestione basata su criteri](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [Eliminare una condizione della gestione basata su criteri](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
 
   
  ## <a name="examples"></a>Esempi
- - [Creazione di criteri Disattivata per impostazione predefinita](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [Configurazione di un server per l'esecuzione di criteri Disattivata per impostazione predefinita](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [Creazione di criteri Disattivata per impostazione predefinita](lesson-1-1-create-the-off-by-default-policy.md)
+  - [Configurazione di un server per l'esecuzione di criteri Disattivata per impostazione predefinita](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>Vedere anche  
  [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

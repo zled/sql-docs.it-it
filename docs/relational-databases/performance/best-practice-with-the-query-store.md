@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  I piani di esecuzione fanno riferimento agli oggetti con nomi in tre parti `database.schema.object`.   
 
 Se si rinomina un database, l'uso forzato del piano avrà esito negativo e questo provoca la ricompilazione in tutte le esecuzioni di query successive.  
+
+##  <a name="Recovery"></a> Usare i flag di traccia nei server critici per migliorare il ripristino di emergenza
+ 
+  I flag di traccia globali 7745 e 7752 consentono di migliorare le prestazioni di Query Store in scenari a disponibilità elevata e di ripristino di emergenza.
   
+  Il flag di traccia 7745 previene il comportamento predefinito quando Query Store scrive i dati sul disco prima dell'arresto di SQL Server.
+  
+  Il flag di traccia 7752 consente a SQL Server di eseguire query prima del caricamento completo di Query Store. Il comportamento predefinito di Query Store impedisce l'esecuzione di query prima del ripristino di Query Store.
+
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
