@@ -46,8 +46,6 @@ Crea tabella AS selezionare (un'istruzione CTAS) è uno dei più importanti funz
 ## <a name="syntax"></a>Sintassi   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 

@@ -112,7 +112,7 @@ ms.lasthandoff: 07/31/2017
   
  Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
 ```  
   
@@ -145,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ### <a name="examples"></a>Esempi  
  Negli esempi di questa sezione viene eseguita l'importazione bulk di dati di tipo carattere dal file dei dati `Department-c-t.txt` creato nell'esempio precedente nella tabella `myDepartment` del database di esempio [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per crearla in base allo schema **dbo** , nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 DROP TABLE myDepartment;  
@@ -163,7 +163,7 @@ GO
   
  Al prompt dei comandi di Windows digitare:  
   
-```  
+```cmd
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
@@ -178,7 +178,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
  Nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'  

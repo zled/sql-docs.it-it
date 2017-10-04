@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 ---
 
 # <a name="insert-sql-graph"></a>INSERT (grafico SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
   Aggiunge uno o più righe a un `node` o `edge` tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 La sintassi per l'inserimento in una tabella di nodo è uguale a quella di una normale tabella. 
 
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
