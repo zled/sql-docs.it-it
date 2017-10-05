@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione di SQL Server 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,56 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Note sulla versione di SQL Server 2017
-Questo argomento descrive i limiti e i problemi relativi a [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Per informazioni correlate, vedere:
-- [Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-- [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+Questo argomento descrive le limitazioni e i problemi relativi a SQL Server 2017. Per informazioni correlate, vedere:
+- [Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
-[![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [scaricare la versione più recente di SQL Server 2017: RC2, agosto 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+**Prova SQL Server 2016;**
+- [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Scaricare SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Creare una macchina virtuale](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Avviare una macchina virtuale con SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - versione di disponibilità generale (ottobre 2017)
+### <a name="database-engine"></a>Motore di database
+
+- **Problema e impatto sul cliente:** dopo l'aggiornamento è possibile che la condivisione di rete FILESTREAM esistente non sia più disponibile.
+
+- **Soluzione alternativa:** riavviare il computer e verificare se la condivisione di rete FILESTREAM è disponibile. Se la condivisione non è ancora disponibile, eseguire le operazioni seguenti:
+
+    1. In Gestione configurazione SQL Server fare clic con il pulsante destro del mouse sull'istanza di SQL Server e scegliere **Proprietà**. 
+    2. Nella scheda **FILESTREAM** deselezionare **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file**, quindi fare clic su **Applica**.
+    3. Selezionare di nuovo **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file** con il nome di condivisione originale e fare clic su **Applica**.
+
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- **Problema e impatto sul cliente:** nella pagina delle autorizzazioni utente, quando si concede l'autorizzazione a livello radice nella visualizzazione albero entità, viene visualizzato l'errore seguente: `"The model permission cannot be saved. The object guid is not valid"`
+
+- **Soluzioni alternative:** 
+  - Concedere l'autorizzazione per i nodi figlio nella visualizzazione albero anziché a livello radice.
+  - o
+  - Eseguire lo script descritto in questo blog del team MDS relativo all'[errore durante l'applicazione di autorizzazioni a livello di entità](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+
+### <a name="analysis-services"></a>Analysis Services
+- **Problema e impatto sul cliente:** per i modelli tabulari al livello di compatibilità 1400, quando si usa Recupera dati, i connettori dati per alcune origini dati, ad esempio Amazon Redshift, IBM Netezza e Impala, non sono ancora disponibili.
+- **Soluzione alternativa:** nessuna.   
+
+- **Problema e impatto sul cliente:** i modelli di query diretta al livello di compatibilità 1400 con prospettive possono avere esito negativo nell'esecuzione di query o nell'individuazione dei metadati.
+- **Soluzione alternativa:** rimuovere le prospettive ed eseguire di nuovo la distribuzione.
+
+### <a name="tools"></a>Strumenti
+- **Problema e impatto sul cliente:** l'esecuzione di *DReplay* ha esito negativo con il messaggio seguente: "Errore DReplay Errore imprevisto".
+- **Soluzione alternativa:** nessuna.
+
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2, agosto 2017)
 Non sono disponibili note sulla versione di SQL Server in Windows per questa versione. Vedere [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>Versione finale candidata di SQL Server 2017 (RC1 - luglio 2017)
@@ -52,7 +87,7 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
 - **Problema e impatto sul cliente:** se SQL Server Reporting Services e il server di report di Power BI sono presenti nello stesso computer e si disinstalla uno dei due, non è più possibile connettersi al server di report rimanente con Gestione configurazione del server di report.
-- **Soluzione alternativa:** per risolvere questo problema, seguire questa procedura dopo aver disinstallato uno dei server.
+- **Soluzione alternativa** per risolvere questo problema, è necessario eseguire le operazioni seguenti dopo la disinstallazione di uno dei server.
 
     1. Avviare un prompt dei comandi in modalità amministratore.
     2. Passare alla directory in cui è installato il server di report rimanente.
@@ -81,7 +116,7 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 
    I tentativi di reinstallare una versione del 2016 di TSqlLanguageService.msi hanno esito negativo con il messaggio: *Installazione di Servizio linguaggio T-SQL di Microsoft SQL Server 2016 non riuscita. Nel computer è già presente una versione successiva*.
 
-- **Soluzione alternativa:** per risolvere questo problema e correggere un'applicazione che dipende dalla versione 13 degli assembly, seguire questa procedura:
+- **Soluzione alternativa** Per risolvere questo problema e correggere un'applicazione che dipende dalla versione v13 degli assembly, seguire questi passaggi:
 
    1. Andare a **Installazione applicazioni**
    2. Cercare *Microsoft SQL Server vNext T-SQL Language Service CTP2.1*, fare clic con il pulsante destro del mouse e selezionare **Disinstalla**.

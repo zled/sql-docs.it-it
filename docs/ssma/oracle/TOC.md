@@ -1,5 +1,6 @@
 # [Installazione di SSMA per Oracle (OracleToSQL)](installing-ssma-for-oracle-oracletosql.md)
 # [Introduzione a SSMA per Oracle (OracleToSQL)](getting-started-with-ssma-for-oracle-oracletosql.md)
+# [Convertire lo schema HR Oracle in SQL Server](sql-server-linux-convert-from-oracle.md)
 # [Note legali (SSMA per Oracle)](legal-notice-ssma-for-oracle.md)
 # [Installazione di SSMA per il client Oracle (OracleToSQL)](installing-ssma-for-oracle-client-oracletosql.md)
 # [Novità di SSMA per Oracle (OracleToSQL)](what-s-new-in-ssma-for-oracle-oracletosql.md)
