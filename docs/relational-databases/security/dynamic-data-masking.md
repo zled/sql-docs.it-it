@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Mascheramento dati dinamici
@@ -30,10 +30,10 @@ La maschera dati dinamica (DDM) limita l'esposizione dei dati sensibili nasconde
 
 La maschera dati dinamica aiuta a impedire l'accesso non autorizzato ai dati sensibili consentendo agli utenti di definire la quantità di dati sensibili da rivelare, con un impatto minimo sul livello dell'applicazione. La funzionalità DDM può essere configurata nel database per nascondere i dati sensibili nei set di risultati delle query in campi di database designati, senza modificare i dati nel database. La maschera dati dinamica è semplice da usare con le applicazioni esistenti, poiché vengono applicate le regole per la maschera nei risultati della query. Molte applicazioni sono in grado di mascherare i dati sensibili senza modificare le query esistenti.
 
-*  I criteri di mascheramento dei dati centrali operano direttamente nei campi sensibili del database.
-*  Designare gli utenti con privilegi o ruoli che hanno accesso ai dati sensibili.
-*  Le funzionalità DDM offrono funzioni di mascheramento completo e parziale, nonché una maschera casuale per dati numerici.
-*  Semplici comandi [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definiscono e gestiscono le maschere.
+* I criteri di mascheramento dei dati centrali operano direttamente sui campi sensibili del database.
+* Designare gli utenti con privilegi o ruoli che hanno accesso ai dati sensibili.
+* Le funzionalità DDM offrono funzioni di mascheramento completo e parziale, nonché una maschera casuale per dati numerici.
+* Semplici comandi [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definiscono e gestiscono le maschere.
 
 Ad esempio, un addetto del call center può identificare i chiamanti da diverse cifre del codice fiscale o dal numero della carta di credito, ma tali elementi di dati non devono essere completamente visibili all'addetto. È possibile definire una regola per la maschera che nasconde nel set di risultati di una query tutte le cifre, ad eccezione delle ultime quattro di qualsiasi codice fiscale o numero di carta di credito. Un altro esempio: usando la maschera dati appropriata per proteggere i dati relativi a informazioni personali, uno sviluppatore può eseguire una query negli ambienti di produzione per la risoluzione dei problemi senza violare la regolamentazione di conformità.
 

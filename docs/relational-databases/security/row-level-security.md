@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.translationtype: HT
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  L'accesso ai dati a livello di riga in una tabella è limitato da un predicato di sicurezza definito come una funzione inline con valori di tabella. La funzione viene quindi richiamata e applicata dai criteri di sicurezza. Nel caso dei predicati del filtro non sono presenti indicazioni per l'applicazione che le righe sono state filtrate dal set di risultati. Se vengono filtrate tutte le righe, viene restituito un set Null. Per i predicati di blocco, qualsiasi operazione che violi il predicato non verrà completata e genererà un errore.  
   
- I predicati di filtro vengono applicati durante la lettura dei dati dalla tabella di base e questa azione influisce su tutte le operazioni get: **SELECT**, **DELETE** (l'utente non può eliminare le righe filtrate) e **UPDATE** (l'utente non può aggiornare le righe filtrate, anche se è possibile aggiornare le righe in modo che vengano filtrate successivamente). I predicati di blocco influiscono su tutte le operazioni di scrittura.  
+ I predicati di filtro vengono applicati durante la lettura dei dati dalla tabella di base. Questa azione influisce su tutte le operazioni Get: **SELECT**, **DELETE** (l'utente non può eliminare le righe filtrate) e **UPDATE** (l'utente non può aggiornare le righe filtrate, sebbene sia possibile aggiornare le righe in modo che vengano filtrate successivamente). I predicati di blocco influiscono su tutte le operazioni di scrittura.  
   
 -   I predicati AFTER INSERT e AFTER UPDATE possono impedire agli utenti di aggiornare le righe con valori che violano il predicato.  
   
@@ -63,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  I predicati del filtro e di blocco e i criteri di sicurezza si comportano nel modo seguente:  
   
--   È possibile definire una funzione di predicato che si unisca a un'altra tabella e/o chiami una funzione. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = ON`, il join o la funzione è accessibile dalla query e funziona come previsto senza controlli aggiuntivi delle autorizzazioni. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = OFF`, gli utenti dovranno avere autorizzazioni **SELECT** o **EXECUTE** su queste tabelle e funzioni aggiuntive per eseguire query sulla tabella di destinazione.  
-  
-     È possibile definire una funzione di predicato che si unisca a un'altra tabella e/o chiami una funzione. Il join/funzione è accessibile dalla query e funziona come previsto senza ulteriori controlli delle autorizzazioni.  
+-   È possibile definire una funzione di predicato che si unisca a un'altra tabella e/o chiami una funzione. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = ON`, il join o la funzione è accessibile dalla query e funziona come previsto senza controlli aggiuntivi delle autorizzazioni. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = OFF`, gli utenti dovranno avere autorizzazioni **SELECT** o **EXECUTE** su queste tabelle e funzioni aggiuntive per eseguire query sulla tabella di destinazione.
   
 -   È possibile inviare una query in una tabella con un predicato di sicurezza definito ma disabilitato. Le righe filtrate o bloccate non sono interessate.  
   

@@ -3,7 +3,7 @@ title: Transazioni in tabelle con ottimizzazione per la memoria| Microsoft Docs
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 06/12/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: 
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 8301993dd05a833c07bd2b30674e59c6cb293c0e
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -56,7 +56,7 @@ L'approccio ottimistico implica un sovraccarico minore ed è in genere più effi
   
 SQL può avviare le transazioni con le modalità seguenti:  
   
-- **Commit automatico** : l'inizio di una semplice query o istruzione DML apre in modo implicito una transazione e la fine di questa istruzione esegue implicitamente il commit della transazione stessa. Impostazione predefinita.  
+- **Commit automatico** : l'inizio di una semplice query o istruzione DML apre in modo implicito una transazione e la fine di questa istruzione esegue implicitamente il commit della transazione stessa. **Commit automatico** è l'impostazione predefinita.  
   - In modalità autocommit non è di solito necessario codificare un hint di tabella sul livello di isolamento delle transazioni nella tabella con ottimizzazione per la memoria nella clausola FROM.  
   
 - **Esplicita** : Transact-SQL contiene il codice BEGIN TRANSACTION, insieme a un eventuale COMMIT TRANSACTION. Due o più istruzioni possono essere riunite nella stessa transazione.  
@@ -64,7 +64,7 @@ SQL può avviare le transazioni con le modalità seguenti:
   
 - **Implicita** : quando è attiva SET IMPLICIT_TRANSACTION ON. Probabilmente IMPLICIT_BEGIN_TRANSACTION sarebbe un nome migliore, poiché questa opzione non fa altro che eseguire in modo implicito l'equivalente di un'istruzione BEGIN TRANSACTION esplicita prima di ogni istruzione UPDATE se 0 = @@trancount. Quindi dipende dal codice T-SQL se viene inviata un'istruzione COMMIT TRANSACTION esplicita.   
   
-- **ATOMIC BLOCK** tutte le istruzioni nei blocchi ATOMIC, necessari con le stored procedure compilate in modo nativo, vengono eseguite sempre come parte di una singola transazione: commit di tutte le azioni del blocco atomico oppure rollback di tutte in caso di errore.  
+- **Blocco ATOMIC**: tutte le istruzioni nei blocchi ATOMIC vengono sempre eseguite come parte di una singola transazione. In caso di esito positivo viene eseguito il commit delle azioni del blocco ATOMIC nel loro complesso oppure, in caso di errore, viene eseguito il rollback di tutte. Ogni stored procedure compilata in modo nativo richiede un blocco ATOMIC.  
   
 <a name="codeexamexpmode25ni"/>  
   
@@ -72,42 +72,44 @@ SQL può avviare le transazioni con le modalità seguenti:
   
 Il seguente script Transact-SQL interpretato usa:  
   
-- Una transazione esplicita.  
-  
-- Una tabella con ottimizzazione per la memoria, denominata dbo. Order_mo.  
-  
+- Una transazione esplicita.
+- Una tabella con ottimizzazione per la memoria, denominata dbo. Order_mo.
 - Il contesto del livello di isolamento delle transazioni READ COMMITTED.  
   
 È quindi necessario avere un hint di tabella per la tabella con ottimizzazione per la memoria. L'hint deve essere per SNAPSHOT o per un livello di isolamento ancora maggiore. Nel caso dell'esempio di codice l'hint è WITH (SNAPSHOT). Se si rimuove questo hint, lo script genera un errore 41368, per il quale un nuovo tentativo automatico non sarebbe appropriato:  
+
+#### <a name="error-41368"></a>Errore 41368
+
+L'accesso alle tabelle con ottimizzazione per la memoria utilizzando il livello di isolamento READ COMMITTED è supportato solo per transazioni in modalità autocommit. Non è invece supportato con le transazioni implicite o esplicite. Specificare un livello di isolamento supportato per la tabella con ottimizzazione per la memoria usando un hint di tabella, ad esempio WITH (SNAPSHOT).
+
+```sql
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+GO  
+
+BEGIN TRANSACTION;  -- Explicit transaction.  
+
+-- Order_mo  is a memory-optimized table.  
+SELECT * FROM  
+           dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
+      JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
+     
+COMMIT TRANSACTION;
+```
   
-- 41368: l'accesso alle tabelle con ottimizzazione per la memoria con il livello di isolamento READ COMMITTED è supportato solo per le transazioni in modalità autocommit. Non è invece supportato con le transazioni implicite o esplicite. Specificare un livello di isolamento supportato per la tabella con ottimizzazione per la memoria usando un hint di tabella, ad esempio WITH (SNAPSHOT).  
-  
-  
-  
-      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-      GO  
-  
-      BEGIN TRANSACTION;  -- Explicit transaction.  
-  
-      -- Order_mo  is a memory-optimized table.  
-      SELECT *  
-       FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
-           JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-      
-      COMMIT TRANSACTION;  
-  
-Si noti che l'hint `WITH (SNAPSHOT)` non è necessario se si usa l'opzione di database `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. Quando questa opzione è impostata su `ON`, l'accesso a una tabella con ottimizzazione per la memoria a un livello di isolamento inferiore viene elevato automaticamente al livello di isolamento SNAPSHOT.  
-  
-    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
-  
+L'hint `WITH (SNAPSHOT)` non è necessario se si usa l'opzione di database `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. Quando questa opzione è impostata su `ON`, l'accesso a una tabella con ottimizzazione per la memoria a un livello di isolamento inferiore viene elevato automaticamente al livello di isolamento SNAPSHOT.  
+
+```sql
+ALTER DATABASE CURRENT
+    SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
+```
+
 <a name="rowver28ni"/>  
   
 ## <a name="row-versioning"></a>Controllo delle versioni delle righe  
   
 Le tabelle con ottimizzazione per la memoria usano un sistema sofisticato per il controllo delle versioni di riga, che assicura l'efficacia dell'approccio ottimistico, anche al livello di isolamento più rigoroso, SERIALIZABLE. Per i dettagli, vedere [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
-Le tabelle basate su disco hanno indirettamente un sistema per il controllo delle versioni delle righe quando è impostata l'opzione READ_COMMITTED_SNAPSHOT o è attivo il livello di isolamento SNAPSHOT. Questo sistema è basato su tempdb, mentre le strutture di dati con ottimizzazione per la memoria hanno un controllo delle versioni delle righe incorporato, per garantire la massima efficienza.  
+Le tabelle basate su disco hanno indirettamente un sistema per il controllo delle versioni delle righe quando è impostata l'opzione READ_COMMITTED_SNAPSHOT o è attivo il livello di isolamento SNAPSHOT. Questo sistema è basato su tempdb, mentre le strutture di dati ottimizzate per la memoria hanno un controllo delle versioni delle righe incorporato, per garantire la massima efficienza.  
   
 <a name="confdegreeiso30ni"/>  
   
@@ -118,7 +120,7 @@ La tabella che segue indica i livelli di isolamento possibili per le transazioni
 | Livello di isolamento | Descrizione |   
 | :-- | :-- |   
 | READ UNCOMMITTED | Non disponibile: non è possibile accedere alle tabelle con ottimizzazione per la memoria con isolamento Read Uncommitted. È comunque possibile accedere alle tabelle con ottimizzazione per la memoria con isolamento SNAPSHOT se l'opzione TRANSACTION ISOLATION LEVEL a livello di sessione è impostata su READ UNCOMMITTED, usando l'hint di tabella WITH (SNAPSHOT) o impostando l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. | 
-| READ COMMITTED | L'opzione è supportata per le tabelle con ottimizzazione per la memoria solo quando è attiva la modalità autocommit. È comunque possibile accedere alle tabelle con ottimizzazione per la memoria con isolamento SNAPSHOT se l'opzione TRANSACTION ISOLATION LEVEL a livello di sessione è impostata su READ COMMITTED, usando l'hint di tabella WITH (SNAPSHOT) o impostando l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. <br/><br/> Si noti che se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON, non è possibile accedere a una tabella con ottimizzazione per la memoria e a una tabella basata su disco con il livello di isolamento READ COMMITTED nella stessa istruzione. |  
+| READ COMMITTED | L'opzione è supportata per le tabelle con ottimizzazione per la memoria solo quando è attiva la modalità autocommit. È comunque possibile accedere alle tabelle con ottimizzazione per la memoria con isolamento SNAPSHOT se l'opzione TRANSACTION ISOLATION LEVEL a livello di sessione è impostata su READ COMMITTED, usando l'hint di tabella WITH (SNAPSHOT) o impostando l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON.<br/><br/>Se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON, non è possibile accedere a una tabella ottimizzata per la memoria e a una tabella basata su disco con il livello di isolamento READ COMMITTED nella stessa istruzione. |  
 | SNAPSHOT | Supportata per le tabelle con ottimizzazione per la memoria. <br/><br/> Internamente, SNAPSHOT è il livello di isolamento della transazione meno rigoroso per le tabelle con ottimizzazione per la memoria. <br/><br/> SNAPSHOT usa meno risorse di sistema rispetto a REPEATABLE READ o SERIALIZABLE. |  
 | REPEATABLE READ | Supportata per le tabelle con ottimizzazione per la memoria. Il livello di isolamento REPEATABLE READ garantisce che, in fase di commit, nessuna transazione simultanea abbia aggiornato nessuna delle righe lette da questa transazione. <br/><br/> Dato il modello ottimistico, alle transazioni simultanee non è impedito di aggiornare le righe lette dalla transazione. In fase di commit, però, questa transazione verifica che l'isolamento REPEATABLE READ non sia stato violato. Se ciò è accaduto, viene eseguito il rollback della transazione e questa deve essere riprovata. | 
 | SERIALIZABLE | Supportata per le tabelle con ottimizzazione per la memoria. <br/><br/> Il nome *Serializable* è dovuto al fatto che l'isolamento è così rigido che è quasi come se le transazioni fossero eseguite in serie anziché contemporaneamente. | 
@@ -130,7 +132,7 @@ La tabella che segue indica i livelli di isolamento possibili per le transazioni
   
 ## <a name="transaction-phases-and-lifetime"></a>Fasi e durata delle transazioni  
   
-Quando è interessata una tabella con ottimizzazione per la memoria, la durata di una transazione attraversa le fasi illustrate nell'immagine seguente.  
+Quando è interessata una tabella ottimizzata per la memoria, la durata di una transazione attraversa le fasi illustrate nell'immagine seguente:
   
 ![hekaton_transactions](../../relational-databases/in-memory-oltp/media/hekaton-transactions.gif)  
   
@@ -143,8 +145,8 @@ Seguono le descrizioni delle fasi.
   
 #### <a name="validation-phase-2-of-3"></a>Convalida: Fase 2 di 3  
   
-- La fase di convalida inizia con l'assegnazione dell'ora di fine, contrassegnando la transazione come completata a livello logico. In questo modo tutte le modifiche della transazione sono visibili alle altre transazioni, che assumeranno una dipendenza da questa transazione e non potranno eseguire il commit fino al commit di questa transazione. Inoltre, le transazioni che contengono queste dipendenze non possono restituire set di risultati al client per assicurare che il client veda solo i dati di cui è stato eseguito il commit nel database.  
-- Questa fase comprende la lettura ripetibile e la convalida serializzabile. Per la convalida di lettura ripetibile, verifica se le righe lette dalla transazione sono state aggiornate da quel momento. Per la convalida serializzabile, verifica se sono state inserite righe in qualsiasi intervallo di dati analizzato da questa transazione. Si noti che, come indicato nella tabella [Livelli di isolamento e conflitti](#confdegreeiso30ni), la convalida di lettura ripetibile e la convalida serializzabile possono avere luogo quando si usa l'isolamento snapshot, per convalidare la coerenza dei vincoli di chiave univoca ed esterna.  
+- La fase di convalida inizia con l'assegnazione dell'ora di fine, contrassegnando la transazione come completata a livello logico. Questo completamento rende visibili tutte le modifiche della transazione per le altre transazioni dipendenti da questa transazione. Il commit delle transazioni dipendenti non è consentito fino al commit di questa transazione. Inoltre, le transazioni che contengono queste dipendenze non possono restituire set di risultati al client per assicurare che il client veda solo i dati di cui è stato eseguito il commit nel database.  
+- Questa fase comprende la lettura ripetibile e la convalida serializzabile. Per la convalida di lettura ripetibile, verifica se le righe lette dalla transazione sono state aggiornate da quel momento. Per la convalida serializzabile, verifica se sono state inserite righe in qualsiasi intervallo di dati analizzato da questa transazione. Come indicato nella tabella [Livelli di isolamento e conflitti](#confdegreeiso30ni), la convalida di lettura ripetibile e la convalida serializzabile possono avere luogo quando si usa l'isolamento snapshot, per convalidare la coerenza dei vincoli di chiave univoca ed esterna.  
   
 #### <a name="commit-processing-phase-3-of-3"></a>Elaborazione del commit: Fase 3 di 3  
   
@@ -161,15 +163,15 @@ Esistono due tipi di condizioni di errore relative alle transazioni che causano 
 - Conflitti tra le transazioni simultanee. Si tratta di conflitti di aggiornamento ed errori di convalida, che possono essere dovuti a violazioni a livello di isolamento della transazione o violazioni di vincoli.
 - Errori di dipendenza. Derivano dal mancato commit della transazione da cui si dipende o dall'aumento eccessivo del numero di dipendenze.
 
-Di seguito sono indicate le condizioni di errore che possono impedire l'accesso alle tabelle con ottimizzazione per la memoria da parte delle transazioni.
+Di seguito sono indicate le condizioni di errore che possono causare errori delle transazioni durante l'accesso alle tabelle ottimizzate per la memoria.
 
 | Codice errore | Descrizione | Causa |
 | :-- | :-- | :-- |
 | **41302** | Si è tentato di aggiornare una riga che è stata aggiornata in un'altra transazione dopo l'avvio di questa transazione. | Questa condizione di errore si verifica se due transazioni simultanee tentano di aggiornare o eliminare la stessa riga nello stesso momento. Una delle due transazioni riceve questo messaggio di errore e dovrà essere ritentata. <br/><br/>  | 
-| **41305**| Errore di convalida di lettura ripetibile. Una riga letta da una tabella con ottimizzazione per la memoria è stata aggiornata da un'altra transazione che ha eseguito il commit prima del commit di questa transazione. | Questo errore può verificarsi quando si usa l'isolamento REPEATABLE READ o SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione del vincolo di chiave esterna. <br/><br/>In genere questa violazione simultanea dei vincoli di chiave esterna è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Tuttavia, l'errore può verificarsi anche se non esiste alcun indice nelle colonne coinvolte nel vincolo FOREIGN KEY. Per questo motivo è consigliabile creare sempre un indice nelle colonne di chiavi esterne in una tabella con ottimizzazione per la memoria. <br/><br/> Per considerazioni più specifiche sugli errori di convalida dovuti a violazioni di chiavi esterne, vedere [questo post di blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) del team di consulenza clienti di SQL Server. |  
-| **41325** | Errore di convalida serializzabile. È stata inserita una nuova riga in un intervallo analizzato in precedenza da questa transazione. Si tratta di una cosiddetta riga fantasma. | Questo errore può verificarsi quando si usa l'isolamento SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione di un vincolo PRIMARY KEY, UNIQUE o FOREIGN KEY. <br/><br/> In genere questa violazione simultanea dei vincoli è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Comunque, analogamente agli errori di convalida di lettura ripetibile, questo errore può verificarsi anche se è presente un vincolo FOREIGN KEY senza indice sulle colonne coinvolte. |  
+| **41305**| Errore di convalida di lettura ripetibile. Una riga letta da una tabella con ottimizzazione per la memoria è stata aggiornata da un'altra transazione che ha eseguito il commit prima del commit di questa transazione. | Questo errore può verificarsi quando si usa l'isolamento REPEATABLE READ o SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione del vincolo di chiave esterna. <br/><br/>Questa violazione simultanea dei vincoli di chiave esterna è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Tuttavia, l'errore può verificarsi anche se non esiste alcun indice nelle colonne coinvolte nel vincolo FOREIGN KEY. Per questo motivo è consigliabile creare sempre un indice nelle colonne di chiavi esterne in una tabella con ottimizzazione per la memoria. <br/><br/> Per considerazioni più specifiche sugli errori di convalida dovuti a violazioni di chiavi esterne, vedere [questo post di blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) del team di consulenza clienti di SQL Server. |  
+| **41325** | Errore di convalida serializzabile. È stata inserita una nuova riga in un intervallo analizzato in precedenza da questa transazione. Si tratta di una cosiddetta riga fantasma. | Questo errore può verificarsi quando si usa l'isolamento SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione di un vincolo PRIMARY KEY, UNIQUE o FOREIGN KEY. <br/><br/> Questa violazione simultanea dei vincoli è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Comunque, analogamente agli errori di convalida di lettura ripetibile, questo errore può verificarsi anche se è presente un vincolo FOREIGN KEY senza indice sulle colonne coinvolte. |  
 | **41301** | Errore di dipendenza: è stata acquisita una dipendenza da un'altra transazione di cui in seguito non è stato eseguito il commit. | Questa transazione (Tx1) ha acquisito una dipendenza da un'altra transazione (Tx2) mentre tale transazione (Tx2) era in fase di elaborazione della convalida o del commit, leggendo i dati scritti da Tx2. Successivamente, Tx2 non è riuscita a eseguire il commit. Le cause più comuni per il mancato commit di Tx2 sono gli errori di convalida di lettura ripetibile (41305) e serializzabile (41325). Una causa meno comune è un errore di I/O del log. |
-| **41839** | La transazione ha superato il numero massimo di dipendenze di commit. | Il numero di transazioni da cui una determinata transazione (Tx1) può dipendere è limitato (dipendenze in uscita). Anche il numero di transazioni che possono dipendere da una determinata transazione (Tx1) è limitato (dipendenze in ingresso). Il limite in entrambi i casi è 8. <br/><br/> Lo scenario più comune per questo errore è la presenza di un ampio numero di transazioni di lettura che accedono a dati scritti da una singola transazione di scrittura. Le probabilità che si verifichi questa condizione aumentano se tutte le transazioni di lettura eseguono ampie analisi degli stessi dati e se l'elaborazione della convalida o del commit della transazione di scrittura richiede molto tempo, ad esempio quando la transazione di scrittura esegue vaste analisi con il livello di isolamento serializable (aumenta la durata della fase di convalida) o il log delle transazioni si trova in un dispositivo di I/O di log lento (aumenta la durata dell'elaborazione del commit). Se le transazioni di lettura eseguono ampie analisi ed è previsto che accedano solo a poche righe, questo potrebbe indicare la mancanza di un indice. Analogamente, se la transazione di scrittura usa l'isolamento serializable ed esegue ampie analisi, ma è previsto che acceda a poche righe, anche questo indica la mancanza di un indice. <br/><br/> Il limite sul numero delle dipendenze di commit può essere eliminato usando il flag di traccia **9926**. È importante usare questo flag di traccia solo se questa condizione di errore si presenta anche dopo avere verificato che non manca alcun indice, perché potrebbe mascherare questi problemi nei casi sopra indicati. Un'altra precauzione è il fatto che i grafici complessi delle dipendenze, in cui ogni transazione ha un numero elevato di dipendenze in ingresso e in uscita e ogni transazione può avere molti livelli di dipendenze, possono determinare inefficienze nel sistema.  |
+| **41839** | La transazione ha superato il numero massimo di dipendenze di commit. | Il numero di transazioni da cui una determinata transazione (Tx1) può dipendere è limitato. Queste transazioni sono le dipendenze in uscita. Anche il numero di transazioni che possono dipendere da una determinata transazione (Tx1) è limitato. Queste transazioni sono le dipendenze in ingresso. Il limite in entrambi i casi è 8. <br/><br/> Lo scenario più comune per questo errore è la presenza di un ampio numero di transazioni di lettura che accedono a dati scritti da una singola transazione di scrittura. Le probabilità che si verifichi questa condizione aumentano se tutte le transazioni di lettura eseguono ampie analisi degli stessi dati e se l'elaborazione della convalida o del commit della transazione di scrittura richiede molto tempo, ad esempio quando la transazione di scrittura esegue vaste analisi con il livello di isolamento serializable (aumenta la durata della fase di convalida) o il log delle transazioni si trova in un dispositivo di I/O di log lento (aumenta la durata dell'elaborazione del commit). Se le transazioni di lettura eseguono ampie analisi ed è previsto che accedano solo a poche righe, potrebbe mancare un indice. Analogamente, se la transazione di scrittura usa l'isolamento serializable ed esegue ampie analisi, ma è previsto che acceda a poche righe, anche questo indica la mancanza di un indice. <br/><br/> Il limite sul numero delle dipendenze di commit può essere eliminato usando il flag di traccia **9926**. È importante usare questo flag di traccia solo se questa condizione di errore si presenta anche dopo avere verificato che non manca alcun indice, perché potrebbe mascherare questi problemi nei casi sopra indicati. Un'altra precauzione è il fatto che i grafici complessi delle dipendenze, in cui ogni transazione ha un numero elevato di dipendenze in ingresso e in uscita e ogni transazione può avere molti livelli di dipendenze, possono determinare inefficienze nel sistema.  |
  
   
 ### <a name="retry-logic"></a>Logica di ripetizione dei tentativi 
@@ -182,63 +184,65 @@ La logica di ripetizione dei tentativi può essere implementata sul lato client 
   
 #### <a name="retry-t-sql-code-example"></a>Esempio di codice di ripetizione T-SQL  
   
-La logica di ripetizione dei tentativi sul lato server mediante T-SQL deve essere usata solo per le transazioni che non restituiscono set di risultati al client perché i tentativi ripetuti possono comportare la restituzione di ulteriori set di risultati imprevisti al client.  
+La logica di ripetizione sul lato server mediante T-SQL deve essere usata solo per le transazioni che non restituiscono set di risultati al client. In caso contrario, tentativi ripetuti possono comportare la restituzione al client di set di risultati aggiuntivi oltre a quelli previsti.  
   
-Lo script T-SQL interpretato riportato di seguito illustra l'aspetto che può avere una logica di ripetizione per gli errori associati ai conflitti tra transazioni relativi alle tabelle con ottimizzazione per la memoria.  
-  
-      -- Retry logic, in Transact-SQL.  
-    DROP PROCEDURE If Exists usp_update_salesorder_dates;  
-    GO  
-  
-    CREATE PROCEDURE usp_update_salesorder_dates  
-    AS  
-    BEGIN  
-        DECLARE @retry INT = 10;  
-  
-        WHILE (@retry > 0)  
-        BEGIN  
-            BEGIN TRY  
-                BEGIN TRANSACTION;  
-  
-                UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)  
-                    set OrderDate = GetUtcDate()  
-                    where CustomerId = 42;  
-  
-                UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)  
-                    set OrderDate = GetUtcDate()  
-                    where CustomerId = 43;  
-  
-                COMMIT TRANSACTION;  
-                SET @retry = 0;  -- //Stops the loop.  
-            END TRY  
-  
-            BEGIN CATCH  
-                SET @retry -= 1;  
-  
-                IF (@retry > 0 AND  
-                    ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)  
-                    )  
-                BEGIN  
-                    IF XACT_STATE() = -1  
-                        ROLLBACK TRANSACTION;  
-  
-                    WAITFOR DELAY '00:00:00.001';  
-                END  
-                ELSE  
-                BEGIN  
-                    PRINT 'Suffered an error for which Retry is inappropriate.';  
-                    THROW;  
-                END  
-            END CATCH  
-  
-        END -- //While loop  
-    END;  
-    GO  
-  
-      --  EXECUTE usp_update_salesorder_dates;  
-  
-  
-  
+Lo script T-SQL interpretato riportato di seguito illustra l'aspetto che può avere una logica di ripetizione per gli errori associati ai conflitti tra transazioni relativi alle tabelle con ottimizzazione per la memoria.
+
+```sql
+-- Retry logic, in Transact-SQL.
+DROP PROCEDURE If Exists usp_update_salesorder_dates;
+GO
+
+CREATE PROCEDURE usp_update_salesorder_dates
+AS
+BEGIN
+    DECLARE @retry INT = 10;
+
+    WHILE (@retry > 0)
+    BEGIN
+        BEGIN TRY
+            BEGIN TRANSACTION;
+
+            UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)
+                set OrderDate = GetUtcDate()
+                where CustomerId = 42;
+
+            UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)
+                set OrderDate = GetUtcDate()
+                where CustomerId = 43;
+
+            COMMIT TRANSACTION;
+
+            SET @retry = 0;  -- //Stops the loop.
+        END TRY
+
+        BEGIN CATCH
+            SET @retry -= 1;
+
+            IF (@retry > 0 AND
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                )
+            BEGIN
+                IF XACT_STATE() = -1
+                    ROLLBACK TRANSACTION;
+
+                WAITFOR DELAY '00:00:00.001';
+            END
+            ELSE
+            BEGIN
+                PRINT 'Suffered an error for which Retry is inappropriate.';
+                THROW;
+            END
+        END CATCH
+
+    END -- //While loop
+END;
+GO
+
+--  EXECUTE usp_update_salesorder_dates;
+```
+
+
 <a name="crossconttxn38ni"/>  
   
 ## <a name="cross-container-transaction"></a>Transazione tra contenitori  
@@ -257,36 +261,35 @@ Nell'esempio di codice Transact-SQL che segue:
   
 - Alla tabella basata su disco, Table_D1, si accede usando il livello di isolamento READ COMMITTED.  
 - Alla tabella con ottimizzazione per la memoria Table_MO7 si accede usando il livello di isolamento SERIALIZABLE. A Table_MO6 non è associato un livello di isolamento specifico perché gli inserimenti sono sempre coerenti ed eseguiti essenzialmente con il livello di isolamento serializable.  
-  
-  
-  
-      -- Different isolation levels for  
-      -- disk-based tables versus memory-optimized tables,  
-      -- within one explicit transaction.  
-  
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
-  
-    BEGIN TRANSACTION;  
-  
-        -- Table_D1 is a traditional disk-based table, accessed using READ COMMITTED isolation.  
-        --  
-        SELECT * FROM Table_D1;  
-  
-  
-  
-        -- Table_MO6 and Table_MO7 are memory-optimized tables. Table_MO7 is accessed using SERIALIZABLE isolation,  
-    --   while Table_MO6 does not have a specific   
-        --  
-        INSERT Table_MO6  
-            SELECT * FROM Table_MO7 WITH (SERIALIZABLE);  
-  
-  
-    COMMIT TRANSACTION;  
-    GO  
-  
-  
-  
+
+
+```sql
+-- Different isolation levels for
+-- disk-based tables versus memory-optimized tables,
+-- within one explicit transaction.
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+go
+
+BEGIN TRANSACTION;
+
+    -- Table_D1 is a traditional disk-based table, accessed using READ COMMITTED isolation.
+
+    SELECT * FROM Table_D1;
+
+
+    -- Table_MO6 and Table_MO7 are memory-optimized tables.
+    -- Table_MO7 is accessed using SERIALIZABLE isolation,
+    --   while Table_MO6 does not have a specific isolation level.
+
+    INSERT Table_MO6
+        SELECT * FROM Table_MO7 WITH (SERIALIZABLE);
+
+COMMIT TRANSACTION;
+go
+```
+
+
 <a name="limitations40ni"/>  
   
 ## <a name="limitations"></a>Limitazioni  
@@ -306,9 +309,9 @@ Nell'esempio di codice Transact-SQL che segue:
 - In una procedura nativa ATOMIC BLOCK deve dichiarare il livello di isolamento della transazione per l'intero blocco, ad esempio:  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
   
-- Non sono consentite istruzioni di controllo delle transazioni esplicite nel corpo di una procedura nativa. Le opzioni BEGIN TRANSACTION, ROLLBACK TRANSACTION e così via sono tutte disattivate.  
+- Non sono consentite istruzioni di controllo delle transazioni esplicite nel corpo di una procedura nativa. Le opzioni BEGIN TRANSACTION, ROLLBACK TRANSACTION e così via sono tutte non consentite.  
   
-- Per altre informazioni sul controllo delle transazioni con i blocchi ATOMIC, vedere [Blocchi atomici](atomic-blocks-in-native-procedures.md)  
+- Per altre informazioni sul controllo delle transazioni con i blocchi ATOMIC, vedere [Blocchi ATOMIC](atomic-blocks-in-native-procedures.md).  
   
 <a name="othertxnlinks44ni"/>  
   

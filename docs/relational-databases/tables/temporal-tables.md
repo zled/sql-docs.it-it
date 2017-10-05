@@ -16,16 +16,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
+ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
+ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduce il supporto per le tabelle temporali con controllo delle versioni del sistema come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011 e ora è supportata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  In SQL Server 2016 è stato introdotto il supporto per le tabelle temporali con controllo delle versioni del sistema come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011.  
   
  **Avvio rapido**  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 07/31/2017
 -   **Video:** per una discussione di 20 minuti sulle tabelle temporali, vedere [Tabelle temporali in SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Che cos'è una tabella temporale con controllo delle versioni di sistema?  
- Una tabella temporale con controllo delle versioni di sistema è un nuovo tipo di tabella utente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], progettato per mantenere una cronologia completa delle modifiche dei dati e semplificare l'analisi temporizzata. Questo tipo di tabella temporale è definito tabella temporale con controllo delle versioni di sistema perché il periodo di validità per ogni riga viene gestito dal sistema, ad esempio, il motore di database.  
+ Una tabella temporale con controllo delle versioni di sistema è un tipo di tabella utente progettato per mantenere una cronologia completa delle modifiche dei dati e semplificare l'analisi temporizzata. Questo tipo di tabella temporale è definito tabella temporale con controllo delle versioni di sistema perché il periodo di validità per ogni riga viene gestito dal sistema, ad esempio, il motore di database.  
   
  Ogni tabella temporale ha due colonne definite in modo esplicito, ciascuna con un tipo di dati **datetime2** . Queste colonne sono note come colonne periodo. Le colonne periodo vengono usate esclusivamente dal sistema per registrare il periodo di validità per ciascuna riga ogni volta che una riga viene modificata.  
   

@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Creare un alias del tipo di dati definito dall'utente
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
      **Tipo di dati**  
      Selezionare il tipo di dati di base dalla casella di riepilogo. In questa casella vengono visualizzati tutti i tipi di dati, ad eccezione di **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** e **xml** . Il tipo di dati di un tipo di dati definito dall'utente esistente non può essere modificato.  
   
-     **Valore predefinito**  
-     Facoltativamente, selezionare una regola o un valore predefinito da associare all'alias del tipo di dati definito dall'utente.  
+     **Default**  
+     Facoltativamente, selezionare un valore predefinito da associare all'alias del tipo di dati definito dall'utente.  
   
      **Lunghezza/Precisione**  
      Consente di visualizzare la lunghezza o la precisione del tipo di dati. L'opzione**Lunghezza** viene applicata ai tipi di dati carattere definiti dall'utente mentre **Precisione** solo ai tipi di dati numerici definiti dall'utente. L'etichetta varia a seconda del tipo di dati selezionato in precedenza. Se la lunghezza o la precisione del tipo di dati selezionato è fissa, la casella non è modificabile.  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

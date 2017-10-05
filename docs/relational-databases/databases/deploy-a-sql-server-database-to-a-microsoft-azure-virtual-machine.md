@@ -38,10 +38,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: d571407c52dd11d7fec6a8077f1eb5a2837c013d
 ms.contentlocale: it-it
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
@@ -183,7 +183,7 @@ Questa funzionalità di distribuzione è destinata solo agli account di archivia
   
             -   CleanupDisabled = False /> \<! -- La procedura guidata non elimina i file intermedi e gli oggetti di Windows Azure (VM, CS, SA). -->  
   
-        -   <PublishProfile \<! -- Informazioni sull'ultimo profilo di pubblicazione usato. -->  
+        -   \<PublishProfile \<!-- Informazioni sull'ultimo profilo di pubblicazione usato. -->  
   
             -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- Il certificato da usare nella procedura guidata. -->  
   
