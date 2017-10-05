@@ -78,19 +78,21 @@ GO
   
 Set di risultati.
   
-`-----------`
-  
- `0`  
-  
-`LastName`
-  
-`---------------`
-  
-`Sanchez`
-  
-`-----------`
-  
- `-1`  
+```
+-----------
+0  
+```
+
+```
+LastName
+---------------
+Sanchez
+```
+
+```
+-----------
+-1
+```  
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni di cursore &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  

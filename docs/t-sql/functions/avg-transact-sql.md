@@ -93,13 +93,13 @@ WHERE JobTitle LIKE 'Vice President%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Average vacation hours       Total sick leave hours`
+```
+Average vacation hours       Total sick leave hours
+ ----------------------       ----------------------
+25                           97
   
-`----------------------       ----------------------`
-  
-`25                           97`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. Utilizzo delle funzioni SUM e AVG con una clausola GROUP BY  
 Ogni funzione di aggregazione, se utilizzata con la clausola `GROUP BY`, restituisce un singolo valore per ogni gruppo anziché per l'intera tabella. Nell'esempio seguente vengono prodotti valori di riepilogo per ciascun territorio di vendita nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Nel riepilogo viene elencata la media dei premi di produttività ricevuti dai venditori in ogni area e la somma delle vendite da inizio anno per ogni area.
@@ -141,11 +141,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+437.4042
   
-`437.4042`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-using-avg-without-distinct"></a>D. Utilizzo della funzione AVG senza DISTINCT  
 Senza DISTINCT, la funzione `AVG` trova il prezzo medio di listino di tutti i prodotti nella tabella `Product` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], inclusi i valori duplicati.
@@ -157,11 +158,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+438.6662
   
-`438.6662`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="e-using-the-over-clause"></a>E. Utilizzo della clausola OVER  
 Nell'esempio seguente viene utilizzata la funzione AVG con la clausola OVER per fornire una media mobile delle vendite annuali per ogni area presente nella tabella `Sales.SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. I dati vengono partizionati in base a `TerritoryID` e ordinati logicamente in base a `SalesYTD`. La funzione AVG viene pertanto calcolata per ogni area in base all'anno di vendita. Si noti che per `TerritoryID` 1, sono presenti due righe per l'anno di vendita 2005, a indicare due venditori con vendite in tale anno. Viene calcolata la media delle vendite delle due righe e nel calcolo viene quindi inclusa la terza riga che rappresenta le vendite per l'anno 2006.

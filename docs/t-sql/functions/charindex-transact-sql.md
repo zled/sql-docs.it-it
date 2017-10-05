@@ -128,11 +128,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+0
   
- `0`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. Esecuzione di una ricerca con distinzione tra maiuscole e minuscole  
 Nell'esempio seguente viene eseguita una ricerca tra maiuscole e minuscole per la stringa `'TEST'` in `'This is a Test``'`.
@@ -148,9 +149,10 @@ SELECT CHARINDEX ( 'TEST',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `0`  
+```
+-----------
+0
+```  
   
 Nell'esempio seguente viene eseguita una ricerca tra maiuscole e minuscole per la stringa `'Test'` in `'This is a Test'`.
   
@@ -165,9 +167,10 @@ SELECT CHARINDEX ( 'Test',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. Esecuzione di una ricerca senza distinzione tra maiuscole e minuscole  
 Nell'esempio seguente viene eseguita una ricerca senza distinzione tra maiuscole e minuscole per la stringa `'TEST'` in `'This is a Test'`.
@@ -184,9 +187,10 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -199,9 +203,10 @@ SELECT CHARINDEX('is', 'This is a string');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `3`  
+```
+---------
+3
+```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. Ricerca da una posizione della posizione del primo  
 L'esempio seguente restituisce la prima posizione del `is` stringa in `This is a string`, che inizia con la posizione del quarto.
@@ -212,9 +217,10 @@ SELECT CHARINDEX('is', 'This is a string', 4);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `6`  
+```
+---------
+ 6
+ ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. Risultati quando non viene trovata la stringa  
 Nell'esempio seguente il valore restituito quando il *string_pattern* non viene trovato nella stringa di ricerca.
@@ -225,9 +231,10 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `0`  
+```
+---------
+0
+```  
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
