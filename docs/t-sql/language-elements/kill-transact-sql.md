@@ -116,8 +116,10 @@ Utilizzare @@SPID per visualizzare il valore di ID di sessione per la sessione c
   
  Se il rollback dell'ID di sessione o UOW è terminata quando il comando KILL *ID sessione*|*UOW* viene eseguita l'istruzione WITH STATUSONLY, o se nessun ID di sessione o del valore UOW è in fase di rollback, KILL *ID sessione*|*UOW* WITH STATUSONLY restituirà l'errore seguente:  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  Per ottenere lo stesso report di stato ripetendo la stessa istruzione KILL *ID sessione*|*UOW* istruzione senza utilizzare l'opzione WITH STATUSONLY; tuttavia, non è consigliabile in questo modo. Ripetizione di un comando KILL *ID sessione* istruzione potrebbe terminare un nuovo processo se il rollback dopo il completamento e l'ID di sessione è stato riassegnato a una nuova attività prima di eseguita la nuova istruzione KILL. L'utilizzo della clausola WITH STATUSONLY consente di evitare questo tipo di problema.  
   

@@ -207,11 +207,11 @@ GO
   
  Nel set di risultati viene indicato che il tipo di base dell'oggetto sottostante, ovvero la tabella `Employee`, è una tabella utente.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>B. Restituzione del valore di una proprietà  
  Nell'esempio seguente viene restituito il numero di trigger UPDATE per la tabella specificata.  

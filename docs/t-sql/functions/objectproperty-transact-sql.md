@@ -213,9 +213,10 @@ GO
   
  Il set di risultati indica che `ufnGetProductDealerPrice` non è una funzione deterministica.  
   
- `-----`  
-  
- `0`  
+ ```
+-----  
+0
+```  
   
 ### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>C. Ricerca di oggetti appartenenti a uno schema specifico  
  Nell'esempio seguente viene utilizzata la proprietà `SchemaId` per restituire tutti gli oggetti che appartengono allo schema `Production`.  

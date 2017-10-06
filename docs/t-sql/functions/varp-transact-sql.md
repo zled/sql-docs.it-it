@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `158146830494.18   157788848582.94`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+158146830494.18   157788848582.94
+```  
   
 ### <a name="c-using-varp-with-over"></a>C. Utilizzare la funzione VAR con failover  
  Nell'esempio seguente viene restituito il `VARP` dei valori di quota di vendite per ogni trimestre dell'anno di calendario. Si noti che la clausola ORDER BY nella clausola OVER Ordina la varianza statistica e la clausola ORDER BY dell'istruzione SELECT Ordina il set di risultati.  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              Variance`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             600250000.00`  
-  
- `2002  3         70000.0000             860222222.22`  
-  
- `2002  4        154000.0000             1185187500.00`  
+ ```
+Year  Quarter  SalesQuota              Variance
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             0.00
+2002  2        140000.0000             600250000.00
+2002  3         70000.0000             860222222.22
+2002  4        154000.0000             1185187500.00
+```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di aggregazione &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

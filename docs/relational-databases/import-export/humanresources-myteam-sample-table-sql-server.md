@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**Title**|**nvarchar(50)**|Ammette valori Null|Titolo professionale del dipendente nel team.|  
 |**Background**|**nvarchar(50)**|Non Null|Data e ora dell'ultimo aggiornamento della riga. Valore predefinito.|  
   
- **Per creare HumanResources.myTeam**  
+**Per creare HumanResources.myTeam**  
   
 -   Utilizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **Per popolare HumanResources.myTeam**  
+**Per popolare HumanResources.myTeam**  
   
 -   Eseguire le istruzioni `INSERT` seguenti per popolare la tabella con due righe:  
   
