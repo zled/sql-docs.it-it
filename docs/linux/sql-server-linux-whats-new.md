@@ -1,4 +1,4 @@
----
+﻿---
 title: "Novità di SQL Server, 2017 in Linux | Documenti Microsoft"
 description: "Questo argomento sono incluse nuove funzionalità per la versione corrente di SQL Server 2017 in Linux."
 author: rothja
@@ -27,6 +27,7 @@ In questo argomento vengono descritte le novità di SQL Server 2017 su Linux.
 La versione Availaiblity generale (GA) contiene gli aggiornamenti e i miglioramenti seguenti:
 
 - I file di database possono ora essere ospitati in NFS. In questo modo si risolvono i problemi con gli scenari di dischi condivisi in NFS, il montaggio di sistemi di archiviazione remota per piattaforme container e il montaggio delle cartelle di Docker per Windows.
+- Altri miglioramenti e correzioni di bug vari.
 
 ## <a name="rc2"></a>RC2
 
