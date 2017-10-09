@@ -26,8 +26,8 @@ In questo argomento vengono descritte le novità di SQL Server 2017 su Linux.
 
 La versione Availaiblity generale (GA) contiene gli aggiornamenti e i miglioramenti seguenti:
 
-- File di database ora possono essere ospitati su NFS. Consente di correggere i problemi con gli scenari di disco condivise NFS, archiviazione remota per le piattaforme di contenitore di montaggio e montaggio delle cartelle di Docker per Windows.
-- Altri miglioramenti e correzioni di bug varie.
+- I file di database possono ora essere ospitati in NFS. In questo modo si risolvono i problemi con gli scenari di dischi condivisi in NFS, il montaggio di sistemi di archiviazione remota per piattaforme container e il montaggio delle cartelle di Docker per Windows.
+- Altri miglioramenti e correzioni di bug vari.
 
 ## <a name="rc2"></a>RC2
 
