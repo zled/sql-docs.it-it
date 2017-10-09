@@ -65,36 +65,37 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilizzo di valori di tolleranza diversi in un'istanza CircularString  
  Nell'esempio seguente viene illustrato come l'impostazione della tolleranza sul `LineString`istanza restituita da un `CircularString` istanza:  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();`  
+ ```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+```  
   
 ### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. Utilizzo del metodo in un'istanza MultiLineString che contiene un'istanza LineString  
  Nell'esempio seguente viene illustrato ciò che viene restituito da un'istanza `MultiLineString` che contiene una sola istanza `LineString`:  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+ ```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');  
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. Utilizzo del metodo in un'istanza MultiLineString che contiene più istanze LineString  
  Nell'esempio seguente viene illustrato ciò che viene restituito da un'istanza `MultiLineString` che contiene più di un'istanza `LineString`:  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+ ```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');  
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Impostazione del parametro relative su true per un'istanza CurvePolygon di chiamata  
  Nell'esempio seguente viene utilizzato un `CurvePolygon` istanza chiamare `CurveToLineWithTolerance()` con *relativo* impostato su true:  
   
- `DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';`  
-  
- `SELECT @g.CurveToLineWithTolerance(.5,1).ToString();`  
+ ```
+ DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
+ SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  

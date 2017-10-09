@@ -60,50 +60,44 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Utilizzo di una variabile di geometria non inizializzata e di un'istanza vuota  
  Nell'esempio seguente, il primo **selezionare** istruzione utilizza l'oggetto non inizializzato **geometry** istanza per chiamare il `STCurveToLine` (metodo), mentre la seconda **selezionare** istruzione utilizza un oggetto vuoto **geometry** istanza. Di conseguenza, il metodo restituisce **NULL** alla prima istruzione e una **GeometryCollection** insieme per la seconda istruzione.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
-  
- `SET @g = geometry::Parse('LINESTRING EMPTY');`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType(); 
+ SET @g = geometry::Parse('LINESTRING EMPTY'); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. Utilizzo di un'istanza LineString  
  Il **selezionare** istruzione nell'esempio seguente viene utilizzato un **LineString** istanza per chiamare il metodo STCurveToLine. Di conseguenza, il metodo restituisce un **LineString** istanza.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)');`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. Utilizzo di un'istanza CircularString  
  Il primo **selezionare** istruzione nell'esempio seguente viene utilizzato un **CircularString** istanza per chiamare il metodo STCurveToLine. Di conseguenza, il metodo restituisce un **LineString** istanza. Questo **selezionare** istruzione confronta inoltre le lunghezze delle due istanze sono pressoché identiche.  Infine, il secondo **selezionare** l'istruzione restituisce il numero di punti per ogni istanza.  Restituisce solo 5 punti per il **CircularString** istanza, ma 65 per il **LineString**istanza.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def];`  
-  
- `SELECT @g1.STNumPoints(), @g2.STNumPoints();`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def]; 
+ SELECT @g1.STNumPoints(), @g2.STNumPoints();
+ ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. Utilizzo di un'istanza CurvePolygon  
  Il **selezionare** istruzione nell'esempio seguente viene utilizzato un **CurvePolygon** istanza per chiamare il metodo STCurveToLine. Di conseguenza, il metodo restituisce un **poligono** istanza.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)   

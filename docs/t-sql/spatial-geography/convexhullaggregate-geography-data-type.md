@@ -61,15 +61,13 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="examples"></a>Esempi  
  L'esempio seguente restituisce una struttura convessa del set di **geography** oggetti.  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT geography::ConvexHullAggregate(SpatialLocation).ToString() AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE City LIKE ('Bothell')`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT geography::ConvexHullAggregate(SpatialLocation).ToString() AS SpatialLocation  
+ FROM Person.Address  
+ WHERE City LIKE ('Bothell')
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di geografia statici estesi](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

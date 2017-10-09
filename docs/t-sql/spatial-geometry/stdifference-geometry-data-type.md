@@ -68,13 +68,12 @@ SELECT @g.STDifference(@h).ToString();
 ### <a name="b-invoking-stdifference-on-a-curvepolygon-instance"></a>B. Chiamata di STDifference() in un'istanza CurvePolygon  
  Nell'esempio seguente viene utilizzato STDifference() in un'istanza CurvePolygon.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';`  
-  
- `-- Note the different results returned by the two SELECT statements`  
-  
- `SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
+ -- Note the different results returned by the two SELECT statements  
+ SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

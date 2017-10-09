@@ -58,27 +58,19 @@ EnvelopeAggregate ( geometry_operand )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito un rettangolo di selezione per un set di oggetti in una colonna delle variabili di tabella.  
   
- `-- Setup table variable for EnvelopeAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `)`  
-  
- `INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform EnvelopeAggregate on @Geom.shape column`  
-  
- `SELECT geometry::EnvelopeAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for EnvelopeAggregate example 
+DECLARE @Geom TABLE 
+( 
+shape geometry, 
+shapeType nvarchar(50) 
+) 
+INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'), 
+('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle'); 
+-- Perform EnvelopeAggregate on @Geom.shape column 
+SELECT geometry::EnvelopeAggregate(shape).ToString() 
+FROM @Geom;
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di geometria statici estesi](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

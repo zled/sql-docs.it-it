@@ -58,19 +58,15 @@ UnionAggregate ( geography_operand )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguito un `UnionAggregate` su un set di **geography** punti percorso all'interno di una città.  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT City,`  
-  
- `geography::UnionAggregate(SpatialLocation) AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE PostalCode LIKE('981%')`  
-  
- `GROUP BY City;`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT City,  
+ geography::UnionAggregate(SpatialLocation) AS SpatialLocation  
+ FROM Person.Address  
+ WHERE PostalCode LIKE('981%')  
+ GROUP BY City;
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di geografia statici estesi](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

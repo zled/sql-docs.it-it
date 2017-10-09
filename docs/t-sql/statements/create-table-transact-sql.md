@@ -1042,21 +1042,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  Quando si creano tabelle temporanee locali o globali, la sintassi dell'istruzione CREATE TABLE supporta le definizioni di vincolo, ad eccezione dei vincoli FOREIGN KEY. Se si specifica un vincolo FOREIGN KEY in una tabella temporanea, l'istruzione restituisce un messaggio di avviso per segnalare che il vincolo è stato ignorato. La tabella viene comunque creata senza i vincoli FOREIGN KEY. Non è possibile fare riferimento a tabelle temporanee nei vincoli FOREIGN KEY.  
   

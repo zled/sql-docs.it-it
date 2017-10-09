@@ -126,11 +126,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene revocata l'autorizzazione `EXECUTE` per la raccolta di XML Schema `Invoices4` all'utente `Wanida`. La raccolta di XML Schema `Invoices4` è incluso nello schema `Sales` del database `AdventureWorks2012`.  
   
- `USE AdventureWorks2012;`  
-  
- `REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [GRANT-autorizzazioni per raccolte XML Schema &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   

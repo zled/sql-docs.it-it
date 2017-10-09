@@ -548,11 +548,11 @@ GO
   
  Di seguito è riportato il set di risultati generato il 12 aprile 2004 ('`2004-04-12'`). Si noti che le colonne `ScrapReasonIDActual` e `ModifiedDate` riflettono i valori generati dall'operazione trigger invece dei valori specificati nell'istruzione `INSERT`.  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. Utilizzo di OUTPUT INTO con le colonne calcolate e Identity  
  Nell'esempio seguente viene creata la tabella `EmployeeSales`, in cui vengono quindi inserite diverse righe tramite un'istruzione `INSERT` con un'istruzione `SELECT` per il recupero dei dati dalle tabelle di origine. La tabella `EmployeeSales` include una colonna Identity (`EmployeeID`) e una colonna calcolata (`ProjectedSales`).  

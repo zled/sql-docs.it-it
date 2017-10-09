@@ -62,20 +62,20 @@ SELECT @g.STBoundary().ToString();
 ### <a name="b-using-stboundary-on-a-linestring-instance-with-the-same-endpoints"></a>B. Utilizzo di STBoundary() in un'istanza LineString con gli stessi endpoint  
  Nell'esempio seguente viene creata un'istanza `LineString` valida con gli stessi endpoint. Tramite `STBoundary()` viene restituita un'istanza `GeometryCollection` vuota.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, -2 2, 0 0)', 0);`  
-  
- `SELECT @g.STBoundary().ToString();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, -2 2, 0 0)', 0);  
+ SELECT @g.STBoundary().ToString();
+ ```  
   
 ### <a name="c-using-stboundary-on-a-curvepolygon-instance"></a>C. Utilizzo di STBoundary() in un'istanza CurvePolygon  
  Nell'esempio seguente viene utilizzato `STBoundary()` in un'istanza `CurvePolygon` vuota. Tramite `STBoundary()` viene restituita un'istanza `CircularString`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);`  
-  
- `SELECT @g.STBoundary().ToString();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);  
+ SELECT @g.STBoundary().ToString();
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

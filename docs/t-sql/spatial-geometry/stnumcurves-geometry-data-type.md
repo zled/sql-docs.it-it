@@ -50,20 +50,20 @@ Questo metodo restituisce il numero di curve in un **geometry** istanza quando l
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. Utilizzo di STNumCurves() in un'istanza CircularString  
  Nell'esempio seguente viene illustrato come ottenere il numero di curve in un'istanza `CircularString`:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. Utilizzo di STNumCurves() in un'istanza CompoundCurve  
  Nell'esempio seguente viene utilizzato `STNumCurves()` per restituire il numero di curve in un'istanza `CompoundCurve`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)   

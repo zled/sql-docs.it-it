@@ -77,23 +77,26 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
 ### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Chiamata a STBuffer() con parameter_value < 0 in un'istanza di geometria unidimensionale  
  Nell'esempio seguente viene restituita un'istanza `GeometryCollection` vuota:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Chiamata a STBuffer() con parameter_value < 0 in un'istanza Polygon  
  Nell'esempio seguente viene restituita un'istanza `Polygon` con un buffer negativo:  
   
- `DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. Chiamata a STBuffer() con parameter_value < 0 in un'istanza CurvePolygon  
  Nell'esempio seguente viene restituita un'istanza `Polygon` con un buffer negativo da un'istanza `CurvePolygon`:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 > [!NOTE]  
 >  Viene restituita un'istanza `Polygon` anziché `CurvePolygon`.  Per restituire un `CurvePolygon` dell'istanza, vedere [BufferWithCurves &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
@@ -101,47 +104,52 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Chiamata a STBuffer () con un valore di parametro negativo mediante il quale viene restituita un'istanza vuota  
  Nell'esempio seguente viene illustrato cosa accade quando il *distanza* parametro è uguale a -2 per l'esempio precedente.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-2).ToString();
+ ```  
   
  Questo **selezionare** istruzione restituisce un`GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Chiamata a STBuffer() con parameter_value = 0  
  Nell'esempio seguente viene restituita una copia dell'istanza `geometry` chiamante:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(0).ToString();
+ ```  
   
 ### <a name="f-calling-stbuffer-with-a-non-zero-parameter-value-that-is-extremely-small"></a>F. Chiamata a STBuffer() con un valore di parametro diverso da zero ed estremamente basso  
  Nell'esempio seguente viene inoltre restituita una copia dell'istanza `geometry` chiamante:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.STBuffer(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';  
+ DECLARE @distance float = 1e-20;  
+ SELECT @g.STBuffer(@distance).ToString();
+ ```  
   
 ### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. Chiamata a STBuffer() con parameter_value > 0  
  Nell'esempio seguente viene restituita un'istanza `Polygon`:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(2).ToString();
+ ```  
   
 ### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. Chiamata a STBuffer() con un valore di parametro stringa  
  Nell'esempio seguente viene restituita la stessa istanza `Polygon` come indicato precedentemente, ma un parametro di stringa viene passato al metodo:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('2').ToString();
+ ```  
   
  Nell'esempio seguente verrà generato un errore:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('a').ToString();
+ ```  
   
 > [!NOTE]  
 >  Nei due esempi precedenti è stato passato un valore letterale stringa a `STBuffer()`.  Il primo esempio funziona perché il valore letterale stringa può essere convertito in un valore numerico. Tuttavia, nel secondo esempio viene generata un'eccezione `ArgumentException`.  
@@ -149,13 +157,12 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
 ### <a name="i-calling-stbuffer-on-a-multipoint-instance"></a>I. Chiamata a STBuffer() in un'istanza MultiPoint  
  Nell'esempio seguente vengono restituite due istanze `MultiPolygon` e un'istanza `Polygon`:  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.STBuffer(1).ToString();`  
-  
- `SELECT @g.STBuffer(1.5).ToString();`  
-  
- `SELECT @g.STBuffer(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.STBuffer(1).ToString(); 
+ SELECT @g.STBuffer(1.5).ToString(); 
+ SELECT @g.STBuffer(1.6).ToString();
+ ```  
   
  I primi due **selezionare** istruzioni restituiscono un `MultiPolygon` istanza perché il parametro *distanza* è minore o uguale a 1/2 la distanza tra i due punti (1 1) e (1 4). Il terzo **selezionare** istruzione restituisce un `Polygon` istanza perché le istanze memorizzate nel buffer dei due punti (1 1) e (1 4) si sovrappongono.  
   

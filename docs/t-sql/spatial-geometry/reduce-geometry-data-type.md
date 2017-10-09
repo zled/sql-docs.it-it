@@ -76,32 +76,31 @@ SELECT @g.Reduce(.75).ToString();
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. Utilizzo di Riduce() con livelli di tolleranza diversi su CircularString  
  L'esempio seguente usa `Reduce()` con tre livelli di tolleranza su un **CircularString** istanza:  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)';`  
-  
- `SELECT @g.Reduce(5).ToString();`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
+ SELECT @g.Reduce(5).ToString(); 
+ SELECT @g.Reduce(15).ToString(); 
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  Nell'esempio viene prodotto l'output seguente:  
   
- `CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0)`  
-  
- `COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0))`  
-  
- `LINESTRING (0 0, 24 0)`  
+ ```
+ CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0) 
+ COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0)) 
+ LINESTRING (0 0, 24 0)
+ ```  
   
  Ogni istanza restituita contiene i punti finali (0 0) e (24 0).  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. Utilizzo di Riduce() con livelli di tolleranza diversi su CompoundCurve  
  L'esempio seguente usa `Reduce()` con due livelli di tolleranza su un **CompoundCurve** istanza:  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
+ SELECT @g.Reduce(15).ToString();  
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  In questo esempio si noti che il secondo **selezionare** istruzione restituisce il **LineString** istanza: `LineString(0 0, 16 0)`.  
   

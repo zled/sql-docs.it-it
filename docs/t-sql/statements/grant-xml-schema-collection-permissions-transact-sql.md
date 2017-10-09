@@ -128,11 +128,11 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene concessa l'autorizzazione `EXECUTE` per la raccolta di XML Schema `Invoices4` all'utente `Wanida`. La raccolta di XML Schema `Invoices4` è incluso nello schema `Sales` del database `AdventureWorks2012`.  
   
- `USE AdventureWorks2012;`  
-  
- `GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [NEGARE autorizzazioni per raccolte XML Schema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   

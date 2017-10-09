@@ -58,27 +58,19 @@ ConvexHullAggregate ( geometry_operand )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita una struttura convessa del set di oggetti di geometria in una colonna delle variabili di tabella.  
   
- `-- Setup table variable for ConvexHullAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `)`  
-  
- `INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform ConvexHullAggregate on @Geom.shape column`  
-  
- `SELECT geometry::ConvexHullAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for ConvexHullAggregate example  
+ DECLARE @Geom TABLE  
+ (  
+ shape geometry,  
+ shapeType nvarchar(50)  
+ )  
+ INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),  
+ ('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');  
+ -- Perform ConvexHullAggregate on @Geom.shape column  
+ SELECT geometry::ConvexHullAggregate(shape).ToString()  
+ FROM @Geom;
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di geometria statici estesi](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

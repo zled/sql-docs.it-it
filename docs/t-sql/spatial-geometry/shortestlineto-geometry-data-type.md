@@ -54,20 +54,20 @@ Restituisce un **LineString** istanza con due punti che rappresentano la distanz
 ### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. Chiamata di ShortestLineTo() in istanze non intersecate  
  In questo esempio viene individuata la distanza più breve tra un'istanza `CircularString` e un'istanza `LineString` e viene restituita l'istanza `LineString` che collega i due punti:  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>B. Chiamata di ShortestLineTo() in istanze intersecate  
  In questo esempio viene restituita un'istanza `LineString` vuota perché l'istanza `LineString` interseca l'istanza `CircularString`:  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [ShortestLineTo &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  

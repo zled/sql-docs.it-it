@@ -112,11 +112,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Return Status`  
+ ```
+ Return Status 
   
- `-------------`  
+ ------------- 
   
- `1`  
+ 1
+ ```  
   
  Rieseguire la query, specificando un numero di contatto diverso.  
   
@@ -129,11 +131,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Return Status`  
+ ```
+ Return Status  
+ -------------  
   
- `-------------`  
-  
- `2`  
+ 2
+ ```  
   
  Rieseguire la query, specificando un altro numero di contatto.  
   
@@ -146,11 +149,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Return Status`  
+ ```
+ Return Status  
+ -------------  
   
- `-------------`  
-  
- `2`  
+ 2
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   

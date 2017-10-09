@@ -102,11 +102,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="c-using-multiple-string-concatenation"></a>C. Utilizzo della concatenazione di più stringhe  
  Nell'esempio seguente vengono concatenate più stringhe per ottenere un'unica stringa di lunghezza maggiore per visualizzare il cognome e l'iniziale del nome dei vicepresidenti in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Vengono aggiunti una virgola dopo il cognome e un punto dopo l'iniziale del nome.  
@@ -125,17 +125,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### <a name="d-using-large-strings-in-concatenation"></a>D. Utilizzo di stringhe di grandi dimensioni in concatenazione
 Nell'esempio seguente consente di concatenare più stringhe per formare una stringa lunga e quindi tenta di calcolare la lunghezza della stringa finale. La lunghezza del set di risultati finale è 16000, perché l'espressione di valutazione viene avviata da sinistra che è @x + @z + @y = > (@x + @z) + @y. In questo caso, il risultato di (@x + @z) vengono troncati a 8000 byte e quindi @y viene aggiunto al set di risultati, che rende la lunghezza della stringa finale 16000. Poiché @y è una stringa di tipo di valori di grandi dimensioni, non il troncamento.
@@ -151,13 +149,13 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-string-concatenation"></a>E. Utilizzo della concatenazione di stringhe  

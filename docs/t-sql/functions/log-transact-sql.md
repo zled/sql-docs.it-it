@@ -117,9 +117,11 @@ SELECT LOG(10);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------`  
+ ```
+ ----------------`  
   
- `2.30`  
+ 2.30
+ ```  
   
 ### <a name="d-calculating-the-logarithm-of-the-exponent-of-a-number"></a>D. Calcolo del logaritmo dell'esponente di un numero  
  Nell'esempio seguente viene calcolato il valore `LOG` per l'esponente di un numero.  

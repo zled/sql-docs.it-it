@@ -65,9 +65,10 @@ Restituisce la curva specificata da un **geometry** che è un **LineString**, **
 ### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. Utilizzo di STCurves() in un'istanza CircularString  
  Nell'esempio seguente viene restituita la seconda curva in un'istanza `CircularString`:  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  Nell'esempio riportato in precedenza in questo argomento viene restituito:  
   
@@ -76,9 +77,10 @@ Restituisce la curva specificata da un **geometry** che è un **LineString**, **
 ### <a name="b-using-stcurven-on-a-compoundcurve-instance-with-one-circularstring-instance"></a>B. Utilizzo di STCurveN() in un'istanza CompoundCurve con un'istanza CircularString  
  Nell'esempio seguente viene restituita la seconda curva in un'istanza `CompoundCurve`:  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  Nell'esempio riportato in precedenza in questo argomento viene restituito:  
   
@@ -87,9 +89,10 @@ Restituisce la curva specificata da un **geometry** che è un **LineString**, **
 ### <a name="c-using-stcurven-on-a-compoundcurve-instance-with-three-circularstring-instances"></a>C. Utilizzo di STCurveN() in un'istanza CompoundCurve con tre istanze CircularString  
  Nell'esempio seguente viene utilizzata un'istanza `CompoundCurve` che combina tre istanze `CircularString` separate nella stessa sequenza di curve dell'esempio precedente:  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE (CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246), CIRCULARSTRING(3 6.3246, 0 7, -3 6.3246), CIRCULARSTRING(-3 6.3246, -1 2.1082, 0 0))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE (CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246), CIRCULARSTRING(3 6.3246, 0 7, -3 6.3246), CIRCULARSTRING(-3 6.3246, -1 2.1082, 0 0))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  Nell'esempio riportato in precedenza in questo argomento viene restituito:  
   
@@ -100,21 +103,16 @@ Restituisce la curva specificata da un **geometry** che è un **LineString**, **
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. Convalida del parametro prima della chiamata a STCurveN()  
  Nell'esempio seguente viene illustrato come assicurarsi che `@n` sia valido prima di chiamare il `STCurveN()`metodo:  
   
- `DECLARE @g geometry;`  
-  
- `DECLARE @n int;`  
-  
- `SET @n = 3;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');`  
-  
- `IF @n >= 1 AND @n <= @g.STNumCurves()`  
-  
- `BEGIN`  
-  
- `SELECT @g.STCurveN(@n).ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry;  
+ DECLARE @n int;  
+ SET @n = 3;  
+ SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');  
+ IF @n >= 1 AND @n <= @g.STNumCurves()  
+ BEGIN  
+ SELECT @g.STCurveN(@n).ToString();  
+ END
+ ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [STNumCurves &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   

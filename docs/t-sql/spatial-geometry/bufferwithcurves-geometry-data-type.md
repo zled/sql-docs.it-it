@@ -81,75 +81,81 @@ Tipo restituito di SQL Server: **geometry**
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. Chiamata a BufferWithCurves() con un valore di parametro < 0 in un'istanza di geometria unidimensionale  
  Nell'esempio seguente viene restituita un'istanza `GeometryCollection` vuota:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(-1).ToString(); 
+ ```
   
 ### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>B. Chiamata a BufferWithCurves() con un valore di parametro < 0 in un'istanza di geometria bidimensionale  
  Nell'esempio seguente viene restituita un'istanza `CurvePolygon` con un buffer negativo:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString()`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.BufferWithCurves(-1).ToString()
+ ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Chiamata a BufferWithCurves() con un valore di parametro < 0 che restituisce un'istanza GeometryCollection vuota  
  Nell'esempio seguente viene illustrato cosa accade quando il *distanza* parametro è uguale a -2:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.BufferWithCurves(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.BufferWithCurves(-2).ToString();
+ ```  
   
  Questo **selezionare** istruzione restituisce`GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Chiamata a BufferWithCurves() con un valore di parametro = 0  
  Nell'esempio seguente restituisce una copia dell'oggetto chiamante **geometry** istanza:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(0).ToString();
+ ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. Chiamata a BufferWithCurves() con un valore di parametro diverso da zero ed estremamente basso  
  L'esempio seguente restituisce anche una copia del chiamante **geometry** istanza:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.BufferWithCurves(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ DECLARE @distance float = 1e-20; 
+ SELECT @g.BufferWithCurves(@distance).ToString();
+ ```  
   
 ### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. Chiamata a BufferWithCurves() con un valore di parametro > 0  
  Nell'esempio seguente viene restituita un'istanza `CurvePolygon`:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(2).ToString();
+ ```  
   
 ### <a name="g-passing-a-valid-string-parameter"></a>G. Passaggio di un parametro di stringa valido  
  Nell'esempio seguente viene restituita la stessa istanza `CurvePolygon` come indicato precedentemente, ma un parametro di stringa viene passato al metodo:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves('2').ToString();
+ ```  
   
 ### <a name="h-passing-an-invalid-string-parameter"></a>H. Passaggio di un parametro di stringa non valido  
  Nell'esempio seguente verrà generato un errore:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'`  
-  
- `SELECT @g.BufferWithCurves('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)' 
+ SELECT @g.BufferWithCurves('a').ToString();
+ ```  
   
  Si noti che nei due esempi precedenti è stato passato un valore letterale stringa al metodo `BufferWithCurves()`. Il primo esempio funziona perché il valore letterale stringa può essere convertito in un valore numerico. Tuttavia, nel secondo esempio viene generata un'eccezione `ArgumentException`.  
   
 ### <a name="i-calling-bufferwithcurves-on-multipoint-instance"></a>I. Chiamata a BufferWithCurves() in un'istanza MultiPoint  
  Nell'esempio seguente vengono restituite due istanze `GeometryCollection` e un'istanza `CurvePolygon`:  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.BufferWithCurves(1).ToString();`  
-  
- `SELECT @g.BufferWithCurves(1.5).ToString();`  
-  
- `SELECT @g.BufferWithCurves(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.BufferWithCurves(1).ToString(); 
+ SELECT @g.BufferWithCurves(1.5).ToString(); 
+ SELECT @g.BufferWithCurves(1.6).ToString();
+ ```  
   
  I primi due **selezionare** istruzioni restituiscono un `GeometryCollection` istanza perché il parametro *distanza* è minore o uguale a 1/2 la distanza tra i due punti (1 1) e (1 4). Il terzo **selezionare** istruzione restituisce un `CurvePolygon` istanza perché le istanze memorizzate nel buffer dei due punti (1 1) e (1 4) si sovrappongono.  
   
