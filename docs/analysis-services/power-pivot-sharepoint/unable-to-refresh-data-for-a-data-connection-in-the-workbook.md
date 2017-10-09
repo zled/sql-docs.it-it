@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **Scenario 1: il servizio non è stato avviato**  
   
- L'istanza di SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) non è stata avviata. Una password scaduta determinerà l'arresto del servizio in esecuzione. Per ulteriori informazioni sulla modifica della password, vedere [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) e [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ L'istanza di SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) non è stata avviata. Una password scaduta determinerà l'arresto del servizio in esecuzione. Per ulteriori informazioni sulla modifica della password, vedere [Configurare gli account del servizio PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) e [Avviare o arrestare un server Power Pivot per SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
  **Scenario 2a: apertura di una versione precedente della cartella di lavoro nel server**  
   
