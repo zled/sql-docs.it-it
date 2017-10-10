@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 972ab981eccb6271dfa2f18e0b482f43020ff36b
+ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
+ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilità con le versioni precedenti di Analysis Services (2017 SQL)
@@ -40,10 +40,11 @@ Le funzionalità seguenti sono deprecate in questa versione:
 |||  
 |-|-|  
 |**Modalità/categoria**|**Funzionalità**|
-|Tabella|Gruppi di misure collegati remoti|
+|Multidimensionale|Data Mining|
+|Multidimensionale|Gruppi di misure collegati remoti|
 |Tabella|Modelli a livello di compatibilità 1100 e 1103|
 |Tabella|Proprietà di modello a oggetti tabulare: Column.IsDefaultImage Column.TableDetailPosition, Column.IsDefaultLabel,|
-|Multidimensionale|Data Mining|
+
 
 ## <a name="discontinued-features"></a>Funzionalità non più supportate
 Oggetto *funzionalità non più disponibile* è stata deprecata in una versione precedente. Possono continuare a essere incluso nella versione corrente, ma non è più supportata. Funzionalità non più disponibili potrebbero venire rimosso completamente in un futuro di rilascio o aggiornare.
@@ -70,8 +71,9 @@ Non sono presenti modifiche di rilievo in questa versione.
 ## <a name="behavior-changes"></a>Modifiche del comportamento
 Oggetto *modifica del comportamento* influisce sul funzionamento di stessa funzionalità nella versione corrente rispetto alla versione precedente. Vengono descritte solo le modifiche di comportamento significativo. Le modifiche nell'interfaccia utente non sono incluse.
 
-Non sono presenti modifiche di comportamento in questa versione.
+Le modifiche al MDSCHEMA_MEASUREGROUP_DIMENSIONS e DISCOVER_CALC_DEPENDENCY, descritti in dettaglio nel [novità di SQL Server 2017 CTP 2.1 per Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) annuncio.
 
 
 ## <a name="see-also"></a>Vedere anche
 [Compatibilità con le versioni precedenti di Analysis Services (SQL Server 2016)](analysis-services-backward-compatibility.md)
+

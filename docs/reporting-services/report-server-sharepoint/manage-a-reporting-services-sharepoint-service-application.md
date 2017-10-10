@@ -1,7 +1,7 @@
 ---
 title: Gestire un'applicazione di servizio SharePoint di Reporting Services | Documenti Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,38 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
-  
- In questo argomento vengono illustrate le informazioni seguenti:  
-  
--   [Per aprire le pagine di gestione delle applicazioni di servizio](#bkmk_openpages)  
-  
--   [Pagina Impostazioni sistema](#bkmk_systemsettings)  
-  
--   [Gestione processi](#bkmk_managejobs)  
-  
--   [Gestione chiavi](#bkmk_keymgt)  
-  
--   [Account di esecuzione](#bkmk_executionaccount)  
-  
--   [Impostazioni posta elettronica](#bkmk_email)  
-  
--   [Avvisi e sottoscrizioni provisioning](#bkmk_provisionsubscriptions)  
-  
-## <a name="to-open-service-application-properties-page"></a>Per aprire la pagina delle proprietà delle applicazioni di servizio  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]applicazioni di servizio sono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
+
+> [!NOTE]
+> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+
+## <a name="open-service-application-properties-page"></a>Pagina delle proprietà dell'applicazione di servizio aperto
+
  Per aprire la pagina delle proprietà di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
   
 1.  Nel gruppo Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
@@ -50,7 +41,8 @@ ms.lasthandoff: 08/09/2017
   
  Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-##  <a name="bkmk_openpages"></a> Per aprire le pagine di gestione delle applicazioni di servizio  
+## <a name="open-service-application-management-pages"></a>Pagine di gestione dell'applicazione di servizio aperto
+
  Per aprire le pagine di gestione di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
   
 1.  Nel gruppo Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
@@ -59,20 +51,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  In alternativa, è possibile fare clic accanto al nome oppure sulla colonna **Tipo** per l'applicazione di servizio in modo da selezionare l'intera riga, quindi fare clic su **Gestisci** sulla barra multifunzione di SharePoint.  
   
-##  <a name="bkmk_systemsettings"></a> Pagina Impostazioni sistema  
- La pagina Impostazioni sistema consente di configurare il comportamento e l'esperienza utente dell'applicazione di servizio, inclusi diversi timeout.  
+## <a name="system-settings-page"></a>Pagina Impostazioni sistema
+
+ La pagina Impostazioni sistema consente di configurare il comportamento e l'esperienza utente dell'applicazione di servizio, inclusi diversi timeout.
   
--   [Impostazioni report](#bkmk_report_settings_section)  
-  
--   [Impostazioni sessione](#bkmk_session_settings_section)  
-  
--   [Impostazioni di sistema per la registrazione](#bkmk_logging_settings_section)  
-  
--   [Impostazioni di sicurezza](#bkmk_security_settings_section)  
-  
--   [Impostazioni del client](#bkmk_client_settings_section)  
-  
-###  <a name="bkmk_report_settings_section"></a> Impostazioni report  
+### <a name="report-settings"></a>Impostazioni di report
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
@@ -83,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 |Durata parametri memorizzati|Il valore predefinito è 180.|  
 |Soglia parametri memorizzati|Il valore predefinito è 1500 giorni.|  
   
-###  <a name="bkmk_session_settings_section"></a> Impostazioni sessione  
+### <a name="session-settings"></a>Impostazioni di sessione
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
@@ -91,7 +74,7 @@ ms.lasthandoff: 08/09/2017
 |Usa cookie di sessione|Il valore predefinito è TRUE.|  
 |Timeout report RDLX|Il valore predefinito è 1800 secondi.|  
   
-###  <a name="bkmk_logging_settings_section"></a> Impostazioni di sistema per la registrazione  
+### <a name="system-settings-for-logging"></a>Impostazioni di sistema per la registrazione
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
@@ -100,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è supportata la registrazione ULS di SharePoint.  Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-###  <a name="bkmk_security_settings_section"></a> Impostazioni di sicurezza  
+### <a name="security-settings"></a>Impostazioni di sicurezza
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
@@ -109,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 |Abilita errori remoti|Il valore predefinito è FALSE.|  
 |Abilita errori dettagliati test connessione|Il valore predefinito è TRUE.|  
   
-###  <a name="bkmk_client_settings_section"></a> Impostazioni del client  
+### <a name="client-settings"></a>Impostazioni client
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
@@ -119,12 +102,13 @@ ms.lasthandoff: 08/09/2017
 |Modifica timeout sessione|Il valore predefinito è 7200 secondi.|  
 |Modifica limite cache di sessione|Il valore predefinito è 5.|  
   
-##  <a name="bkmk_managejobs"></a> Gestione processi  
+## <a name="manage-jobs"></a>Gestisci processi
+
  È possibile visualizzare ed eliminare i processi in esecuzione, ad esempio i processi creati dalle sottoscrizioni del report e da quelle guidate dai dati. La pagina non viene utilizzata per gestire le sottoscrizioni, bensì i processi attivati da una sottoscrizione. Ad esempio, tramite una sottoscrizione pianificata per essere eseguita una volta ogni ora verrà generato un processo una volta ogni ora che verrà visualizzato nella pagina **Gestione processi** .  
   
  ![gestire i processi in esecuzione](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gestire processi in esecuzione")  
   
-##  <a name="bkmk_keymgt"></a> Gestione chiavi  
+## <a name="key-management"></a>Gestione delle chiavi
  Nella tabella seguente sono riepilogate le pagine Gestione chiavi  
   
 > [!IMPORTANT]  
@@ -136,31 +120,33 @@ ms.lasthandoff: 08/09/2017
 |Ripristina chiave di crittografia|1) Digitare o individuare il file della chiave nella casella **Percorso file**<br /><br /> 2) Nella casella **Password** digitare la password usata per eseguire il backup del file di crittografia.<br /><br /> 3) Fare clic su **OK**|  
 |Cambia chiave di crittografia|Questa operazione comporta la creazione di una chiave nuova e l'esecuzione di una nuova operazione di crittografia del contenuto crittografato. Se si dispone di grandi quantità di contenuto, questa operazione può richiedere diverse ore.<br /><br /> Al termine dell'operazione di modifica della chiave di crittografia, è consigliabile eseguire un backup della nuova chiave.|  
 |Elimina contenuto crittografato|Il contenuto eliminato non può essere recuperato.<br /><br /> **\*\* Importante \*\*** L'azione di eliminazione e ricreazione della chiave simmetrica non può essere invertita o annullata. e può comportare conseguenze significative nell'installazione corrente. Se si elimina la chiave, verranno eliminati anche tutti i dati esistenti crittografati con questa chiave simmetrica. I dati eliminati possono includere stringhe di connessione a origini dei dati esterne per i report, stringhe di connessione archiviate e alcune informazioni relative alle sottoscrizioni.|  
-  
-##  <a name="bkmk_executionaccount"></a> Account di esecuzione  
+
+## <a name="execution-account"></a>Account di esecuzione
+
  Utilizzare questa pagina per configurare un account da utilizzare per l'esecuzione automatica. L'account verrà utilizzato in circostanze particolari, ovvero quando non sono disponibili altre origini di credenziali, in particolare:  
   
 -   Quando il server di report si connette a un'origine dei dati per cui non sono necessarie credenziali. Tra gli esempi di origini dati che potrebbero non necessitare di credenziali rientrano i documenti XML e alcune applicazioni di database client.  
   
 -   Quando il server di report si connette a un altro server per recuperare file di immagine esterni o altre risorse a cui si fa riferimento in un report.  
-  
+
  L'impostazione di questo account è facoltativa, tuttavia se non viene eseguita viene limitato l'utilizzo di immagini e connessioni esterne ad alcune origini dati. Quando si recuperano immagini di file esterni, il server di report verifica se è possibile eseguire una connessione anonima. Se la connessione è protetta da password, il server di report utilizza l'account per l'esecuzione automatica dei report per connettersi al server remoto. Durante il recupero di dati per un report, il server di report rappresenta l'utente corrente, richiede all'utente di specificare le credenziali, utilizza le credenziali archiviate oppure utilizza l'account per l'esecuzione automatica se la connessione all'origine dati non specifica **alcun** tipo di credenziale. Il server di report non consente la delega o la rappresentazione delle credenziali dell'account di servizio quando ci si connette ad altri computer, pertanto è necessario utilizzare l'account per l'esecuzione automatica se non sono disponibili altre credenziali.  
-  
+
  L'account specificato deve essere diverso da quello utilizzato per l'esecuzione dell'account del servizio. Se il server di report viene eseguito in una distribuzione con scalabilità orizzontale, è necessario configurare questo account allo stesso modo in ogni server di report.  
-  
+
  È possibile utilizzare qualsiasi account utente di Windows. Per ottenere risultati ottimali, scegliere un account che disponga delle autorizzazioni di lettera e di accesso alla rete per supportare le connessioni ad altri computer. Deve disporre di autorizzazioni di lettura per qualsiasi immagine o file di dati esterno da utilizzare in un report. Non specificare un account locale se tutte le origini dati e tutte le immagini esterne per i report non sono archiviate sul computer del server di report. Utilizzare l'account solo per l'elaborazione automatica dei report.  
-  
- ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell")  
-  
+
+ ### <a name="powershell-command"></a>Comando di PowerShell
+
  Di seguito è riportato un esempio del comando PowerShell per restituire l'elenco delle applicazioni di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la proprietà UEAccount:  
-  
-```  
+
+```
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
-```  
-  
+```
+
  Per altre informazioni, vedere [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)(Cmdlet di PowerShell per la modalità SharePoint di Reporting Services).  
-  
-### <a name="options"></a>Opzioni  
+
+### <a name="options"></a>Opzioni
+
  **Specifica account di esecuzione**  
  Selezionare questa opzione per specificare un account.  
   
@@ -172,11 +158,13 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
  **Conferma password**  
  Immettere nuovamente la password.  
-  
-##  <a name="bkmk_email"></a> Impostazioni posta elettronica  
+
+## <a name="e-mail-settings"></a>Impostazioni di posta elettronica
+
  Utilizzare questa pagina per specificare le impostazioni SMTP (Simple Mail Transport Protocol) che consentono il recapito tramite posta elettronica dal server di report. È possibile utilizzare l'estensione per il recapito tramite posta elettronica del server di report per distribuire report o notifiche di elaborazione dei report utilizzando sottoscrizioni tramite posta elettronica. L'estensione per il recapito tramite posta elettronica del server di report richiede un server SMTP e un indirizzo di posta elettronica da utilizzare nel campo Da.  
-  
-### <a name="options"></a>Opzioni  
+
+### <a name="options"></a>Opzioni
+
  **Utilizza Server SMTP**  
  Consente di specificare che il reindirizzamento della posta elettronica del server di report viene eseguito tramite un server SMTP.  
   
@@ -185,11 +173,13 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
  **Da indirizzo**  
  Consente di specificare l'indirizzo di posta elettronica da utilizzare nel campo Da di un messaggio di posta elettronica generato. È necessario specificare un account utente che abbia l'autorizzazione per l'invio di posta elettronica dal server SMTP.  
-  
-##  <a name="bkmk_provisionsubscriptions"></a> Avvisi e sottoscrizioni provisioning  
+
+## <a name="provision-subscriptions-and-alerts"></a>Avvisi e sottoscrizioni provisioning
+
  Utilizzare questa pagina per verificare se SQL Server Agent è in esecuzione ed effettuare il provisioning dell'accesso per consentire l'utilizzo di SQL Server Agent da parte di Reporting Services. SQL Server Agent è necessario per gli avvisi dati, le pianificazioni e le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
-  
-## <a name="proxy-association"></a>Associazione del proxy  
+
+## <a name="proxy-association"></a>Associazione del proxy
+
  Al momento della creazione dell'applicazione di servizio Reporting Services, è stata selezionata l'applicazione Web da associare e per la quale effettuare il provisioning delle autorizzazioni per l'accesso da parte dell'applicazione di servizio Reporting Services. Se è stato scelto di non eseguire l'associazione o si desidera modificare l'associazione, attenersi alla procedura seguente.  
   
 1.  In Gestione applicazioni di Amministrazione centrale SharePoint fare clic su **Configura associazioni applicazione di servizio**.  
@@ -202,4 +192,4 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 5.  Selezionare la casella relativa al proxy e fare clic su **OK**.  
   
-  
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

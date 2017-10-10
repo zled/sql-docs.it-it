@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
 ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/08/2017
   
 -   **Delimiters** Per impostazione predefinita, l'elenco dei delimitatori contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
--   **Simboli** per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Se, ad esempio, i simboli sono "`()-`", il valore "(425) 123-4567" viene suddiviso in token come ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Simboli** per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%` nonché il segno di graduazione. Se, ad esempio, i simboli sono "`()-`", il valore "(425) 123-4567" viene suddiviso in token come ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un carattere non può essere simultaneamente un delimitatore e un simbolo.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 09/08/2017
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
  **Symbols**  
- Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco **Symbols** contiene i caratteri seguenti: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   

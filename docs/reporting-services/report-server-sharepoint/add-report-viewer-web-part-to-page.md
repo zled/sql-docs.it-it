@@ -1,7 +1,7 @@
 ---
-title: Aggiungere web part Visualizzatore Report a una pagina di SharePoint | Documenti Microsoft
-ms.custom: Add the Report Viewer web part to a page within your SharePoint site.
-ms.date: 09/15/2017
+title: Aggiungere web part di Visualizzatore Report di SQL Server Reporting Services a una pagina di SharePoint | Documenti Microsoft
+ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
+ms.date: 09/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,14 +14,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 033d8092cab4e6aa0889f153d5e2e7d75ae31b03
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
 ms.contentlocale: it-it
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="add-report-viewer-web-part-to-a-sharepoint-page"></a>Aggiungere web part Visualizzatore Report a una pagina di SharePoint
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Aggiungere web part di Visualizzatore Report di SQL Server Reporting Services a una pagina di SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -35,6 +35,8 @@ Visualizzare un report, da SQL Server Reporting Services o Server di Report di P
 
 * La web part Visualizzatore di Report deve essere distribuita alla farm di SharePoint. Per informazioni su come distribuire il progetto di soluzione web part di Visualizzatore Report, vedere [distribuire la web part di Visualizzatore Report in un sito di SharePoint](deploy-report-viewer-web-part.md).
 
+* Per aggiungere una web part a una pagina web, è necessario disporre dell'autorizzazione aggiunta e personalizzazione pagine a livello di sito. Se si usano impostazioni di sicurezza predefinite, questa autorizzazione è concessa ai membri del gruppo **Proprietari** che hanno il livello di autorizzazione Controllo completo.
+
 ## <a name="add-web-part"></a>Aggiunta di web part
 
 1. Nel sito di SharePoint, selezionare il **ingranaggio** icona in alto a sinistra e selezionare **aggiungere una pagina**.
@@ -43,13 +45,13 @@ Visualizzare un report, da SQL Server Reporting Services o Server di Report di P
 
 2. Assegnare alla pagina, un nome e selezionare **crea**.
 
-3. Finestra di progettazione della pagina, selezionare il **inserire** scheda della barra multifunzione. Selezionare quindi **Web part** all'interno di **parti** sezione.
+3. Finestra di progettazione della pagina, selezionare il **inserire** scheda della barra multifunzione. Selezionare quindi **web part** all'interno di **parti** sezione.
 
     ![Inserire una web part dalla barra multifunzione di office.](media/sharepoint-insert-web-part.png)
 
 4. In **categorie**selezionare * * SQL Server Reporting Services (modalità nativa). In **parti**selezionare **Visualizzatore Report**. Selezionare quindi **Aggiungi**.
 
-    ![Aggiungere una Web Part Visualizzatore Report.](media/sharepoint-report-viewer-web-part.png)
+    ![Aggiungere una web part Visualizzatore Report.](media/sharepoint-report-viewer-web-part.png)
 
     Questa verifica può sembrare inizialmente con un errore. L'errore è perché l'URL del server di report predefinito è impostato su *http://localhost* e potrebbe non essere disponibile in tale posizione.
 
@@ -57,7 +59,7 @@ Visualizzare un report, da SQL Server Reporting Services o Server di Report di P
 
 Per configurare la web part in modo da puntare al report specifico, eseguire le operazioni seguenti.
 
-1. Quando si modifica la pagina di SharePoint, selezionare la freccia rivolta verso il basso in alto a destra della web part e selezionare **modifica Web part**.
+1. Quando si modifica la pagina di SharePoint, selezionare la freccia rivolta verso il basso in alto a destra della web part e selezionare **Modifica web part**.
 
     ![Pagina Modifica web part elenco a discesa.](media/sharepoint-edit-web-part.png)
 
@@ -78,6 +80,5 @@ Per configurare la web part in modo da puntare al report specifico, eseguire le 
 * La web part Visualizzatore Report può essere usata in moderne pagine all'interno di SharePoint.
 * Report di Power BI non può essere utilizzato con la web part Visualizzatore Report.
 * Se non viene visualizzata la web part di Visualizzatore Report, aggiungere alla pagina, accertarsi di avere [distribuito la web part Visualizzatore Report](deploy-report-viewer-web-part.md).
-* Il collegamento nella parte superiore della web part genera un errore e non visualizzata in qualsiasi punto.
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |Proprietà|Valore|  
 |--------------|-----------|  
-|Sintassi|**tempo** [(*precisione in secondi frazionari*)]|  
+|Sintassi|**tempo** [(*frazionaria seconda scala*)]|  
 |Utilizzo|DICHIARARE @MyTime **Time (7)**<br /><br /> CREARE una tabella Table1 (Column1 **Time (7)** )|  
-|*precisione frazionaria dei secondi*|Specifica il numero di cifre per la parte frazionaria dei secondi.<br /><br /> Può essere un numero intero compreso tra 0 e 7. Per Informatica, può essere un intero compreso tra 0 e 3.<br /><br /> La precisione frazionaria predefinita è 7 (100 ns).|  
+|*scala di frazioni*|Specifica il numero di cifre per la parte frazionaria dei secondi.<br /><br /> Può essere un numero intero compreso tra 0 e 7. Per Informatica, può essere un intero compreso tra 0 e 3.<br /><br /> La scala di frazioni di predefinita è 7 (100 ns).|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|hh.mm.ss [. nnnnnnn] (hh.mm.ss [. nnn] per Informatica)<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo|00.00.00.0000000 e 23.59.59.9999999 (00.00.00.000 tramite 23:59:59.999 per Informatica)|  
-|Intervalli di elementi|hh rappresenta un numero di due cifre tra 0 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre tra 0 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre tra 0 e 59 indicante i secondi.<br /><br /> n* rappresenta un numero composto da un numero di cifre da 0 a 7 e compreso tra 0 e 9999999, indicante i secondi frazionari. Per Informatica, n\* è uguale a zero a tre cifre, compreso tra 0 e 999.|  
+|Intervalli di elementi|hh rappresenta un numero di due cifre tra 0 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre tra 0 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre tra 0 e 59 indicante i secondi.<br /><br /> n\*è uguale a zero a sette cifre, compreso tra 0 e 9999999, indicante i secondi frazionari. Per Informatica, n\* è uguale a zero a tre cifre, compreso tra 0 e 999.|  
 |Lunghezza in caratteri|da 8 posizioni minimo (hh.mm.ss) a 16 massimo (. nnnnnnn). Per Informatica, il valore massimo è 12 (hh:mm:ss.nnn).|  
 |Precisione, scala<br /><br /> (l'utente specifica solo la scala)|Vedere la tabella riportata di seguito.|  
 |Dimensioni dello spazio di archiviazione|5 byte, fisso è l'impostazione predefinita con la precisione in secondi frazionari predefinita pari a 100 ns. In Informatica, il valore predefinito è 4 byte, fissate, con il valore predefinito di 1 ms frazionari secondo precisione.|  

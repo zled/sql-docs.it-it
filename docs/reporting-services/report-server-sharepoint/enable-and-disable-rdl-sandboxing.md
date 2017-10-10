@@ -1,7 +1,7 @@
 ---
-title: "Abilitare e disabilitare la funzionalità RDL Sandboxing | Documenti Microsoft"
+title: "Abilitare e disabilitare la funzionalità RDL sandboxing per Reporting Services in modalità integrata SharePoint | Documenti Microsoft"
 ms.custom: 
-ms.date: 03/20/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,27 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="enable-and-disable-rdl-sandboxing"></a>Abilitare e disabilitare la funzionalità RDL Sandboxing
-  La caratteristica RDL (Report Definition Language) Sandboxing consente di rilevare e limitare l'utilizzo di tipi specifici di risorse in base a singoli tenant in un ambiente in cui più tenant utilizzano una sola Web farm di server di report. Un esempio di questo tipo è rappresentato dai servizi di hosting in cui è possibile gestire una sola Web farm di server di report utilizzati da più tenant e probabilmente da società diverse. L'amministratore del server di report può abilitare questa caratteristica per ottenere gli obiettivi seguenti:  
+# <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Abilitare e disabilitare la funzionalità RDL sandboxing per Reporting Services in modalità integrata SharePoint
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+La caratteristica RDL (Report Definition Language) sandboxing consente di rilevare e limitare l'utilizzo di tipi specifici di risorse in base a singoli tenant in un ambiente di più tenant che utilizzano una sola web farm di server di report. Un esempio di questo tipo è rappresentato dai servizi di hosting in cui è possibile gestire una sola Web farm di server di report utilizzati da più tenant e probabilmente da società diverse. L'amministratore del server di report può abilitare questa caratteristica per ottenere gli obiettivi seguenti:  
   
 -   Limitare le dimensioni delle risorse esterne. Le risorse esterne includono immagini, file con estensione xslt e dati mappa.  
   
 -   Al momento della pubblicazione del report, limitare i tipi e i membri utilizzati nel testo dell'espressione.  
   
--   Al momento dell'elaborazione del report, limitare la lunghezza del testo e le dimensioni del valore restituito per le espressioni.  
-  
+-   Al momento dell'elaborazione del report, limitare la lunghezza del testo e le dimensioni del valore restituito per le espressioni.
+
+> [!NOTE]
+> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+
  Quando RDL Sandboxing è abilitato, sono disabilitate le caratteristiche seguenti:  
   
 -   Codice personalizzato nel  **\<codice >** elemento di una definizione di report.  
@@ -41,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
  In questo argomento viene descritto ciascun elemento di \< **rdlsandboxing è**> elemento nel file RSReportServer. config. Per altre informazioni su come modificare questo file, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Attività dei record del log di traccia del server correlata alla caratteristica RDL Sandboxing. Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="example-configuration"></a>Configurazione di esempio  
+## <a name="example-configuration"></a>Configurazione di esempio
  L'esempio seguente mostra le impostazioni e i valori di esempio per il \< **rdlsandboxing è**> elemento nel file RSReportServer. config.  
   
 ```  
@@ -59,9 +65,10 @@ ms.lasthandoff: 08/09/2017
       <Deny>StrDup</Deny>  
    </Members>  
 </RDLSandboxing>  
-```  
-  
-## <a name="configuration-settings"></a>Impostazioni di configurazione  
+```
+
+## <a name="configuration-settings"></a>Impostazioni di configurazione
+
  Nella tabella seguente sono contenute le informazioni sulle impostazioni di configurazione. Le impostazioni sono elencate nell'ordine in cui vengono visualizzate nel file di configurazione.  
   
 |Impostazione|Description|  
@@ -73,13 +80,14 @@ ms.lasthandoff: 08/09/2017
 |**Tipi**|Elenco di membri da consentire nelle espressioni RDL.|  
 |**Allow**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
 |**Spazio dei nomi**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
-|**AllowNew**|Attributo booleano per **Consenti** che controlla se nuove istanze del tipo possono essere creati nelle espressioni RDL o in un RDL  **\<classe >** elemento.<br /><br /> Nota: quando **RDLSandboxing** è abilitato, non è possibile creare nuove matrici in espressioni RDL, indipendentemente dall'impostazione di **AllowNew**.|  
+|**AllowNew**|Attributo booleano per **Consenti** che controlla se nuove istanze del tipo possono essere creati nelle espressioni RDL o in un RDL  **\<classe >** elemento.<br /><br /> Quando **rdlsandboxing è** è abilitato, non è possibile creare nuove matrici nelle espressioni RDL, indipendentemente dall'impostazione di **AllowNew**.|  
 |**Valore**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
 |**Membri**|Per l'elenco dei tipi inclusi nel  **\<tipi >** elemento, l'elenco dei nomi dei membri che non sono consentiti nelle espressioni RDL.|  
-|**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Nota: quando per un membro è specificato **Deny** , non è consentito alcun membro con questo nome per nessun tipo.|  
+|**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Quando **Deny** è per un membro specificato, tutti i membri con questo nome per tutti i tipi non consentiti.|  
   
-## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Utilizzo delle espressioni con RDL Sandboxing abilitato  
- È possibile modificare la caratteristica RDL Sandboxing per facilitare la gestione delle risorse utilizzate da un'espressione nelle modalità seguenti:  
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Utilizzo delle espressioni quando RDL sandboxing è abilitato
+
+È possibile modificare la caratteristica RDL Sandboxing per facilitare la gestione delle risorse utilizzate da un'espressione nelle modalità seguenti:  
   
 -   Limitare il numero di caratteri utilizzati per un'espressione.  
   
@@ -96,7 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  I risultati dell'espressione RDL vengono verificati in fase di esecuzione. Le espressioni RDL vengono verificate nella definizione del report durante la pubblicazione di quest'ultimo. Monitorare il log di traccia del server di report relativamente alle violazioni. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-### <a name="working-with-types"></a>Utilizzo dei tipi  
+### <a name="working-with-types"></a>Utilizzo di tipi
+
  Quando si aggiunge un tipo all'elenco consentiti, vengono controllati i punti di ingresso seguenti per l'accesso alle espressioni RDL:  
   
 -   Membri statici di un tipo.  
@@ -139,7 +148,8 @@ ms.lasthandoff: 08/09/2017
   
  L'aggiunta di un tipo da un assembly personalizzato all'elenco consentiti non concede in modo implicito autorizzazioni di esecuzione sull'assembly. È necessario modificare in modo specifico il file di sicurezza per l'accesso al codice e fornire autorizzazioni di esecuzione all'assembly. Per altre informazioni, vedere [Sicurezza dall'accesso di codice in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Gestione di \<Nega > elenco di membri  
+#### <a name="maintaining-the-deny-list-of-members"></a>Gestione di \<Deny > elenco di membri
+
  Quando si aggiunge un nuovo tipo all'elenco consentiti, attenersi all'elenco seguente per determinare quando potrebbe essere necessario aggiornare l'elenco dei membri bloccati:  
   
 -   Quando si aggiorna un assembly personalizzato con una versione che introduce nuovi tipi.  
@@ -152,7 +162,8 @@ ms.lasthandoff: 08/09/2017
   
 -   Quando si aggiorna un server di report per gestire uno schema RDL successivamente, dal momento che è probabile che nuovi membri siano stati aggiunti ai tipi RDL.  
   
-### <a name="working-with-operators-and-new"></a>Utilizzo di operatori e dell'operatore New  
+### <a name="working-with-operators-and-new"></a>Utilizzo di operatori e new
+
  Per impostazione predefinita, gli operatori di linguaggio .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] sono sempre consentiti, ad eccezione di **New**. Il **New** operatore è controllato dal **AllowNew** attributo la  **\<Consenti >** elemento. Altri operatori di linguaggio, come l'operatore della funzione di accesso alla raccolta predefinito **!**, e le macro di cast .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , come **CInt**, sono sempre consentiti.  
   
  L'aggiunta di operatori, inclusi quelli personalizzati, a un elenco bloccati non è supportata. Per escludere operatori per un tipo, è necessario effettuare le operazioni seguenti:  
@@ -169,8 +180,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Aggiungere la classe all'elenco consentiti.  
   
-## <a name="see-also"></a>Vedere anche  
- [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Log di traccia del servizio Server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+ [File di configurazione Rsreportserver. config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Log di traccia di servizio del Server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
+
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

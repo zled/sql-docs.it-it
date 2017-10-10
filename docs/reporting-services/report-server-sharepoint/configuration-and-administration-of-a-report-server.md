@@ -1,7 +1,7 @@
 ---
-title: Configurazione e amministrazione di un Server di Report | Documenti Microsoft
+title: Configurazione e amministrazione di un server di report di SQL Server Reporting Services | Documenti Microsoft
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,31 +10,34 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d6afebe39f0d7c25df5d88ecd021c1d6dbc84d
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
+# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>Configurazione e amministrazione di un server di report di SQL Server Reporting Services
 
-# <a name="configuration-and-administration-of-a-report-server"></a>Configurazione e amministrazione di un Server di Report
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services è una piattaforma di report basato su server che fornisce una gamma completa di strumenti pronti all'uso e i servizi che consentono di creare, distribuire e gestire report per l'organizzazione, nonché programmare funzionalità che consentono di estendere e personalizzare la funzionalità di reporting. È possibile integrare l'ambiente di gestione dei report con un prodotto SharePoint per sfruttare i vantaggi dell'utilizzo dell'ambiente di collaborazione fornito dai siti di SharePoint.  
-  
-## <a name="in-this-section"></a>Contenuto della sezione  
- Utilizzare le sezioni seguenti per meglio comprendere concetti, scenari di distribuzione, procedure e altro ancora per l'integrazione dell'ambiente [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con un prodotto o una tecnologia SharePoint:  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services è una piattaforma di creazione di report basata su server che fornisce una gamma completa di strumenti e servizi pronti per l'uso che consentono di creare, distribuire e gestire report per l'organizzazione nonché di programmare caratteristiche che consentono di estendere e personalizzare la funzionalità di report. È possibile integrare l'ambiente di gestione dei report con un prodotto SharePoint per sfruttare i vantaggi dell'utilizzo dell'ambiente di collaborazione fornito dai siti di SharePoint.
+
+> [!NOTE]
+> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+
+Nelle sezioni seguenti per comprendere i concetti, scenari di distribuzione, procedure e informazioni per l'integrazione dell'ambiente di Reporting Services con un prodotto o tecnologia SharePoint.  
   
 -   Opzioni di menu in una raccolta documenti di SharePoint  
   
     -   [Gestione avvisi dati per utenti di SharePoint](../../reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Creare e gestire sottoscrizioni per server di Report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint](../../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
@@ -56,12 +59,12 @@ SQL Server Reporting Services è una piattaforma di report basato su server che 
   
 -   [Aggiungere i tipi di contenuto di Reporting Services a una libreria SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [Confronto tra modalità e locale. con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+-   [Report in modalità locale e con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
 -   [Caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
 -   [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- Per informazioni generali sulle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea. Per informazioni su altri componenti, strumenti e risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere la [Documentazione online di SQL Server](../../sql-server/sql-server-technical-documentation.md).  
+ Per ulteriori informazioni su Reporting Services, vedere [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea. Per informazioni su altri componenti, strumenti e risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere la [Documentazione online di SQL Server](../../sql-server/sql-server-technical-documentation.md).  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

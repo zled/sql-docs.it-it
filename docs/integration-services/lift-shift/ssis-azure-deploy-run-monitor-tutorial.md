@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: c6018dbd63e9762b974ddc05995d5d2e3622ee26
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
 ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire ed eseguire il monitoraggio di un pacchetto SSIS in Azure
@@ -22,7 +22,7 @@ In questa esercitazione viene illustrato come distribuire un progetto di SQL Ser
 
 Prima di iniziare, verificare di che aver 17.2 per o versione successiva di SQL Server Management Studio. Per scaricare la versione più recente di SSMS, vedere [scaricare SQL Server Management Studio (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Assicurarsi di aver configurato il database SSISDB e il provisioning di integrazione di Azure-SSIS Runtime. Per informazioni su come eseguire il provisioning SSIS in Azure, vedere [sollevamento e spostamento dei pacchetti SQL Server Integration Services (SSIS) in Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Assicurarsi di aver configurato il database SSISDB e il provisioning di integrazione di Azure-SSIS Runtime. Per informazioni su come eseguire il provisioning SSIS in Azure, vedere [sollevamento e spostamento dei pacchetti SQL Server Integration Services (SSIS) in Azure](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Connettersi al database SSISDB
 
@@ -77,7 +77,7 @@ Utilizzare SQL Server Management Studio per connettersi al catalogo SSIS nel ser
   
 5.  Al termine del processo di distribuzione, il **risultati** verrà visualizzata la pagina. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione non riuscita, selezionare **Failed** nel **risultato** colonna per visualizzare una spiegazione dell'errore.
-    -   Facoltativamente, selezionare **Salva Report... ** per salvare i risultati in un file XML.
+    -   Facoltativamente, selezionare **Salva Report...**  per salvare i risultati in un file XML.
     -   Selezionare **Chiudi** chiudere la procedura guidata.
 
 ## <a name="run-a-package"></a>Eseguire un pacchetto
@@ -86,7 +86,7 @@ Utilizzare SQL Server Management Studio per connettersi al catalogo SSIS nel ser
 
 2. Mouse e scegliere **Execute** per aprire la **Esegui pacchetto** la finestra di dialogo.
 
-3.  Nel **Esegui pacchetto** finestra di dialogo casella, configurare l'esecuzione del pacchetto tramite le impostazioni di **parametri**, **gestioni connessioni**, e **avanzate ** schede.
+3.  Nel **Esegui pacchetto** finestra di dialogo casella, configurare l'esecuzione del pacchetto tramite le impostazioni di **parametri**, **gestioni connessioni**, e **avanzate**  schede.
 
 4.  Selezionare **OK** per eseguire il pacchetto.
 

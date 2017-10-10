@@ -1,7 +1,7 @@
 ---
 title: Introduzione a revoscalepy | Documenti Microsoft
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 661e4e24baeb6eba805c9fba6a9a60875c172c9b
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="introducing-revoscalepy"></a>Introduzione a revoscalepy
@@ -32,16 +32,17 @@ ms.lasthandoff: 09/01/2017
 
 I pacchetti di MicrosoftML vengono anche forniti per R e Python. Per ulteriori informazioni, vedere [utilizzando MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
-> [!WARNING]
-> 
-> Supporto Python è una nuova funzionalità di SQL Server 2017 e attualmente è supportato solo a scopo di anteprima.
-
 ## <a name="versions-and-supported-platforms"></a>Versioni e piattaforme supportate
 
 Il **revoscalepy** modulo è disponibile solo quando si installa uno dei prodotti Microsoft seguenti:
 
-+ Machine Learning Services in SQL Server 2017 CTP 2.0 o versione successiva
-+ Server di Microsoft Machine Learning 9.1.0. Richiede l'installazione utilizzando il programma di installazione per SQL Server 2017 CTP 2.0 o versione successiva
++ Machine Learning Services, in SQL Server 2017
++ Microsoft Machine Learning Server 9.2.0 o versione successiva
+
+Per ottenere la versione più recente di revoscalepy, installare l'aggiornamento cumulativo 1 per SQL Server 2017. Include numerosi miglioramenti Python, tra cui:
+
++ Una nuova funzione di Python, `rx_create_col_info`, che ottiene informazioni sullo schema da un'origine dati di SQL Server, ad esempio [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) per 
++ Miglioramenti apportati a [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) per supportare scenari paralleli tramite il `RxLocalParallel` contesto di calcolo. 
 
 ## <a name="supported-functions-and-data-types"></a>Tipi di dati e funzioni supportati
 

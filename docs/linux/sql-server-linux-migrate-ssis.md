@@ -1,6 +1,6 @@
 ---
 title: Estrarre, trasformare e caricare i dati in Linux con SSIS | Documenti Microsoft
-description: 
+description: Questo articolo viene descritto il servizio SQL Server Integration Services (SSIS) per i computer Linux
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -9,12 +9,11 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: aa4ac0cca739ea57a28beb399325d55b38502217
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 04b294aafb8019a44d2bb7fa05a4e6092a9a490f
 ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Estrarre, trasformare e caricare i dati in Linux con SSIS
@@ -57,110 +56,7 @@ Per eseguire un pacchetto SSIS in un computer Linux, eseguire le operazioni segu
 
 ## <a name="limitations-and-known-issues"></a>Limitazioni e problemi noti
 
-### <a name="general-limitations-and-known-issues"></a>Problemi noti e limitazioni generali
-
-Le funzionalità seguenti non sono supportate in questa versione di SSIS in Linux:
-  - Database del catalogo SSIS
-  - Esecuzione del pacchetto pianificato dall'agente SQL
-  - Autenticazione di Windows
-  - Componenti di terze parti
-  - Change Data Capture (CDC)
-  - Scalabilità orizzontale SSIS
-  - Azure Feature Pack per SSIS
-  - Supporto di Hadoop e HDFS
-  - Microsoft Connector for SAP BW
-
-Per altre limitazioni e problemi noti con SSIS in Linux, vedere il [note sulla versione](sql-server-linux-release-notes.md#ssis).
-
-### <a name="components"></a>Componenti supportati e non supportati
-
-I seguenti componenti di Integration Services predefiniti sono supportati in Linux. Alcuni di essi hanno limitazioni sulla piattaforma Linux, come descritto nelle tabelle seguenti.
-
-Componenti predefiniti ai quali non sono elencati di seguito non sono supportati in Linux.
-
-#### <a name="supported-control-flow-tasks"></a>Attività flusso di controllo è supportato
-- Inserimento bulk - attività
-- Attività Flusso di dati
-- Attività Profiling dati
-- Attività Esegui SQL
-- Attività Esegui istruzione T-SQL
-- Attività Espressione
-- Attività FTP
-- Attività Servizio Web
-- Attività XML
-
-#### <a name="control-flow-tasks-supported-with-limitations"></a>Attività flusso di controllo è supportata con limitazioni
-
-| Attività | Limitazioni |
-|------------|---|
-| Execute Process Task | Supporta solo modalità in-process. |
-| Attività File system | Il *spostamento directory* e *impostare attributi di file* azioni non sono supportate. |
-| attività Script | Supporta solo l'API di .NET Framework standard. |
-| Invia messaggi - attività | Supporta solo modalità utente anonimo. |
-| Attività Trasferisci Database | I percorsi UNC non sono supportati. |
-| | |
-
-#### <a name="supported-control-flow-containers"></a>Contenitori del flusso di controllo è supportato
-- Sequenza - contenitore
-- Contenitore Ciclo For
-- Contenitore Ciclo Foreach
-
-#### <a name="supported-data-flow-sources-and-destinations"></a>Flusso di dati supportati origini e destinazioni
-- Origine File non elaborato e destinazione
-- Origine XML
-
-#### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Origini flusso di dati e destinazioni supportate con limitazioni
-
-| Componente | Limitazioni |
-|------------|---|
-| Destinazione e l'origine ADO.NET | Supporta solo il provider di dati SQLClient. |
-| Origine File flat e destinazione | Supporta solo i percorsi dei file di stile di Windows, a cui viene applicata la regola di mapping del percorso predefinito. Ad esempio `D:\home\ssis\travel.csv` diventa `/home/ssis/travel.csv`. |
-| Origine OData | Supporta solo l'autenticazione di base. |
-| Destinazione e l'origine ODBC | Supporta i driver ODBC Unicode a 64 bit in Linux. Dipende da Gestione driver UnixODBC in Linux. |
-| Origine OLE DB e destinazione | Supporta solo SQL Server Native Client 11.0 e il Provider Microsoft OLE DB per SQL Server. |
-| | |
-
-#### <a name="supported-data-flow-transformations"></a>Trasformazioni del flusso di dati supportati
-- Aggregate
-- Controllo
-- Server di distribuzione di dati bilanciati
-- Mappa caratteri
-- Suddivisione condizionale
-- Copia colonna
-- Conversione dati
-- Colonna derivata
-- Esportazione colonna
-- Raggruppamento fuzzy
-- Ricerca fuzzy
-- Importa colonna
-- Ricerca
-- Merge
-- Merge Join
-- Multicast
-- Pivot
-- Conteggio righe
-- Dimensione a modifica lenta
-- Sort
-- Ricerca termini
-- Union All
-- UnPivot
-
-#### <a name="data-flow-transformations-supported-with-limitations"></a>Trasformazioni di flusso di dati supportate con restrizioni
-
-| Componente | Limitazioni |
-|------------|---|
-| Comando OLE DB - trasformazione | Stesse limitazioni di origine OLE DB e di destinazione. |
-| componente script | Supporta solo l'API di .NET Framework standard. |
-| | |
-
-### <a name="supported-and-unsupported-log-providers"></a>Provider di log supportati e non supportati
-Tutti i provider di log SSIS predefiniti sono supportati in Linux tranne il provider del registro eventi di Windows.
-
-Il provider di log di SQL Server supporta solo l'autenticazione di SQL. non supporta l'autenticazione di Windows.
-
-I provider di log SSIS per file di testo, per i file XML e per SQL Server Profiler scrivono l'output in un file specificato. Le considerazioni seguenti si applicano al percorso del file:
--   Se non si fornisce un percorso, il provider di log scritto nella directory corrente dell'host. Se l'utente corrente non dispone dell'autorizzazione di scrittura nella directory corrente dell'host, il provider di log genera un errore.
--   È possibile utilizzare una variabile di ambiente in un percorso di file. Se si specifica una variabile di ambiente, viene visualizzato il testo specificato nel percorso del file. Ad esempio, se si specifica `%TMP%/log.txt`, il provider di log aggiunge il testo letterale `/%TMP%/log.txt` nella directory host corrente.
+Per informazioni dettagliate sulle limitazioni e problemi noti di SSIS in Linux, vedere [limitazioni e problemi noti per SSIS in Linux](sql-server-linux-ssis-known-issues.md).
 
 ## <a name="more-info-about-ssis-on-linux"></a>Altre informazioni su SSIS in Linux
 
@@ -171,7 +67,7 @@ Per ulteriori informazioni su SSIS in Linux, vedere il post di blog seguenti:
 
 ## <a name="more-info-about-ssis"></a>Altre informazioni su SSIS
 
-Microsoft SQL Server Integration Services (SSIS) è una piattaforma per la compilazione di soluzioni di integrazione di dati a elevate prestazioni, inclusi l'estrazione, trasformazione e caricamento (ETL) di pacchetti per il data warehousing. Per altre informazioni su SSIS, vedere [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services.md).
+Microsoft SQL Server Integration Services (SSIS) è una piattaforma per la compilazione di soluzioni di integrazione di dati a elevate prestazioni, inclusi l'estrazione, trasformazione e caricamento (ETL) di pacchetti per il data warehousing. Per altre informazioni su SSIS, vedere [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
 
 SSIS include le funzionalità seguenti:
 - gli strumenti grafici e procedure guidate per la compilazione e debug dei pacchetti in Windows

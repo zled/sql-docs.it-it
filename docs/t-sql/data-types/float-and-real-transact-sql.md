@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 913aa9c71234d1b170a14f9707be82d45b1cd5b8
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 0ce2e3272c30057f533796e0822256c6235de0c1
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="float-and-real-transact-sql"></a>float e real (Transact-SQL)
@@ -65,7 +65,7 @@ I valori di **float** vengono troncati quando vengono convertiti in qualsiasi ti
   
 Quando si desidera eseguire la conversione da **float** o **reale** per dati di tipo carattere, utilizzando la funzione di stringa STR è in genere più utile di CAST (). STR infatti garantisce un maggiore controllo sul formato. Per ulteriori informazioni, vedere [STR &#40; Transact-SQL &#41; ](../../t-sql/functions/str-transact-sql.md) e [funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/functions.md).
   
-Conversione di **float** i valori che utilizzano la notazione scientifica per **decimale** o **numerico** è limitata ai valori di precisione a 17 cifre solo. Tutti i valori con precisione maggiore di 17 vengono arrotondati a zero.
+Conversione di **float** i valori che utilizzano la notazione scientifica per **decimale** o **numerico** è limitata ai valori di precisione a 17 cifre solo. Qualsiasi valore < 5E-18 arrotondato per difetto a 0.
   
 ## <a name="see-also"></a>Vedere anche
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

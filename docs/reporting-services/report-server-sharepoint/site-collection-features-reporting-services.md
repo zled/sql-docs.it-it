@@ -1,7 +1,7 @@
 ---
-title: Caratteristiche raccolta siti di Reporting Services | Documenti Microsoft
+title: "Funzionalità di Reporting Services sito raccolta | Documenti Microsoft"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,30 +10,35 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b68204ab4c9a008db7c43d2c568d1c3ccedbcb7a
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 7c86f9ecdbbf4955ba224e40c245fc412742fc30
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
+# <a name="reporting-services-site-collection-features"></a>Funzionalità di Reporting Services sito raccolta
 
-# <a name="site-collection-features---reporting-services"></a>Caratteristiche raccolta siti - Reporting Services
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La modalità SharePoint fornisce tre funzionalità della raccolta siti di SharePoint. Le funzionalità supportano generale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ambiente di report in modalità SharePoint [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità di SQL Server 2016 Reporting Services aggiuntivo le operazioni di gestione per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Amministrazione centrale SharePoint.  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+Reporting Services in modalità SharePoint fornisce tre caratteristiche raccolta siti di SharePoint. Le funzionalità supportano la modalità SharePoint di Reporting Services generale, ambiente di report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità di SQL Server 2016 Reporting Services aggiuntivo le operazioni di gestione per Reporting Services in Amministrazione centrale SharePoint.
+
+> [!NOTE]
+> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
   
-## <a name="site-collection-features"></a>Funzionalità della raccolta siti  
- Nella tabella seguente vengono descritte le funzionalità della raccolta siti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+## <a name="site-collection-features"></a>Caratteristiche raccolta siti
+
+ Nella tabella seguente descrive le funzionalità di raccolta del sito di Reporting Services.  
   
 |Funzionalità|Description|  
 |-------------|-----------------|  
-|**Funzionalità Amministrazione centrale del server di report**|Consente di abilitare le funzionalità per la gestione dell'integrazione con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Questa funzionalità viene installata e utilizzata solo nella raccolta siti di Amministrazione centrale SharePoint.<br /><br /> La funzionalità di integrazione del server di report viene attivata automaticamente nella raccolta siti di Amministrazione centrale SharePoint dopo aver installato il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] per prodotti SharePoint. In alcune situazioni sarà necessario attivare manualmente la funzionalità. Per attivare la funzionalità del server di report, usare le pagine di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella pagina Impostazioni del sito di Amministrazione centrale SharePoint.<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive del componente aggiuntivo per prodotti SharePoint attiva la funzionalità di integrazione del server di report per tutte le raccolte siti esistenti al momento dell'installazione del componente aggiuntivo. La funzionalità risulterà inoltre attivata automaticamente per le nuove raccolte siti.|  
-|**Funzionalità di integrazione con il server di report**|Consente la creazione di report avanzata tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]<br /><br /> Questa funzionalità è attiva per impostazione predefinita.|  
+|**Funzionalità Amministrazione centrale del server di report**|Abilita le funzionalità per gestire l'integrazione con un server di report di Reporting Services. Questa funzionalità viene installata e utilizzata solo nella raccolta siti di Amministrazione centrale SharePoint.<br /><br /> La funzionalità di integrazione del server di report viene attivata automaticamente nella raccolta siti di Amministrazione centrale SharePoint dopo aver installato il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] per prodotti SharePoint. In alcuni casi, è necessario attivare manualmente la funzionalità. Per attivare la funzionalità server di report, utilizzare le pagine di Reporting Services nella pagina Impostazioni sito di amministrazione centrale SharePoint.<br /><br /> Il [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versione di Reporting Services e versioni successive del componente aggiuntivo per SharePoint prodotti attivare la funzionalità di integrazione server report per tutte le raccolte siti esistenti quando viene installato il componente aggiuntivo. Inoltre, la funzionalità è attivata automaticamente per le nuove raccolte siti.|  
+|**Funzionalità di integrazione con il server di report**|Consente di generare report avanzati tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Questa funzionalità è attiva per impostazione predefinita.|  
 |**Funzionalità di integrazione di Power View**|Consente l'esplorazione dei dati interattiva e la presentazione visiva su cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e database tabulari di Analysis Services.<br /><br /> L'accesso alla funzionalità può essere eseguito dai menu di scelta rapida delle origini dati seguenti:<br /><br /> **rdlx**<br /><br /> **rsds**<br /><br /> File di connessione con estensione**bism** <br /><br /> <br /><br /> Se [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] non è visualizzato nei menu di scelta rapida, verificare che la **Funzionalità di integrazione Power View** sia attivata.<br /><br /> Questa funzionalità è disattivata per impostazione predefinita.|  
 
 ## <a name="next-steps"></a>Passaggi successivi
@@ -42,4 +47,4 @@ ms.lasthandoff: 08/09/2017
 [Funzionalità e impostazioni del sito di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
 [Attivare la funzionalità Sincronizzazione file server di report in Amministrazione centrale SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

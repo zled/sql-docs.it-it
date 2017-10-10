@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: it-it
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe
 In questa esercitazione introduttiva viene illustrato come distribuire un progetto SSIS dal prompt dei comandi eseguendo la distribuzione guidata Integration Services, `ISDeploymentWizard.exe`.
 
-Per ulteriori informazioni sulla distribuzione guidata di Integration Services, vedere [distribuzione guidata Integration Services](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+Per ulteriori informazioni sulla distribuzione guidata di Integration Services, vedere [distribuzione guidata Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Avviare la distribuzione guidata di Integration Services
 1. Aprire la finestra del prompt dei comandi.
@@ -46,7 +46,7 @@ Per ulteriori informazioni sulla distribuzione guidata di Integration Services, 
   
 5.  Al termine del processo di distribuzione, il **risultati** verrà visualizzata la pagina. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione non riuscita, fare clic su **Failed** nel **risultato** colonna per visualizzare una spiegazione dell'errore.
-    -   Facoltativamente, fare clic su **Salva Report... ** per salvare i risultati in un file XML.
+    -   Facoltativamente, fare clic su **Salva Report...**  per salvare i risultati in un file XML.
     -   Fare clic su **Chiudi** chiudere la procedura guidata.
 
 ## <a name="next-steps"></a>Passaggi successivi

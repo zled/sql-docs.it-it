@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -55,13 +55,12 @@ ms.lasthandoff: 09/27/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -69,9 +68,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -131,21 +130,21 @@ Questo valore è valido solo per i database secondari, mentre il database nel se
   
 CANCELLA PROCEDURE_CACHE  
 
-Cancella la cache delle procedure per il database. Può essere eseguito sia nel database primario e secondari.  
+Cancella la cache delle procedure (piano) per il database. Può essere eseguito sia nel database primario e secondari.  
 
-IDENTITY_CACHE = { **ON** | OFF}  
+IDENTITY_CACHE  **=**  { **ON** | OFF}  
 
-**Si applica a**: 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica) 
+**Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (funzionalità è in anteprima pubblica) 
 
-Abilita o disabilita la cache delle identità a livello di database. Il valore predefinito è **ON**. La memorizzazione nella cache di identità viene utilizzato per migliorare le prestazioni di inserimento in tabelle con colonne Identity. Per evitare interruzioni nei valori della colonna Identity nei casi in cui il server viene riavviato in modo imprevisto o viene eseguito il failover a un server secondario, disabilitare l'opzione IDENTITY_CACHE. Questa opzione è simile a esistente SQL Server Trace Flag 272, ad eccezione del fatto che può essere impostata a livello di database, anziché solo a livello di server.   
+Abilita o disabilita la cache delle identità a livello di database. Il valore predefinito è **ON**. La memorizzazione nella cache di identità viene utilizzato per migliorare le prestazioni di inserimento in tabelle con colonne identity. Per evitare interruzioni nei valori di una colonna identity nei casi in cui il server viene riavviato in modo imprevisto o viene eseguito il failover a un server secondario, disabilitare l'opzione IDENTITY_CACHE. Questa opzione è simile al [272 Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ad eccezione del fatto che può essere impostata a livello di database, anziché solo a livello di server.   
 
 > [!NOTE] 
-> Questa opzione può essere impostata solo per il database primario. Per ulteriori informazioni, vedere [colonne Identity](create-table-transact-sql-identity-property.md).  
+> Questa opzione può essere impostata solo per il database primario. Per ulteriori informazioni, vedere [colonne identity](create-table-transact-sql-identity-property.md).  
 >
 
 ##  <a name="Permissions"></a> Autorizzazioni  
  È necessario modificare qualsiasi configurazione di ambito DATABASE   
-nel database. Questa autorizzazione può essere concessa da un utente con autorizzazione CONTROL per un database  
+nel database. Questa autorizzazione può essere concessa da un utente con autorizzazione CONTROL per un database.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Sebbene sia possibile configurare i database secondari per le impostazioni di configurazione di ambito diverso dal loro primario, tutti i database secondari utilizzerà la stessa configurazione. Impossibile configurare impostazioni diverse per singoli database secondari.  
@@ -268,7 +267,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### <a name="g-set-identitycache"></a>G. Set IDENTITY_CACHE
 
-**Si applica a**: 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica) 
+**Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (funzionalità è in anteprima pubblica) 
 
 In questo esempio disabilita la cache delle identità.
 
@@ -279,6 +278,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 ### <a name="maxdop-resources"></a>Risorse MAXDOP 
+* [Grado di parallelismo](../../relational-databases/query-processing-architecture-guide.md#DOP)
 * [Indicazioni e linee guida per l'opzione di configurazione "max degree of parallelism" in SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>Risorse LEGACY_CARDINALITY_ESTIMATION    
@@ -286,18 +286,18 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)
 
 ### <a name="parametersniffing-resources"></a>Risorse PARAMETER_SNIFFING    
+* [Analisi dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * ["Dell'odore parametro!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Risorse QUERY_OPTIMIZER_HOTFIXES    
+* [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server query optimizer hotfix trace flag 4199 modello di manutenzione](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Ulteriori informazioni  
  [Sys. database_scoped_configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Flag di traccia &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
- [Sys. Configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [Opzioni di configurazione del server &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [Configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

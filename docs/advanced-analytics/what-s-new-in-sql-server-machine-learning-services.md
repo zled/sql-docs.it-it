@@ -2,7 +2,7 @@
 title: "Novità &#39; s novità di servizi di Machine Learning | Documenti Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: it-it
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novità di servizi di Machine Learning in SQL Server
@@ -37,6 +37,16 @@ Rilevare l'annuncio più recente qui! [Python in SQL Server 2017: avanzato nel d
 
 Server Microsoft di Machine Learning in SQL Server fornisce ora supporto completo per la compilazione e distribuzione di soluzioni di machine learning in R o Python. Di seguito vengono evidenziate di questa versione:
 
+> [!IMPORTANT]
+> 
+> Servizi di Machine learning, incluso l'uso di R o Python, non sono attualmente supportati quando si esegue SQL Server in Linux o in database SQL di Azure. Cercare le modifiche in una versione successiva.
+> 
+> Punteggio nativa utilizzando la funzione di stima è attualmente supportato nell'edizione Linux.
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Novità nell'aggiornamento cumulativo 1 per SQL Server 2017
+
+È ora possibile aggiornare i componenti di Python e R in Machine Learning Server 9.2.1. Questa versione offre numerosi miglioramenti a **revoscalepy** e **RevoScaleR**, inclusi i miglioramenti delle prestazioni.
+ 
 ### <a name="in-database-python-integration"></a>Integrazione di Python nel database
 
 È possibile eseguire Python nelle stored procedure, o eseguire Python in remoto utilizzando il computer SQL Server come contesto di calcolo. Questa integrazione apre nuove strade per la vasta community di sviluppatori di Python e gli esperti di dati per utilizzare le funzionalità di SQL Server. 

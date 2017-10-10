@@ -1,7 +1,7 @@
 ---
-title: Distribuire la web part di Visualizzatore Report in un sito di SharePoint | Documenti Microsoft
+title: Distribuire la web part di Visualizzatore Report di SQL Server Reporting Services in un sito di SharePoint | Documenti Microsoft
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,27 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part di Visualizzatore Report in un sito di SharePoint
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part di Visualizzatore Report di SQL Server Reporting Services in un sito di SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-La Web Part Visualizzatore Report è una Web Part personalizzata che può essere usato per visualizzare i report di SQL Server Reporting Services (modalità nativa) all'interno del sito di SharePoint. È possibile utilizzare la Web Part per visualizzare, esplorare, stampare ed esportare report in un server di report. La Web Part Visualizzatore Report è associata a file di definizione (con estensione rdl) del report che vengono elaborati da un server di report di SQL Server Reporting Services o un Server di Report di Power BI. Questa web part Visualizzatore Report non può essere utilizzata con i report di Power BI ospitati nel Server di Report di Power BI.
+La web part Visualizzatore Report è una parte web personalizzato che può essere usata per visualizzare i report di SQL Server Reporting Services (modalità nativa) all'interno del sito di SharePoint. È possibile utilizzare la web part per visualizzare, esplorare, stampare ed esportare report in un server di report. La web part Visualizzatore Report è associata a file di definizione (con estensione rdl) del report che vengono elaborati da un server di report di SQL Server Reporting Services o un Server di Report di Power BI. Questa web part Visualizzatore Report non può essere utilizzata con i report di Power BI ospitati nel Server di Report di Power BI.
 
 Utilizzare le istruzioni seguenti per distribuire manualmente il pacchetto della soluzione che aggiungono la web part Visualizzatore Report in un ambiente SharePoint Server 2013 o SharePoint Server 2016. La distribuzione della soluzione è un passaggio obbligatorio per la configurazione della web part.
 
 **La web part Visualizzatore Report è un pacchetto della soluzione autonoma e non è associata la modalità integrata SharePoint per SQL Server Reporting Services.**
 
 ## <a name="requirements"></a>Requisiti
-
-**Sistemi operativi supportati:**  
-* Windows Server 2008 R2 SP1 e versioni successive
 
 **Supporta le versioni di SharePoint Server:**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ Utilizzare le istruzioni seguenti per distribuire manualmente il pacchetto della
 
 La web part Visualizzatore Report è disponibile nel Microsoft Download Center.
 
-[Scarica pacchetto della soluzione web part Visualizzatore Report](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[Scarica pacchetto della soluzione web part Visualizzatore Report](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>Distribuire la soluzione farm
 
@@ -84,15 +81,15 @@ In questa sezione viene illustrato come distribuire il pacchetto della soluzione
 
     ![Impostazioni del sito dall'icona dell'ingranaggio.](media/sharepoint-site-settings.png)
 
-    Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che è possibile accedere spesso a un sito di SharePoint immettendo *http://<computer name> * per aprire la raccolta siti radice.
+    Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che è possibile accedere spesso a un sito di SharePoint immettendo *http://<computer name>*  per aprire la raccolta siti radice.
 
 3. In **Amministrazione raccolta siti**selezionare **caratteristiche raccolta siti**.
 
-4. Scorrere verso il basso la pagina fino a individuare il **Web Part Visualizzatore Report** funzionalità.
+4. Scorrere verso il basso la pagina fino a individuare il **web part Visualizzatore Report** funzionalità.
 
 5. Selezionare **Attiva**.
 
-    ![Attivare la funzionalità Web Part Visualizzatore Report](media/web-part-activiate-feature.png)
+    ![Attivare la funzionalità di web part Visualizzatore Report](media/web-part-activiate-feature.png)
 
 6. Ripetere per le raccolte siti aggiuntive aprendo ogni sito e fare clic su Azioni sito.
 
@@ -124,9 +121,9 @@ Ritiro della soluzione non rimuove la web part Visualizzatore Report nell'elenco
 
     ![Impostazioni del sito dall'icona dell'ingranaggio.](media/sharepoint-site-settings.png)
 
-    Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che è possibile accedere spesso a un sito di SharePoint immettendo *http://<computer name> * per aprire la raccolta siti radice.
+    Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che è possibile accedere spesso a un sito di SharePoint immettendo *http://<computer name>*  per aprire la raccolta siti radice.
 
-2. In **raccolte Designer Web**selezionare **Web part**.
+2. In **raccolte Designer Web**selezionare **web part**.
 
 3. Selezionare il **icona Modifica** accanto a **ReportViewerNativeMode.dwp**. Potrebbe non essere elencato nella prima pagina di risultati.
 
@@ -134,7 +131,23 @@ Ritiro della soluzione non rimuove la web part Visualizzatore Report nell'elenco
 
     ![Modificare ed eliminare la web part modalità nativa di Visualizzatore Report](media/report-viewer-native-mode-edit-delete.png)
 
-È possibile tentare l'eliminazione della web part tramite PowerShell, ma non c'è un comando diretto per tale. Per un esempio di script, vedere [come eliminare una Web part dalla raccolta Web Part](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+È possibile tentare l'eliminazione della web part tramite PowerShell, ma non c'è un comando diretto per tale. Per un esempio di script, vedere [come eliminare una web part dalla raccolta web part](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+
+## <a name="supported-languages"></a>Lingue supportate
+
+Con la web part sono supportate le lingue seguenti:
+
+* Inglese (en)
+* Tedesco (Germania)
+* Spagnolo (sp)
+* Francese (fr)
+* Italiano (it)
+* Giapponese (ja)
+* Coreano (ko)
+* Portoghese (pt)
+* Russo (ru)
+* Cinese (semplificato - zh-HANS e zh-CHS)
+* Cinese (tradizionale, zh-HANT e zh-CHT)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

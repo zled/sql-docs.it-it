@@ -1,7 +1,7 @@
 ---
-title: Pacchetto di installazione, disinstallazione e la sincronizzazione | Documenti Microsoft
+title: Sincronizzazione del pacchetto R per SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 04/12/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,127 +13,106 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 959282395d178a090a3d447769ced4dca8882f89
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: ed7dbf99b0f492b5ca8879bb67a7256fdfae3306
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
 # <a name="r-package-synchronization-for-sql-server"></a>Sincronizzazione del pacchetto R per SQL Server
 
-SQL Server 2017 CTP 2.0 include una nuova funzione per la sincronizzazione dei pacchetti di R, per il supporto di backup e ripristino di raccolte di pacchetti R associate ai database di SQL Server. Questa funzionalità consente di verificare che non vanno perse e che possono essere facilmente ripristinati set complessi di pacchetti R creati dagli utenti.  
+SQL Server 2017 include la possibilità di sincronizzare le raccolte di pacchetti R tra il file system e l'istanza e database in cui vengono utilizzati i pacchetti.
+Questa funzionalità è stata fornita per renderne più semplice eseguire il backup di raccolte di pacchetti R associate ai database di SQL Server. Utilizzando questa funzionalità, un amministratore può ripristinare non solo il database, ma tutti i pacchetti R utilizzati dai data Scientist utilizzo del database.
 
-Questo argomento viene descritto il funzionamento della funzionalità di sincronizzazione del pacchetto e come utilizzare il `rxSyncPackages()` funzione per eseguire le attività seguenti:
+Questo argomento descrive la funzionalità di sincronizzazione del pacchetto e come utilizzare il [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages) funzione per eseguire le attività seguenti:
 
-+  Sincronizzare un elenco di pacchetti per un intero database di SQL Server
-+  Sincronizza pacchetti utilizzati da un singolo utente, o da un gruppo di utenti
++ Sincronizzare un elenco di pacchetti per un intero database di SQL Server
+
++ Sincronizzare pacchetti utilizzati da un singolo utente, o da un gruppo di utenti
+
++ Se un utente passa a un altro Server SQL, è possibile eseguire un backup del database di lavoro dell'utente e ripristinarlo nel nuovo server e verranno installati i pacchetti per l'utente in file system nel nuovo server, come richiesto da R.
+
+Ad esempio, è possibile utilizzare la sincronizzazione di pacchetto in questi scenari:
+
++ L'amministratore del database ripristinato un'istanza di SQL Server in un nuovo computer e richiede agli utenti di connettersi dai rispettivi client R ed eseguire `rxSyncPackages` per aggiornare e ripristinare i pacchetti.
+
++ Si ritiene che un pacchetto R nel file system è danneggiato per eseguire `rxSyncPackages` in SQL Server.
+
+## <a name="requirements"></a>Requisiti
+
+Prima di poter utilizzare la sincronizzazione di pacchetto, è necessario disporre della versione appropriata di Microsoft R e stata abilitata la funzionalità correlate del database.
+
+### <a name="determine-whether-your-server-supports-package-management"></a>Determinare se il server supporta la gestione dei pacchetti
+
+Questa funzionalità è disponibile in SQL Server 2017 CTP 2 o versione successiva.
+
+Poiché questa funzionalità utilizza le funzioni R in Microsoft R versione 9.1.0, è possibile aggiungere questa funzionalità a un'istanza di SQL Server 2016 per l'aggiornamento dell'istanza per utilizzare la versione più recente di Microsoft R. Per ulteriori informazioni, vedere [SqlBindR.exe utilizzare per eseguire l'aggiornamento di SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+### <a name="enable-the-package-management-feature"></a>Abilitare la funzionalità di gestione pacchetti
+
+Per utilizzare la sincronizzazione di pacchetto richiede l'abilitazione di nuove funzionalità di gestione di pacchetti nell'istanza di SQL Server e nei singoli database utilizzati per eseguire le attività di R.
+
+1. L'amministratore del server abilita la funzionalità per l'istanza di SQL Server.
+2. Per ogni database, l'amministratore concede agli utenti la possibilità di installare o condividere i pacchetti R.
+
+Quando questa operazione viene eseguita, informazioni sugli utenti e i pacchetti installati vengono archiviate nell'istanza di SQL Server. Queste informazioni possono quindi essere applicate per aggiornare i pacchetti R nel file system.
+
+Ogni volta che si aggiunge un nuovo pacchetto utilizzando le funzioni di gestione di pacchetti, entrambi i record in SQL Server e il file system vengono aggiornati.
 
 > [!NOTE]
-> Questa funzione viene fornita come parte del software provvisorio e è soggette a modifiche prima della versione finale.
+> Se si hanno stato installando i pacchetti R modo tradizionale, con strumenti R per installare i pacchetti direttamente nel file system, è possibile utilizzare la sincronizzazione di pacchetto.
+### <a name="permissions"></a>Permissions
 
-## <a name="what-is-package-synchronization"></a>Che cos'è la sincronizzazione di pacchetto 
++ La persona che esegue la funzione di sincronizzazione del pacchetto deve essere un'entità in cui l'istanza di SQL Server e database che contiene i pacchetti di sicurezza.
 
-Sincronizzazione del pacchetto è contesti di calcolo di una nuova funzionalità che funziona in modo specifico con SQL Server. È progettato per ottenere un elenco di pacchetti R installati in un database specifico, per un particolare utente o gruppo, e assicurarsi che i pacchetti elencati nel sistema corrisponde file quelli presenti nel database. 
++ Il chiamante della funzione deve essere un membro di uno di questi ruoli di gestione pacchetti: **condiviso rpkgs** o **rpkgs privato**.
 
-Ciò è utile se è necessario spostare un database utente e spostare i pacchetti insieme al database. Eseguire il backup e il ripristino di un database di SQL Server utilizzato per i processi R, è possibile utilizzare anche la sincronizzazione di pacchetto.
++ Per sincronizzare i pacchetti contrassegnati come **condivisa**, la persona che esegue la funzione deve disporre dell'appartenenza al **condiviso rpkgs** ruolo e i pacchetti che vengono spostati sia stato installato per un oggetto condiviso libreria di ambito.
 
-Sincronizzazione del pacchetto viene utilizzata una funzione nuova, `rxSyncPackages()`. Per sincronizzare l'elenco dei pacchetti, aprire un prompt dei comandi di R, passare il contesto di calcolo che definisce l'istanza e database che si desidera utilizzare e quindi specificare un ambito del pacchetto o un nome utente o il proprietario. 
++ Per sincronizzare i pacchetti contrassegnati come **privata**, sia il proprietario del pacchetto o l'amministratore deve eseguire la funzione e i pacchetti devono essere privati.
 
-### <a name="how-packages-are-managed-in-r-and-sql-server"></a>Come vengono gestiti i pacchetti R e SQL Server
-
-In genere, quando si eseguono gli script R mediante strumenti standard di R, pacchetti R installati nel file system. Se più utenti utilizzano R nello stesso computer, potrebbero esserci più copie degli stessi pacchetti, in cartelle diverse o in librerie utente diverso.
-
-Tuttavia, per utilizzare un pacchetto R da SQL Server, il pacchetto deve essere installato nella libreria R predefinito che viene associata all'istanza. Un computer del server potrebbe ospitare più istanze di SQL Server con R abilitato e in questo caso, ogni istanza può includere un set separato di pacchetti R. 
-
-L'amministratore del database è responsabile per l'installazione dei pacchetti nell'istanza. Tuttavia, con le librerie di gestione del pacchetto, l'amministratore può delegare questa responsabilità agli utenti. 
-
-+ Per ogni database, l'amministratore può concedere agli utenti la possibilità di installare liberamente i pacchetti R che hanno bisogno. Questo meccanismo garantisce che più utenti possono installare versioni diverse di pacchetti R senza provocare conflitti per gli altri utenti del computer SQL Server. Singoli utenti possono installare i pacchetti per uso personale, utilizzando un percorso del file system contrassegnato come **privata**, se appartengono al ruolo del database **rpkgs privato**.
-
-+ L'amministratore può configurare un gruppo di utenti di pacchetto in un database e installare i pacchetti che sono condivisi da tutti gli utenti del gruppo. I pacchetti possono essere condivise tra i membri del ruolo del database **condiviso rpkgs**. Tali utenti possono anche installare pacchetti ai percorsi di ambito privato. 
-
-### <a name="goal-of-package-synchronization"></a>Obiettivo di sincronizzazione del pacchetto
-
-Se un database in un server viene perso o deve essere spostato, mediante la sincronizzazione di pacchetto, è possibile ripristinare i set di pacchetti specifici per un database, l'utente o gruppo. 
-
-Le informazioni sugli utenti e i pacchetti installati viene archiviate nell'istanza di SQL Server e viene utilizzate per aggiornare i pacchetti nel file system. Ogni volta che si aggiunge un nuovo pacchetto utilizzando le funzioni di gestione di pacchetti, entrambi i record in SQL Server e il file system vengono aggiornati. Pertanto, se un utente passa a un altro Server SQL, è possibile eseguire un backup del database di lavoro dell'utente e ripristinarlo nel nuovo server, e i pacchetti per l'utente verranno installati nel file system nel nuovo server, come richiesto da R.
-
-
-### <a name="supported-versions"></a>Versioni supportate
-
-Questa funzione è inclusa in SQL Server 2017 CTP 2.0.
-
-Poiché questa funzione è parte di Microsoft R versione 9.1.0, è possibile aggiungere questa funzionalità a un'istanza di SQL Server 2016 per l'aggiornamento dell'istanza per utilizzare la versione più recente di Microsoft R. Per ulteriori informazioni, vedere [SqlBindR.exe utilizzare per eseguire l'aggiornamento di SQL Server R Services](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-
-## <a name="to-synchronize-packages"></a>Per sincronizzare i pacchetti
-
-Chiamare `rxSyncPackages` dopo il ripristino di un'istanza di SQL Server in un nuovo computer, o se creare un pacchetto nel file system un R sembrano danneggiati.
-
-Se il comando viene eseguito correttamente, vengono aggiunti i pacchetti esistenti nel file system nel database, l'ambito e proprietario specificato. Se il file system è danneggiato, i pacchetti sono restred in base all'elenco mantenuta nel database.
-
-### <a name="syntax"></a>Sintassi
-`rxSyncPackages(computeContext = rxGetOption("computeContext"),  scope = c("shared", "private"), owner = c(), verbose = getOption("verbose"))`
-
-+ Contesto di calcolo
-
-    Definire un contesto di calcolo di SQL Server, costituito da un'istanza e il database e i pacchetti per la sincronizzazione. Creare il contesto di SQL Server utilizzando il `RxInSqlServer` (funzione). Se non si specifica un contesto di calcolo, viene utilizzato il contesto di calcolo corrente. 
-
-+ Ambito
-
-  Indicare se si intende installare i pacchetti per un singolo utente o per un gruppo di utenti: 
-
-    + **privato** l'operazione includerà solo i pacchetti che sono stati installati per l'uso da un proprietario specificato.
-    + **condiviso** il oepration includerà tutti i pacchetti installati per un gruppo di utenti. 
-
-  Se si esegue la funzione senza specificare l'ambito privato o condiviso, vengono applicati entrambi gli ambiti. Di conseguenza, l'intero set di pacchetti disponibili per tutti gli ambiti e gli utenti verranno copiati.
-
-+ Proprietario 
-
-    Specificare il proprietario dei pacchetti per la sincronizzazione. Il nome del proprietario deve essere un utente del database SQL valido. Se si lascia vuota, viene utilizzato il nome utente dell'account di accesso SQL specificato nella connessione.
-
-
-### <a name="requirements"></a>Requisiti
-
-+ La persona che esegue la funzione deve essere un'entità di sicurezza in cui l'istanza di SQL Server e database che contiene i pacchetti e deve essere un membro di un ruolo di gestione pacchetti: **condiviso rpkgs** o **rpkgs privato** 
-  + Per sincronizzare i pacchetti contrassegnati come **condivisa**, la persona che esegue la funzione deve disporre dell'appartenenza al **condiviso rpkgs** ruolo e i pacchetti che vengono spostati sia stato installato per un oggetto condiviso libreria di ambito.
-  + Per sincronizzare i pacchetti contrassegnati come **privata**, sia il proprietario del pacchetto o l'amministratore deve eseguire la funzione e i pacchetti devono essere privati.
-+ **gli utenti di rpkgs** -i membri di questo ruolo possono eseguire codice che utilizza i pacchetti installati nell'istanza di SQL Server, ma non installare o pacchetti di sincronizzazione.
 + Per sincronizzare i pacchetti per conto di altri utenti, il proprietario deve essere un membro del **db_owner** ruolo del database.
 
-## <a name="examples"></a>Esempi
+## <a name="how-package-synchronization-works"></a>Funzionamento della sincronizzazione di pacchetto
 
-Nell'esempio seguente crea una connessione a un'istanza specifica di SQL Server, specificare un database e quindi specificano un set di pacchetti per sincronizzare. 
+Per utilizzare la sincronizzazione di pacchetto, chiamare [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), che è una nuova funzione negli [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler). È possibile chiamare questa funzione da SQL Server tramite sp_execute_external_script oppure è possibile eseguirlo da un client remoto di R e specificare contesto di calcolo di SQL Server. 
 
-Quando la chiamata a `rxSyncPackages` viene effettuata, il pacchetto elenchi vengono sincronizzati tra il file system e il database. 
+Poiché i pacchetti vengono gestiti a livello di database, per ogni chiamata a `rxSyncPackages`, è necessario specificare un'istanza di SQL Server e database ed elencare i pacchetti o specificare l'ambito del pacchetto.
 
-### <a name="synchronize-all-by-database"></a>Sincronizzare tutti i database
+1. Creare il contesto di calcolo di SQL Server utilizzando il `RxInSqlServer` (funzione). Se non si specifica un contesto di calcolo, viene utilizzato il contesto di calcolo corrente.
+
+2. Specificare il nome di un database nell'istanza nel contesto di calcolo specificato. Per ogni database vengono gestiti i pacchetti.
+
+3. Elencare i pacchetti da sincronizzare.
+
+4.  Facoltativamente, utilizzare il *ambito* argomento per indicare se si esegue la sincronizzazione di pacchetti per un singolo utente o per un gruppo di utenti. Se si esegue la funzione senza specificando **privata** o **condivisa** definire l'ambito, l'intero set di pacchetti disponibili per tutti gli ambiti e gli utenti verranno copiati.
+
+Se il comando viene eseguito correttamente, i pacchetti esistenti nel file system vengono aggiunti al database, con l'ambito specificato e il proprietario. Se il file system è danneggiato, i pacchetti vengono ripristinati in base all'elenco mantenuta nel database.
+
+### <a name="example-1-synchronize-all-package-by-database"></a>Esempio 1. Sincronizzare tutti i pacchetti dal database
 
 In questo esempio ottiene tutti i pacchetti installati nel database [TestDB]. Poiché nessun proprietario specifico, l'elenco include tutti i pacchetti che sono stati installati per gli ambiti privati e condivisi.
 
 ```R
 connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
 computeContext <- RxInSqlServer(connectionString = connectionString )
-
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-scope"></a>Limitare i pacchetti sincronizzati dall'ambito 
+### <a name="example-2-restrict-synchronized-packages-by-scope"></a>Esempio 2. Limitare i pacchetti sincronizzati dall'ambito
 
-Il seguente Sincronizza esempi solo i pacchetti in ambito condiviso o ambito privato.
-
-**Ambito condiviso**
+Negli esempi seguenti sincronizzare solo i pacchetti nell'ambito specificato.
 
 ```R
+#Shared scope
 rxSyncPackages(computeContext=computeContext, scope="shared", verbose=TRUE)
-```
 
-**Ambito privato**
-
-```R
+#Private scope
 rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-owner"></a>Limitare i pacchetti sincronizzati dal proprietario 
+### <a name="example-3-restrict-synchronized-packages-by-owner"></a>Esempio 3. Limitare i pacchetti sincronizzati dal proprietario
 
 Nell'esempio seguente viene illustrato come ottenere solo i pacchetti che sono stati installati per un utente specifico. In questo esempio, l'utente è identificato dal nome di account di accesso SQL, *user1*.
 
@@ -141,6 +120,20 @@ Nell'esempio seguente viene illustrato come ottenere solo i pacchetti che sono s
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))
 ```
 
-## <a name="see-also"></a>Vedere anche
+### <a name="example-4-restrict-synchronized-packages-by-owner"></a>Esempio 4. Limitare i pacchetti sincronizzati dal proprietario
 
-[Gestione dei pacchetti R per SQL Server](../r/r-package-management-for-sql-server-r-services.md)
+Nell'esempio seguente consente di sincronizzare i pacchetti installati nel file system con l'elenco dei pacchetti gestiti nel database. Se qualsiasi pacchetto è manca, verrà installato nel file system.
+
+```R
+# Instantiate the compute context
+connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
+computeContext <- RxInSqlServer(connectionString = connectionString )
+
+# Synchronize the packages in the file system for all scopes and users
+rxSyncPackages(computeContext=computeContext, verbose=TRUE)
+```
+
+## <a name="related-resources"></a>Risorse correlate
+
+[Gestione dei pacchetti R per SQL Server](r-package-management-for-sql-server-r-services.md)
+

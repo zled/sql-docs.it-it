@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Pianificare l'esecuzione di un pacchetto SSIS in Azure
@@ -58,13 +58,13 @@ Per pianificare un pacchetto con SQL Server Agent in locale, creare un processo 
 
 ## <a name="elastic"></a>Pianificare un pacchetto con i processi di SQL Database elastico
 
-Per ulteriori informazioni sui processi elastici nel Database SQL, vedere [i database di gestione dei cloud di scalabilità orizzontale](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Per ulteriori informazioni sui processi elastici nel Database SQL, vedere [i database di gestione dei cloud di scalabilità orizzontale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Prerequisiti
 
 È possibile utilizzare processi elastici per pianificare i pacchetti SSIS archiviati nel database del catalogo SSISDB in un server di Database SQL di Azure, è necessario eseguire le operazioni seguenti:
 
-1.  Installare e configurare i componenti di processi di Database elastico. Per altre informazioni, vedere [Panoramica di processi di installazione di Database elastico](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
+1.  Installare e configurare i componenti di processi di Database elastico. Per altre informazioni, vedere [Panoramica di processi di installazione di Database elastico](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Creare le credenziali con ambito database processi è possono utilizzare per inviare comandi al database del catalogo SSIS. Per altre informazioni, vedere [creare CREDENZIALI con ambito DATABASE (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -110,7 +110,7 @@ Per pianificare un pacchetto con l'attività di Azure Data Factory Stored Proced
 3.  Creare un set di dati di output che controlla la pianificazione.
 4.  Creare una pipeline di Data Factory che usa l'attività di Stored Procedure di SQL Server per eseguire il pacchetto SSIS.
 
-In questa sezione viene fornita una panoramica dei passaggi. Un'esercitazione di Data Factory completa non rientra nell'ambito di questo articolo. Per altre informazioni, vedere [attività di SQL Server Stored Procedure](/azure/data-factory/data-factory-stored-proc-activity.md).
+In questa sezione viene fornita una panoramica dei passaggi. Un'esercitazione di Data Factory completa non rientra nell'ambito di questo articolo. Per altre informazioni, vedere [attività di SQL Server Stored Procedure](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Creare un servizio collegato per il Database SQL che ospita il database SSISDB
 Il servizio collegato consente a Data Factory di connettersi a SSISDB.
@@ -221,4 +221,4 @@ Per ulteriori informazioni sul codice in questo script, vedere [distribuire ed e
 ## <a name="next-steps"></a>Passaggi successivi
 Per ulteriori informazioni su SQL Server Agent, vedere [processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
 
-Per ulteriori informazioni sui processi elastici nel Database SQL, vedere [i database di gestione dei cloud di scalabilità orizzontale](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Per ulteriori informazioni sui processi elastici nel Database SQL, vedere [i database di gestione dei cloud di scalabilità orizzontale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
