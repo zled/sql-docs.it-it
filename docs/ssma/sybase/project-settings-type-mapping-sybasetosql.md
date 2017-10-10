@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77c02b875a22fefec54c59518f4972cbd7aefd4b
+ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
+ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Impostazioni (Mapping dei tipi) del progetto (SybaseToSQL)
@@ -61,32 +61,32 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti tra ASE e [!INCL
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binario [\*..8000]**|**binario [\*]**|  
-|**binario [8001..\*]**|**varbinary(max)**|  
+|**binario [\*... 8000]**|**binario [\*]**|  
+|**binario [8001...\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**Char (variabile)**|**varchar**|  
-|**variabile Char [\*..8000]**|**varchar [\*]**|  
-|**variabile Char [8001..\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
-|**Char [8001..\& #42;]**|**varchar(max)**|  
+|**variabile Char [\*... 8000]**|**varchar [\*]**|  
+|**variabile Char [8001...\*]**|**varchar(max)**|  
+|**char[\*.. 8000]**|**char[\*]**|  
+|**Char [8001...\*;]**|**varchar(max)**|  
 |**carattere**|**char**|  
 |**variabile di tipo carattere**|**varchar**|  
-|**variabile di tipo carattere [\*..8000]**|**varchar [\*]**|  
-|**variabile di tipo carattere [8001..\*]**|**varchar(max)**|  
-|**caratteri [\*..8000]**|**char[\*]**|  
-|**caratteri [8001..\*]**|**varchar(max)**|  
+|**variabile di tipo carattere [\*... 8000]**|**varchar [\*]**|  
+|**variabile di tipo carattere [8001...\*]**|**varchar(max)**|  
+|**caratteri [\*... 8000]**|**char[\*]**|  
+|**caratteri [8001...\*]**|**varchar(max)**|  
 |**data**|**data**|  
 |**datetime**|**datetime2 [3]**|  
 |**DEC**|**decimal**|  
-|**dec[\*..\*]**|**decimale [\*]**|  
-|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**dec[\*.. \*]**|**decimale [\*]**|  
+|**dec[\*.. \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
-|**decimale [\*..\*]**|**decimale [\*]**|  
-|**decimale [\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**decimale [\*... \*]**|**decimale [\*]**|  
+|**decimale [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**valore a precisione doppia**|**float [53]**|  
 |**float**|**float [53]**|  
-|**float [\*..15]**|**float [24]**|  
+|**float [\*... 15]**|**float [24]**|  
 |**float [16 …\*]**|**float [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
@@ -94,61 +94,61 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti tra ASE e [!INCL
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**char nazionali**|**nchar**|  
-|**National char [\*..4000]**|**nchar [\*]**|  
+|**National char [\*... 4000]**|**nchar [\*]**|  
 |**char National variabile**|**nvarchar**|  
-|**char National varying [\*..4000]**|**nvarchar [\*]**|  
-|**char National varying [4001..\*]**|**nvarchar(max)**|  
-|**National char [4001..\*]**|**nvarchar(max)**|  
+|**char National varying [\*... 4000]**|**nvarchar [\*]**|  
+|**char National varying [4001...\*]**|**nvarchar(max)**|  
+|**National char [4001...\*]**|**nvarchar(max)**|  
 |**caratteri nazionali**|**nchar**|  
-|**caratteri nazionali [\*..4000]**|**nchar [\*]**|  
-|**caratteri nazionali [4001..\*]**|**nvarchar(max)**|  
+|**caratteri nazionali [\*... 4000]**|**nchar [\*]**|  
+|**caratteri nazionali [4001...\*]**|**nvarchar(max)**|  
 |**variabile di caratteri nazionali**|**nvarchar**|  
-|**variabile di caratteri nazionale [\*..4000]**|**nvarchar [\*]**|  
-|**variabile di caratteri nazionale [4001..\*]**|**nvarchar(max)**|  
+|**variabile di caratteri nazionale [\*... 4000]**|**nvarchar [\*]**|  
+|**variabile di caratteri nazionale [4001...\*]**|**nvarchar(max)**|  
 |**varchar nazionali**|**nvarchar**|  
-|**National varchar [\*..4000]**|**nvarchar [\*]**|  
-|**National varchar [4001..\*]**|**nvarchar(max)**|  
+|**National varchar [\*... 4000]**|**nvarchar [\*]**|  
+|**National varchar [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**variabile nchar**|**nvarchar**|  
-|**nchar varying [\*..4000]**|**nvarchar [\*]**|  
-|**nchar varying [4001..\*]**|**nvarchar(max)**|  
-|**nchar [\*..4000]**|**nchar [\*]**|  
-|**nchar [4001..\*]**|**nvarchar(max)**|  
+|**nchar varying [\*... 4000]**|**nvarchar [\*]**|  
+|**nchar varying [4001...\*]**|**nvarchar(max)**|  
+|**nchar [\*... 4000]**|**nchar [\*]**|  
+|**nchar [4001...\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**numerico [\*..\*]**|**numerico [\*]**|  
-|**numerico [\*..\*][\*..\*]**|**numeric[\*][\*]**|  
+|**numerico [\*... \*]**|**numerico [\*]**|  
+|**numerico [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar [\*..4000]**|**nvarchar [\*]**|  
-|**nvarchar [4001..\*]**|**nvarchar(max)**|  
+|**nvarchar [\*... 4000]**|**nvarchar [\*]**|  
+|**nvarchar [4001...\*]**|**nvarchar(max)**|  
 |**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
-|**sysname [\*..\*]**|**nvarchar [255]**|  
+|**sysname [\*... \*]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**tempo [3]**|  
-|**timestamp**|**RowVersion**|  
+|**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**UNICHAR**|**nchar**|  
 |**variabile UNICHAR**|**nvarchar**|  
-|**variabile UNICHAR [\*..4000]**|**nvarchar [\*]**|  
-|**variabile UNICHAR [4001..\*]**|**nvarchar(max)**|  
-|**UNICHAR [\*..4000]**|**nchar [\*]**|  
-|**UNICHAR [4001..\*]**|**nvarchar(max)**|  
+|**variabile UNICHAR [\*... 4000]**|**nvarchar [\*]**|  
+|**variabile UNICHAR [4001...\*]**|**nvarchar(max)**|  
+|**UNICHAR [\*... 4000]**|**nchar [\*]**|  
+|**UNICHAR [4001...\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar [\*..4000]**|**nvarchar [\*]**|  
-|**univarchar [4001..\*]**|**nvarchar(max)**|  
+|**univarchar [\*... 4000]**|**nvarchar [\*]**|  
+|**univarchar [4001...\*]**|**nvarchar(max)**|  
 |**bigint senza segno**|**numerico [20] [0]**|  
 |**int senza segno**|**bigint**|  
 |**smallint senza segno**|**int**|  
 |**tinyint senza segno**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*..8000]**|**varbinary [\*]**|  
-|**varbinary [8001..\*]**|**varbinary(max)**|  
+|**varbinary [\*... 8000]**|**varbinary [\*]**|  
+|**varbinary [8001...\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*..8000]**|**varchar [\*]**|  
-|**varchar [8001..\*]**|**varchar(max)**|  
+|**varchar [\*... 8000]**|**varchar [\*]**|  
+|**varchar [8001...\*]**|**varchar(max)**|  
   
 
