@@ -78,7 +78,7 @@ ROW_NUMBER ( )
 
 La query seguente restituisce le tabelle di quattro sistema in ordine alfabetico.
 
-```
+```t-sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -97,7 +97,7 @@ ORDER BY name ASC;
 
 Per aggiungere una colonna di numeri di riga davanti a ogni riga, aggiungere una colonna con il `ROW_NUMBER` funzione, in questo caso denominato `Row#`. È necessario spostare il `ORDER BY` clausola fino al `OVER` clausola.
 
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -116,7 +116,7 @@ WHERE database_id < 5;
 
 Aggiunta di un `PARTITION BY` clausola nel `recovery_model_desc` colonna, verrà riavviato la numerazione quando il `recovery_model_desc` modificato il valore. 
  
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -137,7 +137,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. Restituzione del numero di riga per i venditori  
  Nell'esempio seguente viene calcolato un numero di riga per i venditori in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] in base alla classificazione delle vendite dall'inizio dell'anno alla data corrente.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -171,7 +171,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>C. Restituzione di un subset di righe  
  Nell'esempio seguente vengono calcolati solo i numeri di riga per tutte le righe nella tabella `SalesOrderHeader` nell'ordine di `OrderDate` e vengono restituite le righe da `50` a `60` incluse.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -188,7 +188,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>D. Utilizzo di ROW_NUMBER() con PARTITION  
  Nell'esempio seguente viene utilizzato l'argomento `PARTITION BY` per suddividere il set di risultati della query in base alla colonna `TerritoryName`. La clausola `ORDER BY` specificata nella clausola `OVER` ordina le righe in ogni partizione in base alla colonna `SalesYTD`. La clausola `ORDER BY` nell'istruzione `SELECT` ordina l'intero set di risultati della query in base al valore di `TerritoryName`.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -226,7 +226,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Restituzione del numero di riga per i venditori  
  Nell'esempio seguente viene restituito il `ROW_NUMBER` per i venditori in base alle rispettive quote di vendite assegnata.  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -255,7 +255,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>F. Utilizzo di ROW_NUMBER() con PARTITION  
  Nell'esempio seguente viene illustrato l'utilizzo della funzione `ROW_NUMBER` con l'argomento `PARTITION BY`. In questo modo il `ROW_NUMBER` funzione per numerare le righe in ogni partizione.  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 
