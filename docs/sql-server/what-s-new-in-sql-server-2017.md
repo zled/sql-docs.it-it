@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
 ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
@@ -53,7 +53,7 @@ SQL Server 2017 include numerose nuove funzionalità del motore di database, mig
 - I **miglioramenti in memoria** includono il supporto per le colonne calcolate nelle tabelle ottimizzate per la memoria, il supporto completo delle funzioni JSON nei moduli compilati in modo nativo e l'operatore CROSS APPLY nei moduli compilati in modo nativo. (CTP 1.1)
 - Le nuove **funzioni di stringa** sono CONCAT_WS, TRANSLATE e TRIM e WITHIN GROUP è ora supportata per la funzione STRING_AGG. (CTP 1.1)
 - Sono disponibili nuove **opzioni di accesso in blocco** (BULK INSERT e OPENROWSET(BULK...) ) per i file con estensione csv e i file del BLOB di Azure. (CTP 1.1)
-- I **miglioramenti degli oggetti con ottimizzazione per la memoria** includono sp_spaceused e l'eliminazione del limite di 8 indici per le tabelle ottimizzate per la memoria, sp_rename per le tabelle ottimizzate per la memoria e i moduli T-SQL compilati in modo nativo e CASE e TOP (N) WITH TIES per i moduli T-SQL compilati in modo nativo. I file di filegroup con ottimizzazione per la memoria possono ora essere archiviati ed è possibile eseguirne il backup e il ripristino nell'archiviazione di Azure. (CTP 1.0)
+- I **miglioramenti degli oggetti ottimizzati per la memoria** includono sp_spaceused e l'eliminazione del limite di 8 indici per le tabelle ottimizzate per la memoria, sp_rename per le tabelle ottimizzate per la memoria e i moduli T-SQL compilati in modo nativo e CASE e TOP (N) WITH TIES per i moduli T-SQL compilati in modo nativo. I file di filegroup con ottimizzazione per la memoria possono ora essere archiviati ed è possibile eseguirne il backup e il ripristino nell'archiviazione di Azure. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** è una nuova classe di autorizzazioni a protezione diretta che supportano CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP e VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS è ora visibile in sys.fn_builtin_permissions. (CTP 1.0)
 - È stata aggiunto il livello **COMPATIBILITY_LEVEL 140** del database. (CTP 1.0).  
 
