@@ -17,11 +17,11 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utilizzo di un file di formato per ignorare una colonna di una tabella (SQL Server)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sample-table-and-data-file"></a>Tabella e file di dati di esempio  
  Per gli esempi seguenti è necessaria una tabella denominata `myTestSkipCol` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] nello schema **dbo** . Per creare la tabella, utilizzare il codice seguente:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -48,7 +48,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  Per eseguire l'importazione bulk dei dati da `myTestSkipCol2.dat` nella tabella `myTestSkipCol` , è necessario che il file di formato esegua il mapping tra il primo campo di dati e `Col1`e tra il secondo campo e `Col3`, ignorando `Col2`.  
@@ -59,7 +58,7 @@ GO
 ### <a name="creating-a-default-non-xml-format-file"></a>Creazione di un file di formato non XML predefinito  
  Questo argomento usa il file di formato non XML predefinito creato per la tabella di esempio `myTestSkipCol` usando il comando **bcp** seguente:  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -109,7 +108,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### <a name="using-bulk-insert"></a>Utilizzo di BULK INSERT  
  Il funzionamento di questo esempio si basa sull'utilizzo dei file di formato non XML modificati creati in "Modalità di modifica di un file di formato non XML", più indietro in questo argomento. In questo esempio, il file di formato modificato è denominato `C:\myTestSkipCol2.fmt`. Per utilizzare `BULK INSERT` per l'importazione bulk dei file di dati `myTestSkipCol2.dat` , nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -130,13 +129,13 @@ GO
 ### <a name="creating-a-default-xml-format-file"></a>Creazione di un file di formato XML predefinito  
  Gli esempi dei file di formato modificati sono basati sulla tabella di esempio `myTestSkipCol` e sul file di dati di esempio creati in "File di dati e tabella di esempio", più indietro in questo argomento. Il comando **bcp** seguente crea un file di formato XML predefinito per la tabella `myTestSkipCol` :  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  Il file di formato non XML predefinito risultante descrive una corrispondenza uno-a-uno tra i campi del file di dati e le colonne di tabella, come segue:  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -158,7 +157,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### <a name="examples"></a>Esempi  
  Gli esempi in questa sezione utilizzano la tabella di esempio `myTestSkipCol` e il file di dati di esempio `myTestSkipCol2.dat` creati in "File di dati e tabella di esempio", più indietro in questo argomento. Per importare i dati da `myTestSkipCol2.dat` nella tabella `myTestSkipCol` , gli esempi utilizzano il file di formato XML modificato seguente, `myTestSkipCol2-x.xml`, basato sul file di formato creato in "Creazione di un file di formato XML predefinito" più indietro in questo argomento.  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -177,7 +176,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  Nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -194,7 +193,7 @@ GO
   
  Nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  
