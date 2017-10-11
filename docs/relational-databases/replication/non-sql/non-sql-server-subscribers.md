@@ -81,7 +81,7 @@ Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, veder
   
     -   Per Oracle, un server include al massimo un database e pertanto non è necessario specificare il database.  
   
-    -   Per IBM DB2, il database viene specificato nella stringa di connessione DB2. Per altre informazioni, vedere [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   Per IBM DB2, il database viene specificato nella stringa di connessione DB2. Per altre informazioni, vedere [Creazione di una sottoscrizione per un Sottoscrittore non SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   Se il server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito su una piattaforma a 64 bit, è necessario utilizzare la versione a 64 bit del provider OLE DB appropriato.  
   
