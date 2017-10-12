@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  In **Mapping**, selezionare un campo nell'origine dati per **Colonna di origine**, quindi selezionare il dominio corrispondente. Ripetere l'operazione per tutti i domini da utilizzare per il processo di corrispondenza. Creare i domini necessari facendo clic su **Crea un Dominio** o su **Crea un dominio composito**.  
   
     > [!NOTE]  
-    >  È possibile eseguire il mapping dei dati di origine a un dominio DQS durante la creazione di criteri di corrispondenza solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati in DQS, vedere [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  È possibile eseguire il mapping dei dati di origine a un dominio DQS durante la creazione di criteri di corrispondenza solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati in DQS, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 5.  Fare clic sul controllo **Più (+)** per aggiungere una riga alla tabella Mapping o sul controllo **Meno (-)** per rimuovere una riga.  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. Fare clic su **Annulla** per interrompere l'attività relativa ai criteri di corrispondenza. Il lavorò verrà perso e verrà visualizzata di nuovo la home page di DQS.  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione dei criteri di corrispondenza  
- Dopo avere creato dei criteri di corrispondenza, è possibile eseguire un progetto di corrispondenza basato sulla Knowledge Base contenente i criteri. Per altre informazioni, vedere [Run a Matching Project](../data-quality-services/run-a-matching-project.md).  
+ Dopo avere creato dei criteri di corrispondenza, è possibile eseguire un progetto di corrispondenza basato sulla Knowledge Base contenente i criteri. Per altre informazioni, vedere [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Schede Profiler e Risultati  
  Le schede Profiler e Risultati contengono statistiche per la pagina Criteri di corrispondenza e per la pagina Risultati corrispondenza.  

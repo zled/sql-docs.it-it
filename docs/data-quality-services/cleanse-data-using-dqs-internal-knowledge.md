@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
-  In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
+  In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
   
  La pulizia dei dati viene eseguita in quattro fasi: una fase di *mapping* , nel corso della quale viene identificata l'origine dati da pulire e ne viene eseguito il mapping ai domini richiesti in una Knowledge Base; una fase di *pulizia computerizzata* , in cui DQS applica la Knowledge Base ai dati da pulire e propone/effettua modifiche ai dati di origine; una fase di *pulizia interattiva* , che consente agli amministratori dei dati di analizzare, accettare o rifiutare le modifiche ai dati; infine, la fase di *esportazione* che consente di esportare i dati puliti. Ognuno di questi processi viene eseguito in una pagina separata della procedura guidata relativa all'attività di pulizia, consentendo all'utente di spostarsi da una pagina a un'altra al fine di rieseguire il processo, completare un processo di pulizia specifico e tornare nuovamente a una sua fase specifica. DQS fornisce statistiche sui dati di origine e sui risultati della pulizia che consentono di prendere decisioni informate sulla pulizia dei dati.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
--   È necessario avere specificato valori soglia adatti per l'attività di pulizia. Per informazioni su questa operazione, vedere [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   È necessario avere specificato valori soglia adatti per l'attività di pulizia. Per informazioni su questa operazione, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   È necessario che in [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sia disponibile una Knowledge Base DQS con cui confrontare i dati di origine ed eseguirne la pulizia. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si desidera pulire dati di origine che contengono indirizzi in Italia, ad esempio, è necessario disporre di una Knowledge Base creata in base a dati di esempio di alta qualità per indirizzi italiani.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Create"></a> Creazione di un progetto Data Quality per la pulizia dei dati  
  Per eseguire l'operazione di pulizia dei dati è necessario utilizzare un progetto Data Quality. Per creare un progetto Data Quality per la pulizia dei dati:  
   
-1.  Seguire i passaggi 1-3 nell'argomento [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
+1.  Seguire i passaggi 1-3 nell'argomento [Creare un progetto Data Quality](../data-quality-services/create-a-data-quality-project.md).  
   
 2.  Nel passaggio 3.d, selezionare l'attività **Pulizia** .  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 09/09/2017
 2.  In **Mapping**, eseguire il mapping delle colonne di dati nei dati di origine ai domini appropriati della Knowledge Base selezionando una colonna di origine dall'elenco a discesa nella **Colonna di origine** , quindi selezionando un dominio dall'elenco a discesa nella colonna **Dominio** della stessa riga. Ripetere questo passaggio per eseguire il mapping di tutte le colonne nei dati di origine ai domini appropriati nella Knowledge Base. Se necessario, è possibile fare clic sull'icona **Aggiungi un mapping colonne** per aggiungere righe alla tabella di mapping.  
   
     > [!NOTE]  
-    >  È possibile eseguire il mapping dei dati di origine a un dominio DQS per eseguire la pulizia dei dati solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per informazioni sui tipi di dati di origine supportati, vedere [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  È possibile eseguire il mapping dei dati di origine a un dominio DQS per eseguire la pulizia dei dati solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per informazioni sui tipi di dati di origine supportati, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 3.  Fare clic sull'icona **Anteprima origine dati** per visualizzare i dati nella tabella o vista di SQL Server selezionata o nel foglio di lavoro di Excel selezionato.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 09/09/2017
     >   
     >      In entrambi i casi, fare clic su **Sì** per utilizzare la Knowledge Base aggiornata per la pulizia computerizzata. Inoltre, se è presente qualsiasi conflitto tra i mapping correnti e la Knowledge Base aggiornata (ad esempio domini eliminati o modifiche al tipo di dati del dominio) viene richiesto anche di correggere i mapping correnti per utilizzare la Knowledge Base aggiornata. Facendo clic su **Sì** si passa alla pagina **Mappa** in cui è possibile correggere i mapping prima di continuare con la pulizia computerizzata.  
   
-2.  Durante la fase di pulizia computerizzata, è possibile attivare il profiler facendo clic sulla scheda **Profiler** e visualizzare i dati di profiling e le notifiche in tempo reale. Per altre informazioni, vedere [Profiler Statistics](#Profiler).  
+2.  Durante la fase di pulizia computerizzata, è possibile attivare il profiler facendo clic sulla scheda **Profiler** e visualizzare i dati di profiling e le notifiche in tempo reale. Per altre informazioni, vedere [Statistiche del profiler](#Profiler).  
   
 3.  Se non si è soddisfatti dei risultati, fare clic su **Indietro** per tornare alla pagina **Mappa** , modificare uno o più mapping come desiderato, tornare alla pagina **Pulisci** , quindi fare clic su **Riavvia**.  
   
@@ -99,9 +99,9 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Interactive"></a> Fase di pulizia interattiva  
  Nella fase di pulizia interattiva, è possibile visualizzare le modifiche proposte da DQS e decidere se implementarle o meno, approvandole o rifiutandole. Nel riquadro sinistro della pagina **Gestisci e visualizza risultati** , tramite DQS viene mostrato un elenco di tutti i domini di cui si è eseguito il mapping precedentemente nella fase di mapping, insieme al numero di valori analizzati nei dati di origine rispetto a ciascun dominio durante la fase di pulizia computerizzata. Nel riquadro destro della pagina **Gestisci e visualizza risultati** , in base al rispetto delle regole di dominio, alle regole relative agli errori di sintassi e ad algoritmi avanzati, tramite DQS i dati vengono suddivisi in categorie in cinque schede, utilizzando il *livello di confidenza*. Il livello di confidenza indica il livello di certezza da parte di DQS in relazione a una correzione o suggerimento e si basa sui valori soglia seguenti:  
   
--   **Soglia di correzione automatica**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia viene corretto automaticamente da DQS. L'amministratore dei dati può tuttavia ignorare la modifica durante la pulizia interattiva. È possibile specificare il valore soglia di correzione automatica nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Soglia di correzione automatica**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia viene corretto automaticamente da DQS. L'amministratore dei dati può tuttavia ignorare la modifica durante la pulizia interattiva. È possibile specificare il valore soglia di correzione automatica nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Soglia di suggerimento automatico**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia, ma al di sotto della soglia di correzione automatica, viene suggerito come valore sostitutivo. In DQS la modifica viene apportata solo se approvata dall'amministratore dei dati. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Soglia di suggerimento automatico**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia, ma al di sotto della soglia di correzione automatica, viene suggerito come valore sostitutivo. In DQS la modifica viene apportata solo se approvata dall'amministratore dei dati. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   **Altro**: qualsiasi valore al di sotto del valore soglia di suggerimento automatico non viene modificato da DQS.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  La funzionalità di correzione ortografica è disponibile solo nel riquadro superiore (valori di dominio). Non è inoltre possibile abilitare o disabilitare il correttore ortografico per domini compositi. Per i domini figlio di tipo stringa abilitati per la funzionalità di correzione ortografica in un dominio composito, tale funzionalità viene abilitata per impostazione predefinita durante la fase di pulizia interattiva.  
   
-4.  Durante la fase di pulizia interattiva, è possibile attivare il profiler facendo clic sulla scheda **Profiler** e visualizzare i dati di profiling e le notifiche in tempo reale. Per altre informazioni, vedere [Profiler Statistics](#Profiler).  
+4.  Durante la fase di pulizia interattiva, è possibile attivare il profiler facendo clic sulla scheda **Profiler** e visualizzare i dati di profiling e le notifiche in tempo reale. Per altre informazioni, vedere [Statistiche del profiler](#Profiler).  
   
 5.  Dopo avere rivisto tutti i valori di dominio, fare clic su **Avanti** per procedere alla fase di esportazione.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 09/09/2017
   
     3.  **File di Excel**: fare clic su **Sfoglia**e specificare il nome e il percorso del file di Excel nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file di Excel insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "C:\ExportedData.xlsx”. Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
-2.  Selezionare la casella di controllo **Standardizzare output** per standardizzare l'output in base al formato selezionato per il dominio. Ad esempio, modificare il valore stringa in caratteri maiuscoli o cambiare al maiuscolo l'iniziale della parola. Per informazioni sulla specifica del formato di output di un dominio, vedere l'elenco **Formato output in** in [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+2.  Selezionare la casella di controllo **Standardizzare output** per standardizzare l'output in base al formato selezionato per il dominio. Ad esempio, modificare il valore stringa in caratteri maiuscoli o cambiare al maiuscolo l'iniziale della parola. Per informazioni sulla specifica del formato di output di un dominio, vedere l'elenco **Formato output in** in [Imposta proprietà del dominio](../data-quality-services/set-domain-properties.md).  
   
 3.  Selezionare quindi l'output dei dati: esportare solo i dati puliti o i dati puliti insieme alle informazioni relative alla pulizia.  
   
@@ -228,6 +228,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Il livello di accuratezza del campo è molto basso. Potrebbe essere necessario verificare il mapping o considerare l'esecuzione dell'individuazione delle informazioni.  
   
- Per ulteriori informazioni sul profiling, vedere [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Per ulteriori informazioni sul profiling, vedere [Profiling di dati e notifiche in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
