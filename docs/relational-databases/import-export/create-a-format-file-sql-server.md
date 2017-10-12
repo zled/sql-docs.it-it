@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: it-it
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Per altre informazioni sull'uso dei dati di tipo carattere Unicode, vedere [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Uso di un file di formato con l'opzione della tabella codici  
- Se si crea un file di formato con il comando bcp, ad esempio usando "`bcp forma`t …" , le informazioni su regole di confronto/tabella codici verranno scritte nel file di formato.   
+Se si crea un file di formato con il comando bcp (ovvero usando `bcp format`), le informazioni sulle regole di confronto o sulla tabella codici verranno scritte nel file di formato.   
 Il seguente file di formato di esempio per una tabella con 5 colonne include le regole di confronto.  
   
 ```  

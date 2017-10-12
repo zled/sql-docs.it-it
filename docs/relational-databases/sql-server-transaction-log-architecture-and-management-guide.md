@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
@@ -67,7 +67,14 @@ ms.lasthandoff: 08/09/2017
  Del log delle transazioni di un database viene eseguito il mapping su uno o più file fisici. Concettualmente, il file di log è una stringa di record di log. Fisicamente, la sequenza di record di log viene archiviata in modo efficiente nel set di file fisici che implementano il log delle transazioni. È necessario che sia disponibile almeno un file di log per ogni database.  
   
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ogni file di log fisico viene diviso internamente in diversi file di log virtuali. I file di log virtuali non hanno dimensioni fisse e non è previsto un numero fisso di file di log virtuali per un file di log fisico. Il [!INCLUDE[ssDE](../includes/ssde-md.md)] definisce dinamicamente le dimensioni dei file di log virtuali durante la creazione o l'estensione. Il [!INCLUDE[ssDE](../includes/ssde-md.md)] tende a mantenere ridotto il numero di file virtuali. Le dimensioni dei file virtuali dopo l'estensione di un file di log corrispondono alla somma delle dimensioni del log esistente e del nuovo incremento del file. Le dimensioni o il numero di file di log virtuali non possono essere configurati o impostati dagli amministratori.  
-  
+
+> [!NOTE]
+> La creazione di file di log virtuali avviene nel modo seguente:
+> - Se il valore growth successivo è inferiore a 1/8 del valore size del log fisico attuale, creare 1 file di log virtuale che copra l'aumento delle dimensioni (a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
+> - Se il valore growth è inferiore a 64 MB, creare 4 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 1 MB, creare quattro file virtuali di log da 256 KB)
+> - Se il valore growth è compreso tra 64 MB e 1 GB, creare 8 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 512 MB, creare otto file virtuali di log da 64 MB)
+> - Se il valore growth è superiore a 1 GB, creare 16 file di log virtuali che coprano l'aumento delle dimensioni (ad esempio con growth di 8 GB, creare sedici file virtuali di log da 512 MB)
+
  I file di log virtuali influenzano le prestazioni del sistema solo se i file di log fisici sono definiti da valori bassi di *size* e *growth_increment* . Il valore *size* indica le dimensioni iniziali del file di log mentre il valore *growth_increment* indica la quantità di spazio aggiunta al file ogni volta che è necessario dello spazio nuovo. Se le dimensioni dei file di log aumentano in modo considerevole in seguito a una serie di piccoli incrementi, in essi verrà incluso un numero elevato di file di log virtuali. Questo potrebbe provocare un rallentamento delle operazioni di avvio del database e di backup e ripristino del log. È consigliabile assegnare ai file di log un valore *size* simile a quello delle dimensioni finali necessarie e un valore *growth_increment* relativamente alto. Per altre informazioni su questi parametri, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
  Il log delle transazioni è un file circolare. Si consideri, ad esempio, un database con un file di log fisico diviso in quattro file di log virtuali. Quando viene creato il database, il file di log logico comincia all'inizio del file di log fisico. Vengono aggiunti nuovi record di log alla fine del log logico, che si espandono verso la fine del log fisico. Il troncamento del log libera tutti i log virtuali i cui record vengono visualizzati tutti davanti al numero minimo di sequenza del file di log (MinLSN, Minimum Log Sequence Number) per il recupero. *MinLSN* è il numero di sequenza del file di log del record di log meno recente necessario per un corretto rollback a livello di database. Il log delle transazioni del database di esempio sarebbe simile a quello illustrato nella figura seguente.  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Se è abilitata l'impostazione FILEGROWTH per il log e sul disco vi è spazio disponibile, il file viene esteso in base al valore specificato nel parametro *growth_increment* e i nuovi record di log vengono aggiunti all'estensione. Per altre informazioni sull'impostazione FILEGROWTH, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
--   Se l'impostazione FILEGROWTH non è attiva oppure se lo spazio libero sul disco in cui risiede il file di log è inferiore a quello specificato in *growth_increment*, viene generato un errore 9002.  
+-   Se l'impostazione FILEGROWTH non è attiva oppure se lo spazio libero sul disco in cui risiede il file di log è inferiore a quello specificato in *growth_increment*, viene generato un errore 9002. Per altre informazioni, fare riferimento a [Risolvere i problemi relativi a un log completo](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  Se il log include più file di log fisici, il log logico utilizzerà tutti i file di log fisici prima di tornare all'inizio del primo file di log fisico.  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  Il troncamento del log può essere posticipato da diversi fattori. Se si verifica un ritardo elevato nel troncamento del log, lo spazio del log delle transazioni può esaurirsi. Per informazioni, vedere [Fattori che possono ritardare il troncamento del log](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) e [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Log delle transazioni write-ahead  
- In questa sezione viene descritto il ruolo del log delle transazioni write-ahead nella registrazione delle modifiche dei dati sul disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un log write-ahead (WAL) che garantisce che le modifiche apportate ai dati non vengano scritte nel disco prima del record di log corrispondente. In questo modo, è possibile mantenere le proprietà ACID per una transazione.  
+ In questa sezione viene descritto il ruolo del log delle transazioni write-ahead nella registrazione delle modifiche dei dati sul disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un algoritmo di log write-ahead (WAL) che garantisce che le modifiche apportate ai dati non vengano scritte nel disco prima del record di log corrispondente. In questo modo, è possibile mantenere le proprietà ACID per una transazione.  
   
  Per comprendere il funzionamento dei log write-ahead, è importante conoscere la modalità con cui i dati modificati vengono scritti sul disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantiene una cache buffer in cui vengono lette le pagine di dati quando questi ultimi devono essere recuperati. Quando una pagina viene modificata nella cache buffer, non viene immediatamente riscritta nel disco, ma viene contrassegnata come *dirty*. A una pagina di dati possono essere associate più scritture logiche prima di essere scritta fisicamente sul disco. Per ogni scrittura logica, viene inserito un record del log delle transazioni nella cache del log, per registrare la modifica. I record di log devono essere scritti sul disco prima che la pagina dirty associata venga rimossa dalla cache buffer e scritta sul disco. Tramite il processo di gestione dei checkpoint viene eseguita periodicamente l'analisi della cache buffer alla ricerca di buffer con pagine di un database specifico e tutte le pagine dirty vengono scritte nel disco. I checkpoint consentono di risparmiare tempo durante un successivo recupero, grazie alla creazione di un punto in cui è certo che tutte le pagine dirty siano state scritte sul disco.  
   
@@ -187,9 +194,9 @@ Per altre informazioni sull'impostazione dell'intervallo di recupero, vedere [Co
 > [!TIP]  
 >  L'opzione di impostazione avanzata -k di SQL Server consente all'amministratore del database di limitare il comportamento di I/O del checkpoint in base alla velocità effettiva del sottosistema di I/O per alcuni tipi di checkpoint. L'opzione di impostazione -k si applica ai checkpoint automatici e ai checkpoint senza limitazione. 
  
-I checkpoint automatici troncano la parte non utilizzata del log delle transazioni se il database utilizza il modello di recupero con registrazione minima, ma non se il database utilizza il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Per altre informazioni, vedere [Log delle transazioni &amp;#40;SQL Server&amp;#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
+I checkpoint automatici troncano la parte non utilizzata del log delle transazioni se il database utilizza il modello di recupero con registrazione minima, ma non se il database utilizza il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
 
-L'istruzione CHECKPOINT offre ora l'argomento facoltativo checkpoint_duration che specifica il tempo necessario in secondi per il completamento dei checkpoint. Per altre informazioni, vedere [CHECKPOINT &amp;#40;Transact-SQL&amp;#41;](../t-sql/language-elements/checkpoint-transact-sql.md).
+L'istruzione CHECKPOINT offre ora l'argomento facoltativo checkpoint_duration che specifica il tempo necessario in secondi per il completamento dei checkpoint. Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](../t-sql/language-elements/checkpoint-transact-sql.md).
 
 
 ### <a name="active-log"></a>log attivo
@@ -217,8 +224,11 @@ L'agente di lettura log esegue il monitoraggio del log delle transazioni di tutt
 ## <a name="additional-reading"></a>Ulteriori informazioni  
  Per ulteriori informazioni sul log delle transazioni, vedere gli articoli e i documenti riportati di seguito.  
   
- [Informazioni sulla registrazione e il recupero in SQL Server di Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [Gestione delle dimensioni del file di log delle transazioni](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40; Transact-SQL &#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [Informazioni sulla registrazione e il recupero in SQL Server di Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [Gestione del log delle transazioni di SQL Server di Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

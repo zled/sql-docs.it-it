@@ -1,5 +1,5 @@
 ---
-title: Progettazione SSIS | Documenti Microsoft
+title: Progettazione SSIS | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  Nella figura seguente vengono illustrate le finestre Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e **Casella degli strumenti** .  
   
- ![Schermata di SSIS progettazione e della casella degli strumenti](../integration-services/media/denali-designerandtoolbox.gif "schermata di SSIS progettazione e della casella degli strumenti")  
+ ![Screenshot di Progettazione SSIS e Casella degli strumenti SSIS](../integration-services/media/denali-designerandtoolbox.gif "Screenshot di Progettazione SSIS e Casella degli strumenti SSIS")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ulteriori finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili finestre e finestre di dialogo che consentono di configurare l'ambiente di sviluppo e usare i pacchetti. Per altre informazioni, vedere [Interfaccia utente di Integration Services](../integration-services/integration-services-user-interface.md).  
   
@@ -158,7 +158,7 @@ Utilizzare la scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../incl
  **Elimina**  
  Dopo aver selezionato un gestore di evento, fare clic su **Elimina** per rimuoverlo dal pacchetto.  
   
- **Fare clic qui per creare un \<nome del gestore eventi\> per il file eseguibile \<nome del file eseguibile\>**  
+ **Fare clic qui per creare un \<nome del gestore dell'evento\> per il file eseguibile \<nome eseguibile\>**  
  Fare clic per creare il gestore di evento.  
   
  Creare il flusso di controllo trascinando gli oggetti grafici che rappresentano i contenitori e le attività di [!INCLUDE[ssIS](../includes/ssis-md.md)] dalla **casella degli strumenti** all'area di progettazione della scheda **Gestori eventi** e quindi trascinando il connettore per collegare gli oggetti.  
@@ -170,7 +170,7 @@ Utilizzare la scheda **Esplora pacchetti** di Progettazione [!INCLUDE[ssIS](../i
   
  Fare clic con il pulsante destro del mouse su un elemento di un pacchetto e quindi scegliere **Proprietà** per visualizzare le proprietà dell'elemento nella finestra **Proprietà** o **Elimina** per eliminarlo. 
  
-## <a name="progress-tab"></a>Scheda stato
+## <a name="progress-tab"></a>Scheda Stato
 Utilizzare la scheda **Stato** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per visualizzare lo stato dell'esecuzione di un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** vengono visualizzate informazioni quali l'ora di inizio, l'ora di fine e il tempo trascorso relative alla convalida e all'esecuzione del pacchetto e dei rispettivi file eseguibili, nonché informazioni o avvisi relativi al pacchetto, notifiche sullo stato, l'esito (positivo o negativo) del pacchetto e tutti i messaggi di errore generati durante l'esecuzione del pacchetto.  
   
  Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** . La disabilitazione del report di stato consente di migliorare le prestazioni durante l'esecuzione di un pacchetto complesso in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  

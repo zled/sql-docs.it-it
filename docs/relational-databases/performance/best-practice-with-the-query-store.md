@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: it-it
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
@@ -323,11 +323,11 @@ Se si rinomina un database, l'uso forzato del piano avrà esito negativo e quest
 
 ##  <a name="Recovery"></a> Usare i flag di traccia nei server critici per migliorare il ripristino di emergenza
  
-  I flag di traccia globali 7745 e 7752 consentono di migliorare le prestazioni di Query Store in scenari a disponibilità elevata e di ripristino di emergenza.
+  I flag di traccia globali 7745 e 7752 consentono di migliorare le prestazioni di Query Store in scenari a disponibilità elevata e di ripristino di emergenza. Per altre informazioni, vedere [Flag di traccia](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   Il flag di traccia 7745 previene il comportamento predefinito quando Query Store scrive i dati sul disco prima dell'arresto di SQL Server.
   
-  Il flag di traccia 7752 consente a SQL Server di eseguire query prima del caricamento completo di Query Store. Il comportamento predefinito di Query Store impedisce l'esecuzione di query prima del ripristino di Query Store.
+  Il flag di traccia 7752 abilita il caricamento asincrono di Query Store e consente anche a SQL Server di eseguire le query prima che Query Store sia stato caricato completamente. Il comportamento predefinito di Query Store impedisce l'esecuzione di query prima del ripristino di Query Store.
 
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

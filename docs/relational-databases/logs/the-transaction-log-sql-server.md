@@ -1,7 +1,7 @@
 ---
 title: Log delle transazioni (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 02/01/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,19 +19,22 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 5a9d2a8533e95c275e62071c37ab44d887ac32c1
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
   Ogni database SQL Server include un log delle transazioni in cui vengono archiviate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database.
   
-Il log delle transazioni è un componente fondamentale del database. Se si verifica un errore di sistema, è necessario tale registro per ripristinare uno stato coerente del database. Evitare di eliminare o spostare questo file di registro se non si conoscono a fondo le implicazioni di questa operazione. 
+Il log delle transazioni è un componente fondamentale del database. Se si verifica un errore di sistema, è necessario tale registro per ripristinare uno stato coerente del database. 
 
-  
- > **Curiosità** I checkpoint rappresentano i punti ottimali noti da cui avviare l'applicazione dei log delle transazioni durante il ripristino del database. Per altre informazioni, vedere [Checkpoint di database (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+> [!IMPORTANT] 
+> Evitare di eliminare o spostare questo file di registro se non si conoscono a fondo le implicazioni di questa operazione. 
+
+> [!TIP]
+> I checkpoint rappresentano i punti ottimali noti da cui avviare l'applicazione dei log delle transazioni durante il ripristino del database. Per altre informazioni, vedere [Checkpoint di database (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ## <a name="operations-supported-by-the-transaction-log"></a>Operazioni supportate dal log delle transazioni  
  Il log delle transazioni supporta le operazioni seguenti:  
@@ -73,9 +76,9 @@ In uno scenario di mirroring del database tutti gli aggiornamenti di un database
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 Caratteristiche del log delle transazioni di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
--  Il log delle transazioni viene implementato come file o set di file distinto nel database. La cache del log viene gestita separatamente dalla cache del buffer per le pagine di dati e, pertanto, genera codice semplice, rapido e affidabile nel motore di database.
+-  Il log delle transazioni viene implementato come file o set di file distinto nel database. La cache del log viene gestita separatamente dalla cache del buffer per le pagine di dati e, pertanto, genera codice semplice, rapido e affidabile nel motore di database. Per altre informazioni, vedere [Architettura fisica del log delle transazioni](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 -  Il formato dei record e delle pagine del log non deve essere necessariamente conforme al formato delle pagine di dati.
--  Il log delle transazioni può essere implementato in diversi file, definiti in modo da espandersi automaticamente tramite l'impostazione del valore FILEGROWTH per il log. In questo modo è possibile ridurre le probabilità che si esaurisca lo spazio nel log delle transazioni e, nel contempo, alleggerire l'overhead amministrativo. Per altre informazioni, vedere [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
+-  Il log delle transazioni può essere implementato in diversi file, definiti in modo da espandersi automaticamente tramite l'impostazione del valore FILEGROWTH per il log. In questo modo è possibile ridurre le probabilità che si esaurisca lo spazio nel log delle transazioni e, nel contempo, alleggerire l'overhead amministrativo. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
 -  Il meccanismo che permette di riutilizzare lo spazio nei file di log è rapido e produce effetti minimi sulla velocità effettiva delle transazioni.
 
 ##  <a name="Truncation"></a> Troncamento del log delle transazioni  
@@ -91,12 +94,13 @@ Caratteristiche del log delle transazioni di [!INCLUDE[ssDEnoversion](../../incl
   
  Per ulteriori informazioni, vedere [Fattori che possono posticipare il troncamento del log](#FactorsThatDelayTruncation)più avanti in questo argomento.  
   
-> **NOTA** Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> [!NOTE]
+> Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Quando i record del log rimangono attivi per molto tempo il troncamento viene posticipato e il log delle transazioni potrebbe riempirsi, come già accennato in precedenza.  
   
-> **IMPORTANTE** Per informazioni su come agire quando il log delle transazioni è completo, vedere [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+> [!IMPORTANT} Per informazioni su come agire quando il log delle transazioni è completo, vedere [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  Il troncamento del log può essere posticipato da diversi fattori. Per individuare l'eventuale condizione che impedisce il troncamento del log, eseguire una query sulle colonne **log_reuse_wait** e **log_reuse_wait_desc** della vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Nella tabella seguente vengono descritti i valori di queste colonne.  
   
@@ -121,9 +125,11 @@ Caratteristiche del log delle transazioni di [!INCLUDE[ssDEnoversion](../../incl
 ##  <a name="MinimallyLogged"></a> Operazioni per cui è possibile eseguire la registrazione minima  
  La*registrazione minima* implica la registrazione nel log delle transazioni delle sole informazioni necessarie per il recupero della transazione stesse senza il supporto del recupero temporizzato. In questo argomento vengono identificate le operazioni con registrazione minima nel [modello di recupero](../backup-restore/recovery-models-sql-server.md) con registrazione minima delle operazioni bulk nonché nel modello di recupero con registrazione minima, ad eccezione dei momenti in cui è in esecuzione un backup.  
   
-> **NOTA** La registrazione minima non è supportata dalle tabelle con ottimizzazione per la memoria.  
+> [!NOTE]
+> La registrazione minima non è supportata dalle tabelle ottimizzate per la memoria.  
   
-> **ALTRA NOTA** In base al [modello di recupero](../backup-restore/recovery-models-sql-server.md)con registrazione completa tutte le operazioni bulk vengono registrate per intero. È tuttavia possibile ridurre al minimo la registrazione per un set di operazioni bulk passando temporaneamente il database al modello di recupero con registrazione minima delle operazioni bulk per le operazioni bulk. La registrazione minima è più efficiente della registrazione completa e riduce la possibilità che un'operazione bulk su larga scala esaurisca lo spazio disponibile per il log delle transazioni durante una transazione bulk. Se tuttavia il database viene danneggiato o perso durante la registrazione minima, non è possibile recuperarlo fino al punto di errore.  
+> [!NOTE]
+> In base al [modello di recupero](../backup-restore/recovery-models-sql-server.md)con registrazione completa tutte le operazioni bulk vengono registrate per intero. È tuttavia possibile ridurre al minimo la registrazione per un set di operazioni bulk passando temporaneamente il database al modello di recupero con registrazione minima delle operazioni bulk per le operazioni bulk. La registrazione minima è più efficiente della registrazione completa e riduce la possibilità che un'operazione bulk su larga scala esaurisca lo spazio disponibile per il log delle transazioni durante una transazione bulk. Se tuttavia il database viene danneggiato o perso durante la registrazione minima, non è possibile recuperarlo fino al punto di errore.  
   
  Per le operazioni seguenti, con registrazione completa nel modello di recupero con registrazione completa, è prevista la registrazione minima nel modello di recupero con registrazione minima e in quello con registrazione minima delle operazioni bulk:  
   
@@ -139,7 +145,8 @@ Quando la replica transazionale è abilitata, le operazioni SELECT INTO vengono 
   
 -   Istruzioni[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) e [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) durante l'inserimento o l'aggiunta di nuovi dati nelle colonne con tipo di dati **text**, **ntext**, e **image** . Si noti che la registrazione minima non viene utilizzata per l'aggiornamento di valori esistenti.  
   
-    >  Le istruzioni WRITETEXT e UPDATETEXT sono **deprecate**, evitare di usarle nelle nuove applicazioni.  
+    > [!IMPORTANT]
+    > Le istruzioni WRITETEXT e UPDATETEXT sono **deprecate**, evitare di usarle nelle nuove applicazioni.  
   
 -   Se il database viene impostato sul modello di recupero con registrazione minima o con registrazione delle operazioni bulk, verrà eseguita la registrazione minima di alcune operazioni DDL sugli indici indipendentemente dal fatto che l'operazione venga eseguita online o offline. Le operazioni sugli indici con registrazione minima sono le seguenti:  
   
@@ -147,6 +154,7 @@ Quando la replica transazionale è abilitata, le operazioni SELECT INTO vengono 
   
     -   Operazioni[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD o DBCC DBREINDEX.  
   
+        > [!IMPORTANT]
         > L' **istruzione DBCC DBREINDEX** è **deprecata**: non usarla nelle nuove applicazioni.  
   
     -   Ricompilazione del nuovo heap DROP INDEX (se pertinente). Durante un'operazione [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) per la deallocazione delle pagine di un indice viene eseguita **sempre** la registrazione completa.

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- Per un database di SQL Server impostato sul livello di compatibilità 120 o su un livello superiore, l'attivazione del [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 impone al sistema di usare la stima di cardinalità di livello 70.  
+ Per un database di SQL Server impostato sul livello di compatibilità 120 o su un livello superiore, l'attivazione del [flag di traccia 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) impone al sistema di usare la stima di cardinalità di livello 70.  
   
  **Stima di cardinalità legacy:** per un database di SQL Server impostato sul livello di compatibilità 120 o superiore, è possibile attivare la stima di cardinalità di livello 70 a livello di database usando [MODIFICARE LA CONFIGURAZIONE CON AMBITO DATABASE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Archivio query:**a partire da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 l'archivio query è uno strumento utile per esaminare le prestazioni delle query.  In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe), in **Esplora oggetti** nel nodo del database, viene visualizzato un nodo **Query Store** quando Query Store è impostato su ON.  
+ **Query Store:** a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Query Store è uno strumento utile per esaminare le prestazioni delle query. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] in **Esplora oggetti** nel nodo del database viene visualizzato un nodo **Query Store** quando Query Store è abilitato.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > È consigliabile installare ogni mese la versione più recente di [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
+ > Si consiglia di installare la versione più recente di [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) e di aggiornarlo spesso.  
   
- Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**.  Il seguente codice T-SQL di esempio viene eseguito su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scrive un file con estensione xel in C:\Temp\ (percorso modificabile). Quando si apre il file con estensione xel in SQL Server Management Studio, i relativi dettagli vengono visualizzati in modo intuitivo.  
+ Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**. Il seguente codice T-SQL di esempio viene eseguito su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scrive un file con estensione xel in C:\Temp\ (percorso modificabile). Quando si apre il file con estensione xel in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], le informazioni dettagliate sono visualizzate in modo intuitivo.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- Per informazioni sugli eventi estesi appositi per il database SQL di Azure, vedere [Eventi estesi nel database SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+ Per informazioni sugli eventi estesi specifici per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Eventi estesi nel database SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>Procedura per valutare la versione della stima di cardinalità  
