@@ -236,7 +236,7 @@ Passa alla pagina **Impostazioni di origine** .
 -   **Annulla**  
   Annulla l'operazione e chiude la procedura guidata.  
   
--   **?**  
+-   **Aiuto**  
 Avvia l'argomento della Guida di MSDN per la procedura guidata.  
   
 ##  <a name="Source_settings"></a> Impostazioni di origine  
