@@ -59,7 +59,7 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  Se vi sono Knowledge Base in [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] con lo stesso nome di quelle che si stanno importando, i nomi delle Knowledge Base importate saranno accodati con un carattere di sottolineatura (_) seguito da un valore intero che inizia con 1. Ad esempio, se il dominio "CompanyName" è duplicato, il nome di dominio importato sarà "CompanyName_1."  
   
 ## <a name="see-also"></a>Vedere anche  
- [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Eseguire DQSInstaller.exe per completare l'installazione del server DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Esportare una Knowledge Base in un file DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [Importare una Knowledge Base da un file DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
