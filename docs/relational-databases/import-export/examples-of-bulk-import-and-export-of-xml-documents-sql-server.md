@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  Per l'importazione bulk di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a una vista non partizionata, è possibile utilizzare quanto segue:  
   
 -   utilità**bcp**   
- È possibile usare l'utilità **bcp** anche per esportare dati da qualunque posizione in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su cui sia possibile usare l'istruzione SELECT, incluse le viste partizionate.  
+    È possibile usare l'utilità **bcp** anche per esportare dati da qualunque posizione in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su cui sia possibile usare l'istruzione SELECT, incluse le viste partizionate.  
   
 -   BULK INSERT  
   

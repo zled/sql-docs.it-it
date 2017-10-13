@@ -71,7 +71,9 @@ L'id utente e password per la connessione.
 ### <a name="connection-string-format"></a>Formato stringa di connessione
 Di seguito è riportato il formato della stringa di connessione tipica.
 
+    ```
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+    ```
 
 ### <a name="enter-the-connection-string"></a>Immettere la stringa di connessione
 Immettere la stringa di connessione nella **ConnectionString** campo o immettere il nome DSN nel **Dsn** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.

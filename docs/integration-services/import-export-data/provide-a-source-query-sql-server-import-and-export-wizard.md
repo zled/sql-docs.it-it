@@ -65,19 +65,19 @@ Se l'origine dati è Excel, vedere [Specificare una query di origine per Excel](
 Le query possono essere eseguite in tre tipi di oggetti Excel.
 -   **Foglio di lavoro.** Per eseguire una query in un foglio di lavoro, aggiungere il carattere $ alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **Intervallo denominato.** Per eseguire una query in un intervallo denominato, è sufficiente usare il nome dell'intervallo, ad esempio **MioIntervalloDati**.
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

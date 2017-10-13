@@ -80,14 +80,18 @@ L'id utente e password per la connessione.
 ### <a name="connection-string-format"></a>Formato stringa di connessione
 Di seguito è riportato il formato della stringa di connessione tipica.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>Immettere la stringa di connessione
 Immettere la stringa di connessione nella **ConnectionString** campo o immettere il nome DSN nel **Dsn** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.
 
 L'esempio seguente usa la stringa di connessione.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+    ```
 
 Di seguito è riportata la schermata che viene visualizzato dopo aver immesso la stringa di connessione.
 

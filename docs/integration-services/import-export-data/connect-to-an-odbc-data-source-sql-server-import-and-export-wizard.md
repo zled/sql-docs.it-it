@@ -93,7 +93,9 @@ Se si desidera fornire le informazioni di connessione con una stringa di conness
 
 In questo esempio verrà utilizzata la seguente stringa di connessione, si connette a Microsoft SQL Server.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 Immettere la stringa di connessione nella **ConnectionString** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.
 
@@ -138,20 +140,24 @@ Per compilare e testare la stringa di connessione per il driver ODBC nel proprio
 
 10. Aprire il file salvato con blocco note o un altro editor di testo. Ecco il contenuto di questo esempio di SQL Server.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. Copiare e incollare i valori necessari in una stringa di connessione in cui le coppie nome-valore sono separate da punti e virgola.
 
     Dopo assemblare i valori necessari dal file di esempio DSN, è necessario la seguente stringa di connessione.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     Non è in genere necessario tutte le impostazioni in un DSN creati dall'amministratore origine dati ODBC per creare una stringa di connessione appropriata.  
     -   È sempre necessario specificare il driver ODBC.
