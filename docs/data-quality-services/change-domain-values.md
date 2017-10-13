@@ -59,14 +59,14 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  La gestione del dominio viene eseguita in una pagina del client Data Quality Services che contiene cinque schede per le operazioni di gestione del dominio separate. Non si tratta di un processo basato su procedure guidate. Ciascuna operazione di gestione può essere eseguita separatamente.  
   
-3.  Dall'elenco di domini ****  nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera modificare i valori o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Create a Domain](../data-quality-services/create-a-domain.md). Fare clic sulla scheda **Valori di dominio** .  
+3.  Dall'elenco di domini ****  nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera modificare i valori o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Crea un dominio](../data-quality-services/create-a-domain.md). Fare clic sulla scheda **Valori di dominio** .  
   
-4.  Visualizzare i valori che è necessario modificare nella tabella **Valore** . Per altre informazioni, vedere [How to Display the Appropriate Values](#Display) più avanti.  
+4.  Visualizzare i valori che è necessario modificare nella tabella **Valore** . Per altre informazioni, vedere [Modalità di visualizzazione dei valori appropriati](#Display) più avanti.  
   
 5.  Per modificare lo stato di un valore, procedere come segue:  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/09/2017
   
  Quando si esegue la pulizia interattiva dei dati nella pagina **Gestisci e visualizza risultati** dell'attività **Pulizia** , nella scheda **Non validi** della pagina **Gestisci e visualizza risultati** vengono inclusi sia i valori in errore che quelli non validi.  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> Modalità di visualizzazione dei valori appropriati  
  È possibile modificare la visualizzazione come segue:  
   
 -   **Filtrare** i risultati desiderati nella tabella, in base al relativo stato, selezionando lo stato nell'elenco a discesa **Filtro** .  
