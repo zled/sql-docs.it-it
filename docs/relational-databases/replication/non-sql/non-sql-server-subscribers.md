@@ -60,7 +60,7 @@ Informazioni sulla versione di Oracle:
 
  La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
 
-Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, vedere [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, vedere [Sottoscrittori Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Considerazioni sui Sottoscrittori non SQL Server  
  Durante la replica in Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenere presente quanto segue:  
@@ -73,7 +73,7 @@ Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, veder
   
 -   Se una pubblicazione include Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario abilitarla per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prima di creare le sottoscrizioni per i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Per impostazione predefinita, gli script generati dall'agente snapshot per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzano identificatori non racchiusi tra virgolette nella sintassi `CREATE TABLE`. Pertanto, una tabella pubblicata denominata 'test' viene replicata come 'TEST'. Per usare la stessa combinazione di maiuscole e minuscole della tabella nel database di pubblicazione, specificare il parametro **-QuotedIdentifier** per l'agente di distribuzione. Il parametro **-QuotedIdentifier** deve essere usato anche se i nomi degli oggetti pubblicati, ad esempio tabelle, colonne e vincoli, includono spazi o parole riservate nella versione del database nel Sottoscrittore non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni su questo parametro, vedere [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   Per impostazione predefinita, gli script generati dall'agente snapshot per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzano identificatori non racchiusi tra virgolette nella sintassi `CREATE TABLE`. Pertanto, una tabella pubblicata denominata 'test' viene replicata come 'TEST'. Per usare la stessa combinazione di maiuscole e minuscole della tabella nel database di pubblicazione, specificare il parametro **-QuotedIdentifier** per l'agente di distribuzione. Il parametro **-QuotedIdentifier** deve essere usato anche se i nomi degli oggetti pubblicati, ad esempio tabelle, colonne e vincoli, includono spazi o parole riservate nella versione del database nel Sottoscrittore non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni su questo parametro, vedere [Agente distribuzione repliche](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   L'account con il quale viene eseguito l'agente di distribuzione deve disporre di accesso in lettura alla directory di installazione del provider OLE DB.  
   
@@ -93,7 +93,7 @@ Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, veder
   
 -   Il valore NULL viene considerato in modo diverso a seconda del database, con conseguenze sulla modalità di rappresentazione dei valori e delle stringhe vuote e dei valori NULL. Ciò a sua volta influisce sul comportamento dei valori inseriti nelle colonne con vincoli univoci definiti. Oracle consente, ad esempio, più valori NULL in una colonna considerata univoca, mentre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente un solo valore NULL in una colonna univoca.  
   
-     Un altro fattore è rappresentato dal modo in cui i valori NULL, le stringhe e i valori vuoti vengono considerati quando la colonna è definita come NOT NULL. Per informazioni sulla risoluzione di questo problema per i Sottoscrittori Oracle, vedere [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Un altro fattore è rappresentato dal modo in cui i valori NULL, le stringhe e i valori vuoti vengono considerati quando la colonna è definita come NOT NULL. Per informazioni sulla risoluzione di questo problema per i Sottoscrittori Oracle, vedere [Sottoscrittori Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
 -   I metadati correlati alla replica (tabella di sequenza della transazione) non vengono eliminati dai Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando la sottoscrizione viene rimossa.  
   
