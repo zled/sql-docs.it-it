@@ -115,7 +115,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione**e quindi selezionare **Create Partition (Crea partizione)**.  
   
-2.  Nella pagina **Creazione guidata partizione**della relativa procedura guidata fare clic su **Avanti** . ****  
+2.  Nel **Creazione guidata partizione**via il **iniziale per la creazione guidata partizione** pagina, fare clic su **Avanti**.  
   
 3.  Nella griglia **Colonne di partizionamento disponibili** della pagina **Seleziona una colonna di partizionamento** selezionare la colonna in cui partizionare la tabella. Nella griglia **Colonne di partizionamento disponibili** verranno visualizzate solo le colonne con i tipi di dati che possono essere utilizzati per partizionare dati. Se come colonna di partizionamento se ne sceglie una calcolata, la colonna deve essere definita come persistente.  
   

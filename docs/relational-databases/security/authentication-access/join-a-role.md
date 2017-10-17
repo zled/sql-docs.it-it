@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Nella finestra di dialogo **Proprietà ruolo del server -***nome_ruolo_server* scegliere **Aggiungi** nella pagina **Membri**.  
   
-6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia…** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti** . Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo del server -**** .  
+6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia…** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti** . Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo del server -***server_role_name* .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

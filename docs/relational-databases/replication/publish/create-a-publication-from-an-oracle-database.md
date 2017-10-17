@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Nella scheda **Account di accesso** :  
   
-    1.  Immettere il nome dell'istanza del database Oracle oppure selezionare **Cerca** nella casella combinata relativa all'istanza del ****  server.  
+    1.  Immettere il nome dell'istanza del database Oracle oppure selezionare **Cerca** nella casella combinata relativa all' **istanza del server**.  
   
     2.  Consente di selezionare l' **Autenticazione standard Oracle** (scelta consigliata) oppure l' **Autenticazione di Windows**.  
   

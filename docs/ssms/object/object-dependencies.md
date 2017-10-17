@@ -34,11 +34,11 @@ Utilizzare questa finestra di dialogo per individuare le dipendenze prima di mod
 **Oggetti che dipendono da** *<selected object>*  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
-**Oggetti da cui dipende** *<selected object>* ****  
+**Oggetti da cui** *<selected object>***dipende**  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
 **Dipendenze**  
-Se si fa clic su **Oggetti che dipendono da** *<selected object>* , vengono visualizzati in ordine gerarchico gli oggetti che dipendono dall'oggetto selezionato. Se si fa clic su **Oggetti da cui dipende** *<selected object>***** vengono visualizzati in ordine gerarchico gli oggetti da cui l'oggetto selezionato dipende.  
+Se si fa clic su **Oggetti che dipendono da** *<selected object>* , vengono visualizzati in ordine gerarchico gli oggetti che dipendono dall'oggetto selezionato. Se si fa clic su **Oggetti da cui** *<selected object>***dipende**vengono visualizzati in ordine gerarchico gli oggetti da cui l'oggetto selezionato dipende.  
   
 **Nome**  
 Consente di visualizzare il nome dell'oggetto selezionato nella visualizzazione albero **Dipendenze** precedente.  

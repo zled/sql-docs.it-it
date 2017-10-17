@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Per consentire l'uso di caratteri jolly nel campo **Trova** durante operazioni Ricerca veloce, **Cerca nei file**, **Sostituzione veloce**o **Sostituisci nei file** , selezionare l'opzione **Utilizza** in **Opzioni di ricerca** e quindi scegliere **Caratteri jolly**.  
   
-2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per l'elenco dei riferimenti **** . Fare clic su di esso per visualizzare l'elenco dei caratteri jolly disponibili. L'elemento scelto dall' **Elenco riferimenti**viene inserito nella stringa **Trova** .  
+2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per **l'elenco dei riferiment** . Fare clic su di esso per visualizzare l'elenco dei caratteri jolly disponibili. L'elemento scelto dall' **Elenco riferimenti**viene inserito nella stringa **Trova** .  
   
  Nella tabella seguente sono descritti i caratteri jolly disponibili nell' **Elenco riferimenti**.  
   
