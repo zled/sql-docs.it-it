@@ -52,7 +52,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Oggetti di database|Possibilità di restituire set di risultati dai trigger|Nessuno|Restituzione di risultati da un trigger|12|  
 |Crittografia|Crittografia tramite RC4 o RC4_128 deprecata. Rimozione pianificata nella prossima versione. Decrittografia RC4 e RC4_128 non deprecata.|Utilizzare un'altra crittografia, ad esempio AES.|Algoritmo di crittografia deprecata|253|  
 |Server remoti|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Sostituire i server remoti utilizzando server collegati. sp_addserver può essere usata solo con l'opzione locale.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Server remoti|@@remserver|Sostituire i server remoti utilizzando server collegati.|Nessuno|Nessuno|  
+|Server remoti|@@remserver |Sostituire i server remoti utilizzando server collegati.|Nessuno|Nessuno|  
 |Server remoti|SET REMOTE_PROC_TRANSACTIONS|Sostituire i server remoti utilizzando server collegati.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Opzioni SET|**SET ROWCOUNT** per istruzioni **INSERT**, **UPDATE**e **DELETE**|Parola chiave TOP|SET ROWCOUNT|109|  
 |Hint di tabella|Hint di tabella HOLDLOCK senza parentesi|Utilizzare HOLDLOCK con parentesi.|Hint di tabella HOLDLOCK senza parentesi|167|  
@@ -156,7 +156,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL come nome di colonna nelle istruzioni DML.|Utilizzare $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL come nome di colonna nelle istruzioni DML.|Utilizzare $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di # e ## come nomi di tabelle e di stored procedure temporanee.|Usare almeno un carattere aggiuntivo.|'#' e '##' come nomi di tabelle e stored procedure temporanee|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di @, @@ o @@ come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)] .|Non usare @ o @@ o nomi che iniziano con @@ come identificatori.|"@" e nomi che iniziano con "@@" come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di @, @@ o @@ come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)] .|Non usare @ o @@ o nomi che iniziano con @@ come identificatori.|" @ " e nomi che iniziano con " @@ " come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo della parola chiave DEFAULT come valore predefinito.|Non utilizzare la parola DEFAULT come valore predefinito.|Parola chiave DEFAULT come valore predefinito|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di uno spazio come separatore tra gli hint di tabella.|Per separare gli hint di tabella, utilizzare la virgola.|Più hint di tabella senza virgola|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(*) in modalità di compatibilità 90.|Utilizzare COUNT_BIG(*).|Elenco di selezione di una vista indicizzata senza COUNT_BIG(*)|2|  

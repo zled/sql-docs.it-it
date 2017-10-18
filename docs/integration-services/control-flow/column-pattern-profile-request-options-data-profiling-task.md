@@ -132,7 +132,7 @@ ms.lasthandoff: 10/05/2017
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
  **Symbols**  
- Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e " @ " per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i seguenti caratteri: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
