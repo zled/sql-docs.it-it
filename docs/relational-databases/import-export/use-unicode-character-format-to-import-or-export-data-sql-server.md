@@ -17,11 +17,11 @@ caps.latest.revision: 37
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 63fb68860ade1e0bd64ce87ca98ec4439bf238fa
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: b38f5585ffa79fbfa5ba702d4fdc8acee9924c7c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati (SQL Server)
@@ -75,7 +75,7 @@ Provare a usare una delle soluzioni alternative seguenti, a seconda della situaz
 
 * Inserire manualmente il primo record fittizio nel file di dati e quindi usare l'opzione **-F 2** affinché l'importazione venga avviata nel secondo record.  Un esempio di questa soluzione alternativa viene fornito più avanti. Vedere [Uso di bcp e del formato carattere Unicode per l'importazione di dati con un file di formato non XML](#bcp_widechar_import_fmt).
 
-* Usare una tabella di gestione temporanea in cui la prima colonna è un tipo di dati carattere.
+* Usare una tabella di staging in cui la prima colonna è un tipo di dati carattere.
 
 * Esportare nuovamente i dati e modificare l'ordine dei campi dati in modo che il primo campo dati sia di tipo carattere.  Usare quindi un file di formato per modificare il mapping del campo dati in base all'ordine effettivo della tabella.  Per un esempio, vedere [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).
   
@@ -98,7 +98,7 @@ Gli esempi riportati in questo argomento sono basati sulla tabella e sul file di
 
 ### **Tabella di esempio**<a name="sample_table"></a>
 Lo script seguente crea un database di test, una tabella denominata `myWidechar` e popola la tabella con alcuni valori iniziali.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -187,7 +187,7 @@ bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
   
 ### **Uso di BULK INSERT e del formato carattere Unicode senza un file di formato**<a name="bulk_widechar"></a>
 Argomento**DATAFILETYPE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
     FROM 'D:\BCP\myWidechar.bcp'
@@ -201,7 +201,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Uso di BULK INSERT e del formato carattere Unicode con un file di formato non XML**<a name="bulk_widechar_fmt"></a>
 Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
    FROM 'D:\BCP\myWidechar.bcp'
@@ -215,7 +215,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Uso di OPENROWSET e del formato carattere Unicode con un file di formato non XML**<a name="openrowset_widechar_fmt"></a>
 Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidechar
     SELECT *

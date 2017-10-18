@@ -19,11 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.translationtype: HT
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 008cdb3fc158b36793f7d4b42ee4b24fd2b56ea5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL
@@ -71,20 +71,8 @@ ms.lasthandoff: 06/22/2017
   
 -   Per le classi di eventi di Traccia SQL configurabili dall'utente (da UserConfigurable:1 a UserConfigurable:9), la funzionalità Eventi estesi usa un singolo evento in sostituzione di tali classi. Il nome dell'evento è user_event. Questo evento viene generato usando sp_trace_generateevent, che è la stessa stored procedure usata da Traccia SQL. L'evento user_event viene restituito indipendentemente dall'ID evento passato alla stored procedure. Viene tuttavia restituito un campo event_id come parte dei dati dell'evento. In questo modo, è possibile compilare un predicato basato sull'ID evento. Se, ad esempio, si usa UserConfigurable:0 (event ID = 82) nel codice, è possibile aggiungere l'evento user_event alla sessione e specificare un predicato di 'event_id = 82'. Non è quindi necessario modificare il codice perché la stored procedure sp_trace_generateevent genera l'evento user_event degli eventi estesi e la classe di evento di Traccia SQL equivalente.  
   
--   Se tutte le colonne restituiscono NULL, ad eccezione della colonna Event Class, significa che non è stata eseguita la migrazione della classe di evento da Traccia SQL.  
-  
--   Se solo il valore nella colonna azione Extended Events è NULL, significa che una delle condizioni seguenti è vera:  
-  
-    -   Per la colonna di Traccia SQL viene eseguito il mapping a uno dei campi dati associati con l'evento degli eventi estesi.  
-  
-        > [!NOTE]  
-        >  Ogni evento degli eventi estesi dispone di un set predefinito di campi dati che vengono inclusi automaticamente nel set di risultati.  
-  
-    -   La colonna relativa all'azione non dispone di un equivalente significativo degli eventi estesi. Ne è un esempio la colonna EventClass in Traccia SQL. Questo colonna non è necessaria negli eventi estesi in quanto il nome dell'evento svolge lo stesso ruolo.  
-  
--   Per le classi di eventi di Traccia SQL configurabili dall'utente (da UserConfigurable:1 a UserConfigurable:9), la funzionalità Eventi estesi usa un singolo evento in sostituzione di tali classi. Il nome dell'evento è user_event. Questo evento viene generato usando sp_trace_generateevent, che è la stessa stored procedure usata da Traccia SQL. L'evento user_event viene restituito indipendentemente dall'ID evento passato alla stored procedure. Viene tuttavia restituito un campo event_id come parte dei dati dell'evento. In questo modo, è possibile compilare un predicato basato sull'ID evento. Se, ad esempio, si usa UserConfigurable:0 (event ID = 82) nel codice, è possibile aggiungere l'evento user_event alla sessione e specificare un predicato di 'event_id = 82'. Non è quindi necessario modificare il codice perché la stored procedure sp_trace_generateevent genera l'evento user_event degli eventi estesi e la classe di evento di Traccia SQL equivalente.  
-  
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   
+

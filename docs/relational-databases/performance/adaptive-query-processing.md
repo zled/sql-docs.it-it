@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: "Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure."
 ms.custom: 
-ms.date: 08/02/2017
+ms.date: 10/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
-ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 
@@ -225,9 +225,10 @@ Un'istruzione che usa OPTION(RECOMPILE) crea un nuovo piano usando l'esecuzione 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md) (Dimostrazione dell'elaborazione di query adattive)      
-
 
 
