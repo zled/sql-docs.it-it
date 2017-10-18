@@ -62,7 +62,7 @@ SQL può avviare le transazioni con le modalità seguenti:
 - **Esplicita** : Transact-SQL contiene il codice BEGIN TRANSACTION, insieme a un eventuale COMMIT TRANSACTION. Due o più istruzioni possono essere riunite nella stessa transazione.  
   - In modalità esplicita è necessario usare l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT o codificare un hint di tabella sul livello di isolamento della transazione nella tabella con ottimizzazione per la memoria nella clausola FROM.  
   
-- **Implicita** : quando è attiva SET IMPLICIT_TRANSACTION ON. Probabilmente IMPLICIT_BEGIN_TRANSACTION sarebbe un nome migliore, poiché questa opzione non fa altro che eseguire in modo implicito l'equivalente di un'istruzione BEGIN TRANSACTION esplicita prima di ogni istruzione UPDATE se 0 = @@trancount. Quindi dipende dal codice T-SQL se viene inviata un'istruzione COMMIT TRANSACTION esplicita.   
+- **Implicita** : quando è attiva SET IMPLICIT_TRANSACTION ON. Probabilmente IMPLICIT_BEGIN_TRANSACTION sarebbe un nome migliore, poiché questa opzione non fa altro che eseguire in modo implicito l'equivalente di un'istruzione BEGIN TRANSACTION esplicita prima di ogni istruzione UPDATE se 0 = @@trancount.  Quindi dipende dal codice T-SQL se viene inviata un'istruzione COMMIT TRANSACTION esplicita.   
   
 - **Blocco ATOMIC**: tutte le istruzioni nei blocchi ATOMIC vengono sempre eseguite come parte di una singola transazione. In caso di esito positivo viene eseguito il commit delle azioni del blocco ATOMIC nel loro complesso oppure, in caso di errore, viene eseguito il rollback di tutte. Ogni stored procedure compilata in modo nativo richiede un blocco ATOMIC.  
   
