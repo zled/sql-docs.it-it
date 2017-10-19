@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 90be7b0ad4f7fcc7677f820e374705636891d458
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 0f561d37aae876f94946c8210665f642daec9755
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
   Restituisce un **smalldatetime** valore per la data e ora specificate.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,27 +43,27 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## <a name="arguments"></a>Argomenti  
  *anno*  
- Espressione intera che specifica un anno.  
+ Espressione integer che specifica un anno.  
   
  *mese*  
- Espressione intera che specifica un mese.  
+ Espressione integer che specifica un mese.  
   
  *giorno*  
- Espressione intera che specifica un giorno.  
+ Espressione integer che specifica un giorno.  
   
  *ora*  
- Espressione intera che specifica le ore.  
+ Espressione integer che specifica le ore.  
   
  *minuto*  
- Espressione intera che specifica i minuti.  
+ Espressione integer che specifica i minuti.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **smalldatetime**  
   
-## <a name="remarks"></a>Osservazioni  
- Queste funzioni si comportano come un costruttore per un oggetto completamente inizializzato **smalldatetime** valore. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null.  
+## <a name="remarks"></a>Sezione Osservazioni  
+ Questa funzione agisce come un costruttore per un oggetto completamente inizializzato **smalldatetime** valore. Se gli argomenti non vengono, viene generato un errore. Se gli argomenti obbligatori sono null, viene restituito null.  
   
- Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Questa funzione è in grado di essere eseguita in modalità remota a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server e versioni successive. Non è eseguita in modalità remota in server con una versione precedente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   
@@ -80,23 +80,6 @@ Result
   
 (1 row(s) affected)  
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
-SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Result  
----------------------------  
-2011-01-01 00:00:00  
-  
-(1 row(s) affected)  
-```  
-  
   
 
 

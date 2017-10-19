@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
 ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurazione destinazione file flat (Importazione/Esportazione guidata SQL Server)
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 -   **Delimitatore di riga**. Ogni riga di dati nell'output termina con un ritorno a capo / avanzamento riga combinazione.
 -   **Delimitatore di colonna**. Colonne di dati all'interno di ogni riga sono separate da una virgola.
 
- ![Pagina di file flat di configurazione dell'importazione / esportazione guidata](../../integration-services/import-export-data/media/flat-file.png "pagina file flat di configurazione dell'importazione / esportazione guidata")  
+ ![Pagina file flat dell'importazione / esportazione guidata di configurazione](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>Selezionare una tabella di origine
  **Tabella o vista di origine**  

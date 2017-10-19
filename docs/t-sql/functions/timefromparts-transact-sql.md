@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 43e6b8f2d234e0b2dd11299c56f1c6b9d0e06518
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: e7cb7497251a0a61cff9f71c07d3c5d9e9028d5d
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
@@ -119,60 +119,6 @@ GO
   
 (1 row(s) affected)  
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-simple-example-without-fractions-of-a-second"></a>C. Esempio semplice senza frazioni di un secondo  
-  
-```  
-SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Result  
---------------------  
-23:59:59.0000000  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-example-with-fractions-of-a-second"></a>D. Esempio con frazioni di un secondo  
- Nell'esempio seguente viene illustrato l'utilizzo del *frazioni* e *precisione* parametri:  
-  
-1.  Quando *frazioni* ha un valore pari a 5 e *precisione* ha un valore pari a 1, quindi il valore di *frazioni* rappresenta 5/10 di secondo.  
-  
-2.  Quando *frazioni* ha un valore pari a 50 e *precisione* ha un valore pari a 2, quindi il valore di *frazioni* rappresenta 50/100 di secondo.  
-  
-3.  Quando *frazioni* ha un valore pari a 500 e *precisione* ha un valore pari a 3, quindi il valore di *frazioni* rappresenta 500/1000 di un secondo.  
-  
-```tsql  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-----------------  
-14:23:44.5  
-  
-(1 row(s) affected)  
-  
-----------------  
-14:23:44.50  
-  
-(1 row(s) affected)  
-  
-----------------  
-14:23:44.500  
-  
-(1 row(s) affected)  
-```  
-  
   
 
 

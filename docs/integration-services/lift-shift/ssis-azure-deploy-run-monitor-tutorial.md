@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
 ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire ed eseguire il monitoraggio di un pacchetto SSIS in Azure
@@ -22,7 +22,7 @@ In questa esercitazione viene illustrato come distribuire un progetto di SQL Ser
 
 Prima di iniziare, verificare di che aver 17.2 per o versione successiva di SQL Server Management Studio. Per scaricare la versione più recente di SSMS, vedere [scaricare SQL Server Management Studio (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Assicurarsi di aver configurato il database SSISDB e il provisioning di integrazione di Azure-SSIS Runtime. Per informazioni su come eseguire il provisioning SSIS in Azure, vedere [sollevamento e spostamento dei pacchetti SQL Server Integration Services (SSIS) in Azure](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
+Assicurarsi di aver configurato il database SSISDB e il provisioning di integrazione di Azure-SSIS Runtime. Per informazioni su come eseguire il provisioning SSIS in Azure, vedere [sollevamento e spostamento dei pacchetti SQL Server Integration Services (SSIS) in Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Connettersi al database SSISDB
 

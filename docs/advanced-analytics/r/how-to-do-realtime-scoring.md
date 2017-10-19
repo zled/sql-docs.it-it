@@ -1,7 +1,7 @@
 ---
 title: Come eseguire l'assegnazione dei punteggi in tempo reale o in SQL Server native di assegnazione dei punteggi | Documenti Microsoft
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Come eseguire l'assegnazione dei punteggi in tempo reale o punteggio nativo in SQL Server
 
-In questo argomento vengono fornite istruzioni e codice di esempio per le caratteristiche di assegnazione dei punteggi native in SQL Server 2016 e SQL Server 2017 e come eseguire l'assegnazione dei punteggi in tempo reale. L'obiettivo di assegnazione dei punteggi in tempo reale e il punteggio nativo è per migliorare le prestazioni delle operazioni di assegnazione dei punteggi nel batch di piccole dimensioni.
+In questo argomento vengono fornite istruzioni e codice di esempio per le caratteristiche di assegnazione dei punteggi native in SQL Server 2017 e SQL Server 2016 e come eseguire l'assegnazione dei punteggi in tempo reale. L'obiettivo di assegnazione dei punteggi in tempo reale e il punteggio nativo è per migliorare le prestazioni delle operazioni di assegnazione dei punteggi nel batch di piccole dimensioni.
 
 Assegnazione dei punteggi in tempo reale sia native di punteggio sono progettati per consentono di utilizzare un modello di machine learning senza dover installare R. È sufficiente è ottenere un modello con training preliminare in un formato compatibile e salvarlo in un database di SQL Server.
 
@@ -30,11 +30,11 @@ Assegnazione dei punteggi in tempo reale sia native di punteggio sono progettati
 Le opzioni seguenti sono supportate per la stima batch veloce:
 
 + **Punteggio native**: funzione stimare T-SQL in SQL Server 2017
-+ **Assegnazione dei punteggi in tempo reale**: utilizzo di sp_rxPredict di stored procedure in SQL Server 2016 o in SQL Server 2017.
++ **Assegnazione dei punteggi in tempo reale**: utilizzo di stored procedure\_rxPredict stored procedure in SQL Server 2016 o in SQL Server 2017.
 
 > [!NOTE]
 > È consigliabile usare la funzione di stima in SQL Server 2017.
-> Per utilizzare sp_rxPredict richiede l'abilitazione integrazione SQLCLR. Prima di abilitare questa opzione, considerare le implicazioni di sicurezza.
+> Per utilizzare sp\_rxPredict richiede l'abilitazione integrazione SQLCLR. Prima di abilitare questa opzione, considerare le implicazioni di sicurezza.
 
 Il processo generale di preparazione del modello e quindi la generazione di punteggi è molto simile:
 
@@ -49,7 +49,7 @@ Il processo generale di preparazione del modello e quindi la generazione di punt
 
 + Se si utilizza sp\_rxPredict, sono necessari alcuni passaggi aggiuntivi. Vedere [abilitare l'assegnazione dei punteggi in tempo reale](#bkmk_enableRtScoring).
 
-+ Al momento della redazione del presente documento, è possibile creare modelli compatibili solo RevoScaleR e MicrosoftML. Tipi di modelli aggiuntivi potrebbero essere disponibili in futuro. Per l'elenco degli algoritmi attualmente supportati, vedere [assegnazione dei punteggi in tempo reale](../real-time-scoring.md).
++ In questo momento, è possibile creare modelli compatibili solo RevoScaleR e MicrosoftML. Tipi di modelli aggiuntivi potrebbero essere disponibili in futuro. Per l'elenco degli algoritmi attualmente supportati, vedere [assegnazione dei punteggi in tempo reale](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>La serializzazione e archiviazione
 
@@ -80,7 +80,7 @@ Dal codice R, esistono due modi per salvare il modello in una tabella:
 
 ## <a name="native-scoring-with-predict"></a>Punteggio con Stima originale
 
-In questo esempio, si sarà creare un modello, quindi chiamare la funzione di stima in tempo reale da T-SQL.
+In questo esempio, si crea un modello e quindi chiama la funzione di stima in tempo reale da T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Passaggio 1. Preparare e salvare il modello
 
@@ -159,7 +159,7 @@ L'istruzione semplice PREDICT Ottiene una classificazione dal modello di albero 
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +181,7 @@ In questa sezione descrive i passaggi necessari per configurare **in tempo reale
 È necessario abilitare questa funzionalità per ogni database che si desidera utilizzare per il punteggio. L'amministratore del server deve eseguire l'utilità della riga di comando, RegisterRExt.exe, che è incluso nel pacchetto RevoScaleR.
 
 > [!NOTE]
-> Affinché in tempo reale di punteggio di lavoro, la funzionalità SQL CLR deve essere abilitato nell'istanza e il database deve essere contrassegnato come attendibile. Quando si esegue lo script, queste azioni vengono eseguite automaticamente. Tuttavia, considerare le implicazioni di sicurezza aggiuntive di questa operazione.
+> Affinché in tempo reale di punteggio di lavoro, la funzionalità SQL CLR deve essere abilitato nell'istanza e il database deve essere contrassegnato come attendibile. Quando si esegue lo script, queste azioni vengono eseguite automaticamente. Tuttavia, considerare le implicazioni di sicurezza aggiuntive.
 
 1. Aprire un prompt dei comandi con privilegi elevati e passare alla cartella in cui si trova RegisterRExt.exe. In un'installazione predefinita, è possibile utilizzare il seguente percorso:
     
@@ -209,12 +209,9 @@ In questa sezione descrive i passaggi necessari per configurare **in tempo reale
 > 
 > In SQL Server 2017, ulteriori misure di sicurezza siano soddisfatti per evitare problemi di integrazione con CLR. Queste misure impongano restrizioni aggiuntive per l'utilizzo di questa stored procedure.
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>Passaggio 2. Preparare e salvare il modello
 
-Il formato binario richiesto da sp\_rxPredict è uguale a quella per la stima.
-
-Pertanto, nel codice R, includere una chiamata a [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)e assicurarsi di specificare _realtimeScoringOnly_ = TRUE, come nel seguente esempio:
+Il formato binario richiesto da sp\_rxPredict è uguale a quella per la stima. Pertanto, nel codice R, includere una chiamata a [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)e assicurarsi di specificare _realtimeScoringOnly_ = TRUE, come nel seguente esempio:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +219,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Passaggio 3. Chiamare sp_rxPredict
 
-Chiamare sp_rxPredict come si farebbe con qualsiasi altra stored procedure. Nella versione corrente, la stored procedure accetta solo due parametri:  _@model_  per il modello in formato binario, e  _@inputData_  per i dati da utilizzare nell'assegnazione dei punteggi, definito come una query SQL valida .
+Chiamare sp\_rxPredict come si sarebbe qualsiasi altra stored procedure. Nella versione corrente, la stored procedure accetta solo due parametri:  _@model_  per il modello in formato binario, e  _@inputData_  per i dati da utilizzare nell'assegnazione dei punteggi, definito come una query SQL valida .
 
 Poiché il formato binario è lo stesso utilizzato dalla funzione di stima, è possibile utilizzare la tabella di modelli e dati dell'esempio precedente.
 
@@ -238,17 +235,22 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> La chiamata a `sp_rxPredict` ha esito negativo se i dati di input per il punteggio non include colonne che corrispondono ai requisiti del modello. Attualmente, sono supportati solo i seguenti tipi di dati .NET: double, float, short, ushort, long, ulong e stringa.
+> La chiamata a sp\_rxPredict ha esito negativo se i dati di input per il punteggio non include colonne che corrispondono ai requisiti del modello. Attualmente, sono supportati solo i seguenti tipi di dati .NET: double, float, short, ushort, long, ulong e stringa.
 > 
 > Di conseguenza, potrebbe essere necessario filtrare i tipi non supportati nei dati di input prima di utilizzarlo per l'assegnazione dei punteggi in tempo reale.
 > 
 > Per informazioni sui tipi SQL corrispondente, vedere [Mapping dei tipi CLR SQL](https://msdn.microsoft.com/library/bb386947.aspx) o [Mapping dei dati di parametro CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-### <a name="disable-realtime-scoring"></a>Disabilitare l'assegnazione dei punteggi in tempo reale
+## <a name="disable-realtime-scoring"></a>Disabilitare l'assegnazione dei punteggi in tempo reale
 
 Per disabilitare la funzionalità di assegnazione dei punteggi in tempo reale, aprire un prompt dei comandi con privilegi elevati ed eseguire il comando seguente:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>In tempo reale di punteggio in Microsoft R Server
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>In tempo reale di punteggio in Microsoft R Server o Server di Machine Learning
 
-Per informazioni in tempo reale di punteggio in un ambiente distribuito in base a Microsoft R Server, consultare il [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) disponibile in funzione la [mrsDeploy pacchetto](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), che supporta pubblicazione di modelli per in tempo reale di punteggio come nuovo un servizio web in esecuzione nel Server di R.
+Server di Machine Learning supporta distribuito in tempo reale di punteggio da modelli pubblicati come servizio web. Per altre informazioni, vedere gli articoli seguenti:
 
++ [Quali sono i servizi web in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [Che cos'è rendere operativo?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Distribuire un modello di Python come servizio web con modello di Azure ml-sdk di gestione](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Pubblicare un modello in tempo reale o un blocco di codice R come un nuovo servizio web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [pacchetto mrsdeploy per R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

@@ -28,10 +28,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 712b6c1b582c2eec76958eafaad5d02f2e411640
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 3c81153c233e68d12347dc47ae9c232f4a5ee030
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   
  Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,17 +54,17 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
  È un'espressione che può essere risolta in un **DateTimeOffset (n)** valore.  
   
  *fuso orario*  
- Stringa di caratteri nel formato [+|-]TZH:TZM o intero con segno (relativo ai minuti) che rappresenta la differenza di fuso orario. Deve essere sensibile all'ora legale e adattato ad essa.  
+ È una stringa di caratteri nel formato [+ |-] tzh o un intero con segno (minuti) che rappresenta la differenza di fuso orario, si presuppone che sia legale e regolata.  
   
 ## <a name="return-type"></a>Tipo restituito  
  **DateTimeOffset** con la precisione frazionaria di *DATETIMEOFFSET* argomento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Sezione Osservazioni  
  Utilizzare SWITCHOFFSET per selezionare un **datetimeoffset** valore in un fuso orario è diverso dalla differenza di fuso orario memorizzato in origine. SWITCHOFFSET non aggiorna archiviato *fuso orario* valore.  
   
  SWITCHOFFSET può essere utilizzato per aggiornare un **datetimeoffset** colonna.  
   
- L'utilizzo di SWITCHOFFSET con la funzione GETDATE() può determinare un'esecuzione lenta della query. Questo perché Query Optimizer non è in grado di ottenere stime relative alla cardinalità precise per il valore di data e ora. Per risolvere il problema, utilizzare l'hint per la query OPTION (RECOMPILE) per forzare la ricompilazione del piano di query da parte di Query Optimizer la volta successiva che viene eseguita la stessa query. A quel punto Query Optimizer disporrà di stime precise sulla cardinalità e offrirà un piano di query più efficace. Per ulteriori informazioni sull'hint per la query RECOMPILE, vedere [hint per la Query &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+ Utilizzo di SWITCHOFFSET con la funzione GETDATE () può causare la query venga eseguita lentamente. In questo modo query optimizer non riesce a ottenere le stime di cardinalità corrette per il valore datetime. Per risolvere questo problema, utilizzare l'hint per la query OPTION (RECOMPILE) per forzare il query optimizer di ricompilare un piano di query alla successiva esecuzione della stessa query. Query optimizer disporrà di stime precise sulla cardinalità e produrrà un piano di query più efficiente. Per ulteriori informazioni sull'hint per la query RECOMPILE, vedere [hint per la Query &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -74,28 +74,7 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ```  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene utilizzato `SWITCHOFFSET` per visualizzare una differenza di fuso orario diversa dal valore archiviato nel database.  
-  
-```  
-CREATE TABLE dbo.test   
-    (  
-    ColDatetimeoffset datetimeoffset  
-    );  
-GO  
-INSERT INTO dbo.test   
-VALUES ('1998-09-20 7:45:50.71345 -5:00');  
-GO  
-SELECT SWITCHOFFSET (ColDatetimeoffset, '-08:00')   
-FROM dbo.test;  
-GO  
---Returns: 1998-09-20 04:45:50.7134500 -08:00  
-SELECT ColDatetimeoffset  
-FROM dbo.test;  
---Returns: 1998-09-20 07:45:50.7134500 -05:00  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente viene utilizzato `SWITCHOFFSET` per visualizzare una differenza di fuso orario diversa dal valore archiviato nel database.  
+ L'esempio seguente usa `SWITCHOFFSET` per visualizzare un offset di fusi orari diversi rispetto al valore archiviato nel database.  
   
 ```  
 CREATE TABLE dbo.test   

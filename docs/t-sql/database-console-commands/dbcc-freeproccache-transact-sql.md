@@ -1,7 +1,7 @@
 ---
 title: DBCC FREEPROCCACHE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: b91dcf6191f6ec3336c9bf3d3588e8f1daad0867
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
 ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -62,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>Argomenti  
  ({ *plan_handle* | *sql_handle* | *pool_name* })  
- *plan_handle* identifica in modo univoco un piano di query per un batch che ha eseguito il cui piano risiede nella cache dei piani. *plan_handle* è **varbinary(64)** e può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
+*plan_handle* identifica in modo univoco un piano di query per un batch che ha eseguito il cui piano risiede nella cache dei piani. *plan_handle* è **varbinary(64)** e può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
  -   [Sys.dm exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [Sys.dm exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [Sys.dm exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [Sys.dm exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
- *valore di sql_handle* è l'handle SQL del batch da cancellare. *valore di sql_handle* è **varbinary(64)** e può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
+*valore di sql_handle* è l'handle SQL del batch da cancellare. *valore di sql_handle* è **varbinary(64)** e può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
  -   [Sys.dm exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [Sys.dm exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [Sys.dm exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [Sys.dm exec_xml_handles –](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [Sys.dm exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
- *pool_name* è il nome di un pool di risorse di Resource Governor. *pool_name* è **sysname** e può essere ottenuto eseguendo una query di [Sys.dm resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) vista a gestione dinamica.  
+*pool_name* è il nome di un pool di risorse di Resource Governor. *pool_name* è **sysname** e può essere ottenuto eseguendo una query di [Sys.dm resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) vista a gestione dinamica.  
  Per associare un pool di risorse di un gruppo di carico di lavoro di Resource Governor, eseguire una query di [Sys.dm resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) vista a gestione dinamica. Per informazioni sul gruppo di carico di lavoro per una sessione, eseguire una query di [Sys.dm exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) vista a gestione dinamica.  
 
   
@@ -87,11 +87,14 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
  ALL  
  Cancellare la cache dei piani di query da ogni nodo di calcolo e dal nodo di controllo.  
-  
-## <a name="remarks"></a>Osservazioni  
-Usare DBCC FREEPROCCACHE per cancellare con cautela la cache dei piani. Liberare la cache dei piani comporta, ad esempio, la ricompilazione di una stored procedure, anziché riutilizzarla dalla cache. 
 
-Ciò può portare a un'improvvisa e temporanea riduzione delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
+> [!NOTE]
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` per cancellare la cache delle procedure (piano) per il database nell'ambito.
+
+## <a name="remarks"></a>Osservazioni  
+Usare DBCC FREEPROCCACHE per cancellare con cautela la cache dei piani. Cancellare la cache fa sì che tutti i piani da rimuovere ed esecuzioni verranno compilato un nuovo piano di query in ingresso (piano) di procedura anziché riutilizzare qualsiasi piano precedentemente memorizzata nella cache. 
+
+Questo può causare una riduzione improvvisa e temporanea delle prestazioni delle query come il numero di nuove compilazioni aumenta. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 
 La cache delle procedure viene cancellata anche con le seguenti operazioni di riconfigurazione:
 -   access check cache bucket count  
@@ -115,16 +118,15 @@ La cache delle procedure viene cancellata anche con le seguenti operazioni di ri
 Quando non è specificata la clausola WITH NO_INFOMSGS, DBCC FREEPROCCACHE restituisce: "esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".
   
 ## <a name="permissions"></a>Permissions  
-Si applica a: SQL Server, Parallel Data Warehouse 
-
+Si applica a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - È necessario disporre dell'autorizzazione ALTER SERVER STATE per il server.  
 
-Si applica a: Azure SQL Data Warehouse
+Si applica a:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Richiede l'appartenenza al ruolo predefinito del server del database DB_OWNER.  
 
 ## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Osservazioni generali per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Possono eseguire contemporaneamente più comandi DBCC FREEPROCCACHE.
-In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], cancellare la cache del piano di query può causare un peggioramento temporaneo delle prestazioni delle query quando le query vengono ricompilate. 
+In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], cancellare la cache dei piani può causare un peggioramento temporaneo delle prestazioni delle query come un nuovo piano di compilazione di query in ingresso, anziché riutilizzare qualsiasi memorizzata nella cache di piano. 
 
 DBCC FREEPROCCACHE (calcolo) fa sì che solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di ricompilazione delle query quando vengono eseguiti sui nodi di calcolo. Ciò non causa [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] per ricompilare il piano di query parallelo che viene generato sul nodo del controllo.
 DBCC FREEPROCCACHE può essere annullato durante l'esecuzione.
@@ -135,11 +137,11 @@ DBCC FREEPROCCAHCE non è supportato in un'istruzione di descrizione.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>I metadati per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Una nuova riga viene aggiunto alla vista di sistema sys.pdw_exec_requests durante l'esecuzione di DBCC FREEPROCCACHE.
-  
+
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Esempi:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Cancellazione di un piano di query dalla cache dei piani  
-Nell'esempio seguente viene indicato come cancellare un piano di query dalla cache dei piani specificando l'handle del piano di query. Per verificare che la query di esempio si trovi nella cache dei piani, la query viene prima eseguita. Il `sys.dm`_`exec` \_ `cached_plans` e `sys.dm` \_ `exec` \_ `sql` \_ `text` vengono eseguite query sulle viste a gestione dinamica per restituire il handle del piano per la query. 
+Nell'esempio seguente viene indicato come cancellare un piano di query dalla cache dei piani specificando l'handle del piano di query. Per verificare che la query di esempio si trovi nella cache dei piani, la query viene prima eseguita. Il `sys.dm_exec_cached_plans` e `sys.dm_exec_sql_text` vengono eseguite query sulle viste a gestione dinamica per restituire l'handle del piano per la query. 
 
 Il valore dell'handle di piani dal set di risultati viene quindi inserito nell'istruzione `DBCC FREEPROCACHE` per rimuovere solo quel piano dalla cache dei piani.
   
@@ -195,7 +197,7 @@ Nell'esempio seguente rimuove i nodi di calcolo di tutte le cache esistente del 
   
 ```sql
 USE UserDbSales;  
-DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;  
+DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
  Nell'esempio seguente ha gli stessi risultati dell'esempio precedente, ad eccezione del fatto che i messaggi informativi verranno visualizzati nei risultati.  
@@ -211,12 +213,14 @@ Quando vengono richiesti i messaggi informativi e l'esecuzione ha esito positivo
 Nell'esempio seguente fornisce l'account di accesso autorizzazione David per l'esecuzione di DBCC FREEPROCCACHE.  
   
 ```sql
-GRANT ALTER SERVER STATE TO David;  
+GRANT ALTER SERVER STATE TO David; 
+GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
+[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+[ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
 

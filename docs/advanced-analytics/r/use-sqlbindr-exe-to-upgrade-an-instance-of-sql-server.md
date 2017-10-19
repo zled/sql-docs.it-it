@@ -1,7 +1,7 @@
 ---
 title: L'aggiornamento dei componenti di machine learning in un'istanza di SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 07/31/2017
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,102 +17,132 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2d9d7ddd95bdbcf6efca98ed94bc305924902b98
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>L'aggiornamento dei componenti di machine learning in un'istanza di SQL Server
 
-Microsoft Machine Learning Server per Windows include uno strumento che consente di aggiornare i componenti di R associati a un'istanza di SQL Server. Sono disponibili due versioni dello strumento: una procedura guidata e un'utilità della riga di comando.
+In questo articolo viene illustrato il processo di _associazione_, che è possibile utilizzare per eseguire l'aggiornamento di machine learning componenti utilizzati in SQL Server. Il processo di associazione consente di bloccare il server in una frequenza di aggiornamento in base alle versioni di Machine Learning Server anziché in SQL Server.
 
-In questo articolo viene illustrato come utilizzare questi strumenti per aggiornare un'istanza di SQL Server compatibile e come ripristinare un'istanza che è stata aggiornata in precedenza.
+> [!IMPORTANT]
+> Non è necessario utilizzare questo processo di aggiornamento, se si desidera ottenere gli aggiornamenti come parte degli aggiornamenti di SQL Server. Quando si installa un nuovo service pack o una versione di servizio, i componenti di machine learning vengono aggiornati automaticamente alla versione più recente. Utilizzare questo processo se si desidera aggiornare i componenti a un ritmo più veloce che viene offerto dalle versioni di servizio SQL Server.
 
-Non è necessario utilizzare questo processo di aggiornamento, se si desidera ottenere gli aggiornamenti come parte degli aggiornamenti di SQL Server. Quando si installa un nuovo service pack o una versione di servizio, i componenti di machine learning vengono aggiornati automaticamente alla versione più recente. Utilizzare questo proess solo se si desidera aggiornare i componenti a un ritmo più veloce rispetto a quelle affored da SQL Server service release.
+Se in qualsiasi momento si desidera interrompere l'aggiornamento in base alla pianificazione di Machine Learning Server, è necessario _disassociare_ l'istanza come descritto in [in questa sezione](#bkmk_Unbind)e disinstallare il Server di Machine Learning.
 
 **Si applica a:** R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
 
+## <a name="binding-vs-upgrading"></a>Associazione e l'aggiornamento
+
+Il processo di aggiornamento di machine learning componenti è detto **associazione**, perché il modello di supporto per i componenti di SQL Server machine learning usare i nuovi criteri di ciclo di vita del Software più recenti viene modificato. 
+
+In generale, il passaggio al modello di licenze nuovo assicura che il data Scientist può utilizzare sempre la versione più recente di R o Python. Per ulteriori informazioni sulle condizioni dei criteri del ciclo di vita moderna, vedere [sequenza temporale del supporto per Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
+
 > [!NOTE]
-> Al momento della redazione del presente documento, gli aggiornamenti si applicano solo alle istanze di SQL Server 2016 compatibile.  Anche se l'aggiornamento è supportato per SQL Server 2017, una nuova versione di Microsoft Machine Learning Server da utilizzare per gli aggiornamenti non è stata rilasciata.
+> L'aggiornamento non modifica il modello di supporto per il database di SQL Server e non modifica la versione di SQL Server.
 
-## <a name="upgrade-an-instance"></a>Aggiornare un'istanza
-
-Il processo di aggiornamento è detto **associazione**, perché il modello di supporto per i componenti di SQL Server machine learning usare i nuovi criteri del ciclo di vita moderna viene modificato. Tuttavia, l'aggiornamento non modifica il modello di supporto per il database di SQL Server.
-
-In generale, questo sistema di licenza permette ai data scientist di usare sempre la versione più recente di R. Per altre informazioni sulle condizioni dei criteri relativi al ciclo di vita, vedere [Support Timeline for Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support)(Sequenza temporale del supporto per Microsoft R Server).
-
-Quando si associa un'istanza, vengono eseguite diverse operazioni:
+Quando si associa un'istanza, verifica quanto segue, che può includere un aggiornamento a di machine learning componenti:
 
 + Il modello di supporto viene modificato. Anziché basarsi su versioni di servizio SQL Server, supporto si basa sul nuovo criterio del ciclo di vita moderna.
-+ Di machine learning i componenti associati all'istanza verrà aggiornato automaticamente con ogni versione, nel passaggio di blocco con la versione corrente in base ai nuovi criteri del ciclo di vita moderna. 
++ I componenti di machine learning associati all'istanza vengono aggiornati automaticamente con ogni versione, nel passaggio di blocco con la versione corrente in base ai nuovi criteri del ciclo di vita moderna. 
 + È potrebbero aggiungervi nuovi pacchetti R o Python. Ad esempio, i precedenti aggiornamenti da Microsoft R Server aggiunti nuovi pacchetti di R, ad esempio [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), e [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + L'istanza non può più essere aggiornata manualmente, se non per aggiungere nuovi pacchetti.
-+ È possibile aggiungere modelli di training preliminare.
++ È possibile ottenere l'opzione per aggiungere modelli di training preliminare forniti da Microsoft.
 
-Se successivamente si decide che si desidera interrompere l'aggiornamento dell'istanza a ogni rilascio, è necessario **disassociare** l'istanza come descritto in [in questa sezione](#bkmk_Unbind), quindi disinstallare di machine learning gli aggiornamenti, come descritto In questo articolo: [eseguire Microsoft R Server per Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows). Una volta completato il processo, non è più future machine learning aggiornamenti basati su Machine Learning Server verrà applicate all'istanza.
+## <a name="bkmk_prereqs"></a>Prerequisites
 
-### <a name="bkmk_prereqs"></a>Prerequisiti per l'aggiornamento
+Iniziare identificando le istanze che sono candidati per un aggiornamento. Se si esegue il programma di installazione e selezionare l'opzione di associazione, restituisce un elenco di istanze che sono compatibili con l'aggiornamento. 
 
-1. Identificare le istanze che possono essere aggiornate.
-    + SQL Server 2016 con R Services installato
-    + Oltre a almeno al Service Pack 1 CU3
+Fare riferimento alla tabella seguente per un elenco di aggiornamenti supportati e i requisiti.
 
-2. Ottenere **Microsoft R Server**, scaricando il programma di installazione di Windows separato.
+| Versione di SQL Server| Aggiornamento supportati| Note|
+|-----|-----|------|
+| SQL Server 2016| Machine Learning Server 9.2.1| Richiede almeno Service Pack 1 e CU3. R Services deve essere installato e abilitato.|
+| SQL Server 2017| Machine Learning Server 9.2.1| Machine Learning Services (In-Database) deve essere installato e abilitato. |
 
-    [How to install R Server 9.0.1 on Windows using the standalone Windows Installer](https://msdn.microsoft.com/microsoft-r/rserver-install-windows#howtoinstall) (Come installare R Server 9.0.1 in Windows tramite il programma di installazione di Windows autonomo)
+## <a name="bind-or-upgrade-an-instance"></a>Associare o aggiornare un'istanza
 
-> [!TIP]
-> 
-> Impossibile trovare SqlBindR.exe? Probabilmente non è stato scaricato R Server ancora. Questa utilità è disponibile solo con il programma di installazione di Windows per Microsoft R Server.
+Microsoft Machine Learning Server per Windows include uno strumento che consente di eseguire l'aggiornamento di machine learning linguaggi e strumenti associati a un'istanza di SQL Server. Sono disponibili due versioni dello strumento: una procedura guidata e un'utilità della riga di comando.
+
+Prima di eseguire la procedura guidata o lo strumento da riga di comando, è necessario scaricare la versione più recente del programma di installazione autonomo per i componenti di apprendimento automatico.
+
++ [Installazione di Machine Learning 9.2.1 Server per Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+
++ [Scaricare i componenti necessari per l'installazione offline](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
 ### <a name="bkmk_BindWizard"></a>Eseguire l'aggiornamento utilizzando la nuova installazione guidata
 
-1. Avviare il programma di installazione nuovo Server R nel computer che dispone dell'istanza che si desidera aggiornare.
-  ![Installazione guidata di Microsoft R Server](media/r-server-installer-01.PNG)
-2. Accettare il contratto di licenza per Microsoft R Server 9.1.0 e fare clic su **Avanti**.
-3. Accettare le condizioni di licenza per i componenti di origine aprire R e fare clic su **Avanti**.
-4. In **Selezione cartella di installazione**, accettare le impostazioni predefinite o specificare un percorso diverso in cui verranno installate librerie R. 
-5. Il programma di installazione identificherà tutte le istanze locali che sono candidati per l'associazione. Se nessuna istanza viene visualizzata, significa che sono state trovate istanze non valide. Potrebbe essere necessario patch per il server oppure verificare se è stato installato R Services.
-6. Selezionare la casella di controllo accanto a tutte le istanze che si desidera aggiornare, quindi fare clic su **Avanti**.
-7. Il processo può richiedere un po' di tempo.
+1. Avviare il programma di installazione nuovo Server di Machine Learning. Assicurarsi di eseguire il programma di installazione nel computer che dispone dell'istanza che si desidera aggiornare.
+
+    ![Configurazione guidata Server di Microsoft Machine Learning](media/mls-921-installer-start.PNG)
+
+2. Nella pagina **configurare l'installazione**verificare i componenti da aggiornare e rivedere l'elenco delle istanze compatibile. Se nessuna istanza viene visualizzata, verificare il [prerequisiti](#bkmk_prereqs).
+
+    Per aggiornare un'istanza, selezionare la casella di controllo accanto al nome di istanza. Se non si seleziona un'istanza, viene creata un'installazione separata di Machine Learning Server e le librerie di SQL Server non sono cambiate.
+
+    ![Configurazione guidata Server di Microsoft Machine Learning](media/configure-the-installation.PNG)
+
+3. Nel **contratto di licenza** selezionare **accetto le condizioni** per accettare le condizioni di licenza per il Server di Machine Learning. 
+
+4. Nelle pagine successive, fornire il consenso per le condizioni di licenza aggiuntive per tutti i componenti di origine aprire selezionato, ad esempio Microsoft R Open o la distribuzione Anaconda Python.
+
+5. Nel **quasi completata** pagina, prendere nota della cartella di installazione. La cartella predefinita è `~\Program Files\Microsoft\ML Server`. 
+
+    Se si desidera modificare la cartella di installazione, fare clic su **avanzate** per tornare alla prima pagina della procedura guidata. Tuttavia, è necessario ripetere tutte le selezioni precedenti. 
+
+6. Se si siano installando i componenti offline, richiesto per il percorso dei componenti di apprendimento macchina richiesta, ad esempio Microsoft R Open, il Server di Python e Python aperto.
     
-    Durante l'installazione, le librerie di R utilizzate da SQL Server R Services vengono sostituite con le librerie per Microsoft R Server 9.1.0.
-    
-    Finestra di avvio non è interessato dal processo, ma le librerie nella cartella R_SERVICES verranno rimossa e verrà modificata la proprietà per il servizio, per utilizzare le librerie in `C:\Program Files\Microsoft\R Server\R_SERVER`.
+Durante l'installazione, vengono sostituite tutte le librerie di R o Python utilizzate da SQL Server e finestra di avvio viene aggiornato per utilizzare i componenti più recenti. Ovvero, se l'istanza viene utilizzata in precedenza librerie nella cartella R_SERVICES predefinita, dopo l'aggiornamento queste librerie vengono rimossi e vengono modificate le proprietà per il servizio Launchpad, per utilizzare le librerie nel percorso specificato.
 
 ### <a name="bkmk_BindCmd"></a>Eseguire l'aggiornamento dalla riga di comando
 
-Dopo aver installato Microsoft R Server, è possibile eseguire lo strumento di SqlBindR.exe dalla riga di comando.
+Se non si desidera utilizzare la procedura guidata, è possibile installare Server di Machine Learning e quindi eseguire lo strumento SqlBindR.exe dalla riga di comando per aggiornare l'istanza.
 
-1. Aprire un prompt dei comandi come amministratore e passare alla cartella che contiene sqlbindr.exe. Il percorso predefinito è`C:\Program Files\Microsoft\R Server\Setup`
+> [!TIP]
+> 
+> Impossibile trovare SqlBindR.exe? Non sono probabilmente scaricati i componenti sopra elencati. Questa utilità è disponibile solo con il programma di installazione di Windows per il Server di Machine Learning.
+
+1. Aprire un prompt dei comandi come amministratore e passare alla cartella che contiene sqlbindr.exe. Il percorso predefinito è`C:\Program Files\Microsoft\MLServer\Setup`
+
 2. Digitare il comando seguente per visualizzare un elenco delle istanze disponibili: `SqlBindR.exe /list`
   
-   Annotare il nome completo dell'istanza indicato. Ad esempio, in cui potrebbe essere il nome dell'istanza `MSSQL13.MSSQLSERVER` per l'istanza predefinita o simile `SERVERNAME.MYNAMEDINSTANCE`.
-3. Eseguire il comando **SqlBindR.exe** con l'argomento */bind* e specificare il nome dell'istanza da aggiornare, restituito nel passaggio precedente.
+   Annotare il nome completo dell'istanza indicato. Ad esempio, in cui potrebbe essere il nome dell'istanza `MSSQL14.MSSQLSERVER` per un'istanza predefinita o simile `SERVERNAME.MYNAMEDINSTANCE`.
 
-   Ad esempio, per aggiornare l'istanza predefinita, digitare:`SqlBindR.exe /bind MSSQL13.MSSQLSERVER`
-4. Al termine dell'aggiornamento, riavviare il servizio Launchpad associato a qualsiasi istanza che è stata modificata.
+3. Eseguire il **SqlBindR.exe** comando con il */Bind* argomento e specificare il nome dell'istanza da aggiornare, utilizzando il nome di istanza che è stato restituito nel passaggio precedente.
 
+   Ad esempio, per aggiornare l'istanza predefinita, digitare:`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+
+4. Al termine dell'aggiornamento, riavviare il servizio Launchpad associato a un'istanza in cui è stata modificata.
 
 ## <a name="bkmk_Unbind"></a>Ripristinare o eliminare il binding di un'istanza
 
-Per ripristinare un'istanza di SQL Server per utilizzare le librerie originale installate tramite SQL Server, è necessario eseguire un **disassociare** operazione. È possibile farlo eseguendo di nuovo l'installazione guidata di Microsoft R Server oppure eseguendo l'utilità SqlBindR dalla riga di comando.
+Se si decide che non è più eseguire l'aggiornamento di machine learning componenti tramite Machine Learning Server, è necessario innanzitutto _disassociare_ dell'istanza, quindi disinstallare Machine Learning Server.
 
-Quando l'annullamento dell'associazione è completata, vengono rimosse le librerie per Microsoft R Server 9.1.0 e librerie R originale utilizzate da SQL Server R Services vengono ripristinate.
++ Separa l'istanza
 
-Le proprietà della finestra di avvio di SQL Server vengono modificate per utilizzare le librerie R nella cartella predefinita per R_SERVICES, nel `C:\Program Files\Microsoft\R Server\R_SERVER`.
+    È possibile separare l'istanza e ripristinare le librerie originale installate tramite SQL Server, utilizzando uno di questi due metodi:
 
-### <a name="unbind-using-the-wizard"></a>Annullamento del binding utilizzando la procedura guidata
+    + [Utilizzare l'installazione guidata](#bkmk_wizunbind) per Machine Learning Server, deselezionare tutte le funzionalità nell'istanza
+    + [Utilizzare l'utilità SqlBindR](#bkmk_cmdunbind) con il `/unbind` argomento, seguito dal nome di istanza.
 
-1. Scaricare di nuovo il programma di installazione per Microsoft R Server 9.1.0.
-2. Eseguire il programma di installazione nel computer che dispone dell'istanza che si desidera separare.
-2. Il programma di installazione identificherà le istanze locali che sono candidati per l'annullamento dell'associazione.
-3. Deselezionare la casella di controllo accanto all'istanza che si desidera ripristinare la configurazione originale di SQL Server R Services.
-4. Accettare il contratto di licenza per Microsoft R Server 9.1.0. Anche se si sta rimuovendo R Server, è necessario accettare il contratto di licenza.
+    Una volta completato il processo di annullamento, non è più future machine learning aggiornamenti basati su Machine Learning Server verrà applicate all'istanza.
+
++ Disinstallazione di Machine Learning Server
+
+    Per istruzioni, vedere [disinstallare Machine Learning per Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall). 
+
+### <a name="bkmk_wizunbind"></a>Annullamento del binding utilizzando la procedura guidata
+
+1. Individuare il programma di installazione per il Server di Machine Learning. Se è stato rimosso il programma di installazione, è necessario scaricarlo di nuovo oppure copiarlo da un altro computer.
+2. Assicurarsi di eseguire il programma di installazione nel computer che dispone dell'istanza che si desidera separare.
+2. Il programma di installazione identifica le istanze locali che sono candidati per l'annullamento dell'associazione.
+3. Deselezionare la casella di controllo accanto all'istanza che si desidera ripristinare la configurazione originale.
+4. Accettare il contratto di licenza. È necessario indicare l'accettazione delle condizioni di licenza anche durante l'installazione.
 5. Fare clic su **Fine**. Il processo richiede un po' di tempo.
 
-### <a name="unbind-using-the-command-line"></a>Annullamento del binding utilizzando la riga di comando
+### <a name="bkmk_cmdunbind"></a>Annullamento del binding utilizzando la riga di comando
 
 1. Aprire un prompt dei comandi e passare alla cartella contenente **sqlbindr.exe**, come descritto nella sezione precedente.
 
@@ -120,23 +150,23 @@ Le proprietà della finestra di avvio di SQL Server vengono modificate per utili
 
    Ad esempio, il comando seguente ripristina l'istanza predefinita:
    
-    `SqlBindR.exe /unbind MSSQL13.MSSQLSERVER`
+    `SqlBindR.exe /unbind MSSQL14.MSSQLSERVER`
 
 ## <a name="known-issues"></a>Problemi noti
 
-In questa sezione sono elencati i problemi noti specifici utilizzo dell'utilità SqlBindR.exe o agli aggiornamenti utilizzando l'utilità di installazione di Microsoft R Server che influiscono sulle istanze di SQL Server.
+In questa sezione sono elencati i problemi noti specifici utilizzo dell'utilità SqlBindR.exe o agli aggiornamenti del Server di Machine Learning che potrebbe influire sulle istanze di SQL Server.
 
 ### <a name="restoring-packages-that-were-previously-installed"></a>Ripristino dei pacchetti che sono stati installati in precedenza
 
 Nell'utilità di aggiornamento che è stato incluso in Microsoft R Server 9.0.1, l'utilità non è stato ripristinato dei pacchetti originali o componenti di R completamente, che richiedono l'esecuzione all'utente che Ripristina nell'istanza, si applicano a tutte le versioni del servizio e quindi riavviare l'istanza.
 
-Tuttavia, la versione più recente dell'utilità di aggiornamento per Microsoft R Server 9.1.0, verrà automaticamente ripristinata la funzionalità di R originale. Pertanto, non è necessario reinstallare i componenti di R o patch nuovamente il server. Tuttavia, è necessario comunque installare tutti i pacchetti R che potrebbero essere state aggiunte dopo l'installazione iniziale.
+Tuttavia, la versione più recente dell'utilità di aggiornamento consente di ripristinare automaticamente le funzionalità di R originale. Pertanto, non è necessario reinstallare i componenti di R o patch nuovamente il server. Tuttavia, è necessario installare tutti i pacchetti R che potrebbero essere state aggiunte dopo l'installazione iniziale.
 
-Se i ruoli di gestione del pacchetto è stato usato per installare e condividere package, questa attività è molto più semplice: è possibile utilizzare i comandi di R per sincronizzare i pacchetti installati nel file System che utilizza i record nel database e viceversa. Per ulteriori informazioni, vedere [installazione e la gestione dei pacchetti R](installing-and-managing-r-packages.md)
+Se i ruoli di gestione del pacchetto è stato usato per installare e condividere package, questa attività è molto più semplice: è possibile utilizzare i comandi di R per sincronizzare i pacchetti installati nel file System che utilizza i record nel database e viceversa. Per ulteriori informazioni, vedere [gestione dei pacchetti R per SQL Server](r-package-management-for-sql-server-r-services.md).
 
-### <a name="cannot-perform-upgrade-from-901"></a>Non è possibile eseguire l'aggiornamento da 9.0.1
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problemi con più aggiornamenti da SQL Server
 
-Se un'istanza di SQL Server 2016 R Services avere precedentemente aggiornato a 9.0.1, quando si esegue di nuovo il programma di installazione per Microsoft R Server 9.1.0, verrà visualizzare un elenco di tutte le istanze valide e quindi selezionare le istanze associate in precedenza per impostazione predefinita. Se si continua, le istanze associate in precedenza sono non associate. Di conseguenza, il precedente 9.0.1 viene rimosso l'installazione, inclusi quelli relativi a pacchetti, ma la nuova versione di Microsoft R Server (9.1.0) non è installata.
+Se un'istanza di SQL Server 2016 R Services avere precedentemente aggiornato a 9.0.1, quando si esegue di nuovo il programma di installazione per Microsoft R Server 9.1.0, viene visualizzato un elenco di tutte le istanze valide e quindi Seleziona istanze precedentemente associate per impostazione predefinita. Se si continua, le istanze associate in precedenza sono non associate. Di conseguenza, il precedente 9.0.1 viene rimosso l'installazione, inclusi quelli relativi a pacchetti, ma la nuova versione di Microsoft R Server (9.1.0) non è installata.
 
 In alternativa, è possibile modificare l'installazione di R Server esistente come indicato di seguito:
 1. Nel Pannello di controllo aprire **Aggiungi / Rimuovi programmi**.
@@ -183,7 +213,8 @@ La query restituisce i messaggi di errore seguenti:
 
 Per ulteriori informazioni, vedere le note sulla versione per Microsoft R Server:
 
-+ [Novità di R Server](https://docs.microsoft.com/r-server/whats-new-in-r-server)
++ [Problemi noti in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues)
 
-+ [Problemi noti di R Server](https://docs.microsoft.com/r-server/resources-known-issues)
++ [Annunci di funzionalità dalla versione precedente di R Server](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
++ [Funzionalità deprecate, funzionalità o modificate](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)

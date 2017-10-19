@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
 ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -119,7 +119,7 @@ Questo valore è valido solo per i database secondari, mentre il database nel se
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRIMARIO}  
 
-Abilita o disabilita gli hotfix di ottimizzazione di query indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**. Ciò equivale ad abilitare [Flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Abilita o disabilita gli hotfix di ottimizzazione di query indipendentemente dal livello di compatibilità del database. Il valore predefinito è **OFF**, che disabilita gli hotfix di ottimizzazione che sono stati rilasciati dopo che è stato introdotto il massimo livello di compatibilità disponibile per una versione specifica di query (post-RTM). L'impostazione di **ON** equivale ad abilitare [Flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > A tale scopo a livello di query, aggiungere il **QUERYTRACEON** [hint per la query](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'HINT USE [hint per la query](../../t-sql/queries/hints-transact-sql-query.md) anziché utilizzare il flag di traccia.  
@@ -140,7 +140,6 @@ Abilita o disabilita la cache delle identità a livello di database. Il valore p
 
 > [!NOTE] 
 > Questa opzione può essere impostata solo per il database primario. Per ulteriori informazioni, vedere [colonne identity](create-table-transact-sql-identity-property.md).  
->
 
 ##  <a name="Permissions"></a> Autorizzazioni  
  È necessario modificare qualsiasi configurazione di ambito DATABASE   
@@ -156,7 +155,7 @@ nel database. Questa autorizzazione può essere concessa da un utente con autori
  L'evento ALTER_DATABASE_SCOPED_CONFIGURATION viene aggiunto come un evento DDL che può essere usato per la generazione di un trigger DDL. Questo è un figlio del gruppo ALTER_DATABASE_EVENTS trigger.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- **MAXDOP**  
+**MAXDOP**  
   
  Impostazioni granulari possono eseguire l'override di quelli globali e governor tale risorsa è possibile chiudere tutte le altre impostazioni MAXDOP.  La logica per l'impostazione di MAXDOP è la seguente:  
   
@@ -170,15 +169,15 @@ nel database. Questa autorizzazione può essere concessa da un utente con autori
   
 -   L'impostazione di sp_configure viene sottoposto a override dall'impostazione di resource governor.  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  Quando l'hint QUERYTRACEON viene utilizzato per abilitare l'utilità di ottimizzazione query legacy o hotfix di query optimizer, sarebbe una condizione OR tra l'hint di query e la configurazione con ambito database, l'impostazione, vale a dire che se uno è abilitata, le opzioni verranno applicate.  
   
- **GeoDR**  
+**GeoDR**  
   
  I database secondari leggibili, ad esempio i gruppi di disponibilità AlwaysOn e replica geografica del, utilizzano il valore secondario controllando lo stato del database. Anche se è non ricompilare il failover e tecnicamente il nuovo database primario con le query che utilizzano le impostazioni di secondarie, l'idea è che l'impostazione tra server primario e secondario variano solo quando il carico di lavoro è diverso, pertanto le query memorizzate nella cache utilizzando le impostazioni ottimali, mentre le nuove query selezionerà le nuove impostazioni che sono appropriate per loro.  
   
- **DacFx**  
+**DacFx**  
   
  Poiché una nuova funzionalità di Database SQL di Azure e SQL Server 2016 che interessa lo schema del database, ALTER DATABASE SCOPED CONFIGURATION esportazioni dello schema (con o senza dati) non sarà in grado di essere importati in una versione precedente di SQL Server, ad esempio [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o < C2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Ad esempio, un'esportazione in un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) da un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database in cui questa nuova funzionalità non sarebbe in grado di essere importati in un server di livello inferiore.  
   
@@ -245,7 +244,7 @@ In questo esempio imposta PARAMETER_SNIFFING per database secondario perché si 
 in uno scenario di replica geografica.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Set QUERY_OPTIMIZER_HOTFIXES  

@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 646999095957abb4e615b59b316b6ca59155dea3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
 ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Connettersi al database del catalogo di SSISDB in Azure
@@ -48,6 +48,9 @@ Prima di iniziare, verificare di che aver 17.2 per o versione successiva di SQL 
    | **Password** | La password per l'account di amministratore del server | Questa è la password specificata al momento della creazione del server. |
 
 3. **Connettersi al database SSISDB**. Selezionare **opzioni** per espandere il **Connetti al Server** la finestra di dialogo. Nella struttura **Connetti al Server** la finestra di dialogo, seleziona il **le proprietà di connessione** scheda. Nel **Connetti al database** campo, selezionare o immettere `SSISDB`.
+
+    > [!IMPORTANT]
+    > Se non si seleziona `SSISDB` quando ci si connette, potrebbe non essere visualizzata nel catalogo SSIS in Esplora oggetti.
 
 4. Selezionare quindi **Connetti**.
 

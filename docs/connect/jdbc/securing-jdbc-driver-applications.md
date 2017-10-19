@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protezione delle applicazioni del driver JDBC
@@ -33,12 +33,13 @@ ms.lasthandoff: 09/09/2017
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Protezione delle stringhe di connessione](../../connect/jdbc/securing-connection-strings.md)|Vengono descritte le tecniche per la protezione delle informazioni utilizzate per la connessione a un'origine dati.|  
-|[Convalida dell'Input utente](../../connect/jdbc/validating-user-input.md)|Vengono descritte le tecniche per la convalida dell'input utente.|  
-|[Sicurezza delle applicazioni](../../connect/jdbc/application-security.md)|Viene descritto come utilizzare le autorizzazioni relative ai criteri Java per proteggere un'applicazione del driver JDBC.|  
-|[Utilizzo della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)|Viene descritto come stabilire un canale di comunicazione protetta con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database utilizza Secure Sockets Layer (SSL).|  
-|[Modalità FIPS](../../connect/jdbc/fips-mode.md)|Viene descritto come utilizzare il driver JDBC in modalità ricorrente FIPS.| 
+|[Convalida dell'input utente](../../connect/jdbc/validating-user-input.md)|Vengono descritte le tecniche per la convalida dell'input utente.|  
+|[Sicurezza dell'applicazione](../../connect/jdbc/application-security.md)|Viene descritto come utilizzare le autorizzazioni relative ai criteri Java per proteggere un'applicazione del driver JDBC.|  
+|[Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)|Viene descritto come stabilire un canale di comunicazione protetta con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database utilizza Secure Sockets Layer (SSL).|  
+|[Modalità FIPS](../../connect/jdbc/fips-mode.md)|Viene descritto come utilizzare il driver JDBC in modalità conforme a FIPS.| 
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del Driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

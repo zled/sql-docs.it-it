@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
 ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
@@ -97,7 +97,7 @@ Per eseguire il rollback o il downgrade da SQL Server a una versione precedente,
 > [!IMPORTANT]
 > Downgrade è supportato solo tra RTM, RC2 e RC1 in questo momento.
 
-## <a id="repositories"></a>Modificare il repository di origine
+## <a id="repositories"></a>Configurare il repository di origine
 
 Quando si installa o si aggiorna SQL Server, ottenere la versione più recente di SQL Server dal repository Microsoft configurato. È importante notare che esistono due tipi principali di repository per ogni distribuzione:
 
@@ -110,9 +110,9 @@ Ogni versione CU e GDR contiene il pacchetto di SQL Server completo e tutti gli 
 > [!NOTE]
 > L'aggiornamento da un pacchetto CU versione a una versione GDR non è supportata.
 
-Per modificare il repository GDR nel repository CU procedere come segue:
+Per configurare il repository CU o GDR, attenersi alla procedura seguente:
 
-1. Rimuovere il repository di anteprima configurate in precedenza.
+1. Se necessario, rimuovere il repository configurato in precedenza.
 
    | Piattaforma | Comando di rimozione del repository |
    |-----|-----|
