@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  Per abilitare manualmente Estensione database nel server, eseguire **sp_configure** e attivare l'opzione **remote data archive** . L'esempio seguente abilita l'opzione **remote data archive** impostandone il valore su 1.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
