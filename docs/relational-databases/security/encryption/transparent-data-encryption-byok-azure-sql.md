@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ Per altre informazioni sul ripristino dei backup per il database SQL, vedere [Ri
 
 Per garantire un recupero rapido delle chiavi e l'accesso ai dati all'esterno di Azure, si consiglia quanto segue:
 - Creare la chiave di crittografia in locale in un dispositivo HSM locale. Verificare che si tratti di una chiave RSA 2048 asimmetrica, in modo che possa essere archiviata in Azure Key Vault.
-- Importare il file della chiave di crittografia (PFX, BYOK o BACKUP) in Azure Key Vault. 
+- Importare il file della chiave di crittografia (PFX, BYOK o BACKUP) in Azure Key Vault. Valutare la possibilità di usare un insieme di credenziali chiave con [eliminazione temporanea](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) abilitata, per la protezione del ripristino in caso di eliminazione accidentale della chiave.
 - Prima di usare la chiave nell'insieme di credenziali delle chiavi di Azure per la prima volta, eseguire un backup di questa chiave. Altre informazioni sul comando [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
 - Ogni volta che vengono apportate modifiche alla chiave, ad esempio si aggiungono elenchi di controllo di accesso, tag o attributi chiave, assicurarsi di eseguire un altro backup della chiave di Azure Key Vault.
 - Durante un rollover della chiave, **mantenere le versioni precedenti della chiave** nell'insieme di credenziali delle chiavi in modo che si possano ripristinare i backup meno recenti dei database. 

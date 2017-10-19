@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novità del motore di database - SQL Server 2016
@@ -349,7 +349,8 @@ Numerosi miglioramenti supportano le funzionalità descritte nella altre sezioni
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) consente ora l'esecuzione di molte azioni di modifica di colonna mentre la tabella rimane disponibile.
 - La DMV dell'indice full-text [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) restituisce la posizione delle parole chiave nei documenti. Questa DMV è stata aggiunta anche in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 e [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1.
 - Un nuovo hint per la query **NO_PERFORMANCE_SPOOL** può impedire l'aggiunta di un operatore spool ai piani di query. Ciò può migliorare le prestazioni quando vengono eseguite numerose query simultanee con operazioni di spooling. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md).
-- L'istruzione [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) accetta ora un argomento msg_string. La dimensione massima della chiave di indice dell'indice della chiave per gli indici non cluster è stata aumentata a 1700 byte.
+- L'istruzione [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) è stata migliorata per accettare un argomento msg_string.
+- Le dimensioni massime per la chiave di indice per gli indici NONCLUSTERED sono state aumentate a 1700 byte.
 - È stata aggiunta la nuova sintassi DROP IF per le istruzioni DROP correlate ad AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER e VIEW. Per la sintassi, vedere i singoli argomenti.
 - È stata aggiunta un'opzione MAXDOP a [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) per specificare il grado di parallelismo.
 - È ora possibile impostare SESSION_CONTEXT. Include la funzione [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md), la funzione [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) e la procedura [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).

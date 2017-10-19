@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funzioni deterministiche e non deterministiche
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/16/2017
  In questo argomento vengono illustrati la proprietà deterministica delle funzioni di sistema predefinite e l'effetto sulla proprietà deterministica delle funzioni definite dall'utente quando contiene una chiamata a stored procedure estese.  
   
 ## <a name="built-in-function-determinism"></a>Proprietà deterministica delle funzioni predefinite  
- Non è possibile influenzare la proprietà deterministica di alcuna funzione predefinita. Ogni funzione predefinita è deterministica o non deterministica in base al modo in cui viene implementata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, la specifica di una clausola ORDER BY in una query non comporta la modifica del determinismo di una funzione utilizzata nella query in questione.  
+ Non è possibile influenzare la proprietà deterministica di alcuna funzione predefinita. Ogni funzione predefinita è deterministica o non deterministica in base al modo in cui viene implementata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, la specifica di una clausola ORDER BY in una query non comporta la modifica del determinismo di una funzione usata nella query in questione.  
   
  Tutte le funzioni per i valori stringa predefinite sono deterministiche. Per un elenco di queste funzioni, vedere [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
@@ -64,7 +64,7 @@ Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un'
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non sceglie esclusivamente il piano di esecuzione con il costo minore in termini di risorse, ma individua il piano che restituisce più rapidamente i risultati all'utente con un costo ragionevole in termini di risorse. Ad esempio, l'esecuzione parallela di una query in genere utilizza una quantità di risorse maggiore rispetto all'esecuzione seriale, ma consente di completare la query più rapidamente. Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] userà un piano di esecuzione parallela per restituire i risultati, a condizione che tale piano non aumenti il carico sul server.
 
-Per la stima dei costi in termini di risorse relativi ai diversi metodi di estrazione delle informazioni da una tabella o da un indice, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si basa sulle le statistiche di distribuzione. Le statistiche di distribuzione vengono registrate per le colonne e gli indici e indicano la selettività dei valori di un indice o di una colonna. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. L'indice dei numeri di identificazione dei veicoli è quindi più selettivo rispetto all'indice dei produttori. Se le statistiche dell'indice non sono aggiornate, è possibile che Query Optimizer non scelga la soluzione migliore per lo stato corrente della tabella. Per altre informazioni sull'aggiornamento delle statistiche dell'indice, vedere la sezione relativa all'uso delle statistiche per migliorare le prestazioni delle query. 
+Per la stima dei costi in termini di risorse relativi ai diversi metodi di estrazione delle informazioni da una tabella o da un indice, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si basa sulle le statistiche di distribuzione. Le statistiche di distribuzione vengono registrate per le colonne e gli indici e indicano la selettività dei valori di un indice o di una colonna. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. L'indice dei numeri di identificazione dei veicoli è quindi più selettivo rispetto all'indice dei produttori. Se le statistiche dell'indice non sono aggiornate, è possibile che Query Optimizer non scelga la soluzione migliore per lo stato corrente della tabella. Per altre informazioni sull'aggiornamento delle statistiche dell'indice, vedere [Statistiche](../relational-databases/statistics/statistics.md). 
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un componente importante perché consente al server di database di adattarsi in modo dinamico alle condizioni variabili del database senza fare ricorso all'intervento di un programmatore o di un amministratore di database. In questo modo i programmatori possono concentrarsi sulla descrizione del risultato finale della query. A ogni esecuzione dell'istruzione, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un piano di esecuzione efficace per lo stato corrente del database.
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1038,5 @@ GO
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)  
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Stima della cardinalità](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Elaborazione di query adattive](../relational-databases/performance/adaptive-query-processing.md)
 

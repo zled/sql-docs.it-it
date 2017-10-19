@@ -1,7 +1,7 @@
 ---
 title: Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure | Microsoft Docs
 ms.custom: 
-ms.date: 09/12/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 3c41be0642b13b63367c5601b716b506808472e7
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure
@@ -31,6 +31,11 @@ ms.lasthandoff: 09/14/2017
 
 ### <a name="use-bcp-from-the-command-prompt"></a>Usare BCP dal prompt dei comandi
 È possibile importare ed esportare i dati con l'utilità della riga di comando BCP. Per altre informazioni, vedere [Importare ed esportare dati per operazioni bulk usando l'utilità BCP](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+
+### <a name="use-the-import-flat-file-wizard"></a>Usare la procedura guidata Importa file flat
+Se non sono necessarie tutte le opzioni di configurazione disponibili nell'Importazione/Esportazione guidata e in altri strumenti, è possibile importare un file di testo in SQL Server usando la **procedura guidata Importa file flat** in SQL Server Management Studio (SSMS). Per altre informazioni, vedere gli articoli seguenti:
+- [What’s new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novità di SQL Server Management Studio 17.3)
+- [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introduzione alla nuova procedura guidata Importa file flat in SSMS 17.3)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>Usare Importazione/Esportazione guidata SQL Server
 È possibile importare o esportare dati da un'ampia gamma di origini e destinazioni con Importazione/Esportazione guidata SQL Server. Per usare la procedura guidata, è necessario avere installato SQL Server Integration Services (SSIS) o SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
