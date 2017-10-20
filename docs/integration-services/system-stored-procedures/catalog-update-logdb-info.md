@@ -27,7 +27,7 @@ Aggiornamento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s
 
 ## <a name="syntax"></a>Sintassi
 
-```tsql
+```sql
 update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
 ```
 

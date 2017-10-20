@@ -69,7 +69,7 @@ ms.lasthandoff: 07/29/2017
 
     Questo comando non può essere annullato.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -82,7 +82,7 @@ ms.lasthandoff: 07/29/2017
   
 -   Per disabilitare l'estensione per una tabella e abbandonare i dati remoti, eseguire il comando seguente.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -108,7 +108,7 @@ ms.lasthandoff: 07/29/2017
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Usare Transact-SQL per disabilitare Estensione database per un database  
  Eseguire il comando seguente.  
   
-```tsql  
+```sql  
 ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 

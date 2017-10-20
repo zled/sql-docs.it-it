@@ -85,7 +85,7 @@ cleanup_server_log
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente chiama la routine cleanup_server_log archiviati.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

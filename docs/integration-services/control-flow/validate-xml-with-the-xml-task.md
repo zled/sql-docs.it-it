@@ -84,7 +84,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>Analizzare l'output della convalida XML con una query Transact-SQL  
  Se l'output della convalida XML contiene un numero elevato di errori, è possibile usare una query di [!INCLUDE[tsql](../../includes/tsql-md.md)] per caricare l'output in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È quindi possibile analizzare l'elenco di errori con tutte le funzionalità del linguaggio T-SQL, inclusi WHERE, GROUP BY, ORDER BY, JOIN e così via.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

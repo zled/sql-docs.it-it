@@ -85,7 +85,7 @@ ms.lasthandoff: 07/29/2017
   
  Ecco un esempio in cui viene eseguita la migrazione dell'intera tabella e la migrazione dei dati viene avviata subito.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -95,7 +95,7 @@ GO
   
  Ecco un esempio in cui viene eseguita la migrazione solo delle righe identificate dalla funzione inline `dbo.fn_stretchpredicate` con valori di tabella e si rimanda l'esecuzione della migrazione dei dati. Per altre informazioni sulla funzione di filtro, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -112,7 +112,7 @@ ALTER TABLE <table name>
   
  Ecco un esempio in cui viene eseguita la migrazione dell'intera tabella e la migrazione dei dati viene avviata subito.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name>
@@ -123,7 +123,7 @@ GO
   
  Ecco un esempio in cui viene eseguita la migrazione solo delle righe identificate dalla funzione inline `dbo.fn_stretchpredicate` con valori di tabella e si rimanda l'esecuzione della migrazione dei dati. Per altre informazioni sulla funzione di filtro, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name> 

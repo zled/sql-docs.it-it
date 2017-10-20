@@ -84,7 +84,7 @@ GO
   
 3.  Per configurare un database di SQL Server per Estensione database, il database deve disporre di una chiave master del database. La chiave master del database consente di proteggere le credenziali usate da Estensione database per la connessione al database remoto. L'esempio che segue crea una nuova chiave master del database.  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         L'esempio che segue crea una nuova credenziale.
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  Fornire le credenziali di amministratore esistenti con l'argomento CREDENTIAL o specificare FEDERATED_SERVICE_ACCOUNT = ON. L'esempio seguente fornisce credenziali esistenti.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

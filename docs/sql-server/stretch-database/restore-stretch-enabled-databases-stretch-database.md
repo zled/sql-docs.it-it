@@ -73,7 +73,7 @@ Per ripristinare un database di Azure eliminato nel punto in cui è stato elimin
   
     -   Specificare se creare una copia dei dati remoti e connettersi alla copia (scelta consigliata).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

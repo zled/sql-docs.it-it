@@ -34,7 +34,7 @@ Per istruzioni di un join di un ruolo del database, vedere [aggiungere un ruolo]
 Chiamare stored procedure [catalog]. [update_logdb_info] con stringa di connessione e nome di Sql Server come parametri.
 
 #### <a name="example"></a>Esempio
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

@@ -94,7 +94,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente chiama la routine cleanup_server_execution_keys archiviati.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

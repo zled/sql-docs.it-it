@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  
  Per visualizzare la quantità di spazio usata da una tabella abilitata per l'estensione in SQL Server, eseguire questa istruzione.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -65,7 +65,7 @@ GO
  
 Per visualizzare la quantità di spazio usata da una tabella abilitata per l'estensione in Azure, eseguire questa istruzione.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -119,7 +119,7 @@ Se sono state accidentalmente eliminate colonne dalla tabella remota, eseguire *
   
 Ad esempio, la query seguente restituisce solo risultati locali.  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;
