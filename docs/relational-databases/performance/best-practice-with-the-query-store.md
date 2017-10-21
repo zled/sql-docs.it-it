@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Intervallo di raccolta statistiche:** definisce il livello di granularità delle statistiche di runtime raccolte. Il valore predefinito è 1 ora. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi, ma questo influisce direttamente sulle dimensioni dei dati dell'archivio query. Usare SSMS o Transact-SQL per impostare un valore diverso per Intervallo di raccolta statistiche:  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Soglia per query non aggiornate (giorni):** criteri di pulizia basati sul tempo che controllano il periodo di conservazione di statistiche di runtime persistenti e query inattive.  
@@ -86,7 +86,7 @@ Per impostazione predefinita, l'archivio query è configurato in modo da conserv
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Modalità di pulizia basata sulle dimensioni:** specifica se viene eseguita la pulizia automatica dei dati quando le dimensioni dei dati dell'archivio query si avvicinano al limite.  
