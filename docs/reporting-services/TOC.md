@@ -71,6 +71,8 @@
 
 
 # Sviluppatore
+## [API REST](developer/rest-api.md)
+## [Esempi di API REST](https://github.com/Microsoft/Reporting-Services)
 ## [Integrazione dell'applicazione](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [Servizio Web ReportServer](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Estensioni](../reporting-services/extensions/reporting-services-extension-library.md)
