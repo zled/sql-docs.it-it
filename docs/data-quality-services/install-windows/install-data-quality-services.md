@@ -105,7 +105,7 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     Per impostazione predefinita, se l'account utente è un membro del ruolo predefinito del server sysadmin, è possibile accedere a [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] utilizzando [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] anche se nessuno dei ruoli DQS viene concesso all'account utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Security](../../data-quality-services/dqs-security.md).  
+     Per impostazione predefinita, se l'account utente è un membro del ruolo predefinito del server sysadmin, è possibile accedere a [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] utilizzando [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] anche se nessuno dei ruoli DQS viene concesso all'account utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Sicurezza](../../data-quality-services/dqs-security.md).  
   
      Per altre informazioni, vedere [Concedere ruoli DQS agli utenti](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
