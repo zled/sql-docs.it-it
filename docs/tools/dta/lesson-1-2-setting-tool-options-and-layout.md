@@ -18,11 +18,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f62f296fd14cefdeeb0f13b99d03852eaf44850a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lezione 1-2-Layout e impostazione delle opzioni dello strumento
@@ -49,7 +50,7 @@ All'avvio è possibile impostare nella maniera più appropriata alla modalità d
     -   Per impostazione predefinita, l'opzione **Chiedi conferma prima di arrestare l'analisi della sessione** è selezionata, per evitare l'arresto accidentale di una sessione di ottimizzazione prima che Ottimizzazione guidata motore di database abbia concluso l'analisi di un carico di lavoro.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 2: Utilizzo di ottimizzazione guidata motore di Database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lezione 2: Utilizzo dello strumento Ottimizzazione guidata motore di database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

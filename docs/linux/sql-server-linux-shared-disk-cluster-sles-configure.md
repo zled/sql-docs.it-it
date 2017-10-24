@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 30187dcf31421be045bb54e9824336e5d258f555
 ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi SLES per SQL Server
@@ -44,7 +44,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
     ```
 
     > [!NOTE]
-    > In fase di installazione, una chiave Master del Server viene generato per l'istanza di SQL Server e inserito in var/rifiutare/mssql/secrets /-chiave del computer. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivise tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario in modo che ogni account locale mssql possono accedervi per decrittografare la chiave Master del Server.
+    > In fase di installazione, viene generato per l'istanza di SQL Server e inserito in una chiave Master del Server `/var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivise tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario in modo che ogni account locale mssql possono accedervi per decrittografare la chiave Master del Server.
 4. Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker utilizzerà questo account per verificare quale sia il nodo è in esecuzione SQL Server.
 
     ```bash

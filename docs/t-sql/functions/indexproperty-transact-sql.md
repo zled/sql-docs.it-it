@@ -23,11 +23,12 @@ caps.latest.revision: 56
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cbd10b32ee6b2d88a97222c3a970452a4a628b83
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2f793612ff0fa46e2fd72f6a51e48eae30602fdf
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -82,7 +83,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come INDEXPROPERTY possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce i valori per il **IsClustered**, **IndexDepth**, e **IndexFillFactor** le proprietà per il `PK`_`Employee` \_ `BusinessEntityID` indice del `Employee` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ L'esempio seguente restituisce i valori per il **IsClustered**, **IndexDepth**, e **IndexFillFactor** le proprietà per il `PK_Employee_BusinessEntityID` indice del `Employee`tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT   

@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati File Flat (SQL Server importazione / esportazione guidata)
-In questo argomento viene illustrato come connettersi a un **file flat** di origine dati (file di testo) dal **scegliere un'origine dati** o **scegliere una destinazione** pagina di esportazione e importazione di SQL Server Procedura guidata. Per i file flat, queste due pagine della procedura guidata presentano diversi set di opzioni, pertanto in questo argomento descrive l'origine file flat e la destinazione separatamente.
+In questo argomento viene illustrato come connettersi a un **file flat** di origine dati (file di testo) dal **scegliere un'origine dati** o **scegliere una destinazione** pagina di esportazione e importazione di SQL Server Procedura guidata. Per i file flat, queste due pagine della procedura guidata presentano diversi set di opzioni, pertanto questo argomento descrive l'origine file flat e la destinazione file flat separatamente.
+
+## <a name="an-alternative-for-simple-text-import"></a>Un'alternativa per l'importazione di testo semplice
+Se è necessario importare un file di testo in SQL Server e non è necessario tutte le opzioni di configurazione disponibili nell'importazione / esportazione guidata, è consigliabile utilizzare il **importazione guidata di File Flat** in SQL Server Management Studio (SSMS). Per altre informazioni, vedere gli articoli seguenti:
+- [What’s new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novità di SQL Server Management Studio 17.3)
+- [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introduzione alla nuova procedura guidata Importa file flat in SSMS 17.3)
 
 ## <a name="connect-to-a-flat-file-source"></a>Connettersi a un'origine file flat
  
@@ -193,7 +198,7 @@ La pagina **Avanzate** mostra informazioni dettagliate su ogni colonna nell'orig
 
 ![Formato file flat delimitato, pagina avanzate](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
 
-Nella schermata, si noti che il **id** colonna che contiene numeri, inizialmente presenta un tipo di dati stringa.
+Nella cattura di schermata, si noti che il **id** colonna che contiene numeri, inizialmente presenta un tipo di dati stringa.
 
 ### <a name="options-to-specify-advanced-page"></a>Le opzioni per specificare (**avanzate** pagina)
 
@@ -202,10 +207,10 @@ Nella schermata, si noti che il **id** colonna che contiene numeri, inizialmente
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**Nome**|Consente di specificare un nome descrittivo per la colonna. Se non si immettere alcun nome, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea automaticamente un nome nel formato Colonna 0, Colonna 1 e così via.|
+|**Nome**|Consente di specificare un nome descrittivo per la colonna. Se non si immette un nome, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea automaticamente un nome in formato colonna 0, 1 colonna e così via.|
 |**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}**. Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.<br /><br /> **{CR}**. Le colonne sono delimitate da un ritorno a capo.<br /><br /> **{LF}**. Le colonne sono delimitate da un avanzamento riga.<br /><br /> **Punto e virgola {;}**. Le colonne sono delimitate da un punto e virgola.<br /><br /> **Due punti {:}**. Le colonne sono delimitate da due punti.<br /><br /> **Virgola {,}**. Le colonne sono delimitate da una virgola.<br /><br /> **Tabulazione {t}**. Le colonne sono delimitate da una tabulazione.<br /><br /> **Barra verticale {&#124;}**. Le colonne sono delimitate da una barra verticale.|
 |**ColumnType**|Indica se la colonna è delimitata, a larghezza fissa o non allineata a destra. Questa proprietà è di sola lettura. I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa, ad eccezione dell'ultima. L'ultima colonna è delimitata dal delimitatore di riga.|  
-|**InputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|
+|**InputColumnWidth**|Specificare un valore da archiviare come un numero di byte. per i file Unicode, questo valore è un numero di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|
 |**DataPrecision**|Consente di specificare la precisione dei dati numerici. Per precisione si intende il numero di cifre.|
 |**DataScale**|Consente di specificare la scala dei dati numerici. Per scala si intende il numero di posizioni decimali.|
 |**DataType**|Consente di selezionare i tipi di dati disponibili nell'apposito elenco.<br/>Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|
@@ -229,7 +234,7 @@ Nella schermata, si noti che il **id** colonna che contiene numeri, inizialmente
  
 Fare clic su **Suggerisci tipi** per visualizzare la finestra di dialogo **Suggerisci tipi di colonne**. 
 
-![Connessione file flat suggerisci](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![La finestra di dialogo tipi di suggerire connessione file flat](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 Dopo aver scelto di opzioni di **Suggerisci tipi di colonne** la finestra di dialogo e fare clic su **OK**, la procedura guidata può modificare i tipi di dati di alcune colonne.
 
@@ -293,7 +298,7 @@ Per una destinazione file flat, è disponibile solo una singola pagina di opzion
  Specificare il qualificatore di testo, se presente, utilizzato dal file. Ad esempio, è possibile specificare che i campi di testo siano racchiusi tra virgolette. (Questa proprietà si applica solo ai file delimitati) 
   
 > [!NOTE] 
-> Dopo aver selezionato un qualificatore di testo, è possibile selezionare di nuovo il **Nessuno** opzione. Digitare **Nessuno** per deselezionare il qualificatore di testo.  
+> Dopo aver selezionato un qualificatore di testo, è impossibile riselezionare il **Nessuno** opzione. Digitare **Nessuno** per deselezionare il qualificatore di testo.  
 
 ## <a name="see-also"></a>Vedere anche
 [Scegliere un'origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

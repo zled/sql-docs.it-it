@@ -29,11 +29,12 @@ caps.latest.revision: 83
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6e1a96bb64c8cb6a81311f422d370e36d9489ca4
 ms.contentlocale: it-it
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
@@ -82,7 +83,7 @@ DROP DATABASE database_name [;]
 >  Rimozione di un database con FILE_SNAPSHOT associati backup avrà esito positivo, ma non verranno eliminati i file di database a cui sono associati snapshot per evitare di invalidare i backup che fa riferimento a questi file di database. Il file verrà troncato, ma non verranno fisicamente eliminato per mantenere i backup FILE_SNAPSHOT intatto. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- La rimozione di uno snapshot di database comporta l'eliminazione dello snapshot del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei file sparse fisici del file system NTFS utilizzati dallo snapshot. Per informazioni sull'utilizzo dei file sparse dagli snapshot del database, vedere [snapshot del Database & #40; SQL Server & #41; ](../../relational-databases/databases/database-snapshots-sql-server.md). La rimozione di uno snapshot del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
+ La rimozione di uno snapshot di database comporta l'eliminazione dello snapshot del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei file sparse fisici del file system NTFS utilizzati dallo snapshot. Per informazioni sull'utilizzo dei file sparse dagli snapshot del database, vedere [snapshot del Database &#40; SQL Server &#41; ](../../relational-databases/databases/database-snapshots-sql-server.md). La rimozione di uno snapshot del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
   
 ## <a name="interoperability"></a>Interoperabilità  
   
@@ -148,7 +149,7 @@ DROP DATABASE Sales, NewSales;
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nell'esempio seguente viene rimosso uno snapshot di database, denominato `sales`_`snapshot0600`, senza influire sul database di origine.  
+ Nell'esempio seguente viene rimosso uno snapshot del database, denominato `sales_snapshot0600`, senza influire sul database di origine.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

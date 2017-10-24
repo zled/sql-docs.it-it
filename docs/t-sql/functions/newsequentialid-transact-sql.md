@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a453b99d7ab0512e57275b5ad1805f5a66522ba
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 39bd8a393a9cc3e19e457cda98c0521492e07911
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  In caso di problemi di riservatezza, non utilizzare questa funzione. È possibile intuire il valore del GUID che verrà generato successivamente e accedere ai dati associati a tale GUID.  
   
- NEWSEQUENTIALID è un wrapper di failover di Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) (funzione).  
+ NEWSEQUENTIALID è un wrapper di failover di Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) funzione, con alcune [byte fuori posto applicato](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
 >  La funzione UuidCreateSequential presenta dipendenze di hardware. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i cluster di valori sequenziali possono sviluppare quando i database (ad esempio i database indipendenti) vengono spostati in altri computer. Quando si usa Always On e su [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], i cluster di valori sequenziali possono sviluppare se il database viene eseguito il failover in un altro computer.  

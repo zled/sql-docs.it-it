@@ -20,11 +20,12 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0b86b019de9a767402814afa4d2f6f2903c983b2
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0a1047fbccf3e9437c3160891f502f9e2838c34a
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="adomdnet-client-functionality"></a>Funzionalità client di ADOMD.NET
@@ -35,7 +36,7 @@ ms.lasthandoff: 09/01/2017
   
  Per ulteriori informazioni: [recupero di metadati da un'origine dati analitici](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md).  
   
- **Il recupero dei dati**  
+ **Recupero di dati**  
  Per recupero di dati si intende il recupero effettivo delle informazioni archiviate nell'origine dati. Il recupero di dati rappresenta la funzione principale di applicazioni "statiche" cui è nota la struttura dell'origine dati, nonché il risultato finale di applicazioni "dinamiche". Il valore dell'indicatore di prestazioni chiave a un'ora specificata del giorno, il numero di biciclette vendute nell'ultima ora per ogni punto vendita e i fattori che governano le prestazioni annuali dei dipendenti sono tutti esempi di dati che possono essere recuperati. Il recupero di dati è estremamente importante per tutte le applicazioni che eseguono query.  
   
  Per ulteriori informazioni: [recupero dei dati da un'origine dati analitici](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md).  
@@ -69,6 +70,7 @@ ms.lasthandoff: 09/01/2017
  [!code-cs[Adomd.NetClient#ReturnCommandUsingCellSet](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/adomd-net-client-functio_1.cs)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione di Client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
+ [Programmazione di client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
+

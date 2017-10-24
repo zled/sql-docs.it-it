@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b348939327efbacbb612e28c4c30fbb2d7cc0a17
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3eb3f21b6a686c3013cdaaa3000038896edfbf94
 ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogenableworkeragent-ssisdb-database"></a>Catalog.enable_worker_agent (Database SSISDB)
@@ -28,15 +28,16 @@ Abilitare un lavoro Out di scala per Scale Out Master che lavora con questo [!IN
 
 ## <a name="syntax"></a>Sintassi
 
-```tsql
-enable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+```sql
+catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>Argomenti
-[ @WorkerAgentId =] *WorkerAgentId* l'id di agente di lavoro del processo di lavoro Out di scala. Il *WorkerAgentId* è **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId* l'agente di lavoro, ID di scala il lavoro. Il *WorkerAgentId* è **uniqueidentifier**.
 
 ## <a name="example"></a>Esempio
 Questo esempio abilita il ruolo di lavoro di scalabilità orizzontale sul computer MachineA.
-```tsql
+
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -61,5 +62,5 @@ GO
 -   L'appartenenza al **sysadmin** ruolo del server 
 
 ## <a name="errors-and-warnings"></a>Errori e avvisi
-La stored procedure restituisce un errore se l'ID di agente di lavoro non è valido.
+Se l'ID di agente di lavoro non è valido, la stored procedure restituisce un errore.
 

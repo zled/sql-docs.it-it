@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eff73515b09d96c6f86cb4993237f99e4d300c7c
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: f9315ca5b46a0dc45a0f8171fa6eea67cd2f4337
 ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 su Linux
@@ -50,7 +50,6 @@ Questa è la versione di disponibilità generale (GA) di SQL Server 2017. La ver
 
 > [!NOTE]
 > È necessario almeno 3,25 GB di memoria per l'esecuzione di SQL Server in Linux.
-> Motore di SQL Server è stato testato fino a 1,5 TB di memoria in questo momento.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -60,7 +59,11 @@ Nella tabella seguente sono elencati i dettagli del pacchetto e i percorsi di do
 - [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare il pacchetto di SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-| Pacchetto | Versione del pacchetto | Scarica | o |---|---|---| | Pacchetto Red Hat RPM | 14.0.1000.169-2 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | | Pacchetto RPM SLES | 14.0.1000.169-2 | [pacchetto RPM motore mssql server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto di SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | | Pacchetto Debian Ubuntu 16.04 | 14.0.1000.169-2 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Pacchetto di SSIS del](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+| Pacchetto | versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 14.0.1000.169-2 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto RPM SLES | 14.0.1000.169-2 | [pacchetto RPM motore MSSQL server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
+| Pacchetto Debian Ubuntu 16.04 | 14.0.1000.169-2 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Pacchetto di SSIS del](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ### <a name="supported-client-tools"></a>Strumenti client supportati
 
@@ -82,7 +85,7 @@ Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo mo
 | &nbsp; | Polybase |
 | &nbsp; | Query distribuita con connessioni a 3rd party |
 | &nbsp; | (XP_CMDSHELL, e così via). le stored procedure estese di sistema |
-| &nbsp; | Tabella filetable |
+| &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Impostare gli assembly CLR con il EXTERNAL_ACCESS o UNSAFE autorizzazione |
 | &nbsp; | Estensione pool di buffer |
 | **SQL Server Agent** |  Sottosistemi: CmdExec, PowerShell, agente di lettura coda, SSIS, SSAS, SSRS |
@@ -95,7 +98,7 @@ Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo mo
 | &nbsp; | Autenticazione di Active Directory per i server collegati | 
 | &nbsp; | Autenticazione di Active Directory per i gruppi di disponibilità (estensivi) | 
 | &nbsp; | strumenti di terze parti AD 3 (Centrify, Vintela, Powerbroker) | 
-| **Servizi** | SQL Server Browser |
+| **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
@@ -225,7 +228,7 @@ Se si utilizza **File System NFS (Network)** condivisioni remote nell'ambiente d
   - Supporto di Hadoop e HDFS
   - Microsoft Connector for SAP BW
 
-Per un elenco di componenti SSIS predefiniti che non sono attualmente supportati o supportati con limitazioni, vedere [di estrazione, trasformazione e caricamento dati in Linux con SSIS](sql-server-linux-migrate-ssis.md#components).
+Per un elenco di componenti SSIS predefiniti che non sono attualmente supportati o supportati con limitazioni, vedere [limitazioni e problemi noti per SSIS in Linux](sql-server-linux-ssis-known-issues.md#components).
 
 Per ulteriori informazioni su SSIS in Linux, vedere gli articoli seguenti:
 -   [Post di blog annunciato il supporto SSIS per Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
@@ -318,7 +321,7 @@ Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo mo
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
 | **Sicurezza** | Extensible Key Management |
-| **Servizi** | SQL Server Browser |
+| **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
@@ -503,7 +506,7 @@ Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo mo
 | **Disponibilità elevata** | Mirroring del database  |
 | &nbsp; | Aggiornamento in sequenza del gruppo di disponibilità |
 | **Sicurezza** | Extensible Key Management |
-| **Servizi** | SQL Server Browser |
+| **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |

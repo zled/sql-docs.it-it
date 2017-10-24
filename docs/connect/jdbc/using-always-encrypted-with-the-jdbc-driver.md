@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilizzo di Always Encrypted con il JDBC Driver
@@ -268,34 +268,12 @@ Tutti questi provider dell'archivio chiavi sono descritti in dettaglio più avan
 ### <a name="using-azure-key-vault-provider"></a>Uso del provider dell'insieme di credenziali delle chiavi di Azure
 L'insieme di credenziali delle chiavi di Azure rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. Microsoft JDBC Driver per SQL Server include un provider predefinito, SQLServerColumnEncryptionAzureKeyVaultProvider, le applicazioni che dispongono di chiavi archiviate nell'insieme di credenziali chiave di Azure. Il nome di questo provider è AZURE_KEY_VAULT. Per utilizzare il provider dell'archivio di credenziali chiave di Azure, uno sviluppatore di applicazioni deve creare l'insieme di credenziali e le chiavi in Azure e configurare l'applicazione per accedere alle chiavi. Per ulteriori informazioni su come configurare l'insieme di credenziali chiave e creare una chiave master della colonna, fare riferimento a [insieme credenziali chiavi Azure – Step-by-Step per ulteriori informazioni su come configurare l'insieme di credenziali chiave](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [la creazione di chiavi Master della colonna nell'insieme di credenziali chiave di Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Per utilizzare l'insieme di credenziali chiave di Azure, le applicazioni client devono creare un'istanza di SQLServerColumnEncryptionAzureKeyVaultProvider e registrarlo con il driver. L'autenticazione di delegati JDBC driver per l'applicazione tramite un'interfaccia denominata SQLServerKeyVaultAuthenticationCallback che dispone di un metodo per recuperare un token di accesso dall'insieme di credenziali chiave. Per creare un'istanza di provider dell'archivio di credenziali chiave di Azure, lo sviluppatore dell'applicazione deve fornire un'implementazione per il solo metodo denominato **getAccessToken** che recupera il token di accesso per la chiave archiviata nell'insieme di credenziali chiave di Azure.  
-  
-Di seguito è riportato un esempio di inizializzazione SQLServerKeyVaultAuthenticationCallback e SQLServerColumnEncryptionAzureKeyVaultProvider:  
+Per utilizzare l'insieme di credenziali chiave di Azure, le applicazioni client devono creare un'istanza di SQLServerColumnEncryptionAzureKeyVaultProvider e registrarlo con il driver.
+
+Di seguito è riportato un esempio di inizializzazione SQLServerColumnEncryptionAzureKeyVaultProvider:  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 Dopo l'applicazione crea un'istanza di SQLServerColumnEncryptionAzureKeyVaultProvider, l'applicazione deve registrare l'istanza all'interno di Microsoft JDBC Driver per SQL Server utilizzando la Metodo registercolumnencryptionkeystoreproviders (). È consigliabile, l'istanza registrata utilizzando il nome di ricerca predefinito, AZURE_KEY_VAULT, che può essere ottenuto chiamando l'API SQLServerColumnEncryptionAzureKeyVaultProvider.getName(). Il nome predefinito, consente di utilizzare strumenti come SQL Server Management Studio o PowerShell, eseguire il provisioning e gestione delle chiavi di crittografia sempre attiva (strumenti di utilizzano il nome predefinito per generare l'oggetto di metadati per una chiave master della colonna). L'esempio seguente mostra la registrazione del provider di credenziali chiave di Azure. Per ulteriori informazioni sul metodo registercolumnencryptionkeystoreproviders (), vedere [sempre crittografato riferimento all'API per il Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md). 
@@ -653,3 +631,4 @@ Nota: Prestare attenzione quando si specifica AllowEncryptedValueModifications c
  [Always Encrypted (Motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

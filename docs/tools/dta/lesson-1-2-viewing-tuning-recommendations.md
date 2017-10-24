@@ -18,11 +18,12 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f23e4034bdfe2cb41161313ae577342ba3f3eda9
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Lezione 1-2 - visualizzazione indicazioni di ottimizzazione
@@ -32,9 +33,9 @@ In questa attività viene usata la sessione di ottimizzazione creata in [Ottimiz
   
 1.  Avviare Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vedere [Avvio dello strumento Ottimizzazione guidata motore di database](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md). Verificare di essere connessi alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usata nell'esercitazione [Ottimizzazione di un carico di lavoro](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
-2.  Nel riquadro **Monitoraggio sessione** fare doppio clic su **MySession** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Ottimizzazione guidata Carica le informazioni sulla sessione dalla sessione di ottimizzazione precedente e viene visualizzato il **indicazioni** scheda. Si noti che in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] non sono disponibili **Indicazioni relative alle partizioni** dal momento che sono state accettate tutte le opzioni di ottimizzazione predefinite ed è stata selezionata l'opzione **Nessun partizionamento** nella scheda **Opzioni di ottimizzazione** .  
+2.  Nel riquadro **Monitoraggio sessione** fare doppio clic su **MySession** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata carica le informazioni sulla sessione dalla sessione di ottimizzazione precedente e visualizza la scheda **Indicazioni** . Si noti che in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] non sono disponibili **Indicazioni relative alle partizioni** dal momento che sono state accettate tutte le opzioni di ottimizzazione predefinite ed è stata selezionata l'opzione **Nessun partizionamento** nella scheda **Opzioni di ottimizzazione** .  
   
-3.  Nella scheda **Indicazioni** usare la barra di scorrimento disponibile nella parte inferiore della pagina a schede per visualizzare le colonne **Indicazioni relative agli indici** . Ogni riga rappresenta un oggetto di database (ovvero indici o viste indicizzate) che Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] consiglia di eliminare o creare. Scorrere fino alla colonna all'estrema destra e fare clic su **Definizione**. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Ottimizzazione guidata consente di visualizzare un **anteprima Script SQL** finestra in cui è possibile visualizzare il [!INCLUDE[tsql](../../includes/tsql-md.md)] script che crea o Elimina l'oggetto di database in tale riga. Fare clic su **Chiudi** per chiudere la finestra di anteprima.  
+3.  Nella scheda **Indicazioni** usare la barra di scorrimento disponibile nella parte inferiore della pagina a schede per visualizzare le colonne **Indicazioni relative agli indici** . Ogni riga rappresenta un oggetto di database (ovvero indici o viste indicizzate) che Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] consiglia di eliminare o creare. Scorrere fino alla colonna all'estrema destra e fare clic su **Definizione**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata visualizza una finestra **Anteprima script SQL** nella quale è possibile visualizzare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] che crea o elimina l'oggetto di database della riga. Fare clic su **Chiudi** per chiudere la finestra di anteprima.  
   
     In caso di difficoltà nell'individuazione di una **Definizione** contenente un collegamento, deselezionare la casella di controllo **Mostra oggetti esistenti** nella parte inferiore della pagina a schede. In questo modo verrà ridotto il numero di righe visualizzate. Quando viene deselezionata questa casella di controllo, in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono visualizzati solo gli oggetti per i quali è stata generata un'indicazione. Selezionare la casella di controllo **Mostra oggetti esistenti** per visualizzare tutti gli oggetti di database attualmente esistenti nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Utilizzare la barra di scorrimento sul lato sinistro della pagina a schede per visualizzare tutti gli oggetti.  
   

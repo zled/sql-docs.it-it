@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (Database SSISDB)
@@ -28,19 +28,19 @@ Imposta la proprietà di un [!INCLUDE[ssISnoversion](../../includes/ssisnoversio
 
 ## <a name="syntax"></a>Sintassi
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>Argomenti
-[ @WorkerAgentId =] *WorkerAgentId*  
-L'id di agente di lavoro del processo di lavoro Out di scala. Il *WorkerAgentId* è **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId*  
+L'agente di lavoro, ID di scala il lavoro. Il *WorkerAgentId* è **uniqueidentifier**.
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 Nome della proprietà. Il *PropertyName* è **nvarchar (256)**.
 
-[ @PropertyValue =] *PropertyValue*  
-Il valore della proprietà. Il *PropertyValue* è **nvarchar (max)**.
+[@PropertyValue =] *PropertyValue*  
+Valore della proprietà. Il *PropertyValue* è **nvarchar (max)**.
 
 ## <a name="remarks"></a>Osservazioni
 I nomi di proprietà validi sono **DisplayName**, **descrizione**, **tag**.
@@ -58,13 +58,13 @@ I nomi di proprietà validi sono **DisplayName**, **descrizione**, **tag**.
   
 -   L'appartenenza al **sysadmin** ruolo del server
 
-## <a name="erros-and-warnings"></a>Errori e avvisi
+## <a name="errors-and-warnings"></a>Errori e avvisi
   Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  
   
 -   Utente senza autorizzazioni appropriate. 
 
--   L'id di agente di lavoro non è valido.
+-   L'ID di agente di lavoro non è valido.
 
 -   Il nome della proprietà non è valido.
 
--   Il valore della proprietà non è vilid.  
+-   Il valore della proprietà non è valido.  

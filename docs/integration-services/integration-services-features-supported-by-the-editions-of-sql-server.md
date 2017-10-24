@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Funzionalità di servizi di integrazione supportate dalle edizioni di SQL Server
@@ -31,7 +31,7 @@ Per le note sulla versione più recente e informazioni sulle novità, vedere gli
 -   [Novità di Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
 -   [Novità di Integration Services in SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
-**Try SQL Server 2016!**    
+**Per provare SQL Server 2016**    
 
 SQL Server Evaluation Edition è disponibile per un periodo di valutazione di 180 giorni.  
     
@@ -70,8 +70,8 @@ SQL Server Evaluation Edition è disponibile per un periodo di valutazione di 18
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Destinazione Oracle a prestazioni elevate di Attunity|Sì|||||  
-|Destinazione Teradata a prestazioni elevate di Attunity|Sì|||||  
+|Origine Oracle a prestazioni elevate e la destinazione di Attunity|Sì|||||  
+|Origine Teradata a prestazioni elevate e la destinazione di Attunity|Sì|||||  
 |Origine e destinazione SAP BW|Sì|||||  
 |Destinazione training modello di data mining|Sì|||||  
 |Destinazione elaborazione dimensione|Sì|||||  
@@ -81,7 +81,6 @@ SQL Server Evaluation Edition è disponibile per un periodo di valutazione di 18
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Ricerche di persistenti (prestazioni elevate)|Sì|||||  
 |Componenti Change Data Capture di Attunity <sup>1</sup>|Sì|||||  
 |Trasformazione di query di data mining|Sì|||||  
 |Trasformazioni di ricerca fuzzy e raggruppamento fuzzy|Sì|||||  

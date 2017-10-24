@@ -1,6 +1,6 @@
 ---
-title: Progettazione di modelli tabulari (SSAS) | Documenti Microsoft
-ms.date: 03/14/2017
+title: Progettazione di modelli tabulari | Documenti Microsoft
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Progettazione di modelli tabulari (SSAS)
@@ -32,13 +32,11 @@ La progettazione di modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](..
   
  Oltre ai nuovi modelli e strumenti per la creazione di soluzioni di modelli multidimensionali e tabulari professionali, nell'ambiente di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sono disponibili funzionalità di debug e ciclo di vita di progetti che assicurano la creazione delle soluzioni BI più efficienti per l'organizzazione. Per ulteriori informazioni su [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vedere la pagina relativa all' [introduzione a Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a> Modelli di progetto  
+##  <a name="bkmk_proj_temp"></a>Modelli di progetto  
  Quando si installa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ai tipi di progetto di Business Intelligence vengono aggiunti i modelli relativi al progetto di modello tabulare seguenti:  
   
  **Progetto tabulare di Analysis Services**  
- Questo modello può essere utilizzato per creare un nuovo progetto di modello tabulare vuoto. I livelli di compatibilità vengono specificati quando si crea il progetto. Scegliere l'impostazione predefinita, **SQL Server 2016 RTM (1200)**, per usare tutte le funzionalità predefinite di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ Questo modello può essere utilizzato per creare un nuovo progetto di modello tabulare vuoto. I livelli di compatibilità vengono specificati quando si crea il progetto.
   
  **Importa da server (tabulare)**  
  Questo modello può essere utilizzato per creare un nuovo progetto di modello tabulare estraendo i metadati da un modello tabulare esistente in Analysis Services.  
@@ -54,10 +52,10 @@ La progettazione di modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](..
 ### <a name="designer-window"></a>Finestra di progettazione  
  La finestra di progettazione viene utilizzata per creare modelli tabulari fornendo una rappresentazione visiva del modello. Quando si apre il file Model.bim, il modello viene visualizzato nella finestra di progettazione. È possibile creare un modello nella finestra di progettazione utilizzando due modalità di visualizzazione diverse:  
   
- **Vista dati**  
+ **Visualizzazione di dati**  
  Nella Vista dati sono visualizzate le tabelle in formato griglia tabulare. Le misure possono essere definite anche utilizzando la relativa griglia che può essere visualizzata per ogni tabella solo nella Vista dati.  
   
- **Visualizzazione Diagramma**  
+ **Vista diagramma**  
  Nella Vista diagramma sono visualizzate le tabelle, con le relative relazioni, in formato grafico. È possibile filtrare colonne, misure, gerarchie e indicatori KPI, nonché scegliere di visualizzare il modello utilizzando una prospettiva definita.  
   
  La maggior parte delle attività di creazione dei modelli può essere effettuata con entrambe le viste.  
@@ -128,7 +126,7 @@ La progettazione di modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](..
 ### <a name="toolbar"></a>Barra degli strumenti  
  La barra degli strumenti di Analysis Services consente un accesso rapido e semplice ai comandi per la creazione di modelli utilizzati più frequentemente.  
   
-##  <a name="bkmk_vsint"></a> Visual Studio Integration  
+##  <a name="bkmk_vsint"></a>Integrazione di Visual Studio  
  **Controllo del codice sorgente**  
  I progetti di Analysis Services sono integrati con il plug-in del controllo del codice sorgente selezionato. Se Visual Studio è stato configurato in modo che venga utilizzato il controllo del codice sorgente, è possibile utilizzare l'archiviazione in Esplora Soluzioni o l'estrazione. Per configurare l'utilizzo di Team Foundation Server, vedere [Configurare Visual Studio con Team Foundation Version Control](http://msdn.microsoft.com/library/ms253064.aspx). Sono supportati anche molti plug-in del controllo del codice sorgente di terze parti.  
   
@@ -143,3 +141,4 @@ La progettazione di modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](..
  [Proprietà &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+

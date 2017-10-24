@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (database SSISDB)
@@ -28,28 +28,28 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @folder_name =] *nome_cartella*  
- Nome della cartella in cui verrà distribuito il progetto. Il *nome_cartella* è **nvarchar (128)**.  
+ [@folder_name =] *nome_cartella*  
+ Il nome della cartella in cui viene distribuito il progetto. Il *nome_cartella* è **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Nome del progetto nuovo o aggiornato nella cartella. Il *project_name* è **nvarchar (128)**.  
   
- [ @projectstream =] *projectstream*  
+ [@projectstream =] *projectstream*  
  Contenuto binario di un file di distribuzione progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (estensione ispac).  
   
  È possibile utilizzare un'istruzione SELECT con la funzione OPENROWSET e il provider BULK per set di righe per recuperare il contenuto binario del file. Per un esempio, vedere [distribuire Integration Services (SSIS) progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Per ulteriori informazioni su OPENROWSET, vedere [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
   
  Il *projectstream* è **varbinary (max)**  
   
- [ @operation_id =] *operation_id*  
+ [@operation_id =] *operation_id*  
  Viene restituito l'identificatore univoco dell'operazione di distribuzione. Il *operation_id* è **bigint**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
@@ -58,7 +58,7 @@ deploy_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni CREATE_OBJECTS sulla cartella per distribuire un nuovo progetto o autorizzazioni MODIFY sul progetto per aggiornare un progetto  

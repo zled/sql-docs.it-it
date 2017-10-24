@@ -18,15 +18,16 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizzare query con risultati SHOWPLAN in SQL Server Profiler
-  È possibile aggiungere a una definizione di traccia classi di eventi Showplan che determinano la raccolta e la visualizzazione delle informazioni sul piano della query nella traccia in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. È inoltre possibile estrarre eventi Showplan dagli altri eventi raccolti nella traccia e salvarli in un file XML distinto.  
+  È possibile aggiungere a una definizione di traccia classi di eventi Showplan che determinano la raccolta e la visualizzazione delle informazioni sul piano della query nella traccia in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . È inoltre possibile estrarre eventi Showplan dagli altri eventi raccolti nella traccia e salvarli in un file XML distinto.  
   
  L'estrazione di eventi Showplan dalla traccia può essere eseguita in uno dei modi seguenti:  
   
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/02/2017
  [Categoria di eventi Prestazioni](../../relational-databases/event-classes/performance-event-category.md)  
   
   
+

@@ -16,11 +16,12 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: adc6db788d4245009d2f70b8af01b84730cb7bb7
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Creare una traccia (SQL Server Profiler)
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/02/2017
   
 ### <a name="to-create-a-trace"></a>Per creare una traccia  
   
-1.  Scegliere **Nuova traccia** dal menu **File** e quindi connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Scegliere **Nuova traccia** dal menu **File**e quindi connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Verrà visualizzata la finestra di dialogo **Proprietà traccia** .  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/02/2017
   
 5.  Facoltativamente, selezionare la casella di controllo **Data e ora di arresto della traccia** e specificare una data e un'ora di arresto della traccia.  
   
-6.  Per aggiungere o rimuovere eventi, colonne di dati o filtri, fare clic sulla scheda **Selezione eventi**. Per altre informazioni, vedere [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+6.  Per aggiungere o rimuovere eventi, colonne di dati o filtri, fare clic sulla scheda **Selezione eventi**  . Per altre informazioni, vedere [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
 7.  Fare clic su **Esegui** per avviare la traccia.  
   

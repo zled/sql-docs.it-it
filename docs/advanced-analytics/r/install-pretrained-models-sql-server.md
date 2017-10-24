@@ -2,8 +2,8 @@
 title: Installare i modelli di training preliminare machine learning in SQL Server | Documenti Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/15/2017
-ms.prod: sql-server-2016
+ms.date: 10/18/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,34 +15,42 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
 ms.contentlocale: it-it
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Installare training preliminare di machine learning i modelli in SQL Server
 
-Questo argomento descrive come aggiungere i modelli di training preliminare a un'istanza di SQL Server che già dispone di R Services o installato Servizi di Machine Learning.
+Questo articolo descrive come aggiungere i modelli di training preliminare a un'istanza di SQL Server che già dispone di R Services o installato Servizi di Machine Learning.
 
-I modelli di training preliminare vengono forniti con l'aggiornamento a Microsoft R Server (o l'aggiornamento al Server di Microsoft Machine Learning). Per informazioni su come aggiornare l'istanza e di ottenere la versione più recente di Microsoft R, vedere [l'aggiornamento dei componenti R in un'istanza di R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+I modelli di training preliminare vengono forniti come un'opzione quando si installa Microsoft R Server o di Machine Learning Server utilizzando il programma di installazione autonomo. È possibile utilizzare il programma di installazione per ottenere i modelli di training preliminare o utilizzarlo per eseguire l'aggiornamento di machine learning componenti in un'istanza di SQL Server 2016 o SQl Server 2017.
 
-È possibile installare questi modelli solo eseguendo l'installazione basata su Windows separato per R Server.
-Tuttavia, esistono alcuni passaggi aggiuntivi da utilizzare quando si installa i modelli in SQL Server. In questo argomento viene descritto il processo.
+Dopo avere scaricato i modelli con training preliminare eseguendo il programma di installazione, esistono alcuni passaggi aggiuntivi per configurare i modelli per l'utilizzo con SQL Server. In questo articolo viene descritto il processo.
+
+Per altre informazioni, vedere gli articoli seguenti:
+
++ [Con training preliminare modelli di machine learning per il rilevamento di analisi e l'immagine di valutazione](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
+
++ [L'aggiornamento dei componenti R in un'istanza di R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## <a name="benefits-of-using-pretrained-models"></a>Vantaggi dell'utilizzo di modelli di training preliminare
 
-I modelli con training preliminare sono state rese disponibili per supportare i clienti che è necessario eseguire attività quali l'analisi del sentiment o immagine featurization, ma non dispone di risorse per ottenere il set di dati di grandi dimensioni o eseguire il training di un modello complesso. Utilizzo di modelli con training preliminare consente un'introduzione a testo e immagine in modo più efficiente l'elaborazione.
+Questi modelli con training preliminare sono stati creati per aiutare i clienti che non è necessario eseguire attività quali l'analisi del sentiment o immagine featurization, ma non dispone di risorse per ottenere il set di dati di grandi dimensioni o eseguire il training di un modello complesso. Utilizzo di modelli con training preliminare consente un'introduzione a testo e immagine in modo più efficiente l'elaborazione.
 
-Attualmente i modelli disponibili sono i modelli di rete neurali profonde (DNN) per la classificazione di analisi e l'immagine di valutazione. Tutti e quattro i modelli di training preliminare erano sottoposto a training sui CNTK. La configurazione di ciascuna rete è stato in base alle implementazioni di riferimento seguente:
+Attualmente i modelli disponibili sono i modelli di rete neurali profonde (DNN) per la classificazione di analisi e l'immagine di valutazione. Tutti i modelli di training preliminare sono stati eseguito il training utilizzando Microsoft [calcolo rete Toolkit](https://cntk.ai/Features/Index.html), o **CNTK**. 
+
+La configurazione di ciascuna rete è stato in base alle implementazioni di riferimento seguente:
 
 + ResNet-18
 + ResNet 50
 + ResNet 101
 + AlexNet
 
-Per ulteriori informazioni sulle reti deep residue e la relativa implementazione utilizzando CNTK, vedere i seguenti articoli:
+Per ulteriori informazioni sulle reti di formazione e la relativa implementazione utilizzando CNTK, vedere i seguenti articoli:
 
 + [Algoritmo i ricercatori Microsoft imposta attività cardine ImageNet richiesta](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
@@ -50,60 +58,74 @@ Per ulteriori informazioni sulle reti deep residue e la relativa implementazione
 
 ## <a name="how-to-install-the-models-on-sql-server"></a>Come installare i modelli in SQL Server
 
-   > [!NOTE]
-   > 
-   > Se si utilizza il programma di installazione basati su Windows separato per installare Microsoft R Server o per aggiornare l'istanza di SQL Server, i modelli con training preliminare sono disponibili dal programma di installazione. Vedere [installare R Server per Windows](https://docs.microsoft.com/en-us/r-server/install/r-server-install-windows).
-   > 
-   > Potrebbero essere necessari ulteriori passaggi per usare i modelli con Microsoft R Server. Per ulteriori informazioni, vedere [come installare e distribuire pre-Training modelli di machine learning con MicrosoftML](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models)
+1. Eseguire l'installazione basata su Windows separato per il Server di Machine Learning. Per i percorsi di download, vedere:
 
-1. I modelli con training preliminare non sono installati per impostazione predefinita quando si installa SQL Server. è necessario aggiungerli tramite l'esecuzione di un'utilità della riga di comando di installazione al termine dell'installazione di SQL Server.
+    + [Installazione di Machine Learning Server per Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+    + [Installare R Server 9.1 per Windows](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
-2. Aprire un prompt dei comandi con privilegi elevati e passare alla cartella bootstrap il programma di installazione per SQL Server, che contiene anche il programma di installazione di Microsoft R.
+2. La selezione di funzionalità da installare varia a seconda che si sono solo i modelli di recupero o l'esecuzione di altri aggiornamenti tramite il programma di installazione.
+ 
+    + Se si tratta di una nuova installazione di Server di Machine Learning e non si desidera apportare altre modifiche ai componenti R o Python, selezionare **solo** l'opzione di modelli di training preliminare. Accettare tutte le altre richieste, inclusi i contratti di licenza.
 
-    In un'istanza predefinita di SQL Server 2017 RC 1, il risultato sarà:
+    + Per aggiornare i componenti di R o Python allo stesso tempo, selezionare la lingua (R, Python o entrambi) che si desidera aggiornare e selezionare l'opzione di modelli di training preliminare. Selezionare una o più istanze per applicare le modifiche.
+
+    + Se precedentemente installato Machine Learning Server e aggiornare i componenti di R o Python utilizzando l'opzione di associazione, lasciare tutte le selezioni precedenti **come**, quindi selezionare le opzioni di modelli di training preliminare. Non deselezionare le opzioni selezionate in precedenza, o che verranno rimossi.
+
+3. Quando l'installazione è stata completata, aprire un prompt dei comandi di Windows **come amministratore**e passare alla cartella bootstrap il programma di installazione per SQL Server, che contiene anche il programma di installazione di Microsoft R. In un'istanza predefinita di SQL Server 2017, la cartella è:
     
-    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017RC1\x64\`
+    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-3. Specificare il componente per l'installazione e la cartella in cui devono essere aggiunti i modelli con training preliminare, utilizzando gli argomenti seguenti:
+4. Specificare il componente per installare la versione e la cartella contenente i file di origine del modello, utilizzando gli argomenti da RSetup.exe, come illustrato negli esempi seguenti:
 
-  + Per utilizzare i modelli con **R_SERVICES**
+  + Per utilizzare i modelli con **R_SERVICES**, utilizzare la sintassi e i percorsi seguenti:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-    Per abilitare l'utilizzo dei modelli di training preliminare usando R in un'istanza predefinita di SQL Server 2017, ad esempio, eseguire l'istruzione seguente:
+    Per abilitare l'utilizzo della versione più recente dei modelli di training preliminare per R, in un'istanza predefinita di SQL Server 2017, ad esempio, eseguire l'istruzione seguente:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + Per utilizzare i modelli con **PYTHON_SERVICES**
+    In un'istanza denominata, il comando sarebbe simile al seguente:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-    Per abilitare l'utilizzo dei modelli di training preliminare usando Python, per un'istanza predefinita di SQL Server 2017, ad esempio, eseguire l'istruzione seguente:
+  + Per utilizzare i modelli con **PYTHON_SERVICES**, utilizzare la sintassi e i percorsi seguenti:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-4. Per il parametro di versione, sono supportati i seguenti valori:
+    Per abilitare l'utilizzo della versione più recente dei modelli di training preliminare per Python, in un'istanza predefinita di SQL Server 2017, ad esempio, eseguire l'istruzione seguente:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+    In un'istanza denominata, il comando sarebbe simile al seguente:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+5. Per il parametro di versione, sono supportati i seguenti valori:
 
     + Versione finale candidata 0: **9.1.0.0**
     + Versione finale candidata 1: **9.2.0.22**
-    + Numero della versione finale (non rilasciata): **9.2.0.100**
+    + RTM: **9.2.0.100**
+    + Aggiornamento cumulativo 1: **9.2.0.24**
 
-5. Se l'installazione ha esito positivo, i modelli seguenti devono essere aggiunti al R\_servizi o PYTHON\_cartelle SERVICES:
+6. Se l'installazione ha esito positivo, i modelli seguenti devono essere aggiunti al R\_servizi o PYTHON\_cartelle SERVICES:
 
-    - AlexNet_Updated.model
-    - ImageNet1K_mean.xml
+    - AlexNet\_Updated.model
+    - ImageNet1K\_mean.xml
     - pretrained.Model
-    - ResNet_101_Updated.model
-    - ResNet_18_Updated.model
-    - ResNet_50_Updated.model
+    - ResNet\_101\_Updated.model
+    - ResNet\_18\_Updated.model
+    - ResNet\_50\_Updated.model
 
 ## <a name="examples"></a>Esempi
 
-Dopo aver installato i modelli, è possibile utilizzare i modelli tramite chiamata da codice R.
+Dopo aver installato i modelli, è possibile utilizzare i modelli tramite chiamata dal codice.
 
 ### <a name="image-featurization-example"></a>Esempio di immagine featurization
 
-Il modello con training preliminare per le immagini supporta featurization delle immagini fornite. Per utilizzare il modello, si chiama il **featurizeImage** trasformare.
+Il modello con training preliminare per le immagini supporta featurization delle immagini fornite. Questo modello specifico è stato eseguito il training usando [CNTK](https://docs.microsoft.com/cognitive-toolkit/). 
+
+Per utilizzare il modello, si chiama il **featurizeImage** trasformare.
 
 + [featurizeImage: trasformare Featurization immagine di Machine Learning](https://docs.microsoft.com/r-server/r-reference/microsoftml/featurizeimage)
 
@@ -125,12 +147,12 @@ L'immagine deve essere ridimensionato per soddisfare i requisiti del modello con
 ```
 
 > [!NOTE]
-> 
-> Non è possibile leggere o modificare il modello con training preliminare stesso. Questo particolare modello è basato su [CNTK](https://docs.microsoft.com/cognitive-toolkit/) del modello, ma è stata compressa con un formato nativo per motivi di prestazioni.
+> Non è possibile leggere o modificare i modelli con training preliminare, perché queste vengono compresse utilizzando un formato nativo, per migliorare le prestazioni.
+
 
 ### <a name="text-analysis-example"></a>Esempio di analisi di testo
 
-Questo esempio viene illustrato l'utilizzo del modello con training preliminare per la classificazione:
+Vedere l'esempio seguente per una dimostrazione di come utilizzare il modello di testo training preliminare featurization classificazione del testo:
 
 [Analisi del sentiment utilizzando l'utilità di testo](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

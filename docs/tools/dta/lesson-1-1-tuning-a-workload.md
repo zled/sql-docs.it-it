@@ -18,11 +18,12 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f64ca747368ed22ea4d9f19027b446a98e19e87c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 287b45c3cf54cb043e111fd62e1d6fa286f9c9a0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Lezione 1-1: ottimizzazione di un carico di lavoro
@@ -44,7 +45,7 @@ In questa attività viene utilizzato il database di esempio [!INCLUDE[ssSampleDB
   
 6.  Selezionare la scheda **Opzioni di ottimizzazione** . In questa esercitazione non verranno impostate le opzioni di ottimizzazione, tuttavia è utile analizzare brevemente le opzioni di ottimizzazione predefinite. Premere F1 per visualizzare la Guida relativa a questa pagina a schede. Fare clic su **Opzioni avanzate** per visualizzare le opzioni di ottimizzazione aggiuntive. Fare clic su **?** nella finestra di dialogo **Opzioni di ottimizzazione avanzate** per ottenere informazioni sulle opzioni di ottimizzazione visualizzate. Fare clic su **Annulla** per chiudere la finestra di dialogo **Opzioni di ottimizzazione avanzate** lasciando selezionate le opzioni predefinite.  
   
-7.  Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. Durante l'esecuzione dell'analisi del carico di lavoro da parte di Ottimizzazione guidata motore di database, è possibile monitorarne lo stato nella scheda **Stato** . Dopo aver completato l'ottimizzazione, verrà visualizzata la scheda **Indicazioni** .  
+7.  Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. Durante l'esecuzione dell'analisi del carico di lavoro da parte di Ottimizzazione guidata motore di database, è possibile monitorarne lo stato nella scheda **Stato** . Dopo aver completato l'ottimizzazione, verrà visualizzata la scheda **Indicazioni**.  
   
     Se viene visualizzato un errore relativo alla data e ora di arresto dell'ottimizzazione, controllare l'impostazione **Data e ora arresto** nella scheda principale **Opzioni di ottimizzazione** . Verificare che i valori **Data e ora arresto** siano successivi alla data e all'ora correnti e, se necessario, modificarli.  
   

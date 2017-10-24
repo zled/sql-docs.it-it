@@ -26,11 +26,12 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7572e82178b211fba9967a88cb16c20d059c7b52
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c46fb930d1bba04b4a30725cc3c40e196b3f9a8b
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
@@ -56,16 +57,6 @@ UPPER ( character_expression )
  **varchar** o **nvarchar**  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono utilizzate le funzioni `UPPER` e `RTRIM` per restituire il cognome delle persone incluse nella tabella `Person` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in modo che ciascun cognome sia in maiuscolo, in formato ridotto e concatenato al nome.  
-  
-```  
-SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  
-FROM Person.Person  
-ORDER BY LastName;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'esempio seguente usa il `UPPER` e `RTRIM` funzioni per restituire il cognome delle persone incluse la `dbo.DimEmployee` in modo che sia in lettere maiuscole, ridotto e concatenato con il nome di tabella.  
   
 ```  

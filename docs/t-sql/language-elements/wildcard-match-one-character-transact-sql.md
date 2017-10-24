@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (carattere jolly per corrispondenze di singoli caratteri) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Utilizzare il carattere di sottolineatura `_` per corrispondi a qualsiasi carattere singolo in un'operazione di confronto di stringhe che comporta un criterio di corrispondenza, ad esempio `LIKE` e `PATINDEX`.  
+Utilizzare il carattere di sottolineatura _ per la corrispondenza di qualsiasi carattere singolo in un'operazione di confronto di stringhe che comporta un criterio di corrispondenza, ad esempio `LIKE` e `PATINDEX`.  
   
 ## <a name="examples"></a>Esempi  
 
@@ -62,10 +63,10 @@ msdb
 È possibile utilizzare più caratteri di sottolineatura per rappresentare più caratteri. Modifica il `LIKE` criteri per includere i due caratteri di sottolineatura `'m__%` include il database master nel risultato.
 
 ### <a name="b-more-complex-example"></a>B: esempio più complesso
- Nell'esempio seguente viene utilizzato l'operatore `_` per trovare tutte le persone nella tabella `Person` con un nome composto da tre lettere che termina con `an`.  
+ L'esempio seguente usa l'operatore _ per trovare tutti gli utenti di `Person` tabella, che hanno un nome che termina con tre lettere `an`.  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [% (Carattere jolly alla corrispondenza)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Carattere jolly alla corrispondenza)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; Mancata corrispondenza dei caratteri (jolly)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

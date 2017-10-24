@@ -1,7 +1,7 @@
 ---
 title: "Passaggio 4: Creare funzionalità di dati mediante T-SQL | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Passaggio 4: Creare funzionalità di dati mediante T-SQL
 
 Dopo l'esplorazione dei dati, sono raccolte alcune informazioni dai dati e sono pronti per passare a *funzionalità engineering*. Questo processo di creazione di funzionalità da dati non elaborati può essere un passaggio critico in analitica avanzate di modellazione.
+
+In questo articolo fa parte di un'esercitazione, [analitica Python nel database per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 In questo passaggio si apprenderà come creare funzionalità dai dati non elaborati tramite una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Tale funzione verrà quindi chiamata da una stored procedure per creare una tabella contenente i valori della funzionalità.
 
@@ -121,14 +123,11 @@ Nel passaggio successivo si apprenderà come usare queste funzionalità di dati 
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Passaggio 5: Training e salvataggio di un modello tramite T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Passaggio 5: Eseguire il training e salvare un modello di Python con T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
 [Passaggio 3: Esplorare e visualizzare i dati](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>Vedere anche
-
-[Servizi di Machine Learning con Python](../python/sql-server-python-services.md)
 
 

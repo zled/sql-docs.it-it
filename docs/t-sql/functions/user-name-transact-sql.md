@@ -27,11 +27,12 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5179a5d031dbc654f1624f4d64c3e94bf28efe40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
@@ -128,14 +129,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username"></a>E. Utilizzo di USER_NAME  
- Nell'esempio seguente viene restituito il nome utente per l'ID utente `13`.  
-  
-```  
-SELECT USER_NAME(13);  
-```  
-  
-### <a name="f-using-username-without-an-id"></a>F. Utilizzo di USER_NAME senza un ID  
+### <a name="e-using-username-without-an-id"></a>E. Utilizzo di USER_NAME senza un ID  
  Nell'esempio seguente viene restituito il nome dell'utente corrente senza specificare un ID.  
   
 ```  
@@ -144,14 +138,12 @@ SELECT USER_NAME();
   
  Di seguito è riportato il set di risultati per un utente attualmente connesso.  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
 ```  
 ------------------------------   
 User7                              
 ```  
   
-### <a name="g-using-username-in-the-where-clause"></a>G. Utilizzo di USER_NAME nella clausola WHERE  
+### <a name="f-using-username-in-the-where-clause"></a>F. Utilizzo di USER_NAME nella clausola WHERE  
  Nell'esempio seguente viene restituita la riga di `sysusers` contenente un nome che corrisponde al risultato della funzione di sistema `USER_NAME` per il numero di identificazione utente `1`.  
   
 ```  

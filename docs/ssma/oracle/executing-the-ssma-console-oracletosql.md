@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e86935bc6eef3ea1e709cd27c916d972dd13b9f
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>L'esecuzione la Console SSMA (OracleToSQL)
@@ -673,7 +673,7 @@ Convert-istruzione
   
 -   `write-summary-report-to`Specifica il percorso in cui verrà generato il report. Se viene specificato il percorso della cartella, solo file in base al nome **ConvertSQLReport.XML** viene creato. (attributo facoltativo)  
   
-    Report creazione è 2 ulteriormente mediante le sottocategorie,..,:  
+    Report creazione è 2 ulteriormente le sottocategorie, dei quali.:  
   
     -   report-errori (= "true/false" con valore predefinito è "false" (attributi facoltativi)).  
   

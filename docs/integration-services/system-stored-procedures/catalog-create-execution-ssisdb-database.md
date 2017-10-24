@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (database SSISDB)
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @folder_name =] *nome_cartella*  
+ [@folder_name =] *nome_cartella*  
  Nome della cartella contenente il pacchetto che deve essere eseguito. Il *nome_cartella* è **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Nome del progetto contenente il pacchetto che deve essere eseguito. Il *project_name* è **nvarchar (128)**.  
   
- [ @package_name =] *nome_pacchetto*  
+ [@package_name =] *nome_pacchetto*  
  Nome del pacchetto che deve essere eseguito. Il *nome_pacchetto* è **nvarchar (260)**.  
   
- [ @reference_id =] *reference_id*  
+ [@reference_id =] *reference_id*  
  Identificatore univoco per un riferimento all'ambiente. Questo parametro è facoltativo. Il *reference_id* è **bigint**.  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Utilizzare il valore 1 per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a 0 per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. Il *Use32bitruntime* è **bit**.  
  
- [ @runinscaleout =] *runinscaleout*  
- Indica se l'esecuzione in orizzontale. Utilizzare il valore 1 per eseguire il pacchetto in orizzontale. Utilizzare il valore 0 per eseguire il pacchetto senza orizzontale. Questo parametro è facoltativo. Si è impostato su DEFAULT_EXECUTION_MODE in [SSISDB]. [catalog]. [catalog_properties,] Se non specificato. Il *runinscaleout* è **bit**. 
+ [@runinscaleout =] *runinscaleout*  
+ Indica se l'esecuzione in orizzontale. Utilizzare il valore 1 per eseguire il pacchetto in orizzontale. Utilizzare il valore 0 per eseguire il pacchetto senza orizzontale. Questo parametro è facoltativo. Se non specificato, il relativo valore è impostato su DEFAULT_EXECUTION_MODE in [SSISDB]. [catalog]. [catalog_properties]. Il *runinscaleout* è **bit**. 
  
- [ @useanyworker =] *useanyworker*  
-  Indica se qualsiasi scala i thread di lavoro è consentito effettuare l'esecuzione. Utilizzare il valore 1 per eseguire il pacchetto con qualsiasi scala i thread di lavoro. Utilizzare il valore 0 per indicare che scala non tutti i lavori sono autorizzati a eseguire il pacchetto. Questo parametro è facoltativo. Si è impostato su 1, se non diversamente specificato. Il *useanyworker* è **bit**. 
+ [@useanyworker =] *useanyworker*  
+  Indica se qualsiasi scala i thread di lavoro è consentito effettuare l'esecuzione. Utilizzare il valore 1 per eseguire il pacchetto con qualsiasi scala i thread di lavoro. Utilizzare il valore 0 per indicare che scala non tutti i lavori sono autorizzati a eseguire il pacchetto. Questo parametro è facoltativo. Se non specificato, il valore è impostato su 1. Il *useanyworker* è **bit**. 
   
- [ @execution_id =] *valore di execution_id*  
+ [@execution_id =] *valore di execution_id*  
  Viene restituito l'identificatore univoco per un'istanza di esecuzione. Il *valore di execution_id* è **bigint**.  
 
   
@@ -77,7 +77,7 @@ create_execution [ @folder_name = folder_name
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene chiamato Catalog. create_execution per creare un'istanza di esecuzione per il pacchetto child1, che non è in orizzontale. Il pacchetto è incluso in Project1 di Integration Services. Nell'esempio viene chiamato catalog.set_execution_parameter_value per impostare i valori per i parametri Parameter1, Parameter2 e LOGGING_LEVEL. Inoltre viene chiamato catalog.start_execution per avviare un'istanza di esecuzione.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,7 +89,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
@@ -98,7 +97,7 @@ GO
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ e EXECUTE sul progetto e, se applicabile, autorizzazioni READ sull'ambiente a cui si fa riferimento  

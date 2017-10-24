@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c3d8adf8dedbee9b5c49cda25171f8f327fc5048
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac
 ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Installazione di SQL Server e creare un database in Ubuntu
@@ -27,9 +27,12 @@ In questa esercitazione introduttiva, installare innanzitutto 2017 di SQL Server
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario disporre di un computer con Ubuntu **almeno 3,25 GB** di memoria.
+È necessario disporre di un computer con Ubuntu 16.04 **almeno 3,25 GB** di memoria.
 
 Per installare Ubuntu sul proprio computer, accedere a [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). È anche possibile creare macchine virtuali Ubuntu in Azure. Vedere [creare e gestire le macchine virtuali Linux con l'interfaccia CLI di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+
+> [!NOTE]
+> In questo momento, il [sottosistema Windows per Linux](https://msdn.microsoft.com/commandline/wsl/about) per Windows 10 non è supportata come destinazione di installazione.
 
 Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in Linux](sql-server-linux-setup.md#system).
 
@@ -38,7 +41,7 @@ Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in L
 Per configurare SQL Server in Ubuntu, eseguire i comandi seguenti in un terminal per installare il **mssql server** pacchetto.
 
 > [!IMPORTANT]
-> Se si è precedentemente installato una versione CTP o candidata di SQL Server 2017, è innanzitutto necessario rimuovere il repository precedente prima di registrare uno degli archivi di GA. Per ulteriori informazioni, vedere [modificare repository dal repository di anteprima per il repository GA](sql-server-linux-change-repo.md)
+> Se si è precedentemente installato una versione CTP o candidata di SQL Server 2017, è innanzitutto necessario rimuovere il repository precedente prima di registrare uno degli archivi di GA. Per ulteriori informazioni, vedere [modificare repository dal repository di anteprima per il repository GA](sql-server-linux-change-repo.md).
 
 1. Importare le chiavi GPG archivio pubblico:
 

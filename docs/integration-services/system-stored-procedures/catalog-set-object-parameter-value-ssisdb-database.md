@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Viene impostato il valore di un parametro nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Viene associato il valore a una variabile di ambiente o viene assegnato un valore letterale che sarà utilizzato per impostazione predefinita nel caso non venga assegnato nessun altro valore.  
+  Viene impostato il valore di un parametro nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associa il valore di una variabile di ambiente o assegna un valore letterale che viene utilizzato per impostazione predefinita, quando nessun altro valore assegnato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  Tipo di parametro. Utilizzare il valore `20` per indicare un parametro del progetto o il valore `30` per indicare un parametro del pacchetto. Il *object_type* è **smallInt**.  
   
- [ @folder_name =] *nome_cartella*  
+ [@folder_name =] *nome_cartella*  
  Nome della cartella in cui è contenuto il parametro. Il *nome_cartella* è **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Nome del progetto in cui è contenuto il parametro. Il *project_name* è **nvarchar (128)**.  
   
- [ @parameter_name =] *parameter_name*  
+ [@parameter_name =] *parameter_name*  
  Nome del parametro. Il *parameter_name* è **nvarchar (128)**.  
   
- [ @parameter_value =] *parameter_value*  
+ [@parameter_value =] *parameter_value*  
  Valore del parametro. Il *parameter_value* è **sql_variant**.  
   
- [ @object_name =] *object_name*  
+ [@object_name =] *object_name*  
  Nome del pacchetto. Questo argomento è necessario quando il parametro è un parametro del pacchetto. Il *object_name* è **nvarchar (260)**.  
   
- [ @value_type =] *value_type*  
- Tipo di valore del parametro. Utilizzare il carattere `V` per indicare che *parameter_value* vengono assegnati a un valore letterale che verrà utilizzato per impostazione predefinita, nessun altro valore prima dell'esecuzione. Utilizzare il carattere `R` per indicare che *parameter_value* è un valore di riferimento ed è stata impostata sul nome di una variabile di ambiente. Questo argomento è facoltativo. Per impostazione predefinita, viene utilizzato il carattere `V`. Il *value_type* è **char (1)**.  
+ [@value_type =] *value_type*  
+ Tipo di valore del parametro. Utilizzare il carattere `V` per indicare che *parameter_value* è un valore letterale che viene utilizzato per impostazione predefinita, quando nessun altro valore assegnato prima dell'esecuzione. Utilizzare il carattere `R` per indicare che *parameter_value* è un valore di riferimento ed è stata impostata sul nome di una variabile di ambiente. Questo argomento è facoltativo. Per impostazione predefinita, viene utilizzato il carattere `V`. Il *value_type* è **char (1)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

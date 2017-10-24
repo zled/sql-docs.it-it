@@ -1,7 +1,7 @@
 ---
-title: Eseguire il provisioning della macchina virtuale di R Server Only SQL Server 2016 Enterprise in Azure | Microsoft Docs
+title: Eseguire il provisioning di una macchina virtuale per machine learning in Azure | Documenti Microsoft
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 10/16/2017
 ms.prod: r-server
 ms.reviewer: 
 ms.suite: 
@@ -15,120 +15,144 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3bfca0753984f09220d8ca4e4f6933c949daf2b
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: 7cb9e069fc3b537f8aab9d048a152435ad0cc6ac
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
-# <a name="advanced-analytics-virtual-machines-on-azure"></a>Analitica avanzate di macchine virtuali in Azure
+# <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Eseguire il provisioning di una macchina virtuale per machine learning in Azure
 
-Macchine virtuali in Azure sono una soluzione comoda per configurare rapidamente un ambiente completo del server per soluzioni di apprendimento automatico. Questo argomento vengono elencate alcune immagini di macchine virtuali che contengono R Server, SQL Server con machine learning o altri strumenti di analisi scientifica dei dati da Microsoft.
+Macchine virtuali in Azure sono una soluzione comoda per configurare rapidamente un ambiente completo del server per soluzioni di apprendimento automatico. In questo articolo sono elencate alcune immagini di macchine virtuali che contengono Server R, Machine Learning Server o SQL Server con machine learning.
+
+Questo elenco non intende essere completa, ma fornire solo i nomi delle immagini che sono correlati a Machine Learning Server o SQL Server Machine Learning Services, per facilitare l'individuazione.
 
 > [!TIP]
 > È consigliabile utilizzare la nuova versione del portale di Azure e Azure Marketplace. Alcune immagini non sono disponibili quando si esplorano la raccolta di Azure nel portale classico.
 
-Azure Marketplace contiene più macchine virtuali che supportano l'analisi scientifica dei dati. Questo elenco non intende essere completa, ma fornire solo i nomi delle immagini che includono servizi, per facilitare l'individuazione di apprendimento automatico di Microsoft R Server o SQL Server.
-
-## <a name="how-to-provision-a-vm"></a>Come eseguire il provisioning di una macchina virtuale
+## <a name="how-to-provision-a-virtual-machine"></a>Come eseguire il provisioning di una macchina virtuale
 
 Se si ha familiarità con l'utilizzo di macchine virtuali di Azure, è consigliabile che vedere gli articoli per ulteriori informazioni sull'utilizzo del portale e la configurazione di una macchina virtuale.
 
 + [Macchine virtuali - Introduzione](https://azure.microsoft.com/documentation/learning-paths/virtual-machines/)
-+ [Introduzione a macchine virtuali di Windows](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-hero-tutorial/)
++ [Introduzione a macchine virtuali di Windows](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/)
 
-### <a name="find-an-image"></a>Trovare un'immagine
+## <a name="find-a-machine-learning-image"></a>Trovare un'immagine di machine learning
 
-1. Il dashboard di Azure fare clic su **Marketplace**.
+1. Dal portale di Azure (portal.azure.com), fare clic su **macchine virtuali**, oppure fare clic su **New**.
 
-    - Fare clic su **Intelligence e analitica** o **database**, e quindi digitare "R" il **filtro** controllo per visualizzare un elenco di macchine virtuali R Server.
-    - Altri possibili le stringhe per il **filtro** controllo sono *analisi scientifica dei dati* e *machine learning*
-    - Utilizzare il carattere jolly % nella ricerca per trovare i nomi di macchina virtuale che contengono una stringa di destinazione, ad esempio *R* o *Julia*.
+2. Individuare la casella di ricerca nella parte superiore della pagina, è possibile utilizzare per filtrare le risorse in base al nome. 
 
-2. Per ottenere R Server per Windows, selezionare **R Server solo SQL Server 2016 Enterprise Edition**.
+3. Digitare "R Server" (o "ML Server") il **filtro** controllo per visualizzare un elenco di risorse correlate. Fare clic su **ricerca in Marketplace** per visualizzare le macchine virtuali.
+
+    > [!TIP]
+    > 
+    > Altre stringhe per il controllo filtro possibili sono "analisi scientifica dei dati" e "machine learning".
+    > 
+    > Utilizzare il `%` jolly nella ricerca per trovare i nomi delle macchine virtuali. Ad esempio, è possibile digitare `"`% % Julia` or `%R %'.
+
+4. Per ottenere R Server per Windows, selezionare **R Server solo SQL Server 2016 Enterprise Edition**.
   
-    [R Server](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) è concesso in licenza come una funzionalità di SQL Server Enterprise Edition, ma la versione 9.1. viene installato come server autonomo e gestite in base ai criteri di supporto del ciclo di vita moderna.
+    [R Server](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) è concesso in licenza come una funzionalità di SQL Server Enterprise Edition, ma la versione 9.1 viene installato come server autonomo e viene gestita in base ai criteri di supporto del ciclo di vita moderna.
 
-3. Dopo la creazione e l'esecuzione della macchina virtuale fare clic sul pulsante **Connetti** per aprire una connessione e accedere alla nuova macchina virtuale.
+    > [!NOTE] 
+    > 
+    > Questo rientra, cercare per la versione di una nuova macchina virtuale che include 2017 di SQL Server e il 9.2.1 versione del Server di Machine Learning.
+    > Fino ad allora, è possibile aggiornare la versione di SQL Server installata nella macchina virtuale utilizzando il Centro installazione SQL Server e scegliendo l'opzione di aggiornamento. Per ulteriori informazioni, vedere [l'aggiornamento di SQL Server mediante l'installazione guidata](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup).
 
-4. Dopo la connessione, si potrebbe essere necessario installare gli strumenti di sviluppo o di altri strumenti di R.
+5. Dopo la macchina virtuale è stata creata e sia in esecuzione, fare clic su di **Connetti** pulsante per aprire una connessione e accedere al nuovo computer.
+
+5. Dopo la connessione, è possibile installare il pacchetto R aggiuntivo o lo strumento di sviluppo preferito.
 
 ### <a name="install-additional-r-tools"></a>Installare gli strumenti di R aggiuntivi
 
-Per impostazione predefinita, Microsoft R Server include tutti gli strumenti R installati con un'installazione di base di R, tra cui RTerm ed RGui. Un collegamento a RGui è stato aggiunto al desktop, se si vuole iniziare a usare R sin da subito.
+Per impostazione predefinita, Microsoft R Server include tutti gli strumenti R installati con un'installazione di base di R, tra cui RTerm ed RGui. Un collegamento a RGui è stata aggiunta anche al desktop.
 
-Tuttavia, può essere necessario installare altri strumenti di R, ad esempio RStudio, gli strumenti R per Visual Studio (RTVS) o Microsoft R Client. Per istruzioni e percorsi di download e istruzioni, vedere i collegamenti seguenti:
+Tuttavia, può essere necessario installare altri strumenti di R, ad esempio RStudio, strumenti R per Visual Studio (RTVS) o Microsoft R Client. Per istruzioni e percorsi di download e istruzioni, vedere i collegamenti seguenti:
+
 + [Strumenti R per Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)
 + [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/install-r-client-windows)
 + [RStudio per Windows](https://www.rstudio.com/products/rstudio/download/)
 
 Al termine dell'installazione, assicurarsi di modificare il percorso di runtime predefinito di R in modo che tutti gli strumenti di sviluppo di R usino le librerie di Microsoft R Server.
 
-### <a name="configure-server-for-web-services"></a>Configurare i server per servizi web
+### <a name="configure-r-server-to-support-web-services"></a>Configurare R Server per supportare i servizi web
 
-Se la macchina virtuale include R Server, è richiesta una configurazione aggiuntiva per usare la distribuzione dei servizi Web, l'esecuzione remota o per usare R Server come server di distribuzione all'interno dell'organizzazione. Per istruzioni, vedere [Configure R Server for Operationalization](https://msdn.microsoft.com/microsoft-r/operationalize/configuration-initial) (Configurare R Server per l'operazionalizzazione).
+Configurazione aggiuntiva è necessaria per utilizzare una distribuzione del servizio web, l'esecuzione remota, o di usare R Server come server di distribuzione nell'organizzazione. Per istruzioni, vedere [configurazione R Server per rendere operative le analitica](https://docs.microsoft.com/machine-learning-server/install/operationalize-r-server-one-box-config).
 
 > [!NOTE]
 > Configurazione aggiuntiva non è necessario se si desidera utilizzare i pacchetti, ad esempio RevoScaleR o MicrosoftML.
 
-## <a name="r-server-images"></a>R Server immagini
+## <a name="other-virtual-machines"></a>Altre macchine virtuali
 
-### <a name="microsoft-data-science-virtual-machine"></a>Impostazioni della macchina virtuale Microsoft per l'analisi scientifica dei dati
+Le immagini seguenti sono disponibili da Azure Marketplace e includere completamente configurate computer gli strumenti di apprendimento, ma non includono necessariamente SQL Server.
 
-Sono configurate per Microsoft R Server, nonché Python (distribuzione Anaconda), un server Jupyter notebook, Visual Studio Community Edition, Power BI Desktop, di Azure SDK e SQL Server Express edition.
+### <a name="data-science-virtual-machine"></a>Macchina virtuale di analisi scientifica dei dati
 
-La versione di Windows viene eseguito in Windows Server 2012 e contiene molti strumenti speciali per la modellazione e analitica, tra cui CNTK e mxnet, pacchetti R più diffusi, ad esempio xgboost e Vowpal Wabbit.
+Questa immagine è preconfigurata con Microsoft R Server, nonché Python (distribuzione Anaconda), un server Jupyter notebook, Visual Studio Community Edition, Power BI Desktop, di Azure SDK e SQL Server Express edition.
 
-### <a name="linux-data-science-virtual-machine"></a>Macchina virtuale di analisi scientifica dei dati di Linux
+La versione di Windows viene eseguito in Windows Server 2012 e contiene molti strumenti speciali per la modellazione e analitica, tra cui [CNTK](https://www.microsoft.com/cognitive-toolkit/), [mxNet](https://mxnet.incubator.apache.org/), e dei pacchetti R più diffusi, ad esempio **xgboost**.
 
-Sono disponibili inoltre strumenti comuni per attività di sviluppo e di analisi scientifica dei dati, incluso Microsoft R Open, Microsoft R Server Developer Edition, Anaconda Python e Jupyter notebook per Python, R e Julia.
+Le versioni di Linux vengono fornite per Ubuntu, in Centos e Centos CSP e contengono molti strumenti comuni per le attività di sviluppo e di analisi scientifica dei dati.
 
-Questa immagine di macchina virtuale è stato recentemente aggiornata per includere JupyterHub, software open source che consente l'utilizzo da più utenti, tramite i metodi di autenticazione diversi, tra cui l'autenticazione di account locali del sistema operativo e l'autenticazione account Github. JupyterHub è un'opzione particolarmente utile se si desidera eseguire una classe di training e tutti gli studenti condividono lo stesso server, ma utilizzare directory e i blocchi appunti separati.
+Per ulteriori informazioni, vedere [Introduzione a Data Science macchina virtuale di Azure per Linux e Windows](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm).
 
-Le immagini vengono fornite per Ubuntu, in Centos e Centos CSP.
+Questa immagine è stata aggiornata di recente in modo da includere: 
 
-### <a name="r-server-only-sql-server-2016-enterprise"></a>R Server solo SQL Server 2016 Enterprise Edition
++ Supporto per Julia, la lingua di analisi scientifica dei dati potenti e scalabili del futuro 
++ JupyterHub, che è un'opzione utile quando si desidera eseguire una classe di training e tutti gli studenti condividono lo stesso server, ma utilizzare directory e i blocchi appunti separati.
 
-Questa macchina virtuale include un programma di installazione autonomo per [R Server 9.1.](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) che supporta il nuovo modello di licenza del ciclo di vita di Software più recenti.
+Per ulteriori informazioni sugli strumenti supportati e Framework di machine learning, vedere [conoscere la macchina virtuale di analisi scientifica dei dati](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-tools-overview)
 
- R Server è disponibile anche nelle immagini per Linux CentOS versione 7.2, Linux RedHat 7.2 e Ubuntu versione 16.04.
+### <a name="r-server-virtual-machines"></a>Macchine virtuali R Server
+
+Oltre al **R Server solo SQL Server 2016 Enterprise Edition** immagine, è possibile ottenere macchine virtuali autonome che contengono R Server. Le immagini sono disponibili per Linux CentOS versione 7.2, Linux RedHat 7.2 e Ubuntu versione 16.04.
+
+Per ulteriori informazioni, vedere [Machine Learning Server nel Cloud](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
 
  > [!NOTE]
  > Queste macchine virtuali sostituiscono la **versione RRE della macchina virtuale di Windows** precedentemente disponibile in Azure Marketplace.
 
-## <a name="sql-server-images"></a>Immagini di SQL Server
+### <a name="sql-server-virtual-machines"></a>Macchine virtuali di SQL Server
 
-Per usare R Services (In-Database) o Machine Learning Services, è necessario installare una delle macchine virtuali SQL Server Enterprise Edition o Developer edition e aggiungere il servizio machine learning, come descritto qui: [l'installazione di SQL Server R Services in un Macchina virtuale di Azure](../../advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+Sono disponibili due opzioni per l'utilizzo di apprendimento di SQL Server in Azure:
+
++ Ottiene una delle immagini di macchina virtuale che include SQL Server R Services preinstallato.
++ Creare una macchina virtuale di Azure e installare SQL Server Enterprise Edition o Developer edition utilizzando il proprio codice di licenza. 
+  
+    Quindi, eseguire nuovamente l'installazione per aggiungere e abilitare il servizio machine learning, come descritto qui: [l'installazione di SQL Server R Services in una macchina virtuale Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
++ Creare un Database di SQL Azure mediante un livello di servizio in grado di supportare l'apprendimento e utilizzare la nuova funzionalità di R Services attualmente in anteprima. Per ulteriori informazioni, vedere [database SQL di Azure](../r/using-r-in-azure-sql-database.md).
 
 > [!NOTE]
-> Attualmente, machine learning servizi non sono supportati nelle macchine virtuali Linux per SQL Server 2017, o in Database SQL di Azure. Per Windows, è necessario utilizzare SQL Server 2016 SP1 o SQL Server 2017.
+> Attualmente, servizi di SQL Server Machine Learning non è supportato nelle macchine virtuali Linux per SQL Server 2017. Tuttavia, è possibile eseguire l'assegnazione dei punteggi in un modello con training utilizzando la funzione di stima di T-SQL. Per ulteriori informazioni, vedere [in SQl Server Native di assegnazione dei punteggi](../sql-native-scoring.md). 
 
-La macchina virtuale di analisi scientifica dei dati include anche SQL Server 2016 con la funzionalità di servizi R già abilitata.
+### <a name="virtual-machines-for-deep-learning"></a>Macchine virtuali per la formazione 
 
+Microsoft fornito in precedenza, il Toolkit di apprendimento completa per i dati dell'analisi scientifica dei macchina virtuale, che è possibile aggiungere a una macchina virtuale scienza esistente dati. Questo toolkit ora viene sostituito dalla macchina virtuale di apprendimento completa, che contiene gli strumenti di apprendimento completa comuni:
 
-## <a name="other-vms"></a>Altre macchine virtuali
++ Le edizioni di GPU di formazione Framework come Microsoft cognitivi Toolkit, TensorFlow, Keras e Caffe
++ Driver GPU predefiniti
++ Una raccolta di strumenti per l'elaborazione di testo e immagine
++ Strumenti di sviluppo di Enterprise, ad esempio Microsoft R Server Developer Edition, Python Anaconda, Jupyter notebook per Python e R
++ Strumenti di sviluppo per Python, R, SQL Server e molto altro ancora
++ Esempi end-to-end per una conoscenza di testo e immagine
 
-### <a name="deep-learning-toolkit-for-the-data-science-virtual-machine"></a>Deep Learning Toolkit per la macchina virtuale di analisi scientifica dei dati
-
-La macchina virtuale contiene lo stesso computer disponibili nella macchina virtuale di analisi scientifica dei dati, strumenti di apprendimento, ma con le versioni GPU di mxnet, CNTK, TensorFlow e Keras. Questa immagine può essere utilizzata solo su istanze di Azure GPU N-series. 
-
-Il toolkit di formazione fornisce inoltre un set di esempio deep learning soluzioni che usano la GPU, inclusi il riconoscimento di immagini per il database CIFAR 10 e un esempio di riconoscimento di caratteri nel database MNIST. Le istanze GPU sono attualmente disponibili nel centro-meridionali, Stati Uniti orientali, Europa occidentale e Asia sudorientale.
+La macchina virtuale di apprendimento completa è disponibile nel server di Windows 2016 o piattaforme Ubuntu Linux. Per ulteriori informazioni, vedere [di formazione e AI Framework](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-deep-learning-ai-frameworks).
 
 > [!IMPORTANT]
-> Le istanze della GPU sono attualmente disponibili solo nell'area centro-meridionale degli Stati Uniti.
-
+> 
+> La distribuzione di questa macchina virtuale richiede le immagini di macchina virtuale di Azure GPU NC-series, sono disponibili in aree di Azure limitate. Per informazioni sulla disponibilità, vedere [i prodotti disponibili per area](https://azure.microsoft.com/en-us/regions/services/). Quando si esegue il provisioning della macchina virtuale, assicurarsi di utilizzare **HDD** come tipo di disco, non **SSD**.
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
+In questa sezione contiene alcune domande frequenti sulle macchine virtuali di Microsoft di apprendimento automatico.
+
 ### <a name="can-i-install-a-virtual-machine-with-sql-server-2017"></a>È possibile installare una macchina virtuale con SQL Server 2017?
 
-Le immagini sono disponibili che contengono 2017 CTP 2.0 di SQL Server per gli ambienti Linux, ma questi ambienti non supportano servizi di Machine Learning. 
+Una macchina virtuale basato su Windows per SQL Server 2017 Enterprise Edition che include i servizi di Machine Learning sarà presto disponibile. Cercare gli annunci in questi siti di blog:
 
-Una macchina virtuale basato su Windows per SQL Server 2017 Enterprise Edition che include i servizi di Machine Learning saranno disponibile dopo il rilascio pubblico. 
-
-In alternativa, è possibile utilizzare l'immagine di SQL Server 2016 e aggiornare l'istanza di R, come descritto qui: [aggiornare un'istanza utilizzando SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). 
-
-In alternativa, creare una macchina virtuale e scaricare l'anteprima della versione CTP 2.0 di [SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017).
++ [Cortana Intelligence e machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
++ [Data Platform Insider](https://blogs.technet.microsoft.com/dataplatforminsider/)
 
 ### <a name="how-do-i-access-data-in-an-azure-storage-account"></a>Come si accede ai dati in un account di archiviazione di Azure?
 
@@ -142,8 +166,5 @@ Quando è necessario usare i dati dell'account di archiviazione di Azure, è pos
 
 È possibile leggere i dati dall'archivio ADLS con RevoScaleR, se si fa riferimento allo stesso modo che un HDFS file system utilizzando webHDFS l'account di archiviazione.  Per ulteriori informazioni, vedere l'articolo: [usando R per eseguire operazioni di file System in un archivio Azure Data Lake](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
 
-## <a name="see-also"></a>Vedere anche
-
-[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)
 
 

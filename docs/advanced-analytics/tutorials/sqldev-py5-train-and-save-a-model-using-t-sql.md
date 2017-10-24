@@ -1,7 +1,7 @@
 ---
-title: 'Passaggio 5: Training e salvataggio di un modello usando T-SQL | Microsoft Docs'
+title: 'Passaggio 5: Eseguire il training e salvare un modello di Python con T-SQL | Documenti Microsoft'
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,30 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80a47819dfbb2e96162a49730e0dcf0b1b340f07
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 11fa031229d8bc08a9091c3fa6f85e81468d7379
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-5-train-and-save-a-model-using-t-sql"></a>Passaggio 5: Eseguire il training e salvare un modello utilizzando T-SQL
+# <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Passaggio 5: Eseguire il training e salvare un modello di Python con T-SQL
 
-In questo passaggio, è illustrato come eseguire il training di un modello di machine learning con i pacchetti Python **scikit-informazioni su** e **revoscalepy**. Queste librerie Python sono già installate con SQL Server Machine Learning Services, pertanto è possibile caricare i moduli e chiamare le funzioni necessarie all'interno di una stored procedure. Il training del modello sarà eseguito usando le funzionalità di dati appena create. Il modello sarà poi salvato in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+In questo articolo fa parte di un'esercitazione, [analitica Python nel database per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
+
+In questo passaggio, è illustrato come eseguire il training di un modello di machine learning con i pacchetti Python **scikit-informazioni su** e **revoscalepy**. Queste librerie Python sono già installate con servizi di SQL Server Machine Learning.
+
+Caricare i moduli e chiamare le funzioni necessarie per creare ed eseguire il training del modello tramite una stored procedure SQL Server. Il modello richiede le funzionalità di dati che è progettato nelle lezioni precedenti. Infine, si salva il modello con training per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella.
+
+> [!IMPORTANT]
+> Sono state apportate numerose modifiche nel **revoscalepy** pacchetto, che ha richiesto modifiche minori nel codice per questa esercitazione. Vedere il [l'elenco delle modifiche](sqldev-py6-operationalize-the-model.md#changes) alla fine di questa esercitazione. 
+> 
+> Se è installato Servizi di Python utilizzando una versione provvisoria di SQL Server 2017, si consiglia di eseguire l'aggiornamento alla versione più recente. 
 
 ## <a name="split-the-sample-data-into-training-and-testing-sets"></a>Suddividere i dati di esempio in set di training e set di testing
 
-1. Eseguire i comandi T-SQL seguenti per creare una stored procedure che divide i dati di nyctaxi\_tabella di esempio in due parti: nyctaxi\_esempio\_training e nyctaxi\_esempio\_test.
+1. È possibile utilizzare la stored procedure **TrainTestSplit** per dividere i dati di nyctaxi\_tabella di esempio in due parti: nyctaxi\_esempio\_training e nyctaxi\_esempio\_test. 
+
+    Questa stored procedure debba essere creata automaticamente, ma è possibile eseguire il codice seguente per crearla:
 
     ```SQL
     CREATE PROCEDURE [dbo].[TrainTestSplit] (@pct int)
@@ -47,20 +58,27 @@ In questo passaggio, è illustrato come eseguire il training di un modello di ma
     GO
     ```
 
-2. Eseguire la stored procedure e digitare un numero intero che rappresenta la percentuale di dati allocati al set di training. Ad esempio, l'istruzione seguente sarebbe allocare il 60% dei dati al set di training. Set di training e dati di test vengono archiviati in due tabelle separate.
+2. Per dividere i dati utilizzando una divisione personalizzata, eseguire la stored procedure, digitare un numero intero che rappresenta la percentuale di dati allocati al set di training. Ad esempio, l'istruzione seguente sarebbe allocare il 60% dei dati al set di training.
 
     ```SQL
     EXEC TrainTestSplit 60
     GO
     ```
 
-## <a name="build-a-logistic-regression-model-using-scikit-learn"></a>Compila un modello di regressione logistica utilizzando scikit-informazioni su
+## <a name="build-a-logistic-regression-model"></a>Compilare un modello di regressione logistica
 
-In questa sezione creare una stored procedure che può essere usata per eseguire il training di un modello utilizzando i dati di training che è stato appena predisposto. Questa stored procedure definisce i dati di input e utilizza un **scikit-informazioni** funzione per eseguire il training di un modello di regressione logistica. Chiamare il runtime di Python che viene installato con SQL Server utilizzando la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+Dopo aver preparati i dati, è possibile utilizzare, per il training di un modello. Questo caso chiamando una stored procedure che esegue codice Python, accettando come input nella tabella di dati di training. Per questa esercitazione, creare due modelli, entrambi i modelli di classificazione binaria:
 
-Per rendere più semplice ripetere il training del modello, è possibile eseguire il wrapping della chiamata a sp_execute_exernal_script in un'altra stored procedure e passare i nuovi dati di training come parametro. In questa sezione verrà illustrati il processo.
++ La stored procedure **TrainTipPredictionModelRxPy** crea un modello di stima suggerimento utilizzando il **revoscalepy** pacchetto.
++ La stored procedure **TrainTipPredictionModelSciKitPy** crea un modello di stima suggerimento utilizzando il **scikit-informazioni** pacchetto.
 
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aprire una nuova **Query** finestra ed eseguire l'istruzione seguente per creare la stored procedure _TrainTipPredictionModelSciKitPy_.  Si noti che la stored procedure contiene una definizione dei dati di input, in modo che non è necessario fornire una query di input.
+Ogni stored procedure utilizza i dati di input fornite per creare ed eseguire il training di un modello di regressione logistica. Viene eseguito il wrapping di tutto il codice Python in stored procedure di sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+Per rendere più semplice ripetere il training del modello su nuovi dati, eseguire il wrapping della chiamata a sp_execute_exernal_script in un'altra stored procedure e passare i nuovi dati di training come parametro. In questa sezione verrà illustrati il processo.
+
+### <a name="traintippredictionmodelscikitpy"></a>TrainTipPredictionModelSciKitPy
+
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aprire una nuova **Query** finestra ed eseguire l'istruzione seguente per creare la stored procedure _TrainTipPredictionModelSciKitPy_.  La stored procedure contiene una definizione dei dati di input, pertanto non è necessario fornire una query di input.
 
     ```SQL
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelSciKitPy;
@@ -74,7 +92,6 @@ Per rendere più semplice ripetere il training del modello, è possibile eseguir
       @script = N'
       import numpy
       import pickle
-      import pandas
       from sklearn.linear_model import LogisticRegression
       
       ##Create SciKit-Learn logistic regression model
@@ -117,11 +134,13 @@ Per rendere più semplice ripetere il training del modello, è possibile eseguir
 
     *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
 
-## <a name="build-a-logistic-model-using-the-revoscalepy-package"></a>Compila un modello logistic utilizzando il _revoscalepy_ pacchetto
+### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
-A questo punto, creare una stored procedure diversa che utilizza il nuovo **revoscalepy** pacchetto per il training di un modello di regressione logistica. Il **revoscalepy** del pacchetto di Python contiene gli oggetti, trasformazione e algoritmi simili a quelli forniti per il linguaggio R **RevoScaleR** pacchetto. Con questa libreria, è possibile creare un contesto di calcolo, spostare dati tra i contesti di calcolo, la trasformazione dei dati ed eseguire il training di modelli predittivi utilizzando algoritmi comuni, ad esempio la regressione logistica e lineare, gli alberi delle decisioni e altro ancora. Per ulteriori informazioni, vedere [novità revoscalepy?](../python/what-is-revoscalepy.md)
+Questa stored procedure utilizza il nuovo **revoscalepy** pacchetto, ovvero un nuovo pacchetto per Python. Contiene gli oggetti, trasformazione e algoritmi simili a quelli forniti per il linguaggio R **RevoScaleR** pacchetto. 
 
-1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aprire una nuova **Query** finestra ed eseguire l'istruzione seguente per creare la stored procedure _TrainTipPredictionModelRxPy_.  Questo modello utilizza anche i dati di training che è stato appena predisposto. Poiché la stored procedure include già una definizione dei dati di input, non è necessario fornire una query di input.
+Utilizzando **revoscalepy**, è possibile creare contesti di calcolo remoto, spostare i dati tra contesti, i dati di trasformazione e training di modelli predittivi utilizzando algoritmi comuni, ad esempio la regressione logistica e lineare, gli alberi delle decisioni, di calcolo e altre. Per ulteriori informazioni, vedere [novità revoscalepy?](../python/what-is-revoscalepy.md)
+
+1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aprire una nuova **Query** finestra ed eseguire l'istruzione seguente per creare la stored procedure _TrainTipPredictionModelRxPy_.  Poiché la stored procedure include già una definizione dei dati di input, non è necessario fornire una query di input.
 
     ```SQL
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -135,11 +154,10 @@ A questo punto, creare una stored procedure diversa che utilizza il nuovo **revo
       @script = N'
     import numpy
     import pickle
-    import pandas
-    from revoscalepy.functions.RxLogit import rx_logit_ex
+    from revoscalepy.functions.RxLogit import rx_logit
     
-    ## Create a logistic regression model using rx_logit_ex function from revoscalepy package
-    logitObj = rx_logit_ex("tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance", data = InputDataSet);
+    ## Create a logistic regression model using rx_logit function from revoscalepy package
+    logitObj = rx_logit("tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance", data = InputDataSet);
     
     ## Serialize model
     trained_model = pickle.dumps(logitObj)
@@ -159,11 +177,9 @@ A questo punto, creare una stored procedure diversa che utilizza il nuovo **revo
 
     Questa stored procedure esegue i passaggi seguenti come parte del training del modello:
 
-    - Eseguire il training di un modello di regressione logistica usando revoscalepy pacchetto su nyctaxi\_esempio\_dati di training.
-    - La query SELECT usa la funzione scalare personalizzata _fnCalculateDistance_ per calcolare la distanza diretta tra la posizione di salita e discesa dei passeggeri. I risultati della query vengono archiviati nella variabile di input predefinito Python, `InputDataset`.
-    - Lo script Python chiama la funzione LogisticRegression del revoscalepy, incluso in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], per creare il modello di regressione logistica.
-    - La variabile binaria _tipped_ viene usata come *etichetta* o come colonna dei risultati. Il modello si adatta usando le colonne delle funzionalità seguenti:  _passenger_count_, _trip_distance_, _trip_time_in_secs_e _direct_distance_.
-    - Il modello con training, incluso nella variabile Python `logitObj`viene serializzata e inserire il parametro di output [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Che l'output viene inserito nella tabella di database _nyc_taxi_models_, insieme al nome, come una nuova riga, in modo che è possibile recuperare e usarlo per le stime future.
+    - La query SELECT si applica la funzione scalare personalizzata _fnCalculateDistance_ per calcolare la distanza tra i percorsi di ritiro e deposito diretta. I risultati della query vengono archiviati nella variabile di input predefinito Python, `InputDataset`.
+    - La variabile binaria _inclinato_ viene utilizzato come il *etichetta* o colonna risultato e il modello si adatta utilizzando queste colonne di funzionalità: _passenger_count_, _trip_ distanza_, _trip_time_in_secs_, e _direct_distance_.
+    - Il modello con Training viene serializzato e archiviato nella variabile Python `logitObj`. Aggiungendo la parola chiave T-SQL OUTPUT, è possibile aggiungere la variabile come output della stored procedure. Nel passaggio successivo, tale variabile viene utilizzata per inserire il codice binario del modello in una tabella di database _nyc_taxi_models_. Questo meccanismo rende è più facile archiviare e riutilizzare i modelli.
 
 2. Eseguire la stored procedure come indicato di seguito per inserire il modello con training **revoscalepy** modello in _nyc la tabella\_taxi\_modelli.
 
@@ -187,9 +203,9 @@ Nel passaggio successivo, utilizzare i modelli con training per creare stime.
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Passaggio 6: Rendere operativo il modello](sqldev-py6-operationalize-the-model.md)
+[Passaggio 6: Rendere operativo il modello di Python utilizzando SQL Server](sqldev-py6-operationalize-the-model.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Passaggio 4: Creare funzionalità di dati con T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Passaggio 4: Creare funzionalità di dati mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

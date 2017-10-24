@@ -1,7 +1,7 @@
 ---
 title: DAX nei modelli tabulari (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
-ms.date: 04/10/2017
+ms.date: 10/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX nei modelli tabulari (SSAS tabulare)
-  Data Analysis Expressions (DAX) è un linguaggio delle formule utilizzato per creare calcoli personalizzati in servizi di analisi, Power BI Desktop e Power Pivot in Excel. Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
+  Data Analysis Expressions (DAX) è un linguaggio delle formule utilizzato per creare calcoli personalizzati in Analysis Services, Power BI Desktop e Power Pivot in Excel. Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
   
  Mentre DAX viene utilizzato in Analysis Services, Power BI Desktop e Power Pivot in Excel, in questo argomento si applica più ai progetti di modello tabulare di Analysis Services creati in SQL Server Data Tools (SSDT).  
   
-##  <a name="bkmk_DAX"></a> Formule DAX in colonne calcolate, misure e filtri di riga  
+##  <a name="bkmk_DAX"></a>Formule DAX in colonne calcolate, misure e filtri di riga  
  Per i modelli tabulari creati in SSDT, le formule DAX vengono utilizzate in colonne calcolate, misure e filtri di riga.  
   
 ### <a name="calculated-columns"></a>Colonne calcolate  
@@ -202,6 +202,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Funzioni matematiche e trigonometriche  
  Le funzioni matematiche in DAX sono molto simili alle funzioni matematiche e trigonometriche di Excel. Esistono tuttavia alcune piccole differenze nei tipi di dati numerici utilizzati dalle funzioni DAX. Per altre informazioni, vedere [Funzioni matematiche e trigonometriche (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f).  
+ 
+### <a name="other-functions"></a>Altre funzioni  
+ Queste funzioni eseguono azioni univoche che non possono essere definite da una delle categorie, la maggior parte delle altre funzioni appartengono a. Per ulteriori informazioni, vedere [altre funzioni (DAX)](https://msdn.microsoft.com/mt150101).
   
 ### <a name="statistical-functions"></a>Funzioni statistiche  
  In DAX sono disponibili funzioni statistiche per l'esecuzione di aggregazioni. Oltre a creare somme e medie o a trovare valori minimi e massimi, in DAX è anche possibile filtrare una colonna prima di aggregare o creare aggregazioni in base a tabelle correlate. Per altre informazioni, vedere [Funzioni statistiche (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559).  
@@ -400,3 +403,4 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Origini dati supportate](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

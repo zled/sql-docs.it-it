@@ -39,11 +39,12 @@ caps.latest.revision: 212
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e80db92abd988b86b1224f07c92ecb2b20bb883
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (Transact-SQL di SQL Server)
@@ -535,9 +536,9 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Creazione di un database che specifica i file di dati e i file di log delle transazioni  
- Nell'esempio seguente viene creato il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè`Sales`_`dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales`\_`dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales`\_`log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .  
+ Nell'esempio seguente viene creato il database `Sales`. Poiché la parola chiave PRIMARY non è specificata, il primo file (`Sales_dat`) diventa il file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales_dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales_log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -559,7 +560,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Creazione di un database specificando più file di dati e più file di log delle transazioni  
  Nell'esempio seguente viene creato il database `Archive` che include tre file di dati da `100-MB` e due file del log delle transazioni da `100-MB`. Il file primario è il primo file dell'elenco e viene specificato in modo esplicito con la parola chiave `PRIMARY`. I file di log delle transazioni vengono specificati dopo le parole chiave `LOG ON`. Si notino le estensioni utilizzate per i file nell'opzione `FILENAME`: `.mdf` per i file di dati primari, `.ndf` per i file di dati secondari e `.ldf` per i file di log delle transazioni. In questo esempio il database viene collocato nell'unità `D:` anziché con il database `master`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -597,7 +598,7 @@ GO
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. Creazione di un database con filegroup  
  Nell'esempio seguente viene creato il database `Sales` che include i filegroup seguenti:  
   
--   Il filegroup primario con i file `Spri1`_`dat` e `Spri2` \_ `dat`. Gli incrementi specificati nel parametro FILEGROWTH per tali file corrispondono al `15%`.  
+-   Il filegroup primario con i file `Spri1_dat` e `Spri2_dat`. Gli incrementi specificati nel parametro FILEGROWTH per tali file corrispondono al `15%`.  
   
 -   Un filegroup `SalesGroup1` con i file `SGrp1Fi1` e `SGrp1Fi2`.  
   
@@ -605,7 +606,7 @@ GO
   
  In questo esempio i file di dati e di log vengono collocati in dischi diversi al fine di migliorare le prestazioni.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -654,7 +655,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. Collegamento di un database  
  Nell'esempio seguente viene scollegato il database `Archive` creato nell'esempio D, quindi viene collegato tramite la clausola `FOR ATTACH`. `Archive` è stato definito in modo da avere più dati e file di log. Tuttavia, poiché il percorso dei file non è stato modificato dopo la creazione, deve essere specificato solo il file primario nella clausola `FOR ATTACH`. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tutti i file full-text inclusi nel database in fase di collegamento verranno collegati assieme al database.  
   
-```  
+```tsql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -666,11 +667,11 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. Creazione di uno snapshot del database  
- Nell'esempio seguente viene creato lo snapshot di database `sales`_`snapshot0600`. Poiché uno snapshot di database è in sola lettura, non è possibile specificare un file di log. In conformità con la sintassi, viene specificato ogni file nel database di origine, mentre i filegroup non vengono specificati.  
+ Nell'esempio seguente viene creato lo snapshot di database `sales_snapshot0600`. Poiché uno snapshot di database è in sola lettura, non è possibile specificare un file di log. In conformità con la sintassi, viene specificato ogni file nel database di origine, mentre i filegroup non vengono specificati.  
   
  Il database di origine per questo esempio è il database `Sales` creato nell'esempio D.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -687,7 +688,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Creazione di un database e specifica di un nome delle regole di confronto e delle opzioni  
  Nell'esempio seguente viene creato il database `MyOptionsTest`. Viene specificato un nome delle regole di confronto e le opzioni `TRUSTYWORTHY` e `DB_CHAINING` vengono impostate su `ON`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -708,7 +709,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Collegamento di un catalogo full-text che è stato spostato  
  Nell'esempio seguente viene collegato il catalogo full-text `AdvWksFtCat` insieme ai file di log e di dati di `AdventureWorks2012`. In questo esempio, il catalogo full-text viene spostato dalla posizione predefinita in una nuova posizione `c:\myFTCatalogs`. I file di dati e di log rimangono nelle posizioni predefinite.  
   
-```  
+```tsql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -733,7 +734,7 @@ GO
   
 -   `FileStreamResumes` contiene dati FILESTREAM. Contiene un contenitore di dati FILESTREAM, ossia `FSResumes` nel percorso `C:\MyFSfolder\Resumes`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  

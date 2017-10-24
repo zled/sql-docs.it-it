@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>Condizione di ricerca (Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Utilizzo della clausola WHERE con la sintassi LIKE ed ESCAPE  
- Nell'esempio seguente viene eseguita una ricerca delle righe in cui la colonna `LargePhotoFileName` contiene i caratteri `green_` e si utilizza l'opzione `ESCAPE` perché `_` è un carattere jolly. Se non si specifica l'opzione `ESCAPE`, la query esegue una ricerca di qualsiasi valore di descrizione contenente la parola `green` seguita da qualsiasi singolo carattere diverso dal carattere `_`.  
+ Nell'esempio seguente viene eseguita la ricerca di righe in cui il `LargePhotoFileName` colonna contiene i caratteri `green_`e utilizza il `ESCAPE` opzione perché _ è un carattere jolly. Senza specificare il `ESCAPE` opzione, la query verrebbe eseguita una ricerca per qualsiasi valore di descrizione che contengono la parola `green` seguita da qualsiasi carattere singolo diverso dal carattere _.  
   
 ```  
 USE AdventureWorks2012 ;  

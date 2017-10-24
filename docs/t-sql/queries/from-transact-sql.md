@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. Utilizzo di una clausola FROM semplice  
- Nell'esempio seguente viene recuperato il `SalesTerritoryID` e `SalesTerritoryRegion` le colonne di `DimSalesTerritory` tabella.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O. Utilizzo della sintassi INNER JOIN  
+### <a name="n-using-the-inner-join-syntax"></a>N. Utilizzo della sintassi INNER JOIN  
  Nell'esempio seguente viene restituito il `SalesOrderNumber`, `ProductKey`, e `EnglishProductName` le colonne di `FactInternetSales` e `DimProduct` tabelle in cui la chiave di join, `ProductKey`, corrisponde in entrambe le tabelle. Il `SalesOrderNumber` e `EnglishProductName` colonne ciascuna presente in uno dei, solo le tabelle, pertanto non è necessario specificare l'alias di tabella con le colonne seguenti, come illustrato; questi alias sono inclusi per migliorare la leggibilità. La parola **AS** prima di un alias di nome non è obbligatorio ma è consigliabile per migliorare la leggibilità e conforme allo standard ANSI.  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. Utilizzando la sintassi LEFT OUTER JOIN e RIGHT OUTER JOIN  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Utilizzando la sintassi LEFT OUTER JOIN e RIGHT OUTER JOIN  
  I join di esempio seguente il `FactInternetSales` e `DimProduct` tabelle nel `ProductKey` colonne. La sintassi di outer join sinistro mantiene le righe senza corrispondenza da sinistra (`FactInternetSales`) nella tabella. Poiché il `FactInternetSales` tabella non contiene alcuna `ProductKey` valori che non corrispondono il `DimProduct` tabella, questa query restituisce le stesse righe del primo esempio di inner join precedente.  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q. Utilizzo della sintassi FULL OUTER JOIN  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. Utilizzo della sintassi FULL OUTER JOIN  
  Nell'esempio seguente viene illustrato un full outer join, che restituisce tutte le righe da entrambe le tabelle unite in join, ma restituisce NULL per i valori che non corrispondono, l'altra tabella.  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R. Utilizzo della sintassi CROSS JOIN  
+### <a name="q-using-the-cross-join-syntax"></a>Q. Utilizzo della sintassi CROSS JOIN  
  L'esempio seguente restituisce il prodotto incrociato del `FactInternetSales` e `DimSalesTerritory` tabelle. Un elenco di tutte le possibili combinazioni di `SalesOrderNumber` e `SalesTerritoryKey` vengono restituiti. Si noti l'assenza del `ON` clausola della query di cross join.  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S. Utilizzo di una tabella derivata  
+### <a name="r-using-a-derived-table"></a>R. Utilizzo di una tabella derivata  
  Nell'esempio seguente viene utilizzata una tabella derivata (un `SELECT` istruzione dopo il `FROM` clausola) per restituire il `CustomerKey` e `LastName` colonne di tutti i clienti nel `DimCustomer` tabella `BirthDate` valori entro il 1 ° gennaio 1970 e il cognome 'Smith'.  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. RIDURRE l'esempio di hint di join  
+### <a name="s-reduce-join-hint-example"></a>S. RIDURRE l'esempio di hint di join  
  L'esempio seguente usa il `REDUCE` hint di join per l'elaborazione della tabella derivata all'interno della query. Quando si utilizza il `REDUCE` hint di join nella query, il `fis.ProductKey` viene proiettata, replicato e apportate distinte e quindi unita in join a `DimProduct` durante la riproduzione casuale di `DimProduct` su `ProductKey`. La tabella derivata risultante viene distribuita in `fis.ProductKey`.  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U. Esempio di hint di join di replica  
+### <a name="t-replicate-join-hint-example"></a>T. Esempio di hint di join di replica  
  In questo esempio viene illustrata la stessa query come nell'esempio precedente, tranne il fatto che un `REPLICATE` hint di join viene utilizzato anziché il `REDUCE` hint di join. Utilizzare il `REPLICATE` hint fa sì che i valori nel `ProductKey` colonna (join) dal `FactInternetSales` tabella devono essere replicate in tutti i nodi. Il `DimProduct` tabella è unita in join alla versione replicata di tali valori.  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V. Utilizzo dell'hint REDISTRIBUTE per garantire uno spostamento casuale per un join non compatibile di distribuzione  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Utilizzo dell'hint REDISTRIBUTE per garantire uno spostamento casuale per un join non compatibile di distribuzione  
  La query seguente utilizza l'hint di query di ridistribuzione in un join non compatibile di distribuzione. In questo modo si garantisce che il query optimizer utilizzerà uno spostamento casuale nel piano di query. Ciò garantisce inoltre che il piano di query non utilizzerà uno spostamento di trasmissione che consente di spostare una tabella distribuita a una tabella replicata.  
   
  Nell'esempio seguente, l'hint REDISTRIBUTE imposto uno spostamento casuale per la tabella FactInternetSales ProductKey è la colonna di distribuzione per DimProduct e non è la colonna di distribuzione per FactInternetSales.  
