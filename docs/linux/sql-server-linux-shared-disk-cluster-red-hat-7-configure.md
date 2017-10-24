@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
 ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
@@ -61,7 +61,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> In fase di installazione, una chiave Master del Server viene generato per l'istanza di SQL Server e inserito in var/rifiutare/mssql/secrets /-chiave del computer. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivise tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario in modo che ogni account locale mssql possono accedervi per decrittografare la chiave Master del Server. 
+> In fase di installazione, viene generato per l'istanza di SQL Server e inserito in una chiave Master del Server `/var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivise tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario in modo che ogni account locale mssql possono accedervi per decrittografare la chiave Master del Server. 
 
 1. Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker utilizzerà questo account per verificare quale sia il nodo è in esecuzione SQL Server. 
 
@@ -225,7 +225,7 @@ Per ulteriori informazioni sull'utilizzo di NFS, vedere le risorse seguenti:
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Se si utilizza una risorsa del File System (FS), come indicato di seguito, non è necessario per mantenere il comando di montaggio in /etc/fstab.. Pacemaker si occuperà di montare la cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di geofencing, si verifica un schermo ADFS non è montato due volte. 
+>Se si utilizza una risorsa del File System (FS), come indicato di seguito, non è necessario per mantenere il comando di montaggio in /etc/fstab. Pacemaker si occuperà di montare la cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di geofencing, si verifica un schermo ADFS non è montato due volte. 
 
 1.  Eseguire `mount -a` comando per il sistema aggiornare i percorsi montati.  
 

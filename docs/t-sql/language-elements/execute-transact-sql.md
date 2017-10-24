@@ -34,11 +34,12 @@ caps.latest.revision: 104
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee6b205e9e33a8aa5879eddf56ecc60104798a1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
 ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>Esegui-Transact-SQL
@@ -281,7 +282,7 @@ Execute a character string
  '*nome*'  
  Nome utente o nome account di accesso valido. *nome* deve essere un membro del ruolo predefinito del server sysadmin oppure esistere come entità nel [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) o [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), rispettivamente.  
   
- *nome* non può essere un account incorporato, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem..  
+ *nome* non può essere un account incorporato, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
  Per ulteriori informazioni, vedere [specificando un utente o un nome di accesso](#_user) più avanti in questo argomento.  
   
@@ -526,7 +527,7 @@ GO
 ```  
   
 ### <a name="h-using-execute-with-recompile"></a>H. Utilizzo dell'istruzione EXECUTE WITH RECOMPILE  
- Nell'esempio seguente viene eseguita la `Proc`_`Test` \_ `Defaults` stored procedure e forza un nuovo piano di query da compilare, utilizzo e l'eliminazione dopo l'esecuzione del modulo.  
+ Nell'esempio seguente viene eseguita la `Proc_Test_Defaults` stored procedure e forza un nuovo piano di query da compilare, utilizzo e l'eliminazione dopo l'esecuzione del modulo.  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
