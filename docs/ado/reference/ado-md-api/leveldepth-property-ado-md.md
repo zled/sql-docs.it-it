@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 911d89ee45a334f51b0afbfaa1410d680f3a11ba
@@ -42,3 +43,4 @@ Indica il numero di livelli tra la radice della gerarchia e un [membro](../../..
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà di profondità (ADO MD)](../../../ado/reference/ado-md-api/depth-property-ado-md.md)   
  [Oggetto di livello (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+

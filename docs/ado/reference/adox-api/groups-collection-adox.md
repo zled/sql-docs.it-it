@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3dfb8a9e2f75fb11caf64b06e34016474d7b9fa7
@@ -58,3 +59,4 @@ Contiene tutti archiviati [gruppo](../../../ado/reference/adox-api/group-object-
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto di gruppo (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)
+

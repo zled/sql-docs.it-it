@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca510493f83f7cfcc97b37586c1e26aee7c3ab24
@@ -101,3 +102,4 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
  [Esempio di catalogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Raccolta di membri (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

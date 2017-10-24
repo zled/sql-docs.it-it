@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  Chiusura originale **Recordset** non chiudere le copie e neppure la chiusura di chiudere una copia originale o una qualsiasi delle altre copie.  
   
  È possibile clonare un **Recordset** oggetto solo se supporta i segnalibri. I valori di segnalibro sono intercambiabili; ovvero, un riferimento di segnalibro da un **Recordset** oggetto fa riferimento allo stesso record in uno dei relativi cloni.
+

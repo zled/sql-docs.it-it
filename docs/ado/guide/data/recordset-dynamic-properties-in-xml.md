@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62d9b59fc1145e09f89bbe69b8d7b6e561798e70
@@ -54,3 +55,4 @@ Attualmente, le seguenti proprietà specifiche del provider di Recordset (da Cli
   
 ## <a name="see-also"></a>Vedere anche  
  [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

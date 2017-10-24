@@ -28,6 +28,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/01/2017
      Se per una di queste opzioni non vengono impostati i valori richiesti, non sarà possibile eseguire in modo corretto le azioni INSERT, UPDATE, DELETE, DBCC CHECKDB e DBCC CHECKTABLE nelle viste indicizzate o nelle tabelle con indici nelle colonne calcolate. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un avviso contenente tutte le opzioni impostate in modo errato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elaborerà, inoltre, le istruzioni SELECT in tali tabelle o viste indicizzate come se gli indici nelle colonne calcolate o nelle viste non esistessero.  
   
   
+

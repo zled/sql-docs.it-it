@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0da0901958ef50ebfef764d4aee626f6ffd7e6c3
@@ -36,3 +37,4 @@ Specifica la sequenza di ordinamento per una colonna indicizzata.
   
 ## <a name="applies-to"></a>Si applica a  
  [Proprietà SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+

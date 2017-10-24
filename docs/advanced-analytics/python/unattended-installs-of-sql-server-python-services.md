@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ Nell'esempio seguente il **minimo** necessarie le funzionalità da specificare n
 3.  Riavviare il servizio SQL Server per l'istanza riconfigurato. In questo modo verrà riavviato automaticamente correlata [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] anche servizio.
 
 3. Potrebbero essere necessari alcuni passaggi aggiuntivi in presenza di una configurazione di sicurezza personalizzata o se si intende usare SQL Server per supportare contesti di calcolo remoto. Per ulteriori informazioni, vedere [risoluzione dei problemi di installazione di machine learning](../machine-learning-troubleshooting-faq.md).
+

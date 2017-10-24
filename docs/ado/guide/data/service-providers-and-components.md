@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
@@ -33,3 +34,4 @@ I provider di servizi sono componenti che estendono la funzionalità del provide
  Ad esempio, un cursore del motore, ad esempio [il servizio di cursore per OLE DB](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), è un componente del servizio che può utilizzare dati da un archivio dati sequenziali e forward-only per produrre dati scorrevoli. Altri provider di servizi comunemente utilizzate da ADO includono il [Microsoft OLE DB Provider di persistenza (Provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (per il salvataggio dei dati in un file), il [Microsoft Data shaping per OLE DB (ADO Service Provider) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (per gerarchica **recordset**) e [Provider Microsoft OLE DB remota (Provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (per richiamare i provider di dati in un computer remoto).  
   
  Per ulteriori informazioni sui provider di servizi e dati, vedere [appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md).
+

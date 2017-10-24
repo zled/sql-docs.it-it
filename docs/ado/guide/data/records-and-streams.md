@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d11617fc364b3ce9f2c4f5b37623f4c74f968517
@@ -73,3 +74,4 @@ ADO fornisce attualmente il [Recordset](../../../ado/reference/ado-api/recordset
 -   [Recupero dei set di risultati in flussi](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
 -   [Utilizzo di ADO per la pubblicazione su Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md)
+

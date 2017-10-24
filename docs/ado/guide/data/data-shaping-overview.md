@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f885a8585d3665efcc39bfe979b501d779c35c00
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Inoltre, data shaping in ADO consente di creare nuovi **Recordset** oggetti senza un'origine dati sottostante utilizzando il **nuovo** (parola chiave) per descrivere i campi del padre e figlio ** Recordset**. Il nuovo **Recordset** oggetto può essere popolato con i dati e memorizzato in modo permanente. Gli sviluppatori possono inoltre eseguire vari calcoli o aggregazioni (ad esempio, **somma**, **AVG**, e **MAX**) sui campi figlio. Il data shaping inoltre possibile creare un elemento padre **Recordset** da un elemento figlio **Recordset** raggruppando i record figlio e inserendo una riga nell'oggetto padre per ogni gruppo, l'elemento figlio.  
   
  Regolare SQL consente di recuperare dati usando **JOIN** sintassi, ma questo è possibile inefficiente e difficile da gestire perché dati ridondanti padre viene ripetuti in ogni record restituito per una relazione padre-figlio specificata. Il data shaping possibile correlare un record singolo elemento padre del padre **Recordset** a più record figlio nell'elemento figlio **Recordset**, evitando la ridondanza di un **JOIN**. Maggior parte degli utenti di trovare il padre-figlio più **Recordset** modello di programmazione più naturale e semplice da utilizzare rispetto a singolo **Recordset JOIN** modello.
+

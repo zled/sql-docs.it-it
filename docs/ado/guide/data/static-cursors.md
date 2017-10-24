@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd0ace9aabf10c2b7e5b34d28bd54dbde84cfd0a
@@ -35,3 +36,4 @@ Un cursore statico Visualizza sempre il risultato impostato com'era quando il cu
  [Cursori forward-Only](../../../ado/guide/data/forward-only-cursors.md)   
  [Cursori keyset](../../../ado/guide/data/keyset-cursors.md)   
  [Cursori dinamici](../../../ado/guide/data/dynamic-cursors.md)
+

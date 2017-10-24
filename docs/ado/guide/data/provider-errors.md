@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  Il **errore** oggetto viene utilizzato anche quando si verificano errori correlati agli eventi. È possibile determinare se si è verificato un errore del processo che ha generato un evento ADO controllando il **errore** oggetto passato come parametro di evento.  
   
  Se l'operazione che ha generato un evento è conclusa correttamente, il *adStatus* imposterà il parametro del gestore eventi *adStatusOK*. D'altra parte, se l'operazione che ha generato l'evento ha esito negativo, il *adStatus* parametro è impostato su *adStatusErrorsOccurred*. In tal caso, il *pError* parametro conterrà un **errore** oggetto che descrive l'errore.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ Nei database relazionali le operazioni vengono eseguite su set di righe completi
   
 ## <a name="scrollability"></a>Scorrimento  
  Il tipo di cursore utilizzato dall'applicazione influisce inoltre la possibilità di spostare in avanti e indietro tra le righe in un set di risultati. Ciò è talvolta detta scorrimento. La possibilità di spostare in avanti *e* con le versioni precedenti attraverso il risultato di un set aumenta la complessità del cursore e pertanto è più costoso da implementare. Per questo motivo, è necessario richiedere un cursore con questa funzionalità solo quando necessario.
+

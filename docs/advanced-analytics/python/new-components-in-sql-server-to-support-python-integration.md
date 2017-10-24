@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
@@ -149,3 +150,4 @@ Nel diagramma seguente viene riepilogato il flusso di lavoro globale quando gli 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Panoramica dell'architettura per Python in SQL Server](architecture-overview-sql-server-python.md)
+

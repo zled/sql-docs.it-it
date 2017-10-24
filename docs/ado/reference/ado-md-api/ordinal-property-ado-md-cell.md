@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b6928eeeb7450b2edbd244d70d3c6a8aa999343a
@@ -46,3 +47,4 @@ Identifica in modo univoco un [cella](../../../ado/reference/ado-md-api/cell-obj
  [Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Proprietà dell'elemento (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Proprietà Ordinal (ADO MD posizione)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)
+

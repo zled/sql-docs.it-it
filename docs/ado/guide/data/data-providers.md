@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a5264398741c58ac6f9aae504237ec1139ecb2c
@@ -31,3 +32,4 @@ Provider di dati rappresentano diverse origini dei dati, ad esempio database SQL
  ADO è potente e flessibile perché può connettersi a uno di diversi provider di dati diversi ed esporre il modello di programmazione stesso, indipendentemente dalle caratteristiche specifiche di qualsiasi provider specificato. Tuttavia, poiché ogni provider di dati è univoco, come l'applicazione interagisca con ADO possono variare da provider di dati.  
   
  Ad esempio, le funzionalità e caratteristiche del Provider OLE DB per SQL Server, che viene utilizzato per accedere ai database di Microsoft SQL Server, sono notevolmente diversi da quelli del Provider Microsoft OLE DB per Internet Publishing, viene utilizzato per accedere a file Archivia in un server Web.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
@@ -36,3 +37,4 @@ Se l'errore è direttamente correlato a un campo, ad esempio, se mancano i dati 
 |**adFieldIntegrityViolation**|10|Indica che il campo non può essere modificato perché è un'entità calcolata o derivata.|  
 |**adFieldIsNull**|3|Indica che il provider ha restituito un valore null.|  
 |**adFieldOutOfSpace**|22|Indica che il provider non riesce a ottenere spazio di archiviazione sufficiente per completare un'operazione di spostamento o l'operazione di copia.|
+

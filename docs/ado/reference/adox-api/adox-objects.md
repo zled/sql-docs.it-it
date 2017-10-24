@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69e8cfd6cd3c0bf867b5ae276de964f26653c8d0
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  [Insiemi ADOX](../../../ado/reference/adox-api/adox-collections.md)   
  [Modello a oggetti ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
  [Estensioni ADO per Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+

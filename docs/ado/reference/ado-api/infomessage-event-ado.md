@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7f1e479b4dfb5b9cb557030e03afeac3f6278720
@@ -53,3 +54,4 @@ InfoMessage pError, adStatus, pConnection
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Riepilogo dei gestori di eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)
+

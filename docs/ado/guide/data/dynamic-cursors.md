@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cda6ab3b4609ef4295240050fd1e204845637b02
@@ -35,3 +36,4 @@ I cursori dinamici rilevano tutte le modifiche apportate alle righe nel set di r
  [Cursori forward-Only](../../../ado/guide/data/forward-only-cursors.md)   
  [Cursori statici](../../../ado/guide/data/static-cursors.md)   
  [Cursori keyset](../../../ado/guide/data/keyset-cursors.md)
+

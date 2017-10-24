@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 60d5d800137febfa9b0ba01994e3b32cd159ec31
@@ -35,3 +36,4 @@ Specifica il tipo di azione da eseguire quando [SetPermissions](../../../ado/ref
 |**adAccessGrant**|1|Il gruppo o l'utente avrà almeno le autorizzazioni richieste.|  
 |**adAccessRevoke**|4|Diritti di accesso esplicita di un utente o il gruppo verranno revocati.|  
 |**adAccessSet**|2|L'utente o gruppo disporrà esattamente le autorizzazioni richieste.|
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
@@ -104,3 +105,4 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  In questo esempio si assegna un nome all'istanza del servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ma senza effettuarne il provisioning. Se non si fornisce un nome, viene utilizzato il nome predefinito, Istanza del servizio di sistema SQL Server Analysis Services. La creazione di un nome personalizzato per il servizio è facoltativa. È possibile assegnare un nome al servizio per supportare scenari di test oppure se si dispone di uno strumento personalizzato o di uno script che consente di eseguire il provisioning dell'istanza in un passaggio successivo.  
   
   
+

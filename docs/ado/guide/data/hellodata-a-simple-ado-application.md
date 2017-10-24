@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
@@ -62,3 +63,4 @@ Questa semplice applicazione passaggi per ognuna delle quattro operazioni ADO pr
 ||Caption|Modificare i dati|  
 |Pulsante di comando|Nome|cmdUpdateData|  
 ||Caption|Dati di aggiornamento|
+

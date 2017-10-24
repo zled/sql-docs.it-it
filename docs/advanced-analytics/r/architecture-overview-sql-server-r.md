@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
@@ -62,3 +63,4 @@ Dati viene mantenuti all'interno del limite di conformità per l'imposizione del
 [Interoperabilità di R](r-interoperability-in-sql-server.md)
 
 [Cenni preliminari sulla sicurezza](security-overview-sql-server-r.md)
+

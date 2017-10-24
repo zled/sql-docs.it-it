@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26033bff0a1a88da25ed2eae566ffef49538c35f
@@ -65,3 +66,4 @@ Contiene raccolte ([tabelle](../../../ado/reference/adox-api/tables-collection-a
  [Raccolta di tabelle (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Raccolta di utenti (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)   
  [Raccolta di visualizzazioni (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+

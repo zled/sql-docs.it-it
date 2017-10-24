@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
  Nella pagina **Completamento procedura guidata** verificare la struttura del nuovo cubo e nella casella **Nome cubo** digitare un nome per il cubo. Facoltativamente, selezionare la casella di controllo **Genera schema adesso** per avviare Generazione guidata schema. Nella maggior parte dei casi non è necessario selezionare questa casella di controllo quando si pianifica la creazione di oggetti aggiuntivi. Inoltre, è possibile utilizzare Progettazione cubi per generare lo schema in un secondo momento.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
@@ -52,3 +53,4 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare gli
  [Raccolta di visualizzazioni, esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Viste di esempio del metodo Delete (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Viste di esempio del metodo Refresh (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
+

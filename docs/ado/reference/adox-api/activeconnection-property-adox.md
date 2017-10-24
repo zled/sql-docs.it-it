@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b827ec332b89767a030e1925320345a2b78baee
@@ -57,3 +58,4 @@ Indica l'oggetto ADO [connessione](../../../ado/reference/ado-api/connection-obj
  [Raccolta di visualizzazioni, esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Viste di esempio del metodo Refresh (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Create (metodo) (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+

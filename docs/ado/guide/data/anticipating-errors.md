@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ Prevenzione di errore è importante come la gestione degli errori. In questa sez
  Assicurarsi che **Recordset** oggetti non sono presenti oltre i limiti del **Recordset** prima di provare a spostare il puntatore del record. Se si tenta di **MoveNext** quando **EOF** è True o **MovePrev** quando **BOF** è True, verrà generato un errore. Se si esegue una del **spostare** metodi quando entrambi **EOF** e **BOF** sono True, verrà generato un errore.  
   
  Errori si verificano anche quando si tenta di eseguire operazioni quali **Seek** e **trovare** su un oggetto vuoto **Recordset**.
+

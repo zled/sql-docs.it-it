@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
@@ -44,3 +45,4 @@ In ADO la maggior parte dei comandi generare alcune informazioni restituite al c
  Per ricevere più di un set di risultati significa che è necessario rendere più round trip in rete, uno per ogni set di dati incapsulate in un **Recordset** oggetto. Per le reti lente o sovraccarica, riducendo il numero di round trip può contribuire a migliorare le prestazioni dell'applicazione. Di conseguenza, alcuni provider offrono supporto per la ricezione di più **Recordset**s in un unico round trip. Questo aspetto è illustrato nel seguente argomento:  
   
 -   [Ricezione di più recordset](../../../ado/guide/data/receiving-multiple-recordsets.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 493bf89f0fcba51e70eaff7d9dcfd8ab3216f1d8
@@ -36,3 +37,4 @@ Specifica le caratteristiche di un [colonna](../../../ado/reference/adox-api/col
   
 ## <a name="applies-to"></a>Si applica a  
  [Proprietà Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)
+

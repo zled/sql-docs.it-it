@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: baa2fd086747707b67458914513d482f794cfdc6
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  Per configurare le proprietà dei protocolli client usati dai client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer corrente, nel riquadro della console fare clic su **Protocolli client**, nel riquadro dei dettagli fare clic con il pulsante destro del mouse sul protocollo desiderato, quindi scegliere **Proprietà**.  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
@@ -327,3 +328,4 @@ WHERE (Measures.[Internet Sales Amount],
  [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
+

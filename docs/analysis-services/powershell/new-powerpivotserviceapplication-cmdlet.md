@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
@@ -111,3 +112,4 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  In questo esempio si crea una nuova applicazione di servizio. Il database dell'applicazione di servizio viene creato in un server di database denominato AdvWorks-SRV01, installato come istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , in base a una configurazione comune per numerose installazioni di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Per creare il database, è necessario disporre delle autorizzazioni dbcreator nell'istanza di SQL Server. È necessario essere membro del ruolo db_owner nel database di configurazione di SharePoint. Dal momento che si tratta della prima applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella farm, è necessario che sia membro del gruppo di proxy predefinito.  
   
   
+

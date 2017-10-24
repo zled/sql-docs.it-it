@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
@@ -88,3 +89,4 @@ Response.Write("Success!")
 -   Non è possibile utilizzare **in errore goto \<etichetta >** all'interno di VBScript.  
   
 -   VBScript supporta alcune delle funzioni predefinite di Visual Basic, ad esempio **Msgbox**, **data**, e **IsNumeric**. Tuttavia, poiché VBScript è un subset di Visual Basic, non tutte le funzioni predefinite sono supportate. Ad esempio, VBScript non supporta il **formato** funzione e le funzioni dei / o file.
+

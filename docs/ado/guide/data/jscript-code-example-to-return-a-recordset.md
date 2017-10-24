@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
@@ -90,3 +91,4 @@ function alert(str)
 2.  Aprire un prompt dei comandi e cd alla directory in cui il file di JScript (rs.js) è stato salvato.  
   
 3.  Tipo `CScript rs.js` dal prompt dei comandi.
+

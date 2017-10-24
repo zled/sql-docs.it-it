@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7b2716ffe745fcbb9359c34c33317e61ac82602
@@ -107,3 +108,4 @@ End Function
 5.  Copiare il codice precedente e incollarlo il **codice** pagina per sostituire il codice esistente.  
   
 6.  Selezionare **avviare** dal **eseguire** menu per eseguire l'applicazione.
+

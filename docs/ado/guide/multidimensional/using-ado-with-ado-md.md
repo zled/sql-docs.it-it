@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38df55c27ced6e0a7b32c321e2b3968bedb73aa1
@@ -54,3 +55,4 @@ ADO e ADO MD sono modelli a oggetti correlato ma separato. ADO fornisce oggetti 
  [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programmazione con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Utilizzo dei dati multidimensionali](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

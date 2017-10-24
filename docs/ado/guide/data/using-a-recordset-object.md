@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
@@ -52,3 +53,4 @@ Set oRs = Nothing
 ```  
   
  Si noti che **oRs.Open** accetta una stringa di connessione (*sConn*), al posto di un **connessione** oggetto (*oConn*), come valore del relativo ** ActiveConnection** parametro. Anche in cui viene applicato il tipo di cursore sul lato client impostando il **CursorLocation** proprietà il **Recordset** oggetto. Nuovamente, confrontare questa operazione con il **HelloData** esempio.
+

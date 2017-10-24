@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 569f03f0a1444d610462317a5ee19dc60f314d31
@@ -74,3 +75,4 @@ C:\PS>Get-PowerPivotSystemServiceInstance -Identity 1234567-890a-bcde-fghijklm |
  In questo esempio si restituiscono proprietà aggiuntive dell'istanza specificata, inclusi il nome, la versione e lo stato di aggiornamento del server.  
   
   
+

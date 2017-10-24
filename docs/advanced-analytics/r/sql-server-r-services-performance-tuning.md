@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ Configurazione e ottimizzazione delle prestazioni richiede la creazione di una b
 + [Ottimizzazione delle prestazioni di R in SQL Server - metodi e i risultati](..\r\performance-case-study-r-services.md)
 
     Riepiloga i dati che è stata utilizzata due case study, la modalità in cui è stata testata le prestazioni e risultati di influenza le ottimizzazioni.
+

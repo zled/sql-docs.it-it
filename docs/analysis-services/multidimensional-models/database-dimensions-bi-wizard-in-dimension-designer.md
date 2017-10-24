@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   Aprire la dimensione in cui si desidera aggiungere funzionalità di Business Intelligence, quindi fare clic sul pulsante **Aggiungi funzionalità di Business Intelligence** sulla barra degli strumenti. In alternativa, è possibile fare clic con il pulsante destro del mouse sulla dimensione in Esplora oggetti o Esplora soluzioni e quindi scegliere **Aggiungi funzionalità di Business Intelligence**.  
   
   
+

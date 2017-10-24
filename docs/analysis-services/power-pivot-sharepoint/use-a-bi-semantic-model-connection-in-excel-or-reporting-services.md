@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  Per la progettazione di report ad hoc in SharePoint, l'utente che crea il report deve disporre di autorizzazioni di SharePoint sul file di connessione BISM (estensione bism) e sul database Business Intelligence Semantic Model. Il contesto di sicurezza della connessione è l'utente interattivo che sta creando il report.  
   
   
+

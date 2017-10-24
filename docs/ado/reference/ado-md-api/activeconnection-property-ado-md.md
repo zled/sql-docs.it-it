@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae0ad910a0535599d7e134d3314030537068ab25
@@ -70,3 +71,4 @@ Indica a quale ADO [connessione](../../../ado/reference/ado-api/connection-objec
  [Esempio di set di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open (metodo) (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+

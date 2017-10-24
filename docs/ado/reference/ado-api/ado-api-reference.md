@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
@@ -54,3 +55,4 @@ In questa sezione della documentazione di ADO contiene argomenti per ogni ADO og
  [Appendice c: programmazione con ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [Cronologia ADO](../../../ado/guide/ado-history.md)
+

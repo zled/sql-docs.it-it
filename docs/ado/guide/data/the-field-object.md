@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di 
  Se è presente alcun record corrente quando si utilizza il **GetChunk** o **AppendChunk** metodo su un **campo** dell'oggetto, si verifica l'errore 3021 (Nessun record corrente).  
   
  Per un esempio di utilizzo di questi metodi per modificare i dati binari, vedere il [metodo AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [metodo GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) negli esempi di *di ADO riferimento per programmatori*.
+

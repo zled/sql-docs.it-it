@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
@@ -59,3 +60,4 @@ If oRs.BOF Then oRs.MoveFirst
  Un altro esempio, se si è posizionati in una particolare riga al centro di un **Recordset** e si chiama **eliminare** e quindi chiamare **MoveNext**, trova ora nel record immediatamente dopo il record eliminato. Ma la chiamata **MovePrevious** il record precedente quello eliminato il record corrente, perché il record eliminato non viene più considerato in appartenenza attiva del **Recordset**.  
   
  È particolarmente difficile definire semantica di spostamento coerente in tutti i provider di metodi di spostamento relativo al record corrente, ovvero **MovePrevious**, **MoveNext**, e **spostare** , in caso di modifica dei dati del record corrente. Ad esempio, se si sta usando un ordinati, filtrati **Recordset**e si modificano i dati del record corrente in modo che precedano tutti gli altri record, ma i dati modificati anche non corrispondano al filtro, non è chiaro dove un **MoveNext** dell'esecuzione. La conclusione più sicura è tale spostamento relativo all'interno di un **Recordset** è più rischioso rispetto al movimento assoluto (ad esempio usando **MoveFirst** o **MoveLast**) quando i dati sono la modifica durante la modifica, i record aggiunti o eliminati. Ordinamento e filtro dovrebbe essere basate su una chiave primaria o un ID, poiché questo tipo di valore non deve modificare.
+

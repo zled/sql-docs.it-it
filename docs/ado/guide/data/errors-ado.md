@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 271e5d4e246a59d7adb97b6e4dc5db4c08875e1c
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 Qualsiasi operazione relativa agli oggetti ADO può generare una o più errori del provider. Quando si verifica ogni errore, uno o più **errore** gli oggetti vengono inseriti nel **errori** insieme del **connessione** oggetto. Per informazioni dettagliate sulla gestione degli avvisi ed errori nell'applicazione ADO, vedere [Error Handling](../../../ado/guide/data/error-handling.md).  
   
  Gli errori dell'applicazione possono essere generati da un meccanismo separato. Ad esempio, in Visual Basic il **Err** oggetto conterrà errori a livello di applicazione.
+

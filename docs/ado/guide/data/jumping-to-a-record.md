@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
@@ -45,3 +46,4 @@ oRs.Move NumRecords, Start
  Se si passa un segnalibro nel *avviare* argomento, lo spostamento è relativo al record con il segnalibro, supponendo che il **Recordset** oggetto supporta i segnalibri. Ottenere un segnalibro utilizzando il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà. Se non specificato, lo spostamento è relativo al record corrente.  
   
  Se si utilizza il **CacheSize** proprietà da memorizzare localmente i record dal provider, passando un *NumRecords* argomento che sposta la posizione corrente all'esterno del gruppo corrente di record memorizzati nella cache ADO viene forzato a recuperare un nuovo gruppo di record, a partire dal record di destinazione. Il **CacheSize** proprietà determina le dimensioni del gruppo appena recuperato e il record di destinazione è il primo record recuperato.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: db0b4def85eb08c193ece45b89e3773419b4feda
@@ -294,3 +295,4 @@ Per generare grafici per gli utenti, è possibile utilizzare una stored procedur
 ## <a name="previous-lesson"></a>Lezione precedente
 
 [Lezione 2: Importare dati in SQL Server tramite PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+

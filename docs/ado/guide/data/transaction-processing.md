@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
@@ -49,3 +50,4 @@ Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni d
   
 ## <a name="nested-transactions"></a>Transazioni nidificate  
  Per i provider che supportano le transazioni nidificate, la chiamata di **BeginTrans** metodo all'interno di una transazione aperta avvia una transazione nidificata. Il valore restituito indica il livello di annidamento: indica di un valore restituito pari a "1" è stata aperta una transazione di primo livello (ovvero, la transazione non sia annidata all'interno di un'altra transazione), "2" indica che è stata aperta una transazione di secondo livello (a transazione annidata all'interno di una transazione di primo livello), e così via. La chiamata **CommitTrans** o **RollbackTrans** interessa solo la maggior parte delle transazioni aperti di recente, è necessario chiudere o il rollback della transazione corrente prima che è possibile risolvere le transazioni di livello superiore.
+

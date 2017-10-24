@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3d95bfaf5ad7375c406ebfaccb77c584c22edb2e
@@ -43,3 +44,4 @@ Indica la didascalia di testo da utilizzare per visualizzare un [livello](../../
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di set di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Proprietà Description (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)
+

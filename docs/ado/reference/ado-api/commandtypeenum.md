@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc2cd3acc56c11bdab98d58c1adc76d98eb1579d
@@ -61,3 +62,4 @@ Specifica la modalità di interpretazione di un argomento del comando.
 |[Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[Execute (metodo) (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[Requery (metodo)](../../../ado/reference/ado-api/requery-method.md)||
+

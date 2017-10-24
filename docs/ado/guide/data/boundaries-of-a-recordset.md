@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
@@ -74,3 +75,4 @@ else
  Questo schema funziona per tutti i tipi di cursore ed è indipendente da provider sottostanti. Se si tenta di determinare il contenuto di un **Recordset** oggetto controllando se il relativo **RecordCount** valore della proprietà è zero (0) o non, è necessario adottare alcune precauzioni per utilizzare un cursore appropriato e un provider che supporta la restituzione del numero di record nel risultato.  
   
  Se si elimina l'ultimo record rimanente di **Recordset** dell'oggetto, il cursore viene lasciato in uno stato indeterminato. Il **BOF** e **EOF** proprietà restino **False** fino a quando non si tenta di riposizionare il record corrente, in base al provider. Per ulteriori informazioni, vedere [eliminazione record utilizzando il metodo Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+

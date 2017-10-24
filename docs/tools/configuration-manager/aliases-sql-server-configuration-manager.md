@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e39a739f9c7d2fa5de9289660bf50cfae4016268
@@ -25,3 +26,4 @@ ms.lasthandoff: 08/02/2017
   Un alias rappresenta un nome alternativo che può essere utilizzato per stabilire una connessione. L'alias incapsula gli elementi necessari di una stringa di connessione e li espone con un nome scelto dall'utente. Per creare un alias per i client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer corrente, fare clic con il pulsante destro del mouse su **Alias** nel riquadro della console, quindi scegliere **Nuovo alias**. Per configurare un alias esistente per i client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su questo computer, fare clic su **Alias** nel riquadro della console, fare clic con il pulsante destro del mouse sull'alias desiderato nel riquadro dei dettagli, quindi fare clic su **Proprietà**.  
   
   
+

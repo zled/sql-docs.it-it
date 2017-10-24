@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4d0b2c896be1059d999418d1f88053225c5d44a
@@ -56,3 +57,4 @@ Le relazioni tra questi oggetti sono rappresentate nel [modello a oggetti ADO](.
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Proprietà ADO](../../../ado/reference/ado-api/ado-properties.md)
+

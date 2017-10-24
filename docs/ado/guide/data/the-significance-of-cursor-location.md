@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ Ogni cursore utilizza risorse temporanee per la memorizzazione dei dati. Queste 
  Tuttavia, è importante sottolineare che un cursore sul lato server è, almeno temporaneamente: utilizzo delle risorse del server per ogni client attivo. È necessario pianificare di conseguenza per assicurarsi che l'hardware del server sia in grado di gestire tutti i cursori sul lato server richiesti dai client attivi. Inoltre un cursore sul lato server può essere lento, perché fornisce solo l'accesso a riga singola, non è disponibile alcun cursore batch.  
   
  I cursori sul lato server sono utili durante l'inserimento, aggiornamento o eliminazione di record. Con cursori sul lato server, è possibile disporre più istruzioni attive nella stessa connessione.
+

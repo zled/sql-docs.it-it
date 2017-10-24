@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0913d7a00407381c895c00a0d9076249773429a
@@ -28,3 +29,4 @@ ADO consente di controllare rigorosamente le modifiche a una tabella di base in 
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità batch](../../../ado/guide/data/batch-mode.md)
+

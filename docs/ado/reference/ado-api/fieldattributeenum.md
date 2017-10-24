@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfac02887d8f66066a11674ca6dded410df709aa
@@ -72,3 +73,4 @@ Specifica uno o più attributi di un [campo](../../../ado/reference/ado-api/fiel
 |||  
 |-|-|  
 |[Append (metodo) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Proprietà Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 027e9cfb4f69cbdb89d776b80916afa8ac89eb69
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
 -   Metodo 3: apportare modifiche alla versione di produzione di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] soltanto usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] in modalità online. Poiché entrambi gli strumenti utilizzano solo lo stesso server online, non è possibile ottenere una diversa versione non sincronizzata.  
   
   
+

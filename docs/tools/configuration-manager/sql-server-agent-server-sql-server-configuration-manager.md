@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 530926a4d207cc4c1595539b1d5af1fe96cbd492
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L'agente è un [!INCLUDE[msCoName](../../includes/msconame-md.md)] chiamata del servizio di Windows che esegue attività amministrative pianificate *processi*. Per informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere "Informazioni su SQL Server Agent" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 909721266982cdfbaf6a3a58b00b120c47cf736e
@@ -82,3 +83,4 @@ Non c'è differenza minima tra i metodi usati in Visual Basic e quelli utilizzat
 </HTML>  
 <!-- EndErrorExampleVBS -->  
 ```
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca4098a61984e009a2874fdca55d898938ce702d
@@ -37,3 +38,4 @@ ADO gestisce un buffer di modifica associato al record corrente. Il **EditMode**
 |**adEditDelete**|Indica che il record corrente è stato eliminato.|  
   
  **EditMode** può restituire un valore valido solo se è disponibile un record corrente. **EditMode** restituirà un errore se **BOF** o **EOF** è **True** o se è stato eliminato il record corrente.
+

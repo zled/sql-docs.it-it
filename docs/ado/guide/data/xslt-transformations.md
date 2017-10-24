@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 36b39d14a4856d882add1e9bafdc9457fa3b8bc1
@@ -58,3 +59,4 @@ XSLT può essere applicato per il codice XML generato per trasformarlo in un alt
   
 ## <a name="see-also"></a>Vedere anche  
  [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

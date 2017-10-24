@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  Il **connessione** oggetto è dichiarato nel **modulo** livello utilizzando il **WithEvents** parola chiave per consentire la gestione degli eventi. Il gestore dell'evento Form_Load crea l'oggetto tramite l'assegnazione di un nuovo **connessione** oggetto *connEvent* e quindi apre la connessione. Naturalmente, un'applicazione reale farebbe ulteriore elaborazione nel gestore eventi Form_Load rispetto a quella illustrata di seguito.
+

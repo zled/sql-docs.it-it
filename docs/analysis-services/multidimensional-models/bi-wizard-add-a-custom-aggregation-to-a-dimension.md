@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  In **Colonna di origine** selezionare la colonna stringa che contiene gli operatori unari. Questa selezione imposta la proprietà **UnaryOperatorColumn** dell'attributo padre. La tabella della dimensione dovrebbe inoltre contenere una colonna stringa che specifica l'operatore di rollup unario. I valori stringa di questa colonna devono contenere operatori di aggregazione validi. Se una riga è vuota, il membro corrispondente viene calcolato normalmente. Se la formula in una colonna non è valida, si verifica un errore di run-time ogni volta che viene recuperato il valore di una cella che utilizza il membro. Per altre informazioni, vedere [Operatori unari nelle dimensioni padre-figlio](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md).  
   
   
+

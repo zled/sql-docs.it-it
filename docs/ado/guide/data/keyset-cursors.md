@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8def959d69c353449c2f862638d6edd54f786624
@@ -45,3 +46,4 @@ Il cursore keyset fornisce funzionalità tra un valore statico e un cursore dina
  [Cursori forward-Only](../../../ado/guide/data/forward-only-cursors.md)   
  [Cursori statici](../../../ado/guide/data/static-cursors.md)   
  [Cursori dinamici](../../../ado/guide/data/dynamic-cursors.md)
+

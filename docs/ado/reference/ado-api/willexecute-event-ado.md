@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 63062a2b16cc423c1188aef4302f5b0f8b1e0677
@@ -76,3 +77,4 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Riepilogo dei gestori di eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)
+

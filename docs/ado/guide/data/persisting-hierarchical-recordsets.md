@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1c4a4fc782bfa6c6130a1acbd45ab1aa2ae3fcd
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  [Data Shaping di esempio](../../../ado/guide/data/data-shaping-example.md)   
  [Grammatica formale forma](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
+

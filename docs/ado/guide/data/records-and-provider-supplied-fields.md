@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
@@ -83,3 +84,4 @@ Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) viene ap
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto di record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+

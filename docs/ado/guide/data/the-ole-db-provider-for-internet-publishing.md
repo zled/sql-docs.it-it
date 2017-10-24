@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
@@ -59,3 +60,4 @@ ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../
 >  Se Msdaipp. DSO è specificato in modo esplicito come valore del provider, con la *Provider* parola chiave di stringa di connessione o **Provider** proprietà, è possibile utilizzare "URL =" nella stringa di connessione. In caso contrario, si verificherà un errore. In alternativa, è sufficiente specificare l'URL come illustrato in precedenza.  
   
  Per informazioni più specifiche su Internet Publishing Provider, vedere [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentazione del provider fornita con l'applicazione di origine con cui il Provider OLE DB per È stato installato Internet Publishing: Windows 2000, Office 2000 o Internet Explorer 5.0.
+

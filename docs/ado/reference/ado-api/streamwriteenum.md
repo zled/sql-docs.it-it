@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 586920fc4f7673f9c5e25c92f252013920acaa8d
@@ -39,3 +40,4 @@ Specifica se un separatore di riga viene aggiunto alla stringa di scrivere un [f
   
 ## <a name="applies-to"></a>Si applica a  
  [Metodo WriteText](../../../ado/reference/ado-api/writetext-method.md)
+

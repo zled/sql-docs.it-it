@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b14593e427db76994976091e5916ffe49aefe82
@@ -48,3 +49,4 @@ Specifica un nome per il [Recordset](../../../ado/reference/ado-api/recordset-ob
  [Microsoft servizio Data Shaping per OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)   
  [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

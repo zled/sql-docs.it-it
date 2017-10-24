@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b56f092cfe368fbbc8b5e325f1ac4ddd7b3b2978
@@ -42,3 +43,4 @@ Specifica il numero di record da recuperare da un [Recordset](../../../ado/refer
   
 ## <a name="applies-to"></a>Si applica a  
  [Metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
+

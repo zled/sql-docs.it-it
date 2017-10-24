@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61d296aaafd3e610a244aa4e0831b9bed5ff5855
@@ -47,3 +48,4 @@ Con un **comando** dell'oggetto, è possibile eseguire le operazioni seguenti:
 -   Passare un **comando** dell'oggetto per il **origine** proprietà di un **Recordset** per ottenere i dati.  
   
 -   Passare un **flusso** oggetto che contiene un comando (ad esempio, un comando XML) a un provider che lo supporta.
+

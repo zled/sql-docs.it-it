@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
 -   Se le prestazioni di esecuzione delle query non sono soddisfacenti, ma non è possibile aumentare le risorse di memoria e processore nel server locale, valutare l'opportunità di distribuire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in due o più server di produzione. Sarà quindi possibile usare la funzionalità di bilanciamento del carico di rete per combinare i server in un unico cluster. In un cluster con bilanciamento carico di rete, le query vengono automaticamente distribuite tra tutti i server del cluster.  
   
   
+

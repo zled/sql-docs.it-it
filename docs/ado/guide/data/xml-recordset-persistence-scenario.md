@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd47944f218c6cb4d3bea571b27be990c5f7f530
@@ -119,3 +120,4 @@ In questo scenario, si creerà un'applicazione di pagine ASP (Active Server) che
 ## <a name="see-also"></a>Vedere anche  
  [Save (metodo)](../../../ado/reference/ado-api/save-method.md)   
  [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

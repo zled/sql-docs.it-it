@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5f943223be304de56e52f54510bd6d27bac6d15
@@ -47,3 +48,4 @@ Indica la scala di un valore numerico nella colonna.
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di codice ADOX: NumericScale e Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Proprietà Type (colonna) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+

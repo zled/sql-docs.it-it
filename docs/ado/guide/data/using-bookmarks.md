@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  Il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo illustrato più dettagliatamente in seguito.  
   
  Ad eccezione del caso di clonato **recordset**, i segnalibri sono univoci per il **Recordset** in cui sono stati creati, anche se viene utilizzato lo stesso comando. Ciò significa che non è possibile utilizzare un **segnalibro** ottenuto da uno **Recordset** per spostare lo stesso record in un secondo **Recordset** aperto con lo stesso comando.
+

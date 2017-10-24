@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3f691a4ba9632f40ceb4eb08c33a35135d9a0e7d
@@ -180,3 +181,4 @@ La sezione dello schema è necessaria. Come illustrato nell'esempio precedente, 
   
 ## <a name="see-also"></a>Vedere anche  
  [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

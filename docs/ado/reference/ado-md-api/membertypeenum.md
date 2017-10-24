@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a8335dcc0f713859f72971a699438b2535550ac
@@ -36,3 +37,4 @@ Specifica l'impostazione per il [tipo](../../../ado/reference/ado-md-api/type-pr
 |**adMemberMeasure**|2|Indica che il **membro** oggetto appartiene alla dimensione Measures e rappresenta un attributo quantitativo.|  
 |**adMemberRegular**|1|Valore predefinito. Indica che il **membro** oggetto rappresenta un'istanza di un'entità di business.|  
 |**adMemberUnknown**|0|Impossibile determinare il tipo del membro.|
+

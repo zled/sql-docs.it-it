@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
@@ -78,3 +79,4 @@ L'applicazione HelloData scorre le operazioni di base di una tipica applicazione
   
 ## <a name="formunload"></a>Form_Unload  
  Il **Form_Unload** subroutine è importante per diversi motivi. In primo luogo, poiché si tratta di un'applicazione di esempio, Form_Unload pulisce le modifiche apportate al database prima la chiusura dell'applicazione. In secondo luogo, il codice viene illustrato come un comando può essere eseguito direttamente da open **connessione** oggetto utilizzando il **Execute** metodo. Infine, viene riportato un esempio di esecuzione di una query non – restituiscono righe (una query di aggiornamento) rispetto all'origine dati.
+

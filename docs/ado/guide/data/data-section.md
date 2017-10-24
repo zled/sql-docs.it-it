@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62eb026fac4588cc159afec1714a6aa51903aa8a
@@ -90,3 +91,4 @@ La sezione di dati definisce i dati del set di righe insieme a eventuali aggiorn
   
 ## <a name="see-also"></a>Vedere anche  
  [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

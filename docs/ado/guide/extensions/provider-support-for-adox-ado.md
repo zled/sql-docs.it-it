@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b15df02c70e2dcdc2efb2ba468b76219a233d65a
@@ -65,3 +66,4 @@ Alcune caratteristiche di ADOX non sono supportati, a seconda del provider di da
 |**Le chiavi** raccolta|Il **Append** e **eliminare** metodi non sono supportati.|  
 |**Gli utenti** raccolta|**Gli utenti** non è supportata.|  
 |**Gruppi** raccolta|**Gruppi** non è supportata.|
+

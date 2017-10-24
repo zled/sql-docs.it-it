@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
@@ -184,3 +185,4 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>Osservazioni  
  A questo punto, è stata trasmessa XML nel browser client ed è pronto per essere visualizzato. Questa operazione viene eseguita utilizzando VBScript sul lato client per associare il documento XML a un'istanza del DOM e scorrimento in ciclo tra ogni nodo figlio per compilare un elenco di prodotti in formato HTML.
+

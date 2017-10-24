@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
@@ -61,3 +62,4 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET non è installato in un front-end Web autonomo configurato per l'amministrazione centrale.|No|No|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET è una libreria client di Analysis Services che supporta la connessione a un database Analysis Services. In una distribuzione di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint, ADOMD.NET consente di accedere ai report predefiniti nel dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] in Amministrazione centrale. I report predefiniti sono di fatto cartelle di lavoro di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] contenenti dati di Analysis Services incorporati. Il dashboard di gestione utilizza ADOMD.NET per inviare una richiesta di connessione al server che carica i dati contenuti nella cartella di lavoro.<br /><br /> Nelle topologie che includono Amministrazione centrale in esecuzione su un server front-end Web autonomo, è necessario installare ADOMD.NET manualmente per visualizzare questi report nel dashboard di gestione. Per altre informazioni, vedere [Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
   
+

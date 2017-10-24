@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 59671deed9a94192f333401c9d66987f75e4a3cb
@@ -46,3 +47,4 @@ Contiene tutti i [proprietà](../../../ado/reference/ado-api/property-object-ado
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto di proprietà (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+

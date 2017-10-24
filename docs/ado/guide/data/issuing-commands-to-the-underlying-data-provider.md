@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a144e0130fec6d62ee55ea68001901815a29fef9
@@ -34,3 +35,4 @@ Qualsiasi comando che non iniziano con la forma viene passato al provider di dat
  [Data Shaping di esempio](../../../ado/guide/data/data-shaping-example.md)   
  [Grammatica formale forma](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
+
