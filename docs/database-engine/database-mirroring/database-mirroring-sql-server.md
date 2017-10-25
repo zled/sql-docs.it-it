@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40253151a07fe393046c7a1b0e20d4e5e7ce1212
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 9160058a5e38ccc9e8e21e56c764b01eac610d2f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="database-mirroring-sql-server"></a>Mirroring del database (SQL Server)
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
      Il mirroring del database offre una ridondanza dei dati completa o quasi completa, in base al fatto che la modalità operativa sia a protezione elevata o a prestazioni elevate. Per ulteriori informazioni, vedere [Modalità operative](#OperatingModes)di seguito in questo argomento.  
   
-     Un partner di mirroring di database in esecuzione in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive cerca di risolvere alcuni tipi di errori che impediscono la lettura di una pagina di dati. Il partner che non è in grado di leggere una pagina ne richiede una copia aggiornata all'altro. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia e l'errore viene risolto. Per ulteriori informazioni, vedere [Correzione automatica della pagina &#40;Gruppi di disponibilità/Mirroring del database&#41;.](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+     Un partner di mirroring di database in esecuzione in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive cerca di risolvere alcuni tipi di errori che impediscono la lettura di una pagina di dati. Il partner che non è in grado di leggere una pagina ne richiede una copia aggiornata all'altro. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia e l'errore viene risolto. Per ulteriori informazioni, vedere [Correzione automatica della pagina &#40;Gruppi di disponibilità/Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Migliore disponibilità del database di produzione durante gli aggiornamenti.  
   
@@ -84,9 +84,6 @@ ms.lasthandoff: 08/02/2017
   
  database mirror  
  Copia del database che in genere è completamente sincronizzata con il database principale.  
-  
- server mirror  
- In una configurazione di mirroring del database, istanza del server in cui risiede il database mirror.  
   
  server mirror  
  In una configurazione di mirroring del database, istanza del server in cui risiede il database mirror.  
