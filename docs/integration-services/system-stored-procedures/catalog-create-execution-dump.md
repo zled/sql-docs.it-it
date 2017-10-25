@@ -24,7 +24,7 @@ ms.lasthandoff: 09/26/2017
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Comporta la sospensione di un pacchetto in esecuzione e la creazione di un file di dump. Il file viene archiviato nel * \<unità >*: cartella \Programmi\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Comporta la sospensione di un pacchetto in esecuzione e la creazione di un file di dump. Il file viene archiviato nel  *\<unità >*: cartella \Programmi\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Sintassi  
   

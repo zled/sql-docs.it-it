@@ -56,7 +56,7 @@ ms.lasthandoff: 09/26/2017
   
  Per informazioni generali sull'utilizzo delle gestioni connessioni con il componente Script, vedere [connessione alle origini dati nel componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
- Per ulteriori informazioni sul **gestioni connessioni** pagina del **Editor trasformazione Script**, vedere [Editor trasformazione Script & #40; Pagina gestioni connessioni & #41; ](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ Per ulteriori informazioni sul **gestioni connessioni** pagina del **Editor trasformazione Script**, vedere [Editor trasformazione Script &#40; Pagina gestioni connessioni &#41; ](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
   
 ### <a name="configuring-outputs-and-output-columns"></a>Configurazione di output e colonne di output  
  Un componente di origine non include input e supporta uno o più output. Nel **input e output** pagina del **Editor trasformazione Script**, è stato creato un singolo output per impostazione predefinita, ma non le colonne di output sono state create. In questa pagina dell'editor può essere necessario o consigliabile configurare gli elementi seguenti.  
@@ -72,16 +72,16 @@ ms.lasthandoff: 09/26/2017
   
 -   Normalmente, più output nello stesso **ExclusionGroup** hanno le stesse colonne di output. Tuttavia, se si crea un output degli errori simulati, è possibile aggiungere più colonne per archiviare le informazioni sugli errori. Per informazioni su come motore del flusso di dati elabora le righe di errore, vedere [tramite output degli errori in un componente del flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). Nel componente script, tuttavia, è necessario scrivere codice personalizzato per inserire le informazioni appropriate sugli errori nelle colonne aggiuntive. Per ulteriori informazioni, vedere [simulando un Output degli errori per il componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
- Per ulteriori informazioni sul **input e output** pagina del **Editor trasformazione Script**, vedere [Editor trasformazione Script & #40; input e output pagina & #41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
+ Per ulteriori informazioni sul **input e output** pagina del **Editor trasformazione Script**, vedere [Editor trasformazione Script &#40; input e output pagina &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Aggiunta di variabili  
  Se sono presenti tutte le variabili esistenti i cui valori che si desidera utilizzare nello script, è possibile aggiungerli nel **ReadOnlyVariables** e **ReadWriteVariables** campi proprietà il **Script** pagina della finestra di **Editor trasformazione Script**.  
   
- Quando si immettono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È inoltre possibile immettere più variabili facendo clic sui puntini di sospensione (**... **) accanto al pulsante il **ReadOnlyVariables** e **ReadWriteVariables** campi delle proprietà e selezionando le variabili nella **Seleziona variabili** la finestra di dialogo .  
+ Quando si immettono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È inoltre possibile immettere più variabili facendo clic sui puntini di sospensione (**...** ) accanto al pulsante il **ReadOnlyVariables** e **ReadWriteVariables** campi delle proprietà e selezionando le variabili nella **Seleziona variabili** la finestra di dialogo .  
   
  Per informazioni generali su come usare le variabili con il componente Script, vedere [utilizzo di variabili nel componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
- Per ulteriori informazioni sul **Script** pagina del **Editor trasformazione Script**, vedere [Editor trasformazione Script & #40; Pagina di script & #41; ](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Per ulteriori informazioni sul **Script** pagina del **Editor trasformazione Script**, vedere [Editor trasformazione Script &#40; Pagina di script &#41; ](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>Generazione di script per un componente di origine in modalità di progettazione codice  
  Dopo aver configurato i metadati per il componente, aprire il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE per codificare gli script personalizzati. Per aprire VSTA, fare clic su **modifica Script** sul **Script** pagina del **Editor trasformazione Script**. È possibile scrivere lo script utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c#, a seconda del linguaggio di script selezionato per il **ScriptLanguage** proprietà.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
  Negli esempi seguenti viene illustrano il codice personalizzato che è necessario il **la classe ScriptMain** classe per creare un componente di origine.  
   
 > [!NOTE]  
->  Negli esempi viene utilizzata la **Person. Address** tabella il **AdventureWorks** database di esempio e passate la prima e la quarta colonna, il **intAddressID** e ** nvarchar (30) Città** colonne, tramite il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
+>  Negli esempi viene utilizzata la **Person. Address** tabella il **AdventureWorks** database di esempio e passate la prima e la quarta colonna, il **intAddressID** e  **nvarchar (30) Città** colonne, tramite il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
   
 ### <a name="adonet-source-example"></a>Esempio di origine ADO.NET  
  Questo esempio viene illustrato un componente di origine che utilizza un oggetto esistente [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestione connessione per caricare dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella nel flusso di dati.  
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  Nel **Script** pagina, fare clic su **modifica Script** e immettere lo script seguente. Chiudere l'ambiente di sviluppo dello script e **Editor trasformazione Script**.  
   
-6.  Creare e configurare un componente di destinazione, ad esempio un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinazione o il componente di destinazione di esempio illustrato in [creazione di una destinazione con il componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), che prevede il ** AddressID** e **Città** colonne. Quindi, connettere il componente di origine alla destinazione. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. È possibile creare una tabella di destinazione eseguendo il seguente comando [!INCLUDE[tsql](../../includes/tsql-md.md)] comando il **AdventureWorks** database:  
+6.  Creare e configurare un componente di destinazione, ad esempio un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinazione o il componente di destinazione di esempio illustrato in [creazione di una destinazione con il componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), che prevede il  **AddressID** e **Città** colonne. Quindi, connettere il componente di origine alla destinazione. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. È possibile creare una tabella di destinazione eseguendo il seguente comando [!INCLUDE[tsql](../../includes/tsql-md.md)] comando il **AdventureWorks** database:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

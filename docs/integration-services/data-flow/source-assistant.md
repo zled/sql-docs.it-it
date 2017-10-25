@@ -39,11 +39,11 @@ In questa sezione viene descritta la procedura per aggiungere una nuova origine 
   
 3.  Selezionare il tipo della destinazione nell'elenco **Tipi**.  
   
-4.  Selezionare una gestione connessione esistente nel **gestioni connessioni** elenco oppure selezionare ** \<nuovo >** per creare una nuova gestione connessione.  
+4.  Selezionare una gestione connessione esistente nel **gestioni connessioni** elenco oppure selezionare  **\<nuovo >** per creare una nuova gestione connessione.  
   
 5.  Se si seleziona una gestione connessione esistente, fare clic su **OK** per chiudere la finestra di dialogo **Aggiungi nuova destinazione**. La destinazione e le gestioni connessioni verranno aggiunte al flusso di dati.  
   
-6.  Se si fa clic ** \<nuovo >** per creare una nuova gestione connessione, verrà visualizzato un **Connection Manager** nella finestra di dialogo che consente di specificare i parametri per la connessione. Dopo avere completato la creazione della nuova gestione connessione, la destinazione e la gestione connessione saranno visibili in Progettazione SSIS.  
+6.  Se si fa clic  **\<nuovo >** per creare una nuova gestione connessione, verrà visualizzato un **Connection Manager** nella finestra di dialogo che consente di specificare i parametri per la connessione. Dopo avere completato la creazione della nuova gestione connessione, la destinazione e la gestione connessione saranno visibili in Progettazione SSIS.  
 
 ## <a name="add-new-source-dialog-box"></a>Aggiungere la finestra di dialogo Nuova origine
 La tabella seguente elenca le opzioni disponibili nel **Aggiungi nuova origine** la finestra di dialogo.  
@@ -51,7 +51,7 @@ La tabella seguente elenca le opzioni disponibili nel **Aggiungi nuova origine**
 |Opzione|Description|  
 |------------|-----------------|  
 |Tipi|Selezionare il tipo di origine a cui si desidera connettersi.|  
-|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su ** \<nuovo >** per creare una nuova gestione connessione.|  
+|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su  **\<nuovo >** per creare una nuova gestione connessione.|  
 |Mostra solo installati|Consente di specificare se visualizzare solo le origini installate.|  
 |OK|Fare clic per salvare le modifiche e aprire eventuali finestre di dialogo successive per configurare opzioni aggiuntive.| 
   

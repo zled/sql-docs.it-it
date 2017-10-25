@@ -37,7 +37,7 @@ ms.lasthandoff: 09/26/2017
  Il componente script e il codice dell'infrastruttura che genera semplificano in modo significativo il processo di sviluppo di un componente del flusso di dati personalizzato. Tuttavia, per comprendere il funzionamento del componente Script, può risultare utile leggere informazioni sui passaggi necessari per lo sviluppo di un componenti del flusso di dati personalizzati nel [lo sviluppo di un componente flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) sezione particolare [Lo sviluppo di un componente di destinazione personalizzato](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md).  
   
 ## <a name="getting-started-with-a-destination-component"></a>Introduzione ai componenti di destinazione  
- Quando si aggiunge un componente di Script alla scheda flusso di dati di [!INCLUDE[ssIS](../../includes/ssis-md.md)] finestra di progettazione, il **Seleziona tipo componente Script** viene visualizzata la finestra di dialogo che chiede di selezionare un **origine**, **destinazione **, o **trasformazione** script. In questa finestra di dialogo selezionare **destinazione**.  
+ Quando si aggiunge un componente di Script alla scheda flusso di dati di [!INCLUDE[ssIS](../../includes/ssis-md.md)] finestra di progettazione, il **Seleziona tipo componente Script** viene visualizzata la finestra di dialogo che chiede di selezionare un **origine**, **destinazione** , o **trasformazione** script. In questa finestra di dialogo selezionare **destinazione**.  
   
  Connettere quindi l'output di una trasformazione al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. A scopo di test, è possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione.  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>Aggiunta di variabili  
  Se si desidera utilizzare variabili esistenti nello script, è possibile aggiungerli nel **ReadOnlyVariables** e **ReadWriteVariables** campi proprietà il **Script** pagina del **Editor trasformazione script**.  
   
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È inoltre possibile selezionare più variabili facendo clic sui puntini di sospensione (**... **) accanto al pulsante il **ReadOnlyVariables** e **ReadWriteVariables** campi delle proprietà e quindi selezionando le variabili nel **Seleziona variabili** la finestra di dialogo.  
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È inoltre possibile selezionare più variabili facendo clic sui puntini di sospensione (**...** ) accanto al pulsante il **ReadOnlyVariables** e **ReadWriteVariables** campi delle proprietà e quindi selezionando le variabili nel **Seleziona variabili** la finestra di dialogo.  
   
  Per informazioni generali su come usare le variabili con il componente Script, vedere [utilizzo di variabili nel componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 09/26/2017
  Negli esempi che seguono viene illustrato il codice che è necessario il **la classe ScriptMain** classe per creare un componente di destinazione.  
   
 > [!NOTE]  
->  Negli esempi viene utilizzata la **Person. Address** tabella il **AdventureWorks** database di esempio e passate la prima e la quarta colonna, il * *int*AddressID ** * e **nvarchar (30) Città** colonne, tramite il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
+>  Negli esempi viene utilizzata la **Person. Address** tabella il **AdventureWorks** database di esempio e passate la prima e la quarta colonna, il  **int*AddressID* * * e **nvarchar (30) Città** colonne, tramite il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
   
 ### <a name="adonet-destination-example"></a>Esempio di destinazione ADO.NET  
  Questo esempio viene illustrato un componente di destinazione che utilizza un oggetto esistente [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestione connessione per salvare i dati dal flusso di dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella.  
@@ -125,7 +125,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come destinazione.  
   
-4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati di **Person. Address** tabella del **AdventureWorks** database di esempio che contiene almeno il **AddressID** e ** Città** colonne.  
+4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati di **Person. Address** tabella del **AdventureWorks** database di esempio che contiene almeno il **AddressID** e  **Città** colonne.  
   
 5.  Aprire il **Editor trasformazione Script**. Nel **le colonne di Input** pagina, selezionare il **AddressID** e **Città** colonne di input.  
   

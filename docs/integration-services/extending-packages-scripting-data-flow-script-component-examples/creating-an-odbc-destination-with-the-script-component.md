@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Il **OdbcCommand** prevede che i parametri posizionali. Le posizioni dei parametri sono indicate dai punti interrogativi (?) nel testo del comando. (Al contrario, un **SqlCommand** previsti parametri denominati.)  
   
- Questo esempio viene utilizzato il **Person. Address** tabella il **AdventureWorks** database di esempio. Nell'esempio vengono passate la prima e la quarta colonna, il * *int*AddressID** * e **nvarchar (30) Città** colonne, di questa tabella tramite il flusso di dati. Questi stessi dati viene utilizzati in origine, trasformazione e gli esempi di destinazione nell'argomento [lo sviluppo di specifici tipi di componenti Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Questo esempio viene utilizzato il **Person. Address** tabella il **AdventureWorks** database di esempio. Nell'esempio vengono passate la prima e la quarta colonna, il  **int*AddressID** * e **nvarchar (30) Città** colonne, di questa tabella tramite il flusso di dati. Questi stessi dati viene utilizzati in origine, trasformazione e gli esempi di destinazione nell'argomento [lo sviluppo di specifici tipi di componenti Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Per configurare l'esempio di componente script  
   

@@ -60,7 +60,7 @@ ms.lasthandoff: 09/26/2017
   
      È possibile utilizzare un account di Windows locale o di dominio per l'account del servizio. In questo caso, è necessario immettere un valore in **Password** per l'account. Questo account può essere per l'host locale o un account di dominio. Assicurarsi di aggiornare la password quando viene modificata utilizzando Servizi locali nel Pannello di controllo di Windows.  
   
- **Nome del server**: selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza a cui connettersi (ad esempio, ** \\ \\< nome_computer >\\< instance_name >**). Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
+ **Nome del server**: selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza a cui connettersi (ad esempio,  **\\ \\< nome_computer >\\< instance_name >**). Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
  **Autenticazione**  
  Selezionare una delle opzioni seguenti:  

@@ -56,9 +56,9 @@ Fare clic su **Modifica SQL** per aprire la finestra di dialogo **Istruzione SQL
 ### <a name="sometimes-these-options-are-disabled"></a>A volte queste opzioni sono disabilitate
 Il **creare una tabella di destinazione** opzione e **modifica SQL** pulsante vengono automaticamente abilitato o disabilitato automaticamente.
 
--   **Abilitata.** Se è stato specificato un **nuova** tabella di destinazione nel **Selezione origine tabelle e viste** pagina il **Crea tabella di destinazione** viene selezionata automaticamente e il ** Modifica codice SQL** pulsante è abilitato.
+-   **Abilitata.** Se è stato specificato un **nuova** tabella di destinazione nel **Selezione origine tabelle e viste** pagina il **Crea tabella di destinazione** viene selezionata automaticamente e il  **Modifica codice SQL** pulsante è abilitato.
 
--   **Disabilitato.** Se si seleziona un **esistente** tabella di destinazione nel **Selezione origine tabelle e viste** pagina il **Crea tabella di destinazione** opzione e **Modifica codice SQL ** pulsante sono disabilitati. Se si desidera creare una nuova tabella di destinazione, tornare alla schermata di **Selezione origine tabelle e viste** pagina e immettere il nome di un **nuova** tabella il **destinazione** colonna.  
+-   **Disabilitato.** Se si seleziona un **esistente** tabella di destinazione nel **Selezione origine tabelle e viste** pagina il **Crea tabella di destinazione** opzione e **Modifica codice SQL**  pulsante sono disabilitati. Se si desidera creare una nuova tabella di destinazione, tornare alla schermata di **Selezione origine tabelle e viste** pagina e immettere il nome di un **nuova** tabella il **destinazione** colonna.  
 
 ## <a name="what-about-existing-data-in-the-destination"></a>Per quanto riguarda i dati esistenti nella destinazione?
 ![Pagina mapping di colonna, sezione Opzioni](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)

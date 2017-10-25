@@ -75,7 +75,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="understanding-the-integration-services-service"></a>Informazioni sul servizio Integration Services    
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .    
     
- Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installato quando si seleziona l'opzione **Integration Services** nella pagina **Selezione funzionalità** . Quando si accettano le impostazioni predefinite nella pagina **Configurazione server[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], il servizio ** viene abilitato e **Tipo di avvio** viene impostato su **Automatico**.    
+ Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installato quando si seleziona l'opzione **Integration Services** nella pagina **Selezione funzionalità** . Quando si accettano le impostazioni predefinite nella pagina **Configurazione server[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], il servizio**  viene abilitato e **Tipo di avvio** viene impostato su **Automatico**.    
     
  È possibile installare solo una singola istanza del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un computer. Il servizio non è specifico di una particolare istanza del Motore di database. È possibile connettersi al servizio usando il nome del computer in cui è in esecuzione il servizio stesso.    
     

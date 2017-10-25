@@ -30,7 +30,7 @@ ms.lasthandoff: 09/26/2017
 > Se è necessario copiare più di un database di SQL Server o gli oggetti di database di SQL Server diverso da tabelle e viste, è possibile utilizzare Copia guidata Database anziché l'importazione / esportazione guidata. Per altre informazioni, vedere [Utilizzo di Copia guidata database](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="screen-shot---if-youre-going-to-copy-tables"></a>Cattura di schermata - se si intende copiare tabelle  
- La schermata seguente mostra un esempio del **Selezione origine tabelle e viste** pagina della procedura guidata quando si è scelto di **copiare i dati da uno o più tabelle o viste** opzione il ** Impostazione copia tabella o Query** pagina. L'elenco visualizza tutte le tabelle e le viste disponibili dall'origine dati.
+ La schermata seguente mostra un esempio del **Selezione origine tabelle e viste** pagina della procedura guidata quando si è scelto di **copiare i dati da uno o più tabelle o viste** opzione il  **Impostazione copia tabella o Query** pagina. L'elenco visualizza tutte le tabelle e le viste disponibili dall'origine dati.
  
 In questo esempio, il **origine** elenco contiene tutte le tabelle nel database di esempio AdventureWorks. La riga selezionata indica che l'utente desidera copiare il **Sales. Customer** tabella dall'origine alla nuova **Sales.CustomerNew** tabella nella destinazione. 
    

@@ -202,7 +202,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |ID|Valore intero|Valore che identifica l'output in modo univoco.|  
 |IdentificationString|String|Stringa che identifica l'output.|  
 |IsErrorOut|Boolean|Indica se l'output è un output degli errori.|  
-|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è **False**.<br /><br /> **\*\*Importante \* \* ** impostando il valore della **IsSorted** proprietà **True** non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è **False**.<br /><br /> **\*\*Importante \* \***  impostando il valore della **IsSorted** proprietà **True** non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nome|String|Nome dell'output.|  
 |SynchronousInputID|Valore intero|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  

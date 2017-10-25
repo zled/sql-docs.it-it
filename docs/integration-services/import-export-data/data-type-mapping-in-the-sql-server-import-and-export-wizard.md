@@ -26,8 +26,8 @@ ms.lasthandoff: 09/26/2017
   
 ##  <a name="wizardMapping"></a> Come viene eseguito il mapping dei tipi di dati tra origine e destinazione durante la procedura guidata?
 La procedura guidata usa file di mapping installati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping dei tipi di dati da un tipo o una versione di database a un altro. Ad esempio, può eseguire il mapping da tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipi di dati Oracle. Per impostazione predefinita, i file di mapping in formato XML sono installati nelle cartelle seguenti.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (per 64 bit)
--   **C:\Programmi\Microsoft file (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * (per i 32 bit).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (per 64 bit)
+-   **C:\Programmi\Microsoft file (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  (per i 32 bit).  
   
  Se si modifica un file di mapping esistente o si aggiunge un nuovo file di mapping alla cartella, è necessario chiudere e riaprire l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per caricare il file di mapping nuovo o modificato.  
  
