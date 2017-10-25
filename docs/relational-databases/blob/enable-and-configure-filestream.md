@@ -38,7 +38,7 @@ ms.lasthandoff: 08/24/2017
   
 4.  Fare clic con il pulsante destro sull'istanza e quindi scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo delle proprietà di SQL Server **** fare clic sulla scheda **FILESTREAM** .  
+5.  Nella finestra di dialogo delle **proprietà di SQL Server** fare clic sulla scheda **FILESTREAM** .  
   
 6.  Selezionare la casella di controllo **Abilita FILESTREAM per l'accesso Transact-SQL** .  
   
