@@ -73,7 +73,7 @@ Utilizzare SQL Server Management Studio per stabilire una connessione al catalog
   
 5.  Al termine del processo di distribuzione, il **risultati** verrà visualizzata la pagina. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione non riuscita, fare clic su **Failed** nel **risultato** colonna per visualizzare una spiegazione dell'errore.
-    -   Facoltativamente, fare clic su **Salva Report... ** per salvare i risultati in un file XML.
+    -   Facoltativamente, fare clic su **Salva Report...**  per salvare i risultati in un file XML.
     -   Fare clic su **Chiudi** chiudere la procedura guidata.
 
 ## <a name="next-steps"></a>Passaggi successivi

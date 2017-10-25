@@ -66,10 +66,10 @@ SQLRETURN SQLNativeSql(
  Se *OutStatementText* è NULL, *TextLength2Ptr* continuerà a restituire il numero totale di caratteri (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui puntava *OutStatementText*.  
   
  *BufferLength*  
- [Input] Numero di caratteri di \* *OutStatementText* buffer. Se il valore restituito * \*InStatementText* è una stringa Unicode (quando si chiama **SQLNativeSqlW**), il *BufferLength* argomento deve essere un numero pari.  
+ [Input] Numero di caratteri di \* *OutStatementText* buffer. Se il valore restituito  *\*InStatementText* è una stringa Unicode (quando si chiama **SQLNativeSqlW**), il *BufferLength* argomento deve essere un numero pari.  
   
  *TextLength2Ptr*  
- [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (ad eccezione di terminazione null) disponibili per restituire \* *OutStatementText*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength*, convertire la stringa SQL in \* *OutStatementText* viene troncato a * BufferLength* meno la lunghezza di un carattere di terminazione null.  
+ [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (ad eccezione di terminazione null) disponibili per restituire \* *OutStatementText*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength*, convertire la stringa SQL in \* *OutStatementText* viene troncato a  *BufferLength* meno la lunghezza di un carattere di terminazione null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
 |22007|Formato di datetime non valido|**InStatementText* contenuta una clausola di escape con un valore di data, ora o timestamp non valido.|  
 |24000|Stato del cursore non valido|Il cursore a cui l'istruzione è stato posizionato prima dell'inizio del set di risultati o dopo la fine del set di risultati. Questo errore non può essere restituito da un driver con un'implementazione nativa di cursore DBMS.|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel * \*MessageText* buffer viene descritto l'errore e la relativa causa.|  
+|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY009|Utilizzo non valido del puntatore null|(DM) **InStatementText* era un puntatore null.|  
 |HY010|Errore nella sequenza (funzione)|(DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione il *ConnectionHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.|  

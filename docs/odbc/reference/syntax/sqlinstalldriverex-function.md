@@ -87,7 +87,7 @@ BOOL SQLInstallDriverEx(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLInstallDriverEx** restituisce FALSE, un oggetto associato * \*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLInstallDriverEx** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
@@ -103,9 +103,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commenti  
  Il *lpszDriver* argomento è un elenco di attributi in forma di coppie valore-parola chiave. Ogni coppia è terminato con un byte null e l'intero elenco è terminata con un byte null. (Ovvero, due byte null contrassegnano la fine dell'elenco.) Il formato di questo elenco è come segue:  
   
- *driver desc* ** \\ **0Driver**=***driver-DLL-filename* ** \\ **0 [installazione**=***installazione-DLL-filename***\\**0]  
+ *driver desc*  **\\** 0Driver**=***driver-DLL-filename*  **\\** 0 [installazione**=***installazione-DLL-filename***\\**0]  
   
- [*driver-attr-keyword1***=***value1***\\**0] [*driver-attr-keyword2 * ** = ** *value2***\\**0]... ** \\ **0  
+ [*driver-attr-keyword1***=***value1***\\**0] [*driver-attr-keyword2*   **=**  *value2***\\**0]...  **\\** 0  
   
  dove \0 è un byte null e *driver-attr-keywordn* qualsiasi parola chiave attributo driver. Le parole chiave devono essere visualizzati nell'ordine specificato. Ad esempio, si supponga che un driver per i file di testo formattato dispone di driver separato e file DLL di installazione e può utilizzare un file con estensione txt e CSV. Il *lpszDriver* argomento per questo driver potrebbe essere come segue:  
   

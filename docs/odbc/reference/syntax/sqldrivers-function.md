@@ -68,7 +68,7 @@ SQLRETURN SQLDrivers(
  [Input] Lunghezza di **DriverDescription* buffer, in caratteri.  
   
  *DescriptionLengthPtr*  
- [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (escluso il carattere di terminazione null) disponibile per restituire \* *DriverDescription*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength1*, la descrizione del driver nella \* *DriverDescription* viene troncato a * BufferLength1* meno la lunghezza di un carattere di terminazione null.  
+ [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (escluso il carattere di terminazione null) disponibile per restituire \* *DriverDescription*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength1*, la descrizione del driver nella \* *DriverDescription* viene troncato a  *BufferLength1* meno la lunghezza di un carattere di terminazione null.  
   
  *DriverAttributes*  
  [Output] Puntatore a un buffer in cui restituire l'elenco di coppie di valore dell'attributo del driver (vedere "Commenti").  
@@ -76,10 +76,10 @@ SQLRETURN SQLDrivers(
  Se *DriverAttributes* è NULL, *AttributesLengthPtr* continuerà a restituire il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui puntava *DriverAttributes*.  
   
  *BufferLength2*  
- [Input] Lunghezza di \* *DriverAttributes* buffer, in caratteri. Se il * \*DriverDescription* valore è una stringa Unicode (quando si chiama **SQLDriversW**), il *BufferLength* argomento deve essere un numero pari.  
+ [Input] Lunghezza di \* *DriverAttributes* buffer, in caratteri. Se il  *\*DriverDescription* valore è una stringa Unicode (quando si chiama **SQLDriversW**), il *BufferLength* argomento deve essere un numero pari.  
   
  *AttributesLengthPtr*  
- [Output] Puntatore a un buffer in cui restituire il numero totale di byte (escluso il byte di terminazione null) disponibile per restituire \* *DriverAttributes*. Se il numero di byte disponibili da restituire è maggiore o uguale a *BufferLength2*, l'elenco di coppie di valore di attributo in \* *DriverAttributes* viene troncato a * BufferLength2* meno la lunghezza del carattere di terminazione null.  
+ [Output] Puntatore a un buffer in cui restituire il numero totale di byte (escluso il byte di terminazione null) disponibile per restituire \* *DriverAttributes*. Se il numero di byte disponibili da restituire è maggiore o uguale a *BufferLength2*, l'elenco di coppie di valore di attributo in \* *DriverAttributes* viene troncato a  *BufferLength2* meno la lunghezza del carattere di terminazione null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -91,7 +91,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|Avviso generico.|(DM) messaggio informativo di gestione Driver specifico. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa di dati corretto troncato|(DM) buffer \* *DriverDescription* non sia abbastanza grande per restituire la descrizione completa del driver. Pertanto, la descrizione è stata troncata. Viene restituita la lunghezza della descrizione del driver completo \* *DescriptionLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) buffer \* *DriverAttributes* non sia abbastanza grande per restituire l'elenco completo di coppie valore dell'attributo. Pertanto, l'elenco è stato troncato. Viene restituita la lunghezza dell'elenco di coppie valore attributo non troncato **AttributesLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel * \*MessageText* buffer viene descritto l'errore e la relativa causa.|  
+|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Impossibile allocare la memoria che è necessario per supportare l'esecuzione o il completamento della funzione (DM) il Driver Manager.|  
 |HY010|Errore nella sequenza (funzione)|(DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
