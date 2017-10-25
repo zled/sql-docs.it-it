@@ -286,7 +286,7 @@ Execute a character string
   
  Per ulteriori informazioni, vedere [specificando un utente o un nome di accesso](#_user) più avanti in questo argomento.  
   
- [N] '**'  
+ [N] '*command_string*'  
  Stringa costante contenente il comando da passare al server collegato. Se il valore N è incluso, la stringa viene interpretata come **nvarchar** tipo di dati.  
   
  [?]  
@@ -295,7 +295,7 @@ Execute a character string
  IN *linked_server_name*  
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Specifica che ** viene eseguita su *linked_server_name* e, se presenti, vengono restituiti al client. *linked_server_name* deve fare riferimento a una definizione di server collegato esistente nel server locale. Server collegati definiti tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Specifica che *command_string* viene eseguita su *linked_server_name* e, se presenti, vengono restituiti al client. *linked_server_name* deve fare riferimento a una definizione di server collegato esistente nel server locale. Server collegati definiti tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  CON \<execute_option >  
  Opzioni di esecuzione possibili. Le opzioni RESULT SETS non possono essere specificate in un'istruzione INSERT...EXEC.  
