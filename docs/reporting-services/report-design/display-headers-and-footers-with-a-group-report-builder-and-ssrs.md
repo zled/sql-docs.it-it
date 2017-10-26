@@ -43,7 +43,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**. Nel riquadro Gruppi di righe verranno visualizzati i membri statici e dinamici gerarchici della gerarchia dei gruppi di righe.  
   
-3.  Fare clic sul membro statico che corrisponde all'intestazione o al piè di pagina della riga che si desidera mantenere con le righe di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei membri Tablix **** .  
+3.  Fare clic sul membro statico che corrisponde all'intestazione o al piè di pagina della riga che si desidera mantenere con le righe di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
   
 4.  Nel riquadro Proprietà fare clic su **KeepWithGroup**e quindi scegliere uno dei valori seguenti nell'elenco a discesa:  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**. Nel riquadro Gruppi di colonne verranno visualizzati i membri statici e dinamici gerarchici della gerarchia dei gruppi di colonne.  
   
-3.  Fare clic sul membro statico che corrisponde alla colonna statica che si desidera mantenere con le colonne di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei membri Tablix **** .  
+3.  Fare clic sul membro statico che corrisponde alla colonna statica che si desidera mantenere con le colonne di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
   
 4.  Nel riquadro Proprietà fare clic su **KeepWithGroup**e quindi scegliere uno dei valori seguenti nell'elenco a discesa:  
   
