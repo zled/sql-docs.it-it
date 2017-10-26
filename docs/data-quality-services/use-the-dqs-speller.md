@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/09/2017
  I suggerimenti per i valori verranno forniti sia nella colonna **Valore** che nella colonna **Correggi in** della tabella **Valore** . Quando si seleziona un suggerimento nella colonna **Valore** , il tipo di valore viene impostato su **Errori**e il suggerimento viene copiato nella colonna **Correggi in** , come se fosse stato inserito manualmente. Se è presente una correzione esistente, diventa un suggerimento. Quando si seleziona un suggerimento nella colonna **Correggi in** della pagina **Gestisci e visualizza risultati** dell'attività **Pulizia** , il valore attualmente selezionato verrà sostituito con la selezione e il valore attualmente selezionato diventerà un suggerimento. Nella pagina **Gestisci e visualizza risultati** dell'attività **Pulizia** non viene indicato alcun suggerimento a livello di record (nella griglia inferiore).  
   
   
+

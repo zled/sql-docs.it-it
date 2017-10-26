@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  Dopo avere distribuito un pacchetto nel catalogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile analizzare il flusso di dati nel pacchetto durante l'esecuzione per verificarne le prestazioni o per verificare la presenza di altri problemi. Sono disponibili alcuni report standard che consentono di visualizzare lo stato e la cronologia dei pacchetti ed è possibile eseguire una query sulle viste del database per ottenere informazioni dettagliate sull'esecuzione dei pacchetti. È inoltre possibile aggiungere e rimuovere dinamicamente i data tap durante l'esecuzione per individuare specifici componenti del pacchetto. Per altre informazioni, vedere [Debug di un flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   
+

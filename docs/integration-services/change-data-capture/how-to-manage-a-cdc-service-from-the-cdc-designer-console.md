@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  Le altre attività del servizio CDC vengono eseguite utilizzando la console di Configurazione del servizio CDC. Per informazioni sulle attività che è possibile eseguire nella console di configurazione del servizio, vedere la Guida della console di configurazione del servizio.  
   
   
+

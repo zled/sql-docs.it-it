@@ -22,6 +22,7 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
@@ -212,3 +213,4 @@ ms.lasthandoff: 08/17/2017
 -   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3 relativa a problemi e alternative](http://go.microsoft.com/fwlink/?LinkId=217676)sul sito dougbert.com.  
   
   
+

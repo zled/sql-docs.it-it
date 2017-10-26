@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  Quando si utilizza l'analisi basata sulle informazioni e sono presenti meno valori nei dati di origine di quanti sono i domini nel dominio composito, DQS inserirà un valore Null nel dominio mancante. Quando sono presenti più valori nei dati di origine di quanti sono i domini nel dominio composito, DQS aggiungerà i dati aggiuntivi a una delle colonne. Se due o più domini includono gli stessi valori, l'origine dati verrà analizzata fino al primo dominio corrispondente.  
   
   
+

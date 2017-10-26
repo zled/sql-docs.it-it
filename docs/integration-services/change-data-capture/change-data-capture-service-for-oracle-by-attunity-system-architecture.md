@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/03/2017
  Il servizio Oracle CDC e le istanze figlio di Oracle CDC sono in grado di comunicare solo con il o i database Oracle di origine e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione come client. Non sono attivamente in ascolto su alcun protocollo di rete e di altro tipo. Tramite il servizio Oracle CDC vengono monitorati i database CDC per le modifiche della configurazione e l'operazione del servizio stesso viene aggiornata in base alla configurazione aggiornata.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6811fe90d64374769e858787a879231140a4e925
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 * Identificare la versione del driver JDBC si intende utilizzare, in base all'ambiente, come indicato di seguito: [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
 * Scaricare e installare i Driver JDBC applicabile qui: [scaricare Microsoft JDBC Driver per SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
 * Percorso della classe set in base alla versione del driver, come indicato di seguito: [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md)
+

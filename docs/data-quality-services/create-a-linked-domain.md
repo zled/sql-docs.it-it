@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/09/2017
 -   Quando si fa doppio clic su un dominio collegato in una qualsiasi delle schede Gestione dominio, il dominio verrà aperto alla modifica con un'indicazione nella stringa del nome che si tratta di un dominio collegato.  
   
   
+

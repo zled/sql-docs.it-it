@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
@@ -139,3 +140,4 @@ ms.lasthandoff: 09/09/2017
  Ogni tabella di valori nella scheda **Valori di dominio** include un valore DQS_NULL. Un valore Null in un'origine dati verrà visualizzato come valore SQL_NULL nella tabella di valori. È possibile impostare uno o più equivalenti di un valore Null come sinonimo di DQS_NULL. In tal modo, tutti i valori Null e gli equivalenti dei valori Null vengono elaborati come valori DQS_NULL.  
   
   
+

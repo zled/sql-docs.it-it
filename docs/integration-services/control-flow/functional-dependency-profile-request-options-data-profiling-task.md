@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/03/2017
  [Form profilo rapido singola tabella &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

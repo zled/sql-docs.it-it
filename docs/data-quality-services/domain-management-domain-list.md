@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  Consente di esportare il dominio in un file DQS. Con questo comando viene visualizzata la finestra di dialogo **Esporta in file di dati** . Questo comando è disponibile nel menu **Esporta** della barra dei menu all'inizio della pagina o facendo clic con il pulsante destro del mouse nel riquadro dell'elenco di domini. Per altre informazioni, vedere [Esportazione di un dominio in un file DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
   
+

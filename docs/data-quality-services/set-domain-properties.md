@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  Se il tipo di dati è **Stringa**, selezionare questa opzione per specificare di non individuare gli errori di sintassi nel dominio durante la pulizia. Selezionare questa casella di controllo quando non è importante identificare gli errori di sintassi per il dominio, ad esempio per un numero di serie. Questo controllo è disponibile solo per il tipo di dati stringa. Il controllo degli errori di sintassi non verrà eseguito nei tipi di dati non stringa.  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
@@ -136,3 +137,4 @@ ms.lasthandoff: 09/09/2017
 |Valore non corrispondente a un'espressione regolare|Solo i valori che non corrispondono all'espressione regolare dell'operando saranno considerati validi.|Operando di esempio: [1-5] + (la stringa non deve essere costituita solo da cifre numeriche comprese tra 1 e 5)<br /><br /> Valori validi: 456, ABC<br /><br /> Valori non validi: 123, 123456, 14352|  
   
   
+

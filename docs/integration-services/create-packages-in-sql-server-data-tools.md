@@ -19,6 +19,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
@@ -78,3 +79,4 @@ Per installare SQL Server Data Tools (SSDT), vedere [Scaricare SQL Server Data T
  È possibile creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
   
+

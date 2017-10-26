@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 453eb45dcefe48397911039ab075b4bb301774a9
@@ -101,3 +102,4 @@ ms.lasthandoff: 09/09/2017
     >  Se si utilizza la versione a 64 bit di Excel, non è possibile esportare i dati puliti in un file di Excel. È possibile eseguire l'esportazione solo in un database di SQL Server o in un file con estensione csv.  
   
   
+

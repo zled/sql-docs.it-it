@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ L'analisi standard è un set di routine di analisi, dipendenti dalle impostazion
   
  L'analisi standard consente di eseguire conversioni tra tipi di dati utilizzati per dati internazionali e deve essere utilizzata quando il formato dei dati non è supportato dall'analisi veloce. Per ulteriori informazioni sull'API di conversione del tipo di dati di automazione, vedere la sezione relativa alle API di conversione dei tipi di dati nel sito Web [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
+

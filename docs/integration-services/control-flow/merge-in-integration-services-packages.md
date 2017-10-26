@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  Il database Inventory contiene una tabella ProductsInventory con le colonne ProductID e StockOnHand. In una tabella Shipments con le colonne ProductID, CustomerID e Quantity vengono rilevate le spedizioni di prodotti ai clienti. La tabella ProductInventory deve essere aggiornata ogni giorno in base alle informazioni presenti nella tabella Shipments. Con una singola istruzione MERGE è possibile ridurre l'inventario nella tabella ProductInventory in base alle spedizioni effettuate. Se l'inventario per un prodotto è stato ridotto a 0, con l'istruzione MERGE è possibile eliminare anche la riga di tale prodotto dalla tabella ProductInventory.  
   
   
+
