@@ -57,7 +57,7 @@ GO
 
 Il codice seguente viene caricato il file eseguibile di Python, passa i dati di input e per ogni riga di dati di input, aggiorna il nome del giorno nella tabella con un numero che rappresenta l'indice del giorno della settimana.
 
-Prendere nota del parametro * @RowsPerRead *. Questo parametro specifica il numero di righe che vengono passati al runtime di Python da SQL Server.
+Prendere nota del parametro  *@RowsPerRead* . Questo parametro specifica il numero di righe che vengono passati al runtime di Python da SQL Server.
 
 La libreria di analisi dati di Python, noto come **pandas**, è necessario per passare dati a SQL Server ed è incluso per impostazione predefinita con servizi di Machine Learning.
 
@@ -177,7 +177,7 @@ ParamCharN=OUTPUT
 
     Il GUID è il nome di una cartella temporanea viene creata durante l'esecuzione di script per archiviare gli elementi di dati e script. Le cartelle temporanee sono protetti da SQL Server e pulite per l'oggetto processo di Windows dopo il completamento dello script è terminata.
 
-+ La sezione che contiene il messaggio "Hello World" visualizzato due volte. Ciò accade perché il valore di * @RowsPerRead * è stato impostato su 5 e sono presenti 10 righe nella tabella; pertanto, in cui sono necessarie due chiamate di Python per elaborare tutte le righe nella tabella.
++ La sezione che contiene il messaggio "Hello World" visualizzato due volte. Ciò accade perché il valore di  *@RowsPerRead*  è stato impostato su 5 e sono presenti 10 righe nella tabella; pertanto, in cui sono necessarie due chiamate di Python per elaborare tutte le righe nella tabella.
 
     Le esecuzioni di produzione, è consigliabile sperimentare valori diversi per determinare il numero massimo di righe che devono essere passati in ogni batch. Il numero ottimale di righe è dipendente dai dati e è influenzato dal entrambi il numero di colonne nel set di dati e il tipo di dati che si siano passando.
 

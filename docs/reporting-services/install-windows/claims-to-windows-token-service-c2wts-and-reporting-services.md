@@ -70,7 +70,7 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
 
     * Selezionare **Aggiungi** per aggiungere un servizio per la delega.
 
-    * Selezionare **utenti o computer... *** e immettere l'account che ospita il servizio. Ad esempio, se SQL Server è in esecuzione con un account denominato *sqlservice*, immettere `sqlservice`. 
+    * Selezionare **utenti o computer...** * e immettere l'account che ospita il servizio. Ad esempio, se SQL Server è in esecuzione con un account denominato *sqlservice*, immettere `sqlservice`. 
 
     * Selezionare l'elenco del servizio. Verranno visualizzati i nomi SPN disponibili per tale account. Se non viene visualizzato, il servizio indicato per l'account può essere mancante o inserito in un altro account. è possibile usare l'utilità SetSPN per modificare i nomi SPN.
 
