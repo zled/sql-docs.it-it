@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
@@ -143,3 +144,4 @@ ms.lasthandoff: 09/01/2017
  Dopo avere valutato le tabelle nel modello e avere impostato le proprietà del comportamento per le tabelle che contengono righe di dettaglio che devono sempre essere visualizzate come singoli elementi, è possibile ottimizzare ulteriormente il modello tramite proprietà o impostazioni aggiuntive.  
   
   
+

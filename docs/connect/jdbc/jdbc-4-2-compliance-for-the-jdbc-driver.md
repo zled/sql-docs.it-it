@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3dbb9bbf584caeca1f6d8db034323e6695512f6a
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/09/2017
 |**Nuove classi Java in Java 8:**<br /><br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **Nuovi tipi JDBC:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR non è supportato in SQL Server. Il driver genera un'eccezione SQLFeatureNotSupportedException se viene utilizzato questo tipo. Il driver supporta tutti gli altri nuovi mapping di tipi Java e JDBC come specificato nella specifica JDBC 4.2.|  
   
   
+

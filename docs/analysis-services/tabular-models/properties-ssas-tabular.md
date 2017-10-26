@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[Configurare la modellazione dei dati e le proprietà di distribuzione predefinite &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Vengono forniti passaggi di configurazione e descrizioni per le proprietà di modellazione e distribuzione predefinite. Le proprietà predefinite vengono applicate ai nuovi progetti di modello tabulare. Dopo aver creato un progetto, queste proprietà possono essere modificate per un particolare progetto di modello in base ai requisiti specifici.|  
   
   
+

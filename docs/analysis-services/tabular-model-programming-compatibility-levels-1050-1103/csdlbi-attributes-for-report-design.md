@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/01/2017
 |**Indicatore KPI**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Sottoelemento|Indica che l'elemento della misura deve essere utilizzato come indicatore KPI. Il sottoelemento KPI utilizza gli elementi KpiGoal e KpiStauts per definire l'immagine di visualizzazione associata e gli intervalli di destinazione.|  
   
   
+

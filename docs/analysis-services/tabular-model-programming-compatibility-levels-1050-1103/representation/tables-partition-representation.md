@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8a0509c571af328e4f5a459dbcbc68e1672d00f4
@@ -102,3 +103,4 @@ private void AddPartition(
  Per comprendere tuttavia la modalità di utilizzo di AMO (Analysis Management Objects) per creare e modificare le rappresentazioni della partizione, vedere il codice sorgente dell'esempio AMO to Tabular. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
   
   
+

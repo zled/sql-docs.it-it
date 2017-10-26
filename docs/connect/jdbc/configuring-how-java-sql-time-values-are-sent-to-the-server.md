@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3fc45c7fc45bb37ea9373c452a2086557ecf62fc
@@ -69,3 +70,4 @@ Si noti che sendTimeAsDatetime deve essere false per le colonne crittografate co
  [Informazioni sui tipi di dati del Driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
+

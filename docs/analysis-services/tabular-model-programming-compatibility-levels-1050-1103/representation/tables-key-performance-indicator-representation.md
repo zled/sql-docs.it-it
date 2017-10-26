@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
@@ -231,3 +232,4 @@ private void addStaticKPI(object sender, EventArgs e)
  Sull'utilizzo di AMO per creare e modificare l'indicatore di prestazioni chiave per comprendere le rappresentazioni vedere il codice sorgente di esempio AMO to Tabular; in particolare controllare nel seguente file di origine: AddKPIs.cs. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
   
   
+

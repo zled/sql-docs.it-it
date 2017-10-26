@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4fe8eea6f5252adcf17f4c1f350c23042b2aeba6
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Per **RelationshipEndVisualizationProperties** elementi, il **CommonIdentifierPosition** elemento contiene la posizione dell'elemento identificatore comune in una raccolta di dettagli. Il valore predefinito di **false** non indica è presente alcun identificatore comune da utilizzare.  
   
   
+

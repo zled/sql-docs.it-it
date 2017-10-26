@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6fbef7caf08fe13a1f86e9797277c609b836bc5d
@@ -140,3 +141,4 @@ private void updatePerspective_Click(
  Per comprendere tuttavia la modalità di utilizzo di AMO (Analysis Management Objects) per la creazione e la modifica delle rappresentazioni della prospettiva, vedere il codice sorgente dell'esempio Da AMO a tabulare. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
   
   
+

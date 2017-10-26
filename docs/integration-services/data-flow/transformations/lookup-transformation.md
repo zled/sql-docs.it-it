@@ -90,7 +90,7 @@ ms.lasthandoff: 08/19/2017
   
  Di seguito sono elencati i vantaggi aggiuntivi del salvataggio permanente della cache in un file:  
   
--   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere ***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Distribuire il file di cache con un pacchetto. ***È quindi possibile usare i dati su più computer.*** Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
