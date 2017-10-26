@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0728ff396ad3b9f87382bfd22ba171afac046720
@@ -172,3 +173,4 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_TXN_ISOLATION_OPTION|0|  
 |SQL_UNION|Più valori|  
 |SQL_USER_NAME|""|
+

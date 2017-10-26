@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
@@ -38,3 +39,4 @@ Il passaggio successivo è per recuperare i risultati, come illustrato nella fig
  Per una descrizione completa di recupero dei risultati, vedere [il recupero dei risultati (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) e [il recupero dei risultati (avanzate)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  A questo punto l'applicazione torna al "Passaggio 3: compilazione ed eseguire un'istruzione SQL" per l'esecuzione di un'altra istruzione nella stessa transazione; o procede al "Passaggio 5: Commit di transazioni" per eseguire il commit o il rollback della transazione.
+

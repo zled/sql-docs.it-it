@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ Per informazioni sul download e installazione del driver ODBC Visual FoxPro, ved
 -   Rimuovere tutti i componenti installati in precedenza.  
   
  Dopo aver installato il driver nel sistema, il programma di installazione riconosce i componenti installati i driver e vengono visualizzate le finestre di dialogo aggiuntive che consentono di modificare la configurazione del driver.
+

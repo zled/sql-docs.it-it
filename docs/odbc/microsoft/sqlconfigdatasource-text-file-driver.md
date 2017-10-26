@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|Per il driver di testo, può essere FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (da una virgola) o DELIMITED() (dal carattere speciale specificato tra parentesi). Il carattere speciale è un carattere di lunghezza e può essere in formato decimale o esadecimale del carattere.|  
 |MAXSCANROWS|Il numero di righe da analizzare per l'impostazione di un tipo di dati colonna sulla base dei dati esistenti.<br /><br /> Per il driver di testo, è possibile immettere un numero compreso tra 1 e 32767 per il numero di righe da analizzare; Tuttavia, il valore verrà sempre aperta a 25. (Un numero di fuori del limite verrà restituito un errore).<br /><br /> Consente di impostare la stessa opzione come **righe da analizzare** nella finestra di dialogo programma di installazione.|  
 |READONLY|TRUE per rendere i file di sola lettura. FALSE per rendere i file non di sola lettura.<br /><br /> Consente di impostare la stessa opzione come **in sola lettura** nella finestra di dialogo programma di installazione.|
+

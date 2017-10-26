@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ L'identificatore per il tipo di dati SQL ODBC Data è:
  [c] è la dimensione del tipo di dati C corrispondente.  
   
  Quando i dati SQL Data viene convertito in dati di tipo carattere C, la stringa risultante è il "*aaaa*-*mm*-*gg*" formato. Questo formato non è interessato dalla configurazione dell'impostazione di paese Windows®.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ L'origine dati o il driver utilizzato da un'applicazione è a volte hardcoded ne
 -   **L'accesso a un determinato DBMS una sola volta.** Ad esempio, in cui potrebbe contenere un foglio di calcolo che recupera i dati mediante la chiamata di funzioni ODBC il **DRIVER** (parola chiave) per identificare un driver specifico. Poiché il nome del driver è significativo per tutti gli utenti che dispongono di tale driver, è possibile passare il foglio di calcolo per gli utenti. Se il foglio di calcolo contiene un nome origine dati, ogni utente deve creare la stessa origine dati per l'utilizzo del foglio di calcolo.  
   
 -   **Esplorazione del sistema per tutti i database accessibili a un driver specifico.** Per ulteriori informazioni, vedere [connessione con SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), più avanti in questa sezione.
+

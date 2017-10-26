@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991f555cb1cc1428b182b306e60c82703a33745d
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 (Questo controllo è disponibile solo quando la versione 4. *x* è selezionato il formato.)  
   
  Con il rilascio della versione del motore di Database Microsoft Jet 4.0, la crittografia del database è consentita durante la creazione di database di Access. Vedere il *di riferimento per programmatori di Jet Database Engine* per ulteriori informazioni.
+

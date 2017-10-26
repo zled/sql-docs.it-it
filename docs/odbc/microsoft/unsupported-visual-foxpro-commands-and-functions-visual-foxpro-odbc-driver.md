@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 101879f45583fc46d5bc4aecc3ff11a92aed5112
@@ -324,3 +325,4 @@ La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate 
 ||||  
 |-|-|-|  
 |FINESTRA di ZOOM (comando)|||
+

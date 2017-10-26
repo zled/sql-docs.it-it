@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ La prima attività per qualsiasi applicazione ODBC consiste nel caricare il Driv
  Quando **SQLFreeHandle** viene chiamato, le versioni di driver, la struttura utilizzata per archiviare le informazioni sull'ambiente. Si noti che **SQLFreeHandle** non può essere chiamato per un handle di ambiente fino a dopo essere stati sbloccati tutti gli handle di connessione su tale handle di ambiente.  
   
  Per ulteriori informazioni sull'handle di ambiente, vedere [ambiente gestisce](../../../odbc/reference/develop-app/environment-handles.md).
+

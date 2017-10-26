@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
@@ -51,3 +52,4 @@ Una volta noto il livello di base di interoperabilità, è necessario considerar
 -   **Supporta più query solo se il driver non.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. L'applicazione consente all'utente di avviare una nuova istruzione quando è già attivo solo se il driver supporta più istruzioni attive. L'applicazione dispone di più funzionalità e l'interoperabilità, ma è più difficile da implementare.  
   
 -   **Quando è necessario emulare sempre supporta più query.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. Sempre l'applicazione consente all'utente di avviare una nuova istruzione quando è già attivo. Se il driver supporta solo un'istruzione attiva, l'applicazione apre una connessione aggiuntiva per il driver ed esegue l'istruzione di nuovo su tale connessione. L'applicazione dispone di funzionalità complete e interoperabilità elevata ma è più difficile da implementare.
+

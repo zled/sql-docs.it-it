@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d158cd0646f276d278b66427e3f44b661493e695
@@ -74,3 +75,4 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |NUMERIC|Tipo di dati limitato alla versione 4.0 di Microsoft Access.|  
   
  Altre limitazioni sui tipi di dati sono reperibili [limitazioni del tipo di dati](../../odbc/microsoft/data-type-limitations.md).
+

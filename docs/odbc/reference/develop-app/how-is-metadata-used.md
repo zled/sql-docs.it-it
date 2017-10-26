@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ Le applicazioni richiedono metadati per la maggior parte delle operazioni sui se
  Applicazioni generiche, in particolare quelli che supportano query ad hoc, non conoscere quasi mai i metadati del set di risultati creati. Pertanto, individuano i metadati in fase di esecuzione tramite le funzioni di **SQLNumResultCols**, **SQLDescribeCol**, e **SQLColAttribute**, che sono descritte nel la sezione successiva, [SQLDescribeCol e SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Tutte le applicazioni, indipendentemente dal loro tipo, è possibile codificare i metadati per il set di risultati restituiti dalle funzioni di catalogo. Questi set di risultati sono definiti nella sezione di riferimento di questo manuale.
+

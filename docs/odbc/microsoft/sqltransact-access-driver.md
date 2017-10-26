@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 657d0324132b279300e2a61151c790f066e4a3f5
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Quando viene utilizzato il driver Microsoft Access, SQL_COMMIT e SQL_ROLLBACK sono supportati per il *fType* argomento in una chiamata a **SQLTransact**.  
   
  Se si verifica un errore durante il processo di commit, il database interessato può essere ripristinato tramite l'opzione di Database di ripristino nel programma di installazione di driver Microsoft Access o tramite la parola chiave REPAIR_DB nel **SQLConfigDataSource** funzione.
+

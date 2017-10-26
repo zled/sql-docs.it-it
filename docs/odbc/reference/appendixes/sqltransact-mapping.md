@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 252339f7fcd2a3893f030c0ffbc4485ab5441152
@@ -48,3 +49,4 @@ SQLEndTran (SQL_HANDLE_ENV, EnvironmentHandle, CompletionType);
  Se *ConnectionHandle* è uguale a SQL_NULL_HDBC. Il *EnvironmentHandle* argomento è impostato sul valore di *henv*.  
   
  In entrambi i casi precedenti, il *CompletionType* argomento è impostato sullo stesso valore di *fType*.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a925896250a307c7d256232377ec6d9325c8db77
@@ -49,3 +50,4 @@ I driver di Database ODBC Desktop e di gestione di Microsoft Jet sottostante non
   
 > [!NOTE]  
 >  I driver di Database Desktop supportano la sintassi ANSI standard per % (percentuale) e _ (carattere di sottolineatura), non * (asterisco) e? (punto interrogativo).
+

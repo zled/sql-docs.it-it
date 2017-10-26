@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce87b9dbed8cfa6ca621cb72c36220c13ecb0929
@@ -32,3 +33,4 @@ Gestione Driver completamente o parzialmente implementa una serie di funzioni e 
 -   Gestione Driver verifica se un driver implementa **SQLGetFunctions**. Se il driver non implementa **SQLGetFunctions**, gestione Driver implementa e verifica la presenza di tutti gli errori e avvisi in essa contenuti.  
   
 -   Gestione Driver implementa parzialmente **SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**, ** SQLFreeHandle**, **SQLGetDiagRec**, e **SQLGetDiagField** e le verifiche per alcuni errori di queste funzioni. Può restituire gli stessi errori perché il driver per alcune di queste funzioni perché entrambi eseguire operazioni simili. Ad esempio, il Driver Manager o il driver può restituire IM008 SQLSTATE (finestra di dialogo non riuscita) se uno è in grado di visualizzare una finestra di dialogo di accesso per **SQLDriverConnect**.
+

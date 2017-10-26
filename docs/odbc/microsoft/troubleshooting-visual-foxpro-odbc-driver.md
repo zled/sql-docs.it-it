@@ -23,6 +23,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3db2f795910c0ee331ad77903b12201f365784e6
@@ -68,3 +69,4 @@ Le sezioni seguenti illustrano come migliorare le prestazioni e risolvere i prob
   
 ## <a name="using-the-set-ansi-command"></a>Il comando SET ANSI  
  Se si è uno sviluppatore di Visual FoxPro, è necessario tenere presente che l'impostazione predefinita per SET ANSI è impostata su ON per il driver, a differenza di un'impostazione OFF per Visual FoxPro. Il valore predefinito di impostazione per SET ANSI consente origini dati di Visual FoxPro da un comportamento coerente con altre origini dati ODBC che in genere eseguono confronti esatto. È possibile modificare l'impostazione predefinita. Per ulteriori informazioni, vedere [SET ANSI](../../odbc/microsoft/set-ansi-command.md).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
@@ -53,3 +54,4 @@ Gestione driver supporta due punti di ingresso per le funzioni che accettano arg
  Gestione Driver è abilitata per Unicode internamente. Di conseguenza, le prestazioni ottimali viene ottenuta da un'applicazione Unicode utilizzano un driver di Unicode, in quanto Gestione Driver passa semplicemente funzioni Unicode tramite il driver. Quando un'applicazione ANSI collabora con un driver ANSI, gestione Driver deve convertire le stringhe da ANSI a Unicode durante l'elaborazione di alcune funzioni, ad esempio **SQLDriverConnect**. Dopo la funzione di elaborazione, gestione Driver deve convertire quindi la stringa Unicode al ANSI prima di inviare la funzione al driver ANSI.  
   
  Un'applicazione non deve modificare o leggere il buffer dei parametri associati, quando il driver restituisce SQL_NEED_DATA o SQL_STILL_EXECUTING. Gestione Driver lascia il buffer associato a ANSI fino a quando il driver restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Un'applicazione multithreading non deve ottenere l'accesso a tutti i valori di parametri associati in un altro thread in esecuzione un'istruzione SQL. Gestione Driver converte i dati da Unicode ad ANSI "sul posto" e l'altro thread potrebbe visualizzare dati di ANSI in questi buffer mentre il driver è in corso l'elaborazione dell'istruzione SQL. Applicazioni che associano i dati Unicode a un driver ANSI non necessario associare due colonne diverse per lo stesso indirizzo.
+

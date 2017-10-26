@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ Nella maggior parte dei casi, i programmatori di applicazioni sapere se le istru
  L'applicazione può chiamare **SQLNumResultCols** in qualsiasi momento dopo la preparazione o l'esecuzione dell'istruzione. Tuttavia, poiché alcune origini dati non sono facilmente descrive i set di risultati che verranno creati per le istruzioni preparate, le prestazioni risulteranno ridotte se **SQLNumResultCols** viene chiamato dopo che un'istruzione preparata ma prima che venga eseguito.  
   
  Alcune origini dati supportano anche il numero di righe restituito da un'istruzione SQL in un set di risultati. A tale scopo, l'applicazione chiama **SQLRowCount**. Esattamente ciò che rappresenta il conteggio delle righe è indicato dall'impostazione dell'opzione SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (a seconda del tipo di cursore) restituito da una chiamata a **SQLGetInfo**. La maschera di bit indica per ogni tipo di cursore, se il conteggio delle righe restituito è esatto, approssimativi o non è disponibile in tutti. Se il conteggio delle righe per statici o basati su keyset interessati dalle modifiche apportate tramite **SQLBulkOperations** o **SQLSetPos**, o per gli aggiornamenti posizionati o le istruzioni delete, dipende da altri bit restituito dagli stessi argomenti opzione elencati in precedenza. Per ulteriori informazioni, vedere il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione.
+

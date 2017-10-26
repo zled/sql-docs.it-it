@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308ad8ed54aacb9ab7bc169efd9dad020e2f2b66
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
 |SL012|Associazioni di istruzione non possono essere modificate mentre è aperto un cursore.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **Funzione SQLSetStmtAttr**|  
 |SL014|È stata eseguita una richiesta di posizione e non tutti i campi numero di colonna sono stati memorizzati nel buffer.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
 |SL015|**SQLFetch** e **SQLFetchScroll** non possono essere combinate.|**SQLExtendedFetch.**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+

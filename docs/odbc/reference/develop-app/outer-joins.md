@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  Per determinare i tipi di outer join che supportano un'origine dati e i driver, un'applicazione chiama **SQLGetInfo** con il SQL_OJ_CAPABILITIES flag. I tipi di outer join che potrebbero essere supportate sono sinistro, destro, completo o annidato outer join. outer join in cui i nomi di colonna nel **ON** clausola non ha lo stesso ordine i nomi di tabella corrispondente nella **OUTER JOIN** clausola; inner join in combinazione con outer join; e utilizzo di outer join qualsiasi operatore di confronto ODBC. Se il tipo di informazioni SQL_OJ_CAPABILITIES restituisce 0, non esiste una clausola outer join è supportata.
+

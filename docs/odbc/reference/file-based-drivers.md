@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ Driver basati su file vengono utilizzati con origini dati, ad esempio dBASE che 
  Nella figura seguente mostra due diverse configurazioni di driver basati su file, uno in cui i dati si trovano in locale e l'altro in cui si trova in un file server di rete.  
   
  ![I driver in base a due configurazioni di file &#45;](../../odbc/reference/media/pr06.gif "pr06")
+

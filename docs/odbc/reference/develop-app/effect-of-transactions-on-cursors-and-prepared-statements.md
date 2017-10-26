@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ Il commit o il rollback di una transazione ha l'effetto seguente su cursori e i 
  Le applicazioni, specialmente su schermo in cui l'utente scorre il set di risultati e gli aggiornamenti o Elimina le righe, necessario prestare attenzione al codice questo comportamento.  
   
  Per determinare il comportamento di un'origine dati quando una transazione viene eseguito il commit o rollback, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR.
+

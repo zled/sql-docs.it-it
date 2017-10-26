@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ Una stringa di connessione contiene informazioni utilizzate per stabilire una co
 -   **SQLBrowseConnect**, che viene completata la stringa di connessione in modo iterativo con l'origine dati.  
   
  **SQLConnect** non utilizza una stringa di connessione; utilizzando **SQLConnect** è analoga alla connessione tramite una stringa di connessione con esattamente tre coppie parola chiave/valore (per nome dell'origine dati e, facoltativamente, l'utente ID e password) .
+

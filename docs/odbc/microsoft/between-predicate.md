@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8daaa0e1c26f00acbff2e6f7788eab8ee5ac8ce
@@ -34,3 +35,4 @@ expression1 BETWEEN expression2 AND expression3
  Restituisce true solo se *expression1* è maggiore o uguale a *expression2* e *expression1* è minore o uguale a *expression3*.  
   
  La semantica di questa sintassi è diversa per i driver di Database Desktop e gestione di Microsoft Jet. In SQL di Microsoft Jet, *expression2* può essere maggiore di *expression3* in modo che l'istruzione restituirà TRUE solo se *expression1* è maggiore o uguale a *expression3*, e *expression1* è minore o uguale a *expression2*.
+

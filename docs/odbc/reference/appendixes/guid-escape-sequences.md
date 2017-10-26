@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4ed6e517d9a8fa6f4c28c7b05541d36262df2a8
@@ -59,3 +60,4 @@ ODBC utilizza le sequenze di escape per i valori letterali GUID. La sintassi di 
  *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 5 4 &#124; &#124; 7 6 &#124; &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
   
  La sequenza di escape letterale GUID è supportata se il tipo di dati GUID è supportato dall'origine dati. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare se questo tipo di dati è supportato.
+

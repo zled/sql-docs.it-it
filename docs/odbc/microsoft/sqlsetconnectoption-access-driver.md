@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION è sempre SQL_TXN_READ_COMMITTED.|  
   
  [1] transazioni atomiche non sono supportate dal driver Microsoft Access. Quando esegue il commit di una transazione usando il driver Microsoft Access, un ritardo finito esiste tra il momento in cui viene eseguito il commit della transazione e l'ora in cui i valori vengono scritti su disco. Questo ritardo è determinato da un ritardo intrinseco nella gestione di Microsoft Jet. Il timeout di pagina non sarà minore di un valore minimo, anche se è impostata l'opzione PageTimeout di sotto di tale valore. Di conseguenza, vi è alcuna garanzia che è stato eseguito il commit dei dati non è stabile, poiché è possibile apportare modifiche durante il ritardo.
+

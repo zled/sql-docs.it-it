@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fe8c88946d6602f77bc39ac03b280fcca99cb8de
@@ -43,3 +44,4 @@ Poiché i cursori a blocchi restituiscano più righe, le applicazioni che li uti
 -   [L'associazione per colonna](../../../odbc/reference/develop-app/column-wise-binding.md)  
   
 -   [L'associazione per riga](../../../odbc/reference/develop-app/row-wise-binding.md)
+

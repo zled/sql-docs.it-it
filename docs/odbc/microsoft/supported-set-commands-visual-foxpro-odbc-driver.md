@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db557f215db12f95c2dd0a44a8448a138dac3856
@@ -51,3 +52,4 @@ L'applicazione può inviare il seguente Visual FoxPro **impostare** comandi a un
  [SET DI RIELABORAZIONE](../../odbc/microsoft/set-reprocess-command.md)  
   
  [IMPOSTARE UNIVOCO](../../odbc/microsoft/set-unique-command.md)
+

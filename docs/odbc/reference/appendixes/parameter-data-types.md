@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
@@ -40,3 +41,4 @@ Anche se ogni parametro specificato con **SQLBindParameter** viene definito util
 |Valore utilizzato con **IN**|Diverso da quello dell'espressione o il primo valore nel caso di un marcatore di parametro nell'espressione|  
 |Utilizzato con un valore di motivo **come**|VARCHAR|  
 |Utilizzato con un valore di aggiornamento **aggiornare**|Stessi valori di aggiornamento|
+

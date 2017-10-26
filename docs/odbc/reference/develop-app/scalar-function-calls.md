@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
@@ -56,3 +57,4 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  Per determinare quali funzioni scalari sono supportate da un'origine dati, un'applicazione chiama **SQLGetInfo** con SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS e SQL_TIMEDATE_ Opzioni di funzioni. Per determinare quali operazioni di conversione sono supportate per il **CONVERTIRE** funzione, un'applicazione chiama **SQLGetInfo** con le opzioni che iniziano con SQL_CONVERT.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  La quantità dell'installazione viene effettivamente eseguita dal programma di installazione dipende da quali funzioni chiamate nel programma di installazione DLL. Il programma di installazione DLL contiene funzioni per installare i singoli componenti ODBC. Il programma di installazione consente di chiamare semplicemente **SQLInstallDriverManager**, **SQLInstallDriverEx**, o **SQLInstallTranslatorEx** del DLL per recuperare il percorso del programma di installazione di Directory in cui il componente sia installato e di aggiungere informazioni sul componente al Registro di sistema. Queste funzioni non copiare effettivamente i file; il programma di installazione avviene mediante le informazioni negli argomenti di queste funzioni.  
   
  Il programma di installazione DLL contiene anche le funzioni per rimuovere i componenti ODBC. Il programma di installazione chiama **SQLRemoveDriverManager**, **SQLRemoveDriver**, o **SQLRemoveTranslator** nel programma di installazione di conteggio DLL per diminuire l'utilizzo di un componente di Registro di sistema e, se il conteggio di utilizzo della nuova del componente scende a 0, rimuovere tutte le informazioni sul componente dal Registro di sistema. Queste funzioni non rimuovono effettivamente i file per il componente. il programma di installazione avviene se il conteggio di utilizzo della nuova scende a 0.
+

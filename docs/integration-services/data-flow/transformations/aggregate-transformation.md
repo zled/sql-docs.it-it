@@ -72,9 +72,9 @@ ms.lasthandoff: 08/19/2017
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
  La trasformazione Aggregazione include un set di proprietà che è possibile impostare per migliorarne le prestazioni.  
   
--   Quando si esegue un'operazione **Group by** , impostare la proprietà Keys o KeysScale del componente e gli output del componente. Tramite Keys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione. In questo contesto, Keys fa riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by**. Tramite KeysScale, è possibile specificare un numero approssimativo di chiavi. Quando si specifica un valore appropriato per Keys o KeyScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
+-   Quando si esegue un'operazione **Group by** , impostare la proprietà Keys o KeysScale del componente e gli output del componente. Tramite Keys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione. (In questo contesto, Keys fa riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by**.) Tramite KeysScale, è possibile specificare un numero approssimativo di chiavi. Quando si specifica un valore appropriato per Keys o KeyScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
   
--   Quando si esegue un'operazione **Distinct count** , impostare la proprietà CountDistinctKeys o CountDistinctScale del componente. Tramite CountDistinctKeys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione per un'operazione Count Distinct. In questo contesto, CountDistinctKeys fa riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct Count**. La proprietà CountDistinctScale consente di specificare un numero approssimativo di chiavi per un'operazione Count Distinct. Quando si specifica un valore appropriato per CountDistinctKeys o CountDistinctScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
+-   Quando si esegue un'operazione **Distinct count** , impostare la proprietà CountDistinctKeys o CountDistinctScale del componente. Tramite CountDistinctKeys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione per un'operazione Count Distinct. (In questo contesto, CountDistinctKeys fa riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct Count**.) La proprietà CountDistinctScale consente di specificare un numero approssimativo di chiavi per un'operazione Count Distinct. Quando si specifica un valore appropriato per CountDistinctKeys o CountDistinctScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
   
 ## <a name="aggregate-transformation-configuration"></a>Configurazione della trasformazione Aggregazione  
  La trasformazione Aggregazione può essere configurata a livello di trasformazione, output e colonna.  
@@ -213,7 +213,7 @@ ms.lasthandoff: 08/19/2017
   
 ### <a name="options"></a>Opzioni  
  **Scala chiavi**  
- Consente di specificare facoltativamente il numero approssimativo di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi** , quest'ultima ****  ha priorità.  
+ Consente di specificare facoltativamente il numero approssimativo di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi** , quest'ultima **Numero di chiavi** ha priorità.  
   
 |Valore|Description|  
 |-----------|-----------------|  
@@ -223,10 +223,10 @@ ms.lasthandoff: 08/19/2017
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di chiavi.|  
   
  **Numero di chiavi**  
- Consente di specificare facoltativamente il numero esatto di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi** , quest'ultima ****  ha priorità.  
+ Consente di specificare facoltativamente il numero esatto di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi** , quest'ultima **Numero di chiavi** ha priorità.  
   
  **Scala conteggio valori distinct**  
- È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct** , quest'ultima ****  ha priorità.  
+ È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct** , quest'ultima **Chiavi conteggio valori distinct** ha priorità.  
   
 |Valore|Description|  
 |-----------|-----------------|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 08/19/2017
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
   
  **Chiavi conteggio valori distinct**  
- È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct** , quest'ultima ****  ha priorità.  
+ È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct** , quest'ultima **Chiavi conteggio valori distinct** ha priorità.  
   
  **Fattore di estensione automatica**  
  Consente di utilizzare un valore compreso tra 1 e 100 per specificare la percentuale di estensione possibile della memoria durante l'aggregazione. Il valore predefinito di questa opzione è **25%**.  

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
@@ -52,3 +53,4 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  I driver di Unicode devono comunque supportare tipi di dati ANSI, tra cui SQL_CHAR. Se un'applicazione che utilizza un driver Unicode associa a SQL_CHAR, gestione Driver non eseguirà il mapping dei dati SQL_CHAR per SQL_WCHAR. Il driver Unicode è necessario accettare i dati SQL_CHAR.  
   
  Gestione Driver archivia driver e i nomi DSN in formato Unicode e ne esegue il mapping ad ANSI in base alle esigenze. Se un carattere Unicode non può essere mappato a un carattere ANSI (come può verificarsi se i caratteri da una tabella codici che non è la pagina di codice nativo del computer vengono utilizzati nei nomi DSN e driver), che non è stato possibile convertire i caratteri sono rappresentati dal sup carattere predefinito plied dal sistema.
+

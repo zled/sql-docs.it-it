@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
@@ -46,3 +47,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  Quando l'applicazione chiama **SQLSetStmtAttr** per impostare SQL_ATTR_ROW_STATUS_PTR, gestione Driver imposta *fSetPosError* toTRUE uguale.  
   
 4.  Quando l'applicazione chiama **SQLSetPos**, con *fSetPosError* uguale a TRUE, il Driver Manager genera SQL_ERROR con SQLSTATE HY011 (Impossibile impostare l'attributo ora) per indicare che l'applicazione tentativo di chiamare **SQLSetPos** dopo aver modificato il puntatore dello stato della riga, ma prima di chiamare **SQLFetchScroll**.
+

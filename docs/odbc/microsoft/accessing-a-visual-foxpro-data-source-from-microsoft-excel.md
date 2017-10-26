@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ Se si dispone di Query Microsoft installato, è possibile creare un'origine dati
 8.  Fare clic su utilizza.  
   
  È ora possibile aggiungere tabelle alla query aperta. Per ulteriori informazioni sulla compilazione di una query, vedere [importazione dei dati in Microsoft Excel da un Database di Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
+

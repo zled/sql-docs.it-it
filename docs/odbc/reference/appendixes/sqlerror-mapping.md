@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7ebbe17713149276acbe061bfb8ba41503026306
@@ -38,3 +39,4 @@ SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErr
 ```  
   
  con il *HandleType* argomento impostato sul valore impostato su SQL_HANDLE_ENV, impostato su SQL_HANDLE_DBC o impostato su SQL_HANDLE_STMT, come appropriato e *gestire* argomento impostato sul valore *henv*, *hdbc*, o *hstmt*, a seconda dei casi. Il *RecNumber* argomento è determinato da Gestione Driver.
+

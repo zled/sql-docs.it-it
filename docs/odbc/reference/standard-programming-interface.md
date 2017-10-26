@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 235d61849f28b29af7ec0b9ba67fe86b38bf8239
@@ -33,3 +34,4 @@ L'interfaccia di programmazione è ad esempio più evidente candidato per la sta
  Uno dei requisiti per ODBC è che una singola applicazione binaria era necessario usare più DBMS. È per questo motivo che ODBC non utilizza incorporate lingue SQL o un modulo. Sebbene il linguaggio nei linguaggi SQL e modulo incorporati standardizzato, ognuno è correlato alla precompilers specifici del DBMS. Pertanto, è necessario ricompilare le applicazioni per ogni sistema DBMS e i file binari risultanti funzionano solo con un singolo DBMS. Sebbene sia accettabile per le applicazioni di scarso trovate nel mondo minicomputer e mainframe, non è accettabile nel mondo personal computer. Innanzitutto, si tratta di un notevole problema logistico per offrire più versioni di volumi elevati, il software ai clienti; in secondo luogo, applicazioni per personal computer spesso necessario accedere contemporaneamente a più DBMS.  
   
  D'altra parte, è possibile implementare un'interfaccia a livello di chiamata tramite librerie o driver di database, che si trovano su ciascun computer locale. un driver diverso è necessario per ogni sistema DBMS. Poiché i sistemi operativi moderni possono caricare tali librerie (ad esempio librerie a collegamento dinamico nel sistema operativo Microsoft® Windows®) in fase di esecuzione, una singola applicazione può accedere ai dati dai diversi DBMS senza ricompilazione e può anche accedere ai dati da più database contemporaneamente. Quando sono disponibili i nuovi driver di database, gli utenti possono solo installare questi nei propri computer senza dover modificare, compilare o ricollegare le applicazioni di database. Inoltre, un'interfaccia a livello di chiamata non è un buon candidato per ODBC perché Windows, la piattaforma per cui è stato originariamente sviluppato ODBC: estensivo di tali librerie è necessario crearle.
+

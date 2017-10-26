@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff05f946dee8f6034d04c5d719ada475255ba643
@@ -36,3 +37,4 @@ SELECT CharCol, BinaryCol, IntegerCol FROM MyTable
  Valori letterali per alcuni tipi di dati richiedono speciali prefissi e suffissi. Nell'esempio precedente, il valore letterale carattere (ABC) richiede una virgoletta singola (') come un prefisso e un suffisso, il valore letterale binario (FFFF) richiede i caratteri 0x come prefisso e il valore letterale integer (10) non richiede un prefisso o suffisso.  
   
  Per tutti i tipi di dati, ad eccezione di date, time e timestamp, le applicazioni interoperabili devono utilizzare i valori restituiti nelle colonne del set di risultati creati:: SQLGetTypeInfo e SQL_VARCHAR **SQLGetTypeInfo**. Per date, time, timestamp e valori letterali intervallo datetime, le applicazioni interoperabili devono utilizzare le sequenze di escape descritte nella sezione precedente.
+

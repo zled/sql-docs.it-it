@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b899cda97d68801d03e1b5cc9655df0eaeaf8ad
@@ -31,3 +32,4 @@ Applicazioni personalizzate in genere eseguono un'attività specifica per i poch
  L'applicazione personalizzata richiede pertanto senza alcuna interoperabilità. Lo sviluppatore di applicazioni è possibile scegliere un driver singolo per ogni sistema DBMS e il codice direttamente per i driver. L'applicazione in modo sicuro può contenere codice specifico del driver per sfruttare le funzionalità del driver e può anche effettuare chiamate al database API native l'utilizzo delle funzionalità non supportate da ODBC.  
   
  Il problema di interoperabilità principali della maggior parte delle applicazioni personalizzata è se il DBMS di destinazione verrà modificato in futuro. In caso affermativo, questo processo può essere semplificato scrivendo codice più interoperabile con cui iniziare. Tuttavia, tale modifica del DBMS è rara e in genere comporta l'uso di una grande quantità di lavoro. Per questo motivo, gli sviluppatori di applicazioni personalizzate scegliere raramente aumentare l'interoperabilità a scapito della funzionalità. in genere scelti per modificare tale funzionalità quando vengono modificate DBMS.
+

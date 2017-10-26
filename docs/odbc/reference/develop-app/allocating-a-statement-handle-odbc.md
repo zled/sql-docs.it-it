@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a96868755475c6fd72b2dd977375fbe0d88c22df
@@ -44,3 +45,4 @@ Prima che l'applicazione può eseguire un'istruzione, è necessario allocare un 
 4.  Gestione Driver restituisce l'handle di istruzione di gestione Driver per l'applicazione nella variabile di applicazione.  
   
  L'handle di istruzione identifica quale istruzione da utilizzare durante la chiamata di funzioni ODBC. Per ulteriori informazioni sugli handle di istruzione, vedere [handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md).
+

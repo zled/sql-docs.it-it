@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
@@ -39,3 +40,4 @@ Gestione Driver controlla i seguenti tipi di argomenti. Se non diversamente spec
 -   Numeri di colonna e di parametro devono essere maggiore di 0 o maggiore di o uguale a 0, a seconda della funzione. Il driver deve controllare il limite massimo di questi valori di argomento in base al set di risultati corrente o l'istruzione SQL.  
   
 -   Gli argomenti di lunghezza/indicatore e argomenti di lunghezza del buffer di dati devono contenere i valori appropriati. Ad esempio, l'argomento che specifica la lunghezza di un nome di tabella in **SQLColumns** (*NameLength3*) deve essere SQL_NTS o un valore maggiore di 0; *BufferLength* in **SQLDescribeCol** deve essere maggiore o uguale a 0. Il driver potrebbe essere necessario anche controllare questi argomenti. Ad esempio, si potrebbe verificare che *NameLength3* è minore o uguale alla lunghezza massima di un nome di tabella nell'origine dati.
+

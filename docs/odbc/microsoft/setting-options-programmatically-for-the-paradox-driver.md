@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c353ec7cca4744a4189891a4123eaf6263b8fd51
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |Selezionare la Directory|Visualizza una finestra di dialogo in cui è possibile selezionare una directory che contiene i file che si desidera accedere.<br /><br /> Quando la definizione di una directory di origine dati specifica la directory in più file utilizzati di frequente si trovano. Il driver ODBC utilizza questa directory come la directory predefinita. Copiare gli altri file in questa directory se vengono usati frequentemente. In alternativa, è possibile qualificare i nomi di file in un'istruzione SELECT con il nome della directory:<br /><br /> SELEZIONARE \* DA C:\MYDIR\EMP<br /><br /> In alternativa, è possibile specificare una nuova directory predefinita utilizzando il **SQLSetConnectOption** funzione con l'opzione SQL_CURRENT_QUALIFIER.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Selezionare la Directory di rete|Il percorso completo della directory contenente un database di blocco Paradox, perché contiene il file Pdoxusrs.net (4 Paradox.* x*) o il file Paradox.net (5 Paradox.* x*). Se la directory non contiene uno di questi file, il driver Paradox viene creata una. Per informazioni su questi file, vedere la documentazione di Paradox.<br /><br /> Prima di poter selezionare una directory di rete, è necessario immettere il nome utente Paradox il **nome utente** casella di testo. Fare clic su **seleziona Directory di rete** per selezionare una directory di rete.|Per impostare questa opzione in modo dinamico, usare il **PARADOXNETPATH** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Nome utente|Il nome utente Paradox. Questo è il nome visualizzato agli altri utenti di file Paradox quando viene incontrato un blocco.|Per impostare questa opzione in modo dinamico, usare il **PARADOXUSERNAME** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
+

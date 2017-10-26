@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09ec943add25acfd029fd6651f3ff5f31aa1a419
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Rilascia un handle di connessione e libera tutta la memoria allocata per l'handle.  
   
  Per ulteriori informazioni, vedere [SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md) nel *riferimento per programmatori ODBC*.
+

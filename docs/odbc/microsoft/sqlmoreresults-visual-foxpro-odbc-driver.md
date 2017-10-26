@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Determina se più risultati sono in sospeso su un handle di istruzione, *hstmt*, contenente le istruzioni SELECT, UPDATE, INSERT o DELETE e in tal caso, inizializza l'elaborazione di tali risultati.  
   
  Per ulteriori informazioni, vedere [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) nel *riferimento per programmatori ODBC*.
+

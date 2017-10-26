@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
@@ -58,3 +59,4 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  L'opzione dell'istruzione SQL_GET_BOOKMARK è stato deprecato in ODBC 3*x*. Per un'applicazione ODBC 3*x* driver per funzionare con ODBC 2.* x* le applicazioni che utilizzano SQL_GET_BOOKMARK, deve supportare SQL_GET_BOOKMARK. Per un'applicazione ODBC 3*x* driver per funzionare con ODBC 2.* x* applicazioni, deve supportare l'impostazione SQL_USE_BOOKMARKS su SQL_UB_ON e devono essere esposti a lunghezza fissa segnalibri. Se un'applicazione ODBC 3*x* driver supporta solo segnalibri di lunghezza variabile, i segnalibri non a lunghezza fissa, mentre deve restituire un valore SQLSTATE HYC00 (funzionalità facoltativa non implementata) se un ODBC 2.* x* applicazione tenta di impostare SQL_USE_BOOKMARKS SQL_UB_ON.  
   
  Per un'applicazione ODBC 3*x* driver, Driver Manager non consente di controllare se *opzione* è tra SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX, oppure è maggiore di SQL_CONNECT_OPT_DRVR_START. Il driver è necessario selezionare questa opzione.
+

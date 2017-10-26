@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
@@ -35,3 +36,4 @@ Ogni origine dati definisce i propri tipi di dati SQL. ODBC definisce gli identi
  ODBC definisce un'ampia gamma di identificatori di tipo SQL. Tuttavia, il driver non è necessario utilizzare tutti gli identificatori. Utilizza invece solo tali identificatori che deve esporre tipi di dati SQL supportati dall'origine dati sottostante. Se l'origine dati sottostante supporta i tipi di dati SQL per cui alcun identificatore di tipo non corrispondente, il driver è possibile definire identificatori di tipo aggiuntivo. Per ulteriori informazioni, vedere [tipi di dati specifici del Driver, descrittore di tipi, tipi di informazioni, tipi di diagnostica e gli attributi](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Per una descrizione completa degli identificatori di tipo SQL, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md) appendice d: tipo di dati.
+

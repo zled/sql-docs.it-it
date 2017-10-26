@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
@@ -57,3 +58,4 @@ I parametri nelle chiamate di procedura possono essere di input, input/output o 
  Dopo l'istruzione è stata eseguita, i driver di archiviano i valori restituiti di input/output e i parametri di output nelle variabili associate a tali parametri. Questi restituito non è garantito che i valori vengano impostati fino a dopo che sono stati recuperati tutti i risultati restituiti dalla procedura e **SQLMoreResults** ha restituito SQL_NO_DATA. Se l'esecuzione dell'istruzione genera un errore, il contenuto del buffer del parametro di input/output o buffer dei parametri di output è definito.  
   
  Un'applicazione chiama **SQLProcedure** per determinare se una stored procedure con un valore restituito. Chiama **SQLProcedureColumns** per determinare il tipo (valore restituito, input, input/output o di output) di ogni parametro di routine.
+

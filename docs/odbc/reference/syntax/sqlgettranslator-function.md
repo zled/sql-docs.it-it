@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 76bc8c85e923c792e87c13c2ca7f490c7273d975
@@ -111,3 +112,4 @@ BOOL SQLGetTranslator(
 |Configurazione di una funzione di conversione|[ConfigTranslator del](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |Recupero di un attributo di traduzione|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |L'impostazione di un attributo di traduzione|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+

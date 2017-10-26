@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4090e609063b74fdcbef694c400272ee6af090c5
@@ -35,3 +36,4 @@ Per eseguire il commit o rollback della transazione in modalità di commit manua
  Se l'applicazione passa l'handle di ambiente per **SQLEndTran** ma non chiama concettualmente non passare un handle di connessione, gestione Driver **SQLEndTran** con l'handle di ambiente per ogni driver che dispone di uno o più connessioni attive nell'ambiente. Il driver quindi esegue il commit delle transazioni in ogni connessione nell'ambiente. Tuttavia, è importante tenere presente che il driver né the Driver Manager esegue un commit a due fasi per le connessioni dell'ambiente. si tratta semplicemente un facilitare la programmazione contemporaneamente chiamare **SQLEndTran** per tutte le connessioni nell'ambiente.  
   
  (A *commit in due fasi* viene generalmente usato per eseguire il commit delle transazioni che sono distribuite in più origini dati. Nella prima fase, le origini dati sono sottoposti a polling per che possono eseguire il commit di propria parte della transazione. Nella seconda fase, la transazione viene effettivamente eseguito il commit in tutte le origini dati. Se tutte le origini dati risponde nella prima fase, che è Impossibile eseguire il commit della transazione, la seconda fase non viene eseguito.)
+

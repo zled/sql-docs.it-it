@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
@@ -49,3 +50,4 @@ L'identificatore per l'ora in cui il tipo di dati SQL ODBC è:
  [d] è la dimensione del tipo di dati C corrispondente.  
   
  Quando i dati SQL ora vengono convertiti in dati di tipo carattere C, la stringa risultante è il "*hh*:*mm*:*ss*" formato. Questo formato non è interessato dalla configurazione dell'impostazione di paese Windows®.
+

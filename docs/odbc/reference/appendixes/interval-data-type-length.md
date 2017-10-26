@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e642685b670fa872c1a34d2d10fed815e5a6fa7e
@@ -37,3 +38,4 @@ Le regole seguenti vengono utilizzate per determinare la lunghezza di un tipo di
 -   Uno più la precisione dei secondi espressa o implicita. Se la precisione dei secondi non è specificata, il valore predefinito è 6.  
   
  I valori di lunghezza di colonna specifica per ogni tipo di dati di intervallo sono contenuti in [dimensioni della colonna](../../../odbc/reference/appendixes/column-size.md).
+

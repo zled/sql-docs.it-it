@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
@@ -33,3 +34,4 @@ Società utilizzato in passato, un singolo DBMS. L'accesso al database è stato 
  Un problema analogo riscontrate fornitori di software indipendenti (ISV). I fornitori di software del database per minicomputer e mainframe erano in genere costretti a scrivere una versione di un'applicazione per ogni sistema DBMS o scrivere codice specifico DBMS per ogni sistema DBMS che desidera accedere. I fornitori di software per PC era necessario scrivere routine di accesso ai dati per ogni vari DBMS con cui si intende utilizzare. In questo modo spesso una notevole quantità di risorse impiegati per la scrittura e la gestione di routine, piuttosto che le applicazioni di accesso ai dati e le applicazioni spesso sono state vendute in qualità, ma in se potrebbe accedono a dati in un sistema DBMS.  
   
  Cosa è necessario entrambi i gruppi di sviluppatori è un modo per accedere ai dati in diversi DBMS. Il gruppo di mainframe e minicomputer necessario un modo per unire i dati dai diversi DBMS in una singola applicazione, mentre il gruppo di computer di personal necessaria questa possibilità, nonché un modo per scrivere una singola applicazione che è indipendente da qualsiasi un DBMS. In breve, entrambi i gruppi necessitassero una modalità interoperativa per accedere ai dati; aprono necessaria la connettività del database.
+

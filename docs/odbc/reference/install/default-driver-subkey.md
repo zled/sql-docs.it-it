@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c269705f5e4c0c855b5b7f929b1a76ee9523bd7
@@ -43,3 +44,4 @@ Driver : REG_SZ : SQL Server
   
 > [!NOTE]  
 >  Il driver predefinito contenuto nella sottochiave predefinito può fare riferimento a un DSN dell'utente predefinito o un DSN di sistema predefinito. Se un DSN dell'utente predefinito sia il sistema DSN sono state create, il driver predefinito è determinato dal DSN che è stato creato per ultimo, in modo che non sia una voce valida per il DSN che è stata creata per prima.
+

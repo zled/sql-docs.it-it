@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f08ffe2a80f89040dc148543c2b3a3985b76eca
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Assegna spazio di archiviazione per una colonna di risultati e specifica il tipo del risultato. Quando [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) o [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) viene chiamato, il driver inserisce i dati per tutte le colonne associate nelle posizioni assegnate. Vedere [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) per il mapping tra tipi di dati ODBC e di Visual FoxPro.  
   
  Per ulteriori informazioni, vedere [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) nel *riferimento per programmatori ODBC*.
+

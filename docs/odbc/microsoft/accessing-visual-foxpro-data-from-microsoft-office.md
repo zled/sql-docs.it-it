@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3b509830bbba4405269a766e95ce7fa585ff7a4
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |Utilizzare Microsoft Access|[Esecuzione di query e l'aggiornamento dei dati di Visual FoxPro da Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)<br /><br /> [Importazione di dati di Visual FoxPro in Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)|  
 |Usare Microsoft Excel|[Accesso a un'origine dati di Visual FoxPro da Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)<br /><br /> [Importazione di dati in Microsoft Excel da un Database di Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)|  
 |Usare Microsoft Word|[Creazione di etichette in Microsoft Word utilizzando i dati di Visual FoxPro](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|
+

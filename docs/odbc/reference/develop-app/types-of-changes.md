@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a494595625d264159fbb39db03818d50ed97876
@@ -32,3 +33,4 @@ Tre tipi di modifiche vengono apportati in ODBC 3. *x* (e qualsiasi versione di 
 |Nuove funzionalità|Si tratta di funzioni che hanno familiarità con ODBC 3. *x*, ad esempio descrittori o associazione out-of-line. Sono implementati solo quando l'applicazione e driver, nonché gestione Driver versione 3*x*, pertanto non c'è alcun tentativo di rendere questi compatibile con le versioni precedenti.|  
 |Funzionalità di duplicati|Si tratta di funzionalità che esistono in ODBC 2*x* mentre ODBC 3.* x* ma vengono implementati in modi diversi in ogni. Le funzioni **SQLAllocHandle** e **SQLAllocStmt** sono un esempio. Problemi di compatibilità con le versioni precedenti per queste e altre funzionalità duplicati vengono principalmente gestiti dal mapping in Gestione Driver.|  
 |Modifiche del comportamento|Si tratta di funzionalità che sono gestite diversamente in ODBC 2*x* mentre ODBC 3.* x*. Un valore datetime **#define** è riportato un esempio. Queste funzionalità vengono gestite da ODBC 3. *x* driver in base a un'impostazione dell'attributo di ambiente. (Vedere [modifiche del comportamento](../../../odbc/reference/develop-app/behavioral-changes.md) per ulteriori informazioni.)|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ Esistono diversi vantaggi rispetto all'utilizzo delle procedure, tutte basata su
  Il secondo svantaggio è che molti DBMS non supportano le procedure. Anche questo è più probabile che un problema per le applicazioni verticali progettato per l'esecuzione con un numero di DBMS. Per determinare se le procedure sono supportate, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_PROCEDURES.  
   
  Lo svantaggio di terzo, che è applicabile in particolare in ambienti di sviluppo di applicazioni, è che ODBC non viene definita una grammatica standard per la creazione di procedure. Ovvero, sebbene le applicazioni possono chiamare procedure interoperably, non possono creare li interoperably.
+

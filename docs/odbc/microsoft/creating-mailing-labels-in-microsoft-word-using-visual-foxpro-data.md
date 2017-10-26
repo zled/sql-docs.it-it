@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/09/2017
 14. Nell'Helper della stampa unione, l'unione dei dati con il documento, fare clic su Merge.  
   
 15. Nella finestra di dialogo unione, selezionare le opzioni desiderato e quindi fare clic su Merge.
+

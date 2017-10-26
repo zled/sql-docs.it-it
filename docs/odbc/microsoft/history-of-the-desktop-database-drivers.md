@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ Nella tabella seguente mostra la cronologia delle versioni Desktop driver di Dat
   
 > [!NOTE]  
 >  I driver version3.5 sono stati progettati per funzionare con ODBC2. *x*. Anche se funzionano anche con ODBC 3.0, non supportano tutte le funzionalità di ODBC 3.0. Per ulteriori informazioni sul funzionano di questi driver con ODBC 3.0, vedere [compatibilità e conformità agli standard](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+

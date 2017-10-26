@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 497676e6b87b6603d4bc6cb1615bb1b133c7acd4
@@ -40,3 +41,4 @@ Tutti i database presentano una struttura che descrive la modalità con cui i da
 -   [Utilizzi dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md)  
   
 -   [Funzioni di catalogo ODBC](../../../odbc/reference/develop-app/catalog-functions-in-odbc.md)
+

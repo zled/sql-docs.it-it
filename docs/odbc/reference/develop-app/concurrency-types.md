@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
@@ -37,3 +38,4 @@ Per risolvere il problema di riduzione della concorrenza nei cursori, ODBC espon
 -   **La concorrenza ottimistica con le versioni di riga e la concorrenza ottimistica con valori** il cursore utilizza la concorrenza ottimistica: aggiorna o Elimina righe solo se non modificati dall'ultima lettura. Per rilevare le modifiche, confronta le versioni delle righe o valori. Non c'è garanzia che il cursore sarà in grado di aggiornare o eliminare una riga, ma la concorrenza è superiore rispetto a quando il blocco viene utilizzato. Per ulteriori informazioni, vedere la sezione seguente, [la concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Un'applicazione specifica il tipo di concorrenza è richiesto il cursore da utilizzare con l'attributo di istruzione SQL_ATTR_CONCURRENCY. Per determinare i tipi supportati, chiama **SQLGetInfo** con l'opzione SQL_SCROLL_CONCURRENCY.
+

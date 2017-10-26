@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd42836285c29e36e6bb64ebe594df570876ff6e
@@ -30,3 +31,4 @@ Quando viene utilizzato il driver Microsoft Access, procedure possono essere ric
  Se un nome della stored procedure include un trattino, il nome deve essere delimitato con virgolette indietro (').  
   
  Una query con parametri può essere chiamata utilizzando l'istruzione precedente.
+

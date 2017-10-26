@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
@@ -54,3 +55,4 @@ Alcuni driver ODBC è strettamente conforme all'architettura descritto in preced
  Uno dei vantaggi di questa architettura è a configurazione e manutenzione efficiente del software. I driver devono essere aggiornati solo in un'unica posizione: nel server. Origini dati con origini dati di sistema, è possibile definire sul server da usare per tutti i client. Non è necessario definire le origini dati nel client. Il pool di connessioni consente di semplificare il processo mediante il quale i client si connettono a origini dati.  
   
  Il driver nel client è in genere un driver molto piccolo che trasferisce la chiamata di gestione Driver al server. Sua può essere notevolmente più piccolo rispetto ai driver ODBC completamente funzionanti nel server. In questa architettura, è possibile liberare risorse di client se il server dispone di maggiore potenza di elaborazione. Inoltre, è possibile migliorare l'efficienza e la sicurezza dell'intero sistema l'installazione di server di backup e di eseguire il bilanciamento del carico per ottimizzare l'utilizzo di server.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
@@ -50,3 +51,4 @@ _C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in
  [b] se la precisione di intervallo è un singolo campo (un mese o anno), l'intervallo di tipo SQL può essere convertito in qualsiasi numerico esatto (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG o SQL_C_NUMERIC).  
   
  La conversione del valore predefinito di un intervallo di tipo SQL è il tipo di dati di intervallo C corrispondente. L'applicazione quindi associa la colonna o parametro (o imposta il campo SQL_DESC_DATA_PTR il record appropriato del ARD) in modo che punti alla struttura SQL_INTERVAL_STRUCT inizializzata (o passa un puntatore alla struttura di SQL _ INTERVAL_STRUCT come il *TargetValuePtr* argomento in una chiamata a **SQLGetData**).
+

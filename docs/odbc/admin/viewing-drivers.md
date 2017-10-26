@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d79cc609be21c1fb2ad5cfc9a8b9ce6a335248f7
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="viewing-drivers"></a>Visualizzazione dei driver
 Per configurare le origini dati, è necessario avere installato almeno un driver nel sistema. Il **driver** nella scheda il **Amministrazione origine dati ODBC** la finestra di dialogo vengono elencati tutti i driver installati nel computer, inclusi il nome, versione, l'azienda, nome file e data di creazione di file di tutti i driver. Per aggiungere o eliminare un driver dal sistema, è necessario utilizzare il programma di installazione del driver. Per ulteriori informazioni sulla modifica di driver, vedere [gestione delle origini dati](../../odbc/admin/managing-data-sources.md).
+

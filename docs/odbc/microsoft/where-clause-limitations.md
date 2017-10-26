@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3169ef45acb26b6db6bbb46680163575d5a588f4
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 Il numero massimo di clausole in una clausola WHERE è 40.  
   
  Colonne LONGVARBINARY e LONGVARCHAR possono essere confrontate con i valori letterali di fino a 255 caratteri, ma non possono essere confrontate con i parametri.
+

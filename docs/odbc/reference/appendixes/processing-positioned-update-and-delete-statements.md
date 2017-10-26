@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   Se il driver supporta solo un'istruzione attiva, le operazioni di recupero libreria cursore il resto del risultato set e recupera quindi nuovamente il set di righe corrente dalla cache prima di eseguire un posizionamento istruzioni update o delete. Se l'applicazione chiama quindi una funzione che restituisce i metadati in un set di risultati (ad esempio, **SQLNumResultCols** o **SQLDescribeCol**), la libreria di cursori restituisce un errore.  
   
 -   Se un aggiornamento posizionato o l'istruzione delete viene eseguita su una colonna di una tabella che include una colonna timestamp viene aggiornata automaticamente ogni volta che viene eseguito un aggiornamento, tutte le successive per gli aggiornamenti posizionati o le istruzioni delete avrà esito negativo se la colonna timestamp associato. Questo errore si verifica perché la ricerca di Aggiorna o Elimina istruzione che crea la libreria di cursori non identifica in modo accurato la riga da aggiornare. Il valore viene eseguita l'istruzione per la colonna timestamp non corrisponderà al valore di aggiornamento automatico della colonna timestamp.
+

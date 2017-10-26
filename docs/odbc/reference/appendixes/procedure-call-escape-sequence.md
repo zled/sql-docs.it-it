@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ba89ae47d223ea17f02cb07976510d78ff3660e
@@ -73,3 +74,4 @@ ODBC utilizza le sequenze di escape per le chiamate di procedura. La sintassi di
  (Se un parametro di routine è una stringa vuota, la procedura Usa il valore predefinito per tale parametro).  
   
  Per determinare se l'origine dati supporta le procedure e il driver supporta la sintassi di chiamata di procedura ODBC, un'applicazione può chiamare **SQLGetInfo** con il tipo di informazioni SQL_PROCEDURES.
+

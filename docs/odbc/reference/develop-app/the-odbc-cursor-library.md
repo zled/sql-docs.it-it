@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a6250d693414a9d63077bcc5e47438d847ae72ce
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Blocco e i cursori scorrevoli vengono aggiunti molto utili per molte applicazioni. Tuttavia, non tutti i driver supportano blocco e i cursori scorrevoli. Lo stesso vale per gli aggiornamenti posizionati e istruzioni delete e **SQLSetPos**, che vengono discussi in aggiornamento dei dati. Pertanto, il componente ODBC di Windows SDK, in precedenza incluso in Microsoft Data Access Components (MDAC) SDK, include una libreria di cursori. La libreria di cursori implementa blocchi, i cursori statici, per gli aggiornamenti posizionati e le istruzioni delete, e **SQLSetPos** per un driver conforme al livello di conformità Apri gruppo Standard CLI. La libreria di cursori può essere ridistribuita con le applicazioni ODBC; il contratto di licenza in SDK per ulteriori informazioni, vedere.  
   
  Per utilizzare la libreria di cursori, un'applicazione imposta l'attributo di connessione SQL_ATTR_ODBC_CURSORS prima che si connetta all'origine dati. Per ulteriori informazioni sulla libreria di cursori, vedere [libreria di cursori ODBC appendice f:](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md).
+

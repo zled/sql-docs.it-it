@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d50d2c9ac987a623d3f25968c6246a735fe4f41
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="group-by-expression-list"></a>GRUPPO dall'elenco di espressioni
 GROUP BY supporta un elenco di espressioni, nonché un nome di colonna. Elenco di selezione di un'istruzione SELECT con una clausola GROUP BY può includere espressioni della clausola GROUP BY o funzioni set solo.
+

@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   **Specificare il buffer di lunghezza non null per i dati binari di C.** La libreria di cursori alloca i buffer di lunghezza nella relativa cache solo se il *StrLen_or_IndPtr* argomento **SQLBindCol** è diverso da null. Quando il *TargetType* argomento SQL_C_BINARY, la libreria di cursori richiede la lunghezza dei dati binari per costruire un **dove** clausola dai dati. Se non vi è alcun buffer di lunghezza per una colonna SQL_C_BINARY e l'applicazione chiama **SQLGetData** o tenta di eseguire un aggiornamento posizionato o eliminare l'istruzione, la restituisce libreria cursore SQL_ERROR e SQLSTATE SL014 (un oggetto posizionato richiesta è stata rilasciata e non tutti i campi numero di colonna sono stati memorizzati nel buffer).  
   
 -   **Specificare il buffer di lunghezza non null per le colonne che ammettono valori null.** La libreria di cursori alloca i buffer di lunghezza nella relativa cache solo se il *StrLen_or_IndPtr* argomento **SQLBindCol** è diverso da null. Poiché SQL_NULL_DATA viene memorizzata nel buffer di lunghezza, la libreria di cursori si presuppone che qualsiasi colonna per la cui lunghezza non viene specificato il buffer non nullable. Se per una colonna che ammette valori null non è specificata alcuna colonna di lunghezza, la libreria di cursori costruisce una **dove** clausola che utilizza il valore dei dati per la colonna. Questa clausola non identificherà correttamente la riga.
+

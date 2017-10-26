@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Una stored procedure consiste nell'usare il valore predefinito di un parametro di input in una stored procedure anziché il valore nel buffer di dati corrispondente.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** o **SQLSetPos** consente di ignorare il valore nel buffer di dati. Quando si aggiorna una riga di dati da una chiamata a **SQLBulkOperations** o **SQLSetPos,** non viene modificato il valore della colonna. Quando si inserisce una nuova riga di dati da una chiamata a **SQLBulkOperations**, il valore della colonna è impostato sul valore predefinito o se la colonna non ha un valore predefinito, null.
+

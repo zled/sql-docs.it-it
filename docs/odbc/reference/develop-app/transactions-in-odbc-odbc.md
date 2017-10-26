@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b3bc3d656d9083d4bcfc47365f294233bedc581
@@ -35,3 +36,4 @@ Al livello di connessione, vengono completate le transazioni in ODBC vale a dire
 -   [Esecuzione del commit e rollback delle transazioni](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)  
   
 -   [Effetto delle transazioni su cursori e le istruzioni preparate](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)
+

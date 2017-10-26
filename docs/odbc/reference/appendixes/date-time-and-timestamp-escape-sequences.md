@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0476415619db3591fd9c26d22bc615b6d90f6c2e
@@ -58,3 +59,4 @@ timestamp-separator ::=
   
 ## <a name="remarks"></a>Osservazioni  
  Se i tipi di dati date, time e timestamp sono supportati dall'origine dati, sono supportate le sequenze di escape di valore letterale data, ora e timestamp. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare se sono supportati i tipi di dati.
+

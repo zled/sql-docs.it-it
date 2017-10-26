@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
@@ -59,3 +60,4 @@ I requisiti di sistema per l'installazione specificare minima del sistema operat
  Il Driver ODBC di Visual FoxPro supporta il set di caratteri a byte doppio (DBCS). Per ulteriori informazioni, vedere [internazionali supporto](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
  Il driver non supporta le applicazioni di Microsoft Windows 3.1 a 16 bit.
+

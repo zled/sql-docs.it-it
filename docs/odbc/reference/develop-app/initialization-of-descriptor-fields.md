@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a42ff3940f5d1620c7ee310df24016dfa39a4cd
@@ -33,3 +34,4 @@ Quando viene allocato un descrittore della riga di applicazione, i relativi camp
  Il concetto di un valore predefinito non è valido per i campi di un'implementazione. Un'applicazione può accedere ai campi di un IRD solo se è presente un'istruzione preparata o eseguita è associata.  
   
  Alcuni campi di un IPD sono definiti solo dopo il IPD sono popolate automaticamente dal driver. Se non sono definiti. Questi campi sono SQL_DESC_CASE_SENSITIVE, SQL_DESC_FIXED_PREC_SCALE, SQL_DESC_TYPE_NAME, SQL_DESC_UNSIGNED e SQL_DESC_LOCAL_TYPE_NAME.
+

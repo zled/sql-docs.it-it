@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 558789a4f435e9fc54176b1423d71369f6b4cc22
@@ -39,3 +40,4 @@ I driver di Database di Microsoft ODBC Desktop imporre le limitazioni sui tipi d
 |timestamp|Impossibile convertire il tipo di dati TIMESTAMP a se stesso per la funzione CONVERT.|  
 |TINYINT|I valori di tipo TINYINT sono sempre senza segno.|  
 |Stringhe di lunghezza zero|Quando viene utilizzato un file dBASE, Microsoft Excel, Paradox o Textdriver, inserire una stringa di lunghezza zero in una colonna effettivamente inserisce un valore NULL invece.|
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d62657134276621442c58639d1ef1c7f2a4b63e0
@@ -41,3 +42,4 @@ Attributi di connessione sono riportate le caratteristiche della connessione. Po
  Dopo la connessione, è necessario impostare gli attributi di connessione di conversione (SQL_ATTR_TRANSLATE_DLL e SQL_ATTR_TRANSLATE_OPTION).  
   
  In qualsiasi momento, è possono impostare tutti gli altri attributi di connessione. Per ulteriori informazioni, vedere il [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) descrizione della funzione. (Gli attributi di connessione non possono essere impostati a livello di ambiente da una chiamata a **SQLSetEnvAttr**.)
+

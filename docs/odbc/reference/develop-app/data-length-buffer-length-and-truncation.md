@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ Il *lunghezza dei dati* è la lunghezza in byte dei dati potrebbe essere memoriz
  Si supponga, ad esempio, che un'applicazione alloca 50 byte per un buffer di dati binari. Se il driver ha 10 byte di dati binari da restituire, restituisce i 10 byte nel buffer. La lunghezza in byte dei dati è 10 e la lunghezza in byte del buffer è 50. Se il driver ha 60 byte di dati binari da restituire, tronca i dati di 50 byte, restituisce i byte nel buffer e restituisce SQL_SUCCESS_WITH_INFO. La lunghezza in byte dei dati è 60 (lunghezza prima troncamento) e la lunghezza in byte del buffer è ancora 50.  
   
  Viene creato un record di diagnostica per ogni colonna che viene troncato. Poiché il tempo per il driver a creare questi record e per l'applicazione per l'elaborazione, il troncamento può influire negativamente sulle prestazioni. In genere, un'applicazione può evitare questo problema tramite l'allocazione di buffer di grandi dimensioni sufficientemente, anche se ciò potrebbe non essere possibile quando si lavora con dati di tipo long. Quando si verifica un troncamento dei dati, l'applicazione può talvolta allocare un buffer più grande e ripetere il recupero dei dati. Ciò non avviene in tutti i casi. Se si verifica un troncamento durante il recupero dei dati con chiamate a **SQLGetData**, l'applicazione non è necessario chiamare **SQLGetData** per i dati che sono già stata resa; per ulteriori informazioni, vedere [Guida Dati di tipo long](../../../odbc/reference/develop-app/getting-long-data.md).
+

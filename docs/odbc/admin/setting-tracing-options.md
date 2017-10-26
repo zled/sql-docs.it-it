@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
@@ -68,3 +69,4 @@ Il **traccia** scheda della finestra di **Amministrazione origine dati ODBC** la
 >  Supporto per Visual Studio Analyzer è stata rimossa a partire da Windows 8 (solo incluso Visual Studio Analyzer in versioni precedenti di Visual Studio). Per un'alternativa meccanismo di risoluzione dei problemi, utilizzare la traccia dell'offerta.  
   
  Analisi di Visual Studio® Analyzer fornisce prestazioni e le informazioni di debug sul livello di ODBC. Tutti gli eventi in uscita verranno generati l'interfaccia principale per presentare accurata un'immagine come possibili relative alla durata in componenti ODBC. Visual Studio Analyzer traccia richiede qualsiasi origine evento per registrare quando l'origine è configurato. Per ulteriori informazioni su questo tipo di traccia, vedere la documentazione di Visual Studio.
+

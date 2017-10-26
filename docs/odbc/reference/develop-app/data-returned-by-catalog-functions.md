@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  Le funzioni di catalogo sono basate su un modello di autorizzazione simile a SQL in cui viene stabilita una connessione in base a un nome utente e una password, e vengono restituiti solo i dati per cui l'utente dispone di un privilegio. Password di protezione di singoli file, che non rientrano in questo modello, è definito dal driver.  
   
  Set di risultati restituiti dalle funzioni di catalogo sono quasi mai aggiornabili e le applicazioni non dovrebbero essere in grado di modificare la struttura del database modificando i dati in questi set di risultati.
+

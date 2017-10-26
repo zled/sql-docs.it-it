@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
@@ -48,3 +49,4 @@ Quando viene utilizzato il driver di testo, è possibile utilizzare il **Definis
 |**Righe da analizzare**|Il numero di righe che il programma di installazione o il driver eseguirà l'analisi quando si impostano le colonne e i tipi di dati basati su dati esistenti.<br /><br /> È possibile immettere un numero compreso tra 1 e 32767 per il numero di righe da analizzare. L'impostazione predefinita 25 se il formato dell'elemento selezionato nel **tabelle** elenco non è stato definito in precedenza da questa finestra di dialogo. (Un numero di fuori del limite verrà restituito un errore).|  
 |**Tabelle**|Contiene un elenco di tutti i file nella directory selezionata tramite il **installazione testo** la finestra di dialogo che corrispondono all'elenco delle estensioni specificate.<br /><br /> Quando \<predefinito > è selezionata, e uno dei seguenti è true, i valori degli attributi nella tabella di **tabelle** gruppo vengono scritte nel file Schema.ini (altre voci nel file Schema.ini non interessate):<br /><br /> -Non è ini nella directory specificata.<br />-Il file ini esiste, ma non vi è alcuna sezione nel file Schema.ini per uno dei file di testo (con l'estensione specificata) nella directory.<br />-La sezione file di testo presente in Schema.ini, ma il corpo è vuoto.<br /><br /> Quando \<predefinito > è selezionata, il **colonne** gruppo è disabilitato.|  
 |**Larghezza**|La larghezza della colonna può essere modificata per le colonne CHAR o LONGCHAR. La larghezza valore predefinito è 1 se il formato dell'elemento selezionato nel **tabelle** elenco non è stato definito in precedenza da questa finestra di dialogo.<br /><br /> Per altri tipi di dati, la larghezza delle schede è disabilitata e viene visualizzato alcun valore.|
+

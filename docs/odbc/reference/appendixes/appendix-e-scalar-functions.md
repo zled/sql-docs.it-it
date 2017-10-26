@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaa110a6a62ca91535e790a267ef714675719bf4
@@ -50,3 +51,4 @@ ODBC specifica i tipi seguenti di funzioni scalari, con informazioni dettagliate
  ODBC e SQL-92 classificare le funzioni scalari in modo diverso. ODBC classifica le funzioni scalari dal tipo di argomento. SQL-92 classifica in base al valore restituito. Ad esempio, la funzione EXTRACT è classificata come funzione timedate da ODBC, in quanto l'argomento di estrazione campo è una parola chiave Data/ora e l'argomento di origine di estrazione è un'espressione datetime o intervallo. SQL-92, d'altra parte, classifica estrazione come una funzione scalare di tipo numerica, perché il valore restituito è un valore numerico.  
   
  Un'applicazione può determinare che un driver supporta chiamando le funzioni scalari **SQLGetInfo**. Tipi di informazioni sono inclusi sia per ODBC per SQL-92 classificazioni di funzioni scalari. Perché le classificazioni sono diverse, il supporto per alcune funzioni scalari può essere indicato in tipi di informazioni che non corrispondono a ODBC e SQL-92. Ad esempio, il supporto per l'estrazione in ODBC è indicato dal tipo di informazioni SQL_TIMEDATE_FUNCTIONS. supporto per l'estrazione in SQL-92, d'altra parte, è indicato dal tipo di informazioni SQL_SQL92_NUMERIC_VALUE_FUNCTIONS.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3aba3d69d8bbb90b1296bf821b6552d25a05b7b2
@@ -60,3 +61,4 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
  Quando un'applicazione chiama **SQLSetStmtAttr** su cui impostare SQL_ATTR_USE_BOOKMARKS SQL_UB_ON in un'applicazione ODBC 3*x* driver, l'attributo di istruzione di SQL_ATTR_USE_BOOKMARKS è impostato su SQL_UB_FIXED. SQL_UB_ON è la stessa costante come SQL_UB_FIXED. Gestione Driver passa SQL_UB_FIXED tramite il driver. SQL_UB_FIXED è stato deprecato in ODBC 3*x*, ma un'applicazione ODBC 3*x* driver deve implementare per funzionare con ODBC 2.* x* le applicazioni che utilizzano i segnalibri di lunghezza fissa.  
   
  Per un'applicazione ODBC 3*x* driver, gestione Driver non controlla se *opzione* è tra SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX, oppure è maggiore di SQL_CONNECT_OPT_DRVR_START.
+

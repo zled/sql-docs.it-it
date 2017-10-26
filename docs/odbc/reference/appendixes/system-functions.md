@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
@@ -38,3 +39,4 @@ La tabella seguente elenca le funzioni di sistema inclusi nel set di funzioni sc
 |**() DATABASE** (ODBC 1.0)|Restituisce il nome del database corrispondente all'handle di connessione. (Il nome del database è disponibile anche tramite la chiamata **SQLGetConnectOption** con l'opzione di connessione SQL_CURRENT_QUALIFIER.)|  
 |**IFNULL (** *exp*,*valore***)** (ODBC 1.0)|Se *exp* è null, *valore* viene restituito. Se *exp* non è null, *exp* viene restituito. Il tipo di dati o i tipi di *valore* deve essere compatibile con il tipo di dati di *exp*.|  
 |**UTENTE ()** (ODBC 1.0)|Restituisce il nome utente del sistema DBMS. (Il nome utente è anche disponibile tramite **SQLGetInfo** specificando il tipo di informazioni: SQL_USER_NAME.) Questo può essere diverso dal nome di account di accesso.|
+

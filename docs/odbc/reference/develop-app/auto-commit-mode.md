@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9b6d354657578f7188481a2e7ff7566f725c80
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Se il sistema DBMS sottostante non supporta le transazioni in modalità autocommit, il driver può emulare li eseguendo manualmente il commit di ogni istruzione SQL eseguita.  
   
  Se un batch di istruzioni SQL viene eseguito in modalità autocommit, risulta specifici dell'origine dati quando le istruzioni nel batch vengono eseguito il commit. Possono essere eseguito il commit come vengono eseguiti o complessivamente dopo l'esecuzione dell'intero batch. Alcune origini dati supportino entrambi questi comportamenti e possono costituire un modo per la selezione di uno o altri utenti. In particolare, se si verifica un errore nel corso del batch, è specifici dell'origine dati se le istruzioni già eseguite sono stato eseguito il commit o rollback. Di conseguenza, applicazioni interoperabili che utilizzano batch e li richiedono per essere eseguito il commit o rollback nel suo complesso devono eseguire batch solo in modalità di commit manuale.
+

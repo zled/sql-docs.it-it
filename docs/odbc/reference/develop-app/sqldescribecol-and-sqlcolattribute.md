@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Un'applicazione può recuperare i metadati dei set di risultati in qualsiasi momento dopo un'istruzione è stata preparata o eseguita e prima del cursore sul risultato del set è chiuso. Poche applicazioni richiedono metadati del set di risultati dopo l'istruzione viene preparata e prima che venga eseguito. Se possibile, le applicazioni devono attendere per recuperare i metadati fino a dopo l'istruzione viene eseguita, poiché alcune origini dati non possono restituire i metadati per le istruzioni preparate e questa funzionalità nel driver di emulazione è spesso un processo lento. Ad esempio, il driver potrebbe generare un risultato zero righe impostato tramite la sostituzione il **in cui** clausola di un **selezionare** istruzione con la clausola **WHERE 1 = 2** e l'esecuzione di istruzione risultante.  
   
  I metadati sono spesso costosi da recuperare dall'origine dati. Per questo motivo, i driver devono memorizzare nella cache i metadati sono recuperare dal server e tenere premuto che per fino a quando il cursore sul risultato del set è aperto. Inoltre, le applicazioni devono richiedere solo i metadati che sono assolutamente necessario.
+

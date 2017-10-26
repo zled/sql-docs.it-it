@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 673298af856478eb1c94db4f79ef5fb56ee3396b
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Arresta elaborazione associata a uno specifico *hstmt*, chiude tutti i cursori aperti associati il *hstmt*Elimina risultati in sospeso e, facoltativamente, libera tutte le risorse associate all'istruzione handle.  
   
  Per ulteriori informazioni, vedere [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) nel *riferimento per programmatori ODBC*.
+

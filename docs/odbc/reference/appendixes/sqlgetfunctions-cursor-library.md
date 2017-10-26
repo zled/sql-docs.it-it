@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6d8ca656e63183df424de2ec45c823ac275ef69f
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  In questo argomento viene illustrato l'utilizzo del **SQLGetFunctions** funzione nella libreria di cursori. Per informazioni generali su **SQLGetFunctions**, vedere [SQLGetFunctions-funzione](../../../odbc/reference/syntax/sqlgetfunctions-function.md).  
   
  Quando si chiama **SQLGetFunctions**, la libreria di cursori restituisce che supporta **SQLExtendedFetch**, **SQLFetchScroll**, **SQLSetPos**, e **SQLSetScrollOptions**, oltre alle funzioni supportate dal driver.
+

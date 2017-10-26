@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni succe
  ODBCJT32.dll implementa funzioni ODBC sopra l'API di Microsoft Jet. Non è tuttavia alcun mapping diretto tra le funzioni di ODBC e Microsoft Jet. Molti fattori, ad esempio i modelli di cursore e i mapping di SQL, evitare una correlazione diretta delle funzioni.  
   
  Il driver ODBC si trova tra la gestione di Microsoft Jet e gestione Driver ODBC. Alcune funzioni ODBC chiamati da un'applicazione sono gestite da Gestione Driver e non è stati passati al driver. Per queste funzioni, Microsoft Jet non vede mai la funzione chiamata perché non dispone di una connessione diretta al Driver Manager.
+

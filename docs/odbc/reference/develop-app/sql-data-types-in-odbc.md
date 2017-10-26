@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56406282ea95471b0343de27bc2a1d194223d059
@@ -29,3 +30,4 @@ Tipi di dati SQL sono i tipi in cui sono memorizzati i dati nell'origine dati.
 -   [Identificatori di tipo SQL](../../../odbc/reference/develop-app/sql-type-identifiers.md)  
   
 -   [Durante il recupero delle informazioni sul tipo di dati con SQLGetTypeInfo](../../../odbc/reference/develop-app/retrieving-data-type-information-with-sqlgettypeinfo.md)
+

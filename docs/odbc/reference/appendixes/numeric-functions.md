@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ La tabella seguente descrive le funzioni numeriche inclusi nel set di funzioni s
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Restituisce la radice quadrata di *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Restituisce la tangente di *float_exp*, dove *float_exp* è l'angolo, espresso in radianti.|  
 |**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Restituisce *numeric_exp* troncato a *integer_exp* posizionato a destra del separatore decimale. Se *integer_exp* è negativo, *numeric_exp* viene troncato a &#124;* integer_exp*&#124; posizioni a sinistra del separatore decimale.|
+

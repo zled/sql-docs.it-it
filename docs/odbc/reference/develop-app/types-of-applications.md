@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ Le applicazioni ODBC possono essere classificate come segue:
     -   Utilizza le nuove funzionalità in una versione successiva di ODBC solo all'interno di codice condizionale.  
   
     -   Il codice condizionale per gestire le modifiche del comportamento limitata o è stato registrato da una versione precedente dell'applicazione ODBC.
+

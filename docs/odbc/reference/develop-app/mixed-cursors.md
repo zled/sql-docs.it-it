@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
@@ -38,3 +39,4 @@ Un cursore misto è una combinazione di un cursore gestito da keyset e un cursor
  Si supponga ora che un'altra applicazione elimina le righe 11 101. Se il cursore tenta di recuperare la riga 11, verificherà un foro perché ha una chiave per questa riga, ma non esiste alcuna riga. si tratta di comportamento basati su keyset. Se il cursore tenta di recuperare la riga 101, il cursore non rileverà che la riga non è disponibile perché non è una chiave per la riga. In alternativa, consente di recuperare che in precedenza era riga 102. Si tratta del comportamento del cursore dinamico.  
   
  Un cursore misto è equivalente a un cursore gestito da keyset quando la dimensione del keyset è uguale alla dimensione del set di risultati. Un cursore misto è equivalente a un cursore dinamico quando la dimensione del keyset è uguale a 1.
+

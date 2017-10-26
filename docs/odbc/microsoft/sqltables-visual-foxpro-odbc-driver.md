@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd3e59437eae02a94353a6205e567fde208f4b97
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 >  Il driver ODBC Visual FoxPro riconosce la differenza tra [tabelle di database](../../odbc/microsoft/visual-foxpro-terminology.md) e [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md), anche se entrambi i tipi di tabelle vengono archiviati nella stessa directory del sistema. Se l'origine dati è una directory di tabelle disponibile, il Driver ODBC di Visual FoxPro non catalogo o non restituire i nomi di tutte le tabelle che sono associati a un database.  
   
  Per ulteriori informazioni, vedere [SQLTables](../../odbc/reference/syntax/sqltables-function.md) nel *riferimento per programmatori ODBC*.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d57b8ec52324dd4bec320b6179507ab3102e629
@@ -37,3 +38,4 @@ SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &dsDate, 0, &DateInd);
  Come accennato nel [allocazione e liberando buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md) sezione, l'indirizzo di un buffer posticipato deve rimanere valido fino a quando il buffer non è associato.  
   
  A meno che non è vietato in particolare, l'indirizzo di un buffer di dati può essere un puntatore null. Per i buffer utilizzati per inviare dati al driver, in questo modo il driver ignorare le informazioni contenute in genere nel buffer. Per i buffer utilizzati per recuperare dati dal driver, in questo modo il driver non restituire un valore. In entrambi i casi, il driver ignora l'argomento di lunghezza del buffer di dati corrispondente.
+

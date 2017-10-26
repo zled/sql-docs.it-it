@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3faac66828cdc408f9bd153377a3aefe74b882b0
@@ -48,3 +49,4 @@ Le dimensioni di visualizzazione di una colonna sono il numero massimo di caratt
 |SQL_GUID|36 (il numero di caratteri di *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato|  
   
  [a] se il driver non è possibile determinare la lunghezza di colonna o parametro dei tipi di variabili, restituirà SQL_NO_TOTAL.
+

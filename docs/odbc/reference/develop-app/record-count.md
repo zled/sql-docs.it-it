@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0d88974bb478386147761a413752e3a69e71a415
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 Il campo dell'intestazione di un descrittore di SQL_DESC_COUNT è l'indice in base 1 del record numero più alto che contiene dati. Questo campo non è un conteggio di tutte le colonne o parametri associati. Quando viene allocato un descrittore, il valore iniziale di SQL_DESC_COUNT è 0.  
   
  Il driver accetta qualsiasi azione necessario per allocare e mantenere la risorsa di archiviazione necessario per contenere informazioni sul descrittore. L'applicazione in modo non esplicito specificare le dimensioni di un descrittore né allocare nuovi record. Quando l'applicazione fornisce informazioni per un record del descrittore il cui numero è maggiore del valore di SQL_DESC_COUNT, il driver aumenta automaticamente SQL_DESC_COUNT. Quando l'applicazione viene disassociato il record del descrittore numero più alto, il driver riduce automaticamente SQL_DESC_COUNT a contenere il numero del record associato rimanenti più alto.
+

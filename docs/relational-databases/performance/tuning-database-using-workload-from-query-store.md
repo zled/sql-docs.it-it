@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
@@ -57,3 +58,4 @@ La differenza tra le opzioni Archivio query e Cache dei piani è che il primo co
 [Esercitazione: Strumento Ottimizzazione guidata motore di database](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [Come Archivio query raccoglie i dati](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Archivio query, procedure consigliate](../../relational-databases/performance/best-practice-with-the-query-store.md)
+

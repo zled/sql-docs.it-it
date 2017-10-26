@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 791350c93e2570ad8615e5b378e9979870e02acf
@@ -40,3 +41,4 @@ Un segnalibro è un valore utilizzato per identificare una riga di dati. Il sign
 -   [L'aggiornamento, eliminazione o recupero dal segnalibro](../../../odbc/reference/develop-app/updating-deleting-or-fetching-by-bookmark.md)  
   
 -   [Confronto tra i segnalibri](../../../odbc/reference/develop-app/comparing-bookmarks.md)
+

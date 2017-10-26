@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Osservazioni  
  Al primo tentativo di bloccare un record o un file non è sempre esito positivo. Spesso, un record o un file è bloccato da un altro utente nella rete. IMPOSTARE RIELABORARE determina se Visual FoxPro esegue ulteriori tentativi per bloccare il record o il file durante il tentativo iniziale ha esito negativo. È possibile specificare il numero di tentativi eseguiti altri tentativi vengono apportati o per quanto tempo i tentativi vengono stabiliti. Una routine ON ERROR influisce sulla riuscita come blocco vengono gestiti i tentativi.
+

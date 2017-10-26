@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|Restituisce un intero a 32 bit che specifica la posizione della riga corrente nel set di risultati. Get di sola lettura. Impossibile impostare.|  
 |SQL_ROWSET_SIZE|Non può superare i 4.294.967.296 righe. Tuttavia, è necessario disporre memoria virtuale sufficiente nel computer per gestire la richiesta.|  
 |SQL_USE_BOOKMARKS|Supporta l'impostazione SQL_USE_BOOKMARKS su SQL_UB_ON ed espone i segnalibri di lunghezza fissa.|
+

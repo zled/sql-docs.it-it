@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   Per origini dati per chiudere i cursori in base ai limiti delle transazioni, la libreria di cursori chiude i cursori ed elimina la cache per tutte le istruzioni per la connessione.  
   
 -   Per origini dati per eliminare le istruzioni preparate in base ai limiti delle transazioni, l'applicazione deve reprepare tutte le istruzioni preparate per la connessione prima di rieseguire li.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9441a955eaa4a9001b7acd655f7753e32f49e68e
@@ -85,3 +86,4 @@ Nella tabella seguente elenca le funzioni ODBC, raggruppate per tipo di attivit√
 ||[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|ODBC|Annulla l'elaborazione in un'istruzione o di connessione.|  
 ||[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|ISO 92|Esegue il commit o il rollback di una transazione.|  
 |Chiusura di una connessione|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|ISO 92<br /><br /> ISO 92|Chiude la connessione.<br /><br /> Rilascia un handle di ambiente, connessione, istruzione o descrittore.|
+

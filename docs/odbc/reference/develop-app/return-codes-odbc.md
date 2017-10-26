@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
@@ -57,3 +58,4 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|Nessun altro dato era disponibile. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive. Uno o più record di stato definito dal driver nella classe 02xxx possono essere restituiti. **Nota:** In ODBC 2.* x*, questo restituisce il codice è stato denominato SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Sono necessari più dati, ad esempio l'invio di dati del parametro in fase di esecuzione o sono necessarie informazioni di connessione aggiuntive. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive, se presente.|  
 |SQL_STILL_EXECUTING|Una funzione che è stata avviata in modo asincrono è ancora in esecuzione. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive, se presente.|
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ La dimensione del set di righe da utilizzare dipende dall'applicazione. Applicaz
 -   **SQLSetPos** utilizza le dimensioni del set di righe che sono attiva a partire dalla chiamata precedente a **SQLFetch** o **SQLFetchScroll**perché **SQLSetPos** opera su un set di righe che è già stata impostata. **SQLSetPos** anche selezionerà la nuova dimensione del set di righe se **SQLBulkOperations** è stato chiamato dopo che è stata modificata la dimensione del set di righe.  
   
 -   **SQLBulkOperations** viene utilizzata la dimensione del set di righe attive al momento della chiamata, perché consente di eseguire operazioni su una tabella indipendente da qualsiasi set di righe recuperate.
+

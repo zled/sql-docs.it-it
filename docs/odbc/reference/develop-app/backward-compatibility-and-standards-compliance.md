@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a27cb6dbeb36bf16e69ee21a41910652b8af31d6
@@ -45,3 +46,4 @@ Compatibilità con le versioni precedenti è la possibilità di componenti ODBC 
 -   [Scrittura di applicazioni ODBC 3. x](../../../odbc/reference/develop-app/writing-odbc-3-x-applications.md)  
   
 -   [Driver di scrittura ODBC 3. x](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)
+

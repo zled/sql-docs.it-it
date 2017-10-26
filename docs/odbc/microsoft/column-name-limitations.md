@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ I nomi di colonna possono contenere qualsiasi carattere validi (ad esempio, spaz
  Il carattere barra verticale (&#124;) non può essere utilizzato in un nome di colonna, se il nome è racchiuso tra virgolette indietro o non.  
   
  Quando viene utilizzato il driver di testo, il driver fornisce un nome predefinito se non viene specificato un nome di colonna. Ad esempio, il driver chiama la prima colonna F1, F2 della seconda colonna e così via.
+

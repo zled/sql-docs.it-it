@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a6b4e1992ea5f446203b125261f5572c2bd9db7
@@ -47,3 +48,4 @@ Gli identificatori per i tipi di dati ODBC C intervallo anno-mese sono:
  La conversione del valore predefinito di un intervallo di tipo C è l'intervallo di anno-mese tipo SQL corrispondente.  
   
  Il driver ignora il valore di lunghezza/indicatore quando la conversione dei dati dal tipo di dati di intervallo C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati di intervallo C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.
+

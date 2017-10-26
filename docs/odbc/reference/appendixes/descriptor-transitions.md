@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 280d35d8ce03d3d7685441c12d99c05c9ff5f451
@@ -83,3 +84,4 @@ Descrittori ODBC sono i seguenti tre stati.
 |D0<br /><br /> Non allocato|D1i<br /><br /> Implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|
+

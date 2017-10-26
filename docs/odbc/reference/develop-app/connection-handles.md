@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ Oggetto *connessione* è costituito da un driver e un'origine dati. Un handle di
  Handle di connessione vengono utilizzati principalmente per la connessione all'origine dati (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**), disconnessione dai dati origine (**SQLDisconnect**), recupero di informazioni sull'origine dati e i driver (**SQLGetInfo**), il recupero di diagnostica (**SQLGetDiagField** e **SQLGetDiagRec**) e l'esecuzione di transazioni (**SQLEndTran**). Vengono inoltre utilizzati durante l'impostazione e recupero degli attributi di connessione (**SQLSetConnectAttr** e **SQLGetConnectAttr**) e quando si ottiene il formato nativo di un'istruzione SQL (**SQLNativeSql **).  
   
  Handle di connessione vengono allocati con **SQLAllocHandle** e liberata con **SQLFreeHandle**.
+

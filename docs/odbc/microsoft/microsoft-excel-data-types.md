@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
@@ -53,3 +54,4 @@ Nella tabella seguente viene illustrato come tipi di dati di Microsoft Excel dri
 |TEXT|Quando le righe di una colonna contengono più di un tipo di dati di Microsoft Excel, il driver ODBC di Microsoft Excel viene assegnato il tipo di dati SQL_VARCHAR alla colonna. Vi è un'eccezione a questa: se la colonna contiene solo due o tre dei tipi di dati datetime (data, ora e data/ora), il driver ODBC di Microsoft Excel viene assegnato il tipo di dati SQL_TIMESTAMP alla colonna.<br /><br /> Creazione di una colonna di testo pari a zero o di lunghezza non specificata restituisce una colonna di 255 byte.<br /><br /> Un valore letterale di stringa di caratteri può contenere qualsiasi carattere ANSI (decimale 1-255). Utilizzare due virgolette singole consecutive (") per rappresentare una virgoletta singola (').<br /><br /> Inserimento di un valore NULL in una colonna con tipo di dati diverso da SQL_VARCHAR causerà il tipo di dati della colonna da modificare per SQL_VARCHAR.|  
   
  Altre limitazioni sui tipi di dati sono reperibili [limitazioni del tipo di dati](../../odbc/microsoft/data-type-limitations.md).
+

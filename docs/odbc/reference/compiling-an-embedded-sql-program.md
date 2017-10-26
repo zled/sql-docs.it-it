@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
@@ -46,3 +47,4 @@ Poiché un programma SQL incorporato contiene una combinazione di istruzioni SQL
 5.  Il modulo di richiesta del database generato dallo strumento di precompilazione viene inviato a un'utilità di associazione speciale. Questa utilità esamina le istruzioni SQL, analizza, convalida e ottimizza le e produce quindi un piano di accesso per ogni istruzione. Il risultato è un piano di accesso combinato per l'intero programma, che rappresenta una versione eseguibile delle istruzioni SQL incorporate. L'utilità di associazione archivia il piano nel database, assegnando in genere il nome dell'applicazione in uso. Se questo passaggio viene eseguita in fase di compilazione o fase di esecuzione varia a seconda del sistema DBMS.  
   
  Si noti che i passaggi necessari per compilare un programma SQL incorporato correlare strettamente con i passaggi descritti in precedenza nella [l'elaborazione di un'istruzione SQL](../../odbc/reference/processing-a-sql-statement.md). In particolare, si noti che il precompilatore separa le istruzioni SQL dal codice del linguaggio host e l'utilità di associazione analizza e convalida le istruzioni SQL e crea i piani di accesso. Nel passaggio 5 in cui ha luogo in fase di compilazione di DBMS, i primi quattro passaggi di elaborazione di un'istruzione SQL eseguite in fase di compilazione, mentre l'ultimo passaggio (esecuzione) viene eseguita in fase di esecuzione. Questo ha lo scopo di rendere l'esecuzione di query in tali DBMS molto veloce.
+

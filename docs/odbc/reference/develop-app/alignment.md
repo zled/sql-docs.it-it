@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ I problemi di allineamento in un'applicazione ODBC in genere non sono diversi ri
  ![Associazione tramite limite di allineamento massimo](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Sebbene questa soluzione lascia fori maggiori, il codice per l'implementazione è relativamente semplice e veloce. Nella maggior parte dei casi, questo viene eseguito l'offset di penalità a pagamento in memoria inutilizzata. Per un esempio che utilizza questo metodo, vedere [SQLBindCol utilizzando](../../../odbc/reference/develop-app/using-sqlbindcol.md).
+

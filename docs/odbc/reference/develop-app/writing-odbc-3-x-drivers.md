@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
  [5] in determinate circostanze, i driver potrebbe essere necessario supportare questa funzione. Per ulteriori informazioni, vedere la pagina di riferimento della funzione.  
   
  [6] il driver può scegliere di supportare **SQLGetFunctions** se il set di funzioni supportate dal driver varia da una connessione per connessione.
+

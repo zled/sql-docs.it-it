@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Per determinare se un driver supporta le sequenze di escape ODBC per i valori letterali di intervallo, un'applicazione chiama **SQLGetTypeInfo**. Se l'origine dati supporta un tipo di dati di intervallo datetime, deve supportare anche la sequenza di escape corrispondente.  
   
  Origini dati possono supportare anche i valori letterali datetime definiti nella specifica ANSI SQL-92, diversi da sequenze di escape ODBC per i valori letterali intervallo datetime. Per determinare se un'origine dati supporta i valori letterali ANSI, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_ANSI_SQL_DATETIME_LITERALS.
+

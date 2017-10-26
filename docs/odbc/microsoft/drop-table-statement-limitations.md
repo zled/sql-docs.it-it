@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 65c47ece213312b749dee0e83b76e8de89cf3dc9
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="drop-table-statement-limitations"></a>Limitazioni di istruzione di rilascio tabella
 Quando viene utilizzato il driver per Microsoft Excel 97 5.0 o 7.0, l'istruzione DROP TABLE Cancella il foglio di lavoro ma non elimina il nome del foglio di lavoro. Poiché il nome del foglio di lavoro esiste ancora nella cartella di lavoro, è Impossibile creare un foglio di lavoro con lo stesso nome.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f2725f312691d3cb644f9a096b5f469f1356c55
@@ -44,3 +45,4 @@ Il driver ODBC dBASE apre automaticamente e l'aggiornamento dei file di indice d
 -   Il nome dell'indice deve corrispondere la convenzione di denominazione indice dBASE. file dBASE III richiede che ogni indice in un file separato, ognuno dei quali con un'estensione ndx. Nel file dBASE IV, gli indici vengono creati come nomi di tag che vengono archiviati in un singolo file MDX. Il file con estensione MDX è lo stesso nome di base del file di database (ad esempio, emp è il file di indice per il database emp).  
   
 -   file dBASE definisce un indice univoco, come in un solo record da un set con gli stessi valori chiavi viene aggiunto all'indice.
+

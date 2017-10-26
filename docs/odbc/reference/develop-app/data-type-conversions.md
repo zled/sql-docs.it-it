@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
@@ -37,3 +38,4 @@ Dati possono essere convertiti da un tipo a altro in uno dei quattro volte: quan
  ODBC definisce la modalità di conversione dei dati tra i diversi tipi di dati SQL e C. In pratica, ODBC supporta tutte le conversioni ragionevole, ad esempio carattere da integer e integer in float e non supporta le conversioni in modo non corretto, ad esempio float alla data. I driver devono supportare tutte le conversioni per ogni tipo di dati SQL che supportano. Per un elenco completo delle conversioni tra tipi di dati SQL e C, vedere [la conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) e [la conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) appendice d: tipo di dati.  
   
  ODBC definisce anche una funzione scalare per la conversione dei dati da un tipo di dati SQL a un altro. Il **CONVERTIRE** viene eseguito il mapping di funzione scalare dal driver per la funzione scalare sottostante o funzioni definite per eseguire conversioni nell'origine dati. Poiché viene eseguito il mapping di questa funzione per funzioni specifiche del sistema DBMS, ODBC non definisce il funzionamento di queste conversioni o quali conversioni devono essere supportate. Un'applicazione consente di individuare quali conversioni sono supportate da un particolare driver e l'origine dati tramite le opzioni SQL_CONVERT **SQLGetInfo**. Per ulteriori informazioni sul **CONVERTIRE** funzione scalare, vedere [sequenze di Escape ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) e [esplicita funzione di conversione di tipi di dati](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
+

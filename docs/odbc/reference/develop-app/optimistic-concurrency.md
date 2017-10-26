@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  Se l'applicazione stessa implementa la concorrenza ottimistica, imposta l'attributo di istruzione SQL_ATTR_CONCURRENCY su SQL_CONCUR_READ_ONLY per leggere una riga. Se verranno confrontate le versioni di riga e non dispone di una colonna della versione di riga, chiama **SQLSpecialColumns** con l'opzione SQL_ROWVER per determinare il nome della colonna.  
   
  L'applicazione aggiorna o elimina la riga, aumentando la concorrenza SQL_CONCUR_LOCK (per ottenere l'accesso in scrittura per la riga) e l'esecuzione di un **aggiornamento** o **eliminare** istruzione con un **in ** clausola che specifica la versione o i valori della riga era quando l'applicazione leggerlo. Se la riga è stata modificata da allora, l'istruzione avrà esito negativo. Se il **dove** clausola non identifica in modo univoco la riga, l'istruzione può anche aggiornare o eliminare le altre righe mentre le versioni di riga identificano sempre in modo univoco le righe, ma i valori di riga identificano in modo univoco le righe solo se includono la chiave primaria.
+

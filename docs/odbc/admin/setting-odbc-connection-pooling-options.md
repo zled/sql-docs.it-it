@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ Il pool di connessioni consente a un'applicazione di utilizzare una connessione 
 |Pool creati|Il numero di pool attivo, inclusi i pool attivo ed è stato rimosso. Questo contatore è stato aggiunto in Windows 8, per i driver che gestiscono le connessioni nel pool di connessioni. Per ulteriori informazioni, vedere [Driver-Aware Connection Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  È necessario specificare i parametri di monitoraggio personalizzati. Esempi per il monitoraggio delle prestazioni sono stati inclusi con questa versione di ODBC.
+

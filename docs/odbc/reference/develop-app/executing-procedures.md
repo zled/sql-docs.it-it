@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
@@ -40,3 +41,4 @@ ODBC definisce una sequenza di escape standard per l'esecuzione delle procedure.
     -   Chiama la routine nell'origine dati e lo invia i valori di parametro convertito. Come il driver chiama la routine è specifico del driver. Ad esempio, è possibile modificare l'istruzione SQL per utilizzare la grammatica SQL dell'origine dati e inviare questa istruzione per l'esecuzione o è possibile chiamare la routine direttamente tramite un meccanismo di chiamata RPC (Remote Procedure) che è definito nel protocollo di flusso di dati del sistema DBMS.  
   
     -   Restituisce i valori di parametri di output o input/output o il valore restituito dalla routine, presupponendo che la procedura ha esito positivo. Questi valori potrebbero non essere disponibili solo dopo l'elaborazione di tutti gli altri risultati (conteggio delle righe e set di risultati) generati dalla procedura. Se la procedura ha esito negativo, il driver restituisce eventuali errori.
+

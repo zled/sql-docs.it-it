@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ Un cursore gestito da keyset è compresa tra un valore statico e un cursore dina
  Cursori basati su keyset in genere vengono implementati mediante la creazione di una tabella temporanea che contiene le chiavi per ogni riga nel set di risultati. Poiché il cursore è inoltre necessario determinare che se sono state aggiornate le righe, questa tabella contiene anche una colonna con informazioni relative al controllo delle versioni delle righe.  
   
  Per scorrere il set di risultati originale, il cursore gestito da keyset viene aperto un cursore statico tramite la tabella temporanea. Per recuperare una riga nel set di risultati originale, il cursore Recupera innanzitutto la chiave appropriata dalla tabella temporanea e quindi recupera i valori per la riga correnti. Se si utilizzano cursori a blocchi, il cursore deve recuperare più righe e le chiavi.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b648c069c3930e923db8a929f7203807c67b128e
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  In questo argomento viene illustrato l'utilizzo del **SQLFreeStmt** funzione nella libreria di cursori. Per informazioni generali su **SQLFreeStmt**, vedere [SQLFreeStmt-funzione](../../../odbc/reference/syntax/sqlfreestmt-function.md).  
   
  Se un'applicazione chiama **SQLFreeStmt** con l'opzione SQL_UNBIND dopo aver chiamato **SQLExtendedFetch**, **SQLFetch**, o **SQLFetchScroll**, la libreria di cursori restituisce un errore. Prima di è possibile separare le colonne del set di risultati, un'applicazione deve chiamare **SQLCloseCursor** o **SQLFreeStmt** con l'opzione di SQL_CLOSE.
+

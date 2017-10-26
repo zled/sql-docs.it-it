@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
@@ -35,3 +36,4 @@ Se l'applicazione utilizzerà i segnalibri, è necessario impostare l'attributo 
 -   Chiamare **SQLSetPos** per posizionarsi su una riga nel set di righe e quindi chiamare **SQLGetData** per la colonna 0. Se un driver supporta i segnalibri, deve supportare sempre la possibilità di chiamare **SQLGetData** per la colonna 0, anche se non consente alle applicazioni di chiamare **SQLGetData** per le altre colonne prima il limite ultimo colonna.  
   
 -   Chiamare **SQLBulkOperations** con il *operazione* argomento impostato su SQL_ADD e colonna 0 associato. Il cursore inserisce la riga e restituisce il segnalibro per la riga nel buffer associato.
+

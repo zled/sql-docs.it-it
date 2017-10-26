@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ Parametri di input che fanno riferimento a dati di tipo carattere a lunghezza va
  Sebbene le applicazioni e driver comunemente utilizzare stringhe C (matrici con terminazione null di caratteri) per contenere i dati di tipo carattere, non è necessario eseguire questa operazione. In C, dati di tipo carattere possono anche essere considerati come una matrice di caratteri (senza terminazione null) e la lunghezza di byte passati separatamente nel buffer di lunghezza/indicatore.  
   
  Poiché i dati di tipo carattere possono essere contenuti in una non-matrice con terminazione null e la lunghezza di byte passati separatamente, è possibile incorporare caratteri null nei dati di tipo carattere. Tuttavia, il comportamento delle funzioni ODBC, in questo caso è definito ed è specifico del driver se un driver gestisce correttamente. Di conseguenza, applicazioni interoperative sempre devono gestire i dati di tipo carattere che possono contenere caratteri null incorporati come dati binari.
+

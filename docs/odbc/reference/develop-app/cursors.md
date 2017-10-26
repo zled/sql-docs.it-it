@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un se
   
 > [!IMPORTANT]  
 >  Eseguire il commit o il rollback di una transazione, in modo esplicito chiamando **SQLEndTran** o per operare in modalità autocommit, a causa di alcune origini dati chiudere tutti i cursori su tutte le istruzioni in una connessione. Per ulteriori informazioni, vedere gli attributi SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione.
+

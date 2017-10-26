@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e080a5cb263d0c83b2c77eb483dbc3a032605d18
@@ -29,3 +30,4 @@ ODBC è stato creato per fornire un metodo uniforme di accesso ai sistemi di ges
 -   [Structured Query Language (SQL)](../../odbc/reference/structured-query-language-sql.md)  
   
 -   [Architettura di accesso database](../../odbc/reference/database-access-architecture.md)
+

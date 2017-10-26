@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67bad57e201d10c5eb29aafb19fa9f513c43b172
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  szErrorMsg = "[Microsoft] [driver ODBC per Oracle] sintassi o violazione di accesso"  
   
  La chiamata alla funzione Oracle OCI Odessp() ha esito negativo in questo scenario, ma è necessaria per implementare i parametri predefiniti. Dopo che vengono modificate le autorizzazioni nella tabella sottostante, è necessario ricompilare la stored procedure prima di eseguirlo nuovamente.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6b5d11258e01a789188b41721171c5e33f4cd37c
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="read-only-status-text-file-driver"></a>Stato di sola lettura (Driver di File di testo)
 Quando viene utilizzato il driver di testo, tabelle di origine dati sono di sola lettura. Tuttavia, le applicazioni è possono eseguire le operazioni di inserimento per le tabelle di testo.
+

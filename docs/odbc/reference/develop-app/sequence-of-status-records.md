@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ Se vengono restituiti due o più record di stato, il gestore dei Driver e il dri
 -   **Avvisi** record di stato che descrivono gli avvisi (classe 01) hanno la priorità più bassa. Se due o più record descrivono la stessa condizione di avviso, di avviso SQLSTATE definiti dalla specifica CLI di gruppo aprire outrank SQLSTATE definite da ODBC e definito dal driver.  
   
  Se sono presenti due o più record con il valore più alto, non viene specificato di record che è il primo record. Non è definito l'ordine di tutti gli altri record. In particolare, poiché gli avvisi potrebbero apparire prima di errori, le applicazioni dovrebbero verificare tutti i record di stato quando una funzione restituisce un valore diverso da SQL_SUCCESS.
+

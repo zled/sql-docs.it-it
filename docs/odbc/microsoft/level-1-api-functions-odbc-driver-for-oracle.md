@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Recupera il set di colonne ottimale che identifica in modo univoco una riga nella tabella.|  
 |**SQLStatistics**|Recupera un elenco delle statistiche su una singola tabella e indici o nomi di tag associati alla tabella. Il driver restituisce le informazioni come set di risultati.|  
 |**SQLTables**|Restituisce l'elenco dei nomi di tabella specificato dal parametro di **SQLTables** istruzione. Se viene specificato alcun parametro, restituisce i nomi delle tabelle archiviate nell'origine dati corrente. Il driver restituisce le informazioni come set di risultati.<br /><br /> Chiamate di tipo di enumerazione non riceveranno una voce del set di risultati per visualizzazioni remote o locale con parametri. Tuttavia, una chiamata a **SQLTables** con una tabella univoca identificatore di nome verrà trovata una corrispondenza per una vista, se presente, con lo stesso nome; in questo modo l'API verificare i conflitti di nome prima di creare una nuova tabella.<br /><br /> Il sinonimo PUBLIC viene restituito con un valore TABLE_OWNER "".<br /><br /> VISTE di proprietà di sistema o SYS vengono identificate come vista di sistema.|
+

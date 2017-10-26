@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a0c01994963a95b6b40936f481882e9634927
@@ -37,3 +38,4 @@ Le quattro opzioni seguenti in **SQLGetInfo** vengono descritti i tipi di cursor
 -   SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (a seconda del tipo di cursore). Vengono elencati i cursori statici e basati su keyset rilevano i propri aggiornamenti, eliminazioni e inserimenti.  
   
  Un'applicazione può determinare funzionalità del cursore in fase di esecuzione chiamando **SQLGetInfo** con queste opzioni. Viene eseguita in genere da applicazioni generiche. Funzionalità del cursore può essere determinata anche durante lo sviluppo di applicazioni e il relativo utilizzo hardcoded nell'applicazione. Viene eseguita in genere da applicazioni personalizzate e verticale, ma può essere eseguita anche dalle applicazioni generiche che usano un'implementazione di cursore sul lato client, ad esempio la libreria di cursori ODBC.
+

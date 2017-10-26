@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
@@ -51,3 +52,4 @@ Modifiche del comportamento sono le modifiche per il quale il *sintassi* dell'in
 -   [Mapping di SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Modifiche ai tipi di dati DateTime](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
+

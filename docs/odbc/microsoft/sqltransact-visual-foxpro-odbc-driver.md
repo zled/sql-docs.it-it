@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b12fa480f4aef8b669bdd57c4322f8d9f736be6
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Se un'operazione di commit ha esito negativo quando è in modalità manuale, la transazione rimane attiva. è possibile scegliere di eseguire il rollback della transazione o ripetere l'operazione di commit. Se un'operazione di commit ha esito negativo quando è in modalità automatica delle transazioni, il rollback della transazione. la transazione non può essere inattiva.  
   
  Per ulteriori informazioni, vedere [SQLTransact](../../odbc/reference/syntax/sqltransact-function.md) nel *riferimento per programmatori ODBC*.
+

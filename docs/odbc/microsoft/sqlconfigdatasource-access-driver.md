@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |THREAD|Il numero di thread in background per il motore da utilizzare. Il valore predefinito è 3, ma può essere modificato.<br /><br /> Consente di impostare la stessa opzione come **thread** nella finestra di dialogo programma di installazione.|  
 |UID|Per il driver Microsoft Access, il nome dell'ID utente utilizzato per l'account di accesso.|  
 |USERCOMMITSYNC|Determina se il driver Microsoft Access eseguirà in modo asincrono le transazioni definite dall'utente. Questo valore è inizialmente impostato su "Sì", il che significa che il driver Microsoft Access attenderà per commit in una transazione definita dall'utente per il completamento.<br /><br /> Il valore di questa opzione non deve essere modificato senza un'attenta valutazione delle conseguenze. Per ulteriori informazioni sull'opzione, vedere il *manuale del programmatore di Microsoft Jet Database Engine*.<br /><br /> Consente di impostare la stessa opzione come **UserCommitSync** nella finestra di dialogo programma di installazione.|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b8d192a0487a921e75a05145511441dc98b53b
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 Il Driver ODBC di Visual FoxPro supporta segnalibri semplici. Quando si chiama [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) con il SQL_BOOKMARK_PERSISTENCE *InfoType*, il valore restituito è SQL_BP_SCROLL.  
   
  Per ulteriori informazioni sui segnalibri, vedere [segnalibri (ODBC)](../../odbc/reference/develop-app/bookmarks-odbc.md).
+

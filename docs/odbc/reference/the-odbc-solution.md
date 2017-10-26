@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
@@ -60,3 +61,4 @@ La domanda, quindi, è come ODBC standardizzare accesso al database? Esistono du
      In modo che un'applicazione può determinare quali funzionalità di un driver e il supporto di DBMS, ODBC fornisce due funzioni (**SQLGetInfo** e **SQLGetFunctions**) che restituiscono informazioni generali sui driver e DBMS funzionalità e un elenco di funzioni il driver supporta. Anche ODBC definisce API e SQL grammatica livelli di conformità, che specificano intervalli ampia di funzionalità supportate dal driver. Per ulteriori informazioni, vedere [livelli di conformità](../../odbc/reference/develop-app/conformance-levels.md).  
   
      È importante ricordare che ODBC definisce un'interfaccia comune per tutte le funzionalità che espone. Per questo motivo, le applicazioni contengono codice specifiche funzionalità, non il codice specifico DBMS e possono utilizzare tutti i driver che espongono le funzionalità. Un vantaggio consiste nel fatto che le applicazioni non dovranno essere aggiornati quando vengono migliorate le funzionalità supportate da un DBMS; al contrario, quando viene installato un driver aggiornato, l'applicazione utilizza automaticamente le funzionalità perché il relativo codice specifiche funzionalità, non è specifico del driver o specifici del DBMS.
+

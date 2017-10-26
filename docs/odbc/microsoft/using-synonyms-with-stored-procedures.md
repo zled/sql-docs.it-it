@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46ad4937f804e5557d153ff94dd9c6ab559c9f81
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, utilizzare il driver ODBC fornito da Oracle.  
   
  Microsoft ODBC Driver for Oracle versioni 2.0 e 2.5 non supportano i sinonimi per le stored procedure chiamante Oracle. Sinonimi funzionano come previsto se utilizzato con altri oggetti di database Oracle, ad esempio le tabelle.
+

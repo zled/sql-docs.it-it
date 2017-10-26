@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
@@ -96,3 +97,4 @@ while (GetPrice(&PartID, &Price)) {
  Se il driver non è possibile emulare preparazione dell'istruzione, archivia l'istruzione quando **SQLPrepare** viene chiamato e inviata per l'esecuzione quando **SQLExecute** viene chiamato.  
   
  Poiché non è perfetto, preparazione dell'istruzione emulata **SQLExecute** può restituire eventuali errori in genere restituiti da **SQLPrepare**.
+

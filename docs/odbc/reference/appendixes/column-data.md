@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 >  La libreria di cursori non aggiorna la cache per una colonna se **StrLen_or_IndPtr* nel set di righe corrispondente buffer è SQL_DATA_AT_EXEC o il risultato della macro SQL_LEN_DATA_AT_EXEC.  
   
  Quando aggiorna una colonna, dei dati dell'origine vuoto riempie caratteri a lunghezza fissa e dati binari a lunghezza fissa fino a zero in base alle esigenze. Ad esempio, un'origine dati memorizza "Smith" in una colonna char (10) come "Smith". La libreria di cursori non non vuoto-riquadro o zero-riquadro dati nei buffer di set di righe durante la copia di dati nella cache dopo l'esecuzione di un'istruzione di aggiornamento posizionato. Pertanto, se un'applicazione richiede che i valori nella cache della libreria di cursori sono riempiti con spazio vuoto o riempiti con degli zero, deve vuoto-riquadro o zero-riquadro i valori nei buffer di set di righe prima di eseguire un'istruzione di aggiornamento posizionato.
+

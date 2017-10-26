@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      In tal modo è possibile creare una copia di prova dell'ambiente di database da cui sono stati acquisiti i dati e quindi ripetere gli eventi acquisiti così come si sono verificati nel sistema reale. Questa funzionalità è disponibile solo con Distributed Replay Utility o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. È possibile riprodurre gli eventi con la stessa velocità originale, nel modo più rapido possibile (per sottoporre il sistema a condizioni estreme) oppure, come è più probabile, un passaggio per volta per analizzare il sistema dopo ogni singolo evento. La possibilità di analizzare eventi reali in un ambiente di prova consente di evitare danni al sistema di produzione. Per altre informazioni, vedere [Riprodurre le tracce](../../tools/sql-server-profiler/replay-traces.md).  
   
   
+

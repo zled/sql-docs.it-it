@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5668f03e785c0d27133965f16af40ce69c2a2567
@@ -32,3 +33,4 @@ Se i dati in una colonna sono più lungo di 255 caratteri, il confronto LIKE si 
  Utilizzo di una clausola di escape in un predicato LIKE non è supportato.  
   
  Non è necessario eseguire un confronto LIKE su una colonna contenente i dati di un tipo di dati numerici o float. I risultati potrebbero essere imprevedibili. Per ulteriori informazioni, vedere il *manuale del programmatore di Microsoft Jet Database Engine*.
+

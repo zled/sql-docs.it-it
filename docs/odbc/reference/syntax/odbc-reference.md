@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 310395e70e4a18aa1c39a9b615a8edbc3031bb5d
@@ -38,3 +39,4 @@ Gli argomenti seguenti contengono informazioni semantiche per tutte le funzioni 
 -   [Riferimento alle funzioni DLL di conversione](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [Riferimento dell'interfaccia del provider di servizi (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
+

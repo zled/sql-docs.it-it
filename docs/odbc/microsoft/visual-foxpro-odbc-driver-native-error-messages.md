@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49c71ee77178b71ed67fbdddf955af1f14643199
@@ -337,3 +338,4 @@ Le tabelle seguenti elencano i messaggi di errore nativi per il Driver ODBC di V
 |988|Valore di valuta è compreso nell'intervallo.|  
 |990|Annulla.|  
 |999|Funzione non è implementata.|
+

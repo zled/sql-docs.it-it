@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ Oltre ai dati, **SQLFetch** e **SQLFetchScroll** può restituire una matrice che
 |SQL_ROW_DELETED|La riga è stata eliminata dopo l'ultimo recupero.|  
 |SQL_ROW_ADDED|La riga inserita da **SQLBulkOperations**. Se la riga viene recuperata di nuovo o viene aggiornata da **SQLSetPos**, lo stato è SQL_ROW_SUCCESS.<br /><br /> Questo valore non è impostato dal **SQLFetch** o **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|Il set di righe sovrapposti la fine del set di risultati ed è stata restituita alcuna riga che corrisponde a questo elemento della matrice di stato di riga.|
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ Sebbene SQL statico funziona bene in molte situazioni, è disponibile una classe
 3.  Il programma è possibile utilizzare l'istruzione EXECUTE più volte, specificando i valori di parametro diversi ogni volta che viene eseguita l'istruzione dinamica.  
   
  Esecuzione preparata è ancora non lo stesso come SQL statico. In SQL statico, i primi quattro passaggi di elaborazione di un'istruzione SQL è avvenire in fase di compilazione. In esecuzione preparata, questi passaggi vengono ancora eseguiti in fase di esecuzione, ma vengono eseguite solo una volta. esecuzione del piano di viene eseguita solo quando viene chiamata EXECUTE. Ciò consente di eliminare alcuni svantaggi prestazioni inerenti l'architettura di SQL dinamico. Nella figura seguente vengono illustrate le differenze tra SQL statico, dinamico SQL con esecuzione immediata e istruzioni SQL dinamiche con l'esecuzione preparata.
+

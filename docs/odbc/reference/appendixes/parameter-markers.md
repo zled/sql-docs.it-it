@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c2c8708c18abee3609fc0b01f6ccd2e0362e5706
@@ -45,3 +46,4 @@ Conforme alla specifica di SQL-92, un'applicazione non è possibile posizionare 
 -   Come argomento di un *riferimento alle funzioni set*  
   
  Per ulteriori informazioni su marcatori di parametro, vedere la specifica di SQL-92. Per ulteriori informazioni sui parametri, vedere [parametri dell'istruzione](../../../odbc/reference/develop-app/statement-parameters.md).
+

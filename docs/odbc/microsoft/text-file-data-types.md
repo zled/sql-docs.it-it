@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ Nella tabella seguente viene illustrato come tipi di dati di testo vengono esegu
 |LONGCHAR|La teoria limita la larghezza di una colonna LONGCHAR in uno a lunghezza fissa oppure tabella delimitata 65500K. Il driver ISAM testo è più probabile fornire un supporto affidabile fino a circa 32 KB.|  
   
  Altre limitazioni sui tipi di dati sono reperibili [limitazioni del tipo di dati](../../odbc/microsoft/data-type-limitations.md).
+

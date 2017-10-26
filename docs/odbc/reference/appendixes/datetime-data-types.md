@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ In ODBC 3*x*, gli identificatori per data, ora e tipi di dati timestamp SQL sono
  Quando tutti i tipi di dati vengono richiesti in una chiamata a **SQLGetTypeInfo**, il set di risultati restituito dalla funzione conterrà SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP come definito in ODBC 3*x*, e SQL_DATE, SQL_TIME e SQL_TIMESTAMP come definito in ODBC 2. *x*.  
   
  A causa di come ODBC 3*x* Driver Manager esegue il mapping dei tipi di dati date, time e timestamp, ODBC 3*x* driver solo necessitano riconoscere **#defines** di 91, 92, e 93 per data, ora e tipi di dati timestamp C immesso nel *TargetType* gli argomenti di **SQLBindCol** e **SQLGetData** o * ValueType* argomento di **SQLBindParameter**e necessario riconoscere solo **#defines** di 91, 92 e 93 per data, ora e tipi di dati timestamp SQL immessi nella *ParameterType* argomento di **SQLBindParameter** o *DataType* argomento di **SQLGetTypeInfo**. Per ulteriori informazioni, vedere [modifiche ai tipi di dati Datetime](../../../odbc/reference/develop-app/datetime-data-type-changes.md).
+

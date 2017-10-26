@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  La libreria di cursori non supporta la modifica il campo SQL_DESC_BIND_TYPE un'APD o ARD quando un cursore è aperto. Il campo SQL_DESC_BIND_TYPE può essere modificato solo dopo il cursore è chiuso e prima dell'apertura di un nuovo cursore. I campi di descrizione solo che la libreria di cursori supporta la modifica di quando è aperto un cursore sono SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_ROWS_PROCESSED_ PTR.  
   
  La libreria di cursori non supporta la modifica il campo SQL_DESC_COUNT del ARD dopo **SQLExtendedFetch** o **SQLFetchScroll** è stato chiamato e prima che il cursore è stato chiuso.
+

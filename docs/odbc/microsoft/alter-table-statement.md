@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c17230d49773262d2373017a24ab522f9eebb166
@@ -29,3 +30,4 @@ Quando viene utilizzato il Microsoft Access, un file dBASE o Paradoxdriver, l'is
   
 > [!NOTE]  
 >  Quando si utilizza il driver Paradox senza implementare Borland Database Engine, le istruzioni ALTER TABLE non sono supportate. solo leggere e aggiungere le istruzioni sono consentite.
+

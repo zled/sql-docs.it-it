@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7e27c80832143ff9907878ffc35c9479ce39ce1e
@@ -49,3 +50,4 @@ La prima tecnica per l'invio di istruzioni SQL per il sistema DBMS è incorporat
 -   [SQL statico](../../odbc/reference/static-sql.md)  
   
 -   [SQL dinamico](../../odbc/reference/dynamic-sql.md)
+

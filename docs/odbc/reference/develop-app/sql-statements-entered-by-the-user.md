@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b234123c01d4bdf4590c000b996a4febe4ad485e
@@ -53,3 +54,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 ```  
   
  Questo approccio semplifica la generazione di codice di applicazione; l'applicazione si basa sull'utente per compilare l'istruzione SQL e sull'origine dati per verificare la validità dell'istruzione. Poiché è difficile scrivere un'interfaccia utente grafica che adeguatamente espone gli aspetti complessi relativi a SQL, è sufficiente che chiede all'utente di immettere il testo dell'istruzione SQL può essere un'alternativa preferibile. Tuttavia, questo richiede all'utente di conoscere non solo SQL, ma anche lo schema dell'origine dati sottoposte a query. Alcune applicazioni forniscono un'interfaccia utente grafica mediante il quale l'utente può creare un'istruzione SQL di base e inoltre fornire un'interfaccia di testo con cui l'utente può modificarlo.
+

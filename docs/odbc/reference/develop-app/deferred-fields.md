@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ I valori di *posticipata campi* non vengono utilizzati quando sono impostati, ma
 -   Se il campo SQL_DESC_OCTET_LENGTH_PTR di un APD ha un valore null e il parametro è una stringa di caratteri, il driver presuppone che si stringa con terminazione null. Per i parametri dinamici di output, un valore null in questo campo impedisce il driver di restituire informazioni sulla lunghezza. (Se il campo SQL_DESC_TYPE non indica un parametro di stringa di caratteri, viene ignorato il campo SQL_DESC_OCTET_LENGTH_PTR.)  
   
  L'applicazione non deve deallocare o eliminare le variabili utilizzate per i campi posticipati tra l'ora che associa i campi e l'ora il driver legge o scrive.
+

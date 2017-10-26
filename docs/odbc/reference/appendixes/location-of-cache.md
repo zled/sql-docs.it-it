@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 645ff6dc68fec7cf332face2fe53a43555887a48
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Se la libreria di cursori in Microsoft® WindowsNT®/Windows 2000 tenta di memorizzare i dati in un file temporaneo nella directory corrente, mentre l'applicazione è in esecuzione da una condivisione di sola lettura o di un CD (ad esempio, un esempio di libreria Microsoft Foundation Class), SQLSTATE HY000 verrà restituito (generale errore-Unable per creare un buffer di file).
+

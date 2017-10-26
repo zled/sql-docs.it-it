@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
@@ -39,3 +40,4 @@ Gli attributi di istruzione sono caratteristiche dell'istruzione. Ad esempio, se
 >  Nessuno degli attributi di istruzione introdotti in ODBC 3. *x* (tranne SQL_ATTR_METADATA_ID) può essere impostata a livello di connessione.  
   
  Per ulteriori informazioni, vedere il [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) descrizione della funzione.
+

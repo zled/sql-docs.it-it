@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
@@ -46,3 +47,4 @@ SELECT * FROM Lines
 ```  
   
  sullo stesso handle di istruzione, le associazioni di colonna per il primo set di risultati sono ancora attive perché queste sono le associazioni archiviate nella struttura di istruzione. Nella maggior parte dei casi, questo è un livello di programmazione ridotte e deve essere evitato. Al contrario, l'applicazione deve chiamare **SQLFreeStmt** con l'opzione SQL_UNBIND per separare tutte le colonne precedente e quindi associare nuovi.
+

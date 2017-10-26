@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 97cdd3b4d205548dd0b35d0aae44e418b7ca9638
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Esegue un'istruzione SQL preparata (un'istruzione già preparata da [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)). Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione.  
   
  Per ulteriori informazioni, vedere [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) nel *riferimento per programmatori ODBC*.
+

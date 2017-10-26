@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d664d15e359070b33f5fb9f7ac2c4737ee900351
@@ -35,3 +36,4 @@ Il Driver ODBC di Visual FoxPro supporta tre tipi di funzioni scalari, come defi
 -   [Funzioni numeriche, Driver ODBC di Visual FoxPro,](../../odbc/microsoft/numeric-functions-visual-foxpro-odbc-driver.md)  
   
 -   [Funzioni di ora e data (Driver ODBC di Visual FoxPro)](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)
+

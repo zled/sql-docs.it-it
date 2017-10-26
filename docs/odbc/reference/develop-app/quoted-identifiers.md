@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07a0c8299fc4063e72353025465309c426a3a251
@@ -35,3 +36,4 @@ SELECT * FROM "Accounts Payable"
  Il motivo per racchiudere tra virgolette gli identificatori è rendere analizzabili l'istruzione. Se, ad esempio contabilità fornitori virgolette nell'istruzione precedente, il parser sarebbe si supponga che sono presenti due tabelle, gli account e fornitori e restituire un errore di sintassi che non sono separati da una virgola. L'identificatore di virgolette è specifico del driver e vengono recuperato con l'opzione SQL_IDENTIFIER_QUOTE_CHAR in **SQLGetInfo**. Gli elenchi di caratteri speciali e parole chiave vengono recuperati con le opzioni SQL_SPECIAL_CHARACTERS e SQL_KEYWORDS **SQLGetInfo**.  
   
  Per maggiore sicurezza, applicazioni interoperative offerta spesso tutti gli identificatori, ad eccezione di quelli per pseudo-colonne, ad esempio la colonna ROWID Oracle. **SQLSpecialColumns** restituisce un elenco di pseudocolonne. Inoltre, se sono presenti restrizioni specifiche dell'applicazione in cui i caratteri speciali possono essere visualizzati in un nome di oggetto, è ideale per applicazioni interoperabili di non utilizzare caratteri speciali in tali posizioni.
+

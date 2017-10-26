@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
@@ -42,3 +43,4 @@ Il terzo passaggio è compilare ed eseguire un'istruzione SQL, come illustrato n
 |**Selezionare** o del catalogo (funzione)|[Passaggio 4: recuperare i risultati](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**AGGIORNAMENTO**, **eliminare**, o **INSERT**|[Passaggio 4b: recuperare il conteggio delle righe](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Tutte le altre istruzioni SQL|Passaggio 3: Compilare ed eseguire un'istruzione SQL (questo argomento) o [passaggio 5: eseguire il Commit della transazione](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+

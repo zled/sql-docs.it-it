@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a044161df57f81fee3639fd26c94b5860d5c1913
@@ -135,3 +136,4 @@ Gli ambienti di ODBC dispongono di tre stati seguenti.
 |E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
 |------------------------|----------------------|-----------------------|  
 |(QUALI)|(QUALI)|--|
+

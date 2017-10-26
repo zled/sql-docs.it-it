@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd83d7ce68d0a7bc1045aee76c28b9b5c39c9faf
@@ -31,3 +32,4 @@ I cursori forward e statici sono supportati per SQL_CONCUR_READ_ONLY.
  Un *fConcurrency* argomento di SQL_CONCUR_ROWVER non è supportata.  
   
  I cursori Dynamic e cursori misti non supportati.
+

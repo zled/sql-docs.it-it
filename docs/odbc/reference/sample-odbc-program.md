@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4b78fa2c79cae4c80b81bd002e19e07024417d3b
@@ -23,3 +24,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sample-odbc-program"></a>Programma di esempio ODBC
 Il [nell'esempio di codice ODBC](http://go.microsoft.com/fwlink/?LinkId=244831) chiesto di immettere un nome di origine dati ODBC.  Verrà quindi richiesto di immettere una query e l'esempio visualizzerà i risultati della query.
+

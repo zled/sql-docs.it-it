@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
@@ -56,3 +57,4 @@ Il *cifre decimali* di dati decimal e numeric tipi viene definito come il numero
 |Tutti i tipi di data/ora|PRECISION|  
 |Tutti i tipi di intervallo con un componente di secondi|PRECISION|  
 |Tutti i tipi di intervallo con nessun componente di secondi|n/d|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 723d95f4ba83ec4ffe207461256d31242f5a05ea
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="cstring-class"></a>Classe CString
 Poiché gli oggetti del **CString** firmate classe in Microsoft® Visual C++ e gli argomenti di stringa nelle funzioni ODBC senza segno, le applicazioni che passano **CString** oggetti alle funzioni ODBC senza esegue il cast li riceverà gli avvisi del compilatore.
+

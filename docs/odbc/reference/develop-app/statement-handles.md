@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
@@ -42,3 +43,4 @@ Oggetto *istruzione* è più facilmente considerato come un'istruzione SQL, ad e
  Handle di istruzione vengono utilizzati nella maggior parte delle funzioni ODBC. In particolare, vengono utilizzati nelle funzioni per i parametri di associazione e causare un set di colonne (**SQLBindParameter** e **SQLBindCol**), preparare ed eseguire le istruzioni (**SQLPrepare** **SQLExecute**, e **SQLExecDirect**), recuperare i metadati (**SQLColAttribute** e **SQLDescribeCol**), recupero risultati (**SQLFetch**) e recuperare dati diagnostici (**SQLGetDiagField** e **SQLGetDiagRec**). Vengono inoltre utilizzati nelle funzioni di catalogo (**SQLColumns**, **SQLTables**e così via) e un numero di altre funzioni.  
   
  Handle di istruzione vengono allocati con **SQLAllocHandle** e liberata con **SQLFreeHandle**.
+

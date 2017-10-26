@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4db30f9e0c291151409d5af6a63226c0c2292bd
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |READONLY|TRUE per rendere i file di sola lettura. FALSE per rendere i file non di sola lettura.<br /><br /> Consente di impostare la stessa opzione come **in sola lettura** nella finestra di dialogo programma di installazione.|  
 |STATISTICS|Per il driver dBASE, determina se le statistiche sulle dimensioni di tabella sono approssimative. Si noti che questa opzione si applica a tutte le origini dati che utilizzano il driver ODBC.<br /><br /> Consente di impostare la stessa opzione come **conteggio approssimativo** nella finestra di dialogo programma di installazione.|  
 |THREAD|Il numero di thread in background per il motore da utilizzare. Questo valore è 3 e non può essere modificato.<br /><br /> Consente di impostare la stessa opzione come **thread** nella finestra di dialogo programma di installazione.|
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  È specifico del driver è esecuzione dell'istruzione dell'intero batch prima che i risultati siano disponibili. In alcune implementazioni, questo è il caso: in altri, la chiamata **SQLMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch.  
   
  Se una delle istruzioni in un batch ha esito negativo, **SQLMoreResults** restituirà SQL_ERROR o SQL_SUCCESS_WITH_INFO. Se il batch è stato interrotto quando l'istruzione non è riuscita o l'istruzione non riuscita era l'ultima istruzione nel batch, **SQLMoreResults** restituirà SQL_ERROR. Se il batch non è stato interrotto quando l'istruzione non è riuscita e l'istruzione non riuscita non è stata l'ultima istruzione nel batch, **SQLMoreResults** restituirà SQL_SUCCESS_WITH_INFO. SQL_SUCCESS_WITH_INFO indica che è stato generato almeno un set di risultati o conteggio e che il batch non è stato interrotto.
+

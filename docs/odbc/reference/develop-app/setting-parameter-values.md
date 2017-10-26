@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ Per impostare il valore di un parametro, l'applicazione imposta semplicemente il
  [d] driver sempre deve controllare questo valore per verificare se è un valore speciale, ad esempio SQL_NULL_DATA.  
   
  Funzionamento di un driver con un valore di parametro in fase di esecuzione è dipendente dal driver. Se necessario, il driver converte il valore dalla C byte e tipo lunghezza dei dati della variabile di associazione per il tipo di dati SQL, precisione e scala del parametro. Nella maggior parte dei casi, il driver invia quindi il valore per l'origine dati. In alcuni casi, formatta il valore come testo e lo inserisce nell'istruzione SQL prima di inviare l'istruzione per l'origine dati.
+

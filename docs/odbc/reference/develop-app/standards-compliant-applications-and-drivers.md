@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
@@ -45,3 +46,4 @@ Un driver o un'applicazione conforme agli standard è conforme a Open Specificat
 -   Per la compatibilità con ISO CLI, ODBC 3*x* file di intestazione contengono alias per i tipi di informazioni utilizzati nelle chiamate a **SQLGetInfo**. Un'applicazione conforme agli standard può utilizzare tali alias anziché ODBC 3*x* tipi di informazioni. Per ulteriori informazioni, vedere l'argomento successivo, [file di intestazione](../../../odbc/reference/develop-app/header-files.md).  
   
 -   Un'applicazione conforme agli standard è necessario verificare che tutte le funzionalità supportate sono supportate nel driver che funzionerà con. Impostare l'attributo di istruzione SQL_ATTR_CURSOR_SCROLLABLE su SQL_SCROLLABLE e impostando l'attributo di istruzione SQL_ATTR_CURSOR_SENSITIVITY su SQL_INSENSITIVE o SQL_SENSITIVE sono funzionalità che sono disponibili come funzionalità facoltativa negli standard ma non vengono inclusi in ODBC 3*x* Core livello e pertanto potrebbero non essere supportati da tutti i 3 ODBC*x* driver. Se un'applicazione conforme agli standard utilizza queste funzionalità, è necessario verificare che il driver che funzionerà con supportarle.
+

@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8fae054b572cb0d61299781d67adc0038afa9a97
@@ -77,3 +78,4 @@ Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**
 -   [SQL a intervalli di giorno-Time c:](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [SQL agli esempi di conversione di dati C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)
+

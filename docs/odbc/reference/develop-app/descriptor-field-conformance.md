@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
@@ -80,3 +81,4 @@ Nella tabella seguente indica il livello di conformità di ogni campo di intesta
  [1] supporto per questi campi di record è obbligatorio solo se il driver supporta i tipi di dati applicabili.  
   
  [2] per la conformità a livello di base, il driver deve supportare SQL_PARAM_INPUT. La conformità di interfaccia di livello 2, il driver deve supportare anche SQL_PARAM_INPUT_OUTPUT e SQL_PARAM_OUTPUT.
+

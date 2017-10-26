@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ Quando si aggiorna una riga dal segnalibro, **SQLBulkOperations** consente all'o
 6.  Chiamate **SQLBulkOperations** con il *operazione* argomento impostato su SQL_UPDATE_BY_BOOKMARK.  
   
  Per ogni riga che viene inviato all'origine dati come un aggiornamento, i buffer dell'applicazione devono disporre dei dati di riga valida. Se il buffer dell'applicazione sono state riempite mediante il recupero, se è stata mantenuta una matrice di stato di riga e se il valore di stato per una riga è SQL_ROW_DELETED, SQL_ROW_ERROR o SQL_ROW_NOROW, dati non validi potrebbero inavvertitamente inviati all'origine dati.
+

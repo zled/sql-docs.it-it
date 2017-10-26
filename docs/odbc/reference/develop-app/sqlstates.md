@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ SQLSTATE forniscono informazioni dettagliate sulla causa di un avviso o errore. 
  SQLSTATE HYC00 (funzionalità facoltativa non implementata) è particolarmente importante perché è l'unico modo in cui un'applicazione può determinare se un driver supporta un particolare attributo di istruzione o una connessione.  
   
  Per un elenco completo di SQLState e restituiranno quali funzioni, vedere [codici di errore ODBC appendice a:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Per una spiegazione dettagliata delle condizioni in cui ogni funzione potrebbe restituire un valore SQLSTATE specifico, vedere la funzione.
+

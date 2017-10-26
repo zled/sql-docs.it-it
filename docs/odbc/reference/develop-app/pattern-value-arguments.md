@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ Alcuni argomenti nel catalogo di funzioni, ad esempio il *TableName* argomento *
 >  ODBC 2. *x* driver non supporta i criteri di ricerca nel *CatalogName* argomento **SQLTables**. ODBC 3*x* driver accettano i modelli di ricerca in questo argomento se l'attributo di ambiente sql_attr ODBC_VERSION è impostato su SQL_OV_ODBC3; non accetta i criteri di ricerca in questo argomento se è impostato su SQL_OV_ODBC2.  
   
  Passando un puntatore null a un argomento di modello di ricerca non vincola la ricerca per tale argomento. ovvero, un puntatore null e la percentuale di criterio di ricerca (caratteri) sono equivalenti. Tuttavia, di lunghezza zero ricerca modello, ovvero, ovvero un puntatore valido a una stringa di lunghezza zero, ovvero corrisponde solo una stringa vuota ("").
+

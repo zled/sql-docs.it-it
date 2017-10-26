@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  La libreria di cursori supporta la chiamata **SQLBindCol** per associare la colonna del segnalibro.  
   
  Quando si lavora con un ODBC 2. *x* driver, la libreria di cursori restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando **SQLBindCol** viene chiamato per impostare la lunghezza del buffer per una colonna del segnalibro a un valore non è uguale a 4. Quando si lavora con un'applicazione ODBC 3*x* driver, la libreria di cursori consente il buffer di qualsiasi dimensione.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ Driver basati su DBMS vengono utilizzati con origini dati, ad esempio Oracle o S
  Nella figura seguente mostra tre diverse configurazioni di driver basati su DBMS. Nella configurazione del primo, il driver e l'origine dati si trovano nello stesso computer. Nel secondo, il driver e l'origine dati si trovano in computer diversi. Nel terzo, il driver e l'origine dati si trovano in computer diversi e un gateway si trova tra di essi, che si trovano in un altro computer.  
   
  ![Tre configurazioni per DBMS &#45; base driver](../../odbc/reference/media/pr07.gif "pr07")
+

@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
@@ -46,3 +47,4 @@ Prima di illustrare le tecniche per l'utilizzo a livello di codice SQL, è neces
 5.  Il sistema DBMS esegue l'istruzione eseguendo il piano di accesso.  
   
  La procedura utilizzata per elaborare un'istruzione SQL varia quantità richiedono l'accesso al database e la quantità di tempo che accettano. L'analisi di un'istruzione SQL non richiede l'accesso al database e possono essere eseguita molto rapidamente. L'ottimizzazione, d'altra parte, è una CPU molta elaborare e richiede l'accesso al catalogo di sistema. Per una query complessa, riferita, query optimizer può esplorare migliaia di diverse modalità di esecuzione della stessa query. Tuttavia, il costo di esecuzione della query in modo inefficiente in genere è talmente elevato che più recuperato il tempo dedicato all'ottimizzazione della velocità di esecuzione di query maggiore. Questo è ancora più importante se lo stesso piano di accesso ottimizzato può essere utilizzato più volte per eseguire le query ricorrenti.
+

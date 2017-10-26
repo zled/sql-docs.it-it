@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
@@ -63,3 +64,4 @@ ODBC definisce due set di tipi di dati: SQL tipi di dati e tipi di dati C. Tipi 
 -   [Conversione di dati c ai tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  Per una spiegazione dei tipi di dati ODBC, vedere [tipi di dati ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ff92186a7523904cf9db8f1b5a8ac1814384354
@@ -31,3 +32,4 @@ Applicazioni ODBC eseguono l'accesso al database quasi tutti tramite l'esecuzion
 -   [Interoperabilità di istruzioni SQL](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)  
   
 -   [Sequenze di escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)
+

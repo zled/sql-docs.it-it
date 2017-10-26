@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38c936b90703212973e1011ff69f1edba55cd8a3
@@ -42,3 +43,4 @@ Utilizzo di un cursore scorrevole richiede tre passaggi seguenti:
 -   [Caratteristiche del cursore e tipo di cursore](../../../odbc/reference/develop-app/cursor-characteristics-and-cursor-type.md)  
   
 -   [Scorrimento e recupero di righe](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6d0c38d70b859b1fb986ebaa366a5396159a95da
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="setting-the-commit-mode"></a>L'impostazione della modalità di Commit
 Le applicazioni di specificare la modalità di transazione con l'attributo di connessione SQL_ATTR_AUTOCOMMIT. Per impostazione predefinita, le transazioni ODBC sono in modalità autocommit (a meno che non **SQLSetConnectAttr** e **SQLSetConnectOption** non sono supportati, che è improbabile che). Il passaggio dalla modalità di commit manuale per la modalità autocommit automaticamente viene eseguito il commit di qualsiasi transazione aperta per la connessione.
+

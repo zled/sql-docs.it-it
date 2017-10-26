@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
@@ -54,3 +55,4 @@ Un descrittore utilizzato per descrivere uno dei valori seguenti:
  Un descrittore di eseguire diversi ruoli. Istruzioni diverse possono condividere un descrittore di allocate in modo esplicito dall'applicazione. Un descrittore della riga in un'unica istruzione può essere utilizzato come un descrittore del parametro in un'altra istruzione.  
   
  È sempre noto se un determinato descrittore è un descrittore di applicazione o un descrittore di implementazione, anche se il descrittore non è ancora stato utilizzato in un'operazione di database. Per i descrittori allocata in modo implicito l'implementazione, l'implementazione registra la riga predefinita relativo handle di istruzione. Qualsiasi descrittore che consente di allocare l'applicazione chiamando **SQLAllocHandle** è un descrittore di applicazione.
+

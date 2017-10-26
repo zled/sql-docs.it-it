@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e449fd186255d508724754b2038b8f2233d6300e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Associa un buffer con un marcatore di parametro in un'istruzione SQL. Il Driver ODBC di Visual FoxPro supporta parametri di input come specificato da di *fParamType* argomento.  
   
  Per ulteriori informazioni, vedere [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) nel *riferimento per programmatori ODBC*.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  In Visual FoxPro, i record vengono archiviati in una tabella. Ogni riga della tabella rappresenta un record e le colonne della tabella rappresentano i campi del record. Ogni tabella di Visual FoxPro è archiviata nel proprio file con estensione dbf. Tabelle di Visual FoxPro possono essere associate a un database.  
   
  FoxPro versione 2. *x* tabelle non sono associate a un database.
+

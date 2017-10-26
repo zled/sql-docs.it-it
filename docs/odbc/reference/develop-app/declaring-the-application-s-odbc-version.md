@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ Prima di un'applicazione alloca una connessione, è necessario impostare l'attri
   
 > [!IMPORTANT]  
 >  Applicazioni che seguono ODBC 3. *x* specifica è necessario utilizzare il codice condizionale per evitare di utilizzare funzionalità nuove per ODBC 3.* x* quando si lavora con ODBC 2.* x* driver. ODBC 2. *x* driver non supportano la funzionalità nuova in ODBC 3.* x* solo perché l'applicazione dichiara che segue ODBC 3.* x* specifica. Inoltre, ODBC 3. *x* driver non cessano supportare la funzionalità nuova in ODBC 3.* x* solo perché l'applicazione dichiara che segue l'API ODBC 2.* x* specifica.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ddd78f90927378fd0a7f8dbd78a5c66abb01f4a
@@ -29,3 +30,4 @@ Un indice univoco viene restituito (se presente) per il flag SQL_BEST_ROWID in *
  Tutti gli ID di riga hanno un ambito di SQL_SCOPE_CURROW.  
   
  Criteri di ricerca non sono supportata per uno di *szTableQualifier* o *szTableName* argomento.
+

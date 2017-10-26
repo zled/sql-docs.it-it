@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  è possibile chiamare **SQLColumns** per la colonna OrderID.  
   
  L'unico caso in cui l'applicazione non è facile determinare i metadati dei parametri è quando l'utente immette un'istruzione con parametri. In questo caso, l'applicazione chiama **SQLPrepare** per preparare l'istruzione, **SQLNumParams** per determinare il numero di parametri, e **SQLDescribeParam** per descrivere ogni parametro. Tuttavia, come indicato in precedenza, la maggior parte delle origini dati non forniscono un modo per individuare i metadati del parametro, pertanto il driver **SQLDescribeParam** è ampiamente supportato.
+

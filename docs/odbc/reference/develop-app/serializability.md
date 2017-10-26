@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
@@ -34,3 +35,4 @@ In teoria, le transazioni devono essere *serializzabile*. Le transazioni vengono
  Pertanto, perché è la serializzabilità è infatti consigliabile? In altre parole, perché è importante che venga visualizzato di una transazione termina prima dell'avvio della transazione successiva? Si consideri il seguente problema. Un agente sta entrando ordini allo stesso tempo che un clerk verrà inviati distinte. Si supponga che l'agente inserisce un ordine di azienda X ma non esegue il commit. l'agente è continuano a comunicare con il rappresentante dall'azienda X. Il clerk richiede un elenco di tutti gli ordini aperti e consente di individuare l'ordine per l'azienda X e li invia una fattura. Ora il rappresentante X società decide che desiderano modificare l'ordine, in modo che l'agente viene modificato prima di eseguire il commit della transazione. Società X Ottiene un effetto non corretto.  
   
  Se le transazioni del venditore e del clerk serializzabile, il problema non sarebbe state eseguite. Transazione del venditore potrebbe avere prima dell'avvio transazione del clerk, nel qual caso il clerk verrà hanno inviata la fattura corretta o potrebbe avere la transazione del clerk prima dell'avvio transazione del venditore, nel qual caso il Clerk sarebbe non hai inviato una fattura a X società affatto.
+

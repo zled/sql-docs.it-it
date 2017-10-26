@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82062fe767847023cd1aa6614173b292b0bff378
@@ -30,3 +31,4 @@ Un'applicazione specifica il file di traccia impostando il **TraceFile** parola 
  Il file di traccia fornisce i valori di tutti gli argomenti e un log di ogni chiamata di funzione ODBC con i tipi di dati. Registra le funzioni di tutti gli input ed esegue tutte le funzioni restituite con i codici restituiti e gli stati di errore.  
   
  In ODBC 3*x*, parametri delle funzioni di connessione non disponibili per la DLL di traccia.
+

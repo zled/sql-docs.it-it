@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 00469dcf77ae81f5d02765026fe0c1f7194da5d1
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
   
  Se un'applicazione che utilizza un ODBC 2*x* driver effettua chiamate a ODBC 3.* x* libreria di cursori, l'applicazione potrebbe essere in grado di utilizzare ODBC 3.* x* funzionalità non supportate da ODBC 2*x* driver. Un writer dell'applicazione occorre prestare attenzione a come vengono utilizzate queste funzionalità, tuttavia. Utilizzo di ODBC 3. *x* libreria di cursori non rende un ODBC 2*x* driver in un'applicazione ODBC 3.* x* driver.
+

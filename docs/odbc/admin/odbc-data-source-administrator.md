@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
@@ -42,3 +43,4 @@ Amministrazione origine dati di Microsoft® ODBC gestisce le origini dati e i dr
 -   [Impostazione delle opzioni del pool di connessioni ODBC](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [Visualizzazione dei driver](../../odbc/admin/viewing-drivers.md)
+

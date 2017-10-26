@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ Il driver ODBC Paradox esegue il mapping di tipi di dati Paradox ai tipi di dati
 |timestamp|Quando un valore viene inserito in una colonna TIMESTAMP dal driver Paradox e quindi successivamente recuperato dalla colonna, il valore recuperato differiscano dal valore inserito da più di 1 secondo a causa dell'arrotondamento.|  
   
  Altre limitazioni sui tipi di dati sono reperibili [limitazioni del tipo di dati](../../odbc/microsoft/data-type-limitations.md).
+

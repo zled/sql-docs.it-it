@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
@@ -482,3 +483,4 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  Quando un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2.* x* driver chiama **SQLSetStmtAttr** per impostare l'attributo SQL_ATTR_USE_BOOKMARKS SQL_UB_VARIABLE, gestione Driver imposta l'attributo SQL_UB_ON in sottostante ODBC 2.* x* driver.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 192962491095f8c6b8fb212ab7789cb74b609897
@@ -67,3 +68,4 @@ Nella tabella seguente elenca i fattori che controllano la visibilità delle mod
  S: serializzabile  
   
  [b] dipende dalla modalità di implementazione del cursore. Se il cursore è possibile rilevare le modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY in **SQLGetInfo**.
+

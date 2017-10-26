@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
@@ -82,3 +83,4 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
  Le guide di piano di tipo TEMPLATE possono essere utilizzate con le guide di piano di tipo SQL. Ad esempio, è possibile creare una guida di piano di tipo TEMPLATE per assicurarsi che una classe di query venga sottoposta a parametrizzazione È possibile creare una guida di piano di tipo SQL sulla query con parametri.  
   
   
+

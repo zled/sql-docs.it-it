@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dde6591396630690960d517be646039f893d821e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Restituisce il numero di parametri in un'istruzione SQL. Il numero di parametri deve essere uguale il numero di punti interrogativi nell'istruzione SQL passata al [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
   
  Per ulteriori informazioni sulla grammatica SQL, vedere [supportata la grammatica SQL ODBC](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md). Per ulteriori informazioni su questa funzione, vedere [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) nel *riferimento per programmatori ODBC*.
+

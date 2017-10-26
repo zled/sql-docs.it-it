@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  Inoltre, è possibile specificare gli hint di tabella INDEX, FORCESCAN e FORCESEEK come hint per le query. Se specificati come hint per le query, tali hint si comportano come un hint di vista o di una tabella inline. L'hint INDEX impone a Query Optimizer di utilizzare soltanto gli indici specificati per accedere ai dati nella tabella o nella vista. L’hint FORCESEEK impone a Optimizer di utilizzare soltanto un’operazione Index Seek per accedere ai dati nella tabella o nella vista a cui si fa riferimento. Tali hint forniscono funzionalità della guida di piano aggiuntive e consentono di avere maggiore influenza sull'ottimizzazione di query che utilizzano la guida di piano.  
   
   
+

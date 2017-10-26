@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e326abbc0a10899028bf93d27f219fadd8d7dd29
@@ -35,3 +36,4 @@ Questa appendice vengono fornite informazioni per gli sviluppatori di driver lav
 -   [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) -duplicato funzionalità sono implementate in modo diverso in ODBC 3.* x* e ODBC 2.* x*. ODBC 3. *x* driver non è necessario preoccuparsi di garantire la compatibilità con le funzionalità di duplicati perché è sempre mappata gestione Driver ODBC 2.* x* funzionalità ODBC 3.* x* funzionalità quando si chiama un'applicazione ODBC 3.* x* driver. Di conseguenza, un database ODBC 3. *x* driver vede solo ODBC 3.* x* funzionalità. Per ulteriori informazioni su tali mapping, vedere, più avanti in questa appendice.  
   
 -   [Modifiche del comportamento e i driver ODBC 3. x](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) , modifiche di comportamento sono disponibili funzionalità che sono gestite diversamente in ODBC 3.* x* e ODBC 2.* x*. ODBC 3. *x* driver sono necessario preoccuparsi delle modifiche di comportamento e agire in risposta all'attributo SQL_ATTR_ODBC_VERSION ambiente impostata dall'applicazione.
+

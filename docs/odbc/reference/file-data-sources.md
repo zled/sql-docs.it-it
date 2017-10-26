@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  Un file DSN può anche essere condivisibile. Un file DSN condivisibili risiede in un singolo computer e punta a un'origine dati macchina. Origini dati su file condivisibile esistano principalmente per consentire la conversione semplice di origini dati macchina in origini dati dei file in modo che un'applicazione può essere progettata per funzionare solo con origini dati dei file. Quando Gestione Driver viene inviata le informazioni in un'origine dati file condivisibile, si connette necessarie per l'origine dati macchina che indichi il file DSN.  
   
  Per ulteriori informazioni sulle origini dati di file, vedere [connessione utilizzando le origini dati](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), o [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.
+

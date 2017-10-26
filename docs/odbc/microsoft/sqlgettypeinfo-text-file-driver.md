@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: be45f11a17e340fb3a6999c242fce208ae733210
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE verrà restituito nella colonna di ricerca per Byte, contatore, Double, tipi di dati singolo, Long e Short. (La funzionalità simile può essere ottenuta dalla conversione del valore in un carattere utilizzando le funzioni di conversione canonica ODBC, quindi eseguire il confronto).  
   
  Quando viene utilizzato il driver di testo, **SQLGetTypeInfo** restituisce un valore CASE_SENSITIVE false per il testo dei tipi di dati CHAR e LONGCHAR, quando i tipi di dati effettivamente tra maiuscole e minuscole.
+

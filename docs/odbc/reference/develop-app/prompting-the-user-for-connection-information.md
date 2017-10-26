@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  Dopo che l'utente seleziona un'origine dati, gestione Driver costruisce una stringa di connessione che specifica che l'origine dati e lo passa al driver. Il driver può quindi richiedere all'utente le informazioni aggiuntive che necessarie.  
   
  Le condizioni in cui il driver richiede all'utente sono controllate dal *DriverCompletion* flag; sono disponibili le opzioni per Chiedi sempre conferma, prompt dei comandi se necessario, visualizzare mai la richiesta. Per una descrizione completa di questo flag, vedere il [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.
+

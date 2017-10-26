@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ Inserimento di dati con **SQLBulkOperations** è simile all'aggiornamento dei da
 3.  Chiamate **SQLBulkOperations** con il *operazione* argomento impostato su SQL_ADD.  
   
  Dopo aver **SQLBulkOperations** restituisce, la riga corrente rimane invariata. Se è associata la colonna del segnalibro (colonna 0), **SQLBulkOperations** restituisce i segnalibri di righe inserite nel buffer di set di righe associati a tale colonna.
+

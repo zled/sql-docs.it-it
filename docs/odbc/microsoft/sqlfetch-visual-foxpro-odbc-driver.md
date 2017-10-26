@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69912ee54db3be2ef7fb068bfe26e76cbf05cdc0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Recupera una riga da un set di risultati in percorsi specificati dalle chiamate precedenti alla [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md). Prepara il driver per una chiamata a [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) per le colonne non associate.  
   
  Per ulteriori informazioni, vedere [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) nel *riferimento per programmatori ODBC*.
+

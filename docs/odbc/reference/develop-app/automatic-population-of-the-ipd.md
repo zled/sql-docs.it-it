@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ Alcuni driver sono in grado di impostare i campi del IPD dopo che è stata prepa
  Quando il popolamento automatico è supportato e abilitato, il driver popola i campi del IPD dopo un'istruzione SQL che contengono marcatori di parametro è stata preparata da una chiamata a **SQLPrepare**. Un'applicazione può recuperare queste informazioni chiamando **SQLGetDescField** o **SQLGetDescRec**, o **SQLDescribeParam**. L'applicazione può utilizzare le informazioni da associare al buffer dell'applicazione più appropriato per un parametro o per specificare una conversione di dati per questo file.  
   
  Il popolamento automatico il IPD potrebbe produrre una riduzione delle prestazioni. Un'applicazione può disattivare tale funzionalità per reimpostare l'attributo di istruzione SQL_ATTR_ENABLE_AUTO_IPD SQL_FALSE (il valore predefinito).
+

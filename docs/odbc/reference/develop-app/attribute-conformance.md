@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
@@ -106,3 +107,4 @@ Nella tabella seguente indica il livello di conformità di ogni attributo di amb
  [2] per la conformità di interfaccia di livello 2, il driver deve supportare SQL_CONCUR_READ_ONLY e almeno un altro valore.  
   
  [3] per la conformità di interfaccia di livello 1, il driver deve supportare SQL_CURSOR_FORWARD_ONLY e almeno un altro valore. La conformità di interfaccia di livello 2, il driver deve supportare tutti i valori definiti in questo documento.
+

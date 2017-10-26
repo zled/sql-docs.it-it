@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
@@ -49,3 +50,4 @@ Definiscono DBMS *dati long* come qualsiasi carattere o dati binari in una deter
  Dopo aver **SQLExecute** o **SQLExecDirect** restituisce SQL_NEED_DATA e prima dell'invio di dati per l'ultimo parametro data-at-execution completamente, l'istruzione è in uno stato di dati necessario. Mentre un'istruzione si trova in uno stato di dati necessario, l'applicazione può chiamare solo **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, o **SQLGetDiagRec**; tutte le altre funzioni restituiscono SQLSTATE HY010 (funzione di errore nella sequenza). La chiamata **SQLCancel** Annulla l'esecuzione dell'istruzione e restituisce lo stato precedente. Per ulteriori informazioni, vedere [tabelle di transizione dello stato di appendice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Per un esempio di invio dei dati in fase di esecuzione, vedere il [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) descrizione della funzione.
+

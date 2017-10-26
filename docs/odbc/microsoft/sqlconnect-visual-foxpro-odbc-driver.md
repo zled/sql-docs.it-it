@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0481be69797c1050b901c54b3ffde023bfdfb1a
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Si connette a un'origine dati, che può essere un [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [tabelle](../../odbc/microsoft/visual-foxpro-terminology.md). Il Driver ODBC di Visual FoxPro ignora il *szUID*, *cbUID*, *szAuthStr*, e *cbAuthStr* argomenti.  
   
  Per ulteriori informazioni, vedere [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) nel *riferimento per programmatori ODBC*.
+

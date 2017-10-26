@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
@@ -72,3 +73,4 @@ Gli identificatori per i tipi di dati C ODBC numerici sono:
  [b] per il caso di "n/d", un driver può anche restituire SQL_SUCCESS_WITH_INFO e 01S07 quando si verifica un troncamento frazionario.  
   
  Il driver ignora il valore di lunghezza/indicatore quando si convertono i dati dai tipi di dati numerici di C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati numerico di C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.
+

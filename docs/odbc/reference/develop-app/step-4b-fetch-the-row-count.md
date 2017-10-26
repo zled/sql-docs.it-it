@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b3526d1aad0475cb487f9c1fba6822604286834
@@ -33,3 +34,4 @@ Il passaggio successivo è recuperare il conteggio delle righe, come illustrato 
  Se l'istruzione eseguita nel passaggio 3 è un **aggiornamento**, **eliminare**, o **inserire** istruzione, l'applicazione recupera il conteggio delle righe interessate con ** SQLRowCount**. Per ulteriori informazioni, vedere [determinare il numero di righe interessate](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
  A questo punto, l'applicazione restituisce al passaggio 3 per l'esecuzione di un'altra istruzione nella stessa transazione o procede al passaggio 5 per eseguire il commit o il rollback della transazione.
+

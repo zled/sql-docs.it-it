@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
@@ -58,3 +59,4 @@ Quando si verifica un errore, il driver di Visual FoxPro restituisce le informaz
  Ad esempio, se il Driver ODBC di Visual FoxPro non è riuscito a trovare il file Employee. dbf, potrebbe restituire il messaggio di errore seguente:  
   
  "[*Microsoft*] [*Driver ODBC Visual FoxPro*] File 'Employee. dbf' non esiste"
+

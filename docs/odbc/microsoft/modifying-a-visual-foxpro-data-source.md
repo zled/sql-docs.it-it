@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2a56fee03c4e839324ffe958031861f0e71bdeb
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 5.  Fare clic su OK per salvare le modifiche e chiudere la finestra di dialogo Amministratore origine dati ODBC.  
   
  Le modifiche saranno effettive alla successiva che accedere all'origine dati dall'applicazione.
+

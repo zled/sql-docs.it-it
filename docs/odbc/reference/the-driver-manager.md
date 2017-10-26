@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
@@ -40,3 +41,4 @@ Il *gestione Driver* è una libreria che gestisce la comunicazione tra applicazi
  Il ruolo principale finale di gestione Driver è caricamento e scaricamento di driver. L'applicazione carica e Scarica solo i Driver Manager. Quando desidera utilizzare un driver specifico, chiama una funzione di connessione (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**) in Gestione Driver e specifica il nome di una determinata origine dati o i driver, ad esempio "Contabilità" o "SQL Server". Utilizza questo nome, gestione Driver consente di cercare le informazioni di origine dati per nome file del driver, ad esempio Sqlsrvr.dll. Quindi caricato il driver (presupponendo che non sia già caricato) archivia l'indirizzo di ogni funzione nel driver e chiama la funzione di connessione nel driver, che quindi inizializzato e si connette all'origine dati.  
   
  Quando viene eseguita l'applicazione usa il driver, chiama **SQLDisconnect** the Driver Manager. Gestione Driver chiama questa funzione nel driver si disconnette dall'origine dati. Tuttavia, gestione Driver mantiene il driver in memoria nel caso in cui l'applicazione si riconnette a esso. Scarica il driver solo quando l'applicazione libera la connessione utilizzata dal driver o utilizza la connessione di un altro driver e le altre connessioni non utilizzano il driver. Per una descrizione completa del ruolo di gestione Driver nel caricamento e scaricamento di driver, vedere [di gestione Driver ruolo nel processo di connessione](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).
+

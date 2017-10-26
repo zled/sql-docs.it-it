@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a493a53b736ef5a2606cca1fca710957e30616f1
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
 Il livello di grammatica SQL-92 supportata da un driver è indicato dal valore restituito da una chiamata a **SQLGetInfo** con il tipo di informazioni SQL_SQL_CONFORMANCE. Indica se il driver conforme ai livelli di voce, FIPS transitorio, intermedio o Full definiti in SQL-92.  
   
  Tutti i driver ODBC devono supportare la grammatica SQL minima descritto in [la grammatica SQL minima](../../../odbc/reference/appendixes/sql-minimum-grammar.md) nella grammatica SQL di appendice c:. Questa sintassi sono un subset di Entry level di SQL-92. Driver può supportare SQL aggiuntive e sia conforme a livello di voce di SQL-92, intermedio o Full o per lo standard FIPS 127-2 livello di transizione. Driver conformi a un determinato livello di SQL-92 o FIPS 127-2 possibile supporta funzionalità aggiuntive in uno dei livelli più elevati ma non sia completamente conforme a tale livello. Per determinare se una funzionalità è supportata, un'applicazione deve chiamare **SQLGetInfo** con il tipo di informazioni appropriate. Il livello di conformità di una funzionalità SQL è descritto nel tipo di informazioni corrispondenti. (Vedere il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione.)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ Per modificare i campi di un descrittore, un'applicazione può chiamare **SQLSet
  Quando l'impostazione dei singoli campi, l'applicazione deve seguire la sequenza definita [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). L'impostazione di alcuni campi, il driver impostare altri campi. Ciò garantisce che il descrittore sia sempre pronto per l'uso dopo l'applicazione è specificato un tipo di dati. Quando l'applicazione imposta il campo SQL_DESC_TYPE, il driver verifica che i campi che specificano il tipo siano validi e coerenti.  
   
  Se una chiamata di funzione che è possibile impostare un campo di descrizione non riesce, il contenuto del campo del descrittore è definito dopo la chiamata di funzione non riuscita.
+

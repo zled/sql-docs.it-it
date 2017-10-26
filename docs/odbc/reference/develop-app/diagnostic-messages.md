@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
@@ -55,3 +56,4 @@ Con ogni SQLSTATE, viene restituito un messaggio di diagnostica. Il valore stess
  [1] In questo caso, il driver funge dal driver e l'origine dati.  
   
  Le parentesi quadre (**[]**) deve essere incluso nel messaggio e non indicano elementi facoltativi.
+

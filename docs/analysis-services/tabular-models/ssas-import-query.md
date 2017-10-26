@@ -1,7 +1,7 @@
 ---
 title: Importare dati utilizzando una query nativa (Analysis Services) | Documenti Microsoft
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importare dati utilizzando una query nativa
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 Per i modelli tabulari 1400, la nuova esperienza di recupera dati nei progetti di Visual Studio Analysis Services fornisce un'enorme flessibilità per la modalità è possibile combinare i dati durante l'importazione. Questo articolo descrive la creazione di una connessione a un'origine dati e quindi la creazione di una query SQL nativa per specificare l'importazione dei dati.
 

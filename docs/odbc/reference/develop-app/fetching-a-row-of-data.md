@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
@@ -40,3 +41,4 @@ Per recuperare una riga di dati, un'applicazione chiama **SQLFetch**. **SQLFetch
  Dati di tipo carattere devono essere con terminazione null dal driver prima che venga restituito all'applicazione, anche se è stato troncato. Il carattere di terminazione null non è inclusa la lunghezza di byte restituita ma richiede spazio nel buffer del binding. Si supponga, ad esempio, un'applicazione utilizza stringhe composte da dati di tipo carattere nel set di caratteri ASCII, un driver è 50 caratteri dei dati da restituire e buffer dell'applicazione è 25 byte. Nel buffer dell'applicazione, il driver restituisce i primi 24 caratteri seguiti da un carattere di terminazione null. Nel buffer di lunghezza/indicatore, viene restituito una lunghezza in byte pari a 50.  
   
  L'applicazione è possibile limitare il numero di righe nel set di risultati tramite l'impostazione dell'attributo di istruzione SQL_ATTR_MAX_ROWS prima di impostare l'esecuzione dell'istruzione che crea il risultato. La modalità di anteprima in un'applicazione utilizzata per formattare i report, ad esempio, è necessario solo il numero di dati sufficienti per visualizzare la prima pagina del report. Limitando le dimensioni del set di risultati, tale funzionalità viene eseguita più velocemente. Questo attributo dell'istruzione è progettato per ridurre il traffico di rete e potrebbe non essere supportato da tutti i driver.
+

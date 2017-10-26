@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42da1bad914342a2f2973a63dc35f6e53f8b6c93
@@ -37,3 +38,4 @@ Il primo passaggio in qualsiasi applicazione consiste nella connessione all'orig
  Successivamente, l'applicazione viene allocato un handle di connessione con **SQLAllocHandle** e si connette all'origine dati con **SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**. Per ulteriori informazioni, vedere [allocare un Handle di connessione](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md) e [stabilire una connessione](../../../odbc/reference/develop-app/establishing-a-connection.md).  
   
  Quindi, l'applicazione imposta gli attributi di connessione, ad esempio se manualmente il commit delle transazioni. Per ulteriori informazioni, vedere [gli attributi di connessione](../../../odbc/reference/develop-app/connection-attributes.md).
+

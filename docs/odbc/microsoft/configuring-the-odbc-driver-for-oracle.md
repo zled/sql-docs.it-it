@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64e6dfe9f31eb983170f08e9fcd3e0705ba9ae62
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   **Sulla scheda** sono elencati i file di componente ODBC installati.  
   
  Dopo avere aggiunto un'origine dati, è possibile utilizzare il **Amministrazione origine dati ODBC** la finestra di dialogo per configurare l'accesso all'origine dati. Selezionare un'origine dati e quindi fare clic su una delle schede per modificare o esaminare le informazioni.
+

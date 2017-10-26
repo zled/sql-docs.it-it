@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 309bea8c888b7fd057e942dd348125c9b420afb7
@@ -47,3 +48,4 @@ Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver][dBASE]No such table or object"
 ```  
   
  Poiché questo errore è correlato all'origine dati, il driver aggiunto il formato di file dell'origine dati ([dBASE]) come prefisso per il messaggio di diagnostica. Poiché il driver è stato anche il componente di interfaccia duale con l'origine dati, aggiungerlo prefissi per il fornitore ([Microsoft]) e il driver ([ODBC Driver di dBASE]).
+

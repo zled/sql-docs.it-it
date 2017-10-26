@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
@@ -37,3 +38,4 @@ I nomi di tabella possono contenere qualsiasi carattere validi (ad esempio, spaz
  Quando viene utilizzato il driver Microsoft Access, il nome della tabella è limitato a 64 caratteri.  
   
  Quando viene utilizzato il driver di Microsoft Excel versione 3.0 o 4.0, Paradox o testo, dBASE, parole chiave MS-DOS speciali CON, AUX, LPT1 e LPT2 non utilizzare come nomi di tabella.
+

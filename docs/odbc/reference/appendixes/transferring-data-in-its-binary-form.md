@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c54b61ec668e9282d723e48f1c50d1005740ac1
@@ -34,3 +35,4 @@ In modo sicuro, un'applicazione può trasferire i dati (nel formato interno usat
 >  Le applicazioni che trasferiscono i dati (tranne i dati binari) in questo modo non sono interoperativi tra DBMS.  
   
  **SQLCopyDesc** può essere utilizzato per copiare le associazioni di riga da DBMS di origine per le associazioni di parametri nel sistema DBMS di destinazione.
+

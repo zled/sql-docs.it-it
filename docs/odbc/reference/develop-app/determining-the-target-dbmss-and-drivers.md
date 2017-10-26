@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
@@ -36,3 +37,4 @@ Domanda successiva da considerare è, quali sono il DBMS di destinazione per l'a
  Server database, ad esempio Oracle, DB2 e SQL Server forniscono il supporto delle transazioni pieno, supportano molti utenti simultanei e avere SQL completo. Sono molto più costosi e disporre di una base installata più piccoli. D'altra parte, i prezzi di software tendono a essere superiore, in qualche modo offset di un mercato potenziale più piccolo.  
   
  Di conseguenza, destinazione DBMS a volte può essere scelto in base le funzionalità necessarie per l'applicazione e di mercato di destinazione dell'applicazione. Ad esempio, un sistema di immissione dell'ordine per le aziende di grandi dimensioni potrebbe non essere destinati database desktop perché questi non dispongono di supporto delle transazioni sufficiente. Un simile sistema progettato per le piccole imprese potrebbe escludere la maggior parte dei database del server in base al costo. Ma gli sviluppatori di applicazioni generiche potrebbe essere destinate a evitare di utilizzare le funzionalità avanzate disponibili nel database del server.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ Le regole in questa sezione per le conversioni che includono valori letterali nu
          (2) il driver viene arrotondata la stringa di Y a una scala appropriata (che può essere anche zero) e scrive il risultato CT.  
   
          (3) il driver non tronca né Arrotonda ma copia solo i primi caratteri LT di Y in CT.
+

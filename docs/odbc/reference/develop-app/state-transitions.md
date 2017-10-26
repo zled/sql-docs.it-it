@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
@@ -41,3 +42,4 @@ ODBC definisce discreti *stati* per ogni ambiente, ogni connessione e ogni istru
  Dal punto di vista dell'applicazione, le transizioni di stato sono in genere semplici: le transizioni di stato validi tendono a passare in mano a mano con il flusso di un'applicazione ben scritta. Transizioni di stato sono più complesse per la gestione di Driver e i driver in quanto è necessario tenere traccia dello stato dell'ambiente, ogni connessione e ogni istruzione. La maggior parte di queste operazioni viene eseguita da Gestione Driver; la maggior parte del lavoro che deve essere eseguita dai driver si verifica con le istruzioni con risultati in sospeso.  
   
  Parti 1 e 2 del manuale ("Introduzione a ODBC" e "Sviluppo di applicazioni e i driver") non tendono a specificare esplicitamente le transizioni di stato. Al contrario, vengono descritte l'ordine in cui devono essere chiamate funzioni. Ad esempio, "Esecuzione di istruzioni" indica che un'istruzione deve essere preparata con **SQLPrepare** prima che possa essere eseguito con **SQLExecute**. Per una descrizione completa degli Stati e transizioni di stato, tra cui le transizioni vengono controllati da Gestione Driver e che devono essere controllate dal driver, vedere [tabelle di transizione dello stato di appendice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+

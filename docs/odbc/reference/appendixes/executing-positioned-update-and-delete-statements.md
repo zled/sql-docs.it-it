@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 |Delete posizionata|SQL_ROW_DELETED|Valori precedenti|Valori precedenti|  
   
  [1] l'applicazione deve aggiornare i valori nei buffer di set di righe prima di eseguire l'istruzione di aggiornamento posizionato. Dopo l'esecuzione dell'istruzione di aggiornamento posizionato, la libreria di cursori copia i valori nei buffer di set di righe nella cache.
+

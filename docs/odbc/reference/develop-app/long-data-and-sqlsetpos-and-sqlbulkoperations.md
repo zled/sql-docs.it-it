@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
@@ -50,3 +51,4 @@ Come accade con i parametri nelle istruzioni SQL, dati di tipo long possono esse
 6.  Chiamate **SQLParamData** nuovamente per indicare che è stato inviato a tutti i dati per la colonna. Se sono presenti colonne data-at-execution per cui non sono stati inviati dati, il driver restituisce SQL_NEED_DATA e il valore univoco per la colonna data-at-execution successivo. l'applicazione torna al passaggio 5. Se i dati sono stati inviati per tutte le colonne data-at-execution, i dati per la riga viene inviati all'origine dati. **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO e può restituire qualsiasi SQLSTATE **SQLBulkOperations** o **SQLSetPos** può restituire.  
   
  Dopo aver **SQLBulkOperations** o **SQLSetPos** restituisce SQL_NEED_DATA e prima dell'invio di dati per l'ultima colonna data-at-execution completamente, l'istruzione è in uno stato di dati necessario. In questo stato, l'applicazione può chiamare solo **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, o **SQLGetDiagRec**; tutte le altre funzioni restituiscono SQLSTATE HY010 (funzione di errore nella sequenza). La chiamata **SQLCancel** Annulla l'esecuzione dell'istruzione e restituisce lo stato precedente. Per ulteriori informazioni, vedere [tabelle di transizione dello stato di appendice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd8c39160ee6cafbbc9f041565a57ea29680bef7
@@ -66,3 +67,4 @@ SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL
   
 > [!NOTE]  
 >  In ODBC 1.0, sono stati associati parametri **SQLSetParam**. Gestione Driver viene eseguito il mapping tra le chiamate **SQLSetParam** e **SQLBindParameter**, a seconda delle versioni di ODBC utilizzata dall'applicazione e del driver.
+

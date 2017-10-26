@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ L'utilizzo delle matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** 
 -   Poiché il driver non interpreta il valore di *ParameterValuePtr* argomento di **SQLBindParameter** per i parametri data-at-execution, se l'applicazione fornisce un puntatore a una matrice, ** SQLParamData** non estrarre e restituire un elemento della matrice per l'applicazione. Al contrario, restituisce che il valore scalare l'applicazione fosse fornita. Ciò significa che il valore restituito da **SQLParamData** è l'applicazione non è sufficiente specificare il parametro per il quale deve inviare i dati, l'applicazione deve anche considerare il numero di riga corrente.  
   
      Se solo alcuni degli elementi della matrice di parametri sono parametri data-at-execution, l'applicazione deve passare l'indirizzo di una matrice in *ParameterValuePtr* che contiene elementi per tutti i parametri. Questa matrice viene interpretata in genere per i parametri che non sono parametri data-at-execution. Per i parametri data-at-execution, il valore che **SQLParamData** fornisce all'applicazione, che potrebbe essere in genere usata per identificare i dati che richiede il driver in questo caso, è sempre l'indirizzo della matrice.
+

@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1513b2c9576d994ea7eb505c4928fd609e9498c
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
   
  La libreria di cursori non supporta i batch di istruzioni SQL, incluse le istruzioni SQL per il quale l'attributo di istruzione SQL_ATTR_PARAMSET_SIZE è maggiore di 1. Se un'applicazione invia un batch di istruzioni SQL per la libreria di cursori, i risultati sono indefiniti.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 -   **Aggiungere, modificare o eliminare automaticamente le origini dati.** Il programma di amministrazione chiama **SQLConfigDataSource** nel programma di installazione DLL e passa è una null handle di finestra, il nome di un'origine dati per aggiungere, modificare o eliminare e un elenco di valori del Registro di sistema. Le chiamate DLL del programma di installazione **ConfigDSN** nella DLL per aggiungere effettivamente l'installazione del driver, modificare o eliminare l'origine dati.  
   
 -   **Aggiungere, modificare o eliminare un'origine dati predefinito.** L'origine dati predefinita è lo stesso come qualsiasi altra origine dati, ad eccezione del fatto che il nome predefinito. Viene aggiunto, modificato o eliminato in modo identico a qualsiasi altra origine dati.
+

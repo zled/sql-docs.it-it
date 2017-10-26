@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 489cd057a15e90794c71cfb433931cd9bc687016
@@ -30,3 +31,4 @@ Poiché una funzione di catalogo crea un set di risultati, è equivalente all'es
  Per eseguire una funzione di catalogo, un'applicazione chiama semplicemente la funzione.  
   
  Per ulteriori informazioni sulle funzioni di catalogo, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).
+

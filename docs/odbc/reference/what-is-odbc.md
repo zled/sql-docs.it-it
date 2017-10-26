@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ Molti pregiudizi ODBC esistono nell'ambiente di elaborazione. Per l'utente final
  È importante comprendere che ODBC sia progettato per esporre funzionalità di database, non completarli. Di conseguenza, gli autori di applicazioni non dovrebbero che l'utilizzo di ODBC trasformerà improvvisamente un database semplice in un motore di database relazionale completamente in primo piano. Né gli sviluppatori di driver devono implementare la funzionalità non trovata nel database sottostante. Un'eccezione è che gli sviluppatori che scrivono i driver che accedono direttamente ai dati di file (ad esempio, i dati in un file Xbase) sono necessari per scrivere un motore di database che supporta la funzionalità SQL almeno minima. Un'altra eccezione è che il componente ODBC di Windows SDK, in precedenza incluso in Microsoft Data Access Components (MDAC) SDK, fornisce una libreria di cursori che simula i cursori scorrevoli per i driver che implementano un certo livello di funzionalità.  
   
  Le applicazioni che utilizzano ODBC sono responsabili di eventuali funzionalità tra database. Ad esempio ODBC non è un motore di join eterogeneo, non è un processore di transazione distribuita. Tuttavia, poiché è indipendente dal sistema DBMS, può essere utilizzato per compilare tali strumenti tra database.
+

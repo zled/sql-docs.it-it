@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c5396150d9b3ae7e3c79fa3568c1468f775cb8e
@@ -41,3 +42,4 @@ Test di Microsoft® ODBC è un'applicazione ODBC compatibile che è possibile ut
  Argomenti della Guida che erano in precedenza inclusi in questa sezione della documentazione sono ora contenuti all'interno del programma di Test di ODBC. Aprire Odbcte32.exe o Odbct32w.exe, aprire il **Guida** menu e quindi fare clic su **argomenti della Guida**.  
   
  Si noti che le versioni a 64 bit di queste applicazioni, progettate per i sistemi operativi Microsoft Windows a 64 bit, hanno gli stessi nomi delle versioni a 32 bit, anche se sono file distinti. ad esempio il nome per la versione Unicode della versione a 64 bit di Test di ODBC è odbct32w.exe.
+

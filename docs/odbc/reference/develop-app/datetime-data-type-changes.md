@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ In ODBC 3. *x*, gli identificatori per data, ora e tipi di dati timestamp SQL so
  [1] in seguito a questa, un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2.* x* driver può utilizzare i codici di data, ora o timestamp restituiti nei set di risultati restituiti dalle funzioni di catalogo.  
   
  [2] in seguito a questa, un'applicazione ODBC 3. *x* applicazione che utilizza un'applicazione ODBC 3.* x* driver può utilizzare i codici di data, ora o timestamp restituiti nei set di risultati restituiti dalle funzioni di catalogo.
+

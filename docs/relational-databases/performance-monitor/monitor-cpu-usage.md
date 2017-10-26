@@ -26,6 +26,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
@@ -60,3 +61,4 @@ ms.lasthandoff: 06/22/2017
  I valori di utilizzo prossimi al 100%, sintomo dell'elaborazione di numerose richieste client, possono indicare la presenza di processi in coda in attesa del tempo del processore che causano un collo di bottiglia. Risolvere il problema aggiungendo processori più veloci.  
   
   
+

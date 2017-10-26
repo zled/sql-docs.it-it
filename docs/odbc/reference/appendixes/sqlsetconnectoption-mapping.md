@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
@@ -63,3 +64,4 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  In ODBC 2. *x*, un'applicazione può chiamare **SQLSetConnectOption** per impostare un'opzione di istruzione. Una volta effettuata questa operazione, il driver stabilisce l'opzione dell'istruzione come valore predefinito per tutte le istruzioni in un secondo momento allocate per tale connessione. Si è definito dal driver se il driver imposta l'opzione dell'istruzione per le istruzioni esistente associato alla connessione specificata.  
   
  Questa funzionalità è stata deprecata in ODBC 3*x*. ODBC 3*x* driver necessitano supporta solo l'impostazione di ODBC 2.* x* gli attributi di istruzione a livello di connessione, se si desidera utilizzare con ODBC 2.* x* applicazioni di eseguire tale operazione. ODBC 3*x* applicazioni non devono mai impostata gli attributi di istruzione a livello di connessione. ODBC 3*x* gli attributi di istruzione non possono essere impostati a livello di connessione, fatta eccezione per gli attributi SQL_ATTR_METADATA_ID e SQL_ATTR_ASYNC_ENABLE, sia gli attributi di connessione e gli attributi di istruzione, che può essere impostare il livello di connessione o il livello di istruzione.
+

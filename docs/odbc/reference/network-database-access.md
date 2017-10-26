@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
@@ -43,3 +44,4 @@ Accesso a un database in una rete richiede un numero di componenti, ognuno dei q
 -   **Meccanismo di comunicazione interprocesso** il meccanismo di comunicazione interprocesso (IPC) è il processo mediante il quale un processo comunica con un altro. Esempi includono DECnet socket, socket TCP/IP e named pipe. La scelta del meccanismo IPC è vincolata dal sistema operativo e la rete in uso.  
   
 -   **Protocollo di rete** viene utilizzato il protocollo di rete per il trasporto del flusso di dati in una rete. Può essere considerato l'infrastruttura che supporta i meccanismi IPC utilizzati per implementare i dati di flusso di protocollo, nonché il supporto di operazioni di rete di base, ad esempio i trasferimenti di file e stampanti. Protocolli di rete includono NetBEUI, TCP/IP, DECnet e SPX/IPX e sono specifici per ogni rete.
+

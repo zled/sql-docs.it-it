@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c5845411fd329869cc49a5f4caaa5be987135841
@@ -29,3 +30,4 @@ La tabella seguente descrive le funzioni DLL di installazione. Per ulteriori inf
 |Attività|Nome funzione|Scopo|  
 |----------|-------------------|-------------|  
 |Configurazione di origini dati e funzioni di conversione|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [ConfigTranslator del](../../../odbc/reference/syntax/configtranslator-function.md)|Installa o disinstalla un driver.<br /><br /> Aggiunge, modifica o elimina un'origine dati.<br /><br /> Restituisce un'opzione di conversione predefinita.|
+

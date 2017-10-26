@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6397e547f46c68c29a70739ccaff2be8edd51416
@@ -40,3 +41,4 @@ C'è un'istanza del contatore per ogni database.
 
 ## <a name="see-also"></a>Vedere anche  
 [Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+

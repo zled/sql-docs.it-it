@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ Un *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. An
 -   Disconnessione dall'origine dati.  
   
  Poiché la maggior parte delle operazioni di accesso di dati viene eseguita con SQL, l'attività principale per cui le applicazioni utilizzano ODBC è per inviare istruzioni SQL e recuperare i risultati generati da tali istruzioni (se presente). Altre attività per cui le applicazioni utilizzano ODBC includono stabilire e modifica alle funzionalità del driver e il catalogo del database di esplorazione.
+

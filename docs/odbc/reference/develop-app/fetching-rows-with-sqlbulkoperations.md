@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ Possono essere refetched dati in un set di righe mediante segnalibri da una chia
 4.  Chiamate **SQLBulkOperations** con il *operazione* argomento impostato su SQL_FETCH_BY_BOOKMARK.  
   
  Non è necessario per l'applicazione di utilizzare la matrice di operazione della riga per evitare l'operazione da eseguire su determinate colonne. L'applicazione consente di selezionare le righe che si desidera recuperare la copia solo i segnalibri per le righe nella matrice segnalibro associato.
+

@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08c8aab7a9cfcecf18181dacbab6f18aaa59ff64
@@ -40,3 +41,4 @@ Il driver può selezionare un'origine dati, l'origine dati predefinita, in alcun
 -   In una chiamata a **SQLDriverConnect** in *InConnectionString* una specifica **DSN**= DEFAULT o specifica con la **DSN** (parola chiave) un origine dati che non è contenuto nelle informazioni di sistema.  
   
  È definito dal driver come specificare l'origine dati predefinita. Questo può comportare un'azione amministrativa e può variare a seconda dell'utente.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ Le regole seguenti determinano la gestione di diagnostica in **SQLGetDiagRec** e
  Per un componente ODBC diverso da Gestione Driver:  
   
 -   Impostare il valore SQLSTATE in base all'errore nativo. Per i driver basati su file e driver basati su DBMS che non utilizzano un gateway, il driver deve impostare il valore SQLSTATE. Per i driver basati su DBMS che usano un gateway, il driver o un gateway che supporti ODBC può impostare il valore SQLSTATE.
+

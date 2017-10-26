@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Poiché Oracle correzioni di bug nelle versioni correnti e quindi li retrofits a versioni precedenti con patch software, è consigliabile scaricare la patch più recente disponibile. Ciò vale soprattutto per i componenti Client di Server Oracle. In caso di domande sull'installazione di patch, contattare il supporto di Oracle.
+

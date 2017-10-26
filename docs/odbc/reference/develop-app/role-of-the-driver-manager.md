@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
@@ -45,3 +46,4 @@ Gestione Driver determina l'ordine finale in cui restituire i record di stato ch
 -   [Controlli degli errori generali](../../../odbc/reference/develop-app/general-error-checks.md)  
   
 -   [Errore di Gestione driver e i controlli di avviso](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
+

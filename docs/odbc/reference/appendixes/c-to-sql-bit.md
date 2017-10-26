@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e7232773b97a66fc0b1b047e3fb8cc4212754f0
@@ -39,3 +40,4 @@ L'identificatore per il tipo di dati ODBC C bit è:
 |SQL_BIT|Nessuno|n/d|  
   
  Il driver ignora il valore di lunghezza/indicatore quando la conversione dei dati dal tipo di dati bit C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati bit C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 054c274bc65c0f4ecf149607216f62e9e15df225
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 2.  Compilare le informazioni appropriate per la finestra di dialogo di connessione e quindi fare clic su OK.  
   
  Dopo la connessione è verificare informazioni, l'applicazione può utilizzare il Driver ODBC per Oracle per accedere alle informazioni contenute nell'origine dati.
+

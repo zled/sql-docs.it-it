@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fad2aab1020cb7a56c00a2b78c1d2c46a41c422
@@ -40,3 +41,4 @@ Per gli errori che si verificano nell'origine dati, il driver ODBC restituisce u
 |-------------------|--------------------|  
 |[Microsoft] [Gestione Driver ODBC] *-testo del messaggio*|Gestione driver (Odbc32.dll)|  
 |[Microsoft] [ODBC *nome driver*]*-testo del messaggio*|Driver ISAM (vedere Driver ISAM)|
+

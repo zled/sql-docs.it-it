@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ La maggior parte delle opzioni di scorrimento in **SQLFetchScroll** posizionare 
  Il numero di righe del cursore, ovvero le dimensioni del risultato è impostato, è disponibile come il campo SQL_DIAG_CURSOR_ROW_COUNT dell'intestazione di diagnostica. Il valore in questo campo è definito solo dopo che **SQLExecute**, **SQLExecDirect**, o **SQLMoreResult** è stato chiamato. Questo conteggio può essere un numero approssimativo di o un conteggio esatto, a seconda delle funzionalità del driver. Supporto del driver può essere determinato chiamando **SQLGetInfo** con i tipi di informazioni di attributi del cursore e verifica se il bit SQL_CA2_CRC_APPROXIMATE o SQL_CA2_CRC_EXACT viene restituito il tipo di cursore.  
   
  Un numero di riga esatta non è mai supportato per un cursore dinamico. Per altri tipi di cursori, il driver può supportare il conteggio delle righe esatta o approssimativa, ma non entrambi. Se il driver supporta esatta né approssimativo conteggio delle righe per un tipo di cursore specifico, il campo SQL_DIAG_CURSOR_ROW_COUNT contiene il numero di righe che sono stati recuperati finora. Indipendentemente dal quale il driver supporta, **SQLFetchScroll** con un *operazione* di SQL_FETCH_LAST causerà il campo SQL_DIAG_CURSOR_ROW_COUNT contenere il numero di riga esatta.
+

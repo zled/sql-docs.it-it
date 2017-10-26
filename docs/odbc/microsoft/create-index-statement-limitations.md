@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
@@ -36,3 +37,4 @@ L'istruzione CREATE INDEX non è supportata per i driver Microsoft Excel o testo
  Quando viene utilizzato il driver dBASE, l'indice creato da un'istruzione CREATE UNIQUE INDEX è in realtà non univoco e possono inserire valori duplicati nella colonna indicizzata. Un solo record da un set con gli stessi valori di chiave può essere aggiunto all'indice.  
   
  Quando viene utilizzato il driver Paradox, è necessario definire un indice univoco su un subset delle colonne in una tabella, incluse la prima colonna contiguo. Impossibile aggiornare una tabella dal driver Paradox se non è definito un indice univoco nella tabella o quando il driver Paradox viene usato senza l'implementazione del motore di Database Borland.
+

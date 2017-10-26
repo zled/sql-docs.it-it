@@ -22,6 +22,7 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
@@ -50,3 +51,4 @@ ms.lasthandoff: 06/22/2017
      È possibile utilizzare la procedura guidata Genera script per trasferire un database da un computer locale a un provider di hosting Web. Per altre informazioni, vedere [Procedura guidata Genera e pubblica script](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
   
+

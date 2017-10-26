@@ -23,6 +23,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f7d3a6bec7c12e271c073d5665c0a4e9b227ceef
@@ -66,3 +67,4 @@ RETCODE SQLPostInstallerError(
 |Aggiunta, modifica o rimozione di un driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
 |Aggiunta, modifica o rimozione di origini dati|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
 |L'impostazione di un'opzione di conversione|[ConfigTranslator del](../../../odbc/reference/syntax/configtranslator-function.md)|
+

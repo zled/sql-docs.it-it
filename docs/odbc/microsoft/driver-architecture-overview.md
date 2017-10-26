@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6755e4b04c0d56995fb83f64891e5fcd7d765a49
@@ -46,3 +47,4 @@ Il Driver ODBC Microsoft Visual FoxPro è un driver a 32 bit che consente di apr
 -   [L'installazione e configurazione del Driver ODBC di Visual FoxPro](../../odbc/microsoft/installing-and-configuring.md)  
   
 -   [Tramite il Driver ODBC di Visual FoxPro](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver.md)
+

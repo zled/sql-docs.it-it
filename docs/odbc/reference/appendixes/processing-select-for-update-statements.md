@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ada17f95371246e3b43e1e9482ab9595f85a8db1
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Per garantire la massima interoperabilità, applicazioni devono generare set di risultati che verrà aggiornato con un'istruzione di aggiornamento posizionato tramite l'esecuzione di un **selezionare per aggiornare** istruzione. Anche se la libreria di cursori non è richiesto, è necessaria per la maggior parte delle origini dati che supportano le istruzioni per gli aggiornamenti posizionati.  
   
  La libreria di cursori ignora le colonne di **FOR UPDATE** clausola di un **SELECT FOR UPDATE** istruzione; prima di passare l'istruzione per il driver rimuove questa clausola. Nella libreria di cursori, l'attributo di istruzione SQL_ATTR_CONCURRENCY, con le restrizioni descritti nella sezione precedente, i controlli se impostare le colonne in un risultato possono essere aggiornati.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData** può essere chiamato solo quando vengono soddisfatte le condizioni seguenti: un **selezionare** istruzione ha generato il set di risultati; **selezionare** istruzione non contiene un join, un ** UNIONE** clausola, o un **GROUP BY** clausola; e le colonne di cui è utilizzato un alias o un'espressione nell'elenco di selezione non sono associate con **SQLBindCol**.  
   
 -   Se il driver supporta solo un'istruzione attiva, la libreria di cursori recupera il resto del gruppo di risultati prima di eseguire il **selezionare** istruzione e la chiamata **SQLGetData**.
+

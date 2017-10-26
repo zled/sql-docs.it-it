@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Restituisce un elenco di procedure nell'origine dati. Per le procedure in pacchetto, nella colonna nome della stored PROCEDURE si *packagename.procedurename* formato.<br /><br /> Poiché Oracle non fornisce un modo per distinguere le procedure in pacchetto da funzioni incluse nel pacchetto, il driver restituisce SQL_PT_UNKNOWN per la colonna PROCEDURE_TYPE.|  
 |**SQLSetPos**|Imposta la posizione del cursore in un set di righe. È possibile utilizzare **SQLSetPos** con **SQLGetData** per recuperare righe da colonne non associate dopo posizionando il cursore in una riga specifica nel set di righe. Righe aggiunte per il set di risultati utilizzando *fOption* SQL_ADD vengono aggiunti dopo l'ultima riga nel set di risultati.|  
 |**SQLSetScrollOptions**|Imposta le opzioni che controllano il comportamento dei cursori associata a un handle di istruzione, hstmt. Per informazioni dettagliate, vedere [combinazioni di concorrenza e il tipo di cursore](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+

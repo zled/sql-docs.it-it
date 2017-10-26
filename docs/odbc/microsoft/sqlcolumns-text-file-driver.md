@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5f64eb930bad551953c4a70b2d839924d127caf
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |TABLE_QUALIFIER|Viene restituito il percorso di una directory.|  
 |TABLE_OWNER|In questa colonna viene restituito NULL perché il nome del proprietario non è supportato.|  
 |NULLABLE|SQL_NO_NULLS viene restituito per le colonne che partecipano in una chiave primaria o di un indice univoco.|
+

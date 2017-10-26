@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **Gestione degli errori** DBMS il report errori di run-time per il programma di applicazioni tramite un SQL Communications Area o SQLCA. Nell'esempio di codice precedente, la prima istruzione SQL incorporata è SQLCA INCLUDONO. In questo modo il precompilatore per includere la struttura SQLCA nel programma. Ciò è necessario ogni volta che il programma elaborerà gli errori restituiti dal sistema DBMS. Il WHENEVER... Istruzione GOTO indica precompilati per generare il codice di gestione degli errori che si verifica rami da un'etichetta specifica quando un errore.  
   
 -   **Singleton selezionare** l'istruzione utilizzata per restituire i dati è un'istruzione SELECT singleton, ovvero, restituisce solo una singola riga di dati. L'esempio di codice, pertanto, non dichiarare o utilizzare i cursori.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Questa istruzione consente di creare un secondo set di risultati, il primo set di righe di cui è il successivo set di righe nel set di risultati originale: in questo caso, il set di righe nella tabella Customers. Il cursore restituisce questo set di righe per l'applicazione.  
   
  È interessante notare che un cursore dinamico implementato in questo modo crea effettivamente molti set di risultati, che consente di rilevare le modifiche apportate al set di risultati originale. Mai l'applicazione viene a conoscenza dell'esistenza di questi set di risultati ausiliario; è sufficiente, viene visualizzato come se il cursore è in grado di rilevare le modifiche apportate al set di risultati originale.
+

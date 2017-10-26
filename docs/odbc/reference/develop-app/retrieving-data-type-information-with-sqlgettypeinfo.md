@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
@@ -38,3 +39,4 @@ Poiché i mapping dai tipi di dati SQL sottostanti per gli identificatori di tip
 -   ODBC non definisce i nomi dei tipi di dati per l'utilizzo in **CREATE TABLE** e **ALTER TABLE** istruzioni. Al contrario, l'applicazione deve utilizzare il nome restituito nella colonna TYPE_NAME del set di risultati restituito da **SQLGetTypeInfo**. Il motivo è che sebbene la maggior parte di SQL non variare molto tra DBMS, nomi dei tipi di dati variare notevolmente. Anziché forzare il driver per analizzare le istruzioni SQL e sostituire i nomi dei tipi di dati standard con nomi di tipi di dati specifici del DBMS, ODBC richiede alle applicazioni di utilizzare i nomi specifici del DBMS in primo luogo.  
   
  Si noti che **SQLGetTypeInfo** non necessariamente descritti tutti i tipi di dati può verificarsi un'applicazione. In particolare, i set di risultati potrebbero contenere tipi di dati non direttamente supportati dall'origine dati. Questi tipi di dati potrebbero non essere supportati dall'origine dati, ad esempio, sono definiti i tipi di dati delle colonne nel set di risultati restituiti dalle funzioni di catalogo da ODBC. Per determinare le caratteristiche dei tipi di dati in un set di risultati, un'applicazione chiama **SQLColAttribute**.
+

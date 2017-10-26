@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ La tabella seguente elenca le funzioni di modifica di stringa. Un'applicazione p
 |**Lo spazio (** *conteggio* **)** (ODBC 2.0)|Restituisce una stringa di caratteri costituito *conteggio* spazi.|  
 |**SUBSTRING (** *string_exp*, *avviare*, lunghezza**)** (ODBC 1.0)|Restituisce una stringa di caratteri che è derivata da *string_exp*, a partire dalla posizione del carattere specificata da *avviare* per *lunghezza* caratteri.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|Restituisce una stringa uguale a quello in *string_exp*, con tutti minuscoli convertiti in caratteri maiuscoli.|
+

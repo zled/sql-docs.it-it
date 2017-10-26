@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ Quando il campo SQL_DESC_TYPE di un ARD è un tipo C di datetime o intervallo, c
  Se l'applicazione chiama **SQLGetData** per restituire i dati in un valore datetime o intervallo di tipo C, vengono utilizzate la precisione di iniziale intervallo predefinito e la precisione dei secondi di intervallo. Se l'impostazione predefinita non è accettabile, l'applicazione deve chiamare **SQLSetDescField** per impostare un campo di descrizione, o **SQLSetDescRec** impostare SQL_DESC_PRECISION. La chiamata a **SQLGetData** deve avere un *TargetType* di SQL_ARD_TYPE per utilizzare i valori nei campi del descrittore.  
   
  Quando **SQLPutData** viene chiamato, l'intervallo iniziale intervallo e precisione secondi precisione vengono letti dai campi di record del descrittore che corrispondono al parametro data-at-execution o colonna, ovvero APD campi per le chiamate per **SQLExecute** o **SQLExecDirect**, o campi ARD per le chiamate a **SQLBulkOperations** o **SQLSetPos**.
+
