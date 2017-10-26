@@ -1,7 +1,7 @@
 ---
 title: Pool di risorse di Resource Governor | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2016
+ms.date: 10/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.translationtype: HT
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
@@ -53,11 +53,19 @@ ms.lasthandoff: 06/22/2017
   
      Queste impostazioni rappresentano il valore minimo e massimo delle operazioni di I/O fisico al secondo (IOPS) per volume di disco per un pool di risorse. È possibile utilizzare queste impostazioni per controllare gli I/O fisici per i thread di utente per un determinato pool di risorse. Il reparto Vendita genera ad esempio numerosi report di fine mese in grandi batch. Le query in questi batch possono generare operazioni di I/O tali da saturare il volume del disco e influire sulle prestazioni di altri carichi di lavoro nel database che hanno una priorità più elevata. Per isolare questo carico di lavoro, MIN_IOPS_PER_VOLUME viene impostato su 20 e MAX_IOPS_PER_VOLUME viene impostato su 100 per il pool di risorse del reparto Vendita, in modo da controllare il livello di I/O che può essere emesso per il carico di lavoro.  
   
- Quando si configura la CPU o la memoria, la somma dei valori MIN di tutti i pool non può superare il 100 percento delle risorse del server. Inoltre, quando si configura la CPU o la memoria, i valori MAX e CAP possono essere impostati dovunque nell'intervallo tra MIN e 100 percento inclusi.  
+Quando si configura la CPU o la memoria, la somma dei valori MIN di tutti i pool non può superare il 100 percento delle risorse del server. Inoltre, quando si configura la CPU o la memoria, i valori MAX e CAP possono essere impostati dovunque nell'intervallo tra MIN e 100 percento inclusi.  
   
- Se per un pool è definito un valore MIN diverso da zero, il valore MAX effettivo degli altri pool viene nuovamente regolato. Il valore minimo del valore MAX configurato di un pool e la somma dei valori MIN degli altri pool vengono sottratti dal 100 percento.  
+Se per un pool è definito un valore MIN diverso da zero, il valore MAX effettivo degli altri pool viene nuovamente regolato. Il valore minimo del valore MAX configurato di un pool e la somma dei valori MIN degli altri pool vengono sottratti dal 100 percento.  
   
- Nella seguente tabella vengono illustrati alcuni concetti precedenti. Nella tabella vengono mostrate le impostazioni per il pool interno, il pool predefinito e due pool definiti dall'utente. Le seguenti formule vengono utilizzate per calcolare il valore MAX% effettivo e la percentuale condivisa.  
+Nella seguente tabella vengono illustrati alcuni concetti precedenti. Nella tabella vengono mostrate le impostazioni per il pool interno, il pool predefinito e due pool definiti dall'utente. 
+  
+|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
+|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
+|interno|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
+|predefiniti|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
+|Pool 1|20|100|50|30|Il valore MAX effettivo viene calcolato come: min(100,100-50) = 50. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
+|Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-20) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
+Le seguenti formule vengono utilizzate per calcolare il valore MAX% effettivo e la percentuale condivisa nella tabella precedente:  
   
 -   Min(X,Y) indica il valore più piccolo di X e Y.  
   
@@ -68,15 +76,8 @@ ms.lasthandoff: 06/22/2017
 -   Valore effettivo MAX% = Min(X,Y).  
   
 -   Percentuale condivisa = Valore effettivo MAX% - MIN%.  
-  
-|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
-|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interno|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
-|predefiniti|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
-|Pool 1|20|100|50|30|Il valore MAX effettivo viene calcolato come: min(100,100-50) = 50. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
-|Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-20) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
-  
- Utilizzando la tabella precedente come esempio, è possibile descrivere ulteriormente le regolazioni che si verificano quando viene creato un altro pool. Il pool descritto è il pool 3 e ha una impostazione MIN% di 5.  
+
+Utilizzando la tabella precedente come esempio, è possibile descrivere ulteriormente le regolazioni che si verificano quando viene creato un altro pool. Il pool descritto è il pool 3 e ha una impostazione MIN% di 5.  
   
 |Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
@@ -94,29 +95,29 @@ ms.lasthandoff: 06/22/2017
   
 -   Tutti i pool hanno valori minimi uguali a zero. Tutti i pool si contendono le risorse disponibili e le dimensioni finali sono basate sull'utilizzo delle risorse in ciascun pool. Altri fattori quali i criteri svolgono un ruolo nella determinazione delle dimensioni finali del pool.  
   
- In Resource Governor sono disponibili due pool di risorse, il pool interno e il pool predefinito. È possibile aggiungere altri pool.  
+In Resource Governor sono disponibili due pool di risorse, il pool interno e il pool predefinito. È possibile aggiungere altri pool.  
   
- **Pool interno**  
+**Pool interno**  
   
- Il pool interno rappresenta le risorse utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo pool contiene sempre soltanto il gruppo interno e non può essere modificato in alcun modo. L'utilizzo delle risorse da parte del pool interno non è limitato. I carichi di lavoro nel pool sono considerati critici per la funzione del server e tramite Resource Governor il pool interno richiede memoria agli altri pool anche se questo comporta la violazione dei limiti impostati per gli altri pool.  
+Il pool interno rappresenta le risorse utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo pool contiene sempre soltanto il gruppo interno e non può essere modificato in alcun modo. L'utilizzo delle risorse da parte del pool interno non è limitato. I carichi di lavoro nel pool sono considerati critici per la funzione del server e tramite Resource Governor il pool interno richiede memoria agli altri pool anche se questo comporta la violazione dei limiti impostati per gli altri pool.  
   
 > [!NOTE]  
 >  L'utilizzo del pool interno e delle risorse del gruppo interno non viene sottratto dall'utilizzo complessivo delle risorse. Le percentuali vengono calcolate dalle risorse complessive disponibili.  
   
- **Pool predefinito**  
+**Pool predefinito**  
   
- Il pool predefinito è il primo pool utente predefinito. Prima della configurazione il pool predefinito contiene solo il gruppo predefinito. Il pool predefinito non può essere creato o eliminato ma può essere modificato. Il pool predefinito può contenere gruppi definiti dall'utente oltre al gruppo predefinito. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è presente un pool di risorse predefinito per le operazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di routine e un pool di risorse esterno predefinito per i processi esterni, ad esempio l'esecuzione di script R.  
+Il pool predefinito è il primo pool utente predefinito. Prima della configurazione il pool predefinito contiene solo il gruppo predefinito. Il pool predefinito non può essere creato o eliminato ma può essere modificato. Il pool predefinito può contenere gruppi definiti dall'utente oltre al gruppo predefinito. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è presente un pool di risorse predefinito per le operazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di routine e un pool di risorse esterno predefinito per i processi esterni, ad esempio l'esecuzione di script R.  
   
 > [!NOTE]  
 >  Il gruppo predefinito può essere modificato ma non può essere spostato all'esterno del pool predefinito.  
   
- **Pool esterno**  
+**Pool esterno**  
   
- Gli utenti possono definire un pool esterno per definire le risorse per i processi esterni. Per R Services, questo pool determina `rterm.exe`, `BxlServer.exe` e altri processi derivati.  
+Gli utenti possono definire un pool esterno per definire le risorse per i processi esterni. Per R Services, questo pool determina `rterm.exe`, `BxlServer.exe` e altri processi derivati.  
   
- **Pool di risorse definiti dall'utente**  
+**Pool di risorse definiti dall'utente**  
   
- I pool di risorse definiti dall'utente sono quelli che si creano per carichi di lavoro specifici in un ambiente. Resource Governor fornisce istruzioni DDL per la creazione, la modifica e l'eliminazione dei pool di risorse.  
+I pool di risorse definiti dall'utente sono quelli che si creano per carichi di lavoro specifici in un ambiente. Resource Governor fornisce istruzioni DDL per la creazione, la modifica e l'eliminazione dei pool di risorse.  
   
 ## <a name="resource-pool-tasks"></a>Attività relative ai pool di risorse  
   

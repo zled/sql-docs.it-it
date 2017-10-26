@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
@@ -111,7 +111,7 @@ GO
     >  Lo stato chiuso di un cursore è rilevante solo in fase di restituzione. È possibile, ad esempio, chiudere un cursore nel corso di una procedura, riaprirlo in una fase successiva e restituire il set di risultati di tale cursore al trigger, alla procedura o al batch chiamante.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Esempi di parametri di output di tipo cursor  
- Nell'esempio seguente viene creata una procedura in cui è specificato un parametro di output `@currency`_`cursor` usando il tipo di dati **cursor** . La procedura viene quindi chiamata in un batch.  
+ Nell'esempio seguente viene creata una procedura in cui è specificato un parametro di output `@currency_cursor` usando il tipo di dati **cursor**. La procedura viene quindi chiamata in un batch.  
   
  Creare innanzitutto la procedura per la dichiarazione e l'apertura di un cursore per la tabella Currency.  
   

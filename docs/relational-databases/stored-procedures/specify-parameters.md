@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
 ms.contentlocale: it-it
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
@@ -137,7 +137,7 @@ GO
   
  Per specificare un parametro di output, è necessario includere la parola chiave OUTPUT nella definizione del parametro nell'istruzione CREATE PROCEDURE. Tramite la procedura, al programma chiamante viene restituito il valore corrente del parametro di output quando la procedura è disponibile. Nel programma chiamante deve inoltre essere utilizzata la parola chiave OUTPUT quando si esegue la procedura per salvare il valore del parametro in una variabile utilizzabile nel programma chiamante.  
   
- Nell'esempio seguente viene creata la procedura `Production.usp`_`GetList` , mediante la quale viene restituito un elenco di prodotti i cui prezzi non superano un determinato importo. Nell'esempio viene illustrato l'utilizzo di più istruzioni SELECT e di più parametri OUTPUT. I parametri OUTPUT consentono a una procedura esterna, a un batch o a più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di accedere a un valore impostato durante l'esecuzione della procedura.  
+ Nell'esempio seguente viene creata la procedura `Production.usp_GetList`, mediante la quale viene restituito un elenco di prodotti i cui prezzi non superano un determinato importo. Nell'esempio viene illustrato l'utilizzo di più istruzioni SELECT e di più parametri OUTPUT. I parametri OUTPUT consentono a una procedura esterna, a un batch o a più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di accedere a un valore impostato durante l'esecuzione della procedura.  
   
 ```  
 USE AdventureWorks2012;  
