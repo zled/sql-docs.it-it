@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  L'istruzione SQL seguente illustra l'istruzione CREATE TABLE predefinita della Configurazione guidata pacchetto.  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

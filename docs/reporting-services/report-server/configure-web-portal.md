@@ -16,7 +16,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: it-it
@@ -66,7 +67,7 @@ Quando si configurano gli URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
 
 #### <a name="to-configure-a-static-report-server-url"></a>Per configurare un URL di un server di report statico
 
-1. Aprire il file **RSReportServer.config** in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS12. \< *instancename*> Services\ReportServer.  
+1. Aprire il file **RSReportServer.config** in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS12. \< *instancename*> Services\ReportServer..  
 
 2. Individuare **ReportServerURL**.
 
@@ -100,9 +101,10 @@ Per altre informazioni sul file di configurazione, vedere [Modificare un file di
 [Supporto browser per Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 [configurare un URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Verificare un'installazione di Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Abilitare o disabilitare le funzionalità di Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
+[Attivare la funzionalità di Reporting Services o disattivare](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
 [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configurare un Server di Report in modalità nativa per l'amministrazione locale](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
  Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

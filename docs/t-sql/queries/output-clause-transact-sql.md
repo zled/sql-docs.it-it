@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   avere regole abilitate o vincoli CHECK.  
   
- *column_list*  
+*column_list*  
  Elenco facoltativo dei nomi di colonna nella tabella di destinazione della clausola INTO. È analogo all'elenco di colonne consentita nel [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione.  
   
  *scalar_expression*  

@@ -18,7 +18,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
 ms.contentlocale: it-it
@@ -54,6 +55,7 @@ ms.lasthandoff: 08/09/2017
      Per visualizzare il report prima della stampa, fare clic sul pulsante **Anteprima** . Verrà aperta la prima pagina del report in una finestra di anteprima distinta. Se il rendering del report viene eseguito sul server di report, saranno disponibili alcune pagine aggiuntive. Il rendering dell'anteprima di un report viene eseguito in formato EMF. È possibile passare alla pagina precedente o successiva fino ad arrivare all'ultima pagina, in cui il pulsante **Successiva** risulta disabilitato. Per modificare i margini di stampa nella pagina di anteprima, fare clic sul pulsante **Margini** . Verrà visualizzata la finestra di dialogo **Margini** . Configurare i margini superiore, inferiore, destro e sinistro e quindi fare clic su **OK**. La finestra di dialogo verrà chiusa e le impostazioni verranno archiviate per l'anteprima del rendering e la stampa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Abilitare e disabilitare la stampa sul lato Client per Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
+

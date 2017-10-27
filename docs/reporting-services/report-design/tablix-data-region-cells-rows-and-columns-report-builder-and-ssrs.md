@@ -20,7 +20,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: it-it
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
-  Per controllare la modalità di visualizzazione in un report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dei dati di righe e colonne di un'area dati Tablix, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali. Per visualizzare i dati, in molti casi è possibile utilizzare le strutture predefinite per una tabella, una matrice o un elenco. Per ulteriori informazioni, vedere [tabelle &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrici](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), o [Elenca](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
+  Per controllare la modalità di visualizzazione in un report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dei dati di righe e colonne di un'area dati Tablix, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali. Per visualizzare i dati, in molti casi è possibile utilizzare le strutture predefinite per una tabella, una matrice o un elenco. Per altre informazioni, vedere [Tabelle &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Creare una matrice (Generatore report e SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Creare le fatture e forme con elenchi (Generatore report e SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
   
  In un'area dati Tablix i dati di dettaglio sono visualizzati in righe e colonne di dettaglio e i dati raggruppati in righe e colonne di gruppo. Quando si aggiungono gruppi di righe e colonne a un'area dati Tablix, le righe e le colonne in cui visualizzare i dati vengono aggiunte automaticamente. È possibile aggiungerle e rimuoverle manualmente per personalizzare un'area dati Tablix e controllare la modalità di visualizzazione dei dati nel report.  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/09/2017
   
  In presenza di gruppi di dettagli, ogni riga di dettaglio è all'interno del gruppo di dettagli. La riga si ripete per ogni valore nel set di risultati della query del set di dati.  
   
- Per ulteriori informazioni sulle gerarchie dei gruppi, vedere [informazioni sui gruppi &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Per altre informazioni sulle gerarchie dei gruppi, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  Nella figura seguente viene illustrata un'area dati Tablix con gruppi di dettagli e gruppi di righe nidificati.  
   
@@ -99,10 +100,10 @@ ms.lasthandoff: 08/09/2017
   
  Per rimuovere righe e colonne associate a un gruppo, è possibile eliminare il gruppo. Quando si elimina un gruppo, è possibile scegliere se eliminare solo la definizione di gruppo o il gruppo e tutte le righe e le colonne associate. Eliminando solo il gruppo, il layout di righe e colonne nell'area dati viene mantenuto. Quando si elimina il gruppo e le relative righe e colonne, si eliminano tutte le righe e le colonne statiche (incluse le intestazioni e i piè di pagina di gruppo) e le relative righe e le colonne dinamiche (incluse le istanze di gruppo) associate al gruppo.  
   
- Per istruzioni dettagliate sull'aggiunta o eliminazione di righe e colonne, vedere [inserire o eliminare una riga &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) e [inserimento o eliminazione di una colonna di &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+ Per istruzioni dettagliate sull'aggiunta o l'eliminazione di righe e colonne, vedere [Inserire o eliminare una riga &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) e [Inserire o eliminare una colonna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-cells"></a>Informazioni sulle celle Tablix  
- Le celle Tablix appartengono a una delle quattro aree Tablix: il corpo della Tablix, le aree del gruppo di righe o di colonne della Tablix o l'angolo della Tablix. Anche se in ogni cella è possibile visualizzare potenzialmente qualsiasi valore nel set di dati, la funzione predefinita per ogni cella viene determinata dalla posizione che essa occupa. Per informazioni dettagliate sulle aree tablix, vedere [aree dell'area dati Tablix &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Le celle Tablix appartengono a una delle quattro aree Tablix: il corpo della Tablix, le aree del gruppo di righe o di colonne della Tablix o l'angolo della Tablix. Anche se in ogni cella è possibile visualizzare potenzialmente qualsiasi valore nel set di dati, la funzione predefinita per ogni cella viene determinata dalla posizione che essa occupa. Per informazioni dettagliate sulle aree Tablix, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Per impostazione predefinita, le celle nelle aree di gruppo di righe e colonne Tablix rappresentano membri del gruppo. I membri del gruppo sono organizzati in più strutture ad albero nella definizione del report. La gerarchia dei gruppi di righe si espande orizzontalmente, quella dei gruppi di colonne si espande verticalmente. Queste celle vengono aggiunte automaticamente quando si crea un gruppo e visualizzano in fase di esecuzione i valori univoci per un gruppo.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
  Se le celle dell'area del corpo Tablix si trovano in una riga o una colonna di dettaglio, possono visualizzare dati di dettaglio. Se si trovano in una riga o in una colonna di gruppo, possono visualizzare dati di gruppo aggregati. L'ambito dei dati in una cella è rappresentato dall'intersezione del gruppo di righe e di colonne più interno a cui appartiene la cella.  
   
 > [!NOTE]  
->  I dati effettivi visualizzati per ogni cella sono l'espressione valutata per l'elemento del report contenuto nella cella, in genere una casella di testo. In una cella che appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito i dati dettaglio, ad esempio **[LineTotal]**. In una cella che non appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito una funzione di aggregazione, ad esempio **Sum[LineTotal]**. Se un'espressione non specifica una funzione di aggregazione anche se la cella appartiene a una riga o una colonna di gruppo, viene visualizzato il primo valore del gruppo. Per ulteriori informazioni sulle aggregazioni, vedere [ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  I dati effettivi visualizzati per ogni cella sono l'espressione valutata per l'elemento del report contenuto nella cella, in genere una casella di testo. In una cella che appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito i dati dettaglio, ad esempio **[LineTotal]**. In una cella che non appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito una funzione di aggregazione, ad esempio **Sum[LineTotal]**. Se un'espressione non specifica una funzione di aggregazione anche se la cella appartiene a una riga o una colonna di gruppo, viene visualizzato il primo valore del gruppo. Per altre informazioni sulle aggregazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Unione e divisione delle celle  
  In un'area Tablix, è possibile unire tra loro più celle adiacenti. È possibile, ad esempio, creare celle per etichette che si estendono su più colonne o righe.  
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/09/2017
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
+

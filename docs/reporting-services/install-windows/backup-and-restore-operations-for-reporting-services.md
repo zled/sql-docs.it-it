@@ -24,7 +24,8 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
 ms.contentlocale: it-it
@@ -46,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
     -   [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-    -   [Eseguire la migrazione di un'installazione di Reporting Services &#40; Modalità SharePoint &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Migrazione di un'installazione di Reporting Services in modalità SharePoint](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Eseguire la migrazione di un'installazione di Reporting Services &#40; Modalità nativa &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>Backup dei database del server di report  
  Poiché un server di report è un server senza stato, tutti i dati delle applicazioni vengono archiviati nei database **reportserver** e **reportservertempdb** in esecuzione su un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . È possibile eseguire il backup dei database **reportserver** e **reportservertempdb** usando uno dei metodi supportati per il backup dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per i database del server di report, tenere presenti le seguenti indicazioni:  
@@ -68,7 +69,7 @@ ms.lasthandoff: 08/09/2017
  Quando si configura un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la prima volta, è consigliabile eseguire il backup delle chiavi di crittografia. È inoltre consigliabile eseguire il backup delle chiavi ogni volta che si modifica l'identità degli account di servizio o si rinomina il computer. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Per i server di report in modalità SharePoint, vedere la sezione "Gestione chiavi" in [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## <a name="backing-up-the-configuration-files"></a>Backup dei file di configurazione  
- Per archiviare le impostazioni dell'applicazione, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono utilizzati i file di configurazione. È consigliabile eseguire il backup dei file quando si configura il server per la prima volta e dopo avere distribuito eventuali estensioni personalizzate. I file di cui eseguire il backup includono:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i file di configurazione per archiviare le impostazioni dell'applicazione. È consigliabile eseguire il backup dei file quando si configura il server per la prima volta e dopo avere distribuito eventuali estensioni personalizzate. I file di cui eseguire il backup includono:  
   
 -   Rsreportserver.config  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Web.config per entrambe le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] del server di report e Gestione report.  
   
--   Machine. config per[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
+-   Machine.config per [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>Backup dei file di dati  
  Eseguire il backup dei file creati e gestiti in Progettazione report e in Progettazione modelli. Tra questi sono inclusi i file di definizione del report (con estensione rdl), i file modello di report (con estensione smdl), i file delle origini dei dati condivise (con estensione rds), i file di visualizzazione dei dati (con estensione dv), i file dell'origine dati (con estensione ds), i file di progetto del server di report (con estensione rptproj) e i file di soluzione di report (con estensione sln).  
@@ -91,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Database del server di report](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Database del Server di report](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
 [Utilità RSKEYMGMT](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
 [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
@@ -99,3 +100,4 @@ ms.lasthandoff: 08/09/2017
 [Configurare e gestire chiavi di crittografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

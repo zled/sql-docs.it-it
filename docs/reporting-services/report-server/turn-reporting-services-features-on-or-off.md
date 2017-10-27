@@ -18,7 +18,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
 ms.contentlocale: it-it
@@ -124,7 +125,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="WebPortal"></a>Portale Web
   
-Nelle versioni precedenti, è possibile disabilitare Gestione Report impostando **IsReportManagerEnabled** su false. **IsReportManagerEnabled** è stato deprecato a partire da SQL Server 2016 Reporting Services aggiornamento cumulativo 2. Il portale Web verrà sempre abilitato.
+Nelle versioni precedenti, è possibile disabilitare Gestione Report impostando **IsReportManagerEnabled** su false. **IsReportManagerEnabled** è stato deprecato a partire da SQL Server 2016 Reporting Services aggiornamento cumulativo 2. Il portale web verrà sempre abilitato.
   
 ##  <a name="ReportBuilder"></a> Generatore report  
   

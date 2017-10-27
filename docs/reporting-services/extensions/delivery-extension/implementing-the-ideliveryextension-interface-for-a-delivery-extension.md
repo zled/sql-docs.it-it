@@ -21,6 +21,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
@@ -47,3 +48,4 @@ L'interfaccia IDeliveryExtension consente la convalida dei dati utente e fornisc
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
 ms.contentlocale: it-it
@@ -70,6 +71,7 @@ Nella versione SQL Server 2016, il componente aggiuntivo può essere installato 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Impossibile esplorare pagine di SharePoint in area non predefinita dopo avere disinstallato il componente aggiuntivo di Reporting Services](http://support.microsoft.com/kb/2009212)  
+[Non si riesce a esplorare pagine di SharePoint in area non predefinita dopo la disinstallazione del componente aggiuntivo di Reporting Services](http://support.microsoft.com/kb/2009212)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

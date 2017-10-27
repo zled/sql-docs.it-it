@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
@@ -68,3 +69,4 @@ Nelle sezioni seguenti per comprendere i concetti, scenari di distribuzione, pro
  Per ulteriori informazioni su Reporting Services, vedere [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea. Per informazioni su altri componenti, strumenti e risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere la [Documentazione online di SQL Server](../../sql-server/sql-server-technical-documentation.md).  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

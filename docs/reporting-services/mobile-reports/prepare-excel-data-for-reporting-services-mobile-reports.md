@@ -15,7 +15,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: it-it
@@ -82,7 +83,7 @@ I campi data sono essenziali per molti report per dispositivi mobili. Per questo
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-Dopo aver convertito le celle, è necessario formattarle come date selezionando o l'intera colonna > **contesto** menu > **Formato celle** > **data** dal **categoria** elenco. Per convertire le celle testo in date correttamente formattate, è anche possibile usare la procedura guidata per la conversione delle colonne di formato testo su Excel.  
+Dopo aver convertito le celle, è necessario formattarle come date selezionando le singole celle o l'intera colonna > menu **di scelta rapida** > **Formato celle** > **Data** dall'elenco **Categoria**. Per convertire le celle testo in date correttamente formattate, è anche possibile usare la procedura guidata per la conversione delle colonne di formato testo su Excel.  
   
 ## <a name="unsupported"></a>Non supportato  
   

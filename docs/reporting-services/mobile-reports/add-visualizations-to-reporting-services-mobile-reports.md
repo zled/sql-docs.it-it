@@ -14,7 +14,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
 ms.contentlocale: it-it
@@ -44,7 +45,7 @@ Ogni singola metrica, o valore, visualizzata in un grafico viene detta serie. Pi
 ### <a name="change-aggregation"></a>Modifica dell'aggregazione 
 Per i campi numerici nel grafico la funzione di aggregazione predefinita è la somma. È possibile modificarla in media, conteggio, minimo, massimo, primo o ultimo.
 
-* Selezionare il **dati** scheda e in **proprietà dati**selezionare **opzioni** accanto al campo numerico > selezionare un'aggregazione diversa.
+* Selezionare la scheda **Dati** e in **Proprietà dati** selezionare **Opzioni** accanto al campo numerico e quindi scegliere un'aggregazione diversa.
 
 ### <a name="set-or-clear-filters"></a>Impostare o cancellare i filtri
 
@@ -66,11 +67,11 @@ Il grafico temporale è il tipo di grafico più semplice in [!INCLUDE[SS_MobileR
 
 2. Per impostazione predefinita, è un grafico a barre in pila. È possibile modificare questa impostazione in **Visualizzazione serie**.
 
-3. Se il grafico necessita di dati che non sia già nel report, selezionare il **dati** scheda > **aggiungere dati** a [ottenere dati da Excel o un set di dati condiviso](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Se per il grafico sono necessari dati che non sono già presenti nel report, selezionare la scheda **Dati** e quindi **Aggiungi dati** per [ottenere dati da Excel o da un set di dati condiviso](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
 3. Nel riquadro **Proprietà dati** **Serie principale** corrisponde a **SimulatedTable**. Selezionare la freccia nella casella e selezionare la tabella.
 
-5. Se si imposta **struttura di Data** a **dalle colonne** (sul **Layout** scheda > **proprietà visive** riquadro), qui nel **proprietà dati** riquadro è possibile selezionare più colonne di valori numerici.
+5. Se si imposta **Struttura dei dati** su **Per colonne** (nel riquadro **Proprietà visive** della scheda **Layout**), nel riquadro **Proprietà dati** è possibile selezionare più colonne di valori numerici.
 
    Se si imposta **Struttura dei dati** su **Per righe**, nel riquadro **Proprietà dati** è possibile selezionare un **Campo del nome della serie** e una colonna di valori numerici.
    

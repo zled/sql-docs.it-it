@@ -17,7 +17,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: it-it
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="choosing-a-chart-type"></a>Scelta del tipo di grafico  
  A ogni tipo di grafico sono associate caratteristiche univoche per agevolare la visualizzazione del set di dati. Per visualizzare i dati, è possibile usare qualsiasi tipo di grafico, tuttavia la lettura dei dati risulterà facilitata se si sceglie un tipo di grafico adatto ai dati, basato su quanto si intende visualizzare nel report. Nella tabella seguente sono riepilogate le caratteristiche dei grafici che rendono un grafico più o meno appropriato a seconda di un determinato set di dati.  
   
- È possibile modificare il tipo di grafico dopo averlo creato. Per ulteriori informazioni, vedere [modificare un tipo di grafico &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
+ È possibile modificare il tipo di grafico dopo averlo creato. Per altre informazioni, vedere [Modificare un tipo di grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
  Molti esempi di questi tipi di grafici sono disponibili come report di esempio. Per ulteriori informazioni sul download di report di esempio, vedere [report di Generatore Report e progettazione Report di esempio](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
@@ -45,8 +46,8 @@ ms.lasthandoff: 08/09/2017
 |[Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||  
 |[Barre dei dati](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||  
 |[Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||  
-|[Grafici a linee &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||  
-|[Grafici a torta &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||||  
+|[Grafici a linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||  
+|[Grafici a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||||  
 |[Grafici polari &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||||  
 |[Grafici a intervalli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")|  
 |[Grafici a dispersione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||  
@@ -61,3 +62,4 @@ ms.lasthandoff: 08/09/2017
 [Aggiungere un grafico a un Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

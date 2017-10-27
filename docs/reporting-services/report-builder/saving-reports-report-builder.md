@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
 ms.contentlocale: it-it
@@ -75,3 +76,4 @@ Durante il salvataggio di un report, l'elemento che viene effettivamente salvato
  [Stampa di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   
+

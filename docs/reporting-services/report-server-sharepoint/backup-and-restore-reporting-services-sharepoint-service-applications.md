@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b6dcd64d6f9662ae592474053e6cc9bbce53a83e
@@ -167,3 +168,4 @@ Per eseguire il backup dell'applicazione di servizio, attenersi alla procedura s
 6.  Selezionare **Ok**
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
@@ -82,3 +83,4 @@ Per configurare la web part in modo da puntare al report specifico, eseguire le 
 * Se non viene visualizzata la web part di Visualizzatore Report, aggiungere alla pagina, accertarsi di avere [distribuito la web part Visualizzatore Report](deploy-report-viewer-web-part.md).
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -16,7 +16,8 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
 ms.contentlocale: it-it
@@ -30,20 +31,20 @@ ms.lasthandoff: 08/09/2017
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[ATOM Device Information Settings](../reporting-services/atom-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering conforme a Atom.|  
-|[CSV Device Information Settings](../reporting-services/csv-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering CSV.|  
-|[Excel Device Information Settings](../reporting-services/excel-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering Excel.|  
-|[Word Device Information Settings](../reporting-services/word-device-information-settings.md)|Descrive le impostazioni delle informazioni sul dispositivo associate all'output del rendering Word.|  
-|[HTML Device Information Settings](../reporting-services/html-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering HTML.|  
-|[Image Device Information Settings](../reporting-services/image-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering IMAGE.|  
-|[MHTML Device Information Settings](../reporting-services/mhtml-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering MHTML.|  
-|[PDF Device Information Settings](../reporting-services/pdf-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering PDF.|  
-|[XML Device Information Settings](../reporting-services/xml-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering XML.|  
-|[RGDI Device Information Settings](../reporting-services/rgdi-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering RGDI.|  
+|[Impostazioni relative alle informazioni sul dispositivo ATOM](../reporting-services/atom-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering conforme a Atom.|  
+|[Impostazioni relative alle informazioni sul dispositivo CSV](../reporting-services/csv-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering CSV.|  
+|[Impostazioni relative alle informazioni sul dispositivo Excel](../reporting-services/excel-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering Excel.|  
+|[Impostazioni relative alle informazioni sul dispositivo Word](../reporting-services/word-device-information-settings.md)|Descrive le impostazioni delle informazioni sul dispositivo associate all'output del rendering Word.|  
+|[Impostazioni relative alle informazioni sul dispositivo HTML](../reporting-services/html-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering HTML.|  
+|[Impostazioni relative alle informazioni sul dispositivo di acquisizione immagini](../reporting-services/image-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering IMAGE.|  
+|[Impostazioni relative alle informazioni sul dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering MHTML.|  
+|[Impostazioni relative alle informazioni sul dispositivo PDF](../reporting-services/pdf-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering PDF.|  
+|[Impostazioni relative alle informazioni sul dispositivo XML](../reporting-services/xml-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering XML.|  
+|[Impostazioni relative alle informazioni sul dispositivo RGDI](../reporting-services/rgdi-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering RGDI.|  
 |[Impostazioni relative alle informazioni sul dispositivo PPTX](../reporting-services/pptx-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering PPTX|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Personalizzare i parametri di estensione per il Rendering in RSReportServer. config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
 

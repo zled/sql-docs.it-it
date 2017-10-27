@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
 4. Avviare attestazioni per il servizio Token Windows tramite Amministrazione centrale SharePoint nel **Gestisci servizi nel Server** pagina. Il servizio deve essere avviato nel server che eseguirà l'azione. Ad esempio se si dispone di un server che è un front-end Web e un altro server che è un Server applicazioni con il servizio condiviso SQL Server Reporting Services in esecuzione, è solo necessario avviare C2WTS nel Server applicazioni. C2WTS è necessario in un server front-end Web solo se si esegue la web part Visualizzatore Report.
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

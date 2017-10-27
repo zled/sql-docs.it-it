@@ -98,18 +98,18 @@ Specificare **Trusted_Connection = Yes** per la connessione con autenticazione i
 ### <a name="connection-string-format"></a>Formato stringa di connessione
 Di seguito è riportato il formato della stringa di connessione che utilizza l'autenticazione integrata di Windows.
 
-    Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Di seguito è riportato il formato della stringa di connessione che utilizza l'autenticazione di SQL Server anziché l'autenticazione integrata di Windows.
 
-     Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;
+     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>Immettere la stringa di connessione
 Immettere la stringa di connessione nella **ConnectionString** campo o immettere il nome DSN nel **Dsn** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.
 
 L'esempio seguente usa la stringa di connessione.
 
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 Di seguito è riportata la schermata che viene visualizzato dopo aver immesso la stringa di connessione.
 

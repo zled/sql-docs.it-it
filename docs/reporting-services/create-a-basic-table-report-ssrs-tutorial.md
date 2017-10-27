@@ -20,6 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
@@ -67,3 +68,4 @@ Per il recupero dei dati dal database [!INCLUDE[ssSampleDBAdventureworks2014_md]
 [Esercitazioni su Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

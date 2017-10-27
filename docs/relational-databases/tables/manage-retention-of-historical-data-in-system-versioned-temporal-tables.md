@@ -15,6 +15,7 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
@@ -72,7 +73,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Uso della procedura guidata per l'estensione per estendere l'intera tabella di cronologia  
  Il metodo più semplice per i principianti consiste nell'usare la procedura guidata per l'estensione per abilitare l'estensione per l'intero database e quindi selezionare la tabella di cronologia temporale all'interno della procedura guidata per l'estensione. Questo esempio presuppone che la tabella Department sia stata configurata come tabella temporale con controllo delle versioni di sistema in un database altrimenti vuoto. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]non è possibile fare clic con il pulsante destro del mouse sulla tabella di cronologia temporale stessa e scegliere Estendi.  
   
-1.  Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, quindi **Estendi**e infine **** per avviare la procedura guidata.  
+1.  Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, scegliere **Estendi**quindi fare clic su **abilitare** per avviare la procedura guidata.  
   
 2.  Nella finestra **Selezionare le tabelle** selezionare la casella di controllo della tabella di cronologia temporale e quindi fare clic su Avanti.  
   

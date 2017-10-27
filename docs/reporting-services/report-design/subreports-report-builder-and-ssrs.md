@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: it-it
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  Utilizzare le aree dati per annidare gruppi di dati dalla stessa origine dati all'interno di un'unica area dati. I sottoreport sono utili per annidare gruppi di dati da diverse origini dati all'interno di un'unica area dati, riutilizzare un sottoreport in più report padre o visualizzare un report autonomo all'interno di un altro report. È possibile, ad esempio, creare un catalogo di prodotti e sottoprodotti inserendo più sottoreport nel corpo di un altro report.  
   
- Le aree dati offrono invece un livello di funzionalità e flessibilità analogo a quello dei sottoreport, ma con prestazioni migliori. Poiché infatti ogni istanza di un sottoreport viene elaborata dal server di report come report distinto, le prestazioni possono risultare rallentate. Per altre informazioni, vedere [Aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
+ Le aree dati offrono invece un livello di funzionalità e flessibilità analogo a quello dei sottoreport, ma con prestazioni migliori. Poiché infatti ogni istanza di un sottoreport viene elaborata dal server di report come report distinto, le prestazioni possono risultare rallentate. Per altre informazioni, vedere [Aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="using-parameters-in-subreports"></a>Utilizzo di parametri nei sottoreport  
  Per passare parametri dal report padre al sottoreport, definire un parametro di report nel report utilizzato come sottoreport. Quando si inserisce il sottoreport nel report padre, è possibile selezionare il parametro di report e un valore da passare dal report padre al parametro di report nel sottoreport.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  È possibile inserire un sottoreport nel corpo principale del report o in un'area dati. Se si inserisce un sottoreport in un'area dati, il sottoreport verrà ripetuto per ogni istanza del gruppo o riga dell'area dati. Per passare un valore dal gruppo o dalla riga al sottoreport, nella proprietà del valore del sottoreport utilizzare un'espressione di campo per il campo contenente il valore che si desidera passare al parametro del sottoreport.  
   
- Per ulteriori informazioni sull'utilizzo dei sottoreport, vedere [aggiungere un sottoreport e i parametri &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'uso dei sottoreport, vedere [Aggiunta di un sottoreport e di parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Specifica di nomi e percorsi dei sottoreport  
  È possibile progettare un report principale per specificare un sottoreport in una cartella diversa nello stesso server di report.  
@@ -60,6 +61,7 @@ ms.lasthandoff: 08/09/2017
  In Generatore report, per visualizzare in anteprima un sottoreport in un report principale, entrambi i report devono trovarsi nello stesso server di report oppure è necessario specificare il percorso completo del sottoreport.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
+

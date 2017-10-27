@@ -16,7 +16,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: it-it
@@ -64,7 +65,7 @@ In questa lezione si presuppone l'uso [!INCLUDE[ssManStudioFull_md](../includes/
     GO  
     ```  
   
-7.  Fare clic su **! Eseguire** sulla barra degli strumenti.  
+7.  Fare clic su  **Esegui** sulla barra degli strumenti.  
   
 8.  Utilizzare un'istruzione SELECT per verificare che siano disponibili tre righe di dati. Esempio: `select * from OrderInfo`  
   
@@ -80,3 +81,4 @@ In questa lezione si presuppone l'uso [!INCLUDE[ssManStudioFull_md](../includes/
 [Creazione di un report tabella semplice](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+
