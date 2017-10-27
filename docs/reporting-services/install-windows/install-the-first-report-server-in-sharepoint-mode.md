@@ -50,7 +50,7 @@ ms.lasthandoff: 10/06/2017
 |-|-|  
 |**(1)**|Servizio SharePoint installato dal programma di installazione di SQL Server. È possibile creare uno o più applicazioni di servizio Reporting Services.|  
 |**(2)**|Reporting Services aggiuntivo per prodotti SharePoint fornisce all'utente i componenti dell'interfaccia nei server SharePoint.|  
-|**(3)**|Applicazione Excel Services usata da Power View e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Non è disponibile in una distribuzione a server singolo per SharePoint 2016.. È necessaria un'istanza di [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) .|  
+|**(3)**|Applicazione Excel Services usata da Power View e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Non è disponibile in una distribuzione a server singolo per SharePoint 2016. È necessaria un'istanza di [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) .|  
 |**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
   
  ![Distribuzione a Server singolo in modalità SharePoint SSRS](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "distribuzione a Server singolo in modalità SharePoint SSRS")  
