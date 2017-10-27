@@ -127,7 +127,7 @@ ms.lasthandoff: 09/01/2017
   
  Tramite il server viene generato l'errore **KeyNotFound** durante l'elaborazione della partizione, quando in un record della tabella dei fatti è contenuto un valore di chiave esterna, ma la chiave esterna non dispone di record corrispondenti in una tabella delle dimensioni correlata. Questo errore si verifica inoltre durante l'elaborazione di tabelle delle dimensioni correlate o con schema snowflake, in cui tramite un record in una dimensione viene specificata una chiave esterna che non esiste nella dimensione correlata.  
   
- Quando si verifica un errore **KeyNotFound** , il record errato viene allocato al membro sconosciuto. Questo comportamento viene controllato tramite l'azione della chiave ****, impostata su **ConvertToUnknown**, in modo che sia possibile visualizzare i record allocati per un controllo ulteriore.  
+ Quando si verifica un errore **KeyNotFound** , il record errato viene allocato al membro sconosciuto. Questo comportamento viene controllato tramite **l'azione della chiave**, impostata su **ConvertToUnknown**, in modo che sia possibile visualizzare i record allocati per un controllo ulteriore.  
   
 ##  <a name="bkmk_nullfact"></a> Chiavi esterne Null in una tabella dei fatti (KeyNotFound)  
  Per impostazione predefinita, un valore Null in una colonna chiave esterna di una tabella dei fatti viene convertito in zero. Se zero non è un valore di chiave esterna valido, l'errore **KeyNotFound** verrà registrato e verrà conteggiato per il limite errori che corrisponde a zero per impostazione predefinita.  
