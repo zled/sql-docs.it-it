@@ -95,7 +95,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. Nel riquadro a sinistra fare clic su **Ruolo Server Web (IIS)** e quindi su ** Servizi ruolo**.
+10. Nel riquadro a sinistra fare clic su **Ruolo Server Web (IIS)** e quindi su  **Servizi ruolo**.
 11. Nella pagina **Servizi ruolo** verificare che siano selezionati i seguenti servizi e quindi fare clic su **Avanti**. Questi servizi sono necessari per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
 
     > [!WARNING]  

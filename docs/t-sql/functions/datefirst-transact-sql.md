@@ -43,12 +43,12 @@ ms.contentlocale: it-it
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40datefirst-transact-sql"></a>& #x 40; & #x 40; DATEFIRST (Transact-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Restituisce il valore corrente, per una sessione, di [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni & #40; Transact-SQL & #41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -101,7 +101,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni di configurazione & #40; Transact-SQL & #41;](../../t-sql/functions/configuration-functions-transact-sql.md)
+[Funzioni di configurazione &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 

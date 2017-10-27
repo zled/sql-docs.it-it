@@ -80,13 +80,12 @@ ms.lasthandoff: 08/03/2017
   
  Nell'esempio seguente viene visualizzato il numero di righe inviate tra i componenti di un pacchetto.  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  Nell'esempio seguente viene calcolato il numero di righe per millisecondi inviate da ogni componente per un'esecuzione specifica. I valori calcolati sono:  
@@ -110,7 +109,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurazione di un output degli errori in un componente del flusso di dati
@@ -230,13 +228,11 @@ order by source_component_name desc
   
  Di seguito è riportato uno script SQL di esempio tramite cui vengono eseguiti i passaggi descritti nello scenario sopra indicato:  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  I parametri del nome della cartella, del nome del progetto e del nome del pacchetto della stored procedure create_execution corrispondono ai nomi della cartella, del progetto e del pacchetto nel catalogo di Integration Services. È possibile ottenere i nomi della cartella, del progetto e del pacchetto da utilizzare nella chiamata a create_execution da SQL Server Management Studio come illustrato nella figura riportata di seguito. Se non viene visualizzato il progetto SSIS in questo punto, non può ancora essere distribuito nel server SSIS. Fare clic con il pulsante destro del mouse sul progetto SSIS in Visual Studio e scegliere Distribuisci per distribuire il progetto nel server SSIS previsto.  
@@ -260,18 +256,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### <a name="removing-a-data-tap"></a>Rimozione di una scelta dei dati  
  È possibile rimuovere una scelta dei dati prima di avviare l'esecuzione usando la stored procedure [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) . Questa stored procedure accetta l'ID della scelta dei dati come parametro, che è possibile ottenere come output della stored procedure add_data_tap.  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### <a name="listing-all-data-taps"></a>Elenco di tutte le scelte dei dati  
  È inoltre possibile elencare tutte le scelte dei dati tramite la vista catalog.execution_data_taps. Nell'esempio seguente vengono estratte le scelte dei dati per un'istanza di esecuzione specifica (ID: 54).  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   

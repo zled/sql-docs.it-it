@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>Utilizzare questo script per isolare problemi e riprodurli in SQL Server Management Studio  
  Il funzionamento dell'origine CDC è regolato dal funzionamento dell'attività di controllo CDC eseguita prima di richiamare l'origine CDC. Tramite l'attività di controllo CDC viene preparato il valore della variabile del pacchetto dello stato CDC in modo da contenere gli LSN iniziale e finale. Viene eseguita la funzione equivalente allo script seguente:  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Se si usa Microsoft Visual Basic per scrivere l'applicazione, impostare la proprietà **My.Application.CommandLineArgs** . Nell'esempio seguente viene impostata la proprietà **My.Application.CommandLineArgs** per recuperare due argomenti:  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

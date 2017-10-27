@@ -89,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
      L'impostazione predefinita è MHTML (archivio Web), che produce un file HTML autonomo, ma non mantiene le funzionalità interattive eventualmente presenti nel report originale.  
   
-8.  In **Opzioni sovrascrittura**specificare un'opzione che determina se sovrascrivere i file durante i recapiti successivi. Se si desidera mantenere i file recapitati in precedenza, selezionare l'opzione per creare un file con nome univoco. **** Per creare il nome di file univoco, ai nomi dei nuovi file viene automaticamente aggiunto un numero.  
+8.  In **Opzioni sovrascrittura**specificare un'opzione che determina se sovrascrivere i file durante i recapiti successivi. Se si desidera mantenere i file recapitati in precedenza, selezionare l'opzione per **creare un file con nome univoco**. Per creare il nome di file univoco, ai nomi dei nuovi file viene automaticamente aggiunto un numero.  
   
 9. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per ulteriori informazioni sulle pianificazioni e l'elaborazione dati, vedere [impostare opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
