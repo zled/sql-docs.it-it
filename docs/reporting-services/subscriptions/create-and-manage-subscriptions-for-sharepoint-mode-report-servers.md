@@ -19,7 +19,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
 ms.contentlocale: it-it
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
  Quando si crea una sottoscrizione, è possibile selezionare un formato di file di output. Non tutti i formati sono appropriati per tutti i report. Prima di selezionare un formato in una sottoscrizione, aprire il report e provare a esportarlo in vari formati, per verificare che venga visualizzato come previsto.  
   
- Per poter creare sottoscrizioni di **, gli utenti necessitano dell'autorizzazione di elenco** Modifica elementi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint. Per altre informazioni, vedere [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ Per poter creare sottoscrizioni di **, gli utenti necessitano dell'autorizzazione di elenco** Modifica elementi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint. Per altre informazioni, vedere [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  Una sottoscrizione che recapita un report a una raccolta o a una cartella condivisa crea un nuovo file statico, che è basato sul report originale ma non è una vera e propria definizione di report eseguibile in una web part Visualizzatore report. Se il report originale include funzionalità interattive (ad esempio, collegamenti drill-through) o contenuto dinamico, tali funzionalità non saranno disponibili nel file statico recapitato al percorso di destinazione. Se si seleziona una pagina Web è possibile mantenere un certo livello di interattività, ma poiché il documento non è un file con estensione rdl eseguito nel visualizzatore di report, quando si fa clic per scorrere il report vengono create nuove pagine nella sessione del browser, pagine che sarà poi necessario scorrere per tornare al sito.  
