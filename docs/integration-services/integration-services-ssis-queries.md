@@ -96,10 +96,10 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Mostra/Nascondi riquadro Diagramma**|Consente di visualizzare o nascondere il riquadro ** ** diagramma.|  
-|**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro griglia. ****|  
-|**Mostra/Nascondi riquadro SQL**|Consente di visualizzare o nascondere il riquadro SQL. ****|  
-|**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il riquadro dei risultati. ****|  
+|**Mostra/Nascondi riquadro Diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.|  
+|**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro **griglia**.|  
+|**Mostra/Nascondi riquadro SQL**|Consente di visualizzare o nascondere il riquadro **SQL**.|  
+|**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il riquadro dei **risultati**.|  
 |**Correre**|Consente di eseguire la query. I risultati verranno visualizzati nel riquadro dei risultati.|  
 |**Verifica istruzione SQL**|Consente di verificare che l'istruzione sia valida.|  
 |**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel riquadro griglia.|  
@@ -115,7 +115,7 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
 |----------|-----------------|  
 |**Riquadro diagramma**|Visualizza la query in un diagramma. Nel diagramma vengono visualizzate le tabelle incluse nella query e indicate le relative modalità di unione in join. Selezionare o deselezionare la casella di controllo accanto a una colonna nella tabella per aggiungere o rimuovere la colonna dall'output della query.<br /><br /> Quando si aggiungono tabelle alla query, in Generatore query vengono creati join tra le tabelle basati sulle tabelle, in base alle chiavi della tabella. Per aggiungere un join, trascinare un campo da una tabella in un campo di un'altra tabella. Per gestire un join, fare clic su di esso con il pulsante destro del mouse e quindi scegliere un'opzione dal menu.<br /><br /> Fare clic con il pulsante destro del mouse sul riquadro **Diagramma** per aggiungere o rimuovere tabelle, selezionare tutte le tabelle e visualizzare o nascondere i riquadri.|  
 |**Riquadro griglia**|Visualizza la query in una griglia. È possibile utilizzare questo riquadro per aggiungere o rimuovere colonne da un query e modificare le impostazioni per ogni colonna.|  
-|**Riquadro SQL**|Visualizza la query come testo di istruzione SQL. Le modifiche apportate nei riquadri ** ** diagramma e ** ** griglia vengono visualizzati qui e viceversa, le modifiche apportate qui vengono visualizzate nei riquadri ** ** diagramma e ** ** griglia.|  
+|**Riquadro SQL**|Visualizza la query come testo di istruzione SQL. Le modifiche apportate nei riquadri **diagramma** e **griglia** vengono visualizzati qui e viceversa, le modifiche apportate qui vengono visualizzate nei riquadri **diagramma** e **griglia**.|  
 |Riquadro**Risultati** |Visualizza i risultati della query quando si fa clic su **Esegui** sulla barra degli strumenti.| 
 
   

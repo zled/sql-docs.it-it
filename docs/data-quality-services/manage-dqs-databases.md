@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>Impostare in modo predefinito l'aumento automatico delle dimensioni e il modello di recupero per i database di DQS  
  Per impedire una crescita smisurata dei database di DQS e dei log delle transazioni e un conseguente riempimento potenziale del disco rigido:  
   
--   Le dimensioni predefinite relative all'aumento automatico dei database di DQS vengono impostate su 10%. ****  
+-   Le dimensioni predefinite relative **all'aumento automatico** dei database di DQS vengono impostate su 10%.  
   
 -   Il modello di recupero predefinito dei database di DQS viene impostato su **Con registrazione minima**. Nel modello di recupero con registrazione minima, per le transazioni è prevista la registrazione minima. Si verifica automaticamente il troncamento del log al termine della transazione per liberare spazio nel log delle transazioni (file con estensione ldf). Per informazioni sul modello di recupero con registrazione minima, vedere [Backup completo del database &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   

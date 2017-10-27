@@ -74,7 +74,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  La gestione del dominio viene eseguita in una pagina del client Data Quality Services che contiene cinque schede per le operazioni di gestione del dominio separate. Non si tratta di un processo basato su procedure guidate. Ciascuna operazione di gestione può essere eseguita separatamente.  
   
-3.  Dall'elenco di domini **** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera creare una regola di dominio o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  Dall'**elenco di domini** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera creare una regola di dominio o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Create a Domain](../data-quality-services/create-a-domain.md).  
   
 4.  Fare clic sulla scheda **Relazioni basate su termini** .  
   

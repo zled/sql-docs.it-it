@@ -83,7 +83,7 @@ ms.lasthandoff: 09/12/2017
   
 1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** *\<istanza server>* e quindi scegliere **Proprietà**.  
   
-2.  Nella scheda **Certificato** della finestra di dialogo **Proprietà - Protocolli per***\<nome istanza>* ** **selezionare il certificato desiderato nell'elenco a discesa per la casella **Certificato** e quindi fare clic su **OK**.  
+2.  Nella scheda **Certificato** della finestra di dialogo **Proprietà** - **Protocolli per***\<nome istanza>* selezionare il certificato desiderato nell'elenco a discesa per la casella **Certificato** e quindi fare clic su **OK**.  
   
 3.  Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì**e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   
