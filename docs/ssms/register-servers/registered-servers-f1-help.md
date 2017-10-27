@@ -58,13 +58,13 @@ ms.lasthandoff: 09/01/2017
  Consente di connettersi mediante la modalità **Autenticazione basata su form** se l'installazione di Reporting Services è configurata per usare un'estensione di autenticazione personalizzata.  
   
  **Nome utente**  
- Immettere il nome account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di base ****  o basata su form ****.  
+ Immettere il nome account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
  **Password**  
- Immettere la password associata al nome utente. Questa opzione può essere modificata solo se si è scelto di utilizzare l'autenticazione di base ****  o basata su form ****.  
+ Immettere la password associata al nome utente. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
  **Memorizza password**  
- Consente di archiviare la password immessa. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di base ****  o basata su form ****.  
+ Consente di archiviare la password immessa. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
 > **NOTA:** Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e fare clic su **Salva**.  
   
