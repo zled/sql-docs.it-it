@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8cac116f89d0cf1fde83a00dfd42c02e1fc5e2f0
@@ -21,14 +22,12 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/22/2017
 
 ---
-# Query dei dati spaziali per Nearest Neighbor
-<a id="query-spatial-data-for-nearest-neighbor" class="xliff"></a>
+# <a name="query-spatial-data-for-nearest-neighbor"></a>Query dei dati spaziali per Nearest Neighbor
   La query Nearest Neighbor è una query comune utilizzata con dati spaziali. Le query Nearest Neighbor vengono utilizzate per trovare gli oggetti spaziali più vicini a un oggetto spaziale specifico. Un localizzatore di archivio per un sito Web, ad esempio, deve spesso trovare i percorsi di archivio più vicini alla posizione di un cliente.  
   
  Una query Nearest Neighbor può essere scritta in una varietà di formati di query validi, ma per l'utilizzo di un indice spaziale è necessario utilizzare la sintassi seguente.  
   
-## Sintassi
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 SELECT TOP ( number )  
@@ -56,8 +55,7 @@ SELECT TOP ( number )
   
 ```  
   
-## Query Nearest Neighbor e indici spaziali
-<a id="nearest-neighbor-query-and-spatial-indexes" class="xliff"></a>  
+## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Query Nearest Neighbor e indici spaziali  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vengono usate le clausole **TOP** e **ORDER BY** per eseguire una query Nearest Neighbor nelle colonne di dati spaziali. La clausola **ORDER BY** contiene una chiamata al metodo `STDistance()` per il tipo di dati della colonna spaziale. La clausola **TOP** indica il numero di oggetti da restituire per la query.  
   
  Per utilizzare un indice spaziale in una query Nearest Neighbor, è necessario soddisfare i requisiti seguenti:  
@@ -81,8 +79,7 @@ SELECT TOP ( number )
   
  Per gli indici utilizzati nelle query Nearest Neighbor è consigliabile utilizzare i nuovi schemi a mosaico di indice spaziale. Per altre informazioni sugli schemi a mosaico di indice spaziale, vedere [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-## Esempio
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrata una query Nearest Neighbor nella quale può essere utilizzato un indice spaziale. Nell'esempio viene utilizzata la tabella `Person.Address` del database `AdventureWorks2012` .  
   
 ```tsql  
@@ -97,8 +94,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Creare un indice spaziale nella colonna SpatialLocation per vedere in che modo viene utilizzato un indice spaziale in una query Nearest Neighbor. Per ulteriori informazioni sulla creazione di indici spaziali, vedere [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## Esempio
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrata una query Nearest Neighbor nella quale non può essere utilizzato un indice spaziale.  
   
 ```tsql  
@@ -112,8 +108,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Nella query manca una clausola **WHERE** che usa `STDistance()` in un formato specificato nella sezione relativa alla sintassi, quindi la query non può usare un indice spaziale.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

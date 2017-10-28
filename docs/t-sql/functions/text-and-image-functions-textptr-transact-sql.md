@@ -1,7 +1,7 @@
 ---
 title: TEXTPTR (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Testo e immagine funzioni - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Il puntatore di testo restituisce un valore che corrisponde a un **testo**, **ntext**, o **immagine** colonna **varbinary** formato. È possibile utilizzare il valore del puntatore di testo recuperato nelle istruzioni READTEXT, WRITETEXT e UPDATETEXT.  
   

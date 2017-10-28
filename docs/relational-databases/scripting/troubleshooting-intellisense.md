@@ -19,6 +19,7 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d5926bbe8569ed88f2697d17cd754cf0fd081f05
@@ -74,3 +75,4 @@ ms.lasthandoff: 06/22/2017
 -   Gli elenchi di completamento potrebbero smettere di funzionare se si perde la connessione all'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Connettersi di nuovo all'istanza.  
   
   
+

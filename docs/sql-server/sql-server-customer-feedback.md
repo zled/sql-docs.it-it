@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
@@ -165,3 +166,4 @@ Durante l'installazione, SQL Server 2016 Analysis Services aggiunge un account s
 È possibile configurare il servizio in modo che non invii dati di utilizzo, come descritto nella sezione "Impostare le sottochiavi del Registro di sistema nel server". In questo modo, tuttavia, non viene rimosso l'account del servizio. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

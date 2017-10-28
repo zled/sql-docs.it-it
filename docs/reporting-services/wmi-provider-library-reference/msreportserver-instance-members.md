@@ -22,7 +22,8 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
 ms.contentlocale: it-it
@@ -47,6 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[Metodo GetReportServerUrls &#40; MSReportServer_Instance WMI &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Elenca gli URL che è possibile utilizzare per accedere al server di report e a Gestione report.|  
+|[Metodo GetReportServerUrls &#40;MSReportServer_Instance WMI&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Elenca gli URL che è possibile utilizzare per accedere al server di report e a Gestione report.|  
   
   
+

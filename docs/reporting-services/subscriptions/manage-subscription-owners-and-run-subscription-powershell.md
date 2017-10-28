@@ -15,7 +15,8 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 103cb28ac4917370c8f116b8de46a27f159261cc
 ms.contentlocale: it-it
@@ -66,11 +67,11 @@ ms.lasthandoff: 08/09/2017
   
 -   List Subscriptions: [Enunmerazione ReportOperation](http://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sul report E (l'utente è proprietario della sottoscrizione) O ReadAnySubscription.  
   
--   Change Subscriptions: l'utente deve essere membro del gruppo BUILTIN\Administrators  
+-   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
   
--   Elenco figli: ReadProperties su Item  
+-   List Children: ReadProperties on Item  
   
--   Evento di attivazione: GenerateEvents (System)  
+-   Fire Event: GenerateEvents (System)  
   
  **Modalità SharePoint:**  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Fire Event: ManageWeb  
   
- Per altre informazioni, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Per altre informazioni, vedere [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### <a name="script-usage"></a>Uso degli script  
  **Creare file script (con estensione ps1)**  
@@ -397,3 +398,4 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   
+

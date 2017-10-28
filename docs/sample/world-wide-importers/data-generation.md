@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ La procedura `Application.Configuration_PopulateLargeSaleTable` consente di aume
 Circa il numero richiesto di righe viene inserito le `Fact.Sale` tabella nell'anno 2012. La procedura limita artificialmente il numero di righe per ogni giorno a 50000. È possibile modificare, ma è presente per evitare overinflations accidentale della tabella.
 
 Inoltre, la procedura viene applicata l'indicizzazione columnstore cluster, se non è già stato applicato.
+

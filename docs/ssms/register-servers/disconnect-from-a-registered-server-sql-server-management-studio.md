@@ -19,6 +19,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 802318d2ff9823b5ca0977083230ce625efdd13e
@@ -36,3 +37,4 @@ ms.lasthandoff: 07/31/2017
 -   In Esplora oggetti fare clic con il pulsante destro del mouse su un server e quindi scegliere **Disconnetti** oppure fare clic sull'icona **Disconnetti** sulla barra degli strumenti di Esplora oggetti.  
   
   
+

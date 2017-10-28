@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: bf54eb7974cfdf42314959a4f8907750863af079
@@ -75,3 +76,4 @@ Interpretazione di colore dell'output di console viene visualizzato nella tabell
   
 ## <a name="see-also"></a>Vedere anche  
 [L'installazione di SSMA per SAP ASE &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+

@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
@@ -182,3 +183,4 @@ La versione di gennaio 2010 di SSMA per MySQL è la versione iniziale. Contiene 
 -   Aggiunta del supporto per la migrazione sia locale di SQL Server e SQL Azure.  
   
 -   **Funzionalità Snapshot:** migrazione di schemi e dati di tabelle/indici o vincoli di MySQL.
+
