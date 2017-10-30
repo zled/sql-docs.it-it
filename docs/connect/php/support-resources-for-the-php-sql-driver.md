@@ -34,7 +34,7 @@ Per la documentazione più recente, vedere [Microsoft PHP Driver per SQL Server]
   
 Per il supporto peer-to-peer, visitare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-Per inviare commenti e suggerimenti, ottenere risposte o sapere di che cosa si sta occupando il team di sviluppo, visitare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [[!INCLUDE[ssDriverPHP](../Token/ssDriverPHP_md.md)]](http://go.microsoft.com/fwlink/?LinkID=108675).  
+Per inviare commenti e suggerimenti, ottenere risposte o sapere di che cosa si sta occupando il team di sviluppo, visitare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Blog del team](http://go.microsoft.com/fwlink/?LinkID=108675).  
   
 [Codice sorgente di Microsoft PHP Driver per SQL Server su Github](https://github.com/azure/msphpsql)  
   
