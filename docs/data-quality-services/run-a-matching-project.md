@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  In **Mapping**, selezionare un campo nell'origine dati per **Colonna di origine**, quindi selezionare il dominio corrispondente. Ripetere l'operazione per tutti i domini da utilizzare per il processo di corrispondenza. È necessario che per ogni dominio definito nei criteri di corrispondenza venga eseguito il mapping alla colonna di origine appropriata. Nel riquadro destro della pagina Mappa vengono visualizzati i domini definiti nei criteri di corrispondenza e le relative regole.  
   
     > [!NOTE]  
-    >  È possibile eseguire il mapping dei dati di origine a un dominio DQS solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati in DQS, vedere [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  È possibile eseguire il mapping dei dati di origine a un dominio DQS solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati in DQS, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 4.  Fare clic sul controllo **Più (+)** per aggiungere una riga alla tabella Mapping o sul controllo **Meno (-)** per rimuovere una riga.  
   
