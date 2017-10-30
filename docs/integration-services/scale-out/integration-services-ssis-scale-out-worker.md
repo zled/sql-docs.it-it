@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 77cf90268938bada458aa159a5f18f885491b407
@@ -60,3 +61,4 @@ Il file di registro del servizio di scala il lavoro è nel \<driver\>: \Users\\*
 Il percorso del log di ogni attività viene configurato nel file WorkerSettings.config da TasksRootFolder. Se non è specificato, il log è nel \<driver\>: \Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks percorso della cartella. 
 
 Il *[account]* è l'account che esegue servizio scala Out Worker. Per impostazione predefinita, l'account è SSISScaleOutWorker140.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
@@ -67,3 +68,4 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  Tutti gli oggetti e i riferimenti all'ambiente del progetto corrispondente vengono eliminati insieme al progetto. Tuttavia, le versioni del progetto e i record delle relative operazioni vengono mantenuti fino alla prossima esecuzione del processo di pulizia delle operazioni.  
   
   
+

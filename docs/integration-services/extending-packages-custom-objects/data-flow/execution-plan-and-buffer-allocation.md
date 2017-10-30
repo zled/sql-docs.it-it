@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
@@ -90,3 +91,4 @@ End WorkThread1
   
  Poiché è probabile che contengono il buffer fornito a un componente dispone di più colonne che il componente nelle relative raccolte di colonne di input o output, gli sviluppatori di componenti è possono chiamare il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> metodo per individuare una colonna nel buffer specificando il relativo **LineageID**.  
   
+

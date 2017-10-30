@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ec785459e5f9585776d83cde3f460c1e79367e46
@@ -45,3 +46,4 @@ GO
 
 > [!NOTE]
 > Se si utilizza un account utente di Windows per la registrazione, deve essere lo stesso account che esegue il servizio di scala il lavoro. In caso contrario, l'account di accesso a SQL Server avrà esito negativo.
+

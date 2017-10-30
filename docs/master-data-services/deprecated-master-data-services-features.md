@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 37ba9531f4b4a2ba9b5831f5d7e8e121f5d3ad7d
@@ -59,3 +60,4 @@ Il tipo di log delle transazioni di entità "Attributo" è deprecato. Eseguire l
  [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)  
   
   
+

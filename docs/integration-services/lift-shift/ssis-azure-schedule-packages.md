@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
@@ -227,3 +228,4 @@ Per ulteriori informazioni sul codice in questo script, vedere [distribuire ed e
 Per ulteriori informazioni su SQL Server Agent, vedere [processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
 
 Per ulteriori informazioni sui processi elastici nel Database SQL, vedere [i database di gestione dei cloud di scalabilità orizzontale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+

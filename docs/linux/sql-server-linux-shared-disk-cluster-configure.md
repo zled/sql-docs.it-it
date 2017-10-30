@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 11b7c2e6a782a2e1215a75e746c6def1b42f90a1
@@ -293,3 +294,4 @@ In questa esercitazione è completato le attività seguenti.
 - [Utilizzare l'istanza del cluster di failover, SQL Server in Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->
+

@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
@@ -135,3 +136,4 @@ In questa sezione vengono fornite le istruzioni necessarie per la configurazione
 -   In **Amministrazione**cluster selezionare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , fare clic con il pulsante destro del mouse e scegliere **Online** dal menu di scelta rapida. A questo punto, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è online come risorsa cluster.  
   
   
+

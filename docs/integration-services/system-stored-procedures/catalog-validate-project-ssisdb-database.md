@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  Tramite la convalida completa viene confermato che tutte le variabili di ambiente a cui si fa riferimento si trovano all'interno degli ambienti di riferimento inclusi nella convalida. Tramite la convalida completa viene generato un elenco di riferimenti all'ambiente che non sono validi e variabili di ambiente a cui si fa riferimento che non sono state trovate in alcun ambiente di riferimento incluso nella convalida.  
   
   
+
