@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  È inoltre possibile creare un dominio composito che comprende due o più domini singoli, ciascuno contenente informazioni sui dati comuni. Per altre informazioni, vedere [Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md).  
   
 ## <a name="domain-properties"></a>Proprietà dominio  
- Quando si crea un dominio, sono disponibili le opzioni seguenti sul popolamento del dominio con i dati di origine e sull'output dei valori del dominio. Per altre informazioni, vedere [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ Quando si crea un dominio, sono disponibili le opzioni seguenti sul popolamento del dominio con i dati di origine e sull'output dei valori del dominio. Per altre informazioni, vedere [Imposta proprietà del dominio](../data-quality-services/set-domain-properties.md).  
   
--   Selezionare il tipo di dati con cui popolare il dominio. Per informazioni sui tipi di dati supportati per ogni tipo di dati del dominio, vedere [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+-   Selezionare il tipo di dati con cui popolare il dominio. Per informazioni sui tipi di dati supportati per ogni tipo di dati del dominio, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 -   Specificare che dal dominio verranno inviati all'output solo i valori principali e non i relativi sinonimi.  
   
