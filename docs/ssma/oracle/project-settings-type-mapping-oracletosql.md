@@ -244,7 +244,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |numero [*..\*][\*..\*]|numerico [*] [\*]|  
 |Numeric|numerico [38] [0]|  
 |numerico [*..\*]|numerico [*]|  
-|numerico [*..\*][\*.. \*]|numerico [*] [\*]|  
+|numerico [*..\*][\*..\*]|numerico [*] [\*]|  
 |NVARCHAR2 [*..4000]|nvarchar [*]|  
 |NVARCHAR2 [4001... *]|nvarchar(max)|  
 |pls_integer|int|  
