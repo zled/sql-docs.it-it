@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
 ms.contentlocale: it-it
@@ -45,11 +44,11 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
-    Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
+    Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
-2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report**. 
+2.  Nel riquadro sinistro assicurarsi che sia selezionata l'opzione **Nuovo report** . 
  
 3.  Nel riquadro destro fare clic su **Report vuoto**.  
   
@@ -61,9 +60,9 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server e quindi la **stringa di connessione** nella casella: **origine dati = \<nomeserver >**  
   
-    **\<nomeserver>**, ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
+    **\<NomeServer >**, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
   
 5.  Fare clic su **Credenziali**, quindi immettere le credenziali necessarie per la connessione all'istanza del motore di database di SQL Server.  
   
@@ -131,7 +130,7 @@ Verrà usato un elenco per visualizzare le informazioni sulle vendite relative a
   
 ### <a name="to-add-a-list"></a>Per aggiungere un elenco  
   
-1.  Nella scheda **Inserisci** fare clic su **Aree dati** > **Elenco**. 
+1.  Nel **inserire** scheda > **aree dati** > **elenco**. 
 
 2. Fare clic nel corpo del report, tra le aree del titolo e del piè di pagina, e trascinare per creare la casella di riepilogo. Assegnare alla casella di riepilogo un'altezza di 18 cm e una larghezza di 16 cm. Per ottenere la dimensione esatta, nel riquadro **Proprietà** digitare in **Posizione**i valori per **larghezza** e **altezza** .
   
@@ -170,7 +169,7 @@ Verrà usato un elenco per visualizzare le informazioni sulle vendite relative a
   
 5.  Selezionare **Elimina solo colonne**.  
   
-6.  Nel riquadro Gruppi di righe fare clic con il pulsante destro del mouse sul gruppo **Dettagli** > **Elimina gruppo**.  
+6.  Nel riquadro gruppi di righe, fare clic destro la **dettagli** gruppo > **Elimina gruppo**.  
    
 7.  Selezionare **Elimina solo gruppo**.  
   
@@ -183,9 +182,9 @@ Uno dei vantaggi offerti da un'area dati elenco consiste nella possibilità di a
   
 1.  Selezionare **Rettangolo** nella scheda **Inserisci**. 
 
-2. Fare clic su nell'angolo superiore sinistro dell'elenco e trascinare per rendere il rettangolo alto 18 cm e largo 9 cm. Anche in questo caso, per ottenere la dimensione esatta, nel riquadro **Proprietà** digitare in **Posizione** i valori per **larghezza** e **altezza**.
+2. Fare clic su nell'angolo superiore sinistro dell'elenco e trascinare per rendere il rettangolo alto 18 cm e largo 9 cm. Anche in questo caso, per ottenere la dimensione esatta, nel riquadro **Proprietà** digitare in **Posizione**i valori per **larghezza** e **altezza**.
   
-2.  Fare clic con il pulsante destro del mouse sul rettangolo, quindi scegliere **Proprietà rettangolo**.  
+2.  Fare doppio clic su rettangolo > **proprietà rettangolo**.  
   
 3.  Fare clic sulla scheda **Riempimento** .  
   
@@ -206,7 +205,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-2.  Fare clic su **Casella testo** nella scheda **Inserisci**. Fare clic nell'angolo superiore sinistro dell'elenco, all'interno del rettangolo aggiunto in precedenza, e trascinare per fare in modo che la casella di testo sia larga 8,7 cm e alta 12,7 cm circa.  
+2.  Nel **inserire** scheda > **casella di testo**. Fare clic nell'angolo superiore sinistro dell'elenco, all'interno del rettangolo aggiunto in precedenza, e trascinare per fare in modo che la casella di testo sia larga 8,7 cm e alta 12,7 cm circa.  
   
 3.  Con il cursore nella casella di testo, digitare: **Notiziario per** . Includere uno spazio dopo la parola "per", per separare il testo del campo che verrà aggiunto nel passaggio successivo.   
   
@@ -216,9 +215,9 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
   
     ![report-builder-free-form-territory-field](../reporting-services/media/report-builder-free-form-territory-field.png)
   
-5.  Selezionare il testo e il campo `[Territory]`.  
+5.  Selezionare il testo e il campo `[Territory]` .  
   
-6.  Nella scheda **Home** selezionare in **Carattere**: 
+6.  Nel **Home** scheda > **carattere**selezionare: 
   
     *  **Segoe Semibold**.
     *  **20 pt**.
@@ -230,7 +229,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
    
 11. Selezionare il testo aggiunto nei passaggi precedenti.
   
-12. Nella scheda **Home** selezionare in **Carattere**: 
+12. Nel **Home** scheda > **carattere**selezionare: 
   
     *  **Segoe Semibold**.
     *  **16 pt**.
@@ -247,7 +246,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
   
 16. Selezionare il testo appena aggiunto.  
   
-17.  Nella scheda **Home** selezionare in **Carattere**: 
+17.  Nel **Home** scheda > **carattere**selezionare: 
   
       *  **Segoe UI**.
       *  **10 pt**.
@@ -259,13 +258,13 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
 
 25. Selezionare il testo e il campo appena aggiunto.  
   
-17.  Nella scheda **Home** selezionare in **Carattere**: 
+17.  Nel **Home** scheda > **carattere**selezionare: 
   
       *  **Segoe Semibold**.
       *  **16 pt**.
       *  **Nero**.  
   
-22. Selezionare solo il campo `[Sales]`, fare clic con il pulsante destro del mouse sul campo > **Espressione**.  
+22. Selezionare solo la `[Sales]` campo pulsante destro del mouse nel campo > **espressione**.  
   
 23. Nella casella **Espressione** modificare l'espressione per includere la funzione Sum nel modo seguente:  
   
@@ -277,7 +276,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
   
     ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. Con `[Sum(Sales)]` sempre selezionato, nella scheda **Home** > gruppo **Numero** > **Valuta**.  
+29. Con `[Sum(Sales)]` ancora selezionato, scegliere il **Home** scheda > **numero** gruppo > **valuta**.  
   
 30. Fare clic con il pulsante destro del mouse sulla casella di testo contenente il testo "Fare clic per aggiungere il titolo", quindi scegliere **Elimina**.  
   
@@ -296,7 +295,7 @@ Utilizzare la procedura guidata Nuova tabella o matrice per aggiungere una tabel
   
 ### <a name="to-add-a-table"></a>Per aggiungere una tabella  
   
-1.  Nella scheda **Inserisci** > area **Aree dati** > **Tabella** > **Creazione guidata Tabella**.  
+1.  Nel **inserire** scheda > **aree dati** area > **tabella** > **Creazione guidata tabella**.  
   
 2.  Nella pagina **Scegliere un set di dati** fare clic su **ListDataset** > **Avanti**.  
   
@@ -327,9 +326,9 @@ Utilizzare la procedura guidata Nuova tabella o matrice per aggiungere una tabel
 
     ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. Selezionare il campo [SalesDate]. Nella scheda **Home** > **Numero** modificare **Predefinito** in **Data**.
+12. Selezionare il campo [SalesDate]. Nel **Home** scheda > **numero**, modificare **predefinito** a **data**.
 
-13. Selezionare i campi [Sum(Sales)]. Nella scheda **Home** > **Numero** modificare **Predefinito** in **Valuta**.
+13. Selezionare i campi [Sum(Sales)]. Nel **Home** scheda > **numero**, modificare **predefinito** a **valuta**.
 
 Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -379,8 +378,8 @@ Aggiungere una linea per separare l'area editoriale da quella dei dettagli del r
   
 3.  Disegnare una linea sotto la casella di testo aggiunta nella lezione 4.  
   
-4.  Fare clic sulla linea e nella scheda **Home** > **Bordo** selezionare:
-     * **Larghezza**: selezionare **3** pt.
+4.  Fare clic sulla riga e scegliere il **Home** scheda > **bordo**selezionare:
+     * **Larghezza** : selezionare **3** pt.
      * **Colore** : selezionare **Cremisi**.  
   
 ## <a name="Visualization"></a>8. (Facoltativo) Aggiungere visualizzazioni dei dati di riepilogo  
@@ -398,7 +397,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
 ## <a name="to-add-a-pie-chart"></a>Per aggiungere un grafico a torta  
   
-1.  Nella scheda **Inserisci** scegliere **Visualizzazioni dati** > **Grafico** > **Creazione guidata grafico**.  
+1.  Nel **inserire** scheda > **visualizzazioni dati** > **grafico** > **Creazione guidata grafico**.  
   
 2.  Nella pagina **Scegliere un set di dati** fare clic su **ListDataset** > **Avanti**.  
   
@@ -416,14 +415,14 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
    
 10. Selezionare il titolo del grafico e digitare: **Quantità di prodotto vendute**.  
   
-12. Nella scheda **Home** > **Carattere** impostare per il titolo:
+12. Nel **Home** scheda > **carattere**, rendere il titolo:
     * **Carattere** **Segoe UI Semibold**.
-    * **Size** **12 pt**.
+    * **Dimensione** **12 pt**.
     * **Colore** **Nero**.  
 
-13. Fare clic con il pulsante destro del mouse sulla legenda > **Proprietà legenda**.
+13. Fare doppio clic su legenda > **proprietà legenda**.
 
-14. In **Posizione legenda** nella scheda **Generale** selezionare il punto centrale in basso. 
+14. In **Posizione legenda** nella scheda **Generale**selezionare il punto centrale in basso. 
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -433,7 +432,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
 ## <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
   
-1.  Nella scheda **Inserisci** scegliere **Visualizzazioni dati** > **Grafico** > **Creazione guidata grafico**.  
+1.  Nel **inserire** scheda > **visualizzazioni dati** > **grafico** > **Creazione guidata grafico**.  
   
 2.  Nella pagina **Scegliere un set di dati** fare clic su **ListDataset**, quindi su **Avanti**.  
   
@@ -455,10 +454,10 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
    
 10. Selezionare il titolo del grafico e digitare: **Vendite prodotto**.  
   
-12. Nella scheda **Home** > **Carattere** impostare per il titolo:
+12. Nel **Home** scheda > **carattere**, rendere il titolo:
     * **Carattere** **Segoe UI Semibold**.
-    * **Size** **12 pt**.
-    * **Color** **Black**.  
+    * **Dimensione** **12 pt**.
+    * **Colore** **Nero**.  
   
 15. Fare clic con il pulsante destro del mouse sulla legenda, quindi scegliere **Elimina legenda**.  
   
@@ -495,7 +494,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
 1.  Selezionare il grafico a torta, premere CTRL, quindi selezionare l'istogramma.  
   
-2.  Con entrambi i grafici selezionati, fare clic con il pulsante destro del mouse su > **Layout** > **Assegna stessa larghezza**.  
+2.  Con entrambi i grafici selezionati, fare doppio clic su > **Layout** > **Assegna stessa larghezza**.  
   
     > [!NOTE]  
     > Il primo elemento selezionato determina la larghezza di tutti gli elementi selezionati.  
@@ -514,7 +513,7 @@ Per altre informazioni sugli elenchi, vedere:
 * [Creare fatture e moduli con elenchi](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Per ulteriori informazioni sulle finestre Progettazione query, vedere [finestre Progettazione Query &#40; Generatore report &#41; ](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [interfaccia utente di progettazione Query basata su testo &#40; Generatore report &#41; ](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 

@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: it-it
@@ -51,7 +50,7 @@ Nella finestra di dialogo Attività iniziali, creare un report matrice tramite *
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -60,7 +59,7 @@ Nella finestra di dialogo Attività iniziali, creare un report matrice tramite *
 3.  Nel riquadro destro verificare che sia selezionata **Creazione guidata tabella o matrice** .  
   
 ## <a name="DConnection"></a>1a. Specificare una connessione dati  
-Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per ulteriori informazioni sull'utilizzo di un'origine dati condivisa, vedere [alternativa modi per ottenere una connessione dati &#40; Generatore report &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
@@ -91,11 +90,11 @@ Una connessione dati contiene le informazioni necessarie per connettersi a un'or
 10. Fare clic su **Tipo credenziali**.  
   
     > [!NOTE]  
-    > A seconda di come vengono configurate le autorizzazioni sull'origine dati, potrebbe essere necessario modificare le opzioni di autenticazione predefinite. Per altre informazioni, vedere [Sicurezza &#40;Generatore report&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > A seconda di come vengono configurate le autorizzazioni sull'origine dati, potrebbe essere necessario modificare le opzioni di autenticazione predefinite. Per altre informazioni, vedere [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Viene visualizzata la pagina **Scegliere una connessione a un'origine dei dati**.  
+    Viene visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
 12. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
   
@@ -115,7 +114,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 6 in [per creare il dataset](#DSkip).  
+    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 6 in [per creare il dataset](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -351,9 +350,9 @@ Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramit
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
-    Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
+    Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
  
 2.  Nella finestra di dialogo **Attività iniziali** verificare che l'opzione **Nuovo report** sia selezionata e fare clic su **Creazione guidata tabella o matrice**.  
   
@@ -406,7 +405,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 5 in [per creare il dataset](#MSkip).  
+    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 5 in [per creare il dataset](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -690,6 +689,6 @@ Eseguire il report principale, quindi fare clic su valori nella colonna della ca
 5.  Facoltativamente, esplorare le altre categorie di prodotto facendo clic sui nomi.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
+[Esercitazioni sul Generatore report](../reporting-services/report-builder-tutorials.md)  
   
 
