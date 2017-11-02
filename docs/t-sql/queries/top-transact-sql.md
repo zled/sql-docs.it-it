@@ -231,7 +231,7 @@ ORDER BY Rate DESC;
 ###  <a name="DML"></a>Limitazione delle righe interessate da DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizzo di TOP per limitare il numero di righe eliminate  
- Quando TOP (*n*) clausola viene utilizzata con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di  *n*  numero di righe. Ovvero, l'istruzione DELETE sceglie qualsiasi (*n*) numero di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono eliminate `20` righe dalla tabella `PurchaseOrderDetail` con scadenze precedenti al 1* luglio 2002.  
+ Quando TOP (*n*) clausola viene utilizzata con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di  *n*  numero di righe. Ovvero, l'istruzione DELETE sceglie qualsiasi (*n*) numero di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono eliminate `20` righe dalla tabella `PurchaseOrderDetail` con scadenze precedenti al 1 luglio 2002.  
   
 ```  
 USE AdventureWorks2012;  
