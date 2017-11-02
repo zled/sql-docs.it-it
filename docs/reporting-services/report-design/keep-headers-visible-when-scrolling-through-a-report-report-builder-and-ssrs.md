@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**.  
   
-3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei membri Tablix **** .  
+3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   
      ![Proprietà membro Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "proprietà membro Tablix")  
   

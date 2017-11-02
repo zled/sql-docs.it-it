@@ -15,8 +15,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cc52b4687f9a2c944ea3a93c15b637d894c7a96
 ms.contentlocale: it-it
@@ -53,4 +52,3 @@ Essendo applicata sulla casella di testo e non sul testo, la rotazione interessa
  [Esercitazione: Formattazione di testo &#40; Generatore report &#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   
-
