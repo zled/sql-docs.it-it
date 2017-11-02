@@ -108,7 +108,7 @@ ms.lasthandoff: 09/26/2017
  Negli esempi che seguono viene illustrato il codice che è necessario il **la classe ScriptMain** classe per creare un componente di destinazione.  
   
 > [!NOTE]  
->  Negli esempi viene utilizzata la **Person. Address** tabella il **AdventureWorks** database di esempio e passate la prima e la quarta colonna, il  **int*AddressID* * * e **nvarchar (30) Città** colonne, tramite il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
+>  Negli esempi viene utilizzata la **Person. Address** tabella il **AdventureWorks** database di esempio e passate la prima e la quarta colonna, il **int*AddressID*** e **nvarchar (30) Città** colonne, tramite il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
   
 ### <a name="adonet-destination-example"></a>Esempio di destinazione ADO.NET  
  Questo esempio viene illustrato un componente di destinazione che utilizza un oggetto esistente [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestione connessione per salvare i dati dal flusso di dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella.  
