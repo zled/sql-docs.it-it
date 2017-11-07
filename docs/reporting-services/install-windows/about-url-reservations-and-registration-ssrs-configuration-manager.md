@@ -20,10 +20,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |SQL Server Express|Portale Web|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticazione e identità del servizio per gli URL di Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Le prenotazioni URL specificano l'account del servizio del servizio Server di Report. L'account con cui viene eseguito il servizio viene utilizzato per tutti gli URL creati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione nella stessa istanza. L'identità del servizio dell'istanza del server di report viene archiviata nel file RSReportServer.config.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specificano l'account del servizio del server di report. L'account con cui viene eseguito il servizio viene utilizzato per tutti gli URL creati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione nella stessa istanza. L'identità del servizio dell'istanza del server di report viene archiviata nel file RSReportServer.config.  
   
  L'account del servizio non prevede alcun valore predefinito. È tuttavia obbligatorio definire un account del servizio durante l'esecuzione del programma di installazione, specificandolo nella sezione **URLReservation** del file RSReportServer.config, anche se il server viene installato in modalità "solo file". I valori validi per l'account del servizio includono un account utente di dominio, **LocalSystem**o **NetworkService**.  
   
@@ -112,8 +112,8 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] e versioni successive includono nuove funzionalità di sicurezza per ridurre al minimo il rischio di eseguire inavvertitamente programmi con privilegi elevati. Per attivare l'amministrazione locale su tali sistemi operativi, è necessario eseguire operazioni aggiuntive. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un URL &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Sintassi delle prenotazioni URL &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Sintassi delle prenotazioni URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 
