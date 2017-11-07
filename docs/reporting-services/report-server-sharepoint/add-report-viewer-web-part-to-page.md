@@ -50,7 +50,7 @@ Visualizzare un report, da SQL Server Reporting Services o Server di Report di P
 
     ![Inserire una web part dalla barra multifunzione di office.](media/sharepoint-insert-web-part.png)
 
-4. In **categorie**selezionare * * SQL Server Reporting Services (modalità nativa). In **parti**selezionare **Visualizzatore Report**. Selezionare quindi **Aggiungi**.
+4. In **categorie**selezionare **SQL Server Reporting Services (modalità nativa). In **parti**selezionare **Visualizzatore Report**. Selezionare quindi **Aggiungi**.
 
     ![Aggiungere una web part Visualizzatore Report.](media/sharepoint-report-viewer-web-part.png)
 
