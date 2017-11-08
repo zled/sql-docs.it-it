@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Controlla l'integrità di tutte le pagine e strutture che compongono la tabella o vista indicizzata.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Controlla l'integrità di tutte le pagine e strutture che compongono la tabella o vista indicizzata.
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Sintassi    
@@ -160,7 +160,7 @@ I controlli di consistenza logica negli indici variano in base al livello di com
 [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Snapshot di database interno    
-DBCC CHECKTABLE utilizza uno snapshot interno del database per garantire la consistenza transazionale necessaria per l'esecuzione di questi controlli. Per ulteriori informazioni, vedere [visualizzare le dimensioni del File Sparse di uno Snapshot del Database &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "DBCC dell'utilizzo di Snapshot interno del Database" in [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE utilizza uno snapshot interno del database per garantire la consistenza transazionale necessaria per l'esecuzione di questi controlli. Per ulteriori informazioni, vedere [visualizzare le dimensioni del File Sparse di uno Snapshot del Database & #40; Transact-SQL & #41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "DBCC dell'utilizzo di Snapshot interno del Database" in [DBCC & #40; Transact-SQL & #41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Se non è possibile creare uno snapshot o se viene specificato TABLOCK, DBCC CHECKTABLE acquisisce un blocco condiviso a livello di tabella per ottenere la consistenza necessaria.
     
 > [!NOTE]    
