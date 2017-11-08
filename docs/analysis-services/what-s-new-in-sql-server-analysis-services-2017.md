@@ -1,6 +1,6 @@
 ---
 title: "Novità di Analysis Services di SQL Server 2017 | Documenti Microsoft"
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: it-it
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Novità di SQL Server 2017 Analysis Services
@@ -47,9 +47,9 @@ Per aggiornare un modello tabulare esistente in SSDT, in Esplora soluzioni fare 
 È importante tenere presente, quando si aggiorna un modello esistente a 1400, è possibile effettuare il downgrade. Assicurarsi di mantenere un backup del database modello 1200.
 
 ## <a name="modern-get-data-experience"></a>Funzionalità moderna per il recupero di dati
-Se si desidera inserire i dati da origini dati nei modelli tabulari, SQL Server Data Tools (SSDT) introduce il moderno **recupera dati** esperienza per i modelli a livello di compatibilità 1400. Questa nuova funzionalità si basa su una funzionalità simile in Power BI Desktop e Microsoft Excel 2016. L'esperienza di recupera dati moderni offre funzionalità di mashup di dati e la trasformazione dei dati di un'enorme utilizzando il generatore delle query di dati e le espressioni di M.
+Se si desidera importare dati da origini di dati nei modelli tabulari, SQL Server Data Tools (SSDT) introduce il moderno **recupera dati** esperienza per i modelli a livello di compatibilità 1400. Questa nuova funzionalità si basa su una funzionalità simile in Power BI Desktop e Microsoft Excel 2016. L'esperienza di recupera dati moderni offre funzionalità di mashup di dati e la trasformazione dei dati di un'enorme utilizzando il generatore delle query di dati e le espressioni di M.
 
-Recupera dati moderni esperienza fornito supporto per un'ampia gamma di origine dati aggiuntiva. Gli aggiornamenti futuri supporta origini dati aggiuntive.
+L'esperienza di recupera dati moderni fornisce supporto per un'ampia gamma di origini dati. In futuro, gli aggiornamenti verranno includono il supporto per ulteriormente.
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
