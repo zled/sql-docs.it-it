@@ -1,8 +1,9 @@
 ---
 title: Ripristino di emergenza di SQL Server in Linux | Documenti Microsoft
 description: 
-author: mihaelab
+author: allanhirt
 ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
