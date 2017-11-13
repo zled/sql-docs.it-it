@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
  L'albero di ogni attributo stimabile contiene informazioni che descrivono il modo in cui le colonne di input scelte incidono sul risultato di quel particolare attributo stimabile. Ogni albero ha inizio da un nodo (NODE_TYPE = 9) che contiene l'attributo stimabile, seguito da una serie di nodi (NODE_TYPE = 10) che rappresentano gli attributi di input. Un attributo corrisponde a una colonna del livello del case o a valori di colonne di tabella annidata che in genere corrispondono ai valori nella colonna **Chiave** della tabella annidata.  
   
- I nodi interni e i nodi foglia rappresentano le condizioni di divisione. Un albero può dividersi più volte sullo stesso attributo. Il modello **TM_DecisionTree** può ad esempio dividersi su [Reddito annuo] e su [Number of Children] (Numero di figli) e quindi dividersi nuovamente su [Reddito annuo] a un livello inferiore nell'albero.  
+ I nodi interni e i nodi foglia rappresentano le condizioni di divisione. Un albero può dividersi più volte sullo stesso attributo. Il modello **TM_DecisionTree** può ad esempio dividersi su [Reddito annuo] e su [Number of Children]\ (Numero di figli) e quindi dividersi nuovamente su [Reddito annuo] a un livello inferiore nell'albero.  
   
  L'algoritmo Microsoft Decision Trees può contenere anche regressioni lineari in tutto l'albero o in parte di esso. Se l'attributo di cui si crea il modello presenta un tipo di dati numerici continui, è possibile creare un nodo di albero di regressione (NODE_TYPE = 25) in ogni punto in cui la relazione tra gli attributi può essere modellata in modo lineare. In questo caso, il nodo contiene una formula di regressione.  
   

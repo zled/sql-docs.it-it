@@ -53,7 +53,7 @@ ms.lasthandoff: 08/03/2017
   
  Sono necessarie autorizzazioni aggiuntive nel caso in cui l'account di processo sia rappresentato durante l'attivazione delle connessioni. Vedere le sezioni **Connetti al server di distribuzione** e **Connetti al Sottoscrittore** seguenti.  
   
- Non è possibile specificare l'account di processo**** per le sottoscrizioni pull di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], poiché l'agente di distribuzione non viene eseguito nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ Non è possibile specificare **l'account di processo** per le sottoscrizioni pull di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], poiché l'agente di distribuzione non viene eseguito nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Password** e **Conferma password**  
  Immettere la password per l'account di Windows.  
