@@ -22,8 +22,7 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
 ms.contentlocale: it-it
@@ -56,13 +55,13 @@ ms.lasthandoff: 08/09/2017
   
 -   Usare parametri per correlare report principali a report drill-through, sottoreport e report collegati. Durante la progettazione di un set di report, ogni report viene progettato in modo da rispondere a domande specifiche. In particolare, ogni report è in grado di offrire una vista diversa o un livello di dettaglio diverso per le informazioni correlate. Per ottenere un set di report correlati tra loro, creare i parametri per i dati correlati nei report di destinazione.  
   
-     Per altre informazioni, vedere [Report drill-through &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Sottoreport &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md) e [Creare un report collegato](../../reporting-services/reports/create-a-linked-report.md).  
+     Per ulteriori informazioni, vedere [report drill-through &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Sottoreport &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), e [creare un Report collegato](../../reporting-services/reports/create-a-linked-report.md).  
   
 -   Personalizzare set di parametri per più utenti. Creare due report collegati basati su un report relativo alle vendite sul server di report. In un report collegato vengono usati i valori di parametro predefiniti per i venditori mentre nel secondo report collegato vengono usati i valori di parametro predefiniti per i responsabili vendite. In entrambi i report viene usata la stessa definizione report.  
   
  **Variare la presentazione del report**  
   
--   Inviare comandi a un server di report tramite una richiesta URL, per personalizzare il rendering di un report. Per altre informazioni, vedere [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) e [Passare un parametro del report in un URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
+-   Inviare comandi a un server di report tramite una richiesta URL, per personalizzare il rendering di un report. Per ulteriori informazioni, vedere [accesso con URL &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md) e [passare un parametro di Report all'interno di un URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
 -   Consentire agli utenti di specificare valori per personalizzare l'aspetto di un report. È ad esempio possibile fornire un parametro booleano per indicare se espandere o comprimere tutti i gruppi di righe nidificati in una tabella.  
   
@@ -124,10 +123,10 @@ ms.lasthandoff: 08/09/2017
   
  Aggiungere una parte del report in cui siano inclusi riferimenti a un parametro o a un set di dati condiviso contenente variabili.  
   
- Le parti di report vengono archiviate sul server di report e possono quindi essere usate da altri utenti nei propri report. Le parti di report corrispondenti a parametri non possono essere gestite dal server di report. È possibile cercare i parametri in Raccolta parti del report e configurarli nel report dopo averli aggiunti. Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Le parti di report vengono archiviate sul server di report e possono quindi essere usate da altri utenti nei propri report. Le parti di report corrispondenti a parametri non possono essere gestite dal server di report. È possibile cercare i parametri in Raccolta parti del report e configurarli nel report dopo averli aggiunti. Per altre informazioni, vedere [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  I parametri possono essere pubblicati come parte del report separata per aree dati che dispongono di set di dati dipendenti con parametri. Sebbene i parametri siano elencati come parte del report, non è possibile aggiungere un parametro della parte del report direttamente a un report. Aggiungere invece la parte del report e tutti i parametri del report necessari vengono generati automaticamente da query del set di dati contenute o a cui fa riferimento la parte del report. Per altre informazioni sulle parti del report, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) e [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+>  I parametri possono essere pubblicati come parte del report separata per aree dati che dispongono di set di dati dipendenti con parametri. Sebbene i parametri siano elencati come parte del report, non è possibile aggiungere un parametro della parte del report direttamente a un report. Aggiungere invece la parte del report e tutti i parametri del report necessari vengono generati automaticamente da query del set di dati contenute o a cui fa riferimento la parte del report. Per ulteriori informazioni sulle parti del report, vedere [parti di Report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) e [parti in Progettazione Report &#40; di Report SSRS &#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ### <a name="parameter-values"></a>Valori di parametri  
  Di seguito sono riportate le opzioni per selezionare i valori di parametri nel report.  
@@ -165,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
  Usare Progettazione query per l'origine dati per compilare una query con parametri.  
   
--   Per query [!INCLUDE[tsql](../../includes/tsql-md.md)] , origini dati diverse supportano una sintassi diversa per i parametri. Supportare gli intervalli dei parametri identificati nella query in base alla posizione o al nome. Per altre informazioni, vedere gli argomenti sui tipi specifici di origini dati esterne in [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). Nella finestra Progettazione query relazionale, è necessario selezionare l'opzione del parametro di filtro per creare una query con parametri. Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
+-   Per query [!INCLUDE[tsql](../../includes/tsql-md.md)] , origini dati diverse supportano una sintassi diversa per i parametri. Supportare gli intervalli dei parametri identificati nella query in base alla posizione o al nome. Per ulteriori informazioni, vedere gli argomenti per i tipi di origini dati esterni specifici in [i set di dati &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md). Nella finestra Progettazione query relazionale, è necessario selezionare l'opzione del parametro di filtro per creare una query con parametri. Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
 -   Per query basate su un'origine di dati multidimensionale quale Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, è possibile specificare se creare un parametro basato su un filtro specificato in Progettazione query. Per altre informazioni, vedere l'argomento relativo alla progettazione query corrispondente all'estensione per i dati in [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
@@ -184,7 +183,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Sottoscrizioni di report.** È possibile specificare valori di parametri per filtrare i dati e recapitare report tramite sottoscrizioni. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
--   **Accesso con URL.** È possibile specificare valori del parametro in un URL di un report. Inoltre è possibile eseguire report e specificare valori di parametri usando l'accesso a URL. Per altre informazioni, vedere [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Accesso con URL.** È possibile specificare valori del parametro in un URL di un report. Inoltre è possibile eseguire report e specificare valori di parametri usando l'accesso a URL. Per ulteriori informazioni, vedere [accesso con URL &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md).  
   
  Le proprietà dei parametri per un report pubblicato vengono in genere mantenute se si pubblica nuovamente la definizione del report. Se la definizione del report viene ripubblicata senza modifiche e i nomi dei parametri e i tipi di dati rimangono invariati, le impostazioni delle proprietà verranno mantenute. Se si aggiungono o eliminano parametri nella definizione del report oppure si modifica il tipo di dati o il nome di un parametro esistente, potrebbe essere necessario modificare le proprietà dei parametri nel report pubblicato.  
   

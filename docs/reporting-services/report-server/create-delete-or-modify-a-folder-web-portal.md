@@ -14,8 +14,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: it-it
@@ -27,9 +26,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>Per creare una cartella  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare il [gestione Report &#40; Modalità nativa SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  Nel portale Web selezionare **Cartella** dal menu a discesa **Nuovo**. In alternativa, per creare una cartella all'interno di una già esistente, passare alla cartella desiderata e selezionare **Cartella** dal menu a discesa **Nuovo** .  
+2.  Nel portale Web selezionare **Cartella** dal menu a discesa **Nuovo** . In alternativa, per creare una cartella all'interno di una già esistente, passare alla cartella desiderata e selezionare **Cartella** dal menu a discesa **Nuovo** .  
   
      Verrà visualizzata la finestra di dialogo **Crea nuova cartella** .  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/09/2017
 6.  Fare clic su **Applica** per salvare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

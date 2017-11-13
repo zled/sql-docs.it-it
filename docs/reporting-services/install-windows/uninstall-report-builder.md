@@ -15,8 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
 ms.contentlocale: it-it
@@ -67,4 +66,3 @@ Se le cartelle utilizzate da Generatore report includono file personalizzati, le
 [Installare Generatore report](../../reporting-services/install-windows/install-report-builder.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
