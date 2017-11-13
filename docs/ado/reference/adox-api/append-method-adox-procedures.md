@@ -51,7 +51,7 @@ Procedures.Append Name, Command
  Se il testo del comando specificato dall'utente rappresenta una vista piuttosto che una stored procedure, il comportamento è dipende dal provider in uso. **Aggiungere** avrà esito negativo se il provider non supporta i comandi di persistenza.  
   
 > [!NOTE]
->  Quando si utilizza il Provider OLE DB per Microsoft Jet, la **procedure** raccolta **Append** metodo consente di specificare un **vista** piuttosto che un ** Procedura** nel *comando* parametro. Il **vista** verrà aggiunto all'origine dati e verrà aggiunto al **procedure** insieme. Dopo il **Append**, se il **procedure** e **viste** raccolte vengono aggiornate, il **visualizzazione** non sarà più possibile nel **Procedure** insieme e verranno visualizzati di **viste** insieme.  
+>  Quando si utilizza il Provider OLE DB per Microsoft Jet, la **procedure** raccolta **Append** metodo consente di specificare un **vista** piuttosto che un  **Procedura** nel *comando* parametro. Il **vista** verrà aggiunto all'origine dati e verrà aggiunto al **procedure** insieme. Dopo il **Append**, se il **procedure** e **viste** raccolte vengono aggiornate, il **visualizzazione** non sarà più possibile nel **Procedure** insieme e verranno visualizzati di **viste** insieme.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Raccolta di procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  

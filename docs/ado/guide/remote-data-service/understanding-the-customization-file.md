@@ -67,7 +67,7 @@ identifier
   
 -   Oggetto **userlist** sezione viene utilizzata se il **userlist** sezione identificatore corrisponde un **connettersi** identificatore di sezione. Se viene trovata una corrispondenza, il contenuto del **userlist** sezione vengono applicate alla connessione disciplinata il **connettersi** sezione.  
   
--   Se la stringa in una stringa di connessione o un comando corrisponde a quello in qualsiasi **connettersi** o **sql** sezione di intestazione e non esiste alcun **connettersi** o **sql ** sezione di intestazione con un parametro predefinito, la stringa del client viene usato senza alcuna modifica.  
+-   Se la stringa in una stringa di connessione o un comando corrisponde a quello in qualsiasi **connettersi** o **sql** sezione di intestazione e non esiste alcun **connettersi** o **sql**  sezione di intestazione con un parametro predefinito, la stringa del client viene usato senza alcuna modifica.  
   
 -   Il **registri** sezione viene utilizzata ogni volta che il **DataFactory** è in esecuzione.  
   

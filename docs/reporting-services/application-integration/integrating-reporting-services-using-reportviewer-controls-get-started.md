@@ -243,7 +243,7 @@ Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet. Per 
 
     ![ssRS-remove-vecchio-rvcontrol-della casella degli strumenti](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Fare clic in un punto qualsiasi nella casella degli strumenti e quindi selezionare **Scegli elementi... **.
+3. Fare clic in un punto qualsiasi nella casella degli strumenti e quindi selezionare **Scegli elementi...** .
 
     ![ssRS--scegliere-elemento](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

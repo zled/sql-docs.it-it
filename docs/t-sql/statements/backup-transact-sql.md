@@ -181,7 +181,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  Dopo un tipico backup del log, alcuni record del log delle transazioni diventano inattivi, a meno che non si specifichi WITH NO_TRUNCATE o COPY_ONLY. Il log viene troncato dopo che tutti i record in uno o più file di log virtuali diventano inattivi. Se il log non viene troncato dopo i backup del log di routine, è possibile che una causa imprevista provochi un ritardo nel troncamento del log. Per altre informazioni, vedere  
   
  { *database_name* | **@**database_name_var *}   
- Nome del database di cui viene eseguito il backup del log delle transazioni oppure il backup parziale o completo del database. Se specificato come variabile (**@***database_name_var*), questo nome può essere specificato come costante stringa (** @ ** * database_name_var***=***nome del database*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
+ Nome del database di cui viene eseguito il backup del log delle transazioni oppure il backup parziale o completo del database. Se specificato come variabile (**@***database_name_var*), questo nome può essere specificato come costante stringa ( **@**   *database_name_var***=***nome del database*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
   
 > [!NOTE]  
 >  Non è possibile eseguire il backup del database mirror in una relazione di mirroring di database.  
@@ -189,10 +189,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 \<file_or_filegroup > [ **,**... *n* ]  
  Utilizzato solo con BACKUP DATABASE, specifica un file o filegroup di database da includere in un backup del file oppure un file o filegroup di sola lettura da includere in un backup parziale.  
   
- FILE ** = ** { *nome_file_logico*| **@***logical_file_name_var* }  
+ FILE  **=**  { *nome_file_logico*| **@***logical_file_name_var* }  
  Nome logico di un file o di una variabile il cui valore equivale al nome logico di un file da includere nel backup.  
   
- FILEGROUP ** = ** { *nome_filegroup_logico*| **@***logical_filegroup_name_var* }  
+ FILEGROUP  **=**  { *nome_filegroup_logico*| **@***logical_filegroup_name_var* }  
  Nome logico di un filegroup o di una variabile il cui valore equivale al nome logico di un filegroup da includere nel backup. Con il modello di recupero con registrazione minima, il backup dei filegroup è consentito solo per i filegroup di sola lettura.  
   
 > [!NOTE]  
@@ -220,14 +220,14 @@ Nome logico di un filegroup di sola lettura o di una variabile il cui valore equ
   
  Per ulteriori informazioni sui backup parziali, vedere [backup parziali &#40; SQL Server &#41; ](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-PER \<dispositivo_backup > [ **,**... * n * ] Indica che l'accompagna set di [dispositivi di backup](../../relational-databases/backup-restore/backup-devices-sql-server.md) è un set di supporti senza mirroring o il primo mirror in un set (per cui una o più MIRROR TO di supporti con mirroring le clausole vengono dichiarate).  
+PER \<dispositivo_backup > [ **,**...  *n*  ] Indica che l'accompagna set di [dispositivi di backup](../../relational-databases/backup-restore/backup-devices-sql-server.md) è un set di supporti senza mirroring o il primo mirror in un set (per cui una o più MIRROR TO di supporti con mirroring le clausole vengono dichiarate).  
   
 \<dispositivo_backup > specifica un dispositivo di backup logico o fisico da utilizzare per l'operazione di backup.  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
- Nome logico del dispositivo di backup in cui viene eseguito il backup del database. Il nome logico deve essere conforme alle regole per gli identificatori. Se specificato come variabile (@*logical_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa (@*logical_device_name_var* ** = ** nome dispositivo di backup logico) oppure come variabile di qualsiasi tipo di dati stringa di caratteri, ad eccezione del **ntext** o **testo** tipi di dati.  
+ Nome logico del dispositivo di backup in cui viene eseguito il backup del database. Il nome logico deve essere conforme alle regole per gli identificatori. Se specificato come variabile (@*logical_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa (@*logical_device_name_var*  **=**  nome dispositivo di backup logico) oppure come variabile di qualsiasi tipo di dati stringa di caratteri, ad eccezione del **ntext** o **testo** tipi di dati.  
   
- {DISCO | NASTRO | URL} ** = ** { **'***physical_device_name***'**  |  ** @ ** *physical_device_name_var* }  
+ {DISCO | NASTRO | URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
  Specifica un file su disco o su nastro o un servizio di archiviazione Blob di Windows Azure. Il formato dell'URL viene utilizzato per la creazione di backup per il servizio di archiviazione Windows Azure. Per ulteriori informazioni ed esempi, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per un'esercitazione, vedere [esercitazione: Backup di SQL Server e il ripristino in Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
 > [!IMPORTANT]  
@@ -245,7 +245,7 @@ PER \<dispositivo_backup > [ **,**... * n * ] Indica che l'accompagna set di [di
  *n*  
  Segnaposto che indica la possibilità di specificare fino a 64 dispositivi di backup in un elenco delimitato da virgole.  
   
-MIRROR TO \<dispositivo_backup > [ **,**... * n * ] Specifica un set di fino a tre dispositivi di backup secondari, ognuno dei quali mirror dei dispositivi di backup specificati nella clausola TO. La clausola MIRROR TO deve specificare lo stesso tipo e numero di dispositivi di backup indicati nella clausola TO. Il numero massimo di clausole MIRROR TO è tre.  
+MIRROR TO \<dispositivo_backup > [ **,**...  *n*  ] Specifica un set di fino a tre dispositivi di backup secondari, ognuno dei quali mirror dei dispositivi di backup specificati nella clausola TO. La clausola MIRROR TO deve specificare lo stesso tipo e numero di dispositivi di backup indicati nella clausola TO. Il numero massimo di clausole MIRROR TO è tre.  
   
  Questa opzione è disponibile solo nella Enterprise Edition di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -310,7 +310,7 @@ MIRROR TO \<dispositivo_backup > [ **,**... * n * ] Specifica un set di fino a t
 Queste opzioni riguardano il set di backup creato dall'operazione di backup.  
   
 > [!NOTE]  
->  Per specificare un set di backup per un'operazione di ripristino, utilizzare il FILE ** = ** * \<backup_set_file_number >* opzione. Per ulteriori informazioni su come specificare un set di backup, vedere "Specifica di un Set di Backup" in [argomenti RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  Per specificare un set di backup per un'operazione di ripristino, utilizzare il FILE  **=**   *\<backup_set_file_number >* opzione. Per ulteriori informazioni su come specificare un set di backup, vedere "Specifica di un Set di Backup" in [argomenti RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Specifica che il backup è un *backup di sola copia*, che non influisce sulla normale sequenza di backup. Un backup di sola copia viene creato indipendentemente dai normali backup pianificati regolarmente. Un backup di sola copia non ha alcun impatto sulle procedure generali di backup e ripristino per il database.  
@@ -340,10 +340,10 @@ Disabilita in modo esplicito la compressione dei backup.
 DESCRIPTION **=** { **'***testo***'** | **@***variabile_testo* }  
 Specifica il testo in formato libero che descrive il set di backup. La stringa può essere composta da un massimo di 255 caratteri.  
   
-NOME ** = ** { *nome_set_backup*| **@***backup_set_var* }  
+NOME  **=**  { *nome_set_backup*| **@***backup_set_var* }  
 Specifica il nome del set di backup. I nomi possono essere composti da un massimo di 128 caratteri. Se si omette NAME, al set di backup non viene assegnato alcun nome specifico.  
   
-{EXPIREDATE **='***data***'**| RETAINDAYS ** = ** *giorni* }  
+{EXPIREDATE **='***data***'**| RETAINDAYS  **=**  *giorni* }  
 Indica quando è possibile sovrascrivere il set di backup per il backup specifico. Se si utilizzano entrambe le opzioni, RETAINDAYS ha la precedenza rispetto a EXPIREDATE.  
   
 Se nessuna delle due opzioni vengano specificata, la data di scadenza è determinata dal **mediaretention** impostazione di configurazione. Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)sia installato il servizio WMI.  
@@ -351,10 +351,10 @@ Se nessuna delle due opzioni vengano specificata, la data di scadenza è determi
 > [!IMPORTANT]  
 >  Queste opzioni impediscono esclusivamente la sovrascrittura di file da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile cancellare i nastri con altri metodi e i file su disco possono essere eliminati tramite il sistema operativo. Per ulteriori informazioni sulla verifica della scadenza, vedere le opzioni SKIP e FORMAT in questo argomento.  
   
-EXPIREDATE ** = ** { **'***data***'** |  ** @ ** *date_var* }  
+EXPIREDATE  **=**  { **'***data***'** |   **@**  *date_var* }  
  Specifica quando il set di backup scade e può essere sovrascritto. Se specificato come variabile (@*date_var*), la data deve seguire il sistema nella configurazione **datetime** formattare ed essere specificati come uno dei seguenti:  
   
--   Costante stringa (@*date_var* ** = ** Data)  
+-   Costante stringa (@*date_var*  **=**  Data)  
 -   Una variabile di tipo carattere (tranne che per il **ntext** o **testo** tipi di dati)  
 -   Oggetto **smalldatetime**  
 -   Oggetto **datetime** variabile  
@@ -369,7 +369,7 @@ Per informazioni su come specificare **datetime** valori, vedere [tipi data e or
 > [!NOTE]  
 >  Per ignorare la data di scadenza, utilizzare l'opzione SKIP.  
   
-RETAINDAYS ** = ** { *giorni*| **@***days_var* }  
+RETAINDAYS  **=**  { *giorni*| **@***days_var* }  
  Specifica il numero di giorni che devono trascorrere prima che il set di supporti di backup possa essere sovrascritto. Se specificato come variabile (**@***days_var*), deve essere specificato come intero.  
   
 **Opzioni Set di supporti**  
@@ -424,13 +424,13 @@ Specifica che deve essere creato un nuovo set di supporti. FORMAT comporta la sc
   
 L'utilizzo dell'opzione FORMAT implica l'utilizzo di SKIP. Non è quindi necessario specificare SKIP in modo esplicito.  
   
-MEDIADESCRIPTION ** = ** { *testo* | **@***variabile_testo* }  
+MEDIADESCRIPTION  **=**  { *testo* | **@***variabile_testo* }  
 Specifica la descrizione di testo in formato libero del set di supporti, composta da un massimo di 255 caratteri.  
   
-MEDIANAME ** = ** { *nome_supporto* | **@***variabile_nome_supporto* }  
+MEDIANAME  **=**  { *nome_supporto* | **@***variabile_nome_supporto* }  
 Specifica il nome dei supporti per l'intero set di supporti di backup. Il nome dei supporti deve essere composto da un massimo di 128 caratteri. Se si specifica MEDIANAME, il nome deve corrispondere al nome dei supporti precedentemente specificato già esistente nei volumi di backup. Se si omette MEDIANAME oppure si specifica l'opzione SKIP, non viene eseguita alcuna verifica del nome dei supporti.  
   
-BLOCKSIZE ** = ** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
 Specifica le dimensioni fisiche del blocco, in byte. Le dimensioni supportate sono 512, 1024, 2048, 4096, 8192, 16384, 32768 e 65536 (64 KB) byte. Il valore predefinito è 65536 per i dispositivi nastro e 512 negli altri casi. Questa opzione non è in genere necessaria, in quanto vengono selezionate automaticamente le dimensioni del blocco più appropriate per il dispositivo. L'impostazione esplicita delle dimensioni del blocco ha la priorità sulla selezione automatica.  
   
 Se si esegue un backup che si desidera copiare in e ripristinare da un CD-ROM, specificare BLOCKSIZE=2048.  
@@ -440,7 +440,7 @@ Se si esegue un backup che si desidera copiare in e ripristinare da un CD-ROM, s
   
 **Opzioni di trasferimento di dati**  
   
-BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
 Specifica il numero totale di buffer di I/O da utilizzare per l'operazione di backup. È possibile specificare qualsiasi numero intero positivo. Un numero elevato di buffer può tuttavia causare errori di memoria insufficiente dovuti a spazio degli indirizzi virtuali non adeguato nel processo Sqlservr.exe.  
   
 Lo spazio totale utilizzato dai buffer viene determinato da: *buffercount***\****maxtransfersize*.  
@@ -448,7 +448,7 @@ Lo spazio totale utilizzato dai buffer viene determinato da: *buffercount***\***
 > [!NOTE]  
 >  Per informazioni importanti sull'utilizzo dell'opzione BUFFERCOUNT, vedere il [opzione di trasferimento dati BufferCount non corretta può causare condizione OOM](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
-MAXTRANSFERSIZE ** = ** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
  Specifica le dimensioni massime, in byte, per il trasferimento tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i supporti di backup. I valori possibili sono i multipli di 65536 byte (64 KB) fino a 4194304 byte (4 MB).  
 > [!NOTE]  
 >  Durante la creazione di backup utilizzando il servizio Writer SQL, se il database è configurato FILESTREAM o include gruppi di File OLTP In memoria, la `MAXTRANSFERSIZE` in fase di ripristino deve essere maggiore o uguale al `MAXTRANSFERSIZE` che è stato utilizzato quando il è stato creato il backup. 
@@ -490,7 +490,7 @@ A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], non ha alcun e
   
 **Opzioni di monitoraggio**  
   
-STATISTICHE [ ** = ** *percentuale* ]  
+STATISTICHE [  **=**  *percentuale* ]  
  Viene visualizzato un messaggio ogni volta che un altro *percentuale* completa e viene utilizzato per misurare lo stato di avanzamento. Se *percentuale* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un messaggio dopo ogni 10% è stata completata.  
   
 L'opzione STATS segnala la percentuale di completamento in base alla soglia specificata per l'intervallo successivo. Si tratta approssimativamente della percentuale specificata. Con l'impostazione STATS=10, ad esempio, se la percentuale di completamento corrisponde al 40%, potrebbe venire indicata una percentuale uguale al 43%. Per i set di backup di grandi dimensioni ciò non rappresenta un problema, perché la percentuale di completamento aumenta molto lentamente tra le varie chiamate di I/O completate.  
@@ -531,13 +531,13 @@ Queste opzioni vengono utilizzate solo con BACKUP LOG.
 > [!NOTE]  
 >  Se non si desidera eseguire un backup del log, utilizzare il modello di recupero con registrazione minima. Per altre informazioni, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{NORECOVERY | STANDBY ** = ** *nome_file_ripristino* }  
+{NORECOVERY | STANDBY  **=**  *nome_file_ripristino* }  
   NORECOVERY  
   Consente di eseguire il backup della parte finale del log lasciando il database nello stato RESTORING. L'opzione NORECOVERY risulta utile quando si esegue il failover in un database secondario o per salvare la parte finale del log prima di un'operazione RESTORE.  
   
   Utilizzare insieme le opzioni NO_TRUNCATE e NORECOVERY per eseguire un backup del log senza troncamento del log e quindi portare il database nello stato RESTORING in modo atomico.  
   
-  STANDBY ** = ** *standby_file_name*  
+  STANDBY  **=**  *standby_file_name*  
   Consente di eseguire il backup della parte finale del log lasciando il database nello stato STANDBY e di sola lettura. La clausola STANDBY scrive i dati di standby (esecuzione del rollback ma con la possibilità di ulteriori ripristini). L'utilizzo dell'opzione STANDBY equivale all'esecuzione di BACKUP LOG WITH NORECOVERY seguita da RESTORE WITH STANDBY.  
   
   Utilizzare la modalità standby richiede un file standby, specificato da *standby_file_name*, il cui percorso è archiviato nel registro del database. Se il file specificato esiste già, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] lo sovrascrive. Se il file non esiste, viene creato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il file standby diventa un elemento integrante del database.  

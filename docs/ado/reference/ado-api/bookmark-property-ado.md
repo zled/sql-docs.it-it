@@ -40,7 +40,7 @@ Indica un segnalibro che identifica in modo univoco il record corrente in un [Re
   
  L'utente potrebbe non essere in grado di visualizzare il valore del segnalibro. Inoltre, gli utenti non devono aspettarsi che segnalibri in modo da essere direttamente confrontabili??? due segnalibri che fanno riferimento allo stesso record possono avere valori diversi.  
   
- Se si utilizza il [Clone](../../../ado/reference/ado-api/clone-method-ado.md) metodo per creare una copia di un **Recordset** oggetto, il **segnalibro** impostazioni delle proprietà per originale e il duplicato **Recordset ** oggetti sono identici e utilizzarle in modo intercambiabile. Tuttavia, non è possibile utilizzare i segnalibri da diversi **Recordset** oggetti in modo intercambiabile, anche se sono stati creati dall'origine o comando stesso.  
+ Se si utilizza il [Clone](../../../ado/reference/ado-api/clone-method-ado.md) metodo per creare una copia di un **Recordset** oggetto, il **segnalibro** impostazioni delle proprietà per originale e il duplicato **Recordset**  oggetti sono identici e utilizzarle in modo intercambiabile. Tuttavia, non è possibile utilizzare i segnalibri da diversi **Recordset** oggetti in modo intercambiabile, anche se sono stati creati dall'origine o comando stesso.  
   
 > [!NOTE]
 >  **Utilizzo del servizio dati remoti** quando utilizzato sul lato client **Recordset** oggetto, il **segnalibro** proprietà è sempre disponibile.  

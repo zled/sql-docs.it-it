@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-deprecated-functions"></a>Mapping di funzioni deprecate
-Questa sezione vengono descritte le funzioni deprecate come viene eseguito il mapping da ODBC 3*x* gestione Driver per garantire la compatibilità con le versioni precedenti di ODBC 3*x* driver che vengono utilizzati con ODBC 2.* x* applicazioni. Gestione Driver esegue il mapping indipendentemente dalla versione dell'applicazione. Poiché ogni ODBC 2. *x* funzioni nell'elenco seguente viene eseguito il mapping per il corrispondente di ODBC 3*x* funzione quando viene chiamato in un'applicazione ODBC 3*x* driver ODBC 3*x*driver non è necessario implementare ODBC 2. *x* funzioni.  
+Questa sezione vengono descritte le funzioni deprecate come viene eseguito il mapping da ODBC 3*x* gestione Driver per garantire la compatibilità con le versioni precedenti di ODBC 3*x* driver che vengono utilizzati con ODBC 2. *x* applicazioni. Gestione Driver esegue il mapping indipendentemente dalla versione dell'applicazione. Poiché ogni ODBC 2. *x* funzioni nell'elenco seguente viene eseguito il mapping per il corrispondente di ODBC 3*x* funzione quando viene chiamato in un'applicazione ODBC 3*x* driver ODBC 3*x*driver non è necessario implementare ODBC 2. *x* funzioni.  
   
  Il mapping nell'elenco viene generato quando il driver è un'applicazione ODBC 3*x* e il driver non supporta la funzione che viene eseguito il mapping.  
   

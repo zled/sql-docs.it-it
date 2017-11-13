@@ -64,7 +64,7 @@ Indica il nome dell'oggetto.
   
  Il **nome** proprietà è di lettura/scrittura in [colonna](../../../ado/reference/adox-api/column-object-adox.md), [gruppo](../../../ado/reference/adox-api/group-object-adox.md), [chiave](../../../ado/reference/adox-api/key-object-adox.md), [indice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabella](../../../ado/reference/adox-api/table-object-adox.md), e [utente](../../../ado/reference/adox-api/user-object-adox.md) oggetti. Il **nome** proprietà è di sola lettura su [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedura](../../../ado/reference/adox-api/procedure-object-adox.md), e [visualizzazione](../../../ado/reference/adox-api/view-object-adox.md) oggetti.  
   
- Per gli oggetti di lettura/scrittura (**colonna**, **gruppo**, **chiave**, **indice**, **tabella** e ** Utente** oggetti), il valore predefinito è una stringa vuota ("").  
+ Per gli oggetti di lettura/scrittura (**colonna**, **gruppo**, **chiave**, **indice**, **tabella** e  **Utente** oggetti), il valore predefinito è una stringa vuota ("").  
   
 > [!NOTE]
 >  Per le chiavi, questa proprietà è di sola lettura su **chiave** già aggiunti a una raccolta di oggetti. Per le tabelle, questa proprietà è di sola lettura per **tabella** già aggiunti a una raccolta di oggetti.  

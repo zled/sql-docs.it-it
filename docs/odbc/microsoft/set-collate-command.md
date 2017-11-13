@@ -51,7 +51,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|Peso univoco|  
   
 > [!NOTE]  
->  Quando si specifica l'opzione SPAGNOLA, *ch* è una singola lettera che ordina tra *c* e *d*, e *ll* Ordina tra * l* e *m*.  
+>  Quando si specifica l'opzione SPAGNOLA, *ch* è una singola lettera che ordina tra *c* e *d*, e *ll* Ordina tra  *l* e *m*.  
   
  Se si specifica un'opzione della sequenza delle regole di confronto come una stringa di caratteri letterali, sarà necessario racchiudere tra virgolette l'opzione:  
   

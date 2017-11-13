@@ -52,13 +52,13 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, BufferLength)  
     ```  
   
- Nei tre casi precedenti, il **StatementHandle** argomento è impostato sul valore *hstmt*, *attributo* argomento è impostato sul valore *fOption *e *ValuePtr* argomento è impostato sul valore come *vParam*.  
+ Nei tre casi precedenti, il **StatementHandle** argomento è impostato sul valore *hstmt*, *attributo* argomento è impostato sul valore *fOption* e *ValuePtr* argomento è impostato sul valore come *vParam*.  
   
  Poiché gestione Driver non è noto se l'attributo di istruzione definito dal driver è necessario un valore stringa o integer a 32 bit, deve passare un valore valido per il *StringLength* argomento di **SQLSetStmtAttr**. Se il driver è definita una semantica speciale per gli attributi di istruzione definito dal driver e deve essere chiamato utilizzando **SQLSetStmtOption**, deve supportare **SQLSetStmtOption**.  
   
- Se un'applicazione chiama **SQLSetStmtOption** per impostare un'opzione di istruzione specifici del driver in un'applicazione ODBC 3*x* driver e l'opzione è stata definita in un ODBC 2.* x* la versione del driver, una nuova costante di manifesto deve essere definita per l'opzione in ODBC 3*x* driver. Se la costante manifesto precedente viene utilizzata nella chiamata a **SQLSetStmtOption**, Driver Manager chiamerà **SQLSetStmtAttr** con il *StringLength* argomento impostato su 0.  
+ Se un'applicazione chiama **SQLSetStmtOption** per impostare un'opzione di istruzione specifici del driver in un'applicazione ODBC 3*x* driver e l'opzione è stata definita in un ODBC 2. *x* la versione del driver, una nuova costante di manifesto deve essere definita per l'opzione in ODBC 3*x* driver. Se la costante manifesto precedente viene utilizzata nella chiamata a **SQLSetStmtOption**, Driver Manager chiamerà **SQLSetStmtAttr** con il *StringLength* argomento impostato su 0.  
   
- Quando un'applicazione chiama **SQLSetStmtAttr** su cui impostare SQL_ATTR_USE_BOOKMARKS SQL_UB_ON in un'applicazione ODBC 3*x* driver, l'attributo di istruzione di SQL_ATTR_USE_BOOKMARKS è impostato su SQL_UB_FIXED. SQL_UB_ON è la stessa costante come SQL_UB_FIXED. Gestione Driver passa SQL_UB_FIXED tramite il driver. SQL_UB_FIXED è stato deprecato in ODBC 3*x*, ma un'applicazione ODBC 3*x* driver deve implementare per funzionare con ODBC 2.* x* le applicazioni che utilizzano i segnalibri di lunghezza fissa.  
+ Quando un'applicazione chiama **SQLSetStmtAttr** su cui impostare SQL_ATTR_USE_BOOKMARKS SQL_UB_ON in un'applicazione ODBC 3*x* driver, l'attributo di istruzione di SQL_ATTR_USE_BOOKMARKS è impostato su SQL_UB_FIXED. SQL_UB_ON è la stessa costante come SQL_UB_FIXED. Gestione Driver passa SQL_UB_FIXED tramite il driver. SQL_UB_FIXED è stato deprecato in ODBC 3*x*, ma un'applicazione ODBC 3*x* driver deve implementare per funzionare con ODBC 2. *x* le applicazioni che utilizzano i segnalibri di lunghezza fissa.  
   
  Per un'applicazione ODBC 3*x* driver, gestione Driver non controlla se *opzione* è tra SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX, oppure è maggiore di SQL_CONNECT_OPT_DRVR_START.
 

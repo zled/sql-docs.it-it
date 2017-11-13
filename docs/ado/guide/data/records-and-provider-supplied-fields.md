@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="records-and-provider-supplied-fields"></a>I record e campi specificati dal Provider
 Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) viene aperto, la relativa origine può essere la riga corrente di un elemento aperto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), un URL assoluto o un URL relativo in combinazione con un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto .  
   
- Se il **Record** viene aperto da un **Recordset**, **Record** oggetto [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta conterrà tutti i campi di ** Recordset**, nonché tutti i campi aggiunti dal provider sottostante.  
+ Se il **Record** viene aperto da un **Recordset**, **Record** oggetto [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta conterrà tutti i campi di  **Recordset**, nonché tutti i campi aggiunti dal provider sottostante.  
   
  Il provider può inserire campi aggiuntivi che fungono da caratteristiche supplementari del **Record**. Di conseguenza, un **Record** può includere campi univoci non nel **Recordset** come intero o una qualsiasi **Record** derivato da un'altra riga del **Recordset**.  
   

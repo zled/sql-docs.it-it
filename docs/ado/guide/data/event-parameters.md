@@ -56,7 +56,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Se si determina nell'evento Will che l'operazione deve continuare, lasciare il *stato* parametro invariato. Fino a quando il parametro di stato in ingresso non è stato impostato su **adStatusCantDeny**, tuttavia, è possibile annullare l'operazione in sospeso modificando *stato* a **adStatusCancel**. Quando si esegue questa operazione, l'evento completo associato all'operazione è relativo *stato* parametro impostato su **adStatusErrorsOccurred**. Il **errore** oggetto passato per l'evento di completamento, conterrà il valore **adErrOperationCancelled**.  
   
- Se non si desidera elaborare un evento, è possibile impostare *stato* a **adStatusUnwantedEvent** e l'applicazione non riceverà più notifiche di quell ' evento. Tuttavia, tenere presente che alcuni eventi possono essere generati per più di un motivo. In tal caso, è necessario specificare **adStatusUnwantedEvent** per ciascun motivo possibili. Ad esempio, per interrompere la ricezione di notifiche in sospeso **RecordChange** eventi, è necessario impostare il *stato* parametro **adStatusUnwantedEvent** per ** adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, e **adRsnFirstChange** che si verificano.  
+ Se non si desidera elaborare un evento, è possibile impostare *stato* a **adStatusUnwantedEvent** e l'applicazione non riceverà più notifiche di quell ' evento. Tuttavia, tenere presente che alcuni eventi possono essere generati per più di un motivo. In tal caso, è necessario specificare **adStatusUnwantedEvent** per ciascun motivo possibili. Ad esempio, per interrompere la ricezione di notifiche in sospeso **RecordChange** eventi, è necessario impostare il *stato* parametro **adStatusUnwantedEvent** per  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, e **adRsnFirstChange** che si verificano.  
   
 |Valore|Description|  
 |-----------|-----------------|  
@@ -64,7 +64,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Richiedere l'annullamento dell'operazione che sta per verificarsi.|  
   
 ## <a name="error-parameter"></a>Errore parametro  
- Il *errore* parametro è un riferimento a un oggetto ADO [errore](../../../ado/reference/ado-api/error-object.md) oggetto. Quando il *stato* parametro è impostato su **adStatusErrorsOccurred**, **errore** oggetto contiene i dettagli sulla causa dell'errore dell'operazione. Se l'evento verrà associata a un evento di completamento ha annullato l'operazione impostando il *stato* parametro **adStatusCancel**, l'oggetto errore viene sempre impostata su ** adErrOperationCancelled**.  
+ Il *errore* parametro è un riferimento a un oggetto ADO [errore](../../../ado/reference/ado-api/error-object.md) oggetto. Quando il *stato* parametro è impostato su **adStatusErrorsOccurred**, **errore** oggetto contiene i dettagli sulla causa dell'errore dell'operazione. Se l'evento verrà associata a un evento di completamento ha annullato l'operazione impostando il *stato* parametro **adStatusCancel**, l'oggetto errore viene sempre impostata su  **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Parametro dell'oggetto  
  Ogni evento riceve uno o più oggetti che rappresentano gli oggetti coinvolti nell'operazione. Ad esempio, il **ExecuteComplete** evento riceve un **comando** oggetto, un **Recordset** , oggetto e un **connessione** oggetto.  

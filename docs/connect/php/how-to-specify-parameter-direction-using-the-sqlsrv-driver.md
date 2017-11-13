@@ -50,7 +50,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per specificare
     > [!NOTE]  
     > Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
   
-3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono nell'ordine ai segnaposto della stringa di Transact-SQL. Specificare la direzione per ogni parametro nella matrice. La direzione di ogni parametro è determinata in uno dei due modi: per impostazione predefinita (per i parametri di input) o tramite **SQLSRV_PARAM _\* ** costanti (per i parametri di output e bidirezionali). Ad esempio, il codice seguente specifica il parametro *$employeeId* come parametro di input e il parametro *$usedVacationHours* come parametro bidirezionale:  
+3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono nell'ordine ai segnaposto della stringa di Transact-SQL. Specificare la direzione per ogni parametro nella matrice. La direzione di ogni parametro è determinata in uno dei due modi: per impostazione predefinita (per i parametri di input) o tramite **SQLSRV_PARAM _\***  costanti (per i parametri di output e bidirezionali). Ad esempio, il codice seguente specifica il parametro *$employeeId* come parametro di input e il parametro *$usedVacationHours* come parametro bidirezionale:  
   
     ```  
     $params = array(  

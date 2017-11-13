@@ -50,9 +50,9 @@ recordset.Move NumRecords, Start
   
  Se il *NumRecords* argomento è maggiore di zero, la posizione del record corrente viene spostata in avanti (verso la fine del **Recordset**). Se *NumRecords* è minore di zero, la posizione corrente si sposta all'indietro (verso l'inizio del **Recordset**).  
   
- Se il **spostare** chiamata Sposta la posizione corrente a un punto prima del primo record, ADO imposta il record corrente nella posizione precedente al primo record del recordset ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **True **). Tenta di spostarsi con le versioni precedenti quando il **BOF** proprietà è già **True** genera un errore.  
+ Se il **spostare** chiamata Sposta la posizione corrente a un punto prima del primo record, ADO imposta il record corrente nella posizione precedente al primo record del recordset ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **True** ). Tenta di spostarsi con le versioni precedenti quando il **BOF** proprietà è già **True** genera un errore.  
   
- Se il **spostare** chiamata Sposta la posizione corrente a un punto successivo all'ultimo record, ADO imposta il record corrente alla posizione successiva all'ultimo record del recordset ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **True **). Tentativo di spostare in avanti quando il **EOF** proprietà è già **True** genera un errore.  
+ Se il **spostare** chiamata Sposta la posizione corrente a un punto successivo all'ultimo record, ADO imposta il record corrente alla posizione successiva all'ultimo record del recordset ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **True** ). Tentativo di spostare in avanti quando il **EOF** proprietà è già **True** genera un errore.  
   
  La chiamata di **spostare** metodo da un oggetto vuoto **Recordset** oggetto genera un errore.  
   

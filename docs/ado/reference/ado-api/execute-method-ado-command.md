@@ -61,7 +61,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  Se il comando non può restituire risultati (ad esempio, una query di aggiornamento di SQL) restituisce il provider **nulla** fino a quando l'opzione **adExecuteStream** è specificata; in caso contrario eseguire restituisce un chiuso **Recordset**. Alcune lingue dell'applicazione consentono di ignorare il valore restituito se non **Recordset** desiderato.  
   
- **Eseguire** genera un errore se l'utente specifica un valore per **CommandStream** quando il **CommandType** è **adCmdStoredProc**, ** adCmdTable**, o **adCmdTableDirect**.  
+ **Eseguire** genera un errore se l'utente specifica un valore per **CommandStream** quando il **CommandType** è **adCmdStoredProc**,  **adCmdTable**, o **adCmdTableDirect**.  
   
  Se la query include parametri, valori di corrente per il **comando** vengono utilizzati i parametri dell'oggetto a meno che non si esegue l'override di questi valori dei parametri passati con il **Execute** chiamare. È possibile eseguire l'override di un subset dei parametri omettendo i nuovi valori per alcuni dei parametri quando si chiama il **Execute** metodo. L'ordine in cui si specificano i parametri è lo stesso ordine in cui li passa il metodo. Ad esempio, se sono presenti parametri quattro (o più) e si desidera passare nuovi valori per solo il primo e il quarto parametro, è necessario passare il `Array(var1,,,var4)` come il *parametri* argomento.  
   

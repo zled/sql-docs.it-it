@@ -42,7 +42,7 @@ ADO utilizza diversi metodi per notificare a un'applicazione di errori che si ve
   
 -   I problemi che si verificano durante l'elaborazione batch di aggiornamenti o altre operazioni bulk che includono un **Recordset** può essere indicato dal **stato** proprietà del **Recordset**. Ad esempio, le violazioni di vincolo dello schema o autorizzazioni insufficienti possono essere specificate da **RecordStatusEnum** valori.  
   
--   Problemi che interessano un determinato **campo** nel record corrente vengono inoltre indicati tramite il **stato** proprietà di ogni **campo** nel **campi ** insieme il **Record** o **Recordset**. Ad esempio, gli aggiornamenti non completati o tipi di dati incompatibili possono essere specificati da **FieldStatusEnum** valori.  
+-   Problemi che interessano un determinato **campo** nel record corrente vengono inoltre indicati tramite il **stato** proprietà di ogni **campo** nel **campi**  insieme il **Record** o **Recordset**. Ad esempio, gli aggiornamenti non completati o tipi di dati incompatibili possono essere specificati da **FieldStatusEnum** valori.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

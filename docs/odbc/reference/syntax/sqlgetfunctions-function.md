@@ -76,7 +76,7 @@ SQLRETURN SQLGetFunctions(
 |--------|-----|-----------|  
 |01000|Avviso generico.|Messaggio informativo specifici del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel * \*MessageText* buffer viene descritto l'errore e la relativa causa.|  
+|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore nella sequenza (funzione)|(DM) **SQLGetFunctions** è stato chiamato prima di **SQLConnect**, **SQLBrowseConnect**, o **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** è stato chiamato per il *ConnectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima di **SQLBrowseConnect** restituito SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *ConnectionHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
@@ -133,7 +133,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] quando si lavora con un ODBC 2*x* driver, **SQLBulkOperations** verranno restituiti come supportato solo se vengono soddisfatte entrambe le operazioni seguenti: ODBC 2*x* driver supporta ** SQLSetPos**, e il tipo di informazioni SQL_POS_OPERATIONS restituisce il bit SQL_POS_ADD come set.  
+ [1] quando si lavora con un ODBC 2*x* driver, **SQLBulkOperations** verranno restituiti come supportato solo se vengono soddisfatte entrambe le operazioni seguenti: ODBC 2*x* driver supporta  **SQLSetPos**, e il tipo di informazioni SQL_POS_OPERATIONS restituisce il bit SQL_POS_ADD come set.  
   
  Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni introdotte in ODBC 3.8 o versione successiva:  
   
@@ -141,16 +141,16 @@ SQLRETURN SQLGetFunctions(
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** verranno restituiti come supportato solo se il driver supporta sia **SQLCancel** e **SQLCancelHandle**. Se **SQLCancel** è supportata ma **SQLCancelHandle** non lo è, l'applicazione può chiamare ancora **SQLCancelHandle** su un handle di istruzione, in quanto esso verrà mappato a ** SQLCancel**.  
+ [2] **SQLCancelHandle** verranno restituiti come supportato solo se il driver supporta sia **SQLCancel** e **SQLCancelHandle**. Se **SQLCancel** è supportata ma **SQLCancelHandle** non lo è, l'applicazione può chiamare ancora **SQLCancelHandle** su un handle di istruzione, in quanto esso verrà mappato a  **SQLCancel**.  
   
 ## <a name="sqlfuncexists-macro"></a>Macro SQL_FUNC_EXISTS  
- Il SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro viene usata per determinare il supporto di ODBC 3*x* o le funzioni precedenti dopo **SQLGetFunctions ** è stata chiamata con un *FunctionId* argomento di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con il *SupportedPtr* argomento impostato sul *SupportedPtr* passato *SQLGetFunctions*e con il * FunctionID* argomento impostato sul **#define** per la funzione. SQL_FUNC_EXISTS restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
+ Il SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro viene usata per determinare il supporto di ODBC 3*x* o le funzioni precedenti dopo **SQLGetFunctions**  è stata chiamata con un *FunctionId* argomento di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con il *SupportedPtr* argomento impostato sul *SupportedPtr* passato *SQLGetFunctions*e con il  *FunctionID* argomento impostato sul **#define** per la funzione. SQL_FUNC_EXISTS restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
   
 > [!NOTE]  
 >  Quando si lavora con un ODBC 2*x* driver ODBC 3*x* gestione Driver restituirà SQL_TRUE per **SQLAllocHandle** e **SQLFreeHandle**perché **SQLAllocHandle** viene eseguito il mapping a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, e Poiché **SQLFreeHandle** viene eseguito il mapping a **SQLFreeEnv**, **SQLFreeConnect**, o **SQLFreeStmt**. **SQLAllocHandle** o **SQLFreeHandle** con un *HandleType* argomento di SQL_HANDLE_DESC non è supportata, tuttavia, anche se SQL_TRUE viene restituito per le funzioni, poiché non esiste alcun ODBC 2*x* funzione per eseguire il mapping in questo caso.  
   
 ## <a name="code-example"></a>Esempio di codice  
- I tre esempi seguenti mostrano come un'applicazione usa **SQLGetFunctions** per determinare se un driver supporta **SQLTables**, **SQLColumns**, e ** SQLStatistics**. Se il driver non supporta queste funzioni, l'applicazione verrà terminata dal driver. Nell'esempio viene chiamato prima **SQLGetFunctions** una volta per ogni funzione.  
+ I tre esempi seguenti mostrano come un'applicazione usa **SQLGetFunctions** per determinare se un driver supporta **SQLTables**, **SQLColumns**, e  **SQLStatistics**. Se il driver non supporta queste funzioni, l'applicazione verrà terminata dal driver. Nell'esempio viene chiamato prima **SQLGetFunctions** una volta per ogni funzione.  
   
 ```  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  

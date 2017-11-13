@@ -52,11 +52,11 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- Nei tre casi precedenti, il *StatementHandle* argomento è impostato sul valore *hstmt*, *attributo* argomento è impostato sul valore *fOption *e *ValuePtr* argomento è impostato sullo stesso valore di *il parametro pvParam*.  
+ Nei tre casi precedenti, il *StatementHandle* argomento è impostato sul valore *hstmt*, *attributo* argomento è impostato sul valore *fOption* e *ValuePtr* argomento è impostato sullo stesso valore di *il parametro pvParam*.  
   
  Per le opzioni di connessione di stringa definite da ODBC Driver Manager imposta la *BufferLength* argomento nella chiamata a **SQLGetConnectAttr** per la lunghezza massima predefinita (SQL_MAX_OPTION_STRING_LENGTH); per un'opzione di connessione non di tipo stringa, *BufferLength* è impostato su 0.  
   
- L'opzione dell'istruzione SQL_GET_BOOKMARK è stato deprecato in ODBC 3*x*. Per un'applicazione ODBC 3*x* driver per funzionare con ODBC 2.* x* le applicazioni che utilizzano SQL_GET_BOOKMARK, deve supportare SQL_GET_BOOKMARK. Per un'applicazione ODBC 3*x* driver per funzionare con ODBC 2.* x* applicazioni, deve supportare l'impostazione SQL_USE_BOOKMARKS su SQL_UB_ON e devono essere esposti a lunghezza fissa segnalibri. Se un'applicazione ODBC 3*x* driver supporta solo segnalibri di lunghezza variabile, i segnalibri non a lunghezza fissa, mentre deve restituire un valore SQLSTATE HYC00 (funzionalità facoltativa non implementata) se un ODBC 2.* x* applicazione tenta di impostare SQL_USE_BOOKMARKS SQL_UB_ON.  
+ L'opzione dell'istruzione SQL_GET_BOOKMARK è stato deprecato in ODBC 3*x*. Per un'applicazione ODBC 3*x* driver per funzionare con ODBC 2. *x* le applicazioni che utilizzano SQL_GET_BOOKMARK, deve supportare SQL_GET_BOOKMARK. Per un'applicazione ODBC 3*x* driver per funzionare con ODBC 2. *x* applicazioni, deve supportare l'impostazione SQL_USE_BOOKMARKS su SQL_UB_ON e devono essere esposti a lunghezza fissa segnalibri. Se un'applicazione ODBC 3*x* driver supporta solo segnalibri di lunghezza variabile, i segnalibri non a lunghezza fissa, mentre deve restituire un valore SQLSTATE HYC00 (funzionalità facoltativa non implementata) se un ODBC 2. *x* applicazione tenta di impostare SQL_USE_BOOKMARKS SQL_UB_ON.  
   
  Per un'applicazione ODBC 3*x* driver, Driver Manager non consente di controllare se *opzione* è tra SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX, oppure è maggiore di SQL_CONNECT_OPT_DRVR_START. Il driver è necessario selezionare questa opzione.
 

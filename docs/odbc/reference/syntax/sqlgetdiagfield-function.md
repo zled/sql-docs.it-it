@@ -80,10 +80,10 @@ SQLRETURN SQLGetDiagField(
  *DiagInfoPtr*  
  [Output] Puntatore a un buffer in cui si desidera restituire le informazioni di diagnostica. Il tipo di dati dipende dal valore di *DiagIdentifier*. Se *DiagInfoPtr* è di tipo integer, le applicazioni devono utilizzare un buffer di SQLULEN e inizializzare il valore su 0 prima di chiamare questa funzione, come alcuni driver può solo scrivere l'inferiore a 32 bit o a 16 bit di un buffer e lasciare l'ordine più elevato bit invariato.  
   
- Se *DiagInfoPtr* è NULL, *StringLengthPtr* continuerà a restituire il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui puntato * DiagInfoPtr*.  
+ Se *DiagInfoPtr* è NULL, *StringLengthPtr* continuerà a restituire il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui puntato  *DiagInfoPtr*.  
   
  *BufferLength*  
- [Input] Se *DiagIdentifier* è una diagnostica definite da ODBC e *DiagInfoPtr* punta a una stringa di caratteri o di un buffer binario, la lunghezza di questo argomento deve essere \* *DiagInfoPtr *. Se *DiagIdentifier* è un campo definito ODBC e \* *DiagInfoPtr* è un numero intero, *BufferLength* viene ignorato. Se il valore in * \*DiagInfoPtr* è una stringa Unicode (quando si chiama **SQLGetDiagFieldW**), il *BufferLength* argomento deve essere un numero pari.  
+ [Input] Se *DiagIdentifier* è una diagnostica definite da ODBC e *DiagInfoPtr* punta a una stringa di caratteri o di un buffer binario, la lunghezza di questo argomento deve essere \* *DiagInfoPtr* . Se *DiagIdentifier* è un campo definito ODBC e \* *DiagInfoPtr* è un numero intero, *BufferLength* viene ignorato. Se il valore in  *\*DiagInfoPtr* è una stringa Unicode (quando si chiama **SQLGetDiagFieldW**), il *BufferLength* argomento deve essere un numero pari.  
   
  Se *DiagIdentifier* è un campo definito dal driver, l'applicazione indica la natura del campo al Driver Manager impostando il *BufferLength* argomento. *BufferLength* può avere i valori seguenti:  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   Se *DiagInfoPtr* è un puntatore a un valore diverso da una stringa di caratteri o stringa binaria, *BufferLength* deve avere il valore SQL_IS_POINTER.  
   
--   Se * \*DiagInfoPtr* contiene un tipo di dati a lunghezza fissa, *BufferLength* è SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, come appropriato.  
+-   Se  *\*DiagInfoPtr* contiene un tipo di dati a lunghezza fissa, *BufferLength* è SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, come appropriato.  
   
  *StringLengthPtr*  
  [Output] Puntatore a un buffer in cui restituire il numero totale di byte (escluso il numero di byte necessari per il carattere di terminazione null) disponibile per restituire \* *DiagInfoPtr*, dati di tipo carattere. Se il numero di byte disponibili da restituire è maggiore o uguale a *BufferLength*, il testo in \* *DiagInfoPtr* viene troncato a *BufferLength* meno la lunghezza di un carattere di terminazione null.  
@@ -129,7 +129,7 @@ SQLRETURN SQLGetDiagField(
   
 1.  Per ottenere le informazioni sull'avviso o errore specifico, quando una chiamata di funzione ha restituito SQL_ERROR o SQL_SUCCESS_WITH_INFO (o SQL_NEED_DATA per il **SQLBrowseConnect** funzione).  
   
-2.  Per determinare il numero di righe nell'origine dati che sono stati interessati quando sono state eseguite operazioni update, delete o insert con una chiamata a **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, o **SQLSetPos** (dal campo di intestazione SQL_DIAG_ROW_COUNT), o per determinare il numero di righe presenti nel cursore aperto corrente, se il driver può fornire queste informazioni (dal Campo di intestazione SQL_DIAG_CURSOR_ROW_COUNT).  
+2.  Per determinare il numero di righe nell'origine dati che sono stati interessati quando sono state eseguite operazioni update, delete o insert con una chiamata a **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, o **SQLSetPos** (dal campo di intestazione SQL_DIAG_ROW_COUNT), o per determinare il numero di righe presenti nel cursore aperto corrente, se il driver può fornire queste informazioni (dal Campo di intestazione SQL_DIAG_CURSOR_ROW_COUNT).  
   
 3.  Per determinare quale funzione che è stata eseguita da una chiamata a **SQLExecDirect** o **SQLExecute** (rispetto ai campi di intestazione SQL_DIAG_DYNAMIC_FUNCTION e SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
   
@@ -238,7 +238,7 @@ n-definizione *|"CREAZIONE DI DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
 -   Per tutti i record relativi a colonne specifiche, i record vengono ordinati dal valore nel campo SQL_DIAG_ROW_NUMBER. Vengono elencati tutti gli errori e avvisi della prima riga interessata, e quindi tutti gli errori e avvisi del successivo di righe interessate e così via.  
   
 > [!NOTE]  
->  ODBC 3*x* gestione Driver non sono ordinati i record di stato nella coda di diagnostica se SQLSTATE 01S01 (errore nella riga) restituito da un'API ODBC 2*x* driver o se SQLSTATE 01S01 (riga) che viene restituito da un database ODBC 3*x* driver quando **SQLExtendedFetch** viene chiamato o **SQLSetPos** viene chiamato su un cursore posizionato con **SQLExtendedFetch. **.  
+>  ODBC 3*x* gestione Driver non sono ordinati i record di stato nella coda di diagnostica se SQLSTATE 01S01 (errore nella riga) restituito da un'API ODBC 2*x* driver o se SQLSTATE 01S01 (riga) che viene restituito da un database ODBC 3*x* driver quando **SQLExtendedFetch** viene chiamato o **SQLSetPos** viene chiamato su un cursore posizionato con **SQLExtendedFetch.** .  
   
  All'interno di ogni riga o per tutti i record che non corrispondono a una riga o per i quali il numero di riga è sconosciuto, o per tutti i record con un numero di riga uguale a SQL_NO_ROW_NUMBER, il primo record elencati è determinato mediante un set di regole di ordinamento. Dopo il primo record, l'ordine dei record che interessano una riga è definito. Un'applicazione non può presumere che gli errori precedono avvisi dopo il primo record. Le applicazioni è consigliabile analizzare la struttura di dati di diagnostica completa per ottenere informazioni complete su una chiamata a una funzione.  
   

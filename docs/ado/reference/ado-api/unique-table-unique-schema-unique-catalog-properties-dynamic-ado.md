@@ -50,7 +50,7 @@ Consente di controllare rigorosamente le modifiche a una tabella di base in un [
   
  Se una tabella di base univoca non viene trovata, verrà generato un errore in fase di esecuzione.  
   
- Queste proprietà dinamiche vengono aggiunte al **Recordset** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta quando il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su ** adUseClient**.  
+ Queste proprietà dinamiche vengono aggiunte al **Recordset** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta quando il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su  **adUseClient**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

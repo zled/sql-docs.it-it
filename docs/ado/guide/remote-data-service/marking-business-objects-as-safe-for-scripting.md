@@ -48,7 +48,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Nell'ultimo passaggio, l'applicazione Installazione guidata crea un file. htm e un file con estensione cab. È quindi possibile copiare questi due file al computer di destinazione e fare doppio clic sul file htm per caricare la pagina e registrare correttamente il server.  
   
- Poiché per impostazione predefinita, l'oggetto business verrà installato nella directory Windows\System32\Occache spostarlo nella directory Windows\System32 e modificare il **HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32** chiave del Registro di sistema in base al percorso corretto.
+ Poiché per impostazione predefinita, l'oggetto business verrà installato nella directory Windows\System32\Occache spostarlo nella directory Windows\System32 e modificare il **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** chiave del Registro di sistema in base al percorso corretto.
 
 
 

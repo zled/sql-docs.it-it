@@ -108,7 +108,7 @@ Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di 
 ### <a name="dealing-with-binary-data"></a>Gestione di dati binari  
  Utilizzare il [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) metodo su un **campo** oggetto per inserirvi dati long binari o character. In situazioni in cui la memoria di sistema è limitata, è possibile utilizzare il **AppendChunk** metodo per modificare i valori lunghi nelle parti anziché nella loro interezza.  
   
- Se il **adFldLong** bit il **attributi** proprietà di un **campo** oggetto è impostato su **True**, è possibile utilizzare il ** AppendChunk** metodo per tale campo.  
+ Se il **adFldLong** bit il **attributi** proprietà di un **campo** oggetto è impostato su **True**, è possibile utilizzare il  **AppendChunk** metodo per tale campo.  
   
  Il primo **AppendChunk** chiamare su un **campo** oggetto scrive dati nel campo, sovrascrivendo i dati esistenti. Le successive **AppendChunk** aggiungono chiamate ai dati esistenti. Se si stanno aggiungendo dei dati a un campo e quindi impostare o leggere il valore di un altro campo del record corrente, si presume che si è terminato l'aggiunta di dati e il primo campo. Se si chiama il **AppendChunk** metodo nel primo campo, ADO interpreta la chiamata come nuovo **AppendChunk** operazione e sovrascrive i dati esistenti. L'accesso ai campi in altre **Recordset** gli oggetti che non siano cloni del primo **Recordset** oggetto non altererà **AppendChunk** operazioni.  
   
@@ -118,7 +118,7 @@ Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di 
   
  Ogni successivo **GetChunk** chiamata recupera i dati a partire dalla posizione precedente **GetChunk** chiamata è stata interrotta. Tuttavia, se si recuperano dati da un campo e quindi impostare o leggere il valore di un altro campo del record corrente, ADO presuppone di che avere il recupero dei dati dal primo campo. Se si chiama il **GetChunk** metodo nel primo campo, ADO interpreta la chiamata come nuovo **GetChunk** operazione e avvia la lettura dall'inizio dei dati. L'accesso ai campi in altre **Recordset** gli oggetti che non siano cloni del primo **Recordset** oggetto non altererà **GetChunk** operazioni.  
   
- Se il **adFldLong** bit il **attributi** proprietà di un **campo** oggetto è impostato su **True**, è possibile utilizzare il **GetChunk ** metodo per tale campo.  
+ Se il **adFldLong** bit il **attributi** proprietà di un **campo** oggetto è impostato su **True**, è possibile utilizzare il **GetChunk**  metodo per tale campo.  
   
  Se è presente alcun record corrente quando si utilizza il **GetChunk** o **AppendChunk** metodo su un **campo** dell'oggetto, si verifica l'errore 3021 (Nessun record corrente).  
   

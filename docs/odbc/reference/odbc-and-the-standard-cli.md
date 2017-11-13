@@ -37,7 +37,7 @@ ODBC in linea con le seguenti specifiche standard in grado di gestire con interf
   
  Come risultato l'allineamento, in quanto si verifica quanto segue:  
   
--   Un'applicazione scritta per le specifiche di ISO CLI Open Group funziona con un'applicazione ODBC 3. *x* driver o un driver conforme agli standard quando viene compilato con ODBC 3.* x* i file di intestazione e collegate con ODBC 3.* x* librerie, e quando accede al driver tramite ODBC 3.* x* gestione Driver.  
+-   Un'applicazione scritta per le specifiche di ISO CLI Open Group funziona con un'applicazione ODBC 3. *x* driver o un driver conforme agli standard quando viene compilato con ODBC 3. *x* i file di intestazione e collegate con ODBC 3. *x* librerie, e quando accede al driver tramite ODBC 3. *x* gestione Driver.  
   
 -   Un driver di scrivere le specifiche Open Group e ISO CLI funzionerà con un'applicazione ODBC 3*x* o come applicazione conforme agli standard quando viene compilato con ODBC 3*x* file di intestazione e collegati con ODBC 3*x* librerie, e quando l'applicazione accede al driver tramite ODBC 3*x* gestione Driver. (Per ulteriori informazioni, vedere [conforme agli standard di applicazioni e driver](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   

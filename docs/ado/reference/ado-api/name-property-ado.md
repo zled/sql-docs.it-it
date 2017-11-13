@@ -35,7 +35,7 @@ Indica il nome di un oggetto.
  Restituisce o imposta un **stringa** valore che indica il nome di un oggetto.  
   
 ## <a name="remarks"></a>Osservazioni  
- Utilizzare il **nome** proprietà per assegnare un nome a o recuperare il nome di un **comando**, **proprietà**, **campo**, o **parametro ** oggetto.  
+ Utilizzare il **nome** proprietà per assegnare un nome a o recuperare il nome di un **comando**, **proprietà**, **campo**, o **parametro**  oggetto.  
   
  Il valore è di lettura/scrittura in un **comando** oggetto e di sola lettura su un **proprietà** oggetto.  
   

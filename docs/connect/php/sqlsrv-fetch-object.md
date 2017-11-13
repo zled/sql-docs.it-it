@@ -133,7 +133,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente recupera ciascuna riga di un set di risultati in forma di istanza della classe *Product* definita nello script. L'esempio recupera informazioni sui prodotti dal *Purchasing. PurchaseOrderDetail* e *Production. Product* tabelle del database AdventureWorks per prodotti con una determinata data di scadenza (* DueDate*) e scorte (*StockQty*) inferiore a un valore specificato. L'esempio evidenzia alcune delle regole applicate quando si specifica una classe in una chiamata a **sqlsrv_fetch_object**:  
+L'esempio seguente recupera ciascuna riga di un set di risultati in forma di istanza della classe *Product* definita nello script. L'esempio recupera informazioni sui prodotti dal *Purchasing. PurchaseOrderDetail* e *Production. Product* tabelle del database AdventureWorks per prodotti con una determinata data di scadenza ( *DueDate*) e scorte (*StockQty*) inferiore a un valore specificato. L'esempio evidenzia alcune delle regole applicate quando si specifica una classe in una chiamata a **sqlsrv_fetch_object**:  
   
 -   La variabile *$product* è un'istanza della classe *Product* , perché con il parametro *$className* è specificato "Product" e la classe *Product* esiste.  
   

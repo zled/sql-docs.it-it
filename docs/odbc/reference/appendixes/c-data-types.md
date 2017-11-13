@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [c] in ODBC 2. *x*, i tipi di dati date, time e timestamp C sono SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP.  
   
- [d] ODBC 3*x* le applicazioni devono utilizzare SQL_C_VARBOOKMARK, non SQL_C_BOOKMARK. Quando un'applicazione ODBC 3*x* applicazione funziona con un'API ODBC 2.* x* driver ODBC 3*x* Driver Manager eseguirà il mapping a SQL_C_BOOKMARK SQL_C_VARBOOKMARK.  
+ [d] ODBC 3*x* le applicazioni devono utilizzare SQL_C_VARBOOKMARK, non SQL_C_BOOKMARK. Quando un'applicazione ODBC 3*x* applicazione funziona con un'API ODBC 2. *x* driver ODBC 3*x* Driver Manager eseguirà il mapping a SQL_C_BOOKMARK SQL_C_VARBOOKMARK.  
   
  [e] un numero viene archiviato nel *val* campo della struttura di SQL_NUMERIC_STRUCT come un integer ridotto, in modalità little-endian little (il byte più a sinistra viene il byte meno significativo). Ad esempio, il numero 10,001 in base 10, con una scala pari a 4, viene ridotto a un numero intero di 100010. Poiché si tratta 186AA in formato esadecimale, il valore in SQL_NUMERIC_STRUCT sarebbe "AA 86 01 00 00... 00", con il numero di byte definito per il SQL_MAX_NUMERIC_LEN **#define**.  
   
@@ -152,7 +152,7 @@ struct tagSQLGUID {
   
  [i] _SQL_C_BOOKMARK è stato deprecato in ODBC 3*x*.  
   
- [j#] _SQL_C_SHORT SQL_C_LONG e SQL_C_TINYINT sono stati sostituiti in ODBC da tipi signed e unsigned: SQL_C_SSHORT e SQL_C_USHORT, SQL_C_SLONG e SQL_C_ULONG, SQL_C_STINYINT e SQL_C_UTINYINT. Un'applicazione ODBC 3*x* driver che dovrebbero funzionare con ODBC 2.* x* applicazioni devono supportare SQL_C_SHORT SQL_C_LONG e SQL_C_TINYINT, perché quando vengono chiamati, gestione Driver li passa attraverso il driver.  
+ [j#] _SQL_C_SHORT SQL_C_LONG e SQL_C_TINYINT sono stati sostituiti in ODBC da tipi signed e unsigned: SQL_C_SSHORT e SQL_C_USHORT, SQL_C_SLONG e SQL_C_ULONG, SQL_C_STINYINT e SQL_C_UTINYINT. Un'applicazione ODBC 3*x* driver che dovrebbero funzionare con ODBC 2. *x* applicazioni devono supportare SQL_C_SHORT SQL_C_LONG e SQL_C_TINYINT, perché quando vengono chiamati, gestione Driver li passa attraverso il driver.  
   
  [k] SQL_C_GUID può essere convertito solo in SQL_CHAR o SQL_WCHAR.  
   

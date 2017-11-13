@@ -65,7 +65,7 @@ Nella tabella seguente sono elencate le funzioni di data e ora ODBC supportate d
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- In questa sintassi, **d** indica che *valore* è una data di *aaaa-mm-gg* formato e **Servizi terminal** indica che *valore * è un timestamp di *aaaa-mm-gg hh: mm:*[.* f... *] formato. La sintassi abbreviata per i dati di data e il timestamp è come segue:  
+ In questa sintassi, **d** indica che *valore* è una data di *aaaa-mm-gg* formato e **Servizi terminal** indica che *valore*  è un timestamp di *aaaa-mm-gg hh: mm:*[. *f...* ] formato. La sintassi abbreviata per i dati di data e il timestamp è come segue:  
   
 ```  
 {d 'value'}  

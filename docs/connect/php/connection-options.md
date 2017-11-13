@@ -56,7 +56,7 @@ In questo argomento sono elencate le opzioni che sono consentite nella matrice a
 
 1. Il `ConnectionPooling` attributo non può essere utilizzato per abilitare o disabilitare il pool di connessioni in Linux e Mac. Vedere [pool di connessioni (driver Microsoft per PHP per SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 
-2. Vengono apportate tutte le query eseguite durante la connessione al database specificato da di *Database* attributo. Tuttavia, se l'utente dispone delle autorizzazioni appropriate, in altri database di accedere ai dati utilizzando un nome completo. Ad esempio, se il *master* database viene impostato con il *Database* attributo di connessione, è comunque possibile eseguire una query Transact-SQL che accede il * AdventureWorks.HumanResources.Employee* tabella utilizzando il nome completo.  
+2. Vengono apportate tutte le query eseguite durante la connessione al database specificato da di *Database* attributo. Tuttavia, se l'utente dispone delle autorizzazioni appropriate, in altri database di accedere ai dati utilizzando un nome completo. Ad esempio, se il *master* database viene impostato con il *Database* attributo di connessione, è comunque possibile eseguire una query Transact-SQL che accede il  *AdventureWorks.HumanResources.Employee* tabella utilizzando il nome completo.  
 
 3. L'abilitazione di *Encryption* può compromettere le prestazioni di alcune applicazioni a causa dell'overhead computazionale necessario per la crittografia dei dati.  
 

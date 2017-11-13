@@ -41,7 +41,7 @@ Indica l'origine dati o l'oggetto rappresentato dal [Record](../../../ado/refere
 ## <a name="remarks"></a>Osservazioni  
  Il **origine** proprietà restituisce il *origine* argomento del **Record** oggetto [aprire](../../../ado/reference/ado-api/open-method-ado-record.md) metodo. Può contenere una stringa URL assoluta o relativa. È possibile usare un URL assoluto senza impostare il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà per aprire direttamente il **Record** oggetto. Implicita **connessione** viene creato in questo caso l'oggetto.  
   
- Il **origine** proprietà può inoltre contenere un riferimento a un già aperto **Recordset**, che consente di aprire un **Record** oggetto che rappresenta la riga corrente nella ** Recordset**.  
+ Il **origine** proprietà può inoltre contenere un riferimento a un già aperto **Recordset**, che consente di aprire un **Record** oggetto che rappresenta la riga corrente nella  **Recordset**.  
   
  Il **origine** proprietà può contenere anche un riferimento a un [comando](../../../ado/reference/ado-api/command-object-ado.md) che restituisce una singola riga di dati dal provider.  
   

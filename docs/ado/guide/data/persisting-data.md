@@ -66,7 +66,7 @@ Destination, PersistFormat
   
  Quando un **Recordset** vengono rese persistenti con la **CursorLocation** proprietà impostata su **adUseServer**, la funzionalità di aggiornamento per il **Recordset**è limitato. In genere, gli aggiornamenti a tabella singola, inserimenti ed eliminazioni sono consentite (dipende dalla funzionalità del provider). Il [Resync](../../../ado/reference/ado-api/resync-method.md) metodo inoltre è disponibile in questa configurazione.  
   
- Poiché il *destinazione* parametro può accettare qualsiasi oggetto che supporta OLE DB **IStream** interfaccia, è possibile salvare un **Recordset** direttamente a ASP ** Risposta** oggetto.  
+ Poiché il *destinazione* parametro può accettare qualsiasi oggetto che supporta OLE DB **IStream** interfaccia, è possibile salvare un **Recordset** direttamente a ASP  **Risposta** oggetto.  
   
  Nell'esempio seguente, il **salvare** e **aprire** metodi vengono utilizzati per mantenere un **Recordset** e riaprirlo successivamente:  
   

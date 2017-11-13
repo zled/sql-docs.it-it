@@ -26,11 +26,11 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connessione di ADO e gli eventi di Recordset
-Due oggetti ADO possono generare eventi: il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Il **ConnectionEvent** famiglia relativa alle operazioni sul **connessione** oggetto e **RecordsetEvent** famiglia relativa alle operazioni sul ** Recordset** oggetto.
+Due oggetti ADO possono generare eventi: il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Il **ConnectionEvent** famiglia relativa alle operazioni sul **connessione** oggetto e **RecordsetEvent** famiglia relativa alle operazioni sul  **Recordset** oggetto.
 
 -   **Gli eventi di connessione**: vengono generati quando inizia una transazione su una connessione, viene eseguito il commit o nuovamente; quando viene eseguito il rollback un [comando](../../../ado/reference/ado-api/command-object-ado.md) esegue; quando un avviso si verifica durante un **evento connessione**operazione. o quando un **connessione** inizia o termina.
 
--   **Eventi recordset**: vengono generati intorno a operazioni di recupero asincrono, nonché quando si scorrono le righe di un **Recordset** oggetto, modificare un campo in una riga di un **Recordset**, modifica una riga in un **Recordset**, aprire un **Recordset** con un cursore sul lato server, chiudere un **Recordset**, o di apportare qualsiasi modifica nel ** Recordset**.
+-   **Eventi recordset**: vengono generati intorno a operazioni di recupero asincrono, nonché quando si scorrono le righe di un **Recordset** oggetto, modificare un campo in una riga di un **Recordset**, modifica una riga in un **Recordset**, aprire un **Recordset** con un cursore sul lato server, chiudere un **Recordset**, o di apportare qualsiasi modifica nel  **Recordset**.
 
  La tabella seguente sono riepilogati gli eventi e le relative descrizioni.
 

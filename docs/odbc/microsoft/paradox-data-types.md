@@ -51,7 +51,7 @@ Il driver ODBC Paradox esegue il mapping di tipi di dati Paradox ai tipi di dati
   
  [1] valido solo per le versioni Paradox 5. *x*.  
   
- [2] valido solo per le versioni Paradox 4. *x* e 5.* x*.  
+ [2] valido solo per le versioni Paradox 4. *x* e 5. *x*.  
   
 > [!NOTE]  
 >  **SQLGetTypeInfo** restituisce i tipi di dati SQL ODBC. Tutte le conversioni nell'appendice D il *riferimento per programmatori ODBC* sono supportati per i tipi di dati SQL ODBC elencati in precedenza in questo argomento.  

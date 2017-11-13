@@ -35,5 +35,5 @@ Quando il campo SQL_DESC_TYPE in un ARD è SQL_C_NUMERIC, con una chiamata a **S
   
  Se l'applicazione chiama **SQLGetData** per restituire i dati in una struttura SQL_C_NUMERIC, vengono utilizzati i campi predefiniti, SQL_DESC_SCALE e SQL_DESC_PRECISION. Se le impostazioni predefinite non sono consentite, l'applicazione deve chiamare **SQLSetDescRec** o **SQLSetDescField** per impostare i campi e quindi chiamare **SQLGetData** con un *TargetType* di SQL_ARD_TYPE per utilizzare i valori nei campi del descrittore.  
   
- Quando **SQLPutData** viene chiamato, la chiamata utilizza i campi SQL_DESC_SCALE e SQL_DESC_PRECISION di record del descrittore che corrisponde al parametro data-at-execution o colonna, che sono i campi per le chiamate a APD ** SQLExecute** o **SQLExecDirect**, o campi ARD per le chiamate a **SQLBulkOperations** o **SQLSetPos**.
+ Quando **SQLPutData** viene chiamato, la chiamata utilizza i campi SQL_DESC_SCALE e SQL_DESC_PRECISION di record del descrittore che corrisponde al parametro data-at-execution o colonna, che sono i campi per le chiamate a APD  **SQLExecute** o **SQLExecDirect**, o campi ARD per le chiamate a **SQLBulkOperations** o **SQLSetPos**.
 

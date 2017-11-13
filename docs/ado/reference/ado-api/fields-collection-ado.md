@@ -44,7 +44,7 @@ Contiene tutti i [campo](../../../ado/reference/ado-api/field-object.md) gli ogg
   
  Alcuni provider (ad esempio, il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) possono popolare la **campi** insieme con un sottoinsieme dei campi disponibili per il **Record** o **Recordset**. Non possibile aggiungere altri campi a raccolta finché vengono innanzitutto a cui fa riferimento in base al nome o indicizzati tramite il codice.  
   
- Se si tenta di fare riferimento a un campo non esistente in base al nome, un nuovo **campo** verrà aggiunto all'oggetto di **campi** insieme con un [stato](../../../ado/reference/ado-api/status-property-ado-field.md) di ** adFieldPendingInsert**. Quando si chiama [aggiornamento](../../../ado/reference/ado-api/update-method.md), ADO creerà un nuovo campo nell'origine dati se consentito dal provider.  
+ Se si tenta di fare riferimento a un campo non esistente in base al nome, un nuovo **campo** verrà aggiunto all'oggetto di **campi** insieme con un [stato](../../../ado/reference/ado-api/status-property-ado-field.md) di  **adFieldPendingInsert**. Quando si chiama [aggiornamento](../../../ado/reference/ado-api/update-method.md), ADO creerà un nuovo campo nell'origine dati se consentito dal provider.  
   
  In questa sezione contiene l'argomento seguente.  
   

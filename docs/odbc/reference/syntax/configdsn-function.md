@@ -72,7 +72,7 @@ BOOL ConfigDSN(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **ConfigDSN** restituisce FALSE, un oggetto associato * \*pfErrorCode* valore viene inserito nel buffer di errore del programma di installazione da una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **ConfigDSN** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore viene inserito nel buffer di errore del programma di installazione da una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
@@ -114,7 +114,7 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 ## <a name="modifying-a-data-source"></a>Modifica di un'origine dati  
  Per modificare un'origine dati, un nome origine dati deve essere passato a **ConfigDSN** in *lpszAttributes*. **ConfigDSN** verifica che il nome dell'origine dati sia in ODBC (i file del Registro di sistema).  
   
- Se *hwndParent* è null, **ConfigDSN** utilizza le informazioni contenute in *lpszAttributes* per modificare le informazioni nel file Odbc.ini (o del Registro di sistema). Se *hwndParent* non è null, **ConfigDSN** Visualizza una finestra di dialogo con le informazioni contenute in *lpszAttributes*; per informazioni non in *lpszAttributes *, Usa informazioni dalle informazioni di sistema. L'utente può modificare le informazioni prima di **ConfigDSN** archivia le informazioni di sistema.  
+ Se *hwndParent* è null, **ConfigDSN** utilizza le informazioni contenute in *lpszAttributes* per modificare le informazioni nel file Odbc.ini (o del Registro di sistema). Se *hwndParent* non è null, **ConfigDSN** Visualizza una finestra di dialogo con le informazioni contenute in *lpszAttributes*; per informazioni non in *lpszAttributes* , Usa informazioni dalle informazioni di sistema. L'utente può modificare le informazioni prima di **ConfigDSN** archivia le informazioni di sistema.  
   
  Se è stato modificato il nome dell'origine dati, **ConfigDSN** chiama innanzitutto **SQLRemoveDSNFromIni** nel programma di installazione DLL per rimuovere i dati esistenti di origine specifica dal file Odbc.ini (o del Registro di sistema). Segue quindi i passaggi nella sezione precedente per aggiungere la nuova specifica origine dati. Se il nome dell'origine dati non è stato modificato, **ConfigDSN** chiamate **SQLWritePrivateProfileString** nel programma di installazione DLL per apportare altre modifiche. **ConfigDSN** non può eliminare o modificare il valore della **Driver** (parola chiave).  
   

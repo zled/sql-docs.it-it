@@ -66,7 +66,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
  [4] questa riga vengono mostrate le transizioni quando *HandleType* stato SQL_HANDLE_DESC.  
   
- [5] la chiamata di **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza tener conto per il contenuto precedente a quella di gestire e potrebbe causare problemi per i driver ODBC. Si tratta di programmazione di applicazioni ODBC non corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile di applicazione definita per * \*OutputHandlePtr* senza chiamare ** SQLFreeHandle** per liberare l'handle prima di riallocazione. Sovrascrittura ODBC gestisce in modo potrebbero causare un comportamento incoerente o errori da parte di driver ODBC.  
+ [5] la chiamata di **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza tener conto per il contenuto precedente a quella di gestire e potrebbe causare problemi per i driver ODBC. Si tratta di programmazione di applicazioni ODBC non corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile di applicazione definita per  *\*OutputHandlePtr* senza chiamare  **SQLFreeHandle** per liberare l'handle prima di riallocazione. Sovrascrittura ODBC gestisce in modo potrebbero causare un comportamento incoerente o errori da parte di driver ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -255,7 +255,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
- [1] questo errore viene restituito da Gestione Driver se **SQLFetch** o **SQLFetchScroll** non è stato restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o ** SQLFetchScroll** ha restituito SQL_NO_DATA.  
+ [1] questo errore viene restituito da Gestione Driver se **SQLFetch** o **SQLFetchScroll** non è stato restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o  **SQLFetchScroll** ha restituito SQL_NO_DATA.  
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
@@ -279,7 +279,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000 HY010 [p] [np]|24000 [p], [1] HY010 [np]|24000 HY010 [p] [np]|  
   
- [1] questo errore viene restituito da Gestione Driver se **SQLFetch** o **SQLFetchScroll** non è stato restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o ** SQLFetchScroll** ha restituito SQL_NO_DATA.  
+ [1] questo errore viene restituito da Gestione Driver se **SQLFetch** o **SQLFetchScroll** non è stato restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o  **SQLFetchScroll** ha restituito SQL_NO_DATA.  
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch.  
   
@@ -328,7 +328,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
  [1] questa riga vengono mostrate le transizioni quando *opzione* stato SQL_CLOSE.  
   
- [2] questa riga vengono mostrate le transizioni quando *opzione* era SQL_UNBIND o SQL_RESET_PARAMS. Se il *opzione* argomento è stato SQL_DROP e il driver sottostante è un'applicazione ODBC 3*x* driver, Driver Manager esegue il mapping a una chiamata a **SQLFreeHandle** con * HandleType* impostato su SQL_HANDLE_STMT come. Per ulteriori informazioni, vedere la tabella di transizione per [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] questa riga vengono mostrate le transizioni quando *opzione* era SQL_UNBIND o SQL_RESET_PARAMS. Se il *opzione* argomento è stato SQL_DROP e il driver sottostante è un'applicazione ODBC 3*x* driver, Driver Manager esegue il mapping a una chiamata a **SQLFreeHandle** con  *HandleType* impostato su SQL_HANDLE_STMT come. Per ulteriori informazioni, vedere la tabella di transizione per [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

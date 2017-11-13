@@ -43,7 +43,7 @@ Tutti i driver ODBC devono presentare almeno a livello di base della conformità
   
 -   Gestire i cursori e nomi di cursore, chiamando **SQLCloseCursor**, **SQLGetCursorName**, e **SQLSetCursorName**.  
   
--   Accedere alla descrizione (metadati) di set di risultati, chiamando **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, e **SQLRowCount **. (Utilizzo di queste funzioni il numero di colonna 0 per recuperare i metadati di segnalibro è funzionalità 204 in [la conformità a livello 2 interfaccia](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Accedere alla descrizione (metadati) di set di risultati, chiamando **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, e **SQLRowCount** . (Utilizzo di queste funzioni il numero di colonna 0 per recuperare i metadati di segnalibro è funzionalità 204 in [la conformità a livello 2 interfaccia](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
 -   Il dizionario dei dati, eseguire una query chiamando le funzioni di catalogo **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, e **SQLTables**.  
   

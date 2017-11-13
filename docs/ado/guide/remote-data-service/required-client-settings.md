@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Impostare il [proprietà CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient**.  
   
--   Specificare il nome del gestore da utilizzare nel [oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto **gestore** , proprietà o [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md) stringa di connessione dell'oggetto "** Gestore**= "parola chiave. (Non è possibile impostare il gestore di **connessione** oggetto stringa di connessione.)  
+-   Specificare il nome del gestore da utilizzare nel [oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto **gestore** , proprietà o [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md) stringa di connessione dell'oggetto " **Gestore**= "parola chiave. (Non è possibile impostare il gestore di **connessione** oggetto stringa di connessione.)  
   
  Servizi Desktop remoto include un gestore predefinito sul server denominato **MSDFMAP. Gestore**. (Il file di personalizzazione predefinito denominato MSDFMAP. INI).  
   
@@ -71,7 +71,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Specificare il [proprietà gestore (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) proprietà o la parola chiave; il [proprietà Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o la parola chiave; e *CustomerById* e * CustomerDatabase* gli identificatori. Aprire quindi il **Recordset** oggetto  
+ Specificare il [proprietà gestore (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) proprietà o la parola chiave; il [proprietà Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o la parola chiave; e *CustomerById* e  *CustomerDatabase* gli identificatori. Aprire quindi il **Recordset** oggetto  
   
  Reporting Services. Aprire "CustomerByID (4)", "gestore = MSDFMAP. Gestore;"& _  
   

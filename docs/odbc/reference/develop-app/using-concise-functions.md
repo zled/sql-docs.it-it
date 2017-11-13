@@ -33,7 +33,7 @@ Alcune funzioni ODBC accedono in modo implicito a descrittori. Gli autori di app
   
  Le funzioni concise **SQLBindCol** e **SQLBindParameter** associare una colonna o parametro impostando i campi di descrizione corrispondenti per i relativi argomenti. Ognuna di queste funzioni vengono eseguite più attività rispetto all'impostazione descrittori. **SQLBindCol** e **SQLBindParameter** fornire una specifica completa dell'associazione di una colonna di dati o un parametro dinamico. Un'applicazione può, tuttavia, modificare i singoli dettagli di un'associazione chiamando **SQLSetDescField** o **SQLSetDescRec** e può associare completamente da una serie di chiamate adatte a una colonna o parametro Queste funzioni.  
   
- Le funzioni concise **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, e ** SQLNumResultCols** recuperare i valori in campi di descrizione.  
+ Le funzioni concise **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, e  **SQLNumResultCols** recuperare i valori in campi di descrizione.  
   
  **SQLSetDescRec** e **SQLGetDescRec** assolvere conciso, con un'unica chiamata, impostare o ottenere più campi di descrizione che determinano il tipo di dati e archiviazione dei dati di colonna o parametro. **SQLSetDescRec** è un metodo efficace per modificare l'associazione di dati di colonna o parametro in un unico passaggio.  
   

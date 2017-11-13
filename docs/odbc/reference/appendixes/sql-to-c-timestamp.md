@@ -54,5 +54,5 @@ _C_TYPE_TIMESTAMP|Parte relativa ai secondi frazionari di timestamp non è stato
   
  [f] è la dimensione del tipo di dati C corrispondente.  
   
- Quando i dati SQL timestamp vengono convertiti in dati di tipo carattere C, la stringa risultante è il "*aaaa*-*mm*-*gg* *hh *:*mm*:*ss*[.* f... *] "formato, in cui può essere utilizzato fino a nove cifre per i secondi frazionari. Questo formato non è interessato dalla configurazione dell'impostazione di paese Windows®. (Tranne il separatore decimale e i secondi frazionari, il formato intero da utilizzare, indipendentemente dalla precisione del tipo di dati timestamp SQL.)
+ Quando i dati SQL timestamp vengono convertiti in dati di tipo carattere C, la stringa risultante è il "*aaaa*-*mm*-*gg* *hh* :*mm*:*ss*[. *f...* ] "formato, in cui può essere utilizzato fino a nove cifre per i secondi frazionari. Questo formato non è interessato dalla configurazione dell'impostazione di paese Windows®. (Tranne il separatore decimale e i secondi frazionari, il formato intero da utilizzare, indipendentemente dalla precisione del tipo di dati timestamp SQL.)
 

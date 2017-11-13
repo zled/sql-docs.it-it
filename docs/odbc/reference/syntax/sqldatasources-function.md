@@ -84,7 +84,7 @@ SQLRETURN SQLDataSources(
  [Input] Lunghezza in caratteri del **descrizione* buffer.  
   
  *NameLength2Ptr*  
- [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (escluso il carattere di terminazione null) disponibile per restituire \* *descrizione*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength2*, la descrizione del driver nella \* *descrizione* viene troncato a *BufferLength2 * meno la lunghezza di un carattere di terminazione null.  
+ [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (escluso il carattere di terminazione null) disponibile per restituire \* *descrizione*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength2*, la descrizione del driver nella \* *descrizione* viene troncato a *BufferLength2*  meno la lunghezza di un carattere di terminazione null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -96,7 +96,7 @@ SQLRETURN SQLDataSources(
 |--------------|-----------|-----------------|  
 |01000|Avviso generico.|(DM) messaggio informativo di gestione Driver specifico. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa di dati corretto troncato|(DM) buffer \* *ServerName* non sia abbastanza grande per restituire il nome di origine di dati completo. Pertanto, il nome è stato troncato. Viene restituita la lunghezza del nome di origine tutti i dati \* *NameLength1Ptr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) buffer \* *descrizione* non sia abbastanza grande per restituire la descrizione completa del driver. Pertanto, la descrizione è stata troncata. Viene restituita la lunghezza della descrizione dell'origine dati non troncato **NameLength2Ptr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|HY000|Errore generale|(DM) di un errore per cui si è verificato alcun errore SQLSTATE specifico per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel * \*MessageText* buffer viene descritto l'errore e la relativa causa.|  
+|HY000|Errore generale|(DM) di un errore per cui si è verificato alcun errore SQLSTATE specifico per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Impossibile allocare la memoria che è necessario per supportare l'esecuzione o il completamento della funzione (DM) il Driver Manager.|  
 |HY010|Errore nella sequenza (funzione)|(DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  

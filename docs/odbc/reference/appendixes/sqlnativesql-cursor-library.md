@@ -33,5 +33,5 @@ ms.lasthandoff: 09/09/2017
  Se il driver supporta questa funzione, chiama la libreria di cursori **SQLNativeSql** nel driver e passa l'istruzione SQL. Per un aggiornamento posizionato, posizionato delete, e **selezionare per aggiornare** istruzioni, la libreria di cursori consente di modificare l'istruzione prima di passarlo al driver.  
   
 > [!NOTE]  
->  La libreria di cursori restituisce erroneamente SQLSTATE 34000 (nome di cursore non valido) se il nome del cursore non è valido in un'istruzione delete che viene passato in o un aggiornamento posizionato il *InStatementText* argomento di **SQLNativeSql **. **SQLNativeSql** non è progettata per restituire gli errori di sintassi, che vengono restituiti solo dopo la preparazione o l'esecuzione.
+>  La libreria di cursori restituisce erroneamente SQLSTATE 34000 (nome di cursore non valido) se il nome del cursore non è valido in un'istruzione delete che viene passato in o un aggiornamento posizionato il *InStatementText* argomento di **SQLNativeSql** . **SQLNativeSql** non è progettata per restituire gli errori di sintassi, che vengono restituiti solo dopo la preparazione o l'esecuzione.
 

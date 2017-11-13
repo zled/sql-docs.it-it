@@ -38,7 +38,7 @@ ms.lasthandoff: 09/09/2017
  Il **BOF** e **EOF** restituiscono **booleano** valori.  
   
 ## <a name="remarks"></a>Osservazioni  
- Utilizzare il **BOF** e **EOF** le proprietà per determinare se un **Recordset** oggetto contiene record o se sono stati superati i limiti di un **Recordset ** dell'oggetto quando si sposta da un record a altro.  
+ Utilizzare il **BOF** e **EOF** le proprietà per determinare se un **Recordset** oggetto contiene record o se sono stati superati i limiti di un **Recordset**  dell'oggetto quando si sposta da un record a altro.  
   
  Il **BOF** restituisce proprietà **True** (-1) se la posizione del record corrente è precedente al primo record e **False** (0) se la posizione del record corrente è il o dopo il primo record.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
   
  Se il valore di **BOF** o **EOF** proprietà **True**, nessun record corrente.  
   
- Se si apre un **Recordset** oggetto che non contiene record, il **BOF** e **EOF** sono impostate su **True** (vedere il [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà per ulteriori informazioni su questo stato di un **Recordset**). Quando si apre un **Recordset** oggetto che contiene almeno un record, il primo record è il record corrente e **BOF** e **EOF** sono proprietà **False **.  
+ Se si apre un **Recordset** oggetto che non contiene record, il **BOF** e **EOF** sono impostate su **True** (vedere il [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà per ulteriori informazioni su questo stato di un **Recordset**). Quando si apre un **Recordset** oggetto che contiene almeno un record, il primo record è il record corrente e **BOF** e **EOF** sono proprietà **False** .  
   
  Se si elimina l'ultimo record rimanente di **Recordset** oggetto, il **BOF** e **EOF** proprietà restino **False** finché non si tentativo di riposizionare il record corrente.  
   

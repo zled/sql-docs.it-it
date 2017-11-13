@@ -38,7 +38,7 @@ Indica, in una gerarchia [Recordset](../../../ado/reference/ado-api/recordset-ob
  Restituisce o imposta un **booleano** valore. Il valore predefinito è **True**. Se **True**, il capitolo verrà aggiornato se l'elemento padre **Recordset** modifiche all'oggetto la posizione riga; se **False**, il capitolo continueranno a fare riferimento ai dati nel capitolo precedente anche se l'elemento padre **Recordset** oggetto è stata modificata la posizione riga.  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa proprietà si applica agli oggetti Recordset gerarchici, ad esempio quelli supportati per il [Microsoft Data shaping per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve essere impostato sull'oggetto padre **Recordset** prima l'elemento figlio ** Recordset** viene recuperato. Questa proprietà semplifica lo spostamento nei recordset gerarchici.  
+ Questa proprietà si applica agli oggetti Recordset gerarchici, ad esempio quelli supportati per il [Microsoft Data shaping per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve essere impostato sull'oggetto padre **Recordset** prima l'elemento figlio  **Recordset** viene recuperato. Questa proprietà semplifica lo spostamento nei recordset gerarchici.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

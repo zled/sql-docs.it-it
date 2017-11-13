@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="working-with-multidimensional-data"></a>Utilizzo di dati multidimensionali
 Oggetto *set di celle* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un *asse* è una raccolta di membri di uno o più dimensioni, che viene utilizzata per individuare o filtrare valori specifici in un cubo.  
   
- Oggetto *posizione* è un punto di un asse. Per un asse è costituito da una singola dimensione, queste posizioni sono un subset dei membri della dimensione. Se un asse è costituito da più di una dimensione, quindi ogni posizione è un'entità composta, che ha * n * parti dove * n * è il numero di dimensioni orientati lungo l'asse. Ogni parte della posizione è un membro da una dimensione che lo costituiscono.  
+ Oggetto *posizione* è un punto di un asse. Per un asse è costituito da una singola dimensione, queste posizioni sono un subset dei membri della dimensione. Se un asse è costituito da più di una dimensione, quindi ogni posizione è un'entità composta, che ha  *n*  parti dove  *n*  è il numero di dimensioni orientati lungo l'asse. Ogni parte della posizione è un membro da una dimensione che lo costituiscono.  
   
  Ad esempio, se le dimensioni di geografia e prodotto da un cubo contenente i dati di vendita sono orientate lungo l'asse x di un set di celle, una posizione lungo l'asse può contenere i membri "USA" e "Computer". In questo esempio, determinare una posizione lungo l'asse x richiede che i membri di ogni dimensione sono orientati lungo l'asse.  
   

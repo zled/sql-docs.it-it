@@ -62,7 +62,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
  Questo metodo non aggiunge automaticamente il **parametro** dell'oggetto per il **parametri** raccolta di un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. Consente di impostare ulteriori proprietà i cui valori ADO verranno convalidati quando si aggiunge il **parametro** oggetto alla raccolta.  
   
- Se si specifica un tipo di dati a lunghezza variabile nel *tipo* argomento, è necessario passare un *dimensioni* argomento o un set di [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md) proprietà del **parametro ** oggetto prima dell'aggiunta per il **parametri** raccolta; in caso contrario, si verifica un errore.  
+ Se si specifica un tipo di dati a lunghezza variabile nel *tipo* argomento, è necessario passare un *dimensioni* argomento o un set di [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md) proprietà del **parametro**  oggetto prima dell'aggiunta per il **parametri** raccolta; in caso contrario, si verifica un errore.  
   
  Se si specifica un tipo di dati numerici (**adNumeric** o **adDecimal**) nei *tipo* argomento, sarà necessario impostare anche la [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [Precisione](../../../ado/reference/ado-api/precision-property-ado.md) proprietà.  
   

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="date-time-and-timestamp-literals"></a>Date, Time e Timestamp letterali
 La sequenza di escape per i valori letterali data, ora e timestamp  
   
- **{***-tipo* **'** *valore* **'}  **  
+ **{***-tipo* **'** *valore* **'}**   
   
  dove *-tipo di valore letterale* è uno dei valori elencati nella tabella seguente.  
   
@@ -35,7 +35,7 @@ La sequenza di escape per i valori letterali data, ora e timestamp
 |---------------------|-------------|-----------------------|  
 |**d**|Data|*aaaa*-*mm*-*gg*|  
 |**t**|Ora *|*hh*:*mm*:*ss*[1]|  
-|**Servizi terminal**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss* [. *f... *] [1]|  
+|**Servizi terminal**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss* [. *f...* ] [1]|  
   
  [1] il numero di cifre a destra del separatore decimale in un intervallo di tempo o timestamp letterale contenente un componente di secondi dipende la precisione dei secondi, come contenuto nel campo SQL_DESC_PRECISION descrittore. (Per ulteriori informazioni, vedere [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

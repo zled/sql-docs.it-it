@@ -34,7 +34,7 @@ Come accade con i parametri nelle istruzioni SQL, dati di tipo long possono esse
 > [!NOTE]  
 >  Un'applicazione in realtà può inviare qualsiasi tipo di dati in fase di esecuzione con **SQLPutData**, anche se solo i caratteri e i dati binari possono essere inviati in parti. Tuttavia, se i dati sono sufficientemente piccoli da rientrare in un unico buffer, non è in genere utilizzare **SQLPutData**. È molto più semplice associare il buffer e consentire il driver di recuperare i dati dal buffer.  
   
- Poiché le colonne di dati long non sono in genere associate, l'applicazione deve associare la colonna prima di chiamare **SQLBulkOperations** o **SQLSetPos** e annullare l'associazione dopo la chiamata **SQLBulkOperations ** o **SQLSetPos**. La colonna deve essere associata perché **SQLBulkOperations** o **SQLSetPos** funziona solo sulle colonne associate e deve essere associato in modo che **SQLGetData** può essere utilizzato per recuperare i dati dalla colonna.  
+ Poiché le colonne di dati long non sono in genere associate, l'applicazione deve associare la colonna prima di chiamare **SQLBulkOperations** o **SQLSetPos** e annullare l'associazione dopo la chiamata **SQLBulkOperations**  o **SQLSetPos**. La colonna deve essere associata perché **SQLBulkOperations** o **SQLSetPos** funziona solo sulle colonne associate e deve essere associato in modo che **SQLGetData** può essere utilizzato per recuperare i dati dalla colonna.  
   
  Per inviare dati in fase di esecuzione, l'applicazione effettua quanto segue:  
   

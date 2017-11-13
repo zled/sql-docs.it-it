@@ -36,7 +36,7 @@ ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e
     }  
     ```  
   
-2.  Definire un oggetto gestore per rappresentare il gestore eventi. L'oggetto gestore deve essere di tipo di dati **ConnectEventHandler** per un evento di tipo **ConnectionEvent**, tipo di dati o **RecordsetEventHandler** per un evento di tipo ** RecordsetEvent**. Ad esempio di codice seguente per il **ConnectComplete** gestore eventi:  
+2.  Definire un oggetto gestore per rappresentare il gestore eventi. L'oggetto gestore deve essere di tipo di dati **ConnectEventHandler** per un evento di tipo **ConnectionEvent**, tipo di dati o **RecordsetEventHandler** per un evento di tipo  **RecordsetEvent**. Ad esempio di codice seguente per il **ConnectComplete** gestore eventi:  
   
     ```  
     ConnectionEventHandler handler =   

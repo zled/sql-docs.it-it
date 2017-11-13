@@ -39,9 +39,9 @@ ms.lasthandoff: 09/09/2017
   
      **AGGIORNAMENTO** *-nome della tabella*  
   
-     **IMPOSTARE** *colonna identificatore* ** = ** {*espressione* &#124; **NULL**}  
+     **IMPOSTARE** *colonna identificatore*  **=**  {*espressione* &#124; **NULL**}  
   
-     [**,** *colonna identificatore* ** = ** {*espressione* &#124; **NULL**}]  
+     [**,** *colonna identificatore*  **=**  {*espressione* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *-nome del cursore*  
   

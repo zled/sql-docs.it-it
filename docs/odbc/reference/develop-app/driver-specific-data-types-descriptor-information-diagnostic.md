@@ -29,15 +29,15 @@ ms.lasthandoff: 09/09/2017
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipi di dati specifici del driver, i tipi di descrittore, tipi di informazioni, i tipi di diagnostica e attributi
 I driver possono allocare valori specifici del driver per le operazioni seguenti:  
   
--   **Indicatori di tipo di dati SQL** questi vengono utilizzati in *ParameterType* in **SQLBindParameter** e *DataType* in **SQLGetTypeInfo** e restituito da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, ** SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
+-   **Indicatori di tipo di dati SQL** questi vengono utilizzati in *ParameterType* in **SQLBindParameter** e *DataType* in **SQLGetTypeInfo** e restituito da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
   
--   **I campi di descrizione** questi vengono utilizzati in *FieldIdentifier* in **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField **.  
+-   **I campi di descrizione** questi vengono utilizzati in *FieldIdentifier* in **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField** .  
   
 -   **I campi di diagnostica** questi vengono utilizzati in *DiagIdentifier* in **SQLGetDiagField** e **SQLGetDiagRec**.  
   
 -   **Tipi di informazioni** questi vengono utilizzati in *InfoType* in **SQLGetInfo**.  
   
--   **Connessione e gli attributi di istruzione** questi vengono utilizzati in *attributo* in **SQLGetConnectAttr**, **SQLGetStmtAttr**, ** La funzione SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
+-   **Connessione e gli attributi di istruzione** questi vengono utilizzati in *attributo* in **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **La funzione SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
   
  Per ognuno di questi elementi, sono disponibili due set di valori: valori riservati per ODBC e valori riservati per i driver. Prima di implementare i valori specifici del driver, un writer di driver deve richiedere un valore per ogni tipo specifico del driver, un campo o attributo da Open Group. Per i nuovi sviluppi driver, utilizzare l'intervallo descritto nella tabella seguente. Gestione ODBC 3.8 Driver non genererà un errore se viene utilizzato un valore sconosciuto che non è compreso nell'intervallo descritto di seguito. Tuttavia, le versioni successive di gestione Driver potrebbero generare un errore se i valori sconosciuti ricevuti che non rientrano nell'intervallo.  
   

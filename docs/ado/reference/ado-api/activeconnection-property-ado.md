@@ -36,7 +36,7 @@ Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.
  Restituisce o imposta un **stringa** valore che contiene una definizione per una connessione se la connessione viene chiusa, o un **Variant** contenente corrente **connessione** oggetto se la connessione è aperta. Valore predefinito è un riferimento di oggetto null. Vedere il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà.  
   
 ## <a name="remarks"></a>Osservazioni  
- Utilizzare il **ActiveConnection** proprietà per determinare il **connessione** oggetto su cui specificato **comando** verrà eseguito l'oggetto o specificato ** Recordset** verrà aperto.  
+ Utilizzare il **ActiveConnection** proprietà per determinare il **connessione** oggetto su cui specificato **comando** verrà eseguito l'oggetto o specificato  **Recordset** verrà aperto.  
   
 ## <a name="command"></a>Command  
  Per **comando** oggetti, il **ActiveConnection** proprietà è di lettura/scrittura.  
@@ -48,7 +48,7 @@ Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.
 ### <a name="note"></a>Nota  
  **Microsoft Visual Basic** impostazione di **ActiveConnection** proprietà *nulla* rimuove l'associazione di **comando** oggetto dall'oggetto corrente **Connessione** e fa sì che il provider di rilasciare le risorse associate all'origine dati. È quindi possibile associare il **comando** oggetto con lo stesso o in un altro **connessione** oggetto. Alcuni provider consentono di modificare l'impostazione della proprietà da uno **connessione** a un altro, senza dover prima di impostare la proprietà su *nulla*.  
   
- Se il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme il **comando** oggetto contiene i parametri forniti dal provider, la raccolta viene cancellata se si imposta la **ActiveConnection** proprietà *nulla* o a un altro **connessione** oggetto. Se si creano manualmente [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetti e usarli per riempire il **parametri** insieme del **comando** oggetto impostando il **ActiveConnection ** proprietà *nulla* o a un altro **connessione** oggetto lascia il **parametri** raccolta intatto.  
+ Se il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme il **comando** oggetto contiene i parametri forniti dal provider, la raccolta viene cancellata se si imposta la **ActiveConnection** proprietà *nulla* o a un altro **connessione** oggetto. Se si creano manualmente [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetti e usarli per riempire il **parametri** insieme del **comando** oggetto impostando il **ActiveConnection**  proprietà *nulla* o a un altro **connessione** oggetto lascia il **parametri** raccolta intatto.  
   
  Chiusura di **connessione** oggetto con cui un **comando** oggetto è set associati il **ActiveConnection** proprietà *nulla*. Impostando questa proprietà su un oggetto chiuso **connessione** oggetto genera un errore.  
   
@@ -62,12 +62,12 @@ Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.
  Se si imposta la **origine** proprietà del **Recordset** oggetto su un valore valido **comando** variabile oggetto, il **ActiveConnection** proprietà di il **Recordset** eredita l'impostazione del **comando** dell'oggetto **ActiveConnection** proprietà.  
   
 > [!NOTE]
->  **Utilizzo del servizio dati remoti** quando utilizzato sul lato client **Recordset** oggetto, questa proprietà può essere impostata solo in una stringa di connessione o (in Microsoft Visual Basic o Visual Basic, Scripting Edition) *Nothing *.  
+>  **Utilizzo del servizio dati remoti** quando utilizzato sul lato client **Recordset** oggetto, questa proprietà può essere impostata solo in una stringa di connessione o (in Microsoft Visual Basic o Visual Basic, Scripting Edition) *Nothing* .  
   
 ## <a name="record"></a>Record  
  Questa proprietà è di lettura/scrittura quando il **Record** oggetto viene chiuso e può contenere una stringa di connessione o un riferimento a un oggetto aperto **connessione** oggetto. Questa proprietà è di sola lettura quando il **Record** oggetto è aperto e contiene un riferimento a un oggetto aperto **connessione** oggetto.  
   
- Oggetto **connessione** oggetto viene creato in modo implicito quando il **Record** oggetto viene aperto da un URL. Aprire il **Record** con un oggetto esistente, aprire **connessione** oggetto assegnando il **connessione** a questa proprietà dell'oggetto o tramite il **connessione** oggetto come parametro nel [aprire](../../../ado/reference/ado-api/open-method-ado-record.md) chiamata al metodo. Se il **Record** viene aperto da un oggetto esistente **Record** o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), quindi è automaticamente associato a tale **Record** o ** Recordset** dell'oggetto **connessione** oggetto.  
+ Oggetto **connessione** oggetto viene creato in modo implicito quando il **Record** oggetto viene aperto da un URL. Aprire il **Record** con un oggetto esistente, aprire **connessione** oggetto assegnando il **connessione** a questa proprietà dell'oggetto o tramite il **connessione** oggetto come parametro nel [aprire](../../../ado/reference/ado-api/open-method-ado-record.md) chiamata al metodo. Se il **Record** viene aperto da un oggetto esistente **Record** o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), quindi è automaticamente associato a tale **Record** o  **Recordset** dell'oggetto **connessione** oggetto.  
   
 > [!NOTE]
 >  Gli URL che utilizzano lo schema http richiamerà automaticamente il [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  

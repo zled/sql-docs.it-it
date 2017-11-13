@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlallocconnect-mapping"></a>Mapping di SQLAllocConnect
-Quando un'applicazione chiama **SQLAllocConnect** tramite un'applicazione ODBC 3.* x* driver, la chiamata a **SQLAllocConnect**(*henv*, *phdbc*) viene eseguito il mapping a **SQLAllocHandle** come indicato di seguito:  
+Quando un'applicazione chiama **SQLAllocConnect** tramite un'applicazione ODBC 3. *x* driver, la chiamata a **SQLAllocConnect**(*henv*, *phdbc*) viene eseguito il mapping a **SQLAllocHandle** come indicato di seguito:  
   
 1.  Gestione Driver alloca una connessione e lo restituisce all'applicazione.  
   

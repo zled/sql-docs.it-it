@@ -53,7 +53,7 @@ Una **matrice** di matrici oppure **false**. La matrice è costituita da una sin
 |Dimensione|Numero di caratteri per i campi di tipo carattere (char(n), varchar(n), nchar(n), nvarchar(n), XML). Numero di byte per i campi di tipo binario (binary(n), varbinary(n), tipo definito dall'utente). **NULL** per altri tipi di dati di SQL Server.|  
 |Precisione|Precisione per i tipi di precisione delle variabili (real, numeric, decimal, datetime2, datetimeoffset e time). **NULL** per altri tipi di dati di SQL Server.|  
 |Scala|Scala per i tipi di scala delle variabili (numeric, decimal, datetime2, datetimeoffset e time). **NULL** per altri tipi di dati di SQL Server.|  
-|Ammette valori Null|Valore enumerato che indica se la colonna è nullable (**SQLSRV_NULLABLE_YES**), la colonna non ammette valori null (**SQLSRV_NULLABLE_NO**), o non è noto se la colonna è nullable (** SQLSRV_NULLABLE_UNKNOWN**).|  
+|Ammette valori Null|Valore enumerato che indica se la colonna è nullable (**SQLSRV_NULLABLE_YES**), la colonna non ammette valori null (**SQLSRV_NULLABLE_NO**), o non è noto se la colonna è nullable ( **SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Nella tabella seguente vengono fornite altre informazioni sulle chiavi di ogni matrice secondaria (per informazioni sui tipi, vedere la documentazione di SQL Server):  
   

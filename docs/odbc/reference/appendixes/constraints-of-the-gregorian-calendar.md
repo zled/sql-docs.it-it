@@ -36,7 +36,7 @@ Tipi di dati date e datetime e i campi dei tipi di dati di intervallo finali dev
   
 -   Il valore del campo relativo ai minuti deve essere compreso tra 0 e 59.  
   
--   Per il campo secondi finali dei tipi di dati di intervallo, il valore del campo secondi deve essere compreso tra 0 e 59,9 (*n*), inclusi, in cui * n * è il numero di cifre di precisione frazionaria dei secondi.  
+-   Per il campo secondi finali dei tipi di dati di intervallo, il valore del campo secondi deve essere compreso tra 0 e 59,9 (*n*), inclusi, in cui  *n*  è il numero di cifre di precisione frazionaria dei secondi.  
   
--   Per il campo secondi finali dei tipi di dati datetime, il valore del campo secondi deve essere compreso tra 0 e 61.9 (*n*), inclusi, in cui * n * specifica il numero di "9" cifre e il valore di * n * è la precisione dei secondi frazionari. (L'intervallo di secondi consente un massimo di due secondi di compensazione gestire la sincronizzazione dell'ora siderale).
+-   Per il campo secondi finali dei tipi di dati datetime, il valore del campo secondi deve essere compreso tra 0 e 61.9 (*n*), inclusi, in cui  *n*  specifica il numero di "9" cifre e il valore di  *n*  è la precisione dei secondi frazionari. (L'intervallo di secondi consente un massimo di due secondi di compensazione gestire la sincronizzazione dell'ora siderale).
 

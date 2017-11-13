@@ -61,7 +61,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     |SQL_CONCUR_ROWVER|SQL_CA2_ROWVER_CONCURRENCY|  
     |SQL_CONCUR_VALUES|SQL_CA2_VALUES_CONCURRENCY|  
   
-     Se il *concorrenza* argomento non è uno dei valori nella tabella precedente, la chiamata a **SQLSetScrollOptions** restituisce SQLSTATE S1108 (opzione di concorrenza non compreso nell'intervallo) e nessuna delle operazioni seguenti eseguire. Se il bit appropriato (come indicato nella tabella precedente) non è impostato **InfoValuePtr* a uno dei valori corrispondenti per il *concorrenza* argomento, la chiamata a ** SQLSetScrollOptions** restituisce SQLSTATE S1C00 (Driver non valido) e nessuno dei passaggi seguenti vengono eseguite.  
+     Se il *concorrenza* argomento non è uno dei valori nella tabella precedente, la chiamata a **SQLSetScrollOptions** restituisce SQLSTATE S1108 (opzione di concorrenza non compreso nell'intervallo) e nessuna delle operazioni seguenti eseguire. Se il bit appropriato (come indicato nella tabella precedente) non è impostato **InfoValuePtr* a uno dei valori corrispondenti per il *concorrenza* argomento, la chiamata a  **SQLSetScrollOptions** restituisce SQLSTATE S1C00 (Driver non valido) e nessuno dei passaggi seguenti vengono eseguite.  
   
 -   Una chiamata a  
   
@@ -69,7 +69,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     con * \*ValuePtr* impostato su uno dei valori nella tabella seguente, in base al valore del *KeysetSize* argomento **SQLSetScrollOptions**.  
+     con  *\*ValuePtr* impostato su uno dei valori nella tabella seguente, in base al valore del *KeysetSize* argomento **SQLSetScrollOptions**.  
   
     |*KeysetSize* argomento|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -85,7 +85,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     con * \*ValuePtr* impostato sul *concorrenza* argomento **SQLSetScrollOptions**.  
+     con  *\*ValuePtr* impostato sul *concorrenza* argomento **SQLSetScrollOptions**.  
   
 -   Se il *KeysetSize* argomento nella chiamata a **SQLSetScrollOptions** è positivo, una chiamata a  
   
@@ -93,7 +93,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con * \*ValuePtr* impostato sul *KeysetSize* argomento **SQLSetScrollOptions**.  
+     con  *\*ValuePtr* impostato sul *KeysetSize* argomento **SQLSetScrollOptions**.  
   
 -   Una chiamata a  
   
@@ -101,7 +101,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con * \*ValuePtr* impostato sul *RowsetSize* argomento **SQLSetScrollOptions**.  
+     con  *\*ValuePtr* impostato sul *RowsetSize* argomento **SQLSetScrollOptions**.  
   
     > [!NOTE]  
     >  Quando esegue il mapping di gestione Driver **SQLSetScrollOptions** per un'applicazione che utilizza un'applicazione ODBC 3*x* driver che non supporta **SQLSetScrollOptions**, il Driver Manager imposta l'opzione dell'istruzione SQL_ROWSET_SIZE, non l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE sul *RowsetSize* argomento **SQLSetScrollOption**. Di conseguenza, **SQLSetScrollOptions** non può essere utilizzato da un'applicazione durante il recupero di più righe da una chiamata a **SQLFetch** o **SQLFetchScroll**. E può essere utilizzato solo quando più recupero righe da una chiamata a **SQLExtendedFetch**.

@@ -38,13 +38,13 @@ Questo argomento elenca le nuove funzionalità introdotte per ogni versione di A
  *Accesso alle unità disco rigido non è consentito all'esterno di un'area attendibile.*
 Tra i domini di scripting che includono i siti non trusted, sono disabilitate le seguenti operazioni: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset. Save**, e **Open**, utilizzato in combinazione con il **adCmdFile** flag o con il Provider Microsoft OLE DB persistenza (MSPersist).
 
- **Open** *,***Recordset. Save** *,***Stream.SaveToFile** *e* **Stream.LoadFromFile***operano su solo i file fisici.        *
+ **Open** *,***Recordset. Save** *,***Stream.SaveToFile** *e* **Stream.LoadFromFile***operano su solo i file fisici.* 
 Questi metodi, ora, verificare che gli handle di file scegliere solo i file fisici.
 
- **Recordset.ActiveCommand***restituisce un errore quando viene richiamato da una pagina HTML/ASP.  *
+ **Recordset.ActiveCommand***restituisce un errore quando viene richiamato da una pagina HTML/ASP.* 
 In questo modo il **comando** oggetto dall'uso improprio.
 
- *Il numero di***recordset***restituito da un tipo annidato***forma***comando ha un limite superiore.        *
+ *Il numero di***recordset***restituito da un tipo annidato***forma***comando ha un limite superiore.* 
 Un comando shape annidato ora restituisce un massimo di 512 **recordset**. Ciò significa che un **forma** comando non può essere annidato a qualsiasi profondità. Al contrario, il livello di nidificazione massimo è 512, se i risultati di ogni comando in una singola (figlio) **Recordset**. Se, in qualsiasi livello, un **forma** comando restituisce più **recordset**, il livello di nidificazione massimo sarà meno di 512.
 
 ## <a name="ado-27"></a>ADO 2.7

@@ -45,7 +45,7 @@ L'identificatore per il tipo di dati C ODBC timestamp è:
   
  Per informazioni su quali sono i valori validi in una struttura SQL_C_TIMESTAMP, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
   
- Quando i dati di tipo timestamp C viene convertiti in dati SQL di tipo carattere, i dati di caratteri risultante sono nel "*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[.* f... *] "formato.  
+ Quando i dati di tipo timestamp C viene convertiti in dati SQL di tipo carattere, i dati di caratteri risultante sono nel "*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[. *f...* ] "formato.  
   
  Il driver ignora il valore di lunghezza/indicatore quando la conversione dei dati dal tipo di dati timestamp C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati timestamp C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.
 

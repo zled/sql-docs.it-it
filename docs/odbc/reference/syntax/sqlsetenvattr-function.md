@@ -74,7 +74,7 @@ SQLRETURN SQLSetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|Avviso generico.|Messaggio informativo specifici del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01S02|Valore di opzione modificato|Il driver non supportava il valore specificato *ValuePtr* e sostituito con un valore analogo. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel * \*MessageText* buffer viene descritto l'errore e la relativa causa.|  
+|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY009|Utilizzo non valido del puntatore null|L'argomento dell'attributo identificato un attributo di ambiente che hanno richiesto un valore stringa, e *ValuePtr* argomento è un puntatore null.|  
 |HY010|Errore nella sequenza (funzione)|(DM) è stato allocato un handle di connessione in *EnvironmentHandle*.<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION** non è stata impostata con **SQLSetEnvAttr** e *attributo* non è uguale a **SQL_ATTR_ODBC_VERSION**. Non è necessario impostare **SQL_ATTR_ODBC_VERSION** in modo esplicito se si utilizza **SQLAllocHandleStd**.|  

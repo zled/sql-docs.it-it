@@ -41,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
  Posizionato update e delete istruzioni sono soggetti alle restrizioni seguenti:  
   
--   Posizionato update e delete istruzioni possono essere utilizzate solo nei seguenti casi: quando un **selezionare** istruzione ha generato il set di risultati; quando il **selezionare** istruzione non contiene un join, un ** UNIONE** clausola, o un **GROUP BY** clausola; e quando non sono associate le colonne di cui è utilizzato un alias o un'espressione nell'elenco di selezione con **SQLBindCol**.  
+-   Posizionato update e delete istruzioni possono essere utilizzate solo nei seguenti casi: quando un **selezionare** istruzione ha generato il set di risultati; quando il **selezionare** istruzione non contiene un join, un  **UNIONE** clausola, o un **GROUP BY** clausola; e quando non sono associate le colonne di cui è utilizzato un alias o un'espressione nell'elenco di selezione con **SQLBindCol**.  
   
 -   Se un'applicazione prepara un'istruzione delete o un aggiornamento posizionato, deve essere eseguita dopo aver chiamato **SQLFetch** o **SQLFetchScroll**. Anche se la libreria di cursori invia l'istruzione per il driver per la preparazione, chiude l'istruzione e viene eseguito direttamente quando l'applicazione chiama **SQLExecute**.  
   

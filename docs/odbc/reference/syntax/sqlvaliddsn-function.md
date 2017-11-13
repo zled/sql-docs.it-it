@@ -54,7 +54,7 @@ BOOL SQLValidDSN(
  La funzione restituisce TRUE se il nome dell'origine dati è valido. Restituisce FALSE se il nome dell'origine dati non è valido o la chiamata di funzione non riuscita.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLValidDSN** restituisce FALSE, un oggetto associato * \*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. Oggetto * \*pfErrorCode* se viene restituito solo se la chiamata di funzione ha esito negativo, non ha restituito false perché il nome dell'origine dati non è valido. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLValidDSN** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. Oggetto  *\*pfErrorCode* se viene restituito solo se la chiamata di funzione ha esito negativo, non ha restituito false perché il nome dell'origine dati non è valido. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  

@@ -55,7 +55,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  Un'applicazione non può ricevere il messaggio di errore restituito dal driver.  
   
 ## <a name="remarks"></a>Osservazioni  
- **SQLCleanupConnectionPoolID** può essere chiamato in qualsiasi momento, ma gestione Driver garantisce che nessun altro thread consiste nel chiamare contemporaneamente **SQLGetPoolID** e nessun altro thread consiste nel chiamare contemporaneamente ** SQLRateConnection** e **SQLPoolConnect** con un token di informazioni di connessione assegnato con tale ID del pool. Pertanto, il driver deve assicurarsi che questa funzione è thread-safe.  
+ **SQLCleanupConnectionPoolID** può essere chiamato in qualsiasi momento, ma gestione Driver garantisce che nessun altro thread consiste nel chiamare contemporaneamente **SQLGetPoolID** e nessun altro thread consiste nel chiamare contemporaneamente  **SQLRateConnection** e **SQLPoolConnect** con un token di informazioni di connessione assegnato con tale ID del pool. Pertanto, il driver deve assicurarsi che questa funzione è thread-safe.  
   
  Un driver possibile pulire le risorse associate all'ID del pool.  
   

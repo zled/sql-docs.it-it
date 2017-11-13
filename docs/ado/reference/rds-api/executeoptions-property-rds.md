@@ -47,7 +47,7 @@ Indica se è abilitata l'esecuzione asincrona.
   
  Se si tenta di chiamare [reimpostare](../../../ado/reference/rds-api/reset-method-rds.md), [aggiornamento](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), o [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) mentre un'altra operazione asincrona che modifichino la [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto **Recordset** è in esecuzione, si verifica un errore.  
   
- Se si verifica un errore durante un'operazione asincrona, il **RDS. DataControl** dell'oggetto [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) valore viene modificato da **adcReadyStateLoaded** a **adcReadyStateComplete**e ** Recordset** valore della proprietà rimane *nulla*.  
+ Se si verifica un errore durante un'operazione asincrona, il **RDS. DataControl** dell'oggetto [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) valore viene modificato da **adcReadyStateLoaded** a **adcReadyStateComplete**e  **Recordset** valore della proprietà rimane *nulla*.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

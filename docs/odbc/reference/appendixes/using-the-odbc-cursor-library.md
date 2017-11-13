@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  Chiamate **SQLFetch** o **SQLFetchScroll** una o più volte per scorrere il set di risultati.  
   
- L'applicazione può modificare i valori dei dati nei buffer di set di righe. Per aggiornare i buffer di set di righe con i dati dalla cache della libreria di cursori, un'applicazione chiama **SQLFetchScroll** con il *FetchOrientation* argomento impostato su SQL_FETCH_RELATIVE e * FetchOffset* argomento impostato su 0.  
+ L'applicazione può modificare i valori dei dati nei buffer di set di righe. Per aggiornare i buffer di set di righe con i dati dalla cache della libreria di cursori, un'applicazione chiama **SQLFetchScroll** con il *FetchOrientation* argomento impostato su SQL_FETCH_RELATIVE e  *FetchOffset* argomento impostato su 0.  
   
  Per recuperare dati da una colonna non associata, l'applicazione chiama **SQLSetPos** per posizionare il cursore sulla riga desiderata. Chiama quindi **SQLGetData** per recuperare i dati.  
   

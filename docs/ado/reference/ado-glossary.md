@@ -52,7 +52,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Un mapping tra un campo in una tabella e una variabile. Nelle estensioni di Visual C++ ADO, **Recordset** campi vengono mappati a variabili di C/C++.  
   
  maschera di bit  
- Un valore numerico è progettato per un confronto bit per bit con gli altri valori numerici, in genere per contrassegnare le opzioni di parametro o valori restituiti. In genere questo confronto viene eseguito con gli operatori logici OR bit per bit, ad esempio **e** e **o** in Visual Basic ** & ** e **&#124;** in C++.  
+ Un valore numerico è progettato per un confronto bit per bit con gli altri valori numerici, in genere per contrassegnare le opzioni di parametro o valori restituiti. In genere questo confronto viene eseguito con gli operatori logici OR bit per bit, ad esempio **e** e **o** in Visual Basic  **&**  e **&#124;** in C++.  
   
  Ad esempio, ADO **FieldAttributeEnum** valori possono essere utilizzati come maschere di bit per determinare gli attributi di un campo. Si supponga di che voler determinare se un campo non è aggiornabile. È possibile effettuare questa verifica con l'espressione seguente in Visual Basic:`Field.Attributes AND adFldUpdatable`  
   
@@ -74,7 +74,7 @@ In questo argomento definisce termini rilevanti per ADO.
  capitolo  
  Un riferimento a un intervallo di righe da un'origine dati. In ADO un capitolo viene in genere un riferimento a un altro **Recordset**.  
   
- Le colonne a capitoli consentono di definire un *padre-figlio* relazione in cui il *padre* è il **Recordset** contenente la colonna a capitoli e * figlio* è il **Recordset** rappresentato dal capitolo.  
+ Le colonne a capitoli consentono di definire un *padre-figlio* relazione in cui il *padre* è il **Recordset** contenente la colonna a capitoli e  *figlio* è il **Recordset** rappresentato dal capitolo.  
   
  alias di capitolo  
  Un alias che fa riferimento alla colonna aggiunta all'elemento padre.  
@@ -220,7 +220,7 @@ In questo argomento definisce termini rilevanti per ADO.
  blocco ottimistico  
  Tipo di blocco in cui la pagina di dati contenente uno o più record, incluso il record viene modificato, non è disponibile ad altri utenti solo mentre il record viene aggiornato dal **aggiornamento** (metodo), ma è disponibile prima e dopo il chiamata a **aggiornamento**.  
   
- Blocco ottimistico viene utilizzato quando il **Recordset** oggetto viene aperto con il **LockType** parametro o proprietà è impostata su **adLockOptimistic** o ** adLockBatchOptimistic**. Vedere anche il blocco pessimistico.  
+ Blocco ottimistico viene utilizzato quando il **Recordset** oggetto viene aperto con il **LockType** parametro o proprietà è impostata su **adLockOptimistic** o  **adLockBatchOptimistic**. Vedere anche il blocco pessimistico.  
   
  valore ordinale  
  Posizione numerica di un elemento all'interno di un ordine. In una raccolta di ADO, il valore ordinale del primo elemento è zero (0). L'elemento successivo è uno (1) e così via.  

@@ -38,7 +38,7 @@ public String toString()
  Rappresentazione di stringa del **DateTimeOffset** oggetto.  
   
 ## <a name="remarks"></a>Osservazioni  
- La stringa ha il formato *aaaa*-*MM*-*gg**hh*:*mm*: *ss*[.* fffffff*] [+ |-]*hh*:*mm*.  
+ La stringa ha il formato *aaaa*-*MM*-*gg**hh*:*mm*: *ss*[. *fffffff*] [+ |-]*hh*:*mm*.  
   
  Nei secondi frazionari della stringa restituita vengono aggiunti zero alla precisione dichiarata. Ad esempio, un **datetimeoffset(6)** con un valore di "12:34:56.78 2010-03-10-08:00" verrà formattato da DateTimeOffset come "2010-03-10 12:34:56.780000 -08:00".  
   

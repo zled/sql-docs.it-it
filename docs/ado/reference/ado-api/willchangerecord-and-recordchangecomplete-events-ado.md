@@ -58,7 +58,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  Quando **RecordChangeComplete** viene chiamato, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento ha esito positivo o a **adStatusErrorsOccurred** se operazione non riuscita.  
   
- Prima di **WillChangeRecord** restituisce un valore, impostare questo parametro su **adStatusCancel** per richiedere l'annullamento dell'operazione che ha causato l'evento o imposta questo parametro su ** adStatusUnwantedEvent** per impedire notifiche successive.  
+ Prima di **WillChangeRecord** restituisce un valore, impostare questo parametro su **adStatusCancel** per richiedere l'annullamento dell'operazione che ha causato l'evento o imposta questo parametro su  **adStatusUnwantedEvent** per impedire notifiche successive.  
   
  Prima di **RecordChangeComplete** restituisce un valore, impostare questo parametro su **adStatusUnwantedEvent** per impedire notifiche successive.  
   

@@ -57,7 +57,7 @@ connection.Open ConnectionString, UserID, Password, Options
   
  Utilizzare l'opzione facoltativa *ConnectionString* argomento per specificare una stringa di connessione che contiene una serie di *argomento* *= valore* istruzioni separate da punti e virgola o un risorsa file o directory identificata da un URL. Il **ConnectionString** proprietà eredita automaticamente il valore utilizzato per il *ConnectionString* argomento. Pertanto, è possibile impostare il **ConnectionString** proprietà del **connessione** oggetto prima di aprirlo oppure utilizzare il *ConnectionString* argomento per impostare o eseguire l'override i parametri di connessione corrente durante il **aprire** chiamata al metodo.  
   
- Se si passa l'utente e password informazioni sia il *ConnectionString* argomento e nella facoltativa *UserID* e *Password* argomenti, il *UserID * e *Password* argomenti sostituiranno i valori specificati in *ConnectionString*.  
+ Se si passa l'utente e password informazioni sia il *ConnectionString* argomento e nella facoltativa *UserID* e *Password* argomenti, il *UserID*  e *Password* argomenti sostituiranno i valori specificati in *ConnectionString*.  
   
  Quando si hanno concluso le operazioni attraverso un **connessione**, utilizzare il [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) metodo per liberare le risorse di sistema associate. Chiusura di un oggetto senza rimuoverlo dalla memoria. è possibile modificare le impostazioni delle proprietà e utilizzare il **aprire** metodo aprirlo più tardi. Per eliminare completamente l'oggetto dalla memoria, impostare la variabile oggetto *nulla*.  
   

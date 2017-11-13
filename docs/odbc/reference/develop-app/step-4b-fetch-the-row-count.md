@@ -31,7 +31,7 @@ Il passaggio successivo è recuperare il conteggio delle righe, come illustrato 
   
  ![Illustra il recupero del conteggio delle righe](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  
   
- Se l'istruzione eseguita nel passaggio 3 è un **aggiornamento**, **eliminare**, o **inserire** istruzione, l'applicazione recupera il conteggio delle righe interessate con ** SQLRowCount**. Per ulteriori informazioni, vedere [determinare il numero di righe interessate](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
+ Se l'istruzione eseguita nel passaggio 3 è un **aggiornamento**, **eliminare**, o **inserire** istruzione, l'applicazione recupera il conteggio delle righe interessate con  **SQLRowCount**. Per ulteriori informazioni, vedere [determinare il numero di righe interessate](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
  A questo punto, l'applicazione restituisce al passaggio 3 per l'esecuzione di un'altra istruzione nella stessa transazione o procede al passaggio 5 per eseguire il commit o il rollback della transazione.
 

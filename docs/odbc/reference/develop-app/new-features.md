@@ -85,7 +85,7 @@ Le seguenti nuove funzionalità sono stata introdotta in ODBC 3. *x*. Un databas
   
 -   Parametri denominati.  
   
--   Qualsiasi valore ODBC 3. *x*– specifico **SQLGetInfo** opzioni. (Se ODBC 3. *x* applicazione che utilizza un ODBC 2.* x* driver chiama i tipi di informazioni SQL_XXX_CURSOR_ATTRIBUTES1 che sono sostituiti diversi ODBC 2.* x* tipi di informazioni, alcune delle informazioni potrebbero essere affidabile, ma alcune potrebbero essere inaffidabili. Per ulteriori informazioni, vedere [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Qualsiasi valore ODBC 3. *x*– specifico **SQLGetInfo** opzioni. (Se ODBC 3. *x* applicazione che utilizza un ODBC 2. *x* driver chiama i tipi di informazioni SQL_XXX_CURSOR_ATTRIBUTES1 che sono sostituiti diversi ODBC 2. *x* tipi di informazioni, alcune delle informazioni potrebbero essere affidabile, ma alcune potrebbero essere inaffidabili. Per ulteriori informazioni, vedere [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Associare gli offset.  
   

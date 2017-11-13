@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="stayinsync-property-example-vc"></a>Esempio di proprietà StayInSync (VC + +)
 Questo esempio viene illustrato come la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) proprietà semplifica l'accesso alle righe in un modello gerarchico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Il ciclo esterno viene visualizzato il nome e cognome, stato e identificazione di ogni autore. L'oggetto aggiunto **Recordset** per ogni riga viene recuperato dal [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme e assegnata automaticamente agli **rstTitleAuthor** dal **StayInSync ** proprietà ogni volta che l'elemento padre **Recordset** passa a una nuova riga. Il ciclo interno visualizza quattro campi da ogni riga del Recordset accodato.  
+ Il ciclo esterno viene visualizzato il nome e cognome, stato e identificazione di ogni autore. L'oggetto aggiunto **Recordset** per ogni riga viene recuperato dal [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme e assegnata automaticamente agli **rstTitleAuthor** dal **StayInSync**  proprietà ogni volta che l'elemento padre **Recordset** passa a una nuova riga. Il ciclo interno visualizza quattro campi da ogni riga del Recordset accodato.  
   
 ```  
 // BeginStayInSyncCpp.cpp  

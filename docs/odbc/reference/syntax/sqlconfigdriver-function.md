@@ -88,7 +88,7 @@ BOOL SQLConfigDriver(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLConfigDriver** restituisce FALSE, un oggetto associato * \*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLConfigDriver** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
@@ -111,7 +111,7 @@ BOOL SQLConfigDriver(
 ## <a name="setting-connection-pooling-timeout"></a>L'impostazione di Timeout pool di connessioni  
  Quando si imposta la configurazione del driver, è possono impostare le proprietà di timeout pool di connessioni. **SQLConfigDriver** viene chiamato con un *trattano* di ODBC_CONFIG_DRIVER e *lpszArgs* impostato su **CPTimeout**. **CPTimeout** determina il periodo di tempo in cui una connessione può rimanere nel pool di connessioni senza essere utilizzati. Quando il timeout scade, la connessione viene chiusa e rimossa dal pool. Il timeout predefinito è 60 secondi.  
   
- Quando **SQLConfigDriver** viene chiamato con *trattano* impostata su ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, gestione Driver carica la DLL di installazione del driver appropriato e chiama il ** ConfigDriver** (funzione). Quando **SQLConfigDriver** viene chiamato con un *trattano* di ODBC_CONFIG_DRIVER, tutta l'elaborazione viene eseguita nel programma di installazione ODBC, in modo che la DLL di installazione di driver non deve essere caricata.  
+ Quando **SQLConfigDriver** viene chiamato con *trattano* impostata su ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, gestione Driver carica la DLL di installazione del driver appropriato e chiama il  **ConfigDriver** (funzione). Quando **SQLConfigDriver** viene chiamato con un *trattano* di ODBC_CONFIG_DRIVER, tutta l'elaborazione viene eseguita nel programma di installazione ODBC, in modo che la DLL di installazione di driver non deve essere caricata.  
   
 ## <a name="messages"></a>Messaggi  
  Una routine di installazione di driver può inviare un messaggio di testo a un'applicazione come stringhe con terminazione null nel *lpszMsg* buffer. Il messaggio verrà troncato a *cbMsgMax* meno il carattere di terminazione null dal **ConfigDriver** funzione se è maggiore o uguale a *cbMsgMax* caratteri.  

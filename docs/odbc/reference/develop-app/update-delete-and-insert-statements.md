@@ -33,11 +33,11 @@ Applicazioni basate su SQL apportano modifiche alle tabelle mediante l'esecuzion
   
  La sintassi di queste istruzioni è:  
   
- **AGGIORNAMENTO***-nome della tabella  *  
+ **AGGIORNAMENTO***-nome della tabella*   
   
- **IMPOSTARE** *colonna identificatore* ** = ** {*espressione* &#124; **NULL**}  
+ **IMPOSTARE** *colonna identificatore*  **=**  {*espressione* &#124; **NULL**}  
   
- [**,** *colonna identificatore* ** = ** {*espressione* &#124; **NULL**}]...  
+ [**,** *colonna identificatore*  **=**  {*espressione* &#124; **NULL**}]...  
   
  [**In** *condizione di ricerca*]  
   

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="scalar-function-calls"></a>Chiamate di funzione scalare
 Funzioni scalari restituiscono un valore per ogni riga. Ad esempio, la funzione scalare del valore assoluto accetta una colonna numerica come argomento e restituisce il valore assoluto di ogni valore nella colonna. La sequenza di escape per chiamare una funzione scalare  
   
- **{fn***funzione scalare* **}  **  
+ **{fn***funzione scalare* **}**   
   
  dove *funzione scalare* è una delle funzioni elencate [appendice e: le funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Per ulteriori informazioni sulla sequenza di escape funzione scalare, vedere [sequenza di Escape funzione scalare](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) nella grammatica SQL di appendice c:.  
   

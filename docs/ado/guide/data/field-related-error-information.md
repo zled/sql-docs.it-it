@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="field-related-error-information"></a>Informazioni sugli errori di campo
-Se l'errore è direttamente correlato a un campo, ad esempio, se mancano i dati o se è il tipo non corretto per il campo: è possibile recuperare ulteriori informazioni sulla causa del problema esaminando il **campo** dell'oggetto **stato ** proprietà. Questa proprietà è stata migliorata per fornire informazioni specifiche sul problema. In questo caso, ad esempio, quando una chiamata a **UpdateBatch** ha esito negativo, la causa del problema può essere determinata esaminando il **stato** proprietà del **campi** in ognuna dell'interessati record. La proprietà conterrà uno dei valori di **FieldStatusEnum** costante. Nella tabella seguente include i valori che sono di particolare interesse quando si verifica un errore.  
+Se l'errore è direttamente correlato a un campo, ad esempio, se mancano i dati o se è il tipo non corretto per il campo: è possibile recuperare ulteriori informazioni sulla causa del problema esaminando il **campo** dell'oggetto **stato**  proprietà. Questa proprietà è stata migliorata per fornire informazioni specifiche sul problema. In questo caso, ad esempio, quando una chiamata a **UpdateBatch** ha esito negativo, la causa del problema può essere determinata esaminando il **stato** proprietà del **campi** in ognuna dell'interessati record. La proprietà conterrà uno dei valori di **FieldStatusEnum** costante. Nella tabella seguente include i valori che sono di particolare interesse quando si verifica un errore.  
   
 |Costante|Valore|Description|  
 |--------------|-----------|-----------------|  

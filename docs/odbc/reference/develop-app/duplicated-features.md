@@ -29,9 +29,9 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="duplicated-features"></a>Funzionalità di duplicati
-Il seguente ODBC 2. *x* funzioni sono state duplicate da ODBC 3.* x* funzioni. Di conseguenza, l'API ODBC 2. *x* funzioni sono deprecate in ODBC 3.* x*. ODBC 3. *x* funzioni vengono dette funzioni di sostituzione.  
+Il seguente ODBC 2. *x* funzioni sono state duplicate da ODBC 3. *x* funzioni. Di conseguenza, l'API ODBC 2. *x* funzioni sono deprecate in ODBC 3. *x*. ODBC 3. *x* funzioni vengono dette funzioni di sostituzione.  
   
- Quando un'applicazione utilizza un deprecata di ODBC 2. *x* funzione e il driver sottostante è un'applicazione ODBC 3.* x* driver, Driver Manager esegue il mapping di chiamata di funzione alla funzione di sostituzione corrispondente. L'unica eccezione a questa regola è **SQLExtendedFetch**. (Vedere la nota alla fine della tabella seguente). Per ulteriori informazioni su tali mapping, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+ Quando un'applicazione utilizza un deprecata di ODBC 2. *x* funzione e il driver sottostante è un'applicazione ODBC 3. *x* driver, Driver Manager esegue il mapping di chiamata di funzione alla funzione di sostituzione corrispondente. L'unica eccezione a questa regola è **SQLExtendedFetch**. (Vedere la nota alla fine della tabella seguente). Per ulteriori informazioni su tali mapping, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
   
  Quando un'applicazione utilizza una funzione di sostituzione e il driver sottostante è un ODBC 2. *x* driver, Driver Manager esegue il mapping di chiamata di funzione alla funzione deprecata.  
   
@@ -53,8 +53,8 @@ Il seguente ODBC 2. *x* funzioni sono state duplicate da ODBC 3.* x* funzioni. D
 |**SQLSetStmtOption**|**Funzione SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] la funzione **SQLExtendedFetch** è una funzionalità duplicate; **SQLFetchScroll** fornisce la stessa funzionalità in ODBC 3.* x*. Tuttavia, gestione Driver non esegue il mapping **SQLExtendedFetch** a **SQLFetchScroll** quando in un'applicazione ODBC 3.* x* driver. Per ulteriori informazioni, vedere [the Driver Manager cosa](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti. Esegue il mapping di gestione Driver **SQLFetchScroll** a **SQLExtendedFetch** quando si passa un 2 di ODBC.* x* driver.  
+ [1] la funzione **SQLExtendedFetch** è una funzionalità duplicate; **SQLFetchScroll** fornisce la stessa funzionalità in ODBC 3. *x*. Tuttavia, gestione Driver non esegue il mapping **SQLExtendedFetch** a **SQLFetchScroll** quando in un'applicazione ODBC 3. *x* driver. Per ulteriori informazioni, vedere [the Driver Manager cosa](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti. Esegue il mapping di gestione Driver **SQLFetchScroll** a **SQLExtendedFetch** quando si passa un 2 di ODBC. *x* driver.  
   
 > [!NOTE]  
->  La funzione **SQLBindParam** è un caso speciale. **SQLBindParam** è una funzionalità duplicate. Non è un'API ODBC 2*x* funzione, ma una funzione che è presente negli standard Open Group e ISO. Le funzionalità offerte da questa funzione sono completamente sostituita da quello del **SQLBindParameter**. Di conseguenza, il Driver Manager esegue il mapping di una chiamata a **SQLBindParam** a **SQLBindParameter** quando il driver sottostante è un'applicazione ODBC 3.* x* driver. Tuttavia, quando il driver sottostante è un ODBC 2*x* driver, Driver Manager non esegue il mapping.
+>  La funzione **SQLBindParam** è un caso speciale. **SQLBindParam** è una funzionalità duplicate. Non è un'API ODBC 2*x* funzione, ma una funzione che è presente negli standard Open Group e ISO. Le funzionalità offerte da questa funzione sono completamente sostituita da quello del **SQLBindParameter**. Di conseguenza, il Driver Manager esegue il mapping di una chiamata a **SQLBindParam** a **SQLBindParameter** quando il driver sottostante è un'applicazione ODBC 3. *x* driver. Tuttavia, quando il driver sottostante è un ODBC 2*x* driver, Driver Manager non esegue il mapping.
 

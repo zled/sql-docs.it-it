@@ -88,7 +88,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Un campo esistente non può essere creato e aggiunto al **campi** raccolta assegnando un valore per l'oggetto campo, come se esistesse già nella raccolta. L'assegnazione verrà attivata la creazione automatica e l'aggiunta del **campo** oggetto e l'assegnazione verrà completata.  
   
- Dopo l'aggiunta una **campo** per il **campi** raccolta di un **Record** dell'oggetto, chiamare il **aggiornamento** metodo il **campi ** insieme per salvare le modifiche.  
+ Dopo l'aggiunta una **campo** per il **campi** raccolta di un **Record** dell'oggetto, chiamare il **aggiornamento** metodo il **campi**  insieme per salvare le modifiche.  
   
 ## <a name="applies-to"></a>Si applica a  
   

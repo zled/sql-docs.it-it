@@ -58,10 +58,10 @@ La tabella seguente descrive le funzioni numeriche inclusi nel set di funzioni s
 |**POWER (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Restituisce il valore di *numeric_exp* alla potenza di *integer_exp*.|  
 |**RADIANTI (** *numeric_exp* **)** (ODBC 2.0)|Restituisce il numero di radianti convertito da *numeric_exp* gradi.|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|Restituisce un valore a virgola mobile casuale usando *integer_exp* come valore di inizializzazione facoltativo.|  
-|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Restituisce *numeric_exp* arrotondato *integer_exp* posizionato a destra del separatore decimale. Se *integer_exp* è negativo, *numeric_exp* viene arrotondato a &#124;* integer_exp*&#124; posizioni a sinistra del separatore decimale.|  
+|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Restituisce *numeric_exp* arrotondato *integer_exp* posizionato a destra del separatore decimale. Se *integer_exp* è negativo, *numeric_exp* viene arrotondato a &#124; *integer_exp*&#124; posizioni a sinistra del separatore decimale.|  
 |**SIGN (** *numeric_exp* **)** (ODBC 1.0)|Restituisce un indicatore del segno di *numeric_exp*. Se *numeric_exp* è minore di zero, -1 viene restituito. Se *numeric_exp* è uguale a zero, viene restituito 0. Se *numeric_exp* è maggiore di zero, viene restituito 1.|  
 |**SIN (** *float_exp* **)** (ODBC 1.0)|Restituisce il seno di *float_exp*, dove *float_exp* è l'angolo, espresso in radianti.|  
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Restituisce la radice quadrata di *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Restituisce la tangente di *float_exp*, dove *float_exp* è l'angolo, espresso in radianti.|  
-|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Restituisce *numeric_exp* troncato a *integer_exp* posizionato a destra del separatore decimale. Se *integer_exp* è negativo, *numeric_exp* viene troncato a &#124;* integer_exp*&#124; posizioni a sinistra del separatore decimale.|
+|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Restituisce *numeric_exp* troncato a *integer_exp* posizionato a destra del separatore decimale. Se *integer_exp* è negativo, *numeric_exp* viene troncato a &#124; *integer_exp*&#124; posizioni a sinistra del separatore decimale.|
 

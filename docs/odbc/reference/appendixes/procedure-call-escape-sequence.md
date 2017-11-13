@@ -43,11 +43,11 @@ ODBC utilizza le sequenze di escape per le chiamate di procedura. La sintassi di
   
  *nome della routine* :: = *identificatore di procedure*  
   
- &#124; *-nome del proprietario*.* Identificatore di procedure*  
+ &#124; *-nome del proprietario*. *Identificatore di procedure*  
   
  &#124; *separatore di catalogo nome-catalogo* *identificatore di procedure*  
   
- &#124; *separatore di catalogo nome-catalogo* [*-nome del proprietario*].* Identificatore di procedure*  
+ &#124; *separatore di catalogo nome-catalogo* [*-nome del proprietario*]. *Identificatore di procedure*  
   
  (La terza sintassi è valida solo se l'origine dati non supporta i proprietari).  
   

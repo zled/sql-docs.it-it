@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="updating-and-persisting-data"></a>L'aggiornamento e il mantenimento dei dati
-Capitoli precedenti hanno illustrato come utilizzare ADO per recuperare i dati in un'origine dati, come spostarsi all'interno dei dati e anche come modificare i dati. Naturalmente, se l'obiettivo dell'applicazione è consentire agli utenti di apportare modifiche ai dati, è necessario conoscere le modalità salvare le modifiche. È possibile mantenere sia il **Recordset** cambia in un file utilizzando il **salvare** metodo oppure è possibile inviare di nuovo le modifiche all'origine dati per l'utilizzo di archiviazione il **aggiornamento** o ** UpdateBatch** metodi.  
+Capitoli precedenti hanno illustrato come utilizzare ADO per recuperare i dati in un'origine dati, come spostarsi all'interno dei dati e anche come modificare i dati. Naturalmente, se l'obiettivo dell'applicazione è consentire agli utenti di apportare modifiche ai dati, è necessario conoscere le modalità salvare le modifiche. È possibile mantenere sia il **Recordset** cambia in un file utilizzando il **salvare** metodo oppure è possibile inviare di nuovo le modifiche all'origine dati per l'utilizzo di archiviazione il **aggiornamento** o  **UpdateBatch** metodi.  
   
  Nei capitoli precedenti, è stato modificato in diverse righe di dati di **Recordset**. ADO supporta due approcci di base in riguardanti l'aggiunta, eliminazione e la modifica di righe di dati.  
   

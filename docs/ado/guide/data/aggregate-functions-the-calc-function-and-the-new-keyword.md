@@ -34,13 +34,13 @@ Il data shaping supporta le funzioni seguenti. Il nome assegnato al capitolo con
   
 |Funzioni di aggregazione|Description|  
 |-------------------------|-----------------|  
-|SUM (*alias capitolo*.* nome della colonna*)|Calcola la somma di tutti i valori nella colonna specificata.|  
-|AVG (*alias capitolo*.* nome della colonna*)|Calcola la media di tutti i valori nella colonna specificata.|  
-|MAX (*alias capitolo*.* nome della colonna*)|Calcola il valore massimo nella colonna specificata.|  
-|MIN (*alias capitolo*.* nome della colonna*)|Calcola il valore minimo nella colonna specificata.|  
-|CONTEGGIO (*alias capitolo*[.* nome della colonna*])|Conta il numero di righe nell'alias specificato. Se viene specificata una colonna, solo le righe per cui tale colonna è non Null sono inclusi nel conteggio.|  
-|STDEV (*alias capitolo*.* nome della colonna*)|Calcola la deviazione standard della colonna specificata.|  
-|QUALSIASI (*alias capitolo*.* nome della colonna*)|Valore della colonna specificata. UNO contiene un valore stimabile solo quando il valore della colonna è uguale per tutte le righe nel capitolo.<br /><br /> **Nota** se la colonna non contiene lo stesso valore per tutte le righe nel capitolo, il comando forma arbitrariamente restituisce uno dei valori per il valore della funzione qualsiasi.|  
+|SUM (*alias capitolo*. *nome della colonna*)|Calcola la somma di tutti i valori nella colonna specificata.|  
+|AVG (*alias capitolo*. *nome della colonna*)|Calcola la media di tutti i valori nella colonna specificata.|  
+|MAX (*alias capitolo*. *nome della colonna*)|Calcola il valore massimo nella colonna specificata.|  
+|MIN (*alias capitolo*. *nome della colonna*)|Calcola il valore minimo nella colonna specificata.|  
+|CONTEGGIO (*alias capitolo*[. *nome della colonna*])|Conta il numero di righe nell'alias specificato. Se viene specificata una colonna, solo le righe per cui tale colonna è non Null sono inclusi nel conteggio.|  
+|STDEV (*alias capitolo*. *nome della colonna*)|Calcola la deviazione standard della colonna specificata.|  
+|QUALSIASI (*alias capitolo*. *nome della colonna*)|Valore della colonna specificata. UNO contiene un valore stimabile solo quando il valore della colonna è uguale per tutte le righe nel capitolo.<br /><br /> **Nota** se la colonna non contiene lo stesso valore per tutte le righe nel capitolo, il comando forma arbitrariamente restituisce uno dei valori per il valore della funzione qualsiasi.|  
   
 |Espressione calcolata|Description|  
 |---------------------------|-----------------|  

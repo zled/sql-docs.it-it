@@ -31,7 +31,7 @@ Gestione driver supporta due punti di ingresso per le funzioni che accettano arg
   
  Il file di intestazione ODBC supporta inoltre funzioni decorate con un *A,* (**SQLDriverConnectA**) per la praticità di applicazioni ANSI o Unicode miste. Le chiamate effettuate per il **A** funzioni sono in realtà chiama il punto di ingresso non decorato (**SQLDriverConnect**.)  
   
- Se l'applicazione viene compilata con Unicode **#define**, il file di intestazione ODBC verrà eseguito il mapping di chiamate di funzione non decorato (**SQLDriverConnect**) per la versione Unicode (**SQLDriverConnectW **.)  
+ Se l'applicazione viene compilata con Unicode **#define**, il file di intestazione ODBC verrà eseguito il mapping di chiamate di funzione non decorato (**SQLDriverConnect**) per la versione Unicode (**SQLDriverConnectW** .)  
   
  Gestione Driver riconosce un driver come driver Unicode se **SQLConnectW** è supportato dal driver.  
   

@@ -79,7 +79,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Il certificato non è scaduto.  
   
--   Il nome comune (CN) nell'oggetto o un nome DNS nell'alternativo nome soggetto (SAN) del certificato corrisponde esattamente il **serverName** valore specificato nella stringa di connessione o, se specificato, il ** hostNameInCertificate** valore della proprietà.  
+-   Il nome comune (CN) nell'oggetto o un nome DNS nell'alternativo nome soggetto (SAN) del certificato corrisponde esattamente il **serverName** valore specificato nella stringa di connessione o, se specificato, il  **hostNameInCertificate** valore della proprietà.  
   
 -   Un nome DNS può includere caratteri jolly. Ma la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non supporta la corrispondenza con caratteri jolly. Vale a dire, abc.com non corrisponderà a *.com, ma \*corrisponderà a COM \*. com.  
   

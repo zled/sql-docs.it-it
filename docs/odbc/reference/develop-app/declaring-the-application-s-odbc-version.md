@@ -30,11 +30,11 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>La dichiarazione dell'applicazione &#39; s versione ODBC
-Prima di un'applicazione alloca una connessione, è necessario impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION. Questo attributo indica che l'applicazione seguente ODBC 2. *x* o ODBC 3.* x* specifica quando si utilizzano gli elementi seguenti:  
+Prima di un'applicazione alloca una connessione, è necessario impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION. Questo attributo indica che l'applicazione seguente ODBC 2. *x* o ODBC 3. *x* specifica quando si utilizzano gli elementi seguenti:  
   
--   **SQLSTATE**. Numero di valori SQLSTATE è diversi in ODBC 2. *x* e ODBC 3.* x*.  
+-   **SQLSTATE**. Numero di valori SQLSTATE è diversi in ODBC 2. *x* e ODBC 3. *x*.  
   
--   **Date, Time e gli identificatori di tipo Timestamp**. La tabella seguente illustra gli identificatori di tipo per date, time e dati di tipo timestamp ODBC 2. *x* e ODBC 3.* x*.  
+-   **Date, Time e gli identificatori di tipo Timestamp**. La tabella seguente illustra gli identificatori di tipo per date, time e dati di tipo timestamp ODBC 2. *x* e ODBC 3. *x*.  
   
     |ODBC 2. *x*|ODBC 3. *x*|  
     |----------------|----------------|  
@@ -52,5 +52,5 @@ Prima di un'applicazione alloca una connessione, è necessario impostare l'attri
  ODBC 3*x* gestione Driver e ODBC 3*x* driver controllare la versione della specifica di ODBC in cui viene scritta un'applicazione e rispondere di conseguenza. Ad esempio, se è seguito dall'applicazione ODBC 2. *x* specifica e chiama **SQLExecute** prima di chiamare **SQLPrepare**, ODBC 3*x* gestione Driver restituisce SQLSTATE S1010 ( Errore nella sequenza funzione). Se l'applicazione segue ODBC 3*x* specifica, gestione Driver restituisce SQLSTATE HY010 (funzione di errore nella sequenza). Per ulteriori informazioni, vedere [compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Applicazioni che seguono ODBC 3. *x* specifica è necessario utilizzare il codice condizionale per evitare di utilizzare funzionalità nuove per ODBC 3.* x* quando si lavora con ODBC 2.* x* driver. ODBC 2. *x* driver non supportano la funzionalità nuova in ODBC 3.* x* solo perché l'applicazione dichiara che segue ODBC 3.* x* specifica. Inoltre, ODBC 3. *x* driver non cessano supportare la funzionalità nuova in ODBC 3.* x* solo perché l'applicazione dichiara che segue l'API ODBC 2.* x* specifica.
+>  Applicazioni che seguono ODBC 3. *x* specifica è necessario utilizzare il codice condizionale per evitare di utilizzare funzionalità nuove per ODBC 3. *x* quando si lavora con ODBC 2. *x* driver. ODBC 2. *x* driver non supportano la funzionalità nuova in ODBC 3. *x* solo perché l'applicazione dichiara che segue ODBC 3. *x* specifica. Inoltre, ODBC 3. *x* driver non cessano supportare la funzionalità nuova in ODBC 3. *x* solo perché l'applicazione dichiara che segue l'API ODBC 2. *x* specifica.
 

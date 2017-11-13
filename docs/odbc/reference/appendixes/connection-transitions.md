@@ -58,7 +58,7 @@ Connessioni ODBC presentano gli stati seguenti.
   
  [4] questa riga vengono mostrate le transizioni quando *HandleType* stato SQL_HANDLE_DESC.  
   
- [5] la chiamata di **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza tener conto per l'handle di ofthat contenuto precedente e potrebbe causare problemi per i driver ODBC. Si tratta di programmazione di applicazioni ODBC non corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile di applicazione definita per * \*OutputHandlePtr* senza chiamare ** SQLFreeHandle** per liberare l'handle prima di riallocazione. Sovrascrittura ODBC gestisce in modo possono causare un comportamento incoerente o errori da parte di driver ODBC.  
+ [5] la chiamata di **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza tener conto per l'handle di ofthat contenuto precedente e potrebbe causare problemi per i driver ODBC. Si tratta di programmazione di applicazioni ODBC non corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile di applicazione definita per  *\*OutputHandlePtr* senza chiamare  **SQLFreeHandle** per liberare l'handle prima di riallocazione. Sovrascrittura ODBC gestisce in modo possono causare un comportamento incoerente o errori da parte di driver ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

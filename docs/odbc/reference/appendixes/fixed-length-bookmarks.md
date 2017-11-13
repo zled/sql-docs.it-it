@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="fixed-length-bookmarks"></a>Segnalibri di lunghezza fissa
-Se un'applicazione ODBC 3*x* driver dovrebbero funzionare con un'API ODBC 2.* x* applicazione che utilizza a lunghezza fissa segnalibri, il driver devono supportare le operazioni seguenti:  
+Se un'applicazione ODBC 3*x* driver dovrebbero funzionare con un'API ODBC 2. *x* applicazione che utilizza a lunghezza fissa segnalibri, il driver devono supportare le operazioni seguenti:  
   
 -   SQL_UB_ON come valore per l'opzione dell'istruzione SQL_USE_BOOKMARKS. (SQL_UB_ON è deprecato in ODBC 3*x*.)  
   

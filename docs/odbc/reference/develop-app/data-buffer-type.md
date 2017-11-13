@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="data-buffer-type"></a>Tipo di Buffer di dati
 Il tipo di dati C di un buffer specificato dall'applicazione. Con una singola variabile, questo errore si verifica quando l'applicazione alloca la variabile. Con generici per la memoria, vale a dire memoria a cui fa riferimento un puntatore di tipo void, questo errore si verifica quando l'applicazione esegue il cast della memoria per un particolare tipo. Il driver individua questo tipo in due modi:  
   
--   **Argomento di tipo di dati del buffer.** Usata per trasferire i valori dei parametri e dati di set di risultati, ad esempio il buffer associato al buffer *TargetValuePtr* in **SQLBindCol**, in genere presente un argomento di tipo associato, ad esempio il * TargetType* argomento **SQLBindCol**. In questo argomento, l'applicazione passa l'identificatore di tipo C che corrisponde al tipo di buffer. Ad esempio, nella chiamata seguente a **SQLBindCol**, il valore SQL_C_TYPE_DATE indica al driver di *data* buffer è un valore SQL_DATE_STRUCT:  
+-   **Argomento di tipo di dati del buffer.** Usata per trasferire i valori dei parametri e dati di set di risultati, ad esempio il buffer associato al buffer *TargetValuePtr* in **SQLBindCol**, in genere presente un argomento di tipo associato, ad esempio il  *TargetType* argomento **SQLBindCol**. In questo argomento, l'applicazione passa l'identificatore di tipo C che corrisponde al tipo di buffer. Ad esempio, nella chiamata seguente a **SQLBindCol**, il valore SQL_C_TYPE_DATE indica al driver di *data* buffer è un valore SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  

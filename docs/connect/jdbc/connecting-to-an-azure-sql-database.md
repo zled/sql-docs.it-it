@@ -82,7 +82,7 @@ shutdown /r /t 1
  Prima della versione 4.0 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], durante la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario aggiungere il nome del server per l'ID utente nella stringa di connessione. Ad esempio, user@servername. A partire dalla versione 4.0 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], non è più necessario aggiungere @servername all'ID utente nella stringa di connessione.  
   
  Impostazione di hostNameInCertificate obbligatoria per l'utilizzo della crittografia  
- Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **crittografare = true**. (Se il nome del server nella stringa di connessione è *shortName*.* domainName*, impostare il **hostNameInCertificate** proprietà \*.* domainName*.)  
+ Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **crittografare = true**. (Se il nome del server nella stringa di connessione è *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.)  
   
  Esempio:  
   

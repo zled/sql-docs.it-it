@@ -53,7 +53,7 @@ Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singo
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     Il **CREATE PROCEDURE** istruzione stessa non è un batch di istruzioni SQL. Tuttavia, la procedura che viene creato è un batch di istruzioni SQL. Nessun punto e virgola di separare i due **selezionare** istruzioni perché il **CREATE PROCEDURE** istruzione specifiche di SQL Server e SQL Server non richiede un punto e virgola per separare più istruzioni in un ** CREATE PROCEDURE** istruzione.  
+     Il **CREATE PROCEDURE** istruzione stessa non è un batch di istruzioni SQL. Tuttavia, la procedura che viene creato è un batch di istruzioni SQL. Nessun punto e virgola di separare i due **selezionare** istruzioni perché il **CREATE PROCEDURE** istruzione specifiche di SQL Server e SQL Server non richiede un punto e virgola per separare più istruzioni in un  **CREATE PROCEDURE** istruzione.  
   
 -   **Le matrici di parametri** matrici di parametri possono essere utilizzate con un'istruzione SQL con parametri come un metodo efficace per eseguire operazioni di massa. Ad esempio, le matrici di parametri utilizzabili con le operazioni seguenti **inserire** inserire più righe nella tabella di righe durante l'esecuzione di una singola istruzione SQL dell'istruzione:  
   

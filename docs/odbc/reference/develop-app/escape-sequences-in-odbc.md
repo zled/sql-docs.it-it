@@ -51,7 +51,7 @@ Un numero di funzionalità del linguaggio, ad esempio gli operatori outer join e
  La sequenza di escape viene riconosciuta e analizzata dal driver, che sostituiscono le sequenze di escape con la grammatica per DBMS specifici. Per ulteriori informazioni sulla sintassi della sequenza di escape, vedere [sequenze di Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) nella grammatica SQL di appendice c:.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, questa è la sintassi standard della sequenza di escape: **-(\*fornitore (***-nome del fornitore***), prodotto (** *nome prodotto***)***estensione* ** \*).**  
+>  In ODBC 2. *x*, questa è la sintassi standard della sequenza di escape: **-(\*fornitore (***-nome del fornitore***), prodotto (** *nome prodotto***)***estensione*  **\*).**  
 >   
 >  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato: **{***estensione***}**  
 >   

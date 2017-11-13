@@ -39,7 +39,7 @@ Indica il tipo di un [comando](../../../ado/reference/ado-api/command-object-ado
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **CommandType** proprietà per ottimizzare la valutazione del [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà.  
   
- Se il **CommandType** valore della proprietà è impostato sul valore predefinito, **adCmdUnknown**, si potrebbe effetti negativi sulle prestazioni poiché ADO deve eseguire chiamate al provider per determinare se il ** CommandText** proprietà è un'istruzione SQL, una stored procedure o un nome di tabella. Se si conosce il tipo di comando in uso, l'impostazione di **CommandType** proprietà indica ad ADO per passare direttamente al codice pertinente. Se il **CommandType** proprietà non corrisponde al tipo di comando nel **CommandText** proprietà, un errore si verifica quando si chiama il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) metodo.  
+ Se il **CommandType** valore della proprietà è impostato sul valore predefinito, **adCmdUnknown**, si potrebbe effetti negativi sulle prestazioni poiché ADO deve eseguire chiamate al provider per determinare se il  **CommandText** proprietà è un'istruzione SQL, una stored procedure o un nome di tabella. Se si conosce il tipo di comando in uso, l'impostazione di **CommandType** proprietà indica ad ADO per passare direttamente al codice pertinente. Se il **CommandType** proprietà non corrisponde al tipo di comando nel **CommandText** proprietà, un errore si verifica quando si chiama il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) metodo.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

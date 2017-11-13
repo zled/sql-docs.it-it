@@ -32,7 +32,7 @@ ms.lasthandoff: 09/09/2017
   
  Conformità di API ODBC: Il livello di base  
   
- Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError ** viene eseguita. La coda di errore viene svuotata dopo ogni istruzione.  
+ Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError**  viene eseguita. La coda di errore viene svuotata dopo ogni istruzione.  
   
  Nella tabella seguente vengono descritti il **SQLError** argomenti e valori restituiti usati dal driver.  
   

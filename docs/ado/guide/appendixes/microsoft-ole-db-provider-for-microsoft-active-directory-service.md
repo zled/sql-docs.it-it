@@ -90,7 +90,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>Comportamento di recordset  
  Le tabelle seguenti elencano le funzionalità disponibili in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto aperto tramite questo provider. Solo il tipo di cursore statico (**adOpenStatic**) è disponibile.  
   
- Per ulteriori informazioni su **Recordset** comportamento per la configurazione di provider, eseguire il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo ed enumerare il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme il ** Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.  
+ Per ulteriori informazioni su **Recordset** comportamento per la configurazione di provider, eseguire il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo ed enumerare il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme il  **Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.  
   
  **Disponibilità di proprietà Recordset ADO standard:**  
   

@@ -36,7 +36,7 @@ Indica la lunghezza effettiva di un campo??? valore s in byte.
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **ActualSize** proprietà per restituire la lunghezza effettiva di un [campo](../../../ado/reference/ado-api/field-object.md) valore dell'oggetto. Per tutti i campi, il **ActualSize** proprietà è di sola lettura. Se ADO non è possibile determinare la lunghezza del **campo** il valore dell'oggetto, il **ActualSize** restituisce proprietà **adUnknown**.  
   
- Il **ActualSize** e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) le proprietà sono diverse, come illustrato nell'esempio seguente. Oggetto **campo** oggetto con un tipo dichiarato di **adVarChar** e una lunghezza massima di 50 caratteri restituisce un **DefinedSize** valore della proprietà di 50, ma la ** ActualSize** valore restituito della proprietà è la lunghezza dei dati archiviati nel campo del record corrente. **Campi** con un **DefinedSize** maggiori di 255 byte vengono considerati come colonne di lunghezza variabile.  
+ Il **ActualSize** e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) le proprietà sono diverse, come illustrato nell'esempio seguente. Oggetto **campo** oggetto con un tipo dichiarato di **adVarChar** e una lunghezza massima di 50 caratteri restituisce un **DefinedSize** valore della proprietà di 50, ma la  **ActualSize** valore restituito della proprietà è la lunghezza dei dati archiviati nel campo del record corrente. **Campi** con un **DefinedSize** maggiori di 255 byte vengono considerati come colonne di lunghezza variabile.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  

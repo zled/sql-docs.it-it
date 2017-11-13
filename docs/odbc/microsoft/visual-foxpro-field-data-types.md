@@ -33,12 +33,12 @@ Nella tabella seguente sono elencati i valori per il *FieldType* argomento nell'
 |B|-|d|Double|  
 |C|N|-|Campo della larghezza di caratteri*n*|  
 |D|-|-|Data|  
-|F|N|d|A virgola mobile a un campo numerico della larghezza * n * con *d* posizioni decimali|  
+|F|N|d|A virgola mobile a un campo numerico della larghezza  *n*  con *d* posizioni decimali|  
 |G|-|-|Generale|  
 |I|-|-|Valore intero|  
 |L|-|-|Logico|  
 |M|-|-|Memo|  
-|N|N|d|Campo numerico della larghezza * n * con *d* posizioni decimali|  
+|N|N|d|Campo numerico della larghezza  *n*  con *d* posizioni decimali|  
 |T|-|-|DateTime|  
 |S|-|-|Currency|
 

@@ -70,7 +70,7 @@ La gestione Driver ODBC 3.5 (o versioni successive) supporta sia ANSI e Unicode 
 |**Funzione SQLInstallDriver**||  
   
 > [!NOTE]  
->  Funzioni obsolete sono di supporto di mapping Unicode-to-ANSI poiché ODBC 3*x* gestione Driver supporta la ricompilazione di ODBC 2.* x* applicazioni con UNICODE **#define**.  
+>  Funzioni obsolete sono di supporto di mapping Unicode-to-ANSI poiché ODBC 3*x* gestione Driver supporta la ricompilazione di ODBC 2. *x* applicazioni con UNICODE **#define**.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

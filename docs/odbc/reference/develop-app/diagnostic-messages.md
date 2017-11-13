@@ -37,11 +37,11 @@ Con ogni SQLSTATE, viene restituito un messaggio di diagnostica. Il valore stess
   
  Se l'origine dell'errore o avviso, è un componente stesso, il messaggio di diagnostica deve spiegare ciò. Pertanto, il testo dei messaggi ha due formati diversi. Per errori e avvisi che non sono presenti in un'origine dati, il messaggio di diagnostica deve utilizzare questo formato:  
   
- **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **]** * testo immesso componente*  
+ **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **]**  *testo immesso componente*  
   
  Per errori e avvisi che si verificano in un'origine dati, il messaggio di diagnostica deve utilizzare questo formato:  
   
- **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **] [** * Identificatore dell'origine dati* **]** *dati-fornito-testo di origine*  
+ **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **] [**  *Identificatore dell'origine dati* **]** *dati-fornito-testo di origine*  
   
  Nella tabella seguente viene illustrato il significato di ogni elemento.  
   

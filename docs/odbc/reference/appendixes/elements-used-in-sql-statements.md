@@ -58,7 +58,7 @@ Gli elementi seguenti sono utilizzati nelle istruzioni SQL elencate in precedenz
   
  *espressione* :: = termine &#124; espressione {+ &#124; –} termine  
   
- *fattore di* :: = [*+*&#124;* –*]*primario*  
+ *fattore di* :: = [*+*&#124; *–*]*primario*  
   
  *valore di inserimento* :: =  
   
@@ -102,7 +102,7 @@ Gli elementi seguenti sono utilizzati nelle istruzioni SQL elencate in precedenz
   
  *elenco di riferimenti tabella* :: = *riferimento alla tabella* [,*riferimento alla tabella*]...  
   
- *termine* :: = *fattore* &#124; *termine* {\*&#124;* / *} *factor*  
+ *termine* :: = *fattore* &#124; *termine* {\*&#124; */* } *factor*  
   
  *intero senza segno* :: = {*cifra*}  
   

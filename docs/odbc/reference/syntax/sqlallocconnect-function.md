@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Introdotta: versione ODBC standard 1.0 conformità: deprecato  
   
  **Riepilogo**  
- In ODBC 3. *x*, ODBC 2.* x* funzione **SQLAllocConnect** è stata sostituita da **SQLAllocHandle**. Per ulteriori informazioni, vedere [SQLAllocHandle-funzione](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ In ODBC 3. *x*, ODBC 2. *x* funzione **SQLAllocConnect** è stata sostituita da **SQLAllocHandle**. Per ulteriori informazioni, vedere [SQLAllocHandle-funzione](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni su quali il Driver Manager esegue il mapping di questa funzione per quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3.* x* driver, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+>  Per ulteriori informazioni su quali il Driver Manager esegue il mapping di questa funzione per quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

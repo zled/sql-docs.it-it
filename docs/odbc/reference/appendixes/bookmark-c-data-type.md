@@ -34,7 +34,7 @@ Il tipo di dati C segnalibro consente a un'applicazione recuperare un segnalibro
  Nella tabella seguente elenca il valore di *CType* per il tipo di dati C segnalibro, il tipo di dati C ODBC che implementa il tipo di dati C segnalibro e la definizione dei dati di tipo da SQL. H.  
   
 > [!NOTE]  
->  Il tipo di dati SQL_C_BOOKMARK è stato deprecato. ODBC 3*x* applicazioni non devono utilizzare SQL_C_BOOKMARK. ODBC 3*x* driver devono supportare SQL_C_BOOKMARK solo se si desidera utilizzare ODBC 2.* x* applicazioni che lo utilizzano. Gestione Driver mappata SQL_C_VARBOOKMARK SQL_C_BOOKMARK quando un'applicazione rispetto a una ODBC 2. *x* driver.  
+>  Il tipo di dati SQL_C_BOOKMARK è stato deprecato. ODBC 3*x* applicazioni non devono utilizzare SQL_C_BOOKMARK. ODBC 3*x* driver devono supportare SQL_C_BOOKMARK solo se si desidera utilizzare ODBC 2. *x* applicazioni che lo utilizzano. Gestione Driver mappata SQL_C_VARBOOKMARK SQL_C_BOOKMARK quando un'applicazione rispetto a una ODBC 2. *x* driver.  
   
 |Identificatore di tipo C|Typedef di ODBC C|Tipo C|  
 |-----------------------|--------------------|------------|  

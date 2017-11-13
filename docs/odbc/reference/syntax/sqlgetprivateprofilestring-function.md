@@ -74,7 +74,7 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString** restituisce un valore intero che indica il numero di caratteri letti.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando una chiamata a **SQLGetPrivateProfileString** non riesce, un oggetto associato * \*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando una chiamata a **SQLGetPrivateProfileString** non riesce, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  

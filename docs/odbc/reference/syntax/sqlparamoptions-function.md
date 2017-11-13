@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Introdotta: versione ODBC standard 1.0 conformità: deprecato  
   
  **Riepilogo**  
- La funzione ODBC 2.0 **SQLParamOptions** è stato sostituito in ODBC 3.* x* dalle chiamate a [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ La funzione ODBC 2.0 **SQLParamOptions** è stato sostituito in ODBC 3. *x* dalle chiamate a [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni su quali il Driver Manager esegue il mapping di questa funzione per quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3.* x* driver, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+>  Per ulteriori informazioni su quali il Driver Manager esegue il mapping di questa funzione per quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="remarks"></a>Osservazioni  
  Vedere [informazioni ODBC a 64 Bit](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione verrà eseguita in un sistema operativo a 64 bit.  

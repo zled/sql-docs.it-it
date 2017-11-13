@@ -36,7 +36,7 @@ Indica la dimensione massima, in byte o caratteri, di un [parametro](../../../ad
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **dimensioni** proprietà per determinare le dimensioni massime per i valori scritti o leggere il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà di un **parametro** oggetto.  
   
- Se si specifica un tipo di dati a lunghezza variabile per un **parametro** oggetto (ad esempio, qualsiasi **stringa** digitare, ad esempio **adVarChar**), è necessario impostare l'oggetto ** Dimensioni** proprietà prima di aggiungerlo al [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta; in caso contrario, si verifica un errore.  
+ Se si specifica un tipo di dati a lunghezza variabile per un **parametro** oggetto (ad esempio, qualsiasi **stringa** digitare, ad esempio **adVarChar**), è necessario impostare l'oggetto  **Dimensioni** proprietà prima di aggiungerlo al [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta; in caso contrario, si verifica un errore.  
   
  Se è già stato accodato la **parametro** dell'oggetto per il **parametri** raccolta di un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e si modifica il tipo a un tipo di dati a lunghezza variabile, è necessario impostare il **parametro** dell'oggetto **dimensioni** proprietà prima di eseguire il **comando** oggetto; in caso contrario, si verifica un errore.  
   

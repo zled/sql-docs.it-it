@@ -48,7 +48,7 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
   
  Dopo aver impostato la **ConnectionString** proprietà e aprire il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto, il provider può modificare il contenuto della proprietà, ad esempio, eseguendo il mapping di nomi degli argomenti definiti da ADO per loro equivalenti per il provider specifico.  
   
- Il **ConnectionString** proprietà eredita automaticamente il valore utilizzato per il *ConnectionString* argomento del [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo, pertanto è possibile eseguire l'override di corrente** ConnectionString** proprietà durante il **aprire** chiamata al metodo.  
+ Il **ConnectionString** proprietà eredita automaticamente il valore utilizzato per il *ConnectionString* argomento del [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo, pertanto è possibile eseguire l'override di corrente **ConnectionString** proprietà durante il **aprire** chiamata al metodo.  
   
  Poiché il *nome File* argomento lo induce ADO caricare il provider associato, è possibile passare a entrambi il *Provider* e *nome File* argomenti.  
   

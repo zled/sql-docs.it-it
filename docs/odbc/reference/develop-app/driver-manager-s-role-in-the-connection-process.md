@@ -36,7 +36,7 @@ Tenere presente che le applicazioni non chiamare direttamente le funzioni di dri
   
 -   Se per la connessione non viene caricato alcun driver, Driver Manager controlla se viene caricato il driver specificato in un'altra connessione nello stesso ambiente. Se non, gestione Driver carica il driver in cui la connessione e chiama **SQLAllocHandle** nel driver con l'opzione impostato su SQL_HANDLE_ENV.  
   
-     Gestione Driver chiama quindi **SQLAllocHandle** nel driver con l'opzione impostato su SQL_HANDLE_DBC o meno è stato appena caricato. Se l'applicazione di impostare gli attributi di connessione, gestione Driver chiama **SQLSetConnectAttr** nel driver; se si verifica un errore, la funzione di connessione di gestione Driver restituisce SQLSTATE IM006 (patente ** La funzione SQLSetConnectAttr** non riuscita). Infine, gestione Driver chiama la funzione di connessione nel driver.  
+     Gestione Driver chiama quindi **SQLAllocHandle** nel driver con l'opzione impostato su SQL_HANDLE_DBC o meno è stato appena caricato. Se l'applicazione di impostare gli attributi di connessione, gestione Driver chiama **SQLSetConnectAttr** nel driver; se si verifica un errore, la funzione di connessione di gestione Driver restituisce SQLSTATE IM006 (patente  **La funzione SQLSetConnectAttr** non riuscita). Infine, gestione Driver chiama la funzione di connessione nel driver.  
   
 -   Se il driver specificato viene caricato per la connessione, gestione Driver chiama la funzione di connessione nel driver. In questo caso, il driver deve assicurarsi che tutti gli attributi di connessione per la connessione mantengono le impostazioni correnti.  
   

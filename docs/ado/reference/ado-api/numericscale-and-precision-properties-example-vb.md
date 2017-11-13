@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale e Precision (VB)
-Questo esempio viene utilizzato il [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [precisione](../../../ado/reference/ado-api/precision-property-ado.md) proprietà per visualizzare la scala numerica e precisione dei campi di ***sconti*** tabella del *** Pubs*** database.  
+Questo esempio viene utilizzato il [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [precisione](../../../ado/reference/ado-api/precision-property-ado.md) proprietà per visualizzare la scala numerica e precisione dei campi di ***sconti*** tabella del  ***Pubs*** database.  
   
 ```  
 'BeginNumericScaleVB  

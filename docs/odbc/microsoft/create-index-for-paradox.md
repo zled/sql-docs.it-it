@@ -50,11 +50,11 @@ La sintassi dell'istruzione CREATE INDEX per il driver ODBC Paradox è:
   
 -   Il *nome indice* argomento per un indice primario deve essere lo stesso nome base della tabella, come richiesto dal Paradox.  
   
- Se la parola chiave **UNIQUE** viene omesso, il driver ODBC Paradox verrà creato un indice non univoco. Si tratta di due file di indice secondario Paradox denominati *-nome della tabella*. X* nn * e *-nome della tabella*. Y*nn*, dove * nn * è il numero della colonna nella tabella. Gli indici non univoci sono soggetti alle restrizioni seguenti:  
+ Se la parola chiave **UNIQUE** viene omesso, il driver ODBC Paradox verrà creato un indice non univoco. Si tratta di due file di indice secondario Paradox denominati *-nome della tabella*. X *nn*  e *-nome della tabella*. Y*nn*, dove  *nn*  è il numero della colonna nella tabella. Gli indici non univoci sono soggetti alle restrizioni seguenti:  
   
 -   Prima di poter creare un indice non univoco per una tabella, deve esistere un indice primario per la tabella.  
   
--   Per Paradox 3. *x*, *nome indice* argomento per un indice diverso da un indice primario (univoco o non univoco) deve essere identico al nome di colonna. Per Paradox 4. *x* e 5.* x*, il nome di tale indice è possibile, ma non deve essere identico al nome di colonna.  
+-   Per Paradox 3. *x*, *nome indice* argomento per un indice diverso da un indice primario (univoco o non univoco) deve essere identico al nome di colonna. Per Paradox 4. *x* e 5. *x*, il nome di tale indice è possibile, ma non deve essere identico al nome di colonna.  
   
 -   Per un indice non univoco, è possibile specificare una sola colonna.  
   

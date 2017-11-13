@@ -37,7 +37,7 @@ Per importare le librerie di ADO in un'applicazione di Microsoft Visual Basic 6,
   
 1.  Creare un nuovo o aprire un progetto di Visual Basic esistente.  
   
-2.  Fare clic su di **progetto** voce di menu e quindi selezionare **riferimenti... ** dal Pannello di menu a discesa.  
+2.  Fare clic su di **progetto** voce di menu e quindi selezionare **riferimenti...**  dal Pannello di menu a discesa.  
   
 3.  Da **riferimenti disponibili**, selezionare la casella per **Microsoft ActiveX Data Objects *n* libreria**, dove ***n*** rappresenta la versione più recente numero di versione. Il **percorso** campo sottostante è necessario identificare la scelta come *$installDir\msado15.dll*, dove *$installDir* rappresenta il percorso della directory in cui la libreria ADO è stato installato.  
   

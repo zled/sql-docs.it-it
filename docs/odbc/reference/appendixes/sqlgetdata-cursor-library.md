@@ -41,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **SQLGetData** non può essere chiamato per i cursori forward-only.  
   
--   **SQLGetData** può essere chiamato solo quando vengono soddisfatte le condizioni seguenti: un **selezionare** istruzione ha generato il set di risultati; **selezionare** istruzione non contiene un join, un ** UNIONE** clausola, o un **GROUP BY** clausola; e le colonne di cui è utilizzato un alias o un'espressione nell'elenco di selezione non sono associate con **SQLBindCol**.  
+-   **SQLGetData** può essere chiamato solo quando vengono soddisfatte le condizioni seguenti: un **selezionare** istruzione ha generato il set di risultati; **selezionare** istruzione non contiene un join, un  **UNIONE** clausola, o un **GROUP BY** clausola; e le colonne di cui è utilizzato un alias o un'espressione nell'elenco di selezione non sono associate con **SQLBindCol**.  
   
 -   Se il driver supporta solo un'istruzione attiva, la libreria di cursori recupera il resto del gruppo di risultati prima di eseguire il **selezionare** istruzione e la chiamata **SQLGetData**.
 

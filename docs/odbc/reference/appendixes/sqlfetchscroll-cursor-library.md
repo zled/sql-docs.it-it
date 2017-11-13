@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Quando si utilizza la libreria di cursori, le chiamate a **SQLFetchScroll** ReadContentAsBinHex con chiamate a **SQLFetch** o **SQLExtendedFetch**.  
   
- Quando si utilizza la libreria di cursori, le chiamate a **SQLFetchScroll** sono supportati sia per ODBC 2.* x* e per ODBC 3.* x* driver.  
+ Quando si utilizza la libreria di cursori, le chiamate a **SQLFetchScroll** sono supportati sia per ODBC 2. *x* e per ODBC 3. *x* driver.  
   
 ## <a name="rowset-buffers"></a>Buffer di set di righe  
  È possibile ottimizzare il trasferimento dei dati dal driver per il buffer di set di righe fornito dall'applicazione, se la libreria di cursori:  

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="retrieving-results-advanced"></a>Il recupero dei risultati (avanzati)
-Un'applicazione può specificare che un offset viene aggiunto per associare gli indirizzi di buffer di dati e l'indicatore di lunghezza corrispondente buffer indirizzi quando **SQLBulkOperations**, **SQLFetch**, ** SQLFetchScroll**, o **SQLSetPos** viene chiamato. I risultati di queste aggiunte determinano gli indirizzi usati in queste operazioni.  
+Un'applicazione può specificare che un offset viene aggiunto per associare gli indirizzi di buffer di dati e l'indicatore di lunghezza corrispondente buffer indirizzi quando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, o **SQLSetPos** viene chiamato. I risultati di queste aggiunte determinano gli indirizzi usati in queste operazioni.  
   
  Offset di associazione consentono a un'applicazione modificare le associazioni senza chiamare **SQLBindCol** per le colonne associate in precedenza. Una chiamata a **SQLBindCol** per riassociare i dati viene modificato l'indirizzo del buffer e il puntatore di lunghezza/indicatore. Riassociazione con un offset, d'altra parte, semplicemente aggiunge un offset all'indirizzo del buffer di dati associati esistente e indirizzo del buffer di lunghezza/indicatore. Quando vengono utilizzati gli offset, le associazioni sono "modello" di disposizione i buffer dell'applicazione e l'applicazione può passare "modello" a diverse aree di memoria modificando l'offset. Un nuovo offset può essere specificato in qualsiasi momento e viene sempre aggiunta per i valori associati originariamente.  
   

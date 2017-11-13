@@ -78,7 +78,7 @@ Il **Recordset** oggetto dispone di funzionalità incorporate che consentono rid
 ## <a name="filtering-the-results"></a>Filtrare i risultati  
  Il **trovare** metodo limita la ricerca per il contenuto di un campo. Il **Seek** metodo presuppone che si dispone di un indice e altre limitazioni. Se è necessario eseguire la ricerca di più campi che non sono la base di un indice o se il provider non supporta gli indici, è possibile limitare i risultati utilizzando il **filtro** proprietà del **Recordset** oggetto.  
   
- Utilizzare il **filtro** proprietà selettivo i record in un **Recordset** oggetto. Filtrati **Recordset** diventa il cursore corrente, che significa che i record non soddisfa il **filtro** criteri non sono disponibili nel **Recordset** fino a quando il **Filtro** viene rimosso. Altre proprietà che restituiscono valori in base al cursore corrente sono interessate, ad esempio **AbsolutePosition**, **AbsolutePage**, **RecordCount**, e ** PageCount**. Questo è l'impostazione di **filtro** proprietà su un valore specifico sposterà il record corrente al primo record che soddisfa il nuovo valore.  
+ Utilizzare il **filtro** proprietà selettivo i record in un **Recordset** oggetto. Filtrati **Recordset** diventa il cursore corrente, che significa che i record non soddisfa il **filtro** criteri non sono disponibili nel **Recordset** fino a quando il **Filtro** viene rimosso. Altre proprietà che restituiscono valori in base al cursore corrente sono interessate, ad esempio **AbsolutePosition**, **AbsolutePage**, **RecordCount**, e  **PageCount**. Questo è l'impostazione di **filtro** proprietà su un valore specifico sposterà il record corrente al primo record che soddisfa il nuovo valore.  
   
  Il **filtro** proprietà accetta un argomento di tipo variant. Questo valore rappresenta uno dei tre metodi per l'utilizzo di **filtro** proprietà: una stringa di criteri, un **FilterGroupEnum** costante o una matrice di segnalibri. Per ulteriori informazioni, vedere la sezione filtro con una stringa di criteri di filtro con una costante e filtro con i segnalibri più avanti in questo argomento.  
   
@@ -92,7 +92,7 @@ Il **Recordset** oggetto dispone di funzionalità incorporate che consentono rid
   
 -   *FieldName* deve essere un nome di campo valido di **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome tra parentesi quadre.  
   
--   *Operatore* deve essere uno dei seguenti: ** \< **, ** > **, ** \< = **, ** >= ** , ** <> **, ** = **, o **come**.  
+-   *Operatore* deve essere uno dei seguenti:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , o **come**.  
   
 -   *Valore* è il valore con cui si confronteranno i valori dei campi (ad esempio, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilizzare le virgolette singole (') con le stringhe e caratteri cancelletto (`#`) con le date. Per i numeri, è possibile utilizzare la notazione scientifica, segni di dollaro e decimali. Se *operatore* è **come**, *valore* possono usare caratteri jolly. Solo l'asterisco (\*) e segno di percentuale (%) jolly sono consentiti i caratteri e devono essere l'ultimo carattere nella stringa. *Valore* non può essere null.  
   

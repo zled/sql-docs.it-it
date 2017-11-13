@@ -59,7 +59,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="b"></a>B  
  **differenza di comportamento**  
- Una modifica di determinate funzionalità da ODBC 3*x* comportamento ODBC 2.* x* comportamento, o viceversa. Causato dalla modifica l'attributo di ambiente SQL_ATTR_ODBC_VERSION.  
+ Una modifica di determinate funzionalità da ODBC 3*x* comportamento ODBC 2. *x* comportamento, o viceversa. Causato dalla modifica l'attributo di ambiente SQL_ATTR_ODBC_VERSION.  
   
  **Oggetto binario di grandi dimensioni (BLOB)**  
  Eventuali dati binari in un determinato numero di byte, ad esempio 255. In genere molto più tempo. Tali dati vengono in genere inviati ed recuperati dall'origine dei dati in parti. Noto anche come *dati long*.  

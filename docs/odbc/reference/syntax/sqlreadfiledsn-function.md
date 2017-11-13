@@ -53,30 +53,30 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>Argomenti  
  *lpszFileName*  
- [Input] Puntatore al buffer di dati che contiene il nome del file DSN. Un'estensione per il DSN viene aggiunto a tutti i nomi di file che non dispongono già di un'estensione per il DSN. Il valore in * \*lpszFileName* deve essere una stringa con terminazione null.  
+ [Input] Puntatore al buffer di dati che contiene il nome del file DSN. Un'estensione per il DSN viene aggiunto a tutti i nomi di file che non dispongono già di un'estensione per il DSN. Il valore in  *\*lpszFileName* deve essere una stringa con terminazione null.  
   
  *lpszAppName*  
- [Input] Puntatore al buffer di dati che contiene il nome dell'applicazione. Questo è "ODBC" per la sezione ODBC. Il valore in * \*lpszAppName* deve essere una stringa con terminazione null.  
+ [Input] Puntatore al buffer di dati che contiene il nome dell'applicazione. Questo è "ODBC" per la sezione ODBC. Il valore in  *\*lpszAppName* deve essere una stringa con terminazione null.  
   
  *lpszkeyname stringa*  
- [Input] Puntatore al buffer di dati che contiene il nome della chiave da leggere. Per parole chiave riservate, vedere "Commenti". Il valore in * \*lpszAppName* deve essere una stringa con terminazione null.  
+ [Input] Puntatore al buffer di dati che contiene il nome della chiave da leggere. Per parole chiave riservate, vedere "Commenti". Il valore in  *\*lpszAppName* deve essere una stringa con terminazione null.  
   
  *lpszString*  
  [Output] Puntatore al buffer di dati che contiene la stringa associata alla chiave per la lettura.  
   
- Se * \*lpszFileName* è un nome DSN valido, ma il *lpszAppName* argomento è un puntatore null e *lpszkeyname stringa* argomento è un puntatore null, il * \*lpszString* contiene un elenco di applicazioni valide. Se * \*lpszFileName* è un nome di file valido. DSN e * \*lpszAppName* è un nome di applicazione valido, ma la *lpszkeyname stringa* argomento è un valore null puntatore, quindi * \*lpszString* contiene un elenco di parole chiave riservate valide nella sezione appropriata del file DSN, delimitata da punti e virgola. Se * \*lpszFileName* è un nome DSN valido ma * \*lpszAppName* è un puntatore null e *lpszkeyname stringa* argomento è un puntatore null, quindi * \*lpszString* contiene un elenco di sezioni nel file DSN, delimitate da punti e virgola.  
+ Se  *\*lpszFileName* è un nome DSN valido, ma il *lpszAppName* argomento è un puntatore null e *lpszkeyname stringa* argomento è un puntatore null, il  *\*lpszString* contiene un elenco di applicazioni valide. Se  *\*lpszFileName* è un nome di file valido. DSN e  *\*lpszAppName* è un nome di applicazione valido, ma la *lpszkeyname stringa* argomento è un valore null puntatore, quindi  *\*lpszString* contiene un elenco di parole chiave riservate valide nella sezione appropriata del file DSN, delimitata da punti e virgola. Se  *\*lpszFileName* è un nome DSN valido ma  *\*lpszAppName* è un puntatore null e *lpszkeyname stringa* argomento è un puntatore null, quindi  *\*lpszString* contiene un elenco di sezioni nel file DSN, delimitate da punti e virgola.  
   
  *cbString*  
- [Input] Lunghezza di * \*lpszString* buffer.  
+ [Input] Lunghezza di  *\*lpszString* buffer.  
   
  *pcbString*  
- [Output] Numero totale di byte disponibili per restituire * \*lpszString*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbString*, la stringa di output in * \*lpszString* viene troncato a *cbString* meno il carattere di terminazione null. Il *pcbString* argomento può essere un puntatore null.  
+ [Output] Numero totale di byte disponibili per restituire  *\*lpszString*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbString*, la stringa di output in  *\*lpszString* viene troncato a *cbString* meno il carattere di terminazione null. Il *pcbString* argomento può essere un puntatore null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLReadFileDSN** restituisce FALSE, un oggetto associato * \*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLReadFileDSN** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
@@ -85,7 +85,7 @@ BOOL SQLReadFileDSN(
 |ODBC_ERROR_INVALID_PATH|Percorso di installazione non valido.|Il percorso del nome file specificato nella *lpszFileName* argomento non valido.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|Il *lpszAppName* argomento è NULL, mentre il *lpszkeyname stringa* argomento è valido.|  
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Stringa di output troncato|La stringa restituita * \*lpszString* è stato troncato perché il valore in *cbString* è minore o uguale al valore di stato * \*pcbString*.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Stringa di output troncato|La stringa restituita  *\*lpszString* è stato troncato perché il valore in *cbString* è minore o uguale al valore di stato  *\*pcbString*.|  
 |ODBC_ERROR_REQUEST_FAILED|Richiesta non riuscita|La parola chiave non esiste nel file DSN.|  
   
 ## <a name="comments"></a>Commenti  

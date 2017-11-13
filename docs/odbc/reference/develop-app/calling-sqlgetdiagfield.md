@@ -29,5 +29,5 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="calling-sqlgetdiagfield"></a>La chiamata di funzione SQLGetDiagField
-Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLGetDiagField** un 2 di ODBC*x* driver, il driver restituisce SQL_SUCCESS e le informazioni appropriate nella * \*DiagInfoPtr* se il *DiagIdentifier* argomento è SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_ NUMERO, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME o SQL_DIAG_SQLSTATE. Tutti gli altri campi di diagnostica restituirà SQL_ERROR.
+Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLGetDiagField** un 2 di ODBC*x* driver, il driver restituisce SQL_SUCCESS e le informazioni appropriate nella  *\*DiagInfoPtr* se il *DiagIdentifier* argomento è SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_ NUMERO, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME o SQL_DIAG_SQLSTATE. Tutti gli altri campi di diagnostica restituirà SQL_ERROR.
 

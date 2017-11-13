@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 Quando viene utilizzato il driver di testo, il formato del file di testo è determinato mediante un file di informazioni dello schema. Il file di informazioni dello schema è sempre denominato Schema.ini e mantenuto sempre nella stessa directory dell'origine dati di testo. Il file di informazioni dello schema fornisce il IISAM con informazioni sul formato generale del file, il nome della colonna e informazioni sul tipo di dati e diverse altre caratteristiche di dati. Un file Schema.ini è sempre necessario per l'accesso ai dati a lunghezza fissa. Quando la tabella di testo contiene DateTime, Currency, o dati Decimal o ogni volta che si desidera maggiore controllo sulla gestione dei dati nella tabella, è necessario utilizzare un file ini.  
   
 > [!NOTE]  
->  Il driver ISAM testo otterrà i valori iniziali dal Registro di sistema, non dal file Schema.ini. Lo stesso formato di file predefinito si applica a tutte le nuove tabelle di dati di testo. Tutti i file creati dall'istruzione CREATE TABLE ereditano tali stessi valori di formato predefinito, che vengono impostati selezionando i valori di formato di file nel **Definisci formato testo** la finestra di dialogo con \<predefinito > scelto per il ** Tabelle** elenco. Se i valori del Registro di sistema sono diversi dai valori nel file Schema.ini, i valori del Registro di sistema verranno sovrascritti dai valori dal file Schema.ini.  
+>  Il driver ISAM testo otterrà i valori iniziali dal Registro di sistema, non dal file Schema.ini. Lo stesso formato di file predefinito si applica a tutte le nuove tabelle di dati di testo. Tutti i file creati dall'istruzione CREATE TABLE ereditano tali stessi valori di formato predefinito, che vengono impostati selezionando i valori di formato di file nel **Definisci formato testo** la finestra di dialogo con \<predefinito > scelto per il  **Tabelle** elenco. Se i valori del Registro di sistema sono diversi dai valori nel file Schema.ini, i valori del Registro di sistema verranno sovrascritti dai valori dal file Schema.ini.  
   
 ## <a name="understanding-schemaini-files"></a>Informazioni sui file ini  
  Il file ini forniscono informazioni sullo schema relative i record in un file di testo. Ogni voce ini specifica uno dei cinque caratteristiche della tabella:  
@@ -91,7 +91,7 @@ Col1=CustomerNumber Text Width 10
 Col2=CustomerName Text Width 30  
 ```  
   
- La sintassi di **Col** * n * è:  
+ La sintassi di **Col**  *n*  è:  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- La tabella seguente descrive ogni parte di **Col** * n * voce.  
+ La tabella seguente descrive ogni parte di **Col**  *n*  voce.  
   
 |Parametro|Description|  
 |---------------|-----------------|  

@@ -48,7 +48,7 @@ ms.lasthandoff: 09/09/2017
  Se l'applicazione interagisca con dati la cui regole, trigger, i valori predefiniti o stored procedure chiamano altri comandi di Visual FoxPro o funzioni, il driver genera un errore. Vedere [funzioni e i comandi non supportati da Visual FoxPro](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) per un elenco di comandi e funzioni non supportate dal driver.  
   
 > [!TIP]  
->  Se si desidera inserire il codice condizionale le regole, trigger o stored procedure che determina i comandi da eseguire quando viene chiamato dal driver, è possibile utilizzare il **() versione** (funzione). Il **() versione** risultato della funzione "Driver ODBC Visual FoxPro * \<versione >*" quando viene chiamato dal driver.  
+>  Se si desidera inserire il codice condizionale le regole, trigger o stored procedure che determina i comandi da eseguire quando viene chiamato dal driver, è possibile utilizzare il **() versione** (funzione). Il **() versione** risultato della funzione "Driver ODBC Visual FoxPro  *\<versione >*" quando viene chiamato dal driver.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Funzioni supportate in Stored procedure, trigger, i valori predefiniti e regole e i comandi di Visual FoxPro  
   

@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  Le lunghezze seguenti sono valide come valori di lunghezza/indicatore:  
   
--   *n*, dove * n * > 0.  
+-   *n*, dove  *n*  > 0.  
   
 -   0.  
   

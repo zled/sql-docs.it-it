@@ -41,10 +41,10 @@ Le applicazioni ODBC possono essere classificate come segue:
     -   Non è stato ricompilato con le intestazioni di ODBC 3.5.  
   
 -   **Pure ODBC 2.**  
-     ***x* applicazione ricompilata** pure ODBC 2.* x* applicazione che è stato ricompilato utilizzando i file di intestazione ODBC 3.5, impostando ODBCVER = 0x0250.  
+     ***x* applicazione ricompilata** pure ODBC 2. *x* applicazione che è stato ricompilato utilizzando i file di intestazione ODBC 3.5, impostando ODBCVER = 0x0250.  
   
 -   **Pure ODBC 2.**  
-     ***x* applicazione Unicode** pure ODBC 2.* x* ricompilare l'applicazione che è conforme a Unicode e utilizza il tipo di dati SQL_WCHAR.  
+     ***x* applicazione Unicode** pure ODBC 2. *x* ricompilare l'applicazione che è conforme a Unicode e utilizza il tipo di dati SQL_WCHAR.  
   
 -   **Pure Open Group e ISO**–**applicazioni ODBC conformi** applicazione A 32 bit che:  
   

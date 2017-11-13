@@ -65,14 +65,14 @@ SQLRETURN SQLGetInfo(
  Se *InfoValuePtr* è NULL, *StringLengthPtr* continuerà a restituire il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui fa riferimento *InfoValuePtr*.  
   
  *BufferLength*  
- [Input] Lunghezza di \* *InfoValuePtr* buffer. Se il valore in * \*InfoValuePtr* non è una stringa di caratteri o se *InfoValuePtr* è un puntatore null, il *BufferLength* argomento viene ignorato. Il driver presuppone che le dimensioni di * \*InfoValuePtr* è SQLUSMALLINT o SQLUINTEGER, in base il *InfoType*. Se * \*InfoValuePtr* è una stringa Unicode (quando si chiama **SQLGetInfoW**), il *BufferLength* argomento deve essere un numero pari; se non, SQLSTATE HY090 ( Lunghezza della stringa o di buffer non valido) viene restituito.  
+ [Input] Lunghezza di \* *InfoValuePtr* buffer. Se il valore in  *\*InfoValuePtr* non è una stringa di caratteri o se *InfoValuePtr* è un puntatore null, il *BufferLength* argomento viene ignorato. Il driver presuppone che le dimensioni di  *\*InfoValuePtr* è SQLUSMALLINT o SQLUINTEGER, in base il *InfoType*. Se  *\*InfoValuePtr* è una stringa Unicode (quando si chiama **SQLGetInfoW**), il *BufferLength* argomento deve essere un numero pari; se non, SQLSTATE HY090 ( Lunghezza della stringa o di buffer non valido) viene restituito.  
   
  *StringLengthPtr*  
  [Output] Puntatore a un buffer in cui restituire il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile per restituire **InfoValuePtr*.  
   
- Per i dati di tipo carattere, se il numero di byte disponibili da restituire è maggiore o uguale a *BufferLength*, le informazioni contenute in \* *InfoValuePtr* viene troncato a * BufferLength* byte meno la lunghezza di una terminazione null di caratteri ed è con terminazione null dal driver.  
+ Per i dati di tipo carattere, se il numero di byte disponibili da restituire è maggiore o uguale a *BufferLength*, le informazioni contenute in \* *InfoValuePtr* viene troncato a  *BufferLength* byte meno la lunghezza di una terminazione null di caratteri ed è con terminazione null dal driver.  
   
- Per tutti gli altri tipi di dati, il valore di *BufferLength* viene ignorato e il driver presuppone che le dimensioni di \* *InfoValuePtr* è SQLUSMALLINT o SQLUINTEGER, a seconda di * InfoType*.  
+ Per tutti gli altri tipi di dati, il valore di *BufferLength* viene ignorato e il driver presuppone che le dimensioni di \* *InfoValuePtr* è SQLUSMALLINT o SQLUINTEGER, a seconda di  *InfoType*.  
   
 ## <a name="return-value"></a>Valore restituito  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -86,12 +86,12 @@ SQLRETURN SQLGetInfo(
 |01004|Stringa di dati corretto troncato|Il buffer \* *InfoValuePtr* non sia abbastanza grande per restituire tutte le informazioni richieste. Pertanto, le informazioni sono state troncate. Viene restituita la lunghezza delle informazioni richieste nella forma non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08003|Connessione non aperta|(DM) il tipo di informazioni di richiesta *InfoType* richiede una connessione aperta. Tra i tipi di informazioni riservati da ODBC, solo SQL_ODBC_VER può essere restituito senza una connessione aperta.|  
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel * \*MessageText* buffer viene descritto l'errore e la relativa causa.|  
+|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore nella sequenza (funzione)|(DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY024|Valore dell'attributo non valido|(DM) il *InfoType* argomento è stato SQL_DRIVER_HSTMT e il valore a cui puntava *InfoValuePtr* non è un handle di istruzione valida.<br /><br /> (DM) il *InfoType* argomento è stato SQL_DRIVER_HDESC e il valore a cui puntava *InfoValuePtr* non è un handle di descrittore valido.|  
-|HY090|Lunghezza di stringa o di buffer non valida|(DM) il valore specificato per l'argomento *BufferLength* era minore di 0.<br /><br /> (DM) il valore specificato per *BufferLength* è un numero dispari, e * \*InfoValuePtr* stato di un tipo di dati Unicode.|  
+|HY090|Lunghezza di stringa o di buffer non valida|(DM) il valore specificato per l'argomento *BufferLength* era minore di 0.<br /><br /> (DM) il valore specificato per *BufferLength* è un numero dispari, e  *\*InfoValuePtr* stato di un tipo di dati Unicode.|  
 |HY096|Tipo di informazioni non compreso nell'intervallo|Il valore specificato per l'argomento *InfoType* non valido per la versione di ODBC supportati dal driver.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Campo facoltativo non implementato|Il valore specificato per l'argomento *InfoType* è un valore specifico del driver che non è supportato dal driver.|  
@@ -527,7 +527,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CU_PROCEDURE_INVOCATION = i cataloghi sono supportati nell'istruzione di chiamata di procedura ODBC.  
   
- SQL_CU_TABLE_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione di tabella: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE **, e **DROP VIEW**.  
+ SQL_CU_TABLE_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione di tabella: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , e **DROP VIEW**.  
   
  SQL_CU_INDEX_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione di indice: **CREATE INDEX** e **DROP INDEX**.  
   
@@ -1005,7 +1005,7 @@ SQLRETURN SQLGetInfo(
   
  Un'applicazione può utilizzare per determinare come gli utenti la selezione dei dati. Ad esempio, Xbase gli utenti spesso considerare i dati archiviati in file, mentre gli utenti ORACLE e Microsoft Access in genere considerate dei dati archiviati nelle tabelle.  
   
- Quando un utente seleziona un'origine dati Xbase, l'applicazione può visualizzare le finestre **Apri File** la finestra di dialogo comuni; quando l'utente seleziona un'origine dati ORACLE o Microsoft Access, l'applicazione potrebbe visualizzare un oggetto personalizzato ** Selezionare una tabella** la finestra di dialogo.  
+ Quando un utente seleziona un'origine dati Xbase, l'applicazione può visualizzare le finestre **Apri File** la finestra di dialogo comuni; quando l'utente seleziona un'origine dati ORACLE o Microsoft Access, l'applicazione potrebbe visualizzare un oggetto personalizzato  **Selezionare una tabella** la finestra di dialogo.  
   
  SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  Maschera di bit SQLUINTEGER che descrive gli attributi di un cursore forward-only sono supportati dal driver. La maschera di bit contiene il primo subset di attributi. per il subset di secondo, vedere SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2.  
@@ -1433,7 +1433,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SU_PROCEDURE_INVOCATION = gli schemi sono supportati nell'istruzione di chiamata di procedura ODBC.  
   
- SQL_SU_TABLE_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione di tabella: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE **, e **DROP VIEW**.  
+ SQL_SU_TABLE_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione di tabella: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , e **DROP VIEW**.  
   
  SQL_SU_INDEX_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione di indice: **CREATE INDEX** e **DROP INDEX**.  
   

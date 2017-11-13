@@ -54,7 +54,7 @@ DataControl.Handler = String
   
  Il nome del gestore predefinito è **MSDFMAP. Gestore**, e il relativo parametro predefinito è un file di personalizzazione denominato **MSDFMAP. INI**. Utilizzare questa proprietà per richiamare i file di personalizzazione alternativi creati dall'amministratore del server.  
   
- Alternativa all'impostazione di **gestore** è di proprietà per specificare parametri in e un gestore di [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà; ovvero "**gestore =** * handlerName parameter1, parameter2,.... *".  
+ Alternativa all'impostazione di **gestore** è di proprietà per specificare parametri in e un gestore di [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà; ovvero "**gestore =**  *handlerName parameter1, parameter2,....* ".  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

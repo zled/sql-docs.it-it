@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  In ODBC 3. *x*, la funzione ODBC 2.0 **SQLColAttributes** è stata sostituita da **SQLColAttribute**. Per ulteriori informazioni, vedere [funzione SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni su quali il Driver Manager esegue il mapping di questa funzione per quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3.* x* driver, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+>  Per ulteriori informazioni su quali il Driver Manager esegue il mapping di questa funzione per quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver, vedere [Mapping funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
   
  Vedere [informazioni ODBC a 64 Bit](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione verrà eseguita in un sistema operativo a 64 bit.  
   

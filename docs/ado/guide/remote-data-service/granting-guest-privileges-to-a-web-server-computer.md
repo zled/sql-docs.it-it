@@ -40,7 +40,7 @@ L'account del server Web anonimo (IUSR_*ComputerName*) deve essere aggiunto al g
   
 4.  Nel **Guests Properties** la finestra di dialogo, fare clic su **Aggiungi**.  
   
-5.  Se l'account del server Web anonimo non vengono visualizzati nell'elenco di **Seleziona utenti o gruppi** finestra di dialogo digitare il nome (IUSR_*ComputerName*) nella casella vuota nella parte inferiore e quindi fare clic su **Aggiungi **.  
+5.  Se l'account del server Web anonimo non vengono visualizzati nell'elenco di **Seleziona utenti o gruppi** finestra di dialogo digitare il nome (IUSR_*ComputerName*) nella casella vuota nella parte inferiore e quindi fare clic su **Aggiungi** .  
   
 6.  Scegliere **OK**.
 

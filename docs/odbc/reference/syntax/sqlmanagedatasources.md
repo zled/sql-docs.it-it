@@ -54,7 +54,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources** restituisce FALSE se *hwnd* non è un handle di finestra valido. In caso contrario, restituisce TRUE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLManageDataSources** restituisce FALSE, un oggetto associato * \*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLManageDataSources** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  

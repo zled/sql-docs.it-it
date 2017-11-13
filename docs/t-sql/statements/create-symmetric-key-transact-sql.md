@@ -98,10 +98,10 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
- CREATION_DISPOSITION ** = ** CREATE_NEW  
+ CREATION_DISPOSITION  **=**  CREATE_NEW  
  Crea una nuova chiave nel dispositivo EKM.  Se nel dispositivo esiste già una chiave, l'istruzione genererà un errore.  
   
- CREATION_DISPOSITION ** = ** OPEN_EXISTING  
+ CREATION_DISPOSITION  **=**  OPEN_EXISTING  
  Definisce il mapping di una chiave simmetrica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una chiave EKM esistente. Se non si specifica CREATION_DISPOSITION = OPEN_EXISTING, l'impostazione predefinita sarà CREATE_NEW.  
   
  *nome_certificato*  

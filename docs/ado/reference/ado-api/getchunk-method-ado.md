@@ -52,7 +52,7 @@ variable = field.GetChunk(Size)
   
  Ogni successivo **GetChunk** chiamata recupera i dati a partire dalla posizione precedente **GetChunk** chiamata è stata interrotta. Tuttavia, se si recuperano dati da un campo e quindi impostare o leggere il valore di un altro campo del record corrente, ADO presuppone di che avere il recupero dei dati dal primo campo. Se si chiama il **GetChunk** metodo nel primo campo, ADO interpreta la chiamata come nuovo **GetChunk** operazione e avvia la lettura dall'inizio dei dati. L'accesso ai campi in altre [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gli oggetti che non siano cloni del primo **Recordset** oggetto non altererà **GetChunk** operazioni.  
   
- Se il **adFldLong** bit il [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà di un **campo** oggetto è impostato su **True**, è possibile utilizzare il **GetChunk ** metodo per tale campo.  
+ Se il **adFldLong** bit il [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà di un **campo** oggetto è impostato su **True**, è possibile utilizzare il **GetChunk**  metodo per tale campo.  
   
  Se è presente alcun record corrente quando si utilizza il **GetChunk** metodo su un **campo** dell'oggetto, si verifica l'errore 3021 (Nessun record corrente).  
   

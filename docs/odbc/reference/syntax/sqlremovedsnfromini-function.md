@@ -54,7 +54,7 @@ BOOL SQLRemoveDSNFromIni(
  La funzione restituisce TRUE se rimuove l'origine dati o l'origine dati non è presente nel file Odbc.ini. Restituisce FALSE se non è possibile rimuovere l'origine dati.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLRemoveDSNFromIni** restituisce FALSE, un oggetto associato * \*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLRemoveDSNFromIni** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  

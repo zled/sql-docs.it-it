@@ -27,11 +27,11 @@ A partire da Windows Server 2003, Microsoft sono supportati i sistemi operativi 
   
  Esistono diversi punti da tenere presenti durante la programmazione per un processore a 64 bit:  
   
--   Anche se le dimensioni di un puntatore sono modificato da 4 byte a 8 byte, numeri interi e Long sono comunque valori a 4 byte. I tipi di **INT64** e **UINT64** sono stati definiti per i valori integer a 8 byte. I nuovi tipi ODBC **SQLLEN** e **SQLULEN** sono definiti nel file di intestazione ODBC come **INT64** e **UINT64** quando **Win64 ** è stato definito.  
+-   Anche se le dimensioni di un puntatore sono modificato da 4 byte a 8 byte, numeri interi e Long sono comunque valori a 4 byte. I tipi di **INT64** e **UINT64** sono stati definiti per i valori integer a 8 byte. I nuovi tipi ODBC **SQLLEN** e **SQLULEN** sono definiti nel file di intestazione ODBC come **INT64** e **UINT64** quando **Win64**  è stato definito.  
   
 -   Molte funzioni ODBC vengono dichiarate come accettare un parametro di tipo puntatore. In ODBC a 32 bit, i parametri definiti come puntatori sono stati utilizzati per passare un valore intero o un puntatore a un buffer, a seconda del contesto della chiamata. Questo stato, naturalmente, possibile che i puntatori e i numeri interi ha le stesse dimensioni. In Windows a 64 bit, questo non avviene.  
   
--   Alcune funzioni ODBC che sono state definite in precedenza con **SQLINTEGER** e **SQLUINTEGER** parametri sono stati modificati in cui è opportuno utilizzare il nuovo **SQLLEN** e ** SQLULEN** typedef. Queste modifiche sono elencate nella sezione successiva, modifiche alle dichiarazioni di funzione.  
+-   Alcune funzioni ODBC che sono state definite in precedenza con **SQLINTEGER** e **SQLUINTEGER** parametri sono stati modificati in cui è opportuno utilizzare il nuovo **SQLLEN** e  **SQLULEN** typedef. Queste modifiche sono elencate nella sezione successiva, modifiche alle dichiarazioni di funzione.  
   
 -   Alcuni dei campi di descrizione che possono essere impostati tramite le varie **SQLSet** e **SQLGet** funzioni sono state modificate per adattare i valori di a 64 bit, mentre altri sono valori comunque a 32 bit. Assicurarsi di utilizzare la variabile con dimensione appropriata quando l'impostazione e recupero di questi campi. Specifiche del descrittore di quali campi sono stati modificati sono elencate sotto modifiche alle dichiarazioni di funzione.  
   
