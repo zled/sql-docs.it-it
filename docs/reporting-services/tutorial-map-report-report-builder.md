@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Eseguire il mapping di Report (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Report mappa (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: it-it
@@ -52,7 +51,7 @@ In questa sezione si aggiunge una mappa al report dalla raccolta mappe. La mappa
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -103,7 +102,7 @@ In questa sezione si aggiunge una mappa al report dalla raccolta mappe. La mappa
 15. Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa**. Nel riquadro **Livelli mappa** viene visualizzato un livello poligono, PolygonLayer1, di tipo **Incorporato**. Ogni regione è un elemento incorporato della mappa a questo livello.  
   
     > [!NOTE]  
-    > Se il riquadro **Livelli mappa** non è visibile, è possibile che sia visualizzato all'esterno della vista corrente. Utilizzare la barra di scorrimento nella parte inferiore della visualizzazione della struttura per modificare la visualizzazione. In alternativa, nella scheda **Visualizza**, deselezionare l'opzione **Dati report** per ampliare l'area di progettazione.   
+    > Se il riquadro **Livelli mappa** non è visibile, è possibile che sia visualizzato all'esterno della vista corrente. Utilizzare la barra di scorrimento nella parte inferiore della visualizzazione della struttura per modificare la visualizzazione. In alternativa, nella scheda **Visualizza** , deselezionare l'opzione **Dati report** per ampliare l'area di progettazione.   
 
 15. Selezionare la freccia accanto a PolygonLayer1 > **Proprietà poligono**.
 
@@ -127,7 +126,7 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
   
 1.  Nella scheda **Esegui** fare clic su > **Progettazione** per tornare alla visualizzazione Progettazione.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livelli mappa** . Sulla barra degli strumenti, fare clic su di **Creazione guidata nuovo livello** pulsante ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livelli mappa** . Sulla barra degli strumenti, fare clic sul pulsante **Creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -243,7 +242,7 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su di **Creazione guidata nuovo livello** pulsante ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic sul pulsante **Creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server** e fare clic su **Avanti**.  
   
@@ -309,7 +308,7 @@ In questa sezione si aggiunge un livello mappa in cui viene visualizzato uno sfo
   
 4.  Fare clic sulla freccia accanto a TileLayer1 > **Proprietà sezione**.  
   
-5.  Nella scheda **Generale** selezionare **Aereo** per **Tipo**. La vista aerea non contiene testo.  
+5.  Nella scheda **Generale** selezionare **Aereo**per **Tipo**. La vista aerea non contiene testo.  
 
     ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
   
@@ -318,9 +317,9 @@ In questa sezione si aggiunge un livello mappa in cui viene visualizzato uno sfo
 ## <a name="Transparent"></a>5. Rendere trasparente un livello  
 Questa sezione spiega come rendere visibili gli elementi su un livello attraverso un altro livello, regolando l'ordine e la trasparenza dei livelli fino a ottenere l'effetto desiderato. Si inizia con il primo livello creato, PolygonLayer1. 
   
-1.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa**.  
+1.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** .  
   
-3.  Fare clic sulla freccia accanto a PolygonLayer1 > **Dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa**.  
+3.  Fare clic sulla freccia accanto a PolygonLayer1 > **Dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
 4.  Nella scheda **Visibilità** digitare **30**per **Trasparenza (percentuale)**.  
   
@@ -414,7 +413,7 @@ Per impostazione predefinita, i dati presentano un formato generale. In questa s
 
 2. Selezionare la scala dei colori. Nella sezione **Numero** della scheda **Home** fare clic su **Valuta**.  
   
-4.  Sempre nella sezione **Numero** fare clic due volte sul pulsante **Diminuisci decimali**.  
+4.  Sempre nella sezione **Numero** fare clic due volte sul pulsante **Diminuisci decimali** .  
   
     La scala dei colori visualizza le vendite annuali nel formato della valuta per ogni intervallo.  
   
@@ -458,15 +457,15 @@ Le regioni a cui sono associati negozi e vendite vengono visualizzate in base al
 Le regioni a cui non sono associati dati vengono visualizzate in grigio-blu. Solo per le regioni a cui sono associati dati analitici vengono usati i colori da **Rosso** a **Verde** secondo le regole colori specificate.  
   
 ## <a name="CustomPoint"></a>7. Aggiungere un punto personalizzato  
-Per rappresentare un nuovo negozio che non è ancora stato creato, specificare un punto e usare il tipo di marcatore **Stella**.  
+Per rappresentare un nuovo negozio che non è ancora stato creato, specificare un punto e usare il tipo di marcatore **Stella** .  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), quindi fare clic su **livello punto**.    
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), quindi fare clic su **Livello punto**.  
   
     Un nuovo livello punto viene aggiunto alla mappa. Per impostazione predefinita, il livello punto usa il tipo di dati spaziali **Incorporato**.  
   
-3.  Fare clic sulla freccia perPointLayer2 > **Aggiungi punto**.  
+3.  Fare clic sulla freccia in PointLayer2 > **Aggiungi punto**.  
   
 4.  Spostare il puntatore sul viewport mappa. Il cursore passa alla selezione di precisione.  
   
@@ -535,7 +534,7 @@ Il titolo verrà visualizzato nella parte superiore del report. Quando non è de
   
 1.  Nella visualizzazione Progettazione o Anteprima fare clic sul menu **File** > **Salva con nome**.
  
-3.  In **Nome** digitare **Punti vendita di New York - vendite**.  
+3.  In **Nome**digitare **Punti vendita di New York - vendite**.  
 
 3. Salvare il documento nel computer locale o in un server [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
   

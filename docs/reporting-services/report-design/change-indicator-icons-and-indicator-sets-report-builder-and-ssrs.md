@@ -1,5 +1,5 @@
 ---
-title: Modificare le icone degli indicatori e i set di indicatori (Generatore Report e SSRS) | Documenti Microsoft
+title: Modificare le icone degli indicatori e dei set di indicatori (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
 ms.contentlocale: it-it
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
      Se lo si desidera, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che imposta il valore dell'opzione **Colore** .  
   
-     Se è stato selezionato **Altri colori**, viene visualizzata la finestra di dialogo **Seleziona colore** in cui è possibile scegliere da un'ampia matrice di colori. Per altre informazioni sulle opzioni, vedere [Finestra di dialogo Seleziona colore &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Fare clic su **OK** per chiudere la finestra di dialogo **Seleziona colore**.  
+     Se è stato selezionato **Altri colori**, viene visualizzata la finestra di dialogo **Seleziona colore** in cui è possibile scegliere da un'ampia matrice di colori. Per altre informazioni sulle opzioni, vedere [Finestra di dialogo Seleziona colore &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Fare clic su **OK** per chiudere la finestra di dialogo **Seleziona colore** .  
   
 4.  Scegliere **OK**.  
   
@@ -100,4 +99,3 @@ ms.lasthandoff: 08/09/2017
  [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

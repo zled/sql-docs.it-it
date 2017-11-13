@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Formattazione del testo (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Formattazione di testo (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: it-it
@@ -46,9 +45,9 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
-    Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
+    Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
  
 2.  Nel riquadro sinistro della finestra di dialogo **Riquadro attività iniziale** verificare che l'opzione **Nuovo report** sia selezionata.  
   
@@ -67,7 +66,7 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
 4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > L'espressione `<servername>`, ad esempio Report001, indica un computer in cui è installata un'istanza del motore di database di SQL Server. Questa esercitazione non sono necessari dati specifici. è sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati**è già disponibile una connessione, è possibile selezionarla e passare alla procedura successiva, ovvero "Per creare un set di dati". Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > L'espressione `<servername>`, ad esempio Report001, indica un computer in cui è installata un'istanza del motore di database di SQL Server. Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati**è già disponibile una connessione, è possibile selezionarla e passare alla procedura successiva, ovvero "Per creare un set di dati". Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -260,7 +259,7 @@ In questa sezione si ruoterà parte del testo incluso nella tabella creata nelle
     > [!NOTE]  
     > Se le proprietà nel riquadro Proprietà sono organizzate in categorie, WritingMode si trova nella categoria **Localizzazione** . Assicurarsi di aver selezionato la cella e non il testo. WritingMode è una proprietà della casella di testo, non del testo.  
 
-    ![report-generatore-selezione-territorio-cella](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
 6.  Nella scheda **Home** della sezione **Paragrafo** selezionare **Al centro** e **Al centro** per posizionare il testo al centro delle celle sia verticalmente sia orizzontalmente.  
   
@@ -365,11 +364,10 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ci sono vari modi per formattare il testo in Generatore report. [Esercitazione: Creazione di un Report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) inclusi altri esempi.  
+Ci sono vari modi per formattare il testo in Generatore report. L'[Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
 
-[Esercitazioni di Generatore report ](../reporting-services/report-builder-tutorials.md)  
- [formattazione degli elementi del Report](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
+[Formattazione degli elementi del report](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
