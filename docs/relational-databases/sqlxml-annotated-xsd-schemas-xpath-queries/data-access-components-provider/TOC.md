@@ -1,0 +1,10 @@
+# [SQLXML 4.0 Data Access Components - Provider SQLXMLOLEDB](sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)
+
+# [Applicare una trasformazione XSL (Provider SQLXMLOLEDB)](applying-an-xsl-transformation-sqlxmloledb-provider.md)
+# [Esecuzione di query SQL (Provider SQLXMLOLEDB)](executing-sql-queries-sqlxmloledb-provider.md)
+# [Esecuzione di modelli che contengono query SQL (Provider SQLXMLOLEDB)](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)
+# [Esecuzione di modelli che contengono query XPath (Provider SQLXMLOLEDB)](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)
+# [Esecuzione di query XPath (Provider SQLXMLOLEDB)](executing-xpath-queries-sqlxmloledb-provider.md)
+# [L'esecuzione di query XPath con spazi dei nomi (Provider SQLXMLOLEDB)](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)
+# [Introduzione al Provider SQLXMLOLEDB (SQLXML 4.0)](introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)
+# [Utilizzo del Provider SQLXMLOLEDB (SQLXML 4.0)](using-the-sqlxmloledb-provider-sqlxml-4-0.md)

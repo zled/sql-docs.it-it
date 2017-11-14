@@ -1,0 +1,6 @@
+# [Comandi](commands.md)
+# [Parametri di comando](command-parameters.md)
+# [Sintassi del comando](command-syntax.md)
+# [Comandi che generano risultati di più set di righe](commands-generating-multiple-rowset-results.md)
+# [Preparazione dei comandi](preparing-commands.md)
+# [Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati](using-imultipleresults-to-process-multiple-result-sets.md)

@@ -1,0 +1,7 @@
+# [Oggetti origine dati (OLE DB)](data-source-objects-ole-db.md)
+# [Proprietà delle informazioni di origine dati](data-source-information-properties.md)
+# [Proprietà dell'origine dati (OLE DB)](data-source-properties-ole-db.md)
+# [Proprietà di inizializzazione e autorizzazione](initialization-and-authorization-properties.md)
+# [Oggetti origine dati persistenti](persisted-data-source-objects.md)
+# [Proprietà di sessione - SQL Server Native Client provider OLE DB](session-properties-sql-server-native-client-ole-db-provider.md)
+# [Sessioni](sessions.md)
