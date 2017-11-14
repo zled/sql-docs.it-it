@@ -40,7 +40,7 @@ Utilizzare SQL Server Management Studio per stabilire una connessione al catalog
 
 2. Nel **Connetti al Server** finestra di dialogo immettere le informazioni seguenti:
 
-   | Impostazione       | Valore consigliato | Altre informazioni | 
+   | Impostazione       | Valore consigliato | Altre informazioni | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Il nome completo del server |  |

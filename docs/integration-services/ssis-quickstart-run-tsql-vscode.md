@@ -52,7 +52,7 @@ Utilizzare Visual Studio Code per stabilire una connessione al catalogo SSIS.
 
 4. Seguire le istruzioni per specificare le proprietà di connessione per il nuovo profilo di connessione. Dopo aver specificato ogni valore, premere **invio** per continuare. 
 
-   | Impostazione       | Valore consigliato | Altre informazioni |
+   | Impostazione       | Valore consigliato | Altre informazioni |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | Il nome completo del server | Se ci si connette a un server di Database SQL di Azure, il nome è nel formato: `<server_name>.database.windows.net`. |
    | **Nome database** | **SSISDB** | Il nome del database a cui connettersi. |
