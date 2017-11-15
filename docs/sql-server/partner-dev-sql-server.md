@@ -15,12 +15,11 @@ ms.workload: sql-server
 ms.custom: partners
 ms.date: 17/09/2017
 ms.author: mikeray
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: e07cf9de9a3526d018e3ce552bf40e21971bdd72
-ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-development-partners"></a>Partner di sviluppo per SQL Server
 Per il supporto allo sviluppo delle soluzioni di database SQL Server, è possibile scegliere tra una vasta gamma di strumenti leader nel settore.  In questo articolo vengono evidenziate le aziende partner di Microsoft con soluzioni di sviluppo per Microsoft SQL Server.

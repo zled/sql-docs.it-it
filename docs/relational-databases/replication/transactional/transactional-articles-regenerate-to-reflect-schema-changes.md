@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - transactional replication, replicating schema changes
 - schemas [SQL Server replication], replicating changes
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 07e855c041cfcb06eea82d38097533ea6d9763fb
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1a4385455d007662ad950343db4413c457a4a687
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>Articoli transazionali - Rigenerare per riflettere le modifiche dello schema
   Per impostazione predefinita, la replica transazionale apporta tutte le modifiche di dati nei Sottoscrittori tramite stored procedure generate mediante procedure interne per ogni articolo di tabella nella pubblicazione. Le tre procedure, rispettivamente per inserimenti, aggiornamenti ed eliminazioni, vengono copiate nel Sottoscrittore ed eseguite in caso di replica di un inserimento, un aggiornamento o un'eliminazione nel Sottoscrittore. Quando viene apportata una modifica dello schema a una tabella in un server di pubblicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , queste procedure vengono rigenerate automaticamente dalla replica chiamando lo stesso set di procedure di scripting interne affinché le nuove procedure corrispondano al nuovo schema. La replica di modifiche dello schema non è supportata per i server di pubblicazione Oracle.  

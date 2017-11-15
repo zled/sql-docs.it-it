@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: faf617519fde35e957969a98d2564821ee01e8a2
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 42921f4ecb7384ce13b648a67723547c85446d73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>WSFC (Windows Server Failover Clustering) con SQL Server
   Un cluster *Windows Server Failover Clustering (WSFC)* è un gruppo di server indipendenti usati congiuntamente per aumentare la disponibilità di applicazioni e servizi. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vengono utilizzate le funzionalità e i servizi di WSFC per supportare le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -108,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
  In un qualsiasi momento specifico, solo una singola istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può ospitare la replica primaria dei database di un gruppo di disponibilità; tutte le repliche secondarie associate devono trovarsi ciascuna in un'istanza separata e ogni istanza deve risiedere su nodi fisici separati.  
   
-> **NOTE:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
+> **NOTA:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non richiedono la distribuzione di un'istanza del cluster di failover né l'uso di archiviazione condivisa simmetrica (SAN o SMB).  
 >   
 >  È possibile utilizzare un'istanza del cluster di failover con un gruppo di disponibilità per migliorare la disponibilità di una replica di disponibilità. Per evitare potenziali race condition nel cluster WSFC, tuttavia, non è consentito eseguire il failover automatico del gruppo di disponibilità a o da una replica di disponibilità ospitata in un'istanza del cluster di failover.  
   
@@ -197,4 +196,3 @@ ms.lasthandoff: 06/22/2017
  [Ripristino di emergenza WSFC tramite quorum forzato (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 Supports Windows Server 2016 Storage Spaces Direct](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/) (Supporto di SQL Server 2016 per Spazi di archiviazione diretta di Windows Server 2016)
   
-

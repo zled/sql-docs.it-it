@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.lookin
+f1_keywords: vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio)
 Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  
@@ -45,15 +42,15 @@ Consente di rimuovere l'insieme di cartelle selezionato dal campo **Insieme di c
 Consente di selezionare un'unità o una cartella per popolare l' **elenco Cartelle**.  
   
 **elenco Cartelle**  
-Elenca le unità e le cartelle disponibili all'interno del volume selezionato nell'elenco a discesa **Cartelle disponibili** . Fare doppio clic per espandere un'unità o una cartella elencata. Selezionare una cartella oppure tenere premuto MAIUSC o CTRL per selezionare più cartelle. Fare clic su **Add (>)** per includere le cartelle selezionate nell'elenco **Cartelle selezionate** .  
+Elenca le unità e le cartelle disponibili all'interno del volume selezionato nell'elenco a discesa **Cartelle disponibili** . Fare doppio clic per espandere un'unità o una cartella elencata. Selezionare una cartella oppure tenere premuto MAIUSC o CTRL per selezionare più cartelle. Fare clic su **Aggiungi (>)** per includere le cartelle selezionate nell'elenco **Cartelle selezionate** .  
   
 **Parent**  
 Consente di spostare la selezione di un livello superiore nella gerarchia dell' **elenco Cartelle** .  
   
-**Aggiungi (&gt;)**  
+**Aggiungi (>)**  
 Consente di aggiungere le cartelle selezionate nell' **elenco Cartelle** all'elenco **Cartelle selezionate** .  
   
-**Rimuovi (&lt;)**  
+**Rimuovi (<)**  
 Consente di rimuovere le cartelle selezionate dall'elenco **Cartelle selezionate** .  
   
 **Cartelle selezionate**  
@@ -62,4 +59,3 @@ Contiene l'elenco delle cartelle aggiunte dall' **elenco Cartelle**. Tali cartel
 **Applica**  
 Consente di salvare l'insieme di cartelle di ricerca contenute nell'elenco **Cartelle selezionate** come insieme denominato di cartelle. Tale insieme di cartelle può quindi essere selezionato nel campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** . Chiude la finestra di dialogo Seleziona cartelle di ricerca.  
   
-

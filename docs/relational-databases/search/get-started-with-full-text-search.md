@@ -4,8 +4,7 @@ ms.date: 08/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
 La funzionalità full-text è abilitata per impostazione predefinita nei database di SQL Server. Prima di poter eseguire query full-text, è necessario creare un catalogo full-text completo e un indice full-text nelle tabelle o nelle viste indicizzate in cui si vuole eseguire la ricerca.
@@ -129,4 +127,3 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver configurato la ricerca full-text di SQL Server, si è pronti per eseguire query full-text. Per altre informazioni, vedere [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md).
-

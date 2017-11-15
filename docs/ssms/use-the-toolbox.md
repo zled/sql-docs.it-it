@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f63a3a6b06e0b76e603e1cce094e5fb17ae32db
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-toolbox"></a>Utilizzo della casella degli strumenti
 Gli elementi, il testo e i controlli presenti nella casella degli strumenti possono essere selezionati e trascinati in form, pagine e finestre di progettazione. È inoltre possibile trascinare gli elementi nuovamente da tali origini alla casella degli strumenti, in modo da poterli riutilizzare in seguito. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , ad esempio, è possibile trascinare un'attività in un piano di manutenzione.  
@@ -49,4 +48,3 @@ Gli elementi della casella degli strumenti sono raggruppati in sezioni denominat
 ## <a name="see-also"></a>Vedere anche  
 [Elementi generali dell'interfaccia utente](../ssms/general-user-interface-elements.md)  
   
-

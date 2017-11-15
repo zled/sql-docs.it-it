@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aeb2660571f6eff735bf9936be3d4243fb797149
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-file-dialog-box"></a>Finestra di dialogo Apri file
 Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disco. o per aprire un file già aperto utilizzando opzioni di codifica della lingua diverse.  
@@ -103,4 +101,3 @@ Elimina il file o la cartella selezionati dalla relativa posizione di archiviazi
 **Connetti unità di rete**  
 Apre la finestra di dialogo **Connetti unità di rete** .  
   
-

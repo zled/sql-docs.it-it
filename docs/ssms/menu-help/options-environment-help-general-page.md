@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.General
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c81d9fefe5e4e7b8bc41f1a3df26d43a79f8226b
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 043ab8f89e389dbd940ca3e34039747e2dbf2d27
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---help---general-page"></a>Opzioni (Ambiente - Guida - Generale)
 Usare la finestra di dialogo **Opzioni** per selezionare i set di documenti e indicare se gli argomenti devono essere visualizzati all'interno di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] o in una finestra separata esterna. Per accedere a questa finestra di dialogo, scegliere **Opzioni** dal menu **Strumenti** , espandere **Guida** nel nodo **Ambiente** e fare clic su **Generale**.  
@@ -52,4 +49,3 @@ Consente di specificare la lingua con priorità più alta in cui devono essere v
 **Mostra anche argomenti in inglese**  
 Consente di specificare se gli argomenti vengono restituiti in inglese e nella lingua selezionata nella casella **Lingua argomenti Guida** .  
   
-

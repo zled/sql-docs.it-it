@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d92bf7d6279cc367e3ea2d67d19e78d362a39151
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale
   Se una o più stored procedure vengono eseguite nel server di pubblicazione e influiscono su tabelle pubblicate, è possibile includerle nella pubblicazione sotto forma di articoli di esecuzione delle stored procedure. La definizione della procedura, ovvero l'istruzione CREATE PROCEDURE, viene replicata nel Sottoscrittore durante l'inizializzazione della sottoscrizione. Quando la procedura viene eseguita nel server di pubblicazione, la replica esegue la procedura corrispondente nel Sottoscrittore. Ciò può migliorare sensibilmente le prestazioni, ad esempio nel caso di operazioni batch di grandi dimensioni, poiché viene replicata solo l'esecuzione della procedura senza necessità di replicare le singole modifiche di ogni riga. Si supponga, ad esempio, di creare la stored procedure seguente nel database di pubblicazione:  
@@ -102,4 +100,3 @@ COMMIT TRANSACTION T2
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
 title: Risoluzione dei problemi relativi ai cluster di failover | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/21/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: cd7bcdf3515d6c8f88ef870494c4f6f8b5545fb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="failover-cluster-troubleshooting"></a>Risoluzione dei problemi relativi al clustering di failover
   In questo argomento sono disponibili informazioni sugli argomenti seguenti:  
@@ -88,12 +86,12 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
  Di seguito vengono elencati alcuni problemi comuni relativi all'utilizzo e le rispettive modalità di risoluzione.  
   
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problema: uso non corretto della sintassi del prompt dei comandi per installare SQL Server  
- **Problema 1** : è difficile diagnosticare problemi di installazione quando si usa l'opzione **/qn** dal prompt dei comandi, perché **tale opzione** determina l'eliminazione di tutte le finestre di dialogo dell'interfaccia utente e dei messaggi di errore del programma di installazione. Se l'opzione **/qn** viene specificata, tutti i messaggi del programma di installazione, compresi i messaggi di errore, vengono inseriti nei file di log del programma. Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+ **Problema 1** : è difficile diagnosticare problemi di installazione quando si usa l'opzione **/qn** dal prompt dei comandi, perché **** tale opzione determina l'eliminazione di tutte le finestre di dialogo dell'interfaccia utente e dei messaggi di errore del programma di installazione. Se l'opzione **/qn** viene specificata, tutti i messaggi del programma di installazione, compresi i messaggi di errore, vengono inseriti nei file di log del programma. Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
  **Risoluzione 1**: usare l'opzione **/qb** anziché l'opzione **/qn** . Se si usa l'opzione **/qb** , per ogni passaggio verrà visualizzata l'interfaccia utente di base, inclusi i messaggi di errore.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server non è in grado di accedere alla rete dopo la migrazione in un altro nodo  
- **Problema 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono in grado di contattare un controller di dominio.  
+ **Problema 1** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono in grado di contattare un controller di dominio.  
   
  **Risoluzione 1**: controllare la presenza di problemi di rete, quali errori della scheda o problemi DNS, nei log eventi. Verificare che sia possibile effettuare il ping del controller di dominio.  
   
@@ -195,4 +193,3 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
  [Caratteristiche dell'esecuzione di stored procedure estese](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
   
   
-

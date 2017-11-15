@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 81736e0887c58abe30013ef052c7eb699c6a2c37
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ca9ab6532c1a83be15b1b9a80c0e96ef051fac27
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Creazione di query mediante l'utilizzo di altre origini oltre a una tabella (Visual Database Tools)
 Quando si crea una query di recupero dati, si definiscono le colonne e le righe da estrarre e la posizione dei dati originali. I dati originali in genere sono costituiti da una tabella o da più tabelle unite in join, ma possono anche provenire da origini diverse dalle tabelle, quali viste, query, sinonimi o funzioni definite dall'utente che restituiscono una tabella.  
@@ -148,4 +146,3 @@ FROM
   
 "VPA30890F" è l'emp_id del responsabile di cui si desidera recuperare l'organizzazione. Per altre informazioni sull'aggiunta di una funzione definita dall'utente a una query, vedere [Aggiunta di tabelle a query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Per una descrizione completa delle funzioni definite dall'utente, vedere [Funzioni definite dall'utente](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   
-

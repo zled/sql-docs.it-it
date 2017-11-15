@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Esecuzione del debugger Transact-SQL
   È possibile avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] dopo avere aperto una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È quindi possibile eseguire il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] in modalità di debug fino a quando non si desidera arrestare il debugger. È possibile impostare le opzioni desiderate per personalizzare la modalità di esecuzione del debugger.  

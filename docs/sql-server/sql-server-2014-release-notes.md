@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
+caps.latest.revision: "100"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d6d229c14056f9157bd219ba6cbb7590eb14a7b7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 3c507363ad05be7410ae69fc6d5f6748ad1738cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 Nel presente documento Note sulla versione vengono descritti i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere problemi relativi a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
@@ -142,7 +141,7 @@ SQL Server 2014 Standard presenta le seguenti modifiche:
 ### <a name="32-in-memory-oltp-issues"></a>3.2 Problemi OLTP in memoria  
   
 #### <a name="321-memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>3.2.1 L'Ottimizzazione guidata per la memoria contrassegna i vincoli predefiniti come incompatibili  
-**Problema:** l'Ottimizzazione guidata per la memoria in SQL Server Management Studio contrassegna tutti i vincoli predefiniti come incompatibili. Non tutti i vincoli predefiniti sono supportati in una tabella con ottimizzazione per la memoria; l'ottimizzazione guidata non opera una distinzione tra i tipi di vincoli predefiniti supportati e quelli non supportati. Tra i vincoli predefiniti supportati sono incluse tutte le costanti, le espressioni e le funzioni predefinite supportate all'interno di stored procedure compilate in modo nativo. Per visualizzare l'elenco delle funzioni supportate nelle stored procedure compilate in modo nativo, fare riferimento alla pagina [Costrutti supportati in stored procedure compilate in modo nativo](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problema:** l'Ottimizzazione guidata per la memoria in SQL Server Management Studio contrassegna tutti i vincoli predefiniti come incompatibili. Non tutti i vincoli predefiniti sono supportati in una tabella ottimizzata per la memoria; l'ottimizzazione guidata non opera una distinzione tra i tipi di vincoli predefiniti supportati e quelli non supportati. Tra i vincoli predefiniti supportati sono incluse tutte le costanti, le espressioni e le funzioni predefinite supportate all'interno di stored procedure compilate in modo nativo. Per visualizzare l'elenco delle funzioni supportate nelle stored procedure compilate in modo nativo, fare riferimento alla pagina [Costrutti supportati in stored procedure compilate in modo nativo](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Soluzione alternativa:** se si desidera utilizzare l'ottimizzazione guidata per individuare i blocchi, ignorare i vincoli predefiniti compatibili. Per utilizzare l'Ottimizzazione guidata per la memoria per la migrazione delle tabelle con vincoli predefiniti compatibili, ma senza altri blocchi, attenersi alla procedura seguente:  
   
@@ -155,7 +154,7 @@ SQL Server 2014 Standard presenta le seguenti modifiche:
 4.  Eseguire lo script di migrazione.  
   
 #### <a name="322-informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>3.2.2 Il messaggio informativo "accesso file negato" viene erroneamente restituito come errore nel log degli errori di SQL Server 2014  
-**Problema:** quando si riavvia un server con database che contengono tabelle con ottimizzazione per la memoria, è possibile che venga visualizzato il tipo seguente di messaggi di errore nel log degli errori di SQL Server 2014:  
+**Problema:** quando si riavvia un server con database che contengono tabelle ottimizzate per la memoria, è possibile che venga visualizzato il tipo seguente di messaggi di errore nel log degli errori di SQL Server 2014:  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -167,20 +166,20 @@ In realtà si tratta di un messaggio informativo e non è richiesto alcun interv
   
 **Soluzione alternativa:** nessuna. È un messaggio informativo.  
   
-#### <a name="323-missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>3.2.3 Nei dettagli sugli indici mancanti sono erroneamente segnalate colonne incluse per la tabella con ottimizzazione per la memoria  
-**Problema:** se SQL Server 2014 rileva un indice mancante per una query in una tabella con ottimizzazione per la memoria, segnala un indice mancante in SHOWPLAN_XML e nelle DMV dell'indice mancante, ad esempio sys.dm_db_missing_index_details. In alcuni casi, i dettagli sugli indici mancanti contengono le colonne incluse. Poiché tutte le colonne sono incluse in modo implicito in tutti gli indici nelle tabelle con ottimizzazione per la memoria, non è consentito specificare in modo esplicito le colonne incluse con gli indici con ottimizzazione per la memoria.  
+#### <a name="323-missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>3.2.3 Nei dettagli sugli indici mancanti sono erroneamente segnalate colonne incluse per la tabella ottimizzata per la memoria  
+**Problema:** se SQL Server 2014 rileva un indice mancante per una query in una tabella ottimizzata per la memoria, segnala un indice mancante in SHOWPLAN_XML e nelle DMV dell'indice mancante, ad esempio sys.dm_db_missing_index_details. In alcuni casi, i dettagli sugli indici mancanti contengono le colonne incluse. Poiché tutte le colonne sono incluse in modo implicito in tutti gli indici nelle tabelle ottimizzate per la memoria, non è consentito specificare in modo esplicito le colonne incluse con gli indici ottimizzati per la memoria.  
   
-**Soluzione alternativa:** non specificare la clausola INCLUDE con gli indici nelle tabelle con ottimizzazione per la memoria.  
+**Soluzione alternativa:** non specificare la clausola INCLUDE con gli indici nelle tabelle ottimizzate per la memoria.  
   
 #### <a name="324-missing-index-details-omit-missing-indexes-if-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>3.2.4 Nei dettagli sugli indici mancanti vengono omessi gli indici mancanti se esiste un indice hash che non è adatto per la query  
-**Problema:** se si dispone di un indice HASH sulle colonne di una tabella con ottimizzazione per la memoria a cui fa riferimento una query, ma l'indice non può essere usato per la query, SQL Server 2014 non segnalerà sempre un indice mancante in SHOWPLAN_XML e nella DMV sys.dm_db_missing_index_details.  
+**Problema:** se si dispone di un indice HASH sulle colonne di una tabella ottimizzata per la memoria a cui fa riferimento una query, ma l'indice non può essere usato per la query, SQL Server 2014 non segnalerà sempre un indice mancante in SHOWPLAN_XML e nella DMV sys.dm_db_missing_index_details.  
   
 In particolare, se una query contiene predicati di uguaglianza che interessano un subset delle colonne chiave dell'indice o se contiene predicati di disuguaglianza che interessano colonne chiave dell'indice, l'indice HASH non può essere utilizzato così com'è ed è necessario un altro indice per eseguire la query in modo efficace.  
   
 **Soluzione alternativa:** se si utilizzano gli indici hash, controllare le query e i piani di query per determinare se le query possono trarre vantaggio dalle operazioni Index Seek su un subset della chiave di indice o sui predicati di disuguaglianza. Se è necessario eseguire la ricerca su un subset della chiave di indice, utilizzare un indice NON CLUSTER oppure un indice HASH esattamente sulle colonne in cui eseguire la ricerca. Se è necessario eseguire la ricerca in un predicato di disuguaglianza, utilizzare un indice NON CLUSTER anziché HASH.  
   
-#### <a name="325-failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>3.2.5 Si verifica un errore quando si utilizza una tabella con ottimizzazione per la memoria e una variabile di tabella con ottimizzazione per la memoria nella stessa query, se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON  
-**Problema:** se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON e si accede sia a una tabella con ottimizzazione per la memoria sia a una variabile di tabella con ottimizzazione per la memoria nella stessa istruzione al di fuori del contesto di una transazione utente, è possibile che venga visualizzato il messaggio di errore seguente:  
+#### <a name="325-failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>3.2.5 Si verifica un errore quando si utilizza una tabella ottimizzata per la memoria e una variabile di tabella ottimizzata per la memoria nella stessa query, se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON  
+**Problema:** se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON e si accede sia a una tabella ottimizzata per la memoria sia a una variabile di tabella ottimizzata per la memoria nella stessa istruzione al di fuori del contesto di una transazione utente, è possibile che venga visualizzato il messaggio di errore seguente:  
   
 ```  
 Msg 41359  
@@ -430,4 +429,3 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
 ![Icona freccia usata con il collegamento Torna all'inizio](../sql-server/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")[Torna all'inizio](#top)  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

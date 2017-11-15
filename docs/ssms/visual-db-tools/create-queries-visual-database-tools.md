@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- queries [SQL Server], creating
+helpviewer_keywords: queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d30a0729357abf0cfc18942d0da6db3f36f11686
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5b7c219e4ead14c4053dfd481d1fa5559ce257a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>Creazione di query (Visual Database Tools)
 Le query consentono di recuperare dati dalle tabelle e dalle viste del database. Le query vengono create e usate in **Progettazione query e Progettazione viste**, uno strumento che comprende quattro riquadri: il [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), il [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), il [riquadro Criteri Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e il [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
@@ -55,4 +52,3 @@ Per perfezionare la query, è possibile modificare il codice SQL nel **riquadro 
 [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

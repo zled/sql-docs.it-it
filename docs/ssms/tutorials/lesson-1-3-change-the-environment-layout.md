@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: b09f254256c4b9a01b99bfe77768a28185f5ffd9
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 140a909962391f037158178f9f5c85441714cfaa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lezione 1-3 - Modificare il layout ambiente
 I componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si contendono lo spazio sullo schermo. Per creare spazio, è possibile chiudere, nascondere o spostare i componenti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Le procedure descritte in questa pagina consentono di spostare i componenti in posizioni diverse.  
@@ -90,4 +87,3 @@ L'ambiente che ospita [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 
   
   
   
-

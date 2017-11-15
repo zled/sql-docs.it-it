@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sp_replmonitorhelppublisher
 - sp_replmonitorhelpmergesessiondetail
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - merge replication monitoring [SQL Server replication]
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b05b9c5af4ff9ed8626773fc6714c2c05f1605b2
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5ab76000d3986678af0be8b85303a6b2df89ea34
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="programmatically-monitor-replication"></a>Monitoraggio della replica a livello di programmazione
   Monitoraggio replica è uno strumento grafico che consente di monitorare una topologia di replica. È possibile accedere agli stessi dati di monitoraggio a livello di programmazione utilizzando le stored procedure di replica [!INCLUDE[tsql](../../../includes/tsql-md.md)] o gli oggetti RMO (Replication Management Objects). Tali oggetti consentono di programmare le attività seguenti:  
@@ -113,35 +110,35 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Per monitorare una sottoscrizione di una pubblicazione di tipo merge nel Sottoscrittore  
   
-1.  Creare una connessione al Sottoscrittore tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al Sottoscrittore tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor>, impostare le proprietà <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A> e <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> per la sottoscrizione e quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> e impostare le proprietà <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>e <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> per la sottoscrizione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
 3.  Chiamare uno dei metodi indicati di seguito per ottenere informazioni sulle sessioni dell'agente di merge per la sottoscrizione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A>: restituisce una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> con le informazioni sulle ultime cinque sessioni dell'agente di merge. Tenere presente il valore della proprietà <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> per le sessioni desiderate.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> : restituisce una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> con informazioni sulle ultime cinque sessioni dell'agente di merge al massimo. Tenere presente il valore della proprietà <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> per le sessioni desiderate.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A>: restituisce una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> con le informazioni sulle sessioni dell'agente di merge eseguite durante il numero di ore passato come parametro *hours* (fino a un massimo di cinque sessioni). Tenere presente il valore della proprietà <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> per le sessioni desiderate.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> : restituisce una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> con informazioni sulle sessioni dell'agente di merge che hanno avuto luogo durante il numero passato di ore specificato come parametro *hours* (ultime cinque sessioni al massimo). Tenere presente il valore della proprietà <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> per le sessioni desiderate.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummary%2A>: restituisce un oggetto <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> con le informazioni sull'ultima sessione dell'agente di merge. Tenere presente il valore della proprietà <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> per questa sessione.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummary%2A> : restituisce un oggetto <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> con informazioni sull'ultima sessione dell'agente di merge. Tenere presente il valore della proprietà <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> per questa sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummaryDataSet%2A>: restituisce un oggetto <xref:System.Data.DataSet> con le informazioni sulle ultime cinque sessioni dell'agente di merge, una per ogni riga. Tenere presente il valore della colonna **Session_id** per le sessioni desiderate.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummaryDataSet%2A> : restituisce un oggetto <xref:System.Data.DataSet> con informazioni sulle ultime cinque sessioni dell'agente di merge al massimo, una in ciascuna riga. Tenere presente il valore della colonna **Session_id** per le sessioni desiderate.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A>: restituisce un oggetto <xref:System.Data.DataRow> con le informazioni sull'ultima sessione dell'agente di merge. Tenere presente il valore della colonna **Session_id** per questa sessione.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A> : restituisce un oggetto <xref:System.Data.DataRow> con informazioni sull'ultima sessione dell'agente di merge. Tenere presente il valore della colonna **Session_id** per questa sessione.  
   
-4.  (Facoltativo) Chiamare <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> per aggiornare i dati relativi all'oggetto <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> passato come parametro *mss* oppure chiamare <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> per aggiornare i dati nell'oggetto <xref:System.Data.DataRow> passato come parametro *drRefresh*.  
+4.  (Facoltativo) Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> per aggiornare i dati per l'oggetto <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> passato come *mss,* o chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> per aggiornare i dati nell'oggetto <xref:System.Data.DataRow> passato come *drRefresh*.  
   
 5.  Utilizzando l'ID sessione ottenuto nel passaggio 3, chiamare uno dei metodi indicati di seguito per ottenere informazioni sui dettagli di una determinata sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A>: restituisce una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> per il parametro *SessionId* specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> : restituisce una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> per il parametro *SessionId*.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A>: restituisce un oggetto <xref:System.Data.DataSet> con le informazioni relative al parametro *SessionId* specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> : restituisce un oggetto <xref:System.Data.DataSet> con informazioni sul parametro *SessionId*.  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>Per monitorare le proprietà di replica per tutte le pubblicazioni in un server di distribuzione  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationMonitor>.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
   
 3.  Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
@@ -149,127 +146,127 @@ ms.lasthandoff: 06/22/2017
   
 5.  Eseguire uno o più metodi riportati di seguito per ottenere le informazioni di replica per tutti i server di pubblicazione che utilizzano il server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumDistributionAgents%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti gli agenti di distribuzione nel server di distribuzione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumDistributionAgents%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti gli agenti di distribuzione nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumErrorRecords%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sugli errori archiviati nel server di distribuzione.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumErrorRecords%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni sugli errori archiviati nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumLogReaderAgents%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti gli agenti di lettura log nel server di distribuzione.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumLogReaderAgents%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti gli agenti di lettura log nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMergeAgents%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti gli agenti di merge nel server di distribuzione.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMergeAgents%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti gli agenti di merge nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMiscellaneousAgents%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti gli altri agenti di replica nel server di distribuzione.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMiscellaneousAgents%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti gli altri agenti di replica nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumPublishers%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti i server di pubblicazione nel server di distribuzione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumPublishers%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti i server di pubblicazione nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumPublishers2%2A>: restituisce un oggetto <xref:System.Data.DataSet> che restituisce i server di pubblicazione che usano il server di distribuzione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumPublishers2%2A> : restituisce un oggetto <xref:System.Data.DataSet> che restituisce i server di pubblicazione che utilizzano il server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgents%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti gli agenti di lettura coda nel server di distribuzione.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgents%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti gli agenti di lettura coda nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessionDetails%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente i dettagli relativi all'agente di lettura coda e alla sessione specificati.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessionDetails%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene dettagli sull'agente di lettura coda specificato e sulla sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessions%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sulla sessione dell'agente di lettura coda specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessions%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni di sessione relative all'agente di lettura coda specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumSnapshotAgents%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti gli agenti snapshot nel server di distribuzione.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumSnapshotAgents%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti gli agenti snapshot nel server di distribuzione.  
   
 #### <a name="to-monitor-publication-properties-for-a-specific-publisher-at-the-distributor"></a>Per monitorare le proprietà della pubblicazione per un server di pubblicazione specifico nel server di distribuzione  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Recuperare un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> mediante uno dei modi indicati di seguito.  
   
-    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> per il server di pubblicazione e quindi la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, il nome del server di pubblicazione è definito in modo non corretto o la pubblicazione non esiste.  
+    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Impostare la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> per il server di pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, il nome del server di pubblicazione è definito in modo non corretto o la pubblicazione non esiste.  
   
-    -   Usare l'oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> esistente.  
+    -   Utilizzare l'oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> esistente.  
   
 3.  Eseguire uno o più metodi riportati di seguito per ottenere le informazioni di replica per tutte le pubblicazioni appartenenti al server di pubblicazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessionDetails%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente i dettagli relativi all'agente di distribuzione e alla sessione specificati.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessionDetails%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene dettagli sull'agente di distribuzione specificato e sulla sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessions%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sulla sessione dell'agente di distribuzione specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessions%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni di sessione relative all'agente di distribuzione specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumErrorRecords%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sul record errori relativo all'errore specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumErrorRecords%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni del record di errori relative all'errore specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessionDetails%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente i dettagli relativi all'agente di lettura log e alla sessione specificati.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessionDetails%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene dettagli sull'agente di lettura log specificato e sulla sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessions%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sulla sessione dell'agente di lettura log specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessions%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni di sessione relative all'agente di lettura log specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente i dettagli relativi all'agente di merge e alla sessione specificati.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene dettagli sull'agente di merge specificato e sulla sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails2%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente i dettagli aggiuntivi relativi all'agente di merge e alla sessione specificati.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails2%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene ulteriori dettagli sull'agente di merge specificato e sulla sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sulla sessione dell'agente di merge specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni di sessione relative all'agente di merge specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions2%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente informazioni aggiuntive sulla sessione dell'agente di merge specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions2%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene ulteriori informazioni di sessione relative all'agente di merge specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutte le pubblicazioni nel server di distribuzione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutte le pubblicazioni nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications2%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente informazioni aggiuntive su tutte le pubblicazioni nel server di distribuzione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications2%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene ulteriori informazioni su tutte le pubblicazioni nel server di distribuzione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessionDetails%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente i dettagli relativi all'agente snapshot e alla sessione specificati.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessionDetails%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene dettagli sull'agente snapshot specificato e sulla sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessions%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sulla sessione dell'agente snapshot specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessions%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni di sessione relative all'agente snapshot specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSubscriptions%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutte le sottoscrizioni di pubblicazioni nel server di distribuzione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSubscriptions%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutte le sottoscrizioni delle pubblicazioni nel server di distribuzione.  
   
 #### <a name="to-monitor-properties-for-a-specific-publication-at-the-distributor"></a>Per monitorare le proprietà di una pubblicazione specifica nel server di distribuzione  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Recuperare un oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitor> mediante uno dei modi indicati di seguito.  
   
-    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> per la pubblicazione e quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono definite in modo non corretto o la pubblicazione non esiste.  
+    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono definite in modo non corretto o la pubblicazione non esiste.  
   
-    -   Usare l'oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> esistente.  
+    -   Utilizzare l'oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> esistente.  
   
 3.  Eseguire uno o più metodi riportati di seguito per ottenere informazioni su questa pubblicazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumErrorRecords%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente i record errori relativi all'errore specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumErrorRecords%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene record di errori relativi all'errore specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumLogReaderAgent%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sull'agente di lettura log per la pubblicazione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumLogReaderAgent%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni sull'agente di lettura log della pubblicazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sui valori di soglia degli avvisi di monitoraggio impostati per la pubblicazione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni sui valore soglia degli avvisi di monitoraggio impostati per la pubblicazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumQueueReaderAgent%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sull'agente di lettura coda usato dalla pubblicazione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumQueueReaderAgent%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni sull'agente di lettura coda utilizzato dalla pubblicazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSnapshotAgent%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sull'agente snapshot per la pubblicazione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSnapshotAgent%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni sull'agente snapshot della pubblicazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.EnumSubscriptions%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sulle sottoscrizioni della pubblicazione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.EnumSubscriptions%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni sulle sottoscrizioni della pubblicazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSubscriptions2%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente informazioni aggiuntive sulle sottoscrizioni della pubblicazione corrente in base all'oggetto <xref:Microsoft.SqlServer.Replication.SubscriptionResultOption> specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSubscriptions2%2A> - restituisce un oggetto <xref:System.Data.DataSet> che contiene ulteriori informazioni sulle sottoscrizioni della pubblicazione in base all'oggetto <xref:Microsoft.SqlServer.Replication.SubscriptionResultOption>specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni sulla latenza per il token di traccia specificato.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni sulla latenza per il token di traccia specificato.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>: restituisce un oggetto <xref:System.Data.DataSet> contenente le informazioni su tutti i token di traccia inseriti nella pubblicazione corrente.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> : restituisce un oggetto <xref:System.Data.DataSet> che contiene informazioni su tutti i token di traccia inseriti nella pubblicazione.  
   
 #### <a name="to-monitor-transactional-commands-that-are-waiting-to-be-applied-at-the-subscriber"></a>Per monitorare i comandi transazionali in attesa di essere applicati al Sottoscrittore  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Recuperare un oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitor> mediante uno dei modi indicati di seguito.  
   
-    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> per la pubblicazione e quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono definite in modo non corretto o la pubblicazione non esiste.  
+    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono definite in modo non corretto o la pubblicazione non esiste.  
   
-    -   Usare l'oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> esistente.  
+    -   Utilizzare l'oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> esistente.  
   
-3.  Eseguire il metodo <xref:Microsoft.SqlServer.Replication.PublicationMonitor.TransPendingCommandInfo%2A>, che restituisce un oggetto <xref:Microsoft.SqlServer.Replication.PendingCommandInfo>.  
+3.  Eseguire il metodo <xref:Microsoft.SqlServer.Replication.PublicationMonitor.TransPendingCommandInfo%2A> che restituisce un oggetto <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> .  
   
-4.  Usare le proprietà dell'oggetto <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> per determinare il numero stimato di comandi in sospeso e il tempo necessario per completare il recapito di tali comandi.  
+4.  Utilizzare le proprietà dell'oggetto <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> per determinare il numero stimato di comandi in sospeso e il tempo necessario per completare il recapito di tali comandi.  
   
 #### <a name="to-set-the-monitor-warning-thresholds-for-a-publication"></a>Per impostare i valore soglia degli avvisi di monitoraggio per una pubblicazione  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Recuperare un oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitor> mediante uno dei modi indicati di seguito.  
   
-    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> per la pubblicazione e quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono definite in modo non corretto o la pubblicazione non esiste.  
+    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono definite in modo non corretto o la pubblicazione non esiste.  
   
-    -   Usare l'oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> esistente.  
+    -   Utilizzare l'oggetto <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> esistente.  
   
-3.  Eseguire il metodo <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A>. Prendere nota delle impostazioni di soglia correnti nel valore restituito della classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.MonitorThreshold>.  
+3.  Eseguire il metodo <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A> . Tenere presenti le impostazioni dei valore soglia correnti nell'oggetto <xref:System.Collections.ArrayList> restituito degli oggetti <xref:Microsoft.SqlServer.Replication.MonitorThreshold> .  
   
-4.  Eseguire il metodo <xref:Microsoft.SqlServer.Replication.PublicationMonitor.ChangeMonitorThreshold%2A>. Passare i parametri indicati di seguito.  
+4.  Eseguire il metodo <xref:Microsoft.SqlServer.Replication.PublicationMonitor.ChangeMonitorThreshold%2A> . Passare i parametri indicati di seguito.  
   
-    -   *metricID*: un valore <xref:System.Int32> che rappresenta la misurazione del valore soglia di monitoraggio nella tabella riportata di seguito.  
+    -   *metricID* : un valore <xref:System.Int32> che rappresenta la misurazione del valore soglia di monitoraggio nella tabella riportata di seguito.  
   
         |Valore|Descrizione|  
         |-----------|-----------------|  
@@ -281,11 +278,10 @@ ms.lasthandoff: 06/22/2017
         |7|**mergefastrunspeed** - esegue il monitoraggio della frequenza delle sincronizzazioni di tipo merge su connessioni tramite rete locale (LAN) a larghezza di banda elevata.|  
         |8|**mergeslowrunspeed** : esegue il monitoraggio della velocità delle sincronizzazioni di tipo merge attraverso connessioni remote a larghezza di banda ridotta.|  
   
-    -   *enable*: valore <xref:System.Boolean> che indica se la metrica è abilitata per la pubblicazione.  
+    -   *enable* - <xref:System.Boolean> che indica se la misurazione è attivata per la pubblicazione.  
   
     -   *thresholdValue* : valore integer che imposta il valore soglia.  
   
     -   *shouldAlert* - Integer che indica se il valore soglia deve generare un avviso.  
   
   
-

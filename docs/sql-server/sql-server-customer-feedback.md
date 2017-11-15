@@ -10,14 +10,12 @@ ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurare SQL Server per inviare commenti e suggerimenti a Microsoft
 
 ## <a name="summary"></a>Riepilogo
@@ -166,4 +164,3 @@ Durante l'installazione, SQL Server 2016 Analysis Services aggiunge un account s
 È possibile configurare il servizio in modo che non invii dati di utilizzo, come descritto nella sezione "Impostare le sottochiavi del Registro di sistema nel server". In questo modo, tuttavia, non viene rimosso l'account del servizio. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

@@ -1,5 +1,5 @@
 ---
-title: "Visualizzare ed esplorare i report in modalità nativa con Web part di SharePoint (SSRS) | Documenti Microsoft"
+title: "Visualizzare ed esplorare i report in modalità nativa usando le web part di SharePoint (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0db727d8356811f6db1544d6abc4c8fbe385bbe3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
 > [!IMPORTANT]  
->  SQL Server Reporting Services non supporta l'utilizzo in modalità nativa (RSWebParts.cab) web part al contenuto del server di report di access in un sito di SharePoint da un server di report in modalità nativa. Usare invece [Web part Visualizzatore report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
+>  SQL Server Reporting Services non supporta l'utilizzo di web part in modalità nativa (RSWebParts. cab) per accedere al contenuto del server di report in un sito di SharePoint da un server di report in modalità nativa. Usare invece [Web part Visualizzatore report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include diverse web part che funzionano con versioni specifiche di un server di report e in determinate modalità di distribuzione.  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Le versioni supportate di prodotti e tecnologie SharePoint sono:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="install-web-parts-using-powershell"></a>Installare web part tramite PowerShell  
   
-1.  Copiare il file **RSWebParts.cab** in una cartella nel server SharePoint. È possibile copiare il file in qualsiasi cartella nel server di SharePoint e quindi eliminarlo dopo aver installato le web part. Per impostazione predefinita, SQL Server 2014 Reporting Services e versioni precedenti il file RSWebParts.cab viene installato nella cartella seguente:  
+1.  Copiare il file **RSWebParts.cab** in una cartella nel server SharePoint. È possibile copiare il file in qualsiasi cartella nel server di SharePoint e quindi eliminarlo dopo aver installato le web part. Per impostazione predefinita, SQL Server 2014 Reporting Services e versioni precedenti installa il file RSWebParts.cab nella cartella seguente:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -149,7 +147,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  In modalità di modifica della pagina fare clic su **Modifica web part** nella web part Visualizzatore report.  
   
-7.  In **Report Manager URL**digitare l'URL di un'istanza di Gestione report associata al server di report in modalità nativa a cui si desidera accedere. Per impostazione predefinita, un URL di gestione di Report presenta la seguente sintassi: **http://\<nomeserver > / reports**.  
+7.  In **Report Manager URL**digitare l'URL di un'istanza di Gestione report associata al server di report in modalità nativa a cui si desidera accedere. Per impostazione predefinita, la sintassi dell'URL di Gestione report è la seguente: **http://\<nomeserver>/reports**.  
   
 8.  In **Percorso report**specificare una barra seguita dal percorso della cartella e dal nome del report. **Non** includere il nome del server o la directory virtuale di Gestione report. Ad esempio, per aprire il report "Company Sales" nella cartella Adventure Works, specificare **/Adventure Works/Company Sales**. Di seguito è riportato un altro esempio in cui il report "Products" si trova nella cartella radice del server di report **/Products**.  
   
@@ -175,5 +173,4 @@ ms.lasthandoff: 08/09/2017
   
     3.  Fare clic su **Visualizzatore report**.  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- security [SQL Server], certificates and asymmetric keys
+helpviewer_keywords: security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: ff3d6bcd21c301e13d39f3ce22205e879af86b85
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: a1175f8ea6b93440437b23c6322fe2eb8a89332c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
   La crittografia a chiave pubblica (PKI) è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata* . La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica viene utilizzata per crittografare dati mentre quella privata viene impiegata per decrittografarli. Un messaggio crittografato con la chiave pubblica può essere decrittografato solo utilizzando la chiave privata corretta. Poiché si tratta di due chiavi diverse, queste chiavi sono *asimmetriche*.  
@@ -87,4 +84,3 @@ ms.lasthandoff: 08/28/2017
  [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
-

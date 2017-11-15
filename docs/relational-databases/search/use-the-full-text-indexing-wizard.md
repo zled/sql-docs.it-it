@@ -5,8 +5,7 @@ ms.date: 08/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 98fce836048a343f9eb87b2d987d13a294bce59f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
   L'Indicizzazione guidata full-text in SQL Server Management Studio illustra la procedura di creazione di un indice full-text.  
@@ -105,7 +103,7 @@ ms.lasthandoff: 07/31/2017
       |-----------|-----------------|
       |**<default>**| Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o la vista è partizionata, viene usato il filegroup primario|
       |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|
-      *user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito, definito dall'utente, selezionarne il nome nell'elenco per usare questo filegroup per il nuovo indice full-text.|   
+      *user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per usare questo filegroup per il nuovo indice full-text.|   
   
      
  11. **Selezione elenco di parole non significative full-text**  
@@ -146,4 +144,3 @@ ms.lasthandoff: 07/31/2017
      Al termine dell'esecuzione di tutte le operazioni, fare clic su questo pulsante per accedere a un report delle operazioni eseguite. È possibile visualizzare il report, stamparlo su file, copiarlo negli Appunti o inviarlo tramite posta elettronica.  
   
   
-

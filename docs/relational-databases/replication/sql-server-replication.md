@@ -5,25 +5,23 @@ ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], about
 - replication [SQL Server]
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 79ab66681162e4f65d9a994f9dcd5c80b8589b52
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 72c2bfc9ab2a6726a7378c42d18f6e05edeef664
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-replication"></a>Replica di SQL Server
   La replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database in modo che risultino consistenti. Usare la replica per distribuire dati a diverse posizioni e a utenti remoti o mobili tramite reti locali e WAN, connessioni remote, connessioni wireless e Internet.  
@@ -35,8 +33,7 @@ ms.lasthandoff: 06/22/2017
  **Esplorare per area**  
  - [Novità](../../relational-databases/replication/what-s-new-replication.md)  
  - [Compatibilità con le versioni precedenti](../../relational-databases/replication/replication-backward-compatibility.md)  
- - [Caratteristiche e attività di replica](../../relational-databases/replication/replication-features-and-tasks.md)  
+ - [Funzionalità e attività di replica](../../relational-databases/replication/replication-features-and-tasks.md)  
  - [Riferimento tecnico](../../relational-databases/replication/technical-reference-replication.md)  
   
   
-

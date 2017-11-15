@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.indexcolumns
+f1_keywords: vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0f1b0c2c698e01aac8b8974591843d70488b2ce0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 669ede45515aa17018e117c2ac703ac2e9b558bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice (Visual Database Tools)
 Utilizzare questa finestra di dialogo per selezionare le colonne di un indice e per impostarne gli ordinamenti. Un indice può utilizzare una o più colonne, ognuna delle quali può essere ordinata con un ordinamento crescente o decrescente. Per accedere a questa finestra di dialogo, nella finestra di dialogo **Indici/chiavi** fare clic sul pulsante con i puntini nella riga **Colonne** della sezione **Generale** .  
@@ -39,4 +36,3 @@ Consente di selezionare l'ordinamento della colonna specificata. Le opzioni disp
 [Creare indici non cluster](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)  
 [Finestra di dialogo Indici/chiavi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   
-

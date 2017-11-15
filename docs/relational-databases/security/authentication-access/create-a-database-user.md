@@ -5,8 +5,7 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,18 +22,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
----   
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: 3459cbe5b6e141af32ba7e8f29f0da6e3a34819d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
+---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -52,9 +50,9 @@ ms.lasthandoff: 06/22/2017
   
  Per coloro che non hanno familiarità con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere difficile determinare il tipo di utente che si vuole creare. Per prima cosa, chiedersi se la persona o il gruppo con l'esigenza di accedere al database ha un account di accesso. Gli account di accesso nel database master sono comuni per le persone che gestiscono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per quelle che devono accedere a molti o a tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per questa situazione, creare un **utente SQL con account di accesso**. L'utente del database è l'identità dell'account di accesso quando è connesso a un database. Può utilizzare lo stesso nome dell'account, ma non si tratta di una condizione obbligatoria. In questo argomento si presuppone che esista già un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per informazioni su come creare un account di accesso, vedere [Creare un account di accesso](../../../relational-databases/security/authentication-access/create-a-login.md).  
   
- Se la persona o il gruppo che deve accedere al database non ha un account di accesso e deve accedere solo a uno o alcuni database, creare un **utente di Windows** o un **utente SQL con password**. Noto anche come utente di database indipendente, questo tipo di utente non è associato a un account di accesso nel database master. È un'ottima scelta se si vuole avere la possibilità di spostare facilmente il database tra istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per usare questa opzione in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], un amministratore deve prima abilitare i database indipendenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il database deve essere abilitato per l'indipendenza. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ Se la persona o il gruppo che deve accedere al database non ha un account di accesso e deve accedere solo a uno o alcuni database, creare un **utente di Windows** o un **utente SQL con password**. Noto anche come utente di database indipendente, questo tipo di utente non è associato a un account di accesso nel database master. È un'ottima scelta se si vuole avere la possibilità di spostare facilmente il database tra istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per usare questa opzione in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], un amministratore deve prima abilitare i database indipendenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e il database deve essere abilitato per l'indipendenza. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-> **IMPORTANTE** Per la connessione come utente di database indipendente, è necessario specificare il nome del database indipendente come parte della stringa di connessione. Per specificare il database in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], nella finestra di dialogo **Connetti a** fare clic su **Opzioni** e quindi sulla scheda **Proprietà connessione**.  
+> **IMPORTANTE** Per la connessione come utente di database indipendente, è necessario specificare il nome del database indipendente come parte della stringa di connessione. Per specificare il database in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], nella finestra di dialogo **Connetti a** fare clic su **Opzioni**e quindi sulla scheda **Proprietà connessione** .  
   
  Quando la persona che deve connettersi non può eseguire l'autenticazione con Windows, selezionare **Utente SQL con password** o **Utente SQL con account di accesso** in base a un **account di accesso con autenticazione di SQL Server**. Si tratta di una situazione comune quando persone esterne all'organizzazione, ad esempio i clienti, si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -77,29 +75,29 @@ ms.lasthandoff: 06/22/2017
   
 2.  Espandere il database in cui si desidera creare il nuovo utente del database.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** e scegliere **Nuovo** e quindi **Utente**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** e scegliere **Nuovo**e quindi **Utente**.  
   
-4.  Nella finestra di dialogo **Utente di database - Nuovo** nella pagina **Generale** selezionare uno dei seguenti tipi di utente nell'elenco **Tipo utente**:  
+4.  Nella finestra di dialogo **Utente di database - Nuovo** nella pagina **Generale** selezionare uno dei seguenti tipi di utente nell'elenco **Tipo utente** :  
   
-    -   **Utente SQL con account di accesso**  
+    -   **utente SQL con account di accesso**  
   
-    -   **Utente SQL con password**  
+    -   **utente SQL con password**  
   
     -   **Utente SQL senza account di accesso**  
   
-    -   **Utente mappato a un certificato**  
+    -   **Utente con mapping eseguito a un certificato**  
   
-    -   **Utente mappato a una chiave asimmetrica**  
+    -   **Utente con mapping eseguito a una chiave asimmetrica**  
   
-    -   **Utente di Windows**  
+    -   **utente di Windows**  
   
 5.  Quando si seleziona un'opzione, le restanti opzioni nella finestra di dialogo potrebbero cambiare. Alcune opzioni si applicano solo a tipi specifici di utenti di database. Alcune opzioni possono essere lasciate vuote e in questo caso verrà usato il valore predefinito.  
   
      **Nome utente**  
-     Immettere un nome per il nuovo utente. Se si è scelto **Utente di Windows** nell'elenco **Tipo utente**, è possibile fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Select User or Group** (Seleziona utente o gruppo).  
+     Immettere un nome per il nuovo utente. Se si è scelto **Utente di Windows** nell'elenco **Tipo utente** , è possibile fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Select User or Group** (Seleziona utente o gruppo).  
   
      **Nome account di accesso**  
-     Immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso**. È disponibile**Nome account di accesso** se si seleziona **Utente SQL con account di accesso** o **Utente di Windows** dall'elenco **Tipo di utente** .  
+     Immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso** . È disponibile**Nome account di accesso** se si seleziona **Utente SQL con account di accesso** o **Utente di Windows** dall'elenco **Tipo di utente** .  
   
      **Password** e **Conferma password**  
      Immettere una password per gli utenti che eseguono l'autenticazione nel database.  
@@ -108,13 +106,13 @@ ms.lasthandoff: 06/22/2017
      Immettere la lingua predefinita dell'utente.  
   
      **Schema predefinito**  
-     Immettere lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema**. È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
+     Immettere lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema** . È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
   
      **Nome certificato**  
-     Immettere il certificato da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato**. È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
+     Immettere il certificato da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato** . È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
   
      **Nome chiave asimmetrica**  
-     Immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica**. È disponibile**Nome chiave asimmetrica** se si seleziona **Utente con mapping eseguito a una chiave asimmetrica** dall'elenco **Tipo di utente** .  
+     Immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica** . È disponibile**Nome chiave asimmetrica** se si seleziona **Utente con mapping eseguito a una chiave asimmetrica** dall'elenco **Tipo di utente** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 06/22/2017
      **Puntini di sospensione (...)**  
      Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa** . Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Elimina**  
+     **Delete**  
      Consente di eliminare la proprietà estesa selezionata.  
   
 ##  <a name="TsqlProcedure"></a> Creare un utente mediante T-SQL  
@@ -166,9 +164,8 @@ ms.lasthandoff: 06/22/2017
  Per altre informazioni, vedere [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) che contiene molti altri esempi per [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Entità &#40;motore di database&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Entità &#40;Motore di database&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Creare un account di accesso](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
-

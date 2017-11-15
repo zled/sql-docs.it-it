@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati nelle espressioni (Generatore Report e SSRS) | Documenti Microsoft
+title: Tipi di dati nelle espressioni (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Modificare la query del set di dati in modo da aggiungere un nuovo campo di query con i dati convertiti. Per le origini dati relazionali o multidimensionali, per eseguire la conversione vengono utilizzate le risorse dell'origine dati.  
   
--   Creare un campo calcolato basato su un campo del set di dati del report esistente scrivendo un'espressione che converte tutti i dati di una colonna del set di risultati in una nuova colonna con un tipo di dati differente. L'espressione seguente, ad esempio, converte il campo Year da un valore di tipo Integer in un valore di tipo String: `=CStr(Fields!Year.Value)`. Per altre informazioni, vedere [Aggiungere, modificare e aggiornare i campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
+-   Creare un campo calcolato basato su un campo del set di dati del report esistente scrivendo un'espressione che converte tutti i dati di una colonna del set di risultati in una nuova colonna con un tipo di dati differente. L'espressione seguente, ad esempio, converte il campo Year da un valore di tipo Integer in un valore di tipo String: `=CStr(Fields!Year.Value)`. Per altre informazioni, vedere [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
 -   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include ad esempio una proprietà estesa FORMATTED_VALUE per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
@@ -101,9 +100,9 @@ ms.lasthandoff: 08/09/2017
  Quando ci si connette a un'origine dati con un provider di dati che non fornisce il supporto di conversione per tutti i tipi di dati dell'origine dati, il tipo di dati predefinito per i tipi di origine dati non supportati corrisponde a String. Negli esempi seguenti sono fornite le soluzioni per i tipi di dati specifici restituiti come stringa.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>Concatenazione di una stringa e di un tipo di dati DateTimeOffset CLR  
- Per la maggior parte dei tipi di dati, CLR fornisce conversioni predefinite in modo da consentire la concatenazione di valori con tipi di dati diversi in una stringa mediante l'operatore &. Nell'espressione seguente, ad esempio, viene concatenato il testo "The date and time are: " con il campo del set di dati StartDate, che rappresenta un valore <xref:System.DateTime>: `="The date and time are: " & Fields!StartDate.Value`.  
+ Per la maggior parte dei tipi di dati, CLR fornisce conversioni predefinite in modo da consentire la concatenazione di valori con tipi di dati diversi in una stringa mediante l'operatore &. Nell'espressione seguente, ad esempio, viene concatenato il testo "The date and time are: " con il campo del set di dati StartDate, che rappresenta un valore <xref:System.DateTime> : `="The date and time are: " & Fields!StartDate.Value`.  
   
- Per alcuni tipi di dati, potrebbe essere necessario includere la funzione ToString. Ad esempio, l'espressione seguente viene illustrato lo stesso esempio con il tipo di dati CLR <xref:System.DateTimeOffset>, che includono la data e l'ora di un fuso orario offset rispetto al fuso orario UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
+ Per alcuni tipi di dati, potrebbe essere necessario includere la funzione ToString. Nell'espressione seguente, ad esempio, è riportato lo stesso esempio con il tipo di dati CLR <xref:System.DateTimeOffset>che include la data, l'ora e una differenza di fuso orario rispetto al fuso orario UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>Conversione del tipo di dati String in un tipo di dati DateTime CLR  
  Se un'estensione per l'elaborazione dati non supporta tutti i tipi di dati definiti in un'origine dati, i dati possono essere recuperati come testo. Un valore del tipo di dati **datetimeoffset(7)** può essere, ad esempio, recuperato come dati di tipo String. A Perth, in Australia, il valore stringa per il 1 luglio 2008, alle 6:05:07.9999999 AM è simile al seguente:  
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/09/2017
   
  Per altre informazioni sulla conversione di stringhe in tipi di dati **DateTime** , vedere [Analisi delle stringhe di data e ora](http://go.microsoft.com/fwlink/?LinkId=89703), [Formattazione di data e ora per impostazioni cultura specifiche](http://go.microsoft.com/fwlink/?LinkId=89704)e [Scelta tra DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) in MSDN.  
   
--   Aggiungere un nuovo campo calcolato al set di dati del report che utilizza un'espressione per estrarre parti della stringa. Per altre informazioni, vedere [Aggiungere, modificare e aggiornare i campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
+-   Aggiungere un nuovo campo calcolato al set di dati del report che utilizza un'espressione per estrarre parti della stringa. Per altre informazioni, vedere [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
 -   Modificare la query del set di dati del report per utilizzare le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per estrarre i valori di data e ora indipendentemente in modo da creare colonne separate. L'esempio seguente illustra come usare la funzione **DatePart** per aggiungere una colonna per l'anno e una colonna per il fuso orario UTC convertito in minuti:  
   
@@ -146,10 +145,9 @@ ms.lasthandoff: 08/09/2017
   
  Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) e [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- Per altre informazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Tipi di dati in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Per altre nellaformazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Tipi di dati nella Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) nella [SQL Server Books Onlnellae](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   
-

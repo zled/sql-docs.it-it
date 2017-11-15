@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 57e52bae2eba99b784da73fd387259e6d455ec4d
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 6714bafa18075219a7da895b05b954f3d67329d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-1---connecting-with-query-editor"></a>Lezione 2-1 - Connessione all'editor di query
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di scrivere e modificare codice quando non si è connessi dal server. Ciò risulta utile quando il server non è disponibile o quando si desidera risparmiare risorse di rete o di server limitate. È inoltre possibile connettere l'editor di query a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza la necessità di avviare una nuova finestra dell'editor di query o di immettere nuovamente il codice.  
@@ -63,4 +60,3 @@ Questa nuova caratteristica dell'editor di query consente di eseguire facilmente
   
   
   
-

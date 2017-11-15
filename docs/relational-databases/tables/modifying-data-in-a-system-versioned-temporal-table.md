@@ -1,26 +1,24 @@
 ---
 title: Modifica dei dati in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1ed023d0892262a8491cc434048e8932510e0e3b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modifica dei dati in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -81,8 +79,8 @@ VALUES  ('Headquarters', 'New York');
   
 ### <a name="inserting-data-using-partition-switch"></a>Inserimento di dati con PARTITION SWITCH  
  Se la tabella corrente è partizionata è possibile usare il cambio di partizione per caricare in modo efficiente i dati in una partizione vuota oppure su più partizioni in parallelo.   
-La tabella di gestione temporanea usata nell'istruzione **PARTITION SWITCH IN** con una tabella temporale con controllo delle versioni di sistema deve avere la definizione di **SYSTEM_TIME PERIOD** , ma non deve essere necessariamente una tabella temporale con controllo delle versioni di sistema.    
-Ciò assicura l’esecuzione di controlli di coerenza temporale durante l'inserimento di dati in una tabella di gestione temporanea o quando il periodo SYSTEM_TIME viene aggiunto a una tabella di gestione temporanea già popolata.  
+La tabella di staging usata nell'istruzione **PARTITION SWITCH IN** con una tabella temporale con controllo delle versioni di sistema deve avere la definizione di **SYSTEM_TIME PERIOD**, ma non deve essere necessariamente una tabella temporale con controllo delle versioni di sistema.    
+Ciò assicura l’esecuzione di controlli di coerenza temporale durante l'inserimento di dati in una tabella di staging o quando il periodo SYSTEM_TIME viene aggiunto a una tabella di staging già popolata.  
   
 ```  
 /*Create staging table with period definition for SWITCH IN temporal table*/   
@@ -201,4 +199,3 @@ WHEN NOT MATCHED THEN
  [Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

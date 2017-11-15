@@ -5,8 +5,7 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 672a3204c3bba22efd0d129d384980352ab2ac8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -310,7 +309,7 @@ Nella tabella riportata di seguito sono elencati i servizi e le porte da cui pot
   
     2.  Al prompt dei comandi digitare **netstat -n -a**.  
   
-         L'opzione **-n** indica a **netstat** di visualizzare in valori numerici l'indirizzo e il numero di porta delle connessioni TCP attive. L'opzione **-a** indica a **netstat** di visualizzare le porte TCP e UDP su cui è in attesa il computer.  
+         L'elemento **-n** indica a **netstat** di visualizzare in valori numerici l'indirizzo e il numero di porta delle connessioni TCP attive. L'opzione **-a** indica a **netstat** di visualizzare le porte TCP e UDP su cui è in attesa il computer.  
   
 -   L'utilità **PortQry** può essere usata per indicare lo stato delle porte TCP/IP come in attesa, non in attesa o filtrato. Uno stato filtrato non indica se la porta è o non è in attesa, bensì che l'utilità non ha ricevuto alcuna risposta dalla porta. È possibile scaricare l'utilità **PortQry** dalla pagina relativa nell' [area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   
@@ -319,4 +318,3 @@ Nella tabella riportata di seguito sono elencati i servizi e le porte da cui pot
  [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

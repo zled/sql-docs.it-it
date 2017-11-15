@@ -6,7 +6,7 @@
 ## [Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità AlwaysOn](set-up-login-accounts-database-mirroring-always-on-availability.md)  
 ## [Concedere l'accesso alla rete a un endpoint per il mirroring del database usando l'autenticazione di Windows](database-mirroring-allow-network-access-windows-authentication.md)  
 ## [Usare certificati per un endpoint del mirroring del database (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
-### [Consentire a un endpoint del mirroring del database di usare i certificati per le connessioni in uscita (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
+### [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
 ### [Consentire a un endpoint del mirroring del database di usare i certificati per le connessioni in entrata (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
 
 # [Mirroring del database](database-mirroring-sql-server.md)  

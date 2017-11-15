@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deleting server groups
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 5b1ae9e4b35f9e46200741d02f97e0faecb753ff
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: e0cb0a74caa92ed03822c8115096e8030e1e7b7c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Rimozione di un gruppo di server (SQL Server Management Studio)
   In questo argomento viene descritto come rimuovere un gruppo di server in Server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile eliminare un gruppo di server in qualunque momento. Se il gruppo di server non è vuoto, qualunque server o gruppo di server incluso nel gruppo di server eliminato verrà eliminato. Prima di eliminare un gruppo di server, spostare in un nuovo gruppo di server eventuali server o gruppi di server da mantenere.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 07/31/2017
  [Spostare un server registrato o un gruppo di server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
   
   
-

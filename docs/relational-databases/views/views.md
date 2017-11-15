@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-views
+ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- views [SQL Server], about views
+helpviewer_keywords: views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca3c02162484ebf4f12a8b98b1cad2b1aea89c22
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: d0a9d167f8ec344a9ce393d387a956c24c994d8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="views"></a>Viste
   Una vista è una tabella virtuale il cui contenuto è definito da una query. In modo analogo a una tabella, una vista è costituita da un set di colonne e righe di dati denominate. A meno che non sia indicizzata, una vista non esiste come set archiviato di valori di dati in un database. Le righe e le colonne di dati provengono da tabelle a cui fa riferimento la query che definisce la vista e sono prodotte dinamicamente quando si fa riferimento alla vista.  

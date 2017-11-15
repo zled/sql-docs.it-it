@@ -5,24 +5,21 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
+f1_keywords: sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8ec5dd80718de624c3e45ac81eceedc7dfaed2ad
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 906d464c7e3f345c21034cffcd51e1494c0724c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="login-for-updatable-subscriptions"></a>Account di accesso per sottoscrizioni aggiornabili
   Per l'aggiornamento immediato, se si seleziona **Replica** nella pagina **Sottoscrizioni aggiornabili** di questa procedura guidata, è necessario specificare un account nel Sottoscrittore nel cui contesto vengono stabilite le connessioni al server di pubblicazione. 
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/27/2017
  [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

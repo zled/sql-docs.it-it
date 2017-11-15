@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactional replication, propagation methods
+helpviewer_keywords: transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 27553553b3bf900a1a7207711520a2355c997941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Specificare la modalità di propagazione delle modifiche per gli articoli transazionali
   La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
@@ -37,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
  Per impostazione predefinita, la replica transazionale propaga le modifiche ai Sottoscrittori utilizzando un set di stored procedure installate in ogni Sottoscrittore. Quando in una tabella del server di pubblicazione ha luogo un inserimento, un aggiornamento o un'eliminazione, l'operazione viene convertita in una chiamata a una stored procedure nel Sottoscrittore. La stored procedure accetta parametri che eseguono il mapping alle colonne della tabella, consentendo a tali colonne di essere modificate nel Sottoscrittore.  
   
- Per impostare il metodo di propagazione per la modifica dei dati negli articoli transazionali, vedere [Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ Per impostare il metodo di propagazione per la modifica dei dati negli articoli transazionali, vedere [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## <a name="default-and-custom-stored-procedures"></a>Stored procedure predefinite e personalizzate  
  Le tre procedure che la replica crea per impostazione predefinita per ogni articolo di tabella sono:  
@@ -222,4 +219,3 @@ go
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

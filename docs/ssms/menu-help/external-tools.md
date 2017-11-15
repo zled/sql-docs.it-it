@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.externaltools
-helpviewer_keywords:
-- External Tools dialog box
+f1_keywords: vs.externaltools
+helpviewer_keywords: External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2e6fbfef713c27e8cf66f63a9e6bc742f45c4159
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 07746b7c20e8bed6bb71abb3c62adb6354f921dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="external-tools"></a>Strumenti esterni
 Usare questa finestra di dialogo per aggiungere strumenti esterni, ad esempio Gestione configurazione SQL Server o Blocco note, al menu **Strumenti** . Aggiungendo strumenti esterni, sarà più semplice avviare altre applicazioni quando si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. Gli output generati da alcuni strumenti verranno inoltre visualizzati nella finestra di output. La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
@@ -84,4 +80,3 @@ Chiude la finestra aperta dallo strumento quando viene chiuso lo strumento stess
 > [!NOTE]  
 > Visualizzare le proprietà del collegamento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] nel menu **Avvio** per verificare il percorso dei file nel computer.  
   
-

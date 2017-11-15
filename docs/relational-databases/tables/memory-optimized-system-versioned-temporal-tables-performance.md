@@ -1,39 +1,37 @@
 ---
 title: Prestazioni delle tabelle temporali con controllo delle versioni di sistema e ottimizzazione per la memoria | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d67b2ac2eb3f10bd5ecbf973ec97d12566973738
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: bdf0303532dce06e4364384aec5d45c79b4596d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Prestazioni delle tabelle temporali con controllo delle versioni di sistema e ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Questo argomento presenta alcune considerazioni sulle prestazioni specifiche quando si usano le tabelle temporali con ottimizzazione per la memoria e controllo delle versioni di sistema.  
+  Questo argomento presenta alcune considerazioni sulle prestazioni specifiche quando si usano le tabelle temporali ottimizzate per la memoria con controllo delle versioni di sistema.  
   
 -   Quando si aggiunge il controllo elle versioni di sistema a una tabella non temporale è prevedibile un impatto sulle prestazioni nelle operazioni di aggiornamento ed eliminazione perché la tabella di cronologia viene aggiornata automaticamente.  
   
--   Ogni operazione di aggiornamento ed eliminazione viene registrata nella tabella di cronologia con ottimizzazione per la memoria interna, per cui può verificarsi un utilizzo imprevisto di memoria se il carico di lavoro fa un uso massiccio di queste due operazioni. Pertanto si consiglia quanto segue:  
+-   Ogni operazione di aggiornamento ed eliminazione viene registrata nella tabella di cronologia ottimizzata per la memoria interna, per cui può verificarsi un utilizzo imprevisto di memoria se il carico di lavoro fa un uso massiccio di queste due operazioni. Pertanto si consiglia quanto segue:  
   
     -   Non eseguire eliminazioni massicce dalla tabella corrente per aumentare la RAM disponibile con la pulizia dello spazio. È consigliabile eliminare manualmente i dati in più batch intervallando lo scaricamento dati richiamato manualmente richiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)oppure mentre **SYSTEM_VERSIONING = OFF**.  
   
-    -   Non eseguire aggiornamenti massicci della tabella in una sola volta perché questo può comportare un consumo di memoria due volte superiore rispetto alla memoria necessaria per aggiornare una tabella non temporale con ottimizzazione per la memoria. Il consumo di memoria raddoppiato è temporaneo perché l'attività di svuotamento dati è regolarmente all'opera per mantenere il consumo di memoria della tabella di gestione temporanea interna entro i limiti previsti per lo stato stabile (circa il 10% del consumo di memoria della tabella temporale corrente). È consigliabile eseguire gli aggiornamenti massicci in più batch o mentre **SYSTEM_VERSIONING = OFF**, ad esempio usando gli aggiornamenti per impostare i valori predefiniti per le colonne aggiunte.  
+    -   Non eseguire aggiornamenti massicci della tabella in una sola volta perché questo può comportare un consumo di memoria due volte superiore rispetto alla memoria necessaria per aggiornare una tabella non temporale ottimizzata per la memoria. Il consumo di memoria raddoppiato è temporaneo perché l'attività di svuotamento dati è regolarmente all'opera per mantenere il consumo di memoria della tabella di staging interna entro i limiti previsti per lo stato stabile (circa il 10% del consumo di memoria della tabella temporale corrente). È consigliabile eseguire gli aggiornamenti massicci in più batch o mentre **SYSTEM_VERSIONING = OFF**, ad esempio usando gli aggiornamenti per impostare i valori predefiniti per le colonne aggiunte.  
   
 -   Il periodo di attivazione per le attività di scaricamento dati non è configurabile ma è possibile applicare il processo richiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).  
   
@@ -53,4 +51,3 @@ ms.lasthandoff: 06/22/2017
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

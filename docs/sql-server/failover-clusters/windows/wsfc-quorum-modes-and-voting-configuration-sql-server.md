@@ -5,8 +5,7 @@ ms.date: 10/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 439b7c66da985003952c897583d520674c26d2ec
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 53ff3b74ec6e818f91b92f7b968362c1f9a8bb7e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
   Sia i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , sia le istanze del cluster di failover Always On usano Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata Always On, nonché per risolverne i problemi.  
@@ -141,4 +140,3 @@ ms.lasthandoff: 06/22/2017
  [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- semantic search [SQL Server], document similarity queries
+helpviewer_keywords: semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 947b4905c97a2c286cefc6baed8d1456276e1a10
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Trovare documenti simili e correlati tramite la ricerca semantica
   Viene descritto come reperire documenti o valori di testo simili o correlati, nonché informazioni relative alla somiglianza o correlazione, in colonne configurate per l'indicizzazione semantica statistica.  
@@ -39,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToIdentifySimilar"></a> Esempio: trovare i documenti più simili a un altro documento  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  Nell'esempio seguente vengono recuperati i primi 10 candidati simili al candidato specificato mediante *@CandidateID* dalla tabella HumanResources.JobCandidate nel database di esempio AdventureWorks2012.  
   
 ```scr  
@@ -64,7 +61,7 @@ GO
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToSimilarPhrases"></a> Esempio: trovare le frasi chiave più simili tra documenti  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  Nell'esempio seguente vengono recuperate le 5 frasi chiave associate al punteggio di somiglianza più elevato tra i candidati specificati nella tabella **HumanResources.JobCandidate** del database di esempio AdventureWorks2012.  
   
 ```tsql  
@@ -80,4 +77,3 @@ GO
 ```  
   
   
-

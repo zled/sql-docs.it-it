@@ -1,48 +1,46 @@
 ---
-title: Abilitare Estensione database per una tabella | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: Abilitare Stretch Database per una tabella | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 18ca9bfffcc53e715668634e0a59e33775c9f2c2
-ms.contentlocale: it-it
-ms.lasthandoff: 07/29/2017
-
+ms.openlocfilehash: 59b750fa20a5167cb6711d2aadb78af5031ed23a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Per configurare una tabella per Estensione database, selezionare **Estendi | Abilita** per una tabella in SQL Server Management Studio in modo da aprire la procedura guidata **Abilita la tabella per l'estensione**. È inoltre possibile usare Transact-SQL per abilitare Estensione database in una tabella esistente o creare una nuova tabella con la funzionalità Estensione database abilitata.  
+  Per configurare una tabella per Stretch Database, selezionare **Stretch | Abilita** per una tabella in SQL Server Management Studio in modo da aprire la procedura guidata **Abilita la tabella per Stretch**. È anche possibile usare Transact-SQL per abilitare Stretch Database in una tabella esistente o creare una nuova tabella con Stretch Database abilitato.  
   
 -   Se i dati ad accesso sporadico vengono archiviati in una tabella separata, è possibile eseguire la migrazione dell'intera tabella.  
   
 -   Se la tabella contiene dati usati più di frequente e dati usati meno di frequente, è possibile specificare una funzione di filtro per selezionare le righe di cui eseguire la migrazione.    
  
- **Prerequisiti**. Se si seleziona **Estendi | Abilita** per una tabella e non è ancora stata abilitata l'estensione per il database, la procedura guidata configura innanzitutto il database per Estensione database. Seguire i passaggi in [Avviare la procedura guidata Abilitare il database per l'estensione](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) anziché quelli riportati in questo argomento.  
+ **Prerequisiti**. Se si seleziona **Stretch | Abilita** per una tabella e Stretch Database non è ancora stato abilitato per il database, la procedura guidata configura prima di tutto il database per Stretch Database. Seguire i passaggi in [Avviare la procedura guidata Abilitare il database per l'estensione](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) anziché quelli riportati in questo argomento.  
   
- **Autorizzazioni**. L'abilitazione di Estensione database in un database o una tabella richiede autorizzazioni db_owner. L'abilitazione di Estensione database in una tabella richiede anche autorizzazioni ALTER sulla tabella.  
+ **Autorizzazioni**. Per abilitare Stretch Database in un database o una tabella sono necessarie autorizzazioni db_owner. L'abilitazione di Stretch Database in una tabella richiede anche autorizzazioni ALTER sulla tabella.  
 
  >   [!NOTE]
- > Se successivamente si disabilita Estensione database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente.
+ > Se successivamente si disabilita Stretch Database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente.
  
-##  <a name="EnableWizardTable"></a> Usare la procedura guidata per abilitare Estensione database in una tabella  
+##  <a name="EnableWizardTable">
+            </a> Usare la procedura guidata per abilitare Stretch Database in una tabella  
  **Avviare la procedura guidata**  
  1.  In Esplora oggetti di SQL Server Management Studio selezionare la tabella in cui si vuole abilitare l'estensione.  
   
@@ -68,21 +66,22 @@ ms.lasthandoff: 07/29/2017
  **Risultati**  
  Controllare i risultati.  
   
-##  <a name="EnableTSQLTable"></a> Usare Transact-SQL per abilitare Estensione database in una tabella  
- È possibile usare Transact-SQL per abilitare Estensione database in una tabella esistente o creare una nuova tabella con la funzionalità Estensione database abilitata.  
+##  <a name="EnableTSQLTable">
+            </a> Usare Transact-SQL per abilitare Stretch Database in una tabella  
+ È possibile usare Transact-SQL per abilitare Stretch Database in una tabella esistente o creare una nuova tabella con Stretch Database abilitato.  
   
 ### <a name="options"></a>Opzioni  
- Usare le opzioni seguenti quando si esegue CREATE TABLE o ALTER TABLE per abilitare Estensione database in una tabella.  
+ Usare le opzioni seguenti quando si esegue CREATE TABLE o ALTER TABLE per abilitare Stretch Database in una tabella.  
   
 -   Facoltativamente, usare la clausola `FILTER_PREDICATE = <function>` per specificare una funzione che selezioni le righe di cui eseguire la migrazione se la tabella contiene sia dati usati più di frequente sia dati usati meno di frequente. Il predicato deve eseguire la chiamata a una funzione inline con valori di tabella. Per altre informazioni, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Se non si specifica una funzione di filtro, viene eseguita la migrazione dell'intera tabella.  
   
     > [!IMPORTANT]  
-    >  Se si specifica una funzione di filtro dalle prestazioni scarse, anche la migrazione dei dati avrà prestazioni scarse. Estensione database applica la funzione di filtro alla tabella usando l'operatore CROSS APPLY.  
+    >  Se si specifica una funzione di filtro dalle prestazioni scarse, anche la migrazione dei dati avrà prestazioni scarse. Stretch Database applica la funzione di filtro alla tabella usando l'operatore CROSS APPLY.  
   
 -   Specificare `MIGRATION_STATE = OUTBOUND` per avviare subito la migrazione dei dati o  `MIGRATION_STATE = PAUSED` per rimandare l'inizio della migrazione dei dati.  
   
-### <a name="enable-stretch-database-for-an-existing-table"></a>Abilitare Estensione database per una tabella esistente  
- Per configurare una tabella esistente per Estensione database, eseguire il comando ALTER TABLE.  
+### <a name="enable-stretch-database-for-an-existing-table"></a>Abilitare Stretch Database per una tabella esistente  
+ Per configurare una tabella esistente per Stretch Database, eseguire il comando ALTER TABLE.  
   
  Ecco un esempio in cui viene eseguita la migrazione dell'intera tabella e la migrazione dei dati viene avviata subito.  
   
@@ -108,8 +107,8 @@ ALTER TABLE <table name>
   
  Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="create-a-new-table-with-stretch-database-enabled"></a>Creare una nuova tabella con la funzionalità Estensione database abilitata  
- Per creare una nuova tabella con la funzionalità Estensione database abilitata, eseguire il comando CREATE TABLE.  
+### <a name="create-a-new-table-with-stretch-database-enabled"></a>Creare una nuova tabella con Stretch Database abilitato  
+ Per creare una nuova tabella con la funzionalità Stretch Database abilitata, eseguire il comando CREATE TABLE.  
   
  Ecco un esempio in cui viene eseguita la migrazione dell'intera tabella e la migrazione dei dati viene avviata subito.  
   
@@ -142,4 +141,3 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d0ae092f97496460ef45d1b3bfafffe07e40fb31
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bdda055c57486f6f20216b30a3c41e0a8c433e1f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associazione di una query a una connessione in un progetto
 Se una query è stata creata senza connessione oppure è stata spostata da un progetto a un altro, non verrà associata a una connessione nel progetto corrente.  
@@ -41,4 +39,3 @@ Se una query è stata creata senza connessione oppure è stata spostata da un pr
 [Modifica della connessione associata a una query](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
 [Visualizzazione o modifica delle proprietà di una connessione in un progetto](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
-

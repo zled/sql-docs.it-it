@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- database master key [SQL Server], exporting
+helpviewer_keywords: database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 52f4f75fe2a48302fb7383ce445f47e23366910d
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9919a50f2c5f6a539d4de91da69c1a52751cf98a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="back-up-a-database-master-key"></a>Backup della chiave master di un database
   In questo argomento viene descritto come eseguire il backup di una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La chiave master viene usata per crittografare altre chiavi e certificati all'interno di un database. Se questa chiave viene eliminata oppure danneggiata, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potrebbe non essere in grado di decrittografare tali chiavi e i dati crittografati con tali chiavi verranno di fatto persi. Per tale motivo, è consigliabile eseguire il backup della chiave master di un database e archiviare la copia di backup in un altro luogo adeguatamente protetto.  
@@ -89,4 +86,3 @@ ms.lasthandoff: 06/22/2017
  Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) e [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
   
   
-

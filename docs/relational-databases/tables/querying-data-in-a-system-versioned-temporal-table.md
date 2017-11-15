@@ -1,33 +1,31 @@
 ---
 title: Query sui dati in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9b9e126587a2c3a6beb34b74f234375de5a4469b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Query sui dati in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Quando occorre recuperare lo stato (effettivo) più aggiornato dei dati in una tabella temporale, è possibile eseguire query esattamente nello stesso modo valido per l'esecuzione di query in tabelle non temporali. Se le colonne PERIOD non sono nascoste, i rispettivi valori compariranno in una query SELECT \* . Se le colonne **PERIOD** sono state specificate come nascoste, i rispettivi valori non saranno visualizzati in una query SELECT \* . Quando le colonne **PERIOD** sono nascoste, è possibile fare riferimento in modo specifico alle colonne **PERIOD** nella clausola SELECT per restituire i valori per queste colonne.  
   
- Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola  **FOR SYSTEM_TIME** con quattro sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. Per ulteriori informazioni su queste clausole, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL #41;](../../t-sql/queries/from-transact-sql.md)  
+ Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola  **FOR SYSTEM_TIME** con quattro sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. Per ulteriori informazioni su queste clausole, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <data_ora>  
   
@@ -149,4 +147,3 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

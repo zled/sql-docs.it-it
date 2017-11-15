@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Designers.Table_Designer
+f1_keywords: VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 79e728f7cf2c300338e202b3e9cae27226f70a50
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ed7c206ee79b83a0ece0be6976aa74b0e27e7394
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Opzioni (finestre di progettazione/pagina Progettazione tabelle e database)
 Utilizzare questa pagina per determinare il comportamento predefinito della finestra di progettazione. Per accedere alla impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Finestre di progettazione** e fare clic su **Progettazione tabelle**.  
@@ -85,4 +82,3 @@ Selezionare la modalità di visualizzazione desiderata per le tabelle nelle fine
 **Apri la finestra Aggiungi tabella con nuovo diagramma**  
 Apre automaticamente la finestra di dialogo **Aggiungi tabella** all'apertura delle finestre di progettazione.  
   
-

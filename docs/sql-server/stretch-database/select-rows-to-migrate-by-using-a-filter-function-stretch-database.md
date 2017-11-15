@@ -1,13 +1,11 @@
 ---
-title: Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Stretch Database) | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 06/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
-ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 290d0a17271d7099904eb7f4f50ffd8280fe2264
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Se i dati usati meno di frequente vengono archiviati in una tabella separata, è possibile configurare Estensione database per eseguire la migrazione dell'intera tabella. Se invece la tabella contiene dati usati più di frequente e dati usati meno di frequente, è possibile specificare un predicato del filtro per selezionare le righe di cui eseguire la migrazione. Il predicato del filtro è una funzione inline con valori di tabella. Questo argomento illustra come scrivere una funzione inline con valori di tabella per selezionare le righe di cui eseguire la migrazione.  
@@ -215,7 +212,7 @@ Se si vuole usare una funzione che non è possibile creare nell' **Abilitazione 
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Attendere il completamento della migrazione. È possibile controllare lo stato in **Monitoraggio dell'estensione database** da SQL Server Management Studio, oppure è possibile eseguire query sulla vista **sys.dm_db_rda_migration_status** . Per altre informazioni, vedere [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Monitoraggio e risoluzione dei problemi della migrazione dei dati) o [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
+2. Attendere il completamento della migrazione. È possibile controllare lo stato in **Monitoraggio di Stretch Database** da SQL Server Management Studio, oppure è possibile eseguire query sulla vista **sys.dm_db_rda_migration_status**. Per altre informazioni, vedere [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Monitoraggio e risoluzione dei problemi della migrazione dei dati) o [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 3. Creare la funzione di filtro che si vuole applicare alla tabella.  
   
@@ -621,4 +618,3 @@ Un account compromesso con privilegi db_owner può eseguire le operazioni seguen
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

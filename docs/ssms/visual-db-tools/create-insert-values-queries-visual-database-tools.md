@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - adding rows
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c5fea6e228188ad87cc3a6f6a448bc65f04a68a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 18ad03e802b65275ba12f161f31ed5a4fd4c3329
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>Creazione di query di accodamento valori (Visual Database Tools)
 Per creare una nuova riga nella tabella corrente, è possibile utilizzare una query di accodamento valori. Durante la creazione di una query di accodamento valori è necessario specificare:  
@@ -76,4 +74,3 @@ Quando si esegue una query di accodamento valori, non viene restituito alcun ris
 [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

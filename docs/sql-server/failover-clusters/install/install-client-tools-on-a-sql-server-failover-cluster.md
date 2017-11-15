@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 422dfcf9b09fdcee328cbd7838985ba5431fb0f5
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7a7fb2b3b58322a3d7eb000d7d913df391ff8e3d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installare strumenti client in un cluster di failover di SQL Server
   Gli strumenti client, ad esempio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , sono funzionalità condivise comuni a tutte le istanze dello stesso computer. Sono compatibili con le versioni precedenti e consentono l'installazione affiancata delle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportate. In un nodo può esistere solo una versione dello strumento client alla volta.  

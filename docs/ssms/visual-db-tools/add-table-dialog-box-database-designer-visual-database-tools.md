@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:65555
 - vdt.dlgbox.schema.addtable
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 275f2120bd76147916f1ba6d24d59dc450ed7c8b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: ff8ea80bf97842fa55321050081df3c09598ff89
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Finestra di dialogo Aggiungi tabella (Progettazione database) (Visual Database Tools)
 Consente di aggiungere tabelle in Progettazione database.  
@@ -47,4 +45,3 @@ Chiude la finestra di dialogo senza aggiungere ulteriori tabelle.
 ## <a name="see-also"></a>Vedere anche  
 [Aggiunta di tabelle a diagrammi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
-

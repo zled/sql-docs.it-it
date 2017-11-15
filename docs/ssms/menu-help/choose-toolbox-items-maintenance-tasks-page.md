@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
-helpviewer_keywords:
-- Customize Toolbox dialog box
+helpviewer_keywords: Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9002551a59ec21f0572906f256577e7157503414
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
 Questa scheda della finestra di dialogo **Personalizza Casella degli strumenti** visualizza un elenco di tutti i componenti delle attività di manutenzione registrati nel computer e offre la possibilità di modificare quelli visualizzati nella Casella degli strumenti. È possibile aprire la finestra di dialogo **Personalizza Casella degli strumenti** dal menu **Strumenti** . Per ordinare l'elenco di componenti selezionare un'intestazione di colonna.  
@@ -48,7 +45,6 @@ Fare clic su un nome per visualizzare gli attributi del componente nelle caselle
 **Lingua**  
 Lingua del componente.  
   
-**Versionee**  
+**Versione**  
 Versione del componente.  
   
-

@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - schemas [SQL Server replication], replicating changes
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: b3ba5fca89b73eaff7ec444d3a9eeec2398f1656
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
   La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche di schema seguenti nell'oggetto pubblicato appropriato in un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   ALTER TRIGGER  
   
-     È possibile utilizzare ALTER TRIGGER solo per trigger [DML] \(Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] \(Data Definition Language).  
+     È possibile utilizzare ALTER TRIGGER solo per trigger [DML] (Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] (Data Definition Language).  
   
 > [!IMPORTANT]  
 >  È necessario apportare le modifiche dello schema nelle tabelle tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO). Quando si apportano modifiche dello schema in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] tenta di eliminare e ricreare la tabella. Poiché non è possibile eliminare gli oggetti pubblicati, la modifica dello schema ha esito negativo.  

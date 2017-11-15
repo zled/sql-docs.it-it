@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2934cf0580b44b6a496f9dae4d5cd297cd8717d7
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2d11a87e4274d2685a07897fb8a3bdfaa76db7f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge
   In questo argomento viene descritto come specificare un sistema di risoluzione dell'articolo di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -91,7 +90,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Per determinare se il sistema di risoluzione desiderato è già registrato, eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) in qualsiasi database nel server di pubblicazione. Verrà visualizzata una descrizione del sistema di risoluzione personalizzato, nonché l'identificatore di classe (CLSID) di ogni sistema di risoluzione basato su COM registrato nel server di distribuzione oppure informazioni sull'assembly gestito per ogni gestore della logica di business registrato nel server di distribuzione.  
   
-3.  Se il sistema di risoluzione desiderato non è già registrato, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) nel database di distribuzione. Specificare un nome per il sistema di risoluzione per **@article_resolver**. Nel caso di un gestore della logica di business, si tratta del nome descrittivo dell'assembly. Per i sistemi di risoluzione basati su COM, specificare il CLSID della DLL per **@resolver_clsid**, mentre per un gestore della logica di business specificare il valore **true** per **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name** e il nome completo della classe che sostituisce <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per **@dotnet_class_name**.  
+3.  Se il sistema di risoluzione desiderato non è già registrato, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) nel database di distribuzione. Specificare un nome per il sistema di risoluzione per **@article_resolver**. Nel caso di un gestore della logica di business, si tratta del nome descrittivo dell'assembly. Per i sistemi di risoluzione basati su COM, specificare il CLSID della DLL per **@resolver_clsid**, mentre per un gestore della logica di business specificare il valore **true** per **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name**e il nome completo della classe che sostituisce <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per **@dotnet_class_name**.  
   
     > [!NOTE]  
     >  Se un assembly del gestore della logica di business non viene distribuito nella stessa directory del file eseguibile dell'agente di merge, è necessario specificare il percorso completo indicando il nome dell'assembly per **@dotnet_assembly_name**.  
@@ -149,6 +148,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementare un gestore della logica di business per un articolo di merge](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

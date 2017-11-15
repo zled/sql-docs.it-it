@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.selectobjects.f1
+f1_keywords: sql13.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bf429c56ec1c00a62c747869a8bfe4aca2ef0355
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="select-objects-object-explorer"></a>Seleziona oggetti (Esplora oggetti)
 Usare la finestra di dialogo **Seleziona oggetti** per aggiungere un oggetto a un elenco in un'altra finestra di dialogo. Il titolo della finestra di dialogo e le opzioni disponibili nella finestra di dialogo dipendono dalla modalità utilizzata per la sua apertura. Vengono visualizzate solo le opzioni disponibili. Ad esempio, quando si seleziona un proprietario per un nuovo oggetto sono disponibili solo gli account di accesso.  
@@ -43,4 +40,3 @@ Convalida i nomi di oggetti riportati nella casella **Immettere i nomi degli ogg
 **Sfoglia**  
 Apre la finestra di dialogo **Cerca oggetti** . Questa finestra di dialogo contiene un elenco di oggetti dei tipi elencati nella casella **Selezionare i tipi di oggetti seguenti** . Selezionare gli oggetti in questo elenco selezionando le caselle di controllo corrispondenti.  
   
-

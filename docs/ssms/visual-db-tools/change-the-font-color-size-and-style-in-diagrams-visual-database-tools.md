@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - text in database diagrams
 - appearance of database diagrams
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bbfd8eb271ea0eb10ed0f8dac22833d8a4aa0f5c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 6a4dc93c6b56c1ab9578bb759a57935d5f14d333
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Modifica dello stile, del colore e delle dimensioni del carattere nei diagrammi (Visual Database Tools)
 È possibile personalizzare l'aspetto del testo contenuto nei diagrammi di database modificando lo stile, il colore e le dimensioni del carattere. Le modifiche vengono applicate ai nuovi diagrammi e a quelli esistenti quando vengono modificati.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>Vedere anche  
 [Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
-ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 91b1b8854e56ab3fad15eb11cdc132788e0709b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurare le funzionalità compatibili di SQL Server con Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,4 +51,3 @@ Se si usano le tabelle temporali, è possibile abilitare Stretch Database nella 
 -   Per istruzioni sull'uso delle tabelle temporali con Stretch Database, vedere [Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 -   Per filtrare le righe di cui eseguire la migrazione dalla tabella di cronologia usando una finestra temporale scorrevole, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 -   Se la tabella è ottimizzata per la memoria, non è possibile abilitare Stretch Database nella tabella di cronologia temporale. Le tabelle ottimizzate per la memoria non sono supportate.
-

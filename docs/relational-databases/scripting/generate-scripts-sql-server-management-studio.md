@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9f103708c1720d7a08e2e9690e298701102c17f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile creare script per più oggetti usando la **Procedura guidata Genera e pubblica script**. È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.  
   
-1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
+1.  **Scegliere un metodo:**  [Procedura guidata Genera e pubblica script](#GenPubScriptWiz), [Menu Crea script per in Esplora oggetti](#OEScriptAsMenu)  
   
-2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
+2.  **Per usare il menu Crea script per:**  [Creare uno script per un solo oggetto](#ScriptSingleObject), [Creare uno script per due oggetti con Esplora oggetti](#ScriptTwoObjectsOE), [Creare uno script per due oggetti usando Dettagli esplora oggetti](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Scegliere il meccanismo che soddisfa maggiormente i requisiti.  
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
 7.  Fare clic con il pulsante destro del mouse su uno degli oggetti selezionati e scegliere **Crea script per \<tipo di oggetto>**.  
   
   
-

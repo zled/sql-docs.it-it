@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,22 +14,21 @@ helpviewer_keywords:
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4fc39f8d8bc454006432c3be42d536e4fa027cdc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Aggiunta di dipendenze a una risorsa di SQL Server
   In questo argomento viene descritto come aggiungere dipendenze a una risorsa dell'istanza del cluster di failover AlwaysOn tramite lo snap-in Gestione cluster di failover. Lo snap-in Gestione cluster di failover è l'applicazione di gestione cluster per il servizio Windows Server Failover Clustering (WSFC).  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Prerequisiti](#Prerequisites)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Prerequisiti](#Prerequisites)  
   
 -   **Per aggiungere una dipendenza a una risorsa SQL Server utilizzando:** [Gestore cluster di failover di Windows](#WinClusManager)  
   
@@ -74,4 +72,3 @@ ms.lasthandoff: 06/22/2017
 -   Selezionare la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , aprire la finestra di dialogo **Proprietà** e utilizzare la scheda **Dipendenze** per aggiungere il disco al set di dipendenze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
   
-

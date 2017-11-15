@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: ed00031d1f55fc6fda2ee1c37fe76f7637e8e891
-ms.contentlocale: it-it
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: 71bde30cb5cefaf1c60bcbd5a5de08b84b3975b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 Release Notes
 In queste note sulla versione sono illustrati problemi da conoscere prima di installare o risolvere i problemi di SQL Server 2012 Service Pack 2. Le note sulla versione sono disponibili solo online, non nel supporto di installazione. Sono aggiornate periodicamente, in caso di rilevamento di nuovi problemi. Per altre informazioni, vedere [Bug risolti in SQL Server 2012 Service Pack 2](http://support.microsoft.com/KB/2958429) .  
@@ -44,4 +43,3 @@ Usare la tabella seguente per identificare la posizione e il nome del file da sc
 |Versione a 64 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
 |Versione a 64 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065) o di [Microsoft SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)|Eseguire l'aggiornamento degli strumenti alla versione a 64 bit di Microsoft SQL Server 2012 SP2 Feature Pack|Uno o più strumenti dalla [pagina per il download di Microsoft SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)|  
   
-

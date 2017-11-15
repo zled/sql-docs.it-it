@@ -1,27 +1,25 @@
 ---
-title: 'Esercitazione: Creazione di un Report tabella semplice (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Creazione di un report tabella semplice (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 2e4cb3264e001fb07119e4c16a274dd38d80887c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
 In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
@@ -41,7 +39,7 @@ Creare un report di tabella con la Creazione guidata tabella o matrice. Sono dis
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -62,7 +60,7 @@ In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre in
   
 3.  In **Nome**digitare **Vendite prodotto** come nome per l'origine dati.  
   
-4.  In **Seleziona il tipo di connessione** verificare che sia selezionato **Microsoft SQL Server**.  
+4.  In **Select a connection type**(Seleziona un tipo di connessione), verificare che sia selezionato **Microsoft SQL Server** .  
   
 5.  In **Stringa di connessione** digitare il testo seguente, dove \<servername> è il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -72,7 +70,7 @@ In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre in
   
     Poiché verrà utilizzata una query che contiene i dati anziché recuperarli da un database, la stringa di connessione non include il nome del database. Per altre informazioni, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-6.  Fare clic sulla scheda **Credenziali**. Immettere le credenziali necessarie per accedere all'origine dati esterna.  
+6.  Fare clic sulla scheda **Credenziali** . Immettere le credenziali necessarie per accedere all'origine dati esterna.  
   
 7. Fare clic sulla scheda Generale. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
   
@@ -205,7 +203,7 @@ Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un n
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** . Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-    Se la lingua delle impostazioni locali è Inglese - Stati Uniti, il testo di esempio predefinito corrisponderà a [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
+    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -222,7 +220,7 @@ Per impostazione predefinita, nel campo SalesDate vengono visualizzate sia la da
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sulla freccia sulla barra multifunzione e selezionare **Data**.  
   
-    Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzato un valore di data di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
+    Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -320,7 +318,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 4.  Fare clic su **Salva**.  
   
 ## <a name="Export"></a>7. Esportare il report  
-I report possono essere esportati in formati differenti, ad esempio come file Microsoft Excel e CSV. Per altre informazioni, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+I report possono essere esportati in formati differenti, ad esempio come file Microsoft Excel e CSV. Per altre informazioni, vedere [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 In questa esercitazione, si esporterà il report in Excel e si imposterà una proprietà nel report per fornire un nome personalizzato per la scheda della cartella di lavoro.  
   
@@ -365,5 +363,4 @@ La procedura dettagliata per la creazione di un report tabella semplice è termi
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 
