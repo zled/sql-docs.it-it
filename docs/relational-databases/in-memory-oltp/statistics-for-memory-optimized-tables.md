@@ -5,22 +5,20 @@ ms.date: 10/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ef309831ab19ef8e69a27e8fefa3313f444ce147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiche per tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,9 +29,9 @@ ms.lasthandoff: 06/22/2017
   
  I dati della tabella in genere cambiano nel corso del tempo quando le righe vengono inserite, aggiornate ed eliminate. Ciò significa che le statistiche devono essere periodicamente aggiornate. Per impostazione predefinita, le statistiche sulle tabelle vengono aggiornate automaticamente quando Query Optimizer determina che potrebbero non essere aggiornate.  
   
- Considerazioni sulle statistiche delle tabelle con ottimizzazione per la memoria:  
+ Considerazioni sulle statistiche delle tabelle ottimizzate per la memoria:  
   
--   A partire da SQL Server 2016 e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è supportato l'aggiornamento automatico delle statistiche per le tabelle con ottimizzazione per la memoria, quando si usa un livello di compatibilità del database di almeno 130. Vedere [Livello di compatibilità ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se un database include tabelle create in precedenza con un livello di compatibilità inferiore, è necessario aggiornare manualmente le statistiche una volta, per consentirne l'aggiornamento automatico per il futuro.
+-   A partire da SQL Server 2016 e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è supportato l'aggiornamento automatico delle statistiche per le tabelle ottimizzate per la memoria, quando si usa un livello di compatibilità del database di almeno 130. Vedere [Livello di compatibilità ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se un database include tabelle create in precedenza con un livello di compatibilità inferiore, è necessario aggiornare manualmente le statistiche una volta, per consentirne l'aggiornamento automatico per il futuro.
   
 -   Per le stored procedure compilate in modo nativo, i piani di esecuzione delle query nella procedura vengono ottimizzati quando la procedura viene compilata, ovvero al momento della creazione. Le procedure non vengono automaticamente ricompilate quando si aggiornano le statistiche. Pertanto, le tabelle devono contenere un set di dati rappresentativo prima della creazione delle procedure.  
   
@@ -43,17 +41,17 @@ ms.lasthandoff: 06/22/2017
 
 Quando le tabelle vengono create in un database con livello di compatibilità di almeno 130, si abilita l'aggiornamento automatico di tutte le statistiche su quella tabella e non è richiesta alcuna azione aggiuntiva.
 
-Se un database include tabelle con ottimizzazione per la memoria create in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con livello di compatibilità inferiore a 130, è necessario aggiornare manualmente le statistiche una volta per consentirne l'aggiornamento automatico per il futuro.
+Se un database include tabelle ottimizzate per la memoria create in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con livello di compatibilità inferiore a 130, è necessario aggiornare manualmente le statistiche una volta per consentirne l'aggiornamento automatico per il futuro.
 
-Per abilitare l'aggiornamento automatico delle statistiche per le tabelle con ottimizzazione per la memoria create con un livello di compatibilità meno recente, seguire questa procedura:
+Per abilitare l'aggiornamento automatico delle statistiche per le tabelle ottimizzate per la memoria create con un livello di compatibilità meno recente, seguire questa procedura:
 
 1. Aggiornare il livello di compatibilità del database: `ALTER DATABASE CURRENT SET COMPATIBILITY_LEVEL=130`
 
-2. Aggiornare manualmente le statistiche per le tabelle con ottimizzazione per la memoria. Di seguito è riportato un esempio di script per tale operazione.
+2. Aggiornare manualmente le statistiche per le tabelle ottimizzate per la memoria. Di seguito è riportato un esempio di script per tale operazione.
 
 3. Ricompilare manualmente le stored procedure compilate in modo nativo per trarre vantaggio dalle statistiche aggiornate.
 
-*Script a singola occorrenza per le statistiche:* per le tabelle con ottimizzazione per la memoria create con un livello di compatibilità inferiore, è possibile eseguire lo script Transact-SQL seguente una volta per aggiornare le statistiche delle tabelle con ottimizzazione per la memoria e abilitare l'aggiornamento automatico delle statistiche per il futuro (presupponendo che AUTO_UPDATE_STATISTICS sia abilitato per il database):
+*Script a singola occorrenza per le statistiche:* per le tabelle ottimizzate per la memoria create con un livello di compatibilità inferiore, è possibile eseguire lo script Transact-SQL seguente una volta per aggiornare le statistiche delle tabelle ottimizzate per la memoria e abilitare l'aggiornamento automatico delle statistiche per il futuro (presupponendo che AUTO_UPDATE_STATISTICS sia abilitato per il database):
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -78,7 +76,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*Verificare che l'aggiornamento automatico sia abilitato:* lo script seguente consente di verificare se l'aggiornamento automatico è abilitato per le statistiche sulle tabelle con ottimizzazione per la memoria. Dopo aver eseguito lo script precedente restituirà `1` nella colonna `auto-update enabled` per tutti gli oggetti statistiche.
+*Verificare che l'aggiornamento automatico sia abilitato:* lo script seguente consente di verificare se l'aggiornamento automatico è abilitato per le statistiche sulle tabelle ottimizzate per la memoria. Dopo aver eseguito lo script precedente restituirà `1` nella colonna `auto-update enabled` per tutti gli oggetti statistiche.
 
 ```
 SELECT 
@@ -90,7 +88,7 @@ WHERE o.is_memory_optimized=1
 ```
 
 ## <a name="guidelines-for-deploying-tables-and-procedures"></a>Linee guida per la distribuzione di tabelle e procedure  
- Per garantire che le statistiche in Query Optimizer risultino aggiornate durante la creazione dei piani di query, distribuire tabelle con ottimizzazione per la memoria e stored procedure compilate in modo nativo che accedono a tali tabelle usando i seguenti quattro passaggi:  
+ Per garantire che le statistiche in Query Optimizer risultino aggiornate durante la creazione dei piani di query, distribuire tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo che accedono a tali tabelle usando i seguenti quattro passaggi:  
   
 1.  Verificare che il livello di compatibilità del database sia almeno 130. Vedere [Livello di compatibilità ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -100,10 +98,9 @@ WHERE o.is_memory_optimized=1
   
 4.  Creare stored procedure che accedono alle tabelle.  
   
- La creazione delle stored procedure compilate in modo nativo dopo il caricamento dei dati garantisce la presenza delle statistiche disponibili per le tabelle con ottimizzazione per la memoria in Query Optimizer. In questo modo si ottengono piani di query efficienti quando la procedura viene compilata.  
+ La creazione delle stored procedure compilate in modo nativo dopo il caricamento dei dati garantisce la presenza delle statistiche disponibili per le tabelle ottimizzate per la memoria in Query Optimizer. In questo modo si ottengono piani di query efficienti quando la procedura viene compilata.  
 
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

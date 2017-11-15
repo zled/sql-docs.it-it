@@ -1,30 +1,27 @@
 ---
 title: Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 13b7c99ce7dc82823dec6f518e84b55820fcdc63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Analizzare il carico di lavoro per determinare le aree sensibili in cui OLTP in memoria può potenzialmente contribuire a migliorare le prestazioni. Il report di analisi delle prestazioni delle transazioni suggerisce tabelle e stored procedure per cui la conversione in OLTP in memoria potrebbe risultare utile.  
   
--   Facilitare la pianificazione e l'esecuzione della migrazione a OLTP in memoria. Il percorso di migrazione da una tabella basata su disco a una tabella con ottimizzazione per la memoria può richiedere tempi lunghi. L'Ottimizzazione guidata per la memoria consente di identificare le incompatibilità presenti nella tabella che devono essere rimosse prima dello spostamento della tabella in OLTP in memoria. Lo strumento di ottimizzazione per la memoria consente inoltre di comprendere l'impatto che la migrazione di una tabella a una tabella con ottimizzazione per la memoria avrà sull'applicazione.  
+-   Facilitare la pianificazione e l'esecuzione della migrazione a OLTP in memoria. Il percorso di migrazione da una tabella basata su disco a una tabella ottimizzata per la memoria può richiedere tempi lunghi. L'Ottimizzazione guidata per la memoria consente di identificare le incompatibilità presenti nella tabella che devono essere rimosse prima dello spostamento della tabella in OLTP in memoria. Lo strumento di ottimizzazione per la memoria consente inoltre di comprendere l'impatto che la migrazione di una tabella a una tabella ottimizzata per la memoria avrà sull'applicazione.  
   
      È possibile verificare se OLTP in memoria può costituire un vantaggio per l'applicazione, quando si desidera pianificare la migrazione a OLTP in memoria e ogni volta che si procede alla migrazione di alcune tabelle e stored procedure a OLTP in memoria.  
   
@@ -73,13 +70,13 @@ ms.lasthandoff: 08/03/2017
   
 -   Sezione relativa alle difficoltà nella migrazione  
   
-     In questa sezione è inclusa una tabella in cui vengono mostrate le difficoltà di conversione della tabella di database in una tabella con ottimizzazione per la memoria. Un grado di difficoltà più elevato indica una maggiore difficoltà di conversione della tabella. Per visualizzare i dettagli relativi alla conversione di questa tabella di database, usare l'Ottimizzazione guidata per la memoria.  
+     In questa sezione è inclusa una tabella in cui vengono mostrate le difficoltà di conversione della tabella di database in una tabella ottimizzata per la memoria. Un grado di difficoltà più elevato indica una maggiore difficoltà di conversione della tabella. Per visualizzare i dettagli relativi alla conversione di questa tabella di database, usare l'Ottimizzazione guidata per la memoria.  
   
 Le statistiche sulle contese e sulle analisi nel report dettagli della tabella vengono raccolte e aggregate da sys.dm_db_index_operational_stats (Transact-SQL).  
 
 ### <a name="stored-procedures"></a>Stored procedure
 
- Una stored procedure con un alto rapporto di tempo di utilizzo della CPU rispetto al tempo trascorso è una candidata per la migrazione. Il report include tutti i riferimenti alle tabelle perché le stored procedure compilate in modo nativo possono fare riferimento solo alle tabelle con ottimizzazione per la memoria che possono costituire un'aggiunta al costo di migrazione.  
+ Una stored procedure con un alto rapporto di tempo di utilizzo della CPU rispetto al tempo trascorso è una candidata per la migrazione. Il report include tutti i riferimenti alle tabelle perché le stored procedure compilate in modo nativo possono fare riferimento solo alle tabelle ottimizzate per la memoria che possono costituire un'aggiunta al costo di migrazione.  
   
  Il report dettagli per una stored procedure è costituito da due sezioni:  
   
@@ -99,14 +96,14 @@ Le statistiche sulle contese e sulle analisi nel report dettagli della tabella v
   
 -   Sezione relativa ai riferimenti a tabelle  
   
-     In questa sezione è inclusa una tabella in cui vengono mostrate le tabelle a cui fa riferimento questa stored procedure. Prima di convertire la stored procedure in una stored procedure compilata a livello nativo, tutte queste tabelle devono essere convertite in tabelle con ottimizzazione per la memoria e devono rimanere nello stesso server e database.  
+     In questa sezione è inclusa una tabella in cui vengono mostrate le tabelle a cui fa riferimento questa stored procedure. Prima di convertire la stored procedure in una stored procedure compilata a livello nativo, tutte queste tabelle devono essere convertite in tabelle ottimizzate per la memoria e devono rimanere nello stesso server e database.  
   
  Le statistiche relative alle esecuzioni nel report dettagli della stored procedure vengono raccolte e aggregate da sys.dm_exec_procedure_stats (Transact-SQL). I riferimenti sono ottenuti da sys.sql_expression_dependencies (Transact-SQL).  
   
  Per visualizzare i dettagli relativi a come convertire una stored procedure in una stored procedure compilata in modo nativo, usare l'Assistente compilazione nativa.  
   
 ## <a name="generating-in-memory-oltp-migration-checklists"></a>Generazione guidata di elenchi di controllo per migrazione OLTP in memoria  
- Gli elenchi di controllo per migrazione identificano qualsiasi funzionalità di stored procedure o tabella non supportata con tabelle con ottimizzazione per la memoria o stored procedure compilate in modo nativo. L'ottimizzazione guidata della memoria e l'assistente compilazione nativa possono generare un elenco di controllo per una singola tabella basata su disco o stored procedure T-SQL interpretata. Gli elenchi di controllo per migrazione possono essere creati per più tabelle e stored procedure in un database.  
+ Gli elenchi di controllo per migrazione identificano qualsiasi funzionalità di stored procedure o tabella non supportata con tabelle ottimizzate per la memoria o stored procedure compilate in modo nativo. L'ottimizzazione guidata della memoria e l'assistente compilazione nativa possono generare un elenco di controllo per una singola tabella basata su disco o stored procedure T-SQL interpretata. Gli elenchi di controllo per migrazione possono essere creati per più tabelle e stored procedure in un database.  
   
  È possibile generare un elenco di controllo per la migrazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando il comando **Generazione guidata elenchi di controllo per migrazione OLTP in memoria** o tramite PowerShell.  
   
@@ -181,4 +178,3 @@ Le statistiche sulle contese e sulle analisi nel report dettagli della tabella v
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

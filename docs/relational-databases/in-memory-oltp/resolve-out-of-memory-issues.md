@@ -5,21 +5,20 @@ ms.date: 08/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6eef790f729a3270c0ba046d6a60114ae2da8dc
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4c56262f4f42370d24c597a668b012fbbf64a81d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
  Quando si prova a ripristinare un database, è possibile che venga visualizzato il messaggio di errore "L'operazione di ripristino non è riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse *\<NomePoolRisorse>*'." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database.
    
-La memoria disponibile del server in cui viene ripristinato un database deve essere sufficiente per le tabelle con ottimizzazione per la memoria nel backup del database, in caso contrario il database non verrà portato online.  
+La memoria disponibile del server in cui viene ripristinato un database deve essere sufficiente per le tabelle ottimizzate per la memoria nel backup del database, in caso contrario il database non verrà portato online.  
   
 Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato questo errore, altri processi potrebbero star usando troppa memoria oppure un problema di configurazione rende la memoria disponibile insufficiente per il ripristino. Per questo tipo di problemi usare le seguenti misure per aumentare la memoria disponibile per l'operazione di ripristino: 
   
@@ -69,7 +68,7 @@ Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato q
   
     ```  
   
-     Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
+     Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 -   Aumentare **max server memory**.  
     Per informazioni sulla configurazione di **max server memory** vedere l'argomento [Ottimizzazione delle prestazioni del server tramite le opzioni di configurazione della memoria](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
@@ -95,7 +94,7 @@ Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato q
  È possibile rimuovere le righe non essenziali da una tabella con ottimizzazione per la memoria. Il Garbage Collector restituisce la memoria usata da queste righe alla memoria disponibile. . Il motore OLTP in memoria raccoglie rapidamente le righe di Garbage Collection. Tuttavia, una transazione con esecuzione prolungata può impedire il processo di Garbage Collection. Ad esempio, se si dispone di una transazione che viene eseguita per 5 minuti, tutte le versioni di riga create a causa delle operazioni di aggiornamento/eliminazione mentre la transazione è attiva non possono essere sottoposte al processo di Garbage Collection.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Spostare una o più righe in una tabella basata su disco  
- Gli articoli di Technet riportati di seguito offrono istruzioni sullo spostamento di righe da una tabella con ottimizzazione per la memoria a una tabella basata su disco.  
+ Gli articoli di Technet riportati di seguito offrono istruzioni sullo spostamento di righe da una tabella ottimizzata per la memoria a una tabella basata su disco.  
   
 -   [Partizionamento a livello di applicazione](http://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
   
@@ -133,7 +132,7 @@ GO
   
 ```  
   
- Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
+ Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 ##### <a name="install-additional-memory"></a>Installare memoria aggiuntiva  
  Infine, la soluzione migliore, se possibile, prevede l'installazione di ulteriore memoria fisica. In questo caso, tenere presente che probabilmente sarà possibile aumentare anche il valore di MAX_MEMORY_PERCENT (vedere l'argomento secondario [Cambiare MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non richiedere ulteriore memoria, consentendo di rendere disponibile la maggior parte se non tutta la memoria appena installata per il pool di risorse.  
@@ -156,4 +155,3 @@ GO
  [Procedure consigliate: Uso di OLTP in memoria in un ambiente di VM](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)  
   
   
-

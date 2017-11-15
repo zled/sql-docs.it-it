@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +13,19 @@ helpviewer_keywords:
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: e5fc544813a3bc1f482e3b73fef56980e4dc3af7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Panoramica: Importazione di dati da tabelle (Master Data Services)
-  Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e ad apportarvi modifiche.   È possibile usare stored procedure, tabelle di gestione temporanea e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
+  Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e ad apportarvi modifiche.   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
  Per istruzioni su come aggiungere e modificare i dati, vedere [Importare dati dalle tabelle &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
@@ -44,9 +42,9 @@ ms.lasthandoff: 09/07/2017
   
  Le principali attività correlate all'aggiunta e all'aggiornamento dei dati sono le seguenti.  
   
-1.  Caricare i dati nelle tabelle di gestione temporanea del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
+1.  Caricare i dati nelle tabelle di staging del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-2.  Caricare i dati dalle tabelle di gestione temporanea nelle tabelle di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] appropriate.  
+2.  Caricare i dati dalle tabelle di staging nelle tabelle di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] appropriate.  
   
      Per caricare i dati, si usano stored procedure di gestione temporanea oppure [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 09/07/2017
 -   Un membro consolidato come elemento di pari livello di un membro foglia o consolidato.  
   
 ## <a name="staging-tables-and-stored-procedures-mds"></a>Stored procedure e tabelle di gestione temporanea (MDS)  
- Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] include i tipi di tabelle di gestione temporanea seguenti che è possibile popolare con i dati personali.  
+ Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] include i tipi di tabelle di staging seguenti che è possibile popolare con i dati personali.  
   
 -   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -83,11 +81,11 @@ ms.lasthandoff: 09/07/2017
   
 -   [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
- Per ogni entità del modello esiste una tabella di gestione temporanea. Il nome della tabella indica l'entità corrispondente e il tipo di entità, ad esempio membro foglia. La figura seguente mostra le tabelle di gestione temporanea per le entità currency, customer e product.  
+ Per ogni entità del modello esiste una tabella di staging. Il nome della tabella indica l'entità corrispondente e il tipo di entità, ad esempio membro foglia. La figura seguente mostra le tabelle di staging per le entità currency, customer e product.  
   
  ![Tabelle di gestione temporanea nel database MDS](../master-data-services/media/mds-staging-tables.png "Tabelle di gestione temporanea nel database MDS")  
   
- Il nome della tabella viene specificato quando si crea un'entità e non può essere modificato. Se nel nome della tabella di gestione temporanea è contenuto _1 o un altro numero, un'altra tabella con tale nome era già presente al momento della creazione dell'entità.  
+ Il nome della tabella viene specificato quando si crea un'entità e non può essere modificato. Se nel nome della tabella di staging è contenuto _1 o un altro numero, un'altra tabella con tale nome era già presente al momento della creazione dell'entità.  
   
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi i tipi di stored procedure di gestione temporanea seguenti.  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 09/07/2017
   
 -   stg.udp_\<name>_Relationship  
   
- Per ogni entità nel modello esistono tre stored procedure corrispondenti alle tabelle di gestione temporanea di membri foglia, membri consolidati e relazioni.  La figura seguente mostra le stored procedure di gestione temporanea per le entità currency, customer e product.  
+ Per ogni entità nel modello esistono tre stored procedure corrispondenti alle tabelle di staging di membri foglia, membri consolidati e relazioni.  La figura seguente mostra le stored procedure di gestione temporanea per le entità currency, customer e product.  
   
  ![Stored procedure di gestione temporanea nel database di MDS](../master-data-services/media/mds-staging-storedprocedures.png "Stored procedure di gestione temporanea nel database di MDS")  
   
@@ -115,4 +113,3 @@ ms.lasthandoff: 09/07/2017
 -   [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
-

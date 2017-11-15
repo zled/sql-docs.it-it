@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Server Object GDR event class
+helpviewer_keywords: Audit Server Object GDR event class
 ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc3f7250a1a81bd87bf39c47f506711a95b56d9f
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b3958fa43152d2d9e75cbb095df992b1841c31ca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR - classe di evento
   La classe di evento **Audit Server Object GDR** si verifica ogni volta che viene generata un'istruzione GRANT, REVOKE o DENY per l'autorizzazione di un oggetto server da parte di qualsiasi utente di Microsoft SQL Server.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**ObjectName**|**nvarchar**|Nome dell'oggetto a cui si fa riferimento.|34|Sì|  
-|**ObjectType**|**Int**|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Questo valore corrisponde alla colonna type nella vista del catalogo **sys.objects** . Per i valori, vedere [Colonna ObjectType per gli eventi di traccia](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sì|  
+|**ObjectType**|**int**|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Questo valore corrisponde alla colonna type nella vista del catalogo **sys.objects** . Per i valori, vedere [Colonna ObjectType per gli eventi di traccia](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sì|  
 |**OwnerName**|**nvarchar**|Nome utente del database per il proprietario dell'oggetto.|37|Sì|  
 |**Autorizzazioni**|**bigint**|Valore intero che rappresenta il tipo di autorizzazioni controllato.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE (solo procedure)<br /><br /> 4096 = SELECT ANY (almeno una colonna)<br /><br /> 8192 = UPDATE ANY|19|Sì|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Esito positivo**|**Int**|1 = esito positivo. 0 = esito negativo. Ad esempio, il valore 1 indica che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
+|**Esito positivo**|**int**|1 = esito positivo. 0 = esito negativo. Ad esempio, il valore 1 indica che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
 |**TargetLoginName**|**nvarchar**|Per le azioni relative a un account di accesso (ad esempio l'aggiunta di un nuovo account di accesso), il nome dell'account di accesso specifico.|42|Sì|  
 |**TargetLoginSid**|**image**|Per le azioni relative a un account di accesso (ad esempio l'aggiunta di un nuovo account di accesso), l'ID di sicurezza (SID) dell'account di accesso specifico.|43|Sì|  
 |**TextData**|**ntext**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  

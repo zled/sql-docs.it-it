@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtStarting event class
+helpviewer_keywords: SQL:StmtStarting event class
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30ff970e6dddcde5e23d0aaaf8848d9a18f87db1
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 47fd548d6e8c35e040e729b532dcd14ed461294f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting - classe di evento
   La classe di evento SQL:StmtStarting indica l'avvio di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|Livello di nidificazione della stored procedure se l'istruzione SQL è stata eseguita all'interno di una stored procedure.|29|Sì|  
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
-|Offset|**Int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
+|Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  

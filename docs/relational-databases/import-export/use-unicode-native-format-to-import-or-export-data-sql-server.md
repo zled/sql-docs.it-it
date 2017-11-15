@@ -5,25 +5,23 @@ ms.date: 09/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 4d61f38522712ff0d550bac46cc19bb83d5418b0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 0d6a9d104b6dccc05ca4f4a9c97118d252966a8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utilizzare il formato Unicode nativo per importare o esportare dati (SQL Server)
 Il formato Unicode nativo risulta particolarmente utile quando è necessario copiare informazioni da un'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra. L'utilizzo del formato nativo per i dati non carattere consente di risparmiare tempo evitando di dover eseguire la conversione dei tipi di dati in formato carattere e viceversa. L'utilizzo del formato carattere Unicode per tutti i dati di tipo carattere consente di evitare la perdita dei caratteri estesi durante il trasferimento bulk dei dati tra server che utilizzano tabelle codici diverse. Un file di dati in formato nativo Unicode è leggibile con qualsiasi metodo di importazione bulk.  
@@ -194,4 +192,3 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   
-

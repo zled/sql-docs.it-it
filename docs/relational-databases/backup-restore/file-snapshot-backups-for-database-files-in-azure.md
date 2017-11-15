@@ -7,22 +7,20 @@ ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 51364693e9385333392ea96258e547b2c8fbea96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backup di snapshot di file per i file di database in Azure
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il backup di snapshot di file usa gli snapshot di Azure per offrire backup quasi istantanei e ripristini più veloci per i file di database archiviati usando il servizio di archiviazione BLOB di Azure. Questa funzionalità consente di semplificare i criteri di backup e ripristino. Per una dimostrazione dal vivo, vedere la [demo del ripristino temporizzato](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Per altre informazioni sull'archiviazione dei file di database con il servizio di archiviazione BLOB di Azure, vedere [File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
@@ -188,4 +186,3 @@ GO
  [Esercitazione: Uso del servizio di archiviazione BLOB di Windows Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
-

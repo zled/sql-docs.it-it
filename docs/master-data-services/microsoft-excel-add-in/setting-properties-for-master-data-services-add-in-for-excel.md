@@ -1,27 +1,24 @@
 ---
 title: "Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c5055942c39ff3805fcdbdbd47f0b3d8e9e2489d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 3ed8b5cab088e76d05d33614af844aaef5eb517e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel
   Le impostazioni del componente aggiuntivo Master Data Services per Excel determinano il modo in cui i dati vengono caricati da MDS nel componente aggiuntivo di Excel e in che modo i dati vengono pubblicati dal componente aggiuntivo per Excel in MDS.  
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/07/2017
 |Dati: Formato cella|Formato di visualizzazione|Selezionare il formato preferito per visualizzare i valori degli attributi basati su dominio. Le opzioni sono Codice {Name}, Codice e Nome {Code}.|  
   
   
-

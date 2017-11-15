@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: ac5d258c4c59154bbf03528cd81ac53a6901f15f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 2e96e6aec792115c5a756b5d682ddffa5b2bf97a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Aggiornamento dei dati (Componente aggiuntivo MDS per Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]aggiornare i dati quando si vuole ottenere le ultime informazioni dal repository MDS senza aprire un nuovo foglio di lavoro. È possibile aggiornare tutte le celle o una selezione di celle. Questo può essere utile quando sono state inserite colonne con formule personalizzate o altri dati che non sono gestiti in MDS e che si desidera mantenere.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/07/2017
 -   [Componente aggiuntivo Master Data Services per Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   
-

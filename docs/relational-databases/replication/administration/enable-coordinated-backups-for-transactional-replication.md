@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - transactional replication, backup and restore
 - sp_replicationdboption
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - coordinated backups [SQL Server replication]
 - backups [SQL Server replication], transactional replication
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa5ed1fce3b03b601618e1b74b37b8d81895eccc
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8d61d9e05c5b44015ed7cd1f73734f3a522c5063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>Abilitare backup coordinati per la replica transazionale
   Quando si attiva la replica transazionale per un database, è possibile specificare che è necessario eseguire il backup di tutte le transazioni prima del recapito al database di distribuzione. È inoltre possibile attivare il backup coordinato nel database di distribuzione. In questo modo, il log delle transazioni per il database di pubblicazione viene troncato solo in seguito al backup delle transazioni propagate al server di distribuzione. Per altre informazioni, vedere [Strategie per il backup e il ripristino della replica snapshot e della replica transazionale](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 1.  Nel database di pubblicazione nel server di pubblicazione o nel database di distribuzione nel server di distribuzione eseguire [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Specificare un valore di **sync with backup** per **@optname** e **false** per **@value**.  
   
   
-

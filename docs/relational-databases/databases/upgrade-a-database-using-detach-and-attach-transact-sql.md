@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d99342c070c23962b70592f3607bc17832815cdc
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4a6e2f8514fea8a4815cd46d3603e3a8f62ea4c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aggiornamento di un database utilizzando le operazioni di scollegamento e collegamento (Transact-SQL)
   In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
      [Utilizzo delle operazioni di collegamento e scollegamento](#SSMSProcedure)  
   
--   **Follow Up:**  [After Upgrading a SQL Server Database](#FollowUp)  
+-   **Completamento:**  [Dopo l'aggiornamento di un database di SQL Server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -122,4 +120,3 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive usano l'algoritmo di crittografia AES per proteggere la chiave master del servizio (SMK) e la chiave master del database (DMK). AES è un algoritmo di crittografia più recente rispetto a 3DES utilizzato nelle versioni precedenti. Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione **OPEN MASTER KEY** per decrittografare la chiave master del database. Dopo aver decrittografato la DMK, è possibile usare l'istruzione **ALTER MASTER KEY REGENERATE** per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave.  
   
   
-

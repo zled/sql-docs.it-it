@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Login event class
+helpviewer_keywords: Audit Login event class
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 82ae7a903c393acf9d2f49fa54255d844a964d2f
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5b198d554fa228609803c38ab2ee4aa6c4ec5355
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-login-event-class"></a>Audit Login - classe di evento
   La classe di evento **Audit Login** indica che un utente è riuscito ad accedere correttamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli eventi di questa classe vengono attivati da nuove connessioni o da connessioni riutilizzate da un pool di connessioni.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Esito positivo**|**Int**|1 = esito positivo. 0 = esito negativo. Per l'evento verrà sempre indicato un esito positivo.|23|Sì|  
+|**Esito positivo**|**int**|1 = esito positivo. 0 = esito negativo. Per l'evento verrà sempre indicato un esito positivo.|23|Sì|  
 |**TextData**|**ntext**|Elenco delimitato da punto e virgola di tutte le opzioni impostate.|1|Sì|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
   

@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -94,11 +94,11 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
 
 2. In Esplora oggetti, fare clic su **Gestione** > **Eventi estesi** > **Nuova sessione**. La finestra di dialogo **Nuova sessione** è preferibile rispetto alla finestra di dialogo di **Creazione guidata nuova sessione**anche se le due finestre sono simili tra loro.
 
-3. In alto a sinistra fare clic sulla pagina **Generale** . Quindi digitare *SessioneUtente*, o qualsiasi nome desiderato, nella casella di testo **Nome sessione** . *Non* premere il pulsante **OK**; questa operazione verrà eseguita solo alla fine della demo.
+3. In alto a sinistra fare clic sulla pagina **Generale** . Quindi digitare *SessioneUtente*, o qualsiasi nome desiderato, nella casella di testo **Nome sessione** . *Non* premere il pulsante **OK** ; questa operazione verrà eseguita solo alla fine della demo.
 
     ![Nuova sessione > Generale > Nome sessione](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
-4. In alto a sinistra fare clic sulla pagina **Eventi** e quindi fare clic sul pulsante **Seleziona**.
+4. In alto a sinistra fare clic sulla pagina **Eventi** e quindi fare clic sul pulsante **Seleziona** .
 
     ![Nuova sessione > Eventi > Seleziona > Libreria di eventi, Eventi selezionati](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
@@ -108,11 +108,11 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
     - Fare clic sul pulsante freccia destra **>** per spostare l'evento nella casella **Eventi selezionati** .
 
 6. Sempre nella pagina **Eventi** fare clic sul pulsante **Configura** all'estrema destra.
-    - Nella schermata seguente, dalla quale è stato eliminato il lato sinistro per una migliore visualizzazione, è possibile vedere l'area **Opzioni di configurazione eventi**.
+    - Nella schermata seguente, dalla quale è stato eliminato il lato sinistro per una migliore visualizzazione, è possibile vedere l'area **Opzioni di configurazione eventi** .
 
     ![Nuova sessione > Eventi > Configura > Filtro (predicato) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Fare clic sulla scheda **Filtro (predicato)**. Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
+7. Fare clic sulla scheda **Filtro (predicato)** . Successivamente, fare clic su **Fare clic qui per aggiungere una clausola**se si intende acquisire tutte le istruzioni SQL SELECT che hanno una clausola HAVING.
 
 8. Scegliere **sqlserver.sql_text** dall'elenco a discesa **Campo**.
    - Per **Operatore** scegliere un operatore LIKE.
@@ -129,17 +129,17 @@ Il testo e le schermate di supporto possono presentare leggere imprecisioni a ca
 
     ![Nuova sessione > Archiviazione dati > Destinazioni > Tipo > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
-11. Nell'area **Proprietà** digitare un nome di percorso e file completo nella casella di testo **Nome file sul server**.
+11. Nell'area **Proprietà** digitare un nome di percorso e file completo nella casella di testo **Nome file sul server** .
     - L'estensione del nome file deve essere *XEL*.
     - Questo semplice test richiederà meno di 1 MB delle dimensioni del file.
 
     ![Nuova sessione > Avanzate > Latenza di recapito massima > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. In alto a sinistra fare clic sulla pagina **Avanzate**.
+12. In alto a sinistra fare clic sulla pagina **Avanzate** .
     - Ridurre la **Latenza di recapito massima** a 3 secondi.
     - Infine, fare clic su **OK** nella parte inferiore.
 
-13. In **Esplora oggetti** espandere **Gestione** > **Sessioni** e visualizzare il nuovo nodo per **SessioneUtente**.
+13. In **Esplora oggetti**espandere **Gestione** > **Sessioni**e visualizzare il nuovo nodo per **SessioneUtente**.
 
     ![Nodo per la nuova *sessione eventi* denominata SessioneUtente, in Esplora oggetti, in Gestione> Eventi estesi > Sessioni](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -392,13 +392,13 @@ Le nozioni di base iniziano con le opzioni del menu di scelta rapida **Visualizz
 
 In **Esplora oggetti**di SSMS è possibile fare clic con il pulsante destro del mouse sul nodo di destinazione sotto il nodo della sessione eventi. Nel menu di scelta rapida fare clic su **Visualizza dati di destinazione**. SSMS visualizza i dati.
 
-La visualizzazione non viene aggiornata man mano che nuovi dati vengono segnalati dall'evento. È possibile, tuttavia, fare clic di nuovo clic su **Visualizza dati di destinazione**.
+La visualizzazione non viene aggiornata man mano che nuovi dati vengono segnalati dall'evento. È possibile, tuttavia, fare clic di nuovo clic su **Visualizza dati di destinazione** .
 
 
 ![Visualizzare i dati di destinazione, in SSMS > Gestione > Eventi estesi > Sessioni > SessioneUtente > package0.event_file, fare doppio clic su](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
 
 
-### <a name="watch-live-data"></a>Controllare i dati dinamici
+### <a name="watch-live-data"></a>Controlla i dati dinamici
 
 
 In **Esplora oggetti**di SSMS è possibile fare clic con il pulsante destro del mouse sul nodo della sessione eventi. Nel menu di scelta rapida fare clic su **Controlla i dati dinamici**. SSMS visualizza i dati in ingresso man mano che continuano ad arrivare in tempo reale.
@@ -661,6 +661,5 @@ Di seguito sono forniti collegamenti alla documentazione relativa a queste istru
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

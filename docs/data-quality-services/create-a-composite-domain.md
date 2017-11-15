@@ -5,25 +5,23 @@ ms.date: 11/22/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: c69c58ed516b9977e8b8ea43a6a5f69a1e57f2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
   In questo argomento viene descritto come creare un dominio composito in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio composito è costituito da uno o più singoli domini che si applicano a un singolo campo di dati. Per informazioni dettagliate sui domini compositi, vedere [Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md).  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  Nella tabella **Mapping** selezionare una colonna di origine dall'elenco a discesa per la **Colonna di origine** di una riga vuota. Verificare che la colonna di origine contenga un dominio composito indirizzato da due singoli domini esistenti. Se non esiste alcun dominio singolo corrispondente, fare clic sull'icona **Crea un dominio** .  
   
-6.  Nella tabella **Mapping** selezionare una colonna di origine dall'elenco a discesa per la **Colonna di origine** di una riga vuota. Verificare che la colonna di origine contenga un dominio composito con parti indirizzate da due singoli domini esistenti. Se non esistono singoli domini corrispondenti, fare clic sull'icona **Crea un dominio** per crearli. Per altre informazioni, vedere [Create a Domain](../data-quality-services/create-a-domain.md).  
+6.  Nella tabella **Mapping** selezionare una colonna di origine dall'elenco a discesa per la **Colonna di origine** di una riga vuota. Verificare che la colonna di origine contenga un dominio composito con parti indirizzate da due singoli domini esistenti. Se non esistono singoli domini corrispondenti, fare clic sull'icona **Crea un dominio** per crearli. Per altre informazioni, vedere [Creazione di un dominio](../data-quality-services/create-a-domain.md).  
   
 7.  Fare clic sull'icona **Crea un dominio composito** .  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  Selezionare **Gestione dominio** come attività, quindi fare clic su **Crea** per creare la nuova Knowledge Base, oppure **Apri** per aprirne una esistente.  
   
-3.  Assicurarsi che esistano due o più singoli domini, necessari per il dominio composito. Se non ne esistono, fare clic sull'icona **Crea un dominio** e crearli. Per altre informazioni, vedere [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  Assicurarsi che esistano due o più singoli domini, necessari per il dominio composito. Se non ne esistono, fare clic sull'icona **Crea un dominio** e crearli. Per altre informazioni, vedere [Creazione di un dominio](../data-quality-services/create-a-domain.md).  
   
 4.  Nella pagina **Gestione dominio** , fare clic sull'icona **Crea un dominio composito** sopra l'elenco di domini.  
   
@@ -107,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  Quando si utilizza l'analisi basata sulle informazioni e sono presenti meno valori nei dati di origine di quanti sono i domini nel dominio composito, DQS inserirà un valore Null nel dominio mancante. Quando sono presenti più valori nei dati di origine di quanti sono i domini nel dominio composito, DQS aggiungerà i dati aggiuntivi a una delle colonne. Se due o più domini includono gli stessi valori, l'origine dati verrà analizzata fino al primo dominio corrispondente.  
   
   
-

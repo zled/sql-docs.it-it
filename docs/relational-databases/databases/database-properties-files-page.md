@@ -5,23 +5,21 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.files.f1
+f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8ecac22fb15ab111571fdfdb8285d30f515bd8e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-properties-files-page"></a>Proprietà database (pagina File)
   Utilizzare questa pagina per creare un nuovo database oppure per visualizzare o modificare le proprietà del database selezionato. Questo argomento si applica a **Proprietà database (pagina File)** per i database esistenti e a **Nuovo database (pagina Generale)**.  
@@ -45,28 +43,28 @@ ms.lasthandoff: 06/22/2017
  **Tipo di file**  
  È possibile selezionare il tipo di file nell'elenco. Il tipo di file può essere **Dati**, **Log**o **Dati FILESTREAM**. Non è possibile modificare il tipo di file di un file esistente.  
   
- Selezionare **Dati FILESTREAM** se si aggiungono file (contenitori) a un filegroup con ottimizzazione per la memoria.  
+ Selezionare **Dati FILESTREAM** se si aggiungono file (contenitori) a un filegroup ottimizzato per la memoria.  
   
  Per aggiungere file (contenitori) a un filegroup di dati FILESTREAM, FILESTREAM deve essere abilitato. È possibile abilitare FILESTREAM usando la finestra di dialogo [Proprietà server (pagina Avanzate)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Filegroup**  
  È possibile selezionare il filegroup per il file nell'elenco. Per impostazione predefinita, il filegroup è PRIMARY. È possibile creare un nuovo filegroup selezionando **\<nuovo filegroup>** e immettendo informazioni sul filegroup nella finestra di dialogo **Nuovo filegroup**. Anche nella pagina **Filegroup** è possibile creare un nuovo filegroup. Non è possibile modificare il filegroup di un file esistente.  
   
- Quando si aggiungono file (contenitori) a un filegroup con ottimizzazione per la memoria, il campo **Filegroup** viene popolato con il nome del filegroup con ottimizzazione per la memoria del database.  
+ Quando si aggiungono file (contenitori) a un filegroup ottimizzato per la memoria, il campo **Filegroup** viene popolato con il nome del filegroup ottimizzato per la memoria del database.  
   
  **Dimensioni iniziali**  
  È possibile immettere o modificare le dimensioni iniziali in megabyte del file. Per impostazione predefinita, questo valore corrisponde a quello del database **model** .  
   
  Questo campo non è valido per i file FILESTREAM.  
   
- Per i file nei filegroup con ottimizzazione per la memoria, questo campo non può essere modificato.  
+ Per i file nei filegroup ottimizzati per la memoria, questo campo non può essere modificato.  
   
  **Aumento automatico**  
  È possibile selezionare o visualizzare le proprietà dell'aumento automatico per il file. Queste proprietà controllano l'espansione del file al raggiungimento delle dimensioni massime. Per modificare i valori di aumento automatico fare clic sul pulsante di modifica accanto alle proprietà di aumento automatico relative al file desiderato e modificare i valori nella finestra di dialogo **Cambia aumento automatico dimensioni** . Per impostazione predefinita, questi valori corrispondono a quelli del database **model** .  
   
  Questo campo non è valido per i file FILESTREAM.  
   
- Per i file nei filegroup con ottimizzazione per la memoria, questo campo deve essere **Senza limiti**.  
+ Per i file nei filegroup ottimizzati per la memoria, questo campo deve essere **Senza limiti**.  
   
  **Percorso**  
  È possibile visualizzare il percorso del file selezionato. Per specificare il percorso di un nuovo file fare clic sul pulsante di modifica accanto al percorso del file e passare alla cartella di destinazione. Non è possibile modificare il percorso di un file esistente.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 06/22/2017
  **Nome file**  
  È possibile visualizzare il nome del file.  
   
- Questo campo non è valido per i file FILESTREAM, inclusi i file nei filegroup con ottimizzazione per la memoria.  
+ Questo campo non è valido per i file FILESTREAM, inclusi i file nei filegroup ottimizzati per la memoria.  
   
  **Aggiungi**  
  È possibile aggiungere un nuovo file al database.  

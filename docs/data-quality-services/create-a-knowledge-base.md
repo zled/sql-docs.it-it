@@ -5,25 +5,23 @@ ms.date: 06/04/2013
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.selectkb.f1
 - sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4f440bb34a0939653d6708fcc9c46735fc3cdf9a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: dcdb69df197a4ff0d484cb5f857aa3c99dfe5313
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-knowledge-base"></a>Creare una Knowledge Base
   In questo argomento viene descritto come creare una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/09/2017
  Dopo avere creato una Knowledge Base, vengono visualizzate una procedura guidata che consente di eseguire l'individuazione delle informazioni, una procedura guidata per creare i criteri di corrispondenza o le pagine per eseguire la gestione del dominio. Per altre informazioni sull'individuazione delle informazioni, sulla gestione del dominio o sui criteri di corrispondenza, vedere [Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md), o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
   
-

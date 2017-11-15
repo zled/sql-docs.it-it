@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Broker:Forwarded Message Sent event class
+helpviewer_keywords: Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0462975232b9391c8cd57bc6811934f82ea5cdc
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d93b0ce74c37df8877e3cb51a991e391c4d72ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento Broker:Forwarded Message Sent quando viene inoltrato un messaggio da Service Broker.  
@@ -34,7 +31,7 @@ ms.lasthandoff: 06/22/2017
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |BigintData1|**bigint**|Numero di sequenza del messaggio.|52|No|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
-|DatabaseID|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene visualizzato il nome del database se la colonna di dati ServerName viene acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita alcuna istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene visualizzato il nome del database se la colonna di dati ServerName viene acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DBUserName|**nvarchar**|ID dell'istanza di Service Broker per il servizio da cui proviene il messaggio.|40|No|  
 |EventClass|**int**|Tipo di classe di evento acquisita. Per Broker:Forwarded Message Sent, corrisponde sempre a 139.|27|No|  
 |EventSequence|**int**|Numero di sequenza dell'evento.|51|No|  
@@ -60,4 +57,3 @@ ms.lasthandoff: 06/22/2017
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|No|  
   
   
-

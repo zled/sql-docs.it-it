@@ -5,22 +5,20 @@ ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: caa1851ca33c49b0199cfa76589d278ec8974a95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 07/31/2017
   
 -   Quali sono le dimensioni dei dati di una riga? Tali dimensioni rientrano nel limite di 8.060 byte? Per rispondere a queste domande, utilizzare il calcolo di [row body size] descritto di seguito.  
 
-  Una tabella con ottimizzazione per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
+  Una tabella ottimizzata per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
   
  ![Tabella ottimizzata per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabella ottimizzata per la memoria.")  
 Tabella con ottimizzazione per la memoria, costituita da indici e righe.  
@@ -71,7 +69,7 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
 
 **Struttura delle righe**
     
- Le righe di una tabella con ottimizzazione per la memoria includono i componenti seguenti:  
+ Le righe di una tabella ottimizzata per la memoria includono i componenti seguenti:  
   
 -   L'intestazione di riga contiene il timestamp necessario per implementare il controllo delle versioni delle righe. L'intestazione di riga contiene inoltre il puntatore dell'indice per implementare il concatenamento di righe nei bucket di hash (descritti in precedenza).  
   
@@ -251,4 +249,3 @@ Il post di blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](ht
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

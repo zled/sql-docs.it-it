@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - tuning databases [SQL Server], resource usage
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5039ba1303b5840566be3dfd6efab2e83a467b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
   Se si utilizza un sistema operativo server Microsoft Windows, è possibile misurare le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mediante lo strumento grafico Monitoraggio di sistema. È possibile visualizzare oggetti e contatori delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nonché funzioni di altri oggetti ad esempio processori, memoria, cache, thread e processi. A ognuno di questi oggetti è associato un set di contatori che misurano l'utilizzo dei dispositivi, le lunghezze delle code, i ritardi e altri indicatori di velocità effettiva e congestione interna.  
@@ -94,4 +92,3 @@ ms.lasthandoff: 06/22/2017
 |Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività OLTP in memoria.|[Contatori delle prestazioni XTP &#40;OLTP in memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
   
   
-

@@ -5,29 +5,26 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.resumedatamove.f1
+f1_keywords: sql13.swb.availabilitygroup.resumedatamove.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], resuming a database
 - secondary databases [SQL Server], in availability group
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: b7a4af01a6b999655a038f02375b7bb0b8bc8a19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Riprendere un database di disponibilità (SQL Server)
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è possibile riprendere un database di disponibilità sospeso utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Quando si riprende un database sospeso, viene attivato lo stato SYNCHRONIZING per il database. Con la ripresa del database primario vengono inoltre ripresi anche eventuali database secondari sospesi in seguito alla sospensione del database primario. Se un database secondario è stato sospeso in locale, dall'istanza del server che ospita la replica secondaria, è necessario riprendere tale database secondario in locale. Quando un database secondario e il database primario corrispondente sono nello stato SYNCHRONIZING, la sincronizzazione dei dati viene ripresa nel database secondario.  
@@ -125,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-
