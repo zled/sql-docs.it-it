@@ -5,24 +5,23 @@ ms.date: 08/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f6310afe6f8909a560fac0b7762c7aa94e3a1f3
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 410ea9f28ad1a4ec7f48024a6716e5588379af5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="contained-database-user-model"></a>Modello di utente di database indipendente  
  Nel modello di utente di database indipendente l'account di accesso nel database master non è presente. Al contrario, il processo di autenticazione si verifica nel database utente e l'utente del database nel database utente non dispone di un account di accesso associato nel database master. Il modello di utente di database indipendente supporta sia l'autenticazione di Windows che l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può essere usato sia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Per connettersi come utente di database indipendente, la stringa di connessione deve sempre contenere un parametro per il database utente in modo che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] sappia quale database è responsabile della gestione del processo di autenticazione. L'attività dell'utente di database indipendente è limitata al database di autenticazione, pertanto durante la connessione come utente di database indipendente, l'account utente del database deve essere creato in modo indipendente in ogni database richiesto dall'utente. Per modificare i database, gli utenti del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devono creare una nuova connessione. Gli utenti di database indipendente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono modificare i database se è presente un utente identico in un altro database.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supporta gli utenti di database indipendente che usano l'autenticazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , mentre [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non li supporta. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Quando si usa l'autenticazione di Azure Active Directory, è possibile stabilire una connessione da SQL Server Management Studio usando l'autenticazione universale di Active Directory.  Gli amministratori possono configurare l'autenticazione universale per richiedere l'autenticazione a più fattori, che consente di verificare l'identità con una telefonata, SMS, smart card con pin o la notifica dell'app mobile. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] supportano le identità di Azure Active Directory come utenti di database indipendente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supporta gli utenti di database indipendente che usano l'autenticazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , mentre [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non li supporta. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Quando si usa l'autenticazione di Azure Active Directory, è possibile stabilire una connessione da SQL Server Management Studio usando l'autenticazione universale di Active Directory.  Gli amministratori possono configurare l'autenticazione universale per richiedere l'autenticazione a più fattori, che consente di verificare l'identità con una telefonata, SMS, smart card con pin o la notifica dell'app mobile. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
  Per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dal momento che il nome del database è sempre richiesto nella stringa di connessione, non sono necessarie modifiche della stringa di connessione quando si passa dal modello tradizionale al modello di utente di database indipendente. Per le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il nome del database deve essere aggiunto alla stringa di connessione, se non è già presente.  
   
@@ -98,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   
   
-

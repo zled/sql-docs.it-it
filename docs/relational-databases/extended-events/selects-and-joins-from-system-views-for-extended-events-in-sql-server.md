@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f74637bd0e696ae4fd17d54f3826181e5d2ecf29
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -119,26 +118,26 @@ La documentazione di riferimento sulle viste del catalogo per gli eventi estesi 
 
 In **Esplora oggetti**di SSMS è possibile avviare la finestra di dialogo **Nuova sessione** . A tale scopo espandere **Gestione** > **Eventi estesi**e quindi fare clic con il pulsante destro del mouse su **Sessioni** > **Nuova sessione**.
 
-Nella finestra di dialogo **Nuova sessione**, nella prima sezione, **Generale**, è selezionata l'opzione **Avviare la sessione eventi all'avvio del server**.
+Nella finestra di dialogo **Nuova sessione** , nella prima sezione, **Generale**, è selezionata l'opzione **Avviare la sessione eventi all'avvio del server**.
 
 ![Nuova sessione > Generale, Avviare la sessione eventi all'avvio del server.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Quindi, nella sezione **Eventi** è stato scelto l'evento **lock_deadlock**. Per questo evento sono state selezionate tre **Azioni** . Ciò significa che il pulsante **Configura** è stato selezionato. Il pulsante, infatti, ora è disabilitato.
+Quindi, nella sezione **Eventi** è stato scelto l'evento **lock_deadlock** . Per questo evento sono state selezionate tre **Azioni** . Ciò significa che il pulsante **Configura** è stato selezionato. Il pulsante, infatti, ora è disabilitato.
 
 ![Nuova sessione > Eventi, Campi globali (azioni)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Quindi, sempre nella sezione **Eventi** > **Configura**, è possibile vedere che [**resource_type** è stato impostato su **PAGE**](#resource_type_dmv_actual_row). Ciò significa che i dati eventi non verranno inviati dal motore degli eventi alla destinazione se il valore **resource_type** è diverso da **PAGE**.
+Quindi, sempre nella sezione **Eventi** > **Configura** , è possibile vedere che [**resource_type** è stato impostato su **PAGE**](#resource_type_dmv_actual_row). Ciò significa che i dati eventi non verranno inviati dal motore degli eventi alla destinazione se il valore **resource_type** è diverso da **PAGE**.
 
 È anche possibile vedere altri predicati di filtri per il nome del database e per un contatore.
 
 ![Nuova sessione > Eventi, campi dei predicati dei filtri (Azioni)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-Quindi, nella sezione **Archiviazione dati** è possibile vedere che **event_file** è stato scelto come destinazione. È anche possibile vedere che è stata selezionata l'opzione **Consenti rollover dei file**.
+Quindi, nella sezione **Archiviazione dati** è possibile vedere che **event_file** è stato scelto come destinazione. È anche possibile vedere che è stata selezionata l'opzione **Consenti rollover dei file** .
 
 ![Nuova sessione > Archiviazione dati, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
@@ -921,6 +920,5 @@ Di seguito è riportato il contenuto della prima cella di XML, dal set di righe 
   </action>
 </event>
 ```
-
 
 

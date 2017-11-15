@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2df9024353df34fc5b7860bae2eaa5b633c06b9f
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 490371ad28d81368a3cd4fad5246285094545c54
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurazione di editor (SQL Server Management Studio)
   È possibile personalizzare il funzionamento degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando le apposite opzioni.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 06/22/2017
 |Percorso delle pagine della Guida per le finestre di dialogo delle opzioni degli editor.|[Guida sensibile al contesto relativa alle pagine di Opzioni query](http://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
   
   
-

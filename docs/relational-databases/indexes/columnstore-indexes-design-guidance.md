@@ -5,22 +5,20 @@ ms.date: 01/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/30/2017
-
+ms.openlocfilehash: 81a9002844d81421e7e82a7540ae6895364218d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Indici columnstore - Linee guida per la progettazione
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +174,7 @@ La tabella seguente riepiloga le attività per la creazione e la manutenzione de
 |Attività|Argomenti di riferimento|Note|  
 |----------|----------------------|-----------|  
 |Creare una tabella come columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]è possibile creare la tabella come indice columnstore cluster. Non è necessario creare prima una tabella rowstore e quindi convertirla in columnstore.|  
-|Creare una tabella in memoria con un indice columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]è possibile creare una tabella in memoria ottimizzata con un indice columnstore. L'indice columnstore può anche essere aggiunto dopo aver creato la tabella, usando la sintassi ALTER TABLE ADD INDEX.|  
+|Creare una tabella in memoria con un indice columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile creare una tabella in memoria ottimizzata con un indice columnstore. L'indice columnstore può anche essere aggiunto dopo aver creato la tabella, usando la sintassi ALTER TABLE ADD INDEX.|  
 |Convertire una tabella rowstore in un columnstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convertire un heap o un albero binario esistente o in un columnstore. Gli esempi illustrano come gestire gli indici esistenti e il nome dell'indice quando si esegue questa conversione.|  
 |Convertire una tabella columnstore in un rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Di solito non è necessario eseguire questa conversione, ma talvolta potrebbe presentarsene la necessità. Gli esempi illustrano come convertire un columnstore in un heap o in un indice cluster.|  
 |Creare un indice columnstore per una tabella rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabella rowstore può avere un solo indice columnstore.  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]l'indice columnstore può avere una condizione di filtro. Gli esempi illustrano la sintassi di base.|  
@@ -209,5 +207,4 @@ Per convertire un indice heap o albero B rowstore esistente in un indice columns
 
 
   
-
 

@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +15,16 @@ helpviewer_keywords:
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 514fe566dd9a26d4a6244e8fb067f97678d2dbc7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Modificare la modalità di compatibilità del database e usare l'archivio query
 In SQL Server 2016 e SQL Server 2017 alcune modifiche vengono abilitate solo dopo aver modificato il livello DATABASE_COMPATIBILITY di un database. Questa operazione viene eseguita per diversi motivi:  
   
@@ -65,4 +62,3 @@ In SQL Server 2016 e SQL Server 2017 alcune modifiche vengono abilitate solo dop
  [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- staging process [Master Data Services], viewing errors
+helpviewer_keywords: staging process [Master Data Services], viewing errors
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: de3c6c2f487dd10b6d55a25c802339a14a67a055
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: bdc53da2a9259930b326778bb8227996565d9c8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>Visualizzare gli errori che si verificano durante il processo di gestione temporanea (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile visualizzare errori che si verificano durante il processo di gestione temporanea. Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , sono disponibili due viste che mostrano errori:  
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/07/2017
   
 2.  Aprire una nuova query.  
   
-3.  Digitare il testo seguente, sostituendo il nome con quello della tabella di gestione temporanea, ad esempio, viw_Product_MemberErrorDetails.  
+3.  Digitare il testo seguente, sostituendo il nome con quello della tabella di staging, ad esempio, viw_Product_MemberErrorDetails.  
   
      `SELECT * FROM stg.viw_name_MemberErrorDetails`  
   
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/07/2017
  [Risoluzione dei problemi relativi al processo di gestione temporanea (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   
-

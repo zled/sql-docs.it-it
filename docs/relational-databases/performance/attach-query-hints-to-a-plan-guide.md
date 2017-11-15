@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cd35ba37fceeee68531e23b2ee2caabae4e81cfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Associazione degli hint per le query a una guida di piano
   In una guida di piano è possibile utilizzare qualsiasi combinazione di hint per la query validi. Quando una guida di piano corrisponde a una query, la clausola OPTION specificata nella clausola dell'hint di una guida di piano viene aggiunta alla query prima che questa venga compilata e ottimizzata. Se una query che corrisponde a una guida di piano contiene già una clausola OPTION, gli hint per la query specificati nella guida di piano sostituiscono quelli della query. Perché una guida di piano possa corrispondere a una query che già contiene una clausola OPTION è tuttavia necessario includere la clausola OPTION della query quando si specifica il testo della query da far corrispondere nell'istruzione sp_create_plan_guide. Se si desidera che gli hint specificati nella guida di piano vengano aggiunti agli hint già esistenti nella query, invece di sostituirli è necessario specificare sia gli hint originali che gli hint aggiuntivi nella clausola OPTION della guida di piano.  
@@ -34,4 +32,3 @@ ms.lasthandoff: 06/22/2017
  Inoltre, è possibile specificare gli hint di tabella INDEX, FORCESCAN e FORCESEEK come hint per le query. Se specificati come hint per le query, tali hint si comportano come un hint di vista o di una tabella inline. L'hint INDEX impone a Query Optimizer di utilizzare soltanto gli indici specificati per accedere ai dati nella tabella o nella vista. L’hint FORCESEEK impone a Optimizer di utilizzare soltanto un’operazione Index Seek per accedere ai dati nella tabella o nella vista a cui si fa riferimento. Tali hint forniscono funzionalità della guida di piano aggiuntive e consentono di avere maggiore influenza sull'ottimizzazione di query che utilizzano la guida di piano.  
   
   
-

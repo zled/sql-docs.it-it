@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainlist.f1
+f1_keywords: sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: ffb0cd1bbb37aeb7c551e9d71612507aad1a3724
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="domain-management-domain-list"></a>Gestione dominio: elenco domini
   In questo argomento vengono descritti i controlli dell'elenco Domini nella pagina **Gestione dominio** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilizzare questo riquadro per selezionare un dominio su cui eseguire le operazioni di gestione. Lo stesso riquadro viene utilizzato per tutte le pagine a schede della pagina **Gestione dominio** .  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  Consente di esportare il dominio in un file DQS. Con questo comando viene visualizzata la finestra di dialogo **Esporta in file di dati** . Questo comando è disponibile nel menu **Esporta** della barra dei menu all'inizio della pagina o facendo clic con il pulsante destro del mouse nel riquadro dell'elenco di domini. Per altre informazioni, vedere [Esportazione di un dominio in un file DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
   
-

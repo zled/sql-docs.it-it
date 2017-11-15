@@ -5,8 +5,7 @@ ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 0a9aeecbec7487e9d750fabb7e2374366f41678a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funzioni deterministiche e non deterministiche
   Le funzioni deterministiche restituiscono sempre lo stesso risultato quando vengono chiamate con un set di valori di input specifico e se lo stato del database rimane invariato. Le funzioni non deterministiche possono restituire risultati diversi quando vengono chiamate con un set di valori di input specifico, anche se lo stato del database a cui accedono rimane invariato. Ad esempio, tramite la funzione AVG viene restituito sempre lo stesso risultato in base alle condizioni indicate in precedenza, ma tramite la funzione GETDATE, mediante la quale viene restituito il valore datetime corrente, viene sempre restituito un risultato diverso.  
@@ -73,19 +71,19 @@ ms.lasthandoff: 10/17/2017
   
 |||  
 |-|-|  
-|@@CONNECTIONS |GETDATE|  
-|@@CPU_BUSY |GETUTCDATE|  
-|@@DBTS |GET_TRANSMISSION_STATUS|  
-|@@IDLE |LAG|  
-|@@IO_BUSY |LAST_VALUE|  
-|@@MAX_CONNECTIONS |LEAD|  
-|@@PACK_RECEIVED |MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT |NEWID|  
-|@@PACKET_ERRORS |NEWSEQUENTIALID|  
-|@@TIMETICKS |NEXT VALUE FOR|  
-|@@TOTAL_ERRORS |NTILE|  
-|@@TOTAL_READ |PARSENAME|  
-|@@TOTAL_WRITE |PERCENTILE_CONT|  
+|@@CONNECTIONS|GETDATE|  
+|@@CPU_BUSY|GETUTCDATE|  
+|@@DBTS|GET_TRANSMISSION_STATUS|  
+|@@IDLE|LAG|  
+|@@IO_BUSY|LAST_VALUE|  
+|@@MAX_CONNECTIONS|LEAD|  
+|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
+|@@PACK_SENT|NEWID|  
+|@@PACKET_ERRORS|NEWSEQUENTIALID|  
+|@@TIMETICKS|NEXT VALUE FOR|  
+|@@TOTAL_ERRORS|NTILE|  
+|@@TOTAL_READ|PARSENAME|  
+|@@TOTAL_WRITE|PERCENTILE_CONT|  
 |AT TIME ZONE|PERCENTILE_DISC|
 |CUME_DIST|PERCENT_RANK|  
 |CURRENT_TIMESTAMP|RAND|  
@@ -103,4 +101,3 @@ ms.lasthandoff: 10/17/2017
  In modo analogo a una chiamata da un batch o da una stored procedure, la stored procedure estesa viene eseguita nel contesto dell'account di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni di questo contesto di protezione devono essere tenute presenti dal proprietario della stored procedure estesa quando vengono concesse ad altri utenti le autorizzazioni per eseguire la procedura.  
   
   
-

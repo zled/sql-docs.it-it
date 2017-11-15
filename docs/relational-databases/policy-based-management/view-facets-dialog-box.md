@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.viewfacet.f1
+f1_keywords: sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4238a58861b26cf1de340d4e06b0e61a667c0f27
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 73c832d6b4da2aa291e0919986b3521fabe7dfad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-facets-dialog-box"></a>Finestra di dialogo Visualizza facet
   Utilizzare questa finestra di dialogo per visualizzare le proprietà di un facet della gestione basata su criteri. Le proprietà di un facet vengono definite durante la creazione del facet e non possono essere modificate in questa finestra di dialogo.  
@@ -44,4 +41,3 @@ ms.lasthandoff: 06/22/2017
  [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

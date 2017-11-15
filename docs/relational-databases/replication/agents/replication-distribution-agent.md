@@ -5,8 +5,7 @@ ms.date: 02/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
   Agente distribuzione repliche è un eseguibile che consente di spostare lo snapshot (per la replica snapshot e transazionale) e le transazioni incluse nelle tabelle del database di distribuzione (per la replica transazionale) nelle tabelle di destinazione nei Sottoscrittori.  
@@ -275,7 +274,7 @@ distrib [-?]
  Specifica il tipo di sottoscrizione per la distribuzione. Un valore **0** indica una sottoscrizione push, un valore **1** indica una sottoscrizione pull e un valore **2** indica una sottoscrizione anonima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory**infinito. See the preceding **–MessageInterval**parameter.  
+ Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory**infinito. Vedere il parametro **– MessageInterval**precedente.  
   
  **-UseDTS**  
  Deve essere specificato come parametro per una pubblicazione che consente la trasformazione dei dati.  
@@ -303,4 +302,3 @@ distrib [-?]
  [Amministrazione dell'agente di replica](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

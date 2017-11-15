@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 -   È possibile creare indici non cluster non univoci online quando la tabella contiene tipi di dati LOB ma nessuna di queste colonne è utilizzata nella definizione di indice come colonna chiave o non chiave (inclusa).  
   
 -   Non è possibile creare, ricompilare o eliminare online indici su tabelle temporanee locali. Questa limitazione non è valida per gli indici su tabelle temporanee globali.
-- Gli indici possono essere ripresi dal punto di interruzione dopo un errore imprevisto, il failover del database o l'esecuzione di un comando **PAUSE**. Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Questa funzionalità è in anteprima pubblica per SQL Server 2017 e il database SQL di Azure.
+- Gli indici possono essere ripresi dal punto di interruzione dopo un errore imprevisto, il failover del database o l'esecuzione di un comando **PAUSE**. Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -95,7 +94,7 @@ Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations
 ## <a name="resumable-index-rebuild-considerations"></a>Considerazioni sulla ricompilazione degli indici ripristinabili
 
 > [!NOTE]
-> Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Questa funzionalità è in anteprima pubblica per SQL Server 2017 e il database SQL di Azure.
+> Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 >
 
 Per eseguire la ricompilazione di un indice online ripristinabile, attenersi alle seguenti linee guida:
@@ -126,4 +125,3 @@ In generale non vi sono differenze di qualità della deframmentazione nella rico
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

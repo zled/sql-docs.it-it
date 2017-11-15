@@ -4,8 +4,7 @@ ms.date: 07/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - Deploy a SQL Server database to Azure
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
-ms.openlocfilehash: d571407c52dd11d7fec6a8077f1eb5a2837c013d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/28/2017
-
+ms.openlocfilehash: f2595d826f1922e497e9774d67afc7e6741d15bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
   Usare la procedura guidata **Distribuisci il database in una macchina virtuale di Microsoft Azure** per distribuire un database da un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale (VM) di Windows Azure. La procedura guidata usa un'operazione di backup completo del database, quindi copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
@@ -237,7 +235,7 @@ Passa alla pagina **Impostazioni di origine** .
 -   **Annulla**  
   Annulla l'operazione e chiude la procedura guidata.  
   
--   **Aiuto**  
+-   **?**  
 Avvia l'argomento della Guida di MSDN per la procedura guidata.  
   
 ##  <a name="Source_settings"></a> Impostazioni di origine  
@@ -299,4 +297,3 @@ Specificare o confermare il nome di un nuovo database. Se il nome del database e
  [Preparazione della migrazione a SQL Server in Macchine virtuali di Microsoft Azure](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
-

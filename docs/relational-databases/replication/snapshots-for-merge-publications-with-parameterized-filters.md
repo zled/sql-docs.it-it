@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f358f84d2dbcec345a160d9fafb660bbebc01be7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>Snapshot per pubblicazioni di tipo merge con filtri con parametri
   Quando si utilizzano filtri di riga con parametri nelle pubblicazioni di tipo merge, ogni sottoscrizione con uno snapshot in due parti viene inizializzata dalla replica. Viene innanzitutto creato uno snapshot dello schema contenente tutti gli oggetti necessari alla replica e lo schema degli oggetti pubblicati, ma non i dati. Ogni sottoscrizione viene quindi inizializzata con uno snapshot che include gli oggetti e lo schema dello snapshot dello schema e i dati appartenenti alla partizione della sottoscrizione. Se più di una sottoscrizione riceve una determinata partizione, ovvero riceve lo stesso schema e gli stessi dati, lo snapshot di tale partizione viene creato una sola volta. Dallo stesso snapshot vengono inizializzate più sottoscrizioni. Per ulteriori informazioni sui filtri di riga con parametri, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -50,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  Considerare [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], che dispone di forza lavoro mobile per la distribuzione delle scorte ai singoli negozi. Ogni venditore riceve una sottoscrizione basata sul proprio account di accesso, che consente di recuperare i dati relativi ai negozi serviti. L'amministratore decide di pregenerare gli snapshot e di aggiornarli ogni domenica. Occasionalmente viene aggiunto al sistema un nuovo utente per il quale sono necessari i dati per una partizione per cui non è disponibile alcuno snapshot. L'amministratore decide inoltre di consentire gli snapshot inizializzati dal Sottoscrittore, per evitare che si verifichi una situazione in cui un Sottoscrittore non può sottoscrivere la pubblicazione in quanto lo snapshot non è ancora disponibile. Quando il nuovo Sottoscrittore effettua la prima connessione, lo snapshot per la partizione specificata viene generato e viene applicato al Sottoscrittore. Per consentire la generazione dello snapshot, è necessario che[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia in esecuzione nel server di pubblicazione.  
   
- Per creare uno snapshot per una pubblicazione con filtri con parametri, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Per creare uno snapshot per una pubblicazione con filtri con parametri, vedere [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>Impostazioni di sicurezza per l'agente snapshot  
  L'agente snapshot crea gli snapshot per ogni partizione. Per gli snapshot pregenerati e per quelli richiesti da un Sottoscrittore, viene eseguito l'agente e vengono effettuate le connessioni con le credenziali specificate al momento della creazione del processo dell'agente snapshot. Tale processo viene creato tramite la Creazione guidata nuova pubblicazione o **sp_addpublication_snapshot**. Per modificare le credenziali, utilizzare **sp_changedynamicsnapshot_job**. Per altre informazioni, vedere [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  

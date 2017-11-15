@@ -5,23 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- New Subscription Wizard
+helpviewer_keywords: New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d33bcc230d395b405ce3a2daf72bac286c4bbb1
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ce75e568b50f4d45684664897de0d4351b51d808
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Creazione guidata nuova sottoscrizione (Guida di riferimento all'interfaccia utente)
   In questa sezione vengono fornite informazioni sulle pagine seguenti della Creazione guidata nuova sottoscrizione:  
@@ -48,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Creazione di una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
  [Riferimento alle proprietà &#40;replica&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   

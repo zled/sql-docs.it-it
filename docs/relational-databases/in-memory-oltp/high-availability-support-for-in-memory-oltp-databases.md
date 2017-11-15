@@ -5,50 +5,49 @@ ms.date: 08/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1ac85ca1f9e073a7c9b9577601fcc982e7249ab
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 14e2a3d68d922c4e78ee154a380fc6ddd4721526
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Supporto della disponibilità elevata per i database OLTP in memoria
-  I database che contengono tabelle con ottimizzazione per la memoria, con o senza stored procedure compilate native, sono completamente supportati con i gruppi di disponibilità AlwaysOn.  Non c'è alcuna differenza di configurazione e supporto per i database contenenti oggetti [!INCLUDE[hek_2](../../includes/hek-2-md.md)] rispetto a quelli che non li contengono.  
+  I database che contengono tabelle ottimizzate per la memoria, con o senza stored procedure compilate native, sono completamente supportati con i gruppi di disponibilità AlwaysOn.  Non c'è alcuna differenza di configurazione e supporto per i database contenenti oggetti [!INCLUDE[hek_2](../../includes/hek-2-md.md)] rispetto a quelli che non li contengono.  
   
- Quando un database OLTP in memoria viene distribuito in una configurazione del gruppo di disponibilità AlwaysOn, le modifiche alle tabelle con ottimizzazione per la memoria nella replica primaria vengono applicate in memoria alle tabelle nelle repliche secondarie, quando è applicato ROLLFORWARD. Ciò significa che il failover su una replica secondaria può essere molto rapido, perché i dati sono già in memoria. Inoltre, le tabelle sono disponibili per le query nelle repliche secondarie che sono state configurate per l'accesso in lettura.  
+ Quando un database OLTP in memoria viene distribuito in una configurazione del gruppo di disponibilità AlwaysOn, le modifiche alle tabelle ottimizzate per la memoria nella replica primaria vengono applicate in memoria alle tabelle nelle repliche secondarie, quando è applicato ROLLFORWARD. Ciò significa che il failover su una replica secondaria può essere molto rapido, perché i dati sono già in memoria. Inoltre, le tabelle sono disponibili per le query nelle repliche secondarie che sono state configurate per l'accesso in lettura.  
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>Gruppi di disponibilità AlwaysOn e database OLTP in memoria  
  La configurazione dei database con componenti [!INCLUDE[hek_2](../../includes/hek-2-md.md)] offre quanto segue:  
   
 -   **Un'esperienza completamente integrata**   
-    È possibile configurare i database contenenti tabelle con ottimizzazione per la memoria usando la stessa procedura guidata con lo stesso livello di supporto sia per le repliche secondarie asincrone sia per quelle sincrone. Inoltre, il monitoraggio dello stato viene fornito tramite il noto dashboard AlwaysOn in SQL Server Management Studio.  
+    È possibile configurare i database contenenti tabelle ottimizzate per la memoria usando la stessa procedura guidata con lo stesso livello di supporto sia per le repliche secondarie asincrone sia per quelle sincrone. Inoltre, il monitoraggio dello stato viene fornito tramite il noto dashboard AlwaysOn in SQL Server Management Studio.  
   
 -   **Tempo di failover confrontabile**   
-    Le repliche secondarie mantengono lo stato in memoria delle tabelle durevoli con ottimizzazione per la memoria. In caso di failover automatico o forzato, il tempo di failover al nuovo database primario è paragonabile a quello del failover a tabelle basate su disco, in quanto non è necessario il ripristino. Le tabelle con ottimizzazione per la memoria create come SCHEMA_ONLY sono supportate in questa configurazione. Tuttavia, le modifiche a queste tabelle non vengono registrate e pertanto non saranno presenti dati in queste tabelle nella replica secondaria.  
+    Le repliche secondarie mantengono lo stato in memoria delle tabelle durevoli ottimizzate per la memoria. In caso di failover automatico o forzato, il tempo di failover al nuovo database primario è paragonabile a quello del failover a tabelle basate su disco, in quanto non è necessario il ripristino. Le tabelle con ottimizzazione per la memoria create come SCHEMA_ONLY sono supportate in questa configurazione. Tuttavia, le modifiche a queste tabelle non vengono registrate e pertanto non saranno presenti dati in queste tabelle nella replica secondaria.  
   
 -   **Secondario leggibile**   
-    È possibile accedere ed eseguire query su tabelle con ottimizzazione per la memoria nella replica secondaria se questa è stata configurata per l'accesso in lettura. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]la sincronizzazione del timestamp di lettura sulla replica secondaria con il timestamp di lettura sulla replica primaria è molto veloce, il che significa che le modifiche apportate alla replica primaria diventano visibili molto rapidamente nella replica secondaria. Questo comportamento di sincronizzazione rapida è diverso rispetto a OLTP in memoria di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
+    È possibile accedere ed eseguire query su tabelle ottimizzate per la memoria nella replica secondaria se questa è stata configurata per l'accesso in lettura. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]la sincronizzazione del timestamp di lettura sulla replica secondaria con il timestamp di lettura sulla replica primaria è molto veloce, il che significa che le modifiche apportate alla replica primaria diventano visibili molto rapidamente nella replica secondaria. Questo comportamento di sincronizzazione rapida è diverso rispetto a OLTP in memoria di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Istanza di clustering di failover e database OLTP in memoria  
- Per ottenere la disponibilità elevata in una configurazione di archiviazione condivisa, è possibile impostare il clustering di failover nelle istanze con uno o più database con tabelle con ottimizzazione per la memoria. Per l'impostazione di un'istanza di clustering di failover, è necessario considerare i fattori seguenti.  
+ Per ottenere la disponibilità elevata in una configurazione di archiviazione condivisa, è possibile impostare il clustering di failover nelle istanze con uno o più database con tabelle ottimizzate per la memoria. Per l'impostazione di un'istanza di clustering di failover, è necessario considerare i fattori seguenti.  
   
 -   **Obiettivo tempo di ripristino**   
-    Il tempo di failover sarà probabilmente maggiore perché le tabelle con ottimizzazione per la memoria devono essere caricate in memoria prima che il database venga reso disponibile.  
+    Il tempo di failover sarà probabilmente maggiore perché le tabelle ottimizzate per la memoria devono essere caricate in memoria prima che il database venga reso disponibile.  
   
 -   **Tabelle SCHEMA_ONLY**   
     Tenere presente che le tabelle SCHEMA_ONLY saranno vuote e senza righe dopo il failover. Si tratta di un comportamento previsto definito dall'applicazione. Questo comportamento corrisponde esattamente a ciò che succede quando si riavvia un database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] con una o più tabelle SCHEMA_ONLY.  
   
 ## <a name="support-for-transaction-replication-in-in-memory-oltp"></a>Supporto per la replica transazionale in OLTP In memoria  
- Le tabelle con funzione di sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle con ottimizzazione per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle con ottimizzazione per la memoria.  Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
+ Le tabelle con funzione di sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria.  Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità Always On (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -57,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   
-

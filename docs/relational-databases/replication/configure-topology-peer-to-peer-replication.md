@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.p2pwizard.peers.f1
+f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a41d0a93fcee491dad6bc2b310720e65f9ee607
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3ac55f8620b7be677223f34d3d14d23007e49d2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configura topologia (replica peer-to-peer)
   La pagina **Configura topologia** consente di eseguire attività di configurazione comuni, ad esempio l'aggiunta di nuovi nodi, l'eliminazione di nodi e l'aggiunta di nuove connessioni tra nodi esistenti. Il nodo selezionato nella pagina **Pubblicazione** di questa procedura guidata viene visualizzato nell'area di progettazione. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse su un nodo, su una connessione o sull'area di progettazione.  

@@ -5,35 +5,33 @@ ms.date: 12/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f4fda63a6cf7dae045a247eb26163d0e041841b8
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e4e4674d6f354d7df300dde4e29e0d46cc62d3ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-computed-columns"></a>Migrazione di colonne calcolate
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-Le colonne calcolate non sono supportate nelle tabelle con ottimizzazione per la memoria. Tuttavia, è possibile simulare una colonna calcolata.
+Le colonne calcolate non sono supportate nelle tabelle ottimizzate per la memoria. Tuttavia, è possibile simulare una colonna calcolata.
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle con ottimizzazione per la memoria.
+**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.
 
-Valutare la necessità di rendere persistenti le colonne calcolate quando si esegue la migrazione delle tabelle basate su disco nelle tabelle con ottimizzazione per la memoria. Le diverse caratteristiche di prestazioni delle tabelle con ottimizzazione per la memoria e delle stored procedure compilate in modo nativo possono annullare la necessità della persistenza.  
+Valutare la necessità di rendere persistenti le colonne calcolate quando si esegue la migrazione delle tabelle basate su disco nelle tabelle ottimizzate per la memoria. Le diverse caratteristiche di prestazioni delle tabelle ottimizzate per la memoria e delle stored procedure compilate in modo nativo possono annullare la necessità della persistenza.  
   
 ## <a name="non-persisted-computed-columns"></a>Colonne calcolate non persistenti  
- Per simulare gli effetti di una colonna calcolata non persistente, creare una vista nella tabella con ottimizzazione per la memoria. Nell'istruzione SELECT che definisce la vista, aggiungere la definizione della colonna calcolata nella vista. Ad eccezione di una stored procedure compilata in modo nativo, le query che utilizzano i valori della colonna calcolata devono essere letti dalla vista. All'interno delle stored procedure compilate in modo nativo, è consigliabile aggiornare tutte le istruzioni SELECT, UPDATE o DELETE in base alla definizione della colonna calcolata.  
+ Per simulare gli effetti di una colonna calcolata non persistente, creare una vista nella tabella ottimizzata per la memoria. Nell'istruzione SELECT che definisce la vista, aggiungere la definizione della colonna calcolata nella vista. Ad eccezione di una stored procedure compilata in modo nativo, le query che utilizzano i valori della colonna calcolata devono essere letti dalla vista. All'interno delle stored procedure compilate in modo nativo, è consigliabile aggiornare tutte le istruzioni SELECT, UPDATE o DELETE in base alla definizione della colonna calcolata.  
   
 ```tsql  
 -- Schema for the table dbo.OrderDetails:  
@@ -99,4 +97,3 @@ GO
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.jobproperties.f1
+f1_keywords: sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 83d8aa2129ec916241436e356d47da56fc0ef055
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-properties-management-studio"></a>Proprietà processo (Management Studio)
   Usare la pagina **Proprietà processo** per visualizzare le informazioni su una sottoscrizione o su un report in corso prima di annullarlo.  
@@ -74,9 +72,8 @@ ms.lasthandoff: 08/09/2017
  Per i processi avviati da un utente, in questa colonna viene indicato il nome dell'utente. Per i processi di sistema, si tratta del nome del server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

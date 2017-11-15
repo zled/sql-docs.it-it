@@ -16,17 +16,16 @@ helpviewer_keywords:
 - printing previews
 - test servers [Reporting Services]
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c4d8cd078dd674ddb0d8bbf1db5a28f794e093df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45df97d21abc1ac494592c98e69964a38d7f4d21
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports"></a>Anteprima dei report
   Durante la progettazione di un report di     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , potrebbe essere necessario visualizzarlo prima di pubblicarlo in un ambiente di produzione. Tale operazione può essere eseguita passando alla modalità di anteprima in Progettazione report, utilizzando la finestra di anteprima in Progettazione report e pubblicando il report in un server di report in un ambiente di prova.  
@@ -63,4 +62,3 @@ ms.lasthandoff: 08/09/2017
  [Uso di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   
-

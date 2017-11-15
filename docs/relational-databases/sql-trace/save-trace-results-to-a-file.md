@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6f62cfaeeb3be67b2a8e9bcf03b95464738a67c
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a5aae35c87ae1910735b06703bcc52fc87690b06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-trace-results-to-a-file"></a>Salvare i risultati della traccia in un file
   È possibile salvare i risultati della traccia in un file. Un file di traccia è un file nel quale vengono scritti i risultati della traccia. Un file di traccia può trovarsi in una directory locale (ad esempio C:\\*nomecartella*\\*nomefile.trc*) o in una directory di rete (ad esempio \\\nomecomputer\nomecondivisione\nomefile.trc).  

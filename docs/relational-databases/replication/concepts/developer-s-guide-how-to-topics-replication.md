@@ -5,24 +5,21 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 288ed137e701d6cfb416d12b6ff2176c59ec0278
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 67ccf264539c01071c3dff0e0e9fc1c70f14d7e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>Guida per gli sviluppatori: Procedure (replica)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,9 +136,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [Inizializzare manualmente una sottoscrizione](../../../relational-databases/replication/initialize-a-subscription-manually.md)  
   
--   [Sincronizzare una sottoscrizione pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md)  
+-   [Sincronizzazione di una sottoscrizione pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   
--   [Sincronizzare una sottoscrizione push](../../../relational-databases/replication/synchronize-a-push-subscription.md)  
+-   [Sincronizzazione di una sottoscrizione push](../../../relational-databases/replication/synchronize-a-push-subscription.md)  
   
 -   [Reinizializzare una sottoscrizione](../../../relational-databases/replication/reinitialize-a-subscription.md)  
   
@@ -194,4 +191,3 @@ ms.lasthandoff: 06/22/2017
 -   [Misurare la latenza e convalidare le connessioni per la replica transazionale](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   
-

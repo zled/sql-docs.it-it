@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8de57644d66112352b48a88a5ce80bb15bc24dd6
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0e46255c7b91546ff00dadd04c5bc7d214831b2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
   La pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** consente di visualizzare e impostare le proprietà a livello di pubblicazione associate alle sottoscrizioni. Le proprietà sono raggruppate nelle categorie seguenti:  
@@ -52,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="schema-replication"></a>Replica dello schema  
  **Replica modifiche dello schema**  
-Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se replicare le modifiche dello schema, ad esempio l'aggiunta di una colonna a una tabella o la modifica del tipo di dati di una colonna, agli oggetti pubblicati. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Solo[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se replicare le modifiche dello schema, ad esempio l'aggiunta di una colonna a una tabella o la modifica del tipo di dati di una colonna, agli oggetti pubblicati. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Opzioni per le pubblicazioni snapshot e transazionali  
   
@@ -64,10 +62,10 @@ Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005
  Determina se vengono creati file di snapshot a ogni esecuzione dell'agente snapshot. È necessaria l'opzione **Agente di distribuzione indipendente**. Questa opzione è di sola lettura ed è impostata su **True** se è stata selezionata l'opzione **Crea uno snapshot immediatamente e mantieni lo snapshot disponibile per l'inizializzazione delle sottoscrizioni** nella pagina **Agente snapshot** della Creazione guidata nuova pubblicazione (opzione predefinita). Per altre informazioni, vedere [Creare e applicare lo snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
   
  **Consenti inizializzazione dai file di backup**  
-Solo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se consentire l'utilizzo dei file di backup per inizializzare le sottoscrizioni. Per altre informazioni, vedere [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+ Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se consentire l'utilizzo dei file di backup per inizializzare le sottoscrizioni. Per altre informazioni, vedere [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Consenti Sottoscrittori non SQL Server**  
-Solo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si imposta questa opzione su **True** , alcune proprietà della pubblicazione verranno modificate per supportare Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si imposta questa opzione su **True** , alcune proprietà della pubblicazione verranno modificate per supportare Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Trasformazioni dei dati  
  **Consenti trasformazioni dei dati**  
@@ -116,7 +114,7 @@ Solo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni su
  Determina le funzioni da utilizzare per convalidare che un Sottoscrittore disponga della partizione dati corretta. È possibile immettere più valori separandoli con una virgola. Per altre informazioni, vedere [Convalidare le informazioni sulle partizioni per un Sottoscrittore di tipo merge](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
   
  **Pre-calcola partizioni**  
-Solo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se ottimizzare la sincronizzazione calcolando in anticipo quali righe di dati appartengono alle varie partizioni. L'impostazione predefinita di questa opzione è **True** se la pubblicazione soddisfa i criteri per le partizioni pre-calcolate. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se ottimizzare la sincronizzazione calcolando in anticipo quali righe di dati appartengono alle varie partizioni. L'impostazione predefinita di questa opzione è **True** se la pubblicazione soddisfa i criteri per le partizioni pre-calcolate. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Ottimizza sincronizzazione**  
  Determina se ottimizzare l'elaborazione di processi merge archiviando metadati aggiuntivi in ogni Sottoscrittore. Tale ottimizzazione è stata sostituita dalle partizioni pre-calcolate. L'opzione **Ottimizza sincronizzazione** è rilevante solo se l'opzione **Pre-calcola partizioni** è impostata su **False**. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

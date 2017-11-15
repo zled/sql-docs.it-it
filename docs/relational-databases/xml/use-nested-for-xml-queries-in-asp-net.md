@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - nested FOR XML queries in ASP.NET
 - ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 080c4c94b10836dd58206ebf690ea45a946994b0
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: ab179ed990361c62144a2f2aa14c1e62692e223b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Utilizzo di query FOR XML nidificate in ASP.NET
   In questo esempio, l'applicazione ASP.NET consente di restituire il valore XML in un browser mediante l'esecuzione di una stored procedure in SQL Server. La stored procedure consente di generare un valore XML tramite query nidificate. Un'istruzione SELECT simile è illustrata nell'argomento [Generazione di elementi di pari livello tramite query nidificate in modalità AUTO](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md). In questo esempio viene indicata la modalità per utilizzare query FOR XML nidificate per generare un valore XML incentrato sugli attributi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -101,4 +99,3 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
  [Utilizzo di query FOR XML nidificate](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   
-

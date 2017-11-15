@@ -52,17 +52,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: afa676627cd7d6364d45bcbe07102f5ad5bf637e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc669d43fc5331a1ce161b0c1c2098a38c5224fb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formattazione di un grafico (Generatore report e SSRS)
   Dopo aver definito i dati per il grafico e una volta ottenuta la visualizzazione desiderata, è possibile aggiungere una formattazione per migliorare l'aspetto complessivo ed evidenziare i principali punti dati. Le opzioni di formattazione più comuni possono essere modificate dalla finestra di dialogo Proprietà accessibile facendo clic con il pulsante destro del mouse su un elemento del grafico per visualizzare il relativo menu di scelta rapida. A ogni elemento del grafico è associata una finestra di dialogo specifica. Per altre informazioni sugli elementi dei grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -100,4 +99,3 @@ ms.lasthandoff: 08/09/2017
  [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   
-

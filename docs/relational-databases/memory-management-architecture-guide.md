@@ -5,24 +5,23 @@ ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: db2d067b9daaf0ca015e8069c9e01cab783cfeb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +55,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 <sup>1</sup> Le versioni a 32 bit non sono disponibili a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb è un parametro di avvio del sistema operativo. Per altre informazioni, consultare MSDN Library.  
 <sup>3</sup> WOW64 (Windows on Windows 64) è una modalità che consente di eseguire la versione a 32 bit di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un sistema operativo a 64 bit.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supporta il valore massimo del sistema operativo.  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supporta fino a 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supporta il valore massimo del sistema operativo.  
 <sup>5</sup> Si noti che l'opzione sp_configure awe enabled è presente in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]a 64 bit, ma viene ignorata.    
 <sup>6</sup> Se viene concesso il privilegio Blocco di pagine in memoria (LPIM), sia su supporto a 32 bit per AWE che a 64 bit indipendente, è consigliabile impostare anche la memoria massima del server.
 
@@ -181,5 +180,4 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'arch
 ## <a name="see-also"></a>Vedere anche
 [Lettura di pagine](../relational-databases/reading-pages.md)   
  [Scrittura di pagine](../relational-databases/writing-pages.md)
-
 

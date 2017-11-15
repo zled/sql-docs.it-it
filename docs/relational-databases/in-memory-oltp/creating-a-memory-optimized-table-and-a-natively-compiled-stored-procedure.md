@@ -1,44 +1,41 @@
 ---
 title: Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 80a65fb9599f613d63b6201242471ca89cbb1080
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo
   In questo argomento è incluso un esempio in cui viene illustrata la sintassi per OLTP in memoria.  
   
  Per abilitare un'applicazione all'utilizzo di OLTP in memoria, è necessario completare le attività seguenti:  
   
--   Creare un filegroup di dati con ottimizzazione per la memoria e aggiungervi un contenitore.  
+-   Creare un filegroup di dati ottimizzato per la memoria e aggiungervi un contenitore.  
   
--   Creare tabelle e indici con ottimizzazione per la memoria. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+-   Creare tabelle e indici ottimizzati per la memoria. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
--   Caricare i dati nella tabella con ottimizzazione per la memoria e aggiornare le statistiche dopo il caricamento dei dati e prima della creazione delle stored procedure compilate. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
+-   Caricare i dati nella tabella ottimizzata per la memoria e aggiornare le statistiche dopo il caricamento dei dati e prima della creazione delle stored procedure compilate. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
   
--   Creare stored procedure compilate in modo nativo per l'accesso ai dati nelle tabelle con ottimizzazione per la memoria. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). È inoltre possibile utilizzare codice [!INCLUDE[tsql](../../includes/tsql-md.md)] tradizionale e interpretato per accedere ai dati nelle tabelle con ottimizzazione per la memoria.  
+-   Creare stored procedure compilate in modo nativo per l'accesso ai dati nelle tabelle ottimizzate per la memoria. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). È inoltre possibile utilizzare codice [!INCLUDE[tsql](../../includes/tsql-md.md)] tradizionale e interpretato per accedere ai dati nelle tabelle ottimizzate per la memoria.  
   
--   In base alle esigenze, eseguire la migrazione dei dati dalle tabelle esistenti nelle tabelle con ottimizzazione per la memoria.  
+-   In base alle esigenze, eseguire la migrazione dei dati dalle tabelle esistenti nelle tabelle ottimizzate per la memoria.  
   
- Per informazioni su come usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare tabelle con ottimizzazione per la memoria, vedere [Supporto di SQL Server Management Studio per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
+ Per informazioni su come usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare tabelle ottimizzate per la memoria, vedere [Supporto di SQL Server Management Studio per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
   
  Nell'esempio di codice seguente è necessaria una directory denominata c:\Data.  
   
@@ -243,4 +240,3 @@ ORDER BY so.so_id, sod.lineitem_id
  [Esempi di codice di OLTP in memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
-

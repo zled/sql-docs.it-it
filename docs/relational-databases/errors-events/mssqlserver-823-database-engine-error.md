@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 823 (Database Engine error)
+helpviewer_keywords: 823 (Database Engine error)
 ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9e44f9347c238f4522bcb1161d6b75ed2bb990b3
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2ed8a95449ed7fd6944a42b34b1447c58b7bed2a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver---database-engine-error"></a>Errore del motore di database MSSQLSERVER
   
@@ -43,4 +40,3 @@ Una richiesta di lettura o scrittura di Windows non è stata eseguita. Il messag
 ## <a name="user-action"></a>Azione dell'utente  
 Per ulteriori informazioni vedere il registro eventi di sistema. Contattare il produttore dell'hardware o il Servizio Supporto Tecnico Clienti Microsoft per determinare la causa e l'azione di correzione appropriata. Dopo la correzione dell'errore hardware, ripristinare tutti i database ed eseguire DBCC CHECKDB.  
   
-

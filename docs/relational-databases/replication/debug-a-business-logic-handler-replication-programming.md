@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6a681d03ae06573a4837ff6b545475980633e3ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debug di un gestore della logica di business (programmazione della replica)
   Utilizzare un gestore della logica di business per richiamare logica di business personalizzata quando viene sincronizzata una sottoscrizione di tipo merge. Per altre informazioni, vedere [Eseguire logiche di business durante la sincronizzazione di tipo merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Creare un progetto RMO (Replication Management Objects) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio che avvia a livello di programmazione l'agente di merge in modo sincrono. Per altre informazioni, vedere [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-4.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per altre informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+4.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per ulteriori informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 5.  Compilare il gestore della logica di business in modalità debug e distribuire il file di simboli (pdb) del debug e dell'assembly nel percorso registrato nel passaggio 1.  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Creare e registrare un gestore della logica di business. Per altre informazioni, vedere [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per altre informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+3.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per ulteriori informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 4.  Compilare il gestore della logica di business in modalità debug e distribuire il file di simboli (pdb) del debug e dell'assembly nel server Web nel percorso registrato nel passaggio 1.  
   
@@ -87,7 +85,6 @@ ms.lasthandoff: 06/22/2017
 11. Presupponendo che non siano stati impostati altri punti di interruzione e che vengano replicati i comandi appropriati, l'esecuzione si arresta quando raggiunge il punto di interruzione nel gestore della logica di business.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementare un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
-

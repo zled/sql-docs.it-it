@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Oracle publishing [SQL Server replication], script to grant permissions
+helpviewer_keywords: Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 847fc8a563be78e9dd354d2a1d255945a014fa2c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script per la concessione di autorizzazioni per Oracle
   Lo script descritto in questo argomento viene utilizzato durante la configurazione di un database Oracle i cui i dati verranno pubblicati tramite la replica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Questo script è disponibile anche nella directory seguente dopo l'installazione: *\<unità>*:\\\Programmi\Microsoft SQL Server\\*\<NomeIstanza>*\MSSQL\Install\oracleadmin.sql. Per altre informazioni sulla configurazione del database Oracle, vedere [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
@@ -133,4 +130,3 @@ GRANT CREATE ANY TRIGGER TO &&ReplLogin;
  [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   
-

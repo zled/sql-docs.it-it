@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>Sottoscrittori IBM DB2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      La maggior parte delle opzioni nella stringa è specifica per il server DB2 configurato, ma è necessario che le opzioni `Process Binary as Character` e `Derive Parameters` siano sempre impostate su `False`. È necessario specificare un valore per l'opzione `Initial Catalog` per identificare il database di sottoscrizione. La stringa di connessione verrà immessa nella Creazione guidata nuova sottoscrizione durante la creazione della sottoscrizione.  
   
-3.  Creare uno snapshot o una pubblicazione transazionale, abilitarlo per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi creare una sottoscrizione push per il Sottoscrittore. Per altre informazioni, vedere [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Creare uno snapshot o una pubblicazione transazionale, abilitarlo per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi creare una sottoscrizione push per il Sottoscrittore. Per altre informazioni, vedere [Creazione di una sottoscrizione per un Sottoscrittore non SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  Se necessario, specificare uno script di creazione personalizzato per uno o più articoli. Quando viene pubblicata una tabella, viene creato uno script `CREATE TABLE` per la tabella. Per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo script viene creato nel sottolinguaggio [!INCLUDE[tsql](../../../includes/tsql-md.md)] e viene quindi convertito in un sottolinguaggio SQL più generico dall'agente di distribuzione prima di essere applicato al Sottoscrittore. Per specificare uno script di creazione personalizzato, modificare lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] esistente oppure creare uno script completo che utilizzi il sottolinguaggio DB2 SQL. Se viene creato uno script DB2, utilizzare la direttiva **bypass_translation** in modo che l'agente di distribuzione possa applicare lo script al Sottoscrittore senza conversione.  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

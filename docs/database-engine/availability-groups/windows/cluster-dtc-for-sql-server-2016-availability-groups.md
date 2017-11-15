@@ -5,22 +5,20 @@ ms.date: 08/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: bf3445a7f28bc53b844946f66bc86712931d82e2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9291f9ce4659e022652078a9f1fadb3502c0e6e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC del cluster per i gruppi di disponibilità di SQL Server 2016
 Questo argomento descrive i requisiti e i passaggi per il clustering del servizio Microsoft Distributed Transaction Coordinator (DTC) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni sulle transazioni distribuite e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità Always On (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
@@ -68,4 +66,3 @@ Dopo aver creato la risorsa gruppo di disponibilità, creare una risorsa DTC clu
 [Supporto DTC di SQL Server 2016 nei gruppi di disponibilità](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
 [Collegamento esterno: Configurare DTC per un'istanza cluster di SQL Server con Windows Server 2008 R2](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
-

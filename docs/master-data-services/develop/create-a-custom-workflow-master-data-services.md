@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 290f862bc9e0295d940a832e07415831bab060bb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: c6011525ab0b33a19ddd392a46a2b02a20dbefe9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate le regole business per creare soluzioni di base per il flusso di lavoro, come l'aggiornamento e la convalida automatici dei dati e l'invio di notifiche mediante posta elettronica in base alle condizioni specificate. Quando è necessaria un'elaborazione più complessa di quella fornita dalle azioni predefinite del flusso di lavoro, utilizzare un flusso di lavoro personalizzato. Un flusso di lavoro personalizzato è un assembly .NET che viene creato. Quando viene chiamato l'assembly del flusso di lavoro, il codice può eseguire qualsiasi azione richiesta dalla situazione. Se ad esempio il flusso di lavoro richiede l'elaborazione di eventi complessi, come le approvazioni multilivello o gli alberi delle decisioni complessi, è possibile configurare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in modo da avviare un flusso di lavoro personalizzato che analizza i dati e determina dove inviarli per l'approvazione.  
@@ -160,4 +157,3 @@ ms.lasthandoff: 09/07/2017
  [Descrizione XML del flusso di lavoro personalizzato &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   
-

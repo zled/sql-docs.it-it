@@ -1,27 +1,24 @@
 ---
 title: Importare dati dalle tabelle (Master Data Services) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 7d059b2852c864f734c924383a115e61431bcccc
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: b09d99d6f00b25c95d35c93d8ce12f0b1ca61761
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importare dati dalle tabelle (Master Data Services)
   È possibile aggiungere dati e apportare modifiche ai dati in bulk a un modello in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/07/2017
   
  **Per aggiungere, aggiornare ed eliminare dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**   
   
-1.  Preparare i membri da importare nella tabella di gestione temporanea appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , ad esempio fornire valori per i campi obbligatori. Per una panoramica sulle tabelle di gestione temporanea, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+1.  Preparare i membri da importare nella tabella di staging appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ad esempio fornire valori per i campi obbligatori. Per una panoramica sulle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
     -   Per i membri foglia la tabella è stg.\<name>_Leaf, dove \<name> si riferisce all'entità corrispondente. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -54,15 +51,15 @@ ms.lasthandoff: 09/07/2017
   
      Per altre informazioni, vedere [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
   
-3.  Importare dati nelle tabelle di gestione temporanea usando l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+3.  Importare dati nelle tabelle di staging usando l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
      Per altre informazioni, vedere [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
-4.  Caricare i dati dalle tabelle di gestione temporanea nelle tabelle di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , effettuando una delle operazioni seguenti  
+4.  Caricare i dati dalle tabelle di staging nelle tabelle di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], effettuando una delle operazioni seguenti  
   
-    -   Eseguire la stored procedure di gestione temporanea che corrisponde alla tabella di gestione temporanea in cui spostare i dati.  
+    -   Eseguire la stored procedure di staging che corrisponde alla tabella di staging in cui spostare i dati.  
   
-         Per una panoramica sulle stored procedure e sulle tabelle di gestione temporanea, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md). Per altre informazioni sui parametri delle stored procedure di gestione temporanea e un esempio di codice, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
+         Per una panoramica sulle stored procedure e sulle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md). Per altre informazioni sui parametri delle stored procedure di gestione temporanea e un esempio di codice, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
     -   Usare l'area funzionale **Gestione integrazione** di Gestione dati master.  
   
@@ -78,7 +75,6 @@ ms.lasthandoff: 09/07/2017
   
      In Gestione dati master passare all'area funzionale **Visualizzatore** per il modello e quindi applicare le regole di business per convalidare i dati. Per altre informazioni, vedere [Convalidare membri specifici rispetto a regole di business &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). È anche possibile usare una stored procedure per convalidare i dati. Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-     Quando si caricano dati dalle tabelle di gestione temporanea, i dati non vengono convalidati automaticamente rispetto alle regole di business. Per altre informazioni sulla convalida e sulla sua esecuzione, vedere [Convalida &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
+     Quando si caricano dati dalle tabelle di staging, i dati non vengono convalidati automaticamente rispetto alle regole di business. Per altre informazioni sulla convalida e sulla sua esecuzione, vedere [Convalida &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
   
   
-

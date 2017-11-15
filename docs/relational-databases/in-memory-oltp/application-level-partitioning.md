@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b0133e07a063589deeae9cf1d1cb9e05fe480437
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
-  Questa applicazione elabora gli ordini. Gli ordini recenti vengono sottoposti a numerose elaborazioni. Gli ordini meno recenti non vengono sottoposti a numerose elaborazioni. Gli ordini recenti sono in una tabella con ottimizzazione per la memoria. Gli ordini meno recenti sono in una tabella basata su disco. Tutti gli ordini dopo *hotDate* sono nella tabella con ottimizzazione per la memoria. Tutti gli ordini prima di *hotDate* sono nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella con ottimizzazione per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
+  Questa applicazione elabora gli ordini. Gli ordini recenti vengono sottoposti a numerose elaborazioni. Gli ordini meno recenti non vengono sottoposti a numerose elaborazioni. Gli ordini recenti sono in una tabella ottimizzata per la memoria. Gli ordini meno recenti sono in una tabella basata su disco. Tutti gli ordini dopo *hotDate* sono nella tabella ottimizzata per la memoria. Tutti gli ordini prima di *hotDate* sono nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
   
  In questo esempio non viene utilizzata una tabella partizionata della tabella basata su disco ma si tiene traccia di un punto di divisione esplicito tra le due tabelle, utilizzando una terza tabella. Il punto di divisione può essere usato per garantire che i dati appena aggiunti vengano inseriti sempre nella tabella appropriata in base alla data. Inoltre, può essere usato per determinare la posizione in cui cercare i dati. I dati che arrivano in ritardo vengono ancora inseriti nella tabella appropriata.  
   
@@ -223,4 +221,3 @@ select * from cold order by orderDate desc
  [Esempi di codice di OLTP in memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
-

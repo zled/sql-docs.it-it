@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU
   È opportuno monitorare periodicamente un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino nei normali intervalli. Se la frequenza di utilizzo della CPU è costantemente elevata può essere necessario eseguire un aggiornamento della CPU o aggiungere più processori. Una valore costantemente elevato di utilizzo della CPU può inoltre indicare la presenza di un'applicazione non progettata o ottimizzata correttamente. L'ottimizzazione dell'applicazione potrebbe ridurre l'utilizzo della CPU.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  I valori di utilizzo prossimi al 100%, sintomo dell'elaborazione di numerose richieste client, possono indicare la presenza di processi in coda in attesa del tempo del processore che causano un collo di bottiglia. Risolvere il problema aggiungendo processori più veloci.  
   
   
-

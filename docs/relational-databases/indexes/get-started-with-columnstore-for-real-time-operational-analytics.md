@@ -1,26 +1,24 @@
 ---
 title: Introduzione a columnstore per l'analisi operativa in tempo reale | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  L'analisi operativa in tempo reale è destinata allo scenario di una singola origine dati, ad esempio un'applicazione ERP (Enterprise Resource Planning) in cui è possibile eseguire sia i carichi di lavoro operativi che i carichi di lavoro di analisi. Ciò non sostituisce la necessità di un data warehouse separato quando è necessario integrare dati da più origini prima di eseguire il carico di lavoro di analisi o quando sono necessarie prestazioni delle analisi estremamente elevate usando dati preaggregati, ad esempio cubi.  
   
- L'analisi in tempo reale usa un indice columnstore aggiornabile in una tabella rowstore.  L'indice columnstore gestisce una copia dei dati, quindi i carichi di lavoro OLTP e di analisi vengono eseguiti su copie separate dei dati. In questo modo si riduce al minimo l'impatto sulle prestazioni causato dall'esecuzione contemporanea di entrambi i carichi di lavoro.  SQL Server gestisce automaticamente le modifiche di indice in modo le modifiche OLTP siano sempre aggiornate per l'analisi. Con questa progettazione l'esecuzione di analisi in tempo reale su dati aggiornati è possibile e utile. Ciò funziona sia per le tabelle basate su disco che per le tabelle con ottimizzazione per la memoria.  
+ L'analisi in tempo reale usa un indice columnstore aggiornabile in una tabella rowstore.  L'indice columnstore gestisce una copia dei dati, quindi i carichi di lavoro OLTP e di analisi vengono eseguiti su copie separate dei dati. In questo modo si riduce al minimo l'impatto sulle prestazioni causato dall'esecuzione contemporanea di entrambi i carichi di lavoro.  SQL Server gestisce automaticamente le modifiche di indice in modo le modifiche OLTP siano sempre aggiornate per l'analisi. Con questa progettazione l'esecuzione di analisi in tempo reale su dati aggiornati è possibile e utile. Ciò funziona sia per le tabelle basate su disco che per le tabelle ottimizzate per la memoria.  
   
 ## <a name="get-started-example"></a>Esempio introduttivo  
  Per iniziare a usare l'analisi in tempo reale:  
@@ -107,7 +105,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Uso di un ritardo di compressione/dei numeri relativi alle prestazioni per ridurre al minimo l'impatto della manutenzione di un indice columnstore non cluster](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [Analisi operativa in tempo reale con le tabelle con ottimizzazione per la memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   [Analisi operativa in tempo reale con le tabelle ottimizzate per la memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
 -   [Ridurre al minimo la frammentazione dell'indice in un indice columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 06/22/2017
  Le query di analisi accedono in modo trasparente sia ai dati meno attivi che ai dati attivi in base alle esigenze per fornire analisi in tempo reale. Se una parte importante del carico di lavoro operativo riguarda la gestione dei dati attivi, le operazioni non richiederanno ulteriore manutenzione dell'indice columnstore. Una procedura consigliata prevede la creazione di un indice cluster rowstore per le colonne usate nella definizione dell'indice filtrato.   SQL Server usa l'indice cluster per analizzare rapidamente le righe che non soddisfano la condizione filtrata. Senza questo indice cluster, sarà necessario eseguire una scansione di tabella completa della tabella rowstore per trovare le righe che possono esercitare un elevato impatto negativo sulle prestazioni di una query di analisi. In assenza di un indice cluster si potrebbe creare un indice Btree non cluster filtrato complementare per identificare le righe, ma questa scelta non è consigliabile perché l'accesso a un ampio intervallo di righe usando indici Btree non cluster comporta costi elevati.  
   
 > [!NOTE]  
->  Un indice columnstore non cluster filtrato è supportato solo nelle tabelle basate su disco. Non è supportato nelle tabelle con ottimizzazione per la memoria.  
+>  Un indice columnstore non cluster filtrato è supportato solo nelle tabelle basate su disco. Non è supportato nelle tabelle ottimizzate per la memoria.  
   
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Esempio A: accesso a dati attivi da un indice Btree, dati meno attivi dall'indice columnstore  
  Questo esempio usa una condizione filtrata (accountkey > 0) per stabilire quali righe saranno presenti nell'indice columnstore. L'obiettivo è di progettare la condizione filtrata e le query successive per accedere a dati attivi, caratterizzati da modifiche frequenti, dall'indice Btree e di accedere ai dati meno attivi, che sono più stabili, dall'indice columnstore.  
@@ -231,4 +229,3 @@ ORDER BY created_time DESC
  [Deframmentazione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

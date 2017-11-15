@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
+helpviewer_keywords: Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger"></a>Debugger Transact-SQL
   Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di individuare errori nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] esaminandone il comportamento in fase di esecuzione. Dopo avere impostato la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sulla modalità di debug, è possibile sospendere l'esecuzione di righe specifiche di codice e controllare le informazioni e i dati utilizzati o restituiti da tali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-debugger-information"></a>Visualizzazione delle informazioni del debugger  
  Ogni volta che il debugger sospende l'esecuzione in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, è possibile utilizzare le seguenti finestre del debugger per visualizzare lo stato corrente dell'esecuzione:  
   
--   **Locals** and **Watch.** In queste finestre vengono visualizzate le espressioni [!INCLUDE[tsql](../../includes/tsql-md.md)] attualmente allocate. Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono una singola espressione scalare. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] supporta la visualizzazione di espressioni che fanno riferimento a variabili, parametri oppure alle funzioni predefinite [!INCLUDE[tsql](../../includes/tsql-md.md)] i cui nomi iniziano con @@. In queste finestre vengono inoltre visualizzati i valori dei dati che sono attualmente assegnati alle espressioni.  
+-   **Variabili locali** ed **Espressione di controllo** In queste finestre vengono visualizzate le espressioni [!INCLUDE[tsql](../../includes/tsql-md.md)] attualmente allocate. Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono una singola espressione scalare. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] supporta la visualizzazione di espressioni che fanno riferimento a variabili, parametri oppure alle funzioni predefinite [!INCLUDE[tsql](../../includes/tsql-md.md)] i cui nomi iniziano con @@. In queste finestre vengono inoltre visualizzati i valori dei dati che sono attualmente assegnati alle espressioni.  
   
 -   **Controllo immediato.** Questa finestra visualizza il valore di un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] e consente di salvare l'espressione in una finestra **Espressione di controllo** .  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Output.** In questa finestra vengono visualizzati i vari messaggi e dati del programma, ad esempio i messaggi di sistema inviati dal debugger.  
   
--   **Results** and **Messages.** In queste schede della finestra dell'editor di query vengono visualizzati i risultati delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] precedentemente eseguite.  
+-   **Risultati** ed **Messaggi** In queste schede della finestra dell'editor di query vengono visualizzati i risultati delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] precedentemente eseguite.  
   
 ## <a name="transact-sql-debugger-tasks"></a>Attività del debugger Transact-SQL  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

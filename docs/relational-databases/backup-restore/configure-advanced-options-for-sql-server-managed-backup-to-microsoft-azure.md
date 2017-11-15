@@ -5,22 +5,20 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
-ms.contentlocale: it-it
-ms.lasthandoff: 08/22/2017
-
+ms.openlocfilehash: e968aad24d2d1ac529028eb39f64b2a842e1712b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure
   L'esercitazione seguente descrive come impostare le opzioni avanzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Queste procedure sono necessarie solo se servono le funzionalità offerte. In caso contrario, è possibile abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e affidarsi al comportamento predefinito.  
@@ -121,4 +119,3 @@ ms.lasthandoff: 08/22/2017
  [Backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
-

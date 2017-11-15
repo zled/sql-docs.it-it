@@ -5,8 +5,7 @@ ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +15,16 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d591578ed239e7c6b0279ea923fc18b558d4f252
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-or-securables-page"></a>Pagina Autorizzazioni o Entità a sicurezza diretta
   Usare la pagina **Autorizzazioni** o la pagina **Entità a protezione diretta** per visualizzare o impostare le autorizzazioni per le entità a protezione diretta. È possibile accedere a questa pagina da diversi tipi di oggetti. Il contenuto della pagina può modificare leggermente, in base alle modalità in cui la pagina è aperta e al contenuto. Quando la pagina viene visualizzata, la griglia superiore della pagina potrebbe contenere alcuni elementi o potrebbe essere vuota. Per aggiungere elementi alla griglia superiore, fare clic su **Cerca**. Selezionare un elemento in tale griglia, quindi impostare le autorizzazioni appropriate nella scheda **Esplicita** . Per visualizzare autorizzazioni aggregate, usare la scheda **Valide**.  
@@ -79,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 589cda4cb202a14cb4633a4126e8fa4680894d34
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d7063b1fdbcec713bea65b0e5e68f0ea40a683fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un set completo di strumenti per il monitoraggio di eventi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per l'ottimizzazione della progettazione fisica del database. La scelta dello strumento dipende dal tipo di monitoraggio o di ottimizzazione da eseguire e dagli eventi specifici da monitorare.  
@@ -76,4 +74,3 @@ ms.lasthandoff: 06/22/2017
  Per ulteriori informazioni sugli strumenti di Windows Server o dei sistemi operativi Windows, consultare la documentazione di Windows.  
   
   
-

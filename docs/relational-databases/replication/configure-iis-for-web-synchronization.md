@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
@@ -174,7 +172,7 @@ ms.lasthandoff: 06/22/2017
   
 8.  Nella pagina **Accesso alla directory** :  
   
-    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
+    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. Si tratta degli account che verranno specificati nella pagina **Informazioni server Web** della Creazione guidata nuova sottoscrizione oppure come valore per il parametro [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* .  
   
 9. Nella pagina **Accesso alla condivisione snapshot** immettere la condivisione snapshot. In questa condivisione vengono impostate le autorizzazioni appropriate affinché i Sottoscrittori possano accedere ai file di snapshot. Per altre informazioni sulle autorizzazioni per la condivisione, vedere [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -366,4 +364,3 @@ ms.lasthandoff: 06/22/2017
  [Configura sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

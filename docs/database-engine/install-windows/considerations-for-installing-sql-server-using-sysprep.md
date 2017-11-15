@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: f10952679464999ae78fbb00432d3a8b8a7dc5ef
-ms.contentlocale: it-it
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerazioni sull'installazione di SQL Server tramite SysPrep
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep consente di preparare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer e di completare la configurazione in un secondo momento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep comporta un processo costituito da due passaggi per ottenere un'istanza autonoma configurata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi necessari sono i seguenti:  

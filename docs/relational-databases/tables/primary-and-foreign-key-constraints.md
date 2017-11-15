@@ -1,13 +1,11 @@
 ---
 title: Vincoli di chiavi primarie ed esterne | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server]
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e93f5fa211bf376c80011bb2d13e861b43205630
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Vincoli di chiavi primarie ed esterne
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Una tabella con un riferimento di chiave esterna a se stessa è comunque limitata a 253 riferimenti di chiave esterna.  
   
--   I riferimenti di chiave esterna maggiori di 253 non sono attualmente disponibili per gli indici columnstore, le tabelle con ottimizzazione per la memoria, Estensione database o tabelle di chiave esterna partizionate.  
+-   I riferimenti di chiave esterna maggiori di 253 non sono attualmente disponibili per gli indici columnstore, le tabelle ottimizzate per la memoria, Estensione database o tabelle di chiave esterna partizionate.  
   
 ### <a name="indexes-on-foreign-key-constraints"></a>Indici nei vincoli di chiave esterna  
  A differenza di quanto avviene per i vincoli di chiave primaria, la creazione di un vincolo di chiave esterna non determina automaticamente la creazione di un indice corrispondente. La creazione manuale di un indice in una chiave esterna, tuttavia, rappresenta spesso un'operazione utile per i motivi seguenti:  
@@ -139,4 +136,3 @@ ms.lasthandoff: 06/22/2017
 |Viene descritto come disabilitare un vincolo di chiave esterna durante l'istruzione INSERT o UPDATE.|[Disabilitazione di vincoli di chiave esterna con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
-

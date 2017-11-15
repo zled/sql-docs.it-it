@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e446499e51168614859e77beb312c468167c1e3
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 40c9434ae693dfe71e97a389ac4c8b500154112a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lezione 1: Creazione e applicazione di criteri Disattivata per impostazione predefinita
 Tramite i criteri della gestione basata su criteri è possibile amministrare una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o più oggetti dell'istanza, una o più istanze del server, uno o più database o uno o più oggetti di database. Gli amministratori del database desiderano impedire che in determinati server sia abilitato Posta elettronica database. In questa lezione verranno creati una condizione e i criteri per l'impostazione dell'opzione server in questione. Il server verrà quindi testato per verificarne la conformità ai criteri. Si utilizzeranno infine i criteri per riconfigurare il server per renderlo conforme.  
@@ -41,4 +38,3 @@ In questa lezione sono inclusi gli argomenti seguenti:
   
   
   
-

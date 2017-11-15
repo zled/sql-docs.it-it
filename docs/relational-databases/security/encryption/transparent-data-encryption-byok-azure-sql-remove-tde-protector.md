@@ -16,15 +16,12 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 861a24ef2f0bc26adece27b2612d4bf2d4640a63
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 5756f318196967169dfbd0272b3ea9af365cdb5a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
-
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Rimuovere una protezione Transparent Data Encryption (TDE) con PowerShell
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -114,4 +111,3 @@ Poiché viene automaticamente eseguito il backup dei file di database e di log, 
 - Informazioni su come eseguire la rotazione della protezione TDE di un server per soddisfare i requisiti di sicurezza: [Ruotare la protezione Transparent Data Encryption (TDE) con PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md)
 
 - Per un'introduzione al supporto Bring Your Own Key (BYOK) per TDE, vedere [PowerShell: abilitare TDE usando la propria chiave di Azure Key Vault](transparent-data-encryption-byok-azure-sql-configure.md)
-

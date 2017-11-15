@@ -5,25 +5,23 @@ ms.date: 02/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,5 +155,4 @@ Entrambi questi problemi sono correlati al servizio SQL Server Browser che indic
     1. In Gestione configurazione SQL Server nel computer client espandere **Configurazione** *SQL Native Client* **versione**nel riquadro sinistro e quindi selezionare **Protocolli client**.
     2. Nel riquadro destro assicurarsi che TCP/IP sia abilitato. Se TCP/IP è disabilitato, fare clic con il pulsante destro del mouse su **TCP/IP** e quindi fare clic su **Abilita**.
     3. Assicurarsi che l'ordine dei protocolli per TCP/IP sia rappresentato da un numero più piccolo rispetto a quello di named pipe o protocolli VIA (nelle versioni precedenti). In genere è consigliabile lasciare Shared Memory con ordine 1 e TCP/IP con ordine 2. Shared Memory viene usato solo quando il client e SQL Server sono in esecuzione nello stesso computer. Viene tentato l'uso di tutti i protocolli abilitati nell'ordine fino a quando non viene stabilita una connessione, ad eccezione di Shared Memory che viene ignorato quando non viene stabilita la connessione allo stesso computer. 
-
 

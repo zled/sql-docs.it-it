@@ -1,27 +1,24 @@
 ---
 title: Scenari di utilizzo delle tabelle temporali | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: ff915a277c4c51a3967db5c9bc880c6bae2a97c6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -166,7 +163,7 @@ Per i carichi di lavoro con elaborazione delle transazioni elevata, è consiglia
   
 -   Le analisi delle tendenze tipiche sfruttano i vantaggi dalle prestazioni di query fornite da un indice columnstore cluster.  
   
--   L'attività di scaricamento dei dati con tabelle con ottimizzazione per la memoria offre prestazioni migliori con un carico di lavoro OLTP impegnativo, se la tabella di cronologia include un indice columnstore cluster.  
+-   L'attività di scaricamento dei dati con tabelle ottimizzate per la memoria offre prestazioni migliori con un carico di lavoro OLTP impegnativo, se la tabella di cronologia include un indice columnstore cluster.  
   
 -   Un indice columnstore cluster offre un'eccellente compressione, specialmente negli scenari in cui non tutte le colonne vengono modificate contemporaneamente.  
   
@@ -180,7 +177,7 @@ La gestione dell'inventario o il trading valutario sono, tra gli altri, esempi d
  L'esempio di codice seguente crea ProductInventory come tabella temporale con controllo delle versioni di sistema in memoria con un indice columnstore cluster nella tabella di cronologia, che in effetti sostituisce l'indice rowstore creato per impostazione predefinita:  
   
 > [!NOTE]  
->  Assicurarsi che il database consenta la creazione di tabelle con ottimizzazione per la memoria. Vedere [Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+>  Assicurarsi che il database consenta la creazione di tabelle ottimizzate per la memoria. Vedere [Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ```  
 USE TemporalProductInventory  
@@ -596,4 +593,3 @@ Se un valore appena aggiornato non è corretto, in molti scenari il ripristino d
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

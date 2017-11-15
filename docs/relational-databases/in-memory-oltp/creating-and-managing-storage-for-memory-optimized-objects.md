@@ -1,32 +1,29 @@
 ---
 title: Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b955ffcf895f5356b77e0d772b3f1ac0cd9780e
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 374b0d1eabfd3956d6e6e8aab684203fe4dcac75
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è integrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in modo da consentire la presenza sia di tabelle con ottimizzazione per la memoria che di tabelle tradizionali basate su disco nello stesso database. Tuttavia, la struttura di archiviazione per le tabelle con ottimizzazione per la memoria è diversa rispetto alle tabelle basate su disco.  
+  Il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è integrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in modo da consentire la presenza sia di tabelle ottimizzate per la memoria che di tabelle tradizionali basate su disco nello stesso database. Tuttavia, la struttura di archiviazione per le tabelle ottimizzate per la memoria è diversa rispetto alle tabelle basate su disco.  
   
  L'archiviazione per una tabella basata su disco presenta gli attributi chiave seguenti:  
   
@@ -38,21 +35,21 @@ ms.lasthandoff: 06/22/2017
   
 -   I dati vengono spostati in memoria (pool di buffer) in base alle esigenze e le pagine appena create o modificate vengono scritte in modo asincrono sul disco generando operazioni IO principalmente casuali.  
   
- L'archiviazione per le tabelle con ottimizzazione per la memoria presenta gli attributi chiave seguenti:  
+ L'archiviazione per le tabelle ottimizzate per la memoria presenta gli attributi chiave seguenti:  
   
--   Tutte le tabelle con ottimizzazione per la memoria sono mappate a un filegroup di dati con ottimizzazione per la memoria. Questo filegroup usa sintassi e semantica simili a Filestream.  
+-   Tutte le tabelle ottimizzate per la memoria sono mappate a un filegroup di dati ottimizzato per la memoria. Questo filegroup usa sintassi e semantica simili a Filestream.  
   
 -   Non sono presenti pagine e i dati vengono salvati in modo permanente come riga.  
   
--   Tutte le modifiche apportate alle tabelle con ottimizzazione per la memoria vengono archiviate aggiungendole ai file attivi. La lettura e la scrittura nei file è sequenziale.  
+-   Tutte le modifiche apportate alle tabelle ottimizzate per la memoria vengono archiviate aggiungendole ai file attivi. La lettura e la scrittura nei file è sequenziale.  
   
 -   Un aggiornamento viene implementato come un'eliminazione seguita da un inserimento. Le righe eliminate non vengono rimosse immediatamente dalla risorsa di archiviazione. Le righe eliminate vengono rimosse da un processo in background, denominato MERGE, in base ai criteri descritti in [Durabilità per tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md).  
   
--   A differenza delle tabelle basate su disco, lo spazio di archiviazione per le tabelle con ottimizzazione per la memoria non è compresso. Quando si esegue la migrazione di una tabella basata su disco (ROW o PAGE) compressa a una tabella con ottimizzazione per la memoria, è necessario tenere conto della variazione di dimensioni.  
+-   A differenza delle tabelle basate su disco, lo spazio di archiviazione per le tabelle ottimizzate per la memoria non è compresso. Quando si esegue la migrazione di una tabella basata su disco (ROW o PAGE) compressa a una tabella ottimizzata per la memoria, è necessario tenere conto della variazione di dimensioni.  
   
--   Una tabella con ottimizzazione per la memoria può essere durevole o non durevole. È sufficiente configurare l'archiviazione per le tabelle con ottimizzazione per la memoria durevoli.  
+-   Una tabella ottimizzata per la memoria può essere durevole o non durevole. È sufficiente configurare l'archiviazione per le tabelle ottimizzate per la memoria durevoli.  
   
- In questa sezione vengono descritte le coppie di file di checkpoint e altri aspetti della modalità di archiviazione dei dati nelle tabelle con ottimizzazione per la memoria.  
+ In questa sezione vengono descritte le coppie di file di checkpoint e altri aspetti della modalità di archiviazione dei dati nelle tabelle ottimizzate per la memoria.  
   
  Contenuto della sezione:  
   
@@ -72,4 +69,3 @@ ms.lasthandoff: 06/22/2017
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5352e093cf531e4bbacdfb284966b8c9739abf4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
   I dati delle modifiche vengono resi disponibili ai consumer della funzionalità Change Data Capture tramite funzioni con valori di tabella. Per tutte le query di queste funzioni sono necessari due parametri che definiscono l'intervallo di numeri di sequenza del file di log (LSN) idonei durante lo sviluppo del set di risultati restituito. Entrambi i valori LSN che rappresentano il limite inferiore e quello superiore dell'intervallo sono inclusi nell'intervallo stesso.  
@@ -123,7 +121,7 @@ ms.lasthandoff: 08/03/2017
   
  Se le funzioni con valori di tabella della query generata hanno esito negativo nel caso in cui venga fornito un valore Null per @from_lsn o @to_lsn, le funzioni del wrapper datetime usano Null per consentire ai wrapper datetime di restituire tutte le modifiche correnti. Se Null viene passato come endpoint basso della finestra di query al wrapper datetime, l'endpoint basso dell'intervallo di validità dell'istanza di acquisizione viene utilizzato nell'istruzione SELECT sottostante applicata alla funzione con valori di tabella della query. Analogamente, se Null viene passato come endpoint alto della finestra di query, l'endpoint alto dell'intervallo di validità dell'istanza di acquisizione viene utilizzato per la selezione eseguita dalla funzione con valori di tabella della query.  
   
- Il set di risultati restituito da una funzione wrapper include tutte le colonne richieste seguite da una colonna dell'operazione, registrata come uno o due caratteri per identificare l'operazione associata alla riga. Se sono stati richiesti flag di aggiornamento, vengono visualizzati come colonne bit dopo il codice dell'operazione, nell'ordine specificato nel parametro @update_flag_list . Per informazioni sulle opzioni di chiamata per la personalizzazione dei wrapper datetime generati, vedere [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
+ Il set di risultati restituito da una funzione wrapper include tutte le colonne richieste seguite da una colonna dell'operazione, registrata come uno o due caratteri per identificare l'operazione associata alla riga. Se sono stati richiesti flag di aggiornamento, vengono visualizzati come colonne bit dopo il codice dell'operazione, nell'ordine specificato nel parametro @update_flag_list. Per informazioni sulle opzioni di chiamata per la personalizzazione dei wrapper datetime generati, vedere [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
  Il modello Instantiate a Wrapper TVF With Update Flag è una dimostrazione di come personalizzare una funzione wrapper generata per aggiungere un flag di aggiornamento per una colonna specificata al set di risultati restituito da una query delle modifiche delta. Il modello Instantiate CDC Wrapper TVFs for a Schema è una dimostrazione di come creare un'istanza dei wrapper datetime per le funzioni con valori di tabella delle query per tutte le istanze di acquisizione create per le tabelle di origine in un determinato schema del database.  
   
@@ -139,4 +137,3 @@ ms.lasthandoff: 08/03/2017
  [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
-

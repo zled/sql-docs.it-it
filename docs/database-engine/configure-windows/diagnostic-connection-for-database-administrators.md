@@ -1,13 +1,11 @@
 ---
 title: Connessione di diagnostica per gli amministratori di database | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/16/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8bc6b057722a9fd864225f74ac58739953b071a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 68bdec09d782634723b2136757a62ea60cc3d66d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una speciale connessione di diagnostica a cui possono ricorrere gli amministratori quando non è possibile usare connessioni standard al server. Questa connessione di diagnostica consente a un amministratore di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire query di diagnostica e risolvere problemi anche quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde alle richieste di connessione standard.  
@@ -149,5 +146,4 @@ ms.lasthandoff: 08/02/2017
  [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
-
 

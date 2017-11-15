@@ -7,23 +7,20 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- management tools, upgrading
+helpviewer_keywords: management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 3174cb5f1f865fb73dbb792066bbaf7ab2dc4894
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Aggiornare gli strumenti di gestione di SQL Server
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta l'aggiornamento da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. In questo argomento vengono fornite informazioni sul supporto e il comportamento dell'aggiornamento degli strumenti e i componenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Posta elettronica database, Piani di manutenzione, XPStar e XPWeb.  

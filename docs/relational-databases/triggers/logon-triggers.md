@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - logon triggers
 - login triggers
-helpviewer_keywords:
-- triggers [SQL Server], logon
+helpviewer_keywords: triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c55dff4979c50d05293c13abe86b1655027640b7
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e3176031068ca2c60b678bde49a306bda1e7c31d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="logon-triggers"></a>Trigger LOGON
   I trigger LOGON consentono di attivare stored procedure in risposta a un evento LOGON generato quando viene stabilita una sessione utente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I trigger LOGON vengono attivati dopo il completamento della fase di autenticazione della procedura di accesso, ma prima che la sessione utente venga effettivamente stabilita. Per questo motivo, tutti i messaggi generati all'interno del trigger che verrebbero normalmente visualizzati all'utente, come i messaggi di errore e i messaggi dall'istruzione PRINT, vengono invece indirizzati al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I trigger LOGON non vengono attivati in caso di esito negativo dell'autenticazione.  
@@ -90,4 +87,3 @@ END;
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   
-

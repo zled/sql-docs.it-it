@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b8b9672e89d5bd0dc1d570aa30d214cda63dbf61
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginato usando una procedura guidata, è possibile modificare l'aspetto della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Per cambiare il contenuto o il relativo formato per una legenda, modificare le opzioni della legenda per le regole corrispondenti per un livello.  
   
- Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Layer"></a> Modificare le opzioni per il livello  
  Per visualizzare i livelli per una mappa, fare clic sulla mappa per selezionarla. Viene visualizzato il riquadro della mappa. Per modificare le opzioni per un livello, fare clic con il pulsante destro del mouse sul livello e utilizzare il menu di scelta rapida.  
@@ -165,11 +164,10 @@ ms.lasthandoff: 08/09/2017
   
 -   Opzioni di sostituzione per singoli punti, linee o poligoni incorporati su un livello. Le modifiche che si apportano sono permanenti. Per ripristinare queste modifiche, è necessario ricaricare i dati per il livello.  
   
- Per altre informazioni, vedere [variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+ Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione guidata mappa e creazione guidata livello mappa &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
- [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-partition
+ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,20 +19,18 @@ f1_keywords:
 - sql13.swb.managepartition.partitionaction.f1
 - sql13.swb.managepartition.summary.f1
 - sql13.swb.managepartition.selectoutput.f1
-helpviewer_keywords:
-- wizards [SQL Server Management Studio] See Manage Partition Wizard
+helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b784bf0926f887baddf94594641ce0c1d35c69d3
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 89d561c68a324e4760c8b093ba641dc7ea3453e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
   Usare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  
@@ -73,16 +70,16 @@ ms.lasthandoff: 06/22/2017
 ### <a name="create-a-staging-table"></a>Creazione di una tabella di gestione temporanea  
  Il cambio della partizione rappresenta un'attività di partizionamento comune se si dispone di una tabella partizionata in e da cui si esegue regolarmente la migrazione di dati, ad esempio se si dispone di una tabella partizionata in cui vengono archiviati dati trimestrali correnti ed è necessario spostare nuovi dati e archiviare i dati precedenti al termine di ogni trimestre.  
   
- La procedura guidata consente di progettare la tabella di gestione temporanea con la stessa colonna di partizionamento, la stessa struttura di tabelle e colonne e gli stessi indici e di archiviare la nuova tabella nel filegroup in cui è inclusa la partizione di origine.  
+ La procedura guidata consente di progettare la tabella di staging con la stessa colonna di partizionamento, la stessa struttura di tabelle e colonne e gli stessi indici e di archiviare la nuova tabella nel filegroup in cui è inclusa la partizione di origine.  
   
- Per creare una tabella di gestione temporanea in cui e da cui spostare i dati della partizione, selezionare **Crea tabella di gestione temporanea per il cambio della partizione**.  
+ Per creare una tabella di staging in cui e da cui spostare i dati della partizione, selezionare **Crea tabella di staging per il cambio della partizione**.  
   
 ### <a name="sliding-window-scenario"></a>Scenario basato su finestra temporale scorrevole  
  Per gestire le partizioni in uno scenario basato su finestra temporale scorrevole, selezionare **Gestisci dati partizionati in uno scenario basato su finestra temporale scorrevole**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Crea tabella di gestione temporanea per il cambio della partizione**  
- Consente di creare una tabella di gestione temporanea per i dati da spostare all'interno o all'esterno della tabella partizionata esistente.  
+ **Crea tabella di staging per il cambio della partizione**  
+ Consente di creare una tabella di staging per i dati da spostare all'interno o all'esterno della tabella partizionata esistente.  
   
  **Partizione di disattivazione**  
  Fornisce le opzioni per la rimozione di una partizione dalla tabella.  
@@ -96,7 +93,7 @@ ms.lasthandoff: 06/22/2017
  ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="SwitchIn"></a> Pagina Seleziona opzioni per l'attivazione della partizione  
- Usare la pagina **Seleziona opzioni per l'attivazione della partizione** per selezionare la tabella di gestione temporanea che si desidera attivare nella tabella partizionata.  
+ Usare la pagina **Seleziona opzioni per l'attivazione della partizione** per selezionare la tabella di staging che si desidera attivare nella tabella partizionata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Mostra tutte le partizioni**  
@@ -106,12 +103,12 @@ ms.lasthandoff: 06/22/2017
  Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup**e **Conteggio righe** delle partizioni selezionate.  
   
  **Tabella di attivazione**  
- Consente di selezionare la tabella di gestione temporanea contenente la partizione che si desidera aggiungere alla tabella partizionata. È necessario creare questa tabella di gestione temporanea prima di attivare partizioni usando la **Gestione guidata partizione**.  
+ Consente di selezionare la tabella di staging contenente la partizione che si desidera aggiungere alla tabella partizionata. È necessario creare questa tabella di staging prima di attivare partizioni usando la **Gestione guidata partizione**.  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="SwitchOut"></a> Pagina Seleziona opzioni per la disattivazione della partizione  
- Usare la pagina **Seleziona opzioni per la disattivazione della partizione** per selezionare la partizione e la tabella di gestione temporanea contenente i dati partizionati che si desidera disattivare dalla tabella partizionata.  
+ Usare la pagina **Seleziona opzioni per la disattivazione della partizione** per selezionare la partizione e la tabella di staging contenente i dati partizionati che si desidera disattivare dalla tabella partizionata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Griglia partizione**  
@@ -121,29 +118,29 @@ ms.lasthandoff: 06/22/2017
  Consente di scegliere una nuova tabella o una esistente in cui spostare i dati.  
   
  **Nuovi**  
- Consente di immettere un nuovo nome per la tabella di gestione temporanea che si desidera utilizzare per la partizione da disattivare per la tabella di origine corrente.  
+ Consente di immettere un nuovo nome per la tabella di staging che si desidera utilizzare per la partizione da disattivare per la tabella di origine corrente.  
   
  **Esistente**  
- Consente di selezionare una tabella di gestione temporanea esistente che si desidera utilizzare per la partizione che si desidera disattivare per la tabella di origine corrente. Gli eventuali dati contenuti nella tabella verranno sovrascritti con i dati utilizzati per la disattivazione.  
+ Consente di selezionare una tabella di staging esistente che si desidera utilizzare per la partizione che si desidera disattivare per la tabella di origine corrente. Gli eventuali dati contenuti nella tabella verranno sovrascritti con i dati utilizzati per la disattivazione.  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Pagina Seleziona opzioni per la tabella di gestione temporanea  
- Usare la pagina **Seleziona opzioni per la tabella di gestione temporanea** per creare la tabella di gestione temporanea che si desidera utilizzare per lo spostamento dei dati partizionati.  
+ Usare la pagina **Seleziona opzioni per la tabella di staging** per creare la tabella di staging che si desidera utilizzare per lo spostamento dei dati partizionati.  
   
- Le tabelle di gestione temporanea devono risiedere nello stesso filegroup della partizione selezionata in cui è presente la tabella di origine. La tabella di gestione temporanea deve riflettere la struttura della tabella di origine e della tabella di destinazione.  
+ Le tabelle di gestione temporanea devono risiedere nello stesso filegroup della partizione selezionata in cui è presente la tabella di origine. La tabella di staging deve riflettere la struttura della tabella di origine e della tabella di destinazione.  
   
- È inoltre possibile creare gli stessi indici nella tabella di gestione temporanea presenti nella partizione di origine. La tabella di gestione temporanea contiene automaticamente un vincolo basato sugli elementi della partizione di origine. In genere tale vincolo viene generato dal valore limite della partizione di origine.  
+ È inoltre possibile creare gli stessi indici nella tabella di staging presenti nella partizione di origine. La tabella di staging contiene automaticamente un vincolo basato sugli elementi della partizione di origine. In genere tale vincolo viene generato dal valore limite della partizione di origine.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Nome tabella di gestione temporanea**  
- Consente di creare un nome per la tabella di gestione temporanea o di accettare il nome predefinito visualizzato nella casella di modifica.  
+ Consente di creare un nome per la tabella di staging o di accettare il nome predefinito visualizzato nella casella di modifica.  
   
  **Cambia partizione**  
  Consente di selezionare la partizione di origine che si desidera rimuovere dalla tabella corrente.  
   
  **Nuovo valore limite**  
- Consente di selezionare o di immettere il valore limite desiderato per la partizione nella tabella di gestione temporanea.  
+ Consente di selezionare o di immettere il valore limite desiderato per la partizione nella tabella di staging.  
   
  **Filegroup**  
  Consente di selezionare un filegroup per la nuova tabella.  
@@ -311,4 +308,3 @@ ms.lasthandoff: 06/22/2017
  [Tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
-

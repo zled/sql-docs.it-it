@@ -5,27 +5,24 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.forcefailover.f1
+f1_keywords: sql13.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4bc7044919ec275a95801088d35efe2bc88bf7a0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: a6365667a087ddd408925dddbdd712cb26df3d96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Eseguire un failover manuale forzato di un gruppo di disponibilità (SQL Server)
   Questo argomento illustra come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
@@ -297,7 +294,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Ripristino della topologia originale del gruppo di disponibilità](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Risposta all'errore irreversibile del data center principale  
+###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  Nella figura seguente viene illustrata la serie di azioni eseguite nel data center remoto in risposta a un errore irreversibile nel data center principale.  
   
  ![Passaggi per la risposta all'errore del data center principale](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Passaggi per la risposta all'errore del data center principale")  
@@ -373,4 +370,3 @@ ms.lasthandoff: 08/02/2017
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

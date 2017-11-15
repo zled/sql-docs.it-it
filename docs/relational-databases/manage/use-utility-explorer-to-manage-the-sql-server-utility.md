@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd65300d9d3c79ea0604d6ea83c1c9377b7982cc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c14be83d174694f31f5a8cc42fea054b250daf10
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizzo di Esplora utilità per gestire Utilità SQL Server
   Gestione Utilità, un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consente di connettersi alle istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per fornire una visualizzazione albero di tutti gli oggetti in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il riquadro del contenuto di Esplora utilità fornisce diverse soluzioni per visualizzare dati riepilogativi e dettagliati sullo stato dell'integrità delle istanze gestite di SQL Server. Esplora utilità fornisce anche un'interfaccia utente per visualizzare e gestire le definizioni dei criteri. Le funzionalità di Esplora utilità variano leggermente a seconda degli oggetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma generalmente includono oggetti, dati e criteri gestiti da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -75,4 +73,3 @@ ms.lasthandoff: 08/03/2017
  [Esplora oggetti](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   
-

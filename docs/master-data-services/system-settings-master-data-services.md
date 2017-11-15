@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: cb5eb5554de4e65e040a2308fa4bc5a52fe765d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="system-settings-master-data-services"></a>Impostazioni di sistema (Master Data Services)
   Per tutte le applicazioni Web e tutti i servizi Web associati a un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile configurare impostazioni di sistema.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 09/07/2017
 |-----------------------------------|--------------------|-----------------|  
 |**Numero di membri predefinito nella gerarchia**|**HierarchyChildNodeLimit**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **di** , numero massimo di membri visualizzati in ogni nodo della gerarchia prima che venga visualizzato **…ulteriori nodi…** vengono visualizzati i puntini di sospensione (...). È possibile fare clic su **...ulteriori nodi...** per visualizzare il gruppo di membri successivo. Il valore predefinito è **50**.|  
 |**Mostra nomi in gerarchia per impostazione predefinita**|**ShowNamesInHierarchy**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Il valore predefinito è **Sì** o **1**, che indica la visualizzazione del nome e del codice di ogni membro. Sostituire con **No** o **2** per visualizzare solo il codice.|  
-|**Numero di attributi basati su dominio nell'elenco**|**DBAListRowLimit**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer**, numero di attributi visualizzati in un elenco quando si fa doppio clic su un valore di attributo basato su dominio nella griglia. Il valore predefinito è **50**. Se sono presenti più di 50 membri, viene visualizzata una finestra di dialogo in cui eseguire ricerche.|  
+|**Numero di attributi basati su dominio nell'elenco**|**DBAListRowLimit**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. Il valore predefinito è **50**. Se sono presenti più di 50 membri, viene visualizzata una finestra di dialogo in cui eseguire ricerche.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. Il valore predefinito è **0.3**. Impostare il valore più prossimo a **1** per restituire una corrispondenza che più si avvicini ai criteri di ricerca. Impostare su **1** per una corrispondenza esatta.|  
   
 ##  <a name="xls"></a> Impostazioni del componente aggiuntivo per Excel  
@@ -154,4 +152,3 @@ ms.lasthandoff: 09/07/2017
  [Sicurezza di oggetti di database &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   
-

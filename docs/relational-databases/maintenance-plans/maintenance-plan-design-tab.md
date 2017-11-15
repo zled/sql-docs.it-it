@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +13,16 @@ f1_keywords:
 - sql13.swb.maint.planeditor.f1
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 64e01a02225d6849bd38def9f00b8a5003752e5e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maintenance-plan-design-tab"></a>Piano di manutenzione (scheda Progettazione)
   Usare la finestra di dialogo **Piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

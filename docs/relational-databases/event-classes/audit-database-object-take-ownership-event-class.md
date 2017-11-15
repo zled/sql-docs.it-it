@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Database Object Take Ownership event class
+helpviewer_keywords: Audit Database Object Take Ownership event class
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7033ca6628e6a9848e9fc33763458480043cab9c
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 597de2d59427cca2b251bd4d568306ff3599563b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Audit Database Object Take Ownership - classe di evento
   La classe di evento **Audit Database Object Take Ownership** viene generata quando si verifica una modifica di proprietario di oggetti nell'ambito del database.  
@@ -43,14 +40,14 @@ ms.lasthandoff: 06/22/2017
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**ObjectName**|**nvarchar**|Nome dell'oggetto a cui si fa riferimento.|34|Sì|  
-|**ObjectType**|**Int**|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Il valore restituito per questa colonna è una combinazione del valore corrispondente nella colonna **type** della vista del catalogo **sys.objects** e dei valori elencati in [Colonna ObjectType per gli eventi di traccia](../../relational-databases/event-classes/objecttype-trace-event-column.md). Se ad esempio viene restituito 8277-U, il tipo di oggetto è una tabella definita dall'utente.|28|Sì|  
+|**ObjectType**|**int**|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Il valore restituito per questa colonna è una combinazione del valore corrispondente nella colonna **type** della vista del catalogo **sys.objects** e dei valori elencati in [Colonna ObjectType per gli eventi di traccia](../../relational-databases/event-classes/objecttype-trace-event-column.md). Se ad esempio viene restituito 8277-U, il tipo di oggetto è una tabella definita dall'utente.|28|Sì|  
 |**OwnerName**|**nvarchar**|Nome utente del database per il proprietario dell'oggetto.|37|Sì|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |**SessionLoginName**|**Nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Esito positivo**|**Int**|1 = esito positivo. 0 = esito negativo. Ad esempio, il valore 1 indica che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
+|**Esito positivo**|**int**|1 = esito positivo. 0 = esito negativo. Ad esempio, il valore 1 indica che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
 |**TargetUserName**|**nvarchar**|Per le azioni relative a un utente del database, ad esempio la concessione di un'autorizzazione a un utente, il nome di tale utente.|39|Sì|  
 |**TextData**|**ntext**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
@@ -60,4 +57,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

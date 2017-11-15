@@ -1,13 +1,11 @@
 ---
 title: Creare un membro foglia (Master Data Services) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: fc46786e571f0a33de6226f83e96584a5765b0e9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 457bbe147e01c060c1f24e6daea3c9c516698899
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Creare un membro foglia (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro foglia per aggiungere dati master al sistema. Per aggiungere i dati in blocco, usare invece le tabelle di gestione temporanea. Per altre informazioni, vedere [Importare dati dalle tabelle &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro foglia per aggiungere dati master al sistema. Per aggiungere i dati in blocco, usare invece le tabelle di staging. Per altre informazioni, vedere [Importare dati dalle tabelle &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  È anche possibile usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare i dati.  
   
@@ -68,4 +65,3 @@ ms.lasthandoff: 09/07/2017
  [Membri &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   
-

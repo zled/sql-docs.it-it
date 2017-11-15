@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0916924eeb783ae65dd254b4d105a01067a08bd5
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b97a7e33924f1ee7b6d6e19c08b020ec0b5c779
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-license-terms"></a>Condizioni di licenza di SQL Server PowerShell
 **CONDIZIONI DI LICENZA PER IL SOFTWARE MICROSOFT**
@@ -41,7 +39,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 **UTILIZZANDO IL SOFTWARE, IL LICENZIATARIO ACCETTA LE PRESENTI CONDIZIONI. QUALORA IL LICENZIATARIO NON LE ACCETTI, NON POTRÀ UTILIZZARE IL SOFTWARE.**
 
 ----------------------------------------------------------------------------------------------------
-**Qualora il licenziatario si attenga alle presenti condizioni di licenza, disporrà dei diritti di seguito indicati.**
+**Qualora il licenziatario si attenga alle presenti condizioni di licenza, disporrà dei diritti indicati di seguito.**
 
 1. **DIRITTI DI INSTALLAZIONE E DI UTILIZZO.** Il licenziatario potrà installare e utilizzare un numero qualsiasi di copie del software nei dispositivi per progettare, sviluppare e testare i programmi.
 
@@ -108,4 +106,3 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
     - controversie relative a responsabilità contrattuale, violazioni di garanzia e delle condizioni, responsabilità oggettiva, negligenza o altra colpa nella misura massima consentita dalla legge applicabile.
 
     Tale limitazione si applica anche nel caso in cui Microsoft era informata o avrebbe dovuto essere informata della possibilità del verificarsi di tali danni. La limitazione o l'esclusione di cui sopra potrebbe non essere applicabile al licenziatario in quanto l'esclusione o la limitazione di danni incidentali, consequenziali o di altro tipo potrebbe non essere consentita nel Paese di residenza del licenziatario.
-

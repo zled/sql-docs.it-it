@@ -1,12 +1,11 @@
 ---
-title: Gerarchie esplicite (Master Data Services) | Documenti Microsoft
+title: Gerarchie esplicite (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +13,19 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+caps.latest.revision: "10"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: cab8d24ba8b634850f700dd15e71a81c006c8562
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Gerarchie esplicite (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] una gerarchia esplicita consente di organizzare i membri di una sola entità secondo qualsiasi modalità specificata. La struttura può essere incompleta e, a differenza delle gerarchie derivate, le gerarchie esplicite non sono basate su relazioni tra attributi basati su dominio.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]una gerarchia esplicita consente di organizzare i membri di una sola entità secondo qualsiasi modalità specificata. La struttura può essere incompleta e, a differenza delle gerarchie derivate, le gerarchie esplicite non sono basate su relazioni tra attributi basati su dominio.  
   
 > [!NOTE]  
 >  La funzionalità Gerarchia esplicita è deprecata.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  Per riepilogare i membri foglia in corrispondenza di punti di consolidamento specifici, è possibile creare membri consolidati nell'entità Product. Inserire i membri consolidati nei livelli dell'albero gerarchico nel punto in cui si desidera riepilogare i membri foglia. Non sussistono limitazioni rispetto al punto di inserimento dei membri consolidati. Ogni membro (foglia o consolidato) può tuttavia essere utilizzato una sola volta.  
   
- ![Esempio di gerarchia esplicita di mountain Bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "esempio di gerarchia esplicita di Mountain Bike")  
+ ![Esempio di gerarchia esplicita relativo alla mountain bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Esempio di gerarchia esplicita relativo alla mountain bike")  
   
  I membri consolidati possono essere utilizzati per raggruppare membri a qualsiasi livello e i membri consolidati vengono ordinati nell'ordine determinato dall'utente.  
   
@@ -88,16 +87,15 @@ ms.lasthandoff: 09/01/2017
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Creare una nuova gerarchia esplicita.|[Creare una gerarchia esplicita &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Modificare il nome di una gerarchia esplicita esistente.|[Modificare il nome di una gerarchia esplicita &#40; Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Eliminare una gerarchia esplicita esistente.|[Eliminare una gerarchia esplicita &#40; Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Creare una nuova gerarchia esplicita.|[Creare una gerarchia esplicita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Modificare il nome di una gerarchia esplicita esistente.|[Modificare il nome di una gerarchia esplicita &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Eliminare una gerarchia esplicita esistente.|[Eliminare una gerarchia esplicita &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Gerarchie derivate &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Raccolte &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Raccolte &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ExistingConnection event class
+helpviewer_keywords: ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d50c35d1e3f67d804cc80e6d7f442a12cb9942e5
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 98b79af4713d77b3c53bf2de715d70d2bddc8ede
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection - classe di evento
   La classe di evento ExistingConnection indica le proprietà delle connessioni utente esistenti dopo l'avvio della traccia. Il server genera un evento ExistingConnection per ogni connessione utente esistente.  

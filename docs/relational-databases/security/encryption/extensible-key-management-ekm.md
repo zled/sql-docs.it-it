@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 632fec019b757d782e7bd54f6854e815ccd2afcf
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 33c468cb6c8f2a8437e9922203afb14ae513f2c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extensible-key-management-ekm"></a>Extensible Key Management (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce funzionalità di crittografia dei dati insieme a *Extensible Key Management* (EKM), l'uso del provider di *API di crittografia Microsoft* (MSCAPI) per la crittografia e la generazione di chiavi. Le chiavi di crittografia per dati e la crittografia delle chiavi vengono create nei contenitori di chiave temporanei e devono essere esportate da un provider prima di essere archiviate nel database. Questo approccio consente la gestione delle chiavi che include una gerarchia delle chiavi di crittografia e un backup delle chiavi, che devono essere gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -174,4 +172,3 @@ DECRYPTION BY EKM_AKey1
  [Creare chiavi simmetriche identiche su due server](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-

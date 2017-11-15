@@ -1,13 +1,11 @@
 ---
 title: Sicurezza a livello di riga | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 809eed1ae84297eb6c8bd04716054660f70a0ee3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -159,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
 -   La sicurezza a livello di riga**Polybase** non è compatibile con Polybase.  
   
--   **Tabelle con ottimizzazione per la memoria**. La funzione inline con valori di tabella usata come predicato di sicurezza in una tabella con ottimizzazione per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION` . Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle con ottimizzazione per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+-   **tabelle ottimizzate per la memoria**. La funzione inline con valori di tabella usata come predicato di sicurezza in una tabella ottimizzata per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION`. Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle ottimizzate per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Viste indicizzate** In generale è possibile creare criteri di sicurezza nelle viste ed è possibile creare viste nelle tabelle associate a criteri di sicurezza. Non è possibile tuttavia creare viste indicizzate in tabelle con un criterio di sicurezza, poiché le ricerche di righe tramite l'indice potrebbero ignorare il criterio.  
   
@@ -373,4 +370,3 @@ GO
  [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
-

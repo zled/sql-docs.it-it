@@ -5,22 +5,20 @@ ms.date: 01/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: eacf688d4ea67d06d3244f7aab2e51bf3ba72bfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nell'ambito della gestione delle informazioni, dei progetti Data Quality e dell'amministrazione della qualità dei dati.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Configurare le impostazioni del servizio dati di riferimento. Per altre informazioni, vedere [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
--   Impostare i valori soglia per le attività di pulizia e di corrispondenza. Per altre informazioni, vedere [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Impostare i valori soglia per le attività di pulizia e di corrispondenza. Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Abilitare o disabilitare le notifiche di profiling Per altre informazioni, vedere [Abilitare o disabilitare le notifiche di profiling in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
@@ -98,4 +96,3 @@ ms.lasthandoff: 09/09/2017
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
-

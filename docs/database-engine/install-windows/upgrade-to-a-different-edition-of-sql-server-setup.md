@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 6dd36fb8359a26f887ccda3821cb8a1b93b8a4f2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server (programma di installazione)
 Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento dell'edizione fra le varie edizioni di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Per informazioni sui percorsi di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Prima di iniziare l'aggiornamento dell'edizione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], rivedere gli argomenti seguenti:  
@@ -87,4 +85,3 @@ Per le installazioni locali è necessario eseguire il programma di installazione
  [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: d83a336ea3d35d22ea14d6a4a66698f99890650d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# Abilitare o disabilitare un protocollo di rete del server
+# <a name="enable-or-disable-a-server-network-protocol"></a>Abilitare o disabilitare un protocollo di rete del server
   Tutti i protocolli di rete vengono installati dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma è possibile abilitarli o meno. In questo argomento viene descritto come abilitare o disabilitare un protocollo di rete del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o PowerShell. Per rendere effettive le modifiche, è necessario arrestare e riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 > [!IMPORTANT]  
@@ -51,7 +49,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
-#### Per abilitare un protocollo di rete del server  
+#### <a name="to-enable-a-server-network-protocol"></a>Per abilitare un protocollo di rete del server  
   
 1.  Nel riquadro della console di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espandere **Configurazione di rete SQL Server**.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di SQL Server PowerShell  
   
-#### Per abilitare un protocollo di rete del server utilizzando PowerShell  
+#### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Per abilitare un protocollo di rete del server utilizzando PowerShell  
   
 1.  Aprire un prompt dei comandi con autorizzazioni di amministratore.  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 10/04/2017
     $Np  
     ```  
   
-#### Per configurare i protocolli per il computer locale  
+#### <a name="to-configure-the-protocols-for-the-local-computer"></a>Per configurare i protocolli per il computer locale  
   
 -   Quando lo script viene eseguito localmente e configura il computer locale, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell offre una maggiore flessibilità per lo script determinando dinamicamente il nome del computer locale. Per recuperare il nome del computer locale, sostituire la riga che imposta la variabile `$uri` con la riga seguente.  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 10/04/2017
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
-#### Per riavviare il Motore di database tramite SQL Server PowerShell  
+#### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>Per riavviare il Motore di database tramite SQL Server PowerShell  
   
 -   Dopo aver disabilitato o abilitato i protocolli, è necessario arrestare e riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per rendere effettiva la modifica. Eseguire le istruzioni seguenti per arrestare e avviare l'istanza predefinita tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Per arrestare e avviare un'istanza denominata, sostituire `'MSSQLSERVER'` con `'MSSQL$<instance_name>'`.  
   
@@ -134,4 +132,3 @@ ms.lasthandoff: 10/04/2017
     ```  
   
   
-

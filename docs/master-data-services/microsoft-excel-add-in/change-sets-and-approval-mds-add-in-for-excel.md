@@ -1,27 +1,24 @@
 ---
 title: Insiemi di modifiche e approvazione (Componente aggiuntivo MDS per Excel) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 24a0db5ef21d00cf46617a011c5953c7cde74f39
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 8dfa57aceccbb96f49949f2513fb58fa6b132722
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Insiemi di modifiche e approvazione (Componente aggiuntivo MDS per Excel)
   Nel componente aggiuntivo [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] per Excel è possibile salvare le modifiche in sospeso a un'entità in un insieme di modifiche. È possibile applicare un insieme di modifiche esistente per visualizzare e cambiare le modifiche in sospeso ed eseguire il commit di un insieme di modifiche esistente.  
@@ -32,4 +29,3 @@ ms.lasthandoff: 09/07/2017
  [Insiemi di modifiche &#40;Master Data Services&#41;](../../master-data-services/changesets-master-data-services.md)  
   
   
-

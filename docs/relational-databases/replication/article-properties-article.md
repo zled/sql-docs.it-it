@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articleproperties.f1
-helpviewer_keywords:
-- Article Properties dialog box
+f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
   È possibile accedere alla finestra **Proprietà articolo** dalla Creazione guidata nuova pubblicazione e dalla finestra di dialogo **Proprietà pubblicazione** . Questa finestra di dialogo consente di visualizzare e impostare le proprietà per tutti i tipi di articoli. Alcune proprietà possono essere impostate solo dopo aver creato la pubblicazione, mentre altre possono essere impostate solo se la pubblicazione non dispone di sottoscrizioni attive. Le proprietà non impostabili vengono visualizzate in sola lettura.  
@@ -43,13 +40,13 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="options-for-all-publications"></a>Opzioni per tutte le pubblicazioni  
  **Copia schemi di partizione delle tabelle** e **Copia schemi di partizione dell'indice**  
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte la partizione della tabella e la partizione dell'indice, caratteristiche non correlate alla replica di partizionamento ottenuta tramite filtri di riga e di colonna. Le opzioni **Copia schemi di partizione delle tabelle** e **Copia schemi di partizione dell'indice** consentono di specificare se gli schemi di partizione devono essere copiati nel Sottoscrittore. Per ulteriori informazioni sul partizionamento, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte la partizione della tabella e la partizione dell'indice, caratteristiche non correlate alla replica di partizionamento ottenuta tramite filtri di riga e di colonna. Le opzioni **Copia schemi di partizione delle tabelle** e **Copia schemi di partizione dell'indice** consentono di specificare se gli schemi di partizione devono essere copiati nel Sottoscrittore. Per ulteriori informazioni sul partizionamento, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Converti tipi di dati**  
  Determina se convertire tipi di dati definiti dall'utente in tipi di dati di base durante la creazione di oggetti nel Sottoscrittore. I tipi di dati definiti dall'utente includono i tipi di dati CLR definiti dall'utente introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Specificare il valore **True** se questi tipi di dati verranno replicati in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per garantire che vengano gestiti correttamente nel Sottoscrittore.  
   
  **Crea schemi nel Sottoscrittore**  
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati introdotti gli schemi, che vengono definiti utilizzando l'istruzione CREATE SCHEMA. Uno schema è il proprietario di un oggetto e viene utilizzato in un nome in più parti, ad esempio \<Database>.\<Schema>.\<Oggetto>. Se nel database esistono oggetti di proprietà di schemi diversi da DBO, la replica è in grado di creare tali schemi nel Sottoscrittore in modo che sia possibile creare gli oggetti pubblicati.  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati introdotti gli schemi, che vengono definiti utilizzando l'istruzione CREATE SCHEMA. Uno schema è il proprietario di un oggetto e viene utilizzato in un nome in più parti, ad esempio \<Database>.\<Schema>.\<Oggetto>. Se nel database esistono oggetti di proprietà di schemi diversi da DBO, la replica è in grado di creare tali schemi nel Sottoscrittore in modo che sia possibile creare gli oggetti pubblicati.  
   
  Se i dati verranno replicati in versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   

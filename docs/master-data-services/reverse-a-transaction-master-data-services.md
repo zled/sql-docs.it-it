@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactions [Master Data Services], reversing
+helpviewer_keywords: transactions [Master Data Services], reversing
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 7bfd5c364d0805f32ea738585794d3b3ec47107d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 4714aebd14cec7b8eb24f95a978aaac87cc19d57
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertire una transazione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]gli amministratori possono invertire una transazione quando è necessario annullare un'azione. Esempi di transazioni sono modifiche al valore dell'attributo, spostamenti di gerarchie o eliminazioni di membri. Questo argomento si applica solo a transazioni di entità con il tipo di log delle transazioni "Attributo". Passare alla pagina di visualizzazione delle entità per visualizzare la cronologia delle transazioni delle entità con il tipo di log delle transazioni "Membro".  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/07/2017
  [Eseguire il rollback della cronologia delle revisioni del membro](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   
-

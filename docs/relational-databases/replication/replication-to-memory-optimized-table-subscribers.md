@@ -1,44 +1,41 @@
 ---
 title: Replica in sottoscrittori di tabelle con ottimizzazione per la memoria | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/21/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38b426bdc8e0485bdbada8c9dbd7371b63612465
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eda94d43e65319f152ea387372c5f28193697818
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Le tabelle con funzione di snapshot e sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle con ottimizzazione per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle con ottimizzazione per la memoria. Questa funzionalità è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+  Le tabelle con funzione di snapshot e sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria. Questa funzionalità è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## <a name="two-configurations-are-required"></a>Sono necessarie due configurazioni  
   
--   **Configurare il database sottoscrittore per supportare la replica per le tabelle con ottimizzazione per la memoria**  
+-   **Configurare il database sottoscrittore per supportare la replica per le tabelle ottimizzate per la memoria**  
   
      Impostare la proprietà **@memory_optimized** su **true** con [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) o [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
   
--   **Configurare l'articolo in modo da supportare la replica per le tabelle con ottimizzazione per la memoria**  
+-   **Configurare l'articolo in modo da supportare la replica per le tabelle ottimizzate per la memoria**  
   
      Impostare l'opzione `@schema_option = 0x40000000000` per l'articolo con [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md).  
   
-#### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>Per configurare una tabella con ottimizzazione per la memoria come sottoscrittore  
+#### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>Per configurare una tabella ottimizzata per la memoria come sottoscrittore  
   
 1.  Creare una pubblicazione transazionale. Per altre informazioni, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -79,19 +76,19 @@ ms.lasthandoff: 06/22/2017
   
  Non è possibile pubblicare le tabelle con ottimizzazione per la memoria.  
   
- Non è possibile configurare le tabelle di replica nel distributore come tabelle con ottimizzazione per la memoria.  
+ Non è possibile configurare le tabelle di replica nel distributore come tabelle ottimizzate per la memoria.  
   
- La replica di tipo merge non può includere tabelle con ottimizzazione per la memoria.  
+ La replica di tipo merge non può includere tabelle ottimizzate per la memoria.  
   
- Nel sottoscrittore le tabelle interessate dalla replica transazionale possono essere configurate come tabelle con ottimizzazione per la memoria, ma le tabelle del sottoscrittore devono soddisfare i requisiti delle tabelle con ottimizzazione per la memoria. Si applicano pertanto le restrizioni seguenti.  
+ Nel sottoscrittore le tabelle interessate dalla replica transazionale possono essere configurate come tabelle ottimizzate per la memoria, ma le tabelle del sottoscrittore devono soddisfare i requisiti delle tabelle ottimizzate per la memoria. Si applicano pertanto le restrizioni seguenti.  
  
--   Le tabelle replicate in tabelle con ottimizzazione per la memoria in un sottoscrittore sono limitate ai tipi di dati consentiti nelle tabelle con ottimizzazione per la memoria. Per altre informazioni, vedere [Tipi di dati supportati](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
+-   Le tabelle replicate in tabelle ottimizzate per la memoria in un sottoscrittore sono limitate ai tipi di dati consentiti nelle tabelle ottimizzate per la memoria. Per altre informazioni, vedere [Tipi di dati supportati](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Non tutte le funzionalità di Transact-SQL sono supportate con le tabelle con ottimizzazione per la memoria. Per altri dettagli, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+-   Non tutte le funzionalità di Transact-SQL sono supportate con le tabelle ottimizzate per la memoria. Per altri dettagli, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="Schema"></a> Modifica di un file dello schema  
   
--   Se si utilizza l'opzione della tabella con ottimizzazione per la memoria `DURABILITY = SCHEMA_AND_DATA` , la tabella deve disporre di un indice di chiave primaria non cluster.  
+-   Se si utilizza l'opzione della tabella ottimizzata per la memoria `DURABILITY = SCHEMA_AND_DATA`, la tabella deve disporre di un indice di chiave primaria non cluster.  
   
 -   ANSI_PADDING deve essere ON.  
   
@@ -99,4 +96,3 @@ ms.lasthandoff: 06/22/2017
  [Caratteristiche e attività di replica](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Change Database Owner event class
+helpviewer_keywords: Audit Change Database Owner event class
 ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 46e68aefafbe361de3504536b8ad8d5a17d2cbf2
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d0d8f16a3377d07a17378a2264b3a1f38e70b713
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner - classe di evento
   La classe di evento **Audit Change Database Owner** viene generata quando si utilizza l'istruzione ALTER AUTHORIZATION per cambiare il proprietario di un database e vengono controllate le autorizzazioni necessarie a tale scopo.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è stato generato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Esito positivo**|**Int**|1 = esito positivo. 0 = esito negativo. Il valore 1 indica, ad esempio, che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
+|**Esito positivo**|**int**|1 = esito positivo. 0 = esito negativo. Il valore 1 indica, ad esempio, che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
 |**TargetLoginName**|**nvarchar**|Per le azioni relative a un account di accesso, il nome dell'account di accesso specifico.|42|Sì|  
 |**TargetLoginSid**|**image**|Per le azioni relative a un account di accesso, il numero di identificazione di sicurezza (SID) dell'account di accesso specifico.|43|Sì|  
 |**TargetUserName**|**nvarchar**|Per le azioni relative a un utente del database, ad esempio la concessione di un'autorizzazione a un utente, il nome di tale utente.|39|Sì|  

@@ -1,30 +1,27 @@
 ---
 title: Indicizzare dati JSON | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 2d618b486f61f2e25a221517eb0efdaed70f582d
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: e252b53eac86495ebdf4050d3ab425e22fea962a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-json-data"></a>Indicizzazione dei dati JSON
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -91,7 +88,7 @@ INCLUDE(SalesOrderNumber,OrderDate)
 In questo caso SQL Server non deve leggere i dati aggiuntivi della tabella `SalesOrderHeader` perché tutto il necessario è incluso nell'indice non cluster JSON. Questo è un buon metodo per combinare i dati JSON e di colonna nelle query e per creare indici ottimali per il carico di lavoro.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Gli indici JSON sono in grado di riconoscere le regole di confronto  
-Una caratteristica importante degli indici rispetto ai dati JSON è che gli indici sono in grado di riconoscere le regole di confronto. Il risultato della funzione `JSON_VALUE`, che si usa quando si crea la colonna calcolata, è un valore di testo che eredita le regole di confronto dall'espressione di input. Di conseguenza, i valori dell'indice vengono ordinati usando le regole di confronto definite nelle colonne di origine.  
+Una caratteristica importante degli indici per i dati JSON è che gli indici sono in grado di riconoscere le regole di confronto. Il risultato della funzione `JSON_VALUE`, che si usa quando si crea la colonna calcolata, è un valore di testo che eredita le regole di confronto dall'espressione di input. Di conseguenza, i valori dell'indice vengono ordinati usando le regole di confronto definite delle colonne di origine.  
   
 Per dimostrare questo concetto, nell'esempio seguente viene creata una semplice tabella di raccolta insieme con una chiave primaria e contenuto JSON.  
   
@@ -155,4 +152,3 @@ ORDER BY JSON_VALUE(json,'$.name')
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Altre informazioni sul supporto JSON integrato in SQL Server  
 Per soluzioni specifiche, casi d'uso e indicazioni, vedere i [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure redatti da Jovan Popovic, Microsoft Program Manager.
-

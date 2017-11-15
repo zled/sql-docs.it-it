@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fbc7cc9abcbfb1e0608104000bab04e56b5ea86d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possibili errori durante il mirroring del database
   Gli errori in una sessione di mirroring del database possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il mirroring del database non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, il mirroring del database implementa un proprio meccanismo di timeout. Quando si verifica un timeout di mirroring, il mirroring del database presuppone che si sia verificato un errore e dichiara un *errore software*. Tuttavia, alcuni errori che si verificano a livello dell'istanza di SQL Server non provocano il timeout del mirroring a timeout e possono non essere rilevati.  

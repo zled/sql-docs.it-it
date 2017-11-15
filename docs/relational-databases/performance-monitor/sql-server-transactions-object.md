@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 642a22206b25ec2963fae4fa04e6b10a5329f0e6
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a3c085266a6f4d14f0c7881289ebea15347675de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-transactions-object"></a>Oggetto Transactions di SQL Server
   L'oggetto **Transactions**, disponibile in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], include i contatori per il monitoraggio del numero di transazioni attive in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], nonché per valutare gli effetti di tali transazioni sulle risorse, ad esempio l'archivio delle versioni di riga del livello di isolamento dello snapshot in **tempdb**. Le transazioni sono unità logiche di lavoro. Per salvaguardare l'integrità logica dei dati, l'intero set di operazioni deve essere eseguito correttamente o cancellato da un database. Le transazioni vengono utilizzate per tutte le modifiche apportate ai dati nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,7 +50,6 @@ ms.lasthandoff: 06/22/2017
 |**Troncamento unità archivio versioni**|Numero di unità di allocazione rimosse dall'archivio delle versioni di riga del livello di isolamento snapshot dall'avvio dell'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

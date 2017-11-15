@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- User-Configurable event class
+helpviewer_keywords: User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0434c01304ccb0aaf138ab046ee5ed7acce6a89d
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ff6cce49cb06cf6d102be1cf7c5dc93abff1fc2c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable - classe di evento
   Utilizzare la categoria di eventi User-Configurable per eseguire il monitoraggio di eventi definiti dall'utente. È possibile creare classi di eventi definite dall'utente per monitorare gli eventi che non possono essere monitorati dalle classi di eventi di sistema di altre categorie. Ad esempio, è possibile creare un evento definito dall'utente per monitorare l'avanzamento dell'esecuzione dell'applicazione in fase di verifica. Durante l'esecuzione dell'applicazione vengono generati eventi in determinati punti che consentono di determinare lo stato di avanzamento dell'esecuzione.  

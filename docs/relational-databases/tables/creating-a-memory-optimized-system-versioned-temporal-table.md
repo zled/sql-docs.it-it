@@ -1,36 +1,34 @@
 ---
 title: Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 32df29be26fb5e26217a09bbb20b9cef39539aee
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f87c849fff748a95cefa9b960594a2866b5f6bae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Come per la creazione di una tabella di cronologia basata su disco, è possibile creare una tabella temporale con ottimizzazione per la memoria in diversi modi.  
+  Come per la creazione di una tabella di cronologia basata su disco, è possibile creare una tabella temporale ottimizzata per la memoria in diversi modi.  
   
 > [!NOTE]  
->  Per creare tabelle con ottimizzazione per la memoria, è necessario innanzitutto creare [il filegroup con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).  
+>  Per creare tabelle ottimizzate per la memoria, è necessario innanzitutto creare [il filegroup ottimizzato per la memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).  
   
- Creare una tabella temporale con una tabella di cronologia predefinita è una soluzione comoda quando si vuole controllare la denominazione e al tempo stesso lasciare che sia il sistema a creare la tabella di cronologia con la configurazione predefinita. L'esempio seguente illustra una nuova tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria collegata a una nuova tabella di cronologia basata su disco.  
+ Creare una tabella temporale con una tabella di cronologia predefinita è una soluzione comoda quando si vuole controllare la denominazione e al tempo stesso lasciare che sia il sistema a creare la tabella di cronologia con la configurazione predefinita. L'esempio seguente illustra una nuova tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema collegata a una nuova tabella di cronologia basata su disco.  
   
 ```  
 CREATE SCHEMA History  
@@ -103,4 +101,3 @@ WITH
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

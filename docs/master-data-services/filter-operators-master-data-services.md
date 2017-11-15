@@ -5,22 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 0d83ee33afcd50635a163a56f977e77fc6e6c68a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: b634ce55f0ba70614432e6d2b38fe1a08ab66d11
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-operators-master-data-services"></a>Operatori di filtro (Master Data Services)
   Per filtrare un elenco di membri, sono disponibili gli operatori seguenti.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/07/2017
 |**Non è NULL**|Restituisce i valori di attributo che non sono null. Il campo **Criteri** viene disabilitato quando si seleziona l'operatore **Non è NULL** .|  
   
   
-

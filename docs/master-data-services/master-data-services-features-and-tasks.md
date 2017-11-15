@@ -5,22 +5,20 @@ ms.date: 04/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 5aec5001ed00120c8e55e280787fd35ee65ff50f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-features-and-tasks"></a>Caratteristiche e attività di Master Data Services
   Vengono fornite informazioni su come utilizzare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per gestire i dati master dell'organizzazione, come creare e gestire oggetti modello che rappresentano i contenitori per i dati, come organizzare e gestire i dati master stessi, come importare ed esportare i dati master, nonché condividere i modelli tra ambienti di test e di produzione e infine come sviluppare applicazioni personalizzate che accedono al servizio Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -76,4 +74,3 @@ ms.lasthandoff: 09/07/2017
 -   [Guida per gli sviluppatori](../master-data-services/develop/master-data-services-developer-documentation.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - backup jobs [SQL Server]
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 2aaf014db77119937d57d04c1eb5951243e687f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="about-log-shipping-sql-server"></a>Informazioni sul log shipping (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di inviare automaticamente i backup del log delle transazioni da un *database primario* in un'istanza del *server primario* a uno o più *database secondari* in istanze separate del *server secondario* . I backup del log delle transazioni vengono applicati singolarmente a ogni database secondario. Un terzo server facoltativo, noto come *server di monitoraggio*, registra la cronologia e lo stato delle operazioni di backup e di ripristino e genera avvisi nel caso in cui tali operazioni non vengano eseguite come previsto.  
@@ -165,7 +163,6 @@ ms.lasthandoff: 08/02/2017
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

@@ -5,22 +5,20 @@ ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: c539c03bc9300bbd04e035a30e02e6d6686f3bd0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipi di dati supportati per OLTP In memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,18 +49,18 @@ ms.lasthandoff: 07/31/2017
   
 Per i precedenti tipi di dati string e binary, a partire da SQL Server 2016:  
   
-- Una singola tabella con ottimizzazione per la memoria può contenere anche diverse colonne di grandi dimensioni, ad esempio `nvarchar(4000)`, anche se il totale delle relative lunghezze sarebbe superiore a quello delle dimensioni fisiche della riga di 8060 byte.  
+- Una singola tabella ottimizzata per la memoria può contenere anche diverse colonne di grandi dimensioni, ad esempio `nvarchar(4000)`, anche se il totale delle relative lunghezze sarebbe superiore a quello delle dimensioni fisiche della riga di 8060 byte.  
   
-- Una tabella con ottimizzazione per la memoria può includere colonne di tipo string e binary di lunghezza massima dei tipi di dati, ad esempio `varchar(max)`.  
+- Una tabella ottimizzata per la memoria può includere colonne di tipo string e binary di lunghezza massima dei tipi di dati, ad esempio `varchar(max)`.  
 
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificare le colonne LOB e altre colonne che si trovano all'esterno di righe
 
-A partire da SQL Server 2016, le tabelle con ottimizzazione per la memoria [supportano colonne all'esterno di righe](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), che consentono a una singola riga di tabella di superare la dimensione di 8060 byte. L'istruzione Transact-SQL SELECT seguente restituisce tutte le colonne che si trovano all'esterno di righe, per tabelle con ottimizzazione per la memoria. Tenere presente quanto segue:
+A partire da SQL Server 2016, le tabelle ottimizzate per la memoria [supportano colonne all'esterno di righe](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), che consentono a una singola riga di tabella di superare la dimensione di 8060 byte. L'istruzione Transact-SQL SELECT seguente restituisce tutte le colonne che si trovano all'esterno di righe, per tabelle ottimizzate per la memoria. Tenere presente quanto segue:
 
 - Tutte le colonne chiave di indice vengono archiviate all'interno di righe.
-  - Le chiavi di indice non univoche possono ora includere colonne che ammettono valori Null in tabelle con ottimizzazione per la memoria.
-  - Gli indici possono essere dichiarati come UNIQUE in una tabella con ottimizzazione per la memoria.
+  - Le chiavi di indice non univoche possono ora includere colonne che ammettono valori Null in tabelle ottimizzate per la memoria.
+  - Gli indici possono essere dichiarati come UNIQUE in una tabella ottimizzata per la memoria.
 - Tutte le colonne LOB vengono archiviate all'esterno di righe.
 - Un valore max_length pari a -1 indica una colonna con oggetti LOB.
 
@@ -95,4 +93,3 @@ SELECT
  [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-

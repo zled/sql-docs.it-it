@@ -5,30 +5,28 @@ ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: baceef80e5e24975b3144d6e239c6fb70fbf1c16
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Ottimizzare l'elaborazione JSON con OLTP in memoria
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-SQL Server e il database SQL di Azure consentono di usare il testo formattato come JSON. Per migliorare le prestazioni delle query che elaborano dati JSON, è possibile archiviare i documenti JSON in tabelle ottimizzate per la memoria usando colonne di tipo stringa standard (tipo NVARCHAR). L'archiviazione dei dati JSON in tabelle con ottimizzazione per la memoria aumenta le prestazioni delle query mediante l'accesso ai dati in memoria senza blocco.
+SQL Server e il database SQL di Azure consentono di usare il testo formattato come JSON. Per migliorare le prestazioni delle query che elaborano dati JSON, è possibile archiviare i documenti JSON in tabelle ottimizzate per la memoria usando colonne di tipo stringa standard (tipo NVARCHAR). L'archiviazione dei dati JSON in tabelle ottimizzate per la memoria aumenta le prestazioni delle query mediante l'accesso ai dati in memoria senza blocco.
 
-## <a name="store-json-in-memory-optimized-tables"></a>Archiviare dati JSON in tabelle con ottimizzazione per la memoria
-Nell'esempio seguente è illustrata una tabella `Product` con ottimizzazione per la memoria contenente due colonne JSON, `Tags` e `Data`.
+## <a name="store-json-in-memory-optimized-tables"></a>Archiviare dati JSON in tabelle ottimizzate per la memoria
+Nell'esempio seguente è illustrata una tabella `Product` ottimizzata per la memoria contenente due colonne JSON, `Tags` e `Data`.
 
 ```sql
 CREATE SCHEMA xtp;
@@ -52,7 +50,7 @@ Le funzionalità disponibili in SQL Server e nel database SQL di Azure consenton
  - [Compilare in modo nativo le query SQL](#compile) che usano valori di documenti JSON o formattano i risultati come testo JSON.
 
 ## <a name="validate"></a> Convalidare le colonne JSON
-SQL Server e il database SQL di Azure consentono di aggiungere vincoli CHECK compilati in modo nativo che convalidano il contenuto dei documenti JSON archiviati in una colonna di tipo stringa. I vincoli JSON CHECK compilati in modo nativo garantiscono la corretta formattazione del testo JSON archiviato nelle tabelle con ottimizzazione per la memoria.
+SQL Server e il database SQL di Azure consentono di aggiungere vincoli CHECK compilati in modo nativo che convalidano il contenuto dei documenti JSON archiviati in una colonna di tipo stringa. I vincoli JSON CHECK compilati in modo nativo garantiscono la corretta formattazione del testo JSON archiviato nelle tabelle ottimizzate per la memoria.
 
 L'esempio seguente crea una tabella `Product` con una colonna JSON `Tags`. La colonna `Tags` ha un vincolo CHECK che usa la funzione `ISJSON` per convalidare il testo JSON nella colonna.
 
@@ -168,4 +166,3 @@ END
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Altre informazioni sul supporto JSON integrato in SQL Server  
 Per soluzioni specifiche, casi d'uso e indicazioni, vedere i [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure redatti da Jovan Popovic, Microsoft Program Manager.
-

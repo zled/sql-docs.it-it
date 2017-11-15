@@ -1,33 +1,31 @@
 ---
 title: Monitoraggio di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a998ba89645d568585d475b50037adaab72657c
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0469d41e4bab668d3f5d83d67489f79c0a0bad91
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>Monitoraggio di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  È possibile usare le viste esistenti per tenere traccia del consumo di memoria in modo riepilogativo e dettagliato per ogni tabella con ottimizzazione per la memoria e controllo delle versioni di sistema.  
+  È possibile usare le viste esistenti per tenere traccia del consumo di memoria in modo riepilogativo e dettagliato per ogni tabella ottimizzata per la memoria con controllo delle versioni di sistema.  
   
- Consumo di memoria dettagliato (suddiviso per tabella principale di gestione temporanea della cronologia interna e con controllo delle versioni di sistema):  
+ Consumo di memoria dettagliato (suddiviso per tabella principale di staging della cronologia interna e con controllo delle versioni di sistema):  
   
 ```  
 --Details of memory consumption   
@@ -61,7 +59,7 @@ SELECT
   
 ```  
   
- Riepilogo del consumo di memoria (totale per una tabella con ottimizzazione per la memoria e controllo delle versioni di sistema):  
+ Riepilogo del consumo di memoria (totale per una tabella ottimizzata per la memoria con controllo delle versioni di sistema):  
   
 ```  
 --Summary of memory consumption   
@@ -118,4 +116,3 @@ GROUP BY TemporalTableSchema, TemporalTableName ;
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

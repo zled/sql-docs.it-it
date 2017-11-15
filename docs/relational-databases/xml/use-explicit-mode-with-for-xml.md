@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4972860dbfc2eaa8d0b04da88f304a95b17a4bd6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
   Come illustrato nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](../../relational-databases/xml/for-xml-sql-server.md), le modalità RAW e AUTO forniscono scarso controllo sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  

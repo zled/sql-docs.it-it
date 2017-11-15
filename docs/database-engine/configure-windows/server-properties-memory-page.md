@@ -5,24 +5,21 @@ ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.memory.f1
+f1_keywords: sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 81b299739f8986e819062756d9fbd8fffcbaca41
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 6e8f2099ebff05085188514503c11abef5f8159c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---memory-page"></a>Proprietà server (pagina Memoria)
   Utilizzare questa pagina per visualizzare o modificare le opzioni di memoria per il server. Quando l'opzione **Memoria minima per il server** è impostata su 0 e l'opzione **Memoria massima per il server** è impostata su 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare in ogni momento la quantità ottimale di memoria, tenendo tuttavia conto della quantità di memoria attualmente usta dal sistema operativo e da altre applicazioni. Mano a mano che il carico di lavoro del computer e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia, anche la quantità di memoria allocata varia di conseguenza. È possibile limitare ulteriormente questa allocazione dinamica della memoria in base ai valori minimi e massimi specificati di seguito.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 08/02/2017
  [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   
-

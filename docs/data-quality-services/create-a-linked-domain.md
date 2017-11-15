@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.linkeddomain.f1
+f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 68a7e937e1c1f0f753779f267cf1fffa16fc3b8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-linked-domain"></a>Creazione di un dominio collegato
   In questo argomento viene descritto come creare un dominio collegato in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio collegato viene creato da un altro dominio esistente in precedenza ed eredita tutti i valori, le regole e le proprietà dal dominio al quale è collegato, ad eccezione del nome e della descrizione. È possibile gestire un set di domini collegati come un unico dominio. Connettendo un dominio all'altro, si crea un dominio che eredita il proprio contenuto da un altro dominio.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
 3.  Dall' **elenco di domini** nella pagina **Gestione dominio** fare clic con il pulsante destro del mouse sul dominio al quale si desidera effettuare il collegamento e fare clic su **Crea dominio collegato**.  
   
@@ -85,7 +82,7 @@ ms.lasthandoff: 09/09/2017
   
 -   È possibile modificare il nome e la descrizione di un dominio collegato.  
   
--   Per modificare le proprietà del dominio per le proprietà **Tipo di dati**, **Utilizza valori iniziali**o **Formato output in** , selezionare il dominio collegato e modificare le impostazioni nella scheda **Proprietà dominio** per quel dominio. Non è possibile modificare tali impostazioni nelle proprietà del dominio collegato. Per altre informazioni, vedere [Create a Domain](../data-quality-services/create-a-domain.md).  
+-   Per modificare le proprietà del dominio per le proprietà **Tipo di dati**, **Utilizza valori iniziali**o **Formato output in** , selezionare il dominio collegato e modificare le impostazioni nella scheda **Proprietà dominio** per quel dominio. Non è possibile modificare tali impostazioni nelle proprietà del dominio collegato. Per altre informazioni, vedere [Creazione di un dominio](../data-quality-services/create-a-domain.md).  
   
 -   È possibile modificare le impostazioni nelle schede **Dati di riferimento**, **Regole di dominio**, **Valori di dominio**e **Relazioni basate su termini** della pagina Gestione dominio per il dominio collegato o per il dominio al quale si è effettuato il collegamento; le modifiche verranno ereditate dall'altro dominio.  
   
@@ -104,4 +101,3 @@ ms.lasthandoff: 09/09/2017
 -   Quando si fa doppio clic su un dominio collegato in una qualsiasi delle schede Gestione dominio, il dominio verrà aperto alla modifica con un'indicazione nella stringa del nome che si tratta di un dominio collegato.  
   
   
-

@@ -5,22 +5,20 @@ ms.date: 10/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: f6902b25f18905ce55dbd30e12917a4af858c139
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
   Il processo di corrispondenza tra dati [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di ridurre la duplicazione dei dati e di migliorarne l'accuratezza in un'origine dati. Il processo analizza il livello di duplicazione in tutti i record di una singola origine dati, restituendo le probabilità ponderate di una corrispondenza per ciascun set di record confrontato. È possibile quindi decidere quali record corrispondono ed eseguire le azioni appropriate sui dati di origine.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   DQS consente di creare criteri di corrispondenza utilizzando un processo computerizzato, di modificarlo in modo interattivo in base ai risultati di corrispondenza e di aggiungerlo a una Knowledge Base riutilizzabile.  
   
--   È possibile reindicizzare dati copiati dall'origine alla tabella di gestione temporanea oppure non reindicizzarli, a seconda dello stato dei criteri di corrispondenza e dei dati di origine. Le prestazioni potrebbero risultare migliorate se si evita la reindicizzazione.  
+-   È possibile reindicizzare dati copiati dall'origine alla tabella di staging oppure non reindicizzarli, a seconda dello stato dei criteri di corrispondenza e dei dati di origine. Le prestazioni potrebbero risultare migliorate se si evita la reindicizzazione.  
   
  È possibile eseguire il processo di corrispondenza insieme agli altri processi di pulizia dei dati per migliorare la qualità generale dei dati. È inoltre possibile eseguire la deduplicazione dei dati utilizzando la funzionalità DQS incorporata in Master Data Services. Per altre informazioni, vedere [Panoramica di Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]  
 >  I valori null nei campi corrispondenti di due record verranno considerati come una corrispondenza.  
   
- I criteri di corrispondenza vengono eseguiti su domini di cui è stato eseguito il mapping ai dati di esempio. È possibile specificare se i dati vanno o meno copiati dall'origine dati nella tabella di gestione temporanea e reindicizzati quando si eseguono i criteri di corrispondenza. Ciò è possibile sia quando si compila la Knowledge Base che quando si esegue il progetto corrispondente. Le prestazioni possono risultare migliorate se si evita la reindicizzazione. La reindicizzazione non è necessaria se le condizioni seguenti sono vere: i criteri di corrispondenza non sono cambiati e non è stata aggiornata l'origine dati, né rieseguito il mapping dei criteri, né selezionata una nuova origine dati, né eseguito il mapping di uno o più nuovi domini.  
+ I criteri di corrispondenza vengono eseguiti su domini di cui è stato eseguito il mapping ai dati di esempio. È possibile specificare se i dati vanno o meno copiati dall'origine dati nella tabella di staging e reindicizzati quando si eseguono i criteri di corrispondenza. Ciò è possibile sia quando si compila la Knowledge Base che quando si esegue il progetto corrispondente. Le prestazioni possono risultare migliorate se si evita la reindicizzazione. La reindicizzazione non è necessaria se le condizioni seguenti sono vere: i criteri di corrispondenza non sono cambiati e non è stata aggiornata l'origine dati, né rieseguito il mapping dei criteri, né selezionata una nuova origine dati, né eseguito il mapping di uno o più nuovi domini.  
   
  Al momento della creazione, ogni regola di corrispondenza viene salvata nella Knowledge Base. Tuttavia, una Knowledge Base può essere disponibile per l'uso in un progetto Data Quality solo quando viene pubblicata. Inoltre, fino al momento della pubblicazione della Knowledge Base, le regole di corrispondenza presenti in quest'ultima non possono essere modificate da un utente diverso da quello che l'ha creata.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/09/2017
 |Eseguire l'individuazione delle corrispondenze in un progetto Data Quality|[Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)|  
   
   
-

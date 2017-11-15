@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
 - vs.findreplace.quickreplace
-helpviewer_keywords:
-- Find and Replace dialog box
+helpviewer_keywords: Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5d3e50dcc4dd901255992d5aeea8c818f498de2
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: af60a2ce76a9e9eeaff398d9cad94f0415ed4f83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-and-replace"></a>Trova e sostituisci
   Usare la finestra di dialogo **Trova e sostituisci** per trovare testo all'interno di un file e facoltativamente sostituirlo con altro testo. Possono essere visualizzate versioni della finestra **Trova e sostituisci** con opzioni leggermente diverse, a seconda di come è stata aperta la finestra di dialogo. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Ricerca veloce** per aprire la finestra di dialogo con le opzioni di ricerca ma senza le opzioni di sostituzione. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Sostituzione veloce** per aprire la finestra di dialogo con le opzioni di ricerca e sostituzione.  
@@ -72,7 +69,7 @@ ms.lasthandoff: 06/22/2017
  Viene visualizzato un promemoria che include l'opzione **Non chiudere i file modificati** . Selezionare questa opzione per mantenere l'opzione **Annulla** . **Annulla** è disponibile solo per i file che restano aperti dopo essere stati modificati.  
   
  **Ignora file**  
- Diventa disponibile quando il valore specificato in **Cerca in** include più file. Fare clic su questo pulsante se non si desidera cercare nel file corrente o modificare tale file. La ricerca proseguirà nel file successivo contenuto nell'elenco **Cerca in**.  
+ Diventa disponibile quando il valore specificato in **Cerca in** include più file. Fare clic su questo pulsante se non si desidera cercare nel file corrente o modificare tale file. La ricerca proseguirà nel file successivo dell'elenco **Cerca in**.  
   
 ## <a name="look-in"></a>Cerca in  
  **Cerca in**  
@@ -133,4 +130,3 @@ ms.lasthandoff: 06/22/2017
  [Tasti di scelta rapida di SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

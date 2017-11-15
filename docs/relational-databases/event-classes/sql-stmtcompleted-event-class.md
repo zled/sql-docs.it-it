@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtCompleted event class
+helpviewer_keywords: SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7e748f3fa3ec93660084f2bed127a832ca70832a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted - classe di evento
   La classe di evento SQL:StmtCompleted indica il completamento di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|Livello di nidificazione della stored procedure se l'istruzione è stata eseguita all'interno di una stored procedure.|29|Sì|  
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
-|Offset|**Int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
+|Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
 |Reads|**bigint**|Numero di letture di pagine eseguite dall'istruzione SQL.|16|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |RowCounts|**bigint**|Numero di righe influenzate da un evento.|48|Sì|  

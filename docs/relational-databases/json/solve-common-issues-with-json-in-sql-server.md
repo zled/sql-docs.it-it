@@ -1,29 +1,25 @@
 ---
 title: Risolvere i problemi comuni di JSON in SQL Server | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- JSON, FAQ
+helpviewer_keywords: JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 40408a6c0a42882fb2c268d70ddd2959b2d627b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Risolvere i problemi comuni di JSON in SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="create-a-nested-json-structure"></a>Creare una struttura JSON nidificata  
  **Domanda.** Si desidera produrre una struttura JSON complessa con numerose matrici sullo stesso livello. FOR JSON PATH è in grado di creare oggetti nidificati usando percorsi e FOR JSON AUTO crea livelli di nidificazione aggiuntivi per ciascuna tabella. Nessuna di queste due opzioni consente di generare l'output desiderato. Come è possibile creare un formato JSON personalizzato che le opzioni esistenti non supportano direttamente?  
   
- **Risposta.** È possibile creare qualsiasi struttura dei dati aggiungendo query FOR JSON come espressioni di colonna che restituiscono testo JSON. È anche possibile creare manualmente JSON tramite la funzione JSON_QUERY. Queste tecniche vengono illustrate nell'esempio seguente.  
+ **Risposta.** È possibile creare qualsiasi struttura dei dati aggiungendo query FOR JSON come espressioni di colonna che restituiscono testo JSON. È anche possibile creare manualmente JSON tramite la funzione JSON_QUERY. Nell'esempio seguente vengono illustrate le tecniche seguenti.  
   
 ```sql  
 SELECT col1, col2, col3,  
@@ -102,7 +98,7 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>Input di OPENJSON e JSON
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Restituire l'oggetto secondario JSON nidificato dal testo JSON con OPENJSON  
- **Domanda.** Non è possibile aprire una matrice di oggetti JSON complessi che contiene sia valori scalari sia oggetti, e matrici usando OPENJSON con uno schema esplicito. Quando si aggiunge un riferimento a una chiave nella clausola WITH, vengono restituiti solo i valori scalari. Oggetti e matrici vengono restituiti come valori null. Come è possibile estrarre oggetti o matrici come oggetti JSON?  
+ **Domanda.** Non è possibile aprire una matrice di oggetti JSON complessi che contiene sia valori scalari sia oggetti, e matrici usando OPENJSON con uno schema esplicito. Quando si aggiunge un riferimento a una chiave nella clausola WITH, vengono restituiti solo i valori scalari. Oggetti e matrici vengono restituiti come valori null. Come è possibile estrarre oggetti o matrici come gli oggetti JSON?  
   
  **Risposta.** Se si desidera restituire un oggetto o una matrice come colonna, usare l'opzione AS JSON nella definizione di colonna, come illustrato nell'esempio seguente.  
   
@@ -151,4 +147,3 @@ WHERE [key] = 'color'
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Altre informazioni sul supporto JSON integrato in SQL Server  
 Per soluzioni specifiche, casi d'uso e indicazioni, vedere i [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure redatti da Jovan Popovic, Microsoft Program Manager.
-

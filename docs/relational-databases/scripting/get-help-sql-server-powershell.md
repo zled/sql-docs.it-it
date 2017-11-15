@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - Help [SQL Server], PowerShell
 - PowerShell [SQL Server], help
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed2c615535a6886f5157be2eda71de15f54ce1f0
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d0a1c7d0f50f672bedd2f3c4d375bfef983f7a5e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-help-sql-server-powershell"></a>Visualizzazione della Guida di SQL Server PowerShell
   Vi sono diverse fonti di informazione per l'utilizzo dei cmdlet e del provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows PowerShell. Tra queste è inclusa la Guida disponibile nell'ambiente di Windows PowerShell.  

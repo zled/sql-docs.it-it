@@ -5,22 +5,20 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 43fa6642db8924195fa1291d74291c21d0b064d1
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8dc75ad62eb09796afcb3a4d3cb937f0a10a5026
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Backup di un database con tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -28,14 +26,14 @@ ms.lasthandoff: 06/22/2017
   Il backup delle tabelle con ottimizzazione per la memoria viene eseguito durante i normali backup di database. Per le tabelle basate su disco, il CHECKSUM di coppie di file di dati e file differenziali viene convalidato durante il backup del database per rilevare eventuali danneggiamenti di archiviazione.  
   
 > [!NOTE]  
->  L'operazione di backup non riesce se viene rilevato un errore di CHECKSUM in uno o più file in un filegroup con ottimizzazione per la memoria. In tal caso, è necessario ripristinare il database dall'ultima copia di backup valida nota.  
+>  L'operazione di backup non riesce se viene rilevato un errore di CHECKSUM in uno o più file in un filegroup ottimizzato per la memoria. In tal caso, è necessario ripristinare il database dall'ultima copia di backup valida nota.  
 >   
->  Se non è disponibile un backup, è possibile esportare i dati dalle tabelle con ottimizzazione per la memoria e dalle tabelle basate su disco e ricaricarli dopo aver eliminato e ricreato il database.  
+>  Se non è disponibile un backup, è possibile esportare i dati dalle tabelle ottimizzate per la memoria e dalle tabelle basate su disco e ricaricarli dopo aver eliminato e ricreato il database.  
   
- Un backup completo di un database con una o più tabelle con ottimizzazione per la memoria è costituito dall'archiviazione allocata per le tabelle basate su disco (se presente), dal log delle transazioni attivo e dalle coppie di file di dati e file differenziali (anche note come coppie di file di checkpoint) per le tabelle con ottimizzazione per la memoria. Tuttavia, come illustrato in [Durabilità per tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md), le dimensioni di archiviazione usate per le tabelle con ottimizzazione per la memoria possono essere di gran lunga superiori rispetto alle relative dimensioni in memoria e influiscono sulle dimensioni del backup del database.  
+ Un backup completo di un database con una o più tabelle ottimizzate per la memoria è costituito dall'archiviazione allocata per le tabelle basate su disco (se presente), dal log delle transazioni attivo e dalle coppie di file di dati e file differenziali (anche note come coppie di file di checkpoint) per le tabelle ottimizzate per la memoria. Tuttavia, come illustrato in [Durabilità per tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md), le dimensioni di archiviazione usate per le tabelle ottimizzate per la memoria possono essere di gran lunga superiori rispetto alle relative dimensioni in memoria e influiscono sulle dimensioni del backup del database.  
   
 ## <a name="full-database-backup"></a>Backup completo del database  
- Questa discussione verterà sui backup dei database che contengono solo tabelle con ottimizzazione per la memoria durevoli, dal momento che il backup per le tabelle basate su disco è lo stesso. Le coppie di file di checkpoint nel filegroup con ottimizzazione per la memoria possono trovarsi in vari stati. La tabella seguente descrive le parti dei file di cui viene eseguito il backup.  
+ Questa discussione verterà sui backup dei database che contengono solo tabelle ottimizzate per la memoria durevoli, dal momento che il backup per le tabelle basate su disco è lo stesso. Le coppie di file di checkpoint nel filegroup ottimizzato per la memoria possono trovarsi in vari stati. La tabella seguente descrive le parti dei file di cui viene eseguito il backup.  
   
 |Stato della coppia di file di checkpoint|Backup|  
 |--------------------------------|------------|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
  Per le descrizione degli stati delle coppie di file di checkpoint, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) e la relativa colonna state_desc.  
   
- Le dimensioni dei backup del database con una o più tabelle con ottimizzazione per la memoria sono in genere maggiori delle relative dimensioni in memoria ma inferiori all'archiviazione su disco. Le maggiori dimensioni dipendono, tra gli altri fattori, anche dal numero di righe eliminate.  
+ Le dimensioni dei backup del database con una o più tabelle ottimizzate per la memoria sono in genere maggiori delle relative dimensioni in memoria ma inferiori all'archiviazione su disco. Le maggiori dimensioni dipendono, tra gli altri fattori, anche dal numero di righe eliminate.  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Stima delle dimensioni di un backup completo del database  
   
@@ -59,22 +57,21 @@ ms.lasthandoff: 06/22/2017
  Il secondo scenario di carico di lavoro è per le operazioni di inserimento, eliminazione e aggiornamento frequenti. Nel peggiore dei casi, tutte le coppie di file del checkpoint sono caricate al 50% dopo aver tenuto conto delle righe eliminate. Le dimensioni del backup del database saranno almeno doppie rispetto a quelle dei dati in memoria.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backup differenziali di database con tabelle con ottimizzazione per la memoria  
- Lo spazio di archiviazione per le tabelle con ottimizzazione per la memoria è costituito da file di dati e differenziali come descritto in [Durabilità per tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md). Il backup differenziale di un database con tabelle con ottimizzazione per la memoria contiene i dati seguenti:  
+ Lo spazio di archiviazione per le tabelle ottimizzate per la memoria è costituito da file di dati e differenziali come descritto in [Durabilità per tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md). Il backup differenziale di un database con tabelle ottimizzate per la memoria contiene i dati seguenti:  
   
--   Il backup differenziale per i filegroup che archiviano le tabelle basate su disco non è interessato dalla presenza di tabelle con ottimizzazione per la memoria.  
+-   Il backup differenziale per i filegroup che archiviano le tabelle basate su disco non è interessato dalla presenza di tabelle ottimizzate per la memoria.  
   
 -   Il log delle transazioni attivo è uguale a quello di un backup completo del database.  
   
--   Per un filegroup di dati con ottimizzazione per la memoria, il backup differenziale utilizza lo stesso algoritmo di un backup completo del database per identificare i file di dati e differenziali per il backup, ma filtra quindi il subset di file nel modo seguente:  
+-   Per un filegroup di dati ottimizzato per la memoria, il backup differenziale utilizza lo stesso algoritmo di un backup completo del database per identificare i file di dati e differenziali per il backup, ma filtra quindi il subset di file nel modo seguente:  
   
     -   Un file di dati contiene le righe appena inserite e, quando è pieno, viene chiuso e contrassegnato in sola lettura. Il backup di un file di dati viene eseguito solo il file è stato chiuso dopo l'ultimo backup completo del database. Il backup differenziale esegue solo il backup dei file di dati che contengono le righe inserite dopo l'ultimo backup completo del database. Un'eccezione è rappresentata da uno scenario di aggiornamento ed eliminazione in cui alcune righe inserite potrebbero essere già state contrassegnate o sottoposte a Garbage Collection.  
   
     -   In un file differenziale sono archiviati i riferimenti alle righe di dati eliminate. Poiché qualsiasi futura transazione può eliminare una riga, è possibile modificare un file differenziale in qualsiasi momento nell'arco della sua durata, non viene mai chiuso. Viene sempre eseguito il backup di un file differenziale. I file differenziali in genere utilizzano meno del 10% dello spazio di archiviazione, pertanto tali file hanno un impatto minimo sulle dimensioni del backup differenziale.  
   
- Se le tabelle con ottimizzazione per la memoria costituiscono una parte significativa delle dimensioni del database, il backup differenziale può ridurre notevolmente le dimensioni del backup del database. Per i carichi di lavoro tipici OLTP, i backup differenziali saranno molto più piccoli dei backup completi del database.  
+ Se le tabelle ottimizzate per la memoria costituiscono una parte significativa delle dimensioni del database, il backup differenziale può ridurre notevolmente le dimensioni del backup del database. Per i carichi di lavoro tipici OLTP, i backup differenziali saranno molto più piccoli dei backup completi del database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   
-

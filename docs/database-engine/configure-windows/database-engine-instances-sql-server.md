@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 629b0c63a6dfe888b64c665fe02de93134acb320
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
   Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del file eseguibile **sqlservr.exe** che viene eseguita come un servizio del sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  [Caratteristiche del motore di database tra istanze](../../relational-databases/database-engine-cross-instance-features.md)  
   
   
-

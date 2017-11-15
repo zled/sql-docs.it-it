@@ -1,32 +1,28 @@
 ---
 title: Risoluzione dei problemi di PolyBase | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
-helpviewer_keywords:
-- PolyBase, troubleshooting
+helpviewer_keywords: PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/12/2017
-
+ms.openlocfilehash: 7ee142066a441189c02488e3e0c9d3b58a4d02a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="polybase-troubleshooting"></a>Risoluzione dei problemi di PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -247,4 +243,3 @@ Per risolvere gli errori delle tabelle esterne, vedere il post [https://blogs.ms
 
 ## <a name="see-also"></a>Vedere anche
 [Risolvere i problemi di connettività di PolyBase Kerberos](polybase-troubleshoot-connectivity.md)
-

@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="differential-backups-sql-server"></a>Backup differenziali [SQL Server]
   Questo argomento relativo a backup e ripristino è applicabile a tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -55,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  Prima di ripristinare un backup differenziale, è necessario eseguire il ripristino della relativa base. Ripristinare quindi solo il backup differenziale più recente per riportare il database allo stato esistente nel momento in cui è stato creato tale backup differenziale. In genere, si ripristina il backup completo più recente, seguito dal backup differenziale più recente basato su tale backup completo.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backup differenziali di database con tabelle con ottimizzazione per la memoria  
- Per informazioni sui backup differenziali e sui database con tabelle con ottimizzazione per la memoria, vedere [Backup di un database con tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md).  
+ Per informazioni sui backup differenziali e sui database con tabelle ottimizzate per la memoria, vedere [Backup di un database con tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md).  
   
 ##  <a name="ReadOnlyDbs"></a> Backup differenziali di database di sola lettura  
  Per i database di sola lettura, i backup completi sono più semplici da gestire quando vengono utilizzati singolarmente anziché in combinazione con i backup differenziali. Quando un database è di sola lettura, il backup e le altre operazioni non sono in grado di modificare i metadati inclusi nel file. I metadati necessari per un backup differenziale, ad esempio il numero di sequenza del file di log in corrispondenza del quale il backup differenziale ha inizio (l'LSN di base del backup differenziale), vengono pertanto archiviati nel database **master** . Se la base differenziale viene creata quando il database è di sola lettura, la mappa di bit differenziale indicherà un numero maggiore di modifiche rispetto a quelle effettivamente apportate dopo il backup di base. I dati aggiuntivi vengono letti dal backup, ma non vengono scritti nel backup, perché tramite il valore **differential_base_lsn** archiviato nella tabella di sistema [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) viene determinato se i dati sono realmente cambiati dopo la creazione della base.  

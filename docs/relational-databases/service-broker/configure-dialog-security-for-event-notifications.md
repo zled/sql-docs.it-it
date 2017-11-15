@@ -5,23 +5,21 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- event notifications [SQL Server], security
+helpviewer_keywords: event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473e5873e7a522c691f39c5fa8b68d5eb17ab2ce
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: fa4b332294fb821ea623b0b0bacd46db33dc676f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurazione della sicurezza del dialogo per le notifiche degli eventi
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi che prevedono l'invio di messaggi a Service Broker su un server remoto. È necessario configurare manualmente la sicurezza del dialogo in base al modello di sicurezza avanzata del dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Il modello di sicurezza avanzata attiva la crittografia e la decrittografia di messaggi inviati da e a server remoti. Sebbene le notifiche degli eventi vengano inviate in una sola direzione, gli altri messaggi, ad esempio gli errori, vengono anche restituiti nella direzione opposta.  

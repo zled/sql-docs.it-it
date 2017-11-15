@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Object:Deleted event class
+helpviewer_keywords: Object:Deleted event class
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0322a00d544b695462481739770505649d59cb75
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c43e82f21e7b29d84ad7b758992b47e38af98ecf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted - classe di evento
   La classe di evento Object:Deleted indica che un oggetto è stato eliminato, ad esempio tramite le istruzioni DROP INDEX e DROP TABLE. È possibile utilizzare questa classe di evento per determinare se si sta verificando l'eliminazione di oggetti, ad esempio da parte di applicazioni ODBC che spesso creano stored procedure temporanee.  

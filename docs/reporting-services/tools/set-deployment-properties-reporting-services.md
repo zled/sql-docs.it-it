@@ -16,17 +16,16 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 555497ecba823a6c13babbbfd1958bf293bd1f9b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
   In[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]è necessario specificare il server di report e facoltativamente le cartelle per i report e le origini dati condivise in modo da poter pubblicare gli elementi di un progetto del server di report in un server di report. Le proprietà e i valori necessari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per compilare, visualizzare in anteprima e distribuire i report vengono archiviati nelle configurazioni di progetto del progetto server di report. È possibile creare più set denominati per queste proprietà del progetto, in modo da poter passare da un set di proprietà all'altro in base alle esigenze. Ogni set di proprietà è una configurazione. È possibile ad esempio disporre di una configurazione per la pubblicazione di report in un server di prova e di una configurazione diversa per la pubblicazione di report in un server di produzione.  
@@ -95,4 +94,3 @@ ms.lasthandoff: 08/09/2017
  [Pubblicazione dei report in un server di report](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   
   
-

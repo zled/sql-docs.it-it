@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,23 +14,23 @@ helpviewer_keywords:
 - How to [DAC], unpack
 - unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dc4498e01b9f72d8ef2cd9f13b137c67f48d63ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unpack-a-dac-package"></a>Decompressione di un pacchetto di applicazione livello dati
   Utilizzare la finestra di dialogo per la decompressione dell'applicazione livello dati per decomprimere gli script e i file da un pacchetto di applicazioni livello dati (DAC). Gli script e i file vengono copiati in una cartella dove è possibile controllarli prima che il pacchetto venga utilizzato per distribuire l'applicazione del livello dati in un sistema di produzione. È inoltre possibile confrontare il contenuto di un pacchetto di applicazione livello dati con il contenuto di un altro pacchetto decompresso in un'altra cartella.  
   
-1.  **Before you begin:**  [Security](#Security)  
+1.  **Prima di iniziare:**  [Sicurezza](#Security)  
   
-2.  **To unpack a DAC, using:**  [Unpack Data-tier Application Dialog](#UnpackDACDial), [Examine the Contents of a DAC Package](#ExamDACPack)  
+2.  **Per decomprimere un pacchetto di applicazione livello dati usando:**  [la finestra di dialogo per la decompressione dell'applicazione livello dati](#UnpackDACDial), [la verifica del contenuto di un pacchetto di applicazione livello dati](#ExamDACPack)  
   
 ##  <a name="Security"></a> Sicurezza  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di utilizzare un pacchetto di applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirlo in un'istanza di prova isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], decomprimere il pacchetto di applicazione livello dati ed esaminare il codice, ad esempio stored procedure o altro codice definito dall'utente.  

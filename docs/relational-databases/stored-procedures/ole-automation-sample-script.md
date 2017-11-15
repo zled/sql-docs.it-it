@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ole
+ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- OLE Automation [SQL Server], examples
+helpviewer_keywords: OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9db090a1bf5d4cf53896bb0de2e7390f426bdb5b
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea466e1a827b90ebbe55f7e62469beecbc8a9a28
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ole-automation-sample-script"></a>Script di automazione OLE di esempio
   Questo argomento include un esempio di un batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che usa le stored procedure dell'automazione OLE per creare e utilizzare un oggetto SQL-DMO di SQLServer nell'istanza locale di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Parti del codice vengono utilizzate come esempi negli argomenti di riferimento per le stored procedure di sistema dell'automazione OLE.  
@@ -157,4 +154,3 @@ GO
  [sp_OADestroy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oadestroy-transact-sql.md)  
   
   
-

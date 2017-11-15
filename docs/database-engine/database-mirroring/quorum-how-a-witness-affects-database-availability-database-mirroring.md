@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - full quorum [SQL Server]
 - high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 423b441557ac6d255414889deaaf50e7a510707d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d3842e229c3b8070c715dd7e215944a50711e787
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)
   Ogni volta che viene impostato un server di controllo del mirroring per una sessione di mirroring del database, è necessario che esista il *quorum* . Il quorum è una relazione esistente quando due o più istanze del server in una sessione di mirroring del database sono connesse l'una all'altra. In genere, un quorum coinvolge tre istanze del server interconnesse. Quando è impostato un server di controllo del mirroring, il quorum è necessario per rendere disponibile il database. Progettato per la modalità a protezione elevata con failover automatico, il quorum garantisce che un database sia di proprietà di un singolo partner alla volta.  
@@ -114,4 +112,3 @@ ms.lasthandoff: 08/02/2017
  [Stati di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   
-

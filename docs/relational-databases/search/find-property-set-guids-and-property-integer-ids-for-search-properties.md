@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cf8b11f86a4d95d2518d85d79df2a53c900b9706
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
   In questo argomento viene illustrato come ottenere i valori richiesti prima di poter aggiungere una proprietà a un elenco delle proprietà di ricerca e abilitarlo per la ricerca full-text. In questi valori sono inclusi il GUID del set di proprietà e l'identificatore di tipo integer di una proprietà del documento.  

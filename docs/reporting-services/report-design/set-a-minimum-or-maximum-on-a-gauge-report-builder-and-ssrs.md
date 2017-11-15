@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d94f902d6183eacd623eaf0f08ee9525ca441ae6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Impostare un valore minimo o massimo su un misuratore (Generatore report e SSRS)
   A differenza dei grafici in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in cui sono definiti più gruppi, i misuratori mostrano un solo valore. Poiché Generatore report e Progettazione report possono determinare il significato contestuale o relativo del valore che si sta tentando di visualizzare sul misuratore, è necessario definire il valore minimo e massimo per la scala.   
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Se l'intervallo dei valori è grande, ad esempio da 0 a 10000, utilizzare un moltiplicatore per ridurre il numero di zero sul misuratore. Il moltiplicatore ridurrà solo la scala dei numeri sul misuratore, non il valore stesso.  
   
- È possibile usare espressioni per impostare i valori delle opzioni **Minimo** e **Massimo**. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ È possibile usare espressioni per impostare i valori delle opzioni **Minimo** e **Massimo** . Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ## <a name="to-set-the-minimum-and-maximum-on-the-gauge"></a>Per impostare i valori minimo e massimo sul misuratore  
   
@@ -43,9 +42,8 @@ ms.lasthandoff: 08/09/2017
 4.  (Facoltativo) Se i valori per le impostazioni Minimo e Massimo sono elevati, specificare un valore per l'opzione **Moltiplica etichette di scala per** . Per specificare un moltiplicatore in modo da ridurre la scala, utilizzare un numero decimale. Se, ad esempio, si dispone di una scala compresa tra 0 e 1000, è possibile specificare un valore di moltiplicatore pari a 0,01 per ridurre la scala ai valori compresi tra 0 e 10.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di Scale su un misuratore &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Formattazione di indicatori di misura su un misuratore &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [I misuratori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formattazione degli indicatori di misura su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

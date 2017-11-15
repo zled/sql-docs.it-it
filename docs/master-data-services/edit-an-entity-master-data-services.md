@@ -1,29 +1,25 @@
 ---
 title: "Modificare un'entità (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- entities [Master Data Services], changing name
+helpviewer_keywords: entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: a1291375fa927102580631814c3247ac63b0d42f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modificare un'entità (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare un'entità.  
@@ -47,7 +43,7 @@ ms.lasthandoff: 09/07/2017
   
 5.  Nel campo **Descrizione** digitare la descrizione aggiornata dell'entità.  
   
-6.  Nel campo **Nome per le tabelle di gestione temporanea** digitare il nome aggiornato per la tabella di gestione temporanea.  
+6.  Nel campo **Nome per le tabelle di staging** digitare il nome aggiornato per la tabella di staging.  
   
 7.  Per il campo **Tipo di log delle transazioni** scegliere il tipo di log delle transazioni aggiornato nell'elenco a discesa.  
   
@@ -68,7 +64,7 @@ ms.lasthandoff: 09/07/2017
   
  Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.  
   
- ![Icona dello stato di errore](../master-data-services/media/mds-statusicon-error.png "Icona dello stato di errore")  
+ ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")  
   
  Quando lo stato è OK, viene visualizzata l'immagine seguente.  
   
@@ -80,4 +76,3 @@ ms.lasthandoff: 09/07/2017
  [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   
-

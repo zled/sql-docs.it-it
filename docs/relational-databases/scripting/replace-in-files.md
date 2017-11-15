@@ -5,27 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.replaceinfiles
 - vs.replaceinfiles
-helpviewer_keywords:
-- Replace in Files dialog box
+helpviewer_keywords: Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2626e43307f63dc878531d36c5129575f1ff69e
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 27f72fee58d96813be7d6ab6146ebeb58a2af9e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replace-in-files"></a>Sostituisci nei file
   La scheda **Sostituisci nei file** della finestra di dialogo Trova e sostituisci consente di cercare una stringa o un'espressione nel codice di un dato set di file e di modificare alcune o tutte le corrispondenze trovate. L'elenco delle corrispondenze rilevate e delle azioni eseguite viene visualizzato nella finestra per i risultati della ricerca selezionata in **Opzioni risultati**.  
@@ -68,7 +65,7 @@ ms.lasthandoff: 06/22/2017
  Viene visualizzato un promemoria che include l'opzione **Non chiudere i file modificati** . Selezionare questa opzione per mantenere l'opzione **Annulla** . **Annulla** è disponibile solo per i file che restano aperti dopo essere stati modificati.  
   
  **Ignora file**  
- Diventa disponibile quando la casella **Cerca in** include più file. Fare clic su questo pulsante se non si desidera cercare nel file corrente o modificare tale file. La ricerca proseguirà nel file successivo contenuto nell'elenco **Cerca in**.  
+ Diventa disponibile quando la casella **Cerca in** include più file. Fare clic su questo pulsante se non si desidera cercare nel file corrente o modificare tale file. La ricerca proseguirà nel file successivo dell'elenco **Cerca in**.  
   
 ## <a name="look-in"></a>Cerca in  
  L'opzione selezionata nell'elenco a discesa **Cerca in** determina se la funzione **Sostituisci nei file** eseguirà la ricerca solo nei file attualmente attivi oppure in tutti i file archiviati all'interno di determinate cartelle. Selezionare un ambito di ricerca dall'elenco, digitare il percorso di una cartella oppure fare clic sul pulsante **Sfoglia** per visualizzare la finestra di dialogo **Seleziona cartelle di ricerca** e selezionare un set di cartelle in cui eseguire la ricerca.  
@@ -164,4 +161,3 @@ ms.lasthandoff: 06/22/2017
  [Tasti di scelta rapida di SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

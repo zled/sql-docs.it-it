@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
   Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Per aggiornare un'applicazione livello dati tramite:**  [la procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza gestita del Motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Applicazioni livello dati distribuite** nell'area [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applicazioni livello dati distribuite** details page.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Convalida degli oggetti  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *NomeSchema***.***NomeOggetto* identifica l'oggetto attualmente sottoposto a verifica.  
+ **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *NomeSchema***.***NomeOggetto* identifica l'oggetto attualmente sottoposto a verifica.  
   
  **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   
@@ -185,4 +183,3 @@ $registerunit.Register()
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

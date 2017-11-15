@@ -5,25 +5,23 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f4aef82cdb9291215f41bad29e4de8ff61b031a8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: dde834cf572d01f3184eff7995c02a748ccdce96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
   Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i dati vengono archiviati in più tabelle di database e sono visibili tramite viste. Le informazioni eventualmente protette nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sono visibili agli utenti che dispongono dell'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -45,17 +43,17 @@ ms.lasthandoff: 09/07/2017
 -   [Configurazione di impostazioni di sistema](#SysSettings)  
   
 ##  <a name="Staging"></a> Dati di gestione temporanea  
- Nella tabella seguente, in ogni entità a protezione diretta la parola 'name' fa parte del nome. Viene indicato il nome della tabella di gestione temporanea specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ Nella tabella seguente, in ogni entità a protezione diretta la parola 'name' fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Creare, aggiornare ed eliminare i membri foglia e i relativi attributi.|stg.name_Leaf|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
-|Caricare i dati dalla tabella di gestione temporanea Foglia nelle tabelle di database MDS appropriate.|stg.udp_name_Leaf|EXECUTE|  
+|Caricare i dati dalla tabella di staging Foglia nelle tabelle di database MDS appropriate.|stg.udp_name_Leaf|EXECUTE|  
 |Creare, aggiornare ed eliminare i membri consolidati e i relativi attributi.|stg.name_Consolidated|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
-|Caricare i dati dalla tabella di gestione temporanea Consolidata nelle tabelle di database MDS appropriate.|stg.udp_name_Consolidated|EXECUTE|  
+|Caricare i dati dalla tabella di staging Consolidata nelle tabelle di database MDS appropriate.|stg.udp_name_Consolidated|EXECUTE|  
 |Spostare membri in una gerarchia esplicita.|stg.name_Relationship|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
-|Caricare i dati dalla tabella di gestione temporanea Relazione nelle tabelle di database MDS appropriate.|stg.udp_name_Relationship|EXECUTE|  
-|Visualizzare gli errori che si verificati quando i dati delle tabelle di gestione temporanea sono stati inseriti nelle tabelle di database MDS.|stg.udp_name_Relationship|SELECT|  
+|Caricare i dati dalla tabella di staging Relazione nelle tabelle di database MDS appropriate.|stg.udp_name_Relationship|EXECUTE|  
+|Visualizzare gli errori che si verificati quando i dati delle tabelle di staging sono stati inseriti nelle tabelle di database MDS.|stg.udp_name_Relationship|SELECT|  
   
  Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/07/2017
  [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   
-

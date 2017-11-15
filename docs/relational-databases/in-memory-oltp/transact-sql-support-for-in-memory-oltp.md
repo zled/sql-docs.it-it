@@ -5,22 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc975fbbdb4118158e4beacef63f45a63c479d38
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 969aeddecb82270a81c1e23836033bc7e6d6e1ee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Supporto di Transact-SQL per OLTP in memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/18/2017
 -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
     In una stored procedure compilata in modo nativo è possibile dichiarare una variabile come **NOT NULL**. Questo non è possibile in una stored procedure normale.  
   
- A partire da SQL Server 2016, **AUTO_UPDATE_STATISTICS** può essere **ON** per le tabelle con ottimizzazione per la memoria. Per altre informazioni, vedere [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md).  
+ A partire da SQL Server 2016,**AUTO_UPDATE_STATISTICS** può essere **ON** per le tabelle ottimizzate per la memoria. Per altre informazioni, vedere [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md).  
   
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md) ON non è supportata dalle stored procedure compilate in modo nativo.  
   
@@ -59,4 +57,3 @@ ms.lasthandoff: 08/18/2017
  [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

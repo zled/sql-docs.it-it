@@ -5,22 +5,20 @@ ms.date: 10/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-cleansing"></a>Pulizia dei dati
   La pulizia dei dati è il processo di analisi della qualità dei dati in un'origine dati, con l'approvazione o il rifiuto manuale dei suggerimenti del sistema e la conseguente modifica dei dati. La pulizia dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) include un processo assistito da computer, che analizza la conformità dei dati alle informazioni in una Knowledge Base, e un processo interattivo, che consente all'amministratore dei dati di rivedere e modificare i risultati del processo assistito da computer per assicurarsi che la pulizia dei dati risponda esattamente alle aspettative.  
@@ -59,9 +57,9 @@ ms.lasthandoff: 09/09/2017
   
  Il processo assistito da computer consente di visualizzare le informazioni sulla qualità dei dati nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] che verrà utilizzato per il processo interattivo di pulizia. Oltre al rispetto delle regole relative agli errori di sintassi, in DQS vengono utilizzati anche dati di riferimento e algoritmi avanzati per la classificazione dei dati in base a un *livello di confidenza*. Il livello di confidenza indica il grado di certezza in DQS in relazione alla correzione o al suggerimento. Il livello di confidenza è basato sui seguenti valori soglia:  
   
--   Un valore *soglia di correzione automatica* sopra la quale tramite DQS viene suggerita e apportata una modifica, a meno che questa non venga rifiutata dall'amministratore dei dati. È possibile specificare il valore soglia di correzione automatica nella scheda **Impostazioni generali** della schermata **Configurazione** . Per ulteriori informazioni, vedere [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Un valore *soglia di correzione automatica* sopra la quale tramite DQS viene suggerita e apportata una modifica, a meno che questa non venga rifiutata dall'amministratore dei dati. È possibile specificare il valore soglia di correzione automatica nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Un valore *soglia di suggerimento automatico* sotto la soglia di correzione automatica, sopra la quale tramite DQS viene suggerita e apportata una modifica, se l'amministratore dei dati la approva. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per ulteriori informazioni, vedere [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Un valore *soglia di suggerimento automatico* sotto la soglia di correzione automatica, sopra la quale tramite DQS viene suggerita e apportata una modifica, se l'amministratore dei dati la approva. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
  Qualsiasi valore con un livello di confidenza inferiore al valore soglia di suggerimento automatico viene lasciato invariato da DQS a meno che l'amministratore dei dati specifichi una modifica.  
   
@@ -113,4 +111,3 @@ ms.lasthandoff: 09/09/2017
  [Corrispondenza di dati](../data-quality-services/data-matching.md)  
   
   
-

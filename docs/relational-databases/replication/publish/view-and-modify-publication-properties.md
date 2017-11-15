@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - modifying replication properties, publications
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25672cad6198647ca7e24eb924796740ce20c264
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 78c385fbef819baf5a3f4b1508fc6d58b6464df6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizzazione e modifica delle proprietà della pubblicazione
   In questo argomento viene descritto come modificare le proprietà delle pubblicazioni in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -156,25 +155,25 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>Per visualizzare o modificare le proprietà di una pubblicazione snapshot o transazionale  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication>, impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata al passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication> , impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata al passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Usare l'operatore logico AND (**&** in Microsoft Visual C# e **And** in Microsoft Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> è impostato un valore <xref:Microsoft.SqlServer.Replication.PublicationAttributes> specificato. (Facoltativo) Usare l'operatore logico OR inclusivo (**|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo (**^** in Visual C# e **Xor** in Visual Basic) per modificare i valori <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Utilizzare l'operatore AND logico (**&** in Microsoft Visual C# e **And** in Microsoft Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.PublicationAttributes> è impostato un valore <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato. Utilizzare l'operatore logico OR inclusivo (**|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo (**^** in Visual C# e **Xor** in Visual Basic) per modificare i valori di <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato.  
   
 5.  (Facoltativo) Se si specifica un valore **true** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per eseguire il commit delle modifiche nel server. Se si specifica un valore **false** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (impostazione predefinita), le modifiche vengono inviate immediatamente al server.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>Per visualizzare o modificare le proprietà di una pubblicazione di tipo merge  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>, impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata al passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> , impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata al passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Usare l'operatore logico AND (**&** in Visual C# e **And** in Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> è impostato un valore <xref:Microsoft.SqlServer.Replication.PublicationAttributes> specificato. (Facoltativo) Usare l'operatore logico OR inclusivo (**|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo (**^** in Visual C# e **Xor** in Visual Basic) per modificare i valori <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà che è possibile impostare. Utilizzare l'operatore AND logico (**&** in Visual C# e **And** in Visual Basic) per determinare se per la proprietà <xref:Microsoft.SqlServer.Replication.PublicationAttributes> è impostato un valore <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato. Utilizzare l'operatore logico OR inclusivo (**|** in Visual C# e **Or** in Visual Basic) e l'operatore logico OR esclusivo (**^** in Visual C# e **Xor** in Visual Basic) per modificare i valori di <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> specificato.  
   
 5.  (Facoltativo) Se si specifica un valore **true** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per eseguire il commit delle modifiche nel server. Se si specifica un valore **false** per <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (impostazione predefinita), le modifiche vengono inviate immediatamente al server.  
   

@@ -5,31 +5,28 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- staging process [Master Data Services], error messages
+helpviewer_keywords: staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a870a044e3687e4d75b3a48ea44ed11119b3b5e2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 8328c57fe3d4ad81262fd49e42b0305d7edd1d26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errori del processo di gestione temporanea (Master Data Services)
-  Al termine del processo di gestione temporanea, per tutti i record elaborati è presente un valore nella colonna ErrorCode delle tabelle di gestione temporanea. Questi valori sono elencati nella seguente tabella.  
+  Al termine del processo di staging, per tutti i record elaborati è presente un valore nella colonna ErrorCode delle tabelle di staging. Questi valori sono elencati nella seguente tabella.  
   
 |Codice|Errore|Si verifica quando/Dettagli|Si applica alla tabella|  
 |----------|-----------|--------------------------|----------------------|  
-|210001|Lo stesso codice membro è presente più volte nella tabella di gestione temporanea.|Nel batch di gestione temporanea lo stesso codice membro è presente più volte. Il membro non è stato né creato né aggiornato.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
+|210001|Lo stesso codice membro è presente più volte nella tabella di staging.|Nel batch di gestione temporanea lo stesso codice membro è presente più volte. Il membro non è stato né creato né aggiornato.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210003|I valori degli attributi fanno riferimento a un membro inesistente o inattivo.|Quando si gestiscono temporaneamente gli attributi basati su dominio, è necessario utilizzare il codice, piuttosto che il nome. Si applica a **ImportType0**, **1**e **2**.|Foglia<br /><br /> Consolidata|  
 |210006|Il codice membro è inattivo.|**ImportType** = **1** ed è stato specificato un codice membro che non esiste.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210032|Il nome della gerarchia è mancante o non valido.|La gerarchia esplicita non è stata trovata o il valore **HierarchyName** è vuoto.|Consolidata<br /><br /> Relazione|  
@@ -41,7 +38,7 @@ ms.lasthandoff: 09/07/2017
 |300002|Il codice membro non è valido.|Relazioni: il codice membro padre o figlio non esiste.<br /><br /> Foglia o Consolidata: **ImportType** = **3** o **4** e il codice membro non esiste.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |300004|Il codice membro esiste già.|**ImportType** = **1** ed è stato usato un codice membro che già esiste nell'entità.|Foglia<br /><br /> Consolidata|  
 |210011|Se **RelationshipType** è **1**, **ParentCode** non può essere un membro foglia.|Assicurarsi che il valore **ParentCode** sia un codice membro consolidato.|Relazione|  
-|210015|Lo stesso codice membro è presente più volte nella tabella di gestione temporanea per una gerarchia e un batch.|Per una gerarchia esplicita, si è specificata la posizione dello stesso membro più volte nello stesso batch.|Relazione|  
+|210015|Lo stesso codice membro è presente più volte nella tabella di staging per una gerarchia e un batch.|Per una gerarchia esplicita, si è specificata la posizione dello stesso membro più volte nello stesso batch.|Relazione|  
 |210016|Impossibile creare la relazione poiché determinerebbe un riferimento circolare.|Ciò si verifica quando si tenta di assegnare un figlio come padre.|Relazione|  
 |210046|Il membro non può essere di pari livello del nodo Radice.|Ciò si verifica quando **RelationshipType** = **2** (di pari livello) e **ParentCode** o **ChildCode** è **Radice**. I membri non possono essere allo stesso livello del nodo Radice; possono essere solo elementi figlio.|Relazione|  
 |210047|Il membro non può essere di pari livello del nodo Inutilizzato.|Ciò si verifica quando **RelationshipType** = **2** (di pari livello) e **ParentCode** o **ChildCode** è **Inutilizzato**. I membri possono essere solo elementi figlio del nodo Inutilizzato.|Relazione|  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/07/2017
  [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   
-

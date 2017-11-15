@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f3aa60ecd19dc22669cc98915fb853d4480d1fa5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d37d9c4769544d597c3fa63bc488a99c5a1b5fd8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-the-database-engine-services"></a>Gestire il servizio Motore di database
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nei sistemi operativi come servizio. Un servizio è un tipo di applicazione eseguito in background nel sistema. I servizi normalmente offrono funzionalità chiave del sistema operativo, ad esempio gestione di richieste Web, registrazione di eventi o gestione di file. I servizi possono essere eseguiti senza la visualizzazione di un'interfaccia utente sul desktop del computer. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e molti altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguiti come servizi. Questi servizi in genere vengono avviati insieme al sistema operativo. Questo dipende dalle opzioni specificate durante l'installazione. Alcuni servizi non vengono avviati per impostazione predefinita. In questa sezione viene descritta la gestione dei vari servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Prima di accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario sapere come avviare, arrestare, sospendere, riprendere e riavviare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo l'accesso, è possibile eseguire attività come la gestione del server o l'esecuzione di query su un database.  
@@ -79,4 +77,3 @@ ms.lasthandoff: 08/02/2017
  [Accesso a SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
   
-

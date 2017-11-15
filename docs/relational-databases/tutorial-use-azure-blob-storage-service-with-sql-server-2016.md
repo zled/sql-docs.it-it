@@ -1,29 +1,25 @@
 ---
 title: 'Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016 | Microsoft Docs'
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ae1e9aef727303d55c79463d822c4f62d3cdae0
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3ee451e1af1df985f99281008c6e5fbf4147e11b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 Benvenuti nell'esercitazione sull'uso di SQL Server 2016 nel servizio di archiviazione BLOB di Microsoft Azure. Questa esercitazione descrive come usare il servizio di archiviazione BLOB di Microsoft Azure per i file di dati e i backup di SQL Server.  
@@ -83,5 +79,4 @@ Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desi
   
   
   
-
 

@@ -5,25 +5,23 @@ ms.date: 04/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e13e255b24d69ae54561fa9ac6fcd88524615c40
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 67dbfddf6209f0c717b83836e63a72b1ea3b4ad7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Area funzionale Gestione integrazione (Gestione dati master)
-  Nell'area funzionale Gestione Integrazione, gli amministratori possono importare dati dalle tabelle di gestione temporanea e possono creare viste delle sottoscrizioni da utilizzare per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+  Nell'area funzionale Gestione Integrazione, gli amministratori possono importare dati dalle tabelle di staging e possono creare viste delle sottoscrizioni da utilizzare per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ## <a name="import-data"></a>Importare dati  
  [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/07/2017
  [Applicazione Web Gestione dati master](../master-data-services/master-data-manager-web-application.md)  
   
   
-

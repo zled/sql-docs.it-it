@@ -5,24 +5,21 @@ ms.date: 01/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dta.general.f1
+f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4f0b031b0c98dd9f7708aebd13984f22403f3de1
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-tuning-advisor"></a>Ottimizzazione guidata motore di database
   Ottimizzazione guidata motore di database (DTA) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] analizza i database e fornisce consigli da utilizzare per ottimizzare le prestazioni di query. È possibile utilizzare Ottimizzazione guidata motore di database per selezionare e creare un set ottimale di indici, viste indicizzate e partizioni di tabella senza che sia necessario conoscere in modo approfondito la struttura del database o le caratteristiche interne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, è possibile eseguire le attività seguenti.  
@@ -130,4 +127,3 @@ ms.lasthandoff: 06/22/2017
 |Visualizzare i risultati dell'operazione di ottimizzazione del database.<br /><br /> Selezionare e implementare le indicazioni relative all'ottimizzazione.<br /><br /> Eseguire l'analisi di simulazione esplorativa nel carico di lavoro.<br /><br /> Rivedere le sessioni di ottimizzazione esistenti, clonare le sessioni in base a quelle esistenti <br />o modificare le indicazioni di ottimizzazione per un'ulteriore valutazione o implementazione.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   
-

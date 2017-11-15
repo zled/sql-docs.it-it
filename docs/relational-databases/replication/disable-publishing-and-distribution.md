@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - disabling replication
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80f107b2855a1e3f2ca4821354021e94c76269d7
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: f52f0f8dc8ff90b1aed18bc603e5e3055800df15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-publishing-and-distribution"></a>Disabilitazione della pubblicazione e della distribuzione
   In questo argomento viene descritto come disabilitare la pubblicazione e la distribuzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -110,17 +109,17 @@ ms.lasthandoff: 06/22/2017
   
 2.  Rimuovere tutte le pubblicazioni che utilizzano il server di distribuzione e disabilitare la pubblicazione per tutti i database se il server di pubblicazione e il server di distribuzione si trovano nello stesso server. Per altre informazioni, vedere [Delete a Publication](../../relational-databases/replication/publish/delete-a-publication.md).  
   
-3.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+3.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Specificare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 3.  
+4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Specificare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 3.  
   
 5.  (Facoltativo) Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per ottenere le proprietà dell'oggetto e verificare che il server di pubblicazione esista. Se il metodo restituisce **false**, il nome del server di pubblicazione impostato al passaggio 4 non è corretto oppure il server di pubblicazione non è utilizzato da questo server di distribuzione.  
   
-6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>. Passare il valore **true** per *force* se il server di pubblicazione e il server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare non esistano più pubblicazioni nel server di pubblicazione.  
+6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passare il valore **true** per *force* se il server di pubblicazione e il server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare non esistano più pubblicazioni nel server di pubblicazione.  
   
-7.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> dal passaggio 3.  
+7.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 3.  
   
-8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A>. Passare il valore **true** affinché *force* rimuova tutti gli oggetti di replica nel database di distribuzione senza prima verificare che tutti i database di pubblicazione locali siano stati disabilitati e i database di distribuzione siano stati disinstallati.  
+8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Passare il valore **true** affinché *force* rimuova tutti gli oggetti di replica nel database di distribuzione senza prima verificare che tutti i database di pubblicazione locali siano stati disabilitati e i database di distribuzione siano stati disinstallati.  
   
 ###  <a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene rimossa la registrazione del server di pubblicazione nel database di distribuzione, viene eliminato il database di distribuzione e viene disinstallato il database di distribuzione.  

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], prerequisites
+helpviewer_keywords: FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: da9c6ce47bf6ea04e47a04246fe5524dc1d3fddb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Abilitazione dei prerequisiti per la tabella FileTable
   Viene descritto come abilitare i prerequisiti per la creazione e l'utilizzo di tabelle FileTable.  
@@ -159,4 +156,3 @@ GO
 -   Quando si elimina un database abilitato per tabelle FileTable, vengono rimosse la directory a livello di database e tutte le strutture di directory di tutte le tabelle FileTable in essa contenute.  
   
   
-

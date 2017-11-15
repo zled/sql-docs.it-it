@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Attention event class
+helpviewer_keywords: Attention event class
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efe8ebb8481cafd35d36b2e9594626b940cf754e
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b16f6c0ade71ebbfc39784342308ccd640042004
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="attention-event-class"></a>Attention - classe di evento
   La classe di evento **Attention** indica che è stato generato un evento di attenzione, ad esempio un'operazione di annullamento, una richiesta di interrupt del client o l'interruzione di una connessione client. Le operazioni di annullamento possono essere considerate inoltre parte integrante dell'implementazione di timeout del driver per l'accesso ai dati.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 06/22/2017
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   
-

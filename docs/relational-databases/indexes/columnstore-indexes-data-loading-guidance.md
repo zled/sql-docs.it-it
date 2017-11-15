@@ -1,27 +1,24 @@
 ---
 title: Indici columnstore - Linee guida per il caricamento di dati | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 5d26997dafae62c7a89662f963e9d590a1e4d40b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Indici columnstore - Linee guida per il caricamento di dati
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -33,7 +30,7 @@ Opzioni e suggerimenti per il caricamento di dati in un indice columnstore usand
 
 ## <a name="what-is-bulk-loading"></a>Che cos'è il caricamento bulk?
 Il termine *caricamento bulk* fa riferimento al modo in cui viene aggiunto un numero elevato di righe a un archivio dati. Questo è il modo che offre le prestazioni migliori per spostare i dati in un indice columnstore, perché si basa su batch di righe. Il caricamento bulk riempie i rowgroup fino alla capacità massima e li comprime direttamente nel columnstore. Solo le righe alla fine di un carico che non soddisfano il requisito minimo di 102.400 righe per ogni rowgroup passano all'archivio differenziale.  
-Per eseguire un caricamento bulk, è possibile usare l'[utilità bcp](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md) oppure selezionare righe da una tabella di gestione temporanea.
+Per eseguire un caricamento bulk, è possibile usare l'[utilità bcp](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md) oppure selezionare righe da una tabella di staging.
 
 ![Caricamento in un indice columnstore cluster](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Caricamento in un indice columnstore cluster")  
   
@@ -78,23 +75,23 @@ FROM sys.dm_db_column_store_row_group_physical_stats
   
  ![Rowgroup e archivio differenziale per un carico batch](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e archivio differenziale per un carico batch")  
   
-## <a name="use-a-staging-table-to-improve-performance"></a>Usare una tabella di gestione temporanea per migliorare le prestazioni
+## <a name="use-a-staging-table-to-improve-performance"></a>Usare una tabella di staging per migliorare le prestazioni
 Se si caricano dati solo per la gestione temporanea, prima di eseguire ulteriori trasformazioni, il caricamento della tabella nella tabella heap sarà molto più rapido del caricamento dei dati in una tabella columnstore cluster. Inoltre, il caricamento dei dati in una [tabella temporanea][Temporanea] avverrà molto più velocemente del caricamento di una tabella in un archivio permanente.  
 
- Il modello comune per il caricamento di dati consiste nel caricare i dati in una tabella di gestione temporanea, eseguire alcune trasformazioni e quindi caricare i dati nella tabella di destinazione usando il comando seguente  
+ Il modello comune per il caricamento di dati consiste nel caricare i dati in una tabella di staging, eseguire alcune trasformazioni e quindi caricare i dati nella tabella di destinazione usando il comando seguente  
   
 ```  
 INSERT INTO <columnstore index>  SELECT <list of columns> FROM <Staging Table>  
   
 ```  
   
- Il comando carica i dati nell'indice columnstore in modo analogo ai comandi bcp o bulk insert, ma in un unico batch. Se il numero di righe nella tabella di gestione temporanea è < 102.400, le righe vengono caricate in un rowgroup delta, altrimenti possono essere caricate direttamente in un rowgroup compresso.  Uno dei limiti principali è dato dal fatto che l'operazione INSERT è a thread singolo. Per caricare i dati in parallelo, è possibile creare più tabelle di gestione temporanea o immettere i comandi INSERT/SELECT con intervalli non sovrapposti di righe dalla tabella di gestione temporanea.  Questa limitazione è stata risolta in SQL Server 2016. Il comando seguente carica i dati dalla tabella di gestione temporanea in parallelo, ma è necessario specificare il comando TABLOCK.  
+ Il comando carica i dati nell'indice columnstore in modo analogo ai comandi bcp o bulk insert, ma in un unico batch. Se il numero di righe nella tabella di staging è < 102.400, le righe vengono caricate in un rowgroup delta, altrimenti possono essere caricate direttamente in un rowgroup compresso.  Uno dei limiti principali è dato dal fatto che l'operazione INSERT è a thread singolo. Per caricare i dati in parallelo, è possibile creare più tabelle di staging o immettere i comandi INSERT/SELECT con intervalli non sovrapposti di righe dalla tabella di staging.  Questa limitazione è stata risolta in SQL Server 2016. Il comando seguente carica i dati dalla tabella di staging in parallelo, ma è necessario specificare il comando TABLOCK.  
   
 ```  
 INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Per il caricamento in indici columnstore cluster da una tabella di gestione temporanea sono disponibili le ottimizzazioni seguenti.  
+ Per il caricamento in indici columnstore cluster da una tabella di staging sono disponibili le ottimizzazioni seguenti.  
   
 -   Ottimizzazione dei log: con registrazione minima quando i dati vengono caricati in rowgroup compressi. Non si ha registrazione minima quando i dati vengono caricati in rowgroup delta.  
   
@@ -130,4 +127,3 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 
  ## <a name="next-steps"></a>Passaggi successivi
  Per altre informazioni sul caricamento, vedere questo [post di blog](http://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  
-

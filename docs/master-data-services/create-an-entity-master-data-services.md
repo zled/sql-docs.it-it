@@ -1,30 +1,27 @@
 ---
 title: "Creare un'entità (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9b081ac7c85401a43533863f2495dad9032c7ba0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: ef44a2211a8b9d82f1a155542176b45b335d706d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un'entità in cui siano contenuti i membri e i relativi attributi.  
@@ -50,12 +47,12 @@ ms.lasthandoff: 09/07/2017
   
 5.  Facoltativamente, nel campo **Descrizione** digitare la descrizione dell'entità.  
   
-6.  Facoltativamente, nella casella **Nome per le tabelle di gestione temporanea** digitare un nome per la tabella di gestione temporanea.  
+6.  Facoltativamente, nella casella **Nome per le tabelle di staging** digitare un nome per la tabella di staging.  
   
      Se questo campo non viene completato, viene usato il nome entità.  
   
     > [!TIP]  
-    >  Usare il nome del modello come parte del nome della tabella di gestione temporanea, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per altre informazioni sulle tabelle di gestione temporanea, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+    >  Usare il nome del modello come parte del nome della tabella di staging, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per altre informazioni sulle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 7.  Per il campo **Tipo di log delle transazioni** scegliere il tipo di log delle transazioni nell'elenco a discesa.  
   
@@ -101,4 +98,3 @@ ms.lasthandoff: 09/07/2017
  [Eliminare un'entità &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   
-

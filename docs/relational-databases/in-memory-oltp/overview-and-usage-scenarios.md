@@ -5,22 +5,20 @@ ms.date: 04/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 33804f220a760d2959f5e3feb1a629b07d1b0296
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-and-usage-scenarios"></a>Panoramica e scenari di utilizzo
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -40,16 +38,16 @@ Ma solo perché i dati si trovano in memoria non significa che si perdono quando
 
 Per sfruttare OLTP in memoria nel database, è possibile usare uno o più dei seguenti tipi di oggetti:
 
-- Le*tabelle con ottimizzazione per la memoria* vengono usate per archiviare i dati utente. È possibile dichiarare una tabella con ottimizzazione per la memoria al momento della creazione.
-- Le*tabelle non durevoli* vengono usate per i dati temporanei, per la memorizzazione nella cache o per un set di risultati intermedio (sostituendo le tabelle temporanee tradizionali). Una tabella non durevole è una tabella con ottimizzazione per la memoria che viene dichiarata con DURABILITY=SCHEMA_ONLY, vale a dire che le modifiche apportate a queste tabelle non comportano operazioni di I/O. Ciò evita l'utilizzo di risorse per le operazioni di I/O sui log per i casi in cui la durabilità non è un problema.
-- I*tipi di tabella con ottimizzazione per la memoria* vengono usati per i parametri con valori di tabella, ovvero come set di risultati intermedi nelle stored procedure. Questi tipi possono essere usati al posto dei tipi di tabella tradizionali. Le variabili di tabella e i parametri con valori di tabella che vengono dichiarati usando un tipo di tabella con ottimizzazione per la memoria ereditano i vantaggi delle tabelle non durevoli con ottimizzazione per la memoria: accesso efficiente ai dati e nessuna operazione I/O.
+- Le*tabelle con ottimizzazione per la memoria* vengono usate per archiviare i dati utente. È possibile dichiarare una tabella ottimizzata per la memoria al momento della creazione.
+- Le*tabelle non durevoli* vengono usate per i dati temporanei, per la memorizzazione nella cache o per un set di risultati intermedio (sostituendo le tabelle temporanee tradizionali). Una tabella non durevole è una tabella ottimizzata per la memoria che viene dichiarata con DURABILITY=SCHEMA_ONLY, vale a dire che le modifiche apportate a queste tabelle non comportano operazioni di I/O. Ciò evita l'utilizzo di risorse per le operazioni di I/O sui log per i casi in cui la durabilità non è un problema.
+- I*tipi di tabella con ottimizzazione per la memoria* vengono usati per i parametri con valori di tabella, ovvero come set di risultati intermedi nelle stored procedure. Questi tipi possono essere usati al posto dei tipi di tabella tradizionali. Le variabili di tabella e i parametri con valori di tabella che vengono dichiarati usando un tipo di tabella ottimizzata per la memoria ereditano i vantaggi delle tabelle non durevoli ottimizzate per la memoria: accesso efficiente ai dati e nessuna operazione I/O.
 - I*moduli T-SQL compilati in modo nativo* vengono usati per ridurre ulteriormente il tempo impiegato per una singola transazione riducendo i cicli di CPU necessari per elaborare le operazioni. È possibile dichiarare un modulo Transact-SQL in modo da essere compilato in modo nativo al momento della creazione. Attualmente, i moduli T-SQL che possono essere compilati in modo nativo sono i seguenti: stored procedure, trigger e funzioni scalari definite dall'utente.
 
-OLTP in memoria è incorporato in SQL Server e nel database SQL di Azure. E poiché il comportamento di questi oggetti è molto simile a quello delle relative controparti tradizionali, spesso è possibile ottenere un miglioramento delle prestazioni apportandolo solo modifiche minime al database e all'applicazione. Inoltre, nello stesso database è possibile avere sia le tabelle con ottimizzazione per la memoria che le tabelle tradizionali basati su disco ed eseguire le query in entrambi i tipi di tabella. Alla fine di questo argomento è disponibile uno script Transact-SQL che mostra un esempio per ognuno di questi tipi di oggetti.
+OLTP in memoria è incorporato in SQL Server e nel database SQL di Azure. E poiché il comportamento di questi oggetti è molto simile a quello delle relative controparti tradizionali, spesso è possibile ottenere un miglioramento delle prestazioni apportandolo solo modifiche minime al database e all'applicazione. Inoltre, nello stesso database è possibile avere sia le tabelle ottimizzate per la memoria che le tabelle tradizionali basati su disco ed eseguire le query in entrambi i tipi di tabella. Alla fine di questo argomento è disponibile uno script Transact-SQL che mostra un esempio per ognuno di questi tipi di oggetti.
 
 ## <a name="usage-scenarios-for-in-memory-oltp"></a>Scenari di utilizzo per OLTP in memoria
 
-OLTP in memoria non è un pulsante magico per ottenere maggiore velocità e non è appropriato per tutti i carichi di lavoro. Ad esempio, le tabelle con ottimizzazione per la memoria non ridurranno effettivamente l'utilizzo della CPU se la maggior parte delle query comportano aggregazioni per grandi intervalli di dati. Per questo scenario saranno utili gli indici columnstore.
+OLTP in memoria non è un pulsante magico per ottenere maggiore velocità e non è appropriato per tutti i carichi di lavoro. Ad esempio, le tabelle ottimizzate per la memoria non ridurranno effettivamente l'utilizzo della CPU se la maggior parte delle query comportano aggregazioni per grandi intervalli di dati. Per questo scenario saranno utili gli indici columnstore.
 
 Di seguito è riportato un elenco di scenari e modelli di applicazione in cui i clienti hanno ottenuto risultati positivi con OLTP in memoria.
 
@@ -57,11 +55,11 @@ Di seguito è riportato un elenco di scenari e modelli di applicazione in cui i 
 
 Questo rappresenta effettivamente lo scenario principale per cui è stato creato OLTP in memoria: supporto di volumi elevati di transazioni con latenza bassa costante per le singole transazioni.
 
-Scenari di carico di lavoro comuni sono: intermediazione di strumenti finanziari, scommesse sportive, giochi per dispositivi mobili e servizi pubblicitari. Un altro modello comune è quello di un "catalogo" letto e/o aggiornato di frequente. Un esempio è rappresentato dal caso in cui si hanno file di grandi dimensioni, ognuno distribuito in diversi nodi di un cluster ed è possibile catalogare la posizione di ogni partizione di ogni file in una tabella con ottimizzazione per la memoria.
+Scenari di carico di lavoro comuni sono: intermediazione di strumenti finanziari, scommesse sportive, giochi per dispositivi mobili e servizi pubblicitari. Un altro modello comune è quello di un "catalogo" letto e/o aggiornato di frequente. Un esempio è rappresentato dal caso in cui si hanno file di grandi dimensioni, ognuno distribuito in diversi nodi di un cluster ed è possibile catalogare la posizione di ogni partizione di ogni file in una tabella ottimizzata per la memoria.
 
 #### <a name="implementation-considerations"></a>Considerazioni sull'implementazione
 
-Usare le tabelle con ottimizzazione per la memoria per le tabelle delle transazioni principali, ad esempio le tabelle con transazioni più critiche per le prestazioni. Usare le stored procedure compilate in modo nativo per ottimizzare l'esecuzione della logica associata alla transazione aziendale. Quanto più è possibile distribuire la logica nelle stored procedure del database, tanto più sarà il vantaggio che si ottiene dall'utilizzo di OLTP in memoria.
+Usare le tabelle ottimizzate per la memoria per le tabelle delle transazioni principali, ad esempio le tabelle con transazioni più critiche per le prestazioni. Usare le stored procedure compilate in modo nativo per ottimizzare l'esecuzione della logica associata alla transazione aziendale. Quanto più è possibile distribuire la logica nelle stored procedure del database, tanto più sarà il vantaggio che si ottiene dall'utilizzo di OLTP in memoria.
 
 Per iniziare a usare questo approccio in un'applicazione esistente:
 1. Usare il [report di analisi delle prestazioni delle transazioni](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) per identificare gli oggetti di cui eseguire la migrazione 
@@ -81,12 +79,12 @@ Modelli di applicazione comuni sono: l'inserimento di letture dei sensori e di e
 
 #### <a name="implementation-considerations"></a>Considerazioni sull'implementazione
 
-Usare una tabella con ottimizzazione per la memoria per l'inserimento dei dati. Se l'operazione di inserimento è costituita principalmente da inserimenti (anziché aggiornamenti) e il footprint di memoria di OLTP in memoria dei dati è un problema, procedere come segue:
+Usare una tabella ottimizzata per la memoria per l'inserimento dei dati. Se l'operazione di inserimento è costituita principalmente da inserimenti (anziché aggiornamenti) e il footprint di memoria di OLTP in memoria dei dati è un problema, procedere come segue:
 
 - Usare un processo per ripartire regolarmente il carico di lavoro dei dati in batch in una tabella basata su disco con un [indice columnstore cluster](../indexes/columnstore-indexes-overview.md)mediante un processo che esegue l'istruzione `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`
-- Usare una [tabella temporale con ottimizzazione per la memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) per gestire i dati cronologici: in questo modo, i dati cronologici risiedono su disco e lo spostamento dei dati viene gestito dal sistema.
+- Usare una [tabella temporale ottimizzata per la memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) per gestire i dati cronologici: in questo modo, i dati cronologici risiedono su disco e lo spostamento dei dati viene gestito dal sistema.
 
-Il repository di esempi di SQL Server contiene un'applicazione intelligente della griglia che usa una tabella temporale con ottimizzazione per la memoria, un tipo di tabella con ottimizzazione per la memoria e una stored procedure compilata in modo nativo per velocizzare l'inserimento dei dati, gestendo il footprint di memoria di OLTP in memoria dei dati del sensore: 
+Il repository di esempi di SQL Server contiene un'applicazione intelligente della griglia che usa una tabella temporale ottimizzata per la memoria, un tipo di tabella ottimizzata per la memoria e una stored procedure compilata in modo nativo per velocizzare l'inserimento dei dati, gestendo il footprint di memoria di OLTP in memoria dei dati del sensore: 
 
  - [smart-grid-release](https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0) 
  - [smart-grid-source-code](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/iot-smart-grid)
@@ -105,7 +103,7 @@ Lo stato della sessione ASP.NET è un caso di utilizzo di grande successo per OL
 
 #### <a name="implementation-considerations"></a>Considerazioni sull'implementazione
 
-È possibile usare tabelle non durevoli con ottimizzazione per la memoria come un semplice archivio chiave-valore mediante l'archiviazione di un BLOB in una colonna varbinary(max). In alternativa, è possibile implementare una cache semistrutturata con [supporto JSON](https://azure.microsoft.com/blog/json-support-is-generally-available-in-azure-sql-database/) in SQL Server e nel database SQL di Azure. Infine, è possibile creare una cache relazionale completa tramite tabelle non durevoli con uno schema relazionale completo, compresi vari tipi di dati e vincoli.
+È possibile usare tabelle non durevoli ottimizzate per la memoria come un semplice archivio chiave-valore mediante l'archiviazione di un BLOB in una colonna varbinary(max). In alternativa, è possibile implementare una cache semistrutturata con [supporto JSON](https://azure.microsoft.com/blog/json-support-is-generally-available-in-azure-sql-database/) in SQL Server e nel database SQL di Azure. Infine, è possibile creare una cache relazionale completa tramite tabelle non durevoli con uno schema relazionale completo, compresi vari tipi di dati e vincoli.
 
 Iniziare a usare lo stato della sessione ASP.NET con ottimizzazione per la memoria sfruttando gli script pubblicati su GitHub per sostituire gli oggetti creati dal provider di stato della sessione SQL Server predefinito:
 
@@ -118,7 +116,7 @@ Iniziare a usare lo stato della sessione ASP.NET con ottimizzazione per la memor
 
 ### <a name="tempdb-object-replacement"></a>Sostituzione dell'oggetto tempdb
 
-Sfruttare le tabelle non durevoli e i tipi di tabella con ottimizzazione per la memoria per sostituire le tabelle #temp tradizionali basate su tempdb, le variabili di tabella e i parametri con valori di tabella.
+Sfruttare le tabelle non durevoli e i tipi di tabella ottimizzata per la memoria per sostituire le tabelle #temp tradizionali basate su tempdb, le variabili di tabella e i parametri con valori di tabella.
 
 Le variabili di tabella con ottimizzazione per la memoria e le tabelle non durevoli riducono in genere l'utilizzo di CPU ed eliminano completamente le operazioni di I/O sui log rispetto alle variabili di tabella tradizionali e alla tabella #temp.
 
@@ -130,18 +128,18 @@ Per iniziare, vedere: [Miglioramento delle prestazioni della tabella temporanea 
 
 #### <a name="customer-case-studies"></a>Case study dei clienti
 
-- Un cliente è riuscito a migliorare le prestazioni del 40% semplicemente sostituendo i parametri con valori di tabella tradizionali con i parametri con valori di tabella con ottimizzazione per la memoria: [Inserimento di dati IoT ad alta velocità grazie a OLTP in memoria in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- Un cliente è riuscito a migliorare le prestazioni del 40% semplicemente sostituendo i parametri con valori di tabella tradizionali con i parametri con valori di tabella ottimizzata per la memoria: [Inserimento di dati IoT ad alta velocità grazie a OLTP in memoria in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
 
 
 ### <a name="etl-extract-transform-load"></a>ETL (Extract, Transform, Load, ovvero estrazione, trasformazione e caricamento)
 
-I flussi di lavoro ETL includono spesso il caricamento dei dati in una tabella di gestione temporanea, le trasformazioni dei dati e il caricamento nelle tabelle finali.
+I flussi di lavoro ETL includono spesso il caricamento dei dati in una tabella di staging, le trasformazioni dei dati e il caricamento nelle tabelle finali.
 
 #### <a name="implementation-considerations"></a>Considerazioni sull'implementazione
 
-Usare tabelle non durevoli con ottimizzazione per la memoria per la gestione temporanea dei dati. Eliminano completamente tutte le operazioni di I/O e rendono più efficiente l'accesso ai dati.
+Usare tabelle non durevoli ottimizzate per la memoria per lo staging dei dati. Eliminano completamente tutte le operazioni di I/O e rendono più efficiente l'accesso ai dati.
 
-Se si eseguono le trasformazioni nella tabella di gestione temporanea come parte del flusso di lavoro, è possibile usare le stored procedure compilate in modo nativo per velocizzare tali trasformazioni. Se è possibile eseguire queste trasformazioni in parallelo, si possono ottenere ulteriori vantaggi di scalabilità dall'ottimizzazione per la memoria.
+Se si eseguono le trasformazioni nella tabella di staging come parte del flusso di lavoro, è possibile usare le stored procedure compilate in modo nativo per velocizzare tali trasformazioni. Se è possibile eseguire queste trasformazioni in parallelo, si possono ottenere ulteriori vantaggi di scalabilità dall'ottimizzazione per la memoria.
 
 ## <a name="sample-script"></a>Script di esempio
 
@@ -235,4 +233,3 @@ Lo script seguente illustra gli oggetti di OLTP in memoria che è possibile crea
 [Ottimizzare le prestazioni con le tecnologie In-Memory nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
 - [Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](http://msdn.microsoft.com/library/dn673538.aspx) 
-

@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +14,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: e69395604574832a56c1b1e778b756b9dca0f200
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
   In questo argomento viene descritto come compilare una Knowledge Base tramite l'individuazione delle informazioni. Durante il processo di individuazione in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vengono analizzati i dati in un'origine dati di esempio tramite un processo computerizzato e vengono aggiunte le informazioni ottenute dalla Knowledge Base. Tali informazioni possono essere modificate e migliorate nel passaggio **Gestisci valori di dominio** dell'attività di individuazione delle informazioni o nell'attività di gestione del dominio.  
@@ -71,12 +69,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  Nella tabella **Mapping** eseguire il mapping di ogni colonna di origine su cui si desidera eseguire l'individuazione delle informazioni a un dominio nella Knowledge Base, come segue:  
   
-    1.  Creare un mapping selezionando una colonna di origine nell'elenco a discesa per la **Colonna di origine** di una riga vuota, quindi selezionando un dominio nell'elenco a discesa per la colonna **Dominio** nella stessa riga, se esiste un dominio. Se non esiste alcun dominio, fare clic su **Crea un dominio** o **Crea un dominio composito** per crearne uno. Per ulteriori informazioni, vedere [Creare una regola di dominio](../data-quality-services/create-a-domain-rule.md) o [Crea un dominio composito](../data-quality-services/create-a-composite-domain.md).  
+    1.  Creare un mapping selezionando una colonna di origine nell'elenco a discesa per la **Colonna di origine** di una riga vuota, quindi selezionando un dominio nell'elenco a discesa per la colonna **Dominio** nella stessa riga, se esiste un dominio. Se non esiste alcun dominio, fare clic su **Crea un dominio** o **Crea un dominio composito** per crearne uno. Per ulteriori informazioni, vedere [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) o [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Ripetere il passaggio precedente per ogni mapping. Per modificare il numero di righe nella tabella, fare clic su **Aggiungi un mapping colonne**o selezionare una riga e fare clic su **Rimuovi mapping colonne selezionate**. Se si fa clic su **Rimuovi mapping colonne selezionate** quando è selezionata una riga popolata, la riga selezionata verrà eliminata anche se è presente una riga non popolata.  
   
         > [!NOTE]  
-        >  È possibile eseguire il mapping dei dati di origine a un dominio DQS per eseguire l'individuazione di informazioni solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  È possibile eseguire il mapping dei dati di origine a un dominio DQS per eseguire l'individuazione di informazioni solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati, vedere [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Fare clic su **Visualizza/Seleziona domini compositi** per visualizzare i domini compositi definiti. Se non è stato definito alcun dominio composito, il controllo non sarà disponibile.  
   
@@ -291,7 +289,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Un campo contiene un basso livello di valori validi; è necessario verificare il mapping e la rilevanza delle regole di dominio sul contenuto del campo.  
   
- Per ulteriori informazioni sul profiling, vedere [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Per ulteriori informazioni sul profiling, vedere [Profiling di dati e notifiche in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

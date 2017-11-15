@@ -5,22 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
-ms.openlocfilehash: 413be658a429308744b303d2d3ef82892c964c5a
-ms.contentlocale: it-it
-ms.lasthandoff: 07/27/2017
-
+ms.openlocfilehash: c358b4c12f78b7d56444d0a4bd0e8e6910c174aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Creazione di stored procedure compilate in modo nativo
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 07/27/2017
   
 -   Associazione allo schema delle stored procedure compilate in modo nativo.  
   
- Le stored procedure compilate in modo nativo vengono create usando [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). Nell'esempio seguente vengono illustrate una tabella con ottimizzazione per la memoria e una stored procedure compilata in modo nativo per inserire righe nella tabella.  
+ Le stored procedure compilate in modo nativo vengono create usando [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). Nell'esempio seguente vengono illustrate una tabella ottimizzata per la memoria e una stored procedure compilata in modo nativo per inserire righe nella tabella.  
   
 ```tsql  
 create table dbo.Ord  
@@ -75,4 +73,3 @@ go
  [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

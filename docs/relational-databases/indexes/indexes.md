@@ -5,24 +5,21 @@ ms.date: 11/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- index types [SQL Server]
+helpviewer_keywords: index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f4ac3c815fec2e6add64257dd2ae12e7b659f84
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 271ebf1536918dde11e024877b591141a7eadbba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="indexes"></a>Indici
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 |Tipo di indice|Descrizione|Informazioni aggiuntive|  
 |----------------|-----------------|----------------------------|  
 |Hash|Con un indice hash l'accesso ai dati viene eseguito tramite una tabella hash in memoria. Gli indici hash utilizzano una quantità di memoria fissa (una funzione del numero di bucket).|[Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)|  
-|Indici non cluster con ottimizzazione per la memoria|Per gli indici non cluster con ottimizzazione per la memoria, l'utilizzo della memoria è una funzione del conteggio delle righe e della dimensione delle colonne chiave di indice|[Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)|  
+|Indici non cluster ottimizzati per la memoria|Per gli indici non cluster ottimizzati per la memoria, l'utilizzo della memoria è una funzione del conteggio delle righe e della dimensione delle colonne chiave di indice|[Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)|  
 |Cluster|Un indice cluster ordina e archivia le righe di dati della tabella o della vista in base alle chiavi di indice cluster. L'indice cluster viene implementato come albero B che supporta il recupero rapido delle righe in base ai rispettivi valori delle chiavi di indice cluster.|[Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)|  
 |Non cluster|Un indice non cluster può essere definito in una tabella o vista con un indice cluster o in un heap. Ogni riga di indice nell'indice non cluster contiene il valore della chiave non cluster e un indicatore di posizione delle righe. Questo indicatore punta alla riga di dati nell'indice cluster o nell'heap contenente il valore della chiave. Le righe dell'indice vengono archiviate in base all'ordine dei valori delle chiavi di indice, ma non è possibile garantire che le righe di dati abbiano un ordine specifico, a meno che nella tabella non venga creato un indice cluster.|[Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)|  
 |Univoco|Un indice univoco garantisce che la chiave di indice non contenga alcun valore duplicato e che pertanto ogni riga della tabella o della vista sia univoca.<br /><br /> L'univocità può essere una proprietà sia degli indici cluster che degli indici non cluster.|[Creare indici univoci](../../relational-databases/indexes/create-unique-indexes.md)|  
@@ -69,4 +66,3 @@ ms.lasthandoff: 06/22/2017
  [Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
-

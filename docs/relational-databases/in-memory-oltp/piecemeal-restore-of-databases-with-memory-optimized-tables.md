@@ -5,31 +5,29 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 670261fb38410ae0b3b78b39d8502fcc4baae674
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Ripristino a fasi di database con tabelle con ottimizzazione per la memoria
-  Nei database con tabelle con ottimizzazione per la memoria è supportato il ripristino a fasi, tranne per la restrizione descritta di seguito. Per altre informazioni sul backup e sul ripristino a fasi, vedere[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+  Nei database con tabelle ottimizzate per la memoria è supportato il ripristino a fasi, tranne per la restrizione descritta di seguito. Per altre informazioni sul backup e sul ripristino a fasi, vedere[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
- Il backup e ripristino di un filegroup con ottimizzazione per la memoria deve essere eseguito insieme al filegroup primario:  
+ Il backup e ripristino di un filegroup ottimizzato per la memoria deve essere eseguito insieme al filegroup primario:  
   
--   Se si esegue il backup (o ripristino) del filegroup primario, è necessario specificare il filegroup con ottimizzazione per la memoria.  
+-   Se si esegue il backup (o ripristino) del filegroup primario, è necessario specificare il filegroup ottimizzato per la memoria.  
   
--   Se si esegue il backup (o ripristino) del filegroup con ottimizzazione per la memoria, è necessario specificare il filegroup primario.  
+-   Se si esegue il backup (o ripristino) del filegroup ottimizzato per la memoria, è necessario specificare il filegroup primario.  
   
  Di seguito sono riportati gli scenari principali per il backup e ripristino a fasi.  
   
@@ -68,20 +66,20 @@ GO
 ```  
   
 ### <a name="backup"></a>Backup  
- In questo esempio viene illustrato come eseguire il backup del filegroup primario e di quello con ottimizzazione per la memoria. È necessario specificare insieme sia il filegroup primario sia quello con ottimizzazione per la memoria.  
+ In questo esempio viene illustrato come eseguire il backup del filegroup primario e di quello ottimizzato per la memoria. È necessario specificare insieme sia il filegroup primario sia quello ottimizzato per la memoria.  
   
 ```  
 backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
 ```  
   
- Nell'esempio seguente viene illustrato che il funzionamento di un backup di filegroup diversi dai filegroup primari e con ottimizzazione per la memoria è simile ai database senza tabelle con ottimizzazione per la memoria. Tramite il comando riportato di seguito viene eseguito il backup del filegroup secondario  
+ Nell'esempio seguente viene illustrato che il funzionamento di un backup di filegroup diversi dai filegroup primari e ottimizzati per la memoria è simile ai database senza tabelle ottimizzate per la memoria. Tramite il comando riportato di seguito viene eseguito il backup del filegroup secondario  
   
 ```  
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
 ### <a name="restore"></a>Restore  
- Nell'esempio seguente viene illustrato come ripristinare insieme il filegroup primario e quello con ottimizzazione per la memoria.  
+ Nell'esempio seguente viene illustrato come ripristinare insieme il filegroup primario e quello ottimizzato per la memoria.  
   
 ```  
 restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
@@ -92,7 +90,7 @@ from disk='c:\data\imoltp.dmp' with partial, norecovery
 GO  
 ```  
   
- Nell'esempio successivo viene illustrato che il funzionamento del ripristino di filegroup diversi dai filegroup primari e con ottimizzazione per la memoria è simile ai database senza tabelle con ottimizzazione per la memoria.  
+ Nell'esempio successivo viene illustrato che il funzionamento del ripristino di filegroup diversi dai filegroup primari e ottimizzati per la memoria è simile ai database senza tabelle ottimizzate per la memoria.  
   
 ```  
 RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
@@ -104,4 +102,3 @@ GO
  [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   
-
