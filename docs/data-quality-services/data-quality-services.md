@@ -5,22 +5,20 @@ ms.date: 10/12/2013
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b168499c8d7707dbd7798ef7aa8111aa0ff0a9a9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: b0b7ff2c3d35f8110a39271b034edff762d27339
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) è un prodotto per la qualità dei dati basato sulle informazioni. DQS consente di compilare una Knowledge Base e utilizzarla per eseguire varie attività relative alla qualità dei dati di importanza fondamentale, tra cui correzione, arricchimento, standardizzazione e deduplicazione dei dati. DQS consente di eseguire la pulizia dei dati tramite servizi dati di riferimento basati su cloud forniti dai provider di dati di riferimento. DQS offre inoltre funzioni di profiling integrate nelle attività relative alla qualità dei dati, consentendo di analizzare l'integrità dei dati stessi.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  [Centro risorse di SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)  
   
   
-

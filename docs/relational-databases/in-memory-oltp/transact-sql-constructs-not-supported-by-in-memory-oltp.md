@@ -5,22 +5,20 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 986ad79967b8b8f4a83e11c271cf350033409f0d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -29,7 +27,7 @@ ms.lasthandoff: 07/31/2017
   
  Nel testo del messaggio di errore viene indicato il tipo di istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] (ad esempio funzionalità, operazione, opzione) e il nome della funzionalità o della parola chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] . La maggior parte delle funzionalità non supportate restituirà l'errore 10794, con il testo del messaggio di errore che indica la funzionalità non supportata. Nelle tabelle seguenti vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di errore e l'azione correttiva per risolvere l'errore.  
   
- Per altre informazioni sulle funzionalità supportate con tabelle con ottimizzazione per la memoria e stored procedure compilate in modo nativo, vedere:  
+ Per altre informazioni sulle funzionalità supportate con tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo, vedere:  
   
 -   [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   
@@ -48,47 +46,47 @@ ms.lasthandoff: 07/31/2017
 |Opzione|ATTACH_REBUILD_LOG|L'opzione di database CREATE ATTACH_REBUILD_LOG non è supportata con i database contenenti un filegroup MEMORY_OPTIMIZED_DATA.|  
 |Funzionalità|DATABASE SNAPSHOT|La creazione di snapshot del database non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
 |Funzionalità|Replica che utilizza 'database snapshot' o 'database snapshot character' come sync_method|La replica che utilizza 'database snapshot' or 'database snapshot character' come sync_method non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
-|Funzionalità|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB ignora le tabelle con ottimizzazione per la memoria nel database.<br /><br /> DBCC CHECKTABLE avrà esito negativo per le tabelle con ottimizzazione per la memoria.|  
+|Funzionalità|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB ignora le tabelle ottimizzate per la memoria nel database.<br /><br /> DBCC CHECKTABLE avrà esito negativo per le tabelle ottimizzate per la memoria.|  
   
 ## <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria  
- La tabella seguente elenca le funzionalità [!INCLUDE[tsql](../../includes/tsql-md.md)] non supportate e le parole chiave che possono essere incluse nel testo del messaggio di un errore relativo a una tabella con ottimizzazione per la memoria. La tabella include anche una risoluzione dell'errore.  
+ La tabella seguente elenca le funzionalità [!INCLUDE[tsql](../../includes/tsql-md.md)] non supportate e le parole chiave che possono essere incluse nel testo del messaggio di un errore relativo a una tabella ottimizzata per la memoria. La tabella include anche una risoluzione dell'errore.  
   
 |Tipo|Nome|Soluzione|  
 |----------|----------|----------------|  
-|Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione **CREATE TABLE** .<br /><br /> Tutte le tabelle con ottimizzazione per la memoria vengono mappate al filegroup con ottimizzazione per la memoria.|  
+|Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione **CREATE TABLE** .<br /><br /> Tutte le tabelle ottimizzate per la memoria vengono mappate al filegroup ottimizzato per la memoria.|  
 |Tipo di dati|*Nome del tipo di dati*|Il tipo di dati indicato non è supportato. Sostituirlo con un tipo di dati supportato. Per altre informazioni, vedere [Tipi di dati supportati](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funzionalità|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle con ottimizzazione per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle con ottimizzazione per la memoria.|  
-|Funzionalità|Replica|La replica non è supportata con le tabelle con ottimizzazione per la memoria.|  
-|Funzionalità|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle con ottimizzazione per la memoria. Rimuovere la parola chiave **FILESTREAM** dalla definizione della colonna.|  
-|Funzionalità|SPARSE|Le colonne delle tabelle con ottimizzazione per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave **SPARSE** dalla definizione della colonna.|  
-|Funzionalità|ROWGUIDCOL|L'opzione ROWGUIDCOL non è supportata dalle colonne delle tabelle con ottimizzazione per la memoria. Rimuovere la parola chiave **ROWGUIDCOL** dalla definizione della colonna.|  
-|Funzionalità|FOREIGN KEY|Per le tabelle con ottimizzazione per la memoria, i vincoli FOREIGN KEY sono supportati solo per chiavi esterne che fanno riferimento a chiavi primarie. Rimuovere il vincolo dalla definizione della tabella se la chiave esterna fa riferimento a un vincolo univoco.|  
+|Funzionalità|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle ottimizzate per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.|  
+|Funzionalità|Replica|La replica non è supportata con le tabelle ottimizzate per la memoria.|  
+|Funzionalità|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave **FILESTREAM** dalla definizione della colonna.|  
+|Funzionalità|SPARSE|Le colonne delle tabelle ottimizzate per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave **SPARSE** dalla definizione della colonna.|  
+|Funzionalità|ROWGUIDCOL|L'opzione ROWGUIDCOL non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave **ROWGUIDCOL** dalla definizione della colonna.|  
+|Funzionalità|FOREIGN KEY|Per le tabelle ottimizzate per la memoria, i vincoli FOREIGN KEY sono supportati solo per chiavi esterne che fanno riferimento a chiavi primarie. Rimuovere il vincolo dalla definizione della tabella se la chiave esterna fa riferimento a un vincolo univoco.|  
 |Funzionalità|indice cluster|Specificare un indice non cluster. Nel caso di un indice di chiave primaria assicurarsi di specificare **PRIMARY KEY NONCLUSTERED [HASH]**.|  
 |Funzionalità|DDL all'interno delle transazioni|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate nel contesto di una transazione utente. Non avviare una transazione e assicurarsi che l'impostazione della sessione IMPLICIT_TRANSACTIONS sia OFF prima di eseguire l'istruzione CREATE o DROP.|  
 |Funzionalità|trigger DDL|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate se esiste un trigger di database o di server per l'operazione DDL. Rimuovere i trigger di database e di server da CREATE/DROP TABLE e CREATE/DROP PROCEDURE.|  
 |Funzionalità|EVENT NOTIFICATION|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate se esiste una notifica degli eventi di database o di server per l'operazione DDL. Rimuovere le notifiche degli eventi di database e di server in CREATE TABLE o DROP TABLE e CREATE PROCEDURE o DROP PROCEDURE.|  
 |Funzionalità|FileTable|Le tabelle con ottimizzazione per la memoria non possono essere create come tabelle di file. Rimuovere l'argomento **AS FileTable** dall'istruzione **CREATE TABLE** .|  
-|Operazione|Aggiornamento di colonne chiave primaria|Le colonne chiave primaria delle tabelle con ottimizzazione per la memoria e dei tipi di tabella non possono essere aggiornate. Se la chiave primaria deve essere aggiornata, eliminare la vecchia riga e inserire una nuova riga con la chiave primaria aggiornata.|  
-|Operazione|CREATE INDEX|Gli indici delle tabelle con ottimizzazione per la memoria devono essere specificati inline con l'istruzione **CREATE TABLE** o **ALTER TABLE** .|  
-|Operazione|CREATE FULLTEXT INDEX|Gli indici full-text non sono supportati dalle tabelle con ottimizzazione per la memoria.|  
-|Operazione|modifica schema|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano le modifiche dello schema, ad esempio **sp_rename**.<br /><br /> Il tentativo di apportare modifiche allo schema genererà l'errore 12320. Le operazioni che richiedono una modifica alla versione dello schema, ad esempio la ridenominazione, non sono supportate nelle tabelle con ottimizzazione per la memoria.<br /><br /> Sono consentite alcune modifiche dello schema apportate mediante ALTER TABLE e ALTER PROCEDURE.<br/><br/>**Si applica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename è supportato.| 
-|Operazione|TRUNCATE TABLE|L'operazione TRUNCATE non è supportata dalle tabelle con ottimizzazione per la memoria. Per rimuovere tutte le righe da una tabella, eliminare tutte le righe usando **DELETE FROM***table* oppure eliminare e ricreare la tabella.|  
-|Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella con ottimizzazione per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
+|Operazione|Aggiornamento di colonne chiave primaria|Le colonne chiave primaria delle tabelle ottimizzate per la memoria e dei tipi di tabella non possono essere aggiornate. Se la chiave primaria deve essere aggiornata, eliminare la vecchia riga e inserire una nuova riga con la chiave primaria aggiornata.|  
+|Operazione|CREATE INDEX|Gli indici delle tabelle ottimizzate per la memoria devono essere specificati inline con l'istruzione **CREATE TABLE** o **ALTER TABLE**.|  
+|Operazione|CREATE FULLTEXT INDEX|Gli indici full-text non sono supportati dalle tabelle ottimizzate per la memoria.|  
+|Operazione|modifica schema|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano le modifiche dello schema, ad esempio **sp_rename**.<br /><br /> Il tentativo di apportare modifiche allo schema genererà l'errore 12320. Le operazioni che richiedono una modifica alla versione dello schema, ad esempio la ridenominazione, non sono supportate nelle tabelle ottimizzate per la memoria.<br /><br /> Sono consentite alcune modifiche dello schema apportate mediante ALTER TABLE e ALTER PROCEDURE.<br/><br/>**Si applica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename è supportato.| 
+|Operazione|TRUNCATE TABLE|L'operazione TRUNCATE non è supportata dalle tabelle ottimizzate per la memoria. Per rimuovere tutte le righe da una tabella, eliminare tutte le righe usando **DELETE FROM***table* oppure eliminare e ricreare la tabella.|  
+|Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
 |Operazione|ALTER SCHEMA|Trasferimento di un'entità a protezione diretta da uno schema a un altro.|  
-|Operazione|DBCC CHECKTABLE|DBCC CHECKTABLE non è supportato con le tabelle con ottimizzazione per la memoria.|  
-|Funzionalità|ANSI_PADDING OFF|L'opzione di sessione **ANSI_PADDING** deve essere impostata su ON durante la creazione delle tabelle con ottimizzazione per la memoria e delle stored procedure compilate in modo nativo. Eseguire **SET ANSI_PADDING ON** prima di eseguire l'istruzione CREATE.|  
-|Opzione|DATA_COMPRESSION|La compressione dati non è supportata dalle tabelle con ottimizzazione per la memoria. Rimuovere l'opzione dalla definizione della tabella.|  
+|Operazione|DBCC CHECKTABLE|DBCC CHECKTABLE non è supportato con le tabelle ottimizzate per la memoria.|  
+|Funzionalità|ANSI_PADDING OFF|L'opzione di sessione **ANSI_PADDING** deve essere impostata su ON durante la creazione delle tabelle ottimizzate per la memoria e delle stored procedure compilate in modo nativo. Eseguire **SET ANSI_PADDING ON** prima di eseguire l'istruzione CREATE.|  
+|Opzione|DATA_COMPRESSION|La compressione dati non è supportata dalle tabelle ottimizzate per la memoria. Rimuovere l'opzione dalla definizione della tabella.|  
 |Funzionalità|DTC|Non è possibile accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo da transazioni distribuite. Utilizzare le transazioni SQL.|  
 |Operazione|Tabelle con ottimizzazione per la memoria come destinazione di MERGE|Le tabelle con ottimizzazione per la memoria non possono essere la destinazione di un'operazione **MERGE** . Utilizzare l'istruzione **INSERT**, **UPDATE**o **DELETE** .|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria  
- Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere inclusi nel testo del messaggio di un errore che interessa l'indice di una tabella con ottimizzazione per la memoria e l'azione correttiva per risolvere l'errore.  
+ Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere inclusi nel testo del messaggio di un errore che interessa l'indice di una tabella ottimizzata per la memoria e l'azione correttiva per risolvere l'errore.  
   
 |Tipo|Nome|Soluzione|  
 |----------|----------|----------------|  
-|Funzionalità|Indice filtrato|Gli indici filtrati non sono supportati con le tabelle con ottimizzazione per la memoria. Omettere la clausola **WHERE** dalla specifica dell'indice.|  
-|Funzionalità|included_columns|Non è necessario specificare le colonne incluse per le tabelle con ottimizzazione per la memoria. Tutte le colonne della tabella con ottimizzazione per la memoria vengono incluse in modo implicito in ogni indice con ottimizzazione per la memoria.|  
-|Operazione|DROP INDEX|L'eliminazione degli indici nelle tabelle con ottimizzazione per la memoria non è supportata. È possibile eliminare gli indici mediante ALTER TABLE.<br /><br /> Per altre informazioni, vedere [Modifica di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
+|Funzionalità|Indice filtrato|Gli indici filtrati non sono supportati con le tabelle ottimizzate per la memoria. Omettere la clausola **WHERE** dalla specifica dell'indice.|  
+|Funzionalità|included_columns|Non è necessario specificare le colonne incluse per le tabelle ottimizzate per la memoria. Tutte le colonne della tabella ottimizzata per la memoria vengono incluse in modo implicito in ogni indice ottimizzato per la memoria.|  
+|Operazione|DROP INDEX|L'eliminazione degli indici nelle tabelle ottimizzate per la memoria non è supportata. È possibile eliminare gli indici mediante ALTER TABLE.<br /><br /> Per altre informazioni, vedere [Modifica di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
 |Opzione dell'indice|*Opzione di indice*|È supportata solo un'opzione di indice: BUCKET_COUNT per gli indici HASH.|  
   
 ## <a name="nonclustered-hash-indexes"></a>Indici hash non cluster  
@@ -124,12 +122,12 @@ ms.lasthandoff: 07/31/2017
 |Funzionalità|stored procedure temporanee|Le stored procedure temporanee non possono essere compilate in modo nativo. Creare una stored procedure compilata in modo nativo permanente o una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] temporaneamente interpretata.|  
 |Livello di isolamento|READ UNCOMMITTED|Il livello di isolamento READ UNCOMMITTED non è supportato dalle stored procedure compilate in modo nativo. Utilizzare un livello di isolamento supportato, ad esempio SNAPSHOT.|  
 |Livello di isolamento|READ COMMITTED|Il livello di isolamento READ COMMITTED non è supportato dalle stored procedure compilate in modo nativo. Utilizzare un livello di isolamento supportato, ad esempio SNAPSHOT.|  
-|Funzionalità|tabelle temporanee|Le tabelle del tempdb non possono essere utilizzate nelle stored procedure compilate in modo nativo. In alternativa, usare una variabile di tabella o una tabella con ottimizzazione per la memoria con DURABILITY=SCHEMA_ONLY.|  
+|Funzionalità|tabelle temporanee|Le tabelle del tempdb non possono essere utilizzate nelle stored procedure compilate in modo nativo. In alternativa, usare una variabile di tabella o una tabella ottimizzata per la memoria con DURABILITY=SCHEMA_ONLY.|  
 |Funzionalità|DTC|Non è possibile accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo da transazioni distribuite. Utilizzare le transazioni SQL.|  
 |Funzionalità|EXECUTE WITH RECOMPILE|L'opzione **WITH RECOMPILE** non è supportata dalle stored procedure compilate in modo nativo.|  
 |Funzionalità|Esecuzione dalla connessione amministrativa dedicata.|Le stored procedure compilate in modo nativo non possono essere eseguite dalla connessione amministrativa dedicata. Utilizzare una connessione normale.|  
 |Operazione|punto di salvataggio|Le stored procedure compilate in modo nativo non possono essere richiamate dalle transazioni che hanno un punto di salvataggio attivo. Rimuovere il punto di salvataggio dalla transazione.|  
-|Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella con ottimizzazione per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
+|Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
 |Operatore|OPENROWSET|Questo operatore non è supportato. Rimuovere **OPENROWSET** dalla stored procedure compilata in modo nativo.|  
 |Operatore|OPENQUERY|Questo operatore non è supportato. Rimuovere **OPENQUERY** dalla stored procedure compilata in modo nativo.|  
 |Operatore|OPENDATASOURCE|Questo operatore non è supportato. Rimuovere **OPENDATASOURCE** dalla stored procedure compilata in modo nativo.|  
@@ -172,7 +170,7 @@ ms.lasthandoff: 07/31/2017
 |Funzionalità|CUBE|**CUBE** non può essere utilizzato con le clausole **GROUP BY** nelle stored procedure compilate in modo nativo. Rimuovere **CUBE** dalla definizione della procedura.|  
 |Funzionalità|GROUPING SETS|**GROUPING SETS** non può essere utilizzato con le clausole **GROUP BY** nelle stored procedure compilate in modo nativo. Rimuovere **GROUPING SETS** dalla definizione della procedura.|  
 |Funzionalità|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Utilizzare i blocchi ATOMIC per controllare le transazioni e la gestione degli errori. Per altre informazioni, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
-|Funzionalità|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella con ottimizzazione per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella con ottimizzazione per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
+|Funzionalità|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella ottimizzata per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella ottimizzata per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
 |Funzionalità|Tabelle basate su disco|Non è possibile accedere alle tabelle basate su dico dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle tabelle basate su disco dalle stored procedure compilate in modo nativo. In alternativa, eseguire la migrazione delle tabelle basate su disco alle tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|Viste|Non è possibile accedere alle viste dalle stored procedure compilate in modo nativo. Anziché alle viste, fare riferimento alle tabelle di base sottostanti.|  
 |Funzionalità|Funzioni con valori di tabella|Non è possibile accedere alle funzioni con valori di tabella dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle funzioni con valori di tabella dalle stored procedure compilate in modo nativo.|  
@@ -181,16 +179,15 @@ ms.lasthandoff: 07/31/2017
 |Opzione|STATISTICS XML|Non supportato. Quando si esegue una query, con l'opzione STATISTICS XML abilitata, viene restituito il contenuto XML senza la parte per la stored procedure compilata in modo nativo.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transazioni che accedono alle tabelle con ottimizzazione per la memoria  
- Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa le transazioni che accedono alle tabelle con ottimizzazione per la memoria e l'azione correttiva per risolvere l'errore.  
+ Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa le transazioni che accedono alle tabelle ottimizzate per la memoria e l'azione correttiva per risolvere l'errore.  
   
 |Tipo|Nome|Soluzione|  
 |----------|----------|----------------|  
-|Funzionalità|punto di salvataggio|La creazione di punti di salvataggio espliciti nelle transazioni che accedono alle tabelle con ottimizzazione per la memoria non è supportata.|  
-|Funzionalità|transazione associata|Le sessioni associate non possono partecipare alle transazioni che accedono alle tabelle con ottimizzazione per la memoria. Non associare la sessione prima di eseguire la procedura.|  
-|Funzionalità|DTC|Le transazioni che accedono alle tabelle con ottimizzazione per la memoria non possono essere transazioni distribuite.|  
+|Funzionalità|punto di salvataggio|La creazione di punti di salvataggio espliciti nelle transazioni che accedono alle tabelle ottimizzate per la memoria non è supportata.|  
+|Funzionalità|transazione associata|Le sessioni associate non possono partecipare alle transazioni che accedono alle tabelle ottimizzate per la memoria. Non associare la sessione prima di eseguire la procedura.|  
+|Funzionalità|DTC|Le transazioni che accedono alle tabelle ottimizzate per la memoria non possono essere transazioni distribuite.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

@@ -20,12 +20,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3794c4ee749902e6d453053405cc155bc1bbac1a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 7d76bcf75112533bce6d74fda23dc43d983cf555
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Usare il profiler XEvent di SQL Server Management Studio
 Il profiler XEvent è una funzionalità di SQL Server Management Studio (SSMS) che apre una finestra del visualizzatore degli eventi estesi. Questa panoramica descrive i motivi di utilizzo del profiler, le funzionalità principali e le istruzioni per iniziare a visualizzare gli eventi estesi.
@@ -60,4 +59,3 @@ Per accedere al profiler XEvent, seguire questa procedura:
 [Strumenti degli eventi estesi](../../relational-databases/extended-events/extended-events-tools.md)  
   
   
-

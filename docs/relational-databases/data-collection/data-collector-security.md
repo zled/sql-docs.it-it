@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 6d73cb275dcc7b9473038a04253cee06ddb88876
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
   L'agente di raccolta dati usano il modello di sicurezza basato sui ruoli implementato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo modello consente all'amministratore del database di eseguire le varie attività dell'agente di raccolta dati in un contesto di sicurezza che ha solo le autorizzazioni necessarie per eseguire quell'attività. Questo approccio è usato anche per operazioni con tabelle interne, a cui è possibile accedere solo mediante una stored procedure o una vista. Per le tabelle interne non vengono concesse autorizzazioni. Le autorizzazioni vengono invece controllate sull'utente della stored procedure o della vista usata per accedere a una tabella.  
@@ -153,4 +151,3 @@ ms.lasthandoff: 07/31/2017
  [Implementazione della sicurezza di SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
   
   
-

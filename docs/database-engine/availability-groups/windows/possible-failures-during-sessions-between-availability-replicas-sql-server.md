@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fa54c411376a66d133834dc726eb2e25fa885fc8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3dea241da7685b1091704416c3a4a658198cfc4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possibili errori durante le sessioni tra repliche di disponibilità (SQL Server)
 Gli errori in una sessione tra due repliche di disponibilità possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Una replica di disponibilità non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa un proprio meccanismo di timeout della sessione. Specifica il periodo di timeout della sessione in secondi. Il periodo di timeout indica l'intervallo di attesa massimo rispettato dall'istanza del server per la ricezione di un messaggio PING da un'altra istanza, prima che l'altra istanza venga considerata disconnessa. Quando si verifica un timeout della sessione tra due repliche di disponibilità, le repliche di disponibilità presuppongono che si sia verificato un errore e viene dichiarato un *errore software*.  
@@ -108,4 +107,3 @@ Gli errori in una sessione tra due repliche di disponibilità possono essere cau
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

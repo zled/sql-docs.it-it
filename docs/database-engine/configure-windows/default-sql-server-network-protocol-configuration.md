@@ -5,33 +5,31 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95adc8c5246284a8f82131f853e6a28b91b8dc5f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: a988fcab5de7d5d21246ce82684213afed0c7fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# Configurazione dei protocolli di rete predefiniti di SQL Server
+# <a name="default-sql-server-network-protocol-configuration"></a>Configurazione dei protocolli di rete predefiniti di SQL Server
 Per una maggiore sicurezza, per alcune nuove installazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disabilita la connettività di rete. La connettività di rete che utilizza TCP/IP non viene disabilitata se si utilizza l'edizione Enterprise, Standard, Evaluation o Workgroup oppure se è presente un'installazione precedente di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Per tutte le installazioni è attivato il protocollo Shared Memory, che consente le connessioni locali al server. È possibile che il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser venga arrestato, in base alle condizioni e alle opzioni di installazione.
 
 Usare il nodo Configurazione di rete [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare i protocolli di rete dopo l'installazione. Usare il nodo Servizi di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser. Per altre informazioni, vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 
-## Configurazione di base
+## <a name="default-configuration"></a>Configurazione di base
 
 Nella tabella seguente viene descritta la configurazione dopo l'installazione.
 
@@ -53,7 +51,7 @@ Tutte le edizioni    | Aggiornamento   | Abilitata   | Impostazioni mantenute da
 >[!NOTE]
 > Quando si installa [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] con argomenti del prompt dei comandi, è possibile specificare i protocolli da abilitare utilizzando i parametri `TCPENABLED` e `NPENABLED` . Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
 
-## Creazione di una stringa di connessione
+## <a name="creating-a-connection-string"></a>Creazione di una stringa di connessione
 
 Per esempi di stringhe di connessione, vedere gli argomenti seguenti:
 * [Creazione di una stringa di connessione valida mediante il protocollo di memoria condivisa](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
@@ -61,7 +59,7 @@ Per esempi di stringhe di connessione, vedere gli argomenti seguenti:
 
 
 
-## [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Impostazioni del servizio Browser
+## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Impostazioni del servizio Browser
 
 Il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser può essere configurato per l'avvio automatico durante l'installazione. L'avvio automatico rappresenta l'impostazione predefinita nei casi seguenti:
 
@@ -71,12 +69,11 @@ Il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser
 * Durante l'installazione di un'istanza denominata del motore di database che include tutte le istanze di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express.
 * Durante l'installazione di un'istanza denominata di Analysis Services.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md)  
-
 
 
 

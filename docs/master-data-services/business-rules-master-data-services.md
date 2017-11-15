@@ -1,30 +1,27 @@
 ---
 title: Regole di business (Master Data Services) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f28a6820698413cd3e5b2a6f827fd7b5a055d7c1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 3f9d21a8ae0d633ea9aeb907bffe5824233afaef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="business-rules-master-data-services"></a>Regole business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]una regola business è una regola utilizzata per garantire la qualità e l'accuratezza dei dati master. È possibile utilizzare una regola business per aggiornare automaticamente i dati, inviare posta elettronica o per avviare un processo aziendale o un flusso di lavoro.  
@@ -79,7 +76,7 @@ ms.lasthandoff: 09/07/2017
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare e pubblicare una nuova regola business.|[Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola di business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Creare una regola business affinché gli attributi dispongano di valori.|[Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
 |Creare una regola business per eseguire un'azione basata su modifiche dei valori di attributo.|[Inizializzare azioni basate su modifiche dei valori di attributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |Creare una regola business per eseguire uno script definito dall'utente come condizione|[Estensione delle regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
@@ -101,4 +98,3 @@ ms.lasthandoff: 09/07/2017
 -   [Rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   
-

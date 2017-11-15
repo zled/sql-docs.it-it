@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - plan guides [SQL Server], parameterization
 - parameterized queries [SQL Server]
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 416a4e54d2b5ff881102b42e136a088e00e2d324
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a2714f2ec176ddcd94641c8c365945063c53faa0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano
   Quando l'opzione di database PARAMETERIZATION è impostata su SIMPLE, Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può scegliere di parametrizzare le query, ovvero di sostituire con parametri i valori letterali contenuti in una query. Tale processo viene chiamato parametrizzazione semplice. Quando è attiva una parametrizzazione di tipo SIMPLE, non è possibile distinguere le query con parametri da quelle senza parametri. È tuttavia possibile specificare che devono essere parametrizzate tutte le query di un database impostando l'opzione di database PARAMETERIZATION su FORCED. Tale processo viene chiamato parametrizzazione forzata.  
@@ -89,4 +87,3 @@ EXEC sp_create_plan_guide
 >  Le guide di piano TEMPLATE definiscono la corrispondenza tra le istruzioni e le query inviate in batch costituite da una singola istruzione. Le istruzioni all'interno di batch costituiti da più istruzioni non sono idonee per la corrispondenza definita dalle guide di piano TEMPLATE.  
   
   
-

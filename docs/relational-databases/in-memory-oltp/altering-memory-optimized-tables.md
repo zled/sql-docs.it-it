@@ -1,40 +1,37 @@
 ---
 title: Modifica di tabelle con ottimizzazione per la memoria | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
-ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: cb499975e6429ac0a54f60cbfca6e72b0290f946
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Le modifiche dello schema e dell'indice nelle tabelle con ottimizzazione per la memoria possono essere eseguite con l'istruzione ALTER TABLE. In SQL Server 2016 e nel database SQL di Azure le operazioni ALTER TABLE su tabelle ottimizzate per la memoria sono OFFLINE, vale a dire che la tabella non è disponibile per eseguire una query mentre è in corso l'operazione. L'applicazione di database può proseguire l'esecuzione e qualsiasi operazione che accede alla tabella viene bloccata fino al termine del processo di modifica. È possibile combinare più operazioni ADD, DROP o ALTER in una singola istruzione ALTER TABLE.
+  Le modifiche dello schema e dell'indice nelle tabelle ottimizzate per la memoria possono essere eseguite con l'istruzione ALTER TABLE. In SQL Server 2016 e nel database SQL di Azure le operazioni ALTER TABLE su tabelle ottimizzate per la memoria sono OFFLINE, vale a dire che la tabella non è disponibile per eseguire una query mentre è in corso l'operazione. L'applicazione di database può proseguire l'esecuzione e qualsiasi operazione che accede alla tabella viene bloccata fino al termine del processo di modifica. È possibile combinare più operazioni ADD, DROP o ALTER in una singola istruzione ALTER TABLE.
   
 ## <a name="alter-table"></a>ALTER TABLE  
  
 La sintassi ALTER TABLE viene usata per apportare modifiche allo schema della tabella e per aggiungere, eliminare e ricompilare gli indici. Gli indici sono considerati parte della definizione di tabella:  
   
--   La sintassi ALTER TABLE … ADD/DROP/ALTER INDEX è supportata solo per le tabelle con ottimizzazione per la memoria.  
+-   La sintassi ALTER TABLE … ADD/DROP/ALTER INDEX è supportata solo per le tabelle ottimizzate per la memoria.  
   
--   Se non si usa l'istruzione ALTER TABLE, le istruzioni CREATE INDEX, DROP INDEX e ALTER INDEX *non* sono supportate per gli indici nelle tabelle con ottimizzazione per la memoria.  
+-   Se non si usa l'istruzione ALTER TABLE, le istruzioni CREATE INDEX, DROP INDEX e ALTER INDEX *non* sono supportate per gli indici nelle tabelle ottimizzate per la memoria.  
   
  Di seguito è riportata la sintassi per le clausole ADD, DROP e ALTER INDEX nell'istruzione ALTER TABLE.  
   
@@ -86,8 +83,8 @@ La sintassi ALTER TABLE viene usata per apportare modifiche allo schema della ta
   
  Ad esempio, se una stored procedure compilata in modo nativo con associazione a schema fa riferimento a una colonna *c1* dalla tabella *mytable*, la colonna *c1* non può essere eliminata. Analogamente, se esiste una procedura con un'istruzione INSERT senza elenco di colonne, ad esempio, `INSERT INTO dbo.mytable VALUES (...)`, non è possibile eliminare alcuna colonna nella tabella.  
  
-## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Registrazione di ALTER TABLE nelle tabelle con ottimizzazione per la memoria
-In una tabella con ottimizzazione per la memoria, la maggior parte degli scenari ALTER TABLE ora viene eseguita in parallelo, con conseguente ottimizzazione delle operazioni di scrittura nel log delle transazioni. L'ottimizzazione si ottiene registrando nel log delle transazioni solo le modifiche ai metadati. Le operazioni ALTER TABLE seguenti vengono tuttavia eseguite a thread singolo e non sono ottimizzate per il log.
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Registrazione di ALTER TABLE nelle tabelle ottimizzate per la memoria
+In una tabella ottimizzata per la memoria, la maggior parte degli scenari ALTER TABLE ora viene eseguita in parallelo, con conseguente ottimizzazione delle operazioni di scrittura nel log delle transazioni. L'ottimizzazione si ottiene registrando nel log delle transazioni solo le modifiche ai metadati. Le operazioni ALTER TABLE seguenti vengono tuttavia eseguite a thread singolo e non sono ottimizzate per il log.
 
 In questo caso l'operazione a thread singolo registrerebbe l'intero contenuto della tabella modificata nel log delle transazioni. Di seguito è riportato un elenco di operazioni a thread singolo:
 
@@ -175,5 +172,4 @@ GO
 
 [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
-
 

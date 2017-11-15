@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Execution Warnings event class
+helpviewer_keywords: Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29117ed6015875dd09b515e78ac6cb23e5a4f22f
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings - classe di evento
   La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
@@ -59,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-
