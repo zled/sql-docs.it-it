@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 84829e727653973598485a88c4a6806c75330c8b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 95c9219c6ee69d72900853ef3f63c1db78231bec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-queries-visual-database-tools"></a>Rinominare le query (Visual Database Tools)
 È possibile rinominare qualsiasi query che non sia attualmente aperta per operazioni di modifica. Nella procedura riportata di seguito si presuppone perciò che la query che si desidera rinominare sia chiusa.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 08/18/2017
 [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

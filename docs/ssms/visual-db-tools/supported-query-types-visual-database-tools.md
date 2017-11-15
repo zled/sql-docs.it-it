@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 - View Designer, query types
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed5c567b380c476f571b4ba96d834d482ecd9c3c
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7455892fca381810aecc9ee0da1cac3d32fb1063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipi di query supportati (Visual Database Tools)
-Nei riquadri Diagramma e Criteri di [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) è possibile creare i tipi di query seguenti:  
+Nei riquadri Diagramma e Criteri di [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)è possibile creare i tipi di query seguenti:  
   
 -   **Query di selezione** Recupera dati da una o più tabelle o viste. Questo tipo di query crea un'istruzione SQL SELECT.  
   
@@ -60,4 +58,3 @@ Quando si creano query con istruzioni SQL che non possono essere rappresentate n
 [Procedure per la progettazione di query e viste (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Tipi di query (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

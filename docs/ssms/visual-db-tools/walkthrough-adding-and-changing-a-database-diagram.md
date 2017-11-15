@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2c1a211f11917f54f0f2c69bd2d1b96034cba41
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: adc91396fd49a546217d28f970a0eb3156c0fae7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
 In questo scenario viene illustrato come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
@@ -220,4 +218,3 @@ Si tratta di un diagramma di base con due tabelle esistenti e due tabelle nuove,
 [Copia negli Appunti di un'immagine di un diagramma di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [Utilizzare il layout di un diagramma &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
-

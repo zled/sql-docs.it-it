@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - updating database to match diagram
 - database diagrams [SQL Server], reconciling changes
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 38ef2e93566791eeb1963b02792942ec5450031d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 209fa6d5ef826179443242733ee4a9e317ac9019
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>Riconciliazione di un diagramma di database con un database modificato (Visual Database Tools)
 Il diagramma di database viene salvato per aggiornare il database in modo che corrisponda al diagramma. Tuttavia, se il database è stato aggiornato da altri utenti dopo l'apertura del diagramma, le modifiche apportate potranno avere effetto sul diagramma e viceversa.  
@@ -59,4 +57,3 @@ Salvando il diagramma, le differenze tra il database e il diagramma verranno ric
 ## <a name="see-also"></a>Vedere anche  
 [Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

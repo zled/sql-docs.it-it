@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.spatialindexes
+f1_keywords: vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5114c8b5fba96020c07758e8c0143c33540a8ad5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0a3e6df8d3ffcae88b1a89c5c4551d0a8a5b8b8e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
 La finestra di dialogo **Indici spaziali** consente di creare indici per le colonne con tipo di dati **geometria** o **geografia** (*colonne spaziali*), che non possono essere indicizzate con la finestra di dialogo **Indici/chiavi** . Ogni colonna spaziale può avere più indici spaziali, ma gli indici devono essere creati uno alla volta.  
@@ -123,4 +120,3 @@ Consente di specificare se per l'indice è consentito il blocco a livello di rig
 ## <a name="see-also"></a>Vedere anche  
 [Panoramica degli indici spaziali](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   
-

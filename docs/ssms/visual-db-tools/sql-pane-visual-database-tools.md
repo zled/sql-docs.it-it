@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fbf4122473bbe62865c57da73e661c74e8d9e035
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 9936c62e610b454b38f4ca5eac2e18ce30f256cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-pane-visual-database-tools"></a>Riquadro SQL (Visual Database Tools)
 Utilizzando il riquadro SQL è possibile creare un'istruzione SQL personalizzata. Per creare un'istruzione, è anche possibile utilizzare i riquadri Criteri e Diagramma, ma in questo caso le istruzioni SQL verranno comunque create nel riquadro SQL. Mentre si compila la query, il riquadro SQL viene aggiornato e riformattato automaticamente in modo da semplificarne la lettura.  
@@ -66,4 +64,3 @@ Se si sceglie di ignorare il fatto che l'istruzione non può essere rappresentat
 [Riquadro Criteri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
 [Riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
   
-

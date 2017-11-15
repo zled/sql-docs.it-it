@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 30bd3badd2ac11c7bd00125ed9ceedefbe1f1f7b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b0292f05a00e1937ce5b7640e414939cb3332f01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Riquadro Criteri (Visual Database Tools)
 Il riquadro Criteri consente di specificare le opzioni per le query, ad esempio le colonne di dati da visualizzare, come ordinare i risultati e quali righe selezionare, immettendo le proprie scelte in una griglia simile a un foglio di calcolo. Nel riquadro Criteri è possibile specificare quanto segue:  
@@ -82,4 +80,3 @@ Se il riquadro Criteri non è visibile, fare clic con il pulsante destro del mou
 [Riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
 [Riquadro SQL &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)  
   
-

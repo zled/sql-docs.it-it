@@ -6,7 +6,7 @@
 # [Precisione, scala e lunghezza](precision-scale-and-length-transact-sql.md)  
 # [bit](bit-transact-sql.md)  
 # [cursor](cursor-transact-sql.md)  
-# [Date e ora](date-and-time-types.md)  
+# [Data e ora](date-and-time-types.md)  
 ## [data](date-transact-sql.md)  
 ## [datetime](datetime-transact-sql.md)  
 ## [datetime2](datetime2-transact-sql.md)  

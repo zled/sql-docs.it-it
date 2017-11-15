@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +13,16 @@ f1_keywords:
 - vdt.dlgbox.saveincomplete
 - vdtsql.chm:98831
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4cba4325958e8f96f524889acaee6f1cbb89bdfb
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 25036c1b2e6ffef3108fe409128d38f4552528a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Finestra di dialogo Notifiche postsalvataggio (Visual Database Tools)
 Questa finestra di dialogo viene visualizzata se si rilevano errori quando si tenta di salvare le modifiche apportate a una tabella. In questa finestra di dialogo vengono elencati gli oggetti salvati correttamente nel database, gli oggetti non salvati e gli errori riscontrati.  
@@ -33,4 +31,3 @@ Questa finestra di dialogo viene visualizzata se si rilevano errori quando si te
 **Salva file di testo**  
 Visualizza la finestra di dialogo **Salva con nome** , in cui è possibile specificare un percorso in cui salvare un file di testo con informazioni sugli errori. Questo file può essere utile per tenere traccia delle modifiche apportate al database salvate correttamente e di quelle non salvate a causa di errori.  
   
-

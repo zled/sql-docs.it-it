@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7ed79dcb5c61626c229f4d4c361764be1b1193e2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: c22ecdbe76b036bbf78810db4d2a18729b184757
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Esecuzione di query con join (Visual Database Tools)
 Il risultato di una query può includere dati tratti da più tabelle o oggetti con valori di tabella. Per combinare i dati di più oggetti con valori di tabella, è possibile utilizzare l'operazione JOIN di SQL.  
@@ -76,4 +74,3 @@ Vengono forniti collegamenti ad argomenti relativi alle operazioni che è possib
 [Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi ai vari tipi di criteri di ricerca e alle modalità di utilizzo.  
   
-

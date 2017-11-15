@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.xmlindexes
+f1_keywords: vdt.dlgbox.xmlindexes
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 88cb1d98e64580b53af2587c431430d91615d0b6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 52f966e4e4ea42595fa93c83b608a18ae5a0b863
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici XML (Visual Database Tools)
 Usare la finestra di dialogo **Indici XML** per creare indici per le colonne con tipo di dati XML, le quali non possono essere indicizzate usando la finestra di dialogo **Indici/chiavi** . Ogni colonna XML può avere più indici XML, ma il primo indice creato (primario) verrà utilizzato come base degli altri (secondari). Eliminando l'indice XML primario, verranno eliminati anche gli indici secondari.  
@@ -95,4 +92,3 @@ Specifica se per l'indice è consentito il blocco a livello delle righe. L'attiv
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di indici XML](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
   
-

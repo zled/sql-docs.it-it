@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
-In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] o in una finestra esterna associata.  
+In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] o in una finestra esterna associata.  
   
 ## <a name="the-help-interface"></a>Interfaccia della Guida  
 **Sommario** e **Indice** assicurano funzionalità e un'interfaccia già note agli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Le altre opzioni sono:  
@@ -103,4 +101,3 @@ Per visualizzare la Guida da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiof
   
 2.  Nella casella **Visualizza la Guida mediante** selezionare **Visualizzatore integrato**.  
   
-
