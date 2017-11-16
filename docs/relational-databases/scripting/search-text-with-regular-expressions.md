@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 11ac36bd42257b0be9a0b03166132f658d62431e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
   Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
@@ -37,12 +35,12 @@ ms.lasthandoff: 07/31/2017
   
 1.  Per consentire l'uso di espressioni regolari nel campo **Trova** durante le operazioni **Ricerca veloce**, **Cerca nei file**, **Sostituzione veloce**o **Sostituisci nei file** , in **Opzioni di ricerca** selezionare **Usa**e scegliere **Espressioni regolari**.  
   
-2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per l'elenco dei riferimenti **** . Fare clic su questo pulsante per visualizzare un elenco delle espressioni regolari più comuni. Ogni elemento selezionato in Generatore di espressioni viene inserito nella stringa **Trova** .  
+2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per **l'elenco dei riferimenti**. Fare clic su questo pulsante per visualizzare un elenco delle espressioni regolari più comuni. Ogni elemento selezionato in Generatore di espressioni viene inserito nella stringa **Trova** .  
   
 > [!NOTE]  
 >  Le espressioni regolari che possono essere utilizzate nelle stringhe **Trova** presentano differenze sintattiche rispetto a quelle valide nella programmazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Poiché ad esempio in **Trova e sostituisci**la notazione con parentesi graffe {} viene utilizzata per le espressioni con tag, l'espressione "zo\{1\}" consente di trovare tutte le occorrenze di "zo" seguite dal tag 1, come "Pranzo1" e "Gonzo1". In .NET Framework, tuttavia, la notazione {} viene utilizzata per i quantificatori. Pertanto l'espressione "zo\{1\}" consente di trovare tutte le occorrenze di "z" seguite da una sola "o", come in "zona", ma non in "zoo".  
   
- Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'elenco dei riferimenti ****.  
+ Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
 |Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 07/31/2017
 |Spazio o tabulazione|:b|Consente di ricercare il carattere spazio o tabulazione.|  
 |Integer|:z|Corrisponde all'espressione ([0-9]+).|  
   
- Nell'elenco dei riferimenti **** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di ricerca e sostituzione ****. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
+ Nell' **elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
 |Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
@@ -142,4 +140,3 @@ ms.lasthandoff: 07/31/2017
  [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)  
   
   
-

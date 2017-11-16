@@ -5,25 +5,23 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: edc83accaccc4eeee09c73ca8535a758fd9cd98e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
   In questo argomento viene descritto come creare una regola di dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola di dominio è una condizione utilizzata per convalidare, correggere e standardizzare i valori di dominio. Una regola di dominio deve rimanere valida in tutto il dominio affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Le regole di dominio possono includere le regole di convalida utilizzate per convalidare i valori di dominio, ma non per correggere i dati in un progetto Data Quality. Le regole includono anche le regole di standardizzazione applicate ai dati validi e utilizzate per la correzione dei dati.  
@@ -42,12 +40,12 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  La gestione del dominio viene eseguita in una pagina del client Data Quality Services che contiene cinque schede per le operazioni di gestione del dominio separate. Non si tratta di un processo basato su procedure guidate. Ciascuna operazione di gestione può essere eseguita separatamente.  
   
-3.  Dall'**elenco di domini** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera creare una regola di dominio o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  Dall'**elenco di domini** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera creare una regola di dominio o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Crea un dominio](../data-quality-services/create-a-domain.md).  
   
 4.  Fare clic sulla scheda **Regole di dominio** .  
   
@@ -137,4 +135,3 @@ ms.lasthandoff: 09/09/2017
 |Valore non corrispondente a un'espressione regolare|Solo i valori che non corrispondono all'espressione regolare dell'operando saranno considerati validi.|Operando di esempio: [1-5] + (la stringa non deve essere costituita solo da cifre numeriche comprese tra 1 e 5)<br /><br /> Valori validi: 456, ABC<br /><br /> Valori non validi: 123, 123456, 14352|  
   
   
-

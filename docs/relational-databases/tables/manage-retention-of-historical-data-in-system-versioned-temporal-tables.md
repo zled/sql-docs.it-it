@@ -1,27 +1,24 @@
 ---
 title: Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 96ca811479e59cc444e6ad0ddef19ab3bd7ec3f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Uso della procedura guidata per l'estensione per estendere l'intera tabella di cronologia  
  Il metodo più semplice per i principianti consiste nell'usare la procedura guidata per l'estensione per abilitare l'estensione per l'intero database e quindi selezionare la tabella di cronologia temporale all'interno della procedura guidata per l'estensione. Questo esempio presuppone che la tabella Department sia stata configurata come tabella temporale con controllo delle versioni di sistema in un database altrimenti vuoto. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]non è possibile fare clic con il pulsante destro del mouse sulla tabella di cronologia temporale stessa e scegliere Estendi.  
   
-1.  Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, scegliere **Estendi**quindi fare clic su **abilitare** per avviare la procedura guidata.  
+1.  Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, quindi **Estendi**e infine **Abilitare** per avviare la procedura guidata.  
   
 2.  Nella finestra **Selezionare le tabelle** selezionare la casella di controllo della tabella di cronologia temporale e quindi fare clic su Avanti.  
   
@@ -197,13 +194,13 @@ Con il passare del tempo, le nuove righe della tabella di cronologia verranno in
   
  Ecco la procedura dettagliata per le attività ricorrenti di manutenzione della partizione:  
   
-1.  SWITCH OUT: creare una tabella di gestione temporanea e quindi cambiare una partizione tra la tabella di cronologia e la tabella di gestione temporanea usando l'istruzione [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) con l'argomento SWITCH PARTITION. Vedere l'esempio C relativo al cambio di partizioni tra tabelle.  
+1.  SWITCH OUT: creare una tabella di staging e quindi cambiare una partizione tra la tabella di cronologia e la tabella di staging usando l'istruzione [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) con l'argomento SWITCH PARTITION. Vedere l'esempio C relativo al cambio di partizioni tra tabelle.  
   
     ```  
     ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>  
     ```  
   
-     Dopo il cambio di partizione, è possibile archiviare facoltativamente i dati dalla tabella di gestione temporanea e quindi eliminare o troncare la tabella di gestione temporanea in modo da essere pronti per quando sarà necessario eseguire di nuovo questa attività ricorrente di manutenzione della partizione.  
+     Dopo il cambio di partizione, è possibile archiviare facoltativamente i dati dalla tabella di staging e quindi eliminare o troncare la tabella di staging in modo da essere pronti per quando sarà necessario eseguire di nuovo questa attività ricorrente di manutenzione della partizione.  
   
 2.  MERGE RANGE: unire la partizione 1 vuota con la partizione 2 usando l'istruzione [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) con MERGE RANGE. Vedere l'esempio B. Rimuovendo il limite inferiore mediante questa funzione, si unisce effettivamente la partizione 1 vuota con la partizione 2 precedente per formare una nuova partizione 1. Vengono modificati anche i numeri ordinali relativi alle altre partizioni.  
   
@@ -322,17 +319,17 @@ COMMIT TRANSACTION
   
  È possibile modificare leggermente lo script precedente e usarlo nel processo di manutenzione mensile regolare:  
   
-1.  Nel passaggio (1) creare una nuova tabella di gestione temporanea per il mese da rimuovere. Il mese successivo nell'esempio è ottobre.  
+1.  Nel passaggio (1) creare una nuova tabella di staging per il mese da rimuovere. Il mese successivo nell'esempio è ottobre.  
   
 2.  Nel passaggio (3) creare e controllare il vincolo corrispondente al mese di dati da rimuovere: `[SysEndTime]<=N'2015-10-31T23:59:59.999'` per la partizione di ottobre.  
   
-3.  Nel passaggio (4) eseguire l'istruzione SWITCH per la partizione 1 nella tabella di gestione temporanea appena creata.  
+3.  Nel passaggio (4) eseguire l'istruzione SWITCH per la partizione 1 nella tabella di staging appena creata.  
   
 4.  Nel passaggio (6) modificare la funzione di partizione unendo il limite inferiore: `MERGE RANGE(N'2015-10-31T23:59:59.999'` dopo la rimozione dei dati per ottobre.  
   
 5.  Nel passaggio (7) suddividere la funzione di partizione creando un nuovo limite superiore: `SPLIT RANGE (N'2016-04-30T23:59:59.999'` dopo la rimozione dei dati per ottobre.  
   
- La soluzione ottimale consiste tuttavia nell'eseguire uno script di Transact-SQL generico, in grado di eseguire l'azione appropriata ogni mese, senza modifiche allo script. È possibile generalizzare lo script precedente in modo che reagisca ai parametri specificati, ovvero un limite inferiore da unire e un nuovo limite che verrà creato con la suddivisione della partizione. Per evitare di creare ogni mese una tabella di gestione temporanea, è possibile crearne una prima e riutilizzarla cambiando il vincolo di verifica in modo che corrisponda alla partizione che verrà disattivata. Per informazioni su [come automatizzare completamente la finestra temporale scorrevole](https://msdn.microsoft.com/library/aa964122.aspx) usando uno script di Transact-SQL, vedere le pagine seguenti.  
+ La soluzione ottimale consiste tuttavia nell'eseguire uno script di Transact-SQL generico, in grado di eseguire l'azione appropriata ogni mese, senza modifiche allo script. È possibile generalizzare lo script precedente in modo che reagisca ai parametri specificati, ovvero un limite inferiore da unire e un nuovo limite che verrà creato con la suddivisione della partizione. Per evitare di creare ogni mese una tabella di staging, è possibile crearne una prima e riutilizzarla cambiando il vincolo di verifica in modo che corrisponda alla partizione che verrà disattivata. Per informazioni su [come automatizzare completamente la finestra temporale scorrevole](https://msdn.microsoft.com/library/aa964122.aspx) usando uno script di Transact-SQL, vedere le pagine seguenti.  
   
 ### <a name="performance-considerations-with-table-partitioning"></a>Considerazioni sulle prestazioni con il partizionamento delle tabelle  
  È importante eseguire le operazioni MERGE e SPLIT RANGE per evitare qualsiasi spostamento di dati, perché lo spostamento di dati può provocare un overhead significativo delle prestazioni. Per altre informazioni, vedere [Modificare una funzione di partizione](../../relational-databases/partitions/modify-a-partition-function.md). Per ottenere questo risultato, usare RANGE LEFT invece di RANGE RIGHT quando si esegue l'istruzione [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
@@ -511,4 +508,3 @@ Per altre informazioni, vedere [Gestire i dati cronologici nelle tabelle tempora
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-
