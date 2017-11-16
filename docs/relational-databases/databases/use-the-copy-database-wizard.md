@@ -5,8 +5,7 @@ ms.date: 07/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +24,16 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 26b3c7967d7549f6f192afcac64888dcb68d6c7c
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 7e53c91fb8462fb26fd5a94e20c7a6ba7e2f54d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
 Copia guidata database consente di spostare o copiare facilmente database e determinati oggetti server da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra istanza, senza tempi di inattività del server. Mediante questa procedura guidata è possibile effettuare le operazioni seguenti: 
@@ -73,7 +72,7 @@ Copia guidata database consente di spostare o copiare facilmente database e dete
   
 -   Se si usa il metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) per spostare il catalogo full-text, è necessario ripopolare l'indice dopo lo spostamento.  
   
--   Il metodo di **collegamento e scollegamento** consente di scollegare il database, spostare o copiare i file con estensione MDF, NDF e LDF del database e ricollegare quest'ultimo nella nuova posizione. Per questo metodo **** non è possibile collegare sessioni attive al database da spostare o copiare per evitare la perdita o l'incoerenza dei dati. Nel caso del metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), l'utilizzo delle sessioni attive è consentito, poiché il database non viene mai portato offline.  
+-   Il metodo di **collegamento e scollegamento** consente di scollegare il database, spostare o copiare i file con estensione MDF, NDF e LDF del database e ricollegare quest'ultimo nella nuova posizione. Per **questo metodo** non è possibile collegare sessioni attive al database da spostare o copiare per evitare la perdita o l'incoerenza dei dati. Nel caso del metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), l'utilizzo delle sessioni attive è consentito, poiché il database non viene mai portato offline.  
 
 -    Il trasferimento dei processi di SQL Server Agent che fanno riferimento a database non ancora esistenti nel server di destinazione causa l'esito negativo dell'intera operazione.  La procedura guidata prova a creare un processo di SQL Server Agent prima di creare il database.  Soluzione alternativa:
      1. Nel server di destinazione creare uno scheletro di database con lo stesso nome del database da copiare o spostare.  Vedere [Creare un database](../../relational-databases/databases/create-a-database.md).
@@ -404,5 +403,4 @@ In questo esempio il database `Sales` verrà copiato e creato come `SalesCopy` n
  [Creare un proxy di SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
   
   
-
 

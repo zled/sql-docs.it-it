@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.objectdependencies.f1
+f1_keywords: sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a8a21c9fc7ade45f13e055a30f4649af13677af
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 184e5862361d61e00bd56a639ae4c2687f29e3a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="object-dependencies"></a>Dipendenze tra oggetti
 Alcuni oggetti di database hanno dipendenze con altri oggetti di database. Le viste e le stored procedure dipendono ad esempio dall'esistenza di tabelle che contengono i dati restituiti dalla vista o dalla procedura. Nella finestra di dialogo **Dipendenze oggetto** della pagina Generale relativa all'oggetto corrente sono elencati sia gli oggetti di database necessari per il corretto funzionamento dell'oggetto in questione, sia gli oggetti che dipendono da tale oggetto. Un oggetto che fa riferimento a un altro oggetto nella propria definizione archiviata nel catalogo del sistema è definito *entità di riferimento*. Un oggetto a cui fa riferimento un altro oggetto è denominato *entità con riferimenti*.  
@@ -35,11 +32,11 @@ Utilizzare questa finestra di dialogo per individuare le dipendenze prima di mod
 **Oggetti che dipendono da** *<selected object>*  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
-**Oggetti da cui** *<selected object>***dipende**  
+**Oggetti da cui** **dipende** *<selected object>*  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
 **Dipendenze**  
-Se si fa clic su **Oggetti che dipendono da** *<selected object>* , vengono visualizzati in ordine gerarchico gli oggetti che dipendono dall'oggetto selezionato. Se si fa clic su **Oggetti da cui** *<selected object>***dipende**vengono visualizzati in ordine gerarchico gli oggetti da cui l'oggetto selezionato dipende.  
+Se si fa clic su **Oggetti che dipendono da** *<selected object>* , vengono visualizzati in ordine gerarchico gli oggetti che dipendono dall'oggetto selezionato. Se si fa clic su **Oggetti da cui** **dipende** *<selected object>*vengono visualizzati in ordine gerarchico gli oggetti da cui l'oggetto selezionato dipende.  
   
 **Nome**  
 Consente di visualizzare il nome dell'oggetto selezionato nella visualizzazione albero **Dipendenze** precedente.  
@@ -71,4 +68,3 @@ Consente di visualizzare il tipo di dipendenza tra due oggetti. I possibili valo
   
     Indica l'impossibilità di determinare il tipo di dipendenza. Si verifica solo quando l'oggetto selezionato si trova in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
-
