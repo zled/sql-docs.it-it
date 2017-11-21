@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2e132f07a9bfa81c2eae226f2ce3d63ba3c65826
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 894f04fe8bf8df95bb288acab897f3274fbacb18
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa per l'autenticazione** è una funzionalità dei componenti di rete implementata dal sistema operativo. La**protezione estesa** è supportata in Windows 7 e in Windows Server 2008 R2 La**protezione estesa** è inclusa nei Service Pack per i sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] meno recenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è più sicuro quando le connessioni vengono effettuate tramite **protezione estesa**.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Se impostata su **Disattivata**, la **protezione estesa** è disabilitata. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accetterà connessioni da qualsiasi client, protetto o non protetto. Il valore**Disattivata** è compatibile con i sistemi operativi precedenti e senza patch installate, sebbene sia meno sicuro. Utilizzare questa impostazione quando si è sicuri che i sistemi operativi dei client non supportano la protezione estesa.  
   
-    -   Se impostata su **Consentita**, la **protezione estesa** è obbligatoria per le connessioni da sistemi operativi che supportano la **protezione estesa**. La**protezione estesa** ignorata per le connessioni da sistemi operativi che non supportano la **protezione estesa**. Le connessioni da applicazioni client non protette in esecuzione su sistemi operativi client protetti vengono rifiutate. Sebbene sia più sicura di **Disattivata**, questa impostazione non garantisce il livello più elevato di sicurezza. Utilizzare questa impostazione negli ambienti misti, dove alcuni sistemi operativi supportano la **protezione estesa** e altri no.  
+    -   Se impostata su **Consentita**, la **protezione estesa** è obbligatoria per le connessioni da sistemi operativi che supportano **tale caratteristica**. **Protezione estesa** viene invece ignorata per le connessioni da sistemi operativi che non supportano **tale caratteristica**. Le connessioni da applicazioni client non protette in esecuzione su sistemi operativi client protetti vengono rifiutate. Sebbene sia più sicura di **Disattivata**, questa impostazione non garantisce il livello più elevato di sicurezza. Utilizzare questa impostazione negli ambienti misti, dove alcuni sistemi operativi supportano la **protezione estesa** e altri no.  
   
     -   Se impostata su **Obbligatoria**, vengono accettate solo le connessioni da applicazioni protette su sistemi operativi protetti. Questa impostazione è la più sicura, ma le connessioni a **da sistemi operativi o applicazioni che non supportano la** protezione estesa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non riuscirà.  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/02/2017
      La variabile relativa ai nomi **SPN NTLM accettati** è necessaria quando un server è noto con più nomi SPN. Se un client tenta di connettersi al server tramite un nome SPN valido sconosciuto al server, l'associazione al servizio non riuscirà. Per evitare questo problema, gli utenti possono specificare diversi nomi SPN che rappresentano il server utilizzando **SPN NTLM accettati**. L'impostazione**SPN NTLM accettati** è costituita da una serie di nomi SPN separati da punti e virgola. Per consentire, ad esempio, l'uso dei nomi **MSSQLSvc/ HostName1.Contoso.com** e **MSSQLSvc/ HostName2.Contoso.com**, digitare **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** nella casella **SPN NTLM accettati** . La lunghezza massima della variabile è di 2048 caratteri. **SPN NTLM accettati** è disponibile in **Proprietà - Protocolli per MSSQLSERVER (scheda Avanzate)** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Abilitazione della protezione estesa per il motore di database  
- Per utilizzare la **protezione estesa**, è necessario disporre sia sul server che sul client di un sistema operativo che supporti questa caratteristica **protezione estesa**. È inoltre necessario che la **protezione estesa** sia abilitata nel sistema operativo. Per ulteriori informazioni sull'abilitazione della **protezione estesa** per il sistema operativo in uso, vedere [Protezione estesa per l'autenticazione](http://support.microsoft.com/kb/968389).  
+ Per utilizzare la **protezione estesa**, è necessario disporre sia sul server che sul client di un sistema operativo che supporti **questa caratteristica**. È inoltre necessario che la **protezione estesa** sia abilitata nel sistema operativo. Per ulteriori informazioni sull'abilitazione della **protezione estesa** per il sistema operativo in uso, vedere [Protezione estesa per l'autenticazione](http://support.microsoft.com/kb/968389).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa** per alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà resa disponibile negli aggiornamenti futuri. Dopo aver abilitato la **protezione estesa** nel server, effettuare i passaggi seguenti per abilitarla **protezione estesa**:  
   
@@ -112,4 +110,3 @@ ms.lasthandoff: 08/02/2017
  [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)  
   
   
-

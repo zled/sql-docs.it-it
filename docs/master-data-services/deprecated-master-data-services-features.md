@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 58d965e8b90bc7a47fd2e26d9002b7e41aff82cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 37ba9531f4b4a2ba9b5831f5d7e8e121f5d3ad7d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecated-master-data-services-features"></a>Funzionalità deprecate di Master Data Services
   In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ancora disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 09/07/2017
   
 -   In Visualizzatore la pagina della gerarchia derivata ora mostra i membri non assegnati (inutilizzati) per ogni livello della gerarchia. I nodi inutilizzati vengono raggruppati per livello di gerarchia. I membri possono essere spostati tra i nodi Inutilizzato e Radice, mediante trascinamento o con operazioni di taglia e incolla.  
   
-     In Amministrazione sistema i nodi inutilizzati sono visibili nel riquadro **Anteprima** . In Sicurezza i nodi inutilizzati sono visibili nel riquadro **Autorizzazioni membri gerarchia** . A tutti i membri nel nodo **Radice** o **Inutilizzato** è possibile assegnare un'autorizzazione. È possibile assegnare autorizzazioni anche agli pseudo membri **Radice**, **Inutilizzato**e **Inutilizzato** .  
+     In Amministrazione sistema i nodi inutilizzati sono visibili nel riquadro **Anteprima** . In Sicurezza i nodi inutilizzati sono visibili nel riquadro **Autorizzazioni membri gerarchia** . A tutti i membri nel nodo **Radice** o **Inutilizzato** è possibile assegnare un'autorizzazione. È possibile assegnare autorizzazioni anche agli pseudo membri **Radice**, **Inutilizzato** e **Inutilizzato** .  
   
 -   La stored procedure mdm.udpConvertCollectionAndConsolidatedMembersToLeaf converte le gerarchie esplicite in gerarchie derivate ricorsive e converte i membri consolidati e della raccolta in membri foglia.  
   
@@ -60,4 +58,3 @@ Il tipo di log delle transazioni di entità "Attributo" è deprecato. Eseguire l
  [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)  
   
   
-

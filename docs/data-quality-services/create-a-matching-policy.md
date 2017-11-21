@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +13,16 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a1f1379effcdfe728dae0f3a74f1a014876b9d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1fe1c8b25d8309d3984c70c31f5949a9724599a3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
   In questo argomento viene descritto come creare dei criteri di corrispondenza in una Knowledge Base di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La preparazione del processo di corrispondenza in DQS si effettua eseguendo l'attività dei criteri di corrispondenza su dati di esempio. In tale attività vengono create e testate una o più regole di corrispondenza nei criteri, quindi viene pubblicata la Knowledge Base per rendere le regole di corrispondenza pubblicamente disponibili per l'uso. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza, ma tali criteri possono contenere più regole di corrispondenza.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
  La creazione di una regola di corrispondenza è un processo iterativo perché nella regola stessa potrebbe essere necessario modificare i pesi relativi dei domini, la somiglianza o la proprietà di prerequisito per un dominio oppure il punteggio di corrispondenza minimo per la regola, al fine di realizzare i risultati attesi. È inoltre possibile che si debbano creare più regole, ognuna delle quali verrà eseguita per creare il punteggio di corrispondenza. Ottenere il risultato previsto con una sola regola potrebbe risultare difficile, mentre con più regole si otterranno visualizzazioni diverse di una corrispondenza richiesta. Mediante l'utilizzo di più regole è possibile includere meno domini in ogni regola, utilizzare pesi superiori per ogni dominio e ottenere risultati migliori. Se i dati sono meno accurati e completi, potrebbe essere necessario un numero maggiore di regole per trovare le corrispondenze richieste. Se i dati sono più accurati e completi, saranno necessarie meno regole.  
   
- Il profiling fornisce informazioni essenziali quanto a completezza e univocità. Completezza e univocità sono qualità da prendere in considerazione in parallelo. Utilizzare i dati di completezza e univocità per determinare il peso da assegnare a un campo nel processo di corrispondenza. Se vi è un livello elevato di univocità in un campo, l'utilizzo di tale campo nei criteri di corrispondenza può ridurre il numero di risultati di corrispondenza, pertanto è consigliabile impostare il peso per il campo su un valore relativamente basso. Se si dispone di un basso livello di univocità per una colonna, ma anche di un basso livello di completezza, non è consigliabile includere un dominio per tale colonna. Con un basso livello di univocità, ma un elevato livello di completezza, è consigliabile includere il dominio. È possibile che alcune colonne, ad esempio di tipo genere, forniscano naturalmente un basso livello di univocità. Per altre informazioni, vedere [Schede Profiler e Risultati](#Tabs).  
+ Il profiling fornisce informazioni essenziali quanto a completezza e univocità. Completezza e univocità sono qualità da prendere in considerazione in parallelo. Utilizzare i dati di completezza e univocità per determinare il peso da assegnare a un campo nel processo di corrispondenza. Se vi è un livello elevato di univocità in un campo, l'utilizzo di tale campo nei criteri di corrispondenza può ridurre il numero di risultati di corrispondenza, pertanto è consigliabile impostare il peso per il campo su un valore relativamente basso. Se si dispone di un basso livello di univocità per una colonna, ma anche di un basso livello di completezza, non è consigliabile includere un dominio per tale colonna. Con un basso livello di univocità, ma un elevato livello di completezza, è consigliabile includere il dominio. È possibile che alcune colonne, ad esempio di tipo genere, forniscano naturalmente un basso livello di univocità. Per altre informazioni, vedere [Profiler and Results Tabs](#Tabs).  
   
 ##  <a name="Starting"></a> Primo passaggio: creazione di un set di criteri di corrispondenza  
  L'attività relativa ai criteri di corrispondenza viene eseguita nell'area di gestione della Knowledge Base dell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -125,7 +123,7 @@ ms.lasthandoff: 09/09/2017
   
 10. Selezionare **Cluster sovrapposti** dall'elenco a discesa per visualizzare i record pivot e i record successivi per tutti i cluster quando viene eseguita la corrispondenza, anche qualora i gruppi di cluster presentino record in comune. Selezionare **Cluster non sovrapposti** per visualizzare i cluster che presentano record in comune come cluster singolo all'esecuzione della corrispondenza.  
   
-11. Fare clic su **Ricarica dati di origine** per copiare i dati dall'origine dati nella tabella di gestione temporanea e reindicizzarli quando si eseguono i criteri di corrispondenza. Fare clic su **Esegui sui dati precedenti** per eseguire i criteri di corrispondenza senza copiare i dati nella tabella di gestione temporanea e senza reindicizzare i dati. L'opzione**Esegui sui dati precedenti** è disabilitata per la prima esecuzione dei criteri di corrispondenza o quando si modifica il mapping nella pagina **Mappa** e si preme **Sì** nel messaggio popup successivo. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se i criteri di corrispondenza non vengono modificati, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
+11. Fare clic su **Ricarica dati di origine** per copiare i dati dall'origine dati nella tabella di staging e reindicizzarli quando si eseguono i criteri di corrispondenza. Fare clic su **Esegui sui dati precedenti** per eseguire i criteri di corrispondenza senza copiare i dati nella tabella di staging e senza reindicizzare i dati. L'opzione**Esegui sui dati precedenti** è disabilitata per la prima esecuzione dei criteri di corrispondenza o quando si modifica il mapping nella pagina **Mappa** e si preme **Sì** nel messaggio popup successivo. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se i criteri di corrispondenza non vengono modificati, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
   
 12. Fare clic su **Start** per avviare il processo di corrispondenza per la regola selezionata. Una volta completato il processo, nella tabella viene visualizzato l'ID del record, il numero del cluster e delle colonne di dati (incluse quelle non presenti nella regola di corrispondenza) per ciascun record in un cluster. La riga pivot nel cluster è considerata il candidato principale per il superamento del processo di deduplicazione. Ogni riga aggiuntiva in un cluster è considerata un duplicato; il punteggio di corrispondenza (confrontato con il record pivot) è riportato nella tabella dei risultati. Il numero del cluster corrisponde all'ID record relativo al record pivot nel cluster.  
   
@@ -137,7 +135,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Se si fa doppio clic su un record nella tabella dei risultati di corrispondenza, in DQS viene visualizzata la schermata popup **Dettagli punteggio corrispondente** in cui sono visibili il record pivot e il record di origine (nonché i valori in tutti i relativi campi), il punteggio tra tali record e un drill-down della loro corrispondenza. Nel drill-down vengono visualizzati i valori in ogni campo del record pivot e del record di origine, in modo da poterli confrontare, e il punteggio di corrispondenza tramite cui ogni campo contribuisce al punteggio di corrispondenza complessivo per i due record.  
   
-14. Visualizzare le statistiche nelle schede **Profiler** e **Risultati corrispondenza** per assicurarsi che si stiano ottenendo i risultati desiderati. Per altre informazioni, vedere [Schede Profiler e Risultati](#Tabs).  
+14. Visualizzare le statistiche nelle schede **Profiler** e **Risultati corrispondenza** per assicurarsi che si stiano ottenendo i risultati desiderati. Per altre informazioni, vedere [Profiler and Results Tabs](#Tabs).  
   
 15. Se sono necessarie modifiche alla regola, modificarla nell'Editor Regole e fare clic su **Riavvia**.  
   
@@ -157,7 +155,7 @@ ms.lasthandoff: 09/09/2017
   
 1.  Nella pagina **Risultati corrispondenza** selezionare **Cluster sovrapposti** dall'elenco a discesa per visualizzare i record pivot e i record successivi per tutti i cluster quando viene eseguita la corrispondenza, anche qualora i gruppi di cluster presentino record in comune. Selezionare **Cluster non sovrapposti** per visualizzare i cluster che presentano record in comune come cluster singolo all'esecuzione della corrispondenza.  
   
-2.  Fare clic su **Ricarica dati di origine** per copiare i dati dall'origine dati nella tabella di gestione temporanea e reindicizzarli quando si eseguono i criteri di corrispondenza. Fare clic su **Esegui sui dati precedenti** per eseguire i criteri di corrispondenza senza copiare i dati nella tabella di gestione temporanea e senza reindicizzare i dati. L'opzione**Esegui sui dati precedenti** è disabilitata per la prima esecuzione dei criteri di corrispondenza o quando si modifica il mapping nella pagina **Mappa** e si preme **Sì** nel messaggio popup successivo. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se i criteri di corrispondenza non vengono modificati, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
+2.  Fare clic su **Ricarica dati di origine** per copiare i dati dall'origine dati nella tabella di staging e reindicizzarli quando si eseguono i criteri di corrispondenza. Fare clic su **Esegui sui dati precedenti** per eseguire i criteri di corrispondenza senza copiare i dati nella tabella di staging e senza reindicizzare i dati. L'opzione**Esegui sui dati precedenti** è disabilitata per la prima esecuzione dei criteri di corrispondenza o quando si modifica il mapping nella pagina **Mappa** e si preme **Sì** nel messaggio popup successivo. In entrambi tali casi, è necessario effettuare la reindicizzazione. Se i criteri di corrispondenza non vengono modificati, non è necessaria alcuna reindicizzazione. L'esecuzione sui dati precedenti può migliorare le prestazioni.  
   
 3.  Fare clic su **Avvia** per eseguire il processo di corrispondenza per tutte le regole definite. Nella tabella **Risultati corrispondenza** viene visualizzato l'ID del record, il numero del cluster e delle colonne di dati (incluse quelle non presenti nella regola di corrispondenza) per ciascun record in un cluster. Il record iniziale nel cluster viene selezionato casualmente. Il record ancora esistente viene determinato selezionando la regola di sopravvivenza nella pagina **Esporta** quando si esegue il progetto di corrispondenza. Ogni riga aggiuntiva in un cluster è considerata un duplicato; il punteggio di corrispondenza (confrontato con il record pivot) è riportato nella tabella dei risultati.  
   
@@ -169,7 +167,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Se si fa doppio clic su un record nella tabella dei risultati di corrispondenza, in DQS viene visualizzata la schermata popup **Dettagli punteggio corrispondente** in cui sono visibili il record pivot e il record di origine (nonché i valori in tutti i relativi campi), il punteggio tra tali record e un drill-down della loro corrispondenza. Nel drill-down vengono visualizzati i valori in ogni campo del record pivot e del record di origine, in modo da poterli confrontare, e il punteggio di corrispondenza tramite cui ogni campo contribuisce al punteggio di corrispondenza complessivo per i due record.  
   
-5.  Visualizzare le statistiche nelle schede **Profiler** e **Risultati corrispondenza** per assicurarsi che si stiano ottenendo i risultati desiderati. Fare clic sulla scheda **Regole di corrispondenza** per verificare le impostazioni di dominio per ciascuna regola. Per altre informazioni, vedere [Schede Profiler e Risultati](#Tabs).  
+5.  Visualizzare le statistiche nelle schede **Profiler** e **Risultati corrispondenza** per assicurarsi che si stiano ottenendo i risultati desiderati. Fare clic sulla scheda **Regole di corrispondenza** per verificare le impostazioni di dominio per ciascuna regola. Per altre informazioni, vedere [Profiler and Results Tabs](#Tabs).  
   
 6.  Se non si è soddisfatti dei risultati di tutte le regole, fare clic su **Indietro** per tornare alla pagina **Criteri di corrispondenza** , modificare una o più regole come desiderato, tornare alla pagina **Risultati corrispondenza** , quindi fare clic su **Riavvia**.  
   
@@ -187,14 +185,14 @@ ms.lasthandoff: 09/09/2017
 8.  Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. Nello stato della Knowledge Base verrà visualizzata la stringa "Criteri di corrispondenza -" e lo stato corrente. Se si è fatto clic su **Chiudi** dalla schermata **Risultati corrispondenza** , nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Risultati". Se si è fatto clic su Chiudi dalla schermata **Criteri di corrispondenza** , nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Criteri di corrispondenza". Dopo avere fatto clic su **Chiudi**per eseguire l'attività **Individuazione informazioni** è necessario tornare all'attività **Criteri di corrispondenza** ; fare clic su **Fine**, quindi su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
   
     > [!NOTE]  
-    >  Mentre un processo di corrispondenza è in esecuzione, tale processo non verrà interrotto quando si fa clic su **Chiudi**. È possibile riaprire la Knowledge Base e verificare che il processo sia ancora in esecuzione oppure, se completato, che ne vengano visualizzati i risultati. Se il processo non è stato completato, lo stato di avanzamento verrà visualizzato sullo schermo.  
+    >  Clic su **Chiudi** mentre un processo di corrispondenza è in esecuzione, tale processo non verrà interrotto quando si fa clic su **Chiudi**. È possibile riaprire la Knowledge Base e verificare che il processo sia ancora in esecuzione oppure, se completato, che ne vengano visualizzati i risultati. Se il processo non è stato completato, lo stato di avanzamento verrà visualizzato sullo schermo.  
   
 9. Fare clic su **Annulla** per interrompere l'attività relativa ai criteri di corrispondenza. Il lavorò verrà perso e verrà visualizzata di nuovo la home page di DQS.  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione dei criteri di corrispondenza  
  Dopo avere creato dei criteri di corrispondenza, è possibile eseguire un progetto di corrispondenza basato sulla Knowledge Base contenente i criteri. Per altre informazioni, vedere [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a> Schede Profiler e Risultati  
+##  <a name="Tabs"></a> Profiler and Results Tabs  
  Le schede Profiler e Risultati contengono statistiche per la pagina Criteri di corrispondenza e per la pagina Risultati corrispondenza.  
   
 ###  <a name="Profiler"></a> Scheda Profiler  
@@ -259,4 +257,3 @@ ms.lasthandoff: 09/09/2017
 -   Il maggior numero di duplicati in un cluster  
   
   
-
