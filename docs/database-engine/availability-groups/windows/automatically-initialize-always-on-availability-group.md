@@ -2,11 +2,12 @@
 title: "Inizializzare automaticamente un gruppo di disponibilità Always On | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
-ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inizializzare automaticamente un gruppo di disponibilità Always On
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2016 introduce il seeding automatico dei gruppi di disponibilità. Quando si crea un gruppo di disponibilità con seeding automatico, SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Non è più necessario eseguire manualmente il backup e il ripristino delle repliche secondarie. Per abilitare il seeding automatico, creare il gruppo di disponibilità con T-SQL o usare la versione più recente di SQL Server Management Studio.
 

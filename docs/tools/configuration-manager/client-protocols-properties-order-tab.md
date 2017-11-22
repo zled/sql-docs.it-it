@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client protocols [SQL Server]
+helpviewer_keywords: client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c3e253853ebcaec3217634605e573d9a96bd063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# Proprietà - Protocolli client (scheda Ordine)
+# <a name="client-protocols-properties-order-tab"></a>Proprietà - Protocolli client (scheda Ordine)
   Usare la pagina **Ordine**della finestra di dialogo **Proprietà protocolli client** per visualizzare e abilitare i protocolli client.  
   
  Fare clic su un protocollo e quindi su **Abilita** o **Disabilita** per spostare il protocollo selezionato nell'elenco **Protocolli disabilitati** o **Protocolli abilitati**.  
@@ -34,7 +31,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Queste impostazioni non vengono usate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient. L'ordine dei protocolli per .NET SqlClient è TCP, quindi named pipe e non può essere modificato.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Protocolli disabilitati**  
  Include un elenco dei protocolli installati ma non in uso.  
   
@@ -59,8 +56,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Se il protocollo viene specificato tramite un prefisso o come parte della stringa di connessione, viene eseguito un tentativo solo con il protocollo specificato.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

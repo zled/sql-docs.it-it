@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e749491aea64728e8e58aa4bb041e28a3cbc20fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bd746a4a3eeb4876ad061aed817f03c01d45506e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Riferimento all'interfaccia utente (SybaseToSQL)
 In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per Sybase.  
@@ -38,7 +36,7 @@ In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../..
 |[Connettersi al database SQL di Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/connect-to-azure-sql-db-sybasetosql.md)|Utilizzare il **Connetti a SQL Azure** la finestra di dialogo per connettersi all'istanza di SQL Azure a cui si desidera eseguire la migrazione.|  
 |[Connettersi a Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)|Utilizzare il **Connetti Sybase** la finestra di dialogo per la connessione di base.|  
 |[Report di migrazione di dati &#40; SybaseToSQL &#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Visualizza i risultati della migrazione dei dati da ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.|  
-|[Impostazioni di migrazione di dati](http://msdn.microsoft.com/en-us/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|Utilizzare il **esteso le impostazioni di migrazione di dati** tab per scrivere query personalizzate per la migrazione dei dati.|  
+|[Impostazioni di migrazione dei dati](http://msdn.microsoft.com/en-us/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|Utilizzare il **esteso le impostazioni di migrazione di dati** tab per scrivere query personalizzate per la migrazione dei dati.|  
 |[Modificare i Mapping dei tipi di &#40; SybaseToSQL &#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Utilizzare il **nuovo Mapping dei tipi** o **Mapping dei tipi di modifica** la finestra di dialogo per creare o modificare il mapping dei tipi di dati tra gli oggetti di database e il database di origine e destinazione.|  
 |[Impostazioni globali &#40; Editor &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Utilizzare la pagina Editor del **impostazioni globali** la finestra di dialogo per configurare le opzioni dell'editor di codice.|  
 |[Globale impostazioni &#40; le finestre di dialogo &#41;  &#40; SybaseToSQL &#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Utilizzare la pagina Editor del **impostazioni globali** finestra di dialogo per configurare le impostazioni di avviso e finestra di dialogo predefinita.|  
@@ -58,4 +56,3 @@ In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../..
 [Introduzione a SSMA per Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
 [Migrazione di database di Sybase ASE a SQL Server: database SQL di Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

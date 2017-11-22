@@ -2,9 +2,12 @@
 title: 'Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria | Microsoft Docs'
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a28231df13aa69cd8998d0020e31a80047c7442
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 19c04ed5c67cc2f661ed0774b3941082dec07d81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   L'esempio di codice in questo argomento illustra la rapidità delle prestazioni delle tabelle ottimizzate per la memoria. Il miglioramento delle prestazioni è evidente quando l'accesso ai dati in una tabella ottimizzata per la memoria viene eseguito da codice [!INCLUDE[tsql](../../includes/tsql-md.md)]tradizionale e interpretato. Il miglioramento delle prestazioni è ancora maggiore quando l'accesso ai dati in una tabella ottimizzata per la memoria viene eseguito da una stored procedure compilata in modo nativo (NCSProc).  
  

@@ -2,9 +2,12 @@
 title: 'Esercitazione: Introduzione al motore di database | Microsoft Docs'
 ms.custom: 
 ms.date: 06/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 254a604114f837c864c5580983121b82e562b935
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 35110508db09e7fc82fdabd4b9b77b831ad1548a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al Motore di database
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Benvenuto a questa esercitazione introduttiva su [!INCLUDE[ssDE](../includes/ssde-md.md)] . Questa esercitazione è destinata agli utenti che non hanno familiarità con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e hanno installato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. In questa breve esercitazione verranno fornite informazioni per iniziare a utilizzare [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   

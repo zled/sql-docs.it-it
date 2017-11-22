@@ -2,9 +2,12 @@
 title: Mantenere i valori Null o usare i valori predefiniti durante un'importazione bulk (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 23e50a8144b21194aca61100c49bf35fff9b776e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 645f300a349a9b34533f247dcabebf8f116c3eb7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Per impostazione predefinita, durante l'importazione di dati in una tabella il comando [bcp](../../tools/bcp-utility.md) e l'istruzione [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) osservano gli eventuali valori predefiniti che sono stati specificati per le colonne della tabella.  Ad esempio, se un file di dati contiene un campo Null, verrà caricato nel campo il valore predefinito della colonna.  Il comando [bcp](../../tools/bcp-utility.md) e l'istruzione [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) consentono entrambi di specificare che dovranno essere mantenuti i valori Null.
 

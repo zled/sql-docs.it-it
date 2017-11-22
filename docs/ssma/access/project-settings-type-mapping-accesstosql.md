@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43b1e632293658300a3ca8c242a57507e31ffb5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f1fbca03968ed7257cd7b65a42a6fff5180dbedc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni (Mapping dei tipi) del progetto (AccessToSQL)
 Le impostazioni di Mapping dei tipi del progetto consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È inoltre possibile specificare i mapping dei tipi per singoli oggetti di database. Per ulteriori informazioni, vedere [Mapping tipi di origine e destinazione dati](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -66,8 +64,8 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |**Memo**|**nvarchar(max)**|  
 |**Memo** : per Access 97|**varchar(max)**|  
 |**singolo**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
-|**text[\*..\*]** : per Access 97|**varchar [\*]**|  
+|**text[\*.. \*]**|**nvarchar [\*]**|  
+|**text[\*.. \*]** : per Access 97|**varchar [\*]**|  
   
 **Aggiungi**  
 Fare clic per aggiungere un tipo di dati nell'elenco di mapping.  
@@ -82,7 +80,6 @@ Fare clic per rimuovere il mapping dei tipi di dati selezionato dall'elenco di m
 Fare clic per reimpostare tutti i mapping dei tipi di dati di SSMA predefinite.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Mapping di origine e i tipi di dati di destinazione](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Mapping dei tipi di dati origine e destinazione](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
 [Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

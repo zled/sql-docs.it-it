@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Schema Mapping
+helpviewer_keywords: Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 98b90bb9b511af631f7ae27d969df21576ca6502
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f7b6a20ffcc0325ce3644c0a0667542aa2d3aca
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE schemi di mapping per gli schemi di SQL Server (SybaseToSQL)
 In Sybase Adaptive Server Enterprise (ASE), ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti all'interno di un database e lo schema nello stesso database e schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Tuttavia, è possibile personalizzare il mapping tra ASE e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure e schemi.  
@@ -75,4 +72,3 @@ Se si desidera analizzare la conversione di oggetti di Sybase ASE in [!INCLUDE[s
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione di database di Sybase ASE a SQL Server: database SQL di Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

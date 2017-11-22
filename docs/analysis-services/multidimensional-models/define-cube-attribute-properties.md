@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], defining
+helpviewer_keywords: cubes [Analysis Services], defining
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5c45283b8f78802445028b96ce40395189cd55f9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe36e6ba9ff002706260e2e195adb292ba19b085
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-cube-attribute-properties"></a>Definire le proprietà degli attributi dei cubi
   Le proprietà degli attributi dei cubi consentono di specificare impostazioni univoche per gli attributi delle dimensioni dei cubi basate sulla stessa dimensione di database. Nella tabella seguente vengono descritte le proprietà di un attributo del cubo.  
@@ -42,7 +40,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Definire le proprietà delle dimensioni del cubo](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
- [Definire le proprietà di gerarchia del cubo](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
+ [Definire le proprietà della gerarchia del cubo](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   
   
-

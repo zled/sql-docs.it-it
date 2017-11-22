@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 812f7c5bcbbcf297da3cc1f43802b2676c9c0697
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f0b6735caf1918cf7473c66e56fc6fd6b808c8d9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-metadata-db2tosql"></a>Salvare i metadati (DB2ToSQL)
 Il **salvare metadati** la finestra di dialogo viene richiesto di caricare i metadati al progetto SSMA prima del salvataggio. Questo consente di avere un file di progetto completo che è possibile utilizzare non in linea e inviare ad altri utenti, come il personale di supporto tecnico.  
@@ -51,4 +49,3 @@ Salva il progetto, il caricamento dei metadati per i database selezionati con me
 **Annulla**  
 Annulla il salvataggio operazione. I metadati mancanti, non viene caricato nel progetto.  
   
-

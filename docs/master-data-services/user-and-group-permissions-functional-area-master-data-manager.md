@@ -2,9 +2,12 @@
 title: Area funzionale Autorizzazioni utenti e gruppi (Gestione dati master) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24de34165adfa89075f6e1b10646f68f30d87706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f24dc8d6d08e69e144a41a96dcff1c7c81b0299
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Area funzionale Autorizzazioni utenti e gruppi (Gestione dati master)
   Nell'area funzionale Autorizzazioni utenti e gruppi, gli amministratori possono concedere l'autorizzazione ad aree funzionali, ad attributi (nella scheda Modelli) e a membri (nella scheda Membri gerarchia). Le autorizzazioni sovrapposte vengono risolte per determinare l'autorizzazione di un utente a ogni singolo valore di attributo.  

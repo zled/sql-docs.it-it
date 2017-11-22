@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping di caratteri SQL Server e MySQL impostare (MySQLToSQL)
 Per i tipi di dati carattere, espressioni e valori letterali di MySQL, è possibile specificare il set di caratteri (set di caratteri).  
@@ -143,4 +141,3 @@ Mapping di set di caratteri varia a livello di nodo diverso, vale a dire:
 > -   Nel mapping di set di caratteri tra database MySQL e database di destinazione nel Database, categoria e i livelli dei nodi oggetto, i valori predefiniti per un particolare set di caratteri a ogni livello diversa dalla radice per la colonna **il tipo di dati di destinazione** deve essere 'ereditata'.  
 > -   Nella griglia, il valore **Inherited** è Posposto con '(CHAR/VARCHAR)' o '(NCHAR/NVARCHAR)' a seconda di quale valore è stato ereditato dall'elemento padre per questo specifico set di caratteri.  
   
-

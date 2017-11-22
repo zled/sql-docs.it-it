@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 515c034ba96c93101ea8346dd0207e17143d2e80
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89be4ac89e89f5ebba68fb9261f32cf315bb81c1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>Salvare tracce e modelli di traccia
   È importante distinguere il salvataggio di file di traccia dal salvataggio di modelli di traccia. Il salvataggio di un file di traccia comporta il salvataggio dei dati di evento acquisiti in una posizione specificata. Il salvataggio di un modello di traccia comporta invece il salvataggio della definizione di una traccia, ad esempio le colonne di dati, le classi di evento o i filtri specificati.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/02/2017
 >  Gli utenti che dispongono dell'autorizzazione SHOWPLAN, ALTER TRACE o VIEW SERVER STATE possono visualizzare le query acquisite nell'output di Showplan. Poiché tali query possono contenere informazioni riservate, ad esempio password, è consigliabile concedere tali autorizzazioni solo agli utenti che possono visualizzare le informazioni riservate, ad esempio ai membri del ruolo predefinito del database **db_owner** oppure ai membri del ruolo predefinito del server **sysadmin** . È inoltre consigliabile salvare file Showplan o file di traccia che contengono eventi correlati a Showplan solo in una posizione che utilizza il file system NTFS e limitare l'accesso agli utenti autorizzati a visualizzare le informazioni riservate.  
   
 ## <a name="saving-templates"></a>Salvataggio dei modelli  
- Nella definizione del modello di una traccia sono incluse le classi di evento, le colonne di dati, i filtri e tutte le altre proprietà, eccetto i dati degli eventi acquisiti, utilizzati per creare una traccia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fornisce modelli di sistema predefiniti per attività di traccia comuni e per attività specifiche, ad esempio la creazione di un carico di lavoro che Ottimizzazione guidata motore di database può utilizzare per ottimizzare la progettazione fisica del database. È inoltre possibile creare e salvare modelli definiti dall'utente.  
+ Nella definizione del modello di una traccia sono incluse le classi di evento, le colonne di dati, i filtri e tutte le altre proprietà, eccetto i dati degli eventi acquisiti, utilizzati per creare una traccia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fornisce modelli di sistema predefiniti per attività di traccia comuni e per attività specifiche, ad esempio la creazione di un carico di lavoro che Ottimizzazione guidata motore di database può usare per ottimizzare la progettazione fisica del database. È inoltre possibile creare e salvare modelli definiti dall'utente.  
   
 ### <a name="importing-and-exporting-templates"></a>Importazione ed esportazione di modelli  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di importare ed esportare modelli da un server a un altro. L'esportazione di un modello comporta lo spostamento di una copia di un modello esistente in una directory specificata. L'importazione crea una copia del modello specificato. Visualizzando questi modelli in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]è possibile distinguerli dai modelli di sistema per il termine "(utente)" che segue il nome del modello. Non è possibile sovrascrivere o modificare direttamente un modello di sistema predefinito.  
@@ -67,12 +65,11 @@ ms.lasthandoff: 08/02/2017
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvare i risultati della traccia in una tabella &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Creare un modello di traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Salvare i risultati della traccia in una tabella &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Derivare un modello da una traccia in esecuzione &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivare un modello da un File di traccia o tabella di traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Esportare un modello di traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   
-

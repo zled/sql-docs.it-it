@@ -3,8 +3,11 @@ title: Importare file flat in SQL | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: douglasl
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,13 +16,14 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b19a4d0d4c2e15081b6a890aea4a4f2a9226e9bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > Per i contenuti correlati all'importazione ed esportazione guidata, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 La procedura guidata per l'importazione di file flat consente di copiare facilmente i dati da un file flat (con estensione csv, txt) a una destinazione. In questa panoramica vengono descritti i motivi per l'uso di questa procedura guidata, come trovarla e un semplice esempio da seguire.

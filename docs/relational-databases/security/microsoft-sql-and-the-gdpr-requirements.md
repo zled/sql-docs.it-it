@@ -2,24 +2,27 @@
 title: Microsoft SQL e i requisiti RGPD | Microsoft Docs
 ms.custom: 
 ms.date: 05/24/2017
-ms.prod: sql
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-security
 ms.tgt_pltfrm: 
 ms.topic: article
 caps.latest.revision: "2"
 author: barbkess
 ms.author: ronitr
-manager: cguyer
-ms.openlocfilehash: a4c6cba332f595b60e936bbdd03128860b76e4c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: a98e19f8bea8b8a1d1679cee6bb7a86215c48450
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Guida all'ottimizzazione della privacy e alla conformità ai requisiti RGPD con la piattaforma Microsoft SQL
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="summary"></a>Riepilogo
 Il 25 maggio 2018 entrerà in vigore una legge europea sulla privacy è dovuto l'effetto che stabilisce un nuovo standard globale per diritti di privacy, sicurezza e conformità. Il Regolamento generale sulla protezione dei dati, o RGPD, riguarda essenzialmente la protezione e il rispetto dei diritti delle persone alla privacy e stabilisce severi requisiti globali per la privacy che regolano il modo in cui dati personali vengono gestiti e protetti nel rispetto delle scelte individuali. 

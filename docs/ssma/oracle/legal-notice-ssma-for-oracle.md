@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 5c6929a0320610942f644beca551f5142788edc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ff37155ef68e6942ffb3a256e54404a5d81bc5ef
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Note legali (SSMA per Oracle)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  
@@ -48,4 +46,3 @@ I clienti non devono usare le API non documentate, inclusi a titolo esemplificat
   
 Gli aggiornamenti di server e database alle versioni successive di SQL Server non sono garantiti per le applicazioni e i database che usano punti di ingresso non trattati nella documentazione. L'uso delle caratteristiche e delle funzionalità di SQL Server deve essere limitato a quanto incluso nella documentazione di Microsoft SQL Server. Se una funzionalità non è documentata nella documentazione di Microsoft SQL Server, non è una parte di SQL Server supportata.  
   
-

@@ -3,8 +3,11 @@ title: Determinare le autorizzazioni valide per il motore di database | Microsof
 ms.custom: 
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70359d3c8b34fabec496ad9fbc165bcc7d1707c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Questo articolo descrive come determinare chi ha le autorizzazioni per i vari oggetti nel motore di database di SQL Server. SQL Server implementa due sistemi di autorizzazione per il motore di database. Nel sistema precedente basato sui ruoli predefiniti esistono autorizzazioni preconfigurate. A partire da SQL Server 2005 è disponibile un sistema più flessibile e preciso. Le informazioni in questo argomento si applicano a SQL Server a partire dalla versione 2005. Alcuni tipi di autorizzazioni non sono disponibili in alcune versioni di SQL Server.
 

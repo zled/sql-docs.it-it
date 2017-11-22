@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: e603c7126e4f8e94d040e2ba34fb4180b01c4287
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: afd652370653f4642162fb596bdab88313366354
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Impostazioni del progetto (conversione) (OracleToSQL)
 La pagina di conversione del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità SSMA converte sintassi Oracle per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintassi.  
@@ -93,4 +90,3 @@ Il riquadro di conversione è disponibile nel **impostazioni progetto** e **impo
 ## <a name="see-also"></a>Vedere anche  
 [Riferimento all'interfaccia utente &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-

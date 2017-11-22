@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbf4124c957394d692976eef60d62742741bd949
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0abbf1d371f7fb97547b7e52331c150c7c003ae
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlservr-application"></a>Applicazione sqlservr
   L'applicazione **sqlservr** avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi.  
@@ -47,7 +45,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **-s** *instance_name*  
+ **-s** *_istanza*  
  Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Se non si specifica un'istanza denominata, **sqlservr** avvia l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -75,7 +73,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modalità utente singolo. Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene avviato in modalità utente singolo, la connessione è consentita solo a un utente. Il meccanismo di CHECKPOINT, che assicura la regolare scrittura delle transazioni completate dalla cache del disco al database, non viene avviato. In genere, questa opzione viene utilizzata quando si riscontrano problemi che richiedono interventi nei database di sistema. L'impostazione abilita l'opzione **sp_configure allow updates**. Per impostazione predefinita, l'opzione **allow updates** è disabilitata.  
   
  **-n**  
- Avvia un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il set di parametri **-s** , viene avviata l'istanza predefinita. Al prompt dei comandi è necessario passare alla directory BINN appropriata per l'istanza prima di avviare **sqlservr.exe**. Ad esempio, se Instance1 usa \mssql$Instance1 per i relativi file binari, l'utente deve passare alla directory \mssql$Instance1\binn per avviare **sqlservr.exe -s instance1**. Se si avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il  **-n**  opzione, è consigliabile utilizzare il **-e** opzione troppo, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono registrati eventi.  
+ Avvia un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il set di parametri **-s** , viene avviata l'istanza predefinita. Al prompt dei comandi è necessario passare alla directory BINN appropriata per l'istanza prima di avviare **sqlservr.exe**. Ad esempio, se Instance1 usa \mssql$Instance1 per i relativi file binari, l'utente deve passare alla directory \mssql$Instance1\binn per avviare **sqlservr.exe -s instance1**. Se si avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'opzione **-n** , è consigliabile usare anche l'opzione **-e** . In caso contrario, gli eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono registrati.  
   
  **-T** *trace#*  
  Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#*) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
@@ -96,9 +94,9 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  Usare il valore predefinito per il parametro **-g** a meno che nel log degli errori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non venga visualizzato uno degli avvisi seguenti:  
   
--   "Impossibile virtuali Allocate byte: FAIL_VIRTUAL_RESERVE \<dimensioni >"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"  
   
--   "Impossibile virtuali Allocate byte: FAIL_VIRTUAL_COMMIT \<dimensioni >"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
  Questi messaggi possono indicare che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sta cercando di liberare settori del pool di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per l'inserimento di oggetti quali file dll per stored procedure estese o oggetti di automazione. In questo caso è consigliabile aumentare la quantità di memoria riservata usando l'opzione **-g**.  
   
@@ -111,7 +109,6 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Il parametro **-h**  non è supportato in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Questo parametro è stato utilizzato in versioni precedenti di istanze a 32 bit di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per riservare spazio di indirizzi della memoria virtuale per metadati della memoria a caldo quando AWE è abilitato. Per altre informazioni, vedere [Funzionalità di SQL Server sospese in SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni di avvio del servizio motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md)  
+ [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
-

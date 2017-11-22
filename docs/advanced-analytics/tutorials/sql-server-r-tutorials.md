@@ -1,30 +1,25 @@
 ---
 title: Esercitazioni su SQL Server R | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-caps.latest.revision: 1
+applies_to: SQL Server 2016
+dev_langs: R
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 341ec619ee5976ca7488f3662f010358b4457437
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a313a6f26283b96d138671991438197ae0cc0332
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-r-tutorials"></a>Esercitazioni di SQL Server R
 
@@ -118,4 +113,3 @@ Dopo l'installazione di SQL Server, non dimenticare questi passaggi importanti:
 + Verificare che l'account di accesso SQL o un account utente di Windows disponga delle autorizzazioni necessarie per connettersi al server, per leggere i dati e creare oggetti di database necessari dall'esempio
 
 Se si verificano problemi, vedere questo articolo per alcuni problemi comuni: [risoluzione dei problemi di Machine Learning Services](../machine-learning-troubleshooting-faq.md)
-

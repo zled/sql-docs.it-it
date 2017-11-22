@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8aeaaf23c409135fa677f9d942d1a62baeb8858
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ae6cf2c4ed63515930098546c02c429ab253cbe4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-logging-db2tosql"></a>Impostazioni globali (registrazione) (DB2ToSQL)
 Utilizzare il **impostazioni globali** la finestra di dialogo per specificare le impostazioni di registrazione per SSMA. In genere, è necessario modificare queste impostazioni solo quando si lavora con il supporto tecnico.  
@@ -68,4 +66,3 @@ La dimensione massima del file di log in KB. La dimensione minima è di 10 KB. L
 **Numero totale di file di log**  
 Quando un log si riempie, SSMA verrà rinominare il file di log e avvia uno nuovo. Con questa impostazione, specificare il numero massimo di file di log da conservare. Il valore minimo è 2.  
   
-

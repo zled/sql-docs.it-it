@@ -2,9 +2,12 @@
 title: Opzione di configurazione del server open objects | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0c744f522f3ed900d7da97d8486a99a9288258c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b493ed5ad1195d13739fc726a9ad12892ca1bae9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="open-objects-server-configuration-option"></a>Opzione di configurazione del server open objects
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Questa opzione è ancora presente in **sp_configure** anche se in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la relativa funzionalità è stata disabilitata. L'impostazione non ha alcun effetto. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il numero degli oggetti di database aperti viene gestito in modo dinamico ed è limitato soltanto dalla memoria disponibile. L'opzione **open objects** è stata mantenuta in **sp_configure** per garantire la compatibilità con le versioni precedenti per gli script esistenti.  
   

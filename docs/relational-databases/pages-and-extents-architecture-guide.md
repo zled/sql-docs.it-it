@@ -3,8 +3,11 @@ title: Guida sull'architettura di pagina ed extent | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc9b8e32bc6848547b8833841876b74ca25cc27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 991def989273019e4a58d7ffc6b37a42b73953dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 La pagine è l'unità di base per l'archiviazione dei dati in SQL Server. Un extent è una raccolta di otto pagine fisicamente contigue. Gli extent aiutano a gestire le pagine in modo efficace. Questa guida descrive le strutture dei dati usate per gestire pagine ed extent in tutte le versioni di SQL Server. La comprensione dell'architettura delle pagine e degli extent è importante per la progettazione e lo sviluppo di database efficienti.
 

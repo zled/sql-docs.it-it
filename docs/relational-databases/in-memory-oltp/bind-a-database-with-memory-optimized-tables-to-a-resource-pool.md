@@ -2,9 +2,12 @@
 title: Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25e72cd14e4f8d58e27fb38e041b40f2a2a4dbb5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Un pool di risorse rappresenta un subset di risorse fisiche che è possibile governare. Per impostazione predefinita, i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono associati alle risorse del pool di risorse predefinito e usano queste ultime. Per evitare che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutte le risorse vengano usate da una o più tabelle ottimizzate per la memoria e che altri utenti utilizzino la memoria necessaria per le tabelle ottimizzate per la memoria, è consigliabile creare un pool di risorse distinto per gestire l'utilizzo di memoria per il database con tabelle ottimizzate per la memoria.  
   

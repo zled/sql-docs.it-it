@@ -2,9 +2,12 @@
 title: Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d2c7a4a2d87fb730ebca3f4804b059471899823
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c94bd59f4e383606c12aa90efc1fbff2f831d1cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  
   I carichi di lavoro di data warehousing e analisi possono trarre vantaggio dagli [indici columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md), nonché dagli indici rowstore tradizionali. La scelta della combinazione di indici rowstore e columnstore da compilare per il database dipende dal carico di lavoro dell'applicazione. In SQL Server 2016, [Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md) può analizzare il carico di lavoro e consigliare una combinazione di indici rowstore e columnstore appropriata per il database. 

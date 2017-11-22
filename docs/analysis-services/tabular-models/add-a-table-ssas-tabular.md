@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 95113c2053b0e37cc4ee3d94d2baf0ed64d71d57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d68422844c6c5692ebfe362cb6e6d44400e705b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-table-ssas-tabular"></a>Aggiungere una tabella (SSAS tabulare)
   In questo argomento verrà illustrato come aggiungere una tabella da un'origine dati dalla quale sono stati importati precedentemente i dati nel modello. Per aggiungere una tabella dalla stessa origine dati, è possibile utilizzare la connessione all'origine dati esistente. È consigliabile utilizzare sempre una sola connessione in caso di importazione di un qualsiasi numero di tabelle da un'unica origine dati.  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [Eliminare una tabella &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   
-

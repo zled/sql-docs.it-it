@@ -2,9 +2,12 @@
 title: Area funzionale Gestione versioni (Gestione dati master) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96107ad180951172dca4f61bae8b5668c8806f9c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1ac141fd1bffe16fe483381b9d81c1972de5ac27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Area funzionale Gestione versioni (Gestione dati master)
   Nell'area funzionale Gestione versioni, gli amministratori possono convalidare dati, rivedere e invertire transazioni, creare copie di dati con versione e versioni del flag di dati per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  

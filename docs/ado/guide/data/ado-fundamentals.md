@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-fundamentals"></a>Nozioni fondamentali su ADO
 ADO offre agli sviluppatori un modello a oggetti logico e avanzato per l'accesso a livello di codice, la modifica e aggiornamento dei dati da una vasta gamma di origini dati tramite interfacce OLE DB di sistema. L'utilizzo più comune di ADO consiste nell'eseguire una query una o più tabelle in un database relazionale, recuperare e visualizzare i risultati in un'applicazione e forse consentire agli utenti di apportare e salvare le modifiche ai dati. Altre attività includono quanto segue:  
@@ -64,11 +62,10 @@ ADO offre agli sviluppatori un modello a oggetti logico e avanzato per l'accesso
   
  Tuttavia, prima di illustrare questi dettagli, verrà presentata una panoramica del modello a oggetti ADO e una semplice applicazione ADO che viene scritto in Microsoft® Visual Basic® ed esegue ognuna delle quattro operazioni ADO primarie:  
   
--   [Raccolte e gli oggetti ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [Oggetti e raccolte di ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData: Una semplice applicazione ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: applicazione semplice ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [Provider OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [errori](../../../ado/guide/data/errors-ado.md)
-

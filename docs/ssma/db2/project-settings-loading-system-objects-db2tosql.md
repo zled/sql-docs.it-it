@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: acd361c61d56d93e5f2b28f498e67e3721fd0b2c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ef45d9ecb596daea8701af49dffa37d08d642bd5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Impostazioni (oggetti di sistema durante il caricamento) del progetto (DB2ToSQL)
 La pagina di oggetti di sistema durante il caricamento del **impostazioni progetto** la finestra di dialogo consente di specificare quali oggetti di sistema DB2 SSMA converte e li carica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -55,4 +53,3 @@ La conversione di oggetti di sistema utilizza risorse di sistema e richiede temp
   
 Se gli oggetti di DB2 fanno riferimento a oggetti di sistema aggiuntive, è necessario selezionare gli oggetti. Se non si seleziona gli oggetti di sistema che fanno riferimento gli oggetti di database DB2, SSMA verrà segnalati gli errori di conversione. Se si ricevono errori di conversione causati dalla mancanza di oggetti di sistema, selezionare gli oggetti mancanti nella finestra di dialogo. È quindi possibile ripetere la conversione in base alle esigenze.  
   
-

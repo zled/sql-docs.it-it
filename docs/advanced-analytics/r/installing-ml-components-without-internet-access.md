@@ -1,42 +1,40 @@
 ---
 title: Installazione dei componenti di machine learning senza accesso a internet | Documenti Microsoft
 ms.custom: 
-ms.date: 10/0522/2017
-ms.prod: sql-server-2016
+ms.date: 11/30/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Installazione dei componenti di machine learning senza accesso a internet
 
-Poiché i componenti di R e Python forniti con SQL Server 2016 e SQL Server 2017 sono open source di, Microsoft non vengono installati i componenti di R o Python per impostazione predefinita.
-
-È invece fornire i programmi di installazione correlate e in bundle di pacchetti per motivi di praticità nel Microsoft Download Center e altri siti attendibili. Deve accettare la licenza appropriata e quindi il programma di installazione di SQL Server installa i componenti di R o Python per l'utente.
+Poiché i componenti di R e Python forniti con SQL Server 2016 e SQL Server 2017 sono open source di, Microsoft non vengono installati i componenti di R o Python per impostazione predefinita. È invece fornire i programmi di installazione correlate e in bundle di pacchetti per motivi di praticità nel Microsoft Download Center e altri siti attendibili. Deve accettare la licenza appropriata e quindi il programma di installazione di SQL Server installa i componenti di R o Python per l'utente.
 
 In questo argomento fornisce i percorsi di download per i programmi di installazione e una panoramica del processo di installazione offline.
 
-## <a name="installation-process"></a>Processo di installazione
+## <a name="overview-of-the-offline-installation-process"></a>Panoramica del processo di installazione offline
 
 In genere, il programma di installazione dei componenti di computer utilizzati in SQL Server 2016 e SQL Server 2017 richiede una connessione internet. Quando viene eseguito il programma di installazione di SQL Server, se è stata selezionata una qualsiasi di machine learning opzioni, il programma di installazione verifica la presenza di Python o R programmi di installazione, nonché altri componenti necessari.
 
 + **Se il computer dispone di una connessione internet**
 
-    SQL Server consente di individuare e scaricare i componenti di, quindi li installa durante l'installazione. È necessario accettare le condizioni di licenza separatamente per ogni componente di origine aprire (R o Python) installato.
+    SQL Server individua e scarica i componenti per l'utente e quindi li installa durante l'installazione. Accettare le condizioni di licenza separatamente per ogni componente di origine aprire (R o Python) installato.
 
 + **Se il computer non ha accesso a internet**
 
@@ -48,12 +46,21 @@ In genere, il programma di installazione dei componenti di computer utilizzati i
 
 ### <a name="step-1-obtain-additional-installers"></a>Passaggio 1. Ottenere i programmi di installazione aggiuntivi
 
-Per **R** in SQL Server 2016 e SQL Server 2017, è necessario ottenere due programmi di installazione diversi. L'installazione guidata di SQL Server assicura che vengono installate nell'ordine corretto.
+**Per R**
+
+Il linguaggio R è supportato in SQL Server 2016 e SQL Server 2017. Due diversi programmi di installazione sono necessari, per open source e componenti proprietari. L'installazione guidata di SQL Server assicura che vengono installate nell'ordine corretto.
 
 + Programmi di installazione con **SRO** nel nome di fornire i componenti di origine aperti.
 + Programmi di installazione con **SRS** nel nome contengono i componenti forniti da Microsoft, inclusi quelli per l'integrazione di database.
 
-Per **Python** in SQL Server 2017, scaricare il file CAB singolo e tutti i prerequisiti.
+**Per Python**
+
+Il linguaggio Python è supportato solo in SQL Server 2017. Nuovamente, esistono due programmi di installazione separati che è necessario scaricare.
+
++ Programmi di installazione con **Simulato** nel nome sono per aprire Python di Microsoft e fornire i componenti di origine aperti.
++ Programmi di installazione con **SPS** nel nome sono per Python di Microsoft Server e include i componenti forniti da Microsoft, inclusi quelli per l'integrazione di database.
+
+**Come scaricare**
 
 1. Scaricare i programmi di installazione dal [siti Microsoft Download Center](#installerlocs) in un computer con accesso a internet, quindi salvare il programma di installazione, anziché eseguirlo.
 2. Copiare i file di programma di installazione (CAB) nel computer in cui si intende installare i componenti di machine learning.
@@ -119,10 +126,15 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Aprire Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Server Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |Utilizzare prervious|
+Microsoft R Open     |Utilizzare precedente|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Aprire Microsoft Python     |Utilizzare precedente |
 Server Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+**SQL Server 2017 CU2** |
+Microsoft R Open     |Utilizzare precedente|
+Microsoft R Server      |Utilizzare precedente|
+Aprire Microsoft Python     |Utilizzare precedente |
+Server Microsoft Python    |Utilizzare precedente|
 
 ### <a name="bkmk_2016Installers"></a>Download di SQL Server 2016
 
@@ -189,7 +201,6 @@ Componente  |Versione
 [Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
 [Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
 
-
 ## <a name="modslocales"></a>L'installazione di lingue diverse
 
 Se Scarica il. File CAB come parte del programma di installazione di SQL Server in un computer con accesso a internet, la procedura guidata di installazione rileva la lingua locale e viene automaticamente impostata come lingua del programma di installazione.
@@ -204,7 +215,7 @@ Tuttavia, a seconda della versione di SQL Server, potrebbe essere necessario ese
 
     > [!IMPORTANT]
     > Questo problema si applica solo a versioni ed è stato risolto nelle versioni successive.
-    > Utilizzare questa soluzione solo se il programma di installazione restituisce un messaggio che è possibile installare la lingua corretta.
+    > **Utilizzare questa soluzione solo se il programma di installazione restituisce un messaggio che è possibile installare la lingua corretta.**
 
 + **Per SQL Server 2017**
 
@@ -220,14 +231,15 @@ L'installazione integrata si riferisce alla possibilità di applicare una patch 
 
 + Se si è *aggiunta* questi componenti di un *esistente* installazione, utilizzare la versione aggiornata del programma di installazione di SQL Server e il corrispondente aggiornato versione dei componenti aggiuntivi. Quando si specifica che deve essere installato sia la funzionalità di R, il programma di installazione cerca la versione corrispondente dei programmi di installazione per il machine learning componenti.
 
-## <a name="command-line-arguments-for-setup"></a>Argomenti della riga di comando per l'installazione
+## <a name="command-line-arguments-for-specifying-component-locations"></a>Argomenti della riga di comando per specificare i percorsi dei componenti
 
-Quando si esegue un'installazione automatica, è necessario fornire i seguenti argomenti della riga di comando. Non tuttavia necessario impostare i flag aggiuntivi per installare i componenti aggiuntivi; prerequisiti, ad esempio .NET core vengono automaticamente installati per impostazione predefinita.
+Quando si esegue un'installazione offline dalla riga di comando, è necessario fornire gli argomenti della riga di comando seguenti per specificare il percorso dei componenti che è stato scaricato in anticipo. Non tuttavia necessario impostare i flag aggiuntivi per installare i componenti aggiuntivi; prerequisiti, ad esempio .NET core vengono automaticamente installati per impostazione predefinita.
 
 **Percorso dei programmi di installazione**
 
 - `/UPDATESOURCE`Per specificare il percorso del file locale contenente il programma di installazione di aggiornamento di SQL Server
 - `/MRCACHEDIRECTORY`Per specificare la cartella contenente i file CAB del componente R
+- `/MPYCACHEDIRECTORY`Per specificare la cartella contenente i file CAB del componente Python
 
 **Componenti di R in SQL Server 2016**
 
@@ -244,7 +256,7 @@ Quando si esegue un'installazione automatica, è necessario fornire i seguenti a
 
 - `/ADVANCEDANALYTICS`Per ottenere supporto del motore di script esterni
 - `/SQL_INST_MPY`Per utilizzare Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`per accettare R separate contratto di licenza
+- `/IACCEPTPYTHONLICENSETERMS="True"`per accettare la versione di Python separate contratto di licenza
 
 
 > [!NOTE]
@@ -255,4 +267,3 @@ Quando si esegue un'installazione automatica, è necessario fornire i seguenti a
 [Installare Microsoft R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 In questo articolo dal team di supporto dei servizi R viene illustrato come eseguire un'installazione automatica o un aggiornamento di R services in SQL Server 2016: [la distribuzione di R Services in computer senza accesso a Internet](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
-

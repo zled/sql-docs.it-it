@@ -1,8 +1,7 @@
 ---
 title: Metodo Synchronize21 (RDS) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Synchronize21 method [ADO]
+helpviewer_keywords: Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 996510799ad3222a40910af3a1d04c9cbb9b30fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4a9c335379853272340a731d194d1e2360513a1b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize21-method-rds"></a>Metodo Synchronize21 (RDS)
 Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo con ADO 2.1.  
@@ -70,6 +67,5 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

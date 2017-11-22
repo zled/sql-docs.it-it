@@ -1,10 +1,13 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7516d8a10fc121bfa05661eb94084fa148fce0ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: adde08cc4584568c42d896b70ffbcc49689d6416
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   I processori moderni sono costituiti da multipli a molti core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA.  In caso di processori che contengono da 10 a più core per socket, l'uso di soft-NUMA (software non-uniform memory access) per suddividere i nodi NUMA hardware aumenta generalmente la scalabilità e le prestazioni. Prima di SQL Server 2014 SP2, l'architettura soft-NUMA era configurata per computer anziché per istanza. Era anche necessario modificare il registro per aggiungere una maschera di affinità alla configurazione del nodo.  Grazie a SQL Server 2014 SP2 e SQL Server 2016, l'architettura soft-NUMA viene configurata automaticamente a livello di istanza database all'avvio del servizio SQL Server.  
   

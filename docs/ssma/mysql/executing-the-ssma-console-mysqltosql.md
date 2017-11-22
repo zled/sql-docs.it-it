@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5536ace7511bbbb778b9ca5c3732ff78c986afd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d3524ac9d8aac255fdf87bedbe6cf3badad963bd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>L'esecuzione la Console SSMA (MySQLToSQL)
 Microsoft fornisce un set affidabile di script di comandi di file per eseguire e controllare le attività SSMA.  
@@ -679,7 +677,7 @@ Convert-istruzione
   
 8.  `write-summary-report-to`Specifica il percorso in cui verrà generato il report di riepilogo. Se viene specificato il percorso della cartella, solo file in base al nome **ConvertSQLReport.XML** viene creato. (attributo facoltativo)  
   
-    Report creazione è 2 ulteriormente mediante le sottocategorie..,:  
+    Report creazione è 2 ulteriormente mediante le sottocategorie,..,:  
   
     -   report-errori (= "true/false" con valore predefinito è "false" (attributi facoltativi)).  
   
@@ -770,4 +768,3 @@ Il passaggio successivo dipende dai requisiti del progetto:
   
 3.  Per la risoluzione dei problemi nella console, vedere [Troubleshooting &#40; MySQLToSQL &#41; ](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   
-

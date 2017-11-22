@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 187c615e8dd9369fba4bdd4b88336e0bd8fcfcc9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f1c097e900a9ed76bb5160ecab37238344d7a33
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizzare le colonne visualizzate in una traccia (SQL Server Profiler)
   È possibile raggruppare le colonne di dati di una traccia selezionando **Organizza colonne** nella tabella di traccia o nella finestra di dialogo **Proprietà file di traccia** oppure durante la definizione della traccia. Il raggruppamento delle colonne di dati semplifica l'analisi dell'output della traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Per altre informazioni, vedere [Visualizzare e analizzare le tracce con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
@@ -88,9 +86,8 @@ ms.lasthandoff: 08/02/2017
 7.  Per tornare a una visualizzazione normale dei dati di traccia, scegliere **Visualizzazione aggregata** dal menu **Visualizza** per annullare la selezione. Per tornare alla visualizzazione aggregata, scegliere di nuovo **Visualizzazione aggregata** dal menu **Visualizza** per confermare di nuovo la selezione. È anche possibile scegliere **Visualizzazione a gruppi** dal menu **Visualizza** per visualizzare gli eventi di traccia raggruppati senza comprimerli.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Aprire una tabella di traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Aprire un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   
-
