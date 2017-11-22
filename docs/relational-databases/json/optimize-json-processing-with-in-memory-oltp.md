@@ -2,9 +2,12 @@
 title: Ottimizzare l'elaborazione JSON con OLTP in memoria | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baceef80e5e24975b3144d6e239c6fb70fbf1c16
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 32926b4251dbe8d01c1e0b4835b09ca141ff80da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Ottimizzare l'elaborazione JSON con OLTP in memoria
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 SQL Server e il database SQL di Azure consentono di usare il testo formattato come JSON. Per migliorare le prestazioni delle query che elaborano dati JSON, è possibile archiviare i documenti JSON in tabelle ottimizzate per la memoria usando colonne di tipo stringa standard (tipo NVARCHAR). L'archiviazione dei dati JSON in tabelle ottimizzate per la memoria aumenta le prestazioni delle query mediante l'accesso ai dati in memoria senza blocco.
 

@@ -1,35 +1,33 @@
 ---
 title: Indici hash per tabelle con ottimizzazione per la memoria | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.component: in-memory-oltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e9fc5c574cc4fee841cfc6598623ec20ae26c504
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Hash Indexes for Memory-Optimized Tables (Indici hash per tabelle con ottimizzazione per la memoria)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
-Questo articolo descrive il tipo di indice *hash* disponibile per una tabella con ottimizzazione per la memoria. Questo articolo:  
+Questo articolo descrive il tipo di indice *hash* disponibile per una tabella ottimizzata per la memoria. Questo articolo:  
   
 - Fornisce brevi esempi di codice per illustrare la sintassi Transact-SQL.  
 - Illustra le nozioni fondamentali sugli indici hash.  
@@ -45,12 +43,12 @@ Informazioni sul contesto importanti per la comprensione di questo articolo sono
   
   
   
-## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintassi per gli indici con ottimizzazione per la memoria  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintassi per gli indici ottimizzati per la memoria  
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 Esempio di codice per la sintassi  
   
-Questa sottosezione contiene un blocco di codice Transact-SQL che mostra le sintassi disponibili per creare un indice hash in una tabella con ottimizzazione per la memoria.  
+Questa sottosezione contiene un blocco di codice Transact-SQL che mostra le sintassi disponibili per creare un indice hash in una tabella ottimizzata per la memoria.  
   
 - Nell'esempio viene illustrato che l'indice hash viene dichiarato all'interno dell'istruzione CREATE TABLE.  
   - È invece possibile dichiarare l'indice hash in un'istruzione [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations) separata.  
@@ -97,7 +95,7 @@ Le prestazioni di un indice hash sono:
   
 ### <a name="b2-declaration-limitations"></a>B.2 Limitazioni di dichiarazione  
   
-Un indice hash può essere presente solo in una tabella con ottimizzazione per la memoria. Non può esistere in una tabella basata su disco.  
+Un indice hash può essere presente solo in una tabella ottimizzata per la memoria. Non può esistere in una tabella basata su disco.  
   
 Un indice hash può essere dichiarato:  
   
@@ -119,7 +117,7 @@ Di seguito è riportato un esempio della sintassi per creare un indice hash al d
 Un indice hash ancora i propri valori di chiave in una matrice di *bucket* :  
   
 - Ogni bucket è costituito da 8 byte, che vengono usati per archiviare l'indirizzo di memoria di un elenco di collegamenti delle voci della chiave.  
-- Ogni voce rappresenta un valore per una chiave di indice, oltre all'indirizzo della riga corrispondente nella tabella con ottimizzazione per la memoria sottostante.  
+- Ogni voce rappresenta un valore per una chiave di indice, oltre all'indirizzo della riga corrispondente nella tabella ottimizzata per la memoria sottostante.  
   - Ogni voce punta alla voce successiva in un elenco di collegamenti di voci, tutte concatenate per il bucket corrente.  
   
   
@@ -151,7 +149,7 @@ Nell'immagine seguente è riepilogata l'interazione tra l'indice hash e i bucket
 ### <a name="b4-row-versions-and-garbage-collection"></a>B.4 Versioni delle righe e Garbage Collection  
   
   
-In una tabella con ottimizzazione per la memoria, quando una riga è interessata da un'istruzione SQL UPDATE, la tabella crea una versione aggiornata della riga. Durante la transazione di aggiornamento, altre sessioni potrebbero riuscire a leggere la versione precedente della riga e quindi evitare il rallentamento delle prestazioni associato a un blocco di riga.  
+In una tabella ottimizzata per la memoria, quando una riga è interessata da un'istruzione SQL UPDATE, la tabella crea una versione aggiornata della riga. Durante la transazione di aggiornamento, altre sessioni potrebbero riuscire a leggere la versione precedente della riga e quindi evitare il rallentamento delle prestazioni associato a un blocco di riga.  
   
 L'indice hash potrebbe anche avere versioni diverse delle relative voci per includere l'aggiornamento.  
   
@@ -189,7 +187,7 @@ Un numero di bucket troppo *elevato* presenta i seguenti svantaggi:
   
 Anche se il valore **BUCKET_COUNT** è moderatamente inferiore o superiore all'intervallo preferito, è probabile che le prestazioni dell'indice hash siano tollerabili o accettabili. Non si verificano problemi.  
   
-Assegnare all'indice hash un valore **BUCKET_COUNT** quasi uguale al numero di righe che si prevede di raggiungere nella tabella con ottimizzazione per la memoria.  
+Assegnare all'indice hash un valore **BUCKET_COUNT** quasi uguale al numero di righe che si prevede di raggiungere nella tabella ottimizzata per la memoria.  
   
 Se ad esempio la tabella espandibile contiene 2.000.000 righe, ma si prevede che crescerà di 10 volte, fino a 20.000.000 righe, iniziare con un numero di bucket 10 volte superiore al numero di righe nella tabella. In questo modo si avrà spazio sufficiente per un numero maggiore di righe.  
   
@@ -273,7 +271,7 @@ Confrontare i risultati dell'istruzione SELECT con le linee guida statistiche se
 Il blocco di codice T-SQL seguente offre un modo semplice per testare un `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`. Il blocco di codice viene completato in 1 minuto. Di seguito sono riportate le fasi del blocco di codice seguente:  
   
   
-1. Crea una tabella con ottimizzazione per la memoria con alcuni indici hash.  
+1. Crea una tabella ottimizzata per la memoria con alcuni indici hash.  
 2. Popola la tabella con migliaia di righe.  
     A. Viene usato un operatore modulo per configurare il tasso di valori duplicati nella colonna StatusCode.  
     B. Il ciclo INSERT inserisce 262144 righe in circa 1 minuto.  
@@ -440,4 +438,3 @@ L'indice a due colonne può essere un indice non cluster o un indice hash. Si su
 L'indice hash necessita della clausola WHERE per specificare un test di uguaglianza per ogni colonna della chiave. In caso contrario l'indice hash non è utile per Query Optimizer.  
   
 Nessuno dei due tipi di indice è utile se la clausola WHERE specifica solo la seconda colonna della chiave di indice.  
-
