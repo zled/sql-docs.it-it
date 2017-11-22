@@ -3,10 +3,12 @@ title: COMMIT della transazione (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - COMMIT TRANSACTION
 - COMMIT_TSQL
 - COMMIT_TRANSACTION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ending transactions [SQL Server]
 - user-defined transactions [SQL Server]
@@ -28,20 +29,19 @@ helpviewer_keywords:
 - COMMIT TRANSACTION statement
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b2f6bffa6a19007fc98796daa9ff34bda729bd4d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 84ca8221700d3eabd443b84d97dea4f698e9f945
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Contrassegna la fine di una transazione esplicita o implicita completata correttamente. Se @@TRANCOUNT è 1, COMMIT TRANSACTION rende tutte le modifiche dei dati eseguite dall'inizio della transazione una parte permanente del database, libera le risorse utilizzate dalla transazione e decrementa @@TRANCOUNT su 0. Se @@TRANCOUNT è maggiore di 1, COMMIT TRANSACTION riduce @@TRANCOUNT solo da 1 e la transazione rimane attiva.  
   
@@ -177,4 +177,3 @@ PRINT N'Transaction count after COMMIT OuterTran = '
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 269c901b4242ae199f6d83fc7f678c29be39e5e5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Impostazioni (Mapping dei tipi) del progetto (MySQLToSQL)
 Le impostazioni di Mapping dei tipi del progetto consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA.  
@@ -61,7 +59,7 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |-|-|  
 |**Tipo di dati di MySQL**|**Tipo di dati SQL Server**|  
 |bigint|bigint|  
-|bigint [*..255]|bigint|  
+|bigint [*... 255]|bigint|  
 |binary|binario [1]|  
 |binario [0..1]|binario [1]|  
 |binario [2..255]|binario [*]|  
@@ -93,30 +91,30 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |caratteri [2..255]|nchar [*]|  
 |data|data|  
 |datetime|datetime2 [0]|  
-|dec|Decimal|  
-|DEC [*..65]|decimale [*] [0]|  
-|DEC [*..65][\*..30]|decimale [*] [\*]|  
-|Decimal|Decimal|  
-|decimale [*..65]|decimale [*] [0]|  
-|decimale [*..65][\*..30]|decimale [*] [\*]|  
+|dec|decimal|  
+|DEC [*... 65]|decimale [*] [0]|  
+|DEC [*... 65][\*.. 30]|decimale [*] [\*]|  
+|decimal|decimal|  
+|decimale [*... 65]|decimale [*] [0]|  
+|decimale [*... 65][\*.. 30]|decimale [*] [\*]|  
 |double|float [53]|  
 |valore a precisione doppia|float [53]|  
-|valore a precisione doppia [*..255][\*..30]|numerico [*] [\*]|  
-|Double [*..255][\*..30]|numerico [*] [\*]|  
+|valore a precisione doppia [*... 255][\*.. 30]|numerico [*] [\*]|  
+|Double [*... 255][\*.. 30]|numerico [*] [\*]|  
 |predefinito|numeric|  
-|fissa [*..65][\*..30]|numerico [*] [\*]|  
+|fissa [*... 65][\*.. 30]|numerico [*] [\*]|  
 |float|float [24]|  
-|float [*..255][\*..30]|numerico [*] [\*]|  
-|float [*..53]|float [53]|  
+|float [*... 255][\*.. 30]|numerico [*] [\*]|  
+|float [*... 53]|float [53]|  
 |int|int|  
-|int [*..255]|int|  
+|int [*... 255]|int|  
 |integer|int|  
-|numero intero [*..255]|int|  
+|numero intero [*... 255]|int|  
 |longblob|varbinary(max)|  
 |LONGTEXT|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|int|  
-|mediumint [*..255]|int|  
+|mediumint [*... 255]|int|  
 |mediumtext|nvarchar(max)|  
 |char nazionali|nchar [1]|  
 |National char [0..1]|nchar [1]|  
@@ -140,17 +138,17 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |nchar [0..1]|nchar [1]|  
 |nchar [2..255]|nchar [*]|  
 |numeric|numeric|  
-|numerico [*..65]|numerico [*] [0]|  
-|numerico [*..65][\*..30]|numerico [*] [\*]|  
+|numerico [*... 65]|numerico [*] [0]|  
+|numerico [*... 65][\*.. 30]|numerico [*] [\*]|  
 |nvarchar|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001... *]|nvarchar(max)|  
 |real|float [53]|  
-|reale [*..255][\*..30]|numerico [*] [\*]|  
+|reale [*... 255][\*.. 30]|numerico [*] [\*]|  
 |Seriale|bigint|  
 |smallint|smallint|  
-|smallint [*..255]|smallint|  
+|smallint [*... 255]|smallint|  
 |text|nvarchar(max)|  
 |testo [0..1]|nvarchar [1]|  
 |testo [2..4000]|nvarchar [*]|  
@@ -159,38 +157,38 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |timestamp|datetime|  
 |tinyblob|varbinary [255]|  
 |tinyint|smallint|  
-|tinyint [*..255]|smallint|  
+|tinyint [*... 255]|smallint|  
 |tinytext|nvarchar [255]|  
 |bigint senza segno|bigint|  
-|senza segno bigint [*..255]|bigint|  
-|dec senza segno|Decimal|  
-|senza segno dec [*..65]|decimale [*] [0]|  
-|senza segno dec [*..65][\*..30]|decimale [*] [\*]|  
-|senza segno decimale|Decimal|  
-|senza segno decimale [*..65]|decimale [*] [0]|  
-|senza segno decimale [*..65][\*..30]|decimale [*] [\*]|  
+|senza segno bigint [*... 255]|bigint|  
+|dec senza segno|decimal|  
+|senza segno dec [*... 65]|decimale [*] [0]|  
+|senza segno dec [*... 65][\*.. 30]|decimale [*] [\*]|  
+|senza segno decimale|decimal|  
+|senza segno decimale [*... 65]|decimale [*] [0]|  
+|senza segno decimale [*... 65][\*.. 30]|decimale [*] [\*]|  
 |doppia senza segno|float [53]|  
 |senza segno a precisione doppia|float [53]|  
-|senza segno a precisione doppia [*..255][\*..30]|numerico [*] [\*]|  
-|Unsigned double [*..255][\*..30]|numerico [*] [\*]|  
+|senza segno a precisione doppia [*... 255][\*.. 30]|numerico [*] [\*]|  
+|Unsigned double [*... 255][\*.. 30]|numerico [*] [\*]|  
 |Unsigned predefinito|numeric|  
-|Unsigned fissa [*..65][\*..30]|numerico [*] [\*]|  
+|Unsigned fissa [*... 65][\*.. 30]|numerico [*] [\*]|  
 |float senza segno|float [24]|  
-|senza segno float [*..255][\*..30]|numerico [*] [\*]|  
-|senza segno float [*..53]|float [53]|  
+|senza segno float [*... 255][\*.. 30]|numerico [*] [\*]|  
+|senza segno float [*... 53]|float [53]|  
 |int senza segno|bigint|  
-|int senza segno [*..255]|bigint|  
+|int senza segno [*... 255]|bigint|  
 |intero senza segno|bigint|  
-|intero senza segno [*..255]|bigint|  
+|intero senza segno [*... 255]|bigint|  
 |mediumint senza segno|int|  
-|senza segno mediumint [*..255]|int|  
+|senza segno mediumint [*... 255]|int|  
 |numerico senza segno|numeric|  
-|numerico senza segno [*..65]|numerico [*] [0]|  
-|numerico senza segno [*..65][\*..30]|numerico [*] [\*]|  
+|numerico senza segno [*... 65]|numerico [*] [0]|  
+|numerico senza segno [*... 65][\*.. 30]|numerico [*] [\*]|  
 |senza segno reale|float [53]|  
-|Unsigned reale [*..255[[\*..30]|numerico [*] [\*]|  
+|Unsigned reale [*... 255[[\*.. 30]|numerico [*] [\*]|  
 |smallint senza segno|int|  
-|smallint non firmati [*..255]|int|  
+|smallint non firmati [*... 255]|int|  
 |tinyint senza segno|tinyint|  
 |senza segno tinyint [*... 255]|tinyint|  
 |varbinary [0..1]|varbinary [1]|  
@@ -215,4 +213,3 @@ Fare clic per rimuovere il mapping dei tipi di dati selezionato dall'elenco di m
 ##### <a name="reset-to-default"></a>Ripristina predefiniti  
 Fare clic per reimpostare tutti i mapping dei tipi di dati di SSMA predefinite.  
   
-

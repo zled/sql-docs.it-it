@@ -3,10 +3,12 @@ title: Dimensioni della colonna | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size"></a>Dimensioni di colonna
 Le dimensioni di colonna (o parametro) dei tipi di dati numerici sono definita come il numero massimo di cifre utilizzate dal tipo di dati della colonna o parametro o la precisione dei dati. Per i tipi di carattere, si tratta della lunghezza in caratteri dei dati. per i tipi di dati binari, dimensioni della colonna sono definita come la lunghezza in byte dei dati. Per l'ora, timestamp e tutti i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri dei dati. La dimensione della colonna definita per ogni tipo di dati SQL conciso è illustrata nella tabella seguente.  
@@ -72,4 +73,3 @@ Le dimensioni di colonna (o parametro) dei tipi di dati numerici sono definita c
 |Tutti i tipi numerici|PRECISION|  
 |Tutti i tipi datetime e interval|LENGTH|  
 |SQL_BIT|LENGTH|
-

@@ -3,33 +3,31 @@ title: IsNull (tipo di dati geography) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsNull (geography Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- IsNull method
+f1_keywords: IsNull (geography Data Type)
+dev_langs: TSQL
+helpviewer_keywords: IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3873babae0514b35626872b1b592f287a884be1c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9f65a3860b1b0d54231d3243fdfdf1902ae8ca
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Una proprietà che specifica se il **geography** istanza è null. Restituisce 'TRUE' se l'istanza è Null. In caso contrario, restituisce 0.  
   
@@ -53,7 +51,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Esempi  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Metodi estesi sulle istanze geografiche](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

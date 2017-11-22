@@ -3,24 +3,25 @@ title: Gestione dei risultati set con il Driver JDBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5cf61ff8794270ca5706284118c41c224bd5518f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e17e39f8a83313a60b269fed82631b80f07ffed5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>Gestione dei set di risultati con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,10 +42,9 @@ ms.lasthandoff: 09/09/2017
 |-----------|-----------------|  
 |[Informazioni sui tipi di cursore](../../connect/jdbc/understanding-cursor-types.md)|Vengono descritti i diversi tipi di cursore di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta.|  
 |[Informazioni sul controllo della concorrenza](../../connect/jdbc/understanding-concurrency-control.md)|Viene descritto il supporto fornito dal driver JDBC per il controllo della concorrenza.|  
-|[Blocco di riga](../../connect/jdbc/understanding-row-locking.md)|Viene descritto in che modo il driver JDBC supporta i blocchi a livello di riga.|  
+|[Informazioni sul blocco delle righe](../../connect/jdbc/understanding-row-locking.md)|Viene descritto in che modo il driver JDBC supporta i blocchi a livello di riga.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del Driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

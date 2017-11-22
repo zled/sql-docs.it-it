@@ -3,27 +3,28 @@ title: SQLConfigDataSource (Driver Paradox) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 18d184fa68e1b8a9d87f6c4e86e5059c7f7a118d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox Driver)
 > [!NOTE]  
@@ -49,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |PWD|Password.<br /><br /> Questa parola chiave facoltativa e mai essere scritta nel file dal driver. Viene utilizzato in una chiamata a **SQLDriverConnect** sui file di Paradox protetto da password. Apertura di una tabella, la password utilizzata sarà più valida. Se nessuna password viene passata nella stringa di connessione, non viene stabilita alcuna password per la tabella. Se le tabelle avere password differenti, più di uno non è aperto nella stessa sessione, né possono essere unite le tabelle.|  
 |READONLY|TRUE per rendere i file di sola lettura. FALSE per rendere i file non di sola lettura.<br /><br /> Consente di impostare la stessa opzione come **in sola lettura** nella finestra di dialogo programma di installazione.|  
 |THREAD|Il numero di thread in background per il motore da utilizzare. Questo valore è 3 e non può essere modificato.<br /><br /> Consente di impostare la stessa opzione come **thread** nella finestra di dialogo programma di installazione.|
-

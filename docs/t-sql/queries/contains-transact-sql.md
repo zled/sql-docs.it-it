@@ -3,17 +3,18 @@ title: CONTIENE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - CONTAINS predicate (Transact-SQL)
@@ -34,20 +35,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
+caps.latest.revision: "117"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cerca corrispondenze precise o fuzzy (meno precise) a singole parole e frasi, parole a una certa distanza una dall'altra o corrispondenze ponderate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS è un predicato utilizzato nella [clausola WHERE](../../t-sql/queries/where-transact-sql.md) di un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione SELECT per eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricerca full-text full-text indicizzate colonne contenenti tipi di dati di tipo carattere.  
   
@@ -178,7 +178,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Specifica il testo da cercare nella *column_name* e le condizioni per una corrispondenza.  
   
-*\<contains_search_condition >* è **nvarchar**. Viene eseguita una conversione implicita quando si utilizza come input un tipo di dati character diverso. Nell'esempio seguente la variabile `@SearchWord`, definita come `varchar(30)`, causa una conversione implicita nel predicato `CONTAINS`.
+*\<contains_search_condition >* è **nvarchar**. Viene eseguita una conversione implicita quando si utilizza come input un tipo di dati character diverso. Varchar (max) e nvarchar (max) i tipi di dati di stringa di grandi dimensioni non possono essere utilizzati. Nell'esempio seguente la variabile `@SearchWord`, definita come `varchar(30)`, causa una conversione implicita nel predicato `CONTAINS`.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -556,4 +556,3 @@ GO
  [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

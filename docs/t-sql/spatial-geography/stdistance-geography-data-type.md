@@ -3,34 +3,33 @@ title: STDistance (tipo di dati geography) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STDistance_TSQL
 - STDistance (geography Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STDistance method
+dev_langs: TSQL
+helpviewer_keywords: STDistance method
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f504f3b6617786f4268dfedb16985a9b86f5bb0a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f79891d789938a6f4615c0e4be9cc3ba5d361f1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Restituisce la distanza più breve tra un punto in un **geography** istanza e un punto in un altro **geography** istanza.  
   
@@ -71,7 +70,6 @@ SELECT @g.STDistance(@h);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Sviluppo di applicazioni | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2e38d349a45bece0fa9c637d18ee6a3c41a5f4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e64c33ea666d3df06b220a8c31f67e3606df7ffa
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-applications"></a>Sviluppo di applicazioni
 In questa sezione contiene informazioni sullo sviluppo di applicazioni che utilizzano l'interfaccia ODBC e driver che l'implementano.  
@@ -33,9 +34,9 @@ In questa sezione contiene informazioni sullo sviluppo di applicazioni che utili
   
 -   [Nozioni fondamentali su ODBC](../../../odbc/reference/develop-app/odbc-fundamentals.md)  
   
--   [Passaggi di base ODBC applicazione](../../../odbc/reference/develop-app/basic-odbc-application-steps.md)  
+-   [Passaggi di base dell'applicazione ODBC](../../../odbc/reference/develop-app/basic-odbc-application-steps.md)  
   
--   [Connessione ai dati di un Driver o origine](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)  
+-   [Connessione a un'origine dati o driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)  
   
 -   [Funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md)  
   
@@ -43,11 +44,11 @@ In questa sezione contiene informazioni sullo sviluppo di applicazioni che utili
   
 -   [L'esecuzione di istruzioni](../../../odbc/reference/develop-app/executing-statements-odbc.md)  
   
--   [Il recupero dei risultati (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)  
+-   [Recupero di risultati (di base)](../../../odbc/reference/develop-app/retrieving-results-basic.md)  
   
--   [Il recupero dei risultati (avanzati)](../../../odbc/reference/develop-app/retrieving-results-advanced.md)  
+-   [Recupero di risultati (avanzati)](../../../odbc/reference/develop-app/retrieving-results-advanced.md)  
   
--   [Panoramica di aggiornamento dati](../../../odbc/reference/develop-app/updating-data-overview.md)  
+-   [Panoramica sull'aggiornamento dei dati](../../../odbc/reference/develop-app/updating-data-overview.md)  
   
 -   [Descrittori](../../../odbc/reference/develop-app/descriptors.md)  
   
@@ -60,5 +61,4 @@ In questa sezione contiene informazioni sullo sviluppo di applicazioni che utili
 -   [Considerazioni sulla programmazione](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [ODBC Programmer's Reference (Guida di riferimento per programmatori ODBC)](../../../odbc/reference/odbc-programmer-s-reference.md)
-
+ [Guida di riferimento per programmatori ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

@@ -1,33 +1,31 @@
 ---
 title: Problemi noti di Machine Learning Services | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: d5835b1c79ec1ce26e200b02fa9ba6e03378187b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti in servizi di Machine Learning
 
 Questo articolo descrive i problemi noti o limitazioni con i componenti che vengono forniti come un'opzione in SQL Server 2016 e SQL Server 2017 di apprendimento automatico.
 
-Le informazioni riportate di seguito si applicano a tutte le operazioni seguenti, a meno che non indicato in particolare:
+Le informazioni riportate di seguito si applicano a tutte le operazioni seguenti, se non diversamente indicato:
 
 * SQL Server 2016
 
@@ -44,13 +42,17 @@ Le informazioni riportate di seguito si applicano a tutte le operazioni seguenti
 
 Per una descrizione dei processi e domande comuni che riguardano l'installazione iniziale e la configurazione, vedere [domande frequenti sull'installazione e aggiornamento](r/upgrade-and-installation-faq-sql-server-r-services.md). Contiene informazioni sugli aggiornamenti, installazione side-by-side e l'installazione di nuovi componenti di R o Python.
 
-### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>Impossibile installare i componenti di Python nelle installazioni non in linea di SQL Server 2017 CTP 2.0 o versione successiva
+### <a name="unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>Non è possibile installare le funzionalità di SQL Server machine learning in un controller di dominio
 
-Se si installa una versione non definitiva di SQL Server 2017 in un computer senza accesso a internet, il programma di installazione potrebbe non riuscire visualizzare la pagina che richiede il percorso dei componenti scaricati Python. In questo caso, è possibile installare la funzionalità di servizi di Machine Learning, ma non i componenti di Python.
+Se si tenta di installare SQL Server 2016 R Services o i servizi di SQL Server 2017 Machine Learning in un controller di dominio, l'installazione non riesce, con questi errori:
 
-Questo problema viene risolto nella versione di rilascio. Se si verifica questo problema, in alternativa, è possibile abilitare temporaneamente l'accesso a internet per la durata dell'installazione. Questa limitazione non è valida per R.
+>*"Si è verificato un errore durante il processo di installazione della funzionalità".*
+> 
+>*"Impossibile trovare il gruppo con identità..."*
+> 
+>*"Codice di errore componente: 0x80131509"*
 
-**Si applica a:** 2017 di SQL Server con Python
+L'errore si verifica perché, in un controller di dominio, il servizio non è possibile creare gli account locali 20 necessari per eseguire l'apprendimento. In generale, non è consigliabile installare SQL Server in un controller di dominio. Per ulteriori informazioni, vedere [bollettino supporto 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
 ### <a name="install-the-latest-service-release-to-ensure-compatibility-with-microsoft-r-client"></a>Installare la versione più recente del servizio per garantire la compatibilità con Client di Microsoft R
 
@@ -68,7 +70,13 @@ Per evitare problemi con i pacchetti R, è inoltre possibile aggiornare la versi
 
 **Si applica a:** SQL Server 2016 R Services, con R Server versione 9.0.0 o versioni precedenti
 
-### <a name="bkmk_sqlbindr"></a>Avviso di versione non compatibile quando ci si connette a una versione precedente di SQL Server R Services da un client tramite[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>Impossibile installare i componenti di Python nelle installazioni non in linea di SQL Server 2017 CTP 2.0 o versione successiva
+
+Se si installa una versione non definitiva di SQL Server 2017 in un computer senza accesso a internet, il programma di installazione potrebbe non riuscire visualizzare la pagina che richiede il percorso dei componenti scaricati Python. In questo caso, è possibile installare la funzionalità di servizi di Machine Learning, ma non i componenti di Python.
+
+Questo problema viene risolto nella versione di rilascio. Se si verifica questo problema, in alternativa, è possibile abilitare temporaneamente l'accesso a internet per la durata dell'installazione. Questa limitazione non è valida per R.
+
+**Si applica a:** 2017 di SQL Server con Python # # # <a name="bkmk_sqlbindr"> </a> di versione non compatibile di avviso quando ci si connette a una versione precedente di SQL Server R Services da un client tramite[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 Quando si esegue codice R in un contesto di calcolo di SQL Server 2016, e una delle due istruzioni seguenti è vera, si potrebbe essere visualizzato un errore simile al seguente:
 * R Server (Standalone) è stato installato in un computer client tramite installazione guidata di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
@@ -120,18 +128,16 @@ In alternativa, è possibile usare un account di accesso SQL per eseguire proces
 
 **Si applica a:** SQL Server 2016 R Services Express Edition
 
-### <a name="performance-limits-when-r-libraries-are-called-from-other-r-tools"></a>Limiti sulle prestazioni quando vengono chiamate librerie R tramite altri strumenti di R
+### <a name="performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>Limiti sulle prestazioni quando vengono chiamate librerie usate da SQL Server da altri strumenti
 
-È possibile chiamare R strumenti e librerie che vengono installate per SQL Server da un'applicazione esterna R, ad esempio RGui. Questa chiamata potrebbe essere utile quando si installano nuovi pacchetti, o quando si eseguono test ad hoc su molto brevi esempi di codice.
+È possibile chiamare di machine learning librerie che vengono installate per SQL Server da un'applicazione esterna, ad esempio RGui. In questo modo potrebbe essere il modo più semplice per eseguire determinate attività, ad esempio nuovi pacchetti di installazione o esecuzione di test ad hoc su molto brevi esempi di codice. Tuttavia, all'esterno di SQL Server, potrebbero essere limitata sulle prestazioni. 
 
-Tuttavia, tenere presente che all'esterno di SQL Server, delle prestazioni potrebbero risultare limitata. Ad esempio, anche se è stata acquistata l'edizione Enterprise di SQL Server, R viene eseguito in modalità a thread singolo quando si esegue il codice R con strumenti esterni. Le prestazioni dovrebbero essere migliori se si esegue il codice R iniziando una connessione di SQL Server e utilizzando [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), che richiede le librerie di R.
+Ad esempio, anche se si utilizza SQL Server Enterprise Edition, R viene eseguito in modalità a thread singolo quando si esegue il codice R con strumenti esterni. Per ottenere i vantaggi delle prestazioni in SQL Server, avviare una connessione di SQL Server e utilizzare [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per chiamare il runtime dello script esterno.
 
-* Evitare di chiamare le librerie di R usati da SQL Server da strumenti esterni di R.
-* Se è necessario eseguire codice R esteso nel computer SQL Server con SQL Server, installare un'istanza separata di R, ad esempio, Client di Microsoft R e quindi verificare che gli strumenti di sviluppo R facciano riferimento alla nuova libreria.
++ In generale, evitare le chiamate di machine learning librerie utilizzate da SQL Server da strumenti esterni.
++ Se è necessario debug R o codice Python, risulta in genere più semplice eseguire questa operazione all'esterno di SQL Server. Per ottenere le stesse librerie che sono in SQL Server, è possibile installare Microsoft R Client o [Machine Learning Server](r/create-a-standalone-r-server.md).
 
-Per altre informazioni, vedere [Creare un server R autonomo](r/create-a-standalone-r-server.md).
-
-### <a name="the-r-script-is-throttled-due-to-resource-governance-default-values"></a>Lo script R è limitato a causa di valori predefiniti di governance delle risorse
+### <a name="external-script-execution-is-throttled-due-to-resource-governance-default-values"></a>Esecuzione dello script esterno è limitato a causa di valori predefiniti di governance delle risorse
 
 In Enterprise Edition è possibile usare pool di risorse per gestire processi di script esterni. In alcune build di rilascio anticipato, la memoria massima allocata per i processi di R è il 20%. Pertanto, se il server ha 32 GB di RAM, i file eseguibili di R (RTerm.exe e BxlServer.exe) Impossibile utilizzare un massimo di 6,4 GB in una singola richiesta.
 
@@ -139,11 +145,11 @@ Se si verificano i limiti delle risorse, controllare il valore predefinito. Se i
 
 **Si applica a:** R Services SQL Server 2016, Enterprise Edition
 
-## <a name="r-code-execution-and-package-or-function-issues"></a>Esecuzione del codice R e i problemi del pacchetto o una funzione
+## <a name="r-issues"></a>Problemi di R
 
 In questa sezione contiene i problemi noti che sono specifici per l'esecuzione di R in SQL Server, nonché alcuni problemi che sono correlate alle librerie R e strumenti pubblicati da Microsoft, tra cui RevoScaleR.
 
-Per altri problemi noti che potrebbero influire sulle soluzioni R, visitare il [sito Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-known-issues).
+Per altri problemi noti che potrebbero influire sulle soluzioni R, visitare il [sito Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues).
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>Limitazioni relative all'affinità processori per i processi R
 
@@ -175,12 +181,15 @@ Quando si salva un modello in una tabella di SQL Server, è necessario serializz
 
 Se è necessario utilizzare i modelli di dimensioni maggiori, sono disponibili soluzioni alternative seguenti:
 
-+ Utilizzare il [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) funzione R di base per ridurre le dimensioni del modello prima di passarlo a SQL Server. Questa opzione è consigliabile quando il modello è prossimo al limite di 2 GB.
-+ Per maggiore modelli, anziché utilizzare una colonna varbinary per archiviare i modelli, è possibile utilizzare il [FileTable](..\relational-databases\blob\filetables-sql-server.md) funzionalità disponibile in SQL Server.
++ Eseguire i passaggi per ridurre le dimensioni del modello. Alcuni pacchetti R open source includono una grande quantità di informazioni nell'oggetto modello e molte di queste informazioni può essere rimossi per la distribuzione. 
++ Utilizzare funzionalità di selezione per rimuovere colonne non necessarie.
++ Se si utilizza un algoritmo di origine aperti, prendere in considerazione un'implementazione simile utilizzando l'algoritmo corrispondente in MicrosoftML o RevoScaleR. Questi pacchetti sono stati ottimizzati per scenari di distribuzione.
++ Dopo che il modello è stato ragionato e ridurre le dimensioni utilizzando i passaggi precedenti, vedere se il [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) funzione in R di base può essere utilizzata per ridurre le dimensioni del modello prima di passarlo a SQL Server. Questa opzione è consigliabile quando il modello è prossimo al limite di 2 GB.
++ Per i modelli di dimensioni maggiori, è possibile utilizzare SQL Server [FileTable](..\relational-databases\blob\filetables-sql-server.md) funzionalità per archiviare i modelli, anziché utilizzare una colonna varbinary.
 
     Per usare le tabelle Filetable, è necessario aggiungere un'eccezione del firewall, poiché i dati archiviati nelle tabelle Filetable vengono gestiti dal driver del file System di Filestream in SQL Server e le regole firewall predefinite bloccano l'accesso ai file di rete. Per ulteriori informazioni, vedere [abilitare i prerequisiti per la tabella FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md). 
 
-    Dopo avere abilitato FileTable, per scrivere il modello, ottenere un percorso da SQL utilizzando l'API di FileTable e scrivere quindi il modello in tale posizione dal codice R. Quando è necessario leggere il modello, ottenere il percorso da SQL, quindi chiamare il modello utilizzando il percorso di script R. Per ulteriori informazioni, vedere [wth di accedere alle tabelle Filetable API di File di Input-Output](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
+    Dopo avere abilitato FileTable, scrivere il modello, che ottenere un percorso da SQL tramite l'API FileTable e quindi scrivere il modello in tale posizione dal codice. Quando è necessario leggere il modello, ottenere il percorso da SQL, quindi chiamare il modello utilizzando il percorso dallo script. Per ulteriori informazioni, vedere [accesso a tabelle Filetable con API di File di Input-Output](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>Non deselezionare le aree di lavoro quando si esegue il codice R in un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contesto di calcolo
 
@@ -205,6 +214,16 @@ Non è possibile usare in uno script R i tipi seguenti di risultati delle query:
   
      Se è necessario usare dati mascherati in uno script R, una possibile soluzione consiste nel creare una copia dei dati in una tabella temporanea e usare invece tali dati.
 
+### <a name="use-of-strings-as-factors-can-lead-to-performance-degradation"></a>Utilizzo di stringhe come fattori che possono determinare un peggioramento delle prestazioni
+
+L'utilizzo di variabili di tipo stringa come fattori possono aumentare notevolmente la quantità di memoria utilizzata per operazioni di R. Si tratta in genere un problema noto con R e sono disponibili molti articoli sull'argomento. Ad esempio, vedere [fattori non sono elementi di primaria importanza in R, per il montaggio di John, in R blogger)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) o [stringsAsFactors: una biografia non autorizzato, da Roger Peng](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/). 
+
+Anche se il problema non è specifico di SQL Server, possono influire notevolmente sulle prestazioni del codice R eseguire in SQl Server. Sono in genere archiviate come varchar o nvarchar e se una colonna di dati stringa dispone di molti valori univoci, il processo di conversione internamente questi numeri interi e tornare al stringhe da R può anche causare degli errori di allocazione di memoria.
+
+Se non è assolutamente necessario un tipo di dati stringa per le altre operazioni, mapping dei valori di stringa a un valore numerico (intero) i tipi di dati come parte della preparazione dei dati sarebbe utile dal punto di vista delle prestazioni e scalabilità.
+
+Per una descrizione di questo problema e altri suggerimenti, vedere [delle prestazioni per R Services - ottimizzazione dati](r/r-and-data-optimization-r-services.md).
+
 ### <a name="arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>Argomenti *varsToKeep* e *varsToDrop* non sono supportati per le origini dati di SQL Server
 
 Quando si utilizza la funzione rxDataStep per scrivere i risultati in una tabella, usando il *varsToKeep* e *varsToDrop* è un modo pratico per specificare le colonne da includere o escludere come parte dell'operazione. Tuttavia, questi argomenti non sono supportati per le origini dati di SQL Server.
@@ -227,7 +246,7 @@ Questa limitazione si applica ai dati passati tra SQL Server e Python, nonché. 
 
 Quando un tipo di dati binari (R **raw** tipo di dati) viene restituito da R, il valore deve essere inviato nel frame di dati di output.
 
-Con i dati di tipi diversi da **raw**, è possibile restituire i valori dei parametri e i risultati della stored procedure semplicemente aggiungendo la parola chiave OUTPUT. Per ulteriori informazioni, vedere [restituire dati utilizzando i parametri di OUTPUT](https://technet.microsoft.com/library/ms187004.aspx).
+Con i dati di tipi diversi da **raw**, è possibile restituire i valori dei parametri e i risultati della stored procedure aggiungendo la parola chiave OUTPUT. Per ulteriori informazioni, vedere [parametri](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters).
 
 Se si desidera utilizzare più set di output che includono valori di tipo **raw**, una possibile soluzione alternativa è effettuare più chiamate della stored procedure o il risultato di inviare set nuovamente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite ODBC.
 
@@ -248,20 +267,20 @@ Se si verifica questo problema, è possibile risolverlo incorporando la definizi
 Esempio:
 
 ```r
-f <- function(x) { 2*x * 3 }  
-g <- function(y) {   
-              a <- 10 * y  
-               f(a)  
+f <- function(x) { 2*x * 3 }
+g <- function(y) {
+              a <- 10 * y
+               f(a)
 }
 ```
 
 Per evitare l'errore, riscrivere la definizione come indicato di seguito:
 
 ```r
-g <- function(y){  
-              f <- function(x) { 2*x +3}  
-              a <- 10 * y  
-              f(a)  
+g <- function(y){
+              f <- function(x) { 2*x +3}
+              a <- 10 * y
+              f(a)
 }
 ```
 
@@ -301,6 +320,46 @@ La funzione `rxDTree` attualmente non supporta le trasformazioni nella formula. 
 
 I fattori ordinati vengono trattati proprio come i fattori in tutte le funzioni di analisi RevoScaleR eccetto `rxDTree`.
 
+## <a name="python-code-execution-or-python-package-issues"></a>Esecuzione del codice Python o problemi di pacchetti Python
+
+In questa sezione contiene i problemi noti specifici all'esecuzione di Python su SQL Server, nonché i problemi relativi ai pacchetti Python pubblicati da Microsoft, tra cui [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) e [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+
+### <a name="call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>Chiamata al modello con training preliminare non riesce se il percorso al modello è troppo lungo
+
+Se si installano i modelli con training preliminare in un'installazione predefinita, a seconda del nome del computer e il nome dell'istanza, il percorso completo risulta nel file di modello con training potrebbe essere troppo lungo per Python da leggere. Questa limitazione verrà risolto in una prossima service release.
+
+Esistono diverse potenziali soluzioni alternative: 
+
++ Quando si installa i modelli con training preliminare, scegliere un percorso personalizzato.
++ Se possibile, installare l'istanza di SQL Server in un percorso di installazione personalizzato, ad esempio C:\SQL\MSSQL14. MSSQLSERVER.
++ Utilizzare l'utilità Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) per creare un collegamento fisso che esegue il mapping a un percorso più breve il file del modello. 
+
+### <a name="failure-to-initialize-a-varbinary-variable-causes-an-error-in-bxlserver"></a>Errore di inizializzazione di una variabile di tipo varbinary causa un errore in BxlServer
+
+Se si esegue codice Python in SQL Server utilizzando `sp_execute_external_script`e il codice include variabili di tipo varbinary (max), varchar (max) o tipi simili di output, la variabile deve essere inizializzata o impostare come parte dello script. In caso contrario, il componente di scambio di dati, BxlServer, genera un errore e smette di funzionare.
+
+Questa limitazione verrà risolto in una prossima service release. In alternativa, assicurarsi che la variabile viene inizializzata all'interno dello script Python. Qualsiasi valore valido può essere utilizzato, come negli esempi seguenti:
+
+```sql
+declare @b varbinary(max);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N'b = 0x0'
+  , @params = N'@b varbinary(max) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
+```sql
+declare @b varchar(30);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N' b = ""  '
+  , @params = N'@b varchar(30) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise e Microsoft R Open
 
 Questa sezione elenca i problemi specifici di connettività R, sviluppo e gli strumenti di prestazioni forniti da Revolution Analitica. Questi strumenti sono stati forniti nelle versioni definitive precedenti di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -323,14 +382,9 @@ Per la compatibilità con [!INCLUDE[rsql_productname](../includes/rsql-productna
 
 Revisione 0.92 del driver ODBC di SQLite è incompatibile con RevoScaleR. Le revisioni 0.88-0.91 e 0.93 e versioni successive sono noti per essere compatibili.
 
-## <a name="python-code-execution-or-python-package-issues"></a>Esecuzione del codice Python o problemi di pacchetti Python
-
-In questa sezione contiene i problemi noti specifici all'esecuzione di Python su SQL Server, nonché i problemi relativi ai pacchetti Python pubblicati da Microsoft, tra cui [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) e [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
-
 
 ## <a name="see-also"></a>Vedere anche
 
 [Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
 
 [Risoluzione dei problemi di apprendimento in SQL Server](machine-learning-troubleshooting-faq.md)
-

@@ -3,24 +3,25 @@ title: Utilizzando un'istruzione SQL senza parametri | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16983e560714bdfb7046da72b04bc4f57f506df5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1e7e97fa030c2efd499aebfa054c0e4827d590dc
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>Utilizzo di un'istruzione SQL senza parametri
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,6 @@ ms.lasthandoff: 09/09/2017
  Per ulteriori informazioni sull'utilizzo di set di risultati, vedere [gestione dei set di risultati con il Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Con le istruzioni SQL](../../connect/jdbc/using-statements-with-sql.md)  
+ [Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)  
   
   
-

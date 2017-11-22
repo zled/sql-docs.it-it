@@ -3,37 +3,37 @@ title: TOP (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TOP_TSQL
 - TOP
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - TOP clause
 - first set of query result rows [SQL Server]
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 80e0e31edae97c66b5f9428a53c76e5d87e72418
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e360ecdae24cbe93b0ed75215819ad4bb9e6bff
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Limita le righe restituite nel set di risultati di una query a un numero specificato o a una percentuale di righe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se TOP viene utilizzato in combinazione con la clausola ORDER BY, il set di risultati è limitato al primo *N* numero di righe ordinate; in caso contrario, viene restituito il primo *N* numero di righe in un ordine non definito. Usare questa clausola per specificare il numero di righe restituite da un'istruzione SELECT o interessate da un'istruzione INSERT, UPDATE, MERGE o DELETE.  
   
@@ -350,5 +350,4 @@ FROM DimEmployee ORDER BY LastName;
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  
   
   
-
 

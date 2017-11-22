@@ -1,8 +1,7 @@
 ---
 title: "Proprietà SQL | Documenti Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SQL property [RDS]
+helpviewer_keywords: SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1c6dfe09bf48ca48a9df29d066ef100403f7703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b16ac51bae59fbb4435f094da6e0ac0e40053e89
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-property"></a>Proprietà SQL
 Indica la stringa di query utilizzata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -54,14 +51,13 @@ Run time: DataControl.SQL = "QueryString"
  Il **SQL** proprietà è facoltativa se un oggetto business sul lato server personalizzato recupera i dati per il client.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà SQL (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
  [Proprietà Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Metodo query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Metodo Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [Metodo SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
+ [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

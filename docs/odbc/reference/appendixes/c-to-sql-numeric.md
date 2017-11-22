@@ -3,10 +3,12 @@ title: 'C a SQL: numerico | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], numeric
 - converting data from c to SQL types [ODBC], numeric
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7f754d17ef64213a0d608e2502f7a65545b2076
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-numeric"></a>C a SQL: numerico
 Gli identificatori per i tipi di dati C ODBC numerici sono:  
@@ -73,4 +74,3 @@ Gli identificatori per i tipi di dati C ODBC numerici sono:
  [b] per il caso di "n/d", un driver può anche restituire SQL_SUCCESS_WITH_INFO e 01S07 quando si verifica un troncamento frazionario.  
   
  Il driver ignora il valore di lunghezza/indicatore quando si convertono i dati dai tipi di dati numerici di C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati numerico di C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.
-

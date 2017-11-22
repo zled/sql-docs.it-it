@@ -3,27 +3,28 @@ title: Funzioni API ODBC supportati | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abf3068ec65fdcca39a88f6ce18d750294f865bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-odbc-api-functions"></a>Funzioni API ODBC supportati
 Lo scopo di livellamento è informare l'applicazione di quali funzionalità sono disponibili a esso dal driver. I driver di Database di Microsoft ODBC Desktop supportano tutte le funzioni di base e di livello 1.  
@@ -60,23 +61,22 @@ Transact] (... / Topic/SQLTransact%20Function.md)|[Accesso](../../odbc/microsoft
   
  Gli argomenti seguenti forniscono note sulle funzioni ODBC. Queste note sono applicabili a tutti i driver di Database ODBC Desktop.  
   
--   [SQLGetData (driver di Database Desktop)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
+-   [SQLGetData (driver di database desktop)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
 -   [SQLGetStmtOption (driver di Database Desktop)](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
--   [SQLMoreResults (driver di Database Desktop)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
+-   [SQLMoreResults (driver di database desktop)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   
--   [SQLPrepare (driver di Database Desktop)](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
+-   [SQLPrepare (driver di database desktop)](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
   
--   [SQLProcedures (driver di Database Desktop)](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
+-   [SQLProcedures (driver di database desktop)](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
   
--   [SQLSetCursorName (driver di Database Desktop)](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
+-   [SQLSetCursorName (driver di database desktop)](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
   
--   [SQLSetPos (driver di Database Desktop)](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
+-   [SQLSetPos (driver di database desktop)](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
   
--   [SQLSetScrollOptions (driver di Database Desktop)](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
+-   [SQLSetScrollOptions (driver di database desktop)](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
   
--   [SQLSetStmtOption (driver di Database Desktop)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
+-   [SQLSetStmtOption (driver di database desktop)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
--   [SQLSpecialColumns (driver di Database Desktop)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-
+-   [SQLSpecialColumns (driver di database desktop)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)

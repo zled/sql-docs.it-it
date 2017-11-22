@@ -3,10 +3,12 @@ title: In ODBC sequenze di escape | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1981e538d5ea3a8730547544f99bcbf96d0e9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92fd9745bccacad3d7487c3ed9f1bee58eeb4411
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequenze di escape in ODBC
 Un numero di funzionalità del linguaggio, ad esempio gli operatori outer join e chiamate di funzione scalare, in genere viene implementato da DBMS. Tuttavia, la sintassi per queste funzionalità tendono a essere DBMS specifici, anche quando la sintassi standard definita organismi vari standard. Per questo motivo, ODBC definisce sequenze di escape che contengono la sintassi standard per le funzionalità del linguaggio seguenti:  
@@ -63,13 +64,12 @@ Un numero di funzionalità del linguaggio, ad esempio gli operatori outer join e
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Date, Time e Timestamp letterali](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
+-   [Valori letterali data, ora e timestamp](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   
--   [Chiamate di funzione scalare](../../../odbc/reference/develop-app/scalar-function-calls.md)  
+-   [Chiamate di funzioni scalari](../../../odbc/reference/develop-app/scalar-function-calls.md)  
   
--   [COME carattere di Escape predicato](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
+-   [Carattere di escape nel predicato LIKE](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
   
--   [Outer join](../../../odbc/reference/develop-app/outer-joins.md)  
+-   [Outer Join](../../../odbc/reference/develop-app/outer-joins.md)  
   
--   [Chiamate di procedure](../../../odbc/reference/develop-app/procedure-calls.md)
-
+-   [Chiamate di procedura](../../../odbc/reference/develop-app/procedure-calls.md)

@@ -3,10 +3,12 @@ title: Scelta di una grammatica SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>Scelta di una grammatica SQL
 La prima decisione da prendere durante la costruzione di istruzioni SQL è quali grammatica da utilizzare. Oltre alle grammatiche disponibili dai corpi dei vari standard, ad esempio Open Group, ANSI e ISO, praticamente ogni fornitore del sistema DBMS definisce il proprio grammatica, ognuno dei quali varia leggermente dallo standard.  
@@ -38,4 +39,3 @@ La prima decisione da prendere durante la costruzione di istruzioni SQL è quali
  Pertanto, sono disponibili due opzioni di sintassi da utilizzare: la grammatica SQL-92 (e sequenze di escape ODBC) e una grammatica specifici del DBMS. Tra i due, solo la grammatica SQL-92 è interoperativa, in modo interoperative tutte le applicazioni devono utilizzare. Le applicazioni che non sono interoperativi possono utilizzare la grammatica SQL-92 o una grammatica specifici del DBMS. Le grammatiche specifici del DBMS offrono due vantaggi: È possibile sfruttare le funzionalità non coperto da SQL-92, che sono leggermente più veloce perché il driver non è necessario modificarle. La funzionalità di quest'ultima può essere applicata parzialmente impostando l'attributo di istruzione SQL_ATTR_NOSCAN, interrompe il driver di ricerca e sostituzione di sequenze di escape.  
   
  Se viene utilizzata la grammatica SQL-92, l'applicazione può scoprire come viene modificato dal driver chiamando **SQLNativeSql**. Ciò è spesso utile durante il debug di applicazioni. **SQLNativeSql** accetta un'istruzione SQL e lo restituisce dopo che il driver è stato modificato. Poiché questa funzione è il livello di conformità di interfaccia di base, è supportato da tutti i driver.
-

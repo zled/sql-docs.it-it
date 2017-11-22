@@ -3,10 +3,12 @@ title: Impostazione delle opzioni a livello di codice per il Driver Paradox | Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c4b822a41f18250e92ed9fe4475507fef01127b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c353ec7cca4744a4189891a4123eaf6263b8fd51
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Impostazione delle opzioni a livello di codice per il Driver Paradox
 |Opzione|Description|Metodo|  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |Selezionare la Directory|Visualizza una finestra di dialogo in cui è possibile selezionare una directory che contiene i file che si desidera accedere.<br /><br /> Quando la definizione di una directory di origine dati specifica la directory in più file utilizzati di frequente si trovano. Il driver ODBC utilizza questa directory come la directory predefinita. Copiare gli altri file in questa directory se vengono usati frequentemente. In alternativa, è possibile qualificare i nomi di file in un'istruzione SELECT con il nome della directory:<br /><br /> SELEZIONARE \* DA C:\MYDIR\EMP<br /><br /> In alternativa, è possibile specificare una nuova directory predefinita utilizzando il **SQLSetConnectOption** funzione con l'opzione SQL_CURRENT_QUALIFIER.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Selezionare la Directory di rete|Il percorso completo della directory contenente un database di blocco Paradox, perché contiene il file Pdoxusrs.net (4 Paradox. *x*) o il file Paradox.net (5 Paradox. *x*). Se la directory non contiene uno di questi file, il driver Paradox viene creata una. Per informazioni su questi file, vedere la documentazione di Paradox.<br /><br /> Prima di poter selezionare una directory di rete, è necessario immettere il nome utente Paradox il **nome utente** casella di testo. Fare clic su **seleziona Directory di rete** per selezionare una directory di rete.|Per impostare questa opzione in modo dinamico, usare il **PARADOXNETPATH** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Nome utente|Il nome utente Paradox. Questo è il nome visualizzato agli altri utenti di file Paradox quando viene incontrato un blocco.|Per impostare questa opzione in modo dinamico, usare il **PARADOXUSERNAME** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
-

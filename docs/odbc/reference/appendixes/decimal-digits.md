@@ -3,10 +3,12 @@ title: Cifre decimali | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="decimal-digits"></a>Cifre decimali
 Il *cifre decimali* di dati decimal e numeric tipi viene definito come il numero massimo di cifre a destra del separatore decimale, o la scala dei dati. Per le colonne di numeri a virgola mobile approssimati o i parametri, la scala è definita, poiché il numero di cifre a destra del separatore decimale non è fisso. Per datetime o intervallo di dati che contiene un componente di secondi, le cifre decimali viene definito come il numero di cifre a destra del separatore decimale nel componente di secondi di dati.  
@@ -34,7 +35,7 @@ Il *cifre decimali* di dati decimal e numeric tipi viene definito come il numero
   
  Le cifre decimali definite per ogni tipo di dati SQL conciso è illustrato nella tabella seguente.  
   
-|Tipo SQL|Cifre decimali|  
+|Tipo SQL|cifre decimali|  
 |--------------|--------------------|  
 |Tutti i tipi carattere e binario [a]|n/d|  
 |SQL_DECIMAL<br />SQL_NUMERIC|Il numero definito di cifre a destra del separatore decimale. Ad esempio, la scala di una colonna definita come NUMERIC(10,3) è 3. Può trattarsi di un numero negativo per il supporto di archiviazione di numeri molto grandi senza utilizzare la notazione esponenziale. ad esempio, "12000" possono essere archiviate come "12" con una scala pari a -3.|  
@@ -57,4 +58,3 @@ Il *cifre decimali* di dati decimal e numeric tipi viene definito come il numero
 |Tutti i tipi di data/ora|PRECISION|  
 |Tutti i tipi di intervallo con un componente di secondi|PRECISION|  
 |Tutti i tipi di intervallo con nessun componente di secondi|n/d|
-

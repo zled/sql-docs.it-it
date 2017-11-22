@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - identifiers [MDX]
 - expressions [MDX]
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], expressions
 - Multidimensional Expressions [Analysis Services], expressions
 ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 8474c90f0cfbcd8ae0aabce14623c427106298a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 608cba1c2819136f5bafa71be8ac5a347c5939cd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-mdx"></a>Espressioni (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,17 +87,16 @@ WHERE [Product].[Category].[Bikes]
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Utilizzo delle espressioni di sottocubo e cubo](../mdx/using-cube-and-subcube-expressions.md)|Definisce le espressioni di cubo e sottocubo.|  
-|[Utilizzo di espressioni di dimensione](../mdx/using-dimension-expressions.md)|Definisce le espressioni di dimensione.|  
-|[Utilizzo di espressioni di membro](../mdx/using-member-expressions.md)|Definisce le espressioni di membro.|  
-|[Utilizzo di espressioni di tupla](../mdx/using-tuple-expressions.md)|Definisce le espressioni di tupla.|  
-|[Utilizzo di espressioni Set](../mdx/using-set-expressions.md)|Definisce le espressioni set.|  
-|[Utilizzo di espressioni scalari](../mdx/using-scalar-expressions.md)|Definisce le espressioni scalari.|  
-|[Utilizzo di valori vuoti](../mdx/working-with-empty-values.md)|Illustra il concetto di valore vuoto e la modalità di gestione dei valori di questo tipo.|  
+|[Uso di espressioni di cubo e sottocubo](../mdx/using-cube-and-subcube-expressions.md)|Definisce le espressioni di cubo e sottocubo.|  
+|[Uso delle espressioni di dimensione](../mdx/using-dimension-expressions.md)|Definisce le espressioni di dimensione.|  
+|[Uso delle espressioni di membro](../mdx/using-member-expressions.md)|Definisce le espressioni di membro.|  
+|[Uso delle espressioni di tupla](../mdx/using-tuple-expressions.md)|Definisce le espressioni di tupla.|  
+|[Uso di espressioni set](../mdx/using-set-expressions.md)|Definisce le espressioni set.|  
+|[Uso di espressioni scalari](../mdx/using-scalar-expressions.md)|Definisce le espressioni scalari.|  
+|[Uso di valori vuoti](../mdx/working-with-empty-values.md)|Illustra il concetto di valore vuoto e la modalità di gestione dei valori di questo tipo.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
  [Nozioni fondamentali sulle Query MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

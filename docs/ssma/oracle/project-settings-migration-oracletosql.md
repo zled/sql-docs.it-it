@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: dbe432d2df571eef49610ccb9611e5d88a85d1a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 42d83671531f703e1d604dce5cb4e247767dae83
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-oracletosql"></a>Impostazioni del progetto (migrazione) (OracleToSQL)
 La pagina di migrazione del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità SSMA viene eseguita la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -65,4 +63,3 @@ Il riquadro di migrazione è disponibile in entrambi i **impostazioni progetto**
 > [!IMPORTANT]  
 > Quando il **modalità di migrazione di dati parallelo** opzione è impostata su **personalizzato**, un nuovo progetto, l'impostazione di opzione **conteggio Thread** viene visualizzato. Specifica il numero di thread utilizzati per la migrazione dei dati.  
   
-

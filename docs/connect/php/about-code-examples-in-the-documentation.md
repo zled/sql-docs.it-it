@@ -3,24 +3,25 @@ title: Informazioni sugli esempi di codice nella documentazione di | Documenti M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e9218af7938f3d60548a145936ba1645d4db824
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d24d29aba9db9d3626a456f87f799e00da1b42cc
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Informazioni sugli esempi di codice nella documentazione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,4 +60,3 @@ Esistono diversi aspetti da tenere presenti durante l'esecuzione degli esempi di
 ## <a name="see-also"></a>Vedere anche  
 [Panoramica del driver SQL PHP](../../connect/php/overview-of-the-php-sql-driver.md)
   
-

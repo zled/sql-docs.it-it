@@ -3,18 +3,19 @@ title: RAISERROR (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -28,19 +29,18 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 4fe1477de1f1aa087d622d687249ee4a10ad2524
-ms.contentlocale: it-it
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="raiserror-transact-sql"></a>RAISERROR-Transact-SQL
+# <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Consente di generare un messaggio di errore e di inizializzare l'elaborazione dell'errore per la sessione. RAISERROR può fare riferimento a un messaggio definito dall'utente archiviato nella vista del catalogo sys. Messages oppure compilare un messaggio in modo dinamico. Il messaggio viene restituito come messaggio di errore del server all'applicazione chiamante o a un blocco CATCH associato di un costrutto TRY…CATCH. Nuove applicazioni devono utilizzare [generare](../../t-sql/language-elements/throw-transact-sql.md) invece.  
@@ -286,7 +286,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DICHIARARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md) [funzioni predefinite &#40; Transact-SQL &#41;](~/t-sql/functions/functions.md)   
+ [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
@@ -302,5 +303,4 @@ GO
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   
-
 

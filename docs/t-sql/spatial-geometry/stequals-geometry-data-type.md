@@ -3,34 +3,33 @@ title: STEquals (tipo di dati geometry) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STEquals (geometry Data Type)
 - STEquals_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STEquals (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STEquals (geometry Data Type)
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e6038e3dbf825fd94590cfdb1562ff5b36ffb80e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8aaaa3e346f3b2c21bed8476cbebcbdc03e1ec94
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Restituisce 1 se un **geometry** istanza rappresenta lo stesso punto impostato come un altro **geometry** istanza. In caso contrario, restituisce 0.
   
@@ -69,5 +68,4 @@ SELECT @g.STEquals(@h);
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

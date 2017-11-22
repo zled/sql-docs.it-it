@@ -3,10 +3,12 @@ title: Funzioni API di livello, il Driver ODBC per Oracle, di base | Documenti M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7dd288a2b2c95f19c2e2a472bc5875971c9df312
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello principale (Driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -42,7 +43,7 @@ ms.lasthandoff: 09/09/2017
 |**SQLCancel**|Annulla l'elaborazione su un handle di istruzione, hstmt. In alcuni casi, Oracle non consente l'annullamento di un'istruzione in esecuzione. Ciò significa che un'istruzione in esecuzione continua fino al Oracle completa il processo, nel qual caso i risultati dalle istruzioni vengono annullati dal Driver ODBC per Oracle.|  
 |**SQLColAttributes**|Restituisce informazioni sul descrittore per una colonna in un set di risultati. Informazioni del descrittore viene restituite come una stringa di caratteri, un dipendente dal descrittore di valore a 32 bit o un valore intero.|  
 |**SQLConnect**|Si connette a un'origine dati. Per utilizzare l'autenticazione del sistema operativo di Oracle, specificare "/" come il *szUID* parametro e "" come il *szAuthStr* parametro.|  
-|**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:****SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.  |  
+|**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:****SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.|  
 |**SQLDisconnect**|Chiude una connessione. Se il pool di connessioni è abilitato per un ambiente condiviso e un'applicazione chiama **SQLDisconnect** su una connessione in tale ambiente, la connessione viene restituita al pool di connessioni ed è ancora disponibile per altri componenti utilizzando lo stesso ambiente condiviso.|  
 |**SQLError**|Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError**  viene eseguita. La coda di errore viene svuotata dopo ogni istruzione. In genere recupera un messaggio di errore Oracle e in caso contrario è vuoto.|  
 |**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. La tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi di backup offerta contrassegni. Ad esempio, se il database contiene una tabella denominata *tabella personale* e il campo *My Field*, racchiudere ogni elemento dell'identificatore in questo modo:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Tabella\`.\` My Field2\` FROM \`la tabella '|  
@@ -58,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|Associa un nome di cursore con un handle di istruzione attiva, *hstmt*.|  
 |**SQLSetParam**|Sostituito da SQLBindParameter in ODBC 2. *x*.|  
 |**SQLTransact**|Richiede un'operazione di commit o rollback per tutte le operazioni attive in tutti gli handle di istruzione (hstmts) associati a una connessione o per tutte le connessioni associate all'handle di ambiente, *henv*. Se un'operazione di commit ha esito negativo quando è in modalità manuale, la transazione rimane attiva. è possibile scegliere di eseguire il rollback della transazione o ripetere l'operazione di commit. Se un'operazione di commit ha esito negativo quando è in modalità automatica delle transazioni, il rollback della transazione. la transazione non può essere inattiva.|
-

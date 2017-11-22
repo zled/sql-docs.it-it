@@ -3,10 +3,12 @@ title: Allocare l'Handle di ambiente | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c0bbe08b13b45b47fecda5143ca419c31dfe82d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-the-environment-handle"></a>Allocare l'Handle di ambiente
 La prima attività per qualsiasi applicazione ODBC consiste nel caricare il Driver Manager; Questa procedura è dipendente dal sistema operativo. Ad esempio, in un computer che esegue Microsoft Windows® 95/98, Windows NT Workstation/Windows 2000 Professional o Microsoft® Windows NT® Server e Windows 2000 Server, l'applicazione sia collegata alla libreria di gestione Driver o chiamate  **LoadLibrary** per caricare la DLL di gestione Driver.  
@@ -52,4 +53,3 @@ La prima attività per qualsiasi applicazione ODBC consiste nel caricare il Driv
  Quando **SQLFreeHandle** viene chiamato, le versioni di driver, la struttura utilizzata per archiviare le informazioni sull'ambiente. Si noti che **SQLFreeHandle** non può essere chiamato per un handle di ambiente fino a dopo essere stati sbloccati tutti gli handle di connessione su tale handle di ambiente.  
   
  Per ulteriori informazioni sull'handle di ambiente, vedere [ambiente gestisce](../../../odbc/reference/develop-app/environment-handles.md).
-

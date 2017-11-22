@@ -3,26 +3,26 @@ title: Comando COLLATE SET | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set collate command [ODBC]
+helpviewer_keywords: set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73bf988f0ab1b181a75c7569c8b279b36a9b76d8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfd2225157c048840cd20bd140ed74ae31384b8a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-collate-command"></a>Comando COLLATE SET
 Specifica una sequenza di confronto per i campi di tipo carattere in operazioni di ordinamento e di indicizzazione successive.  
@@ -79,5 +79,4 @@ SET COLLATE TO cSequenceName
  Ad esempio, se un indice viene creato con SET COLLATE impostato su Generale e l'impostazione SET COLLATE viene modificata in seguito sullo spagnolo, l'indice consente di mantenere la sequenza di confronto generali.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La finestra di dialogo programma di installazione di Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
-
+ [Finestra di dialogo di configurazione ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

@@ -3,26 +3,26 @@ title: 'Passaggio 4: Connettere in modo resiliente a SQL con ADO.NET | Documenti
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ado-net
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- CSharp
+dev_langs: CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8985e162d0a1d72d2ca655be26b6c5c1a1607358
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Passaggio 4: Connettere in modo resiliente a SQL con ADO.NET
 
@@ -322,4 +322,3 @@ Per dimostrare il codice gestisce gli errori persistenti correttamente, eseguire
 ## <a name="next-steps"></a>Passaggi successivi  
   
 Per esplorare altri migliore practicies e linee guida di progettazione, visitare [connessione al Database SQL: i collegamenti, procedure consigliate e linee guida di progettazione](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
-

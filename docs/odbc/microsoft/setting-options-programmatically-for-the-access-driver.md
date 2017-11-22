@@ -3,10 +3,12 @@ title: Impostazione delle opzioni a livello di codice per il Driver Access | Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed08d24f96b66b69bbff409cbc2c9e203526041b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Impostazione delle opzioni a livello di codice per il Driver di accesso
 |Opzione|Description|Metodo|  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |Database di sistema|Il percorso completo del database di sistema di Microsoft Access da utilizzare con il database di Microsoft Access che si desidera accedere.<br /><br /> Fare clic su di **Database di sistema** pulsante per selezionare il database di sistema da utilizzare. Il driver ODBC Microsoft Access richiede all'utente per un nome e una password. Il nome predefinito è l'amministrazione e la password predefinita in Microsoft Access per l'utente amministratore è una stringa vuota.<br /><br /> Per aumentare la sicurezza del database di Microsoft Access, creare un nuovo utente per sostituire l'utente amministratore e l'utente amministratore di eliminare o modificare gli oggetti a cui l'utente amministratore ha accesso.|Per impostare questa opzione in modo dinamico, usare il **SYSTEMDB** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Thread|Il numero di thread in background per il motore da utilizzare. Per il driver Microsoft Access, questo valore predefinito è 3, ma può essere modificato. L'utente desideri aumentare il numero di thread se è presente una grande quantità di attività nel database.<br /><br /> Questa opzione è incluso nel **Imposta opzioni avanzate** la finestra di dialogo per il driver Microsoft Access.|Per impostare questa opzione in modo dinamico, usare il **thread** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |UserCommitSync|Determina se il driver Microsoft Access eseguirà un transazioni esplicite definite dall'utente in modo asincrono. Questo valore è inizialmente impostato su "Sì", il che significa che il driver Microsoft Access attenderà per commit in una transazione definita dall'utente per il completamento.<br /><br /> L'impostazione di questa opzione su False può avere conseguenze imprevedibili in un ambiente multiutente.|Per impostare questa opzione in modo dinamico, usare il **USERCOMMITSYNC** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|
-

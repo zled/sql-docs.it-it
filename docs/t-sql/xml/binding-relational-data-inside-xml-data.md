@@ -3,14 +3,15 @@ title: Associazione di dati relazionali all'interno di dati XML | Documenti Micr
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - relational data binding [SQL Server]
 - XML [SQL Server], binding relational data
@@ -19,20 +20,19 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef249a7482610419873604637290cab3ef18e34b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fbb6d199812f90c07e9efa81da11f834e58cdb59
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Associazione di dati relazionali all'interno di dati XML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   È possibile specificare [metodi con tipo di dati xml](../../t-sql/xml/xml-data-type-methods.md) contro un **xml** variabile o una colonna del tipo di dati. Ad esempio, il [query &#40; &#41; Metodo &#40; tipo di dati xml &#41; ](../../t-sql/xml/query-method-xml-data-type.md) esegue la query XQuery specificata su un'istanza XML. Quando si creano dati XML in questo modo, è possibile inserirvi un valore di una colonna di tipo non XML o di una variabile Transact-SQL. Questo processo viene definito associazione di dati relazionali all'interno di dati XML.  
   
@@ -65,4 +65,3 @@ WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1
  [metodi con tipo di dati xml](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

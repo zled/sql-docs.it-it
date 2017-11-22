@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Execution Steps
+helpviewer_keywords: Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20b74e4908f57c0fab89cbfbea295f2442cedde1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80c335253aef5dd676ece990cb34feb5d67da829
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>Esecuzione di Test case (SybaseToSQL)
 Quando SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test completata. La corrispondenza degli oggetti tra Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -83,4 +80,3 @@ Durante la finalizzazione SSMA Tester pulisce gli oggetti ausiliari, creati nel 
 [Selezione e configurazione di oggetti interessati &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [Test di eseguire la migrazione di oggetti di Database &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

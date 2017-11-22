@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>Introduzione a revoscalepy
 
@@ -125,7 +123,7 @@ Per informazioni dettagliate, vedere [Introduzione a MicrosoftML](https://docs.m
 
 Quando si esegue in locale, in genere eseguire script Python dalla riga di comando o da un ambiente di sviluppo Python e specificare un contesto di calcolo di SQL Server utilizzando uno del **revoscalepy** funzioni. È possibile utilizzare il contesto di calcolo remoto per tutto il codice o per le singole funzioni. È ad esempio eseguire l'offload di training del modello per il server di utilizzare i dati più recenti e di evitare lo spostamento dei dati.
 
-Se si desidera inserire uno script Python completo all'interno della stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), è consigliabile riscrivere il codice come una singola funzione che ha definito chiaramente input e output. Input e output devono essere **pandas** frame di dati. In tal caso, è possibile chiamare la stored procedure da qualsiasi client che supporta T-SQL, facilmente passare query SQL come input e salvare i risultati in tabelle SQL. Per un esempio, vedere [Analitica Python nel Database per gli sviluppatori L](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Se si desidera inserire uno script Python completo all'interno della stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), è consigliabile riscrivere il codice come una singola funzione che ha definito chiaramente input e output. Input e output devono essere **pandas** frame di dati. In tal caso, è possibile chiamare la stored procedure da qualsiasi client che supporta T-SQL, facilmente passare query SQL come input e salvare i risultati in tabelle SQL. Per un esempio, vedere [Analitica Python nel Database per gli sviluppatori SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-remote-compute-contexts"></a>Utilizzo di contesti di calcolo remoto
 

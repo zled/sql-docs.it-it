@@ -3,10 +3,12 @@ title: Gli elementi utilizzati nelle istruzioni SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 955b214ef035bf957ecf68a2481d85fdf3ec7956
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c29dcd40090a380c124a0c72b07d5993d4295829
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementi utilizzati nelle istruzioni SQL
 Gli elementi seguenti sono utilizzati nelle istruzioni SQL elencate in precedenza.  
@@ -109,4 +110,3 @@ Gli elementi seguenti sono utilizzati nelle istruzioni SQL elencate in precedenz
  *lettera di case superiore* :: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; E &#124; &#124; J &#124; Manti &#124; L &#124; M &#124; N &#124; O &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; In W &#124; X &#124; Y &#124; Z*  
   
  *nome definito dall'utente* :: = *lettera*[*cifra* &#124; *lettera* &#124; *_*]...
-

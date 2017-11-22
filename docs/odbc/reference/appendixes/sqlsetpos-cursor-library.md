@@ -3,26 +3,26 @@ title: SQLSetPos (libreria di cursori) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetPos function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetPos function [ODBC], Cursor Library
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef34ee5a34df9252c7ec03e12cfa5b1ddee8f72c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos (libreria di cursori)
 > [!IMPORTANT]  
@@ -37,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  La libreria di cursori non supporta le operazioni di SQL_UPDATE e SQL_DELETE in una chiamata a **SQLSetPos**. L'oggetto implementa libreria cursore un posizionato, aggiornare o eliminare l'istruzione SQL tramite la creazione di una ricerca istruzioni update o delete con una clausola WHERE che enumera i valori memorizzati nella cache per ogni colonna associata. Per ulteriori informazioni, vedere [istruzioni di eliminazione e l'elaborazione di aggiornamento posizionato](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md).  
   
  Se il driver non supporta i cursori statici, è necessario chiamare un'applicazione che utilizza la libreria di cursori **SQLSetPos** solo su un set di righe recuperate dalle **SQLExtendedFetch** o **SQLFetchScroll** , non da **SQLFetch**. La libreria di cursori implementa **SQLExtendedFetch** e **SQLFetchScroll** eseguendo chiamate ripetute di **SQLFetch** (con un set di righe pari a 1) nel driver. La libreria di cursori passa le chiamate a **SQLFetch**, su altro canto, tramite il driver. Se **SQLSetPos** viene chiamato su un set di righe di più righe recuperate dalle **SQLFetch** quando il driver non supporta i cursori statici, la chiamata avrà esito negativo perché **SQLSetPos** non funziona con cursori forward-only. Ciò si verifica anche se un'applicazione è stato chiamato **SQLSetStmtAttr** su cui impostare SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC, che la libreria di cursori supporta anche se il driver non supporta i cursori statici.
-

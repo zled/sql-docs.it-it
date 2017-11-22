@@ -3,22 +3,23 @@ title: Note - Microsoft ODBC Driver for SQL Server in Linux e macOS | Documenti 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 84bb78e184f1bca9e683aeebf46b178e3a7dd61f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -54,4 +55,3 @@ Il driver ODBC in Linux supporta [!INCLUDE[ssHADR](../../../includes/sshadr_md.m
 Il driver ODBC in Linux supporta le connessioni al database SQL di Microsoft Azure. Per altre informazioni, vedere la pagina relativa alla [procedura di connessione al database SQL di Windows Azure usando ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
 
 Il `-l` opzione (timeout di accesso) è stata aggiunta a `bcp`. Per ulteriori informazioni, vedere [connessione con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
-

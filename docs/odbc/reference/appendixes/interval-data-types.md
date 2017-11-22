@@ -3,10 +3,12 @@ title: Tipi di dati di intervallo | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +27,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-data-types"></a>Tipi di dati di intervallo
 Un intervallo è definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un *anno-mese* intervallo espresso intervalli in termini di anni e un numero integrale di mesi. L'altro è un *diurno* intervallo che esprime gli intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono distinti e non possono essere combinati, perché i mesi possono avere un numero di giorni.  
@@ -64,13 +65,12 @@ Un intervallo è definito come la differenza tra due date e ore. Gli intervalli 
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Struttura di intervallo C](../../../odbc/reference/appendixes/c-interval-structure.md)  
+-   [Struttura C Interval](../../../odbc/reference/appendixes/c-interval-structure.md)  
   
 -   [Precisione del tipo di dati intervallo](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
   
 -   [Lunghezza del tipo di dati intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md)  
   
--   [Valori letterali di intervallo](../../../odbc/reference/appendixes/interval-literals.md)  
+-   [Valori letterali intervallo](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [Override iniziale predefinita e la precisione in secondi per i tipi di dati di intervallo](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
-
+-   [Override della precisione iniziale e in secondi predefinita per i tipi di dati intervallo](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

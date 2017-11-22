@@ -1,184 +1,198 @@
 ---
-title: Creare un server R autonomo | Microsoft Docs
+title: Installare R Server autonomo o Machine Learning Server autonomo | Documenti Microsoft
 ms.custom: 
-ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 408e2503-5c7d-4ec4-9d3d-bba5a8c7661d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 8a11d71e1568b3da175de0d2eecf182a9b415400
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4f39a03ecf7b74e0e1305d692a71c28609c80bf0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="create-a-standalone-r-server"></a>Creare un server R autonomo
+# <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Installare R Server (Standalone) o Machine Learning Server (Standalone)
 
-Installazione di SQL Server include l'opzione per installare un server che esegue SQL Server di fuori di apprendimento. 
-
-Questa opzione potrebbe essere utile se è necessario sviluppare soluzioni R ad alte prestazioni in Windows e quindi condividere le soluzioni con altre piattaforme. Per configurare un ambiente per la creazione di soluzioni per l'esecuzione su questi supportata contesti di calcolo remoto, è possibile utilizzare anche l'opzione server:
+Installazione di SQL Server include l'opzione per installare un server che esegue SQL Server di fuori di apprendimento. Questa opzione potrebbe essere utile se è necessario sviluppare soluzioni di apprendimento computer ad alte prestazioni che possono usare i contesti di calcolo remoto, o che possono essere distribuiti in più piattaforme, tra cui:
   
-  + Un'istanza di SQL Server che esegue R Services
-  + Un'istanza di R Server che usa un cluster Hadoop o Spark
-  + Analisi nel database di teradati
-  + R Server in esecuzione in Linux 
+  + Un'istanza di SQL Server 2016 o 2017 di SQL Server in cui è abilitato l'apprendimento
+  + Un'istanza di R Server o Server di Machine Learning in un cluster Hadoop o Spark
+  + R Server o Server di Machine Learning in Linux
 
-In questo argomento vengono descritti i passaggi di installazione nel programma di installazione di SQL Server per Microsoft R Server e Server di Microsoft Machine Learning.
+In questo articolo viene illustrato come utilizzare il programma di installazione di SQL Server per installare la versione autonoma di Machine Learning Server o Microsoft R Server. Se si dispone di un Enterprise Edition o Software Assurance, l'installazione del server di apprendimento autonomo è gratuita.
 
-## <a name="which-should-i-install"></a>Che è necessario installare?
++ [Installare R Server](#bkmk_installRServer) -utilizza il programma di installazione di SQL Server 2016
++ [Installare Server di Machine Learning](#bkmk_installMLServer) -utilizza il programma di installazione di SQL Server 2017
++ [Aggiornare un'istanza esistente di Microsoft R Server](#bkmk_upgrade)
++ [Come decidere quali componenti installare](#bkmk_tips)
 
-**Microsoft R Server** prima di tutto è stato offerto come parte di SQL Server 2016 e supporta il linguaggio R. L'ultima versione di Microsoft R Server è stato 9.0.1.
-In SQL Server 2017, R Server è stato rinominato **Microsoft Machine Learning Server**, con aggiunto il supporto per Python. La versione più recente del Server di Microsoft Machine Learning è 9.1.0.
+##  <a name="bkmk_installMLServer"></a>Installazione di Machine Learning Server (Standalone)
 
-Microsoft R Server sia Server di Microsoft Machine Learning richiedono Enterprise Edition.
+Questa funzionalità richiede una licenza Enterprise o equivalente per **SQL Server 2017**.
 
-+ [Installare Microsoft R Server (Standalone) utilizzando il programma di installazione di SQL Server](#bkmk_installRServer)
-+ [Installare Microsoft Machine Learning Server (Standalone) utilizzando il programma di installazione di SQL Server](#bkmk_installRServer) 
+Se è installata una versione precedente di Microsoft R Server, si consiglia di disinstallarlo prima di tutto.
 
-  La configurazione richiede una licenza di SQL Server e gli aggiornamenti sono in genere allineati alla frequenza di rilascio di SQL Server. Questo garantisce la sincronizzazione degli strumenti di sviluppo con la versione in esecuzione nel contesto di calcolo di SQL Server.
+Se il computer non ha accesso a Internet, è necessario scaricare i programmi di installazione del componente in anticipo. Per ulteriori informazioni, vedere [l'installazione dei componenti di machine learning senza accesso a internet](./installing-ml-components-without-internet-access.md).
 
-+ [Installare R Server per Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
+1. Eseguire l'installazione di SQL Server 2017.
 
-  Con questa opzione, R Server viene installato usando i criteri di supporto del ciclo di vita moderna. È anche possibile eseguire il programma di installazione al termine dell'installazione per aggiornare un'istanza di SQL Server 2016. Attualmente, si _Impossibile_ Python supporta l'utilizzo di questa opzione di installazione. Per ottenere Python, è necessario installare Machine Learning Server tramite l'installazione di SQL Server 2017.
-
-##  <a name="bkmk_installRServer"></a>Come installare Microsoft Machine Learning Server (Standalone)
-  
-1. Se è installata una versione precedente di Microsoft R Server, si consiglia di disinstallarlo prima di tutto.
-
-2. Eseguire l'installazione di SQL Server 2017.
-  
-3. Fare clic su di **installazione** scheda e selezionare **Machine Learning installazione nuovo Server (Standalone)**.
-
-4. Una volta completata la verifica delle regole, accettare i termini della licenza di SQL Server e selezionare una nuova installazione.
-
-5. Nel **Selezione funzionalità** pagina, le seguenti opzioni dovrebbero essere già selezionate:
+2. Fare clic su di **installazione** scheda e selezionare **Machine Learning installazione nuovo Server (Standalone)**.
     
+     ![Installazione autonoma di Server di Machine Learning](media/2017setup-installation-page-mlsvr.png "avviare l'installazione di Machine Learning Server autonomo")
+
+3. Una volta completata la verifica delle regole, accettare i termini della licenza di SQL Server e selezionare una nuova installazione.
+
+4. Nel **Selezione funzionalità** pagina, le seguenti opzioni dovrebbero essere già selezionate:
+
     - Microsoft Machine Learning Server (Standalone)
-    
-    - R e Python sono entrambe selezionate per impostazione predefinita.
-    
-    Tutte le altre opzioni devono essere ignorate.
 
-6.  Accettare le condizioni di licenza per il download e installazione di machine learning componenti. Un contratto di licenza separato è necessario per Microsoft R Open e Python. 
-    
-    Quando il pulsante **Accetto** non è più disponibile, è possibile fare clic su **Avanti**. 
-    
-    L'installazione di questi componenti (e degli eventuali prerequisiti) potrebbe richiedere alcuni minuti. 
-    
-    Se il computer non ha accesso a Internet, è necessario scaricare i programmi di installazione del componente in anticipo. Per ulteriori informazioni, vedere [componenti di installazione di ML senza accesso a Internet](./installing-ml-components-without-internet-access.md). 
-    
-7.  Nella pagina **Inizio installazione** verificare le opzioni selezionate e fare clic su **Installa**.
+    - R e Python sono entrambe selezionate per impostazione predefinita. È possibile deselezionare entrambi i linguaggi, ma è consigliabile installare almeno uno dei linguaggi supportati.
 
-
-Per altre informazioni sull'installazione automatica o offline, vedere [Installare Microsoft R Server dalla riga di comando](../../advanced-analytics/r-services/install-microsoft-r-server-from-the-command-line.md).
-
-###  <a name="bkmk_installRServer"></a> Installare Microsoft R Server (Standalone)  
-
-1. Se è stato installato una versione precedente di Microsoft R Server o qualsiasi versione degli strumenti di Revolution Analitica, è necessario disinstallare prima.  Vedere [Aggiornamento da una versione precedente di Microsoft R Server](#bkmk_Uninstall).
-
-2. Eseguire l'installazione di SQL Server 2016. Si consiglia di installare Service Pack 1 o versione successivo.
-
-3. Nella scheda **Installazione** fare clic su **Nuova installazione di R Server (Standalone)** .
+     ![Installazione autonoma di Server di Machine Learning](media/2017setup-features-page-mlsvr-rpy.png "avviare l'installazione di Machine Learning Server autonomo")
     
-     ![Opzione di configurazione per R Server Standalone](media/rsql-rstandalonesetup.png "Opzione di configurazione per R Server Standalone")
+    Tutte le altre opzioni devono essere ignorate. 
     
-4.  Nella pagina **Selezione funzionalità** dovrebbe essere già selezionata l'opzione seguente:
+    > [!NOTE]
+    > Evitare l'installazione di **Caratteristiche condivise di** se nel computer è già installato per analitica nel database di SQL Server servizi di Machine Learning. Crea raccolte duplicate.
+    > 
+    > Inoltre, mentre gli script R o Python in esecuzione in SQL Server vengono gestiti da SQL Server a come non in conflitto con la memoria utilizzata da altri servizi motore di database, server autonomo machine learning non ha tali vincoli e possono interferire con altre operazioni di database . Infine, accesso remoto tramite una sessione RDP, che viene spesso usata per rendere operativo, in genere è bloccato da amministratori di database.
+    > 
+    > Per questi motivi, in genere consigliabile installare Machine Learning Server (Standalone) in un computer diverso da servizi di SQL Server Machine Learning.
+
+5.  Accettare le condizioni di licenza per il download e installazione di machine learning componenti. Se si installa entrambi i linguaggi, è necessario per Microsoft R e Python un contratto di licenza separato.
+    
+     ![Contratto di licenza di Python](media/2017setup-python-license.png "contratto di licenza di Python")
+    
+    Installazione di questi componenti e gli eventuali prerequisiti che necessari, potrebbe richiedere qualche istante. Quando il pulsante **Accetto** non è più disponibile, è possibile fare clic su **Avanti**.
+
+6.  Nella pagina **Inizio installazione** verificare le opzioni selezionate e fare clic su **Installa**.
+
+Per ulteriori informazioni sull'installazione automatica o non in linea, vedere [installare Microsoft R Server dalla riga di comando](../../advanced-analytics/r/install-microsoft-r-server-from-the-command-line.md).
+
+##  <a name="bkmk_installRServer"></a> Installare Microsoft R Server (Standalone)
+
+Questa funzionalità richiede una licenza Enterprise o equivalente per **SQL Server 2016**.
+
+Se è stata installata qualsiasi versione precedente degli strumenti di Revolution Analitica o pacchetti, è necessario disinstallarle prima. Vedere [l'aggiornamento da una versione precedente di Microsoft R Server](#bkmk_Uninstall).
+
+1. Eseguire l'installazione di SQL Server 2016. Si consiglia di installare Service Pack 1 o versione successivo.
+
+2. Nel **installazione** scheda, fare clic su **R installazione nuovo Server (Standalone)**.
+    
+     ![Avviare l'installazione di R Server autonomo](media/2016-setup-installation-rsvr.png "avviare l'installazione di R Server autonomo")
+    
+3.  Nella pagina **Selezione funzionalità** dovrebbe essere già selezionata l'opzione seguente:
     
     **R Server (Standalone)**  
     
-    Tutte le altre opzioni possono essere ignorate. Non installare il motore di database di SQL Server o SQL Server R Services.
+    ![Funzionalità selezioni per R Server autonomo](media/2016setup-rserver-features.png "funzionalità selezioni per R Server autonomo")
     
-5.  Accettare le condizioni di licenza per il download e l'installazione di Microsoft R Open. Quando il pulsante **Accetto** non è più disponibile, è possibile fare clic su **Avanti**. 
+    Tutte le altre opzioni possono essere ignorate. 
     
-    L'installazione di questi componenti (e degli eventuali prerequisiti) potrebbe richiedere alcuni minuti.
+    > [!NOTE]
+    > Evitare l'installazione di **Caratteristiche condivise di** se si esegue il programma di installazione in un computer in cui R Services è già stato installato per analitica nel database di SQL Server. Crea raccolte duplicate.
+    > 
+    > Mentre gli script R in esecuzione in SQL Server vengono gestiti da SQL Server a come non in conflitto con la memoria utilizzata da altri servizi motore di database, Server R autonomo non presenta tali limiti e può interferire con altre operazioni di database.
+    > 
+    > In genere è consigliabile installare Machine Learning Server (Standalone) in un computer diverso da servizi di SQL Server Machine Learning.
+
+4.  Accettare le condizioni di licenza per il download e l'installazione di Microsoft R Open. Quando il pulsante **Accetto** non è più disponibile, è possibile fare clic su **Avanti**.
     
-6.  Nella pagina **Inizio installazione** verificare le opzioni selezionate e fare clic su **Installa**.  
+    Installazione di questi componenti e gli eventuali prerequisiti che necessari, potrebbe richiedere qualche istante.
+    
+5.  Nella pagina **Inizio installazione** verificare le opzioni selezionate e fare clic su **Installa**.
 
+## <a name="bkmk_upgrade"></a>Aggiornare un'istanza esistente di R Server
 
-### <a name="upgrade-an-existing-r-server-to-901"></a>L'aggiornamento di un Server esistente di R a 9.0.1
+Se è installata una versione precedente di Microsoft R Server (Standalone), è possibile aggiornare l'istanza per utilizzare le versioni più recenti dei componenti R. L'aggiornamento modifica anche i criteri di supporto per usare i criteri del ciclo di vita Software moderni supporta. In questo modo l'istanza da aggiornare più frequentemente, in base a una pianificazione diversa rispetto a versioni di SQL Server.
 
-Se è stata installata una versione precedente di Microsoft R Server (Standalone) è possibile aggiornare l'istanza per utilizzare le versioni più recenti dei componenti R. L'aggiornamento viene modificato anche il server dei criteri di supporto del ciclo di vita moderna. In questo modo l'istanza da aggiornare più frequentemente, in base a una pianificazione diversa rispetto a versioni di SQL Server.
+1. Scaricare il programma di installazione basati su Windows separato dai percorsi elencati di seguito: 
 
-1. Installare Microsoft R Server (Standalone), se non è già installato.
+    + [Installazione di Machine Learning Server per Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+    + [Installare R Server 9.1 per Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 
-2. Download l'installazione basata su Windows separato dai percorsi elencato di seguito: [eseguire Microsoft R Server per Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows#howtoinstall).
+2. Eseguire il programma di installazione e seguire le istruzioni. Nella pagina in cui si seleziona le funzionalità da installare, selezionare ogni istanza del Server di R che si desidera aggiornare.
 
-3. Eseguire il programma di installazione e seguire [queste istruzioni](https://msdn.microsoft.com/microsoft-r/rserver-install-windows#download-r-server-installer).
+## <a name ="bkmk_tips"></a>Follow-up e suggerimenti per l'installazione
 
+In questa sezione fornisce informazioni aggiuntive correlate al programma di installazione.
 
-### <a name="change-in-default-folder-for-r-packages"></a>Cartella predefinita di modifica per i pacchetti R
+### <a name="which-version-should-i-install"></a>La versione è necessario installare?
 
-Quando si installa tramite l'installazione di SQL Server, le librerie di R vengono installate in una cartella associata alla versione di SQL Server utilizzato per l'installazione. In questa cartella si troveranno anche dati di esempio, la documentazione per i pacchetti R di base, e la documentazione relativa al runtime e agli strumenti R.
++ **Microsoft R Server** prima di tutto è stato offerto come parte di SQL Server 2016 e supporta il linguaggio R. L'ultima versione di Microsoft R Server è stato 9.0.1.
 
-**R Server (Standalone) con configurazione tramite SQL Server 2016**
++ **Server di Microsoft Machine Learning** è la versione più recente, che è stata rilasciata con SQL Server 2017 e molti aggiornamenti delle funzionalità, incluso il supporto per Python. Aggiornamento cumulativo 1 per SQL Server 2017 è stata rilasciata, che include la versione 9.2.1.24 di Machine Learning Server. Questo aggiornamento è consigliabile se si desidera che le API più recente di Python.
 
-`C:\Program Files\Microsoft SQL Server\130\R_SERVER`
++ **L'aggiornamento sul posto**: il programma di installazione richiede una licenza di SQL Server e gli aggiornamenti sono in genere allineati con i rilasci di SQL Server. Questo garantisce la sincronizzazione degli strumenti di sviluppo con la versione in esecuzione nel contesto di calcolo di SQL Server. Tuttavia, è possibile utilizzare il programma di installazione separato basati su Windows per ottenere gli aggiornamenti più frequenti, in base ai criteri di supporto di ciclo di vita di Software più recenti. È anche possibile utilizzare il programma di installazione per aggiornare un'istanza di SQL Server 2016 o SQL Server 2017.
 
-**R Server (Standalone) con configurazione tramite SQL Server 2017**
+### <a name="default-installation-folders"></a>Cartelle di installazione predefinito
 
-`C:\Program Files\Microsoft SQL Server\140\R_SERVER`
+Quando si installa R Server o Machine Learning Server tramite l'installazione di SQL Server, le librerie di R vengono installate in una cartella associata alla versione di SQL Server utilizzato per l'installazione. In questa cartella, si trovano anche dati di esempio, alla documentazione per i pacchetti di base di R e documentazione di strumenti di R e runtime.
 
-**Installazione mediante il programma di installazione autonomo di Windows**
+Tuttavia, se si installa tramite il programma di installazione di Windows separato o se esegue l'aggiornamento utilizzando il programma di installazione di Windows separato, le librerie di R vengono installate in una cartella diversa.
 
-Tuttavia, se si installa tramite il programma di installazione di Windows separato o se esegue l'aggiornamento utilizzando il programma di installazione di Windows separato, librerie R vengono spostate nella cartella R Server seguenti:
+Solo per riferimento, se è stata installata un'istanza di SQL Server con R Services (In-Database) o i servizi di Machine Learning (In-Database), e tale istanza nello stesso computer, le librerie R e gli strumenti vengono installati per impostazione predefinita in una cartella diversa.
 
-`C:\Program Files\Microsoft\R Server\R_SERVER`
-      
-**Nel database di servizi di installazione di R Services o di Machine LEarning**
+Nella tabella seguente sono elencati i percorsi per ogni installazione.
 
-Se è stata installata un'istanza di SQL Server con R Services (In-Database) o i servizi di Machine Learning (In-Database) e tale istanza è sullo stesso computer, le librerie R e gli strumenti vengono installati per impostazione predefinita in una cartella diversa:
-
-`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES`
-
-Non chiamare direttamente le utilità o i pacchetti R associati all'istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Se R Server R Services vengono installati sia nello stesso computer, quando è necessario eseguire RGui o altri strumenti, è possibile utilizzare gli strumenti di R e i pacchetti installati nella cartella R_SERVER.
-
+|Versione| Metodo di installazione | Cartella predefinita|
+|----|----|----|
+|R Server (Standalone) |Installazione guidata di SQL Server 2016|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
+|R Server (Standalone) |Programma di installazione di Windows autonomo|`C:\Program Files\Microsoft\R Server\R_SERVER`|
+|Machine Learning Server (Standalone) |  Installazione guidata di SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning Server (Standalone) |  Programma di installazione di Windows autonomo |`C:\Program Files\Microsoft\R Server\R_SERVER`|
+|R Services (In-Database) |Installazione guidata di SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+|Machine Learning Services (In-Database) |Installazione guidata di SQL Server 2017|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`o`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>Strumenti di sviluppo
 
 Sviluppo IDE non è installato come parte del programma di installazione. Strumenti aggiuntivi non sono necessari, come tutti gli strumenti standard sono inclusi che sarebbero forniti con una distribuzione di R o Python.
 
-È consigliabile provare la nuova versione di [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)], come Visual Studio supporta gli strumenti di R e Python, nonché SQL Server e Business Intelligence. Tuttavia, è possibile utilizzare qualsiasi ambiente di sviluppo preferito tra RStudio.
+È consigliabile provare la nuova versione di [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]. Visual Studio supporta sia R e Python, nonché strumenti di sviluppo di database, la connettività con SQL Server e strumenti di Business Intelligence. Tuttavia, è possibile utilizzare qualsiasi ambiente di sviluppo preferito tra RStudio.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi  
+## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+In questa sezione sono elencati alcuni problemi comuni per tenere conto durante l'installazione di Server di Machine Learning o R Server.
 
 ### <a name="incompatible-version-of-r-client-and-r-server"></a>Le versioni di R Client e R Server non sono compatibili
 
-Se si installa la versione più recente di Microsoft R Client e si usa tale versione per eseguire R su SQL Server tramite un contesto di calcolo remoto, è possibile che venga visualizzato l'errore seguente:
+Se si installa Microsoft R Client e utilizzarlo per l'esecuzione di R in un contesto di calcolo di SQL Server remoto, è possibile che venga visualizzato un errore simile al seguente:
 
-*Si esegue la versione 9.0.0 del client di Microsoft R nel computer, non è compatibile con la versione del server 8.0.3 di Microsoft R. Download and install a compatible version.* (Sul computer è in esecuzione la versione 9.0.0 di Microsoft R, che non è compatibile con Microsoft R Server versione 8.0.3. Scaricare e installare una versione compatibile.)
+*Si esegue la versione 9.0.0 del client di Microsoft R nel computer, non è compatibile con la versione 8.0.3 Microsoft R Server. Download and install a compatible version.* (Sul computer è in esecuzione la versione 9.0.0 di Microsoft R, che non è compatibile con Microsoft R Server versione 8.0.3. Scaricare e installare una versione compatibile.)
 
-In genere, la versione di R installata con SQL Server R Services viene aggiornata al momento della pubblicazione di nuove versioni del servizio. Per assicurarsi di avere sempre le versioni più aggiornate dei componenti R, installare tutti i Service Pack. Per la compatibilità con Microsoft R Client 9.0.0, è necessario installare gli aggiornamenti descritti in questo [articolo del supporto tecnico](https://support.microsoft.com/kb/3210262). 
+In SQL Server 2016, è necessario che la versione di R che era in esecuzione in SQL Server R Services corrispondere esattamente come le librerie client di Microsoft R. Tale requisito è stato rimosso nelle versioni successive. Tuttavia, si consiglia di sempre le versioni più recenti di machine learning i componenti di ottenere e installare tutti i service pack. 
 
+Se si dispone di una versione precedente di Microsoft R Server ed è necessario garantire la compatibilità con Client di Microsoft R 9.0.0, installare gli aggiornamenti descritti in questo [articolo del supporto tecnico](https://support.microsoft.com/kb/3210262).
 
 ### <a name="installing-microsoft-r-server-on-an-instance-of-sql-server-installed-on-windows-core"></a>Installazione di Microsoft R Server in un'istanza di SQL Server installata in Windows Core
 
 Nella versione RTM di SQL Server 2016, si è verificato un problema noto durante l'aggiunta di Microsoft R Server per un'istanza in versione di Windows Server Core. Questo problema è stato risolto.
 
-Se si riscontra questo problema, è possibile applicare la correzione descritta nell'articolo [KB3164398](https://support.microsoft.com/kb/3164398) per aggiungere la funzionalità R all'istanza esistente in Windows Server Core.   Per altre informazioni, vedere [Impossibile installare Microsoft R Server (autonomo) in un sistema operativo Windows Server Core](https://support.microsoft.com/kb/3168691).
+Se si verifica questo problema, è possibile applicare la correzione descritta nel [KB3164398](https://support.microsoft.com/kb/3164398) per aggiungere la funzionalità di R per l'istanza esistente in Windows Server Core.   Per altre informazioni, vedere [Impossibile installare Microsoft R Server (autonomo) in un sistema operativo Windows Server Core](https://support.microsoft.com/kb/3168691).
 
-
-###  <a name="bkmk_Uninstall"></a> Aggiornamento da una versione precedente di Microsoft R Server
+###  <a name="bkmk_Uninstall"></a>L'aggiornamento da una versione precedente di Microsoft R Server
 
 Se è installata una versione non definitiva di Microsoft R Server, è necessario disinstallarla prima dell'aggiornamento a una versione più recente.
 
 **Per disinstallare R Server (Standalone)**
 
-1.  Nel **Pannello di controllo**fare clic su **Installazione applicazioni**e selezionare `Microsoft SQL Server 2016 <version number>`.  
+1.  Nel **Pannello di controllo**fare clic su **Installazione applicazioni**e selezionare `Microsoft SQL Server 2016 <version number>`.
+
+2.  Nella finestra di dialogo con le opzioni per **aggiungere**, **ripristinare**o **rimuovere** i componenti selezionare **Rimuovi**.
   
-2.  Nella finestra di dialogo con le opzioni per **aggiungere**, **ripristinare**o **rimuovere** i componenti selezionare **Rimuovi**.  
-  
-3.  Nella pagina **Seleziona funzionalità** , in **Funzionalità condivise**, selezionare **R Server (Standalone)**. Fare clic su **Avanti**e quindi su **Fine** per disinstallare solo i componenti selezionati.  
-   
+3.  Nella pagina **Seleziona funzionalità** , in **Funzionalità condivise**, selezionare **R Server (Standalone)**. Fare clic su **Avanti**e quindi su **Fine** per disinstallare solo i componenti selezionati.
+
 ### <a name="installation-fails-with-error-only-one-revolution-enterprise-product-can-be-installed-at-a-time"></a>L'installazione non riesce con l'errore "Only one Revolution Enterprise product can be installed at a time." (È possibile installare un solo prodotto Revolution Enterprise alla volta.)
 
 Questo errore può verificarsi se si dispone di un'installazione precedente dei prodotti Revolution Analytics o di una versione non definitiva di SQL Server R Services. Prima di poter installare una versione più recente di Microsoft R Server, è necessario disinstallare le versioni precedenti. L'installazione side-by-side con altre versioni degli strumenti Revolution Enterprise non è supportata.
@@ -205,6 +219,4 @@ Se si riscontrano problemi durante la rimozione di una versione precedente, può
   
 ## <a name="see-also"></a>Vedere anche
 
-[Microsoft R Server](../../advanced-analytics/r-services/r-server-standalone.md)
-
-
+[Machine Learning Server (Standalone)](../../advanced-analytics/r/r-server-standalone.md)

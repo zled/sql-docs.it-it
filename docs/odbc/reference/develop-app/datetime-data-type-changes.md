@@ -3,10 +3,12 @@ title: Modifica tipo di dati DateTime | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40d432cd25752c88b6c82209269c1d37a6bf5f63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datetime-data-type-changes"></a>Modifiche ai tipi di dati DateTime
 In ODBC 3. *x*, gli identificatori per data, ora e tipi di dati timestamp SQL sono stati modificati da SQL_DATE, SQL_TIME e SQL_TIMESTAMP (con istanze di **#define** nel file di intestazione di 9, 10 e 11) per tipo SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (con istanze di **#define** nel file di intestazione di 91 92 e 93), rispettivamente. Gli identificatori di tipo C corrispondenti sono stati modificati da SQL_C_DATE SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP, rispettivamente.  
@@ -65,4 +66,3 @@ In ODBC 3. *x*, gli identificatori per data, ora e tipi di dati timestamp SQL so
  [1] in seguito a questa, un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2. *x* driver può utilizzare i codici di data, ora o timestamp restituiti nei set di risultati restituiti dalle funzioni di catalogo.  
   
  [2] in seguito a questa, un'applicazione ODBC 3. *x* applicazione che utilizza un'applicazione ODBC 3. *x* driver può utilizzare i codici di data, ora o timestamp restituiti nei set di risultati restituiti dalle funzioni di catalogo.
-

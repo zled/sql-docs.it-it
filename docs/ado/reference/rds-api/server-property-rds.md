@@ -1,8 +1,7 @@
 ---
 title: "Proprietà server (RDS) | Documenti Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,22 +9,19 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RDS::IBindMgr21::Server
-helpviewer_keywords:
-- Server property [RDS]
+f1_keywords: RDS::IBindMgr21::Server
+helpviewer_keywords: Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05ff98ce99d444a9b5dfc1aac035920a29482d7c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-property-rds"></a>Proprietà server (RDS)
 Indica il protocollo di comunicazione e nome di Internet Information Services (IIS).  
@@ -125,13 +121,12 @@ DataControl.Server=""
  Il server è il percorso in cui il **RDS. DataControl** elaborazione richiesta (ovvero, una query o aggiornamento). Per impostazione predefinita, tutte le richieste vengono elaborate le [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto [MSDFMAP. Gestore](../../../ado/guide/remote-data-service/datafactory-customization.md) componente e [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) file nel server specificato. Ricordare che quando si modificano i server per riconciliare le impostazioni nel vecchio e nuovo **MSDFMAP. INI** file. Incompatibilità possono causare richieste con esito positivo su un server in un altro. Se la proprietà del Server è impostata su una stringa vuota "", tali oggetti verranno utilizzati nel computer locale.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà server (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Proprietà Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Proprietà SQL](../../../ado/reference/rds-api/sql-property.md)   
- [Metodo SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
+ [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

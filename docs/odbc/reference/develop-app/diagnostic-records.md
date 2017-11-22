@@ -3,10 +3,12 @@ title: I record di diagnostica | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 13dbdcb97bb56f665d6688b981dfc472349b54bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 598f047d1ae18e2c37587df270001b49d1b15831
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-records"></a>Record di diagnostica
 Associato a ogni ambiente, connessione, l'istruzione e handle di descrittore sono *i record di diagnostica*. Questi record contengono informazioni di diagnostica relative l'ultima funzione chiamata che è usato un handle specifico. I record vengono sostituiti solo quando viene chiamata un'altra funzione utilizzando l'handle. Non sussiste alcun limite al numero di record di diagnostica che possono essere archiviati in qualsiasi momento.  
@@ -42,4 +43,3 @@ Associato a ogni ambiente, connessione, l'istruzione e handle di descrittore son
 -   [Record di intestazione](../../../odbc/reference/develop-app/header-record.md)  
   
 -   [Record di stato](../../../odbc/reference/develop-app/status-records.md)
-

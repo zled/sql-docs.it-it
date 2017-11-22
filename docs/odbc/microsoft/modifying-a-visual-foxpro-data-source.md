@@ -3,27 +3,28 @@ title: Modifica di un'origine dati di Visual FoxPro | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf0667860cc047cace0713c4b4595bb5d225e49a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a2a56fee03c4e839324ffe958031861f0e71bdeb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Modifica di un'origine dati di Visual FoxPro
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Per modificare un'origine dati di Visual FoxPro  
@@ -42,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 5.  Fare clic su OK per salvare le modifiche e chiudere la finestra di dialogo Amministratore origine dati ODBC.  
   
  Le modifiche saranno effettive alla successiva che accedere all'origine dati dall'applicazione.
-

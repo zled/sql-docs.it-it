@@ -3,27 +3,28 @@ title: Cursori basati su keyset | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>Cursori basati su keyset
 Un cursore gestito da keyset è compresa tra un valore statico e un cursore dinamico, la possibilità di rilevare le modifiche apportate. Un cursore statico, non sempre rileva le modifiche per l'appartenenza e l'ordine del set di risultati. È un cursore dinamico, di rilevare le modifiche ai valori delle righe nel set (soggetti a livello di isolamento della transazione, come impostato dall'attributo di connessione SQL_ATTR_TXN_ISOLATION) di risultati.  
@@ -39,4 +40,3 @@ Un cursore gestito da keyset è compresa tra un valore statico e un cursore dina
  Cursori basati su keyset in genere vengono implementati mediante la creazione di una tabella temporanea che contiene le chiavi per ogni riga nel set di risultati. Poiché il cursore è inoltre necessario determinare che se sono state aggiornate le righe, questa tabella contiene anche una colonna con informazioni relative al controllo delle versioni delle righe.  
   
  Per scorrere il set di risultati originale, il cursore gestito da keyset viene aperto un cursore statico tramite la tabella temporanea. Per recuperare una riga nel set di risultati originale, il cursore Recupera innanzitutto la chiave appropriata dalla tabella temporanea e quindi recupera i valori per la riga correnti. Se si utilizzano cursori a blocchi, il cursore deve recuperare più righe e le chiavi.
-

@@ -2,35 +2,36 @@
 title: Istruzioni Data Mining Extensions (DMX) dati definizione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - statements [DMX], data definition statements
 - data definition statements [DMX]
 - DDL
 ms.assetid: a215bbe9-0fc6-4256-b5a1-7ef03493bb3f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d9c4709219dcfc15ff671474deebfebef19f68b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ce131b2d4dc067764d5a5b034a5f0b8cf3a078f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dmx-statements---data-definition"></a>Istruzioni DMX - definizione dei dati 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Nella tabella seguente sono elencate le istruzioni DMX (Data Mining Extensions) che fanno parte del linguaggio DDL (Data Definition Language) per il data mining.  
   
@@ -50,4 +51,3 @@ ms.lasthandoff: 08/02/2017
  [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

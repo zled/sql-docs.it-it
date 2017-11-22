@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b81b223e02482106a3aaefc25ab56a9b06ba3234
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ee77ec5fa517bf955e3f83cb4a6540746215efb4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversione dei database MySQL (MySQLToSQL)
 Dopo essersi connessi a MySQL, connesso alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure e imposta il progetto e le opzioni di mapping di dati, è possibile convertire oggetti di database MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o gli oggetti di database di SQL Azure.  
@@ -120,4 +118,3 @@ Il passaggio successivo del processo di migrazione è [il caricamento di convert
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione di database MySQL a SQL Server: database SQL di Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

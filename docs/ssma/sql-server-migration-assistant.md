@@ -5,25 +5,23 @@ ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8c431da24d6449ce7d7ec8a5125d207828ff0b6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 7a199b65ceb8fdd1692b37e307dd544c52ad618b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) è uno strumento progettato per automatizzare la migrazione di database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -89,7 +87,7 @@ Se non specificato diversamente, società, organizzazioni, prodotti, nomi di dom
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   
-© Microsoft Corporation. 2017. Tutti i diritti sono riservati.  
+© 2017 Microsoft Corporation. Tutti i diritti sono riservati.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System e WinFX sono marchi o marchi registrati di Microsoft Corporation negli Stati Uniti e/o in altri paesi/aree geografiche.  
   
@@ -106,4 +104,3 @@ I clienti non devono usare le API non documentate, inclusi a titolo esemplificat
   
 Gli aggiornamenti di server e database alle versioni successive di SQL Server non sono garantiti per le applicazioni e i database che usano punti di ingresso non trattati nella documentazione. L'uso delle caratteristiche e delle funzionalità di SQL Server deve essere limitato a quanto incluso nella documentazione di Microsoft SQL Server. Se una funzionalità non è documentata nella documentazione di Microsoft SQL Server, non è una parte di SQL Server supportata.  
   
-

@@ -3,34 +3,33 @@ title: EnvelopeAggregate (tipo di dati geography) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EnvelopeAggregate_TSQL
 - EnvelopeAggregate
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- EnvelopeAggregate method (geography)
+dev_langs: TSQL
+helpviewer_keywords: EnvelopeAggregate method (geography)
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc24295c305c4cc2ea2e4b6ff5fb3525a315f3d6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9d50e15f644a5662af2eead65d29447af8493a9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Restituisce un oggetto di delimitazione per un determinato set di **geography** oggetti. Il valore risultante **geography** oggetto contiene più segmenti di arco circolare.
   
@@ -72,7 +71,6 @@ EnvelopeAggregate ( geography_operand )
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi di geografia statici estesi](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Metodi geography statici estesi](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

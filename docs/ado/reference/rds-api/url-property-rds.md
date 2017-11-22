@@ -1,8 +1,7 @@
 ---
 title: "Proprietà URL (RDS) | Documenti Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- URL property [ADO]
+helpviewer_keywords: URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85c0e3ee8fe805b0cd8a90651e9de2a0fa7f04c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: feda106c2ce5450fa86550dbc83fd40c928c1510
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-property-rds"></a>Proprietà URL (RDS)
 Indica una stringa contenente un URL relativo o assoluto.  
@@ -54,10 +51,9 @@ Run time: DataControl.URL="Server"
  Se il **URL** proprietà è stata impostata, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) invierà le modifiche nel percorso specificato dall'URL.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nell'esempio di proprietà URL (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
+ [Esempio di proprietà URL (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

@@ -3,10 +3,12 @@ title: 'Appendice f: libreria di cursori ODBC | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], about cursor library
 - cursor library [ODBC]
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17e597eb8a071c0a6c08d6de6f1b8028efda4327
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f48f9e35793d197efc7a72600a122abc83484ed8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Appendice f: libreria di cursori ODBC
 > [!IMPORTANT]  
@@ -43,13 +44,12 @@ ms.lasthandoff: 09/09/2017
   
  Per ulteriori informazioni sulla libreria di cursori ODBC, vedere le sezioni seguenti di questa appendice:  
   
--   [Utilizzando la libreria di cursori ODBC](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
+-   [Uso della libreria di cursori ODBC](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   
--   [L'esecuzione di istruzioni di eliminazione e aggiornamento posizionato](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
+-   [Esecuzione di istruzioni di eliminazione e aggiornamento posizionato](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
   
--   [Esempio di codice di libreria di cursori](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
+-   [Esempio di codice della libreria di cursori](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
 -   [Note di implementazione](../../../odbc/reference/appendixes/implementation-notes.md)  
   
--   [Codici di errore libreria di cursori ODBC](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)
-
+-   [Codici di errore della libreria di cursori ODBC](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

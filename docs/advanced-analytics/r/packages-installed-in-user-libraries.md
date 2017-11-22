@@ -1,26 +1,24 @@
 ---
 title: Evitare gli errori di pacchetti R installati nelle librerie utente | Documenti Microsoft
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Evitare gli errori di pacchetti R installati nelle librerie utente
 
@@ -35,7 +33,7 @@ Gli sviluppatori R che devono installare i nuovi pacchetti R sono abituati per l
 Ad esempio, in un tipico ambiente di sviluppo di R, l'utente sarebbe il percorso del pacchetto la variabile di ambiente R `libPath`, o riferimento al percorso completo del pacchetto, simile al seguente:
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 Tuttavia, ciò non possa mai funzionare durante l'esecuzione di soluzioni R in SQL Server, perché i pacchetti R devono essere installati in una raccolta predefinito specifico che viene associata all'istanza.
@@ -68,7 +66,6 @@ Se si adotta l'approccio di gestione di pacchetto in base ai ruoli di database, 
 
     + Modificare il codice per verificare che i pacchetti siano caricati dalla libreria predefinita, non dalla directory ad hoc o librerie utente.
 
-+ Evitare l'installazione del pacchetto ad hoc come parte di una soluzione. Controllare il codice per assicurarsi che non sono presenti chiamate a pacchetti non installati o codice che consente di installare i pacchetti in modo dinamico. Se non si dispone delle autorizzazioni, il codice avrà esito negativo e, se si dispone delle autorizzazioni, è necessario installare separatamente i pacchetti da altro codice che si desidera eseguire.
++ Evitare l'installazione del pacchetto ad hoc come parte di una soluzione. Controllare il codice per assicurarsi che non sono presenti chiamate a pacchetti non installati o codice che consente di installare i pacchetti in modo dinamico. Se non si dispone delle autorizzazioni necessarie per installare i pacchetti, il codice avrà esito negativo. Anche se si dispone delle autorizzazioni per installare i pacchetti, è consigliabile pertanto separatamente da altro codice che si desidera eseguire.
 
-+ Modificare tutti i percorsi di librerie del pacchetto R diretti. Se un pacchetto è installato nella libreria predefinita, il runtime R lo caricherà dalla libreria predefinita, anche se viene specificata un'altra libreria nel codice R.
-
++ Aggiornare il codice per rimuovere i riferimenti diretti ai percorsi di pacchetti R o librerie R. Se un pacchetto è installato nella libreria predefinita, il runtime R lo caricherà dalla libreria predefinita, anche se viene specificata un'altra libreria nel codice R.

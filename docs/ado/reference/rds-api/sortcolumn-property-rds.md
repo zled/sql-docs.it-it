@@ -1,8 +1,7 @@
 ---
 title: "Proprietà SortColumn (RDS) | Documenti Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SortColumn property [RDS]
+helpviewer_keywords: SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8cdd4d854a4328613ab0fd98e8e107e207f2e12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c2cf7afef8435343b9b3c7362940e29fc448056
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sortcolumn-property-rds"></a>Proprietà SortColumn (RDS)
 Indica da quale colonna per ordinare i record.  
@@ -51,13 +48,12 @@ DataControl.SortColumn = String
  Ordinare elementi su un **Recordset**, è necessario salvare le modifiche in sospeso. Se si utilizza il **RDS. DataControl**, è possibile utilizzare il [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) metodo. Ad esempio, se il **RDS. DataControl** è denominato ADC1, il codice sarebbe `ADC1.SubmitChanges`. Se si utilizza un oggetto ADO **Recordset**, è possibile utilizzare il relativo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) metodo. Utilizzando **UpdateBatch** è il metodo consigliato per **Recordset** gli oggetti creati con il [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) metodo. Ad esempio, il codice può essere `myRS.UpdateBatch` o `ADC1.Recordset.UpdateBatch`.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection proprietà e la reimpostazione metodo esempio (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Proprietà di ordinamento](../../../ado/reference/ado-api/sort-property.md)   
- [Proprietà SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
+ [Proprietà SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 
 

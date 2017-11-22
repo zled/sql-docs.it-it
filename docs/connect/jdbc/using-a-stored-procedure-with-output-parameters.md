@@ -3,24 +3,25 @@ title: Utilizzo di una Stored Procedure con parametri di Output | Documenti Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7dc04aac6bf9ec53b72705322ebe7f056caf8bfb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e5c3b945652c04cbbe75563d853703b5676b43f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Utilizzo di una stored procedure con parametri di output
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -101,7 +102,6 @@ public static void executeStoredProcedure(Connection con) {
  Le stored procedure possono restituire conteggi aggiornamenti e più set di risultati. Il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] conforme alla specifica JDBC 3.0, che indica che più set di risultati e i conteggi aggiornamenti devono essere recuperati prima che vengano recuperati i parametri OUT. Vale a dire, l'applicazione deve recuperare tutti gli oggetti ResultSet e verranno aggiornati i conteggi prima di recuperare i parametri OUT utilizzando i metodi CallableStatement.getter. In caso contrario, gli oggetti set di risultati e i conteggi di aggiornamento che non sono già stati recuperati andranno persi quando vengono recuperati i parametri OUT. Per ulteriori informazioni sui conteggi di aggiornamento e più set di risultati, vedere [utilizzando una Stored Procedure con un conteggio di aggiornamento](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [utilizzando più set di risultati](../../connect/jdbc/using-multiple-result-sets.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle istruzioni con le Stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)  
+ [USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
-

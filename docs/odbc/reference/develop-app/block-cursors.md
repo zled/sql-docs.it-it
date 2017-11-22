@@ -3,10 +3,12 @@ title: Bloccare i cursori | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8d6b3eb0a520d4c5c83e043f57076d164503f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7747f421fe4a7356086cf27ecf62739f34acdd17
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors"></a>Cursori a blocchi
 Molte applicazioni impiegano una quantità significativa di tempo per trasferire i dati attraverso la rete. Parte di questo tempo è trascorso effettivamente riportare i dati attraverso la rete e una parte viene impiegata per la rete sovraccarico, ad esempio la chiamata eseguita dal driver per richiedere una riga di dati. Il tempo di quest'ultimo può essere ridotto se l'applicazione utilizza in modo efficiente *blocco* o *fat* *i cursori,* che può restituire più di una riga alla volta.  
@@ -41,9 +42,8 @@ Molte applicazioni impiegano una quantità significativa di tempo per trasferire
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Associazione delle colonne per l'utilizzo con i cursori a blocchi](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)  
+-   [Associazione di colonne per l'utilizzo con cursori rettangolari](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)  
   
--   [Utilizzo di cursori a blocchi](../../../odbc/reference/develop-app/using-block-cursors.md)  
+-   [Utilizzo di cursori rettangolari](../../../odbc/reference/develop-app/using-block-cursors.md)  
   
--   [Matrice di stato di riga](../../../odbc/reference/develop-app/row-status-array.md)
-
+-   [Matrice di stato riga](../../../odbc/reference/develop-app/row-status-array.md)

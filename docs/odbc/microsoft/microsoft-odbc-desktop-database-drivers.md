@@ -3,10 +3,12 @@ title: Microsoft ODBC driver di Database Desktop | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 38917d4e3a7cbd53be9a638d0d4dc3f5b2c2b179
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC driver di Database Desktop
 ODBC è un'API che utilizza Structured Query Language (SQL) come linguaggio di accesso di database. È possibile accedere a un'ampia gamma di sistemi di gestione di database (DBMS) con lo stesso codice di origine ODBC che è direttamente incorporato nel codice sorgente dell'applicazione. Con il driver ODBC Microsoft di Database Desktop, un utente di un'applicazione ODBC compatibile può aprire, query e aggiornare un database desktop tramite l'interfaccia ODBC.  
@@ -51,29 +52,28 @@ ODBC è un'API che utilizza Structured Query Language (SQL) come linguaggio di a
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Architettura di driver di Database desktop](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
+-   [Architettura dei driver di database desktop](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
   
--   [Cronologia dei driver di Database Desktop](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
+-   [Cronologia dei driver di database desktop](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
   
--   [Supporto tecnico](../../odbc/microsoft/product-support.md)  
+-   [Servizio Supporto Tecnico Clienti Microsoft](../../odbc/microsoft/product-support.md)  
   
--   [Implementazione di driver di Database Desktop](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
+-   [Implementazione dei driver di database desktop](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   
--   [Considerazioni sulla programmazione di Driver Microsoft Access](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
+-   [Considerazioni sulla programmazione dei driver Microsoft Access](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
   
--   [Considerazioni sulla programmazione di Driver di Microsoft Excel](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
+-   [Considerazioni sulla programmazione dei driver Microsoft Excel](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
   
--   [Considerazioni sulla programmazione di Driver Paradox](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
+-   [Considerazioni sulla programmazione dei driver Paradox](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
   
--   [Considerazioni sulla programmazione Driver dBASE](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
+-   [Considerazioni sulla programmazione dei driver dBASE](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
   
--   [Considerazioni sulla programmazione di Driver File di testo](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
+-   [Considerazioni sulla programmazione dei driver file di testo](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
   
--   [Grammatica SQL ODBC supportati aggiuntive](../../odbc/microsoft/additional-supported-odbc-sql-grammar.md)  
+-   [Grammatica SQL ODBC supportata aggiuntiva](../../odbc/microsoft/additional-supported-odbc-sql-grammar.md)  
   
 -   [Limitazioni](../../odbc/microsoft/limitations.md)  
   
 -   [Errori ODBC](../../odbc/microsoft/odbc-errors.md)  
   
--   [Funzioni API ODBC supportati](../../odbc/microsoft/supported-odbc-api-functions.md)
-
+-   [Funzioni API ODBC supportate](../../odbc/microsoft/supported-odbc-api-functions.md)

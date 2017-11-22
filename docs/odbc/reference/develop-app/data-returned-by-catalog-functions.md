@@ -3,27 +3,28 @@ title: Dati restituiti dalle funzioni di catalogo | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>Dati restituiti dalle funzioni di catalogo
 Ogni funzione di catalogo restituisce dati come set di risultati. Questo set di risultati non è diverso da qualsiasi altro set di risultati. In genere viene generato da un oggetto predefinito, con parametri **selezionare** istruzione che viene archiviato in una routine nell'origine dati o a livello di codice nel driver. Per informazioni su come recuperare dati da un set di risultati, vedere [è stato creato di impostare un risultato?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  
@@ -43,4 +44,3 @@ SELECT "Customer Name" FROM "Accounts Payable"
  Le funzioni di catalogo sono basate su un modello di autorizzazione simile a SQL in cui viene stabilita una connessione in base a un nome utente e una password, e vengono restituiti solo i dati per cui l'utente dispone di un privilegio. Password di protezione di singoli file, che non rientrano in questo modello, è definito dal driver.  
   
  Set di risultati restituiti dalle funzioni di catalogo sono quasi mai aggiornabili e le applicazioni non dovrebbero essere in grado di modificare la struttura del database modificando i dati in questi set di risultati.
-

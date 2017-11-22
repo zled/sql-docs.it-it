@@ -3,10 +3,12 @@ title: Applicazioni | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>Applicazioni
 Un *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. Anche se sono possibili diversi tipi di applicazioni, la maggior parte rientrano in tre categorie, che vengono utilizzate come esempi in questa Guida.  
@@ -60,4 +61,3 @@ Un *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. An
 -   Disconnessione dall'origine dati.  
   
  Poiché la maggior parte delle operazioni di accesso di dati viene eseguita con SQL, l'attività principale per cui le applicazioni utilizzano ODBC è per inviare istruzioni SQL e recuperare i risultati generati da tali istruzioni (se presente). Altre attività per cui le applicazioni utilizzano ODBC includono stabilire e modifica alle funzionalità del driver e il catalogo del database di esplorazione.
-

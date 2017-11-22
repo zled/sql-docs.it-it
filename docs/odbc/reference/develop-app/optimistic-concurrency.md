@@ -3,10 +3,12 @@ title: Concorrenza ottimistica | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 *Concorrenza ottimistica* il relativo nome deriva dal presupposto ottimistico che raramente si verificheranno conflitti tra le transazioni, viene definito un conflitto si sono verificati quando un'altra transazione aggiorna o elimina una riga di dati tra il momento in cui è in lettura la transazione corrente e l'ora venga aggiornato o eliminato. È l'opposto di *concorrenza pessimistica,* o di blocco, in cui lo sviluppatore dell'applicazione ritiene che tali conflitti siano comuni.  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  Se l'applicazione stessa implementa la concorrenza ottimistica, imposta l'attributo di istruzione SQL_ATTR_CONCURRENCY su SQL_CONCUR_READ_ONLY per leggere una riga. Se verranno confrontate le versioni di riga e non dispone di una colonna della versione di riga, chiama **SQLSpecialColumns** con l'opzione SQL_ROWVER per determinare il nome della colonna.  
   
  L'applicazione aggiorna o elimina la riga, aumentando la concorrenza SQL_CONCUR_LOCK (per ottenere l'accesso in scrittura per la riga) e l'esecuzione di un **aggiornamento** o **eliminare** istruzione con un **in**  clausola che specifica la versione o i valori della riga era quando l'applicazione leggerlo. Se la riga è stata modificata da allora, l'istruzione avrà esito negativo. Se il **dove** clausola non identifica in modo univoco la riga, l'istruzione può anche aggiornare o eliminare le altre righe mentre le versioni di riga identificano sempre in modo univoco le righe, ma i valori di riga identificano in modo univoco le righe solo se includono la chiave primaria.
-

@@ -5,22 +5,20 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 536d493ba199ff4cdc808c5463cb260926f106f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ottimizzazione delle prestazioni di R in SQL Server
 
@@ -92,7 +90,7 @@ Configurazione e ottimizzazione delle prestazioni richiede la creazione di una b
 
 + [Ottimizzazione delle prestazioni di R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Vengono fornite indicazioni per la configurazione dell'hardware che [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] è installato e per la configurazione dell'istanza di SQL Server per supportare meglio gli script esterni. È particolarmente utile per **gli amministratori del database**.
+    Vengono fornite indicazioni per la configurazione dell'hardware che [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] è installato e per la configurazione dell'istanza di SQL Server per supportare meglio gli script esterni. È particolarmente utile per **gli amministratori del database**.
 
 + [Ottimizzazione delle prestazioni di R in SQL Server - codice e i dati ottimizzazione](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +102,3 @@ Configurazione e ottimizzazione delle prestazioni richiede la creazione di una b
 + [Ottimizzazione delle prestazioni di R in SQL Server - metodi e i risultati](..\r\performance-case-study-r-services.md)
 
     Riepiloga i dati che è stata utilizzata due case study, la modalità in cui è stata testata le prestazioni e risultati di influenza le ottimizzazioni.
-

@@ -3,10 +3,12 @@ title: Architettura di driver di Database desktop | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architettura di driver di Database desktop
 Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni successive o Windows NT 4.0 e Windows 2000. Sono supportate sole applicazioni a 32 bit in Windows 95 o versione successiva. applicazioni a 16 bit e a 32 bit sono supportate in Windows NT 4.0 e Windows 2000.  
@@ -55,4 +56,3 @@ Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni succe
  ODBCJT32.dll implementa funzioni ODBC sopra l'API di Microsoft Jet. Non è tuttavia alcun mapping diretto tra le funzioni di ODBC e Microsoft Jet. Molti fattori, ad esempio i modelli di cursore e i mapping di SQL, evitare una correlazione diretta delle funzioni.  
   
  Il driver ODBC si trova tra la gestione di Microsoft Jet e gestione Driver ODBC. Alcune funzioni ODBC chiamati da un'applicazione sono gestite da Gestione Driver e non è stati passati al driver. Per queste funzioni, Microsoft Jet non vede mai la funzione chiamata perché non dispone di una connessione diretta al Driver Manager.
-

@@ -3,24 +3,25 @@ title: Note sulla versione per il Driver JDBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Note sulla versione per il Driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -130,11 +131,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Supporto per le connessioni di ripristino di emergenza a disponibilità elevata a gruppi di disponibilità AlwaysOn in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Vedere [supporto del Driver JDBC per il ripristino di emergenza a disponibilità elevata](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) per ulteriori informazioni.  
   
- **Utilizza l'autenticazione integrata Kerberos per connettersi a SQL Server**  
+ **Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server**  
   
  Supporto per l'autenticazione integrata Kerberos di tipo 4 per applicazioni di connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Per ulteriori informazioni, vedere [utilizzando l'autenticazione integrata Kerberos per connettersi a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Kerberos di tipo 2 l'autenticazione integrata è disponibile in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] le versioni precedenti alla 4.0.)  
   
- **L'accesso a informazioni di diagnostica nel Log degli eventi estesi**  
+ **Accesso alle informazioni di diagnostica nel log degli eventi estesi**  
   
  È possibile accedere al contenuto del log degli eventi estesi del server per ottenere informazioni sugli errori di connessione. Per ulteriori informazioni, vedere [l'accesso a informazioni di diagnostica nel Log degli eventi estesi](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
@@ -151,7 +152,6 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  Microsoft JDBC driver 6.0, 4.2, 4.1 e 4.0 per applicazioni SQL Server non sono supportati per l'esecuzione in un computer Itanium.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del Driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

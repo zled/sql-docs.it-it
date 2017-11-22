@@ -3,10 +3,12 @@ title: Identificatore argomenti | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>Argomenti di tipo identificatore
 Se una stringa in un argomento dell'identificatore è racchiuso tra virgolette, il driver rimuove iniziali e gli spazi vuoti finali e considera letteralmente la stringa tra virgolette. Se la stringa non è racchiuso tra virgolette, il driver rimuove riduzioni e gli spazi vuoti finali stringa in maiuscolo. L'impostazione di un argomento dell'identificatore a un puntatore null restituisce SQL_ERROR e SQLSTATE HY009 (utilizzo non valido del puntatore null), a meno che l'argomento è un nome di catalogo e i cataloghi non sono supportati.  
@@ -41,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Gli identificatori delimitati vengono utilizzati per distinguere un nome di colonna true da una pseudo-colonna con lo stesso nome, ad esempio ROWID in Oracle. Se viene passato un argomento di una funzione di catalogo "ROWID", la funzione funziona con la pseudo-colonna ROWID se esiste. Se la pseudo-colonna non esiste, la funzione funziona con la colonna "ROWID". Se il valore ROWID viene passato un argomento di una funzione di catalogo, la funzione funziona con la colonna ROWID.  
   
  Per ulteriori informazioni sugli identificatori tra virgolette, vedere [identificatori tra virgolette](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

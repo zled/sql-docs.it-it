@@ -1,26 +1,23 @@
 ---
 title: Assegnazione dei punteggi in tempo reale | Documenti Microsoft
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea8977d555bc30f661817b72fbf90f9198cf3088
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="realtime-scoring"></a>Assegnazione dei punteggi in tempo reale
 
 Questo argomento descrive una funzionalità disponibile in SQL Server 2016 e SQL Server 2017 che supporta l'assegnazione dei punteggi su modelli di machine learning in tempo quasi reale.
@@ -54,56 +51,56 @@ Per un esempio di come è possibile rxPredict utilizzati per il punteggio, veder
 
 Assegnazione dei punteggi in tempo reale è supportato su queste piattaforme:
 
-+ Servizi SQL Server 2017 Machine Learning (include Microsoft R Server 9.1.0)
++ SQL Server 2017 Machine Learning Services
 + SQL Server R Services 2016, con un aggiornamento dell'istanza di R Services da Microsoft R Server 9.1.0 o versione successiva
-+ Microsoft Machine Learning Server (Standalone)
++ Machine Learning Server (Standalone)
 
 In SQL Server, è necessario abilitare funzionalità di punteggio in anticipo in tempo reale. Questo avviene perché la funzionalità richiede l'installazione delle librerie basato su CLR in SQL Server.
 
-Per informazioni in tempo reale di punteggio in un ambiente distribuito in base a Microsoft R Server, consultare il [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) disponibile in funzione la [mrsDeploy pacchetto](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), che supporta pubblicazione di modelli per in tempo reale di punteggio come nuovo un servizio web in esecuzione nel Server di R.
+Per informazioni in tempo reale di punteggio in un ambiente distribuito in base a Microsoft R Server, consultare il [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) disponibile in funzione la [mrsDeploy pacchetto](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), che supporta pubblicazione di modelli per in tempo reale di punteggio come nuovo un servizio web in esecuzione nel Server di R.
 
 ### <a name="restrictions"></a>Restrizioni
 
-+ Training del modello deve essere eseguito in precedenza tramite uno dei supportati **rx** algoritmi. Per informazioni dettagliate, vedere [supportati gli algoritmi](#bkmk_rt_supported_algos). In tempo reale di punteggio con sp_rxPredict supporta gli algoritmi di RevoScaleR sia MicrosoftML.
++ Training del modello deve essere eseguito in precedenza tramite uno dei supportati **rx** algoritmi. Per informazioni dettagliate, vedere [supportati gli algoritmi](#bkmk_rt_supported_algos). In tempo reale di punteggio con `sp_rxPredict` supporta gli algoritmi RevoScaleR sia MicrosoftML.
 
-+ È necessario salvare il modello utilizzando la nuova funzione di serializzazione disponibile in Microsoft R Server 9.1.0. Il metodo di serializzazione è stato ottimizzato per il supporto di classificazione rapido.
++ È necessario salvare il modello utilizzando le nuove funzioni di serializzazione: [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) per R, e [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) per Python. Queste funzioni di serializzazione sono state ottimizzate per il supporto di classificazione rapido.
 
-+ Assegnazione dei punteggi in tempo reale non utilizza un interprete R; Pertanto, qualsiasi funzionalità che potrebbero richiedere l'interprete R non è supportata durante il passaggio di assegnazione dei punteggi.  Ad esempio:
++ Assegnazione dei punteggi in tempo reale non utilizza un interprete interprete; Pertanto, qualsiasi funzionalità che potrebbero richiedere un interprete non è supportata durante il passaggio di assegnazione dei punteggi.  Ad esempio:
 
   + Modelli di utilizzo di `rxGlm` o `rxNaiveBayes` algoritmi non sono attualmente supportati
 
   + I modelli che utilizzano una funzione di trasformazione di R, o una formula che contiene una trasformazione, ad esempio RevoScaleR <code>A ~ log(B)</code> non sono supportate nell'assegnazione dei punteggi in tempo reale. Per utilizzare un modello di questo tipo, è consigliabile eseguire la trasformazione di dati di input prima di passare i dati per l'assegnazione dei punteggi in tempo reale.
 
-+ Assegnazione dei punteggi in tempo reale attualmente è ottimizzato per le stime veloce in un set di dati più piccolo, compreso tra alcune righe e centinaia di migliaia di righe. Nel set di dati molto grandi, l'assegnazione dei punteggi in R tramite rxPredict potrebbero essere più veloci.
++ Assegnazione dei punteggi in tempo reale attualmente è ottimizzato per le stime veloce in un set di dati più piccolo, compreso tra alcune righe e centinaia di migliaia di righe. Nel set di dati molto grandi, tramite [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) potrebbero essere più veloci.
 
 ### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-realtime-scoring"></a><a name="bkmk_rt_supported_algos">Algoritmi che supportano l'assegnazione dei punteggi in tempo reale
 
 + Modelli RevoScaleR
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
   
   I modelli è contrassegnato con \* supportano inoltre l'assegnazione dei punteggi native con la funzione di stima.
 
 + Modelli MicrosoftML
 
-  + [rxFastTrees](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + Trasformazioni fornite da MicrosoftML
 
-  + [featurizeText](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [Concat](https://docs.microsoft.com/r-server/r-reference/microsoftml/concat)
-  + [per categoria](https://docs.microsoft.com/r-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [per categoria](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>Tipi di modello non supportato
 
@@ -122,4 +119,3 @@ Non sono supportati i tipi di modello seguenti:
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Come eseguire l'operazione di assegnazione dei punteggi in tempo reale](r/how-to-do-realtime-scoring.md)
-

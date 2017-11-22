@@ -3,10 +3,12 @@ title: Clausola OPTION (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,26 +16,24 @@ f1_keywords:
 - OPTION_TSQL
 - OPTION
 - OPTION_clause_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - clauses [SQL Server], OPTION
 - OPTION clause
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b582333a9bf85fa8815b53774980867fbeff3deb
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b5457a572985c9a83984efbe9ce90811e22cf2d4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="option-clause-transact-sql"></a>Clausola OPTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifica che l'hint per la query indicato deve essere utilizzato in tutta la query. Sono consentiti più hint per la query. Ogni hint, tuttavia, può essere specificato una sola volta. In una istruzione è consentito utilizzare una sola clausola OPTION.  
   
@@ -204,5 +204,4 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
   
   
-
 
