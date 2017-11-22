@@ -153,12 +153,11 @@
 ### [Opzioni di configurazione avanzate per Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Considerazioni sulla sicurezza per il runtime R in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modificare il pool di account utente per SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Configurare e gestire le estensioni di apprendimento automatico](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [Distribuire e usare i modelli usando i servizi Web](operationalization-with-mrsdeploy.md)
 ### [Gestione e monitoraggio delle soluzioni di apprendimento automatico](r/managing-and-monitoring-r-solutions.md)
 ### [Gestione delle risorse per Machine Learning Services](r/resource-governance-for-r-services.md)
-### [Creare un pool di risorse per R](r/how-to-create-a-resource-pool-for-r.md)
+### [Creare un pool di risorse per Machine Learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Eventi estesi per Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
 
 ### [DMV per Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [Aggiungere R a una macchina virtuale esistente](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Usare sqlBindR.exe per aggiornare un'istanza](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Installare R Server dalla riga di comando](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provisioning della macchina virtuale per Data Science](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Effettuare il provisioning di una macchina virtuale per data science Enterprise](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Configurare gli strumenti di data science](r/setup-or-configure-r-tools.md)
 ### [Configurare un client per la data science](r/set-up-a-data-science-client.md)
 

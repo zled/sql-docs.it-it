@@ -1,6 +1,6 @@
-# [Dettagli di implementazione di API ODBC](odbc-api-implementation-details.md)
+# [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)
 
-# API ODBC SQL * per client nativi
+# API ODBC SQL* per client nativi
 ## [SQLBindCol](sqlbindcol.md)
 ## [SQLBindParameter](sqlbindparameter.md)
 ## [SQLBrowseConnect](sqlbrowseconnect.md)
@@ -43,11 +43,11 @@
 ## [SQLProcedures](sqlprocedures.md)
 ## [SQLPutData](sqlputdata.md)
 ## [SQLRowCount](sqlrowcount.md)
-## [Funzione SQLSetConnectAttr](sqlsetconnectattr.md)
+## [SQLSetConnectAttr](sqlsetconnectattr.md)
 ## [SQLSetDescField](sqlsetdescfield.md)
 ## [SQLSetDescRec](sqlsetdescrec.md)
 ## [SQLSetEnvAttr](sqlsetenvattr.md)
-## [Funzione SQLSetStmtAttr](sqlsetstmtattr.md)
+## [SQLSetStmtAttr](sqlsetstmtattr.md)
 ## [SQLSpecialColumns](sqlspecialcolumns.md)
 ## [SQLStatistics](sqlstatistics.md)
 ## [SQLTablePrivileges](sqltableprivileges.md)

@@ -1,4 +1,4 @@
 # [Modalità di implementazione dei cursori](how-cursors-are-implemented.md)
 # [Libreria di cursori ODBC](odbc-cursor-library.md)
-# [Cursori del Server](using-server-cursors.md)
-# [Utilizzo di set di risultati predefiniti SQL Server](using-sql-server-default-result-sets.md)
+# [Uso dei cursori server](using-server-cursors.md)
+# [Uso dei set di risultati predefiniti di SQL Server](using-sql-server-default-result-sets.md)

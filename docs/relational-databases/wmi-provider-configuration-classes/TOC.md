@@ -1,4 +1,4 @@
-# [Provider WMI per le classi di Gestione configurazione](wmi-provider-for-configuration-management-classes.md)
+# [Classi del provider WMI per la gestione della configurazione](wmi-provider-for-configuration-management-classes.md)
 
 # Aree specifiche
 ## [Classe ClientNetLibInfo +](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)
@@ -16,11 +16,11 @@
 ## [Classe SqlService +](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md)
 ## [Classe SqlServiceAdvancedProperty +](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md)
 
-# [Classe CInstance - proprietà InstanceName](cinstance-class-instancename-property.md)
-# [Classe CInstance - metodo SetDefaults](cinstance-class-setdefaults-method.md)
+# [Classe CInstance - Proprietà InstanceName](cinstance-class-instancename-property.md)
+# [Classe CInstance - Metodo SetDefaults](cinstance-class-setdefaults-method.md)
 # [Classe CInstance](cinstance-class.md)
-# [Classe ClientSettings - proprietà InstanceName](clientsettings-class-instancename-property.md)
-# [Classe ClientSettings - metodo SetDefaults](clientsettings-class-setdefaults-method.md)
+# [Classe ClientSettings - Proprietà InstanceName](clientsettings-class-instancename-property.md)
+# [Classe ClientSettings - Metodo SetDefaults](clientsettings-class-setdefaults-method.md)
 # [Classe ClientSettings](clientsettings-class.md)
 # [Classe SqlErrorLogEvent](sqlerrorlogevent-class.md)
 # [Classe SqlErrorLogFile](sqlerrorlogfile-class.md)

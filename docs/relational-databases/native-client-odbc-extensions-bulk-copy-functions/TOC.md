@@ -1,4 +1,4 @@
-# [Estensioni del Driver SQL Server - funzioni di copia Bulk](sql-server-driver-extensions-bulk-copy-functions.md)
+# [Estensioni del driver di SQL Server - Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)
 
 # [bcp_batch](bcp-batch.md)
 # [bcp_bind](bcp-bind.md)

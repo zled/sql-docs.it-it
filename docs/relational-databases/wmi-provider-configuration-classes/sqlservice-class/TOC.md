@@ -20,5 +20,5 @@
 # [Proprietà SqlServiceType (classe SqlService)](sqlservicetype-property-sqlservice-class.md)
 # [Proprietà StartMode (classe SqlService)](startmode-property-sqlservice-class.md)
 # [Metodo StartService (classe SqlService)](startservice-method-sqlservice-class.md)
-# [Proprietà state (classe SqlService)](state-property-sqlservice-class.md)
+# [Proprietà State (classe SqlService)](state-property-sqlservice-class.md)
 # [Metodo StopService (classe SqlService)](stopservice-method-sqlservice-class.md)

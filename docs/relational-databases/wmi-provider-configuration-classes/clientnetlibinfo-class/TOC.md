@@ -1,5 +1,5 @@
 # [Classe ClientNetLibInfo](clientnetlibinfo-class.md)
-# [Proprietà date (classe ClientNetLibInfo)](date-property-clientnetlibinfo-class.md)
+# [Proprietà Date (classe ClientNetLibInfo)](date-property-clientnetlibinfo-class.md)
 # [Proprietà FileName (classe ClientNetLibInfo)](filename-property-clientnetlibinfo-class.md)
 # [Proprietà ProtocolDisplayName (classe ClientNetLibInfo)](protocoldisplayname-property-clientnetlibinfo-class.md)
 # [Proprietà ProtocolName (classe ClientNetLibInfo)](protocolname-property-clientnetlibinfo-class.md)
