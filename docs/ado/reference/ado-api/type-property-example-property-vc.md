@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Type property [property] [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6838ae3c98f9dc4c210100e04103c94d5ba0d115
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d8d23ccda32c3124f94556dbf92720efa6836c9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-property-vc"></a>Esempio di proprietà Type (proprietà) (VC + +)
 Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà. Si tratta di un modello di un'utilità per elencare i nomi e tipi di una raccolta, ad esempio [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md), [campi](../../../ado/reference/ado-api/fields-collection-ado.md)e così via.  
@@ -225,5 +221,4 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto di proprietà (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Proprietà di tipo (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-
+ [Proprietà Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

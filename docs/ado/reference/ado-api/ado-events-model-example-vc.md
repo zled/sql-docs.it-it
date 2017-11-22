@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Visual C++ code examples [ADO], event model
+dev_langs: C++
+helpviewer_keywords: Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e984459ddf5e45cbcf25d9109a7e50cbd43abbf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd6596f4d19a7f7755f8110b1fbd7fc2e72fe85e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-events-model-example-vc"></a>Esempio di modello di eventi ADO (VC + +)
 La sezione di Visual C++ di [la creazione di istanze di ADO evento dal linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md) viene fornita una descrizione generale di creazione di un'istanza del modello di evento ADO. Ecco un esempio specifico di un'istanza del modello di evento all'interno dell'ambiente creato tramite il **#import** direttiva.  
@@ -519,4 +515,3 @@ int main() {
    CoUninitialize();  
 }  
 ```
-

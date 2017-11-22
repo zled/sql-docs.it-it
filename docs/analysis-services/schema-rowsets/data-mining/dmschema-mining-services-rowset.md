@@ -13,25 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_SERVICES
+apiname: DMSCHEMA_MINING_SERVICES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_SERVICES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_SERVICES rowset
 ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 56d83a4651662294ef1af8c41c741e2e32a3f4e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e7a9f2cd1d082bd2c33a15c66ce9b3fb170eb9e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dmschemaminingservices-rowset"></a>Set di righe DMSCHEMA_MINING_SERVICES
   Fornisce una descrizione di ogni algoritmo di data mining supportato dal provider.  
@@ -77,7 +73,6 @@ ms.lasthandoff: 09/01/2017
 |**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Facoltativa.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello Schema di Data Mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

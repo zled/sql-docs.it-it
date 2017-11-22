@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::Update
-helpviewer_keywords:
-- Update method [ADO]
+f1_keywords: Recordset15::Update
+helpviewer_keywords: Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 287fb5bf8b87a8371ee84d89ba4e5efee6b3587f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="update-method"></a>Update (metodo)
 Salva le modifiche apportate alla riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  
@@ -78,7 +74,7 @@ record.Fields.Update
   
 |||  
 |-|-|  
-|[Raccolta di campi (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodi CancelUpdate (VB) e di aggiornamento](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
@@ -87,4 +83,3 @@ record.Fields.Update
  [Metodo CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Proprietà EditMode](../../../ado/reference/ado-api/editmode-property.md)   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
-

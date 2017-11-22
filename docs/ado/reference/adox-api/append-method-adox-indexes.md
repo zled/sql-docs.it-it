@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Indexes::Append
-helpviewer_keywords:
-- Append method [ADOX]
+f1_keywords: Indexes::Append
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27ddeee201dba9d1381b31023039256d9e587a1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb25d4ce8ab95f1311460f67b79a2b2199b96e62
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-indexes"></a>Append (metodo) (ADOX indici)
 Aggiunge un nuovo [indice](../../../ado/reference/adox-api/index-object-adox.md) dell'oggetto per il [indici](../../../ado/reference/adox-api/indexes-collection-adox.md) insieme.  
@@ -41,7 +37,7 @@ Indexes.Append Index [,Columns]
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Indice*  
+ *Index*  
  Il **indice** oggetto da accodare o il nome dell'indice per creare e aggiungere.  
   
  *Colonne*  
@@ -53,7 +49,7 @@ Indexes.Append Index [,Columns]
  Se il provider non supporta la creazione di indici, si verificherà un errore.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta di indici (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Raccolta di oggetti Index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Indici di esempio del metodo Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
@@ -63,5 +59,4 @@ Indexes.Append Index [,Columns]
  [Append (metodo) (ADOX procedure)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append (metodo) (ADOX tabelle)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append (metodo) (ADOX utenti)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append (metodo) (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Metodo Append (oggetti View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

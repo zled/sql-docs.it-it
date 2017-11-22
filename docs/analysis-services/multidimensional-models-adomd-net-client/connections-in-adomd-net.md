@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - opening connections
 - closing connections
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7c3555be8e304add34cba3a8dd9f0bac4264216
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connections-in-adomdnet"></a>Connessioni in ADOMD.NET
   In ADOMD.NET, utilizzare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto per aprire connessioni con origini dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Quando la connessione non è più necessaria, deve essere chiusa in modo esplicito.  
@@ -75,7 +73,6 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 >  Nel **Finalize** metodo di qualsiasi classe implementata, non chiamare il **Chiudi** o **Dispose** metodi di un <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oggetto, o qualsiasi altro oggetto gestito. In un finalizzatore rilasciare solo le risorse non gestite di proprietà diretta della classe implementata. Se la classe implementata non è il proprietario delle risorse non gestite, non includere un **Finalize** metodo nella definizione della classe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione di Client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
+ [Programmazione di client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
-

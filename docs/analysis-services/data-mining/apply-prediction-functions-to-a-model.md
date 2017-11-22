@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Prediction [Analysis Services], selecting mining models
+helpviewer_keywords: Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0634ebe36d956f356d13384159eb1171d4fc2ea4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
   Per creare una query di stima in Data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario selezionare prima di tutto il modello di data mining su cui sarà basata la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
@@ -137,4 +135,3 @@ ms.lasthandoff: 09/01/2017
  [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

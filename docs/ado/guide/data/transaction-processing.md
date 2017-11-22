@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-processing"></a>Elaborazione delle transazioni
 Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni di accesso ai dati eseguito attraverso una connessione. Soggetto alle funzionalità transazionali dell'origine dati, il **connessione** oggetto consente inoltre di creare e gestire le transazioni. Ad esempio, utilizza il Provider Microsoft OLE DB per SQL Server per accedere a un database in Microsoft SQL Server, è possibile creare più transazioni nidificate per i comandi da eseguire.  
@@ -53,4 +51,3 @@ Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni d
   
 ## <a name="nested-transactions"></a>Transazioni nidificate  
  Per i provider che supportano le transazioni nidificate, la chiamata di **BeginTrans** metodo all'interno di una transazione aperta avvia una transazione nidificata. Il valore restituito indica il livello di annidamento: indica di un valore restituito pari a "1" è stata aperta una transazione di primo livello (ovvero, la transazione non sia annidata all'interno di un'altra transazione), "2" indica che è stata aperta una transazione di secondo livello (a transazione annidata all'interno di una transazione di primo livello), e così via. La chiamata **CommitTrans** o **RollbackTrans** interessa solo la maggior parte delle transazioni aperti di recente, è necessario chiudere o il rollback della transazione corrente prima che è possibile risolvere le transazioni di livello superiore.
-

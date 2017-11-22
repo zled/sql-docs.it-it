@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995e77345c2770f59db620afb1ced2085eaeefa2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d19093c8030e9faf909168cd4707cf5b3e8759ef
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-command-tmsl"></a>Attach-comando (TMSL)
 
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/01/2017
 |-|-|-|  
 |**Proprietà**|**Default**|**Description**|  
 |database|[Obbligatorio]|Il nome dell'oggetto di database da collegare.|  
-|Cartella|[Obbligatorio]|La cartella che contiene il database collegato.|  
+|folder|[Obbligatorio]|La cartella che contiene il database collegato.|  
 |password|Vuoto|La password da utilizzare per crittografare i segreti nel database collegato.|  
 |readWriteMode|Lettura/scrittura|Valore di enumerazione che indica le modalità di accesso consentite al database.<br /><br /> **Come indicato di seguito sono riportati i valori di enumerazione:**<br /><br /> readWrite: è consentito l'accesso in lettura / scrittura.<br /><br /> readOnly: è consentito l'accesso di sola lettura.<br /><br /> readOnlyExclusive: è consentito l'accesso esclusivo in sola lettura.|  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Collegamento e scollegamento di database di Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: Introduzione alle autorizzazioni del motore di database | Microsoft Docs
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -13,16 +16,16 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21d6f4a4434b90561216edc72fb25d5f305fa43d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ff03a1d00fc6cd1972ecb1d5915882287f372a5f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Le autorizzazioni del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] vengono gestite a livello di server tramite gli account di accesso e i ruoli del server e a livello di database tramite gli utenti e i ruoli del database. Il modello per il [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] espone lo stesso sistema all'interno di ogni database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento illustra alcuni concetti di base sulla sicurezza e quindi descrive un'implementazione tipica delle autorizzazioni.  
   

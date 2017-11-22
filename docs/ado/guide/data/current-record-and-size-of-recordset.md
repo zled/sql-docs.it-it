@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6e1da6abaf639a691c647168f51dfa6130da12f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb50826230e46cc71106a2b17d01914eae024f47
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="current-record-and-size-of-recordset"></a>Record corrente e le dimensioni di Recordset
 In questa sezione viene descritto come individuare la posizione corrente del cursore nell'esempio **Recordset** in [esempio di codice JScript per restituire un Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
@@ -55,5 +53,4 @@ oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText
   
  In questa sezione contiene l'argomento seguente.  
   
- [Limiti di un Recordset](../../../ado/guide/data/boundaries-of-a-recordset.md)
-
+ [Limiti di un recordset](../../../ado/guide/data/boundaries-of-a-recordset.md)

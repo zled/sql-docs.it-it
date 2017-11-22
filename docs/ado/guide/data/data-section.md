@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data section [ADO]
+helpviewer_keywords: data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62eb026fac4588cc159afec1714a6aa51903aa8a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-section"></a>Sezione di dati
 La sezione di dati definisce i dati del set di righe insieme a eventuali aggiornamenti, le operazioni di inserimento o eliminazione in sospeso. La sezione di dati può contenere zero o più righe. Può contenere solo i dati da un set di righe in cui la riga è definita dallo schema. Inoltre, come accennato prima, colonne senza dati possono essere omessa. Se viene utilizzato un attributo o un sottoelemento nella sezione dei dati e tale costrutto non è stato definito nella sezione dello schema, viene ignorata automaticamente.  
@@ -93,5 +90,4 @@ La sezione di dati definisce i dati del set di righe insieme a eventuali aggiorn
  Un aggiornamento contiene sempre i dati della riga originale intero seguiti da dati della riga modificata. La riga modificata può contenere tutte le colonne o solo le colonne effettivamente modificati. Nell'esempio precedente, non viene modificata la riga per 2 spedizioniere e solo la colonna telefono è stato modificato i valori per 3 spedizioniere e pertanto è l'unica colonna inclusa nella riga modificata. Le righe inserite per Shippers 12, 13 e 14 sono batch tag rs: inserimento in un insieme. Si noti che le righe eliminate possono anche essere raggruppate, anche se questa opzione non è mostrata nell'esempio precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

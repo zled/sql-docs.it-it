@@ -1,27 +1,23 @@
 ---
-title: SQL Server R Services | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/22/2017
-ms.prod: sql-server-2016
+title: Machine Learning servizi con Python | Documenti Microsoft
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: af81754d0e6b87546432ea864098da4615522670
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="machine-learning-services-with-python"></a>Servizi di Machine Learning con Python
 
@@ -33,11 +29,11 @@ Questa versione include la distribuzione Anaconda di Python, nonché il nuovo [r
 
 È possibile installare tutto ciò che occorre per iniziare a utilizzare Python tramite l'installazione di SQL Server 2017:
 
-+ **Machine Learning Services (In-Database):** installare questa funzionalità, con il motore di database di SQL Server, attivare l'esecuzione sicura degli script R di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
++ **Machine Learning Services (In-Database):** installare questa funzionalità, con il motore di database di SQL Server, attivare l'esecuzione sicura degli script Python di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
   
      Quando si seleziona questa funzionalità, le estensioni vengono installate nel motore di database per supportare l'esecuzione di script Python e viene creato un nuovo servizio, il [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], per gestire le comunicazioni tra il runtime di Python e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.
 
-+ **Machine Learning Server (Standalone):** se non è necessario l'integrazione di SQL Server, installare questa funzionalità per ottenere supporto Python nella Microsoft R Server. Ciò consente di rendere operative le soluzioni di Python usando **mrsdeploy**.
++ **Machine Learning Server (Standalone):** se non è necessario l'integrazione di SQL Server, installare questa funzionalità per ottenere il supporto di Python e R per distribuita machine learning. È inoltre possibile distribuire la soluzione di Python come servizio web tramite **mrsdeploy**.
   
      Non installare questa funzionalità nello stesso computer che esegue servizi di SQL Server Machine Learning.
 
@@ -47,4 +43,3 @@ Questa versione include la distribuzione Anaconda di Python, nonché il nuovo [r
 [Impostare i servizi nel Database di apprendimento automatico di Python](setup-python-machine-learning-services.md)
 
 [Esercitazioni di Python](../tutorials/sql-server-python-tutorials.md)
-

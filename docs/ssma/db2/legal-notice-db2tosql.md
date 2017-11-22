@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f549bb5f993f96e71798090311d2544806472a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc9ae0412621d5ceaee4fd31941f0a4b33cacd13
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="legal-notice-db2tosql"></a>Note legali (DB2toSQL)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  
@@ -51,4 +49,3 @@ I clienti non devono usare le API non documentate, inclusi a titolo esemplificat
   
 Gli aggiornamenti di server e database alle versioni successive di SQL Server non sono garantiti per le applicazioni e i database che usano punti di ingresso non trattati nella documentazione. L'uso delle caratteristiche e delle funzionalità di SQL Server deve essere limitato a quanto incluso nella documentazione di Microsoft SQL Server. Se una funzionalità non è documentata nella documentazione di Microsoft SQL Server, non è una parte di SQL Server supportata.  
   
-

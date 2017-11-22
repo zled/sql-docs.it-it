@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3de186cec4b3299bbdc43cf2fe63c806c228cb66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Set di righe DBSCHEMA_PROVIDER_TYPES
   Identifica i tipi di dati (di base) supportati dal provider di dati.  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|Il numero massimo di cifre consentito a destra del separatore decimale se l'indicatore del tipo è **DBTYPE_VARNUMERIC**, **DBTYPE_DECIMAL**, o **DBTYPE_NUMERIC**; in caso contrario, N**U**LL.|  
 |**GUID**|**DBTYPE_GUID**|(Destinato all'utilizzo futuro) Il **GUID** del tipo, se il tipo è descritto in una libreria dei tipi. In caso contrario, **NULL**.|  
 |**LIBRERIA DEI TIPI**|**DBTYPE_WSTR**|(Destinato all'utilizzo futuro) Libreria dei tipi contenente la descrizione del tipo, se il tipo viene descritto in una libreria dei tipi. In caso contrario, NULL.|  
-|**VERSIONE**|**DBTYPE_WSTR**|(Destinato all'utilizzo futuro) Versione della definizione del tipo. I provider potrebbero ritenere opportuno assegnare una versione alle definizioni del tipo. È possibile che provider diversi utilizzino schemi di controllo delle versioni diversi, ad esempio un timestamp o un numero (integer o float). **NULL** se non è supportato.|  
+|**VERSION**|**DBTYPE_WSTR**|(Destinato all'utilizzo futuro) Versione della definizione del tipo. I provider potrebbero ritenere opportuno assegnare una versione alle definizioni del tipo. È possibile che provider diversi utilizzino schemi di controllo delle versioni diversi, ad esempio un timestamp o un numero (integer o float). **NULL** se non è supportato.|  
 |**IS_LONG**|**DBTYPE_BOOL**|Valore booleano che indica se il tipo di dati è un oggetto BLOB (Binary Large Object) e contiene dati molto lunghi.<br /><br /> **VARIANT_TRUE** indica che il tipo di dati è un **BLOB** che contiene dati molto lunghi; la definizione di dati molto lunghi è specifica del provider.<br /><br /> **VARIANT_FALSE** indica che il tipo di dati è un **BLOB** che non contiene dati molto lunghi o non è un **BLOB**.<br /><br /> Questo valore determina l'impostazione del **DBCOLUMNFLAGS_ISLONG** flag restituito da **GetColumnInfo** in **IColumnsInfo** e **GetParameterInfo** in **ICommandWithParameters**.|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|Valore booleano che indica se il tipo di dati è una corrispondenza più appropriata.<br /><br /> **VARIANT_TRUE** indica che il tipo di dati è la corrispondenza più appropriata tra tutti i tipi di dati nell'archivio dati e il tipo di dati OLE DB indicato dal valore nella **DATA_TYPE** colonna.<br /><br /> **VARIANT_FALSE** indica che il tipo di dati non è la migliore corrispondenza.<br /><br /> Per ogni set di righe in cui il valore della **DATA_TYPE** colonna è lo stesso, il **BEST_MATCH** colonna è impostata su **VARIANT_TRUE** solo in una riga.|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|Valore booleano che indica se la colonna è a lunghezza fissa.<br /><br /> **VARIANT_TRUE** indica che le colonne di questo tipo create dal linguaggio di definizione dei dati (DDL) saranno di lunghezza fissa.<br /><br /> **VARIANT_FALSE** indica che le colonne di questo tipo create dal DDL saranno di lunghezza variabile.<br /><br /> Se il campo è **NULL**, non è noto se il provider eseguirà il mapping in questo campo con una colonna a lunghezza fissa o a lunghezza variabile.|  
@@ -74,7 +70,6 @@ ms.lasthandoff: 09/01/2017
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello Schema OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [Set di righe dello schema OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

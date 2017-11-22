@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_CancelBatch
 - Recordset15::CancelBatch
-helpviewer_keywords:
-- CancelBatch method [ADO]
+helpviewer_keywords: CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b5dc5cc6d3047c7dc0804c42c7e8efcc80b64054
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2eced52fb03d47d8f79838d07a45c1d8dde31cf9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancelbatch-method-ado"></a>Metodo CancelBatch (ADO)
 Annulla un aggiornamento batch in sospeso.  
@@ -55,7 +52,7 @@ recordset.CancelBatchAffectRecords
  Se il tentativo di annullare gli aggiornamenti in sospeso non riesce a causa di un conflitto con i dati sottostanti (ad esempio, se un record è stato eliminato da un altro utente), il provider restituisce avvisi per il [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta ma non interrompe esecuzione del programma. Errore di run-time si verifica solo se sono presenti conflitti in tutti i record richiesti. Utilizzare il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà (**adFilterAffectedRecords**) e [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà per individuare i record con conflitti.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio UpdateBatch e CancelBatch metodi (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
@@ -67,4 +64,3 @@ recordset.CancelBatchAffectRecords
  [Clear (metodo) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Proprietà LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
-

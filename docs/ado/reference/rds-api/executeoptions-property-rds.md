@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- ExecuteOptions property [ADO], VBScript example
+helpviewer_keywords: ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56e631762097a140f722202a9eba6a304b66c0cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d46a26f7e4a80ae7a22954f388597552a5fb86
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="executeoptions-property-rds"></a>Proprietà ExecuteOptions (RDS)
 Indica se è abilitata l'esecuzione asincrona.  
@@ -53,11 +50,10 @@ Indica se è abilitata l'esecuzione asincrona.
  Se si verifica un errore durante un'operazione asincrona, il **RDS. DataControl** dell'oggetto [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) valore viene modificato da **adcReadyStateLoaded** a **adcReadyStateComplete**e  **Recordset** valore della proprietà rimane *nulla*.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [ExecuteOptions e FetchOptions proprietà esempio (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Metodo Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
+ [Metodo Cancel (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancel-method-rds.md)
 
 

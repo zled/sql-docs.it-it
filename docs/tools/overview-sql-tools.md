@@ -1,54 +1,54 @@
 ---
-title: "Gli strumenti di SQL e le utilità per SQL Server, Database SQL di Azure e SQL Data Warehouse | Documenti Microsoft"
+title: "Gli strumenti di SQL e le utilità per SQL Server, Database SQL di Azure e Azure SQL Data Warehouse | Documenti Microsoft"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 11/15/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0ad2c6a833d064d7e70da281e1fdc36ae9c235e1
+ms.sourcegitcommit: c31ab3a0c47644560fd125decee4f8630da5ebdb
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>Strumenti e utilità per Database SQL di Azure, SQL Server e SQL Data Warehouse
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Gli strumenti di SQL e le utilità per SQL Server, Database SQL di Azure e Azure SQL Data Warehouse
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-![](../includes/media/sql-database-tools.png)In questo articolo fornisce un elenco degli strumenti disponibili per l'utilizzo di SQL Server, Database SQL di Azure, SQL Data Warehouse e le applicazioni basate su SQL Server. 
 
-Se si desidera passare direttamente in e avviare la creazione di tabelle, esecuzione di query, fondamentalmente progettare e gestire il database, quindi [ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) è molto probabile che lo strumento come. SQL Server Management Studio è disponibile e viene eseguito in Windows.
+## <a name="tools-to-run-queries-and-manage-databases"></a>Strumenti per eseguire query e gestire i database  
 
-Se si esegue Linux o Mac OS, provare a [codice di Visual Studio](https://code.visualstudio.com/) con il [ **mssql per Visual Studio Code** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) estensione. Questi strumenti sono per lo sviluppo di Microsoft SQL Server, Database SQL di Azure e SQL Data Warehouse con un'ampia gamma di funzionalità e sono inoltre disponibili. Vedere [usare codice di Visual Studio per creare ed eseguire script Transact-SQL per SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
-
-
-## <a name="sql-tools"></a>Strumenti di SQL 
- 
 | Strumento | Description |
 |:--|:--|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilizzare SQL Server Management Studio (SSMS) per eseguire una query, progettazione e gestione di SQL Server, Database SQL di Azure e Azure SQL Data Warehouse. |
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Trasformare Visual Studio in un ambiente di sviluppo potenti per SQL Server, Database SQL di Azure e Azure SQL Data Warehouse. |
-| [Codice di Visual Studio](https://code.visualstudio.com/)| Codice di Visual Studio funziona su Linux, macOS e Windows. Dopo aver installato Visual Studio Code, installare il [estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) per lo sviluppo di Microsoft SQL Server, Database SQL di Azure e SQL Data Warehouse. |
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]è uno strumento gratuito e leggero per la gestione di database ogni volta che vengono eseguiti. Questa versione di anteprima fornisce funzionalità di gestione di database, incluso un editor Transact-SQL esteso e personalizzabile approfondite lo stato operativo dei database. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]viene eseguito in Windows, macOS e Linux**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilizzare SQL Server Management Studio (SSMS) per eseguire una query, progettazione e gestione di SQL Server, Database SQL di Azure e Azure SQL Data Warehouse. **In Windows viene eseguito SQL Server Management Studio**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Trasformare Visual Studio in un ambiente di sviluppo potenti per SQL Server, Database SQL di Azure e Azure SQL Data Warehouse. **SSDT viene eseguito in Windows**.|
+| [Codice di Visual Studio](https://code.visualstudio.com/)| Dopo aver installato Visual Studio Code, installare il [estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) per lo sviluppo di Microsoft SQL Server, Database SQL di Azure e SQL Data Warehouse. **Codice di Visual Studio viene eseguito in Windows, macOS e Linux**.|
+
+
+
+## <a name="additional-tools"></a>Strumenti aggiuntivi
+
+| Strumento | Description |
+|:--|:--|
 | [Gestione configurazione](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilizzare Gestione configurazione SQL Server per configurare servizi di SQL Server e configurare la connettività di rete.|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Utilizzare SQL Server Migration Assistant per automatizzare la migrazione di database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e Sybase.|
 | [Riesecuzione distribuita](../tools/distributed-replay/install-distributed-replay-overview.md) | Utilizzare la funzionalità di riesecuzione distribuita che consentono di valutare l'impatto dei futuri aggiornamenti di SQL Server. Inoltre è possibile utilizzare Distributed Replay per valutare l'impatto dell'hardware e aggiornamenti del sistema operativo e l'ottimizzazione di SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | L'utilità ssbdiagnose segnala i problemi in conversazioni di Service Broker o la configurazione di servizi di Service Broker. |
 
 
-## <a name="sql-command-prompt-utilities"></a>Utilità della riga di comando SQL
+## <a name="command-line-utilities"></a>Utilità della riga di comando
 
-  Le utilità del prompt dei comandi consentono di generare script di operazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Nella tabella seguente è riportato l'elenco delle utilità del prompt dei comandi fornite con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Utilità della riga di comando consentono di script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operazioni. Nella tabella seguente è riportato l'elenco delle utilità del prompt dei comandi fornite con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Utility**|**Descrizione**|**Posizione di installazione**|  
 |-----------------|---------------------|----------------------|  
@@ -82,6 +82,5 @@ Se si esegue Linux o Mac OS, provare a [codice di Visual Studio](https://code.vi
 |`monospace`|Esempi di comandi e codice di programmazione.|  
 |*corsivo*|Parametri specificati dall'utente.|  
 |**grassetto**|Comandi, parametri e altri elementi della sintassi che devono essere digitati esattamente come indicato.|  
-
 
 

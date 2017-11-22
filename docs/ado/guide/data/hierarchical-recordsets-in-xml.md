@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- hierarchical Recordsets [ADO], in XML
+helpviewer_keywords: hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb5fb67b0572ea7edea1259ac1314706cc883cd8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c5d4a03801d4f126185ba63fe3fb6409947219bf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Oggetti Recordset gerarchici in XML
 ADO consente la persistenza degli oggetti Recordset gerarchici in XML. Con gli oggetti Recordset gerarchici, il valore di un campo nell'oggetto Recordset padre è un altro oggetto Recordset. Tali campi sono rappresentati come elementi figlio nel flusso XML anziché un attributo.  
@@ -133,5 +130,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   Se un record figlio include riferimenti a più di un record padre, quindi su riaprire il Recordset, il Recordset figlio potrebbe contenere record duplicati. Tuttavia, i duplicati saranno visibili solo se l'utente interagisce direttamente con il set di righe figlio sottostante. Se viene utilizzato un capitolo per passare l'elemento figlio di Recordset (che è l'unico modo per passare tramite ADO), i duplicati non sono visibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

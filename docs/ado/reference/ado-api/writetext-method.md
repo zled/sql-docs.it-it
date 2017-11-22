@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
 - _Stream::WriteText
-helpviewer_keywords:
-- WriteText method [ADO]
+helpviewer_keywords: WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 489e91a0ca9dcaa6c2ca59bba3117c2c409c9799
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7facdd886b6bf048afb9f17a6d9c7c0a69ced57
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="writetext-method"></a>Metodo WriteText
 Scrive una stringa di testo specificato in un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -59,8 +56,7 @@ Stream.WriteText Data, Options
 >  Il **WriteText** metodo viene utilizzato con flussi di testo ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeText**). Per i flussi binari (**tipo** è **adTypeBinary**), utilizzare [scrivere](../../../ado/reference/ado-api/write-method.md).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto di flusso (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Write, metodo](../../../ado/reference/ado-api/write-method.md)
-
+ [Metodo Write](../../../ado/reference/ado-api/write-method.md)

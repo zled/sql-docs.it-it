@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- CommandTypeEnum
-helpviewer_keywords:
-- CommandTypeEnum enumeration [ADO]
+f1_keywords: CommandTypeEnum
+helpviewer_keywords: CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b4a2e9e05e48913e2aecc3ef5a6f0651cd36e2d8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc2cd3acc56c11bdab98d58c1adc76d98eb1579d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Specifica la modalità di interpretazione di un argomento del comando.  
@@ -62,7 +58,6 @@ Specifica la modalità di interpretazione di un argomento del comando.
   
 |||  
 |-|-|  
-|[Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Execute (metodo) (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Requery (metodo)](../../../ado/reference/ado-api/requery-method.md)||
-
+|[Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Metodo Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Metodo Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Metodo Requery](../../../ado/reference/ado-api/requery-method.md)||

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - NextRecordset
 - Recordset15::NextRecordset
 - Recordset15::raw_NextRecordset
-helpviewer_keywords:
-- NextRecordset method [ADO]
+helpviewer_keywords: NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7650cb3516311f3eb93e93304ba9d20ec874466
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nextrecordset-method-ado"></a>Firme (ADO)
 Cancella il contenuto del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto e restituisce il successivo **Recordset** anticipando attraverso una serie di comandi.  
@@ -68,9 +65,8 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
  Tuttavia, altri provider possono eseguire il comando successivo in un'istruzione solo dopo la chiamata di NextRecordset. Per questi provider, se si chiude in modo esplicito il **Recordset** dell'oggetto prima di scorrere l'intera istruzione di comando, i comandi rimanenti non viene mai eseguito ADO.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di firme (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
- [Esempio di firme (VC + +)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
-
+ [Esempio di metodo NextRecordset (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
