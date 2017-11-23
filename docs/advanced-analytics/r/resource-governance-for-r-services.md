@@ -1,90 +1,100 @@
 ---
-title: Governance delle risorse per R Services | Microsoft Docs
+title: Governance delle risorse per machine learning in SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e5f334edf065d691a78469c01bf2cd3352a71544
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5475c2258971c48c2e19bba69d9ec962ae48be87
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="resource-governance-for-r-services"></a>Governance delle risorse per R Services
-  Un punto debole di R è rappresentato dal fatto che l'analisi di grandi quantità di dati nell'ambiente di produzione richiede hardware aggiuntivo e i dati vengono spesso spostati al di fuori del database in computer non controllati dall'IT.  Per eseguire operazioni di analisi avanzata, i clienti vogliono sfruttare le risorse dei server di database e per proteggere i dati è necessario che tali operazioni soddisfino requisiti di conformità di livello aziendale, ad esempio per quanto riguarda sicurezza e prestazioni.  
+# <a name="resource-governance-for-machine-learning-in-sql-server"></a>Governance delle risorse per machine learning in SQL Server
+
+Questo articolo fornisce una panoramica di governance delle risorse di funzionalità di SQL Server che consentono di allocare e bilanciare le risorse utilizzate dagli script R e Python.
+
+**Si applica a:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] 
+ [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+
+## <a name="goals-of-resource-governance-for-machine-learning"></a>Obiettivi di governance delle risorse per machine learning
+
+Un punto di problemi noti con linguaggi di machine learning, ad esempio R e Python è che i dati vengono spesso spostati all'esterno del database ai computer non controllati da IT. Un vantaggio è che R è a thread singolo, vale a dire che è possibile utilizzare solo con i dati disponibili in memoria. 
+
+Servizi di SQL Server Machine Learning riduce entrambi questi problemi, e consente di soddisfano i requisiti di conformità dell'organizzazione. Consente di mantenere analitica avanzati all'interno del database e supporta miglioramento delle prestazioni su grandi set di dati tramite le funzionalità, ad esempio il flusso e operazioni di suddivisione in blocchi. Tuttavia, lo spostamento di R e Python calcoli all'interno di database di influire sulle prestazioni di altri servizi che utilizzano il database, tra cui query utente normale, le applicazioni esterne e i processi pianificati del database.
+
+In questa sezione fornisce informazioni su come è possibile gestire le risorse utilizzate dal runtime esterni, ad esempio R e Python, per ridurre l'impatto su altri servizi di database principale. Un ambiente server di database è in genere l'hub per più servizi e applicazioni dipendenti.
+
+È possibile utilizzare [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) per gestire le risorse utilizzate dal runtime esterni per R e Python.  Per l'apprendimento automatico, la governance delle risorse include le attività:
+
++ Identificazione di script che usano una quantità eccessiva di risorse del server.
   
- Questa sezione fornisce informazioni su come gestire le risorse usate dal runtime R e dai processi R in esecuzione con un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come contesto di calcolo.  
+     L'amministratore deve poter terminare o limitare i processi che utilizzano troppe risorse.
   
-## <a name="what-is-resource-governance"></a>Informazioni sulla governance delle risorse  
- La governance delle risorse è progettata per identificare e prevenire i problemi comuni in un ambiente server di database, in cui ci sono spesso più applicazioni dipendenti e più servizi da supportare e bilanciare. Per [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], la governance delle risorse include le attività seguenti:  
++ Riduzione dei carichi di lavoro imprevedibili.
   
--   Identificazione di script che usano una quantità eccessiva di risorse del server.  
+     Ad esempio, se più processi di machine learning eseguono contemporaneamente sul server, la contesa tra risorse risultante potrebbe comportare prestazioni imprevedibile o compromettere il completamento del carico di lavoro. Tuttavia, se vengono utilizzati pool di risorse, i processi possono essere isolati una da altra.
   
-     L'amministratore deve poter terminare o limitare i processi che utilizzano troppe risorse.  
+-   Assegnazione di priorità ai carichi di lavoro.
   
--   Riduzione dei carichi di lavoro imprevedibili.  
+     L'amministratore o un architetto deve essere in grado di specificare i carichi di lavoro che deve hanno la precedenza o garantire la contesa tra risorse è necessario completare alcuni carichi di lavoro.
+
+## <a name="how-to-use-resource-governor-to-manage-machine-learning"></a>Come utilizzare Resource Governor per gestire l'apprendimento
+ 
+Gestire le risorse allocate alle sessioni di R o Python mediante la creazione di un *pool di risorse esterne*e l'assegnazione di carichi di lavoro per il pool o il pool. Un pool di risorse esterne è un nuovo tipo di pool di risorse introdotta in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] per gestire il runtime di R e altri processi esterni al motore di database.
+
+SQL Server supporta tre tipi di pool di risorse predefiniti: 
   
-     Se, ad esempio, più processi R sono in esecuzione simultaneamente sul server e tali processi non sono isolati uno dall'altro tramite pool di risorse, la contesa per le risorse risultante potrebbe comportare prestazioni imprevedibili o compromettere il completamento del carico di lavoro.  
+-   Il *pool interno* rappresenta le risorse usate da SQL Server e non può essere modificato o limitato.
   
--   Assegnazione di priorità ai carichi di lavoro.  
+-   Il *pool predefinito* è un pool di utenti predefinito che è possibile usare per modificare l'uso delle risorse per il server nel complesso. È anche possibile definire gruppi di utenti che appartengono al pool, per gestire l'accesso alle risorse.
   
-     L'amministratore o il progettista deve poter specificare i carichi di lavoro che hanno la precedenza o garantire il completamento di determinati carichi di lavoro in caso di contesa per le risorse.  
+-   Il *pool esterno predefinito* è un pool di utenti predefinito per le risorse esterne. È anche possibile creare un nuovo pool di risorse esterne e definire i gruppi di utenti che appartengono a questo pool.
   
- In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] è possibile usare [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) per gestire le risorse usate dal runtime R e dai processi R remoti.  
+ Inoltre, è possibile creare *pool di risorse definiti dall'utente* per allocare le risorse al motore di database o ad altre applicazioni e creare *pool di risorse esterne definiti dall'utente* per gestire R e altri processi esterni.
   
-## <a name="how-to-use-resource-governor-to-manage-r-jobs"></a>Come usare Resource Governor per gestire i processi R  
- In generale, è possibile gestire le risorse allocate ai processi R creando *pool di risorse esterne* e assegnando carichi di lavoro ai pool. Un pool di risorse esterne è un nuovo tipo di pool di risorse introdotto in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per supportare la gestione del runtime R e di altri processi esterni al motore di database.  
-  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ci sono ora tre tipi di pool di risorse predefiniti.  
-  
--   Il *pool interno* rappresenta le risorse usate da SQL Server e non può essere modificato o limitato.  
-  
--   Il *pool predefinito* è un pool di utenti predefinito che è possibile usare per modificare l'uso delle risorse per il server nel complesso. È anche possibile definire gruppi di utenti che appartengono al pool, per gestire l'accesso alle risorse.  
-  
--   Il *pool esterno predefinito* è un pool di utenti predefinito per le risorse esterne. È anche possibile creare un nuovo pool di risorse esterne e definire i gruppi di utenti che appartengono a questo pool.  
-  
- Inoltre, è possibile creare *pool di risorse definiti dall'utente* per allocare le risorse al motore di database o ad altre applicazioni e creare *pool di risorse esterne definiti dall'utente* per gestire R e altri processi esterni.  
-  
- Per una buona introduzione ai concetti generali e alla terminologia, vedere [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+ Per una buona introduzione ai concetti generali e alla terminologia, vedere [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
 
   
-## <a name="resource-management-using-resource-governor"></a>Gestione delle risorse con Resource Governor 
+## <a name="resource-management-walkthrough-with-resource-governor"></a>Procedura dettagliata di gestione di risorse con Resource Governor
 
-   Se non si conosce Resource Governor, vedere questo argomento per una rapida procedura dettagliata su come modificare le risorse predefinite dell'istanza e creare un nuovo pool di risorse esterne: [Procedura: Creare un pool di risorse per R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)   
+Se si ha familiarità di Resource Governor, vedere l'argomento per una rapida procedura dettagliata per modificare le risorse di un'istanza predefinita e creare un nuovo pool di risorse esterne: [creare un pool di risorse per gli script esterni](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
   
- È possibile usare il meccanismo di *pool di risorse esterne* per gestire le risorse usate dai file eseguibili R seguenti:  
-  
--   Rterm.exe e processi satellite  
-  
--   BxlServer.exe e processi satellite  
-  
--   Processi satellite avviati da LaunchPad  
-  
- La gestione diretta del servizio Launchpad con Resource Governor non è tuttavia supportata. Ciò accade perché [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] è un servizio attendibile che da progettazione può ospitare solo utilità di avvio fornite da Microsoft. Le utilità di avvio attendibili sono inoltre configurate per evitare l'utilizzo eccessivo di risorse.  
-  
- È consigliabile gestire i processi satellite tramite Resource Governor e ottimizzarli in modo da soddisfare le esigenze del carico di lavoro e della configurazione del database specifico.  Qualsiasi processo satellite, ad esempio, può essere creato o eliminato definitivamente on demand durante l'esecuzione.  
-  
-## <a name="disable-external-script-execution"></a>Disabilitare l'esecuzione di script esterni  
- Il supporto per gli script esterni è facoltativo nell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Anche dopo l'installazione di [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], la possibilità di eseguire script esterni è disattivata per impostazione predefinita e per abilitare l'esecuzione di script è necessario riconfigurare manualmente la proprietà e riavviare l'istanza.  
-  
- Se quindi c'è un problema di risorse o di sicurezza che deve essere risolto rapidamente, un amministratore può disabilitare immediatamente l'esecuzione di script esterni usando [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e impostando la proprietà `external scripts enabled` su FALSE o 0.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione e monitoraggio di soluzioni R](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
- [Procedura: Creare un pool di risorse per R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)  
- [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-  
+ È possibile utilizzare il *pool di risorse esterne* meccanismo per gestire le risorse usate dai seguenti file eseguibili che vengono usati in machine learning:
 
++ Rterm.exe e processi satellite
++ Processi Python.exe e satellite
++ BxlServer.exe e processi satellite
++ Processi satellite avviati dalla finestra di avvio
+  
+> [!NOTE]
+> 
+> Non è supportata la gestione diretta del servizio Launchpad tramite Resource Governor. Ciò accade perché [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] è un servizio attendibile che da progettazione può ospitare solo utilità di avvio fornite da Microsoft. Avvio attendibili è configurati per evitare un utilizzo eccessivo di risorse.
+>   
+> È consigliabile gestire i processi satellite tramite Resource Governor e ottimizzarli in modo da soddisfare le esigenze del carico di lavoro e della configurazione del database specifico.  Qualsiasi processo satellite, ad esempio, può essere creato o eliminato definitivamente on demand durante l'esecuzione.
+  
+## <a name="disable-external-script-execution"></a>Disabilitare l'esecuzione dello script esterno
 
+Il supporto per gli script esterni è facoltativo nell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Anche dopo l'installazione di machine learning funzionalità, la possibilità di eseguire gli script esterni è impostata su OFF per impostazione predefinita e manualmente necessario riconfigurare le proprietà e riavviare l'istanza per consentire l'esecuzione dello script.
+
+Pertanto, se si verifica un problema di risorse che devono essere risolti immediatamente o un problema di sicurezza, un amministratore può immediatamente disabilitare qualsiasi esecuzione dello script esterno utilizzando [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e impostando la proprietà `external scripts enabled` su FALSE o 0.
+  
+## <a name="see-also"></a>Vedere anche
+
+[Gestione e monitoraggio delle soluzioni di apprendimento automatico](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
+
+[Creare un pool di risorse per Machine Learning](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
+
+[Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

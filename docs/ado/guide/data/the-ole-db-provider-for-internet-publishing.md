@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Il Provider OLE DB per la pubblicazione su Internet
 ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetti sono utilizzabile con il Provider Microsoft OLE DB per Internet Publishing (Internet Publishing Provider) per accedere e modificare le risorse, ad esempio file o cartelle Web servite da Microsoft FrontPage. Con ADO, è possibile specificare l'origine di un **Record**, **flusso**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) da un URL. È possibile caricare, scaricare, spostare, copiare ed eliminare le risorse o modificare direttamente le proprietà delle risorse.  
@@ -63,4 +61,3 @@ ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../
 >  Se Msdaipp. DSO è specificato in modo esplicito come valore del provider, con la *Provider* parola chiave di stringa di connessione o **Provider** proprietà, è possibile utilizzare "URL =" nella stringa di connessione. In caso contrario, si verificherà un errore. In alternativa, è sufficiente specificare l'URL come illustrato in precedenza.  
   
  Per informazioni più specifiche su Internet Publishing Provider, vedere [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentazione del provider fornita con l'applicazione di origine con cui il Provider OLE DB per È stato installato Internet Publishing: Windows 2000, Office 2000 o Internet Explorer 5.0.
-

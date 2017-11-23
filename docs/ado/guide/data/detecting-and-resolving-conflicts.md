@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ac1ca3e4cd6e9047f6a3f47e8067efc6143ba5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00a768c70b1945bc573aaca6c48841e665780081
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
 Se si utilizzano il Recordset in modalità immediata, è meno probabile per problemi di concorrenza si verifichi. D'altra parte, se l'applicazione utilizza la modalità batch di aggiornamento, potrebbe esserci una buona possibilità che un utente modifichi un record prima che vengano salvate le modifiche apportate da un altro utente modifica lo stesso record. In tal caso, è possibile utilizzare l'applicazione di gestire correttamente il conflitto. Potrebbe essere desideri che l'ultima persona di inviare un aggiornamento al server "wins". Oppure è possibile consentire all'utente più recente per decidere quali update deve avere la precedenza fornendo a quest'ultimo una scelta tra i due valori in conflitto.  
@@ -125,4 +123,3 @@ Se si utilizzano il Recordset in modalità immediata, è meno probabile per prob
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità batch](../../../ado/guide/data/batch-mode.md)
-

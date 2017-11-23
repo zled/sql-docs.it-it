@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LastUpdate Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LastUpdate Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- LastUpdate element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: LastUpdate element
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0137ecd5ec2344ece1c4ab65ad55ec344678e1bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0674fa178abad4b9c791a2f8db1199b1651c5957
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lastupdate-element-assl"></a>Elemento LastUpdate (ASSL)
   Contiene una proprietà di sola lettura timestamp che indica l'ultima volta in cui l'oggetto associato [Database](../../../analysis-services/scripting/objects/database-element-assl.md) o uno dei principali oggetti contenuti nel database sono stato modificato.  
@@ -71,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

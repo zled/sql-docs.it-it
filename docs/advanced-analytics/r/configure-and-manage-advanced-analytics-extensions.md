@@ -1,88 +1,64 @@
 ---
 title: Configurazione opzioni avanzate per servizi di Machine Learning | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.custom: SQL2016_New_Updated
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 872acf107d72989b4623a9d5f4ccb85c44d1f2f9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>Configurazione opzioni avanzate per i servizi di Machine Learning
+# <a name="advanced-configuration-options-for-machine-learning-services"></a>Opzioni di configurazione avanzate per i servizi di Machine Learning
 
-Questo articolo descrive le modifiche apportate dopo l'installazione, per modificare la configurazione del runtime di R e altri servizi associati con machine learning in SQL Server.
+Questo articolo descrive le modifiche apportate dopo l'installazione, per modificare la configurazione di runtime dello script esterno e altri servizi associati con machine learning in SQL Server.
 
-Si applica a: R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
+**Si applica a:** R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
 
-##  <a name="bkmk_Provisioning"></a>E account utente di effettuare il provisioning per computer apprendimento
+##  <a name="bkmk_Provisioning"></a>Eseguire il provisioning aggiuntive gli account utente per la macchina apprendimento
 
 Processi di script esterni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguiti nel contesto dell'account utente locale con privilegi limitati. Questi processi in esecuzione in singoli account con privilegi limitati presenta i vantaggi seguenti:
 
 + Consente di ridurre i privilegi dei processi di runtime dello script esterno nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer
 + Fornisce l'isolamento tra le sessioni di un runtime esterni, ad esempio R o Python.
 
-Come parte del programma di installazione, una nuova finestra *pool di account utente* viene creato che contiene gli account utente locali necessari per l'esecuzione del processo di runtime di R. Se necessario, è possibile modificare il numero di utenti per supportare R. L'amministratore del database deve anche concedere a questo gruppo l'autorizzazione necessaria per connettersi a qualsiasi istanza in cui è stato abilitato R Services. Per altre informazioni, vedere [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Come parte del programma di installazione, una nuova finestra *pool di account utente* viene creato che contiene gli account utente locali necessari per l'esecuzione di processi di runtime esterni, ad esempio R o Python. È possibile modificare il numero di utenti in base alle esigenze per supportare l'attività di machine learning. 
 
-Tuttavia, è possibile definire un elenco di controllo di accesso (ACL) per le risorse sensibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per negare l'accesso a questo gruppo, in modo da impedire al processo di runtime R di ottenere l'accesso alle risorse.
+Inoltre, l'amministratore del database è necessario assegnare questo gruppo l'autorizzazione per connettersi a qualsiasi istanza in cui è stato attivato l'apprendimento. Per ulteriori informazioni, vedere [modificare il pool di account utente per i servizi di SQL Server Machine Learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-+ Il pool di account utente è collegato a un'istanza specifica.  Per ogni istanza in cui è stato abilitato uno script R, viene creato un pool di account di lavoro separato. Gli account non possono essere condivisi tra istanze.
+Alle risorse sensibili protext il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile definire un elenco di controllo di accesso (ACL) per questo gruppo. Specificando le risorse che il gruppo viene negato l'accesso, è possibile impedire l'accesso da processi esterni, ad esempio i runtime R o Python.
 
-+ I nomi degli account utente nel pool sono nel formato SQLInstanceName*nn*. Ad esempio, se si usa l'istanza predefinita come server R, il pool di account utente supporta nomi di account come MSSQLSERVER01, MSSQLSERVER02 e così via.
++ Il pool di account utente è collegato a un'istanza specifica. Per ogni istanza del computer in cui è stata abilitata l'apprendimento, è necessario un pool separato di account di lavoro. Gli account non possono essere condivisi tra istanze.
 
-+ La dimensione del pool di account utente è statica e il valore predefinito è 20. Il numero delle sessioni del runtime di R che possono essere avviate simultaneamente è limitato dalla dimensione di questo pool di account utente. Questo limite può tuttavia essere modificato da un amministratore tramite Gestione configurazione SQL Server.
++ I nomi degli account utente nel pool sono nel formato SQLInstanceName*nn*. Ad esempio, se si utilizza l'istanza predefinita per machine learning, il pool di account utente supporta nomi di account come MSSQLSERVER01, MSSQLSERVER02 e così via.
 
-Per altre informazioni su come apportare modifiche al pool di account utente, vedere [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
++ La dimensione del pool di account utente è statica e il valore predefinito è 20. Il numero di sessioni di runtime esterno che possono essere avviate simultaneamente è limitato dalle dimensioni del pool di account utente. Per modificare questo limite, un amministratore deve utilizzare Gestione configurazione SQL Server.
 
-##  <a name="bkmk_ManagingMemory"></a>Gestire la memoria utilizzata dai processi di Script esterni
+Per ulteriori informazioni su come apportare modifiche al pool di account utente, vedere [modificare il pool di account utente per i servizi di SQL Server Machine Learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-Per impostazione predefinita, i processi del runtime di R associati con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] sono limitati all'uso di non più del 20% della memoria totale del computer. Se necessario, l'amministratore può aumentare il valore di questo limite.
+##  <a name="bkmk_ManagingMemory"></a>Gestire la memoria utilizzata dai processi di script esterni
 
-In generale, questa quantità sarà inadeguata per attività R importanti, come il training di modelli o la stima su molte righe di dati. Potrebbe essere necessario ridurre la quantità di memoria riservata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o per altri servizi) e usare Resource Governor per definire uno o più pool di risorse esterne e allocarli. Per ulteriori informazioni, vedere [governance delle risorse per R](../../advanced-analytics/r/resource-governance-for-r-services.md).
+Per impostazione predefinita, i runtime dello script esterno per machine learning sono limitati a non più del 20% della memoria totale del computer. Dipende dal sistema, ma in generale, si noterà questo limite non adeguato per le attività di apprendimento macchina grave, ad esempio training di un modello o stima su molte righe di dati. 
 
-##  <a name="bkmk_ChangingConfig"></a>Modifica servizio opzioni avanzate utilizzando il File di configurazione
+Per supportare l'apprendimento, un amministratore può aumentare questo limite. Quando si esegue questa operazione, potrebbe essere necessario ridurre la quantità di memoria riservata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per altri servizi. È consigliabile l'utilizzo di Resource Governor per definire un pool di risorse esterne o pool, in modo che è possibile allocare il pool di risorse specifiche per i processi R o Python.
 
-È possibile controllare alcune proprietà avanzate di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] modificando il file di configurazione di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Questo file viene creato durante la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per impostazione predefinita viene salvato come file di solo testo nel seguente percorso:
-
-`<instance path>\binn\rlauncher.config`
-
-Per poter apportare modifiche a questo file è necessario essere amministratore del computer su cui è eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si decide di modificare il file, si consiglia di crearne una copia di backup prima di salvare le modifiche.
-
-Ad esempio, per utilizzare Blocco note per aprire il file di configurazione per l'istanza predefinita, si potrebbe aprire un prompt dei comandi come amministratore e digitare il comando seguente:
-
-```
-C:\>Notepad.exe "%programfiles%\Microsoft SQL Server\MSSQL13.MSSQLSERVER\mssql\binn\rlauncher.config"  
-```
-
-##  <a name="bkmk_properties"></a>Modificare le proprietà di configurazione
-
-La tabella seguente elenca tutte le impostazioni supportate per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], con i valori consentiti.
-
-Tutte le impostazioni assumono la forma di coppie chiave-valore e ogni impostazione si trova su una riga diversa. Ad esempio, questa proprietà specifica il livello di traccia per RLauncher:
-
-Impostazione predefinita: TRACE_LEVEL=4
+Per ulteriori informazioni, vedere [governance delle risorse per machine learning](../../advanced-analytics/r/resource-governance-for-r-services.md).
 
 
-|**Nome impostazione**|**Tipo valore**|**Valore predefinito**|**Descrizione**|
-|------------------|----------------|-------------|-----------------|
-|JOB_CLEANUP_ON_EXIT|Integer<br /><br /> 0 = Disabilitato<br /><br /> 1 = Attivato|1<br /><br /> I file di log sono rimossi all'uscita|Specifica se la cartella di lavoro temporanea creata per ciascuna sessione R deve essere eliminata dopo che la sessione R è terminata. L'impostazione è utile per il debug.<br /><br /> Nota: questa è un'impostazione esclusivamente interna, perciò questo valore non deve essere modificato.|
-|TRACE_LEVEL|Integer<br /><br /> 1 = Errore<br /><br /> 2 = Prestazioni<br /><br /> 3 = Avviso<br /><br /> 4 = Informazioni|1<br /><br /> Solo avvisi di output|Configura il livello di dettaglio della traccia dell'utilità di avvio di R (MSSQLLAUNCHPAD) per scopi di debug. Questa impostazione influisce sul dettaglio delle tracce archiviate nei seguenti file di traccia, entrambi posizionati nel percorso specificato dall'impostazione LOG_DIRECTORY:<br /><br /> **rlauncher.log**: il file di traccia generato per le sessioni R avviate da query T-SQL.<br /><br /> |
-
-## <a name="bkmk_Launchpad"></a>Modificare l'Account del servizio Launchpad
+## <a name="bkmk_Launchpad"></a>Modificare l'account del servizio Launchpad
 
 Un oggetto separato [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] servizio viene creato per ogni istanza in cui è stato configurato di machine learning services.
 
@@ -97,7 +73,37 @@ Se si modifica l'account del servizio, assicurarsi di usare l'applicazione **Cri
 
 Per altre informazioni sulle autorizzazioni necessarie per l'esecuzione di servizi di SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
+##  <a name="bkmk_ChangingConfig"></a>Modificare le opzioni avanzate del servizio
+
+Nelle versioni precedenti di SQL Server 2016 R Services, è possibile modificare alcune proprietà del servizio modificando la [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] file di configurazione. 
+
+Tuttavia, questo file non è più utilizzato per la modifica delle configurazioni. È consigliabile utilizzare Gestione configurazione SQL Server per le modifiche alla configurazione del servizio, ad esempio l'account del servizio e il numero di utenti.
+
+**Per modificare la configurazione di avvio**
+
+1. Aprire [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md). 
+2. Finestra di avvio di SQL Server e scegliere **proprietà**.
+
+    + Per modificare l'account del servizio, scegliere il **accesso** scheda.
+
+    + Per aumentare il numero di utenti, fare clic su di **avanzate** scheda.
+
+
+**Per modificare le impostazioni di debug**
+
+Proprietà alcuni possono essere modificate solo tramite la file di configurazione del finestra di avvio che potrebbe essere utili in alcuni casi, ad esempio il debug. Il file di configurazione viene creato durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del programma di installazione e per impostazione predefinita viene salvato come file di testo normale nel percorso seguente:`<instance path>\binn\rlauncher.config`
+
+Per poter apportare modifiche a questo file è necessario essere amministratore del computer su cui è eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si decide di modificare il file, si consiglia di crearne una copia di backup prima di salvare le modifiche.
+
+La tabella seguente elenca le impostazioni avanzate per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], con i valori consentiti. 
+
+|**Nome impostazione**|**Tipo**|**Description**|
+|----|----|----|
+|PROCESSO\_PULIZIA\_ON\_USCITA|Valore intero |Questa è un'impostazione esclusivamente interna, non modificare questo valore. </br></br>Specifica se la cartella di lavoro temporanea creata per ogni sessione di runtime esterno deve essere pulita al termine della sessione. L'impostazione è utile per il debug. </br></br>Valori supportati sono **0** (disattivato) o **1** (abilitato). </br></br>Il valore predefinito è 1, i file di log di significato sono rimossi all'uscita.|
+|TRACCIA\_LIVELLO|Valore intero |Consente di configurare il livello di dettaglio di traccia di MSSQLLAUNCHPAD a scopo di debug. Ciò influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>Valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, vale a dire solo avvisi di output.|
+
+Tutte le impostazioni assumono la forma di coppie chiave-valore e ogni impostazione si trova su una riga diversa. Ad esempio, per modificare il livello di traccia, aggiungere la riga `Default: TRACE_LEVEL=4`.
+
 ## <a name="see-also"></a>Vedere anche
 
 [Considerazioni sulla sicurezza](security-considerations-for-the-r-runtime-in-sql-server.md)
-

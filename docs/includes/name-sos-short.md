@@ -1,0 +1,1 @@
+<Token>Studio operazioni SQL (anteprima)</Token>

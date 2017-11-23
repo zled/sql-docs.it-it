@@ -1,8 +1,7 @@
 ---
 title: Metodo SubmitChanges (RDS) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SubmitChanges method [ADO]
+helpviewer_keywords: SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2d7015e1a668697a12c373904c0bd71e22108449
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce476afad98f812c7622d55ee9bfe80ce919ae9b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="submitchanges-method-rds"></a>Metodo SubmitChanges (RDS)
 Invia le modifiche di locale memorizzato nella cache e aggiornabile in sospeso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) all'origine dati specificata nel [Connetti](../../../ado/reference/rds-api/connect-property-rds.md) proprietà o [URL](../../../ado/reference/rds-api/url-property-rds.md) proprietà.  
@@ -66,14 +63,13 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
   
 |||  
 |-|-|  
-|[Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
+|[Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Pulsanti di Address Book comando](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Metodo Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-
+ [Metodo Refresh (Servizi Desktop remoto)](../../../ado/reference/rds-api/refresh-method-rds.md)
 
 
 

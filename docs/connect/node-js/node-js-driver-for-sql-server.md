@@ -3,24 +3,25 @@ title: Driver di Node.js per SQL Server | Documenti Microsoft
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: node-js
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c3f3203af56f39a4f9beffc8a7a616c0cde64270
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049852043326d39188592b19077276cf04f98764
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Driver di Node.js per SQL Server
 
@@ -49,4 +50,3 @@ Il modulo noioso è un'implementazione javascript di protocollo TDS, supportato 
 * [Introduzione a Node.js in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
 * [Introduzione a Node.js su Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
 * [Introduzione a Node.js su SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)
-

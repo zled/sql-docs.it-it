@@ -1,0 +1,96 @@
+---
+title: sp_refresh_log_shipping_monitor (Transact-SQL) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_refresh_log_shipping_monitor
+- sp_refresh_log_shipping_monitor_TSQL
+dev_langs: TSQL
+helpviewer_keywords: sp_refresh_log_shipping_monitor
+ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
+caps.latest.revision: "21"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 3150f13cbbc25b3a768a65296d6f30b87b5daa4a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Questa stored procedure aggiorna le tabelle di monitoraggio remote in base alle informazioni più recenti recuperate da un server primario o secondario specificato per l'agente di log shipping specificato. La procedura viene richiamata dal server primario o secondario.  
+  
+||  
+|-|  
+|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+sp_refresh_log_shipping_monitor  
+[ @agent_id = ] 'agent_id',  
+[ @agent_type = ] 'agent_type'  
+[ @database = ] 'database'  
+[ @mode ] n  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ [  **@agent_id=** ] **'***agent_id***'**  
+ ID primario per il backup o ID secondario per la copia o il ripristino. *agent_id* è **uniqueidentifier** e non può essere NULL.  
+  
+ [  **@agent_type=** ] **'***agent_type***'**  
+ Tipo di processo di log shipping.  
+  
+ 0 = backup.  
+  
+ 1 = copia.  
+  
+ 2 = ripristino.  
+  
+ *agent_type* è **tinyint** e non può essere NULL.  
+  
+ [  **@database=** ] **'***database***'**  
+ Database primario o secondario utilizzato dagli agenti di registrazione in base al backup o di ripristino.  
+  
+ [ **@mode** ] *n*  
+ Specifica se aggiornare i dati di monitoraggio oppure eliminarli. Il tipo di dati *m* è di tipo tinyint e i valori supportati sono:  
+  
+ 1 = aggiornamento (valore predefinito)  
+  
+ 2 = eliminazione  
+  
+## <a name="return-code-values"></a>Valori restituiti  
+ 0 (esito positivo) o 1 (esito negativo)  
+  
+## <a name="result-sets"></a>Set di risultati  
+ nessuna.  
+  
+## <a name="remarks"></a>Osservazioni  
+ **sp_refresh_log_shipping_monitor** aggiorna il **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_ Dettagli**, e **log_shipping_monitor_error_detail** le tabelle con le informazioni di sessione che non è già stata trasferita. Ciò consente di sincronizzare il server di monitoraggio con il server primario o secondario nel caso in cui il server di monitoraggio non sia più in sincronia. Consente inoltre di eliminare le informazioni di monitoraggio nel server di monitoraggio, se necessario.  
+  
+ **sp_refresh_log_shipping_monitor** deve essere eseguita la **master** database nel server primario o secondario.  
+  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

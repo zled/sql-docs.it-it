@@ -3,32 +3,32 @@ title: nchar e nvarchar (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Tipi di dati che sono a lunghezza fissa, carattere **nchar**, o a lunghezza variabile, **nvarchar**, set di dati Unicode e l'utilizzo di UNICODE UCS-2 caratteri.
   
@@ -37,7 +37,7 @@ Tipi di dati che sono a lunghezza fissa, carattere **nchar**, o a lunghezza vari
 Dati di tipo string a lunghezza fissa Unicode. *n*definisce la lunghezza della stringa e deve essere un valore compreso tra 1 e 4.000. Le dimensioni di archiviazione sono pari al doppio  *n*  byte. Quando la tabella codici delle regole di confronto utilizza caratteri a byte doppio, le dimensioni di archiviazione sono ancora  *n*  byte. A seconda della stringa, le dimensioni di archiviazione  *n*  byte possono essere minore del valore specificato per  *n* . I sinonimi di ISO per **nchar** sono **char national** e **caratteri nazionali**...
   
 **nvarchar** [(n | **max** )]  
-Dati di tipo string a lunghezza variabile Unicode. *n*definisce la lunghezza della stringa e può essere un valore compreso tra 1 e 4.000. **max** indica che le dimensioni massime di archiviazione sono 2 ^ 31-1 byte (2 GB). Le dimensioni di archiviazione, espresse in byte, sono pari al doppio della lunghezza effettiva dei dati immessi + 2 byte. I sinonimi di ISO per **nvarchar** sono **national char varying** e **variabile di caratteri nazionali**.
+Dati di tipo string a lunghezza variabile Unicode. *n*definisce la lunghezza della stringa e può essere un valore compreso tra 1 e 4.000. **max** indica che le dimensioni massime di archiviazione sono 2 ^ 31-1 caratteri, (2 GB). Le dimensioni di archiviazione, espresse in byte, sono pari al doppio della lunghezza effettiva dei dati immessi + 2 byte. I sinonimi di ISO per **nvarchar** sono **national char varying** e **variabile di caratteri nazionali**.
   
 ## <a name="remarks"></a>Osservazioni  
 Quando  *n*  non è specificato nella definizione dei dati o istruzione di dichiarazione di variabile, la lunghezza predefinita è 1. Quando  *n*  non è specificato con la funzione CAST, la lunghezza predefinita è 30.
@@ -103,4 +103,3 @@ Test data       More test data
 [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

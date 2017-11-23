@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 Facoltativamente, è possibile abilitare gli eventi estesi dei gruppi di disponibilità Always On per diagnosticare più facilmente la causa radice durante la risoluzione dei problemi che interessano un gruppo di disponibilità. Eseguire il comando seguente in ogni istanza di SQL Server. 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ Per altre informazioni su questa sessione XE, vedere [Eventi estesi di Always On
 
 Lo script di Transact-SQL seguente crea un account di accesso denominato `dbm_login`e un utente denominato `dbm_user`. Aggiornare lo script con una password complessa. Eseguire il comando seguente in tutte le istanze di SQL Server per creare l'utente dell'endpoint di mirroring del database.
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ Il servizio SQL Server in Linux usa i certificati per autenticare la comunicazio
 
 Lo script di Transact-SQL seguente crea una chiave master e un certificato. Quindi esegue il backup del certificato e consente di proteggere il file con una chiave privata. Aggiornare lo script con password complesse. Connettersi all'istanza di SQL Server primaria ed eseguire il Transact-SQL seguente per creare il certificato:
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 Lo script di Transact-SQL seguente crea una chiave master e un certificato dal backup creato nella replica primaria di SQL Server. Inoltre, il comando autorizza l'utente ad accedere al certificato. Aggiornare lo script con password complesse. La password di decrittografia è la stessa password utilizzata per creare il file .pvk in un passaggio precedente. Eseguire lo script seguente in tutti i server secondari per creare il certificato.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Creare endpoint di mirroring del database in tutte le repliche
 
-Gli endpoint del mirroring del database utilizzano il protocollo TCP (Transmission Control Protocol) per inviare e ricevere messaggi tra istanze del server che fanno parte di sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco. 
+Gli endpoint del mirroring del database utilizzano il protocollo TCP (Transmission Control Protocol) per inviare e ricevere messaggi tra istanze del server che fanno parte di sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco. Il listener TCP richiede un indirizzo IP del listener. L'indirizzo IP del listener deve essere un indirizzo IPv4. È inoltre possibile utilizzare `0.0.0.0`. 
 
 Lo script di Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Avvia l'endpoint e assegna l'autorizzazione di connessione all'utente creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`.
 
->[!NOTE]
->Per questa versione, non usare un indirizzo IP diverso per l'IP del listener. Questo problema è in fase di correzione, tuttavia, l'unico valore accettabile per il momento è "0.0.0.0".
+Aggiornare il codice Transact-SQL per l'ambiente in tutte le istanze di SQL Server: 
 
-Aggiornare lo script di Transact-SQL seguente per il proprio ambiente in tutte le istanze di SQL Server: 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->La porta TCP sul firewall deve essere aperta per la porta del listener.
+>[!NOTE]
+>Se si utilizza SQL Server Express Edition in un nodo per ospitare una replica di sola configurazione, l'unico valore valido per il ruolo è `WITNESS`. Eseguire lo script seguente in SQL Server Express Edition.
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->In SQL Server 2017, l'unico metodo di autenticazione supportato per l'endpoint di mirroring del database è `CERTIFICATE`. L'opzione `WINDOWS` sarà abilitata in una versione futura.
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-Per informazioni complete, vedere [Endpoint del mirroring del database (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

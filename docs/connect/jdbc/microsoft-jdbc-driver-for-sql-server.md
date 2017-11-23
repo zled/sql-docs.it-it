@@ -3,24 +3,25 @@ title: Microsoft JDBC Driver per SQL Server | Documenti Microsoft
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 231aeea7b69585b01df5064b62707a85ec016ff7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 996f6ff5a36c0aa96d857a548e272a756acf2212
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver per SQL Server
 
@@ -31,9 +32,9 @@ Nel suo costante impegno per l'interoperabilità, Microsoft fornisce un driver J
 Microsoft JDBC Driver per SQL Server è stato testato per i principali server applicazioni, ad esempio IBM WebSphere e SAP NetWeaver.
   
 ## <a name="getting-started"></a>Introduzione  
-* [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Java](step-1-configure-development-environment-for-java-development.md)  
-* [Passaggio 2: Creare un database SQL per lo sviluppo Java](step-2-create-a-sql-database-for-java-development.md)  
-* [Passaggio 3: Modello di connessione a SQL tramite Java prova](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di Java](step-1-configure-development-environment-for-java-development.md)  
+* [Passaggio 2: Creare un database SQL per lo sviluppo di Java](step-2-create-a-sql-database-for-java-development.md)  
+* [Passaggio 3: Modello di verifica per la connessione a SQL tramite Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Documentazione  
 * [Introduzione](getting-started-with-the-jdbc-driver.md)
@@ -46,7 +47,7 @@ Microsoft JDBC Driver per SQL Server è stato testato per i principali server ap
 * [Conformità e legali](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>Community
-[Ricerca di informazioni sul Driver JDBC aggiuntive](finding-additional-jdbc-driver-information.md)  
+[Altre informazioni sul driver JDBC](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>Scarica
 [Scaricare Microsoft JDBC Driver per SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -dispone di informazioni aggiuntive sui progetti Maven e altro ancora.
@@ -58,4 +59,3 @@ Microsoft JDBC Driver per SQL Server è stato testato per i principali server ap
 * [Introduzione al linguaggio in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
 * [Introduzione al linguaggio in Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
 * [Introduzione al linguaggio in SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
-

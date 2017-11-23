@@ -3,14 +3,15 @@ title: Linguaggio (XML DML) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - modifying data [SQL Server], XML DML
 - XML [SQL Server], DML
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - XQuery, XML DML
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: acbedcd828fcacb6b690f0380d83d7dd779f1b2e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18fb5825297754c59f2824b6f05150ddaed7bb9c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Linguaggio XML di manipolazione dei dati (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il linguaggio XML DML è un'estensione del linguaggio XQuery. Come definito dal consorzio W3C, il linguaggio XQuery non include la parte relativa alla manipolazione dei dati (DML). Il linguaggio XML DML illustrato in questo argomento e il linguaggio XQuery, fornisce un completamente funzionale linguaggio di query e la modifica dei dati che è possibile utilizzare con il **xml** tipo di dati.  
   
@@ -77,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [metodi con tipo di dati xml](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

@@ -1,8 +1,7 @@
 ---
 title: Synchronize (metodo) (RDS) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Synchronize method [ADO]
+helpviewer_keywords: Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c69217abc435fb4b3438975db560b9ce5836ee8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4f6b559b8ad716be403a00d9cf171094286c222f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize-method-rds"></a>Synchronize (metodo) (RDS)
 Sincronizzare il Recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo in ADO 2.5 e versioni successiva.  
@@ -73,6 +70,5 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

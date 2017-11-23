@@ -8,22 +8,20 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a48b3f89da00437cec8781e1ea35b6ea87f0c300
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dax-properties"></a>Proprietà DAX
    La sezione DAX del file msmdsrv.ini contiene impostazioni che consentono di controllare particolari comportamenti delle query in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ad esempio il limite superiore del numero di righe restituite in un set di risultati di query DAX. 
@@ -56,4 +54,3 @@ MaxIntermediateRowsetSize | 1000000 | Numero massimo di righe restituito in una 
 PredicateCheckSpoolCardinalityThreshold| 5000 | Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico Microsoft.
 
 Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md). 
-

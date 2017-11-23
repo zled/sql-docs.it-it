@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f69fa396c4040c901f0609e42a1d2fcc9ff8d46
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45e92a822f8a8acc6abbab756a44668bb4c966c6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Raccolta di visualizzazioni, esempio di proprietà CommandText (VB)
 Il codice seguente viene illustrato come utilizzare il [comando](../../../ado/reference/adox-api/command-property-adox.md) proprietà per aggiornare il testo di una vista.  
@@ -89,5 +86,4 @@ End Sub
  [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Proprietà dei comandi (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Oggetto visualizzazione (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Raccolta di visualizzazioni (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

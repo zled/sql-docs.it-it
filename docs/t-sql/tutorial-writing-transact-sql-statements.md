@@ -2,11 +2,13 @@
 title: 'Esercitazione: Scrittura di istruzioni Transact-SQL | Documenti Microsoft'
 ms.custom: 
 ms.date: 08/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 509334a16689e2aa8fda308fcb7ca20b24badb93
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Esercitazione: Scrittura di istruzioni Transact-SQL
-L'esercitazione per la scrittura di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] è destinata agli utenti che non hanno familiarità con la scrittura delle istruzioni SQL e consentirà ai nuovi utenti di esaminare alcune istruzioni di base per creare tabelle e inserire i dati. Ai fini di questa esercitazione viene utilizzato [!INCLUDE[tsql](../includes/tsql-md.md)], l'implementazione [!INCLUDE[msCoName](../includes/msconame-md.md)] dello standard SQL. Questa esercitazione costituisce una breve introduzione al linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)] e non rappresenta un'alternativa a un corso su [!INCLUDE[tsql](../includes/tsql-md.md)] . Le istruzioni incluse in questa esercitazione sono intenzionalmente semplici e non sono progettate per illustrare la complessità di un tipico database di produzione.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Per la scrittura [!INCLUDE[tsql](../includes/tsql-md.md)] esercitazione di istruzioni. è destinata agli utenti che non hanno familiarità con la scrittura delle istruzioni SQL e consentirà ai nuovi utenti di esaminare alcune istruzioni di base per creare tabelle e inserire i dati. Ai fini di questa esercitazione viene utilizzato [!INCLUDE[tsql](../includes/tsql-md.md)], l'implementazione [!INCLUDE[msCoName](../includes/msconame-md.md)] dello standard SQL. Questa esercitazione costituisce una breve introduzione al linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)] e non rappresenta un'alternativa a un corso su [!INCLUDE[tsql](../includes/tsql-md.md)] . Le istruzioni incluse in questa esercitazione sono intenzionalmente semplici e non sono progettate per illustrare la complessità di un tipico database di produzione.  
   
 >**NOTA:** ai principianti è consigliabile usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] invece di scrivere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
@@ -62,5 +63,4 @@ Per completare questa esercitazione non è necessario conoscere il linguaggio SQ
   
   
   
-
 

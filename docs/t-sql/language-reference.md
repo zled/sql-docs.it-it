@@ -3,32 +3,32 @@ title: Riferimento a Transact-SQL (motore di Database) | Documenti Microsoft
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sql13.tsqlref.f1
 - devlang-tsql
-helpviewer_keywords:
-- Transact-SQL
+helpviewer_keywords: Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: db6310309c694a856727672cd5d1e5ad80ae6b49
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfc7cd52aeae6978dcd21d84bd6fd7ac99de1c21
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transact-sql-reference-database-engine"></a>Guida di riferimento a Transact-SQL (Motore di database)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 In questo argomento fornisce le nozioni di base su come trovare e utilizzare gli argomenti di riferimento di Transact-SQL (T-SQL) di Microsoft. T-SQL è fondamentale per l'utilizzo di servizi e prodotti di Microsoft SQL. Tutti gli strumenti e applicazioni che comunicano con un database SQL è possibile farlo mediante l'invio di comandi T-SQL.  
 
@@ -96,4 +96,3 @@ Ora che comprendere come trovare gli argomenti di riferimento di T-SQL, si è pr
 
   
   
-
