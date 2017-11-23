@@ -3,34 +3,33 @@ title: CONCAT_WS (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- CONCAT_WS function
+dev_langs: TSQL
+helpviewer_keywords: CONCAT_WS function
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b73433578de0f3f0f0311778e10569a26b84ce0a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 377db445118e55f1bdeec220f1e6701e9f89706c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Consente di concatenare un numero variabile di argomenti con un delimitatore specificato nell'argomento 1. (`CONCAT_WS` indica *concatenate con separatore*.)
 
@@ -130,5 +129,4 @@ FROM sys.databases;
 ## <a name="see-also"></a>Vedere anche
 [Funzioni stringa (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)      
-
 

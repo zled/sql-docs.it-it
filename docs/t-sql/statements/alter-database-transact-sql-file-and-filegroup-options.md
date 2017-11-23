@@ -3,17 +3,18 @@ title: ALTER DATABASE opzioni File e Filegroup (Transact-SQL) | Documenti Micros
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
 - ADD_FILE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting files
 - removing files
@@ -41,20 +42,19 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 0672b00cbb7064bdb889908585b4333865ac75c9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fdd1f2aaab4e4aeeced6eb069255adba5b333abf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>File e Filegroup opzioni ALTER DATABASE (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica i file e i filegroup associati al database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente inoltre di aggiungere file e filegroup a un database, di rimuoverli da esso e di modificare gli attributi di un database o i relativi file e filegroup. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
   
@@ -200,11 +200,11 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  Le proprietà SIZE e FILEGROWTH non si applicano a un filegroup FILESTREAM.  
   
  **'** *memory_optimized_data_path* **'**  
- Per un filegroup con ottimizzazione per la memoria, FILENAME fa riferimento a un percorso in cui verranno archiviati dati con ottimizzazione per la memoria. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso C:\MyFiles\MyData, C:\MyFiles deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella MyData non deve essere presente.  
+ Per un filegroup ottimizzato per la memoria, FILENAME fa riferimento a un percorso in cui verranno archiviati dati ottimizzati per la memoria. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso C:\MyFiles\MyData, C:\MyFiles deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella MyData non deve essere presente.  
   
  Il filegroup e il file (`<filespec>`) devono essere creati nella stessa istruzione.  
   
- Le proprietà SIZE, MAXSIZE e FILEGROWTH non si applicano a un filegroup con ottimizzazione per la memoria.  
+ Le proprietà SIZE, MAXSIZE e FILEGROWTH non si applicano a un filegroup ottimizzato per la memoria.  
   
  DIMENSIONI *dimensioni*  
  Specifica le dimensioni del file. SIZE non si applica a filegroup FILESTREAM.  
@@ -663,4 +663,3 @@ GO
  [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
   
-

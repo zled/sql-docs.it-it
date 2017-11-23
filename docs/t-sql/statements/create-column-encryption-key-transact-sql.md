@@ -1,13 +1,14 @@
 ---
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,28 +22,26 @@ f1_keywords:
 - SQL13.SWB.COLUMNENCRYPTIONKEY.GENERAL.F1
 - COLUMN_ENCRYPTION_KEY_TSQL
 - CREATE COLUMN ENCRYPTION
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Always Encrypted, create column encryption key
 - column encryption key, create
 - column encryption key
 - CREATE COLUMN ENCRYPTION KEY statement
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 921b1901cac16a2d9a3788785ef1d6ab82f41d30
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6663d8c00c5f24f3f104643d78698c05b4df636a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Crea una chiave di crittografia di colonna con il set iniziale di valori, crittografati con chiavi master della colonna specificata. Si tratta di un'operazione di metadati. Una CEK può avere fino a due valori che consente una rotazione della chiave master della colonna. È necessario creare una CEK prima di qualsiasi colonna nel database può essere crittografato usando il [Always Encrypted &#40; motore di Database &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) funzionalità. CEK può inoltre essere creata utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di creare una CEK, è necessario definire una CMK con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) istruzione.  
   
@@ -142,4 +141,3 @@ GO
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
-

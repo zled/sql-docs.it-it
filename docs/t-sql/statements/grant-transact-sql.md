@@ -3,17 +3,18 @@ title: GRANT (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
 - GRANT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - granting permissions [SQL Server], GRANT statement
 - schema-level securables [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb9bf548f042a4a6f41322fb789a2cd7e5b6bec9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concede a un'entità autorizzazioni per un'entità a protezione diretta.  Il concetto generale consiste nel concedere \<un'autorizzazione > ON \<un oggetto > TO \<alcuni utenti, account di accesso o gruppo >. Per una discussione generale sulle autorizzazioni, vedere [autorizzazioni &#40; motore di Database &#41;](../../relational-databases/security/permissions-database-engine.md).  
   
@@ -210,4 +210,3 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
  [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   
-

@@ -3,17 +3,18 @@ title: USER_NAME (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USER_NAME
 - USER_NAME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - usernames [SQL Server]
 - IDs [SQL Server], databases
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: it-it
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce un nome di un utente del database corrispondente al numero di identificazione specificato.  
   
@@ -50,13 +50,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>Argomenti  
  *id*  
- Numero di identificazione associato a un utente del database. *ID*è **int**. È necessario utilizzare le parentesi.  
+ Numero di identificazione associato a un utente del database. *ID* è **int**. È necessario utilizzare le parentesi.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(256)**  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando *id* viene omesso, viene utilizzato l'utente corrente nel contesto corrente. Se il parametro contiene la parola che null, verrà restituito NULL. Quando USER_NAME viene chiamato senza specificare un *id* dopo un'istruzione EXECUTE come istruzione, viene restituito il nome dell'utente rappresentato. Se un'entità di Windows accede al database in base all'appartenenza a un gruppo, USER_NAME restituisce il nome dell'entità di Windows anziché il gruppo.  
+ Quando *id* viene omesso, viene utilizzato l'utente corrente nel contesto corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL. Quando USER_NAME viene chiamato senza specificare un *id* dopo un'istruzione EXECUTE come istruzione, viene restituito il nome dell'utente rappresentato. Se un'entità di Windows accede al database in base all'appartenenza a un gruppo, USER_NAME restituisce il nome dell'entità di Windows anziché il gruppo.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -168,5 +168,4 @@ User7
  [SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

@@ -3,10 +3,12 @@ title: CREATE INDEX (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - INDEX
 - INDEX_TSQL
 - CREATE_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - PRIMARY XML INDEX statement
@@ -53,20 +54,19 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "223"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ce92f7f55f82a7245818cbe669da76900f76be89
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Crea un indice relazionale in una tabella o vista. Acronimo di un indice rowstore perché è un indice btree non cluster o non cluster. È possibile creare un indice rowstore prima dell'immissione dati della tabella. Utilizzare un indice rowstore per migliorare le prestazioni delle query, in particolare quando le query selezionare colonne specifiche o richiedono valori da ordinare in un ordine particolare.  
   
@@ -99,7 +99,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
   
  **È necessario creare un tipo di indice diverso?**  
   
--   [CREATE XML INDEX & #40; Transact-SQL & #41;](../../t-sql/statements/create-xml-index-transact-sql.md)  
+-   [CREATE XML INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)  
   
 -   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -246,7 +246,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  Fino a 32 colonne possono essere combinate in una chiave di indice composto. Tutte le colonne di una chiave di indice composto devono appartenere alla stessa tabella o vista. La dimensione massima consentita dei valori combinati dell'indice è 900 byte per un indice cluster o 1700 per un indice non cluster. I limiti sono 16 colonne e i 900 byte per le versioni precedenti [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
- Le colonne dei tipi di dati LOB (large object) **ntext**, **testo**, **varchar (max)**, **nvarchar (max)**, ** varbinary (max)**, **xml**, o **immagine** non possono essere specificate come colonne chiave per un indice. Inoltre, è possibile includere una definizione di vista **ntext**, **testo**, o **immagine** colonne, anche se non viene fatto riferimento nell'istruzione CREATE INDEX.  
+ Le colonne dei tipi di dati LOB (large object) **ntext**, **testo**, **varchar (max)**, **nvarchar (max)**,  **varbinary (max)**, **xml**, o **immagine** non possono essere specificate come colonne chiave per un indice. Inoltre, è possibile includere una definizione di vista **ntext**, **testo**, o **immagine** colonne, anche se non viene fatto riferimento nell'istruzione CREATE INDEX.  
   
  È possibile creare indici su colonne di tipo CLR definito dall'utente se il tipo supporta l'ordinamento binario. È inoltre possibile creare indici su colonne calcolate definite come chiamate di metodo da una colonna con tipo definito dall'utente, a condizione che i metodi siano contrassegnati come deterministici e non eseguano operazioni di accesso ai dati. Per ulteriori informazioni sull'indicizzazione di colonne di tipo definito dall'utente CLR, vedere [tipi definiti dall'utente CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
@@ -262,7 +262,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  Come colonne incluse è possibile utilizzare colonne calcolate che sono deterministiche, sia precise che imprecise. Le colonne calcolate derivate da **immagine**, **ntext**, **testo**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e **xml** tipi di dati possono essere inclusi in colonne non chiave, purché i tipi di dati della colonna calcolata sia consentito come colonna inclusa. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
- Per informazioni sulla creazione di un indice XML, vedere [CREATE XML INDEX & #40; Transact-SQL & #41; ](../../t-sql/statements/create-xml-index-transact-sql.md).  
+ Per informazioni sulla creazione di un indice XML, vedere [CREATE XML INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-xml-index-transact-sql.md).  
   
  DOVE \<filter_predicate > consente di creare un indice filtrato specificando le righe da includere nell'indice. L'indice filtrato deve essere un indice non cluster in una tabella. Crea statistiche filtrate per le righe di dati dell'indice filtrato.  
   
@@ -358,7 +358,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH PAD_INDEX equivale a WITH PAD_INDEX = ON.  
   
- Fattore di riempimento ** = ** *fattore di riempimento*  
+ Fattore di riempimento  **=**  *fattore di riempimento*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica una percentuale che indica il livello di riempimento del livello foglia di ogni pagina di indice applicato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o la ricompilazione dell'indice. *fattore di riempimento* deve essere un valore intero compreso tra 1 e 100. Se *fillfactor* è 100, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono creati indici con pagine foglia riempite fino alla capacità.  
@@ -543,7 +543,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  Per ulteriori informazioni sulla compressione, vedere [la compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
- PARTIZIONI **(** { \<partition_number_expression > | \<intervallo >} [ **,**... * n * ] **)** **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ PARTIZIONI **(** { \<partition_number_expression > | \<intervallo >} [ **,**...  *n*  ] **)** **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica le partizioni alle quali si applica l'impostazione DATA_COMPRESSION. Se l'indice non è partizionato, l'argomento ON PARTITIONS genererà un errore. Se la clausola ON PARTITIONS non viene fornita, l'opzione DATA_COMPRESSION si applica a tutte le partizioni di un indice partizionato.  
   
@@ -639,10 +639,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Per ulteriori informazioni sugli indici filtrati, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 ## <a name="spatial-indexes"></a>Indici spaziali  
- Per informazioni sugli indici spaziali, vedere [CREATE SPATIAL INDEX & #40; Transact-SQL & #41; ](../../t-sql/statements/create-spatial-index-transact-sql.md) e [panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
+ Per informazioni sugli indici spaziali, vedere [CREATE SPATIAL INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-spatial-index-transact-sql.md) e [panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## <a name="xml-indexes"></a>Indici XML  
- Per informazioni sugli indici XML, vedere [CREATE XML INDEX & #40; Transact-SQL & #41; ](../../t-sql/statements/create-xml-index-transact-sql.md) e [XML indici & #40; SQL Server & #41; ](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Per informazioni sugli indici XML, vedere [CREATE XML INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-xml-index-transact-sql.md) e [XML indici &#40; SQL Server &#41; ](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="index-key-size"></a>Dimensione della chiave di indice  
  La dimensione massima per una chiave di indice è 900 byte per un indice cluster e 1700 byte per un indice non cluster. (Prima [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] il limite era sempre 900 byte.) Gli indici sui **varchar** le colonne che superano il limite di byte possono essere create se i dati esistenti nelle colonne non superano il limite al momento della creazione dell'indice; tuttavia, successive azioni di inserimento o aggiornamento nelle colonne che causano il dimensione totale sia maggiore del limite avrà esito negativo. La chiave di indice di un indice cluster non può contenere colonne di tipo **varchar** con dati esistenti nell'unità di allocazione ROW_OVERFLOW_DATA. Se viene creato un indice cluster in una colonna **varchar** e i dati esistenti si trovano nell'unità di allocazione IN_ROW_DATA, le azioni di inserimento o aggiornamento successive eseguite nella colonna che comporterebbero lo spostamento dei dati all'esterno delle righe avranno esito negativo.  
@@ -688,13 +688,13 @@ INSERT INTO t1 VALUES (1, 0);
  È possibile aggiungere colonne non chiave, o incluse, al livello foglia di un indice non cluster per migliorare le prestazioni di esecuzione delle query tramite la copertura della query. Questo significa che tutte le colonne a cui la query fa riferimento sono incluse nell'indice come colonne chiave o non chiave. In questo modo, per individuare tutte le informazioni necessarie, in Query Optimizer verrà eseguita un'analisi dell'indice, senza necessità di accedere ai dati della tabella o dell'indice cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
 ## <a name="specifying-index-options"></a>Impostazione di opzioni per gli indici  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte nuove opzioni per gli indici ed è stata modificata la modalità di impostazione di tali opzioni. Sintassi compatibile con le versioni precedenti, WITH *option_name* equivale a WITH **(** \<option_name > ** = ** ON **)**. Quando si impostano opzioni per gli indici, è necessario rispettare le regole seguenti: 
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte nuove opzioni per gli indici ed è stata modificata la modalità di impostazione di tali opzioni. Sintassi compatibile con le versioni precedenti, WITH *option_name* equivale a WITH **(** \<option_name >  **=**  ON **)**. Quando si impostano opzioni per gli indici, è necessario rispettare le regole seguenti: 
   
--   Nuove opzioni di indice possono essere specificate solo utilizzando WITH **(***option_name* ** = ** ON | OFF**)**.  
+-   Nuove opzioni di indice possono essere specificate solo utilizzando WITH **(***option_name*  **=**  ON | OFF**)**.  
   
--   Non è possibile specificare opzioni utilizzando in una stessa istruzione sia la sintassi compatibile con le versioni precedenti, sia la nuova sintassi. Ad esempio, specificando WITH **(**DROP_EXISTING**,** ONLINE ** = ** ON**)** fa sì che l'istruzione avrà esito negativo.  
+-   Non è possibile specificare opzioni utilizzando in una stessa istruzione sia la sintassi compatibile con le versioni precedenti, sia la nuova sintassi. Ad esempio, specificando WITH **(**DROP_EXISTING**,** ONLINE  **=**  ON**)** fa sì che l'istruzione avrà esito negativo.  
   
--   Quando si crea un indice XML, è necessario specificare le opzioni utilizzando WITH **(***option_name* ** = ** ON | OFF**)**.  
+-   Quando si crea un indice XML, è necessario specificare le opzioni utilizzando WITH **(***option_name*  **=**  ON | OFF**)**.  
   
 ## <a name="dropexisting-clause"></a>Clausola DROP_EXISTING  
  È possibile utilizzare la clausola DROP_EXISTING per ricompilare l'indice, aggiungere o eliminare colonne, modificare opzioni, modificare il tipo di ordinamento delle colonne oppure cambiare lo schema di partizione o il filegroup.  
@@ -760,7 +760,7 @@ INSERT INTO t1 VALUES (1, 0);
 -   È possibile creare un indice su una vista.  
   
 ## <a name="metadata"></a>Metadati  
- Per visualizzare informazioni sugli indici esistenti, è possibile eseguire una query di [Sys. Indexes & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista del catalogo.  
+ Per visualizzare informazioni sugli indici esistenti, è possibile eseguire una query di [Sys. Indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista del catalogo.  
   
 ## <a name="version-notes"></a>Note sulla versione  
  Database SQL non supporta le opzioni di filegroup e filestream.  
@@ -1044,35 +1044,21 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
-### <a name="p-add-a-column-to-an-index"></a>P. Aggiungere una colonna a un indice  
- Nell'esempio seguente viene creato l'indice IX_FF con due colonne della tabella dbo. Tabella FactFinance.  L'istruzione successiva viene illustrato come ricompilare l'indice con lo stesso nome e una colonna in più.  
-  
-```  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey ASC, DateKey ASC );  
-  
---Rebuild and add the OrganizationKey  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey, DateKey, OrganizationKey DESC)  
-WITH ( DROP_EXISTING = ON );  
-```  
-  
 ## <a name="see-also"></a>Vedere anche  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE SPATIAL INDEX & #40; Transact-SQL & #41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CREATE XML INDEX & #40; Transact-SQL & #41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [CREATE XML INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX & #40; Transact-SQL & #41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [Sys. xml_indexes & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [Sys. xml_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
-
 

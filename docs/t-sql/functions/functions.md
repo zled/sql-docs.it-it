@@ -3,14 +3,15 @@ title: Quali sono le funzioni di database SQL di Microsoft? | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - built-in functions [SQL Server]
 - function [SQL Server] See functions [SQL Server]
@@ -19,20 +20,19 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fa55a0b066db617ef0d6f2f0471ad6866cac2d73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 53a2a1be1099b2224b14f8c8d856b7ae07d42ac6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quali sono le funzioni di database SQL?
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 Informazioni sulle categorie di funzioni predefinite che è possibile utilizzare con i database SQL. È possibile utilizzare le funzioni predefinite o creare funzioni definite dall'utente.
   
@@ -67,7 +67,7 @@ Sono applicate a un singolo valore e restituiscono un singolo valore. È possibi
 |[Funzioni matematiche](mathematical-functions-transact-sql.md)|Eseguono calcoli in base ai valori di input specificati come parametri per le funzioni e restituiscono valori numerici.|  
 |[Funzioni dei metadati](metadata-functions-transact-sql.md)|Restituiscono informazioni sul database e sugli oggetti di database.|  
 |[Funzioni di sicurezza](security-functions-transact-sql.md)|Restituiscono informazioni sugli utenti e sui ruoli.|  
-|[Funzioni stringa](string-functions-transact-sql.md)|Eseguire operazioni su una stringa (**char** o **varchar**) valore di input e restituiscono un valore stringa o numerica.|  
+|[Funzioni per i valori stringa](string-functions-transact-sql.md)|Eseguire operazioni su una stringa (**char** o **varchar**) valore di input e restituiscono un valore stringa o numerica.|  
 |[Funzioni di sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Eseguono operazioni e restituiscono informazioni su valori, oggetti e impostazioni in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funzioni statistiche di sistema](system-statistical-functions-transact-sql.md)|Restituiscono informazioni statistiche sul sistema.|  
 |[Funzioni di immagine e testo](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Eseguono operazioni su valori di input o colonne di testo o immagini e restituiscono informazioni sul valore.|  
@@ -88,4 +88,3 @@ Sono applicate a un singolo valore e restituiscono un singolo valore. È possibi
  [Tramite le Stored procedure &#40; MDX &#41;](../../mdx/using-stored-procedures-mdx.md)  
   
   
-

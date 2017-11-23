@@ -2,32 +2,31 @@
 title: Concessione dell'accesso a un oggetto di Database | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- granting access to database objects
+applies_to: SQL Server 2016
+helpviewer_keywords: granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5ccbacfe52541c59e12b992220f40806cae46bca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cc5c15a44f16e4049974ff76095a389348707c7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lezione 2-4-la concessione dell'accesso a un oggetto di Database
-In qualità di amministratore, l'utente è autorizzato a eseguire l'istruzione SELECT dalla tabella **Products** e dalla vista **vw_Names** , nonché a eseguire la procedura **pr_Names** . All'utente Mary non sono tuttavia concesse tali autorizzazioni. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Come amministratore, è possibile eseguire l'istruzione SELECT dal **prodotti** tabella e **vw_Names** visualizzare ed eseguire il **pr_Names** procedura; Mary non sono tuttavia. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
   
 ### <a name="procedure-title"></a>Titolo della procedura  
   
@@ -55,4 +54,3 @@ In questo scenario, all'utente Mary è consentito solo l'accesso alla tabella **
   
   
   
-

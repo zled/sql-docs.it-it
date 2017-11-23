@@ -3,37 +3,37 @@ title: DENSE_RANK (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DENSE_RANK_TSQL
 - DENSE_RANK
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - row ranking [SQL Server]
 - DENSE_RANK function
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fd11621293a410a4ac5adb71b0c1fd62f07e03a8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4897ba682387179ad305657215afce9cde3e5a70
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il rango delle righe nella partizione di un set dei risultati, senza vuoti tra i ranghi. Il rango di una riga corrisponde a 1 più il numero di ranghi distinti che precedono la riga in questione.  
   
@@ -215,5 +215,4 @@ Tsoflias           1687000.0000  Pacific              1
  [Funzioni](../../t-sql/functions/functions.md)  
   
   
-
 

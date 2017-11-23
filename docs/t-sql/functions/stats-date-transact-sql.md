@@ -3,37 +3,37 @@ title: STATS_DATE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STATS_DATE_TSQL
 - STATS_DATE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - statistical information [SQL Server], last time updated
 - STATS_DATE function
 - query optimization statistics [SQL Server], last time updated
 - last time statistics updated
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e19ad2cc1a55f226e44197f5cc29d903952523e6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 44fc7524040db874abc5d596b641cba985dcf893
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce la data dell'aggiornamento più recente delle statistiche per una tabella o vista indicizzata.  
   
@@ -160,5 +160,4 @@ GO
  [Statistiche](../../relational-databases/statistics/statistics.md)  
   
   
-
 
