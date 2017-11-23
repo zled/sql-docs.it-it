@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>Oggetto di relazioni (TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Relazione** gli oggetti dispongono anche le proprietà seguenti.  
   
  isActive  
- Valore booleano che indica se la relazione è contrassegnata come attivo o inattivo. Una relazione attiva viene usata automaticamente per il filtro tra le tabelle. Una relazione inattiva può essere utilizzata in modo esplicito nei calcoli DAX con la funzione USERELATIONSHIP.  
+ Valore booleano che indica se la relazione è contrassegnata come attivo o inattivo. Una relazione attiva viene usata automaticamente per il filtro tra tabelle. Una relazione inattiva può essere usata in modo esplicito nei calcoli DAX con la funzione USERELATIONSHIP.  
   
  crossFilteringBehavior  
  Indica le influenze delle relazioni sulle operazioni di filtro dei dati. Vedere [bidirezionale tra i filtri per i modelli tabulari in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) per ulteriori informazioni. I valori validi sono i seguenti:  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 -   Creare un join (2) - quando si uniscono due colonne, DatePartOnly solo parte della data.  
   
  relyOnReferentialIntegrity  
- Inutilizzato; riservato per utilizzi futuri.  
+ Non usato; riservato per usi futuri.  
   
  securityFilteringBehavior  
  Enumerazione che indica influenze delle relazioni sull'applicazione di filtri dei dati durante la valutazione di espressioni di sicurezza a livello di riga. I valori validi sono i seguenti:  
@@ -179,4 +178,3 @@ ms.lasthandoff: 09/01/2017
  [Creare relazioni](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

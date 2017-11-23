@@ -3,10 +3,12 @@ title: "Conformità di interfaccia di base | Documenti Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07c5896fc179f8224914d0af8b4aa9defa94b9bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c535d6756ba2fa5eaa20d6dec9ca3ad7ae3c85b4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="core-interface-conformance"></a>Conformità di interfaccia di base
 Tutti i driver ODBC devono presentare almeno a livello di base della conformità di interfaccia. Poiché le funzionalità del livello di base sono quelle richieste dalle applicazioni interoperabili più generiche, con tali applicazioni possa utilizzare il driver. Le funzionalità del livello di base corrispondono anche con le funzionalità definite nella specifica ISO CLI e con le funzionalità necessari definite nella specifica Open CLI di gruppo. Un driver ODBC a livello di base conforme allo standard dell'interfaccia consente all'applicazione di eseguire tutte le operazioni seguenti:  
@@ -73,4 +74,3 @@ Tutti i driver ODBC devono presentare almeno a livello di base della conformità
   
     > [!IMPORTANT]  
     >  Il livello di conformità di interfaccia di base devono implementare le funzioni ODBC (driver).
-

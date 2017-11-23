@@ -6,17 +6,20 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: d3e551d02c6a4b62dbe30949c81d15fcb16e93ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 4b39b8dce2a9d6b940936a6d7072fc41c2b67e8f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurare le immagini contenitore di SQL Server 2017 in Docker
 
@@ -431,4 +434,3 @@ cat errorlog
 Introduzione a SQL Server 2017 le immagini contenitore Docker attraverso il [esercitazione introduttiva](quickstart-install-connect-docker.md).
 
 Vedere anche il [repository GitHub mssql docker](https://github.com/Microsoft/mssql-docker) per le risorse, commenti e suggerimenti e problemi noti.
-

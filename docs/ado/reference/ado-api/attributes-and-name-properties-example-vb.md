@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ba4c5cc9ac78e89f5984c96cdad06255e13cfb8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07787bcccbd64ab9c81a22e169fb3124606bc400
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Esempio di proprietà di nome (VB) e gli attributi
 In questo esempio viene visualizzato il valore della [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [campo](../../../ado/reference/ado-api/field-object.md), e [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetti. Usa il [nome](../../../ado/reference/ado-api/name-property-ado.md) proprietà per visualizzare il nome di ogni **campo** e **proprietà** oggetto.  
@@ -139,5 +136,4 @@ End Sub
  [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
  [Nome proprietà (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Oggetto di proprietà (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-
+ [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Schema section [ADO]
+helpviewer_keywords: Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbe340ed1778b125d6281ef62f53b721923939cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f691a4ba9632f40ceb4eb08c33a35135d9a0e7d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schema-section"></a>Sezione dello schema
 La sezione dello schema è necessaria. Come illustrato nell'esempio precedente, ADO scrive metadati dettagliati su ogni colonna per mantenere la semantica dei valori dei dati il più possibile per l'aggiornamento. Tuttavia, per caricare il file XML, ADO richiede solo i nomi delle colonne e il set di righe a cui appartengono. Di seguito è riportato un esempio di uno schema minimo:  
@@ -183,5 +180,4 @@ La sezione dello schema è necessaria. Come illustrato nell'esempio precedente, 
  Per ulteriori informazioni su OLE DB costrutti disponibili per l'utilizzo all'interno dello schema di un documento XML per OLE DB, vedere la definizione di "urn: schemas-microsoft-com: rowset" e Guida OLE DB Programmer.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

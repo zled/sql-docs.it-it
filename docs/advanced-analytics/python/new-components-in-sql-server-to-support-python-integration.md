@@ -1,24 +1,22 @@
 ---
 title: I componenti per l'integrazione di Python con SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Componenti di SQL Server per supportare l'integrazione di Python
 
@@ -104,7 +102,7 @@ Satellite SQL può essere monitorato mediante estesi (XEvent) eventi di windows.
   + Scrivere dati in tabelle: ad esempio, quando il salvataggio risultati in una tabella
   + Creare oggetti di database: ad esempio, se il salvataggio dello script esterno come parte di una nuova stored procedure.
 
-  Quando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] viene usato come contesto di calcolo per Python script eseguito da un client remoto e il file eseguibile Python deve recuperare dati da un'origine esterna, ODBC viene utilizzato per il writeback. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]verrà mappare l'identità dell'utente che invia il comando remoto per l'identità dell'utente nell'istanza corrente, quindi eseguire il comando ODBC utilizzando le credenziali dell'utente. La stringa di connessione necessaria per eseguire questa chiamata a ODBC viene ottenuta dal codice client.
+  Quando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] viene usato come contesto di calcolo per Python script eseguito da un client remoto e il file eseguibile Python deve recuperare dati da un'origine esterna, ODBC viene utilizzato per il writeback. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Associa l'identità dell'utente che invia il comando remoto per l'identità dell'utente nell'istanza corrente e viene eseguito il comando ODBC utilizzando le credenziali dell'utente. La stringa di connessione necessaria per eseguire questa chiamata a ODBC viene ottenuta dal codice client.
 
 ## <a name="interaction-of-components"></a>Interazione tra componenti
 
@@ -116,9 +114,9 @@ Quando si esegue Python "interni" [!INCLUDE[ssNoVersion_md](../../includes/ssnov
 
 Dopo lo script è stato incorporato in stored procedure, qualsiasi applicazione che è possibile effettuare una stored procedure chiamata può avviare l'esecuzione del codice Python.  Successivamente [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gestisce l'esecuzione del codice, come riepilogato nel diagramma seguente.
 
-![script in db python.](../../advanced-analytics/python/media/script-in-db-python.png)
+![script in db python.](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Una richiesta per il runtime di Python è indicata dal parametro  _@language= 'Python'_ passato alla stored procedure. SQL Server invia la richiesta per il servizio Launchpad.
+1. Una richiesta per il runtime di Python è indicata dal parametro `@language='Python'` passato alla stored procedure. SQL Server invia la richiesta per il servizio Launchpad.
 2. Il servizio Launchpad avvia l'utilità di avvio appropriata; In questo caso, PythonLauncher.
 3. PythonLauncher avvia il processo di Python35 esterno.
 4. BxlServer interagisce con il runtime di Python per gestire gli scambi di dati e archiviazione dei risultati di lavoro.
@@ -131,11 +129,11 @@ Dopo lo script è stato incorporato in stored procedure, qualsiasi applicazione 
 È possibile eseguire script Python da un computer remoto, ad esempio un computer portatile e sono eseguite nel contesto del computer SQl Server, se vengono soddisfatte queste condizioni:
 
 + Progettare in modo appropriato gli script
-+ Nel computer remoto sia installato le librerie di estendibilità che vengono utilizzate dai servizi di Machine Learning
++ Nel computer remoto sia installato le librerie di estendibilità che vengono utilizzate dai servizi di Machine Learning. Il [revoscalepy](what-is-revoscalepy.md) pacchetto è necessario utilizzare i contesti di calcolo remoto.
 
 Nel diagramma seguente viene riepilogato il flusso di lavoro globale quando gli script vengono inviati da un computer remoto.
 
-![remoto sqlcc da python](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
+![remoto sqlcc da python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Per le funzioni che sono supportate in **revoscalepy**, il runtime di Python chiama una funzione di collegamento, che a sua volta chiama BxlServer.
 2. BxlServer è incluso in servizi di Machine Learning (In-Database) e viene eseguito in un processo separato dal runtime di Python.
@@ -150,4 +148,3 @@ Nel diagramma seguente viene riepilogato il flusso di lavoro globale quando gli 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Panoramica dell'architettura per Python in SQL Server](architecture-overview-sql-server-python.md)
-

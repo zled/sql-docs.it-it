@@ -1,13 +1,14 @@
 ---
 title: CREARE una tabella (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +20,7 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,20 +47,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: "256"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -979,7 +978,7 @@ Gli indici di colonna e di tabella possono essere specificati come parte dell'is
   
  Indica che viene creato un indice HASH.  
   
- Gli indici hash sono supportati solo nelle tabelle con ottimizzazione per la memoria.  
+ Gli indici hash sono supportati solo nelle tabelle ottimizzate per la memoria.  
   
 ## <a name="remarks"></a>Osservazioni  
  Per informazioni sul numero di tabelle consentite, colonne, vincoli e indici, vedere [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
@@ -1020,7 +1019,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1029,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1068,7 @@ Database SQL di Azure supporta le tabelle temporanee globali sono inoltre archiv
 Le tabelle temporanee globali per il database SQL di Azure seguono la stessa sintassi e semantica utilizzata da SQL Server per le tabelle temporanee.  Analogamente, stored procedure temporanee globali sono limitate anche al livello di database nel database di SQL Azure. Tabelle temporanee locali (avviate con il nome di tabella #) sono supportate anche per Database SQL di Azure e seguano la stessa sintassi e semantica utilizzata da SQL Server.  Vedere la sezione precedente relativa [tabelle temporanee](#temporary-tables).  
 
 > [!IMPORTANT]
-> Questa funzionalità è disponibile in anteprima pubblica e disponibile per il Database SQL di Azure.
+> Questa funzionalità è disponibile per il Database SQL di Azure solo.
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Risoluzione dei problemi relativi a tabelle temporanee globali per il database SQL di Azure 
@@ -1660,6 +1659,5 @@ GO
  [sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

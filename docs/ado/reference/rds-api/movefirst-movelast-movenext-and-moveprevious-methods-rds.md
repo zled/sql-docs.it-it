@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - MoveFirst method [RDS]
 - MoveNext method [RDS]
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22ac6b2d67502e7563cee5338a19b311c71b68c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae28d49a51d2bd4dbf516a7cc96bbf20381ccdfe
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext e MovePrevious metodi (RDS)
 Sposta il primo, ultimo, successivo o precedente record in un oggetto specificato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -52,12 +50,11 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  È possibile utilizzare il **spostare** metodi con il **RDS. DataControl** oggetto per spostarsi tra i record dei dati nei controlli con associazione a dati in una pagina Web. Ad esempio, si supponga di visualizzare un **Recordset** in una griglia utilizzando l'associazione a un **RDS. DataControl** oggetto. È quindi possibile includere i pulsanti First, Last, Avanti e indietro che consente agli utenti per spostarsi al primo, ultimo, successivo, o record precedente visualizzato **Recordset**. Tale scopo, chiamare il **MoveFirst**, **MoveLast**, **MoveNext**, e **MovePrevious** metodi il **RDS. DataControl** oggetto nelle procedure onClick per i pulsanti First, Last, Avanti e indietro, rispettivamente. Il [esempio Address Book](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) viene illustrato come eseguire questa operazione.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-
 
 

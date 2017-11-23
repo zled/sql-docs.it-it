@@ -3,17 +3,18 @@ title: Istruzione ALTER INDEX (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Consente di modificare un indice di tabella o di vista esistente, di tipo relazionale o XML, tramite la disabilitazione, la ricompilazione o la riorganizzazione dell'indice oppure tramite l'impostazione di opzioni per l'indice.  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |RIORGANIZZA partizione = *numero_partizione*|Indice non partizionato, indice XML, indice spaziale o indice disabilitato|  
 |IGNORE_DUP_KEY = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice ColumnStore: **si applica a:** (a partire da SQL Server 2012) di SQL Server e Database SQL di Azure.|  
 |ONLINE = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice ColumnStore: **si applica a:** (a partire da SQL Server 2012) di SQL Server e Database SQL di Azure.|
-| PUÒ ESSERE RIPRISTINATO = ON  | Gli indici può essere ripristinati non è supportati con **tutti** (parola chiave). <br /><br /> **Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica) |   
+| PUÒ ESSERE RIPRISTINATO = ON  | Gli indici può essere ripristinati non è supportati con **tutti** (parola chiave). <br /><br /> **Si applica a**: a partire da SQL Database SQL Server 2017 e Azure |   
   
 > [!WARNING]
 >  Per ulteriori informazioni sulle operazioni sugli indici che è possibile eseguire online, vedere [linee guida per operazioni sugli indici Online](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -436,7 +436,7 @@ Fattore di riempimento = *fattore di riempimento*
 
 PUÒ ESSERE RIPRISTINATO  **=**  {ON | **OFF**}
 
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)  
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure   
 
  Specifica se un'operazione sull'indice online è ripristinabile.
 
@@ -446,7 +446,7 @@ PUÒ ESSERE RIPRISTINATO  **=**  {ON | **OFF**}
 
 MAX_DURATION  **=**  *ora* [**minuti**] utilizzato con **può essere RIPRISTINATO = ON** (richiede **ONLINE = ON**).
  
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)  
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure 
 
 Indica il tempo (valore intero specificato in minuti) che un ripristinabili online operazione di indice viene eseguita prima di essere stato sospeso. 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Si applica a**: a partire da SQL Server 2017 (funzionalità è in anteprima pubblica)
+**Si applica a**: a partire da SQL Server 2017  
 
 Ripresa di un'operazione sull'indice che è stata sospesa manualmente o a causa di un errore.
 
 MAX_DURATION utilizzato con **può essere RIPRISTINATO = ON**
 
  
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure
 
 Il tempo (valore intero specificato in minuti) viene eseguita l'operazione sull'indice online può essere ripristinato dopo viene ripresa. Dopo la scadenza, l'operazione può essere ripristinato è sospeso se è ancora in esecuzione.
 
 WAIT_AT_LOW_PRIORITY utilizzato con **può essere RIPRISTINATO = ON** e **ONLINE = ON**.  
   
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure 
   
  Ripresa di una ricompilazione dell'indice online dopo una pausa deve rimanere in attesa per le operazioni di blocco in questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione indice online rimarrà in attesa dei blocchi con priorità bassa, consentendo alle altre operazioni di continuare mentre è in attesa che l'operazione di compilazione indice online. L'omissione di **WAIT AT LOW PRIORITY** equivale all'opzione `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Per ulteriori informazioni, vedere [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 SOSPENDI
  
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure 
   
 Sospendere un'operazione di ricompilazione indice online può essere ripristinato.
 
 INTERRUZIONE
 
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)   
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure   
 
 Interrompere un'operazione di indice in esecuzione o sospesa che è stata dichiarata come ripristinabile. È necessario eseguire in modo esplicito un **ABORT** operazione di ricompilazione di comando per terminare un indice può essere ripristinato. Errore o la sospensione di un'operazione di indice può essere ripristinato non termina l'esecuzione. lascia invece l'operazione in uno stato di sospensione indefinito.
   
@@ -712,7 +712,7 @@ Interrompere un'operazione di indice in esecuzione o sospesa che è stata dichia
 
 ### <a name="resumable-index-operations"></a>Operazioni sugli indici può essere ripristinato
 
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure 
 
 RICOSTRUZIONE di un indice ONLINE viene specificato come ripristinabili utilizzando il può essere RIPRISTINATO = opzione. 
 -  L'opzione può essere RIPRISTINATO non è persistente nei metadati per un determinato indice e si applica solo alla durata di un'istruzione DDL corrente. Pertanto, il può essere RIPRISTINATO = ON clausola deve essere specificata in modo esplicito affinché funzioni.
@@ -786,7 +786,7 @@ La seguente funzionalità è disabilitata per operazioni di ricompilazione dell'
   
 -   Gli indici ColumnStore non sono disponibili prima di SQL Server 2012. 
 
--  Operazioni sugli indici può essere ripristinato sono disponibili a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica) |   
+-  Operazioni sugli indici può essere ripristinato sono disponibili a partire da SQL Server 2017 e Database SQL di Azure   
   
 ## <a name="basic-syntax-example"></a>Esempio di sintassi di base:   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Ricompilazione dell'indice può essere ripristinato online
 
-**Si applica a**: a partire da 2017 e Azure SQL Database di SQL Server (funzionalità è in anteprima pubblica)    
+**Si applica a**: a partire da SQL Database SQL Server 2017 e Azure   
 
  Negli esempi seguenti viene illustrato come utilizzare la ricostruzione dell'indice può essere ripristinato in linea. 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

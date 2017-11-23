@@ -3,10 +3,12 @@ title: Istruzioni SQL costruite in fase di esecuzione | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76c05e6d7148ac11e25783caca575bee034dd872
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Istruzioni SQL costruite in fase di esecuzione
 Applicazioni che eseguono analisi ad hoc comunemente compilare istruzioni SQL in fase di esecuzione. Ad esempio, un foglio di calcolo potrebbe consentire a un utente di selezionare le colonne da cui recuperare i dati:  
@@ -78,4 +79,3 @@ int main() {
  Le applicazioni che creare istruzioni SQL in fase di esecuzione possano offrono flessibilità per l'utente. Come si può notare nell'esempio precedente, che non supporta anche le operazioni comuni come **in** clausole, **ORDER BY** clausole o join, la costruzione di istruzioni SQL in fase di esecuzione è molto più complesso rispetto alle istruzioni a livello di codice. Inoltre, verifica di tali applicazioni è problematica, perché è possibile costruire un numero arbitrario di istruzioni SQL.  
   
  Uno svantaggio potenziale di creazione di istruzioni SQL in fase di esecuzione è che richiede più tempo per costruire un'istruzione di usare un'istruzione a livello di codice. Fortunatamente, raramente si tratta di un problema. Tali applicazioni tendono a essere elevato utilizzo di interfaccia utente e il tempo dedicato dall'applicazione di istruzioni SQL è generalmente di dimensioni ridotte rispetto all'ora in cui l'utente impiega immissione dei criteri.
-

@@ -3,24 +3,25 @@ title: Sviluppo di un Driver ODBC consapevolezza Pool di connessioni | Documenti
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 678d44bb439804246b84a7f8d60f59be45a6dce0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b7b550bd24788f30926aaee5ae42a8de79a59c9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Sviluppo di un Driver ODBC consapevolezza Pool di connessioni
 In questo argomento vengono illustrati i dettagli dello sviluppo di un driver ODBC che contiene informazioni su come il driver deve fornire i servizi del pool di connessione.  
@@ -49,7 +50,7 @@ In questo argomento vengono illustrati i dettagli dello sviluppo di un driver OD
 |Funzione|Aggiunta di funzionalità|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Supportano il nuovo tipo di handle: SQL_HANDLE_DBC_INFO_TOKEN (vedere la descrizione riportata sotto).|  
-|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Supporta il nuovo attributo di connessione di sola: SQL_ATTR_DBC_INFO_TOKEN per il ripristino della connessione (vedere la descrizione riportata sotto).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Supporta il nuovo attributo di connessione di sola: SQL_ATTR_DBC_INFO_TOKEN per il ripristino della connessione (vedere la descrizione riportata sotto).|  
   
 > [!NOTE]  
 >  Funzioni deprecate come **SQLError** e **SQLSetConnectOption** non sono supportate per il pool di connessioni compatibile con il driver.  
@@ -153,4 +154,3 @@ In questo argomento vengono illustrati i dettagli dello sviluppo di un driver OD
 ## <a name="see-also"></a>Vedere anche  
  [Il pool di connessioni compatibile con il driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Riferimento dell'interfaccia del provider di servizi (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
-

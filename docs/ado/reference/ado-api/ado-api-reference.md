@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, reference
+helpviewer_keywords: ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 76618b7bc7a8eef4e9eb77182c94598a62853ad3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-api-reference"></a>Riferimento all'API ADO
 In questa sezione della documentazione di ADO contiene argomenti per ogni ADO oggetto, insieme, proprietà, proprietà dinamiche, metodo, evento e dell'enumerazione. Inoltre, contiene un elenco di indici di ADO sintassi da utilizzare con Microsoft Visual C++ e di Windows Foundation Classes (WFC).  
@@ -34,7 +31,7 @@ In questa sezione della documentazione di ADO contiene argomenti per ogni ADO og
   
 -   [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)  
   
--   [Le interfacce e gli oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
+-   [Interfacce e oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
   
 -   [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)  
   
@@ -57,5 +54,4 @@ In questa sezione della documentazione di ADO contiene argomenti per ogni ADO og
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Appendice c: programmazione con ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)   
- [Cronologia ADO](../../../ado/guide/ado-history.md)
-
+ [Cronologia di ADO](../../../ado/guide/ado-history.md)

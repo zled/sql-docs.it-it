@@ -3,10 +3,12 @@ title: Conversione di dati da SQL a tipi di dati C | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0fef5a663ecbb3ec1f162dcf453691f04183d732
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8fae054b572cb0d61299781d67adc0038afa9a97
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversione di dati da SQL a tipi di dati C
 Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, il driver recupera i dati dall'origine dati. Se necessario, ne converte i dati dal tipo di dati in cui il driver è stato recuperato al tipo di dati specificato per il *TargetType* argomento **SQLBindCol** o **SQLGetData.** Infine, archivia i dati nella posizione a cui fa riferimento il *TargetValuePtr* argomento **SQLBindCol** o **SQLGetData** (e il campo SQL_DESC_DATA_PTR del ARD).  
@@ -57,25 +58,24 @@ Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [SQL carattere c:](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [Da SQL a C: carattere](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL per c: numerico](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [Da SQL a C: dati numerici](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL a Bit c:](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [Da SQL a C: bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL in formato binario c:](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [Da SQL a C: dati binari](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL per c: data](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [Da SQL a C: data](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL per c: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [Da SQL a C: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL a c: ora](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [Da SQL a C: ora](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL a c: Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [Da SQL a C: timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL a intervalli di anno-mese c:](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [Da SQL a C: intervalli anno-mese](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL a intervalli di giorno-Time c:](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [Da SQL a C: intervalli di tempo](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
--   [SQL agli esempi di conversione di dati C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)
-
+-   [Esempi di conversione di dati da SQL a C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

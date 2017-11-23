@@ -3,10 +3,12 @@ title: CREARE un indice SPAZIALE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - CREATE SPATIAL INDEX
 - CREATE_SPATIAL_INDEX_TSQL
 - SPATIAL_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], creating
 - index creation [SQL Server], spatial indexes
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 89
+caps.latest.revision: "89"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8b1b92761aa72e4d001ddfb2845c593c3d99f79a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8fc44c4e52900f6aea611575773e3c439f3dec7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un indice spaziale in una tabella e in una colonna specificate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'indice può essere creato prima dell'immissione dei dati nella tabella. È possibile creare indici per tabelle o viste di un altro database specificando un nome di database completo. Per gli indici spaziali è richiesto che nella tabella sia inclusa una chiave primaria cluster. Per informazioni sugli indici spaziali, vedere [panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -542,10 +542,10 @@ BOUNDING_BOX = ( {
 ## <a name="catalog-views-for-spatial-indexes"></a>Viste del catalogo per gli indici spaziali  
  Le viste del catalogo seguenti sono specifiche degli indici spaziali:  
   
- [Sys. spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
+ [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  Rappresenta le principali informazioni per gli indici spaziali.  
   
- [Sys. spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
+ [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Rappresenta le informazioni sullo schema a mosaico e i parametri di ognuno degli indici spaziali.  
   
 ## <a name="additional-remarks-about-creating-indexes"></a>Osservazioni aggiuntive sulla creazione degli indici  
@@ -654,4 +654,3 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   
-

@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - CopyRecord method [ADO], Visual Basic example
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8cd9135930d2cd4f3cfaf60bb6fcaf7548ba0a77
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f7e0bdba854ce12456b80a7f42b29f0b6889e9d2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo e SaveToFile metodi esempio (VB)
 In questo esempio viene illustrato come creare copie di un file utilizzando [flusso](../../../ado/reference/ado-api/stream-object-ado.md) o [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetti. Una copia viene eseguita in una cartella Web per la pubblicazione su Internet. Altre proprietà e metodi illustrati includono [tipo di flusso](../../../ado/reference/ado-api/type-property-ado-stream.md), **aprire**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
@@ -142,4 +139,3 @@ End Sub
  [Metodo SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)   
  [Oggetto di flusso (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Proprietà Type (flusso ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-

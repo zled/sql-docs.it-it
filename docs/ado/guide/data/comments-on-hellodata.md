@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- hellodata sample application [ADO]
+helpviewer_keywords: hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: adda58b0be044229cc4efc26c65b1af1c4ca3dc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="comments-on-hellodata"></a>Commenti sulle HelloData
 L'applicazione HelloData scorre le operazioni di base di una tipica applicazione ADO: recupero, esame, la modifica e aggiornamento dei dati. Quando si avvia l'applicazione, fare clic sul pulsante prima, **recupera dati**. Verrà eseguito il **GetData** subroutine.  
@@ -82,4 +79,3 @@ L'applicazione HelloData scorre le operazioni di base di una tipica applicazione
   
 ## <a name="formunload"></a>Form_Unload  
  Il **Form_Unload** subroutine è importante per diversi motivi. In primo luogo, poiché si tratta di un'applicazione di esempio, Form_Unload pulisce le modifiche apportate al database prima la chiusura dell'applicazione. In secondo luogo, il codice viene illustrato come un comando può essere eseguito direttamente da open **connessione** oggetto utilizzando il **Execute** metodo. Infine, viene riportato un esempio di esecuzione di una query non – restituiscono righe (una query di aggiornamento) rispetto all'origine dati.
-

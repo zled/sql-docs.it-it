@@ -25,17 +25,16 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
   La*selezione delle caratteristiche* è una parte importante del Machine Learning. La selezione delle caratteristiche si riferisce al processo di riduzione degli input per l'elaborazione e l'analisi o di individuazione degli input più significativi. Un termine correlato, *progettazione delle caratteristiche* (o *estrazione delle caratteristiche*), si riferisce al processo di estrazione di informazioni o caratteristiche utili dai dati esistenti.  
@@ -144,4 +143,3 @@ ms.lasthandoff: 09/01/2017
  [Personalizzare struttura e modelli di data mining](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

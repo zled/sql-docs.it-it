@@ -3,17 +3,18 @@ title: ntext, text e image (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ntext_TSQL
 - ntext
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - text data type, about text data type
 - text [SQL Server], data types
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - ntext data type, about ntext data type
 - image data type, about image data type
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 43acc9a88b483aa119e7b8b0c7d00039fd33e8a2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 76b78b01596b484bc35df1a1e468c5b2bb8ece63
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text e image (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Tipi di dati a lunghezza fissa e variabile per l'archiviazione di dati di tipo binario e carattere sia Unicode che non Unicode di dimensioni elevate. Nei dati Unicode viene utilizzato il set di caratteri UNICODE UCS-2.
   
@@ -69,5 +69,4 @@ Le seguenti funzioni e istruzioni possono essere utilizzate con **ntext**, **tes
 [Ad esempio &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
-
 

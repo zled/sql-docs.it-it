@@ -2,11 +2,13 @@
 title: CREARE una tabella (SQL grafico) | Documenti Microsoft
 ms.custom: 
 ms.date: 05/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,8 +23,7 @@ f1_keywords:
 - EDGE_TSQL
 - AS_EDGE
 - AS_EDGE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - graph
 - SQL graph
@@ -31,21 +32,19 @@ helpviewer_keywords:
 - EDGE
 - SQL graph, CREATE TABLE statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 92a586a3612934a4f66e5a616d969454afc87eac
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c32a8c4f683f20c4384089c1d2552614090f9b3d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="create-table-sql-graph"></a>CREARE una tabella (SQL grafico)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Crea una nuova tabella grafico SQL come un `NODE` o `EDGE` tabella. 
   
@@ -128,5 +127,4 @@ Gli esempi seguenti mostrano come creare `EDGE` tabelle
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (SQL grafico)](../../t-sql/statements/insert-sql-graph.md)]  
  [L'elaborazione con SQL Server 2017 grafico](../../relational-databases/graphs/sql-graph-overview.md)
-
 

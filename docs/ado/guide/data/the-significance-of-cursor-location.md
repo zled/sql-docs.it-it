@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>Il significato della posizione del cursore
 Ogni cursore utilizza risorse temporanee per la memorizzazione dei dati. Queste risorse possono essere memoria, un file di paging su disco, i file su disco temporaneo o un archivio temporaneo nel database. Il cursore viene chiamato un *sul lato client* cursore quando queste risorse si trovano nel computer client. Il cursore viene chiamato un *sul lato server* cursore quando queste risorse si trovano nel server.  
@@ -46,4 +44,3 @@ Ogni cursore utilizza risorse temporanee per la memorizzazione dei dati. Queste 
  Tuttavia, è importante sottolineare che un cursore sul lato server è, almeno temporaneamente: utilizzo delle risorse del server per ogni client attivo. È necessario pianificare di conseguenza per assicurarsi che l'hardware del server sia in grado di gestire tutti i cursori sul lato server richiesti dai client attivi. Inoltre un cursore sul lato server può essere lento, perché fornisce solo l'accesso a riga singola, non è disponibile alcun cursore batch.  
   
  I cursori sul lato server sono utili durante l'inserimento, aggiornamento o eliminazione di record. Con cursori sul lato server, è possibile disporre più istruzioni attive nella stessa connessione.
-

@@ -3,24 +3,25 @@ title: Riferimento all'interfaccia di Provider del servizio ODBC | Documenti Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3334e74f7b7c6cd76c21de6f47224db9ebec2ce3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a4521d90f3e7eda4167062bd8bc1299921b0e31d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Riferimento all'interfaccia di Provider del servizio ODBC
 In genere, ODBC definita un'interfaccia di programmazione di applicazioni (API). Le funzioni dell'API possono essere chiamate dalle applicazioni e che devono essere implementate all'interno di gestione Driver sia il driver.  
@@ -49,4 +50,3 @@ In genere, ODBC definita un'interfaccia di programmazione di applicazioni (API).
  [Sviluppo di un Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Sviluppo di un Driver ODBC consapevolezza Pool di connessioni](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Pool di connessioni di Gestione driver](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)
-

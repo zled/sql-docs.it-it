@@ -3,14 +3,15 @@ title: Predicati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - HAVING clause, predicates
 - FROM clause, predicates
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - predicates [full-text search]
 - expressions [SQL Server], predicates
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: df3ed2d88551928b239ff69ecdb86e2a3332f204
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff30f8b970c56b2ca8094aa5b3f0aea28458db5c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="predicates"></a>Predicati
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Espressione che restituisce TRUE, FALSE o UNKNOWN. I predicati vengono utilizzati nella condizione di ricerca di [in](../../t-sql/queries/where-transact-sql.md) clausole e [HAVING](../../t-sql/queries/select-having-transact-sql.md) clausole, le condizioni di join di [FROM](../../t-sql/queries/from-transact-sql.md) clausole e altri costrutti in cui è un valore booleano Obbligatorio.  
   
@@ -55,4 +55,3 @@ ms.lasthandoff: 09/01/2017
  [Condizione di ricerca &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   
-

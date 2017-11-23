@@ -3,24 +3,25 @@ title: Informazioni di ODBC a 64 bit | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 027c953dd10145318e764959a42911fb0b413d03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e19cb2defa4e2e0e17f94b32af8f94606759f2ab
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-64-bit-information"></a>Informazioni di ODBC a 64 bit
 A partire da Windows Server 2003, Microsoft sono supportati i sistemi operativi le librerie ODBC a 64 bit. Le intestazioni ODBC e librerie fornite con il SDK di MDAC 2.7 contengono le modifiche per consentire ai programmatori di scrivere facilmente il codice per nuove piattaforme a 64 bit. Assicurando che il codice vengono utilizzati i tipi ODBC definiti elencati di seguito, è possibile compilare il codice sorgente stesso sia per le piattaforme a 64 bit e a 32 bit basati sul **Win64** o **WIN32** macro.  
@@ -379,7 +380,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
- **Funzione SQLSetConnectAttr**  
+ **SQLSetConnectAttr**  
   
  Quando il *attributo* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit *valore*:  
   
@@ -421,7 +422,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DESC_ROWS_PROCESSED_PTR  
   
- **Funzione SQLSetStmtAttr**  
+ **SQLSetStmtAttr**  
   
  Quando il *attributo* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit **ValuePtr*:  
   
@@ -503,4 +504,3 @@ typedef SQLULEN BOOKMARK;
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a ODBC](../../odbc/reference/introduction-to-odbc.md)
-

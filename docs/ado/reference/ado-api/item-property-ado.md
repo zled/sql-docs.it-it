@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -45,20 +44,18 @@ f1_keywords:
 - Parameters::get_Item
 - Errors::Item
 - Procedures::get_Item
-helpviewer_keywords:
-- Item property [ADO]
+helpviewer_keywords: Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b82a73846dacf2607bdd86e3b4d75609d575ebe9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59779714027c0ff619293d01de851daec7bbe158
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="item-property-ado"></a>Proprietà dell'elemento (ADO)
 Indica un membro specifico di una raccolta, per nome o numero ordinale.  
@@ -73,7 +70,7 @@ Set object = collection.Item ( Index )
  Restituisce un riferimento all'oggetto.  
   
 ## <a name="parameters"></a>Parametri  
- *Indice*  
+ *Index*  
  Oggetto **Variant** espressione che restituisce il nome o il numero ordinale di un oggetto in una raccolta.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -90,15 +87,14 @@ collection (Index)
   
 ||||  
 |-|-|-|  
-|[Raccolta assi (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Raccolta di colonne (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Insieme CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Raccolta di dimensioni (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Raccolta di campi (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Raccolta di gruppi (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Raccolta di indici (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Raccolta di chiavi (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta di livelli (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Raccolta di membri (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Raccolta di posizioni (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Raccolta di procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Raccolta di tabelle (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Raccolta di utenti (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Raccolta di visualizzazioni (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
+|[Raccolta Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Raccolta di oggetti Column (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Raccolta CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
+|[Raccolta Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
+|[Raccolta di oggetti Group (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta Hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Raccolta di oggetti Index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Raccolta di oggetti Key (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta Levels (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Raccolta Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
+|[Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Raccolta Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
+|[Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Raccolta di oggetti Table (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Item (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
- [Esempio di proprietà Item (VC + +)](../../../ado/reference/ado-api/item-property-example-vc.md)   
-
+ [Esempio di proprietà Item (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

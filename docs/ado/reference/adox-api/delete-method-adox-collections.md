@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -30,20 +29,18 @@ f1_keywords:
 - Groups::raw_Delete
 - Tables::raw_Delete
 - Columns::Delete
-helpviewer_keywords:
-- delete method [ADOX]
+helpviewer_keywords: delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aae45d1d8f6bc5eb2ab6ebf429d48426cceacf20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72dd3f6d514b20bb28f9daee6fc16c5c7c346095
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-method-adox-collections"></a>Delete (metodo) (ADOX raccolte)
 Rimuove un oggetto da una raccolta.  
@@ -68,11 +65,10 @@ Collection.Delete Name
   
 ||||  
 |-|-|-|  
-|[Raccolta di colonne (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Raccolta di gruppi (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta di indici (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Raccolta di chiavi (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta di procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Raccolta di tabelle (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
-|[Raccolta di utenti (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Raccolta di visualizzazioni (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
+|[Raccolta di oggetti Column (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Raccolta di oggetti Group (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta di oggetti Index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Raccolta di oggetti Key (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Raccolta di oggetti Table (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
+|[Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure di esempio del metodo Delete (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Viste di esempio del metodo Delete (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
-
+ [Esempio di metodo Delete oggetti View (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

@@ -3,24 +3,25 @@ title: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo di ADO.
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ado-net
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ee138401f61663fbfc078f893ed542503d30be77
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d33660b662ea3e89d10d04266425261a6eb9f6e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di ADO.NET
 
@@ -44,4 +45,3 @@ Esempio di codice corrente Usa ADO.NET di .NET Framework, per Windows. .NET Core
 Collegamenti per il download di .NET Core, per un'ampia gamma di sistemi operativi, sono disponibili in:
 
 - ![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[per scaricare e installare .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
-

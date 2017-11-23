@@ -3,10 +3,12 @@ title: BEGIN CONVERSATION TIMER (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +22,7 @@ f1_keywords:
 - BEGIN_CONVERSATION_TIMER_TSQL
 - CONVERSATION_TSQL
 - BEGIN CONVERSATION
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - BEGIN CONVERSATION TIMER statement
 - DialogTimer message
@@ -32,20 +33,19 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3772f81727b60f5c7932671fa10f5ca6454047c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b70228860699b3fefe9a1b5adcfc0250ce5d34e1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Avvia un timer. Quando il timeout scade, [!INCLUDE[ssSB](../../includes/sssb-md.md)] inserisce un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` nella coda locale per la conversazione.  
   
@@ -96,4 +96,3 @@ TIMEOUT = 120 ;
  [RICEZIONE &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)  
   
   
-

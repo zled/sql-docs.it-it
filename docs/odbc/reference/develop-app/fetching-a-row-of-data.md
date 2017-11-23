@@ -3,10 +3,12 @@ title: Recupero di una riga di dati | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1136751fc7ec479cd3538814369cafed8ca45abf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-a-row-of-data"></a>Recupero di una riga di dati
 Per recuperare una riga di dati, un'applicazione chiama **SQLFetch**. **SQLFetch** può essere chiamato con qualsiasi tipo di cursore, ma solo sposta il cursore del set di righe in una direzione forward-only. **SQLFetch** sposta il cursore alla riga successiva e restituisce i dati per tutte le colonne che sono stati associati con chiamate a **SQLBindCol**. Quando il cursore raggiunge la fine del risultato è stato impostato, **SQLFetch** restituisce SQL_NO_DATA. Per esempi di chiamata **SQLFetch**, vedere [SQLBindCol utilizzando](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
@@ -41,4 +42,3 @@ Per recuperare una riga di dati, un'applicazione chiama **SQLFetch**. **SQLFetch
  Dati di tipo carattere devono essere con terminazione null dal driver prima che venga restituito all'applicazione, anche se è stato troncato. Il carattere di terminazione null non è inclusa la lunghezza di byte restituita ma richiede spazio nel buffer del binding. Si supponga, ad esempio, un'applicazione utilizza stringhe composte da dati di tipo carattere nel set di caratteri ASCII, un driver è 50 caratteri dei dati da restituire e buffer dell'applicazione è 25 byte. Nel buffer dell'applicazione, il driver restituisce i primi 24 caratteri seguiti da un carattere di terminazione null. Nel buffer di lunghezza/indicatore, viene restituito una lunghezza in byte pari a 50.  
   
  L'applicazione è possibile limitare il numero di righe nel set di risultati tramite l'impostazione dell'attributo di istruzione SQL_ATTR_MAX_ROWS prima di impostare l'esecuzione dell'istruzione che crea il risultato. La modalità di anteprima in un'applicazione utilizzata per formattare i report, ad esempio, è necessario solo il numero di dati sufficienti per visualizzare la prima pagina del report. Limitando le dimensioni del set di risultati, tale funzionalità viene eseguita più velocemente. Questo attributo dell'istruzione è progettato per ridurre il traffico di rete e potrebbe non essere supportato da tutti i driver.
-

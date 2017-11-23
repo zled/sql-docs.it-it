@@ -3,10 +3,12 @@ title: Valori letterali di intervallo | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literals"></a>Valori letterali di intervallo
 ODBC richiede che tutti i driver supportano la conversione del tipo di dati SQL_CHAR o SQL_VARCHAR a tutti i tipi di dati di intervallo C. Se l'origine dati sottostante non supporta i tipi di dati di intervallo, tuttavia, il driver deve conoscere il formato corretto del valore nel campo SQL_CHAR per supportare queste conversioni. Analogamente, ODBC richiede che deve disporre di qualsiasi tipo essere convertibile in SQL_CHAR o SQL_VARCHAR, pertanto è necessario sapere quale formato di un intervallo archiviato nel campo carattere un driver di ODBC C. In questa sezione viene descritta la sintassi di valori letterali di intervallo, che scrive il driver deve utilizzare per convalidare i campi SQL_CHAR durante la conversione da o verso tipi di dati di intervallo C.  
@@ -99,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{INTERVALLO '223.16' SECONDO}<br /><br /> {INTERVALLO '223' ANNO}|Poiché la precisione iniziale non è specificata, il valore predefinito 2, che è troppo piccolo per contenere il valore letterale specificato.|  
 |{INTERVALLO '22.1234567' SECONDO}|La precisione dei secondi non è specificata, pertanto il valore predefinito è 6. Il valore letterale presenta sette cifre dopo il separatore decimale.|  
 |{INTERVALLO ' 163-13. ' YEAR(3) AL MESE}<br /><br /> {INTERVALLO ' 163 DAY(3) A ORA 65'}<br /><br /> {INTERVALLO '163 62:39' DAY(3) AL MINUTO}<br /><br /> {INTERVALLO '163 12:125:59.163' DAY(3) A SECOND(3)}<br /><br /> {INTERVALLO '163:144' HOUR(3) AL MINUTO}<br /><br /> {INTERVALLO '163:567:234.163' HOUR(3) A SECOND(4)}<br /><br /> {INTERVALLO '163:591.163' MINUTE(3) A SECOND(5)}|Il campo finale non segue le regole del calendario gregoriano.|
-

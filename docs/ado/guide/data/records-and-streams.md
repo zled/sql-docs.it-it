@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cfe5f8e48eb88233949102e988f3a2296cf373b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11617fc364b3ce9f2c4f5b37623f4c74f968517
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-streams"></a>I record e flussi
 ADO fornisce attualmente il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto come il mezzo principale per l'accesso alle informazioni nelle origini dati, ad esempio database relazionali. Tuttavia, alcuni provider supportano il [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetti come alternativi o complementari oggetti con cui i dati dai provider possono essere modificati. Per informazioni specifiche sulla **Record** comportamento, vedere la documentazione del provider.  
@@ -70,11 +68,10 @@ ADO fornisce attualmente il [Recordset](../../../ado/reference/ado-api/recordset
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Persistenza e flussi](../../../ado/guide/data/streams-and-persistence.md)  
+-   [Flussi e persistenza](../../../ado/guide/data/streams-and-persistence.md)  
   
--   [Comando flussi](../../../ado/guide/data/command-streams.md)  
+-   [Flussi di comandi](../../../ado/guide/data/command-streams.md)  
   
--   [Recupero dei set di risultati in flussi](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
+-   [Recupero di set di risultati nei flussi](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
--   [Utilizzo di ADO per la pubblicazione su Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md)
-
+-   [Uso di ADO per Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md)

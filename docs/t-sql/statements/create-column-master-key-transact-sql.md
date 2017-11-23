@@ -1,13 +1,14 @@
 ---
 title: CREARE la chiave MASTER della colonna (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,28 +20,26 @@ f1_keywords:
 - COLUMN_MASTER_KEY_TSQL
 - SQL13.SWB.NEWCOLUMNMASTERKEY.GENERAL.F1
 - SQL13.SWB.COLUMNMASTERKEY.GENERAL.F1
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - column master key definition
 - column master key, create
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 30cf5c83de208992cb36692c0b4b7b07fabf5cb6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 871acb46898a9a62b25062f69d4e51bf28658f06
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Crea un oggetto di metadati chiave master della colonna in un database. Una voce di metadati chiave master della colonna che rappresenta una chiave, archiviati in un archivio di chiavi esterno, viene utilizzato per proteggere (crittografare) le chiavi di crittografia di colonna quando si utilizza il [Always Encrypted &#40; motore di Database &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) funzionalità. Consenti più chiavi master della colonna per la rotazione delle chiavi; modifica periodica della chiave per migliorare la sicurezza. È possibile creare una chiave master della colonna in un archivio chiavi e il relativo oggetto di metadati corrispondente nel database utilizzando Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Per informazioni dettagliate, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
@@ -220,4 +219,3 @@ WITH (
 * [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
 * [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
   
-

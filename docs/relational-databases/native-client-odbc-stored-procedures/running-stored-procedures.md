@@ -1,0 +1,81 @@
+---
+title: Esecuzione di Stored procedure | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: native-client-odbc-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- ODBC, stored procedures
+- stored procedures [ODBC], running
+- SQL Server Native Client ODBC driver, stored procedures
+- stored procedures [ODBC], executing
+ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
+caps.latest.revision: "36"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 6fe693f482620618e459483efa8eb85b55e0e544
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
+---
+# <a name="running-stored-procedures"></a>Esecuzione delle stored procedure
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+
+  Una stored procedure è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  
+-   Stored procedure:  
+  
+     Una o più istruzioni SQL precompilate in una sola stored procedure eseguibile.  
+  
+-   Stored procedure estese:  
+  
+     DLL C o C++ scritte nell'API ODS di SQL Server per le stored procedure estese. L'API ODS amplia le funzionalità delle stored procedure per includere il codice C o C++.  
+  
+ Durante l'esecuzione delle istruzioni, la chiamata a una stored procedure sull'origine dati, in alternativa all'esecuzione o alla preparazione diretta di un'istruzione nell'applicazione client, può offrire:  
+  
+-   Prestazioni più elevate  
+  
+     Le istruzioni SQL vengono analizzate e compilate durante la creazione delle stored procedure. Questo overhead viene quindi salvato durante l'esecuzione delle stored procedure.  
+  
+-   Overhead di rete ridotto  
+  
+     L'esecuzione di una stored procedure in alternativa all'invio di query complesse in rete può ridurre il traffico di rete. Se un'applicazione ODBC utilizza la sintassi ODBC {CALL} per eseguire una stored procedure, il driver ODBC esegue ulteriori ottimizzazioni che eliminano la necessità di convertire i dati dei parametri.  
+  
+-   Maggiore coerenza  
+  
+     Se le regole di un'organizzazione vengono implementate in una risorsa centrale, ad esempio una stored procedure, possono essere codificate, testate e sottoposte a debug una volta. I singoli programmatori possono quindi utilizzare le stored procedure testate anziché sviluppare implementazioni personalizzate.  
+  
+-   Maggiore precisione  
+  
+     Poiché le stored procedure vengono in genere sviluppate da programmatori esperti, sono più efficienti e contengono un numero di errori inferiore rispetto al codice sviluppato più volte da programmatori meno competenti.  
+  
+-   Maggior numero di funzionalità  
+  
+     Le stored procedure estese possono utilizzare le caratteristiche C e C++ non disponibili nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  
+     Per un esempio di come chiamare una stored procedure, vedere [codici restituiti di processo e i parametri di Output &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+  
+## <a name="in-this-section"></a>Argomenti della sezione  
+  
+-   [Chiamata di una stored procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
+  
+-   [Invio in batch di chiamate di stored procedure](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)  
+  
+-   [Elaborazione dei risultati delle stored procedure](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
+  
+## <a name="see-also"></a>Vedere anche  
+ [SQL Server Native Client &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Esecuzione della Stored procedure procedure &#40; ODBC &#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+  
+  

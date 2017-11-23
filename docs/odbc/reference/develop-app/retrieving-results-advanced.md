@@ -3,10 +3,12 @@ title: Il recupero dei risultati (avanzati) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], about result sets
 - bind offsets [ODBC]
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f669180407ed626ae9235bd666068b6889060b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 85ee85c9bb44f32d33cee622c60c677f22b0ba7c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-results-advanced"></a>Il recupero dei risultati (avanzati)
 Un'applicazione può specificare che un offset viene aggiunto per associare gli indirizzi di buffer di dati e l'indicatore di lunghezza corrispondente buffer indirizzi quando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, o **SQLSetPos** viene chiamato. I risultati di queste aggiunte determinano gli indirizzi usati in queste operazioni.  
@@ -38,11 +39,10 @@ Un'applicazione può specificare che un offset viene aggiunto per associare gli 
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Cursori a blocchi](../../../odbc/reference/develop-app/block-cursors.md)  
+-   [Cursori rettangolari](../../../odbc/reference/develop-app/block-cursors.md)  
   
 -   [Cursori scorrevoli](../../../odbc/reference/develop-app/scrollable-cursors.md)  
   
--   [La libreria di cursori ODBC](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
+-   [Libreria di cursori ODBC](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
   
--   [Più risultati](../../../odbc/reference/develop-app/multiple-results.md)
-
+-   [Risultati multipli](../../../odbc/reference/develop-app/multiple-results.md)

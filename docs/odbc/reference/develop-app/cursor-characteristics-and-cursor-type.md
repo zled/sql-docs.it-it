@@ -3,10 +3,12 @@ title: Caratteristiche del cursore e tipo di cursore | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Caratteristiche del cursore e tipo di cursore
 Un'applicazione può specificare le caratteristiche di un cursore anziché specificare il tipo di cursore (forward-only, statico, basati su keyset o dinamico). A tale scopo, l'applicazione seleziona scorrimento del cursore (impostando l'attributo di istruzione SQL_ATTR_CURSOR_SCROLLABLE) e sensibilità (impostando l'attributo di istruzione SQL_ATTR_CURSOR_SENSITIVITY) prima di aprire il cursore sull'istruzione handle. Il driver quindi sceglie il tipo di cursore che fornisce in modo più efficiente le caratteristiche che l'applicazione richiesta.  
@@ -54,4 +55,3 @@ Un'applicazione può specificare le caratteristiche di un cursore anziché speci
 |SQL_ATTR_CURSOR_TYPE per SQL_CURSOR_FORWARD_ONLY|SQL_ATTR_CURSOR_SCROLLABLE su SQL_NONSCROLLABLE.|  
 |SQL_ATTR_CURSOR_TYPE per SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE su SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED o SQL_SENSITIVE (criteri definito dal driver, se SQL_ATTR_CONCURRENCY non SQL_CONCUR_READ_ONLY).|  
 |SQL_ATTR_CURSOR_TYPE per SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE su SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY su SQL_INSENSITIVE (se SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED o SQL_SENSITIVE (se non SQL_ATTR_CONCURRENCY è SQL_CONCUR_READ_ONLY).|
-

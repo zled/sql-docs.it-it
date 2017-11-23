@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a688b9544642ecb9dc5cbca1d7c5e3af90a5ebd4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 868de22e20887c0d038cf65690649ae6a41530e1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-classes---introduction"></a>Classi AMO - introduzione
   Analysis Management Objects (AMO) è una libreria di classi progettata per gestire un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] da un'applicazione client. Le classi AMO verranno utilizzate per amministrare gli oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], ad esempio database, dimensioni, cubi, strutture e modelli di data mining, ruoli e autorizzazioni, eccezioni e così via.  
@@ -43,10 +41,10 @@ ms.lasthandoff: 09/01/2017
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Classi fondamentali AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Descrive le classi necessarie per utilizzare qualsiasi altro set di classi.|  
-|[Classi OLAP in AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Descrive le classi che consentono di gestire gli oggetti OLAP in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Classi di Data Mining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Descrive le classi che consentono di gestire gli oggetti di data mining in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Classi OLAP di AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Descrive le classi che consentono di gestire gli oggetti OLAP in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Classi di data mining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Descrive le classi che consentono di gestire gli oggetti di data mining in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Classi di sicurezza AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Descrive le classi che consentono di controllare l'accesso ad altri oggetti e di gestire la sicurezza.|  
-|[AMO altri metodi e classi](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Descrive le classi e i metodi che consentono agli amministratori OLAP oppure ai responsabili delle operazioni di data mining di completare le attività giornaliere.|  
+|[Altre classi e altri metodi AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Descrive le classi e i metodi che consentono agli amministratori OLAP oppure ai responsabili delle operazioni di data mining di completare le attività giornaliere.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices>   
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [Lo sviluppo con Analysis Management Objects &#40; AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   
-

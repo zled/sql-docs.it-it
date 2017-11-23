@@ -3,34 +3,33 @@ title: STRelate (tipo di dati geometry) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STRelate (geometry Data Type)
 - STRelate_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STRelate (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STRelate (geometry Data Type)
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbda0b7d41dcf979afd23dba651b20513ea1b193
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 68978595626be0dae1c81c5dbc1f1187dbed6d5f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Restituisce 1 se un **geometry** istanza è correlata a un'altra **geometry** istanza, in cui la relazione è definita da un valore di una matrice di modello Dimensionally Extended 9 Intersection Model (DE-9IM); in caso contrario , restituisce 0.  
   
@@ -71,4 +70,3 @@ SELECT @g.STRelate(@h, 'FF*FF****');
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-

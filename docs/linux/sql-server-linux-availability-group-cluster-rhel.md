@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
+ms.openlocfilehash: c8e22f070a97dcc0a0f84b55e6f35cda02806637
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7930fd8cee6f6fabe00a711f9109573e42550563
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server
 
@@ -206,4 +210,3 @@ Eseguire manualmente il failover del gruppo di disponibilità con `pcs`. Non avv
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Utilizzare il gruppo di disponibilità elevata](sql-server-linux-availability-group-failover-ha.md)
-

@@ -3,22 +3,23 @@ title: Linee guida di programmazione | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: it-it
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -31,22 +32,22 @@ Un'applicazione ODBC può usare MARS Multiple Active Result Set () e altri [!INC
 ## <a name="available-features"></a>Funzionalità disponibili  
 Le sezioni seguenti dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione Native Client per ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) sono validi quando si utilizza il driver ODBC in macOS e Linux:  
 
--   [La comunicazione con SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Comunicazione con SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [Supporto del timeout connessione e la query](http://msdn.microsoft.com/library/ms130822.aspx)  
 -   [Cursori](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
 -   [Data/ora miglioramenti (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
--   [L'esecuzione di query (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [Gestione degli errori e messaggi](http://msdn.microsoft.com/library/ms131289.aspx)  
+-   [Esecuzione di query (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Gestione di errori e messaggi](http://msdn.microsoft.com/library/ms131289.aspx)  
 -   [Autenticazione Kerberos](http://msdn.microsoft.com/library/cc280459.aspx)  
--   [Tipi definiti dall'utente CLR di grandi dimensioni (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
+-   [Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Esecuzione di transazioni (ODBC) (escluse le transazioni distribuite)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [Elaborazione dei risultati (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [Esecuzione di Stored procedure](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [Risultati dell'elaborazione (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Esecuzione delle stored procedure](http://msdn.microsoft.com/library/ms131440.aspx)
 -   [Supporto per colonne di tipo sparse (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [Crittografia SSL](http://msdn.microsoft.com/library/ms131691.aspx)
 -   [I parametri con valori di tabella](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 e UTF-16 per l'API di comandi e dei dati](http://msdn.microsoft.com/library/ff878241.aspx)
--   [Utilizzo di funzioni di catalogo](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [Uso delle funzioni catalogo](http://msdn.microsoft.com/library/ms131490.aspx)  
 
 ## <a name="unsupported-features"></a>Caratteristiche non supportate
 
@@ -115,4 +116,3 @@ Quando caratteri multibyte UTF-8 o caratteri sostitutivi UTF-16 vengono suddivis
 [Problemi noti in questa versione del driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [Note sulla versione](../../../connect/odbc/linux-mac/release-notes.md)
-

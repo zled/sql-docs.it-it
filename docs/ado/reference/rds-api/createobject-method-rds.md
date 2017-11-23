@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- CreateObject method [ADO]
+helpviewer_keywords: CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8697a45869d503a2c21dc61b2defed182b02b559
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject (metodo) (RDS)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a esso. I pacchetti ed esegue il marshalling dei dati proxy allo stub sul lato server per le comunicazioni con l'oggetto business per l'invio di richieste e dei dati tramite Internet. Per gli oggetti di componente in-process, non vengono utilizzati proxy, viene fornito solo un puntatore all'oggetto.  
@@ -61,12 +58,11 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
  Il *protocollo HTTP* è il protocollo Web standard; *HTTPS* è un protocollo Web sicuro. Utilizzare il *protocollo DCOM* durante l'esecuzione di una rete locale senza HTTP. Il *in-process* protocollo è una libreria di collegamento dinamico (DLL) locale, non utilizza una rete.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto DataFactory, metodo di Query ed esempio CreateObject (metodo) (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [Oggetto DataSpace e metodo CreateObject (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [Metodo CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
+ [Metodo CreateRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
 
 

@@ -11,20 +11,18 @@ ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, about
+helpviewer_keywords: ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0d9da4cba3b4d90d82b3ac66ffec68a0e961ec40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28fa2c279cfd7964d8516514a3caed129e335692
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -56,22 +54,21 @@ In ogni sezione di questo articolo descrive un componente di ADO.
  ADOX è una libreria complementare agli oggetti ADO principali. Espone oggetti aggiuntivi per la creazione, modifica ed eliminazione di oggetti dello schema, ad esempio tabelle e procedure. Include anche gli oggetti di sicurezza per gestire utenti e gruppi e concedere e revocare le autorizzazioni per gli oggetti.  
   
 ## <a name="documentation"></a>Documentazione  
- [Problemi di progettazione di sicurezza ADO](../ado/guide/ado-security-design-issues.md)  
+ [Problemi di progettazione della sicurezza ADO](../ado/guide/ado-security-design-issues.md)  
   
- [Manuale del programmatore ADO](../ado/guide/ado-programmer-s-guide.md)  
+ [Manuale del programmatore di ADO](../ado/guide/ado-programmer-s-guide.md)  
   
  Introduzione all'utilizzo di ADO, RDS, ADO MD e ADOX.  
   
- [Riferimento del programmatore ADO](../ado/reference/ado-programmer-s-reference.md)  
+ [Guida di riferimento per programmatori ADO](../ado/reference/ado-programmer-s-reference.md)  
   
  In questa sezione della documentazione di ADO contiene argomenti per ogni ADO, RDS, ADO MD e ADOX oggetto, insieme, proprietà, proprietà dinamiche, metodo, evento ed enumerazione.  
   
- [Glossario di ADO](../ado/ado-glossary.md)  
+ [Glossario ADO](../ado/ado-glossary.md)  
   
 ## <a name="support"></a>Supporto  
  Libera della Guida con problemi di ADO, ripetere la registrazione al newsgroup pubblico ADO. Questo newsgroup viene monitorato dal personale del supporto Microsoft (tecnico) che coprono ADO e da altri sviluppatori esperti di ADO.  
   
  Ulteriori informazioni sulle opzioni di supporto sono reperibile nel sito di Microsoft Help Web e supporto tecnico.
-
 
 

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d07faf4f544ef22c2afcf9013528fd65225be6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-ado-events"></a>Gestione degli eventi ADO
 Il modello di eventi ADO supporta determinate operazioni ADO sincrone e asincrone che rilasciano *eventi*, o notifiche, prima dell'inizio dell'operazione o quando è stata completata. Un evento è effettivamente una chiamata a una routine del gestore eventi definiti nell'applicazione.  
@@ -43,15 +41,15 @@ Il modello di eventi ADO supporta determinate operazioni ADO sincrone e asincron
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Riepilogo dei gestori di eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
+-   [Riepilogo dei gestori eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
   
 -   [Tipi di eventi](../../../ado/guide/data/types-of-events.md)  
   
--   [Parametri di evento](../../../ado/guide/data/event-parameters.md)  
+-   [Parametri evento](../../../ado/guide/data/event-parameters.md)  
   
--   [Dell'interazione tra i gestori eventi](../../../ado/guide/data/how-event-handlers-work-together.md)  
+-   [Interazione tra i gestori eventi](../../../ado/guide/data/how-event-handlers-work-together.md)  
   
--   [Creazione di istanze di ADO evento dal linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
+-   [Creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riepilogo dei gestori di eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
@@ -59,4 +57,3 @@ Il modello di eventi ADO supporta determinate operazioni ADO sincrone e asincron
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Parametri di evento](../../../ado/guide/data/event-parameters.md)   
  [Tipi di eventi](../../../ado/guide/data/types-of-events.md)
-

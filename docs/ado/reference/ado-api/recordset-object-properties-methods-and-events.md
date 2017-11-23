@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO], members
+helpviewer_keywords: Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6917146077060e7ca9d11aeb034479dff6901e32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d35cf15880ae2dfa902acaccca04cb204a6d77
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Le proprietà dell'oggetto Recordset, metodi ed eventi
 ## <a name="propertiescollections"></a>Raccolte di proprietà /  
@@ -55,9 +52,9 @@ ms.lasthandoff: 09/09/2017
   
  [Raccolta di campi](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [Proprietà filtro](../../../ado/reference/ado-api/filter-property.md)  
+ [Proprietà Filter](../../../ado/reference/ado-api/filter-property.md)  
   
- [Proprietà index](../../../ado/reference/ado-api/index-property.md)  
+ [Proprietà Index](../../../ado/reference/ado-api/index-property.md)  
   
  [Proprietà LockType](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
@@ -73,7 +70,7 @@ ms.lasthandoff: 09/09/2017
   
  [Proprietà RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
- [Proprietà di ordinamento](../../../ado/reference/ado-api/sort-property.md)  
+ [Proprietà Sort](../../../ado/reference/ado-api/sort-property.md)  
   
  [Proprietà Source (Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
@@ -98,9 +95,9 @@ ms.lasthandoff: 09/09/2017
   
  [Metodo CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
- [Delete (metodo) (Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+ [Metodo Delete (recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
- [Find (metodo)](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Metodo Find](../../../ado/reference/ado-api/find-method-ado.md)  
   
  [Metodo GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)  
   
@@ -112,19 +109,19 @@ ms.lasthandoff: 09/09/2017
   
  [Firme](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
- [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   
- [Requery (metodo)](../../../ado/reference/ado-api/requery-method.md)  
+ [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)  
   
- [Risincronizzazione (metodo)](../../../ado/reference/ado-api/resync-method.md)  
+ [Metodo Resync](../../../ado/reference/ado-api/resync-method.md)  
   
- [Save (metodo)](../../../ado/reference/ado-api/save-method.md)  
+ [Metodo Save](../../../ado/reference/ado-api/save-method.md)  
   
- [Il metodo di ricerca](../../../ado/reference/ado-api/seek-method.md)  
+ [Metodo Seek](../../../ado/reference/ado-api/seek-method.md)  
   
- [Supporta (metodo)](../../../ado/reference/ado-api/supports-method.md)  
+ [Metodo Supports](../../../ado/reference/ado-api/supports-method.md)  
   
- [Update (metodo)](../../../ado/reference/ado-api/update-method.md)  
+ [Metodo Update](../../../ado/reference/ado-api/update-method.md)  
   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
   
@@ -144,5 +141,4 @@ ms.lasthandoff: 09/09/2017
  [WillMove e MoveComplete eventi](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

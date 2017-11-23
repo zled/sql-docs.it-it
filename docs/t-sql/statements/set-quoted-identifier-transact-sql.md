@@ -3,10 +3,12 @@ title: SET QUOTED_IDENTIFIER (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - SET_QUOTED_IDENTIFIER_TSQL
 - SET QUOTED_IDENTIFIER
 - QUOTED_IDENTIFIER
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - delimited identifiers [SQL Server]
 - identifiers [SQL Server], delimited
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - ISO delimited identifiers rules
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 207cf23523a315a0a4a4bc923ae9e52d7b82f8b0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c6ba7962a9721dad3c3f043f960c72f718f6062
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Impone in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la conformità alle regole ISO relative all'utilizzo delle virgolette per delimitare identificatori e stringhe letterali. Gli identificatori delimitati da virgolette doppie possono essere parole chiave riservate [!INCLUDE[tsql](../../includes/tsql-md.md)] o possono includere caratteri normalmente non consentiti dalle regole della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori.  
   
@@ -210,4 +210,3 @@ GO
  [sp_rename &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
   
   
-

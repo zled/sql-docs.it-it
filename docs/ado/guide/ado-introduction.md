@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, programming
+helpviewer_keywords: ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17fb13aafe00ce39d18ea52c3a2240f4bebf14d2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-overview-and-benefits"></a>Panoramica di ADO e vantaggi
 ActiveX Data Objects (ADO) è un'interfaccia di alto livello, da utilizzare per OLE DB. OLE DB è un'interfaccia di basso livello, ad alte prestazioni per un'ampia gamma di archivi dati. Sia ADO e OLE DB possono essere usati con relazionale (tabulare) e non relazionali (gerarchico o flusso) dei dati.
@@ -33,15 +31,14 @@ ActiveX Data Objects (ADO) è un'interfaccia di alto livello, da utilizzare per 
 
  In questa sezione vengono trattati gli argomenti seguenti.
 
--   [Cronologia ADO](../../ado/guide/ado-history.md)
+-   [Cronologia di ADO](../../ado/guide/ado-history.md)
 
--   [Prerequisiti per l'uso della documentazione di ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [Prerequisiti per l'uso della documentazione ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
 
--   [Riferimento alle librerie ADO](../../ado/guide/referencing-the-ado-libraries.md)
+-   [Riferimenti alle librerie ADO](../../ado/guide/referencing-the-ado-libraries.md)
 
 -   [Tabella delle attività ADO](../../ado/guide/ado-task-table.md)
 
--   [Tabella delle tecnologie ADO](../../ado/guide/ado-technology-table.md)
+-   [Tabella della tecnologia ADO](../../ado/guide/ado-technology-table.md)
 
--   [Problemi di progettazione di sicurezza ADO](../../ado/guide/ado-security-design-issues.md)
-
+-   [Problemi di progettazione della sicurezza ADO](../../ado/guide/ado-security-design-issues.md)

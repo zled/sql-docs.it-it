@@ -3,27 +3,28 @@ title: Gli argomenti della funzione Unicode | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b8d2ee5be47e77fe639299da0851029494d88c4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff461881ea10c904ceefd1c51a364984ca10971b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-function-arguments"></a>Argomenti della funzione Unicode
 La gestione Driver ODBC 3.5 (o versioni successive) supporta sia ANSI e Unicode versioni di tutte le funzioni che accettano puntatori alle stringhe di caratteri o SQLPOINTER nei relativi argomenti. Le funzioni Unicode vengono implementate come funzioni (con il suffisso *W*), non come macro. Le funzioni ANSI (che può essere chiamato con o senza un suffisso di *A*) sono identiche per le funzioni API ODBC corrente.  
@@ -46,11 +47,11 @@ La gestione Driver ODBC 3.5 (o versioni successive) supporta sia ANSI e Unicode 
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  
 |**SQLDriverConnect**|**SQLProcedures**|  
-|**SQLDrivers**|**Funzione SQLSetConnectAttr**|  
+|**SQLDrivers**|**SQLSetConnectAttr**|  
 |**SQLError**|**SQLSetConnectOption**|  
 |**SQLExecDirect**|**SQLSetCursorName**|  
 |**SQLForeignKeys**|**SQLSetDescField**|  
-|**SQLGetConnectAttr**|**Funzione SQLSetStmtAttr**|  
+|**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
 |**SQLGetConnectOption**|**SQLSpecialColumns**|  
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
@@ -78,5 +79,4 @@ La gestione Driver ODBC 3.5 (o versioni successive) supporta sia ANSI e Unicode 
   
 -   [Driver di Unicode](../../../odbc/reference/develop-app/unicode-drivers.md)  
   
--   [Mapping di funzione in Gestione Driver](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)
-
+-   [Mapping di funzioni in Gestione driver](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)

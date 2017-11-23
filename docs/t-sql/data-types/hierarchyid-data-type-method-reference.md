@@ -3,35 +3,35 @@ title: hierarchyid (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - hierarchyid
 - hierarchyid_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Hierarchy data type
 - hierarchyid data type
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8f69a5bae73c7c1b6ab868bc008c98a652900ae6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 44299e7ddb90bdd52e2638dd859993513bd6f966
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>riferimento al metodo del tipo di dati hierarchyid
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Il **hierarchyid** tipo di dati è a lunghezza variabile, tipo di dati di sistema. Utilizzare **hierarchyid** per rappresentare una posizione in una gerarchia. Una colonna di tipo **hierarchyid** non rappresenta automaticamente un albero. È compito dell'applicazione generare e assegnare i valori **hierarchyid** in maniera tale che la relazione desiderata tra le righe sia riflessa nei valori.
   
@@ -100,4 +100,3 @@ La replica bidirezionale include la replica transazionale con aggiornamento di s
 [Guida di riferimento ai metodi per il tipo di dati hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   
-
