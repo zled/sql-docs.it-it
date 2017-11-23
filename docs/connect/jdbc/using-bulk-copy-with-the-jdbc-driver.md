@@ -3,24 +3,25 @@ title: Con la copia Bulk con il Driver JDBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4edc1b7348e9b34c924236819f0122ea5277d3e8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilizzo della copia bulk con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -1114,7 +1115,6 @@ public class Program
 |SetTimeWithTimezoneFormat(String timeFormat) void|Imposta il formato per l'analisi dei dati Time del file come java.sql.Types.TIME_WITH_TIMEZONE.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del Driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

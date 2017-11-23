@@ -3,33 +3,30 @@ title: SQLManageDataSources | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLManageDataSources
-apilocation:
-- sqlsrv32.dll
+apiname: SQLManageDataSources
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLManageDataSources
-helpviewer_keywords:
-- SQLManageDataSources [ODBC]
+f1_keywords: SQLManageDataSources
+helpviewer_keywords: SQLManageDataSources [ODBC]
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8bfd528a3b401cdae956701c8934c2333e01109d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8785fef25830aa3987470a8007e115da1cc73a42
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformità**  
@@ -120,7 +117,7 @@ BOOL SQLManageDataSources(
  Se l'utente specifica il nome di un file di traccia nel **percorso file di Log** casella di testo e quindi fa clic su **OK**, **SQLManageDataSources** imposta il **TraceFile** (parola chiave) nella sezione [ODBC] le informazioni di sistema per il nome specificato.  
   
 > [!IMPORTANT]  
->  Supporto per Visual Studio Analyzer è stata rimossa a partire da Windows 8 (solo incluso Visual Studio Analyzer in versioni precedenti di Visual Studio). Per un'alternativa meccanismo di risoluzione dei problemi, utilizzare la traccia dell'offerta.  
+>  Supporto per Visual Studio Analyzer è stata rimossa a partire da Windows 8 (solo incluso Visual Studio Analyzer in versioni precedenti di Visual Studio).. Per un'alternativa meccanismo di risoluzione dei problemi, utilizzare la traccia dell'offerta.  
   
  Se l'utente fa clic **avviare Visual Studio Analyzer** e quindi fa clic su **OK**, Visual Studio Analyzer è abilitata. Rimane abilitata fino **arrestare Visual Studio Analyzer** si fa clic.  
   
@@ -131,4 +128,3 @@ BOOL SQLManageDataSources(
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Creazione di origini dati|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|
-

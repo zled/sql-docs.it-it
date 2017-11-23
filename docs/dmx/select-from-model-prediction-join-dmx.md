@@ -2,9 +2,12 @@
 title: SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -17,8 +20,7 @@ f1_keywords:
 - join
 - FROM
 - PREDICTION JOIN
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - PREDICTION JOIN statement
@@ -27,20 +29,19 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - SELECT FROM <model> PREDICTION JOIN statement
 ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 2d8f5e26541b8d2062174f5e64eb226a4bc6843a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7caf239374a174cc26c2bee349c1a52c805f4de4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Utilizza un modello di data mining per stimare gli stati delle colonne in un'origine dati esterna. Il **PREDICTION JOIN** istruzione corrisponde a ogni case della query di origine per il modello.  
   
@@ -216,4 +217,3 @@ NATURAL PREDICTION JOIN
  [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

@@ -3,10 +3,12 @@ title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - SET CURSOR_CLOSE_ON_COMMIT
 - CURSOR_CLOSE_ON_COMMIT_TSQL
 - SET_CURSOR_CLOSE_ON_COMMIT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CURSOR_CLOSE_ON_COMMIT option
 - transactions [SQL Server], cursors
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - cursors [SQL Server], closing
 - SET CURSOR_CLOSE_ON_COMMIT statement
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 49e829a63d87485a2834094327195cffcec9a53c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de736d329175fe44c8bf837a2a6ef0ca966666ee
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Controlla il funzionamento dell'istruzione COMMIT TRANSACTION di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il valore predefinito di questa impostazione è OFF, che specifica che i cursori non verranno chiusi dal server in occasione del commit di una transazione.  
   
@@ -139,4 +139,3 @@ GO
  [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   
-

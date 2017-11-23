@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
 
@@ -108,7 +113,10 @@ Nella sezione successiva verrà configurare l'archiviazione condivisa e spostare
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Configurare l'archiviazione condivisa e spostare i file di database 
 
-Sono disponibili un'ampia gamma di soluzioni per fornire l'archiviazione condivisa. Questa procedura dettagliata viene illustrata la configurazione di archiviazione condivisa con NFS. Si consiglia di seguire le procedure consigliate e utilizzano l'autenticazione Kerberos per la protezione di NFS (è possibile trovare un esempio di seguito: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). In caso contrario, chiunque può accedere alla rete e lo spoofing l'indirizzo IP di un nodo SQL sarà in grado di accedere ai file di dati. Come sempre, assicurarsi di minaccia del modello del sistema prima di utilizzarlo nell'ambiente di produzione. Un'altra opzione di archiviazione consiste nell'utilizzare una condivisione file SMB.
+Sono disponibili un'ampia gamma di soluzioni per fornire l'archiviazione condivisa. Questa procedura dettagliata viene illustrata la configurazione di archiviazione condivisa con NFS. Si consiglia di seguire le procedure consigliate e utilizzano l'autenticazione Kerberos per la protezione di NFS (è possibile trovare un esempio di seguito: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>Se non si protegge NFS, chiunque può accedere alla rete e lo spoofing l'indirizzo IP di un nodo SQL sarà in grado di accedere ai file di dati. Come sempre, assicurarsi di minaccia del modello del sistema prima di utilizzarlo nell'ambiente di produzione. Un'altra opzione di archiviazione consiste nell'utilizzare una condivisione file SMB.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Configurare l'archiviazione condivisa con NFS
 
@@ -225,7 +233,7 @@ Per ulteriori informazioni sull'utilizzo di NFS, vedere le risorse seguenti:
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Se si utilizza una risorsa del File System (FS), come indicato di seguito, non è necessario per mantenere il comando di montaggio in /etc/fstab. Pacemaker si occuperà di montare la cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di geofencing, si verifica un schermo ADFS non è montato due volte. 
+>Se si utilizza una risorsa del File System (FS), come indicato di seguito, non è necessario per mantenere il comando di montaggio in /etc/fstab.. Pacemaker si occuperà di montare la cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di geofencing, si verifica un schermo ADFS non è montato due volte. 
 
 1.  Eseguire `mount -a` comando per il sistema aggiornare i percorsi montati.  
 
@@ -391,4 +399,3 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Funzionamento di SQL Server in cluster dei dischi condivisi Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

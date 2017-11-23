@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Sybase Console,Creating Server Connection Files
 - Sybase Console,Server Connection File Validation
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3560921debc16ed2752b27cfe174e68958496b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f7cea05ac113d752a67202cebb6a072876666315
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Creazione dei file di connessione del Server (SybaseToSQL)
 Nella sezione del file di script server o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione del server sia file di script, è considerata la definizione del server nel file di script.  
@@ -117,6 +115,5 @@ L'utente può facilmente convalidare il file di connessione del server nel file 
 Il passaggio successivo nella console di gestione è [in esecuzione la Console di SSMA &#40; SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[L'esecuzione la Console SSMA](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Esecuzione della console SSMA](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   
-

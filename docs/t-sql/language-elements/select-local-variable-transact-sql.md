@@ -3,10 +3,12 @@ title: Selezionare @local_variable (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +18,26 @@ f1_keywords:
 - variable
 - '@loca_variable_TSQL'
 - '@local_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - variables [SQL Server], assigning
 - SELECT statement [SQL Server], @local_variable
 - '@local_variable'
 - local variables [SQL Server]
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 56303a563bce3def564fe3b92067eb6f4c6a2177
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 1c136514f12749e9eac28bf4b4512acf3e8aaee1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="select-localvariable-transact-sql"></a>Selezionare @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Imposta una variabile locale per il valore di un'espressione.  
   
@@ -134,7 +134,7 @@ NULL
 ## <a name="see-also"></a>Vedere anche  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-

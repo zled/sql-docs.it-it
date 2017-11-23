@@ -3,26 +3,26 @@ title: Programma di installazione nella DLL la funzione di riferimento all'API |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installer DLL [ODBC]
+helpviewer_keywords: installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 846cd1f07c5bd940e35711ee79dc1c6c5e63e736
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2fdc92484d13c6a83cb4528cf2858927710f5cf0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installer-dll-api-reference-function"></a>Programma di installazione nella DLL la funzione API Reference
 In questa sezione viene descritta la sintassi delle funzioni DLL API del programma di installazione. Il programma di installazione costituito da 20 funzioni API DLL. Tre di queste funzioni, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, e **SQLWriteDSNToIni**, vengono chiamati solo da file DLL di installazione. Le altre funzioni vengono chiamate dai programmi di installazione e amministrazione.  
@@ -80,4 +80,3 @@ In questa sezione viene descritta la sintassi delle funzioni DLL API del program
 -   [Funzione SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)  
   
 -   [Funzione SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)
-

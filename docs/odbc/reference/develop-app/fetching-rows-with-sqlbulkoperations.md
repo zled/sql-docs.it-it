@@ -3,10 +3,12 @@ title: Recupero di righe con SQLBulkOperations | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84b8e31821e1571da8272806c5fcd7f5563a4182
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Recupero di righe con SQLBulkOperations
 Possono essere refetched dati in un set di righe mediante segnalibri da una chiamata a **SQLBulkOperations.** Recuperare le righe sono identificate mediante i segnalibri in una colonna del segnalibro associato. Le colonne con un valore di SQL_COLUMN_IGNORE non vengono recuperate.  
@@ -43,4 +44,3 @@ Possono essere refetched dati in un set di righe mediante segnalibri da una chia
 4.  Chiamate **SQLBulkOperations** con il *operazione* argomento impostato su SQL_FETCH_BY_BOOKMARK.  
   
  Non è necessario per l'applicazione di utilizzare la matrice di operazione della riga per evitare l'operazione da eseguire su determinate colonne. L'applicazione consente di selezionare le righe che si desidera recuperare la copia solo i segnalibri per le righe nella matrice segnalibro associato.
-

@@ -3,34 +3,33 @@ title: STIsRing (tipo di dati geometry) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STIsRing_TSQL
 - STIsRing (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STIsRing (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STIsRing (geometry Data Type)
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e19543ff1e62529ef826499751f6e42633dc603b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3417f5da487ea7de5d7c51820316dae3caf8bb0e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Restituisce 1 se un **geometry** istanza soddisfa i requisiti seguenti:
 -   Si tratta di un **LineString** istanza.  
@@ -71,5 +70,4 @@ SELECT @g.STIsRing();
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

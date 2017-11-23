@@ -3,27 +3,28 @@ title: CREARE DATABASE (Parallel Data Warehouse) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52a55d6c275388e03e3f7be09d265a3b918f583f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-database-parallel-data-warehouse"></a>CREARE DATABASE (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Crea un nuovo database in un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] accessorio. Utilizzare questa istruzione per creare tutti i file associati a un database dello strumento e per impostare dimensioni massime e le opzioni di aumento automatico per le tabelle di database e log delle transazioni.  
   
@@ -151,4 +152,3 @@ CREATE DATABASE mytest
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   
-

@@ -3,10 +3,12 @@ title: 'C a SQL: GUID | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], guid
 - GUID data type [ODBC]
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45310bcea2a98d4c1dcb4c4ca782a84c7107ed6d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36aadcf415fcf447f87f5952f6b6d32c921b07c2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-guid"></a>C a SQL: GUID
 L'identificatore per il tipo di dati C ODBC GUID è:  
@@ -46,4 +47,3 @@ L'identificatore per il tipo di dati C ODBC GUID è:
  [a] tutti i valori esadecimali sono validi come un GUID.  
   
  Il driver ignora il valore di lunghezza/indicatore quando la conversione dei dati dal tipo di dati GUID C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati GUID C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.
-

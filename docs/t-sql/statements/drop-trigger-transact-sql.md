@@ -1,20 +1,20 @@
 ---
 title: DROP TRIGGER (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP TRIGGER
 - DROP_TRIGGER_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - renaming triggers
 - triggers [SQL Server], removing
@@ -25,20 +25,19 @@ helpviewer_keywords:
 - removing triggers
 - DML triggers, removing
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 98f871f47674aeb4c5c3d2b0f55a3e7f8aebb4d7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e3ca35b2b33a60d0af5dd31467f1381402f8f99b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Rimuove uno o più trigger DML o DDL dal database corrente.  
   
@@ -147,4 +146,3 @@ ON DATABASE;
  [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
   
-

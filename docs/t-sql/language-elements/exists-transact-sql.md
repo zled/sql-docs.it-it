@@ -3,17 +3,18 @@ title: ESISTENTE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EXISTS_TSQL
 - EXISTS
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - existence testing [SQL Server]
 - testing existence
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - NOT EXISTS keyword
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 37e61f88a9b687e335aa7b45f32861abed462580
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c620baae23d9cab28142ee890ee103edbe2ee114
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifica una sottoquery per testare l'esistenza di righe.  
   
@@ -336,6 +336,5 @@ WHERE NOT EXISTS
  [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 
 

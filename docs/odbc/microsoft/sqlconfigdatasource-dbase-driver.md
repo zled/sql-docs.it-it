@@ -3,27 +3,28 @@ title: SQLConfigDataSource (dBASE Driver) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DBase driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], dBASE Driver
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17b90ca3ab230aadaa764b58f3399172686502af
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4db30f9e0c291151409d5af6a63226c0c2292bd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE Driver)
 > [!NOTE]  
@@ -44,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 |READONLY|TRUE per rendere i file di sola lettura. FALSE per rendere i file non di sola lettura.<br /><br /> Consente di impostare la stessa opzione come **in sola lettura** nella finestra di dialogo programma di installazione.|  
 |STATISTICS|Per il driver dBASE, determina se le statistiche sulle dimensioni di tabella sono approssimative. Si noti che questa opzione si applica a tutte le origini dati che utilizzano il driver ODBC.<br /><br /> Consente di impostare la stessa opzione come **conteggio approssimativo** nella finestra di dialogo programma di installazione.|  
 |THREAD|Il numero di thread in background per il motore da utilizzare. Questo valore è 3 e non può essere modificato.<br /><br /> Consente di impostare la stessa opzione come **thread** nella finestra di dialogo programma di installazione.|
-

@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
+ms.openlocfilehash: d8ebecb0d6ff5892bdee8cf4cf98287f1ace33e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare SLES Cluster per il gruppo di disponibilità di SQL Server
 
@@ -118,9 +122,9 @@ In server Linux configurare il gruppo di disponibilità e quindi configurare le 
 
 3. Per configurare il livello di comunicazione del cluster (Corosync): 
 
-   A. Immettere un indirizzo di rete da associare. Per impostazione predefinita, lo script propone di eth0 l'indirizzo di rete. In alternativa, immettere un indirizzo di rete diversi, ad esempio l'indirizzo di bond0. 
+   a. Immettere un indirizzo di rete da associare. Per impostazione predefinita, lo script propone di eth0 l'indirizzo di rete. In alternativa, immettere un indirizzo di rete diversi, ad esempio l'indirizzo di bond0. 
 
-   B. Immettere un indirizzo multicast. Lo script propone un indirizzo casuale che è possibile utilizzare come valore predefinito. 
+   b. Immettere un indirizzo multicast. Lo script propone un indirizzo casuale che è possibile utilizzare come valore predefinito. 
 
    c. Immettere una porta multicast. Lo script viene proposto 5405 come predefinito. 
 
@@ -308,4 +312,3 @@ Per ulteriori informazioni, vedere:
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Utilizzare il gruppo di disponibilità elevata](sql-server-linux-availability-group-failover-ha.md)
-

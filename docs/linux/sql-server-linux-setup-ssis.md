@@ -7,15 +7,19 @@ ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
+ms.openlocfilehash: d265d1c4fa25f10c58e321cef06cf293fdce5ac5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installare SQL Server Integration Services (SSIS) in Linux
 
@@ -131,4 +135,3 @@ dtexec /F <package name> /DE <protection password>
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per ulteriori informazioni sull'utilizzo di SSIS in Linux per estrarre, trasformare e caricare i dati, vedere [estrarre, trasformare e caricare i dati per SQL Server in Linux con SSIS](sql-server-linux-migrate-ssis.md).
-

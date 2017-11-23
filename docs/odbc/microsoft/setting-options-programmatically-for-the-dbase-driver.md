@@ -3,10 +3,12 @@ title: Impostazione di opzioni a livello di codice per il Driver dBASE | Documen
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc037c3db2eddaf91338d1ce74aa4894f2a3b7b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2760e0b08417121e765582904565461501eb0df6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Impostazione di opzioni a livello di codice per il Driver dBASE
 |Opzione|Description|Metodo|  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |Read Only|Indica il database in sola lettura.|Per impostare questa opzione in modo dinamico, usare il **READONLY** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Selezionare la Directory|Visualizza una finestra di dialogo in cui è possibile selezionare una directory che contiene i file che si desidera accedere.<br /><br /> Quando si definisce una directory di origine dati, specificare la directory in cui si trovano i file utilizzati più frequentemente. Il driver ODBC utilizza questa directory come la directory predefinita. Copiare gli altri file in questa directory se vengono usati frequentemente. In alternativa, è possibile qualificare i nomi di file in un'istruzione SELECT con il nome della directory:<br /><br /> SELEZIONARE \* DA C:\MYDIR\EMP<br /><br /> In alternativa, è possibile specificare una nuova directory predefinita utilizzando il **SQLSetConnectOption** funzione con l'opzione SQL_CURRENT_QUALIFIER.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Mostra le righe eliminate|Specifica se le righe che sono state contrassegnate come eliminate possono essere recuperate o posizionato in corrispondenza di. Se deselezionata, le righe eliminate non vengono visualizzate. Se selezionata, le righe eliminate vengono considerate come righe non è stato eliminato. Per impostazione predefinita, l'opzione è deselezionata.|Per impostare questa opzione in modo dinamico, usare il **DELETED** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|
-

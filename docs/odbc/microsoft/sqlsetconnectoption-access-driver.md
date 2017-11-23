@@ -3,27 +3,28 @@ title: SQLSetConnectOption (Driver di accesso) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f545dc9e40b45c20dec14405cf78d182acf3c71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Driver di accesso)
 > [!NOTE]  
@@ -44,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION è sempre SQL_TXN_READ_COMMITTED.|  
   
  [1] transazioni atomiche non sono supportate dal driver Microsoft Access. Quando esegue il commit di una transazione usando il driver Microsoft Access, un ritardo finito esiste tra il momento in cui viene eseguito il commit della transazione e l'ora in cui i valori vengono scritti su disco. Questo ritardo è determinato da un ritardo intrinseco nella gestione di Microsoft Jet. Il timeout di pagina non sarà minore di un valore minimo, anche se è impostata l'opzione PageTimeout di sotto di tale valore. Di conseguenza, vi è alcuna garanzia che è stato eseguito il commit dei dati non è stabile, poiché è possibile apportare modifiche durante il ritardo.
-

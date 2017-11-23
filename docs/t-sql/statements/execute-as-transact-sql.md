@@ -3,17 +3,18 @@ title: EXECUTE AS (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EXECUTE AS
 - EXECUTE_AS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - REVERT statement
 - WITH NO REVERT clause
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b89c78d286feaace6ec6bb2c85e854cb0ddbb5e0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e389fdc50da662deeab7eba030a367e5fc7e97cb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Imposta il contesto di esecuzione di una sessione.  
   
@@ -215,5 +215,4 @@ GO
  [EXECUTE AS clausola &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   
   
-
 

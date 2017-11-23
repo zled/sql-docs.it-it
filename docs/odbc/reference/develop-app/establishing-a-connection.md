@@ -3,10 +3,12 @@ title: Stabilire una connessione | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2d061c689ae35a93eceab083f554ed6534ca810
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 43e7ab9f883df271f47b0ad55a931ce1a2d2c220
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="establishing-a-connection"></a>Stabilire una connessione
 Dopo l'allocazione di handle di ambiente e di connessione e impostare gli attributi di connessione, l'applicazione è pronta per la connessione all'origine dati o driver. Sono disponibili tre diverse funzioni che l'applicazione può utilizzare per eseguire questa operazione: **SQLConnect** (il livello di conformità di interfaccia di base), **SQLDriverConnect** (Core), e **SQLBrowseConnect**(Livello 1). Ognuno dei tre è progettato per essere utilizzato in uno scenario diverso. Prima della connessione, l'applicazione può determinare quali di queste funzioni è supportata con il **ConnectFunctions** parola chiave restituita dal **SQLDrivers**.  
@@ -49,4 +50,3 @@ Dopo l'allocazione di handle di ambiente e di connessione e impostare gli attrib
 -   [Connessione con SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)  
   
 -   [Connessione con SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)
-

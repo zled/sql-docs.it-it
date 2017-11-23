@@ -3,10 +3,12 @@ title: Compila un programma SQL incorporato | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compila un programma SQL incorporato
 Poiché un programma SQL incorporato contiene una combinazione di istruzioni SQL e host, non può essere inviato direttamente a un compilatore per il linguaggio host. Al contrario, viene compilato tramite un processo in più passaggi. Anche se questo processo è diverso da un prodotto per un prodotto, i passaggi sono quasi gli stessi per tutti i prodotti.  
@@ -47,4 +48,3 @@ Poiché un programma SQL incorporato contiene una combinazione di istruzioni SQL
 5.  Il modulo di richiesta del database generato dallo strumento di precompilazione viene inviato a un'utilità di associazione speciale. Questa utilità esamina le istruzioni SQL, analizza, convalida e ottimizza le e produce quindi un piano di accesso per ogni istruzione. Il risultato è un piano di accesso combinato per l'intero programma, che rappresenta una versione eseguibile delle istruzioni SQL incorporate. L'utilità di associazione archivia il piano nel database, assegnando in genere il nome dell'applicazione in uso. Se questo passaggio viene eseguita in fase di compilazione o fase di esecuzione varia a seconda del sistema DBMS.  
   
  Si noti che i passaggi necessari per compilare un programma SQL incorporato correlare strettamente con i passaggi descritti in precedenza nella [l'elaborazione di un'istruzione SQL](../../odbc/reference/processing-a-sql-statement.md). In particolare, si noti che il precompilatore separa le istruzioni SQL dal codice del linguaggio host e l'utilità di associazione analizza e convalida le istruzioni SQL e crea i piani di accesso. Nel passaggio 5 in cui ha luogo in fase di compilazione di DBMS, i primi quattro passaggi di elaborazione di un'istruzione SQL eseguite in fase di compilazione, mentre l'ultimo passaggio (esecuzione) viene eseguita in fase di esecuzione. Questo ha lo scopo di rendere l'esecuzione di query in tali DBMS molto veloce.
-

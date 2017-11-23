@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: dea846a3de7ce7ad60f46d58239e0d5fce9a9af7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4bb8091460427468705575dd00b8f41138ac3134
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Utilizzo di SSMA per Oracle Console (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Versione di Migration Assistant (SSMA) per Oracle è ora possibile accedere tramite un'applicazione console dalla riga di comando. I file di script formano l'input per l'applicazione per l'esecuzione dei comandi. Come applicazione console, SSMA consente l'interazione a livello di script, riduce il ciclo di migrazione e scala sforzo di migrazione.  
@@ -46,4 +44,3 @@ Gli argomenti trattati in questa sezione includono:
 ## <a name="see-also"></a>Vedere anche  
 [Introduzione a SSMA per Oracle Console](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
   
-

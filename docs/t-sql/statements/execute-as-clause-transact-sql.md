@@ -3,17 +3,18 @@ title: EXECUTE AS clausola (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AS
 - AS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - permission sets [SQL Server]
 - queues [SQL Server]
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: baf3fdc592265f1c2117ef3358820ae94ce8536c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b96757281a5b36755422346ef444136ad8702726
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clausola EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile definire il contesto di esecuzione dei seguenti moduli definiti dall'utente: funzioni (ad eccezione delle funzioni inline con valori di tabella), procedure, code e trigger.  
   
@@ -234,4 +234,3 @@ GO
  [ESEGUIRE AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   
-

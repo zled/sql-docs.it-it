@@ -3,40 +3,37 @@ title: Funzione SQLInstallTranslatorEx | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallTranslatorEx
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallTranslatorEx
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallTranslatorEx
-helpviewer_keywords:
-- SQLInstallTranslatorEx function [ODBC]
+f1_keywords: SQLInstallTranslatorEx
+helpviewer_keywords: SQLInstallTranslatorEx function [ODBC]
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dce5cddff43d8e33ce38403f8b27c3427637022b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 241cb92786626bfc4674426c67f099f4349a6cb4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx (funzione)
 **Conformità**  
  Introdotta: versione ODBC 3.0  
   
  **Riepilogo**  
- **SQLInstallTranslatorEx** aggiunge informazioni su una funzione di conversione alla sezione Odbcinst.ini delle informazioni di sistema (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI\ODBC traduttori chiave Registro di sistema).  
+ **SQLInstallTranslatorEx** aggiunge informazioni su una funzione di conversione alla sezione Odbcinst.ini delle informazioni di sistema (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.. INI\ODBC traduttori chiave Registro di sistema).  
   
  La funzionalità di **SQLInstallTranslatorEx** accessibili anche con [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
@@ -124,4 +121,3 @@ BOOL SQLInstallTranslatorEx(
 |Restituzione di un'opzione di conversione predefinita|[ConfigTranslator del](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |La selezione delle funzioni di conversione|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |Rimozione di funzioni di conversione|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
-
