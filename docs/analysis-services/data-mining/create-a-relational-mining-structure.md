@@ -20,17 +20,16 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>Creare una struttura di data mining relazionale
   La maggior parte dei modelli di data mining sono basati su origini dati relazionali. La creazione di un modello di data mining relazionale offre il vantaggio di poter assemblare dati ad hoc e aggiornare ed eseguire il training di un modello evitando la complessità di dover creare un cubo.  
@@ -102,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
  I dati di una struttura di data mining derivano dal contenuto all'interno della vista origine dati esistente. È possibile modificare dati secondo le esigenze all'interno della vista origine dati, aggiungendo relazioni o colonne derivate che potrebbero non essere presenti nei dati relazionali sottostanti. È inoltre possibile creare calcoli o aggregazioni denominati all'interno della vista origine dati. Queste funzionalità sono molto utili se non è possibile controllare la disposizione dei dati nell'origine dati o se si desidera sperimentare diverse aggregazioni di dati per i modelli di data mining.  
   
- Non è necessario utilizzare tutti i dati disponibili; è possibile scegliere quali colonne includere nella struttura di data mining. Tutti i modelli basati su tale struttura possono quindi usare tali colonne o è possibile contrassegnare determinate colonne per ****  ignorarle per un particolare modello. È inoltre possibile consentire agli utenti di un modello di data mining di eseguire il drill-down a partire dai risultati del modello per visualizzare colonne della struttura di data mining aggiuntive non incluse nel modello di data mining stesso.  
+ Non è necessario utilizzare tutti i dati disponibili; è possibile scegliere quali colonne includere nella struttura di data mining. Tutti i modelli basati su tale struttura possono quindi usare tali colonne o è possibile contrassegnare determinate colonne per **ignorarle** per un particolare modello. È inoltre possibile consentire agli utenti di un modello di data mining di eseguire il drill-down a partire dai risultati del modello per visualizzare colonne della struttura di data mining aggiuntive non incluse nel modello di data mining stesso.  
   
 ##  <a name="bkmk_ContentDataType"></a> Come specificare il tipo di contenuto e di dati  
  Il tipo di dati è molto simile ai tipi di dati specificati in SQL Server o nelle interfacce di altre applicazioni: date e ore, numeri di dimensioni diverse, valori booleani, testo e altri dati discreti.  
@@ -141,4 +140,3 @@ ms.lasthandoff: 09/01/2017
  [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

@@ -3,36 +3,36 @@ title: OPENXML (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
 - OPENXML
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - OPENXML statement
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff4578d88cdb76468d261843c36043ef4696d92c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OpenXML fornisce una vista di un documento XML basata su un set di righe. In quanto provider di set di righe, è possibile utilizzare OPENXML nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che supportano provider di set di righe quali una tabella, una vista o la funzione OPENROWSET.  
   
@@ -64,7 +64,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Può essere utilizzato in combinazione (OR logico) con XML_ATTRIBUTES o XML_ELEMENTS. Nel contesto di recupero, questo flag indica che i dati consumati non devono essere copiati nella proprietà di overflow  **@mp:xmltext** .|  
   
  *SchemaDeclaration*  
- È la definizione dello schema nel formato: *ColName**ColType* [*ColPattern* | *metaproprietà*] [**** *ColNameColType* [*ColPattern* | *metaproprietà*]...]  
+ È la definizione dello schema nel formato: *ColName**ColType* [*ColPattern* | *metaproprietà*] [**,***ColNameColType* [*ColPattern* | *metaproprietà*]...]  
   
  *ColName*  
  Nome della colonna nel set di righe.  
@@ -253,4 +253,3 @@ EXEC sp_xml_removedocument @idoc;
  [Esempi d'uso di OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   
-

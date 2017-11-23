@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cross-validation-formulas"></a>Formule per la convalida incrociata
   Quando viene generato, un report di convalida incrociata contiene misure di accuratezza per ogni modello, a seconda del tipo di modello di data mining (ovvero dell'algoritmo utilizzato per creare il modello), del tipo di dati dell'attributo stimabile e del valore dell'attributo stimabile, se presente.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 |**Vero negativo**|Attributo discreto, il valore viene specificato|Numero di case che soddisfano le condizioni seguenti:<br /><br /> Il case non contiene il valore di destinazione.<br /><br /> Tramite il modello è stato stimato che il case non contiene il valore di destinazione.|  
 |**Falso positivo**|Attributo discreto, il valore viene specificato|Numero di case che soddisfano le condizioni seguenti:<br /><br /> Il valore effettivo è uguale a quello di destinazione.<br /><br /> Tramite il modello è stato stimato che il case contiene il valore di destinazione.|  
 |**Falso negativo**|Attributo discreto, il valore viene specificato|Numero di case che soddisfano le condizioni seguenti:<br /><br /> Il valore effettivo non è uguale a quello di destinazione.<br /><br /> Tramite il modello è stato stimato che il case non contiene il valore di destinazione.|  
-|**Test superato/Test non superato**|Attributo discreto, nessuna destinazione specificata|Numero di case che soddisfano le condizioni seguenti:<br /><br /> Il test viene superato se lo stato stimato con la probabilità più elevata corrisponde allo stato di input e la probabilità è maggiore del valore della soglia di stato. ****<br /><br /> In caso contrario il test non viene superato.|  
+|**Test superato/Test non superato**|Attributo discreto, nessuna destinazione specificata|Numero di case che soddisfano le condizioni seguenti:<br /><br /> Il test viene superato se lo stato stimato con la probabilità più elevata corrisponde allo stato di input e la probabilità è maggiore del valore della **soglia di stato**.<br /><br /> In caso contrario il test non viene superato.|  
 |**Accuratezza**|Attributo discreto. Il valore di destinazione può essere specificato ma non è obbligatorio.|Probabilità in forma logaritmica media per tutte le righe con valori per l'attributo di destinazione in cui la probabilità in forma logaritmica per ogni case viene calcolata come Log(ActualProbability/MarginalProbability). Per calcolare la media, la somma dei valori di probabilità in forma logaritmica viene divisa per il numero di righe nel set di dati di input, escluse le righe con valori mancanti per l'attributo di destinazione.<br /><br /> Il valore dell'accuratezza può essere positivo o negativo. Un valore positivo indica un modello efficace con prestazioni migliori rispetto all'ipotesi casuale.|  
 |**Punteggio in forma logaritmica**|Attributo discreto. Il valore di destinazione può essere specificato ma non è obbligatorio.|Logaritmo della probabilità effettiva per ciascun case, sommato e quindi diviso per il numero di righe nel set di dati di input, escluse le righe con valori mancanti per l'attributo di destinazione.<br /><br /> Poiché la probabilità è rappresentata come frazione decimale, i punteggi in forma logaritmica sono sempre numeri negativi. Un punteggio più vicino a 0 corrisponde a un punteggio migliore.|  
 |**Probabilità del case**|Cluster|Somma dei punteggi di probabilità del cluster per tutti i case, divisa per il numero di case nella partizione, escluse le righe con valori mancanti per l'attributo di destinazione.|  
@@ -58,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   
-

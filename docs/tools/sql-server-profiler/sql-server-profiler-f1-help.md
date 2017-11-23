@@ -5,8 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6075e08d0fd6d5a62c9de00b5f34576459b0ffdc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Finestre di dialogo di SQL Server Profiler
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno strumento in grado di acquisire gli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un server. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema. Di seguito sono i comandi e le impostazioni disponibili nelle finestre di dialogo di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -216,8 +214,8 @@ Per visualizzare questa finestra utilizzare [!INCLUDE[ssSqlProfiler](../../inclu
 |---|---
 |**Server di riproduzione**|Consente di visualizzare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi per la riproduzione.  
 |**Cambia...**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un altro server.  
-|**Salva nel file** |Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Consente di visualizzare la finestra di dialogo file standard, in cui è possibile specificare il percorso in cui salvare il file.  
-|**Salva nella tabella**|Consente di salvare i risultati di riproduzione in una tabella. In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verrà visualizzata la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
+|**Salva nel file** |Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo dei file standard in cui è possibile specificare la posizione in cui salvare il file.  
+|**Salva nella tabella**|Consente di salvare i risultati di riproduzione in una tabella. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
 |**Numero di thread di riproduzione**|Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma la riproduzione viene eseguita in modo più veloce e simultaneo.  
 |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti in modo sequenziale. Utilizzare questa opzione per riprodurre una traccia a scopi di debug.  
 |**Riproduci gli eventi utilizzando più thread** |Gli eventi vengono riprodotti simultaneamente. Questa opzione offre una riproduzione più veloce rispetto alla riproduzione degli eventi sequenziale, ma non permette l'utilizzo a scopi di debug. Gli eventi vengono ordinati in base ai relativi identificatori di processo di sistema (SPID).  
@@ -242,7 +240,7 @@ Usare la finestra di dialogo **Trova** per eseguire la ricerca all'interno di un
  Per aprire questa finestra di dialogo in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], scegliere **Trova** dal menu **Modifica**.  
 |Elemento|Description
 |---|---
-|**Find what**|Immettere il testo che si desidera cercare. La ricerca individua tutte le stringhe contenenti la stringa specificata. Ad esempio, se si cerca "Completed", viene individuata la stringa "SQL:BatchCompleted." I caratteri jolly (*, ? e così via) non sono supportati.  
+|**Trova**|Immettere il testo che si desidera cercare. La ricerca individua tutte le stringhe contenenti la stringa specificata. Ad esempio, se si cerca "Completed", viene individuata la stringa "SQL:BatchCompleted." I caratteri jolly (*, ? e così via) non sono supportati.  
 |**Cerca nella colonna**|Fare clic su una colonna di dati per eseguire la ricerca oppure fare clic su  **\<tutte le colonne >** per la ricerca di tutte le colonne di dati nella traccia.  
 |**Maiuscole/minuscole**|Consente di trovare una stringa di testo con le stesse lettere maiuscole e minuscole di quella specificata nella casella **Trova** . Deselezionare questa casella di controllo per trovare stringhe di testo nella traccia che corrispondono al testo specificato indipendentemente dai caratteri maiuscoli o minuscoli.  
 |**Parola intera**|Consente di limitare l'ambito della ricerca alle parole intere. Deselezionare la casella di controllo **Parola intera** per cercare un insieme di caratteri all'interno di una parola.  
@@ -281,4 +279,3 @@ Utilizzare la finestra di dialogo **Seleziona nome modello** per selezionare un 
 [Monitoraggio delle prestazioni e dell'attività del server](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

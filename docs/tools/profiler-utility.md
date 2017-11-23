@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +15,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 441d4cdd25e2c0c9db0a6d9a1d6a1704a0d474b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="profiler-utility"></a>Utilità profiler
-  L'utilità **profiler** consente di avviare lo strumento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Gli argomenti facoltativi elencati di seguito in questo argomento consentono di controllare la modalità di avvio dell'applicazione.  
+  L'utilità **profiler** consente di avviare lo strumento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Gli argomenti facoltativi elencati di seguito in questo argomento consentono di controllare la modalità di avvio dell'applicazione.  
   
 > [!NOTE]  
 >  L'utilità **profiler** non viene usata per lo scripting delle tracce. Per altre informazioni, vedere [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -74,10 +72,10 @@ profiler
  Specifica la connessione tramite l'autenticazione di Windows e le credenziali dell'utente corrente.  
   
  **/S**  *sql_server_name*  
- Specifica un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **** *per connettersi a un'istanza denominata di*\\*per connettersi a un'istanza denominata di*.  
+ Specifica un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **/S** *per connettersi a un'istanza denominata di*\\*per connettersi a un'istanza denominata di*.  
   
  **/A**  *analysis_services_server_name*  
- Consente di specificare un'istanza di Analysis Services. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  **** *per connettersi a un'istanza denominata di*.  
+ Consente di specificare un'istanza di Analysis Services. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  **/A** *per connettersi a un'istanza denominata di*.  
   
  **/D** *database*  
  Specifica il nome del database da utilizzare con la connessione. Se non si specifica alcun database, questa opzione selezionerà il database predefinito per l'utente specificato.  
@@ -130,7 +128,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Guida di riferimento alle utilità del prompt dei comandi &#40;motore di database&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

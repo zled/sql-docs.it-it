@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Creare un cubo tramite una vista origine dati
   Utilizzare questo metodo di compilazione di un nuovo cubo se si desidera utilizzare una vista origine dati esistente. Con questo metodo, è possibile specificare la vista origine dati, nonché selezionare le tabelle dei fatti e delle dimensioni che si desidera utilizzare nella vista origine dati. Successivamente è possibile scegliere le dimensioni e le misure che si desidera includere nel cubo.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="selecting-the-build-method"></a>Selezione del metodo di compilazione  
  Nella pagina **Selezione metodo di creazione** della procedura guidata fare clic su **Crea il cubo utilizzando un'origine dei dati**.  
   
- Se si seleziona la casella di controllo **Compilazione automatica** , tramite la procedura guidata vengono analizzate la vista origine dati per configurare il cubo e le relative dimensioni. La procedura guidata consente di identificare le tabelle dei fatti e delle dimensioni, di selezionare le misure da includere nel cubo, nonché di compilare le gerarchie. In ogni pagina della procedura guidata è possibile esaminare e modificare le scelte effettuate tramite tale procedura se è selezionata l'opzione **Compilazione automatica** . In caso contrario, **** tutte queste scelte devono essere effettuate manualmente.  
+ Se si seleziona la casella di controllo **Compilazione automatica** , tramite la procedura guidata vengono analizzate la vista origine dati per configurare il cubo e le relative dimensioni. La procedura guidata consente di identificare le tabelle dei fatti e delle dimensioni, di selezionare le misure da includere nel cubo, nonché di compilare le gerarchie. In ogni pagina della procedura guidata è possibile esaminare e modificare le scelte effettuate tramite tale procedura se è selezionata l'opzione **Compilazione automatica** . **In caso contrario**, tutte queste scelte devono essere effettuate manualmente.  
   
  Se si seleziona **Compilazione automatica**, è possibile fare clic su **Fine** in qualsiasi pagina della procedura guidata per passare all'ultima pagina e accettare le configurazioni predefinite per tutte le pagine restanti. Nell'ultima pagina della procedura guidata è possibile controllare la struttura del cubo prima di terminare tale procedura.  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 09/01/2017
  Dopo aver creato il cubo, è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per aggiungere funzionalità avanzate di Business Intelligence per le gerarchie temporali al cubo. In tali funzionalità sono incluse viste per il calcolo dei dati di un periodo rispetto alla data corrente, di un periodo specifico o della media mobile dei dati in un periodo.  
   
 ## <a name="selecting-dimensions"></a>Selezione delle dimensioni  
- Utilizzare la pagina per selezionare le dimensioni della procedura guidata per aggiungere dimensioni esistenti al cubo. **** Questa pagina verrà visualizzata solo se sono già presenti dimensioni condivise che corrispondono alle tabelle delle dimensioni nel nuovo cubo.  
+ Utilizzare la pagina per **selezionare le dimensioni** della procedura guidata per aggiungere dimensioni esistenti al cubo. Questa pagina verrà visualizzata solo se sono già presenti dimensioni condivise che corrispondono alle tabelle delle dimensioni nel nuovo cubo.  
   
  Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra (**>**) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la doppia freccia (**>>**) per spostare tutte le dimensioni nell'elenco.  
   
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  Nella pagina **Completamento procedura guidata** della procedura guidata è possibile visualizzare i gruppi di misure, le misure e le dimensioni nel nuovo cubo. Nella casella **Nome cubo** digitare un nome per il cubo. Successivamente, se il cubo creato soddisfa le proprie esigenze, fare clic su **Fine**. Fare clic su **Indietro** per tornare a una pagina precedente della procedura guidata e apportare modifiche.  
   
   
-

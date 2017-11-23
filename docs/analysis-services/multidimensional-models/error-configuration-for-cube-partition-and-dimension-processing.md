@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configurazione errori per cubi, partizioni e l'elaborazione della dimensione
   Con le proprietà di configurazione degli errori in oggetti dimensione, cubi o partizioni viene determinata la modalità di risposta del server in caso di errori di integrità dei dati durante l'elaborazione. L'attivazione di errori di questo tipo è in genere dovuta a chiavi duplicate, chiavi mancanti e valori Null in una colonna chiave e, anche se il record che causa l'errore non viene aggiunto al database, è possibile impostare le proprietà con cui vengono determinate le operazioni successive. Per impostazione predefinita, l'elaborazione viene arrestata. Tuttavia, durante lo sviluppo di un cubo, è possibile che l'elaborazione continui quando si verificano degli errori, in modo da poter testare i comportamenti del cubo con i dati importati, anche se incompleti.  
@@ -188,11 +187,10 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_next"></a> Passaggio successivo  
  Stabilire se gli errori determineranno l'arresto dell'elaborazione o verranno ignorati. Si tenga presente che solo l'errore viene ignorato. Il record che ha causato l'errore non viene ignorato; viene rimosso o convertito in membro sconosciuto. I record che violano le regole di integrità dei dati non vengono mai aggiunti al database. Per impostazione predefinita, l'elaborazione viene arrestata al primo errore, ma è possibile modificare questo comportamento aumentando il limite errori. Nello sviluppo del cubo, può essere utile ridurre le regole di configurazione degli errori, consentendo la continuazione dell'elaborazione, in modo che vi siano dati con cui eseguire il test.  
   
- Decidere se modificare i comportamenti di elaborazione dei valori Null predefiniti. Per impostazione predefinita, i valori Null in una colonna stringa vengono elaborati come valori vuoti, mentre i valori Null in una colonna numerica vengono elaborati come valori pari a zero. Per istruzioni sull'impostazione dell'elaborazione di valori Null in un attributo, vedere [Definizione delle proprietà UnknownMember e NullProcessing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Decidere se modificare i comportamenti di elaborazione dei valori Null predefiniti. Per impostazione predefinita, i valori Null in una colonna stringa vengono elaborati come valori vuoti, mentre i valori Null in una colonna numerica vengono elaborati come valori pari a zero. Per istruzioni sull'impostazione dell'elaborazione di valori Null in un attributo, vedere [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà dei log](../../analysis-services/server-properties/log-properties.md)   
  [Che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

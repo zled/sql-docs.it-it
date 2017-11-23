@@ -2,9 +2,12 @@
 title: Modificare i valori di dominio | Microsoft Docs
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1f8a61f77ac470917f41bf6ba6704f5ca5df48d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6ebf88408f523594fc9a74f49d5d613a2d059b36
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
   In questo argomento viene descritto come modificare e aumentare i metadati in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Dopo avere generato le informazioni mediante l'individuazione delle informazioni, importato le informazioni nella Knowledge Base o nei domini oppure basato una Knowledge Base su un'altra Knowledge Base, è possibile modificare in modo interattivo i valori dei dati. La generazione della Knowledge Base non solo sfrutta i processi computerizzati, ma consente di utilizzare informazioni personalizzate per verificare i valori dei dati e modificarli nei modi seguenti:  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  La gestione del dominio viene eseguita in una pagina del client Data Quality Services che contiene cinque schede per le operazioni di gestione del dominio separate. Non si tratta di un processo basato su procedure guidate. Ciascuna operazione di gestione può essere eseguita separatamente.  
   
-3.  Dall'**elenco di domini** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera modificare i valori o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Crea un dominio](../data-quality-services/create-a-domain.md). Fare clic sulla scheda **Valori di dominio** .  
+3.  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera modificare i valori o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Crea un dominio](../data-quality-services/create-a-domain.md). Fare clic sulla scheda **Valori di dominio** .  
   
 4.  Visualizzare i valori che è necessario modificare nella tabella **Valore** . Per altre informazioni, vedere [How to Display the Appropriate Values](#Display) più avanti.  
   
