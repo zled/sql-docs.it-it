@@ -3,34 +3,33 @@ title: STMPolyFromText (tipo di dati geometry) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STMPolyFromText (geometry Data Type)
 - STMPolyFromText_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STMPolyFromText (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STMPolyFromText (geometry Data Type)
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e8217c1f2ceeebc840fcc78592eda4732460db3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cc4ef5cbe61b6ccea9b898707814dd398838f5f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Restituisce un **geometry** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT) con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
   
@@ -71,5 +70,4 @@ SELECT @g.ToString();
  [Metodi di geometria statici OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

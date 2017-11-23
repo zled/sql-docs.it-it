@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Field object [ADO]
+helpviewer_keywords: Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ecd2382d15536a5c2ebd2b2098c89c41c78ba1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-field-object"></a>Oggetto Field
 Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di database. Tuttavia, un **campo** può anche rappresentare un puntatore a un altro **Recordset**, denominato capitolo. Eccezioni, ad esempio le colonne a capitoli, verranno trattate più avanti in questa Guida.  
@@ -126,4 +123,3 @@ Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di 
  Se è presente alcun record corrente quando si utilizza il **GetChunk** o **AppendChunk** metodo su un **campo** dell'oggetto, si verifica l'errore 3021 (Nessun record corrente).  
   
  Per un esempio di utilizzo di questi metodi per modificare i dati binari, vedere il [metodo AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [metodo GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) negli esempi di *di ADO riferimento per programmatori*.
-

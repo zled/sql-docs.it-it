@@ -3,10 +3,12 @@ title: Chiamata a livello di interfacce | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 051a94e77b5a53d2a87b3310048da9f8d67260fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="call-level-interfaces"></a>Interfacce a livello di chiamata
 La tecnica finale per l'invio di istruzioni SQL per il sistema DBMS è tramite un'interfaccia a livello di chiamata (CLI). Un'interfaccia a livello di chiamata fornisce una libreria di funzioni di sistema DBMS che può essere chiamato dall'applicazione. Pertanto, anziché tentare di blend SQL con un altro linguaggio di programmazione, un'interfaccia a livello di chiamata è simile alle routine librerie che la maggior parte dei programmatori sono abituati a usare, ad esempio la stringa, i/o o librerie matematiche in C. Notare che DBMS che supportano SQL incorporato dispone già di un'interfaccia a livello di chiamata, le chiamate a cui vengono generate dallo strumento di precompilazione. Tuttavia, queste chiamate sono non documentato e soggetto a modifiche senza preavviso.  
@@ -44,4 +45,3 @@ La tecnica finale per l'invio di istruzioni SQL per il sistema DBMS è tramite u
 3.  Se l'istruzione è un'istruzione SELECT, l'applicazione chiama una funzione CLI per restituire i risultati nel buffer dell'applicazione. In genere, questa funzione restituisce una riga o una colonna di dati alla volta.  
   
 4.  L'applicazione chiama una funzione CLI per disconnettersi dal sistema DBMS.
-

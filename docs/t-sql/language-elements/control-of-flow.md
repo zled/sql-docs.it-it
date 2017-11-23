@@ -3,46 +3,46 @@ title: Il controllo di flusso | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - keywords [SQL Server], control-of-flow language
 - control-of-flow language [SQL Server], keywords listed
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 27c7874fbdd1ed29e60b32a8dba1f4acbb84566d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efcad0edec6f90bffaa72f1bb6ac42e2e12872b8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="control-of-flow"></a>Controllo di flusso
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Le parole chiave del linguaggio per il controllo di flusso [!INCLUDE[tsql](../../includes/tsql-md.md)] sono le seguenti:  
   
 |||  
 |-|-|  
-|[BEGIN... FINE](../../t-sql/language-elements/begin-end-transact-sql.md)|[RESTITUIRE](../../t-sql/language-elements/return-transact-sql.md)|  
-|[INTERRUZIONE](../../t-sql/language-elements/break-transact-sql.md)|[THROW](../../t-sql/language-elements/throw-transact-sql.md)|  
-|[CONTINUARE](../../t-sql/language-elements/continue-transact-sql.md)|[TRY... CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)|  
+|[BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)|[RETURN](../../t-sql/language-elements/return-transact-sql.md)|  
+|[BREAK](../../t-sql/language-elements/break-transact-sql.md)|[THROW](../../t-sql/language-elements/throw-transact-sql.md)|  
+|[CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)|[TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)|  
 |[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *etichetta*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
-|[SE... ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
+|[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [CASE &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Barra Star commento &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
+ [Stella barra &#40; Blocco di commento &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
  [-&#40; Commento &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
@@ -50,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-

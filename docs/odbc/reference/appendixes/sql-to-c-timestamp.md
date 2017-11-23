@@ -3,10 +3,12 @@ title: 'SQL a c: Timestamp | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70bef5a2817b0a7bbdd24b01ca07f357b9c5237d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-timestamp"></a>SQL a c: Timestamp
 L'identificatore del tipo di dati SQL ODBC timestamp è:  
@@ -55,4 +56,3 @@ _C_TYPE_TIMESTAMP|Parte relativa ai secondi frazionari di timestamp non è stato
  [f] è la dimensione del tipo di dati C corrispondente.  
   
  Quando i dati SQL timestamp vengono convertiti in dati di tipo carattere C, la stringa risultante è il "*aaaa*-*mm*-*gg* *hh* :*mm*:*ss*[. *f...* ] "formato, in cui può essere utilizzato fino a nove cifre per i secondi frazionari. Questo formato non è interessato dalla configurazione dell'impostazione di paese Windows®. (Tranne il separatore decimale e i secondi frazionari, il formato intero da utilizzare, indipendentemente dalla precisione del tipo di dati timestamp SQL.)
-

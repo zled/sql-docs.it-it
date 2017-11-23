@@ -3,10 +3,12 @@ title: Non supportato di comandi di Visual FoxPro e funzioni | Documenti Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df2f3bfdb37ab506de3fe99d8c7d1e5e9764ef43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 101879f45583fc46d5bc4aecc3ff11a92aed5112
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>I comandi di Visual FoxPro non supportato e funzioni (Driver ODBC di Visual FoxPro)
 La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate dal Driver ODBC Visual FoxPro, ma sono supportate da Microsoft® Visual FoxPro.  
@@ -325,4 +326,3 @@ La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate 
 ||||  
 |-|-|-|  
 |FINESTRA di ZOOM (comando)|||
-

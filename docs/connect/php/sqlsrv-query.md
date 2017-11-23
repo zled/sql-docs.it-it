@@ -1,32 +1,33 @@
 ---
 title: sqlsrv_query | Documenti Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_query
+apiname: sqlsrv_query
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_query
 - executing queries
 - API Reference, sqlsrv_query
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: de82748f8888a02104e5365817096d0ffb79a182
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1dbc5c20a1d9fb1210bb7729f36299ea4392ebc
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ Prepara ed esegue un'istruzione.
   
 ```  
   
-sqlsrv_query( resource $conn, string $tsql [, array $params [, array $options]])  
+sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -45,7 +46,7 @@ sqlsrv_query( resource $conn, string $tsql [, array $params [, array $options]])
   
 *$tsql*: espressione Transact-SQL che corrisponde all'istruzione preparata.  
   
-*$params* [facoltativo]: un **matrice** di valori che corrispondono ai parametri in una query con parametri. Ogni elemento della matrice può corrispondere a uno dei seguenti:  
+*$params* [facoltativo]: un **matrice** di valori che corrispondono ai parametri in una query con parametri. Ogni elemento della matrice può corrispondere a uno dei seguenti:
   
 -   Valore letterale.  
   
@@ -57,20 +58,20 @@ sqlsrv_query( resource $conn, string $tsql [, array $params [, array $options]])
     array($value [, $direction [, $phpType [, $sqlType]]])  
     ```  
   
-    La descrizione di ciascun elemento della matrice è nella tabella seguente:  
+    La descrizione di ogni elemento della matrice è nella tabella seguente:  
   
     |Elemento|Descrizione|  
     |-----------|---------------|  
     |*$value*|Un valore letterale, una variabile PHP o una variabile PHP per riferimento.|  
-    |*$direction*[facoltativo]|Uno dei seguenti **SQLSRV_PARAM _\* ** costanti usate per indicare la direzione del parametro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Il valore predefinito è **SQLSRV_PARAM_IN**.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[facoltativo]|Oggetto **SQLSRV_PHPTYPE _\* ** costante che specifica il tipo di dati PHP del valore restituito.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$sqlType*[facoltativo]|Oggetto **SQLSRV_SQLTYPE\* ** costante che specifica il tipo di dati di SQL Server del valore di input.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[facoltativo]|Uno dei seguenti **SQLSRV_PARAM _\***  costanti usate per indicare la direzione del parametro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Il valore predefinito è **SQLSRV_PARAM_IN**.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[facoltativo]|Oggetto **SQLSRV_PHPTYPE _\***  costante che specifica il tipo di dati PHP del valore restituito.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$sqlType*[facoltativo]|Oggetto **SQLSRV_SQLTYPE\***  costante che specifica il tipo di dati di SQL Server del valore di input.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
 *$options* [facoltativo]: matrice associativa che imposta le proprietà della query. Le chiavi supportate sono le seguenti:  
   
 |Key|Valori supportati|Descrizione|  
 |-------|--------------------|---------------|  
-|QueryTimeout|Valore integer positivo.|Imposta il timeout in secondi della query. Per impostazione predefinita, il driver attende i risultati per un periodo illimitato.|  
+|QueryTimeout|Valore integer positivo.|Imposta il timeout in secondi della query. Per impostazione predefinita, il driver attende indefinitamente per ottenere i risultati.|  
 |SendStreamParamsAtExec|**true** o **false**<br /><br />Il valore predefinito è **true**.|Configura il driver per l'invio di tutti i flussi di dati al momento dell'esecuzione (**true**), o per inviare il flusso di dati in blocchi (**false**). Per impostazione predefinita, il valore è impostato su **true**. Per altre informazioni, vedere [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
 |Scorrimento|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Per altre informazioni su questi valori, vedere [Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
   
@@ -93,12 +94,11 @@ Nell'esempio seguente viene inserita un'unica riga nella tabella *Sales.SalesOrd
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
 $serverName = "(local)";  
-$connectionInfo = array( "Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
-     echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$connectionInfo = array("Database"=>"AdventureWorks");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Set up the parameterized query. */  
@@ -116,25 +116,22 @@ $tsql = "INSERT INTO Sales.SalesOrderDetail
 $params = array(75123, 5, 741, 1, 818.70, 0.00);  
   
 /* Prepare and execute the query. */  
-$stmt = sqlsrv_query( $conn, $tsql, $params);  
-if( $stmt )  
-{  
-     echo "Row successfully inserted.\n";  
-}  
-else  
-{  
-     echo "Row insertion failed.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$stmt = sqlsrv_query($conn, $tsql, $params);  
+if ($stmt) {  
+    echo "Row successfully inserted.\n";  
+} else {  
+    echo "Row insertion failed.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Free statement and connection resources. */  
-sqlsrv_free_stmt( $stmt);  
-sqlsrv_close( $conn);  
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
 ?>  
 ```  
   
 ## <a name="example"></a>Esempio  
-L'esempio che segue aggiorna un campo nella tabella *Sales.SalesOrderDetail* del database AdventureWorks. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+L'esempio seguente aggiorna un campo di *Sales. SalesOrderDetail* tabella del database AdventureWorks. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
   
 ```  
 <?php  
@@ -142,37 +139,61 @@ L'esempio che segue aggiorna un campo nella tabella *Sales.SalesOrderDetail* del
 specify the AdventureWorks database as the database in use. */  
 $serverName = "(local)";  
 $connectionInfo = array("Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
-     echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Set up the parameterized query. */  
 $tsql = "UPDATE Sales.SalesOrderDetail   
-         SET OrderQty = ( ?)   
-         WHERE SalesOrderDetailID = ( ?)";  
+         SET OrderQty = (?)   
+         WHERE SalesOrderDetailID = (?)";  
   
 /* Assign literal parameter values. */  
-$params = array( 5, 10);  
+$params = array(5, 10);  
   
 /* Execute the query. */  
-if( sqlsrv_query( $conn, $tsql, $params))  
-{  
-      echo "Statement executed.\n";  
-}   
-else  
-{  
-      echo "Error in statement execution.\n";  
-      die( print_r( sqlsrv_errors(), true));  
+if (sqlsrv_query($conn, $tsql, $params)) {  
+    echo "Statement executed.\n";  
+} else {  
+    echo "Error in statement execution.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Free connection resources. */  
-sqlsrv_close( $conn);  
+sqlsrv_close($conn);  
 ?>  
 ```  
   
+> [!NOTE]
+> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php).
+
+## <a name="example"></a>Esempio  
+In questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"YourTestDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+     echo "Could not connect.\n";  
+     die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume TestTable exists with a decimal field 
+$input = "9223372036854.80000";
+$params = array($input);
+$stmt = sqlsrv_query($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
+
 ## <a name="see-also"></a>Vedere anche  
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Procedura: Eseguire query con parametri](../../connect/php/how-to-perform-parameterized-queries.md)  
@@ -180,4 +201,3 @@ sqlsrv_close( $conn);
 [Procedura: Inviare dati come flusso](../../connect/php/how-to-send-data-as-a-stream.md)  
 [Uso dei parametri direzionali](../../connect/php/using-directional-parameters.md)  
   
-

@@ -3,27 +3,28 @@ title: Marcatori di parametro di associazione | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parameter markers [ODBC]
 - binding parameter markers [ODBC]
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea1c1ecd676c7a496f7856f0eb0b22b003183407
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd8c39160ee6cafbbc9f041565a57ea29680bef7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameter-markers"></a>Marcatori di parametro di associazione
 L'applicazione associa parametri chiamando **SQLBindParameter**. **SQLBindParameter** associa un parametro alla volta. Con questa soluzione, l'applicazione specifica quanto segue:  
@@ -67,4 +68,3 @@ SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL
   
 > [!NOTE]  
 >  In ODBC 1.0, sono stati associati parametri **SQLSetParam**. Gestione Driver viene eseguito il mapping tra le chiamate **SQLSetParam** e **SQLBindParameter**, a seconda delle versioni di ODBC utilizzata dall'applicazione e del driver.
-

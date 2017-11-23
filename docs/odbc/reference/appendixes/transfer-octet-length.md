@@ -3,10 +3,12 @@ title: Trasferire la lunghezza dell'ottetto | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - data types [ODBC], transfer octet length
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9a6655bde245348b3b70c3d29631be1b9caa60b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-octet-length"></a>Lunghezza dell'ottetto trasferimento
 La lunghezza di ottetti di trasferimento di una colonna è il numero massimo di byte restituiti all'applicazione quando i dati vengono trasferiti al relativo tipo di dati C predefinito. Dati di tipo carattere, la lunghezza di ottetti di trasferimento non include lo spazio per il carattere di terminazione null. La lunghezza di ottetti di trasferimento di una colonna può essere diversa dal numero di byte necessari per archiviare i dati nell'origine dati.  
@@ -51,4 +52,3 @@ La lunghezza di ottetti di trasferimento di una colonna è il numero massimo di 
 |SQL_GUID|16 (la dimensione della struttura di GUID).|  
   
  [a] se il driver non è possibile determinare la lunghezza della colonna o parametro per i tipi di variabile, restituirà SQL_NO_TOTAL.
-

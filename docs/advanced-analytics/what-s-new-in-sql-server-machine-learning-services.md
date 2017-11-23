@@ -1,58 +1,45 @@
 ---
 title: "Novità &#39; s novità di servizi di Machine Learning | Documenti Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/05/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b7c0ee478e6b585e1b645533461ab8d3d81faee9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novità di servizi di Machine Learning in SQL Server
 
 In SQL Server 2016, Microsoft ha introdotto SQL Server R Services, una funzionalità che supporta l'analisi scientifica dei dati su larga scala, integrando il linguaggio R con il motore di database di SQL Server.
 
-In SQL Server 2017, l'apprendimento diventa ancora più potente, con l'aggiunta del supporto per il linguaggio Python diffuso. Insieme al supporto per nuove lingue viene fornito un nuovo nome: **Machine Learning Services (In-Database)**.
+In SQL Server 2017, l'apprendimento integrate con il database è diventato ancora più potente, con l'aggiunta del supporto per il linguaggio Python diffuso. Insieme al supporto per nuove lingue viene fornito un nuovo nome: **Machine Learning Services (In-Database)**.
 
 Rilevare l'annuncio più recente qui! [Python in SQL Server 2017: avanzato nel database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
-[!NOTE]
-> Ora è possibile eseguire R in database SQL di Azure. Per ulteriori informazioni, vedere [questo articolo](r/using-r-in-azure-sql-database.md), o in questo blog dal team di sviluppo di SQL Server: [Announcing anteprima di Machine Learning Services con supporto di R in Database SQL di Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
-
 ## <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 
-Server Microsoft di Machine Learning in SQL Server fornisce ora supporto completo per la compilazione e distribuzione di soluzioni di machine learning in R o Python. Di seguito vengono evidenziate di questa versione:
-
-> [!IMPORTANT]
-> 
-> Servizi di Machine learning, incluso l'uso di R o Python, non sono attualmente supportati quando si esegue SQL Server in Linux o in database SQL di Azure. Cercare le modifiche in una versione successiva.
-> 
-> Punteggio nativa utilizzando la funzione di stima è attualmente supportato nell'edizione Linux.
+Machine Learning Server in SQL Server offre il supporto completo per la compilazione e distribuzione di soluzioni di machine learning in R o Python. Di seguito vengono evidenziate di questa versione:
 
 ### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Novità nell'aggiornamento cumulativo 1 per SQL Server 2017
 
-È ora possibile aggiornare i componenti di Python e R in Machine Learning Server 9.2.1. Questa versione offre numerosi miglioramenti a **revoscalepy** e **RevoScaleR**, inclusi i miglioramenti delle prestazioni.
- 
+È ora possibile aggiornare i componenti di Python e R in Machine Learning Server 9.2.1.24. Questa versione offre numerosi miglioramenti a **revoscalepy** e **RevoScaleR**, inclusi i miglioramenti delle prestazioni.
+
 ### <a name="in-database-python-integration"></a>Integrazione di Python nel database
 
-È possibile eseguire Python nelle stored procedure, o eseguire Python in remoto utilizzando il computer SQL Server come contesto di calcolo. Questa integrazione apre nuove strade per la vasta community di sviluppatori di Python e gli esperti di dati per utilizzare le funzionalità di SQL Server. 
+È possibile eseguire Python nelle stored procedure, o eseguire Python in remoto utilizzando il computer SQL Server come contesto di calcolo. Questa integrazione apre nuove strade per la vasta community di sviluppatori di Python e gli esperti di dati per utilizzare le funzionalità di SQL Server.
 
-Gli sviluppatori di SQL Server ottengono l'accesso alle librerie Python estese da dell'ecosistema di origine aperti, inclusi Framework famosi come scikit-informazioni su, Tensorflow Caffe e Theano/Keras. E assicurarsi di esplorare le innovazioni da Microsoft, ad esempio **revoscalepy** e **microsoftml**!
+Gli sviluppatori di SQL Server ottengono l'accesso alle librerie Python estese da dell'ecosistema di origine aperti, inclusi Framework famosi come scikit-informazioni su, TensorFlow Caffe e Theano/Keras. E assicurarsi di esplorare le innovazioni da Microsoft, ad esempio **revoscalepy** e **microsoftml**!
 
 Python in esecuzione nel database non è quasi di machine learning, dalla modalità. Esistono numerose di altre applicazioni potenziali per l'integrazione di Python con SQL e utilizzando la potenza di ogni linguaggio per fornire potenti soluzioni più intelligenti.
 
@@ -68,7 +55,7 @@ Python in esecuzione nel database non è quasi di machine learning, dalla modali
 
 + Supporto Python in Microsoft Machine Learning Server (Standalone)
 
-    SQL Server 2017 include l'opzione per installare una versione autonoma di Microsoft Machine Learning Server. Tramite i Server di Machine Learning, è possibile distribuire e scalare R o Python codice senza l'utilizzo di SQL Server.
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]include l'opzione per installare una versione autonoma di Microsoft Machine Learning Server. Tramite i Server di Machine Learning, è possibile distribuire e scalare R o Python codice senza l'utilizzo di SQL Server.
 
 ### <a name="linux-support"></a>Supporto Linux
 
@@ -78,11 +65,9 @@ In Linux, tuttavia, è possibile eseguire [punteggio native](sql-native-scoring.
 
 ### <a name="new-algorithms"></a>Nuovi algoritmi
 
-Il **MicrosoftML** package di R e di Python contiene algoritmi avanzati di machine learning e la trasformazione dei dati che può essere scalato o eseguito in remoto i contesti di calcolo. Gli algoritmi sono logistic regression, gli alberi delle decisioni veloce e foreste delle decisioni, la regressione lineare e reti neurali profonde personalizzabile.
+Il **MicrosoftML** package di R e di Python contiene algoritmi avanzati di machine learning e la trasformazione dei dati che può essere scalato o eseguito in remoto i contesti di calcolo. Gli algoritmi sono logistic regression, gli alberi delle decisioni veloce e foreste delle decisioni, la regressione lineare e reti neurali profonde personalizzabile. Il pacchetto MicrosoftML viene fornito con interfacce di R sia Python.
 
-Il pacchetto MicrosoftML viene fornito con interfacce di R sia Python e si basa su Microsoft Machine Learning Server versione 9.2.0.
-
-Per ulteriori informazioni, vedere [Introduzione a MicrosoftML](using-the-microsoftml-package.md) e [microsoftml per Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+Per ulteriori informazioni, vedere [Introduzione a MicrosoftML](using-the-microsoftml-package.md) e [microsoftml per Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package).
 
 ### <a name="operationalization"></a>Rendere operativo
 
@@ -94,21 +79,21 @@ Questa versione contiene più opzioni e funzionalità che consentono di implemen
 
 + **mrsdeploy** per Python
 
-    Il **mrsdeploy** dal pacchetto per Microsoft R Server ora supporta la distribuzione di modelli di Python e gli script come servizi web ed è disponibile come un'opzione in Machine Learning Server (Standalone). Per un esempio di come funziona, vedere [pubblica e utilizzare il codice Python](python/publish-consume-python-code.md).
+    Il **mrsdeploy** pacchetto per [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)] e [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] supporta la distribuzione di modelli di Python e gli script come servizi web. Per un esempio di come funziona, vedere [pubblica e utilizzare il codice Python](python/publish-consume-python-code.md).
 
 + Prestazioni
 
-    Microsoft ha inserito i limiti delle prestazioni per il punteggio. Con l'assegnazione dei punteggi nel database, elaborazione un milione di righe al secondo tramite modelli R. In questa versione, le nuove funzionalità per **assegnazione dei punteggi in tempo reale** e **punteggio native** supportare prestazioni migliori in una singola riga e dell'assegnazione punteggio batch. 
+    Microsoft ha inserito i limiti delle prestazioni per il punteggio. Con l'assegnazione dei punteggi nel database, elaborazione un milione di righe al secondo tramite modelli R. In questa versione, le nuove funzionalità per **assegnazione dei punteggi in tempo reale** e **punteggio native** supportare prestazioni migliori in una singola riga e dell'assegnazione punteggio batch.
 
 ### <a name="realtime-scoring-and-native-scoring"></a>Assegnazione dei punteggi in tempo reale e i punteggi nativo
 
 Assegnazione dei punteggi in tempo reale si basa su librerie di C++ native per leggere un modello archiviato in un formato binario ottimizzato e quindi generare stime senza necessità di chiamare il runtime di R. Ciò rende le operazioni di assegnazione dei punteggi molto più veloce.
 
-Inoltre, questa versione di SQL Server 2017 include una funzione Transact-SQL nativa per il punteggio veloce che può essere eseguita in qualsiasi edizione di SQL Server, anche in Linux. La funzione non richiede alcuna installazione di R o configurazione aggiuntiva. Ciò significa che è possibile eseguire il training di un modello in un' posizione, salvarlo in SQL Server e quindi eseguire l'assegnazione dei punteggi senza mai chiamare R. Questa funzionalità è definita come _punteggio nativo_.
+Inoltre, questa versione di [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] include una funzione nativa di T-SQL per fast punteggio che può essere eseguito in qualsiasi edizione di SQL Server, anche in Linux. La funzione non richiede alcuna installazione di R o configurazione aggiuntiva. Ciò significa che è possibile eseguire il training di un modello in un' posizione, salvarlo in SQL Server e quindi eseguire l'assegnazione dei punteggi senza mai chiamare R. Questa funzionalità è definita come _punteggio nativo_.
 
-  - Punteggio nativa è disponibile solo in SQL Server 2017. Usa una funzione di T-SQL che possono essere eseguiti in qualsiasi edizione di SQL Server, tra cui Linux.
- - Assegnazione dei punteggi in tempo reale è supportata in SQL Server 2017 e nel Server di Microsoft Machine Learning. È possibile eseguire una stored procedure o eseguire in tempo reale dal codice R di punteggio.
- - Assegnazione dei punteggi in tempo reale è disponibile anche per SQL Server 2016, se l'istanza viene aggiornato alla versione più recente di Microsoft R Server.
+  - Punteggio nativa è disponibile solo in [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]. Usa una funzione di T-SQL che possono essere eseguiti in qualsiasi edizione di SQL Server, tra cui Linux.
+ - Assegnazione dei punteggi in tempo reale è supportata in [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]e nel Server di Microsoft Machine Learning. È possibile eseguire una stored procedure o eseguire in tempo reale dal codice R di punteggio.
+ - Assegnazione dei punteggi in tempo reale è disponibile anche per SQL Server 2016, se l'istanza viene aggiornato alla versione più recente di [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)].
 
 Per altre informazioni, vedere gli articoli seguenti:
 
@@ -118,7 +103,7 @@ Per altre informazioni, vedere gli articoli seguenti:
 
 ### <a name="upgrade-your-machine-learning-experience-and-get-pre-trained-models"></a>Aggiornamento del computer esperienza di apprendimento e ottenere i modelli con training preliminare
 
-Se è installata una versione precedente di SQL Server 2016 R Services, è possibile aggiornare la versione più recente ora passando il server per utilizzare i criteri del ciclo di vita di Software più recenti. In questo modo, è possibile usufruire di un ciclo di rilascio più veloce per R e l'aggiornamento automatico di tutti i componenti di R. Per altre informazioni, vedere [Microsoft R Server 9.0.1](https://docs.microsoft.com/r-server/whats-new-in-r-server).
+Se è installata una versione precedente di SQL Server 2016 R Services, è possibile aggiornare la versione più recente ora passando il server per utilizzare i criteri del ciclo di vita di Software più recenti. In questo modo, è possibile usufruire di un ciclo di rilascio più veloce per R e l'aggiornamento automatico di tutti i componenti di R. Per ulteriori informazioni, vedere [novità di Server di Machine Learning](https://docs.microsoft.com/machine-learning-server/whats-new-in-machine-learning-server).
 
 Il programma di installazione offre inoltre la possibilità di installare una raccolta di modelli con training preliminare in formato binario. Questi modelli supportano l'apprendimento negli scenari, ad esempio riconoscimento di immagini, in cui potrebbe essere difficile ai clienti di trovare grandi set di dati per il training di un modello. Dopo aver installato uno dei modelli con training preliminare, è possibile utilizzare per la stima sui dati senza i tempi e costi coinvolti nel training di tale modello grande e complessi.
 
@@ -128,7 +113,7 @@ Per ulteriori informazioni, vedere [installare modelli con training preliminare 
 
 Questa versione include numerosi miglioramenti introdotti nella gestione dei pacchetti per SQL Server. tra cui:
 
-- ruoli predefiniti del database per gestire e controllare le autorizzazioni all'amministratore di database
+- Ruoli predefiniti del database per gestire i pacchetti e assegnare le autorizzazioni per installare i pacchetti all'amministratore di database
 - L'istruzione CREATE libreria esterna in T-SQL, per gestire i pacchetti senza dover sapere R gli amministratori di database
 - Un set completo di funzioni R per l'installazione, rimuovere o elencare i pacchetti di proprietà degli utenti
 
@@ -141,4 +126,3 @@ Per ulteriori informazioni, vedere [pacchetto gestione](r/r-package-management-f
 + [Impostare R in servizi di SQL Server Machine Learning](r/set-up-sql-server-r-services-in-database.md)
 
 + [Esempi ed esercitazioni di machine learning](tutorials/machine-learning-services-tutorials.md)
-

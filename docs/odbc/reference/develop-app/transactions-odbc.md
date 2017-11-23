@@ -3,27 +3,28 @@ title: Transazioni ODBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions-odbc"></a>Transazioni ODBC
 Oggetto *transazione* è un'unità di lavoro che viene eseguita come operazione atomica singola; vale a dire, l'operazione ha esito positivo o negativo nel suo complesso. Si consideri, ad esempio, il trasferimento di denaro da un conto bancario a un altro. Questa operazione comporta due passaggi: prelievo del denaro dal conto primo e il deposito al secondo. È importante che entrambi i passaggi esito positivo. non è accettabile per un passaggio abbia esito positivo e l'altro errore. Un database che supporta le transazioni è in grado di garantire questo.  
@@ -40,7 +41,6 @@ Oggetto *transazione* è un'unità di lavoro che viene eseguita come operazione 
   
 -   [Transazioni in ODBC](../../../odbc/reference/develop-app/transactions-in-odbc-odbc.md)  
   
--   [Isolamento delle transazioni](../../../odbc/reference/develop-app/transaction-isolation.md)  
+-   [Isolamento della transazione](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [Controllo della concorrenza](../../../odbc/reference/develop-app/concurrency-control.md)
-

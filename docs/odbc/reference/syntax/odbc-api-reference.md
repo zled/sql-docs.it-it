@@ -3,25 +3,26 @@ title: Riferimento all'API ODBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 348b9a8bead318f99f0ab85f0f961e64a56770f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: abb5aebcd58c79c6351d7c47a7b98be5a040ef46
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-api-reference"></a>Riferimento all'API ODBC
 Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabetico. Ogni funzione è definita come funzione del linguaggio di programmazione C. Di seguito sono riportate le descrizioni:  
@@ -210,4 +211,3 @@ Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabeti
 -   [Funzione SQLTables](../../../odbc/reference/syntax/sqltables-function.md)  
   
 -   [Funzione SQLTransact](../../../odbc/reference/syntax/sqltransact-function.md)
-

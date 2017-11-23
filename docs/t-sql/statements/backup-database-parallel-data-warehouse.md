@@ -3,27 +3,28 @@ title: BACKUP DATABASE (Parallel Data Warehouse) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4fb36fd89c02ff9ddd5bc33825a387b53ab6e174
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Crea una copia di backup di un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database e archiviato il backup di disattivare il dispositivo in un percorso di rete specificato dall'utente. Utilizzare questa istruzione con [Ripristina DATABASE &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) per il ripristino di emergenza o copiare un database da un dispositivo a un'altra.  
   
@@ -249,4 +250,3 @@ WITH (
  [Ripristina DATABASE &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
-

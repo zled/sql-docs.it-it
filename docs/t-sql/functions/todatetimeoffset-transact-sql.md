@@ -3,10 +3,12 @@ title: TODATETIMEOFFSET (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - SWITCH_TZ_TSQL
 - SWITCH_TZ
 - TO_DATETIMEOFFSET
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - date and time [SQL Server], TODATETIMEOFFSET
 - TODATETIMEOFFSET function
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b6a8e329f2dc0db17bfb7e0e1a99657f7d436365
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 6c0ff45ae5842950d9f15d7b131ad107fba351b5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce un **datetimeoffset** valore convertito da un **datetime2** espressione.  
   
@@ -101,5 +101,4 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
  [FUSO orario &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
-
 

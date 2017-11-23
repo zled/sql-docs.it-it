@@ -3,31 +3,30 @@ title: STContains (tipo di dati geography) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STContains method (geography)
+dev_langs: TSQL
+helpviewer_keywords: STContains method (geography)
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52c8af5f78056857555002d26f6ed709d7c8d614
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83927a3612c66d4c3bd84f67f4a2ca6940e9c9ef
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Specifica se la chiamata **geography** istanza contiene a livello spaziale il **geography** istanza passata al metodo.  
   
@@ -63,4 +62,3 @@ SET @h = geography::Parse('POINT(-121.703796 46.893985)');
  `SELECT @g.STContains(@h);`  
   
   
-

@@ -26,17 +26,16 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisiti e considerazioni per la distribuzione di Analysis Services
   Le prestazioni e la disponibilità di una soluzione dipendono da molti fattori, tra cui le funzionalità dell'hardware sottostante, la topologia della distribuzione server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o usando l'archiviazione ROLAP per la quale è richiesto l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
 -   Se le prestazioni di esecuzione delle query non sono soddisfacenti, ma non è possibile aumentare le risorse di memoria e processore nel server locale, valutare l'opportunità di distribuire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in due o più server di produzione. Sarà quindi possibile usare la funzionalità di bilanciamento del carico di rete per combinare i server in un unico cluster. In un cluster con bilanciamento carico di rete, le query vengono automaticamente distribuite tra tutti i server del cluster.  
   
   
-

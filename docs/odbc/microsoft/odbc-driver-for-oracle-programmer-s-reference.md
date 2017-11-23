@@ -3,24 +3,25 @@ title: Il Driver ODBC per Oracle programmatore &#39; riferimento s | Documenti M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d97051190e8964c62b3f004a69976f6b9ef4abc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 274e9cbdb1b90318ed3b3c6681409eac4b3c3ee5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Il Driver ODBC per Oracle programmatore &#39; s riferimento
 > [!IMPORTANT]  
@@ -28,23 +29,23 @@ ms.lasthandoff: 09/09/2017
   
  In questa sezione vengono trattati gli argomenti seguenti:  
   
--   [Gli attributi e formato di stringa di connessione](../../odbc/microsoft/connection-string-format-and-attributes.md)  
+-   [Formato e attributi della stringa di connessione](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   
 -   [Opzioni di connessione](../../odbc/microsoft/connect-options.md)  
   
--   [Opzioni dell'istruzione](../../odbc/microsoft/statement-options.md)  
+-   [Opzioni delle istruzioni](../../odbc/microsoft/statement-options.md)  
   
--   [Tipo di cursore e combinazioni di concorrenza](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)  
+-   [Combinazioni di tipo di cursore e concorrenza](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)  
   
--   [Utilizzo di Servizi componenti di Microsoft](../../odbc/microsoft/using-microsoft-component-services.md)  
+-   [Uso dei Servizi componenti Microsoft](../../odbc/microsoft/using-microsoft-component-services.md)  
   
--   [Utilizzando Microsoft Internet Information Services](../../odbc/microsoft/using-microsoft-internet-information-services.md)  
+-   [Uso di Microsoft Internet Information Services](../../odbc/microsoft/using-microsoft-internet-information-services.md)  
   
--   [Utilizzando l'autenticazione del sistema operativo](../../odbc/microsoft/using-operating-system-authentication.md)  
+-   [Uso dell'autenticazione del sistema operativo](../../odbc/microsoft/using-operating-system-authentication.md)  
   
--   [Utilizzo SQLConfigDatasource con il Driver ODBC per Oracle](../../odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md)  
+-   [Uso di SQLConfigDatasource con il driver ODBC per Oracle](../../odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md)  
   
--   [Limitazioni dell'utilizzo di cursori](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
+-   [Limitazioni dell'uso dei cursori gestiti da keyset](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
 -   [Il Driver ODBC per Oracle Stored procedure](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
@@ -57,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 -   [Tipi di dati supportati](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [Mapping dei tipi di dati](../../odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md)
-

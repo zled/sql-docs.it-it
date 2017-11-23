@@ -1,0 +1,91 @@
+---
+title: il sp_bindsession (Transact-SQL) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_bindsession
+- sp_bindsession_TSQL
+dev_langs: TSQL
+helpviewer_keywords: sp_bindsession
+ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
+caps.latest.revision: "38"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c426c9ecca2c67dd1892d3d09a800fd229291598
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
+---
+# <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Consente di associare o Annulla l'associazione di una sessione con altre sessioni nella stessa istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'associazione di sessioni consente a due o più sessioni di partecipare alla stessa transazione e condividere i blocchi fino a quando non viene eseguita un'istruzione ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare invece MARS (Multiple Active Results Sets) o transazioni distribuite. Per ulteriori informazioni, vedere [utilizzando Multiple Active Result Set &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+  
+||  
+|-|  
+|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+sp_bindsession { 'bind_token' | NULL }  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ **'** *bind_token* **'**  
+ È il token che identifica la transazione ottenuto in origine tramite **sp_getbindtoken** o il servizio ODS **srv_getbindtoken** (funzione). *bind_token*è **varchar (255)**.  
+  
+## <a name="return-code-values"></a>Valori restituiti  
+ 0 (esito positivo) o 1 (esito negativo)  
+  
+## <a name="remarks"></a>Osservazioni  
+ Due sessioni associate condividono esclusivamente la transazione e i blocchi. Ogni sessione mantiene il livello di isolamento specifico impostato e se si imposta un diverso livello di isolamento per una sessione, tale modifica non influisce sul livello di isolamento dell'altra sessione. Ogni sessione è identificata da un account di sicurezza specifico e consente l'accesso solo alle risorse del database per cui l'account in questione dispone delle autorizzazioni.  
+  
+ **sp_bindsession** utilizza un token di associazione per associare due o più sessioni client esistenti. Tali sessioni devono essere incluse nella stessa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da cui è stato ottenuto il token di associazione. Una sessione è un client che esegue un comando. Le sessioni di database associate condividono una transazione e uno spazio di blocco.  
+  
+ Non è possibile utilizzare un token di associazione ottenuto da un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per una sessione client connessa a un'altra istanza, anche nel caso di transazioni DTC. Un token di associazione è valido solo a livello locale all'interno di ogni istanza e non può essere condiviso tra più istanze. Per associare sessioni client in un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], è necessario ottenere un token di associazione diversi eseguendo **sp_getbindtoken**.  
+  
+ **sp_bindsession** avrà esito negativo con un errore se utilizza un token che non è attivo.  
+  
+ Annullare l'associazione a una sessione tramite **sp_bindsession** senza specificare *bind_token* oppure passando NULL in *bind_token*.  
+  
+## <a name="permissions"></a>Permissions  
+ È richiesta l'appartenenza al ruolo **public** .  
+  
+## <a name="examples"></a>Esempi  
+ Nell'esempio seguente viene associato alla sessione corrente il token di associazione specificato.  
+  
+> [!NOTE]  
+>  Il token di associazione illustrato nell'esempio è stato ottenuto eseguendo **sp_getbindtoken** prima di eseguire **sp_bindsession**.  
+  
+```  
+USE master;  
+GO  
+EXEC sp_bindsession 'BP9---5---->KB?-V'<>1E:H-7U-]ANZ';  
+GO  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [sp_getbindtoken &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [srv_getbindtoken &#40; Estesi API delle Stored Procedure &#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

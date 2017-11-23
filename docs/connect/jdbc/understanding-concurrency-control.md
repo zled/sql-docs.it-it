@@ -3,24 +3,25 @@ title: Informazioni sul controllo della concorrenza | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52c954cb3acc87753f9ede5a0fc786bd9ed9b755
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-concurrency-control"></a>Informazioni sul controllo della concorrenza
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,6 @@ ms.lasthandoff: 09/09/2017
 |La struttura della tabella non consente un cursore di tipo KEYSET o DYNAMIC|La tabella sottostante non dispone di chiavi univoche per consentire [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] per identificare in modo univoco una riga.|Aggiungere chiavi univoche alla tabella per consentire l'identificazione univoca di ogni riga.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione dei risultati set con il Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+ [Gestione dei set di risultati con il driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
-

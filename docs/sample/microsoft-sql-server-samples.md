@@ -3,33 +3,36 @@ title: Esempi di Microsoft SQL Server | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
+ms.prod: sample
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
+ms.openlocfilehash: a8aa94cd3d28fe8516588b0c7c25811319cb4c50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6c0bbe97c8638f3a669f3c651d66bbdeac2f60f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-sql-server-samples"></a>Esempi di Microsoft SQL Server
-La raccolta contiene i database di esempio e altri esempi per i prodotti di Microsoft SQL incluso SQL Server e Database SQL di Azure.   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]La raccolta contiene i database di esempio e altri esempi per i prodotti di Microsoft SQL incluso SQL Server e Database SQL di Azure.   
 
 ## <a name="new-wide-world-importers-sample-database"></a>Nuovo!! Database di esempio Wide World Importers
 
 Siamo lieti di funzionalità di un nuovo database di esempio denominato Wide World Importers (WWI), sviluppato per Progettazione database showcase utilizzando la funzionalità corrente, strumenti e tecniche di progettazione. Gli esempi includono un OLTP e un database OLAP che vengono compilati per l'esecuzione in SQL Server 2016 e versioni successive. 
 
 ## <a name="documentation"></a>Documentazione
-Il [documentazione WWI](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) è su MSDN.   
+Il [documentazione WWI](./world-wide-importers/wide-world-importers-documentation.md) in Microsoft Docs.   
   
 
 ## <a name="sql-server-samples-repository"></a>Repository di esempi di SQL Server

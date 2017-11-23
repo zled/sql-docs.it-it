@@ -1,13 +1,14 @@
 ---
 title: ELIMINARE i criteri di sicurezza (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,25 +16,22 @@ f1_keywords:
 - DROP SECURITY POLICY
 - DROP SECURITY
 - DROP_SECURITY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- DROP SECURITY POLICY statement
+dev_langs: TSQL
+helpviewer_keywords: DROP SECURITY POLICY statement
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 251fecc3ef17dc575308a9a0adf05e0643245c58
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 146d8d9341ae1d7c8cb63f4ebf186be95914a04f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-security-policy-transact-sql"></a>ELIMINARE i criteri di sicurezza (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Elimina un criterio di sicurezza.  
   
@@ -77,4 +75,3 @@ DROP SECURITY POLICY secPolicy;
  [Sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
-

@@ -3,29 +3,29 @@ title: NULL e sconosciuto (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdac1899707b3caa4f4c515324511a47830f2722
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL e sconosciuto (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   NULL indica che il valore è sconosciuto. Un valore null è diverso dal valore zero o vuota. Non esistono due valori Null uguali. I confronti tra due valori null o tra un valore null e qualsiasi altro valore restituiscono unknown in quanto il valore di ogni NULL è sconosciuto.  
   
@@ -64,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [È NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)  
   
   
-

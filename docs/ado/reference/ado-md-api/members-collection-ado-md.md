@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Level::Members
 - Members
 - Position::Members
-helpviewer_keywords:
-- Members collection [ADO MD]
+helpviewer_keywords: Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 662e957488b6d7e61428d6d49179930e0e233a81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d72b7b87507e13ae4aa103a6333e7e2caaf581ae
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="members-collection-ado-md"></a>Raccolta di membri (ADO MD)
 Contiene il [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) gli oggetti di un livello o una posizione lungo un asse.  
@@ -58,5 +55,4 @@ Contiene il [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) 
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di membri (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
- [Oggetto membro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
-
+ [Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

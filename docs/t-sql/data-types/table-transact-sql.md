@@ -3,32 +3,32 @@ title: tabella (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - table data type [SQL Server]
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 90f8db8df144113d47543ff50c321baed61fba37
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b22ecfa04f949af77df974abc3359b7bc5144a82
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Tipo di dati speciale che può essere utilizzato per archiviare un set di risultati per l'elaborazione in un secondo momento. **tabella** viene utilizzato principalmente per l'archiviazione temporanea di un set di righe restituite come set di risultati di una funzione con valori di tabella. Funzioni e variabili possono essere dichiarate come tipo di **tabella**. **tabella** variabili possono essere utilizzate in funzioni, stored procedure e batch. Per dichiarare le variabili di tipo **tabella**, utilizzare [DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
@@ -189,4 +189,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
   
   
-

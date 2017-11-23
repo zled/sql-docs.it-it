@@ -3,24 +3,25 @@ title: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo di PHP 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7bf34beaff0317b6e99367b0ee79d2c914cb8cc0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b7b0b338d6365108669c545833ee7e8552aea9b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-php-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 
 
 *   Configurare il caricamento del driver PHP e configurare il server web per ospitare applicazioni PHP, come indicato di seguito: [esercitazione di installazione di driver Mac e Linux PHP](../../connect/php/installation-tutorial-linux-mac.md)
-

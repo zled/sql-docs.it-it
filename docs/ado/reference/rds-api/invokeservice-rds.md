@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- InvokeService [RDS]
+helpviewer_keywords: InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be188df1a61cfd398644ba42af5d32605d501919
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20e7b09600a0ec96b089322a1bd4d55e75eb9acf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Restituisce un puntatore all'interfaccia richiesta in una versione più in grado di oggetto.  
@@ -61,10 +58,9 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  L'implementazione di motore del cursore di servizi desktop remoto di **InvokeService** accetta il set di righe di input (o più oggetti risultati), consente di popolare il motore del cursore dal set di righe di input e quindi restituisce un puntatore in se stesso.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Interfaccia IRDSService (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [Interfaccia IRDSService (Servizi Desktop remoto)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi di servizi desktop remoto](../../../ado/reference/rds-api/rds-methods.md)
-
+ [Metodi di Servizi Desktop remoto](../../../ado/reference/rds-api/rds-methods.md)
 
 

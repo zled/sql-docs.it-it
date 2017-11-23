@@ -1,19 +1,20 @@
 ---
 title: SELECT (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Recupera righe dal database e consente la selezione di uno o più righe o colonne da uno o più tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sintassi completa dell'istruzione SELECT è complessa, ma le clausole principali sono le seguenti:  
   
@@ -138,7 +138,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. Torna all'inizio  
-  
+
+> [!WARNING]
+> La precedente sequenza si verifica in genere. Tuttavia, esistono casi non comuni in cui la sequenza può essere diverso.
+>
+> Si supponga, ad esempio, si dispone di un indice cluster in una vista, e la vista esclude alcune righe di tabella, elenco selezionare la colonna della vista utilizza una conversione che modifica un tipo di dati da *varchar* a *intero*. In questo caso, la funzione CONVERT può essere eseguita prima della clausola WHERE viene eseguita. Insolito effettivamente. Spesso è possibile modificare la vista per evitare la sequenza di diversi, se è importante nel caso specifico. 
+
 ## <a name="permissions"></a>Permissions  
  La selezione di dati richiede l'autorizzazione **SELECT** per la tabella o la vista che potrebbe essere ereditata da un ambito più elevato, ad esempio l'autorizzazione **SELECT** per lo schema o l'autorizzazione **CONTROL** per la tabella. O richiede l'appartenenza di **db_datareader** o **db_owner** ruoli predefiniti del database, o **sysadmin** ruolo predefinito del server. Creazione di una nuova tabella tramite **SELECTINTO** richiede inoltre il **CREATETABLE** autorizzazione e **ALTERSCHEMA** autorizzazione per lo schema a cui appartiene la nuova tabella.  
   
@@ -266,5 +271,4 @@ ORDER BY OrderDateKey;
  [Selezionare esempi &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Hint per la &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

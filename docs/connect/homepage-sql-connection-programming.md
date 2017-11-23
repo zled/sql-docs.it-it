@@ -4,18 +4,21 @@ description: Pagina hub con annotazioni collegamenti ai download e la documentaz
 author: MightyPen
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.prod_service: drivers
+ms.service: 
+ms.component: connect
+ms.suite: sql
+ms.custom: 
+ms.technology: drivers
 ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
+ms.openlocfilehash: dbbb2e06521b364de7d8de1b32869380fbc2772a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page per client di programmazione per Microsoft SQL Server
 
@@ -373,5 +376,4 @@ In questa sezione vengono forniti collegamenti sulle altre opzioni di sviluppo. 
 [image-ref-380-ruby]: ./media/homepage-sql-connection-drivers/gm-ruby-un-r82.png
 [image-ref-390-aka-ms-sqldev-choose-language]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-400-aka-ms-sqldev-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
-
 

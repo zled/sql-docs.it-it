@@ -3,27 +3,28 @@ title: I cursori dinamici ODBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b5d294aaeebab45e0ff0ce36db0fa39b9738571
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursori dinamici ODBC
 Un cursore dinamico è esattamente questo: dinamica. È possibile rilevare eventuali modifiche apportate ai valori del set di risultati dopo l'apertura del cursore, ordine e l'appartenenza. Si supponga, ad esempio, un cursore dinamico vengono recuperate due righe e un'altra applicazione, quindi aggiorna una di queste righe ed elimina l'altro. Se il cursore dinamico tenta quindi di recupero di tali righe, non troverà la riga eliminata, ma restituirà i nuovi valori per la riga aggiornata.  
@@ -48,4 +49,3 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Questa istruzione consente di creare un secondo set di risultati, il primo set di righe di cui è il successivo set di righe nel set di risultati originale: in questo caso, il set di righe nella tabella Customers. Il cursore restituisce questo set di righe per l'applicazione.  
   
  È interessante notare che un cursore dinamico implementato in questo modo crea effettivamente molti set di risultati, che consente di rilevare le modifiche apportate al set di risultati originale. Mai l'applicazione viene a conoscenza dell'esistenza di questi set di risultati ausiliario; è sufficiente, viene visualizzato come se il cursore è in grado di rilevare le modifiche apportate al set di risultati originale.
-

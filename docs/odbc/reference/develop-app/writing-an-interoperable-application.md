@@ -3,10 +3,12 @@ title: Scrittura di un'applicazione interoperabile | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Scrittura di un'applicazione di interoperabilità
 Ogni volta che un'applicazione utilizza lo stesso codice con più di un driver, il codice deve essere interoperabile tra i driver. Nella maggior parte dei casi, si tratta di un'attività semplice. Ad esempio, il codice per recuperare le righe con un cursore forward-only è uguale per tutti i driver. In alcuni casi, può essere più difficile. Ad esempio, il codice per costruire gli identificatori per l'utilizzo nelle istruzioni SQL deve considerare il caso di identificatore, racchiudere tra virgolette e convenzioni di denominazione in tre parti, due parti e una parte.  
@@ -40,7 +41,6 @@ Ogni volta che un'applicazione utilizza lo stesso codice con più di un driver, 
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Verifica il supporto di funzionalità e la variabilità](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [Controllo del supporto e della variabilità delle funzionalità](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
--   [Funzionalità di controllo per](../../../odbc/reference/develop-app/features-to-watch-for.md)
-
+-   [Funzionalità da controllare](../../../odbc/reference/develop-app/features-to-watch-for.md)

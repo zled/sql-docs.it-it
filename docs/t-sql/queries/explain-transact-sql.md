@@ -3,27 +3,28 @@ title: Spiegare (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: af61ec5c670bdc48a3f661080983fac3e7263014
-ms.contentlocale: it-it
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="explain-transact-sql"></a>Spiegare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Restituisce il piano di query per un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] istruzione senza eseguire l'istruzione. Utilizzare **ESPLICATIVO** per le operazioni che richiede lo spostamento dei dati di anteprima e visualizzare i costi stimati delle operazioni di query.  
   
@@ -307,5 +308,4 @@ GO
 -   Riga 136 inizia operazione 9. Le righe dalla 137 alla 140: su tutti i nodi, eliminare la tabella temporanea **TEMP_ID_16894**.  
   
   
-
 

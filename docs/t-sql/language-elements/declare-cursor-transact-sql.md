@@ -3,10 +3,12 @@ title: DECLARE CURSOR (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - CURSOR_TSQL
 - DECLARE CURSOR
 - CURSOR
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DECLARE CURSOR statement
 - cursors [SQL Server], attributes
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Definisce gli attributi di un cursore del server [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio lo scorrimento e la query utilizzata per compilare il set di risultati su cui agisce il cursore. L'istruzione DECLARE CURSOR supporta la sintassi basata sullo standard ISO e la sintassi che utilizza un set di estensioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -164,9 +164,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 |Stored procedure di sistema|Description|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|Restituisce l'elenco dei cursori visibili nella connessione e gli attributi corrispondenti.|  
-|**stored procedure sp_describe_cursor**|Descrive gli attributi di un cursore, ad esempio se si tratta di un cursore forward-only o scorrevole.|  
+|**sp_describe_cursor**|Descrive gli attributi di un cursore, ad esempio se si tratta di un cursore forward-only o scorrevole.|  
 |**sp_describe_cursor_columns**|Descrive gli attributi delle colonne nel set di risultati del cursore.|  
-|**stored procedure sp_describe_cursor_tables**|Descrive le tabelle di base a cui ha avuto accesso il cursore.|  
+|**sp_describe_cursor_tables**|Descrive le tabelle di base a cui ha avuto accesso il cursore.|  
   
  Le variabili possono essere utilizzate come parte di *select_statement* che dichiara un cursore. Dopo la dichiarazione di un cursore i valori delle variabili di cursore non cambiano.  
   
@@ -264,4 +264,3 @@ DEALLOCATE vendor_cursor;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

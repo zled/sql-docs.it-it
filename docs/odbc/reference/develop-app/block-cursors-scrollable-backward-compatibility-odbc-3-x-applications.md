@@ -3,10 +3,12 @@ title: "Blocco e la compatibilità di cursori scorrevoli per ODBC 3. x | Documen
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc3b2fa0e72329300f4fb6aa52c274a0ce0f9b83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursori a blocchi, i cursori scorrevoli e la compatibilità con le applicazioni ODBC 3. x
 L'esistenza di entrambi **SQLFetchScroll** e **SQLExtendedFetch** rappresenta il primo clear suddiviso in ODBC tra l'interfaccia API (Application Programming), ovvero il set di funzioni di le chiamate dell'applicazione e il servizio Provider interfaccia SPI (), ovvero il set di funzioni il driver implementa. La divisione è necessario per conciliare il requisito in ODBC 3. *x*, che usa **SQLFetchScroll**, per allineare con gli standard e di essere compatibile con ODBC 2. *x*, che usa **SQLExtendedFetch**.  
@@ -49,4 +50,3 @@ L'esistenza di entrambi **SQLFetchScroll** e **SQLExtendedFetch** rappresenta il
   
 > [!NOTE]  
 >  ODBC 3. *x* applicazioni non devono utilizzare **SQLExtendedFetch** o l'attributo di istruzione SQL_ROWSET_SIZE. Al contrario, dovrebbero usare **SQLFetchScroll** e l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE. ODBC 3. *x* applicazioni non devono utilizzare **SQLSetPos** con un *operazione* di SQL_ADD è invece necessario utilizzare **SQLBulkOperations** con un *Operazione* di SQL_ADD.
-

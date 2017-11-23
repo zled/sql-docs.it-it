@@ -3,27 +3,28 @@ title: SQLSTATE | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c45bbcbf03c4377e8ff162c3cd28ddf7128810b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlstates"></a>SQLSTATE
 SQLSTATE forniscono informazioni dettagliate sulla causa di un avviso o errore. SQLSTATE in questo manuale sono basati su quelli nella specifica ISO/IEF CLI, anche se tali SQLSTATE che iniziano con IM sono specifici per ODBC.  
@@ -53,4 +54,3 @@ SQLSTATE forniscono informazioni dettagliate sulla causa di un avviso o errore. 
  SQLSTATE HYC00 (funzionalità facoltativa non implementata) è particolarmente importante perché è l'unico modo in cui un'applicazione può determinare se un driver supporta un particolare attributo di istruzione o una connessione.  
   
  Per un elenco completo di SQLState e restituiranno quali funzioni, vedere [codici di errore ODBC appendice a:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Per una spiegazione dettagliata delle condizioni in cui ogni funzione potrebbe restituire un valore SQLSTATE specifico, vedere la funzione.
-

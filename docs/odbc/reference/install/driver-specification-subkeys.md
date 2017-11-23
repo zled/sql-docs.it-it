@@ -3,10 +3,12 @@ title: Driver specifica sottochiavi | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a2bbfe9608fabef11b4208597f550e32e2a816d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f45130c81f9fc4f669cf95d4bde72155f519c1aa
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specification-subkeys"></a>Sottochiavi di specifica di driver
 Ogni driver elencate nella sottochiave del driver ODBC ha una sottochiave propri. Questa sottochiave ha lo stesso nome come valore corrispondente nella sottochiave del driver ODBC. I valori in questa sottochiave elencare i percorsi completi dei driver e di installazione del driver DLL, i valori delle parole chiave driver restituite da **SQLDrivers**e il conteggio di utilizzo. I formati dei valori vengono visualizzati nella tabella seguente.  
@@ -72,4 +73,3 @@ Setup : REG_SZ : C:\WINDOWS\SYSTEM32\TXTSETUP.DLL
 SQLLevel : REG_SZ : 0  
 UsageCount : REG_DWORD : 0x3  
 ```
-

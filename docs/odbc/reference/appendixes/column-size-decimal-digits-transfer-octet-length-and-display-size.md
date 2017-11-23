@@ -3,10 +3,12 @@ title: Dimensioni della colonna, cifre decimali, la lunghezza dell'ottetto trasf
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +23,16 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b80fdf874fe7ddb7306824ac4aedb7332cf3d6c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19f505751d63f07dbd5eb2d1d53b9c191307e9b2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Dimensioni della colonna, cifre decimali, trasferimento ottetto lunghezza e visualizzare dimensioni - ODBC
 Tipi di dati sono caratterizzati da loro dimensioni di colonna (o parametro), cifre decimali, lunghezza e dimensioni di visualizzazione. Le funzioni ODBC seguenti restituiscono questi attributi per un parametro in un'istruzione SQL o per un tipo di dati SQL in un'origine dati. Ogni funzione ODBC restituisce un set diverso di questi attributi, come indicato di seguito:  
@@ -54,8 +55,7 @@ Tipi di dati sono caratterizzati da loro dimensioni di colonna (o parametro), ci
   
  Argomenti correlati:  
   
--   [Dimensioni di colonna](../../../odbc/reference/appendixes/column-size.md)  
+-   [Dimensione colonna](../../../odbc/reference/appendixes/column-size.md)  
 -   [Cifre decimali](../../../odbc/reference/appendixes/decimal-digits.md)  
--   [Lunghezza dell'ottetto trasferimento](../../../odbc/reference/appendixes/transfer-octet-length.md)  
+-   [Lunghezza dell'ottetto di trasferimento](../../../odbc/reference/appendixes/transfer-octet-length.md)  
 -   [Dimensioni di visualizzazione](../../../odbc/reference/appendixes/display-size.md)
-

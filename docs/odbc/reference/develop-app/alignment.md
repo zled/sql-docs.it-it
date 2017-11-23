@@ -3,26 +3,26 @@ title: Allineamento | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alignment"></a>Alignment
 I problemi di allineamento in un'applicazione ODBC in genere non sono diversi rispetto a qualsiasi altra applicazione. Ovvero, la maggior parte delle applicazioni ODBC persistono poche o nessuna con allineamento. Sanzioni per l'allineamento non indirizzi variare in base all'hardware e del sistema operativo e potrebbero essere minore come una riduzione delle lieve miglioramento delle prestazioni o come principale come un errore irreversibile in fase di esecuzione. Pertanto, le applicazioni ODBC e le applicazioni ODBC portabile, in particolare, devono prestare attenzione a allineare correttamente i dati.  
@@ -52,4 +52,3 @@ I problemi di allineamento in un'applicazione ODBC in genere non sono diversi ri
  ![Associazione tramite limite di allineamento massimo](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Sebbene questa soluzione lascia fori maggiori, il codice per l'implementazione è relativamente semplice e veloce. Nella maggior parte dei casi, questo viene eseguito l'offset di penalità a pagamento in memoria inutilizzata. Per un esempio che utilizza questo metodo, vedere [SQLBindCol utilizzando](../../../odbc/reference/develop-app/using-sqlbindcol.md).
-

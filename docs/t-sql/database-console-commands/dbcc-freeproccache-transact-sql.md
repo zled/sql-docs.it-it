@@ -3,10 +3,12 @@ title: DBCC FREEPROCCACHE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - FREEPROCCACHE
 - DBCC_FREEPROCCACHE_TSQL
 - DBCC FREEPROCCACHE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - freeing procedure cache
 - removing procedure cache elements
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ae416ab23f27a7f71951ac05a6c69d0abb00a90d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
-ms.contentlocale: it-it
-ms.lasthandoff: 10/16/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 Rimuove tutti gli elementi dalla cache dei piani, rimuove un piano specifico dalla cache dei piani specificando un handle di piani o un handle SQL oppure rimuove tutte le voci della cache associate a un pool di risorse specificato.
 
@@ -64,17 +64,17 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="arguments"></a>Argomenti  
  ({ *plan_handle* | *sql_handle* | *pool_name* })  
 *plan_handle* identifica in modo univoco un piano di query per un batch che ha eseguito il cui piano risiede nella cache dei piani. *plan_handle* è **varbinary(64)** e può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
- -   [Sys.dm exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
- -   [Sys.dm exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
- -   [Sys.dm exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
- -   [Sys.dm exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+ -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+ -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
 *valore di sql_handle* è l'handle SQL del batch da cancellare. *valore di sql_handle* è **varbinary(64)** e può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
- -   [Sys.dm exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
- -   [Sys.dm exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
- -   [Sys.dm exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
- -   [Sys.dm exec_xml_handles –](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
- -   [Sys.dm exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+ -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
+ -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
+ -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
 *pool_name* è il nome di un pool di risorse di Resource Governor. *pool_name* è **sysname** e può essere ottenuto eseguendo una query di [Sys.dm resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) vista a gestione dinamica.  
  Per associare un pool di risorse di un gruppo di carico di lavoro di Resource Governor, eseguire una query di [Sys.dm resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) vista a gestione dinamica. Per informazioni sul gruppo di carico di lavoro per una sessione, eseguire una query di [Sys.dm exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) vista a gestione dinamica.  
@@ -224,4 +224,3 @@ GO
 [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
-

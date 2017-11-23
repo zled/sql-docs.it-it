@@ -3,26 +3,26 @@ title: SQLGetData (libreria di cursori) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetData function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2024b9943f11877b38773cecaa59027867a31d1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (libreria di cursori)
 > [!IMPORTANT]  
@@ -44,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData** può essere chiamato solo quando vengono soddisfatte le condizioni seguenti: un **selezionare** istruzione ha generato il set di risultati; **selezionare** istruzione non contiene un join, un  **UNIONE** clausola, o un **GROUP BY** clausola; e le colonne di cui è utilizzato un alias o un'espressione nell'elenco di selezione non sono associate con **SQLBindCol**.  
   
 -   Se il driver supporta solo un'istruzione attiva, la libreria di cursori recupera il resto del gruppo di risultati prima di eseguire il **selezionare** istruzione e la chiamata **SQLGetData**.
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
   Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
@@ -402,4 +401,3 @@ NATURAL PREDICTION JOIN
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   
-

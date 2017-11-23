@@ -3,34 +3,33 @@ title: STMPolyFromWKB (tipo di dati geography) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STMPolyFromWKB (geography Data Type)
 - STMPolyFromWKB_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STMPolyFromWKB method
+dev_langs: TSQL
+helpviewer_keywords: STMPolyFromWKB method
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8f80daaa68a388136ff8eba24acc4d8be7a59538
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7c5bfa3ca900ffde7a68d378ff21e8314ff69c3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Restituisce un **geographyMultiPolygon** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
   
@@ -65,7 +64,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi di geografia statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [Metodi geography statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

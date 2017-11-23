@@ -3,10 +3,12 @@ title: Creazione di etichette in Microsoft Word utilizzando i dati di Visual Fox
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05e115df47cb916bceafab871d475e98d5074b00
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Creazione di etichette in Microsoft Word utilizzando i dati di Visual FoxPro
 È possibile utilizzare i dati di Visual FoxPro in un Microsoft Word per Windows 95 o Windows 98 documento. Potrebbe ad esempio, si desidera creare etichette dalle informazioni del cliente archiviate in una tabella di Visual FoxPro.  
@@ -62,4 +63,3 @@ ms.lasthandoff: 09/09/2017
 14. Nell'Helper della stampa unione, l'unione dei dati con il documento, fare clic su Merge.  
   
 15. Nella finestra di dialogo unione, selezionare le opzioni desiderato e quindi fare clic su Merge.
-

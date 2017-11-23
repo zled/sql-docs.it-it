@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 345a24e6-186c-4570-baf2-7bfe9b7b4cc1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5f2a4210d440b2a1002156850c5577c332b3250f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 06526a6e7ccb25e4deefe0556c63622a491635be
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="displaykeyposition-element-xml"></a>Elemento DisplayKeyPosition (XML)
   Contiene informazioni sulla posizione dell'elemento in una raccolta di elementi.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  Per **RelationshipEndVisualizationProperties** elementi, il **DisplayKeyPosition** elemento contiene la posizione dell'elemento chiave visualizzato in una raccolta di dettagli. Il valore predefinito indica che non è presente alcuna chiave di visualizzazione da utilizzare.  
   
   
-

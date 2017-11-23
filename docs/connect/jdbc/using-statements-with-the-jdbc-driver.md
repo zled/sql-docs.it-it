@@ -3,24 +3,25 @@ title: Utilizzo delle istruzioni con il Driver JDBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e4cbbfc9d2b73d0a7c79ebc2791f588a7c8f862
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Utilizzo delle istruzioni con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,16 +42,15 @@ ms.lasthandoff: 09/09/2017
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Con le istruzioni SQL](../../connect/jdbc/using-statements-with-sql.md)|Viene descritto come utilizzare istruzioni SQL con il driver JDBC per operare con i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
-|[Utilizzo delle istruzioni con le Stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)|Viene descritto come utilizzare stored procedure con il driver JDBC per operare con i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
-|[Utilizzo di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md)|Viene descritto come utilizzare il driver JDBC per recuperare i dati da più set di risultati.|  
-|[Utilizzo di sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Viene descritto come utilizzare le sequenze di escape SQL, quali i valori letterali di data e ora e le funzioni.|  
-|[Utilizzo automatico delle chiavi generate](../../connect/jdbc/using-auto-generated-keys.md)|Viene descritto come utilizzare le chiavi generate automaticamente.|  
-|[Esecuzione di operazioni Batch](../../connect/jdbc/performing-batch-operations.md)|Viene descritto come utilizzare il driver JDBC per eseguire operazioni batch.|  
+|[Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)|Viene descritto come utilizzare istruzioni SQL con il driver JDBC per operare con i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
+|[USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)|Viene descritto come utilizzare stored procedure con il driver JDBC per operare con i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
+|[Uso di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md)|Viene descritto come utilizzare il driver JDBC per recuperare i dati da più set di risultati.|  
+|[Uso delle sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Viene descritto come utilizzare le sequenze di escape SQL, quali i valori letterali di data e ora e le funzioni.|  
+|[Uso delle chiavi generate automaticamente](../../connect/jdbc/using-auto-generated-keys.md)|Viene descritto come utilizzare le chiavi generate automaticamente.|  
+|[Esecuzione di operazioni batch](../../connect/jdbc/performing-batch-operations.md)|Viene descritto come utilizzare il driver JDBC per eseguire operazioni batch.|  
 |[Gestione delle istruzioni complesse](../../connect/jdbc/handling-complex-statements.md)|Viene descritto come utilizzare il driver JDBC per eseguire istruzioni complesse che consentono di eseguire varie attività e possono restituire diversi tipi di dati.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del Driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

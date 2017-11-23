@@ -3,26 +3,26 @@ title: "Perché è stato creato ODBC? | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="why-was-odbc-created"></a>Perché è stato creato ODBC?
 Società utilizzato in passato, un singolo DBMS. L'accesso al database è stato eseguito il front-end del sistema o mediante le applicazioni scritte per lavorare esclusivamente con tale sistema. Tuttavia, come l'utilizzo di computer aumento delle dimensioni e ulteriori componenti hardware e software è diventato disponibile, società avviato acquisire diversi DBMS. Sono molti i motivi: persone hanno acquistate animale più economico, qual era il più veloce, quali sono già informata, ciò che è stato più recente sul mercato, cosa ha funzionato ottimale per una singola applicazione. Per altri motivi erano riorganizzazioni e fusioni, in cui i reparti che in precedenza erano un singolo DBMS era diversi.  
@@ -34,4 +34,3 @@ Società utilizzato in passato, un singolo DBMS. L'accesso al database è stato 
  Un problema analogo riscontrate fornitori di software indipendenti (ISV). I fornitori di software del database per minicomputer e mainframe erano in genere costretti a scrivere una versione di un'applicazione per ogni sistema DBMS o scrivere codice specifico DBMS per ogni sistema DBMS che desidera accedere. I fornitori di software per PC era necessario scrivere routine di accesso ai dati per ogni vari DBMS con cui si intende utilizzare. In questo modo spesso una notevole quantità di risorse impiegati per la scrittura e la gestione di routine, piuttosto che le applicazioni di accesso ai dati e le applicazioni spesso sono state vendute in qualità, ma in se potrebbe accedono a dati in un sistema DBMS.  
   
  Cosa è necessario entrambi i gruppi di sviluppatori è un modo per accedere ai dati in diversi DBMS. Il gruppo di mainframe e minicomputer necessario un modo per unire i dati dai diversi DBMS in una singola applicazione, mentre il gruppo di computer di personal necessaria questa possibilità, nonché un modo per scrivere una singola applicazione che è indipendente da qualsiasi un DBMS. In breve, entrambi i gruppi necessitassero una modalità interoperativa per accedere ai dati; aprono necessaria la connettività del database.
-

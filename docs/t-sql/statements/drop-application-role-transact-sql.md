@@ -3,17 +3,18 @@ title: DROP APPLICATION ROLE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_APPLICATION_ROLE_TSQL
 - DROP APPLICATION ROLE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dropping application roles
 - deleting application roles
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - application roles [SQL Server], removing
 - DROP APPLICATION ROLE statement
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 05cac03b57e3bb51086b7f97c6a9feb1f7c7a091
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 326c0bb53e995aeacb807a91b83d69f59d034d2f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Rimuove un ruolo applicazione dal database corrente.  
   
@@ -75,4 +75,3 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

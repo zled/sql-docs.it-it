@@ -6,16 +6,20 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
+ms.openlocfilehash: 5b901062920165f1ffcbaf7e77cb50e3b7d9cabf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 83f6e12a38d5fef4ab27cc39257906c4263aa846
-ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installare SQL Server Agent su Linux
 
@@ -94,4 +98,3 @@ Se occorre un'installazione offline, individuare il download del pacchetto in SQ
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per ulteriori informazioni sull'utilizzo di SQL Server Agent per creare, pianificare ed eseguire processi, vedere [eseguire un processo di agente SQL Server in Linux](sql-server-linux-run-sql-server-agent-job.md).
-

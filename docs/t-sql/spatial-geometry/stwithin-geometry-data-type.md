@@ -3,36 +3,35 @@ title: STWithin (tipo di dati geometry) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STWithin_TSQL
 - STWithin (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STWithin (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa8935b7f67d593be8a1246bbc035e1f8d6c520a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb38281ba8e4c4cc7c483a7662b2bdeb95a8b4f9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza è completamente all'interno di altra **geometry** istanza; in caso contrario, restituisce 0.
+Restituisce 1 se un **geometry** istanza è completamente all'interno di altra **geometry** istanza; in caso contrario, restituisce 0. Il `STWithin` comando è tra maiuscole e minuscole.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +50,7 @@ Restituisce 1 se un **geometry** istanza è completamente all'interno di altra *
  Tipo CLR restituito: **SqlBoolean**  
   
 ## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+ Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STWithin()` per verificare se per due istanze `geometry` la prima è completamente all'interno della seconda.  
@@ -69,5 +68,4 @@ SELECT @g.STWithin(@h);
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

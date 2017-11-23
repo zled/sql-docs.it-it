@@ -3,10 +3,12 @@ title: Sottochiave ODBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - subkeys [ODBC], ODBC subkey
 - ODBC subkey [ODBC]
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a01cda7280ec0a6a70bca8cf7f9fdec503c92d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c90ca7ef439d1f12df7ddb18e95dea883b7142af
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-subkey"></a>Sottochiave ODBC
 I valori della sottochiave ODBC specificano le opzioni di traccia ODBC. Queste opzioni vengono impostate tramite la scheda analisi della finestra di dialogo Amministratore origine dati ODBC visualizzato da **SQLManageDataSources**. La sottochiave ODBC stesso è facoltativa. Il formato di questi valori è come illustrato nella tabella seguente.  
@@ -48,4 +49,3 @@ Trace : REG_SZ : 1
 TraceFile : REG_SZ : C:\ODBC.LOG  
   
 ```
-

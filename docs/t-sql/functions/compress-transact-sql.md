@@ -1,35 +1,34 @@
 ---
 title: COMPRIMI (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COMPRESS
 - COMPRESS_TSQL
-helpviewer_keywords:
-- COMPRESS function
+helpviewer_keywords: COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 01500cd6560fd60dda2cb9060c2968d7c010d8e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c30cb5f351d9a84beec608483380edb94b8c7844
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="compress-transact-sql"></a>COMPRIMI (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Comprime l'espressione di input utilizzando l'algoritmo GZIP. Il risultato della compressione è la matrice di byte di tipo **varbinary (max)**.
   
@@ -82,4 +81,3 @@ INTO dbo.inactivePlayers ;
 [DECOMPRIMERE &#40; Transact-SQL &#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   
-

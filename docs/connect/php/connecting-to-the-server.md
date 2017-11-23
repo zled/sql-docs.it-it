@@ -3,24 +3,25 @@ title: Connessione al Server | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c8f04b08517de9b21e5e3104b43b18db0324a863
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d314d1da7a072fc6b2b95dc54acf66ce07a3676e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-to-the-server"></a>Connessione al server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,4 +49,3 @@ I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] possono connettersi 
 ## <a name="see-also"></a>Vedere anche  
 [Guida di programmazione per il Driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
 [applicazione di esempio &#40; Driver SQLSRV &#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-

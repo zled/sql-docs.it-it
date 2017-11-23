@@ -3,24 +3,25 @@ title: Utilizzo di parametri con valori di tabella | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e68713965ff5c985244e992bed5f3dd0bfb8eef7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91777796843557cf6c5e6f7667994d7743b608a0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-table-valued-parameters"></a>Utilizzo di parametri con valori di tabella
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -307,7 +308,6 @@ pStmt.execute();
 |pubblica setStructured void finale (paratemeterName stringa, stringa tvpName, ISQLServerDataRecord tvpDataRecord)|Popola un parametro con valori di tabella passato a una stored procedure con un oggetto ISQLServerDataRecord. ISQLServerDataRecord viene utilizzato per il flusso di dati e l'utente decide come utilizzarla. paratemeterName è il nome del parametro, tvpName è il nome del tipo TVP e tvpDataRecord è un oggetto ISQLServerDataRecord.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del Driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

@@ -2,36 +2,36 @@
 title: IMPORTAZIONE (DMX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IMPORT
-dev_langs:
-- DMX
+f1_keywords: IMPORT
+dev_langs: DMX
 helpviewer_keywords:
 - IMPORT statement
 - mining structures [DMX], importing
 ms.assetid: c053bc88-2daf-4ebb-81d7-5a330250536d
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e38a8b305cda1592a6a0df3f9d24fdc053059585
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5510631430ed75a04dd9685d1197f60c64a85aa8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Carica nel server un modello o una struttura di data mining da un file con estensione abf (Analysis Services Backup File).  
   
@@ -63,7 +63,6 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
  [ESPORTAZIONE &#40; DMX &#41;](../dmx/export-dmx.md)   
- [Esportare e importare oggetti di Data Mining](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Esportare e importare gli oggetti di data mining](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   
-

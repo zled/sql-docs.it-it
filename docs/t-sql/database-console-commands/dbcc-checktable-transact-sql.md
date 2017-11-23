@@ -1,11 +1,14 @@
 ---
 title: DBCC CHECKTABLE (Transact-SQL) | Documenti Microsoft
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKTABLE_TSQL
 - DBCC CHECKTABLE
 - CHECKTABLE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexed views [SQL Server], DBCC CHECKTABLE
 - page integrity checks [SQL Server]
@@ -25,20 +27,22 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
+caps.latest.revision: "89"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9d6ef6adb1d9a10b93e938842de2661eb9202d16
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af19e042e9e40bd92352a175394c442431959b0e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Controlla l'integrità di tutte le pagine e strutture che compongono la tabella o vista indicizzata.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Controlla l'integrità di tutte le pagine e le strutture che compongono la tabella o la vista indicizzata.
+
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Sintassi    
@@ -160,7 +164,7 @@ I controlli di consistenza logica negli indici variano in base al livello di com
 [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Snapshot di database interno    
-DBCC CHECKTABLE utilizza uno snapshot interno del database per garantire la consistenza transazionale necessaria per l'esecuzione di questi controlli. Per ulteriori informazioni, vedere [visualizzare le dimensioni del File Sparse di uno Snapshot del Database & #40; Transact-SQL & #41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "DBCC dell'utilizzo di Snapshot interno del Database" in [DBCC & #40; Transact-SQL & #41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE utilizza uno snapshot interno del database per garantire la consistenza transazionale necessaria per l'esecuzione di questi controlli. Per ulteriori informazioni, vedere [visualizzare le dimensioni del File Sparse di uno Snapshot del Database &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "DBCC dell'utilizzo di Snapshot interno del Database" in [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Se non è possibile creare uno snapshot o se viene specificato TABLOCK, DBCC CHECKTABLE acquisisce un blocco condiviso a livello di tabella per ottenere la consistenza necessaria.
     
 > [!NOTE]    
@@ -254,4 +258,3 @@ DBCC CHECKTABLE ('Production.Product',@indid);
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     
   
-

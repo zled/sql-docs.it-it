@@ -3,28 +3,29 @@ title: La generazione dei dati | Documenti Microsoft
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: cb816c1d41f0f5b77aa1dd6434cf912a6fbf4592
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>Generazione di dati WideWorldImporters
-Le versioni rilasciate dei database WideWorldImporters e WideWorldImportersDW contiene dati iniziale 2013 1 ° gennaio, fino a di questi database sono stati generati al giorno.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Le versioni rilasciate dei database WideWorldImporters e WideWorldImportersDW contiene dati iniziale 2013 1 ° gennaio, fino a di questi database sono stati generati al giorno.
 
 Se i database di esempio vengono utilizzati in un secondo momento, per scopi dimostrativi o illustrazione, potrebbe essere utile includere dati di esempio più recenti nel database.
 
@@ -85,4 +86,3 @@ La procedura `Application.Configuration_PopulateLargeSaleTable` consente di aume
 Circa il numero richiesto di righe viene inserito le `Fact.Sale` tabella nell'anno 2012. La procedura limita artificialmente il numero di righe per ogni giorno a 50000. È possibile modificare, ma è presente per evitare overinflations accidentale della tabella.
 
 Inoltre, la procedura viene applicata l'indicizzazione columnstore cluster, se non è già stato applicato.
-

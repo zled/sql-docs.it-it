@@ -3,29 +3,28 @@ title: Metodo getTables (SQLServerDatabaseMetaData) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getTables
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getTables
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bbf35aeec7b5626b380fc654995d181fe124811
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Metodo getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -76,7 +75,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**String**|Nome dello schema della tabella.|  
 |TABLE_NAME|**String**|Il nome della tabella.|  
 |TABLE_TYPE|**String**|Tipo di tabella.|  
-|REMARKS|**String**|Descrizione della tabella.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] non restituisce un valore per questa colonna.  |  
+|REMARKS|**String**|Descrizione della tabella.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] non restituisce un valore per questa colonna.|  
 |TYPE_CAT|**String**|Non supportato dal driver JDBC.|  
 |TYPE_SCHEM|**String**|Non supportato dal driver JDBC.|  
 |TYPE_NAME|**String**|Non supportato dal driver JDBC.|  
@@ -118,4 +117,3 @@ public static void executeGetTables(Connection con) {
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

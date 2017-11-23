@@ -1,30 +1,31 @@
 ---
 title: Documentazione di Wide World Importers | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 367581f176b148fe65f8fee44bfdbb7a6eb5e8ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 00c70ac3c82cc5a2e21a687a21c51739b75909ef
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-documentation"></a>Documentazione di Wide World Importers
-Wide World Importers è il nuovo database di esempio per SQL Server 2016 e Database SQL di Azure. Illustra le funzionalità principali di SQL Server 2016 e Database SQL di Azure per l'elaborazione delle transazioni (OLTP), data warehouse e carichi di lavoro analitica (OLAP), nonché ibrida transaction e carichi di elaborazione (HTAP) analitica.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers è il nuovo database di esempio per SQL Server 2016 e Database SQL di Azure. Illustra le funzionalità principali di SQL Server 2016 e Database SQL di Azure per l'elaborazione delle transazioni (OLTP), data warehouse e carichi di lavoro analitica (OLAP), nonché ibrida transaction e carichi di elaborazione (HTAP) analitica.
 
 ## <a name="about-this-sample"></a>Su questo esempio
 
@@ -69,4 +70,3 @@ Query di esempio analitica sfruttando il database WideWorldImportersDW.
 ## <a name="data-generation"></a>Generazione di dati
 
 Viene descritto come altri dati possono essere generati nel database di esempio, inserire, ad esempio vendite e acquistare dati fino alla data corrente.
-

@@ -3,26 +3,26 @@ title: SQLTransact (Driver ODBC di Visual FoxPro) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLTransact function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLTransact function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bfa0765a984d36e03e92321bdcf1e95374b2822
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b12fa480f4aef8b669bdd57c4322f8d9f736be6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact (Driver ODBC di Visual FoxPro)
 > [!NOTE]  
@@ -37,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  Se un'operazione di commit ha esito negativo quando è in modalità manuale, la transazione rimane attiva. è possibile scegliere di eseguire il rollback della transazione o ripetere l'operazione di commit. Se un'operazione di commit ha esito negativo quando è in modalità automatica delle transazioni, il rollback della transazione. la transazione non può essere inattiva.  
   
  Per ulteriori informazioni, vedere [SQLTransact](../../odbc/reference/syntax/sqltransact-function.md) nel *riferimento per programmatori ODBC*.
-

@@ -3,17 +3,18 @@ title: RETURN (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RETURN_TSQL
 - RETURN
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - unconditionally exiting program
 - stored procedures [SQL Server], exiting
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - exiting procedures [SQL Server]
 - RETURN statement
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 66b8ed9a2fdb4868ef22cd89642d7bad75079842
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4c3db821e25a671872035e1a584bf5e4205657d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Esce senza condizioni da una query o da una procedura. RETURN è un'istruzione immediata e completa e può essere utilizzata in qualsiasi momento per uscire da una procedura, un batch o un blocco di istruzioni. Le istruzioni che seguono RETURN non vengono eseguite.  
   
@@ -166,4 +166,3 @@ GO
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
   
   
-

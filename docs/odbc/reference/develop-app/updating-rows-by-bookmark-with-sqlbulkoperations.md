@@ -3,10 +3,12 @@ title: L'aggiornamento delle righe dal segnalibro con SQLBulkOperations | Docume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>L'aggiornamento delle righe dal segnalibro con SQLBulkOperations
 Quando si aggiorna una riga dal segnalibro, **SQLBulkOperations** consente all'origine dati di aggiornare una o più righe della tabella. Le righe sono identificate mediante il segnalibro in una colonna del segnalibro associato. La riga viene aggiornata utilizzando i dati nei buffer di applicazione per ogni colonna associata (tranne quando il valore nel buffer di lunghezza/indicatore per una colonna è SQL_COLUMN_IGNORE). Le colonne non associate non verranno aggiornate.  
@@ -47,4 +48,3 @@ Quando si aggiorna una riga dal segnalibro, **SQLBulkOperations** consente all'o
 6.  Chiamate **SQLBulkOperations** con il *operazione* argomento impostato su SQL_UPDATE_BY_BOOKMARK.  
   
  Per ogni riga che viene inviato all'origine dati come un aggiornamento, i buffer dell'applicazione devono disporre dei dati di riga valida. Se il buffer dell'applicazione sono state riempite mediante il recupero, se è stata mantenuta una matrice di stato di riga e se il valore di stato per una riga è SQL_ROW_DELETED, SQL_ROW_ERROR o SQL_ROW_NOROW, dati non validi potrebbero inavvertitamente inviati all'origine dati.
-

@@ -3,36 +3,36 @@ title: CREARE l'origine dati esterna (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
 ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 477d2f682da2c91ba8e4bfd42186c4b1b9735f85
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREARE l'origine dati esterna (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Crea un'origine dati esterna per PolyBase, query di Database elastico o archiviazione Blob di Azure. A seconda dello scenario, la sintassi è notevolmente diverso. Un'origine dati creata per PolyBase non può essere utilizzata per le query di Database elastico.  Analogamente, un'origine dati creata per le query di Database elastico non può essere utilizzata per PolyBase e così via. 
   
@@ -418,31 +418,7 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>Esempi: Azure SQL Data Warehouse
 
-### <a name="g-create-external-data-source-to-reference-azure-blob-storage"></a>G. Creare l'origine dati esterna per fare riferimento a archiviazione blob di Azure
-Per creare un'origine dati esterna per fare riferimento nel contenitore dell'archiviazione blob di Azure, specificare l'URI di archiviazione blob di Azure e le credenziali con ambito database che contiene la chiave dell'account di archiviazione di Azure.
-
-In questo esempio, l'origine dati esterna viene denominato dailylogs con account di archiviazione di Azure denominato myaccount un contenitore di archiviazione blob di Azure. L'origine dati esterna di archiviazione di Azure per il trasferimento dei dati e non supporta la distribuzione del predicato.
-
-In questo esempio viene illustrato come creare le credenziali con ambito database per l'autenticazione per archiviazione di Azure. Specificare la chiave di account di archiviazione di Azure in segreto della credenziale di database. Specificare l'identità delle credenziali con ambito di qualsiasi stringa nel database, non viene utilizzato per l'autenticazione per archiviazione di Azure. Quindi, la credenziale viene usata nell'istruzione che crea un'origine dati esterna.
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### <a name="h-create-external-data-source-to-reference-azure-data-lake-store"></a>H. Creare l'origine dati esterna da riferimento archivio Azure Data Lake
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Creare l'origine dati esterna da riferimento archivio Azure Data Lake
 Connettività archivio Azure Data lake dipende l'URI di ADLS ed entità servizio dell'applicazione Azure Active directory. Documentazione per la creazione di questa applicazione è reperibile in[autenticazione di archivio Data lake tramite Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```tsql
@@ -465,18 +441,7 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>Esempi: Parallel Data Warehouse
 
-### <a name="i-create-external-data-source-to-reference-hadoop"></a>I. Creare l'origine dati esterna da riferimento Hadoop
-Per creare un'origine dati esterna per fare riferimento a cluster Hortonworks o Cloudera Hadoop, specificare il nome del computer o indirizzo IP della porta e Hadoop Namenode.
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### <a name="j-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>J. Creare l'origine dati esterna da riferimento Hadoop con la distribuzione abilitata
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Creare l'origine dati esterna da riferimento Hadoop con la distribuzione abilitata
 Specificare l'opzione JOB_TRACKER_LOCATION per abilitare push-down dei calcoli in Hadoop per le query PolyBase. Una volta abilitato, PolyBase utilizza una decisione basata sui costi per determinare se il calcolo di query che devono essere inviato in Hadoop o tutti i dati devono essere spostati per elaborare la query in SQL Server. 
 
 ```tsql
@@ -488,7 +453,7 @@ WITH (
 );
 ```
 
-### <a name="k-create-external-data-source-to-reference-azure-blob-storage"></a>K. Creare l'origine dati esterna per fare riferimento a archiviazione blob di Azure
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Creare l'origine dati esterna per fare riferimento a archiviazione blob di Azure
 PERCORSO di origine origine dati per fare riferimento nel contenitore dell'archiviazione blob di Azure, specificare l'URI di archiviazione blob di Azure come i dati esterni per creare un riferimento esterno. Aggiungere la chiave dell'account di archiviazione di Azure per file core-Site.XML PDW per l'autenticazione.
 
 In questo esempio, l'origine dati esterna viene denominato dailylogs con account di archiviazione di Azure denominato myaccount un contenitore di archiviazione blob di Azure. L'origine dati esterna di archiviazione di Azure per il trasferimento dei dati e non supporta la distribuzione del predicato.
@@ -501,7 +466,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>Esempi: Le operazioni di massa   
-### <a name="l-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>L. Creare un'origine dati esterna per le operazioni bulk, il recupero dei dati dall'archiviazione Blob di Azure.   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Creare un'origine dati esterna per le operazioni bulk, il recupero dei dati dall'archiviazione Blob di Azure.   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Utilizzare l'origine dati seguente per le operazioni bulk utilizzando [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). La credenziale utilizzata, deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```tsql
@@ -523,5 +488,4 @@ Per questo esempio in uso, vedere [BULK INSERT](../../t-sql/statements/bulk-inse
 [Sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
-
 

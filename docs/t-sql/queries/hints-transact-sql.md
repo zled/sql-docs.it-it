@@ -3,14 +3,15 @@ title: Hint (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimizer [SQL Server], hints
 - hints [SQL Server], about hints
@@ -20,20 +21,19 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], hints
 - DELETE statement [SQL Server], hints
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 30a221dbe557704085fe280b36d2b762ec15f231
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6d2d8b50a38299162677b1f7d5bbff501fba9881
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hints-transact-sql"></a>Hint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gli hint sono opzioni o strategie che vengono specificati per imporre un comportamento specifico a Query Processor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'esecuzione di istruzioni SELECT, INSERT, UPDATE o DELETE. Gli hint consentono di ignorare eventuali piani di esecuzione selezionati da Query Optimizer per una query.  
   
@@ -44,9 +44,8 @@ ms.lasthandoff: 09/01/2017
   
 -   [Hint di join](../../t-sql/queries/hints-transact-sql-join.md)  
   
--   [Hint per la query](../../t-sql/queries/hints-transact-sql-query.md)  
+-   [Query Hints](../../t-sql/queries/hints-transact-sql-query.md) (Hint per la query)  
   
 -   [Hint di tabella](../../t-sql/queries/hints-transact-sql-table.md)  
   
   
-

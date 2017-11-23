@@ -1,30 +1,31 @@
 ---
 title: Panoramica | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: ff91724bead3e6b1aa96962bd5bb801afe3af950
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5a3dd9c765c347b7516706d6e157a47f3c9bd03
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-overview"></a>Panoramica di Wide World Importers
-Questa è una panoramica della società fittizia Wide World Importers e i flussi di lavoro che vengono affrontati nel database di esempio WideWorldImporters per SQL Server e Database SQL di Azure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Questa è una panoramica della società fittizia Wide World Importers e i flussi di lavoro che vengono affrontati nel database di esempio WideWorldImporters per SQL Server e Database SQL di Azure.  
 
 Wide World Importers (WWI) è un importatore di merci originalità all'ingrosso e operativo dall'area di San Francisco alloggiamenti server di distribuzione.
 
@@ -71,4 +72,3 @@ L'azienda opera con un esercizio che inizia il 1 ° novembre.
 La licenza per il database di esempio e il codice di esempio descritto di seguito: [License](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 Il database di esempio include dati pubblici che sono stati caricati dal data.gov ed EarthData naturale. In questa sezione sono le condizioni di utilizzo: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
-

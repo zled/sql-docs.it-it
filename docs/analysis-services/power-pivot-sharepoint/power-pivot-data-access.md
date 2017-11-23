@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 386df5d2dfc9443b07352a0f30e30d74bdf6ff7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad15d17a17809c6190a45b9ead89bc66ed6962d6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-data-access"></a>Accesso ai dati PowerPivot
   Questo argomento illustra la modalità con cui i dati vengono recuperati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta di SharePoint.  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [Accesso ai dati di modello tabulare](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
-

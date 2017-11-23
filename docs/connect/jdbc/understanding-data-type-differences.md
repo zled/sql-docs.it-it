@@ -3,24 +3,25 @@ title: Dati di informazioni sulle differenze tra i tipi | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f9f24abd0bf39ebe61cf3715371c6c6c3d6f5663
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a0068e98ab284ff3fbe89a7047cf485ecb5ef4b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-data-type-differences"></a>Informazioni sulle differenze tra i tipi di dati
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -76,7 +77,6 @@ ms.lasthandoff: 09/09/2017
  La funzionalità di mapping del tipo personalizzato di JDBC, che utilizza le interfacce di dati SQL per JDBC avanzata tipi (UDT, Struct e così via). non è implementata nel driver JDBC.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sui tipi di dati del Driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

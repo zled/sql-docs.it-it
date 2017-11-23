@@ -1,12 +1,14 @@
 ---
 title: DBCC SHRINKFILE (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DBCC_SHRINKFILE_TSQL
 - DBCC SHRINKFILE
 - SHRINKFILE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - data shrinking [SQL Server]
 - TRUNCATEONLY option
@@ -29,20 +30,19 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 87
+caps.latest.revision: "87"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f1b96b92738d3f44c21f4e6056798da74e26872a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14746a5bfac3674299e03b6eba0da1a823f1bba9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Compatta le dimensioni del file di dati o di log specificato per il database corrente o svuota un file spostando i dati dal file specificato ad altri file dello stesso filegroup, consentendo la rimozione del file dal database. È possibile compattare un file fino a dimensioni inferiori rispetto a quelle specificate al momento della creazione. Le dimensioni minime del file verranno reimpostate sul nuovo valore.
   
@@ -241,4 +241,3 @@ GO
 [Compattare un file](../../relational-databases/databases/shrink-a-file.md)
   
   
-

@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>Set di righe DISCOVER_CALC_DEPENDENCY
   Crea report sulle dipendenze tra i calcoli e sugli oggetti a cui si fa riferimento in tali calcoli. Tali informazioni possono essere utilizzate in un'applicazione client per segnalare problemi con formule complesse o per visualizzare avvisi quando gli oggetti correlati vengono eliminati o modificati. È inoltre possibile utilizzare il set di righe per estrarre le espressioni DAX utilizzate nelle misure o nelle colonne calcolate.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Sì|Viene specificato il nome del database contenente l'oggetto per il quale viene richiesta l'analisi delle dipendenze. Se omesso, viene utilizzato il database corrente.<br /><br /> Il set di righe **DISCOVER_DEPENDENCY_CALC** può essere limitato tramite questa colonna.|  
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|Sì|Viene indicato il tipo di oggetto per il quale viene richiesta l'analisi delle dipendenze. L'oggetto deve essere uno dei tipi seguenti:<br /><br /> **ACTIVE_RELATIONSHIP**: una relazione attiva<br /><br /> **CALC_COLUMN**: colonna calcolata<br /><br /> **HIERARCHY**: una gerarchia<br /><br /> **MEASURE**: una misura<br /><br /> **RELATIONSHIP**: una relazione<br /><br /> **KPI**: un indicatore di prestazioni chiave<br /><br /> <br /><br /> Si noti che il **DISCOVER_DEPENDENCY_CALC** righe può essere limitato tramite questa colonna.|  
 |**QUERY**|**DBTYPE_WSTR**|Sì|Per i modelli tabulari creati in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], è possibile includere una query o un'espressione DAX per visualizzare il grafico delle dipendenze per questa query o espressione. Tramite la restrizione QUERY viene fornita alle applicazioni client una modalità per determinare gli oggetti utilizzati da una query DAX.<br /><br /> La restrizione **QUERY** può essere specificata in XMLA o nella clausola WHERE di una query DMV. Per ulteriori informazioni, vedere la sezione degli esempi.|  
-|**TAVOLO**|**DBTYPE_WSTR**||Nome della tabella contenente l'oggetto per il quale vengono generate le informazioni sulle dipendenze.|  
+|**TABLE**|**DBTYPE_WSTR**||Nome della tabella contenente l'oggetto per il quale vengono generate le informazioni sulle dipendenze.|  
 |**OGGETTO**|**DBTYPE_WSTR**||Nome dell'oggetto per il quale vengono generate le informazioni sulle dipendenze. Se l'oggetto è una misura o una colonna calcolata, utilizzare il nome della misura. Se l'oggetto è una relazione, il nome della tabella (o dimensione del cubo) contenente la colonna che fa parte della relazione.|  
 |**ESPRESSIONE**|**DBTYPE_WSTR**||Formula contenente l'oggetto per il quale vengono richieste le dipendenze.|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||Viene restituito il tipo di oggetto che presenta una dipendenza dall'oggetto a cui si fa riferimento. Gli oggetti restituiti possono essere del tipo seguente:<br /><br /> **CALC_COLUMN**: una colonna calcolata<br /><br /> **COLUMN**: una colonna di dati<br /><br /> **MEASURE**: una misura<br /><br /> **RELATIONSHIP**: una relazione<br /><br /> **KPI**: un indicatore di prestazioni chiave|  
@@ -139,4 +136,3 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
  [Usare dinamica viste a Gestione &#40; viste a gestione dinamica &#41; per monitorare Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-

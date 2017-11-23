@@ -3,10 +3,12 @@ title: "Più risultati | Documenti Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6e9f4cb753a7849e87c8b4725e7e0fad0e953ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="multiple-results"></a>Più risultati
 Oggetto *risultato* è un valore restituito dall'origine dati dopo l'esecuzione di un'istruzione. ODBC sono disponibili due tipi di risultati: set di risultati e conteggio delle righe. *Conteggio delle righe* sono il numero di righe interessate da un'istruzione update, delete o insert di istruzione. Batch, descritto in [batch di istruzioni SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md), è possibile generare più risultati.  
@@ -58,4 +59,3 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  È specifico del driver è esecuzione dell'istruzione dell'intero batch prima che i risultati siano disponibili. In alcune implementazioni, questo è il caso: in altri, la chiamata **SQLMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch.  
   
  Se una delle istruzioni in un batch ha esito negativo, **SQLMoreResults** restituirà SQL_ERROR o SQL_SUCCESS_WITH_INFO. Se il batch è stato interrotto quando l'istruzione non è riuscita o l'istruzione non riuscita era l'ultima istruzione nel batch, **SQLMoreResults** restituirà SQL_ERROR. Se il batch non è stato interrotto quando l'istruzione non è riuscita e l'istruzione non riuscita non è stata l'ultima istruzione nel batch, **SQLMoreResults** restituirà SQL_SUCCESS_WITH_INFO. SQL_SUCCESS_WITH_INFO indica che è stato generato almeno un set di risultati o conteggio e che il batch non è stato interrotto.
-

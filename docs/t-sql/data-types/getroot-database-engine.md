@@ -3,34 +3,33 @@ title: GetRoot (motore di Database) | Documenti Microsoft
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetRoot
 - GetRoot_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- GetRoot [Database Engine]
+dev_langs: TSQL
+helpviewer_keywords: GetRoot [Database Engine]
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 643eb8274a47220a1dd8c6cc76f822c18dbcf849
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4de7e4010400cbf3d192efb3dd6709792d734ba
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getroot-database-engine"></a>GetRoot (Motore di database)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Restituisce la radice dell'albero gerarchico. GetRoot () è un metodo statico.
   
@@ -78,4 +77,3 @@ SqlHierarchyId.GetRoot()
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
   
   
-

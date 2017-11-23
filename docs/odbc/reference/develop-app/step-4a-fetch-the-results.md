@@ -3,27 +3,28 @@ title: 'Passaggio 4: recuperare i risultati | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f706364735794aea773847431a9d42d0a09c8183
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-4a-fetch-the-results"></a>Passaggio 4: recuperare i risultati
 Il passaggio successivo è per recuperare i risultati, come illustrato nella figura seguente.  
@@ -39,4 +40,3 @@ Il passaggio successivo è per recuperare i risultati, come illustrato nella fig
  Per una descrizione completa di recupero dei risultati, vedere [il recupero dei risultati (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) e [il recupero dei risultati (avanzate)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  A questo punto l'applicazione torna al "Passaggio 3: compilazione ed eseguire un'istruzione SQL" per l'esecuzione di un'altra istruzione nella stessa transazione; o procede al "Passaggio 5: Commit di transazioni" per eseguire il commit o il rollback della transazione.
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.importfromppt.f1
+f1_keywords: sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85ae04b00034decd7390f86db1ee7e00c496434
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>Importare da Power Pivot (SSAS tabulare)
   Questo argomento descrive come creare un nuovo progetto di modello tabulare importando i metadati e i dati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con il modello di progetto Importa da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [Copiare e incollare dati &#40; SSAS tabulare &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Valori letterali numerici | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 11fa70b4ebbb46745590d17ae7188b88f59a28b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91f9b1fe25772c464877fff38b0eb4fc73155828
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-literals"></a>Valori letterali numerici
 Quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri, vengono utilizzati valori letterali numerici. Per la conversione di dati numerici di SQL su una stringa SQL_C_CHAR o conversione di dati numerici di C in una stringa SQL_CHAR o SQL_VARCHAR, sintassi del valore letterale numerica viene utilizzata per specificare il contenuto archiviato nel database di destinazione. Per la conversione di numerico archiviato come stringa SQL_C_CHAR a dati numerici di SQL o numerico archiviato sotto forma di stringa a dati C numerici SQL_CHAR, questa sintassi è utilizzata per convalidare il contenuto archiviato nell'origine.  
@@ -36,5 +37,4 @@ Quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri,
   
 -   [Regole per le conversioni](../../../odbc/reference/appendixes/rules-for-conversions.md)  
   
--   [Si esegue l'override di scala e precisione predefinita per i tipi di dati numerici](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)
-
+-   [Override della precisione predefinita e della scala per i tipi di dati numerici](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)

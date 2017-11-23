@@ -2,16 +2,18 @@
 title: '&lt;query di origine dati&gt; | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - data sources [DMX]
 - predictions [DMX]
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - <source data query> element
 - training mining models
 ms.assetid: 9dce5e37-1354-4d28-87c2-f9c419cb5b09
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7e950bdcc5b6e2b683ac1a63a79353c97c88dec1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 195c2ecd04a28ad830aca2d90df821b76d46e98e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ltsource-data-querygt"></a>&lt;query di origine dati&gt;
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Per eseguire il training di un modello di data mining e creare stime da un modello di data mining, è necessario accedere a dati esterni al [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Utilizzare il \<query di origine dati > clausola in estensioni DMX (Data Mining) per definire i dati esterni. Il [DMX INSERT INTO &#40; &#41;](../dmx/insert-into-dmx.md), [modello SELECT FROM &#60; &#62; DMX PREDICTION JOIN &#40; &#41; ](../dmx/select-from-model-prediction-join-dmx.md), e [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) tutte le istruzioni utilizzano  **\<query di origine dati >**.  
   
@@ -74,4 +75,3 @@ ms.lasthandoff: 08/02/2017
  [Tabelle nidificate &#40; Analysis Services - Data Mining &#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
   
-

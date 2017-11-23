@@ -3,26 +3,26 @@ title: "Prendere in considerazione le funzionalità di Database da utilizzare | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="considering-database-features-to-use"></a>Prendere in considerazione le funzionalità di Database da utilizzare
 Una volta noto il livello di base di interoperabilità, è necessario considerare le funzionalità del database utilizzate dall'applicazione. Ad esempio, le istruzioni SQL l'applicazione eseguirà? L'applicazione utilizzerà i cursori scorrevoli? Transazioni? Procedure? Dati di tipo Long? Per informazioni su quali funzionalità potrebbero non essere supportati da tutti i DBMS, vedere il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) le descrizioni delle funzioni e [ Appendice c: la grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Le funzionalità richieste da un'applicazione potrebbero eliminare alcuni DBMS dall'elenco di DBMS di destinazione. Si potrebbe anche essere indicato che l'applicazione può utilizzare facilmente DBMS più.  
@@ -52,4 +52,3 @@ Una volta noto il livello di base di interoperabilità, è necessario considerar
 -   **Supporta più query solo se il driver non.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. L'applicazione consente all'utente di avviare una nuova istruzione quando è già attivo solo se il driver supporta più istruzioni attive. L'applicazione dispone di più funzionalità e l'interoperabilità, ma è più difficile da implementare.  
   
 -   **Quando è necessario emulare sempre supporta più query.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. Sempre l'applicazione consente all'utente di avviare una nuova istruzione quando è già attivo. Se il driver supporta solo un'istruzione attiva, l'applicazione apre una connessione aggiuntiva per il driver ed esegue l'istruzione di nuovo su tale connessione. L'applicazione dispone di funzionalità complete e interoperabilità elevata ma è più difficile da implementare.
-

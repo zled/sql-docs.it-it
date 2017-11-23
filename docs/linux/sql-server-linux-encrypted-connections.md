@@ -6,18 +6,21 @@ ms.date: 10/02/2017
 ms.author: meetb;rickbyh
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords:
-- Linux, encrypted connections
+helpviewer_keywords: Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: f2f0792202d3af6be0e24ff8b24532598c8d0c84
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: it-it
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
@@ -133,4 +136,3 @@ TLS è utilizzato per crittografare le connessioni da un'applicazione client [!I
 |Il nome dell'entità di destinazione non è corretto.  |Assicurarsi che il campo nome comune nel certificato di SQL Server corrisponda al nome di server specificato nella stringa di connessione del client. |  
 |Una connessione esistente chiusa forzatamente dall'host remoto. |Questo errore può verificarsi quando il client non supporta la versione del protocollo TLS richiesta da SQL Server. Ad esempio, se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è configurato per richiedere TLS 1.2, assicurarsi che i client supportano anche il protocollo TLS 1.2. |
 | | |   
-

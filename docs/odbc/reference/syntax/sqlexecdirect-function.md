@@ -3,33 +3,30 @@ title: Funzione SQLExecDirect | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLExecDirect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLExecDirect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLExecDirect
-helpviewer_keywords:
-- SQLExecDirect function [ODBC]
+f1_keywords: SQLExecDirect
+helpviewer_keywords: SQLExecDirect function [ODBC]
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d2d4ebb3d6262056b5219d7b8cfd8bbc928faf7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fdf6183eda2b66263a8ff27664d046640b94ea95
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlexecdirect-function"></a>Funzione SQLExecDirect
 **Conformità**  
@@ -169,4 +166,3 @@ SQLRETURN SQLExecDirect(
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

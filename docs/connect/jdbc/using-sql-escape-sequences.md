@@ -3,24 +3,25 @@ title: Utilizzo di sequenze di Escape SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56610f09ea40942988e88202ac09ec6a3a5e48e0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-sql-escape-sequences"></a>Utilizzo delle sequenze di escape SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -167,7 +168,6 @@ LIMIT <rows> [OFFSET <row offset>]
  La sintassi di escape è costituito da due parti: \< *righe*> è obbligatorio e specifica il numero di righe da restituire. OFFSET e \< *offset di riga*> sono facoltativi e specificare il numero di righe da ignorare prima di iniziare a restituire le righe. Il driver JDBC supporta solo la parte obbligatoria trasformando la query per l'utilizzo di TOP invece di LIMIT. SQL Server non supporta la clausola LIMIT. **Il driver JDBC non supporta l'opzione facoltativa \<offset di riga > e il driver genererà un'eccezione se viene utilizzato**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle istruzioni con il Driver JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [Uso delle istruzioni con il driver JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

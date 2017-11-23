@@ -3,10 +3,12 @@ title: 'Passaggio 1: Connettersi all''origine dati | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data sources [ODBC], connections
 - connecting to data source [ODBC], steps
 ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 65c33be649b1c8007eef9e43db44897053a83a42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42da1bad914342a2f2973a63dc35f6e53f8b6c93
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-1-connect-to-the-data-source"></a>Passaggio 1: Connettersi all'origine dati
 Il primo passaggio in qualsiasi applicazione consiste nella connessione all'origine dati. Questa fase, incluse le funzioni che richiesti, è illustrata nella figura seguente.  
@@ -38,4 +39,3 @@ Il primo passaggio in qualsiasi applicazione consiste nella connessione all'orig
  Successivamente, l'applicazione viene allocato un handle di connessione con **SQLAllocHandle** e si connette all'origine dati con **SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**. Per ulteriori informazioni, vedere [allocare un Handle di connessione](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md) e [stabilire una connessione](../../../odbc/reference/develop-app/establishing-a-connection.md).  
   
  Quindi, l'applicazione imposta gli attributi di connessione, ad esempio se manualmente il commit delle transazioni. Per ulteriori informazioni, vedere [gli attributi di connessione](../../../odbc/reference/develop-app/connection-attributes.md).
-

@@ -3,10 +3,12 @@ title: Scrittura di driver di ODBC 3. x | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>Driver di scrittura ODBC 3. x
 Nella tabella seguente viene illustrato il supporto di funzione in un'applicazione ODBC 3. *x* driver e un'applicazione ODBC e il mapping eseguita da Gestione Driver quando le funzioni vengono chiamate su un'applicazione ODBC 3. *x* driver.  
@@ -93,7 +94,7 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
 |**SQLProcedures**|Sì|Sì|No|  
 |**SQLPutData**|Sì|Sì|No|  
 |**SQLRowCount**|Sì|Sì|No|  
-|**Funzione SQLSetConnectAttr**|Sì|Sì|No|  
+|**SQLSetConnectAttr**|Sì|Sì|No|  
 |**SQLSetConnectOption**|[5]|[1]|Sì|  
 |**SQLSetCursorName**|Sì|Sì|No|  
 |**SQLSetDescField**|Sì|Sì|No|  
@@ -102,7 +103,7 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
 |**SQLSetPos**|Sì|Sì|No|  
 |**SQLSetParam**|No|No|Sì|  
 |**SQLSetScrollOption**|Sì|Sì|No|  
-|**Funzione SQLSetStmtAttr**|Sì|Sì|No|  
+|**SQLSetStmtAttr**|Sì|Sì|No|  
 |**SQLSetStmtOption**|[5]|[1]|Sì|  
 |**SQLSpecialColumns**|Sì|Sì|No|  
 |**SQLStatistics**|Sì|Sì|No|  
@@ -121,4 +122,3 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
  [5] in determinate circostanze, i driver potrebbe essere necessario supportare questa funzione. Per ulteriori informazioni, vedere la pagina di riferimento della funzione.  
   
  [6] il driver può scegliere di supportare **SQLGetFunctions** se il set di funzioni supportate dal driver varia da una connessione per connessione.
-

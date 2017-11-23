@@ -7,15 +7,19 @@ ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 70b13a0deae8f12715488d81b44fb660f76decd0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti per SSIS in Linux
 
@@ -125,5 +129,4 @@ Il provider di log di SQL Server supporta solo l'autenticazione di SQL. non supp
 I provider di log SSIS per file di testo, per i file XML e per SQL Server Profiler scrivono l'output in un file specificato. Le considerazioni seguenti si applicano al percorso del file:
 -   Se non si fornisce un percorso, il provider di log scritto nella directory corrente dell'host. Se l'utente corrente non dispone dell'autorizzazione di scrittura nella directory corrente dell'host, il provider di log genera un errore.
 -   È possibile utilizzare una variabile di ambiente in un percorso di file. Se si specifica una variabile di ambiente, viene visualizzato il testo specificato nel percorso del file. Ad esempio, se si specifica `%TMP%/log.txt`, il provider di log aggiunge il testo letterale `/%TMP%/log.txt` nella directory host corrente.
-
 

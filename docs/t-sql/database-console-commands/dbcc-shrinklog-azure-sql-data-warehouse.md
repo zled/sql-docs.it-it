@@ -3,28 +3,28 @@ title: DBCC SHRINKLOG (Azure SQL Data Warehouse) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-caps.latest.revision: 11
+dev_langs: TSQL
+caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e2561b5658e87e2d33f4ccd7649ede7d7fa2857d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f572bdbf8a0606c6652de4838b7b72664040156a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Riduce le dimensioni del log delle transazioni *tra il dispositivo* per l'oggetto corrente [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. I dati viene deframmentati per compattare il log delle transazioni. Nel corso del tempo, il log delle transazioni di database può diventare frammentato e inefficiente. Utilizzare DBCC SHRINKLOG per ridurre la frammentazione e ridurre le dimensioni del log.
   
@@ -68,4 +68,3 @@ DBCC SHRINKLOG;
 ```  
   
   
-

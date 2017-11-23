@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server nel client Linux VDI specifica SDK
 
@@ -195,7 +199,7 @@ Quando questa routine deve bloccarsi in attesa per un comando, il thread è disp
 | |**pCmd** |Questo è l'indirizzo di un comando precedentemente restituito da ClientVirtualDevice::GetCommand.
 | |**completionCode** |Si tratta di un codice di stato che indica lo stato di completamento. Questo parametro deve essere restituito per tutti i comandi. Il codice restituito deve essere appropriato per il comando viene eseguito. ERROR_SUCCESS è usato in tutti i casi per indicare un comando eseguito correttamente. Per l'elenco completo dei possibili codici, vedere il file, vdierror.h. Un elenco di codici di stato per ogni comando viene visualizzata in "Comandi" più avanti in questo documento.
 | |**bytesTransferred** |Questo è il numero di byte trasferiti. Viene restituito solo per il trasferimento di dati, i comandi di lettura e scrittura.
-| |**position** |Si tratta di una risposta al comando GetPosition solo.
+| |**posizione** |Si tratta di una risposta al comando GetPosition solo.
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
@@ -325,6 +329,5 @@ La sezione Osservazioni il processo che richiama la funzione GetBufferHandle è 
 | |**VD_E_INVALID** |Il ppBuffer è un handle non valido.
 
 **La sezione Osservazioni** necessario prestare attenzione per comunicare correttamente i punti di controllo. Gli handle sono locali a un set unico dispositivo virtuale. I processi di partner, la condivisione di un handle devono verificare buffer handle vengono utilizzati solo nell'ambito del dispositivo virtuale impostata da cui è stato originariamente ottenuto il buffer.
-
 
 

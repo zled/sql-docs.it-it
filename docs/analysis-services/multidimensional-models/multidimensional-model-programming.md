@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dae8eace8a062bb296e172ce5d547eaf7768fa42
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-programming"></a>Programmazione del modello multidimensionale
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diverse API per la programmazione in un'istanza di Analysis Services e sui database multidimensionali che vengono da questa resi disponibili. In questa sezione vengono descritti gli approcci disponibili per gli sviluppatori che desiderano creare applicazioni personalizzate utilizzando Analysis Services. È possibile utilizzare queste informazioni per scegliere l'interfaccia di programmazione che più soddisfa i requisiti di un particolare progetto. I progetti di sviluppo di Analysis Services possono essere basati su codice gestito o non gestito eseguito su una piattaforma Windows o altre piattaforme che supportano accesso HTTP.  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Programmazione di Data Mining](../../analysis-services/data-mining-programming.md)  
   
   
-

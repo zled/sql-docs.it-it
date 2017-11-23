@@ -3,24 +3,25 @@ title: Domande frequenti (FAQ per il Driver JDBC) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e68c34ad2b9e444b39bf3ce8a5cfa33ad2dcd00c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508f8526ed13af3f7f92aa500b182e077f5bb23d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti (FAQ per il Driver JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -116,4 +117,3 @@ Il driver è stato testato nei principali server applicazioni, inclusi IBM WebSp
 **Il driver può comunicare con gli algoritmi FIPS convalidati?** Microsoft JDBC Driver non contiene algoritmi di crittografia. Se un cliente usa algoritmi del sistema operativo, dell'applicazione e JVM considerati accettabili da FIPS (Federal Information Processing Standard) e configura il driver per l'utilizzo di tali algoritmi, il driver userà solo gli algoritmi designati per la comunicazione.  
   
   
-

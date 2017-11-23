@@ -3,27 +3,28 @@ title: Funzioni stringa | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-functions"></a>Funzioni per i valori stringa
 La tabella seguente elenca le funzioni di modifica di stringa. Un'applicazione può determinare le funzioni di stringa supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_STRING_FUNCTIONS.  
@@ -64,4 +65,3 @@ La tabella seguente elenca le funzioni di modifica di stringa. Un'applicazione p
 |**Lo spazio (** *conteggio* **)** (ODBC 2.0)|Restituisce una stringa di caratteri costituito *conteggio* spazi.|  
 |**SUBSTRING (** *string_exp*, *avviare*, lunghezza**)** (ODBC 1.0)|Restituisce una stringa di caratteri che è derivata da *string_exp*, a partire dalla posizione del carattere specificata da *avviare* per *lunghezza* caratteri.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|Restituisce una stringa uguale a quello in *string_exp*, con tutti minuscoli convertiti in caratteri maiuscoli.|
-

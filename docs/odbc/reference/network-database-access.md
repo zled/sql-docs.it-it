@@ -3,10 +3,12 @@ title: Accesso al Database di rete | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 920de8b36ee55357eebde9ad844bfe569773f74e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="network-database-access"></a>Accesso alla rete del Database
 Accesso a un database in una rete richiede un numero di componenti, ognuno dei quali è indipendente e si trova di sotto, l'interfaccia di programmazione. Questi componenti sono illustrati nella figura seguente.  
@@ -44,4 +45,3 @@ Accesso a un database in una rete richiede un numero di componenti, ognuno dei q
 -   **Meccanismo di comunicazione interprocesso** il meccanismo di comunicazione interprocesso (IPC) è il processo mediante il quale un processo comunica con un altro. Esempi includono DECnet socket, socket TCP/IP e named pipe. La scelta del meccanismo IPC è vincolata dal sistema operativo e la rete in uso.  
   
 -   **Protocollo di rete** viene utilizzato il protocollo di rete per il trasporto del flusso di dati in una rete. Può essere considerato l'infrastruttura che supporta i meccanismi IPC utilizzati per implementare i dati di flusso di protocollo, nonché il supporto di operazioni di rete di base, ad esempio i trasferimenti di file e stampanti. Protocolli di rete includono NetBEUI, TCP/IP, DECnet e SPX/IPX e sono specifici per ogni rete.
-

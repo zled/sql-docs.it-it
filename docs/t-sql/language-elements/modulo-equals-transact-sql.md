@@ -1,36 +1,39 @@
 ---
-title: Modulo uguale a (Transact-SQL) | Documenti Microsoft
+title: '% = (Operatore di assegnazione) (Transact-SQL) | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '%=_TSQL'
 - '%='
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '%= (modulo equals)'
+- '%= (modulus assignment)'
 - compound operators, %=
+- assignment operators, %=
+- augmented operators, %=
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06b2992236f5d1705c10249ca07793e5fe01dff6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d425882e4d0e6b16334bcd0ec7dc5af0487a5c0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="modulo-equals-transact-sql"></a>Modulo EQUALS (Transact-SQL)
+# <a name="-modulus-assignment-transact-sql"></a>% = (Operatore di assegnazione) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Esegue la divisione tra due numeri e imposta un valore sul risultato dell'operazione. Ad esempio, se una variabile @x è uguale a 38, quindi @x % = 5 accetta il valore originale di @x, divisione per 5 e imposta @x al resto della divisione (3).  
@@ -51,7 +54,7 @@ expression %= expression
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni, vedere [Modulo &#40; Transact-SQL &#41; ](../../t-sql/language-elements/modulo-transact-sql.md).  
+ Per ulteriori informazioni, vedere [% &#40; Modulo &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/modulo-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
@@ -59,4 +62,3 @@ expression %= expression
  [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

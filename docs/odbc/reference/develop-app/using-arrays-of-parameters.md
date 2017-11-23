@@ -3,27 +3,28 @@ title: Utilizzo delle matrici di parametri | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-arrays-of-parameters"></a>Utilizzo delle matrici di parametri
 L'utilizzo delle matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMSET_SIZE per specificare il numero di set di parametri. Chiama **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMS_PROCESSED_PTR per specificare l'indirizzo di una variabile in cui il driver può restituire il numero di set di parametri elaborati, inclusi i set di errore. Chiama **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAM_STATUS_PTR in modo che punti a una matrice in cui si desidera ottenere informazioni sullo stato per ogni riga di valori di parametro. Il driver archivia questi indirizzi nella struttura che viene mantenuta per l'istruzione.  
@@ -58,4 +59,3 @@ L'utilizzo delle matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** 
 -   Poiché il driver non interpreta il valore di *ParameterValuePtr* argomento di **SQLBindParameter** per i parametri data-at-execution, se l'applicazione fornisce un puntatore a una matrice,  **SQLParamData** non estrarre e restituire un elemento della matrice per l'applicazione. Al contrario, restituisce che il valore scalare l'applicazione fosse fornita. Ciò significa che il valore restituito da **SQLParamData** è l'applicazione non è sufficiente specificare il parametro per il quale deve inviare i dati, l'applicazione deve anche considerare il numero di riga corrente.  
   
      Se solo alcuni degli elementi della matrice di parametri sono parametri data-at-execution, l'applicazione deve passare l'indirizzo di una matrice in *ParameterValuePtr* che contiene elementi per tutti i parametri. Questa matrice viene interpretata in genere per i parametri che non sono parametri data-at-execution. Per i parametri data-at-execution, il valore che **SQLParamData** fornisce all'applicazione, che potrebbe essere in genere usata per identificare i dati che richiede il driver in questo caso, è sempre l'indirizzo della matrice.
-

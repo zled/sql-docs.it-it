@@ -3,10 +3,12 @@ title: "Livello 1 interfaccia conformità | Documenti Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>Conformità di interfaccia di livello 1
 Il livello di conformità di livello 1 interfaccia include la funzionalità di livello principale dell'interfaccia conformità funzionalità aggiuntive, ad esempio transazioni, in genere disponibili in un DBMS relazionali OLTP. Un driver conforme allo standard dell'interfaccia di livello 1 consente all'applicazione di eseguire le operazioni seguenti, oltre alle funzionalità del livello di conformità interfaccia Core:  
@@ -40,4 +41,3 @@ Il livello di conformità di livello 1 interfaccia include la funzionalità di l
 |107|Utilizzare le funzioni ODBC anziché istruzioni SQL per eseguire determinate operazioni di database: **SQLSetPos** con SQL_POSITION e SQL_REFRESH.|  
 |108|Accedere al contenuto di più set di risultati generati dal batch e stored procedure, chiamando **SQLMoreResults**.|  
 |109|Delimitare transazioni che interessano diverse funzioni ODBC, con l'atomicità true e la possibilità di specificare SQL_ROLLBACK in **SQLEndTran**.|
-

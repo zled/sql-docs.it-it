@@ -3,10 +3,12 @@ title: SET STATISTICS IO (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - IO
 - IO_TSQL
 - SET STATISTICS IO
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - disk I/O statistics [SQL Server]
 - I/O [SQL Server], disk activity information
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - SET STATISTICS IO statement
 - statistical information [SQL Server], disk activity
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8d19ec8f11ae314dd4c420ba8b72689169e5e29b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 99e1dc183844f25002057b7cebd4729ff5f1bbe5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Impone in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la visualizzazione di informazioni sulla quantità di attività del disco generata da istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -107,4 +107,3 @@ lob read-ahead reads 0.
  [SET STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
   
   
-

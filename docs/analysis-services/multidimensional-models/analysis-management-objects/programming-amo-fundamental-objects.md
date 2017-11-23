@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6eda664b7dbe009d5f82e0daffe0b428b26098d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0d7e6045e81d10084b0d1951a373f88c675ee083
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programmazione di oggetti fondamentali AMO
   Gli oggetti fondamentali sono in genere oggetti di semplice utilizzo che solitamente vengono creati e di cui successivamente viene creata un'istanza. Quando non sono più necessari, l'utente si disconnette da tali oggetti. Le classi fondamentali includono gli oggetti <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>. L'unico oggetto complesso tra gli oggetti fondamentali AMO è <xref:Microsoft.AnalysisServices.DataSourceView>, per cui è necessario utilizzare dettagli per la compilazione del modello astratto che rappresenta la vista origine dati.  
@@ -570,4 +568,3 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
  [Gli oggetti di database &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

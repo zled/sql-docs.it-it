@@ -3,24 +3,25 @@ title: Utilizzo del buffer adattivo | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80944d5ebb5ec8c9f6ba98d9c520b10a0c4ade30
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-adaptive-buffering"></a>Utilizzo del buffer adattivo
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **La query produce un set di risultati molto grandi:** l'applicazione può eseguire un'istruzione SELECT che produce più righe di quante possano essere archiviate in memoria. Nelle versioni precedenti, l'applicazione deve utilizzare un cursore server per evitare un OutOfMemoryError. Il buffer adattivo consente di passare in modalità forward-only di sola lettura un set di risultati anche molto grande senza che sia necessario un cursore server.  
   
--   **La query produce grandi**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonne o**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**i valori di parametro:**  L'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per essere caricato interamente nella memoria dell'applicazione.         Il buffer adattivo consente all'applicazione client di recuperare tale valore come flusso, utilizzando il getAsciiStream, il getBinaryStream o i metodi getCharacterStream. L'applicazione recupera il valore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] durante la lettura dal flusso.  
+-   **La query produce grandi**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonne o**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**i valori di parametro:**  L'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per essere caricato interamente nella memoria dell'applicazione. Il buffer adattivo consente all'applicazione client di recuperare tale valore come flusso, utilizzando il getAsciiStream, il getBinaryStream o i metodi getCharacterStream. L'applicazione recupera il valore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] durante la lettura dal flusso.  
   
 > [!NOTE]  
 >  Con il buffer adattivo il driver JDBC memorizza nel buffer solo la quantità di dati necessaria e non fornisce alcun metodo pubblico per controllare o limitare le dimensioni del buffer.  
@@ -93,7 +94,6 @@ ms.lasthandoff: 09/09/2017
 -   Per i set di risultati forward-only aggiornabili, durante il recupero di un blocco di righe il driver in genere legge in memoria il numero di righe indicate dal [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto, anche quando il buffer adattivo è abilitato per la connessione. Se la chiamata di [Avanti](../../connect/jdbc/reference/next-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto implica un OutOfMemoryError, è possibile ridurre il numero di righe recuperate chiamando il [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) metodo di [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) per impostare la dimensione di recupero su un numero inferiore di righe, persino fino a una 1 riga, se necessario. È inoltre possibile forzare il driver non memorizzare nel buffer alcuna riga chiamando la [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) metodo il [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) dell'oggetto con "**adattivo**" parametro prima l'esecuzione dell'istruzione. Poiché il set di risultati non è scorrevole, se l'applicazione accede a un valore di colonna di grandi dimensioni utilizzando uno dei get\<tipo > metodi di flusso, il driver ignora il valore come letto dall'applicazione come avviene per il forward-only in sola lettura set di risultati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramento delle prestazioni e affidabilità con il Driver JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+ [Uso del driver JDBC per il miglioramento di prestazioni e affidabilità](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

@@ -3,27 +3,28 @@ title: SQLTables (dBASE Driver) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DBase driver [ODBC], SQLTables
 - SQLTables function [ODBC], dBASE Driver
 ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 83d58070e945c7ed68874aa3bd2d210e04f8bc6a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f477169cfc2f4912763ca90a38112104b237f9bd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltables-dbase-driver"></a>SQLTables (dBASE Driver)
 > [!NOTE]  
@@ -34,4 +35,3 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|L'argomento valido solo per *szTableOwner* è NULL perché nessuno dei driver supporta i nomi di proprietario. Con *szTableOwner* impostato su NULL, vengono restituite tutte le tabelle. Nella colonna TABLE_OWNER viene restituito NULL.|  
 |*szTableQualifier*|Nella colonna TABLE_QUALIFIER **SQLTables** restituirà il percorso in una directory.|  
 |*SzTableType*|Per i file dBASE, "TABLE" è l'unico tipo di tabella è supportato.|
-

@@ -3,10 +3,12 @@ title: Dati della colonna | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7694a2646f8cb62824991d37a01cd49f5291033
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-data"></a>Dati della colonna
 > [!IMPORTANT]  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 >  La libreria di cursori non aggiorna la cache per una colonna se **StrLen_or_IndPtr* nel set di righe corrispondente buffer è SQL_DATA_AT_EXEC o il risultato della macro SQL_LEN_DATA_AT_EXEC.  
   
  Quando aggiorna una colonna, dei dati dell'origine vuoto riempie caratteri a lunghezza fissa e dati binari a lunghezza fissa fino a zero in base alle esigenze. Ad esempio, un'origine dati memorizza "Smith" in una colonna char (10) come "Smith". La libreria di cursori non non vuoto-riquadro o zero-riquadro dati nei buffer di set di righe durante la copia di dati nella cache dopo l'esecuzione di un'istruzione di aggiornamento posizionato. Pertanto, se un'applicazione richiede che i valori nella cache della libreria di cursori sono riempiti con spazio vuoto o riempiti con degli zero, deve vuoto-riquadro o zero-riquadro i valori nei buffer di set di righe prima di eseguire un'istruzione di aggiornamento posizionato.
-

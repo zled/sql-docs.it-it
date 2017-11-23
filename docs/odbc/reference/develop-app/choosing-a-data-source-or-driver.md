@@ -3,10 +3,12 @@ title: Scelta dei dati di un'origine o il Driver | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Scelta dei dati di un Driver o origine
 L'origine dati o il driver utilizzato da un'applicazione è a volte hardcoded nell'applicazione. Ad esempio, un'applicazione personalizzata programmata dal dipartimento MIS per trasferire dati da un'origine dati a un'altra contiene i nomi di tali origini dati, ovvero semplicemente l'applicazione non funziona con tutte le altre origini dati. Un altro esempio è un'applicazione verticale, ad esempio un oggetto utilizzato per l'inserimento dell'ordine. Tale applicazione sempre utilizza la stessa origine dati, che ha uno schema predefinito noto dall'applicazione.  
@@ -47,4 +48,3 @@ L'origine dati o il driver utilizzato da un'applicazione è a volte hardcoded ne
 -   **L'accesso a un determinato DBMS una sola volta.** Ad esempio, in cui potrebbe contenere un foglio di calcolo che recupera i dati mediante la chiamata di funzioni ODBC il **DRIVER** (parola chiave) per identificare un driver specifico. Poiché il nome del driver è significativo per tutti gli utenti che dispongono di tale driver, è possibile passare il foglio di calcolo per gli utenti. Se il foglio di calcolo contiene un nome origine dati, ogni utente deve creare la stessa origine dati per l'utilizzo del foglio di calcolo.  
   
 -   **Esplorazione del sistema per tutti i database accessibili a un driver specifico.** Per ulteriori informazioni, vedere [connessione con SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), più avanti in questa sezione.
-

@@ -3,10 +3,12 @@ title: 'SQL per c: anno-mese intervalli | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - intervals [ODBC], converting
 - year-month intervals [ODBC]
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4acd46374597b19849abfaa7cb547c8b6af23bd9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL a intervalli di anno-mese c:
 Gli identificatori per i tipi di dati SQL ODBC intervallo anno-mese sono:  
@@ -51,4 +52,3 @@ _C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in
  [b] se la precisione di intervallo è un singolo campo (un mese o anno), l'intervallo di tipo SQL può essere convertito in qualsiasi numerico esatto (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG o SQL_C_NUMERIC).  
   
  La conversione del valore predefinito di un intervallo di tipo SQL è il tipo di dati di intervallo C corrispondente. L'applicazione quindi associa la colonna o parametro (o imposta il campo SQL_DESC_DATA_PTR il record appropriato del ARD) in modo che punti alla struttura SQL_INTERVAL_STRUCT inizializzata (o passa un puntatore alla struttura di SQL _ INTERVAL_STRUCT come il *TargetValuePtr* argomento in una chiamata a **SQLGetData**).
-

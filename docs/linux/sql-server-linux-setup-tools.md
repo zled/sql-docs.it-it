@@ -6,16 +6,20 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 8d97ba08eae758a22195250521935268aadb770e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installare sqlcmd e bcp strumenti da riga di comando di SQL Server in Linux
 
@@ -202,7 +206,7 @@ A partire da SQL Server 2017 CTP 2.0, gli strumenti da riga di comando di SQL Se
 
 Nella tabella seguente fornisce il percorso per i pacchetti di strumenti più recenti:
 
-| Pacchetto di strumenti | Version | Scarica |
+| Pacchetto di strumenti | Versione | Scarica |
 |-----|-----|-----|
 | Pacchetto di strumenti di Red Hat RPM | 14.0.5.0-1 | [pacchetto RPM MSSQL strumenti](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | Pacchetto di strumenti SLES RPM | 14.0.5.0-1 | [pacchetto RPM MSSQL strumenti](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -211,7 +215,7 @@ Nella tabella seguente fornisce il percorso per i pacchetti di strumenti più re
 
 Questi pacchetti dipendono da **ha**, che deve essere installato per primo. Il **ha** quest'ultimo ha anche una dipendenza su **esposti all'interno di unixODBC** (RPM) o **unixodbc-dev** (Debian). Il percorso del **ha** nella tabella seguente vengono elencati i pacchetti:
 
-| pacchetto ha | Version | Scarica |
+| pacchetto ha | Versione | Scarica |
 |-----|-----|-----|
 | Pacchetto ha Red Hat RPM | 13.1.6.0-1 | [pacchetto RPM ha](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | Pacchetto ha SLES RPM | 13.1.6.0-1 | [pacchetto RPM ha](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -265,4 +269,3 @@ Per un esempio di come utilizzare **sqlcmd** per connettersi a SQL Server e crea
 - [Eseguire in Docker](quickstart-install-connect-ubuntu.md)
 
 Per un esempio di come utilizzare **bcp** per importazione ed esportazione bulk dei dati, vedere [copia Bulk di dati a SQL Server in Linux](sql-server-linux-migrate-bcp.md).
-

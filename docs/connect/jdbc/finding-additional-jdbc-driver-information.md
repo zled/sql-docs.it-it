@@ -3,24 +3,25 @@ title: Ricerca di informazioni sul Driver JDBC aggiuntive | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ae72ba798703fcbb54553b05a1cfa5109f99505b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa8e17ee877f8bd7346ca3cf50dcc49c0acc51a7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Ulteriori informazioni sul driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,6 @@ ms.lasthandoff: 09/09/2017
 |[Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=116905)|Questo sito consente di cercare i problemi relativi al driver inviati dai clienti e di segnalare il proprio problema.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del Driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

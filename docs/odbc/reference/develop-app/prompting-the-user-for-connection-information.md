@@ -3,10 +3,12 @@ title: Chiedere conferma all'utente informazioni di connessione | Documenti Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Chiedere conferma all'utente informazioni di connessione
 Se l'applicazione utilizza **SQLConnect** e deve richiedere all'utente le informazioni di connessione, ad esempio un nome utente e una password, è necessario usare la stessa. Mentre in questo modo l'applicazione controllare il "aspetto", potrebbe forzare l'applicazione contenente il codice specifico del driver. Questo errore si verifica quando l'applicazione deve richiedere all'utente le informazioni di connessione specifici del driver. Ciò rappresenta una situazione possibile per le applicazioni generiche, vengono progettati per funzionare con alcuni o tutti i driver, inclusi i driver che non esistono quando l'applicazione viene scritta.  
@@ -54,4 +55,3 @@ DSN=XYZ Corp;
  Dopo che l'utente seleziona un'origine dati, gestione Driver costruisce una stringa di connessione che specifica che l'origine dati e lo passa al driver. Il driver può quindi richiedere all'utente le informazioni aggiuntive che necessarie.  
   
  Le condizioni in cui il driver richiede all'utente sono controllate dal *DriverCompletion* flag; sono disponibili le opzioni per Chiedi sempre conferma, prompt dei comandi se necessario, visualizzare mai la richiesta. Per una descrizione completa di questo flag, vedere il [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.
-

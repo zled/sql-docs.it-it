@@ -3,10 +3,12 @@ title: CREARE il tipo di messaggio (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,8 +20,7 @@ f1_keywords:
 - MESSAGE TYPE
 - MESSAGE_TYPE_TSQL
 - CREATE MESSAGE TYPE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - XML [Service Broker]
 - validation [Service Broker]
@@ -28,20 +29,19 @@ helpviewer_keywords:
 - binary [SQL Server], message types
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78606c8f9f058acec660a7fe20a392f93c8dee49
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8869a53cf18a58ba58b02e6faf8a42231e971e5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un nuovo tipo di messaggio. Il tipo di messaggio definisce il nome di un messaggio e la convalida che viene eseguita da [!INCLUDE[ssSB](../../includes/sssb-md.md)] nei messaggi con tale nome. In entrambi i lati di una conversazione devono essere definiti gli stessi tipi di messaggio.  
   
@@ -170,4 +170,3 @@ CREATE MESSAGE TYPE
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

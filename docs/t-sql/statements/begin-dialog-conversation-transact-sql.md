@@ -3,10 +3,12 @@ title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,8 +20,7 @@ f1_keywords:
 - DIALOG_TSQL
 - BEGIN DIALOG
 - BEGIN DIALOG CONVERSATION
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - conversations [Service Broker]
 - beginning dialogs
@@ -30,20 +31,19 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d4ca1959c247aedd2e49c38a870621d440a089f7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6e1f746ea0607759329b32499aed5887ee44b650
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Inizia un dialogo da un servizio a un altro servizio. Un dialogo è una conversazione per lo scambio di messaggi tra due servizi, messaggi che vengono inviati una sola volta e rispettando l'ordine di invio.  
   
@@ -222,4 +222,3 @@ BEGIN DIALOG CONVERSATION @dialog_handle
  [Sys. conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   
-

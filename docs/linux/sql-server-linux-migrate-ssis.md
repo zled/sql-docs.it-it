@@ -7,15 +7,19 @@ ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
+ms.openlocfilehash: 71e082bf6c2f7c5bad518f7c521767172e6265bd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 04b294aafb8019a44d2bb7fa05a4e6092a9a490f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Estrarre, trasformare e caricare i dati in Linux con SSIS
 
@@ -83,4 +87,3 @@ Per informazioni introduttive su SSIS, scaricare la versione più recente di [SQ
 - [Altre informazioni su SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [Strumenti di gestione e sviluppo di SQL Server Integration Services (SSIS)](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [Esercitazioni su SQL Server Integration Services](../integration-services/integration-services-tutorials.md)
-

@@ -6,15 +6,20 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 05/08/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
+ms.workload: On Demand
+ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
-ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Risolvere i problemi relativi a SQL Server in Linux
 
@@ -119,6 +124,37 @@ Per i dump di Core
 Per i dump SQL 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
+   ```
+   
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>Avvio di SQL Server nella configurazione minima o in modalità utente singolo
+
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>Avvio di SQL Server in modalità configurazione minima
+È utile nel caso in cui l'impostazione di un valore di configurazione, ad esempio un'allocazione eccessiva di memoria, abbia impedito l'avvio del server.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### <a name="start-sql-server-in-single-user-mode"></a>Avvio di SQL Server in modalità utente singolo
+In determinate circostanze, è possibile avviare un'istanza di SQL Server in modalità utente singolo utilizzando l'opzione di avvio -m. Ad esempio, può risultare utile modificare le opzioni di configurazione del server oppure recuperare un database master o un altro database di sistema danneggiato. Ad esempio, è consigliabile modificare le opzioni di configurazione di server oppure recuperare un database master danneggiato o altri database di sistema   
+
+Avvio di SQL Server in modalità utente singolo
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+Avvio di SQL Server in modalità utente singolo con SQLCMD
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  Avviare SQL Server in Linux con l'utente "mssql" per evitare problemi di avvio future. Esempio "sudo -u mssql /opt/mssql/bin/sqlservr [opzioni]" 
+
+Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessario modificare il proprietario dei file di database di SQL Server all'utente prima dell'avvio di SQL Server con systemd 'mssql'. Ad esempio, eseguire il comando seguente per modificare la proprietà di tutti i file di database in /var/opt/mssql all'utente 'mssql',
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## <a name="common-issues"></a>Problemi comuni

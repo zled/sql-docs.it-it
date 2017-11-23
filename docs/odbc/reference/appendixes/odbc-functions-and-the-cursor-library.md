@@ -3,24 +3,25 @@ title: Le funzioni ODBC e la libreria di cursori | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5fe29e8cd03ded1ee2125d2729ede4c66f196838
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6405c2a0890b9a5b43c420960f1b823b39ad9e60
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>Le funzioni ODBC e la libreria di cursori
 > [!IMPORTANT]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [Funzioni ODBC eseguite dalla libreria di cursori](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   
--   [Funzioni ODBC non è state eseguite dalla libreria di cursori](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
+-   [Funzioni ODBC non eseguite dalla libreria di cursori](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
   
 -   [SQLBindCol (libreria di cursori)](../../../odbc/reference/appendixes/sqlbindcol-cursor-library.md)  
   
@@ -68,9 +69,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [SQLRowCount (libreria di cursori)](../../../odbc/reference/appendixes/sqlrowcount-cursor-library.md)  
   
--   [Funzione SQLSetConnectAttr (libreria di cursori)](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
+-   [SQLSetConnectAttr (libreria di cursori)](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
   
--   [SQLSetDescField e SQLSetDescRec (libreria di cursori)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
+-   [SQLSetDescField and SQLSetDescRec (libreria di cursori)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
 -   [SQLSetEnvAttr (libreria di cursori)](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
@@ -79,4 +80,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSetScrollOptions (libreria di cursori)](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
   
 -   [SQLSetStmtAttr (libreria di cursori)](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)
-

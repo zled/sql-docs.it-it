@@ -3,24 +3,25 @@ title: Schermata della procedura guidata 3, il Driver ODBC per SQL Server, dell'
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 1bda5a320e399888ed05331b3adbc2d29cf28022
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="data-source-wizard-screen-3"></a>Schermata di creazione guidata origine dati 3
 
@@ -95,4 +96,3 @@ Consente di tornare alla schermata precedente della procedura guidata.
 [Schermata di creazione guidata origine dati 2](../../../connect/odbc/windows/dsn-wizard-2.md)
 
 [Schermata di creazione guidata origine dati 4](../../../connect/odbc/windows/dsn-wizard-4.md)
-

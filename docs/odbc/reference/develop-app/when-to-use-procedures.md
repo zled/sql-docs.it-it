@@ -3,27 +3,28 @@ title: Quando utilizzare le procedure | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>Quando utilizzare le procedure
 Esistono diversi vantaggi rispetto all'utilizzo delle procedure, tutte basata sul fatto che tramite le procedure Sposta istruzioni SQL dall'applicazione per l'origine dati. Ciò che resta nell'applicazione è una chiamata di procedura interoperativa. Tali vantaggi includono:  
@@ -51,4 +52,3 @@ Esistono diversi vantaggi rispetto all'utilizzo delle procedure, tutte basata su
  Il secondo svantaggio è che molti DBMS non supportano le procedure. Anche questo è più probabile che un problema per le applicazioni verticali progettato per l'esecuzione con un numero di DBMS. Per determinare se le procedure sono supportate, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_PROCEDURES.  
   
  Lo svantaggio di terzo, che è applicabile in particolare in ambienti di sviluppo di applicazioni, è che ODBC non viene definita una grammatica standard per la creazione di procedure. Ovvero, sebbene le applicazioni possono chiamare procedure interoperably, non possono creare li interoperably.
-

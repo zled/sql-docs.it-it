@@ -3,24 +3,25 @@ title: Microsoft Open Database Connectivity (ODBC) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 17ae2b4d9ceb1518a0c2e455c93c124df6954f3d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 L'interfaccia di Microsoft Open Database Connectivity (ODBC) è un'interfaccia del linguaggio di programmazione C che consente alle applicazioni di accedere ai dati da un'ampia gamma di sistemi di gestione di database (DBMS). ODBC è un'interfaccia di basso livello, ad alte prestazioni che è progettata specificamente per gli archivi dati relazionali.  
@@ -28,15 +29,15 @@ L'interfaccia di Microsoft Open Database Connectivity (ODBC) è un'interfaccia d
  L'interfaccia ODBC consente di ottenere la massima interoperabilità, un'applicazione può accedere a dati nel DBMS diversi tramite un'unica interfaccia. Inoltre, tale applicazione sarà indipendente da qualsiasi DBMS da cui accede ai dati. Gli utenti dell'applicazione è possono aggiungere componenti software denominati driver, interfaccia tra un'applicazione e un DBMS specifico.  
   
 ## <a name="documentation"></a>Documentazione  
- [Riferimento per programmatori ODBC](../odbc/reference/odbc-programmer-s-reference.md)  
+ [Guida di riferimento per programmatori ODBC](../odbc/reference/odbc-programmer-s-reference.md)  
   
  Documentazione di ODBC interfacce e metodi.  
   
- [Amministrazione origine dati ODBC](../odbc/admin/odbc-data-source-administrator.md)  
+ [Amministratore origine dati ODBC](../odbc/admin/odbc-data-source-administrator.md)  
   
  L'amministratore dell'origine dati ODBC Microsoft gestisce le origini dati e i driver di database.  
   
- [Driver ODBC fornito da Microsoft](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)  
+ [Driver ODBC forniti da Microsoft](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)  
   
  Documentazione per il driver ODBC di Database Desktop, il Driver ODBC per Oracle e il Driver ODBC FoxPro® Visual.  
   
@@ -54,4 +55,3 @@ L'interfaccia di Microsoft Open Database Connectivity (ODBC) è un'interfaccia d
   
 ## <a name="support"></a>Supporto  
  Informazioni sulle opzioni di supporto possono trovarsi nel [Microsoft Help and Support](http://go.microsoft.com/fwlink?linkid=5521) sito Web.
-

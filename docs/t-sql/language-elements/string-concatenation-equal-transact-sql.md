@@ -1,34 +1,34 @@
 ---
-title: + = (Concatenazione) (Transact-SQL) | Documenti Microsoft
+title: + = (Concatenazione di stringhe e assegnazione) (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - concatenate strings
 - string concatenation
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6c1716e014de1c99e4b3560d55674f0d82797c03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c557bcc1d3c2f314ce57e93701b11833f5a6fc6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="string-concatenation---equal-transact-sql"></a>Concatenazione di stringhe: uguale a (Transact-SQL)
+# <a name="-string-concatenation-assignment-transact-sql"></a>+ = (Assegnazione di concatenazione di stringhe) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concatena due stringhe e imposta la stringa sul risultato dell'operazione. Ad esempio, se una variabile @x è uguale a 'Adventure', quindi @x + = 'Works' accetta il valore originale di @x, aggiunta di 'Works' per la stringa e imposta @x nuovo valore 'AdventureWorks'.  
@@ -129,8 +129,7 @@ GO
    
 ## <a name="see-also"></a>Vedere anche  
  [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = &#40; Aggiungi EQUALS &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ = &#40; Aggiungi assegnazione &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ &#40; Concatenazione di stringhe &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   
-

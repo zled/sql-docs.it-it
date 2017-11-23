@@ -3,10 +3,12 @@ title: Istruzione ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Documenti Micros
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,25 +16,22 @@ f1_keywords:
 - ALTER CRYPTOGRAPHIC PROVIDER
 - ALTER_CRYPTOGRAPHIC_TSQL
 - ALTER CRYPTOGRAPHIC
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER CRYPTOGRAPHIC PROVIDER
+dev_langs: TSQL
+helpviewer_keywords: ALTER CRYPTOGRAPHIC PROVIDER
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fe377a27978cdae372a7bfc8545d7cad1f514820
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b1579fb75de53747a26e647f69c7fc70346738fa
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica un provider di crittografia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un provider EKM (Extensible Key Management).  
   
@@ -112,4 +111,3 @@ GO
  [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   
-

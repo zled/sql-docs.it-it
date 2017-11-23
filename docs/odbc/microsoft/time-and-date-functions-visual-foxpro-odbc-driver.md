@@ -3,10 +3,12 @@ title: Funzioni di ora e data (Driver ODBC di Visual FoxPro) | Documenti Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a64206cf57944933ae6c8e98633500444e273fca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab52b29d54416dca84d18cb0cd2b832da1b4d63
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni di ora e data (Driver ODBC di Visual FoxPro)
 Nella tabella seguente sono elencate le funzioni di data e ora ODBC supportate dal Driver ODBC di Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencata l'equivalente di Visual FoxPro.  
@@ -86,4 +87,3 @@ UPDATE alltypes
   
 ## <a name="remarks"></a>Osservazioni  
  Per ulteriori informazioni sulle sequenze di escape, vedere [sequenze di Escape ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) nel *riferimento per programmatori ODBC*.
-

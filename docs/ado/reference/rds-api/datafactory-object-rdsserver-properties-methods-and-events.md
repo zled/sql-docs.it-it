@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DataFactory object [ADO], members
+helpviewer_keywords: DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f5343dacd2ae5369e5d21fcd72df46ea9f11a9e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1375d8c681129f2be813257dbc805b2ed02517b3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Le proprietà dell'oggetto DataFactory (RDSServer), metodi ed eventi
 > [!IMPORTANT]
@@ -38,20 +35,19 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Metodo ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte un recordset in una stringa MIME64.|  
-|[Metodo CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crea e restituisce un oggetto recordset vuoto.|  
-|[Eseguire il metodo (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati (per l'utilizzo con ADO 2.5 o versioni successive).|  
-|[Metodo Execute21 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati (per l'utilizzo con ADO 2.1).|  
-|[Metodo query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati.|  
-|[Metodo SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Dato un recordset con modifiche in sospeso, questo metodo li invia al database specificato nella stringa di connessione.|  
-|[Synchronize (metodo) (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2.5 o versioni successive).|  
-|[Metodo Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2.1).|  
+|[Metodo ConvertToString (Servizi Desktop remoto)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte un recordset in una stringa MIME64.|  
+|[Metodo CreateRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crea e restituisce un oggetto recordset vuoto.|  
+|[Metodo Execute (Servizi Desktop remoto)](../../../ado/reference/rds-api/execute-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati (per l'utilizzo con ADO 2.5 o versioni successive).|  
+|[Metodo Execute21 (Servizi Desktop remoto)](../../../ado/reference/rds-api/execute21-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati (per l'utilizzo con ADO 2.1).|  
+|[Metodo Query (Servizi Desktop remoto)](../../../ado/reference/rds-api/query-method-rds.md)|Eseguire la richiesta e creare un set di righe di dati avanzati.|  
+|[Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Dato un recordset con modifiche in sospeso, questo metodo li invia al database specificato nella stringa di connessione.|  
+|[Metodo Synchronize (Servizi Desktop remoto)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2.5 o versioni successive).|  
+|[Metodo Synchronize21 (Servizi Desktop remoto)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2.1).|  
   
 ## <a name="events"></a>Eventi  
  nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

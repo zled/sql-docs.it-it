@@ -1,30 +1,31 @@
 ---
 title: "Utilizzo delle funzionalità di SQL Server | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: f2feaaa999a6010ab493e9f4f73f6ffdef576e82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Utilizzo delle funzionalità di SQL Server
-WideWorldImporters l'utilizzo di funzionalità di SQL Server e funzionalità nel database OLTP.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters l'utilizzo di funzionalità di SQL Server e funzionalità nel database OLTP.
 
 WideWorldImporters è progettato per illustrare molte delle funzionalità chiave di SQL Server, incluse le funzionalità più recenti introdotte in SQL Server 2016. Di seguito è riportato un elenco di funzionalità di SQL Server e funzionalità e una descrizione di come vengono usati in WideWorldImporters.
 
@@ -51,4 +52,3 @@ WideWorldImporters è progettato per illustrare molte delle funzionalità chiave
 |Archivio query|Archivio query è abilitato nel database. Dopo aver eseguito alcune query, aprire il database in Management Studio, aprire l'archivio Query, ovvero del database, il nodo e aprire il report Top query per consumo risorse per visualizzare le esecuzioni di query e i piani per le query che è stata eseguita.|
 |STRING_SPLIT|La colonna `DeliveryInstructions` nella tabella `Sales.Invoices`ha un valore delimitato da virgole che può essere utilizzato per illustrare STRING_SPLIT.|
 |Controllo|Eseguendo l'istruzione seguente nel database, SQL Server Audit può essere abilitata per questo database di esempio:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>Nel Database di SQL Azure, il controllo è abilitato tramite il [portale di Azure](https://portal.azure.com/).<br/><br/>Operazioni di protezione che include gli account di accesso, ruoli e autorizzazioni vengono registrate in tutti i sistemi in cui controllo è abilitato (inclusi i sistemi di standard edition). Controllo viene indirizzato al registro applicazioni di perché questo è disponibile in tutti i sistemi e non richiede autorizzazioni aggiuntive. Un avviso è dato che per una maggiore sicurezza, è necessario reindirizzarlo nel Registro di sicurezza o in un file in una cartella protetta. Viene fornito un collegamento per descrivere le operazioni di configurazione necessarie.<br/><br/>Per i sistemi di valutazione/developer o enterprise edition, viene controllato l'accesso a tutti i dati finanziari transazionali.|
-

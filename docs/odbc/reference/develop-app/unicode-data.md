@@ -3,10 +3,12 @@ title: Dati Unicode | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31122122cdb7a6f940dd1ba91eeb8caef8ac9d0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-data"></a>Dati Unicode
 Per descrivere i dati che si trovano in formato Unicode in modo nativo nel sistema DBMS sono disponibili i tipi di dati Unicode di SQL. Un tipo di dati Unicode C viene fornito per consentire a un'applicazione associare dati a un buffer di Unicode. Gestione Driver può convertire i dati da un tipo di Unicode C (SQL_C_WCHAR) per rendere una funzione con un driver ANSI.  
@@ -53,4 +54,3 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  I driver di Unicode devono comunque supportare tipi di dati ANSI, tra cui SQL_CHAR. Se un'applicazione che utilizza un driver Unicode associa a SQL_CHAR, gestione Driver non eseguirà il mapping dei dati SQL_CHAR per SQL_WCHAR. Il driver Unicode è necessario accettare i dati SQL_CHAR.  
   
  Gestione Driver archivia driver e i nomi DSN in formato Unicode e ne esegue il mapping ad ANSI in base alle esigenze. Se un carattere Unicode non può essere mappato a un carattere ANSI (come può verificarsi se i caratteri da una tabella codici che non è la pagina di codice nativo del computer vengono utilizzati nei nomi DSN e driver), che non è stato possibile convertire i caratteri sono rappresentati dal sup carattere predefinito plied dal sistema.
-

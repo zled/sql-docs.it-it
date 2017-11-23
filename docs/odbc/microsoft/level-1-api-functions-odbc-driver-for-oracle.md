@@ -3,10 +3,12 @@ title: Funzioni API di livello 1, il Driver ODBC per Oracle | Documenti Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f6aac543377e321be8db38f7dd95fad16efbac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello 1 (Driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -51,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Recupera il set di colonne ottimale che identifica in modo univoco una riga nella tabella.|  
 |**SQLStatistics**|Recupera un elenco delle statistiche su una singola tabella e indici o nomi di tag associati alla tabella. Il driver restituisce le informazioni come set di risultati.|  
 |**SQLTables**|Restituisce l'elenco dei nomi di tabella specificato dal parametro di **SQLTables** istruzione. Se viene specificato alcun parametro, restituisce i nomi delle tabelle archiviate nell'origine dati corrente. Il driver restituisce le informazioni come set di risultati.<br /><br /> Chiamate di tipo di enumerazione non riceveranno una voce del set di risultati per visualizzazioni remote o locale con parametri. Tuttavia, una chiamata a **SQLTables** con una tabella univoca identificatore di nome verrà trovata una corrispondenza per una vista, se presente, con lo stesso nome; in questo modo l'API verificare i conflitti di nome prima di creare una nuova tabella.<br /><br /> Il sinonimo PUBLIC viene restituito con un valore TABLE_OWNER "".<br /><br /> VISTE di proprietà di sistema o SYS vengono identificate come vista di sistema.|
-

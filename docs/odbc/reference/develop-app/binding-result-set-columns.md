@@ -3,27 +3,28 @@ title: Colonne del Set di risultati di associazione | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cafac55eeca169ff83521e945f0f5e76b31f19c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-result-set-columns"></a>Colonne del Set di risultati di associazione
 Le applicazioni possono associare come molti o con il minor numero di colonne del set di risultati a propria scelta, tra cui non associazione colonne affatto. Quando viene recuperata una riga di dati, il driver restituisce i dati per le colonne associate all'applicazione. Se l'applicazione associa tutte le colonne nel set di risultati dipende dall'applicazione. Ad esempio, le applicazioni che generano i rapporti in genere hanno un formato fisso; tali applicazioni creare un set di risultati contenente tutte le colonne utilizzate nel report e quindi associare e recuperano i dati per tutte queste colonne. Le applicazioni che consentono di visualizzare schermate completa dei dati talvolta consentono all'utente di decidere le colonne da visualizzare. tali applicazioni creare un set di risultati contenente tutte le colonne, l'utente potrebbe comunque ma associare e recuperare i dati solo per le colonne selezionate dall'utente.  
@@ -47,4 +48,3 @@ SELECT * FROM Lines
 ```  
   
  sullo stesso handle di istruzione, le associazioni di colonna per il primo set di risultati sono ancora attive perché queste sono le associazioni archiviate nella struttura di istruzione. Nella maggior parte dei casi, questo è un livello di programmazione ridotte e deve essere evitato. Al contrario, l'applicazione deve chiamare **SQLFreeStmt** con l'opzione SQL_UNBIND per separare tutte le colonne precedente e quindi associare nuovi.
-

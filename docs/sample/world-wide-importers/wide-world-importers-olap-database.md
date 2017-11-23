@@ -1,30 +1,31 @@
 ---
 title: Database di Wide World Importers OLAP | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee64562b-a6d7-420c-b9da-75b5223cf8ab
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: e86540aca2f4db314a7c28e1d8f68f71e951a514
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: de0880b7c16e2e54a45d7d138a727c3d6b696d15
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-data-warehousing-and-analytics-database"></a>Wide World Importers data warehousing e analitica database
-Documentazione per il database Wide World Importers data warehousing e analitica.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Documentazione per il database Wide World Importers data warehousing e analitica.
 
 **WideWorldImportersDW installazione e configurazione**
 
@@ -45,4 +46,3 @@ Viene descritto come il WideWorldImportersDW sfrutta le funzionalità di SQL Ser
 **Query di esempio WideWorldImportersDW OLAP**
 
 Query di esempio analitica sfruttando il database WideWorldImportersDW.
-

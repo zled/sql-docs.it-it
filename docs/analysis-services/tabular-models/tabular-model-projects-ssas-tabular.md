@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Progetti di modello tabulare (SSAS tabulare)
   Per creare un nuovo modello tabulare, è necessario innanzitutto creare un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando si installa [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vengono forniti tre nuovi modelli di progetto di Business Intelligence per la creazione di progetti di modelli tabulari. In ogni modello di progetto è disponibile un framework in base al quale è possibile iniziare a creare il modello. Negli argomenti di questa sezione viene descritto come creare un nuovo progetto di modello tabulare utilizzando i modelli di progetto.  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/01/2017
 |[Importare da Power Pivot &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|Questo argomento descrive come creare un nuovo progetto di modello tabulare estraendo i metadati e i dati da un file [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel (con estensione xlsx).|  
   
   
-

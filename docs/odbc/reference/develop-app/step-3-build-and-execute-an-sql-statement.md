@@ -3,27 +3,28 @@ title: 'Passaggio 3: Compilare ed eseguire un''istruzione SQL | Documenti Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f213203e7601c79f8f5336756462d6ad344aaa8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Passaggio 3: Compilare ed eseguire un'istruzione SQL
 Il terzo passaggio è compilare ed eseguire un'istruzione SQL, come illustrato nella figura seguente. I metodi utilizzati per eseguire questo passaggio possono variare notevolmente. L'applicazione potrebbe richiedere all'utente di immettere un'istruzione SQL, un'istruzione SQL in base all'input di compilazione o utilizzare un'istruzione SQL a livello di codice. Per ulteriori informazioni, vedere [la costruzione di istruzioni SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
@@ -40,7 +41,6 @@ Il terzo passaggio è compilare ed eseguire un'istruzione SQL, come illustrato n
   
 |Tipo di istruzione SQL|Passare alla|  
 |---------------------------|----------------|  
-|**Selezionare** o del catalogo (funzione)|[Passaggio 4: recuperare i risultati](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**Selezionare** o del catalogo (funzione)|[Passaggio 4a: recuperare i risultati](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**AGGIORNAMENTO**, **eliminare**, o **INSERT**|[Passaggio 4b: recuperare il conteggio delle righe](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Tutte le altre istruzioni SQL|Passaggio 3: Compilare ed eseguire un'istruzione SQL (questo argomento) o [passaggio 5: eseguire il Commit della transazione](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
-

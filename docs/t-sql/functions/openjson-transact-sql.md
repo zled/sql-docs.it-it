@@ -1,13 +1,14 @@
 ---
 title: OPENJSON (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-json
+ms.suite: sql
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,20 +19,19 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fe464bedc22fa5ebc47fc7f783e75b994d0cff49
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 27eeb54d6493bb200e56caada1238d6fafb5b339
-ms.contentlocale: it-it
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** è una funzione con valori di tabella che analizza il testo JSON e restituisce gli oggetti e le proprietà dell'input JSON in righe e colonne. In altre parole, **OPENJSON** fornisce una visualizzazione di set di righe in un documento JSON. In modo esplicito, è possibile specificare le colonne nel set di righe e i percorsi delle proprietà JSON usati per popolare le colonne. Poiché **OPENJSON** restituisce un set di righe, è possibile usare **OPENJSON** nel `FROM` clausola di un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione nello stesso modo in cui è possibile utilizzare qualsiasi altra tabella, vista o funzione con valori di tabella.  
   
@@ -371,4 +371,3 @@ DECLARE @json NVARCHAR(max)  = N'{
  [Usare OPENJSON con uno Schema esplicito &#40; SQL Server &#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   
   
-

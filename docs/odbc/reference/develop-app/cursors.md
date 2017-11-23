@@ -3,10 +3,12 @@ title: Cursori | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursors"></a>Cursori
 Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un set di risultati: un set di risultati è il set di righe che soddisfa i criteri di ricerca particolare, mentre un cursore è il software che restituisce le righe per l'applicazione. Il nome *cursore,* applicato ai database, probabilmente ha avuto origine il cursore in un computer terminal lampeggiante. Come tale cursore indica la posizione sullo schermo e in cui le parole tipizzate apparirà successive, un cursore su un set di risultati indica la posizione corrente nel set di risultati e la riga verrà restituita accanto.  
@@ -43,4 +44,3 @@ Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un se
   
 > [!IMPORTANT]  
 >  Eseguire il commit o il rollback di una transazione, in modo esplicito chiamando **SQLEndTran** o per operare in modalità autocommit, a causa di alcune origini dati chiudere tutti i cursori su tutte le istruzioni in una connessione. Per ulteriori informazioni, vedere gli attributi SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione.
-

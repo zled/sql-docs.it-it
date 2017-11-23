@@ -3,10 +3,12 @@ title: Funzioni di intervallo, ora e data | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-date-and-interval-functions"></a>Funzioni di data, ora e intervallo
 La tabella seguente elenca le funzioni di data e ora che sono inclusi nel set di funzioni scalari ODBC. Un'applicazione può determinare quali funzioni di data e ora sono supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_TIMEDATE_FUNCTIONS.  
@@ -63,4 +64,3 @@ La tabella seguente elenca le funzioni di data e ora che sono inclusi nel set di
 |**TIMESTAMPDIFF (** *intervallo*, *timestamp_exp1*, *timestamp_exp2* **)** (ODBC 2.0)|Restituisce il numero intero di intervalli di tipo *intervallo* mediante il quale *timestamp_exp2* è maggiore di *timestamp_exp1*. I valori validi di *intervallo* sono le parole chiave seguenti:<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> frazioni di secondo in cui sono espressi in miliardesimi di secondo. Ad esempio, l'istruzione SQL seguente restituisce il nome di ogni dipendente e il numero di anni che egli usato:<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> Se due espressioni di timestamp è un valore di ora e *intervallo* giorni, settimane, mesi, trimestri o anni, la parte relativa alla data di tale timestamp viene impostata sulla data corrente prima di calcolare la differenza tra i timestamp.<br /><br /> Se due espressioni di timestamp è un valore di data e *intervallo* specifica frazionari secondi, secondi, minuti o ore, la porzione dell'ora di tale timestamp è impostata su 0 prima di calcolare la differenza tra i timestamp.<br /><br /> Un'applicazione determina quali intervalli di un'origine dati supporta chiamando **SQLGetInfo** con l'opzione SQL_TIMEDATE_DIFF_INTERVALS.|  
 |**SETTIMANA (** *date_exp* **)** (ODBC 1.0)|Restituisce la settimana dell'anno in base al campo della settimana in *date_exp* come valore intero compreso nell'intervallo da 1 a 53.|  
 |**ANNO (** *date_exp* **)** (ODBC 1.0)|Restituisce l'anno in base al campo year nella *date_exp* come valore integer. L'intervallo è dipende dall'origine dati.|
-

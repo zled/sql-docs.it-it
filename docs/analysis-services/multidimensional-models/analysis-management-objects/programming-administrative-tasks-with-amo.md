@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, programming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e585db13b3c3562cd454ef41fdbb7d60bbd94c26
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55e99f0c8abe8a0527af77d06a2fd4ab863a8491
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Programmazione di attività amministrative con AMO
   La libreria AMO (Analysis Management Objects) è una libreria di programmazione utilizzata dalle applicazioni client per gestire [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. In questa sezione viene illustrato come programmare utilizzando gli oggetti AMO.  
@@ -39,12 +36,12 @@ ms.lasthandoff: 09/01/2017
   
 |Capitolo|Sommario|  
 |-------------|--------------|  
-|[Programmazione di oggetti fondamentale AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)|Descrive come programmare gli oggetti Server, Database, DataSource e DataSourceView. In questo capitolo è inclusa inoltre l'eccezione AMOException.|  
+|[Programmazione di oggetti fondamentali AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)|Descrive come programmare gli oggetti Server, Database, DataSource e DataSourceView. In questo capitolo è inclusa inoltre l'eccezione AMOException.|  
 |[Programmazione di oggetti di base OLAP in AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)|Descrive come programmare gli oggetti Dimension, Cube, MeasureGroup, Partition e Aggregation.|  
-|[Oggetti avanzati OLAP in AMO programmazione](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)|Descrive come programmare gli oggetti Action, KPI, Perspective, ProactiveCaching e Translation.|  
-|[Oggetti di Data Mining di programmazione AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)|Descrive come programmare gli oggetti MiningStructure e MiningModel.|  
+|[Programmazione di oggetti avanzati OLAP in AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)|Descrive come programmare gli oggetti Action, KPI, Perspective, ProactiveCaching e Translation.|  
+|[Programmazione di oggetti di data mining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)|Descrive come programmare gli oggetti MiningStructure e MiningModel.|  
 |[Programmazione di oggetti di sicurezza AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)|Descrive come programmare gli oggetti Roles, Members e Permissions.|  
-|[Metodi e classi di programmazione AMO complementari](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md)|Descrive come programmare l'oggetto Assembly, i metodi Backup e Restore, la classe Trace, la classe CaptureLog e l'attributo CaptureXML.|  
+|[Programmazione di classi e metodi AMO complementari](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md)|Descrive come programmare l'oggetto Assembly, i metodi Backup e Restore, la classe Trace, la classe CaptureLog e l'attributo CaptureXML.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices>   
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Gli oggetti di database &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

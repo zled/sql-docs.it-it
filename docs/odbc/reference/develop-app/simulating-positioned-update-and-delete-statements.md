@@ -3,10 +3,12 @@ title: Simulazione posizionato istruzioni Update e Delete | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 68fd71437779741489b5729379d3d5d3358915c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99d022dd56700a3e6441413eb43c06bc1c51cb70
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>La simulazione di istruzioni Delete e aggiornamento posizionato
 Se l'origine dati non supporta l'aggiornamento posizionato e istruzioni delete, il driver consente di simulare questi. Ad esempio, la libreria di cursori ODBC Simula aggiornamento posizionato e istruzioni delete. La strategia generale per la simulazione di aggiornamento posizionato e le istruzioni delete consiste nel convertire le istruzioni posizionate a quelli di ricerca. Questa operazione viene eseguita sostituendo il **WHERE CURRENT OF** clausola con una ricerca **dove** clausola che identifica la riga corrente.  
@@ -99,4 +100,3 @@ UPDATE Customers SET Address = ?, Phone = ? WHERE (CustID = ?)
 UPDATE Customers SET Address = ?, Phone = ?  
    WHERE (Name = ?) AND (Address = ?) AND (Phone = ?)  
 ```
-

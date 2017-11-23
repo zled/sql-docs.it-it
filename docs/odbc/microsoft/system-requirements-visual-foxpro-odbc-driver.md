@@ -3,10 +3,12 @@ title: Requisiti di sistema (Driver ODBC di Visual FoxPro) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 842f31d5444513a6acde47f3a502806578b9baeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisiti di sistema (Driver ODBC di Visual FoxPro)
 I requisiti di sistema per l'installazione specificare minima del sistema operativo e lo spazio su disco necessari per l'installazione del driver. Dopo aver installato il driver, è possibile selezionare il software specifico dell'applicazione che si desidera utilizzare per accedere ai dati di Visual FoxPro.  
@@ -60,4 +61,3 @@ I requisiti di sistema per l'installazione specificare minima del sistema operat
  Il Driver ODBC di Visual FoxPro supporta il set di caratteri a byte doppio (DBCS). Per ulteriori informazioni, vedere [internazionali supporto](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
  Il driver non supporta le applicazioni di Microsoft Windows 3.1 a 16 bit.
-

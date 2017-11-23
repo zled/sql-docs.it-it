@@ -3,34 +3,33 @@ title: STMLineFromWKB (tipo di dati geography) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STMLineFromWKB_TSQL
 - STMLineFromWKB (geography Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STMLineFromWKB method
+dev_langs: TSQL
+helpviewer_keywords: STMLineFromWKB method
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b4056744ea6596fc648e6fe7cf3ed9c125191e54
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 658085d4129e7e3ee0262e71883a52db55a17a71
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Restituisce un **geographyMultiLineString** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
   
@@ -68,7 +67,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi di geografia statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [Metodi geography statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

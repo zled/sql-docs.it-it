@@ -3,10 +3,12 @@ title: Utilizzo di funzioni Concise | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f58efc6ca7f6587ce7d7070bc02ad935efe06bff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-concise-functions"></a>Utilizzo di funzioni Concise
 Alcune funzioni ODBC accedono in modo implicito a descrittori. Gli autori di applicazioni risultare molto più conveniente di chiamare il metodo **SQLSetDescField** o **SQLGetDescField**. Queste funzioni vengono chiamate *conciso* funzioni perché eseguono un numero di funzioni, inclusa l'impostazione o il recupero dei campi di descrizione. Alcune funzioni concisi consentono un'applicazione di impostare o recuperare diversi campi di descrizione correlati in una sola chiamata di funzione.  
@@ -38,4 +39,3 @@ Alcune funzioni ODBC accedono in modo implicito a descrittori. Gli autori di app
  **SQLSetDescRec** e **SQLGetDescRec** assolvere conciso, con un'unica chiamata, impostare o ottenere più campi di descrizione che determinano il tipo di dati e archiviazione dei dati di colonna o parametro. **SQLSetDescRec** è un metodo efficace per modificare l'associazione di dati di colonna o parametro in un unico passaggio.  
   
  **SQLSetStmtAttr** e **SQLGetStmtAttr** fungono da funzioni concise in alcuni casi. (Vedere [campi di descrizione](../../../odbc/reference/develop-app/descriptor-fields.md).)
-

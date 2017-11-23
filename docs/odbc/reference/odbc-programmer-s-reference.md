@@ -3,26 +3,26 @@ title: ODBC Programmer ' &#39; riferimento s | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], reference
+helpviewer_keywords: ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC Programmer ' &#39; s riferimento
 Il *riferimento per programmatori ODBC* include le sezioni seguenti.  
@@ -127,4 +127,3 @@ Il *riferimento per programmatori ODBC* include le sezioni seguenti.
 -   Welch, Keith: *tramite ODBC 2* (Que, 1994).  
   
 -   Merlano, fattura: *Impara gli ODBC 21 giorni* (Howard W. Sams & società, 1994).
-

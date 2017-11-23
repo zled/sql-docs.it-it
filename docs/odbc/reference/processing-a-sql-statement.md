@@ -3,10 +3,12 @@ title: L'elaborazione di un'istruzione SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-a-sql-statement"></a>L'elaborazione di un'istruzione SQL
 Prima di illustrare le tecniche per l'utilizzo a livello di codice SQL, è necessario illustrare la modalità di elaborazione di un'istruzione SQL. I passaggi sono comuni a tutti e tre le tecniche, anche se ogni tecnica vengano eseguite in momenti diversi. Nella figura seguente vengono illustrati i passaggi coinvolti nell'elaborazione di un'istruzione SQL, che vengono discussi in tutto il resto di questa sezione.  
@@ -47,4 +48,3 @@ Prima di illustrare le tecniche per l'utilizzo a livello di codice SQL, è neces
 5.  Il sistema DBMS esegue l'istruzione eseguendo il piano di accesso.  
   
  La procedura utilizzata per elaborare un'istruzione SQL varia quantità richiedono l'accesso al database e la quantità di tempo che accettano. L'analisi di un'istruzione SQL non richiede l'accesso al database e possono essere eseguita molto rapidamente. L'ottimizzazione, d'altra parte, è una CPU molta elaborare e richiede l'accesso al catalogo di sistema. Per una query complessa, riferita, query optimizer può esplorare migliaia di diverse modalità di esecuzione della stessa query. Tuttavia, il costo di esecuzione della query in modo inefficiente in genere è talmente elevato che più recuperato il tempo dedicato all'ottimizzazione della velocità di esecuzione di query maggiore. Questo è ancora più importante se lo stesso piano di accesso ottimizzato può essere utilizzato più volte per eseguire le query ricorrenti.
-

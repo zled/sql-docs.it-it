@@ -3,33 +3,30 @@ title: Funzione SQLParamOptions | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLParamOptions
-apilocation:
-- sqlsrv32.dll
+apiname: SQLParamOptions
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLParamOptions
-helpviewer_keywords:
-- SQLParamOptions function [ODBC]
+f1_keywords: SQLParamOptions
+helpviewer_keywords: SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbd63ebaf70728ba19ea8065884452d559702ce6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e018fb3cff41ea9f2d0a78a2b32ec8668b1ec2d7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlparamoptions-function"></a>Funzione SQLParamOptions
 **Conformità**  
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

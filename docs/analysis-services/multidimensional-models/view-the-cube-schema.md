@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-cube-schema"></a>Visualizzare lo schema del cubo
   Lo schema del cubo viene visualizzato nel riquadro **Vista origine dati** della scheda **Struttura cubo** in **Progettazione cubi** . Lo schema è il set di tabelle da cui derivano le misure e le dimensioni per un cubo. Ogni schema del cubo è costituito da una o più tabelle dei fatti e da una o più tabelle delle dimensioni su cui sono basate le misure e le dimensioni nel cubo.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
 |Modificare lo schema della vista origine dati|Scegliere **Modifica vista origine dati** dal menu **Vista origine dati**.<br /><br /> - oppure -<br /><br /> Fare clic con il pulsante destro del mouse sullo sfondo del riquadro **Vista origine dati** , quindi scegliere **Modifica vista origine dati**.|  
   
   
-
