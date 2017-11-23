@@ -2,9 +2,12 @@
 title: INSERIRE (DMX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -14,8 +17,7 @@ f1_keywords:
 - INSERT INTO
 - INSERT
 - INSERT_INTO
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SKIP (DMX)
 - mapped model columns element
@@ -27,20 +29,19 @@ helpviewer_keywords:
 - training mining models
 - mining structures [DMX], processing
 ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6effd75e67a69db182ddaf37388d377b644a17da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eeb42798d1a095ce08a081144d33961c40ee8dd8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Consente di elaborare l'oggetto di data mining specificato. Per ulteriori informazioni sull'elaborazione dei modelli di data mining e strutture di data mining, vedere [l'elaborazione di requisiti e considerazioni &#40; Data Mining &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -149,4 +150,3 @@ AS [Models]
  [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

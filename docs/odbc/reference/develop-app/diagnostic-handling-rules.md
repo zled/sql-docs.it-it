@@ -3,10 +3,12 @@ title: Diagnostica di gestione delle regole | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 154261b999911bcc02050634901b199d0ae49be1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-handling-rules"></a>Regole di gestione di diagnostica
 Le regole seguenti determinano la gestione di diagnostica in **SQLGetDiagRec** e **SQLGetDiagField**.  
@@ -63,4 +64,3 @@ Le regole seguenti determinano la gestione di diagnostica in **SQLGetDiagRec** e
  Per un componente ODBC diverso da Gestione Driver:  
   
 -   Impostare il valore SQLSTATE in base all'errore nativo. Per i driver basati su file e driver basati su DBMS che non utilizzano un gateway, il driver deve impostare il valore SQLSTATE. Per i driver basati su DBMS che usano un gateway, il driver o un gateway che supporti ODBC può impostare il valore SQLSTATE.
-

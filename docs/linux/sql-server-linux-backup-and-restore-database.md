@@ -4,28 +4,32 @@ description: Informazioni su come eseguire il backup e ripristino dei database d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 11/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
+ms.openlocfilehash: 4693d53a8318a4d8ac5ecfa696203688737dad25
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database di SQL Server in Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-È possibile eseguire i backup dei database SQL Server 2017 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile utilizzare `sqlcmd` per connettersi a SQL Server ed eseguire il backup. Da Windows, è possibile connettersi a SQL Server in Linux ed eseguire i backup con l'interfaccia utente. La funzionalità di backup è lo stesso tra le piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
+È possibile eseguire i backup dei database SQL Server 2017 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile utilizzare **sqlcmd** per connettersi a SQL Server ed eseguire il backup. Da Windows, è possibile connettersi a SQL Server in Linux ed eseguire i backup con l'interfaccia utente. La funzionalità di backup è lo stesso tra le piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="backup-with-sqlcmd"></a>Backup con sqlcmd
+## <a name="backup-a-database"></a>Backup di un database
 
-Nell'esempio seguente `sqlcmd` si connette all'istanza locale di SQL Server e richiede una procedura completa di backup di un database utente denominato `demodb`.
+Nell'esempio seguente **sqlcmd** si connette all'istanza locale di SQL Server e richiede una procedura completa di backup di un database utente denominato `demodb`.
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
@@ -50,28 +54,39 @@ Processed 2 pages for database 'demodb', file 'demodb_log' on file 1.
 BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec).
 ```
 
-### <a name="backup-log-with-sqlcmd"></a>Backup del log con sqlcmd
+### <a name="backup-the-transaction-log"></a>Eseguire il backup del log delle transazioni
 
-Nell'esempio seguente, `sqlcmd` si connette all'istanza locale di SQL Server e accetta della parte finale del log come backup. Dopo aver completato il backup della parte finale del log, il database sarà in stato di ripristino. 
+Se il database nel modello di recupero con registrazione completa, è anche possibile rendere i backup del log delle transazioni per le opzioni di ripristino più granulari. Nell'esempio seguente, **sqlcmd** si connette all'istanza locale di SQL Server ed esegue il backup un log delle transazioni.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
-## <a name="restore-with-sqlcmd"></a>Ripristino con sqlcmd
+## <a name="restore-a-database"></a>Ripristinare un database
 
-Nell'esempio seguente `sqlcmd` si connette all'istanza locale di SQL Server e di ripristinare un database.
+Nell'esempio seguente **sqlcmd** si connette all'istanza locale di SQL Server e ripristina il database demodb. Si noti che il `NORECOVERY` opzione viene utilizzata per consentire ulteriori ripristini di file di backup del log. Se non si intende ripristinare i file di log aggiuntivi, rimuovere il `NORECOVERY` opzione.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+```
+
+> [!TIP]
+> Se accidentalmente, utilizzare l'opzione NORECOVERY ma non dispone di backup di file di log aggiuntivi, eseguire il comando `RESTORE DATABASE demodb` senza parametri aggiuntivi. Questo termine del ripristino e lascia il database operativo.
+
+### <a name="restore-the-transaction-log"></a>Ripristino del log delle transazioni
+
+Il comando seguente ripristina il backup del log delle transazioni precedenti.
+
+```bash
+sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak'"
 ```
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>Backup e ripristino con SQL Server Management Studio (SSMS)
 
-È possibile utilizzare SSMS da un computer Windows per connettersi a un database di Linux e creare un backup tramite l'interfaccia utente. 
+È possibile utilizzare SSMS da un computer Windows per connettersi a un database di Linux e creare un backup tramite l'interfaccia utente.
 
 >[!NOTE] 
-> Utilizzare la versione più recente di SSMS per connettersi a SQL Server. Per scaricare e installare la versione più recente, vedere [scaricare SSMS](http://msdn.microsoft.com/library/mt238290.aspx). 
+> Utilizzare la versione più recente di SSMS per connettersi a SQL Server. Per scaricare e installare la versione più recente, vedere [scaricare SSMS](../ssms/download-sql-server-management-studio-ssms.md). Per ulteriori informazioni sull'utilizzo di SQL Server Management Studio, vedere [utilizzare SSMS per gestire SQL Server in Linux](sql-server-linux-manage-ssms.md).
 
 I passaggi seguenti eseguendo un backup con SQL Server Management Studio. 
 
@@ -82,8 +97,6 @@ I passaggi seguenti eseguendo un backup con SQL Server Management Studio.
 1. Nel **Backup dei Database** finestra di dialogo, verificare i parametri e le opzioni e fare clic su **OK**.
  
 SQL Server consente di completare il backup del database.
-
-Per ulteriori informazioni, vedere [utilizzare SSMS per gestire SQL Server in Linux](sql-server-linux-manage-ssms.md).
 
 ### <a name="restore-with-sql-server-management-studio-ssms"></a>Ripristino con SQL Server Management Studio (SSMS) 
 
@@ -101,8 +114,7 @@ I passaggi seguenti consentono di eseguire il ripristino di un database con SQL 
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Creare un Backup completo del Database (SQL Server)](http://msdn.microsoft.com/library/ms187510.aspx)
-* [Eseguire il backup di un Log delle transazioni (SQL Server)](http://msdn.microsoft.com/library/ms179478.aspx)
-* [BACKUP (Transact-SQL)](http://msdn.microsoft.com/library/ms186865.aspx)
-* [Backup di SQL Server nell'URL](http://msdn.microsoft.com/library/dn435916.aspx)
-
+* [Creare un Backup completo del Database (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
+* [Eseguire il backup di un Log delle transazioni (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
+* [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
+* [Backup di SQL Server nell'URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)

@@ -2,42 +2,43 @@
 title: Riferimento alla funzione di Data Mining Extensions (DMX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - functions [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1871de9ebb81ef5bd88063a3a26067e86b32ad3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Guida di riferimento alle funzioni DMX (Data Mining Extensions)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta molte funzioni del linguaggio DMX (Data Mining Extensions). Le funzioni consentono di espandere i risultati di una query di stima in modo da includere informazioni che descrivono ulteriormente la stima. Tramite le funzioni è inoltre possibile ottenere un maggiore controllo sulla modalità con cui vengono restituiti i risultati della stima. Nella tabella seguente vengono forniti i collegamenti alle risorse che illustrano come utilizzare le funzioni in DMX.  
   
 |Funzione|Description|  
 |--------------|-----------------|  
 |[Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|Vengono elencate le funzioni che è possibile utilizzare con tutti i tipi di modelli e vengono forniti i collegamenti a ulteriori informazioni sull'esecuzione di query su tipi specifici di modelli di data mining.|  
-|[Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Viene fornita una panoramica della costruzione di una query di stima mediante DMX.|  
+|[Struttura e uso di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Viene fornita una panoramica della costruzione di una query di stima mediante DMX.|  
 |[DMX BottomCount &#40; &#41;](../dmx/bottomcount-dmx.md)|Restituisce una tabella che contiene un numero specificato di righe a partire dall'ultima, in ordine di rango crescente in base a un'espressione di rango.|  
   
  Nella tabella seguente vengono elencate le funzioni supportate da DMX.  
@@ -82,7 +83,6 @@ ms.lasthandoff: 08/02/2017
  [Data Mining Extensions &#40; DMX &#41; Elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Informazioni sull'istruzione Select di DMX](../dmx/understanding-the-dmx-select-statement.md)  
+ [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

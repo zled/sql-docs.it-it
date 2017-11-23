@@ -3,33 +3,30 @@ title: Funzione SQLSetEnvAttr | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetEnvAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetEnvAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetEnvAttr
-helpviewer_keywords:
-- SQLSetEnvAttr function [ODBC]
+f1_keywords: SQLSetEnvAttr
+helpviewer_keywords: SQLSetEnvAttr function [ODBC]
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad246dc337b57eb97b588c1ed08bb380cc4d6185
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0f99a9d8a572653be31e74cab00de918f1f51e16
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr Function
 **Conformità**  
@@ -111,5 +108,4 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)   
- [Novità in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-
+ [Novità di ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

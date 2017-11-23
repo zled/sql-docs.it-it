@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: bbf9dc74633ba55b4f73fe9146d8a26374440240
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 350b223034355afa675d0a18300028841edeee71
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection--oracletosql"></a>Selezione avanzata di oggetti (OracleToSQL)
 Il **avanzate sezione oggetto** la finestra di dialogo consente di filtrare gli oggetti di database utilizzando le stringhe e sottostringhe nel nome dell'oggetto, quindi selezionare o deselezionare gli oggetti. SSMA consente di eseguire operazioni di conversione e migrazione oggetti selezionati.  
@@ -47,7 +45,7 @@ Consente di visualizzare filtrato di elementi in una tabella.
 **Caricare solo gli elementi visualizzati**  
 Attiva o disattiva la visualizzazione delle categorie o gli elementi. Quando si seleziona questo pulsante, SSMA Mostra tutti gli elementi che soddisfano i criteri di filtro e quelli che sono stati caricati in precedenza. Se questo pulsante non è selezionato, tramite SSMA vengono illustrate le cartelle di categoria.  
   
-**Filtra**  
+**Filter**  
 Immettere la stringa in cui che si desidera utilizzare per filtrare gli elementi. Ad esempio, per trovare tutti disponibili elementi che contengono la stringa "ID" nel nome dell'elemento, immettere la stringa "ID" nel **filtro** casella.  
   
 Se gli elementi corrispondono ai criteri di filtro, le categorie o gli elementi verranno visualizzato durante la digitazione della stringa. Per visualizzare gli elementi corrispondenti, si consiglia di scegliere il **visualizzati solo gli elementi caricati** pulsante.  
@@ -55,4 +53,3 @@ Se gli elementi corrispondono ai criteri di filtro, le categorie o gli elementi 
 **Cancella filtro**  
 Cancella il **filtro** casella.  
   
-

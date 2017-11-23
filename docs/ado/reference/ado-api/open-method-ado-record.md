@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Record::raw_Open
 - _Record::Open
-helpviewer_keywords:
-- Open method [ADO]
+helpviewer_keywords: Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc5b12e87123af4abc3b92535b87668b7c983f4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7e7f1c5e35ced700818954056b380a44c75570c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-record"></a>Open (metodo) (Record ADO)
 Apre un oggetto esistente [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto oppure crea un nuovo elemento rappresentato dal **Record**, ad esempio un file o directory.  
@@ -82,11 +79,10 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 >  Gli URL che utilizzano lo schema http richiamerà automaticamente il [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto di record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Open (metodo) (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open (metodo) (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Metodo OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
-

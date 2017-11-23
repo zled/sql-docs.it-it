@@ -1,73 +1,72 @@
 ---
-title: Modificare il pool di account utente per SQL Server R Services | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/03/2017
-ms.prod: sql-server-2016
+title: Modificare il pool di account utente per l'apprendimento automatico di SQL Server | Documenti Microsoft
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 1baa301134ea01aa5c13a579fdb1aac01b2dbcf5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 33e22f7edec807d046798d89a9cd5daa642e8d3b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="modify-the-user-account-pool-for-sql-server-r-services"></a>Modificare il pool di account utente per SQL Server R Services
-  Come parte del processo di installazione di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], viene creato un nuovo *pool di account utente* Windows per supportare l'esecuzione delle attività tramite il servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]. Lo scopo di questi account di lavoro è quello di isolare l'esecuzione simultanea di script R da parte di utenti SQL diversi. 
+# <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Modificare il pool di account utente per l'apprendimento automatico di SQL Server
 
-Questo argomento descrive la configurazione predefinita, la sicurezza e la capacità per gli account di lavoro, nonché come modificare la configurazione predefinita.
+Come parte del processo di installazione di [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], viene creato un nuovo *pool di account utente* Windows per supportare l'esecuzione delle attività tramite il servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]. Lo scopo di questi account di lavoro è per isolare l'esecuzione simultanea di script esterni da utenti diversi di SQL.
 
-## <a name="worker-accounts-used-by-r-services"></a>Account di lavoro usati da R Services   
+Questo articolo descrive la configurazione predefinita, sicurezza e la capacità per gli account di lavoro e come modificare la configurazione predefinita.
 
-Il gruppo di account Windows viene creato dall'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni istanza in cui viene installato R Services. Se quindi sono installate più istanze che supportano R, ci saranno più gruppi di utenti.
+**Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
--   In un'istanza predefinita il nome del gruppo è **SQLRUserGroup**. 
--   In un'istanza denominata il nome predefinito del gruppo ha un suffisso con il nome dell'istanza: ad esempio, **SQLRUserGroupNomeIstanza**. 
+## <a name="worker-accounts-used-for-external-script-execution"></a>Account di lavoro usati per l'esecuzione dello script esterno
 
-Per impostazione predefinita, il pool di account utente contiene 20 account utente. Nella maggior parte dei casi, 20 account sono più che sufficienti per supportare le sessioni di R, ma è possibile modificare il numero di account.
--  In un'istanza predefinita i singoli account sono denominati da **MSSQLSERVER01** a **MSSQLSERVER20**.  
--   Per un'istanza denominata il nome dei singoli account dipende dal nome dell'istanza: ad esempio da **NomeIstanza01** a **NomeIstanza20**.  
+Il gruppo di account Windows viene creato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il programma di installazione per ogni istanza del computer in cui è installato e abilitato apprendimento.
 
-### <a name = "HowToChangeGroup"> </a>Come modificare il numero di account di lavoro R
+-   In un'istanza predefinita il nome del gruppo è **SQLRUserGroup**. Il nome è lo stesso, se si usa R, Python o entrambi.
+-   In un'istanza denominata il nome predefinito del gruppo ha un suffisso con il nome dell'istanza: ad esempio, **SQLRUserGroupNomeIstanza**.
 
-Per modificare il numero di utenti nel pool di account, è necessario modificare le proprietà del servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], come descritto di seguito.  
-  
-Le password associate a ciascun account utente vengono generate in modo casuale, ma è possibile modificarle in un secondo momento, dopo la creazione degli account.  
-  
+Per impostazione predefinita, il pool di account utente contiene 20 account utente. Nella maggior parte dei casi, è più che sufficiente per supportare l'attività di machine learning 20, ma è possibile modificare il numero di account.
+-  In un'istanza predefinita i singoli account sono denominati da **MSSQLSERVER01** a **MSSQLSERVER20**.
+-   Per un'istanza denominata il nome dei singoli account dipende dal nome dell'istanza: ad esempio da **NomeIstanza01** a **NomeIstanza20**.
+
+Se più di un'istanza Usa il machine learning, il computer sarà necessario più gruppi di utenti. Un gruppo non può essere condivisa tra più istanze.
+
+### <a name = "HowToChangeGroup"></a>Come modificare il numero di account di lavoro
+
+Per modificare il numero di utenti nel pool di account, è necessario modificare le proprietà del servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], come descritto di seguito.
+
+Le password associate a ciascun account utente vengono generate in modo casuale, ma è possibile modificarle in un secondo momento, dopo la creazione degli account.
+
 1. Aprire Gestione configurazione SQL Server e selezionare **Servizi di SQL Server**.
-2. Fare doppio clic sul servizio Launchpad di SQL Server e arrestare il servizio, se è in esecuzione. 
-3.  Nella scheda **Servizio** verificare che la modalità di avvio sia impostata come automatica. Gli script R avranno esito negativo se Launchpad non è in esecuzione.
-4.  Fare clic sulla scheda **Avanzate** e modificare il valore di **Conteggio degli utenti esterni**, se necessario. Questa impostazione controlla il numero di utenti di SQL diversi che possono eseguire query simultaneamente in R. Il valore predefinito è 20 account.
-5. Facoltativamente, è possibile impostare l'opzione **Reimposta password utenti esterni** su _Sì_ se l'organizzazione ha criteri che richiedono la modifica delle password a intervalli regolari. In questo modo, le password crittografate gestite da Launchpad per gli account utente verranno rigenerate. Per altre informazioni, vedere [Applicazione dei criteri delle password](#bkmk_EnforcePolicy).    
-6.  Riavviare il servizio.  
+2. Fare doppio clic sul servizio Launchpad di SQL Server e arrestare il servizio, se è in esecuzione.
+3.  Nella scheda **Servizio** verificare che la modalità di avvio sia impostata come automatica. Quando la finestra di avvio non è in esecuzione, non è possibile avviare script esterni.
+4.  Fare clic sulla scheda **Avanzate** e modificare il valore di **Conteggio degli utenti esterni**, se necessario. Questa impostazione determina il numero di utenti SQL diverso possibile eseguire script esterno sessioni contemporaneamente. Il valore predefinito è 20 account.
+5. Facoltativamente, è possibile impostare l'opzione **Reimposta password utenti esterni** su _Sì_ se l'organizzazione ha criteri che richiedono la modifica delle password a intervalli regolari. In questo modo, le password crittografate gestite da Launchpad per gli account utente verranno rigenerate. Per altre informazioni, vedere [Applicazione dei criteri delle password](#bkmk_EnforcePolicy).
+6.  Riavviare il servizio Launchpad.
 
-## <a name="managing-r-workload"></a>Gestione del carico di lavoro R
+## <a name="managing-machine-learning-workloads"></a>Gestione dei carichi di lavoro di machine learning
 
-Il numero di account in questo pool determina il numero di sessioni R che possono essere attive simultaneamente.  Per impostazione predefinita, vengono creati 20 account, quindi 20 utenti diversi possono avere sessioni R attive simultaneamente. Se si prevede che sarà necessario consentire un maggior numero di utenti simultanei che eseguono script R, è possibile aumentare il numero di account di lavoro. 
+Il numero di account in questo pool determina il numero di sessioni dello script esterno può essere attivo contemporaneamente.  Per impostazione predefinita, vengono creati 20 account, vale a dire che 20 diversi utenti possono avere R o Python sessioni attive in una sola volta. È possibile aumentare il numero di account di lavoro, se si prevede di eseguire script simultanea di più di 20.
 
-Quando lo stesso utente esegue simultaneamente più script R, tutte le sessioni eseguite da tale utente useranno lo stesso account di lavoro. Un singolo utente può ad esempio eseguire 100 script R diversi simultaneamente, purché le risorse lo consentano, usando un singolo account di lavoro.
+Quando l'utente stesso esegue contemporaneamente più script esterni, tutte le sessioni eseguita da tale utente utilizzare lo stesso account di lavoro. Ad esempio, un singolo utente potrebbe essere 100 script R diverso in esecuzione contemporaneamente, purché consentono di risorse, ma tutti gli script verrebbero eseguito utilizzando un account di lavoro singola.
 
-Il numero di account di lavoro che è possibile supportare e il numero di sessioni di R simultanee che un singolo utente può eseguire sono limitati solo dalle risorse del server.  In genere, la memoria rappresenta il primo collo di bottiglia che si incontra quando si usa il runtime di R.
+Il numero di account di lavoro che è possibile supportare e il numero di sessioni simultanee che è possibile eseguire qualsiasi singolo utente, è limitato solo dalle risorse del server. In genere, la memoria rappresenta il primo collo di bottiglia che si incontra quando si usa il runtime di R.
 
-In R Services le risorse che possono essere usate dagli script R sono controllate da SQL Server. È consigliabile monitorare l'utilizzo delle risorse mediante DMV di SQL Server o esaminare i contatori delle prestazioni sull'oggetto processo di Windows associato e modificare di conseguenza l'utilizzo della memoria del server. 
- 
-Se si ha SQL Server Enterprise Edition, è possibile allocare le risorse usate per l'esecuzione di script R configurando un [pool di risorse esterne](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md). 
+Le risorse utilizzate dagli script Python o R vengono gestite da SQL Server. È consigliabile monitorare l'utilizzo delle risorse mediante DMV di SQL Server o esaminare i contatori delle prestazioni sull'oggetto processo di Windows associato e modificare di conseguenza l'utilizzo della memoria del server. Se si dispone di SQL Server Enterprise Edition, è possibile allocare le risorse utilizzate per l'esecuzione di script esterni tramite la configurazione di un [pool di risorse esterne](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
 
-Per altre informazioni sulla gestione della capacità degli script R, vedere questi articoli:
+Per ulteriori informazioni sulla gestione di machine learning capacità di attività, vedere gli articoli:
 
-- [Configurazione di SQL Server (R Services)](../../advanced-analytics/r-services/sql-server-configuration-r-services.md)
--  [Case study sulle prestazioni (R Services)](../../advanced-analytics/r-services/performance-case-study-r-services.md)
+- [Configurazione di SQL Server per R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
+-  [Case study di prestazioni per R Services](../../advanced-analytics/r/performance-case-study-r-services.md)
 
 ## <a name="security"></a>Security
 
@@ -89,7 +88,7 @@ Per reimpostare le password a intervalli regolari, è possibile impostare questo
 
 Per impostazione predefinita, il gruppo di account di lavoro R **non** ha le autorizzazioni di accesso per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui è associato. Questo può costituire un problema se gli utenti R si connettono a SQL Server da un client remoto per eseguire script R oppure se uno script usa ODBC per ottenere dati aggiuntivi. 
 
-Per garantire il supporto di questi scenari, l'amministratore del database deve fornire al gruppo di account di lavoro R le autorizzazioni di accesso all'istanza di SQL Server in cui verranno eseguiti gli script R (autorizzazioni **Connetti a**). In questo caso si parla di *autenticazione implicita*, che consente a SQL Server di eseguire gli script R usando le credenziali dell'utente remoto.
+Per garantire il supporto di questi scenari, l'amministratore del database deve fornire al gruppo di account di lavoro R le autorizzazioni di accesso all'istanza di SQL Server in cui verranno eseguiti gli script R (autorizzazioni **Connetti a**). Ciò è detto *autenticazione implicita*e consente di eseguire gli script R usando le credenziali dell'utente remoto di SQL Server.
 
 > [!NOTE]
 > Questa limitazione non si applica se si usano account di accesso SQL per eseguire script R da una workstation remota, perché le credenziali di accesso SQL vengono passate in modo esplicito dal client R all'istanza di SQL Server e quindi a ODBC.
@@ -97,7 +96,7 @@ Per garantire il supporto di questi scenari, l'amministratore del database deve 
 
 ### <a name="how-to-enable-implied-authentication"></a>Come abilitare l'autenticazione implicita
 
-1. Aprire SQL Server Management Studio come amministratore dell'istanza in cui si eseguirà il codice R.
+1. Aprire SQL Server Management Studio come amministratore nell'istanza in cui si eseguirà il codice R o Python.
 
 2. Eseguire lo script seguente. Assicurarsi di modificare il nome del gruppo di utenti, se è stato cambiato quello predefinito, oltre che i nomi del computer e dell'istanza.
 
@@ -106,12 +105,6 @@ Per garantire il supporto di questi scenari, l'amministratore del database deve 
     GO
     
     CREATE LOGIN [computername\SQLRUserGroup] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[language]
-    GO  
+    GO
     ````
-
-
-  
-## <a name="see-also"></a>Vedere anche  
- [Configurazione (SQL Server R Services)](../../advanced-analytics/r-services/configuration-sql-server-r-services.md)
-  
 

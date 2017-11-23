@@ -3,10 +3,12 @@ title: Funzioni API di livello 2, il Driver ODBC per Oracle | Documenti Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6232a890c5898bcf543df9e47c97f363e2bfca12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello 2 (Driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -52,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Restituisce un elenco di procedure nell'origine dati. Per le procedure in pacchetto, nella colonna nome della stored PROCEDURE si *packagename.procedurename* formato.<br /><br /> Poiché Oracle non fornisce un modo per distinguere le procedure in pacchetto da funzioni incluse nel pacchetto, il driver restituisce SQL_PT_UNKNOWN per la colonna PROCEDURE_TYPE.|  
 |**SQLSetPos**|Imposta la posizione del cursore in un set di righe. È possibile utilizzare **SQLSetPos** con **SQLGetData** per recuperare righe da colonne non associate dopo posizionando il cursore in una riga specifica nel set di righe. Righe aggiunte per il set di risultati utilizzando *fOption* SQL_ADD vengono aggiunti dopo l'ultima riga nel set di risultati.|  
 |**SQLSetScrollOptions**|Imposta le opzioni che controllano il comportamento dei cursori associata a un handle di istruzione, hstmt. Per informazioni dettagliate, vedere [combinazioni di concorrenza e il tipo di cursore](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>Utilizzo di ADO con linguaggi di Scripting
 All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite gli script sul lato server. In questo scenario, ADO, il provider OLE DB sottostante che viene utilizzato e vengono installati i componenti necessari per fare riferimento a un archivio dati specificato in un server che esegue Internet Information Services (IIS). Utilizzando le pagine ASP (Active Server), ADO è un componente a cui fa riferimento in uno script che può generare HTML, ad esempio. Questo contenuto HTML può essere passato tramite HTTP a un Web browser client. Usando gli script, la pagina Web per inviare le azioni allo script sul lato server, che consente di aggiornare, attraversare o visualizzare i dati specifici.  
@@ -76,5 +74,4 @@ All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite 
 ## <a name="see-also"></a>Vedere anche  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Utilizzo di ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Utilizzo di ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-
+ [Uso di ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

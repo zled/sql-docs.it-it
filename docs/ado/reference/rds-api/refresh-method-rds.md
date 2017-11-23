@@ -1,8 +1,7 @@
 ---
 title: Metodo Refresh (RDS) | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,20 +13,18 @@ f1_keywords:
 - Refresh
 - RDS.DataControl::Refresh
 - DataControl::Refresh
-helpviewer_keywords:
-- Refresh method [RDS]
+helpviewer_keywords: Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bd8ba42c4e1822e5ef1fafd6ec4f3b53c2a9a363
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9710779f8ac92b4e9696ec56997c4eea43032206
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-method-rds"></a>Metodo Refresh (RDS)
 Riesegue l'origine dati specificata una query di [Connetti](../../../ado/reference/rds-api/connect-property-rds.md) proprietà e gli aggiornamenti, i risultati della query.  
@@ -52,7 +49,7 @@ DataControl.Refresh
  È consigliabile chiamare il **aggiornamento** metodo periodicamente quando si utilizzano dati. Se si recuperano dati e quindi lasciato in un computer client per un periodo di tempo, è probabile che diventi obsoleto. È possibile che eventuali modifiche apportate avrà esito negativo, perché un altro utente sia stato modificato il record e inviati prima di procedere.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio del metodo Refresh (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
@@ -60,7 +57,6 @@ DataControl.Refresh
  [Pulsanti di Address Book comando](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [Metodo SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
+ [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

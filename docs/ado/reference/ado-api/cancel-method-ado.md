@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Connection::Cancel
 - Command25::Cancel
 - _Stream::Cancel
-helpviewer_keywords:
-- Cancel method [ADO]
+helpviewer_keywords: Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3b0112431262f9b120bb3006c07e077e968f79c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba15f12006b31fa8ce0f67fd14ef7c6afb46863b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancel-method-ado"></a>Cancel (metodo) (ADO)
 Annulla l'esecuzione di una chiamata al metodo asincrono in sospeso.  
@@ -61,8 +58,8 @@ object.Cancel
   
 ||||  
 |-|-|-|  
-|[Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)|[Oggetto di record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Oggetto di flusso (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
+|[Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
+|[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio del metodo Cancel (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
@@ -75,5 +72,4 @@ object.Cancel
  [Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute (metodo) (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Open (metodo) (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)
-
+ [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)

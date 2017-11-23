@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], preparing and executing commands
+helpviewer_keywords: Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc77ab26c705aaaaed4a7171f8c9349be8ac7f0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preparing-and-executing-commands"></a>Preparazione e l'esecuzione di comandi
 I comandi sono disponibili istruzioni di rilasciato a un provider di eseguire alcune operazioni per l'origine dati sottostante. Un'istruzione SQL, è ad esempio, un comando per il Provider di dati SQL Microsoft. In ADO, i comandi in genere vengono rappresentati da **comando** oggetti, anche se i comandi semplici possono anche essere emessi tramite **connessione** o **Recordset** oggetti.  
@@ -41,15 +38,14 @@ I comandi sono disponibili istruzioni di rilasciato a un provider di eseguire al
   
 -   [Panoramica dell'oggetto Command](../../../ado/guide/data/command-object-overview.md)  
   
--   [Per creare ed eseguire un comando semplice](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Creazione ed esecuzione di un comando semplice](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
 -   [Parametri dell'oggetto Command](../../../ado/guide/data/command-object-parameters.md)  
   
--   [Chiamare una Stored Procedure con un comando](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
+-   [Chiamata di una stored procedure con Command](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
 -   [Chiamare una Stored Procedure come metodo in un oggetto di connessione](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
--   [Comandi denominati](../../../ado/guide/data/named-commands.md)  
+-   [Comandi con nome](../../../ado/guide/data/named-commands.md)  
   
--   [Passaggio di parametri a un comando denominato](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
-
+-   [Passaggio di parametri a un comando con nome](../../../ado/guide/data/passing-parameters-to-a-named-command.md)

@@ -1,36 +1,38 @@
 ---
-title: '| = (OR EQUALS bit) (Transact-SQL) | Documenti Microsoft'
+title: '| = (OR bit per bit o assegnazione) (Transact-SQL) | Documenti Microsoft'
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '|='
 - '|=_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, |=
-- '|= (bitwize OR equals)'
+- assignment operators, |=
+- augmented operators, |=
+- '|= (bitwise OR equals)'
 ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c5f991e93e9fd11e74e9284a6f85e1f010187bed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 224f1c3e0dff0ad9e6a1816a6a12eea0392791ab
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-bitwise-or-equals-transact-sql"></a>|= (OR EQUALS bit per bit) (Transact-SQL)
+# <a name="-bitwise-or-assignment-transact-sql"></a>| = (OR bit per bit o assegnazione) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Esegue un'operazione con OR logico bit per bit tra i due valori interi specificati convertiti in espressioni binarie in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e imposta un valore sul risultato dell'operazione.  
@@ -60,4 +62,3 @@ expression |= expression
  [Operatori bit per bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

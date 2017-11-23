@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc6946f6944cf37f85759847f2c8db852d120461
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
 Il Provider di Active Directory Service Interfaces (ADSI) consente di ADO per connettersi a servizi di directory eterogenei tramite ADSI. In questo modo le applicazioni ADO accesso in sola lettura per i servizi directory Microsoft Windows NT 4.0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e Novell Directory Services. ADSI è basato su un modello di provider, in modo che se è presente un nuovo provider che fornisce l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi. Il provider ADSI è a thread libero e abilitato per Unicode.  
@@ -153,5 +151,4 @@ objectClass='user' AND objectCategory='Person'"
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Proprietà del provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supporta (metodo)](../../../ado/reference/ado-api/supports-method.md)
-
+ [Metodo Supports](../../../ado/reference/ado-api/supports-method.md)

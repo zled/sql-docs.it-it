@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 811735d222f76b910d75e87505f075c83bba902c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
   Analysis Services consente di memorizzare i dati nella cache per migliorare le prestazioni delle query. In questo argomento vengono forniti consigli per l'utilizzo del comando XMLA ClearCache con cui cancellare le cache create in risposta a una query MDX. Gli effetti dell'esecuzione di ClearCache variano a seconda che si utilizzi un modello tabulare o multidimensionale.  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [Monitorare un'istanza di Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

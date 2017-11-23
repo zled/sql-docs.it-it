@@ -1,27 +1,25 @@
 ---
 title: Installare pacchetti R aggiuntivi su SQL Server | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/02/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
+ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: a7afdf4230bd27505afff271a6b4782214eedfb3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Installare pacchetti R aggiuntivi su SQL Server
 
@@ -30,7 +28,8 @@ In questo articolo viene descritto come installare i nuovi pacchetti di R a un'i
 > [!IMPORTANT]
 > Il processo per l'aggiunta di nuovi pacchetti varia a seconda della versione di SQL Server è in esecuzione e gli strumenti in uso. 
 
-**Si applica a:** R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
+**Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="overview-of-package-installation-process"></a>Panoramica del processo di installazione del pacchetto
 
@@ -40,7 +39,9 @@ In questo articolo viene descritto come installare i nuovi pacchetti di R a un'i
 
     Assicurarsi di verificare le dipendenze di pacchetto e ottenere tutti i pacchetti correlati che potrebbero essere necessari durante l'installazione. Per preparare una raccolta di pacchetti e le relative dipendenze, si consiglia di [miniCRAN pacchetto](#bkmk_packageDependencies).
 
-3.  Metodi di installazione pacchetto diversi a seconda se il server abbia accesso a internet e della versione di SQL Server. Di seguito sono riportate le procedure consigliate:
+    Se si verificano errori di download o l'installazione, provare a un sito mirror diversi.
+
+3.  Come installare il pacchetto varia a seconda se il server abbia accesso a internet e della versione di SQL Server. Di seguito sono riportate le procedure consigliate:
 
     **Installazione del pacchetto per SQL Server 2016**
     
@@ -62,13 +63,13 @@ In questo articolo viene descritto come installare i nuovi pacchetti di R a un'i
 
 ## <a name="install-new-packages"></a>Installare i nuovi pacchetti
 
-In questa sezione sono disponibili procedure dettagliate per i seguenti scenari di installazione pacchetto della chiave. Il metodo migliore da usare dipende da queste factores:
+In questa sezione illustrano procedure dettagliate per scenari di installazione del pacchetto della chiave. Scegliere il metodo migliore, a seconda:
 
 - La versione di SQL Server in uso
 
-- Se sono l'unico proprietario dell'istanza o sta tentando di pacchetti mamaneg per più persone che utilizzano i ruoli del database.
+- Se sono l'unico proprietario dell'istanza o sta tentando di gestire i pacchetti per più persone che utilizzano i ruoli del database.
 
-- Se si intende installare i pacchetti di uno o più pacchetti con dipendenze
+- Se si installa un pacchetto o più pacchetti con dipendenze
 
 **Usare Gestione dei pacchetti di SQL Server**
 
@@ -86,7 +87,7 @@ Se l'istanza supporta funzionalità di gestione pacchetti, è possibile utilizza
 
     [Installare più pacchetti da un repository miniCRAN](#bkmk_minicran)
 
-**Utilizzare rools R convenzionale**
+**Utilizzare gli strumenti di R convenzionali**
 
 Se si utilizza una versione precedente di SQL Server R services, seguire queste istruzioni per installare i pacchetti con strumenti di R convenzionali. Facoltativamente, è possibile utilizzare miniCRAN per preparare una raccolta di pacchetti per l'installazione.
 
@@ -106,13 +107,13 @@ Se si utilizza una versione precedente di SQL Server R services, seguire queste 
 
 2. Connettersi al server utilizzando un account che disponga delle autorizzazioni per installare i nuovi pacchetti, utilizzando uno dei ruoli del database supportato descritti in questo argomento: [gestione dei pacchetti R per SQL Server](r-package-management-for-sql-server-r-services.md)
 
-3.  Copiare il file compresso contenente il pacchetto R che si desidera installare in una cartella sul computer del server, ad esempio, il **utenti** o **documenti** cartella. È possibile aggiungere un pacchetto da un'unità di rete o da una cartella nel computer client. Se è stata usata miniCRAN per creare un repository di pacchetti, copiare il repository di pacchetti nella sua interezza in qualsiasi cartella locale nel server: ad esempio, non su un'unità di rete.
+3.  Copiare il file compresso contenente il pacchetto R che si desidera installare in una cartella sul computer del server, ad esempio, il **utenti** o **documenti** cartella. È possibile aggiungere un pacchetto da un'unità di rete o da una cartella nel computer client. Se è stata usata miniCRAN per creare un repository di pacchetti, copiare il repository di pacchetti nella sua interezza in qualsiasi cartella locale nel server: ovvero, non su un'unità di rete.
 
     Se si non ha accesso a qualsiasi cartella nel server, è possibile passare il contenuto del pacchetto in formato binario. Vedere [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) per un esempio.
 
 4.  Dal database in cui si desidera utilizzare il pacchetto, eseguire il [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) istruzione.
 
-    In questo esempio si presuppone che l'account disponga delle autorizzazioni necessarie per caricare nuovi pacchetti sul server e installarli in un ambito condiviso nel database.
+    In questo esempio si presuppone che l'account disponga dell'autorizzazione per caricare nuovi pacchetti sul server e installarli per **condivisa** ambito nel database.
 
     L'istruzione seguente aggiunge una versione di rilascio di [zoo](https://cran.r-project.org/web/packages/zoo/index.html) pacchetto nel contesto del database corrente, da una condivisione di file locale.
 
@@ -136,7 +137,7 @@ Se si utilizza una versione precedente di SQL Server R services, seguire queste 
     library(zoo)'
     ```
 
-    Se ha esito positivo, il **messaggi** finestra deve segnalare un messaggio come "pacchetto"zoo"correttamente decompressi e somme MD5 archiviato". Se un pacchetto richiesto è già installato, il processo di installazione verrà collegare e caricare il pacchetto richiesto.
+    Se ha esito positivo, il **messaggi** finestra deve segnalare un messaggio come "pacchetto"zoo"correttamente decompressi e somme MD5 archiviato". Se un pacchetto richiesto è già installato, il processo di installazione collega quindi carica il pacchetto richiesto.
 
     > [!NOTE]
     > Se un pacchetto richiesto non è disponibile, viene restituito un errore: "Nessun pacchetto chiamato \<required_package\>". 
@@ -149,7 +150,7 @@ Se è già stato abilitato nell'istanza di gestione dei pacchetti, è possibile 
 
 1. Prima di iniziare, verificare che siano soddisfatte queste condizioni:
 
-    + Il client R è la versione più recente di RevoScale. Le versioni non definitive non include alcune funzioni di gestione del pacchetto.
+    + Utilizzare la versione più recente di Microsoft R Client, che include gli aggiornamenti per RevoScale.
     + Gestione dei pacchetti è stata abilitata nell'istanza e sul database.
     + Si è autorizzati a uno dei ruoli di gestione del database.
 
@@ -219,7 +220,7 @@ Se è già stato abilitato nell'istanza di gestione dei pacchetti, è possibile 
 
     Quando viene richiesto un sito mirror, è possibile selezionare qualsiasi sito a cui è utile per il percorso.
 
-    Se il pacchetto di destinazione dipende da pacchetti aggiuntivi, il programma di installazione di R scaricherà automaticamente le dipendenze e le installerà.
+    Se il pacchetto di destinazione dipende da pacchetti aggiuntivi, il programma di installazione di R automaticamente le dipendenze vengono scaricate e li installa automaticamente.
 
     **Installa pacchetto manualmente o in un computer senza accesso a Internet**
 
@@ -235,7 +236,7 @@ Se è già stato abilitato nell'istanza di gestione dei pacchetti, è possibile 
 
 ### <a name="bkmk_minicran"></a>Installare più pacchetti da un repository miniCRAN
 
-Se si siano installando i pacchetti da un repository miniCRAN, il processo generale è molto simile all'installazione di un pacchetto da un unico file ZIP. Tuttavia, invece di caricare un singolo pacchetto in formato compresso, il repository miniCRAN contiene il pacchetto di destinazione, nonché tutti i pacchetti necessari correlati.
+Il processo generale di installazione dei pacchetti da un repository miniCRAN è simile all'installazione di un pacchetto da un unico file ZIP. Tuttavia, invece di caricare un singolo pacchetto in formato compresso, il repository miniCRAN contiene il pacchetto di destinazione, nonché tutti i pacchetti necessari correlati.
 
 1.  Preparare il repository miniCRAN e quindi copiare il file compresso in una cartella locale nel server.
 
@@ -259,7 +260,7 @@ Se si siano installando i pacchetti da un repository miniCRAN, il processo gener
     library(randomForest)'
     ```
 
-    Se ha esito positivo, il **messaggi** finestra deve segnalare un messaggio, ad esempio "package 'randomForest' correttamente decompressi e somme MD5 archiviato" e anche "operazione completata concatenate esecuzione".
+    Se ha esito positivo, il **messaggi** finestra deve segnalare un messaggio, ad esempio "package 'randomForest' correttamente decompressi e somme MD5 archiviato" e "Completato concatenate esecuzione".
 
 ## <a name="package-installation-tips"></a>Suggerimenti per l'installazione del pacchetto
 
@@ -267,11 +268,11 @@ In questa sezione fornisce diversi suggerimenti e codice di esempio relativi all
 
 ###  <a name="packageVersion"></a>Ottenere la versione corretta del pacchetto e il formato
 
-Sono presenti più origini per i pacchetti R, le più note sono CRAN e Bioconductor. Il sito ufficiale per il linguaggio R (<https://www.r-project.org/>) elenca molte di queste risorse. Molti pacchetti vengono pubblicati anche in GitHub, dove è possibile ottenere il codice sorgente. Tuttavia, si potrebbe avere accesso anche ai pacchetti R sviluppati da qualcuno nella propria azienda.
+Sono presenti più origini per i pacchetti R, le più note sono CRAN e Bioconductor. Il sito ufficiale per il linguaggio R (<https://www.r-project.org/>) elenca molte di queste risorse. Molti pacchetti vengono pubblicati in GitHub, dove è possibile ottenere il codice sorgente. Tuttavia, si potrebbero avere ottenuto il pacchetti R sviluppati da qualcuno nella propria azienda.
 
 Indipendentemente dall'origine, è necessario assicurarsi che il pacchetto da installare è in formato binario per la piattaforma Windows. In caso contrario, il pacchetto scaricato non è possibile eseguire nell'ambiente di SQL Server.
 
-È inoltre necessario determinare se il pacchetto è compatibile con la versione di R in esecuzione in SQL Server.
+Prima di scaricare, controllare anche se il pacchetto è compatibile con la versione di R in esecuzione in SQL Server.
 
 ### <a name="bkmk_zipPreparation"></a>Download del pacchetto come file compresso
 
@@ -287,7 +288,7 @@ Ad esempio, la procedura seguente descrive adesso per ottenere la versione corre
 
 Questo processo crea una copia locale del pacchetto. È quindi possibile installare il pacchetto o copiare il pacchetto compresso in un server che non dispone dell'accesso a internet.
 
-Per altre informazioni sui contenuti del formato di file ZIP e su come creare un pacchetto R, è consigliabile seguire questa esercitazione, che è possibile scaricare in formato PDF dal sito del progetto R: [Freidrich Leisch: Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf) (Freidrich Leisch: Creazione di pacchetti R).
+Per ulteriori informazioni sui contenuti del formato di file zip e come creare un pacchetto R, si consiglia di questa esercitazione, che è possibile scaricare in formato PDF dal sito del progetto R: [la creazione di pacchetti R](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf).
 
 ### <a name="bkmk_packageDependencies"></a>Ottenere le dipendenze dei pacchetti
 
@@ -365,4 +366,3 @@ Se è stato installato Microsoft Machine Learning Server (Standalone) oltre a se
 > I pacchetti installati nella raccolta R_SERVER sono utilizzati solo da Microsoft R Server e SQL Server non sono accessibile.
 > 
 > Assicurarsi di utilizzare il `R_SERVICES` libreria quando si installano i pacchetti che si desidera utilizzare in SQL Server.
-

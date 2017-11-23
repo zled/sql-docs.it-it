@@ -3,26 +3,26 @@ title: SQLSetStmtAttr (libreria di cursori) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetStmtAttr function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 603a01d46e83b98622b7d143ef162fd5cfbc6518
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d03483adc4a566d4691bb7687f231b41ca0b41bd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (libreria di cursori)
 > [!IMPORTANT]  
@@ -53,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  La libreria di cursori supporta l'impostazione dell'attributo di istruzione SQL_ATTR_PARAM_BIND_OFFSET_PTR o SQL_ATTR_ROW_BIND_OFFSET_PTR per abilitare gli offset di associazione. L'offset di associazione non essere utilizzato per le chiamate a **SQLFetch** quando la libreria di cursori viene utilizzata con un ODBC 2. *x* driver.  
   
  La libreria di cursori supporta l'impostazione dell'attributo di istruzione SQL_ATTR_USE_BOOKMARKS su SQL_UB_VARIABLE.
-

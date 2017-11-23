@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 085b89aa994ddd7b94353ab2a4e075d837298643
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 7812e5ad1b6566a3ef477800d8098b23abacdd6a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>La creazione di file di connessione (AccessToSQL) del server
 Informazioni sul server può essere specificato nella sezione del file di script server. Inoltre possibile specificare le informazioni sul server in un file di connessione server separato. Il parametro della riga di comando per il file di connessione del server è `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione sia lo script e il server, è considerata la definizione del server nel file di script.  
@@ -78,4 +76,3 @@ Il passaggio successivo nella console di gestione è [in esecuzione la Console d
 ## <a name="see-also"></a>Vedere anche  
 [L'esecuzione la Console SSMA (accesso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
-

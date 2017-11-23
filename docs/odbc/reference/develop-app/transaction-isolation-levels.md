@@ -3,10 +3,12 @@ title: Livelli di isolamento delle transazioni | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +23,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f0b5499af07c7bbb5309ff87037f7c3825872dab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
 *Livelli di isolamento delle transazioni* sono una misura dell'estensione per la transazione ha esito positivo isolamento. In particolare, i livelli di isolamento delle transazioni vengono definiti dalla presenza o assenza di fenomeni di seguenti:  
@@ -64,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |Serializable|La transazione attende fino a quando le righe scrittura bloccata da altre transazioni vengono sbloccate; Ciò evita la lettura di tutti i dati "dirty".<br /><br /> La transazione contiene un blocco di lettura (se legge solo righe) o il blocco di scrittura (se è possibile aggiornare o eliminare righe) dell'intervallo di righe interessa. Ad esempio, se la transazione include l'istruzione SQL **selezionare \* FROM Orders**, l'intervallo è l'intera tabella Orders; il transazione lettura blocchi di tabella e non non consentire l'aggiunta di nuove righe da inserire. Se la transazione include l'istruzione SQL **eliminare da ordini in cui lo stato = 'Chiuso'**, l'intervallo è tutte le righe con lo stato di "CLOSED"; i blocchi di scrittura transazione tutte le righe degli ordini di tabella il cui stato è "Chiuso" e non non Consenti tutte le righe da inserire o aggiornare in modo che la riga risulta ha lo stato "Chiuso".<br /><br /> Dato che altre transazioni non è possibile aggiornare o eliminare le righe nell'intervallo, la transazione corrente evita qualsiasi letture non ripetibili. Dato che altre transazioni non è possibile inserire le righe nell'intervallo, la transazione corrente evita qualsiasi righe fantasma. La transazione rilascia il blocco quando viene eseguito il commit o rollback.|  
   
  È importante notare che il livello di isolamento non influisce sulla possibilità di una transazione per visualizzare le proprie modifiche; le transazioni possono sempre visualizzare qualsiasi modifica apportata. Ad esempio, una transazione può essere costituito da due **aggiornamento** istruzioni, il primo dei quali genera la retribuzione di tutti i dipendenti del 10% e il secondo dei quali imposta la retribuzione dei dipendenti su alcune quantità massima di tale quantità. L'esito è positivo come una singola transazione solo perché la seconda **aggiornamento** istruzione è possibile visualizzare i risultati del primo.
-

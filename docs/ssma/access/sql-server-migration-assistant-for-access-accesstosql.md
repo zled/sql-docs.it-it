@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: 63d6dc07686f1c4a8101cf4ab13d39136bbc69aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
-ms.openlocfilehash: dddd86a23304dc52a99ca5636ab3a81c4a2d666c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/15/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant per Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per l'accesso è uno strumento per la migrazione di database da [!INCLUDE[msCoName](../../includes/msconame_md.md)] accedere alle versioni 97 fino a 2010 per [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 in Windows e Linux (anteprima) / [!INCLUDE[msCoName](../../includes/msconame_md.md)] database SQL di Azure. SSMA per l'accesso consente di convertire oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o oggetti di database SQL di Azure, carica tali oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, e quindi viene eseguita la migrazione dei dati dall'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
@@ -40,8 +38,7 @@ Questa documentazione viene presentato SSMA per Access e vengono fornite istruzi
 |[Preparazione dei database di Access per la migrazione](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)|Viene descritto come preparare i database di Access per la conversione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure.|  
 |[Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)|Viene fornita una panoramica del processo di conversione e informazioni dettagliate su ogni passaggio del processo.|  
 |[Il collegamento alle applicazioni di accesso di SQL Server](http://msdn.microsoft.com/en-us/82374ad2-7737-4164-a489-13261ba393d4)|Viene descritto come utilizzare le applicazioni Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Riferimento all'interfaccia utente](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)|Contiene la documentazione per le finestre di dialogo SSMA.|  
-|[Utilizzo di SSMA per la Console di accesso](http://msdn.microsoft.com/en-us/ef94e843-9f88-45a2-86c4-a0af268738c4)|Contenere informazioni sull'applicazione Console di SSMA|  
+|[Guida di riferimento all'interfaccia utente](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)|Contiene la documentazione per le finestre di dialogo SSMA.|  
+|[Uso di SSMA per la console di Access](http://msdn.microsoft.com/en-us/ef94e843-9f88-45a2-86c4-a0af268738c4)|Contenere informazioni sull'applicazione Console di SSMA|  
 |[Assistenza per SSMA per l'accesso](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Vengono fornite informazioni su come ottenere ulteriore assistenza.|  
   
-

@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Procedura dettagliata di analisi scientifica dei dati end-to-end per R e SQL Server
 
@@ -45,8 +41,8 @@ Stimati periodi non includono l'installazione. Per ulteriori informazioni, veder
 |Elenco di argomenti|Tempo stimato|
 |-|------------------------------|
 |[Preparare i dati di questa procedura dettagliata di R](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Ottenere i dati usati per la compilazione di un modello. Scaricare un set di dati pubblico e caricarlo in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|30 minuti|
-|[Esplorare i dati di utilizzo di SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Comprensione dei dati utilizzando i riepiloghi e gli strumenti di SQL.|10 minuti|
-|[Riepilogare i dati con R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Usare R per esplorare i dati e generare riepiloghi.|10 minuti|
+|[Esplorare i dati usando R](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Comprensione dei dati utilizzando i riepiloghi e gli strumenti di SQL.|10 minuti|
+|[Riepilogare i dati usando R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Usare R per esplorare i dati e generare riepiloghi.|10 minuti|
 |[Creare grafici usando R in SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Creare grafici in contesti di calcolo locali e remoti per la combinazione di R e SQL.|10 minuti|
 |[Creare le funzionalità di dati con R e T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Eseguire la progettazione di funzionalità usando funzioni personalizzate in R e [!INCLUDE[tsql](../../includes/tsql-md.md)]. Confrontare le prestazioni di R e T-SQL per le attività di creazione di funzionalità. |10 minuti|
 |[Compilare un modello R e salvarlo in SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Eseguire il training di un modello predittivo e ottimizzarlo. Valutare le prestazioni del modello. Questa procedura dettagliata crea un modello di classificazione. Tracciare l'accuratezza del modello usando R.|15 minuti|
@@ -71,4 +67,3 @@ Per informazioni dettagliate su come configurare questi server e di ambienti cli
 ## <a name="next-lesson"></a>Lezione successiva
 
 [Preparare i dati di questa procedura dettagliata di R](../tutorials/walkthrough-prepare-the-data.md)
-

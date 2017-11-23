@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67a300e30522a5f02bb6c33409a062a3c2434643
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="boundaries-of-a-recordset"></a>Limiti di un Recordset
 **Recordset** supporta il **BOF** e **EOF** proprietà per delineare rispettivamente l'inizio e alla fine del set di dati. È possibile considerare **BOF** e **EOF** come record "fantasma" posizionati all'inizio e fine il **Recordset**. Conteggio **BOF** e **EOF**, l'esempio **Recordset** avrà ora un aspetto simile al seguente:  
@@ -78,4 +76,3 @@ else
  Questo schema funziona per tutti i tipi di cursore ed è indipendente da provider sottostanti. Se si tenta di determinare il contenuto di un **Recordset** oggetto controllando se il relativo **RecordCount** valore della proprietà è zero (0) o non, è necessario adottare alcune precauzioni per utilizzare un cursore appropriato e un provider che supporta la restituzione del numero di record nel risultato.  
   
  Se si elimina l'ultimo record rimanente di **Recordset** dell'oggetto, il cursore viene lasciato in uno stato indeterminato. Il **BOF** e **EOF** proprietà restino **False** fino a quando non si tenta di riposizionare il record corrente, in base al provider. Per ulteriori informazioni, vedere [eliminazione record utilizzando il metodo Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
-

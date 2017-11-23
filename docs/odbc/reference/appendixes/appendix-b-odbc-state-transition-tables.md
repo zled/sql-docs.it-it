@@ -3,10 +3,12 @@ title: 'Appendice b: tabelle di transizione dello stato di ODBC | Documenti Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 775c3d0464443d11b833a230591b94293343086b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice b: tabelle di transizione dello stato di ODBC
 Le tabelle in questa appendice illustrano come le funzioni ODBC causano transizioni di ambiente, connessione, istruzione e gli stati del descrittore. Lo stato dell'ambiente, una connessione, istruzione o un descrittore determina in genere quando le funzioni che utilizzano il corrispondente tipo di handle (ambiente di connessione, istruzione o descrittore) possono essere chiamate. Gli stati di ambiente, connessione, l'istruzione e descrittore sovrappongano approssimativamente come illustrato nelle figure seguenti. Ad esempio, la sovrapposizione esatto della connessione stati C5 e C6 e istruzione indica S1 tramite S12 dati dipende dall'origine, poiché le transazioni iniziano in momenti diversi da origini dati diverse e varia a seconda dello stato di descrittore D1i (allocati in modo implicito descrittore) durante lo stato D1e (allocati in modo esplicito descrittore) lo stato dell'istruzione a cui è associato il descrittore, è indipendentemente dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [connessione transizioni](../../../odbc/reference/appendixes/connection-transitions.md), [istruzione transizioni](../../../odbc/reference/appendixes/statement-transitions.md), e [descrittore transizioni ](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
@@ -101,5 +102,4 @@ Le tabelle in questa appendice illustrano come le funzioni ODBC causano transizi
   
 -   [Transizioni di istruzione](../../../odbc/reference/appendixes/statement-transitions.md)  
   
--   [Descrittore transizioni](../../../odbc/reference/appendixes/descriptor-transitions.md)
-
+-   [Transizioni dei descrittori](../../../odbc/reference/appendixes/descriptor-transitions.md)

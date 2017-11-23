@@ -3,10 +3,12 @@ title: Batch di istruzioni SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70649ee51ec7b5c2ef3926706f802da8189fc3b2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="batches-of-sql-statements"></a>Batch di istruzioni SQL
 Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singola istruzione SQL che ha lo stesso effetto di un gruppo di due o più istruzioni SQL. In alcune implementazioni, l'istruzione dell'intero batch viene eseguito prima che i risultati siano disponibili. Questo è spesso più efficiente rispetto all'invio istruzioni separatamente, poiché il traffico di rete spesso può essere ridotto e l'origine dati in alcuni casi può ottimizzare l'esecuzione di un batch di istruzioni SQL. Nelle altre implementazioni di chiamata **SQLMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch. ODBC supporta i seguenti tipi di batch:  
@@ -70,7 +71,6 @@ Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singo
   
 -   [Istruzioni per la generazione di risultati e senza risultati](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
   
--   [L'esecuzione di batch](../../../odbc/reference/develop-app/executing-batches.md)  
+-   [Esecuzione di batch](../../../odbc/reference/develop-app/executing-batches.md)  
   
 -   [Errori e batch](../../../odbc/reference/develop-app/errors-and-batches.md)
-

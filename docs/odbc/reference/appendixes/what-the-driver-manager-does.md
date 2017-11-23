@@ -3,10 +3,12 @@ title: Quali la gestione di Driver non | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662370f1e782edfc5f932ad26cdbc38643bcda7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-manager-does"></a>Funzionamento di gestione Driver
 Nella tabella seguente sono riepilogati come ODBC 3*x* gestione Driver mapping delle chiamate a ODBC 2. *x* mentre ODBC 3*x* driver.  
@@ -43,4 +44,3 @@ Nella tabella seguente sono riepilogati come ODBC 3*x* gestione Driver mapping d
 |**SQLFetchScroll**|Restituisce il set di righe specificato. Di seguito sono indicati i dettagli di implementazione:<br /><br /> -Quando un'applicazione chiama **SQLFetchScroll** in un'API ODBC 2. *x* driver ODBC 3*x* Driver Manager esegue il mapping a **SQLExtendedFetch**. Viene utilizzato il valore dell'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR memorizzati nella cache il *RowStatusArray* argomento e il valore memorizzato nella cache dell'attributo SQL_ATTR_ROWS_FETCHED_PTR istruzione per il *RowCountPtr* argomento. Se il *FetchOrientation* argomento **SQLFetchScroll** è impostato su SQL_FETCH_BOOKMARK, viene utilizzato il valore dell'attributo di istruzione SQL_ATTR_FETCH_BOOKMARK_PTR memorizzati nella cache il *FetchOffset*  argomento e restituisce un errore se il *FetchOffset* argomento di **SQLFetchScroll** è non da 0.<br />-Quando un'applicazione chiama questo in un'applicazione ODBC 3*x* driver ODBC 3*x* gestione Driver passa la chiamata al driver.|  
 |**SQLSetPos**|Esegue diverse operazioni posizionate. ODBC 3*x* gestione Driver passa le chiamate a **SQLSetPos** al driver, indipendentemente dalla versione del driver.|  
 |**SQLSetScrollOptions**|Quando esegue il mapping di gestione Driver **SQLSetScrollOptions** per un'applicazione che utilizza un'applicazione ODBC 3*x* driver che non supporta **SQLSetScrollOptions**, il Driver Manager imposta l'opzione dell'istruzione SQL_ROWSET_SIZE, non l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE sul *RowsetSize* argomento **SQLSetScrollOption**. Di conseguenza, **SQLSetScrollOptions** non può essere utilizzato da un'applicazione durante il recupero di più righe da una chiamata a **SQLFetch** o **SQLFetchScroll**. E può essere utilizzato solo quando più recupero righe da una chiamata a **SQLExtendedFetch**.|
-

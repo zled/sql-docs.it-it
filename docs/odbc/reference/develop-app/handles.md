@@ -3,10 +3,12 @@ title: Gestisce | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 499f62ecd8e053ef0776873dcdf4fe20cac1fa96
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05788f48f4a3fdb695fc3064023e52c2a3750c2e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handles"></a>Selettori
 Gli handle sono opachi a 32 bit di valori che identificano un particolare elemento; in ODBC, questo elemento può essere un ambiente, connessione, l'istruzione o descrittore. Quando l'applicazione chiama **SQLAllocHandle**, il Driver Manager o il driver crea un nuovo elemento del tipo specificato e restituisce il relativo handle per l'applicazione. In un secondo momento l'applicazione utilizza l'handle per identificare l'elemento quando si chiamano funzioni ODBC. Il gestore dei Driver e il driver è possibile utilizzare l'handle per individuare le informazioni sull'elemento.  
@@ -94,7 +95,6 @@ SQLCloseCursor(hstmtOrder);
   
 -   [Handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md)  
   
--   [Handle di descrittore](../../../odbc/reference/develop-app/descriptor-handles.md)  
+-   [Handle descrittore](../../../odbc/reference/develop-app/descriptor-handles.md)  
   
 -   [Transizioni di stato](../../../odbc/reference/develop-app/state-transitions.md)
-

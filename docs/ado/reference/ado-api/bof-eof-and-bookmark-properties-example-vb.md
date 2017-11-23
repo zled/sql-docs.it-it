@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - BOF property [ADO], Visual Basic example
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e4b81966672200f4ab7a01b6a6bc3f0022a8d26
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3e94fd93b5988ea7fb95e1276e31819575a5abd4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Esempio di proprietà di segnalibro (VB), EOF e BOF
 Questo esempio viene utilizzato il [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) proprietà per visualizzare un messaggio se un utente tenta di superare il primo o ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per consentire all'utente di contrassegnare un record in un **Recordset** e si torna in un secondo momento.  
@@ -146,5 +143,4 @@ Attribute VB_Name = "BOF"
 ## <a name="see-also"></a>Vedere anche  
  [BOF, proprietà EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Proprietà Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

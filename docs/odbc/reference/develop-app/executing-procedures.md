@@ -3,27 +3,28 @@ title: Esecuzione di procedure | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f952e8d2fbc1eb41d65cd4d30fa2f13c991d264
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-procedures"></a>Esecuzione di procedure
 ODBC definisce una sequenza di escape standard per l'esecuzione delle procedure. Per la sintassi di questa sequenza e un esempio di codice che lo utilizza, vedere [chiamate di procedura](../../../odbc/reference/develop-app/procedure-calls.md).  
@@ -41,4 +42,3 @@ ODBC definisce una sequenza di escape standard per l'esecuzione delle procedure.
     -   Chiama la routine nell'origine dati e lo invia i valori di parametro convertito. Come il driver chiama la routine è specifico del driver. Ad esempio, è possibile modificare l'istruzione SQL per utilizzare la grammatica SQL dell'origine dati e inviare questa istruzione per l'esecuzione o è possibile chiamare la routine direttamente tramite un meccanismo di chiamata RPC (Remote Procedure) che è definito nel protocollo di flusso di dati del sistema DBMS.  
   
     -   Restituisce i valori di parametri di output o input/output o il valore restituito dalla routine, presupponendo che la procedura ha esito positivo. Questi valori potrebbero non essere disponibili solo dopo l'elaborazione di tutti gli altri risultati (conteggio delle righe e set di risultati) generati dalla procedura. Se la procedura ha esito negativo, il driver restituisce eventuali errori.
-

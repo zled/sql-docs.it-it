@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f05ca08a88951de138f094fbcac1dd9a31bfdfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 462f8ea10fc0d4c489de40ddcf0174cb2a82435b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="examining-data"></a>Analisi dei dati
 Il [acquisizione dei dati](../../../ado/guide/data/getting-data.md) sezione viene spiegato come recuperare dati da un'origine dati come uno o più **Recordset** oggetti. In questa sezione verrà illustrate **Recordset** in modo più dettagliato, ad esempio come spostarsi tra le **Recordset** e visualizzarne i dati.  
@@ -37,13 +35,12 @@ Il [acquisizione dei dati](../../../ado/guide/data/getting-data.md) sezione vien
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Record corrente e le dimensioni di Recordset](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
+-   [Record corrente e dimensioni del recordset](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
   
--   [Esplorazione dati](../../../ado/guide/data/navigating-through-data.md)  
+-   [Esplorazione dei dati](../../../ado/guide/data/navigating-through-data.md)  
   
--   [Informazioni sulla struttura di Recordset](../../../ado/guide/data/understanding-recordset-structure.md)  
+-   [Informazioni sulla struttura dei recordset](../../../ado/guide/data/understanding-recordset-structure.md)  
   
--   [Set di record di esempio per l'analisi dei dati](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
+-   [Recordset di esempio per l'analisi dei dati](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
   
--   [Limiti di un Recordset](../../../ado/guide/data/boundaries-of-a-recordset.md)
-
+-   [Limiti di un recordset](../../../ado/guide/data/boundaries-of-a-recordset.md)

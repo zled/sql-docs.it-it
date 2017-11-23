@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1566fc59ac51e0923392a3cc0bee6d24dd3bfa
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary-terms"></a>Termini del Glossario ADO
 In questo argomento definisce termini rilevanti per ADO.
@@ -222,4 +219,3 @@ In questo argomento definisce termini rilevanti per ADO.
  Struttura che rappresenta una relazione gerarchica tra gli elementi (nodi). È presente un nodo al livello superiore di una struttura ad albero (radice). Sotto la radice, possono essere presenti più figli. Ogni elemento figlio a sua volta potrebbe essere l'elemento padre di altri elementi figlio, pertanto la diramazione come una struttura ad albero. Una cartella contenente i documenti e altre cartelle è un esempio tipico di una struttura ad albero. Vedere anche gerarchia, nodo, radice, figlio, padre.
 
  Server Web un computer che fornisce i servizi Web e le pagine per utenti di Internet e intranet.
-

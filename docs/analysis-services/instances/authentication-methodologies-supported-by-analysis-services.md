@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 86e65d3db90f2cf30f8fe4ae7288819ac4745e54
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologie di autenticazione supportate da Analysis Services
   Per la connessione a un'istanza di Analysis Services da un'applicazione client è necessaria l'autenticazione di Windows (integrata). È possibile fornire un'identità utente di Windows utilizzando uno dei metodi seguenti:  
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

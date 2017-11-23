@@ -3,26 +3,26 @@ title: Parametri dell'istruzione | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- statement parameters [ODBC]
+helpviewer_keywords: statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7039a3830f24f29260b41ad244799be677fc817b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e56b61d47581f98f37560875de920c45029c2e9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-parameters"></a>Parametri dell'istruzione
 Oggetto *parametro* è una variabile in un'istruzione SQL. Si supponga, ad esempio, che in una tabella include colonne denominate PartID, la descrizione e prezzo. Per aggiungere una parte senza parametri richiederebbe la costruzione di un'istruzione SQL, ad esempio:  
@@ -49,13 +49,12 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Parametri di associazione](../../../odbc/reference/develop-app/binding-parameters-odbc.md)  
   
--   [Impostazione dei valori di parametro](../../../odbc/reference/develop-app/setting-parameter-values.md)  
+-   [Configurazione dei valori dei parametri](../../../odbc/reference/develop-app/setting-parameter-values.md)  
   
--   [L'invio di dati Long](../../../odbc/reference/develop-app/sending-long-data.md)  
+-   [Invio di dati Long](../../../odbc/reference/develop-app/sending-long-data.md)  
   
 -   [Il recupero dei parametri di Output da SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)  
   
--   [Parametri di routine](../../../odbc/reference/develop-app/procedure-parameters.md)  
+-   [Parametri di procedure](../../../odbc/reference/develop-app/procedure-parameters.md)  
   
 -   [Matrici di valori di parametro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)
-

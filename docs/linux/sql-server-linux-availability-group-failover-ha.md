@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 07/20/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 54c9be66075ebbc9614de0b007b5b718e976121b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Funzioni gruppo di disponibilità elevata per SQL Server in Linux
 
@@ -293,4 +297,3 @@ Per eliminare un gruppo di disponibilità, eseguire [DROP AVAILABILITY GROUP](..
 [Configurare i Cluster di SUSE Linux Enterprise Server per le risorse Cluster il gruppo di disponibilità di SQL Server](sql-server-linux-availability-group-cluster-sles.md)
 
 [Configurare il Cluster Ubuntu per le risorse Cluster il gruppo di disponibilità di SQL Server](sql-server-linux-availability-group-cluster-ubuntu.md)
-

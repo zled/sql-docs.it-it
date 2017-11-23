@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Connection15::ConnectionString
-helpviewer_keywords:
-- ConnectionString property [ADO]
+f1_keywords: Connection15::ConnectionString
+helpviewer_keywords: ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 590125743d78e4c583cd22011dcf40f58eed1999
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34db69d25ff835de4f8c81d252c99017ae4acbb5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectionstring-property-ado"></a>Proprietà ConnectionString (ADO)
 Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.  
@@ -70,10 +66,9 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 |Nessuna impostazione predefinita.<br /><br /> Quando un'applicazione ADO viene eseguito nei seguenti sistemi operativi e non specifica il provider in modo esplicito, ADO restituisce l'errore seguente: "ADODB. Connessione: il provider non è specificato e nessun provider predefinito designato "|Windows 2000 (64 bit)<br /><br /> Windows XP (64 bit)<br /><br /> Windows Server 2003 (64 bit)<br /><br /> Windows Vista (64 bit)|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio ConnectionString, ConnectionTimeout e la proprietà State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [Esempio ConnectionString, ConnectionTimeout e la proprietà State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)

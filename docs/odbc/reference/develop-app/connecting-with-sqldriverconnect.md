@@ -3,10 +3,12 @@ title: Connessione con SQLDriverConnect | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f918c4f5b32f913fea3d48b05c24c1070fe8f4ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7bdfbf03fb4e67fcd0bc88ecf9212e3bb9cd7773
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Connessione con SQLDriverConnect
 **SQLDriverConnect** viene utilizzato per connettersi a un'origine dati utilizzando una stringa di connessione. **SQLDriverConnect** viene usata invece di **SQLConnect** per i motivi seguenti:  
@@ -43,11 +44,10 @@ ms.lasthandoff: 09/09/2017
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Informazioni di connessione specifici del driver](../../../odbc/reference/develop-app/driver-specific-connection-information.md)  
+-   [Informazioni di connessione specifiche del driver](../../../odbc/reference/develop-app/driver-specific-connection-information.md)  
   
--   [Chiedere conferma all'utente informazioni di connessione](../../../odbc/reference/develop-app/prompting-the-user-for-connection-information.md)  
+-   [Chiedere all'utente informazioni di connessione](../../../odbc/reference/develop-app/prompting-the-user-for-connection-information.md)  
   
--   [Connessione tramite origini dati dei File](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)  
+-   [Connessione tramite origini dati dei file](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)  
   
--   [Connettersi direttamente al driver](../../../odbc/reference/develop-app/connecting-directly-to-drivers.md)
-
+-   [Connessione diretta ai driver](../../../odbc/reference/develop-app/connecting-directly-to-drivers.md)

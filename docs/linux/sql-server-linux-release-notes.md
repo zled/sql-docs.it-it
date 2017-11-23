@@ -4,42 +4,28 @@ description: "In questo argomento contiene le note sulla versione e tutte le fun
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/04/2017
+ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
+ms.workload: Active
+ms.openlocfilehash: e7fb6ac444679477c6cbc0b66c59b7ea1c9775f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: f9315ca5b46a0dc45a0f8171fa6eea67cd2f4337
-ms.contentlocale: it-it
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 su Linux
 
-Le note sulla versione seguenti si applicano a 2017 di SQL Server in esecuzione in Linux. Questa versione supporta molte delle funzionalità del motore di database di SQL Server per Linux. L'argomento riportato di seguito viene suddiviso in sezioni per ogni versione, a partire da generale più recente versione di disponibilità (GA) e due versioni precedenti. Vedere le informazioni contenute in ogni sezione per le piattaforme supportate, strumenti, funzionalità e i problemi noti.
+Le note sulla versione seguenti si applicano a 2017 di SQL Server in esecuzione in Linux. L'argomento riportato di seguito viene suddiviso in sezioni per ogni versione. Il rilascio GA ha dettagliate supportabilità ed elencati problemi noti. Ogni versione di aggiornamento cumulativo (CU) presenta un collegamento a un argomento di supporto che descrive le modifiche CU nonché i collegamenti per il pacchetto di download di Linux.
 
-Nella tabella seguente elenca la cronologia delle versioni per SQL Server 2017.
-
-| Versione | Versione | Data di rilascio |
-|-----|-----|-----|
-| [VERSIONE GA](#GA) | 14.0.1000.169 | 10-2017 |
-| [RC2](#RC2) | 14.0.900.75 | 8-2017 |
-| [RC1](#RC1) | 14.0.800.90 | 7-2017 |
-| CTP 2.1 | 14.0.600.250 | 5-2017 |
-| NELLA VERSIONE CTP 2.0 | 14.0.500.272 | 4-2017 |
-| CTP 1.4 | 14.0.405.198 | 3-2017 |
-| CTP 1.3 | 14.0.304.138 | 2-2017 |
-| CTP 1.2 | 14.0.200.24 | 1-2017 |
-| CTP 1.1 | 14.0.100.187 | 12-2016 |
-| CTP 1.0 | 14.0.1.246 | 11-2016 |
-
-## <a id="GA"></a>GA (ottobre 2017)
-
-Questa è la versione di disponibilità generale (GA) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.1000.169.
-
-### <a name="supported-platforms"></a>Piattaforme supportate
+## <a name="supported-platforms"></a>Piattaforme supportate
 
 | Piattaforma | File system | Guida all'installazione |
 |-----|-----|-----|
@@ -48,8 +34,54 @@ Questa è la versione di disponibilità generale (GA) di SQL Server 2017. La ver
 | Ubuntu 16.04LTS | EXT4 | [Guida all'installazione](quickstart-install-connect-ubuntu.md) | 
 | Motore docker 1.8 + in Windows, Mac o Linux | N/D | [Guida all'installazione](quickstart-install-connect-docker.md) | 
 
-> [!NOTE]
-> È necessario almeno 3,25 GB di memoria per l'esecuzione di SQL Server in Linux.
+> [!TIP]
+> Esaminare il [requisiti di sistema](sql-server-linux-setup.md#system) per SQL Server in Linux.
+
+## <a name="supported-client-tools"></a>Strumenti client supportati
+
+| Strumento | Versione minima |
+|-----|-----|
+| [SQL Server Management Studio (SSMS) per Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
+| [SQL Server Data Tools per Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
+| [Codice di Visual Studio](https://code.visualstudio.com) con il [estensione mssql](https://aka.ms/mssql-marketplace) | Più recente |
+
+## <a name="release-history"></a>Cronologia versioni
+
+Nella tabella seguente elenca la cronologia delle versioni per SQL Server 2017.
+
+| Versione | Versione | Data di rilascio |
+|-----|-----|-----|
+| [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
+| [VERSIONE GA](#GA) | 14.0.1000.169 | 10-2017 |
+
+## <A id="CU1"></a>Aggiornamento cumulativo 1 (ottobre 2017)
+
+Questa è la versione di aggiornamento cumulativo 1 (CU1) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3006.16. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
+
+### <a name="installation"></a>Installazione
+
+Se è stato configurato il repository dell'aggiornamento cumulativo, si otterrà l'aggiornamento cumulativo più recente dei pacchetti di SQL Server quando si eseguono le nuove installazioni. Il repository di aggiornamento cumulativo è il valore predefinito per tutti gli articoli di installazione del pacchetto per SQL Server in Linux. Per ulteriori informazioni sulla configurazione del repository, vedere [repository di origine](sql-server-linux-setup.md#repositories).
+
+Se si aggiornano i pacchetti esistenti di SQL Server, eseguire il comando di aggiornamento appropriato per ogni pacchetto ottenere l'aggiornamento cumulativo più recente. Per istruzioni di aggiornamento specifico per ogni pacchetto, vedere le guide di installazione seguenti:
+
+- [Installare il pacchetto di SQL Server](sql-server-linux-setup.md#upgrade)
+- [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
+- [Installare il pacchetto di SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+- [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti RPM e Debian con le informazioni nella tabella seguente:
+
+| Pacchetto | versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 14.0.3006.16-3 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto RPM SLES | 14.0.3006.16-3 | [pacchetto RPM motore MSSQL server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
+| Pacchetto Debian Ubuntu 16.04 | 14.0.3006.16-3 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="GA"></a>GA (ottobre 2017)
+
+Questo è il rilascio GA (General Availability) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.1000.169.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -58,24 +90,17 @@ Nella tabella seguente sono elencati i dettagli del pacchetto e i percorsi di do
 - [Installare il pacchetto di SQL Server](sql-server-linux-setup.md)
 - [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare il pacchetto di SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+- [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 | Pacchetto | versione del pacchetto | Download |
 |-----|-----|-----|
 | Pacchetto Red Hat RPM | 14.0.1000.169-2 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Pacchetto RPM SLES | 14.0.1000.169-2 | [pacchetto RPM motore MSSQL server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
-| Pacchetto Debian Ubuntu 16.04 | 14.0.1000.169-2 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Pacchetto di SSIS del](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-### <a name="supported-client-tools"></a>Strumenti client supportati
-
-| Strumento | Versione minima |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) per Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools per Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Codice di Visual Studio](https://code.visualstudio.com) con il [estensione mssql](https://aka.ms/mssql-marketplace) | Più recente |
+| Pacchetto Debian Ubuntu 16.04 | 14.0.1000.169-2 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ### <a name="Unsupported"></a>Servizi e funzionalità non supportate
 
-Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo momento. Il supporto di queste funzionalità verrà sempre abilitato durante la cadenza mensile gli aggiornamenti del programma di anteprima.
+Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo momento. Il supporto di queste funzionalità verrà sempre abilitato nel tempo.
 
 | Area | Servizio o funzionalità non supportata |
 |-----|-----|
@@ -205,7 +230,7 @@ Se si utilizza **File System NFS (Network)** condivisioni remote nell'ambiente d
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- Quando mssql conf installazione e l'esecuzione di un'installazione diversa dall'inglese di SQL Server, non corretto caratteri estesi vengono visualizzati dopo il testo localizzato, "Configurazione di SQL Server …". O, per le installazioni di base non latini, potrebbe essere manca contiene la frase completamente. Contiene la frase manca deve visualizzare la stringa localizzata seguente: "il PID di licenza è stato elaborato correttamente.  È la nuova edizione [<Name> edizione] ". Questa stringa viene restituita solo per scopi informativi e al successivo aggiornamento cumulativo di SQL Server si occuperanno per tutte le lingue. Questa operazione non influenza la corretta installazione di SQL Server in alcun modo. 
+- Quando mssql conf installazione e l'esecuzione di un'installazione diversa dall'inglese di SQL Server, non corretto caratteri estesi vengono visualizzati dopo il testo localizzato, "Configurazione di SQL Server …". O, per le installazioni di base non latini, potrebbe essere manca contiene la frase completamente. Contiene la frase manca deve visualizzare la stringa localizzata seguente: "il PID di licenza è stato elaborato correttamente.  È la nuova edizione [\<nome\> edizione] ". Questa stringa viene restituita solo per scopi informativi e al successivo aggiornamento cumulativo di SQL Server si occuperanno per tutte le lingue. Questa operazione non influenza la corretta installazione di SQL Server in alcun modo. 
 
 #### <a name="full-text-search"></a>Ricerca full-text
 
@@ -255,383 +280,3 @@ Per iniziare, vedere le esercitazioni di avvio rapido seguenti:
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installare in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Eseguire in Docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![Grafico della barra di separazione](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a id="RC2"></a>RC2 (agosto 2017)
-
-La versione del motore di SQL Server per questa versione è 14.0.900.75.
-
-### <a name="supported-platforms"></a>Piattaforme supportate
-
-| Piattaforma | File system | Guida all'installazione |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation desktop e Server | XFS o EXT4 | [Guida all'installazione](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Guida all'installazione](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS | EXT4 | [Guida all'installazione](quickstart-install-connect-ubuntu.md) | 
-| Motore docker 1.8 + in Windows, Mac o Linux | N/D | [Guida all'installazione](quickstart-install-connect-docker.md) | 
-
-> [!NOTE]
-> È necessario almeno 3,25 GB di memoria per l'esecuzione di SQL Server in Linux.
-> Motore di SQL Server è stato testato fino a 1,5 TB di memoria in questo momento.
-
-### <a name="package-details"></a>Dettagli del pacchetto
-
-Nella tabella seguente sono elencati i dettagli del pacchetto e i percorsi di download per i pacchetti RPM e Debian. Si noti che è necessario scaricare i pacchetti direttamente se si utilizza la procedura nelle guide di installazione seguenti:
-
-- [Installare il pacchetto di SQL Server](sql-server-linux-setup.md)
-- [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
-- [Installare il pacchetto di SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-
-| Pacchetto | versione del pacchetto | Download |
-|-----|-----|-----|
-| Pacchetto Red Hat RPM | 14.0.900.75-1 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.900.75-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.900.75-1.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.900.75-1.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.900.75-1.x86_64.rpm) | 
-| Pacchetto RPM SLES | 14.0.900.75-1 | [pacchetto RPM motore MSSQL server](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.900.75-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.900.75-1.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.900.75-1.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.900.75-1.x86_64.rpm) | 
-| Pacchetto Debian Ubuntu 16.04 | 14.0.900.75-1 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.900.75-1_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.900.75-1_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.900.75-1_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.900.75-1_amd64.deb) |
-
-### <a name="supported-client-tools"></a>Strumenti client supportati
-
-| Strumento | Versione minima |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) per Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools per Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Codice di Visual Studio](https://code.visualstudio.com) con il [estensione mssql](https://aka.ms/mssql-marketplace) | Più recente |
-
-### <a name="unsupported-features-and-services"></a>Servizi e funzionalità non supportate
-
-Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo momento. Il supporto di queste funzionalità verrà sempre abilitato durante la cadenza mensile gli aggiornamenti del programma di anteprima.
-
-| Area | Servizio o funzionalità non supportata |
-|-----|-----|
-| **Motore di database** | Replica transazionale |
-| &nbsp; | Replica di tipo merge |
-| &nbsp; | Estensione database |
-| &nbsp; | Polybase |
-| &nbsp; | Query distribuita con connessioni a 3rd party |
-| &nbsp; | (XP_CMDSHELL, e così via). le stored procedure estese di sistema |
-| &nbsp; | Tabella filetable |
-| &nbsp; | Impostare gli assembly CLR con il EXTERNAL_ACCESS o UNSAFE autorizzazione |
-| &nbsp; | Estensione pool di buffer |
-| **SQL Server Agent** |  Sottosistemi: CmdExec, PowerShell, agente di lettura coda, SSIS, SSAS, SSRS |
-| &nbsp; | Avvisi |
-| &nbsp; | Agente di lettura log |
-| &nbsp; | Change Data Capture |
-| &nbsp; | Backup gestito |
-| **Disponibilità elevata** | Mirroring del database  |
-| **Sicurezza** | Extensible Key Management |
-| **Services** | SQL Server Browser |
-| &nbsp; | SQL Server R services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>Problemi noti
-
-Nelle sezioni seguenti vengono descritti problemi noti relativi a questa versione di SQL Server 2017 RC2 in Linux.
-
-#### <a name="general"></a>Generale
-
-- La lunghezza del nome host in cui SQL Server è installato deve essere 15 caratteri o meno. 
-
-    - **Risoluzione**: modificare il nome e così via/nome host e un valore 15 caratteri lunghi o meno.
-
-- Impostare manualmente l'ora di sistema con le versioni precedenti nel tempo causerà l'esecuzione SQL Server per interrompere l'aggiornamento dell'ora di sistema interno all'interno di SQL Server.
-
-    - **Risoluzione**: riavviare SQL Server.
-
-- Sono supportate solo le installazioni a istanza singola.
-
-    - **Risoluzione**: se si desidera disporre di più di un'istanza in un determinato host, è consigliabile utilizzare le macchine virtuali o i contenitori di Docker. 
-
-- Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
-
-- La lingua predefinita di **sa** account di accesso è l'inglese.
-
-    - **Risoluzione**: modificare la lingua del **sa** account di accesso con il **ALTER LOGIN** istruzione.
-
-#### <a name="databases"></a>Database
-
-- Impossibile spostare il database master con l'utilità mssql conf. Altri database di sistema possono essere spostati con mssql conf
-
-- Quando si ripristina un database di cui è stato eseguito il backup in SQL Server in Windows, è necessario utilizzare il **WITH MOVE** clausola nell'istruzione Transact-SQL.
-
-- Le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator non sono supportate in SQL Server in esecuzione in Linux. SQL Server a SQL Server sono supportate le transazioni distribuite.
-
-- Determinati algoritmi (pacchetti di crittografia) per Transport Layer Security (TLS) non funzionano correttamente con SQL Server in Linux. Quando si tenta di connettersi a SQL Server, nonché problemi di attivazione delle connessioni tra repliche di gruppi di disponibilità elevata, causando errori di connessione.
-
-   - **Risoluzione**: modificare il **mssql.conf** script di configurazione per SQL Server in Linux per disabilitare i pacchetti di crittografia problematico, effettuando le operazioni seguenti:
-
-      1. Aggiungere quanto segue per /var/opt/mssql/mssql.conf.
-
-      ```
-      [network]
-      tlsciphers=ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
-
-      1. Riavviare SQL Server con il comando seguente.
-   
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
-
-- Impossibile ripristinare i database di SQL Server 2014 in Windows che utilizzano OLTP In memoria in SQL Server 2017 in Linux. Per ripristinare un database di SQL Server 2014 che utilizza OLTP in memoria, aggiornare i database a SQL Server 2016 o 2017 di SQL Server in Windows prima di spostarli in SQL Server in Linux tramite backup e ripristino o scollegare o collegare.
-
-#### <a name="remote-database-files"></a>File di database remoto
-
-- Hosting dei file di database in un server NFS non è supportata in questa versione. Include l'utilizzo di NFS per disco condiviso clustering di failover e database nelle istanze non cluster. Stiamo lavorando su come abilitare il supporto di server NFS nelle prossime versioni.
-
-#### <a name="localization"></a>Localizzazione
-
-- Se le impostazioni locali sono inglese (it_IT) durante l'installazione, è necessario utilizzare la codifica UTF-8 nella sessione/terminale bash. Se si utilizza la codifica ASCII, si potrebbe essere visualizzato un errore simile al seguente:
-
-   ```
-   UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
-   ```
-
-   Se non è possibile utilizzare la codifica UTF-8, eseguire l'installazione utilizzando la variabile di ambiente MSSQL_LCID per specificare il linguaggio selezionato.
-
-   ```bash
-   sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
-   ```
-
-#### <a name="full-text-search"></a>Ricerca full-text
-- Non tutti i filtri sono disponibili in questa versione, inclusi i filtri per i documenti di Office. Per un elenco di filtri supportati, vedere [installare di ricerca Full-Text di SQL Server in Linux](sql-server-linux-setup-full-text-search.md#filters).
-
-#### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
-È possibile eseguire pacchetti SSIS in Linux. Per altre informazioni, vedere gli articoli seguenti:
--   [Post di blog annunciato il supporto SSIS per Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
--   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
--   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
-
-Tenere presente i seguenti problemi noti con questa versione.
-
-- Il **mssql server è** pacchetto è supportato in Ubuntu e Red Hat Enterprise Linux (RHEL) in questa versione.
-
-- Con SSIS in aggiornamento di Linux CTP 2.1 e versioni successive, i pacchetti SSIS possono utilizzare connessioni di ODBC in Linux. Questa funzionalità è stata testata con SQL Server e i driver ODBC di MySQL, ma anche dovrebbe funzionare con qualsiasi driver ODBC Unicode che osserva la specifica ODBC. In fase di progettazione, è possibile fornire un DSN o una stringa di connessione per connettersi ai dati ODBC; è inoltre possibile utilizzare l'autenticazione di Windows. Per altre informazioni, vedere il [post del blog annuncia il supporto ODBC in Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
-
-- Le funzionalità seguenti non sono supportate in questa versione, quando si eseguono i pacchetti SSIS in Linux:
-  - Database del catalogo SSIS
-  - Esecuzione del pacchetto pianificato dall'agente SQL
-  - Autenticazione di Windows
-  - Componenti di terze parti
-  - Change Data Capture (CDC)
-  - Scalabilità orizzontale SSIS
-  - Azure Feature Pack per SSIS
-  - Supporto di Hadoop e HDFS
-  - Microsoft Connector for SAP BW
-
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-Le limitazioni seguenti si applicano a SQL Server Management Studio in Windows connessi a SQL Server in Linux.
-
-- I piani di manutenzione non sono supportati.
-
-- Gestione dei Data Warehouse di e l'agente di raccolta dati in SQL Server Management Studio non sono supportati. 
-
-- I componenti SSMS UI con l'autenticazione di Windows o le opzioni del registro eventi di Windows non funzionano con Linux. È comunque possibile utilizzare queste funzionalità con altre opzioni, ad esempio account di accesso SQL. 
-
-- Impossibile modificare il numero di file di log da mantenere.
-
-### <a name="next-steps"></a>Passaggi successivi
-
-Per iniziare, vedere le esercitazioni di avvio rapido seguenti:
-
-- [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installare in Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Eseguire in Docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![Grafico della barra di separazione](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a id="RC1"></a>RC1 (luglio 2017)
-La versione del motore di SQL Server per questa versione è 14.0.800.90.
-
-### <a name="supported-platforms"></a>Piattaforme supportate 
-
-| Piattaforma | File system | Guida all'installazione |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation desktop e Server | XFS o EXT4 | [Guida all'installazione](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Guida all'installazione](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS | EXT4 | [Guida all'installazione](quickstart-install-connect-ubuntu.md) | 
-| Motore docker 1.8 + in Windows, Mac o Linux | N/D | [Guida all'installazione](quickstart-install-connect-docker.md) | 
-
-> [!NOTE]
-> È necessario almeno 3,25 GB di memoria per l'esecuzione di SQL Server in Linux.
-
-### <a name="package-details"></a>Dettagli del pacchetto
-Nella tabella seguente sono elencati i dettagli del pacchetto e i percorsi di download per i pacchetti RPM e Debian. Si noti che è necessario scaricare i pacchetti direttamente se si utilizza la procedura nelle guide di installazione seguenti:
-
-- [Installare il pacchetto di SQL Server](sql-server-linux-setup.md)
-- [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
-- [Installare il pacchetto di SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-
-| Pacchetto | versione del pacchetto | Download |
-|-----|-----|-----|
-| Pacchetto Red Hat RPM | 14.0.800.90-2 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.800.90-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.800.90-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.800.90-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.800.90-2.x86_64.rpm) | 
-| Pacchetto RPM SLES | 14.0.800.90-2 | [pacchetto RPM motore MSSQL server](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.800.90-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.800.90-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.800.90-2.x86_64.rpm)</br>[Pacchetto RPM di SQL Server Agent](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.800.90-2.x86_64.rpm) | 
-| Pacchetto Debian Ubuntu 16.04 | 14.0.800.90-2 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.800.90-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.800.90-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.800.90-2_amd64.deb)</br>[Pacchetto Debian di SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.800.90-2_amd64.deb) |
-
-### <a name="supported-client-tools"></a>Strumenti client supportati
-
-| Strumento | Versione minima |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) per Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools per Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Codice di Visual Studio](https://code.visualstudio.com) con il [estensione mssql](https://aka.ms/mssql-marketplace) | Più recente |
-
-### <a name="unsupported-features-and-services"></a>Servizi e funzionalità non supportate
-Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo momento. Il supporto di queste funzionalità verrà sempre abilitato durante la cadenza mensile gli aggiornamenti del programma di anteprima.
-
-| Area | Servizio o funzionalità non supportata |
-|-----|-----|
-| **Motore di database** | Replica transazionale |
-| &nbsp; | Replica di tipo merge |
-| &nbsp; | Estensione database |
-| &nbsp; | Polybase |
-| &nbsp; | Query distribuite |
-| &nbsp; | Servizi di Machine Learning |
-| &nbsp; | (XP_CMDSHELL, e così via). le stored procedure estese di sistema |
-| &nbsp; | Tabella filetable |
-| &nbsp; | Impostare gli assembly CLR con il EXTERNAL_ACCESS o UNSAFE autorizzazione |
-| **SQL Server Agent** |  Sottosistemi: CmdExec, PowerShell, agente di lettura coda, SSIS, SSAS, SSRS |
-| &nbsp; | Avvisi |
-| &nbsp; | Agente di lettura log |
-| &nbsp; | Change Data Capture |
-| &nbsp; | Backup gestito |
-| **Disponibilità elevata** | Mirroring del database  |
-| &nbsp; | Aggiornamento in sequenza del gruppo di disponibilità |
-| **Sicurezza** | Extensible Key Management |
-| **Services** | SQL Server Browser |
-| &nbsp; | SQL Server R services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>Problemi noti
-Nelle sezioni seguenti vengono descritti problemi noti relativi a questa versione di SQL Server 2017 RC1 in Linux.
-
-#### <a name="general"></a>Generale
-- La lunghezza del nome host in cui SQL Server è installato deve essere 15 caratteri o meno. 
-
-    - **Risoluzione**: modificare il nome e così via/nome host e un valore 15 caratteri lunghi o meno.
-
-- Impostare manualmente l'ora di sistema con le versioni precedenti nel tempo causerà l'esecuzione SQL Server per interrompere l'aggiornamento dell'ora di sistema interno all'interno di SQL Server.
-
-    - **Risoluzione**: riavviare SQL Server.
-
-- Sono supportate solo le installazioni a istanza singola.
-
-    - **Risoluzione**: se si desidera disporre di più di un'istanza in un determinato host, è consigliabile utilizzare le macchine virtuali o i contenitori di Docker. 
-
-- Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
-
-- La lingua predefinita di **sa** account di accesso è l'inglese.
-
-    - **Risoluzione**: modificare la lingua del **sa** account di accesso con il **ALTER LOGIN** istruzione.
-
-#### <a name="databases"></a>Database
-
-- Impossibile spostare i database di sistema con l'utilità mssql conf.
-
-- Quando si ripristina un database di cui è stato eseguito il backup in SQL Server in Windows, è necessario utilizzare il **WITH MOVE** clausola nell'istruzione Transact-SQL.
-
-- Le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator non sono supportate in SQL Server in esecuzione in Linux. SQL Server a SQL Server sono supportate le transazioni distribuite.
-
-#### <a name="remote-database-files"></a>File di database remoto
-
-- Hosting dei file di database in un server NFS non è supportata in questa versione. Include l'utilizzo di NFS per disco condiviso clustering di failover e database nelle istanze non cluster. Stiamo lavorando su come abilitare il supporto di server NFS nelle prossime versioni.
-
-#### <a name="cross-platform-availability-groups-and-distributed-availability-groups"></a>Gruppi di disponibilità su più piattaforme e i gruppi di disponibilità distribuiti
-
-- A causa di un problema noto, la creazione di gruppi di disponibilità con repliche in istanze ospitate in Windows e Linux non funziona in questa versione. Sono inclusi i gruppi di disponibilità distribuiti. Per risolvere il problema sarà disponibile nella compilazione prossima versione finale candidata. 
-
-#### <a name="server-collation"></a>Regole di confronto del server
-
-- Quando l'utilizzo di MSSQL_COLLATION override o quando si esegue un'installazione (non in lingua inglese) localizzata, è possibile SQL Server verrà raggiunto un deadlock durante il tentativo di impostare le regole di confronto di server, che genera un dump. L'installazione viene completata, tuttavia le regole di confronto del server verrà non impostato. La soluzione alternativa consiste nell'eseguire. / mssql conf set di regole di confronto e immettere il nome delle regole di confronto desiderato quando viene richiesto (il nome delle regole di confronto, vedere il log degli errori in corrispondenza della riga: "Tentativo di modificare regole di confronto predefinite..."). 
- 
-#### <a name="localization"></a>Localizzazione
-
-- Se le impostazioni locali sono inglese (it_IT) durante l'installazione, è necessario utilizzare la codifica UTF-8 nella sessione/terminale bash. Se si utilizza la codifica ASCII, si potrebbe essere visualizzato un errore simile al seguente:
-
-   ```
-   UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
-   ```
-
-   Se non è possibile utilizzare la codifica UTF-8, eseguire l'installazione utilizzando la variabile di ambiente MSSQL_LCID per specificare il linguaggio selezionato.
-
-   ```bash
-   sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
-   ```
-
-#### <a name = "fci"></a>Aggiornamento dell'istanza del cluster disco condiviso
-
-Nella versione RC1 l'agente di risorse cluster imposta il nome del server virtuale, come avviene in un'istanza del Cluster di Failover in Windows. Prima di RC1 `@@servername` su un disco condiviso cluster ha restituito il nodo specifico nome di questa operazione dopo il failover `@@servername` ha restituito un valore diverso. Nella versione RC1 serverName dell'istanza del cluster disco condiviso viene aggiornato con il nome della risorsa quando la risorsa viene aggiunto al cluster. Per questo motivo, il cluster sarà necessario riavviare SQL Server dopo il failover manuale durante l'aggiornamento, come i passaggi seguenti:
-
-1. Aggiornare innanzitutto nodo secondario (passivo).
-   - Eseguire l'aggiornamento **mssql server** pacchetto.
-   - Eseguire l'aggiornamento **mssql-server-a disponibilità elevata** pacchetto.
-1. Eseguire manualmente il failover al nodo aggiornato.
-   `pcs resource move <resourceName>`
-   - Risorsa non riesce inizialmente perché l'agente di risorse controlla serverName effettivo e previsto. ServerName previsto saranno diverso.
-   - Cluster verrà riavviato la risorsa di SQL Server nello stesso nodo. Verrà aggiornato il nome del server.
-1. Aggiornare l'altro nodo. 
-   - Eseguire l'aggiornamento **mssql server** pacchetto.
-   - Eseguire l'aggiornamento **mssql-server-a disponibilità elevata** pacchetto.
-1. Rimuovere il vincolo aggiunto dallo spostamento manuale delle risorse. Vedere [cluster di Failover manualmente](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md#failManual).
-2. Se si desidera, esito negativo fino al nodo primario originale. 
-
-#### <a name="availability-group"></a>Gruppo di disponibilità
-
-In Linux, l'aggiornamento di SQL Server 2017 CTP 2.1 in sequenza a RC1 non è supportata. Dopo aver aggiornato la replica secondaria, verrà disconnesso dalla replica primaria fino a quando non viene aggiornata la replica primaria. Microsoft prevede di risolvere il problema per una versione futura.
-
-#### <a name="full-text-search"></a>Ricerca full-text
-- Non tutti i filtri sono disponibili in questa versione, inclusi i filtri per i documenti di Office. Per un elenco di filtri supportati, vedere [installare di ricerca Full-Text di SQL Server in Linux](sql-server-linux-setup-full-text-search.md#filters).
-
-#### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
-
-- Il **mssql server è** pacchetto non è supportato in SUSE in questa versione. È attualmente supportato in Ubuntu e su Red Hat Enterprise Linux (RHEL).
-
-- Le funzionalità seguenti non sono supportate in questa versione, quando si eseguono i pacchetti SSIS in Linux:
-  - Database del catalogo SSIS
-  - Esecuzione del pacchetto pianificato dall'agente SQL
-  - Autenticazione di Windows
-  - Componenti di terze parti
-  - Change Data Capture (CDC)
-  - Scalabilità orizzontale SSIS
-  - Azure Feature Pack per SSIS
-  - Supporto di Hadoop e HDFS
-  - Microsoft Connector for SAP BW
-
-Per ulteriori informazioni su SSIS in Linux, vedere gli articoli seguenti:
--   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
--   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
-
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-Le limitazioni seguenti si applicano a SQL Server Management Studio in Windows connessi a SQL Server in Linux.
-
-- I piani di manutenzione non sono supportati.
-
-- Gestione dei Data Warehouse di e l'agente di raccolta dati in SQL Server Management Studio non sono supportati. 
-
-- I componenti SSMS UI con l'autenticazione di Windows o le opzioni del registro eventi di Windows non funzionano con Linux. È comunque possibile utilizzare queste funzionalità con altre opzioni, ad esempio account di accesso SQL. 
-
-- Impossibile modificare il numero di file di log da mantenere.
-
-### <a name="next-steps"></a>Passaggi successivi
-
-Per iniziare, vedere le esercitazioni di avvio rapido seguenti:
-
-- [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installare in Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Eseguire in Docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-

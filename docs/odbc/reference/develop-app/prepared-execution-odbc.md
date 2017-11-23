@@ -3,10 +3,12 @@ title: Esecuzione ODBC preparato | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], prepared execution
 - SQL statements [ODBC], executing
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bde6eb0d06e99a9a7e08aeb4d4179bcbb9a5bff2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepared-execution-odbc"></a>Esecuzione preparata ODBC
 Esecuzione preparata è un modo efficiente per eseguire un'istruzione più volte. L'istruzione viene innanzitutto compilata, o *preparati,* in un piano di accesso. Il piano di accesso viene quindi eseguito uno o più volte in un secondo momento. Per ulteriori informazioni sui piani di accesso, vedere [l'elaborazione di un'istruzione SQL](../../../odbc/reference/processing-a-sql-statement.md).  
@@ -97,4 +98,3 @@ while (GetPrice(&PartID, &Price)) {
  Se il driver non è possibile emulare preparazione dell'istruzione, archivia l'istruzione quando **SQLPrepare** viene chiamato e inviata per l'esecuzione quando **SQLExecute** viene chiamato.  
   
  Poiché non è perfetto, preparazione dell'istruzione emulata **SQLExecute** può restituire eventuali errori in genere restituiti da **SQLPrepare**.
-

@@ -3,10 +3,12 @@ title: Argomenti delle funzioni di catalogo in | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db8463f643763f4dbaa621b5e26549c5523197ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f8939b2e1ae81c3eb171e78753e7fc3b6cc17ae
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arguments-in-catalog-functions"></a>Argomenti nelle funzioni di catalogo
 Tutte le funzioni di catalogo accettano gli argomenti con cui un'applicazione può limitare l'ambito dei dati restituiti. Ad esempio, le chiamate a primo e seconda **SQLTables** nel codice seguente restituisce un set di risultati contenente informazioni su tutte le tabelle, mentre la terza chiamata restituisce informazioni sulla tabella Ordini:  
@@ -53,11 +54,10 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Argomenti normali](../../../odbc/reference/develop-app/ordinary-arguments.md)  
+-   [Argomenti ordinari](../../../odbc/reference/develop-app/ordinary-arguments.md)  
   
--   [Argomenti di valore modello](../../../odbc/reference/develop-app/pattern-value-arguments.md)  
+-   [Argomenti del valore criterio](../../../odbc/reference/develop-app/pattern-value-arguments.md)  
   
 -   [Argomenti di tipo identificatore](../../../odbc/reference/develop-app/identifier-arguments.md)  
   
--   [Valore elenco argomenti](../../../odbc/reference/develop-app/value-list-arguments.md)
-
+-   [Argomenti dell'elenco di valori](../../../odbc/reference/develop-app/value-list-arguments.md)

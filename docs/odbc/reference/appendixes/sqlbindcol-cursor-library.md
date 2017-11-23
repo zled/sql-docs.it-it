@@ -3,26 +3,26 @@ title: SQLBindCol (libreria di cursori) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLAllocStmt function [ODBC], Cursor Library
+helpviewer_keywords: SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf80a3dfd02c2871267cfe57f1b95ae246094bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (libreria di cursori)
 > [!IMPORTANT]  
@@ -39,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  La libreria di cursori supporta la chiamata **SQLBindCol** per associare la colonna del segnalibro.  
   
  Quando si lavora con un ODBC 2. *x* driver, la libreria di cursori restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando **SQLBindCol** viene chiamato per impostare la lunghezza del buffer per una colonna del segnalibro a un valore non è uguale a 4. Quando si lavora con un'applicazione ODBC 3*x* driver, la libreria di cursori consente il buffer di qualsiasi dimensione.
-

@@ -3,26 +3,26 @@ title: Comando esclusivo SET | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET EXCLUSIVE command [ODBC]
+helpviewer_keywords: SET EXCLUSIVE command [ODBC]
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5aa039c9af4b3dfbabce2647408be7f612c80f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 830cec1dbb87ae2bc4336d28d6112fd76b4db0ed
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-exclusive-command"></a>Comando esclusivo SET
 Specifica se aprire o meno i file di tabella per l'utilizzo esclusiva o condivisa in rete.  
@@ -45,5 +45,4 @@ SET EXCLUSIVE ON | OFF
  Modificare l'impostazione di SET esclusivo non viene modificato lo stato di tabelle aperte in precedenza. Ad esempio, se una tabella viene aperto con SET esclusivo impostata su ON e SET esclusivo in un secondo momento viene impostato su OFF, la tabella mantiene lo stato di uso esclusivo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La finestra di dialogo programma di installazione di Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
-
+ [Finestra di dialogo di configurazione ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

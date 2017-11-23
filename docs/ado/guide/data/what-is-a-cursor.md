@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cursors [ADO], about cursors
+helpviewer_keywords: cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61fb503b5b183f1147e2297a76045876c254a8e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-a-cursor"></a>Che cos'è un cursore?
 Nei database relazionali le operazioni vengono eseguite su set di righe completi. Il set di righe restituito da un'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, specialmente quelle che sono interattivi e online, non possono funzionare in modo efficace con l'intero set di risultati come un'unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  
@@ -80,4 +77,3 @@ Nei database relazionali le operazioni vengono eseguite su set di righe completi
   
 ## <a name="scrollability"></a>Scorrimento  
  Il tipo di cursore utilizzato dall'applicazione influisce inoltre la possibilità di spostare in avanti e indietro tra le righe in un set di risultati. Ciò è talvolta detta scorrimento. La possibilità di spostare in avanti *e* con le versioni precedenti attraverso il risultato di un set aumenta la complessità del cursore e pertanto è più costoso da implementare. Per questo motivo, è necessario richiedere un cursore con questa funzionalità solo quando necessario.
-

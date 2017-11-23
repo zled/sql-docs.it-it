@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e36f73bd8f62bed52ef13acd4e1491b0d3e894fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 175e135f99f8ed96754ff255cbad7f32cc202479
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-modes-mysqltosql"></a>Modalità SQL (MySQLToSQL)
 SSMA per MySQL può operare in modalità diverse di SQL che è possibile applicare queste modalità in modo diverso per diversi client.  
@@ -85,4 +83,3 @@ Modalità SQL effettivo può essere definita a vari livelli nel modo seguente:
   
     3.  La modalità di SQL effettivo che è impostato in modo esplicito non vengono riportata come ereditata modalità SQL e infine viene applicata all'oggetto.  
   
-

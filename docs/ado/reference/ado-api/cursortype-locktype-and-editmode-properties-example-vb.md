@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - EditMode property [ADO], Visual Basic example
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4269193e57287781cb5f9f0963b8c70c6ba77b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7a2ac4243578480e2b9d3af74b2c78ae4c471ef
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType ed esempio di proprietà EditMode (VB)
 In questo esempio viene illustrato come impostare il [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) proprietà prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Viene inoltre illustrato il valore di [EditMode](../../../ado/reference/ado-api/editmode-property.md) proprietà in varie condizioni. La funzione EditModeOutput è necessaria per eseguire questa procedura.  
@@ -137,5 +134,4 @@ End Function
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
  [Proprietà LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

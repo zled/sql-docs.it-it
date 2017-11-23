@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4020ae2dd9bd8fa07a97f5817a0f06969fc0bb73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f173bca2b294cb839e542d1bc5e8a650b6d7afb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-designer"></a>Progettazione modelli di data mining
   Progettazione modelli di data mining rappresenta l'ambiente principale per l'utilizzo di modelli di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile accedere alla finestra di progettazione selezionando una struttura di data mining esistente o utilizzando la Creazione guidata modello di data mining per creare una nuova struttura e un nuovo modello di data mining. Progettazione modelli di data mining consente di eseguire le attività seguenti:  
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

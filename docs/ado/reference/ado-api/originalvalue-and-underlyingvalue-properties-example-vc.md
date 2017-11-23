@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc78a70ee7c3d6443126a190ce9bd80fe03105e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e73d970163aba564c6ed199a2024511db7579a89
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Esempio OriginalValue e UnderlyingValue proprietà (VC + +)
 Questo esempio viene illustrato il [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) proprietà visualizzando un messaggio se i dati sottostanti di un record è stata modificata durante un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aggiornamento batch.  
@@ -230,5 +227,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Proprietà](../../../ado/reference/ado-api/underlyingvalue-property.md)
-
+ [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

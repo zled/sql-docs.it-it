@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8a09ad6fb1af544e98f1b7875d1e04c396e46e60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95bf93de0eac697aecac7e31e7b0d32b082bda22
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Provider Microsoft OLE DB per Microsoft Jet Panoramica
 Il Provider OLE DB per Microsoft Jet consente ADO per accedere ai database Microsoft Jet.
@@ -344,4 +342,3 @@ Microsoft.Jet.OLEDB.4.0
 |Utilizzare i segnalibri|DBPROP_BOOKMARKS|
 
  Per dettagli specifici sull'implementazione e di funzionalità relative al Provider OLE DB per Microsoft Jet, vedere [Provider Jet](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) nella documentazione di OLE DB.
-

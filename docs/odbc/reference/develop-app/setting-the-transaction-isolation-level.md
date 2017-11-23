@@ -3,10 +3,12 @@ title: L'impostazione del livello di isolamento delle transazioni | Documenti Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30d7746cb49609154a9b5e82ec7a85b1a1480e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>L'impostazione del livello di isolamento delle transazioni
 Per impostare il livello di isolamento delle transazioni, un'applicazione utilizza l'attributo di connessione SQL_ATTR_TXN_ISOLATION. Se l'origine dati non supporta il livello di isolamento richiesto, il driver o l'origine dati è possibile impostare un livello superiore. Per determinare quali isolamento della transazione i livelli di un'origine dati supporta ed è il livello di isolamento predefinito, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_TXN_ISOLATION_OPTION e SQL_DEFAULT_TXN_ISOLATION, rispettivamente.  
@@ -38,4 +39,3 @@ Per impostare il livello di isolamento delle transazioni, un'applicazione utiliz
 -   Cui la velocità è prioritaria rispetto alla precisione e gli eventuali errori è probabile che sia esiguo. Ad esempio, si supponga che una società rende l'importo delle vendite di piccole dimensioni e che le vendite di grandi dimensioni sono rare. Una transazione di cui si stima il valore totale di tutte le vendite potrebbe utilizzare in modo sicuro il livello di isolamento Read Uncommitted. Anche se la transazione include gli ordini che sono viene aperto o chiuso e successivamente il rollback, questi verrebbe in genere annullano reciprocamente e la transazione sarà molto più veloce perché non è bloccato ogni volta che rileva un ordine di questo tipo.  
   
  Per ulteriori informazioni, vedere [la concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).
-

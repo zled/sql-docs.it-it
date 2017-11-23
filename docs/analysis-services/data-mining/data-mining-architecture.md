@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-architecture"></a>Architettura di data mining
   In questa sezione viene descritta l'architettura delle soluzioni di data mining ospitate in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Negli argomenti di questa sezione viene descritta l'architettura logica e fisica di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che supporta il data mining e vengono fornite informazioni su client, provider e protocolli che è possibile usare per comunicare con i server di data mining e per usare oggetti di data mining in modalità locale o remota.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [Programmazione di Data Mining](../../analysis-services/data-mining-programming.md)  
   
   
-

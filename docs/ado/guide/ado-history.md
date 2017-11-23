@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, what's new
+helpviewer_keywords: ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594152a9dd7e6d4fdb4d00668692239d09bdf373
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-features-for-each-release"></a>Funzionalità di ADO per ogni versione
 Questo argomento elenca le nuove funzionalità introdotte per ogni versione di ADO, ADO MD e ADOX.
@@ -51,17 +49,17 @@ Un comando shape annidato ora restituisce un massimo di 512 **recordset**. Ciò 
  *supporto per piattaforme a 64 bit* ADO 2.7 introduce il supporto per processori a 64 bit.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***metodo* a partire da ADO 2.6, gli oggetti ADO MD possono essere recuperati utilizzando nomi univoci, come specificato dal [proprietà UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Non è necessario conoscere i nomi degli oggetti padre e raccolte padre non è necessario essere popolati per recuperare un oggetto dello schema. Vedere [GetSchemaObject metodo (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***metodo* a partire da ADO 2.6, gli oggetti ADO MD possono essere recuperati utilizzando nomi univoci, come specificato dal [proprietà UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Non è necessario conoscere i nomi degli oggetti padre e raccolte padre non è necessario essere popolati per recuperare un oggetto dello schema. Vedere [GetSchemaObject metodo (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Comando flussi* il **comando** oggetto supporta i comandi nel formato di flusso come alternativa all'utilizzo di **CommandText** proprietà. Il [(ADO) la proprietà CommandStream](../../ado/reference/ado-api/commandstream-property-ado.md) può essere utilizzato per specificare i modelli XML o updategram come il **comando** di input con il Provider Microsoft OLE DB per SQL Server.
 
- **Sottolinguaggio***proprietà* [sottolinguaggio](../../ado/reference/ado-api/dialect-property.md) è una nuova proprietà che definisce la sintassi e regole generali che il provider utilizzato per analizzare la stringa o nel flusso.  
+ **Sottolinguaggio***proprietà* [sottolinguaggio](../../ado/reference/ado-api/dialect-property.md) è una nuova proprietà che definisce la sintassi e regole generali che il provider utilizzato per analizzare la stringa o nel flusso.
 
- **Command. Execute***metodo* il [metodo Execute](../../ado/reference/ado-api/execute-method-ado-command.md) di ADO **comando** oggetto è stato migliorato per utilizzare i flussi di input e output.  
+ **Command. Execute***metodo* il [metodo Execute](../../ado/reference/ado-api/execute-method-ado-command.md) di ADO **comando** oggetto è stato migliorato per utilizzare i flussi di input e output.
 
  *Campo statusvalues* se l'utente si verifica un errore DB_E_ERRORSOCCURRED quando si modifica un **campo** di un **Recordset**, ADO ora compilerà il **Field.Status**proprietà con le informazioni di stato appropriato in modo che l'utente dispone di ulteriori informazioni sulla causa dell'errore. Vedere [proprietà Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***proprietà* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) è una proprietà di nuovo il **comando** oggetto che indica che il provider deve utilizzare denominato parametri.  
+ **NamedParameters***proprietà* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) è una proprietà di nuovo il **comando** oggetto che indica che il provider deve utilizzare denominato parametri.
 
  *Set di risultati nei flussi* ADO può restituire set di risultati da un'origine dati in un **flusso**, piuttosto che un **Recordset** oggetto. Utilizzando la versione più recente del Provider Microsoft OLE DB per SQL Server, è possibile ottenere i risultati XML dal provider eseguendo una query di "Per XML". Oggetto **flusso** che riceve il set di risultati può essere aperto con un comando "Per XML" come origine. Vedere [il recupero dei set di risultati in flussi](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
@@ -75,4 +73,3 @@ Un comando shape annidato ora restituisce un massimo di 512 **recordset**. Ciò 
  *L'associazione URL* ADO 2.5 viene presentato l'utilizzo di un URL, in alternativa a un testo stringa e un comando di connessione, come nomi di oggetti di archivio dati. Un URL può essere utilizzato con esistente **connessione** e **Recordset** oggetti, come con il nuovo **Record** e **flusso** oggetti.
 
  *Provider di dati che supporta l'associazione URL* ADO 2.5 supporta i provider OLE DB che riconoscono gli schemi URL. Questo include i Provider OLE DB per Internet Publishing, che accede al file system di Windows 2000 e riconosce lo schema HTTP esistente.
-

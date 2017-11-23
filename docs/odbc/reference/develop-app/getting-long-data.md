@@ -3,10 +3,12 @@ title: Recupero di dati Long | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>Recupero di dati Long
 Definiscono DBMS *dati long* come qualsiasi carattere o dati binari in una determinata dimensione, ad esempio i 255 caratteri. Tali dati possono essere sufficientemente ridotto da archiviare in un unico buffer, ad esempio una descrizione di parte di diverse migliaia di caratteri. Tuttavia, potrebbe essere troppo lungo per archiviare in memoria, ad esempio documenti di testo lungo o bitmap. Poiché tali dati non possono essere archiviati in un unico buffer, viene recuperato dal driver in parti con **SQLGetData** dopo gli altri dati nella riga sono stati recuperati.  
@@ -90,4 +91,3 @@ SQLCloseCursor(hstmt);
  Alcuni driver non applicano queste restrizioni. Applicazioni interoperative devono supporre esiste o determinare le restrizioni non vengono applicate chiamando **SQLGetInfo** con l'opzione SQL_GETDATA_EXTENSIONS.  
   
  Se l'applicazione non necessita di tutti i dati in un carattere o una colonna di dati binari, è possibile ridurre il traffico di rete di driver basati su DBMS impostando l'attributo di istruzione SQL_ATTR_MAX_LENGTH prima di eseguire l'istruzione. Il che limita il numero di byte di dati che verranno restituiti per qualsiasi colonna di tipo binario o carattere. Si supponga, ad esempio, che una colonna contiene documenti di testo lungo. Un'applicazione che esamina la tabella contenente questa colonna potrebbe essere necessario visualizzare solo la prima pagina di ogni documento. Anche se questo attributo dell'istruzione può essere simulato nel driver, non è necessario eseguire questa operazione. In particolare, se un'applicazione desidera troncare i dati carattere o binario, deve essere associato un buffer di piccole dimensioni e la colonna con **SQLBindCol** e lasciare che il driver di troncare i dati.
-

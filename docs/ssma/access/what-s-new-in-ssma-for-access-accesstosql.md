@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 5cc5b9bf49c28b298570e0c867c5b03e8ad99c47
-ms.contentlocale: it-it
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità di SSMA per Access (AccessToSQL)
 Questo argomento elenca SSMA per le modifiche di accesso in ogni versione.  
@@ -178,4 +176,3 @@ La versione di SSMA per Access novembre 2006 contiene le seguenti modifiche:
   
 ## <a name="july-2006"></a>Luglio 2006  
 La versione di SSMA per Access luglio 2006 costituisce la versione iniziale.
-

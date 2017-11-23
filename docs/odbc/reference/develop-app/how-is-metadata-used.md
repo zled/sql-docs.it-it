@@ -3,27 +3,28 @@ title: Quali sono i metadati utilizzati? | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6cb8bb35eb0e53415465b3ea003341d74e248bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-is-metadata-used"></a>Quali sono i metadati utilizzati?
 Le applicazioni richiedono metadati per la maggior parte delle operazioni sui set di risultati. L'applicazione, ad esempio, utilizza il tipo di dati di una colonna per determinare il tipo di variabile da associare alla colonna. Usa la lunghezza in byte di una colonna di tipo carattere per determinare la quantità di spazio che è necessario visualizzare dati di tale colonna. Il modo in cui un'applicazione determina i metadati per una colonna dipende dal tipo dell'applicazione.  
@@ -35,4 +36,3 @@ Le applicazioni richiedono metadati per la maggior parte delle operazioni sui se
  Applicazioni generiche, in particolare quelli che supportano query ad hoc, non conoscere quasi mai i metadati del set di risultati creati. Pertanto, individuano i metadati in fase di esecuzione tramite le funzioni di **SQLNumResultCols**, **SQLDescribeCol**, e **SQLColAttribute**, che sono descritte nel la sezione successiva, [SQLDescribeCol e SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Tutte le applicazioni, indipendentemente dal loro tipo, è possibile codificare i metadati per il set di risultati restituiti dalle funzioni di catalogo. Questi set di risultati sono definiti nella sezione di riferimento di questo manuale.
-

@@ -3,10 +3,12 @@ title: "Livello 2 interfaccia conformità | Documenti Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 216cfaa83c7b48e94778b98fde9766a47221091b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-interface-conformance"></a>Conformità di interfaccia di livello 2
 Il livello di conformità di interfaccia di livello 2 include la funzionalità di livello 1 interfaccia: livello di conformità e le funzionalità seguenti:  
@@ -42,4 +43,3 @@ Il livello di conformità di interfaccia di livello 2 include la funzionalità d
 |209|Impostare l'attributo di istruzione SQL_ATTR_CONCURRENCY su almeno un valore diverso da SQL_CONCUR_READ_ONLY.|  
 |210|La possibilità di timeout richiesta di accesso e le query SQL (SQL_ATTR_LOGIN_TIMEOUT e SQL_ATTR_QUERY_TIMEOUT).|  
 |211|La possibilità di modificare il livello di isolamento predefinito; la possibilità di eseguire transazioni con il livello di isolamento "serializzabile".|
-

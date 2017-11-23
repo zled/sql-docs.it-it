@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data shaping [ADO], overview
+helpviewer_keywords: data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2bcfa746be8db71aa85c7e83f7f52b40997fd433
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f885a8585d3665efcc39bfe979b501d779c35c00
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-shaping-overview"></a>Data Shaping Panoramica
 *Il data shaping* significa che la creazione di relazioni gerarchiche tra due o più entità logiche in una query. La gerarchia può essere visualizzata in relazioni padre-figlio tra un record di uno [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e uno o più record (noto anche come un capitolo) di un altro **Recordset**. In una relazione padre-figlio, l'elemento padre **Recordset** contiene l'elemento figlio **Recordset**. Un esempio di tale relazione gerarchica è customers e orders. Per ogni cliente in un database, possono essere presenti zero o più ordini. La relazione gerarchica può essere ricorsivo, vale a dire che i record nipote possono essere annidati in un record figlio. In sostanza, un record gerarchico può essere annidato a qualsiasi profondità. In pratica, ADO limita la ricorsione a un massimo di 512 **Recordset**s.  
@@ -39,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  Inoltre, data shaping in ADO consente di creare nuovi **Recordset** oggetti senza un'origine dati sottostante utilizzando il **nuovo** (parola chiave) per descrivere i campi del padre e figlio  **Recordset**. Il nuovo **Recordset** oggetto può essere popolato con i dati e memorizzato in modo permanente. Gli sviluppatori possono inoltre eseguire vari calcoli o aggregazioni (ad esempio, **somma**, **AVG**, e **MAX**) sui campi figlio. Il data shaping inoltre possibile creare un elemento padre **Recordset** da un elemento figlio **Recordset** raggruppando i record figlio e inserendo una riga nell'oggetto padre per ogni gruppo, l'elemento figlio.  
   
  Regolare SQL consente di recuperare dati usando **JOIN** sintassi, ma questo è possibile inefficiente e difficile da gestire perché dati ridondanti padre viene ripetuti in ogni record restituito per una relazione padre-figlio specificata. Il data shaping possibile correlare un record singolo elemento padre del padre **Recordset** a più record figlio nell'elemento figlio **Recordset**, evitando la ridondanza di un **JOIN**. Maggior parte degli utenti di trovare il padre-figlio più **Recordset** modello di programmazione più naturale e semplice da utilizzare rispetto a singolo **Recordset JOIN** modello.
-

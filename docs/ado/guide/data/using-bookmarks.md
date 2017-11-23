@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-bookmarks"></a>Utilizzo di segnalibri
 È spesso utile tornare direttamente a un record specifico dopo vari spostamenti **Recordset** senza dover scorrere ogni record e confrontare i valori. Ad esempio, se si tenta di eseguire la ricerca di un record utilizzando il **trovare** metodo ma la ricerca non restituisce alcun record, si viene automaticamente posizionati in delle estremità del **Recordset**. Se il provider supporta questa funzionalità, è possono utilizzare i segnalibri per contrassegnare la posizione prima di utilizzare il **trovare** metodo in modo da poter ritornare alla posizione dell'utente. Un segnalibro è un **Variant** tipo di valore che identifica in modo univoco un record in un **Recordset** oggetto.  
@@ -57,4 +55,3 @@ End If
  Il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo illustrato più dettagliatamente in seguito.  
   
  Ad eccezione del caso di clonato **recordset**, i segnalibri sono univoci per il **Recordset** in cui sono stati creati, anche se viene utilizzato lo stesso comando. Ciò significa che non è possibile utilizzare un **segnalibro** ottenuto da uno **Recordset** per spostare lo stesso record in un secondo **Recordset** aperto con lo stesso comando.
-

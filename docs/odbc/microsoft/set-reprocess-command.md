@@ -3,26 +3,26 @@ title: Comando RIELABORAZIONE SET | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET REPROCESS command [ODBC]
+helpviewer_keywords: SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8e907d01b79c314603ba87c8195e56c8710bd10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-reprocess-command"></a>Comando RIELABORAZIONE SET
 Specifica quante volte o per informazioni su come long per bloccare un file o un record dopo un tentativo di blocco non riuscito.  
@@ -59,4 +59,3 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Osservazioni  
  Al primo tentativo di bloccare un record o un file non è sempre esito positivo. Spesso, un record o un file è bloccato da un altro utente nella rete. IMPOSTARE RIELABORARE determina se Visual FoxPro esegue ulteriori tentativi per bloccare il record o il file durante il tentativo iniziale ha esito negativo. È possibile specificare il numero di tentativi eseguiti altri tentativi vengono apportati o per quanto tempo i tentativi vengono stabiliti. Una routine ON ERROR influisce sulla riuscita come blocco vengono gestiti i tentativi.
-

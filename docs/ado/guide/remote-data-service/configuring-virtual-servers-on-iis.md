@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- virtual servers in RDS [ADO]
+helpviewer_keywords: virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 085aaafca8390c2c036ea5e67905e194a18401b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 10edd98f77c0aaeae05d25e76ad76a15b99bc1ed
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configurazione dei server virtuali in IIS
 Durante la creazione di server virtuali in Internet Information Services 4.0, per configurare il server virtuale per funzionare con Servizi Desktop remoto sono necessari due passaggi aggiuntivi seguenti:  
@@ -39,6 +36,5 @@ Durante la creazione di server virtuali in Internet Information Services 4.0, pe
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b93fe94c608cce5ca4338e1d0a7ccfbcc834a322
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ffd5c3c3a735c86aa39f7ab0b521bb23e0c4e14
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-methods"></a>Metodi ADO
 |||  
@@ -53,7 +51,7 @@ ms.lasthandoff: 09/09/2017
 |[Eseguire (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Esegue query specificata, istruzione SQL, stored procedure o il testo del provider.|  
 |[Trova](../../../ado/reference/ado-api/find-method-ado.md)|Cerca un **Recordset** per la riga che soddisfa i criteri specificati.|  
 |[Scaricamento](../../../ado/reference/ado-api/flush-method-ado.md)|Forza il contenuto del **flusso** rimanenti nel buffer di ADO per l'oggetto sottostante a cui il **flusso** associata.|  
-|[get_OLEDBCommand (metodo)](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Restituisce il comando OLE DB sottostanti, innanzitutto propaga qualsiasi informazione di parametro impostato sul comando ADO al comando OLE DB.|  
+|[Metodo get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Restituisce il comando OLE DB sottostanti, innanzitutto propaga qualsiasi informazione di parametro impostato sul comando ADO al comando OLE DB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Restituisce un **Recordset** le cui righe rappresentano i file e sottodirectory della directory rappresentato da questo **Record**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Restituisce tutto o in parte, il contenuto di un testo di grandi dimensioni o dati binari **campo** oggetto.|  
 |[Metodo GetDataProviderDSO](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Recupera l'oggetto origine dati OLE DB sottostante dal provider di forma.|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 09/09/2017
 |[Aprire (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Apre un cursore.|  
 |[Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|Apre un **flusso** oggetto per gestire i flussi di dati binario o di testo.|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|Ottiene informazioni sullo schema di database dal provider.|  
-|[put_OLEDBCommand (metodo)](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Questo metodo non esegue alcuna operazione, viene sempre restituito S_OK.|  
+|[Metodo put_OLEDBCommand](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Questo metodo non esegue alcuna operazione, viene sempre restituito S_OK.|  
 |[Lettura](../../../ado/reference/ado-api/read-method.md)|Legge un numero specificato di byte da un **flusso** oggetto.|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Legge un numero specificato di caratteri da un testo **flusso** oggetto.|  
 |[Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md)|Aggiorna gli oggetti in una raccolta in modo da riflettere gli oggetti disponibili e specifiche del provider.|  
@@ -97,4 +95,3 @@ ms.lasthandoff: 09/09/2017
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Le interfacce e gli oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Proprietà ADO](../../../ado/reference/ado-api/ado-properties.md)
-

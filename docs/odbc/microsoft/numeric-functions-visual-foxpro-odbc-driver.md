@@ -3,10 +3,12 @@ title: Funzioni numeriche, Driver ODBC di Visual FoxPro | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - numeric functions [ODBC]
 - FoxPro ODBC driver [ODBC], numeric functions
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fa1e5111769f3c30b969e7a9176d7d92e9c870db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af884148535018c19a2a7375f3bfc90d73aa5f78
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Funzioni numeriche, Driver ODBC di Visual FoxPro,
 La tabella seguente descrive le funzioni ODBC numeriche supportate dal Driver ODBC di Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencata l'equivalente di Visual FoxPro.  
@@ -60,4 +61,3 @@ La tabella seguente descrive le funzioni ODBC numeriche supportate dal Driver OD
  POWER *(numeric_exp, integer_exp)*  
   
  TRONCARE *(numeric_exp, integer_exp)*
-

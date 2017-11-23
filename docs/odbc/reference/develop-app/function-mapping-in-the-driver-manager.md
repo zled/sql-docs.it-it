@@ -3,10 +3,12 @@ title: Funzione di Mapping in Gestione Driver | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - driver manager [ODBC], function mapping
 - functions [ODBC], Unicode functions
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 63c908b668e4cecd93cc9930f638ccde9173b563
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Mapping di funzione in Gestione Driver
 Gestione driver supporta due punti di ingresso per le funzioni che accettano argomenti di stringa. La funzione non decorata (**SQLDriverConnect**) è il formato ANSI della funzione. Il formato Unicode è decorato con un *W* (**SQLDriverConnectW**.)  
@@ -54,4 +55,3 @@ Gestione driver supporta due punti di ingresso per le funzioni che accettano arg
  Gestione Driver è abilitata per Unicode internamente. Di conseguenza, le prestazioni ottimali viene ottenuta da un'applicazione Unicode utilizzano un driver di Unicode, in quanto Gestione Driver passa semplicemente funzioni Unicode tramite il driver. Quando un'applicazione ANSI collabora con un driver ANSI, gestione Driver deve convertire le stringhe da ANSI a Unicode durante l'elaborazione di alcune funzioni, ad esempio **SQLDriverConnect**. Dopo la funzione di elaborazione, gestione Driver deve convertire quindi la stringa Unicode al ANSI prima di inviare la funzione al driver ANSI.  
   
  Un'applicazione non deve modificare o leggere il buffer dei parametri associati, quando il driver restituisce SQL_NEED_DATA o SQL_STILL_EXECUTING. Gestione Driver lascia il buffer associato a ANSI fino a quando il driver restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Un'applicazione multithreading non deve ottenere l'accesso a tutti i valori di parametri associati in un altro thread in esecuzione un'istruzione SQL. Gestione Driver converte i dati da Unicode ad ANSI "sul posto" e l'altro thread potrebbe visualizzare dati di ANSI in questi buffer mentre il driver è in corso l'elaborazione dell'istruzione SQL. Applicazioni che associano i dati Unicode a un driver ANSI non necessario associare due colonne diverse per lo stesso indirizzo.
-

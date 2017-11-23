@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tuning reports [SQL Server]
+applies_to: SQL Server 2016
+helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a395ca1faceb1465c1ce7dc8fc43215dae31c8be
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Lezione 1-3 - visualizzazione dei report di ottimizzazione
 Nell'attività precedente di questa lezione sono stati esaminati gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di creare o eliminare oggetti di database dalle indicazioni di Ottimizzazione guidata motore di database generate come risultato della sessione di ottimizzazione di MySession. La sessione di ottimizzazione di MySession è stata creata in [Ottimizzazione di un carico di lavoro](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
@@ -53,8 +49,7 @@ Sebbene sia molto utile visualizzare gli script che è possibile utilizzare per 
 A questo punto è stata esaminata la scheda **Report** dell'interfaccia utente grafica di Ottimizzazione guidata motore di database per la sessione di ottimizzazione di MySession. È possibile eseguire gli stessi passaggi per esplorare i report creati per la sessione di ottimizzazione di EvaluateMySession. Nel riquadro **Monitoraggio sessione** fare doppio clic su **EvaluateMySession** per iniziare.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 3: Utilizzo dell'utilità del prompt dei comandi dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lezione 3: Uso dell'utilità del prompt dei comandi dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   
-

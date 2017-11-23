@@ -3,10 +3,12 @@ title: Ruolo di gestione Driver | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a6e0b002c34e8bf35f4f2c9b42dd7b47293ac9b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="role-of-the-driver-manager"></a>Ruolo di gestione Driver
 Gestione Driver determina l'ordine finale in cui restituire i record di stato che viene generata. In particolare, determina il record è il valore più alto e deve essere restituito prima. Il driver è responsabile per l'ordinamento dei record di stato che viene generata. Se i record di stato vengono registrati da Gestione Driver sia il driver, Driver Manager è responsabile ordinandoli. Per ulteriori informazioni, vedere [sequenza di record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
@@ -39,11 +40,10 @@ Gestione Driver determina l'ordine finale in cui restituire i record di stato ch
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Controlli di valori di argomento](../../../odbc/reference/develop-app/argument-value-checks.md)  
+-   [Controlli del valore dell'argomento](../../../odbc/reference/develop-app/argument-value-checks.md)  
   
--   [Controlli delle transizioni di stato](../../../odbc/reference/develop-app/state-transition-checks.md)  
+-   [Controlli della transizione di stato](../../../odbc/reference/develop-app/state-transition-checks.md)  
   
 -   [Controlli degli errori generali](../../../odbc/reference/develop-app/general-error-checks.md)  
   
--   [Errore di Gestione driver e i controlli di avviso](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
-
+-   [Errore di Gestione driver e controlli di avviso](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)

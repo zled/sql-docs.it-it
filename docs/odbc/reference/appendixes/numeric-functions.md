@@ -3,27 +3,28 @@ title: Funzioni numeriche | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-functions"></a>Funzioni numeriche
 La tabella seguente descrive le funzioni numeriche inclusi nel set di funzioni scalari ODBC. Chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_NUMERIC_FUNCTIONS, un'applicazione può determinare quali funzioni numeriche sono supportate da un driver.  
@@ -64,4 +65,3 @@ La tabella seguente descrive le funzioni numeriche inclusi nel set di funzioni s
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Restituisce la radice quadrata di *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Restituisce la tangente di *float_exp*, dove *float_exp* è l'angolo, espresso in radianti.|  
 |**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Restituisce *numeric_exp* troncato a *integer_exp* posizionato a destra del separatore decimale. Se *integer_exp* è negativo, *numeric_exp* viene troncato a &#124; *integer_exp*&#124; posizioni a sinistra del separatore decimale.|
-

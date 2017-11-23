@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/09/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: db5f32d52171a51f4882c0da309543f424b1ff48
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: d161da0d79c4b778e739fb806ffae62e68eac52c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>SQL Server Migration Assistant per DB2 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per DB2 è uno strumento per la migrazione di database DB2 a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 in Windows e Linux (anteprima) o database SQL di Azure. SSMA per DB2 converte gli oggetti di database DB2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti di database, crea gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e quindi viene eseguita la migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure.  
@@ -42,4 +40,3 @@ Questa documentazione viene presentato SSMA per DB2 e vengono fornite istruzioni
 |[Utilizzo di SSMA per la Console di DB2](http://msdn.microsoft.com/en-us/29d8787c-632e-4ff7-9ccc-3f7ad40480ec)|Contiene la documentazione dell'applicazione Console di SSMA|  
 |[Recupero di SSMA per l'assistenza di DB2](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Vengono fornite informazioni su come ottenere ulteriore assistenza.|  
   
-

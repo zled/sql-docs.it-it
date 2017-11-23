@@ -1,35 +1,29 @@
 ---
 title: Creare grafici e grafici utilizzando SQL e R (procedura dettagliata) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Creare grafici e grafici utilizzando SQL e R (procedura dettagliata)
 
-In questa parte della procedura dettagliata si apprenderà tecniche per la generazione di grafici e mappe usando R con i dati di SQL Server. Si creerà un istogramma semplice per esercitarsi e quindi si svilupperà un tracciato a mappa più complesso.
+In questa parte della procedura dettagliata, si informazioni tecniche per la generazione di grafici e mappe usando R con i dati di SQL Server. Creare un semplice istogramma, per esercitarsi e quindi sviluppare un tracciato mappa più complesso.
 
 ### <a name="create-a-histogram"></a>Creare un istogramma
 
@@ -56,8 +50,6 @@ In questa parte della procedura dettagliata si apprenderà tecniche per la gener
 ### <a name="create-a-map-plot"></a>Creare un tracciato di mappa
 
 In genere, i server di database bloccano l'accesso a Internet. Può essere poco pratico quando si usano pacchetti R che è necessario scaricare le mappe o altre immagini per generare i grafici. Tuttavia, è una soluzione alternativa che possono risultare utili durante lo sviluppo di applicazioni personalizzate. In pratica, generare la rappresentazione della mappa sul client e quindi sovrapposizione sulla mappa i punti che vengono archiviati come attributi nella tabella di SQL Server.
-
-Ti condurremo attraverso di esso in questa lezione.
 
 1. Definire la funzione che crea l'oggetto tracciato R. La funzione personalizzata *mapPlot* crea un grafico a dispersione che utilizza i percorsi di prelievo taxi e il numero di si basa avviata da ogni località è rappresentata. Usa i pacchetti **ggplot2** e  **ggmap** , che dovrebbero già essere installati e caricati.
 
@@ -117,4 +109,3 @@ Ti condurremo attraverso di esso in questa lezione.
 ## <a name="previous-lesson"></a>Lezione precedente
 
 [Riepilogare i dati con R](/walkthrough-view-and-summarize-data-using-r.md)
-

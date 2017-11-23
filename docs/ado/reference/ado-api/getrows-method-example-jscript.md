@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-helpviewer_keywords:
-- Getrows method [ADO], JScript example
+dev_langs: JScript
+helpviewer_keywords: Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a81c58c0a9f131993b5b41c130ddd599d42c0d91
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3309dde1d1d69ceb1f5cd720f3e97037fd3068a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getrows-method-example-jscript"></a>Esempio di metodo GetRows (JScript)
 Questo esempio viene utilizzato il [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) metodo per recuperare tutte le righe del *Custiomers* tabella da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per inserire una matrice con i dati risultanti. Il **GetRows** metodo restituirà inferiore al numero desiderato di righe in due casi: se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è stato raggiunto, oppure se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **False** solo se il secondo caso si verifica. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **GetRowsJS**.  
@@ -168,5 +164,4 @@ BODY {
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -3,10 +3,12 @@ title: Utilizzando i valori di lunghezza e indicatore | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>Utilizzo di lunghezza e i valori di indicatore
 Il buffer di lunghezza/indicatore viene utilizzato per passare la lunghezza in byte dei dati nel buffer di dati o un indicatore speciale, ad esempio SQL_NULL_DATA, che indica che i dati sono NULL. A seconda della funzione in cui viene utilizzato, un buffer di lunghezza/indicatore è definito come un SQLINTEGER o un SQLSMALLINT. Pertanto, un solo argomento, è necessario per una descrizione. Se il buffer di dati è un buffer di input nondeferred, questo argomento contiene la lunghezza in byte dei dati stessi o un valore dell'indicatore. È spesso denominato *StrLen_or_Ind* o un nome simile. Ad esempio, il codice seguente chiama **SQLPutData** per passare un buffer completo dei dati; la lunghezza in byte (*ValueLen*) viene passato direttamente perché il buffer dei dati (*ValuePtr*) è un buffer di input.  
@@ -76,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Una stored procedure consiste nell'usare il valore predefinito di un parametro di input in una stored procedure anziché il valore nel buffer di dati corrispondente.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** o **SQLSetPos** consente di ignorare il valore nel buffer di dati. Quando si aggiorna una riga di dati da una chiamata a **SQLBulkOperations** o **SQLSetPos,** non viene modificato il valore della colonna. Quando si inserisce una nuova riga di dati da una chiamata a **SQLBulkOperations**, il valore della colonna è impostato sul valore predefinito o se la colonna non ha un valore predefinito, null.
-

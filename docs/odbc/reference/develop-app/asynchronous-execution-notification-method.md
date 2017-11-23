@@ -3,24 +3,25 @@ title: Esecuzione asincrona (metodo di notifica) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56eadba88bc229b4d3f3560c60988124b54f33b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b39bfb096e980106ecaef4e12ef9871f1a32452a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="asynchronous-execution-notification-method"></a>Esecuzione asincrona (metodo di notifica)
 ODBC consente l'esecuzione asincrona di connessione e le operazioni di istruzione. Un thread dell'applicazione può chiamare una funzione ODBC in modalità asincrona e la funzione può restituire prima che l'operazione è stata completata, consentendo il thread dell'applicazione eseguire altre attività. In Windows 7 SDK, per l'istruzione asincrona o operazioni di connessione, un'applicazione determinato che l'operazione asincrona è completa utilizzando il metodo di polling. Per ulteriori informazioni, vedere [esecuzione asincrona (metodo di Polling)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partire da Windows 8 SDK, è possibile determinare che un'operazione asincrona viene completata utilizzando il metodo di notifica.  
@@ -421,4 +422,3 @@ Else
     // Call the corresponding Asynchronous ODBC API to complete all processing and retrieve the return code.  
 }  
 ```
-

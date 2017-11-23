@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Views::raw_Append
 - Views::Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a30ccf01370b89572697917c4fbbbbf3df11a0e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 535f25f475f6357d467e2f7ac19a96ed6eea1605
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-views"></a>Append (metodo) (ADOX Views)
 Crea un nuovo [vista](../../../ado/reference/adox-api/view-object-adox.md) dell'oggetto e lo aggiunge al [viste](../../../ado/reference/adox-api/views-collection-adox.md) insieme.  
@@ -57,7 +54,7 @@ Views.Append Name, Command
 >  Quando si utilizza il Provider OLE DB per Microsoft Jet, la **viste** raccolta **Append** metodo consente di specificare un **procedura** piuttosto che un **visualizzazione**  nel *comando* parametro. Il **procedura** verrà aggiunto all'origine dati e verrà aggiunto al **viste** insieme. Dopo il **Append**, se il **procedure** e **viste** raccolte vengono aggiornate, il **procedura** non sarà più possibile nel **Viste** insieme e verranno visualizzati di **procedure** insieme.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta di visualizzazioni (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste di esempio del metodo Append (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
@@ -67,5 +64,4 @@ Views.Append Name, Command
  [Append (metodo) (ADOX chiavi)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append (metodo) (ADOX procedure)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append (metodo) (ADOX tabelle)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append (metodo) (ADOX utenti)](../../../ado/reference/adox-api/append-method-adox-users.md)
-
+ [Metodo Append (oggetti User ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)

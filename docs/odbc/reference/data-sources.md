@@ -3,26 +3,27 @@ title: Origini dati | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>Origini dei dati
 Oggetto *origine dati* è semplicemente l'origine dei dati. Può trattarsi di un file, un database specifico in un DBMS o anche un feed di dati in tempo reale. I dati potrebbero trovarsi nello stesso computer del programma, o in un altro computer in un punto qualsiasi in una rete. Ad esempio, un'origine dati potrebbe essere un DBMS Oracle in esecuzione in un sistema operativo OS/2®, accede Novell® Netware. un DBMS di IBM DB2 tramite un gateway. una raccolta di file Xbase in una directory di server. o un file di database locale di Microsoft® Access.  
@@ -35,6 +36,6 @@ Oggetto *origine dati* è semplicemente l'origine dei dati. Può trattarsi di un
   
 -   [Tipi di origini dati](../../odbc/reference/types-of-data-sources.md)  
   
--   [Utilizzo di origini dati](../../odbc/reference/using-data-sources.md)  
+-   [Uso delle origini dati](../../odbc/reference/using-data-sources.md)  
   
 -   [Esempio di origine dati](../../odbc/reference/data-source-example.md)

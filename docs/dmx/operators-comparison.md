@@ -2,33 +2,33 @@
 title: Operatori di confronto (DMX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- comparison operators [DMX]
+dev_langs: DMX
+helpviewer_keywords: comparison operators [DMX]
 ms.assetid: eea3cf90-9683-4453-b1f3-da740f3a4885
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4ac50c6884356bf98384d330e85afbc837a0c2f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 92362f5158b23b0425030092fe7b9372a08b13ca
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operators---comparison"></a>Operatori di confronto-
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   È possibile utilizzare gli operatori di confronto con dati scalari in qualsiasi espressione di Data Mining Extensions (DMX) [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Questi operatori restituiscono un tipo di dati Boolean, ovvero TRUE o FALSE a seconda che venga soddisfatta o meno la condizione specificata.  
   
@@ -56,7 +56,6 @@ ms.lasthandoff: 08/02/2017
  [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Operatori &#40; DMX &#41;](../dmx/operators-dmx.md)   
  [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Informazioni sull'istruzione Select di DMX](../dmx/understanding-the-dmx-select-statement.md)  
+ [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

@@ -1,31 +1,25 @@
 ---
 title: Prerequisiti per la procedura dettagliata dell'analisi scientifica dei dati per SQL Server e R | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/23/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 127957f5a2838efb9d2dfa2829cb33909c490571
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9d3a579f023a7e6d9805b934edc3f0e9e5ad5e8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>Prerequisiti per la procedura dettagliata dell'analisi scientifica dei dati per SQL Server e R
 
@@ -35,7 +29,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="install-machine-learning-for-sql-server"></a>Installare l'apprendimento di SQL Server
 
-È necessario avere accesso a un'istanza di SQL Server con il supporto per R installato, utilizzando uno dei seguenti:
+È necessario avere accesso a un'istanza di SQL Server con il supporto per R installato. Questa procedura dettagliata è stato originariamente sviluppata per SQL Server 2016 e testata su 2017, pertanto dovrebbe essere in grado di utilizzare una delle seguenti versioni di SQL Server. (Vi sono alcune piccole differenze nelle funzioni RevoScaleR tra le versioni).
 
 + Per SQL Server 2017 di Machine Learning Services (In-Database)
 + SQL Server 2016 R Services
@@ -43,21 +37,21 @@ ms.lasthandoff: 09/01/2017
 Per ulteriori informazioni, vedere [configurare SQL Server R Services (In-Database](../r/set-up-sql-server-r-services-in-database.md).
 
 > [!IMPORTANT]
-> Assicurarsi di usare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o versione successiva. Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportano l'integrazione con R. Tuttavia, è possibile usare i database SQL precedenti come origine dati ODBC.
+> Versioni di SQL Server precedenti a 2016 non supportano l'integrazione con R. Tuttavia, è possibile utilizzare il database SQL precedenti come un'origine dati ODBC.
 
 ## <a name="install-an-r-development-environment"></a>Installare un ambiente di sviluppo di R
 
 Per questa procedura dettagliata, è consigliabile utilizzare un ambiente di sviluppo R. Di seguito sono riportati alcuni suggerimenti:
 
-- **Strumenti R per Visual Studio** (RTVS) è un plug-in che fornisce Intellisense, debug e il supporto per Microsoft R. È possibile utilizzarlo con R Server e servizi di SQL Server Machine Learning. Per scaricarlo, vedere [R Tools per Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx).
+- **Strumenti R per Visual Studio** (RTVS) è un plug-in che fornisce Intellisense, debug e il supporto per Microsoft R. È possibile utilizzarlo con R Server e servizi di SQL Server Machine Learning. Per scaricarlo, vedere [R Tools per Visual Studio](https://www.visualstudio.com/vs/rtvs/).
 
-- **Microsoft R Client** è uno strumento di sviluppo leggero che supporta lo sviluppo in R con i pacchetti ScaleR. Per ottenerlo, vedere [Introduzione a Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started).
+- **Microsoft R Client** è uno strumento di sviluppo leggero che supporta lo sviluppo di R usando il pacchetto RevoScaleR. Per ottenerlo, vedere [Introduzione a Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).
 
 - **RStudio** è uno degli ambienti più diffusi per lo sviluppo di R. Per altre informazioni, vedere [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 
     Non è possibile completare questa esercitazione Usa un'installazione generica di RStudio o un altro ambiente; è inoltre necessario installare i pacchetti R e librerie di connettività per Microsoft R Open. Per altre informazioni, vedere [Configurare un client per l'analisi scientifica dei dati](../r/set-up-a-data-science-client.md).
 
-- Strumenti di base di R (R.exe, RTerm.exe, RScripts.exe) vengono installati anche per impostazione predefinita, quando si installa [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]. Se non si desidera installare un IDE, è possibile utilizzare questi strumenti.
+- Strumenti di base di R (R.exe, RTerm.exe, RScripts.exe) vengono installati per impostazione predefinita anche quando si installa R in SQL Server o Client di R. Se non si desidera installare un IDE, è possibile utilizzare questi strumenti.
 
 ## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>Ottenere le autorizzazioni per l'istanza di SQL Server e database
 
@@ -78,4 +72,3 @@ Questa procedura dettagliata, abbiamo utilizzato l'account di accesso SQL **RTes
 ## <a name="next-lesson"></a>Lezione successiva
 
 [Preparare i dati di utilizzo di PowerShell](/walkthrough-prepare-the-data.md)
-

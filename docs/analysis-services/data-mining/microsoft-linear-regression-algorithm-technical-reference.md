@@ -18,17 +18,16 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed842a83a00412da1fce19e7519049d4171baf21
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Linear Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression è una versione speciale dell'algoritmo Microsoft Decision Trees ottimizzata per la modellazione delle coppie di attributi continui. In questo argomento viene illustrata l'implementazione dell'algoritmo, viene mostrato come personalizzarne il comportamento e vengono forniti collegamenti a ulteriori informazioni sull'esecuzione di query sui modelli.  
@@ -99,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

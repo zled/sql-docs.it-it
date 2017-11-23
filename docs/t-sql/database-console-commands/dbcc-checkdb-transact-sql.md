@@ -1,13 +1,14 @@
 ---
 title: DBCC CHECKDB (Transact-SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKDB_TSQL
 - DBCC CHECKDB
 - CHECKDB
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECKDB [DBCC statement]
 - database objects [SQL Server], checking
@@ -35,26 +35,25 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
+caps.latest.revision: "144"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0960e000c4ba1d798228445720e39db0f627f9b1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Verifica l'integrità logica e fisica di tutti gli oggetti del database specificato eseguendo le operazioni seguenti:    
     
-> **Nota:** DBCC CHECKDB è supportato nei database che contengono tabelle con ottimizzazione per la memoria, ma la convalida viene eseguita solo nelle tabelle basate su disco. Tuttavia, come parte del backup e del ripristino del database, la convalida mediante CHECKSUM viene eseguita per i file nei filegroup con ottimizzazione per la memoria.    
+> **Nota:** DBCC CHECKDB è supportato nei database che contengono tabelle con ottimizzazione per la memoria, ma la convalida viene eseguita solo nelle tabelle basate su disco. Tuttavia, come parte del backup e del ripristino del database, la convalida mediante CHECKSUM viene eseguita per i file nei filegroup ottimizzati per la memoria.    
 >     
->  Poiché le opzioni di correzione DBCC non sono disponibili per le tabelle con ottimizzazione per la memoria, è necessario eseguire regolarmente il backup dei database e verificare i backup. Se i problemi di integrità dei dati si verificano in una tabella con ottimizzazione per la memoria, è necessario eseguire il ripristino dall'ultima copia di backup valida nota.    
+>  Poiché le opzioni di correzione DBCC non sono disponibili per le tabelle ottimizzate per la memoria, è necessario eseguire regolarmente il backup dei database e verificare i backup. Se i problemi di integrità dei dati si verificano in una tabella ottimizzata per la memoria, è necessario eseguire il ripristino dall'ultima copia di backup valida nota.    
     
 -   Esecuzioni [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) nel database.    
     
@@ -404,5 +403,4 @@ GO
 [Visualizzare le dimensioni del file sparse di uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
 [Tabelle di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-
 

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7a1f8568b633417196c6c9dda3e8a3615146603
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Servizio cursore per una panoramica OLE DB Microsoft
 Il servizio di cursore per OLE DB Microsoft integra le funzioni di supporto cursore dei provider di dati. Di conseguenza, l'utente utilizza funzionalità relativamente uniforme di tutti i provider di dati.
@@ -98,4 +96,3 @@ rs.Properties("Optimize") = True
 
 ## <a name="method-behavior"></a>Comportamento del metodo
  Consente di attivare il servizio di cursore per OLE DB o influisce sul comportamento del [campo](../../../ado/reference/ado-api/field-object.md) dell'oggetto [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo; e **Recordset** dell'oggetto [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), e [salvare](../../../ado/reference/ado-api/save-method.md) metodi.
-

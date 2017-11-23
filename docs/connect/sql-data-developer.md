@@ -3,24 +3,25 @@ title: Sviluppatori di dati SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 03/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: 
+ms.service: 
+ms.component: connect
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssma
+ms.suite: sql
+ms.technology: tools-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 10c5b6f36ac8c9c4e60e974ad7f3f25a46e9d02e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b68e218e549ee6bccc716d6f3430774065f9390
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sql-data-developer"></a>Sviluppatori di dati SQL
 Utilizzare piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui dati tra dispositivi mobili e desktop per server web, i server dell'organizzazione e nel cloud.  
@@ -54,4 +55,3 @@ Utilizzare piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui
 
 
  
-

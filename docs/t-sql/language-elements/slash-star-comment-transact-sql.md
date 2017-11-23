@@ -1,40 +1,41 @@
 ---
-title: Barre a stella commento (Transact-SQL) | Documenti Microsoft
+title: Barre a stella (blocco di commento) (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /*...*/_TSQL
 - Comment
 - /*...*/
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nonexecuting text strings [SQL Server]
 - /*...*/ (comment)
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 60ae52af725a065a8319a2fde1e87e1b8bb52e02
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e617c6f0108906046d6c6ea983d1bbc26082709
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="slash-star-comment-transact-sql"></a>Commenti a stella barra (Transact-SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>Barre a stella (blocco di commento) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   Evidenzia il testo inserito dall'utente. Il testo compreso tra il / * e \*/ non viene valutato dal server.  
   
@@ -110,5 +111,4 @@ GO
  [Il controllo di flusso Language &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
-
 

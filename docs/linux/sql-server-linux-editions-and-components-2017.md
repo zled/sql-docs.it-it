@@ -1,11 +1,13 @@
 ---
 title: "Edizioni e le funzionalità supportate di SQL Server 2017 ~ Linux | Documenti Microsoft"
-ms.custom:
-- SQL2017_New_Updated
+ms.custom: 
 ms.date: 09/14/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - sql-linux
 - server-general
@@ -29,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edizioni e le funzionalità supportate di SQL Server 2017 su Linux
 
@@ -47,7 +48,7 @@ Questo articolo fornisce informazioni dettagliate delle funzionalità supportate
 I requisiti di installazione variano in base alle esigenze dell'applicazione. Le diverse edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consentono di soddisfare le esigenze specifiche di utenti e organizzazioni in termini di prezzo, esecuzione e prestazioni. I componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installati dipendono inoltre dai requisiti specifici. Nelle sezioni seguenti vengono fornite tutte le informazioni necessarie per adottare la scelta migliore tra le edizioni e i componenti disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Per le note sulla versione più recenti e informazioni sulle novità, vedere quanto segue:
-- [SQL Server su note sulla versione di Linux](sql-server-linux-release-notes.md)
+- [Note sulla versione di SQL Server in Linux](sql-server-linux-release-notes.md)
 - [Novità di SQL Server in Linux](sql-server-linux-whats-new.md)
 
 Per un elenco delle funzionalità di SQL Server non disponibile in Linux, vedere [non supportate funzionalità e i servizi](sql-server-linux-release-notes.md#Unsupported).
@@ -92,7 +93,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Capacità di calcolo massima usata da una singola istanza - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oppure [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|valore massimo del sistema operativo|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|
 |Memoria massima per il pool di buffer per ogni istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|valore massimo del sistema operativo|128 GB|64 GB|1410 MB|
 |Memoria massima per la cache dei segmenti Columnstore per ogni istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB| 16 GB| 352 MB|  
-|Dimensione massima dati con ottimizzazione per la memoria per ogni database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB| 16 GB| 352 MB|
+|Dimensione massima dati ottimizzati per la memoria per ogni database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB| 16 GB| 352 MB|
 |Dimensione massima del database relazionale|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise edition con Server + CAL Client Access License () in base licenze (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per istanza di SQL Server. Non sono previsti limiti nel modello di licenza server basato su core. Per ulteriori informazioni, vedere [limiti di capacità di calcolo per edizione di SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
@@ -119,11 +120,11 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Backup crittografato|Sì|Sì|No|No|
 |Backup ibrido in Microsoft Azure (backup nell'URL)|Sì|Sì|No|No|
   
-<sup>1</sup> in Enterprise edition, il numero di nodi è il valore massimo del sistema operativo. In Standard edition è supportata per i due nodi. 
+<sup>1</sup> in Enterprise edition, il numero di nodi è il valore massimo del sistema operativo. In Standard Edition è presente il supporto per due nodi. 
 
 <sup>2</sup> in Enterprise edition, fornisce il supporto per fino a 8 repliche secondarie, incluse 2 repliche secondarie sincrone. 
 
-<sup>3</sup> standard edition supporta i gruppi di disponibilità di base. Un gruppo di disponibilità di base supporta due repliche, con un database. Per ulteriori informazioni sui gruppi di disponibilità di base, vedere [gruppi di disponibilità di base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> standard edition supporta i gruppi di disponibilità di base. Un gruppo di disponibilità di base supporta due repliche, con un database. Per altre informazioni sui gruppi di disponibilità di base, vedere [Gruppi di disponibilità di base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> Scalabilità e prestazioni RDBMS  
   
@@ -148,7 +149,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Miglioramenti dell'inserimento bulk|Sì|Sì|Sì|Sì|
 
 
-<sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo (DOP) di processi per la compilazione di un indice è limitato a 2 grado di Parallelismo per Standard edition e 1 grado di Parallelismo per le edizioni Web ed Express. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle con ottimizzazione per la memoria.
+<sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo (DOP) di processi per la compilazione di un indice è limitato a 2 grado di Parallelismo per Standard edition e 1 grado di Parallelismo per le edizioni Web ed Express. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle ottimizzate per la memoria.
 
 ##  <a name="RDBMSS"></a> Sicurezza RDBMS  
   
@@ -227,4 +228,3 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
 
   
   
-

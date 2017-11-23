@@ -3,10 +3,12 @@ title: Le applicazioni Unicode | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - compiling Unicode applications [ODBC]
 - functions [ODBC], Unicode functions
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a09b99c9fdf819cbc78cfe68a7d78634187f2426
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-applications"></a>Applicazioni Unicode
 È possibile ricompilare un'applicazione come un'applicazione Unicode in uno dei due modi:  
@@ -45,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  Una funzione può essere chiamata in uno dei tre modi: come una chiamata di funzione solo Unicode (con il *W* suffisso), come una chiamata di funzione solo ANSI (con il *A* suffisso), o come chiamata di funzione ODBC senza alcun suffisso. Gli argomenti per le tre forme di una funzione sono identici. Solo le funzioni con SQLCHAR \* argomenti o SQLPOINTER che puntano alle stringhe richiedono form Unicode e ANSI. Per le funzioni presentano argomenti che possono essere dichiarati come un tipo di carattere, ad esempio **SQLBindCol** o **SQLGetData** (che non si dispone i form di Unicode e ANSI), l'argomento può essere dichiarato come tipo Unicode, ANSI digitare oppure nel caso di un C argomento, la macro SQL_C_TCHAR. Per ulteriori informazioni, vedere [dati Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
  Anche se non Unicode sono disponibili driver per funzionare con, un'applicazione può essere scritta come un'applicazione Unicode. Gestione Driver verrà eseguito il mapping tipi di dati e le funzioni Unicode ad ANSI. Esistono alcune restrizioni per Unicode per il mapping ANSI che possono essere eseguite. L'esistenza di un driver di Unicode per l'applicazione di Unicode funzionare con determinerà un miglioramento delle prestazioni e rimuoverà le limitazioni intrinseche in Unicode per il mapping ANSI.
-

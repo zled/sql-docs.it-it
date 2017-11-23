@@ -3,10 +3,12 @@ title: Argomenti di valore di schema | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pattern-value-arguments"></a>Argomenti di valore modello
 Alcuni argomenti nel catalogo di funzioni, ad esempio il *TableName* argomento **SQLTables**, accettare i criteri di ricerca. Questi argomenti accettano i criteri di ricerca se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; sono gli argomenti di identificatore che non accettano un criterio di ricerca se questo attributo è impostato su SQL_TRUE.  
@@ -52,4 +53,3 @@ Alcuni argomenti nel catalogo di funzioni, ad esempio il *TableName* argomento *
 >  ODBC 2. *x* driver non supporta i criteri di ricerca nel *CatalogName* argomento **SQLTables**. ODBC 3*x* driver accettano i modelli di ricerca in questo argomento se l'attributo di ambiente sql_attr ODBC_VERSION è impostato su SQL_OV_ODBC3; non accetta i criteri di ricerca in questo argomento se è impostato su SQL_OV_ODBC2.  
   
  Passando un puntatore null a un argomento di modello di ricerca non vincola la ricerca per tale argomento. ovvero, un puntatore null e la percentuale di criterio di ricerca (caratteri) sono equivalenti. Tuttavia, di lunghezza zero ricerca modello, ovvero, ovvero un puntatore valido a una stringa di lunghezza zero, ovvero corrisponde solo una stringa vuota ("").
-

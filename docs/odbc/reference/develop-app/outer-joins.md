@@ -3,27 +3,28 @@ title: Outer join | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78f943033febb1f60ebfe420a10748af1f4260b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="outer-joins"></a>Outer join
 ODBC supporta SQL-92 a sinistra, la sintassi di right e full outer join. La sequenza di escape per gli outer join  
@@ -51,4 +52,3 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  Per determinare i tipi di outer join che supportano un'origine dati e i driver, un'applicazione chiama **SQLGetInfo** con il SQL_OJ_CAPABILITIES flag. I tipi di outer join che potrebbero essere supportate sono sinistro, destro, completo o annidato outer join. outer join in cui i nomi di colonna nel **ON** clausola non ha lo stesso ordine i nomi di tabella corrispondente nella **OUTER JOIN** clausola; inner join in combinazione con outer join; e utilizzo di outer join qualsiasi operatore di confronto ODBC. Se il tipo di informazioni SQL_OJ_CAPABILITIES restituisce 0, non esiste una clausola outer join è supportata.
-

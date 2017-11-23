@@ -3,10 +3,12 @@ title: Le voci del Registro di sistema (Driver ODBC di Visual FoxPro) | Document
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Voci del Registro di sistema (Driver ODBC di Visual FoxPro)
 Quando si installa il Driver ODBC di Visual FoxPro, il programma di installazione aggiorna il Registro di sistema nella chiave del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, per aggiungere una nuova chiave denominata driver per Microsoft Visual FoxPro. In tale chiave, vengono aggiunti i valori descritti nella tabella seguente.  
@@ -62,4 +63,3 @@ Quando si installa il Driver ODBC di Visual FoxPro, il programma di installazion
  Non è necessario accedere direttamente; queste informazioni qualsiasi amministrazione del Registro di sistema viene gestita dall'amministratore ODBC quando si aggiungere, modificare o eliminare un'origine dati.  
   
  È possibile utilizzare alcune di queste parole chiave e i valori come parametri in di [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) funzione API ODBC.
-

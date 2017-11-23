@@ -8,8 +8,7 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8c3a514f91e9af8de54fdbd4d9ef851c72f1911e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-analysis-services"></a>Che cos'è Analysis Services?
   Analysis Services è un motore dati analitici utilizzato per il supporto decisionale e analitica di business, fornisce i dati analitici per i report di business e applicazioni client quali Power BI, Excel, report di Reporting Services e altri strumenti di visualizzazione di dati.  
@@ -65,8 +63,7 @@ In generale, la documentazione per Azure Analysis Services è inclusa con la doc
 *  [Modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [Data mining](../analysis-services/data-mining/data-mining-ssas.md)  
 *  [PowerPivot per SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
-*  [Gestione delle istanze](../analysis-services/instances/analysis-services-instance-management.md)    
+*  [Gestione di un'istanza](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [Esercitazioni](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Documentazione per sviluppatori](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [Riferimento tecnico (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
-

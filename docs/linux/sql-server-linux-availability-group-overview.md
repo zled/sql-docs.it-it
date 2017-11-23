@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
+ms.openlocfilehash: 950a02b20e2a99565c235e6be477827a580b142f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c5c7e602ac1beedb028072b4c82578e9948af43d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>Gruppi di disponibilità per SQL Server in Linux
 
@@ -102,4 +106,3 @@ Creare un gruppo di disponibilità senza un cluster per supportare i carichi di 
 [Aggiungere il gruppo di disponibilità risorsa Cluster in SLES](sql-server-linux-availability-group-cluster-sles.md)
 
 [Aggiungere il gruppo di disponibilità risorsa Cluster in Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
-

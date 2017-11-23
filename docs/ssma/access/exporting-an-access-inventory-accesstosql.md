@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5d4c6fb051f37d02875070eeef6709cba84ae452
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55f91e6b5e83b3a317f74b71e591de7e08009413
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Esportazione di un inventario di accesso (AccessToSQL)
 Se si dispone di più database di Access e non si è certi di quelle per eseguire la migrazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile esportare un inventario di tutti i database di Access in un progetto. È possibile quindi esaminare e query sui metadati per determinare i database e gli oggetti all'interno di tali database per eseguire la migrazione di inventario. L'inventario consente rapidamente trovare risposte alle domande, ad esempio le operazioni seguenti:  
@@ -238,4 +236,3 @@ Se non si conosce il nome della colonna, è possibile scrivere una query per res
 ## <a name="see-also"></a>Vedere anche  
 [Preparazione dei database di Access per la migrazione](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
-

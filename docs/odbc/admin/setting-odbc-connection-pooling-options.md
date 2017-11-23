@@ -3,10 +3,12 @@ title: Impostazione delle opzioni del pool di connessioni ODBC | Documenti Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: admin
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Impostazione delle opzioni del pool di connessioni ODBC
 Il pool di connessioni consente a un'applicazione di utilizzare una connessione da un pool di connessioni che non è necessario essere ristabilita per ogni utilizzo. È possibile utilizzare il **pool di connessioni** scheda della finestra di **Amministrazione origine dati ODBC** la finestra di dialogo per abilitare e disabilitare il monitoraggio delle prestazioni. Fare doppio clic su un nome di driver per impostare il periodo di timeout di connessione.  
@@ -48,4 +49,3 @@ Il pool di connessioni consente a un'applicazione di utilizzare una connessione 
 |Pool creati|Il numero di pool attivo, inclusi i pool attivo ed è stato rimosso. Questo contatore è stato aggiunto in Windows 8, per i driver che gestiscono le connessioni nel pool di connessioni. Per ulteriori informazioni, vedere [Driver-Aware Connection Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  È necessario specificare i parametri di monitoraggio personalizzati. Esempi per il monitoraggio delle prestazioni sono stati inclusi con questa versione di ODBC.
-

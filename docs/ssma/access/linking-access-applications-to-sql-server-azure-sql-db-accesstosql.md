@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: 0cb77274631be10896e3b6dc13c3b36f0e75a0e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 0a0acdf34e916fc3748b0ba33947259e1a361230
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Il collegamento alle applicazioni di accesso di SQL Server: database SQL di Azure (AccessToSQL)
 Se si desidera utilizzare le applicazioni Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile collegare le tabelle di Access originale dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tabelle di SQL Azure. Collegamento di modifica nel database di Access in modo che i dati di utilizzare pagine di accesso ai dati, moduli, report e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure anziché i dati nel database di Access.  
@@ -164,4 +162,3 @@ Recordset.LastModified
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

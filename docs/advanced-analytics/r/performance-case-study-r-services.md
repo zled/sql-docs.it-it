@@ -1,26 +1,24 @@
 ---
 title: Prestazioni per R Services - risultati e le risorse | Documenti Microsoft
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Prestazioni per R Services: risultati e le risorse
 
@@ -31,7 +29,7 @@ I due case study ha obiettivi diversi:
 + Il primo case study, dal team di sviluppo di R Services, richiesta misurare l'impatto delle tecniche di ottimizzazione specifiche
 + Il secondo case study, da un team esperto di dati, sperimentato con più metodi per determinare le migliori ottimizzazioni per uno specifico scenario di assegnazione dei punteggi di volumi elevati.
 
-Questo argomento elenca i risultati dettagliati del primo case study. Per il case study, secondo un riepilogo descrive le conclusioni generali. Alla fine di questo argomento, sono disponibili collegamenti a tutti gli script e i dati di esempio e le risorse utilizzate dagli autori originali.
+Questo argomento elenca i risultati dettagliati del primo case study. Per il case study, secondo un riepilogo descrive le conclusioni generali. Alla fine di questo argomento vengono forniti collegamenti a tutti gli script e i dati di esempio e le risorse utilizzate dagli autori originali.
 
 ## <a name="performance-case-study-airline-dataset"></a>Case study di prestazioni: Airline set di dati
 
@@ -280,13 +278,13 @@ I risultati del test mostrano il tempo necessario per salvare il modello e il te
 
 Il caricamento di un modello con Training da una tabella è chiaramente un modo più veloce per eseguire stime. Si consiglia di evitare la creazione del modello e l'esecuzione di punteggio tutti nello stesso script.
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>Case study: ottimizzazione per la ripresa di corrispondenza attività
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Case study: ottimizzazione dell'attività di corrispondenza resume
 
-Il modello di corrispondenza resume è stato sviluppato da esperto di dati Microsoft Ke Huang per testare le prestazioni del codice R in SQL Server e abilitare gli esperti di dati per il supporto di soluzioni scalabili e a livello aziendale.
+È stato sviluppato il modello di corrispondenza resume esperto di dati Microsoft Ke Huang per testare le prestazioni del codice R in SQL Server e in questo modo pertanto i dati della Guida creare scalabili, gli esperti di soluzioni aziendali.
 
 ### <a name="methods"></a>Metodi
 
-RevoScaleR sia MicrosoftML pacchetti sono stati utilizzati per il training di un modello predittivo in una soluzione di R complessa che coinvolgono grandi set di dati. Le query SQL e codice R sono identici. Tutti i test sono stati eseguiti in una singola macchina virtuale Azure con SQL Server installato. L'autore quindi confrontata punteggio volte con e senza queste ottimizzazioni fornite da SQL Server:
+RevoScaleR sia MicrosoftML pacchetti sono stati utilizzati per il training di un modello predittivo in una soluzione di R complessa che coinvolgono grandi set di dati. Le query SQL e codice R sono identici in tutti i test. Test sono stati condotti su una singola macchina virtuale di Azure con SQL Server installato. L'autore quindi confrontata punteggio volte con e senza le ottimizzazioni seguenti fornite da SQL Server:
 
 - Tabelle in memoria
 - Soft-NUMA
@@ -328,12 +326,9 @@ La configurazione con prestazioni ottimali in corrispondenza resume studiare è 
 
 -   Quantità massima di memoria utilizzata dalle sessioni R = 70%
 
-Per il modello di corrispondenza resume utilizzo dello script esterno è stato elevato e si sono verificati nessun altro database servizi motore di esecuzione. Pertanto, le risorse allocate per gli script esterni è stato aumentato a 70%, che è la migliore configurazione per le prestazioni di script.
+Per il modello di corrispondenza resume utilizzo dello script esterno è stato elevato e si sono verificati nessun altro database servizi motore di esecuzione. Di conseguenza, le risorse allocate per gli script esterni sono state portate a 70%, che ha dimostrato la migliore configurazione per le prestazioni di script.
 
-Questa configurazione è stata arrivata tramite sperimentazioni con valori diversi. Se si utilizza hardware diverso o una soluzione diversa, è possibile che la configurazione ottimale potrebbe essere diversa.
-
-> [!IMPORTANT]
-> Riuscire a individuare la migliore configurazione per il case!
+Questa configurazione è stata arrivata tramite sperimentazioni con valori diversi. Se si utilizza hardware diverso o una soluzione diversa, è possibile che la configurazione ottimale potrebbe essere diversa. Sempre riuscire a individuare la migliore configurazione per il case!
 
 Nella soluzione ottimizzata, classificate in meno di 8,5 secondi in un computer di 20 core 1.1 milioni di righe di dati (con 100 funzionalità). Le ottimizzazioni migliorate in modo significativo le prestazioni in termini di tempo di punteggio.
 
@@ -342,6 +337,16 @@ I risultati suggerisce che il **numero di funzionalità** aveva un impatto signi
 È consigliabile leggere l'esercitazione di accompagnamento per una descrizione dettagliata e l'articolo di blog.
 
 -   [Ottimizzazione suggerimenti e consigli per machine learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+Molti utenti hanno indicato che vi sia una pausa di piccole dimensioni come il runtime di R (o Python) viene caricato per la prima volta. Per questo motivo, come descritto in questi test, il tempo per la prima esecuzione è spesso misurato ma eliminato in un secondo momento. Conseguente memorizzazione nella cache potrebbe comportare differenze rilevanti delle prestazioni tra il primo e secondo viene eseguito. È inoltre disponibile un overhead quando i dati vengono spostati tra SQL Server e runtime esterno, in particolare se i dati vengono passati tramite la rete, invece di essere caricato direttamente da SQL Server.
+
+Per questi motivi, non è disponibile alcuna soluzione per ridurre il tempo di caricamento iniziale, come l'impatto sulle prestazioni varia notevolmente a seconda dell'attività. Ad esempio, vengono memorizzati nella cache per l'assegnazione dei punteggi in batch; a riga singola di conseguenza, le operazioni successive di punteggio sono molto più veloci e il modello né il runtime di R viene ricaricato al momento. È inoltre possibile utilizzare [punteggio native](../sql-native-scoring.md) per evitare il caricamento del runtime di R completamente.
+
+Per il training di modelli di grandi dimensioni, o punteggio in batch di grandi dimensioni, l'overhead potrebbe essere minima rispetto i guadagni da evitare lo spostamento dei dati o dal flusso e l'elaborazione parallela. Vedere i blog recenti ed esempi per linee guida aggiuntive sulle prestazioni:
+
++ [Classificazione di prestito con SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [Esperienze del cliente anticipata con R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [Uso di R per rilevare una frode pari a 1 milione di transazioni al secondo](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Risorse
 
@@ -407,4 +412,3 @@ Di seguito vengono forniti collegamenti a informazioni e strumenti di script uti
 [Ottimizzazione delle prestazioni per R - R ottimizzazione di codice e i dati](r-and-data-optimization-r-services.md)
 
 [Ottimizzazione delle prestazioni - risultati di case study](performance-case-study-r-services.md)
-

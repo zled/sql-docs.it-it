@@ -5,29 +5,26 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: fd52d724dc1b51943019339bacdc56ea334492cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operators-mdx-syntax"></a>Operatori (sintassi MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +44,10 @@ ms.lasthandoff: 08/02/2017
 |Per eseguire questo tipo di operazione|Utilizzare|  
 |---------------------------------------|---------|  
 |Assegnare un valore a una variabile oppure associare un alias a una colonna di un set di risultati.|[Operatori di assegnazione](../mdx/assignment-operators.md)|  
-|Eseguire addizioni, sottrazioni, moltiplicazioni e divisioni.|[Aritmetici (operatori)](../mdx/arithmetic-operators.md)|  
+|Eseguire addizioni, sottrazioni, moltiplicazioni e divisioni.|[Operatori aritmetici](../mdx/arithmetic-operators.md)|  
 |Stabilire se una condizione è vera, ad esempio AND, OR, NOT e XOR.|[Operatori bit per bit](../mdx/bitwise-operators.md)|  
 |Confrontare un valore con un altro valore o un'espressione.|[Operatori di confronto](../mdx/comparison-operators.md)|  
-|Combinare due stringhe in un'unica stringa in modo permanente o temporaneo.|[Concatenazione (operatori)](../mdx/concatenation-operators.md)|  
+|Combinare due stringhe in un'unica stringa in modo permanente o temporaneo.|[Operatori di concatenazione](../mdx/concatenation-operators.md)|  
 |Combinare due espressioni set in un unico set in modo permanente o temporaneo.|[Operatori sui set](../mdx/set-operators.md)|  
 |Eseguire un'operazione su un operando.|[Operatori unari](../mdx/unary-operators.md)|  
   
@@ -89,7 +86,7 @@ ms.lasthandoff: 08/02/2017
   
 -   XOR  
   
--   OPPURE  
+-   o  
   
  Per ulteriori informazioni sugli operatori in MDX, vedere [riferimento agli operatori MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -116,4 +113,3 @@ ms.lasthandoff: 08/02/2017
  [Gli elementi della sintassi MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

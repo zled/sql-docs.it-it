@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::Move
 - Recordset15::raw_Move
-helpviewer_keywords:
-- Move method [ADO]
+helpviewer_keywords: Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d1db74ef70a98467e320dc09ff4e19c5935ac04
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 69f3ce38f87be4670bcb08f80db076ce88d37212
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-method-ado"></a>Metodo Move (ADO)
 Sposta la posizione del record corrente in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -69,7 +66,7 @@ recordset.Move NumRecords, Start
 >  Supporto per lo spostamento all'indietro nella forward-only **Recordset** non è prevedibile, a seconda del provider. Se il record corrente è stato posizionato dopo l'ultimo record di **Recordset**, **spostare** con le versioni precedenti non può generare la posizione corrente corretta.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio del metodo Move (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
@@ -78,4 +75,3 @@ recordset.Move NumRecords, Start
  [MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext e MovePrevious metodi (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

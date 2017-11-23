@@ -1,35 +1,34 @@
 ---
 title: L'aggiornamento dei componenti di machine learning in un'istanza di SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
+applies_to: SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
-ms.contentlocale: it-it
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>L'aggiornamento dei componenti di machine learning in un'istanza di SQL Server
 
-In questo articolo viene illustrato il processo di _associazione_, che è possibile utilizzare per eseguire l'aggiornamento di machine learning componenti utilizzati in SQL Server. Il processo di associazione consente di bloccare il server in una frequenza di aggiornamento in base alle versioni di Machine Learning Server anziché in SQL Server.
+In questo articolo viene illustrato il processo di _associazione_, che è possibile utilizzare per eseguire l'aggiornamento di machine learning componenti utilizzati in SQL Server. Il processo di associazione blocca il server in una frequenza di aggiornamento in base alle versioni di Machine Learning Server, anziché utilizzare SQL Server versione e aggiornare la pianificazione.
 
 > [!IMPORTANT]
-> Non è necessario utilizzare questo processo di aggiornamento, se si desidera ottenere gli aggiornamenti come parte degli aggiornamenti di SQL Server. Quando si installa un nuovo service pack o una versione di servizio, i componenti di machine learning vengono aggiornati automaticamente alla versione più recente. Utilizzare questo processo se si desidera aggiornare i componenti a un ritmo più veloce che viene offerto dalle versioni di servizio SQL Server.
+> Non è necessario utilizzare questo processo di aggiornamento, se si desidera ottenere gli aggiornamenti come parte degli aggiornamenti di SQL Server. Quando si installa un nuovo service pack o una versione di servizio, i componenti di machine learning vengono aggiornati automaticamente alla versione più recente. Utilizzare solo il _associazione_ elaborare se si desidera aggiornare i componenti a un ritmo più veloce che viene offerto dalle versioni di servizio SQL Server.
 
 Se in qualsiasi momento si desidera interrompere l'aggiornamento in base alla pianificazione di Machine Learning Server, è necessario _disassociare_ l'istanza come descritto in [in questa sezione](#bkmk_Unbind)e disinstallare il Server di Machine Learning.
 
@@ -39,22 +38,22 @@ Se in qualsiasi momento si desidera interrompere l'aggiornamento in base alla pi
 
 Il processo di aggiornamento di machine learning componenti è detto **associazione**, perché il modello di supporto per i componenti di SQL Server machine learning usare i nuovi criteri di ciclo di vita del Software più recenti viene modificato. 
 
-In generale, il passaggio al modello di licenze nuovo assicura che il data Scientist può utilizzare sempre la versione più recente di R o Python. Per ulteriori informazioni sulle condizioni dei criteri del ciclo di vita moderna, vedere [sequenza temporale del supporto per Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
+In generale, il passaggio al modello di licenze nuovo assicura che il data Scientist può utilizzare sempre la versione più recente di R o Python. Per ulteriori informazioni sulle condizioni dei criteri del ciclo di vita moderna, vedere [sequenza temporale del supporto per Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > L'aggiornamento non modifica il modello di supporto per il database di SQL Server e non modifica la versione di SQL Server.
 
-Quando si associa un'istanza, verifica quanto segue, che può includere un aggiornamento a di machine learning componenti:
+Quando si associa un'istanza, vengono eseguite diverse operazioni:
 
 + Il modello di supporto viene modificato. Anziché basarsi su versioni di servizio SQL Server, supporto si basa sul nuovo criterio del ciclo di vita moderna.
 + I componenti di machine learning associati all'istanza vengono aggiornati automaticamente con ogni versione, nel passaggio di blocco con la versione corrente in base ai nuovi criteri del ciclo di vita moderna. 
-+ È potrebbero aggiungervi nuovi pacchetti R o Python. Ad esempio, i precedenti aggiornamenti da Microsoft R Server aggiunti nuovi pacchetti di R, ad esempio [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), e [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
++ È potrebbero aggiungervi nuovi pacchetti R o Python. Ad esempio, gli aggiornamenti precedenti in base a Microsoft R Server 9.1 aggiunti nuovi pacchetti di R, ad esempio [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), e [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + L'istanza non può più essere aggiornata manualmente, se non per aggiungere nuovi pacchetti.
-+ È possibile ottenere l'opzione per aggiungere modelli di training preliminare forniti da Microsoft.
++ Viene visualizzata l'opzione per installare i modelli di training preliminare forniti da Microsoft.
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-Iniziare identificando le istanze che sono candidati per un aggiornamento. Se si esegue il programma di installazione e selezionare l'opzione di associazione, restituisce un elenco di istanze che sono compatibili con l'aggiornamento. 
+Iniziare identificando le istanze che sono candidati per un aggiornamento. Se si esegue il programma di installazione e selezionare l'opzione di associazione, restituisce un elenco di istanze che sono compatibili con l'aggiornamento.
 
 Fare riferimento alla tabella seguente per un elenco di aggiornamenti supportati e i requisiti.
 
@@ -65,7 +64,7 @@ Fare riferimento alla tabella seguente per un elenco di aggiornamenti supportati
 
 ## <a name="bind-or-upgrade-an-instance"></a>Associare o aggiornare un'istanza
 
-Microsoft Machine Learning Server per Windows include uno strumento che consente di eseguire l'aggiornamento di machine learning linguaggi e strumenti associati a un'istanza di SQL Server. Sono disponibili due versioni dello strumento: una procedura guidata e un'utilità della riga di comando.
+Machine Learning per Windows Server include uno strumento che consente di eseguire l'aggiornamento di machine learning linguaggi e strumenti associati a un'istanza di SQL Server. Sono disponibili due versioni dello strumento: una procedura guidata e un'utilità della riga di comando.
 
 Prima di eseguire la procedura guidata o lo strumento da riga di comando, è necessario scaricare la versione più recente del programma di installazione autonomo per i componenti di apprendimento automatico.
 
@@ -89,13 +88,13 @@ Prima di eseguire la procedura guidata o lo strumento da riga di comando, è nec
 
 4. Nelle pagine successive, fornire il consenso per le condizioni di licenza aggiuntive per tutti i componenti di origine aprire selezionato, ad esempio Microsoft R Open o la distribuzione Anaconda Python.
 
-5. Nel **quasi completata** pagina, prendere nota della cartella di installazione. La cartella predefinita è `~\Program Files\Microsoft\ML Server`. 
+5. Nel **quasi completata** pagina, prendere nota della cartella di installazione. La cartella predefinita è `~\Program Files\Microsoft\ML Server`.
 
-    Se si desidera modificare la cartella di installazione, fare clic su **avanzate** per tornare alla prima pagina della procedura guidata. Tuttavia, è necessario ripetere tutte le selezioni precedenti. 
+    Se si desidera modificare la cartella di installazione, fare clic su **avanzate** per tornare alla prima pagina della procedura guidata. Tuttavia, è necessario ripetere tutte le selezioni precedenti.
 
 6. Se si siano installando i componenti offline, richiesto per il percorso dei componenti di apprendimento macchina richiesta, ad esempio Microsoft R Open, il Server di Python e Python aperto.
-    
-Durante l'installazione, vengono sostituite tutte le librerie di R o Python utilizzate da SQL Server e finestra di avvio viene aggiornato per utilizzare i componenti più recenti. Ovvero, se l'istanza viene utilizzata in precedenza librerie nella cartella R_SERVICES predefinita, dopo l'aggiornamento queste librerie vengono rimossi e vengono modificate le proprietà per il servizio Launchpad, per utilizzare le librerie nel percorso specificato.
+
+Durante il processo di installazione, vengono sostituite tutte le librerie di R o Python utilizzate da SQL Server e finestra di avvio viene aggiornato per utilizzare i componenti più recenti. Di conseguenza, se l'istanza viene utilizzata in precedenza librerie nella cartella R_SERVICES predefinita, dopo l'aggiornamento queste librerie vengono rimossi e vengono modificate le proprietà per il servizio Launchpad, per utilizzare le librerie nella nuova posizione.
 
 ### <a name="bkmk_BindCmd"></a>Eseguire l'aggiornamento dalla riga di comando
 
@@ -219,4 +218,3 @@ Per ulteriori informazioni, vedere le note sulla versione per Microsoft R Server
 + [Annunci di funzionalità dalla versione precedente di R Server](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [Funzionalità deprecate, funzionalità o modificate](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
-

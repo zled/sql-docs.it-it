@@ -3,27 +3,28 @@ title: Utilizzando la libreria di cursori ODBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC cursor library [ODBC], using cursor library
 - cursor library [ODBC], using cursor library
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 339cb811d75f0b87197e6a23b19a0c62d346e7c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db98c1cee3b31615ee515fd197427724a39c9433
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-the-odbc-cursor-library"></a>Utilizzando la libreria di cursori ODBC
 > [!IMPORTANT]  
@@ -48,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  Per recuperare dati da una colonna non associata, l'applicazione chiama **SQLSetPos** per posizionare il cursore sulla riga desiderata. Chiama quindi **SQLGetData** per recuperare i dati.  
   
  Per determinare il numero di righe che sono stati recuperati dall'origine dati, l'applicazione chiama **SQLRowCount**.
-

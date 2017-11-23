@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8434e598deba57bf72dfdb8df1c31990113b304c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-handling"></a>Gestione degli errori
 ADO utilizza diversi metodi per notificare a un'applicazione di errori che si verificano. In questa sezione vengono descritti i tipi di errori che possono verificarsi quando si utilizza ADO e le modalità di notifica dell'applicazione. Conclude forniti alcuni suggerimenti su come gestire gli errori.  
@@ -53,11 +51,10 @@ ADO utilizza diversi metodi per notificare a un'applicazione di errori che si ve
   
 -   [Errori del provider](../../../ado/guide/data/provider-errors.md)  
   
--   [Informazioni sugli errori di campo](../../../ado/guide/data/field-related-error-information.md)  
+-   [Informazioni sugli errori associati ai campi](../../../ado/guide/data/field-related-error-information.md)  
   
--   [Informazioni sugli errori di recordset](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [Informazioni sugli errori associati ai recordset](../../../ado/guide/data/recordset-related-error-information.md)  
   
--   [Gestione degli errori In altri linguaggi](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [Gestione degli errori in altri linguaggi](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
 -   [Prevenzione degli errori](../../../ado/guide/data/anticipating-errors.md)
-

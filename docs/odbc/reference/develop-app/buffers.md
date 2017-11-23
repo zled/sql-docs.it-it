@@ -3,10 +3,12 @@ title: Buffer | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7fa45570f0f5bda2190f7b3193f404ffccd3d621
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5953f3409a3886abbf76963d0207a89be1e83aec
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="buffers"></a>Buffer
 Un buffer è qualsiasi porzione di memoria dell'applicazione utilizzata per passare dati tra l'applicazione e il driver. Ad esempio, i buffer dell'applicazione può essere associato a, o *associato,* colonne con set di risultati **SQLBindCol**. Come viene recuperata ogni riga, i dati vengono restituiti per ogni colonna in questi buffer. *I buffer di input* vengono utilizzati per passare dati dall'applicazione al driver. *buffer di output* vengono utilizzate per restituire i dati dal driver per l'applicazione.  
@@ -57,9 +58,8 @@ Un buffer è qualsiasi porzione di memoria dell'applicazione utilizzata per pass
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Buffer posticipato](../../../odbc/reference/develop-app/deferred-buffers.md)  
+-   [Buffer posticipati](../../../odbc/reference/develop-app/deferred-buffers.md)  
   
--   [Allocando e liberando i buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
+-   [Allocazione e liberazione di buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   
--   [Utilizzo dei dati](../../../odbc/reference/develop-app/using-data-buffers.md)
-
+-   [Utilizzo dei buffer dei dati](../../../odbc/reference/develop-app/using-data-buffers.md)

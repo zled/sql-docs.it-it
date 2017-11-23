@@ -3,27 +3,28 @@ title: Definisce il formato di testo (Driver di File di testo) | Documenti Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 224a4c7f7c2540d78c69dc7c1ed61267db564261
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definisce il formato di testo (Driver di File di testo)
 Quando viene utilizzato il driver di testo, è possibile utilizzare il **Definisci formato testo** la finestra di dialogo per definire il formato delle colonne in un file selezionato. Questa finestra di dialogo consente di specificare lo schema per ogni tabella di dati. Queste informazioni vengono scritte in un file ini nella directory di origine dati. Per ogni directory di origine dati di testo, viene creato un file di schema. ini separato.  
@@ -49,4 +50,3 @@ Quando viene utilizzato il driver di testo, è possibile utilizzare il **Definis
 |**Righe da analizzare**|Il numero di righe che il programma di installazione o il driver eseguirà l'analisi quando si impostano le colonne e i tipi di dati basati su dati esistenti.<br /><br /> È possibile immettere un numero compreso tra 1 e 32767 per il numero di righe da analizzare. L'impostazione predefinita 25 se il formato dell'elemento selezionato nel **tabelle** elenco non è stato definito in precedenza da questa finestra di dialogo. (Un numero di fuori del limite verrà restituito un errore).|  
 |**Tabelle**|Contiene un elenco di tutti i file nella directory selezionata tramite il **installazione testo** la finestra di dialogo che corrispondono all'elenco delle estensioni specificate.<br /><br /> Quando \<predefinito > è selezionata, e uno dei seguenti è true, i valori degli attributi nella tabella di **tabelle** gruppo vengono scritte nel file Schema.ini (altre voci nel file Schema.ini non interessate):<br /><br /> -Non è ini nella directory specificata.<br />-Il file ini esiste, ma non vi è alcuna sezione nel file Schema.ini per uno dei file di testo (con l'estensione specificata) nella directory.<br />-La sezione file di testo presente in Schema.ini, ma il corpo è vuoto.<br /><br /> Quando \<predefinito > è selezionata, il **colonne** gruppo è disabilitato.|  
 |**Larghezza**|La larghezza della colonna può essere modificata per le colonne CHAR o LONGCHAR. La larghezza valore predefinito è 1 se il formato dell'elemento selezionato nel **tabelle** elenco non è stato definito in precedenza da questa finestra di dialogo.<br /><br /> Per altri tipi di dati, la larghezza delle schede è disabilitata e viene visualizzato alcun valore.|
-

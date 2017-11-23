@@ -27,17 +27,16 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53869c8e03d3b4c289872351e59579d49aa193e2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Algoritmo Microsoft Neural Network
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network è un'implementazione dell'architettura di rete neurale diffusa e flessibile per l'apprendimento automatico.  Il funzionamento dell'algoritmo si basa sulla verifica di ogni possibile stato dell'attributo di input rispetto a ogni possibile stato dell'attributo di stima e sul calcolo delle probabilità per ogni combinazione in base ai dati di training. Queste probabilità possono quindi essere usate a scopo di classificazione o regressione o per stimare un risultato, sulla base di alcuni attributi di input. Una rete neurale può essere usata anche per l'analisi di associazione.  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   
-

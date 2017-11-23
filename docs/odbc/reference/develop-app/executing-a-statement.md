@@ -3,26 +3,26 @@ title: Esecuzione di un'istruzione | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL statements [ODBC], executing
+helpviewer_keywords: SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 90195a2a70a89a50aa7edbfb40ee3d72a748600d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e3fdaf1a063951dcb06018858a905c5ee8651e9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-a-statement"></a>Esecuzione di un'istruzione
 Sono disponibili quattro modi per eseguire un'istruzione, in base al momento della compilazione (autore) il motore di database e che sono definiti:  
@@ -95,5 +95,4 @@ while ((OrderID = GetOrderID()) != 0) {
   
 -   [Batch di istruzioni SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md)  
   
--   [L'esecuzione di funzioni di catalogo](../../../odbc/reference/develop-app/executing-catalog-functions.md)
-
+-   [Esecuzione delle funzioni di catalogo](../../../odbc/reference/develop-app/executing-catalog-functions.md)

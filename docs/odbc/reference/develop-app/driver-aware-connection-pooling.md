@@ -3,24 +3,25 @@ title: Il pool di connessioni compatibile con il driver | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 390d9801346f904e77647c1784d810672b45b6cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf5c6405d4492a4cf559c3a62f53f69eb8a3fdeb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-aware-connection-pooling"></a>Pool di connessioni compatibile con il driver
 Il pool di connessioni compatibile con il driver è una nuova funzionalità di gestione Driver in Windows 8. Il pool di connessioni compatibile con il driver consente agli autori di driver di personalizzare il comportamento nel driver ODBC di pool di connessioni.  
@@ -43,5 +44,4 @@ Il pool di connessioni compatibile con il driver è una nuova funzionalità di g
  Un'applicazione può usare il riconoscimento di pool di connessioni patente impostando l'attributo SQL_ATTR_CONNECTION_POOLING su SQL_CP_DRIVER_AWARE con [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Se un driver non supporta il riconoscimento di pool di connessioni, il pool di connessioni di gestione Driver verrà utilizzato (stesso come se fosse stato specificato SQL_CP_ONE_PER_HENV, anziché SQL_CP_DRIVER_AWARE). Le applicazioni ODBC 2. x e 3. x è possono abilitare questa funzionalità.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sviluppo di un Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-
+ [Sviluppo di un driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

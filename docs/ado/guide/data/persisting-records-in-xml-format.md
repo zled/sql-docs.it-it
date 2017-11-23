@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>Salvataggio di record in formato XML
 Ad esempio formato ADTG, **Recordset** persistenza in formato XML è implementata con Provider Microsoft OLE DB la persistenza. Questo provider genera un set di righe forward-only di sola lettura da un file XML o un flusso che contiene le informazioni sullo schema generate da ADO salvato. Analogamente, può richiedere un oggetto ADO **Recordset**, generare codice XML e salvarlo in un file o di qualsiasi oggetto che implementa il modello COM **IStream** interfaccia. (In realtà, un file è semplicemente un altro esempio di un oggetto che supporta **IStream**.) Per le versioni 2.5 e versioni successive, ADO si basa su Microsoft XML Parser (MSXML) per caricare il codice XML nel **Recordset**; pertanto MSXML è obbligatorio.  
@@ -82,19 +80,18 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Spazi dei nomi](../../../ado/guide/data/namespaces.md)  
   
--   [Sezione dello schema](../../../ado/guide/data/schema-section.md)  
+-   [Sezione schema](../../../ado/guide/data/schema-section.md)  
   
 -   [Sezione di dati](../../../ado/guide/data/data-section.md)  
   
--   [Oggetti Recordset gerarchici in XML](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
+-   [Recordset gerarchici in XML](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Proprietà dinamiche dell'oggetto Recordset in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Proprietà dinamiche del recordset in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [Trasformazioni XSLT](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Salvataggio con l'oggetto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Salvataggio nell'oggetto XML DOM](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
 -   [Considerazioni sulla sicurezza XML](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Scenario di persistenza Recordset XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
-
+-   [Scenario di persistenza recordset XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

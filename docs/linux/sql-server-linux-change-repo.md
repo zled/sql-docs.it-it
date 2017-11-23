@@ -6,15 +6,19 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: bf4eecc1e72f1eadcb0feeab5ca046e75155a66d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a0d6ff0a983f1d1d1ad8fdcc7de37d9a06032025
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>Repository di modifica dal repository di anteprima per il repository GA
 
@@ -73,4 +77,3 @@ Per modificare dal repository di anteprima per un repository di origine (CU o GD
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per ulteriori informazioni su come installare SQL Server 2017 in Linux, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).
-

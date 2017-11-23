@@ -3,10 +3,12 @@ title: Istruzioni SQL dinamiche | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dynamic-sql"></a>SQL dinamica
 Sebbene SQL statico funziona bene in molte situazioni, è disponibile una classe di applicazioni in cui l'accesso ai dati non è possibile determinare in anticipo. Si supponga, ad esempio, che consente di immettere una query, il foglio di calcolo inviato per il sistema DBMS per recuperare dati da un foglio di calcolo. Il contenuto di questa query ovviamente non può essere noto al programmatore di quando viene scritto il foglio di calcolo.  
@@ -45,4 +46,3 @@ Sebbene SQL statico funziona bene in molte situazioni, è disponibile una classe
 3.  Il programma è possibile utilizzare l'istruzione EXECUTE più volte, specificando i valori di parametro diversi ogni volta che viene eseguita l'istruzione dinamica.  
   
  Esecuzione preparata è ancora non lo stesso come SQL statico. In SQL statico, i primi quattro passaggi di elaborazione di un'istruzione SQL è avvenire in fase di compilazione. In esecuzione preparata, questi passaggi vengono ancora eseguiti in fase di esecuzione, ma vengono eseguite solo una volta. esecuzione del piano di viene eseguita solo quando viene chiamata EXECUTE. Ciò consente di eliminare alcuni svantaggi prestazioni inerenti l'architettura di SQL dinamico. Nella figura seguente vengono illustrate le differenze tra SQL statico, dinamico SQL con esecuzione immediata e istruzioni SQL dinamiche con l'esecuzione preparata.
-

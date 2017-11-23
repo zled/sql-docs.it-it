@@ -11,24 +11,22 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7369fe9b75148c7b0d448ff4fd2b9457dc77212
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a14a03b6b0a0e2e879d745fd8d2f341c1bbf6c54
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Riferimento alle librerie ADO In un'applicazione Visual Basic 6
 Per importare le librerie di ADO in un'applicazione di Microsoft Visual Basic 6, è necessario impostare un riferimento nel progetto di Visual Basic.  
@@ -61,4 +59,3 @@ Per importare le librerie di ADO in un'applicazione di Microsoft Visual Basic 6,
 -   *msado20.tlb*, ADO libreria dei tipi 2.0  
   
  Se l'applicazione deve usare uno qualsiasi di queste librerie di ADO per motivi di compatibilità con le versioni precedenti, è necessario importare la versione appropriata della libreria dei tipi. A tale scopo, seguire le procedure nella sezione precedente, sostituendo *msado15.dll* da *msadoXX.tlb*, dove *XX* rappresenta il numero di versione è necessario importare.
-

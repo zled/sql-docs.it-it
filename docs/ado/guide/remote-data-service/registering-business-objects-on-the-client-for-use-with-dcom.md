@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- business objects in RDS [ADO]
+helpviewer_keywords: business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3828dcd05256914b4d640ecf4e0a318d80b08e08
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e293eb58053259dd229656152094763ac31b48a2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registrazione degli oggetti Business sul Client per l'utilizzo con DCOM
 Gli oggetti business personalizzati devono verificare che sul lato client può eseguire il mapping al nome di programma (ProgId) a un identificatore di classe (CLSID) che può essere utilizzato su DCOM. Per questo motivo, il ProgID dell'oggetto DCOM deve essere nel Registro di sistema sul lato client e il mapping all'ID classe dell'oggetto business sul lato server. Per altri protocolli supportati (HTTP, HTTPS e in-process), ciò non è necessario.  
@@ -39,6 +36,5 @@ Gli oggetti business personalizzati devono verificare che sul lato client può e
 [HKEY_CLASSES_ROOT]  
 \MyBObj\Clsid\(Default) "{00112233-4455-6677-8899-00AABBCCDDEE}"  
 ```
-
 
 

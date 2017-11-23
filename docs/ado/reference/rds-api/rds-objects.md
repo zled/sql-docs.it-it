@@ -1,8 +1,7 @@
 ---
 title: Gli oggetti di servizi desktop remoto | Documenti Microsoft
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 217fb3282f843c2bba6963a48b6a50212e7da7dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7d4353fa5c82bc979d87393680d75033feef43c8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-objects"></a>Oggetti di servizi desktop remoto
 > [!IMPORTANT]
@@ -34,10 +32,9 @@ ms.lasthandoff: 09/09/2017
 |[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Associa una query di data **Recordset** a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare il **Recordset** dati in una pagina Web.<br /><br /> Il **DataControl** oggetto è sicuro per lo script.|  
 |[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementa metodi che forniscono accesso ai dati di lettura/scrittura a origini dati specificate per applicazioni lato client.<br /><br /> Il **DataFactory** oggetto non è sicuro per lo scripting.|  
 |[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Crea proxy sul lato client per oggetti di business personalizzata che si trovano nel livello intermedio.<br /><br /> Il **DataSpace** oggetto è sicuro per lo script.|  
-|[Interfaccia IRDSService (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Espone il [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) metodo, che viene utilizzato per restituire un puntatore all'interfaccia richiesta in una versione più in grado di oggetto.|  
+|[Interfaccia IRDSService (Servizi Desktop remoto)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Espone il [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) metodo, che viene utilizzato per restituire un puntatore all'interfaccia richiesta in una versione più in grado di oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API di servizi desktop remoto](../../../ado/reference/rds-api/rds-api-reference.md)
-
 
 

@@ -3,10 +3,12 @@ title: Scorrimento e recupero di righe (ODBC) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bf6624c5c5a814c1b290fec1d4f717e66dd5e46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Scorrimento e recupero di righe (ODBC)
 Quando si utilizza un cursore scorrevole, le applicazioni chiamano **SQLFetchScroll** per posizionare il cursore e recuperare righe. **SQLFetchScroll** supporta lo scorrimento relativo (successivo, precedente e relativo  *n*  righe), lo scorrimento assoluto (primo, ultimo e di riga  *n* ), e posizionamento dal segnalibro. Il *FetchOrientation* e *FetchOffset* argomenti **SQLFetchScroll** specificare quale set di righe da recuperare, come illustrato nelle figure seguenti.  
@@ -46,4 +47,3 @@ Quando si utilizza un cursore scorrevole, le applicazioni chiamano **SQLFetchScr
   
 > [!NOTE]  
 >  Lo scorrimento è supportato in ODBC 2. *x* driver da **SQLExtendedFetch**. Per ulteriori informazioni, vedere [cursori a blocchi, i cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.
-

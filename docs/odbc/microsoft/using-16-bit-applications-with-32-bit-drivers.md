@@ -3,27 +3,28 @@ title: Utilizzo di applicazioni a 16 Bit con driver a 32 Bit | Documenti Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5cdfeea078774f5261bdeca25123a4743b1c874b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d35585ec95bdfed62c527dfe004132c7454e5243
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Utilizzo di applicazioni a 16 Bit con driver a 32 Bit
 > [!IMPORTANT]  
@@ -68,4 +69,3 @@ ms.lasthandoff: 09/09/2017
 |Mentre|Gestione Driver a 16 bit|  
 |Odbcinst.dll|programma di installazione a 16 bit DLL|  
 |Odbcadm.exe|programma di amministrazione di ODBC a 16 bit|
-

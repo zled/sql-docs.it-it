@@ -3,27 +3,28 @@ title: Posticipata campi | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deferred-fields"></a>Campi posticipati
 I valori di *posticipata campi* non vengono utilizzati quando sono impostati, ma il driver vengono salvati gli indirizzi delle variabili per un effetto posticipata. Per un descrittore del parametro dell'applicazione, il driver utilizza il contenuto delle variabili al momento della chiamata a **SQLExecDirect** o **SQLExecute**. Per un descrittore di riga dell'applicazione, il driver utilizza il contenuto delle variabili al momento l'operazione di recupero.  
@@ -47,4 +48,3 @@ I valori di *posticipata campi* non vengono utilizzati quando sono impostati, ma
 -   Se il campo SQL_DESC_OCTET_LENGTH_PTR di un APD ha un valore null e il parametro è una stringa di caratteri, il driver presuppone che si stringa con terminazione null. Per i parametri dinamici di output, un valore null in questo campo impedisce il driver di restituire informazioni sulla lunghezza. (Se il campo SQL_DESC_TYPE non indica un parametro di stringa di caratteri, viene ignorato il campo SQL_DESC_OCTET_LENGTH_PTR.)  
   
  L'applicazione non deve deallocare o eliminare le variabili utilizzate per i campi posticipati tra l'ora che associa i campi e l'ora il driver legge o scrive.
-

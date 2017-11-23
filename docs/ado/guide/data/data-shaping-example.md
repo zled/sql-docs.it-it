@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data shaping [ADO], about data shaping
+helpviewer_keywords: data shaping [ADO], about data shaping
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ac91d7a7e962443e9798b5b2ecf2daf80ee72eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b6719d8cdd2c86482c3c125ceec52fafdf3e397
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-shaping-example"></a>Data Shaping di esempio
 I seguenti dati di data shaping di comando di seguito viene illustrato come compilare un modello gerarchico **Recordset** dal **clienti** e **ordini** tabelle nel database Northwind.  
@@ -55,5 +52,4 @@ RELATE customerID TO customerID)
   
  In questa sezione continua con l'argomento seguente.  
   
--   [Esempio di Visual Basic di Data Shaping](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
-
+-   [Esempio di data shaping in Visual Basic](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)

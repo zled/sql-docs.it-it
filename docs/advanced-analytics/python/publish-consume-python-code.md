@@ -1,39 +1,36 @@
 ---
 title: Pubblicare e utilizzare il codice Python | Documenti Microsoft
 ms.custom: 
-ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b060d27376b17709bd0f3fc8f39b8e01a6702e6b
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
-ms.contentlocale: it-it
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="publish-and-consume-python-web-services"></a>Pubblicare e utilizzare i servizi web di Python
 
 La funzionalità di rendere operativo il Server di Microsoft Machine Learning, è possibile distribuire un soluzione di Python di lavoro a un servizio web. In questo argomento vengono descritti i passaggi per pubblicare correttamente e quindi eseguire la soluzione.
 
-> [!IMPORTANT]
->
-> In questo esempio è stato sviluppato per la versione di Python incluso in Machine Learning Server (Standalone), che utilizza le funzionalità in Machine Learning Server versione 9.1.0.
- > 
- > Per visualizzare un esempio simile che sfrutta le funzionalità nella versione più recente di Microsoft Machine Learning Server, versione 9.2.0, vedere l'articolo sul sito del Server di Machine Learning: [distribuire e gestire i servizi web di Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
-
 I destinatari di questo articolo sono esperti di dati che desiderano informazioni su come pubblicare codice Python o i modelli come servizi web ospitati nei Server di Microsoft Machine Learning. L'articolo spiega inoltre come le applicazioni possono utilizzare del codice o dei modelli. Questo articolo si presuppone che si è esperti in Python.
 
-**Si applica a: in SQL Server 2017 di Machine Learning Server (Standalone)**
+> [!IMPORTANT]
+>
+> In questo esempio è stato sviluppato per la versione di Python incluso in Machine Learning Server (Standalone), che utilizza le funzionalità nella versione Server di Machine Learning **9.1.0**.
+ > 
+ > Fare clic sul collegamento seguente per vedere l'esempio nella stessa replicato utilizzando le librerie più recenti nel Server di Machine Learning. Vedere [distribuire e gestire i servizi web di Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
+
+**Si applica a: Microsoft R Server (Standalone)**
 
 ## <a name="overview-of-workflow"></a>Panoramica del flusso di lavoro
 
@@ -54,7 +51,7 @@ In questo articolo illustra ogni passaggio del flusso di lavoro e include il cod
 
 Questo codice di esempio si presuppone di avere soddisfatto i [prerequisiti](#prereq) per generare una libreria client Python da tale Swagger file e che è stato usato Autorest.
 
-Dopo il blocco di codice, è disponibile una procedura dettagliata con una descrizione più dettagliata di ogni steo nel processo.
+Dopo il blocco di codice, è disponibile una procedura dettagliata con descrizioni più dettagliate del processo di completamento.
 
 > [!IMPORTANT]
 > Questo esempio viene utilizzato locale `admin` account per l'autenticazione. Tuttavia, è necessario sostituire le credenziali e [metodo di autenticazione](#python-auth) configurato dall'amministratore.
@@ -65,7 +62,12 @@ Dopo il blocco di codice, è disponibile una procedura dettagliata con una descr
 ##################################################
 
 # Import the generated client library. 
+
 import deployrclient
+
+# This example is intended for use with Microsoft R Server 9.0.1. 
+# If you are using a newer version of Machine Learning Server, 
+# use the mrs_server library instead.
 
 ##################################################
 ##              AUTHENTICATION                  ##
@@ -75,6 +77,7 @@ import deployrclient
 #Create client instance and point it at an R Server. 
 #In this case, R Server is local.
 client = deployrclient.DeployRClient("http://localhost:12800")
+# To use ML Server, replace with mrs_server.MRSServer()
 
 #Define the login request and provide credentials 
 #Update values with the connection parameters from your admin
@@ -88,7 +91,7 @@ token_response = client.login(login_request)
 headers = {"Authorization": "Bearer {0}".format(token_response.access_token)}
 
 #Verify that the server is running.
-#Remember to include `headers` in every request!
+#Remember to include `headers` in all requests!
 status_response = client.status(headers) 
 print(status_response.status_code)
 
@@ -103,7 +106,7 @@ print(status_response.status_code)
 create_session_request = deployrclient.models.CreateSessionRequest("Session 1", runtime_type="Python")
 
 #Make the call to start the session. 
-#Remember to include headers in every method call to the server.
+#Remember to include headers in all method calls to the server.
 #Returns a session ID.
 response = client.create_session(create_session_request, headers) 
    
@@ -151,7 +154,7 @@ else:
 response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
 #Return the snapshot ID for reference when you publish later.
 response.snapshot_id
-#If you forget the ID, list every snapshot to get the ID again.
+#If you forget the ID, list snapshots to get the ID again.
 for snapshot in client.list_snapshots(headers):
     print(snapshot)
 
@@ -300,30 +303,28 @@ Prima di iniziare il Python codice e i modelli mediante Microsoft Machine Learni
 
 3. Generare la libreria client generato in modo statico passando il `rserver-swagger-<version>.json` al generatore di codice Swagger di file e specificare la lingua desiderata. In questo caso, è necessario specificare Python.  
 
-   Ad esempio, se si utilizza AutoRest per generare una libreria client Python, potrebbe essere simile al seguente, in cui il numero di 3 cifre rappresenta il numero di versione di R Server:
-   
-   `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
-   
+    Ad esempio, se si utilizza AutoRest per generare una libreria client Python, potrebbe essere simile al seguente, in cui il numero di 3 cifre rappresenta il numero di versione di R Server:
+    
+    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
 
-   È possibile fornire alcune intestazioni personalizzate e apportare altre modifiche prima di utilizzare il client generato lo stub di libreria. Vedere il [interfaccia della riga di comando](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentazione su GitHub per i dettagli relativi a diverse opzioni di configurazione e le preferenze, ad esempio rinominare lo spazio dei nomi.
+4. È anche possibile fornire alcune intestazioni personalizzate e apportare altre modifiche prima di utilizzare il client generato lo stub di libreria. Vedere il [interfaccia della riga di comando](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentazione su GitHub per i dettagli relativi a diverse opzioni di configurazione e le preferenze, ad esempio rinominare lo spazio dei nomi.
    
-4. Esplorare la libreria client di base per visualizzare le varie chiamate API, che è possibile apportare. 
+5. Esplorare la libreria client di base per visualizzare le varie chiamate API, che è possibile apportare. 
 
-   In questo esempio, Autorest generato alcune directory e file per la libreria client Python nel sistema locale. Per impostazione predefinita, lo spazio dei nomi (e directory) è `deployrclient` e potrebbe essere simile al seguente:
+    In questo esempio, Autorest generato alcune directory e file per la libreria client Python nel sistema locale. Per impostazione predefinita, lo spazio dei nomi (e directory) è `deployrclient` e potrebbe essere simile al seguente:
    
    ![Percorso di output Autorest](./media/data-scientist-python-autorest.png)
 
-   Per questo spazio dei nomi predefinito, viene chiamata la stessa libreria client `deploy_rclient.py`. Se questo file si apre l'IDE, ad esempio Visual Studio, si noterà quanto segue:
+    Per questo spazio dei nomi predefinito, viene chiamata la stessa libreria client `deploy_rclient.py`. Se questo file si apre l'IDE, ad esempio Visual Studio, si noterà quanto segue:
    
    ![Libreria client Python](./media/data-scientist-python-client-library.png)
-
 
 
 ### <a name="step-2-add-authentication-and-header-logic"></a>Passaggio 2. Aggiungere la logica di autenticazione e l'intestazione
 
 Tenere presente che tutte le API richiedono l'autenticazione. Pertanto, tutti gli utenti devono eseguire l'autenticazione quando si effettua un'API di chiamare usando il `POST /login` API o tramite Azure Active Directory (AAD). 
 
-Per semplificare questo processo, vengono rilasciati token di accesso di connessione in modo che gli utenti non è necessario specificare le credenziali per ogni singola chiamata.  Questo token di connessione è un token di sicurezza leggero che concede l'accesso "bearer" a una risorsa protetta: in questo caso, le API del Server Machine Learning. Dopo l'autenticazione dell'utente, l'applicazione deve convalidare i token di connessione dell'utente per assicurarsi che l'autenticazione è riuscita per le parti previste. Per ulteriori informazioni sulla gestione di questi token, vedere [i token di accesso di sicurezza](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
+Per semplificare questo processo, vengono rilasciati token di accesso di connessione in modo che gli utenti non è necessario specificare le credenziali per ogni chiamata.  Questo token di connessione è un token di sicurezza leggero che concede l'accesso "bearer" a una risorsa protetta: in questo caso, le API del Server Machine Learning. Dopo l'autenticazione dell'utente, l'applicazione deve convalidare i token di connessione dell'utente per assicurarsi che l'autenticazione è riuscita per le parti previste. Per ulteriori informazioni sulla gestione di questi token, vedere [i token di accesso di sicurezza](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
 
 Prima che si interagisce con le API principali, innanzitutto l'autenticazione, ottenere l'accesso alla connessione token utilizzando il [metodo di autenticazione](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication) configurato dall'amministratore e, successivamente, includerla in ogni intestazione per ogni richiesta successiva:
 
@@ -336,11 +337,11 @@ Prima che si interagisce con le API principali, innanzitutto l'autenticazione, o
    import deployrclient
    ```
 
-2. Aggiungere la logica di autenticazione per l'applicazione per definire una connessione dal computer locale al Server di Machine Learning, fornire le credenziali, acquisire il token di accesso, aggiungere tale token per l'intestazione e utilizzare tale intestazione per tutte le richieste successive.  Utilizzare il metodo di autenticazione definito dall'amministratore: account di amministrazione di base, Active Directory LDAP (Active Directory o LDAP) o Azure Active Directory (AAD).
+2. Aggiungere la logica di autenticazione per l'applicazione per definire una connessione dal computer locale al Server di Machine Learning, fornire le credenziali, acquisire il token di accesso, aggiungere tale token all'intestazione. È quindi possibile utilizzare l'intestazione per tutte le richieste successive.  Utilizzare il metodo di autenticazione definito dall'amministratore: account di amministrazione di base, Active Directory LDAP (Active Directory o LDAP) o Azure Active Directory (AAD).
 
    **Active Directory o LDAP o `admin` account di autenticazione**
 
-   È necessario chiamare il `POST /login` API per l'autenticazione. È necessario passare il `username` e `password` per l'amministratore locale, o se Active Directory è abilitata, passare le informazioni sull'account LDAP. A sua volta, Server di Machine Learning verrà emettere un token di connessione/accesso. Dopo l'autenticazione, l'utente non dovrà fornire le credenziali di nuovo fino a quando il token è ancora valido e viene inviata un'intestazione con ogni richiesta. Se non si conoscono le impostazioni di connessione, contattare l'amministratore.
+   Chiamare il `POST /login` API per l'autenticazione. Passare il `username` e `password` per l'amministratore locale, o se Active Directory è abilitata, passare le informazioni sull'account LDAP. A sua volta, Machine Learning Server rilascia un token di connessione/accesso. Dopo l'autenticazione, l'utente non deve fornire le credenziali, purché il token è ancora valido e viene inviata un'intestazione con ogni richiesta. Se non si conoscono le impostazioni di connessione, contattare l'amministratore.
 
    ```python
    #Using client library generated from Autorest
@@ -358,7 +359,7 @@ Prima che si interagisce con le API principali, innanzitutto l'autenticazione, o
 
    **Autenticazione di Azure Active Directory (AAD)**
 
-   È necessario passare AAD credenziali, autorità e l'ID client. A sua volta, Azure ad rilascia il [token di accesso connessione](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). Dopo l'autenticazione, l'utente non dovrà fornire le credenziali di nuovo fino a quando il token è ancora valido e viene inviata un'intestazione con ogni richiesta. Se non si conoscono le impostazioni di connessione, contattare l'amministratore.
+   Passare le credenziali AAD, autorità e l'ID client. A sua volta, Azure ad rilascia il [token di accesso connessione](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). Dopo l'autenticazione, l'utente non deve fornire le credenziali, purché il token è ancora valido e viene inviata un'intestazione con ogni richiesta. Se non si conoscono le impostazioni di connessione, contattare l'amministratore.
 
    ```python
    #Import the AAD authentication library
@@ -397,12 +398,12 @@ Prima che si interagisce con le API principali, innanzitutto l'autenticazione, o
 
 ### <a name="step-3-prepare-session-and-code"></a>Passaggio 3. Preparare una sessione e codice
 
-Dopo l'autenticazione, è possibile avviare una sessione di Python e creare un modello che sono pubblicate in un secondo momento. È possibile includere qualsiasi codice Python o modelli in un servizio web. Dopo aver impostato l'ambiente di sessione, è possibile salvarla anche come snapshot in modo che è possibile ricaricare la sessione, come in precedenza era. 
+Dopo l'autenticazione, è possibile avviare una sessione di Python e creare un modello per la pubblicazione in un secondo momento. È possibile includere qualsiasi codice Python o modelli in un servizio web. Dopo aver impostato l'ambiente di sessione, è possibile salvarla anche come snapshot in modo che è possibile ricaricare la sessione, come in precedenza era. 
 
 > [!IMPORTANT]
 > Ricordarsi di includere `headers` in ogni richiesta.
 
-1. Creare una sessione di Python nel Server di R. È necessario specificare un nome e il linguaggio Python (`runtime_type="Python"`).  Se non si imposta il tipo di runtime di Python, il valore predefinito R.
+1. Creare una sessione di Python nel Server di R. Assicurarsi di specificare un nome e il linguaggio Python (`runtime_type="Python"`).  Se non si imposta il tipo di runtime di Python, il valore predefinito R.
 
    Si tratta di una continuazione dell'esempio di utilizzo della libreria client generata da Autorest:
 
@@ -464,10 +465,7 @@ Dopo l'autenticazione, è possibile avviare una sessione di Python e creare un m
        print (execute_response.error_message)
    ```
 
-3. Creare uno snapshot di questa Python sessione in modo da questo ambiente può essere salvato nel servizio web e riprodurre in utilizzano il tempo. Gli snapshot sono molto utili quando è necessario un ambiente predisposto che include alcune librerie, oggetti, modelli, i file e gli elementi. Gli snapshot salvare l'intera area di lavoro e la directory di lavoro. Tuttavia, per la pubblicazione, è possibile utilizzare solo gli snapshot creati.
-
-   > [!NOTE] 
-   > Mentre gli snapshot possono essere utilizzati anche quando si pubblica un servizio web per le dipendenze di ambiente, potrebbe avere un impatto sulle prestazioni del tempo di utilizzo.  Per prestazioni ottimali, considerare con attenzione le dimensioni dello snapshot e assicurarsi di mantenere solo gli oggetti dell'area di lavoro desiderati e ripulire il resto. In una sessione, è possibile utilizzare la versione di Python `del` funzione o [il `deleteWorkspaceObject` richiesta API](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) per rimuovere gli oggetti non necessari. 
+3. Creare uno snapshot di questa Python sessione in modo da questo ambiente può essere salvato nel servizio web e riprodurre in utilizzano il tempo. Gli snapshot sono utili quando è necessario un ambiente predisposto che include alcune librerie, oggetti, modelli, file e gli elementi. Gli snapshot salvare l'intera area di lavoro e la directory di lavoro. Tuttavia, per la pubblicazione, è possibile utilizzare solo gli snapshot creati.
 
    ```python
    #Create a snapshot of the current session.
@@ -476,27 +474,27 @@ Dopo l'autenticazione, è possibile avviare una sessione di Python e creare un m
    #Return the snapshot ID for reference when you publish later.
    response.snapshot_id
    
-   #If you forget the ID, list every snapshot to get the ID again.
+   #If you forget the ID, list snapshots to get the ID again.
    for snapshot in client.list_snapshots(headers):
        print(snapshot)
    ```
+
+  > [!NOTE] 
+   > Mentre gli snapshot possono essere utilizzati anche quando si pubblica un servizio web per le dipendenze di ambiente, potrebbe avere un impatto sulle prestazioni del tempo di utilizzo.  Per prestazioni ottimali, considerare con attenzione le dimensioni dello snapshot e assicurarsi di mantenere solo gli oggetti dell'area di lavoro desiderati e ripulire il resto. In una sessione, è possibile utilizzare la versione di Python `del` funzione o [il `deleteWorkspaceObject` richiesta API](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) per rimuovere gli oggetti non necessari. 
 
 ### <a name="step-4-publish-the-model"></a>Passaggio 4. Pubblicare il modello 
 
 Dopo che la libreria client è stata generata e aver creato la logica di autenticazione nell'applicazione, è possibile interagire con l'API per creare una sessione di Python, creare un modello e quindi pubblicare un servizio web utilizzando il modello di base.
 
-> [!NOTE]
-> Tenere presente che è necessario essere autenticati prima di apportare tutte le chiamate API. Pertanto, includere `headers` in ogni richiesta.
+Alcuni aspetti da tenere presente:
 
-+ Pubblicare il modello SVM come un servizio web Python in Machine Learning Server. Questo servizio web verrà punteggio di un vettore passati al metodo.
++ È necessario essere autenticati prima di apportare tutte le chiamate API. Pertanto, includere `headers` in tutte le richieste.
++ Per garantire che il servizio web è registrato come un servizio di Python, assicurarsi di specificare `runtime_type="Python"`. Se non si imposta il tipo di runtime di Python, il valore predefinito R.
++ Assegnazione dei punteggi richiede un vettore con lunghezza sepal, sepal larghezza, lunghezza petalo e petalo
 
-> [!IMPORTANT]
-> Per garantire che il servizio web è registrato come un servizio di Python, assicurarsi di specificare `runtime_type="Python"`. Se non si imposta il tipo di runtime di Python, il valore predefinito R.
+Il codice seguente pubblica il modello SVM come un servizio web di Python. Questo servizio web genera una categoria stimata in base ai valori passati a esso.
 
 ```python
-   #Define a web service that determines the iris species by scoring 
-   #a vector of sepal length and width, petal length and width
-   
    #Set `flower_data` for the sepal and petal length and width
    flower_data = deployrclient.models.ParameterDefinition(name = "flower_data", type = "vector")
    #Set `iris_species` for the species of iris
@@ -545,22 +543,22 @@ In questa sezione viene illustrato come utilizzare il servizio nella stessa sess
    #Record the R Server endpoint URL hosting the web services you created
    url = "http://localhost:12800"
 
-   #Give the request.Session object the authentication headers 
-   #so you don't have to repeat it with each request.
+   #Include the request.Session object in the authentication headers.
+   #By doing so, you don't need to repeat it with each request.
    s.headers = headers
 
-   # Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific Swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either download service-specific swagger file using the json library.
+   #You can download a service-specific Swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or print just what you need from the Swagger file, 
-   #such as the routing paths for the endpoints to be consumed.
+   #Or, you can print just what you need from the Swagger file. 
+   #This example gets the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
-   #Or, print input and output parameters as defined in the Swagger.io format
+   #You can also print input and output parameters as defined in the Swagger.io format
    print("Input")
    print(json.dumps(swagger_resp.json()["definitions"]["InputParameters"], indent = 1, sort_keys = True))
    print("Output")
@@ -585,11 +583,11 @@ In questa sezione viene illustrato come utilizzare il servizio nella stessa sess
 
 ## <a name="managing-the-services"></a>Gestione dei servizi
 
-Dopo aver creato un servizio web, aggiornare, eliminare o ripubblicare il servizio. È anche possibile elencare tutti i servizi web sono ospitati tramite i Server di Microsoft Machine Learning.
+Dopo aver creato un servizio web, aggiornare, eliminare o ripubblicare il servizio. È anche possibile elencare tutti i servizi web sono ospitati usando R Server (o Server di Machine Learning).
 
 ### <a name="update-a-web-service"></a>Aggiornare un servizio web
 
-È possibile aggiornare un servizio web per modificare il codice, modello, descrizione, gli input, output e altro ancora. In questo esempio, aggiornamento del servizio per aggiungere una descrizione utile agli utenti che potrebbero utilizzare questo servizio.
+ In questo esempio, aggiornamento del servizio per aggiungere una descrizione utile agli utenti che potrebbero utilizzare questo servizio.
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -600,9 +598,11 @@ update_request = deployrclient.models.PublishWebServiceRequest(
 client.patch_web_service_version("Iris", "V1.0", update_request, headers)
 ```
 
+È possibile aggiornare un servizio web per modificare il codice, modello, descrizione, gli input, output e altro ancora.
+
 ### <a name="publish-another-version"></a>Un'altra versione di pubblicazione
 
-È anche possibile pubblicare un'altra versione del servizio web. In questo esempio, il servizio restituirà ora specie iris, conosciuti come stringa anziché come un elenco di stringhe.
+In questo esempio, il servizio restituirà ora specie iris, conosciuti come stringa anziché come un elenco di stringhe.
 
 ```python
 #Publish another version of the web service, but this time 
@@ -629,9 +629,11 @@ resp = s.post(url+"/api/Iris/V2.0",json={"flower_data":[5.1,3.5,1.4,.2]})
 print(json.dumps(resp.json(), indent = 1, sort_keys = True))
 ```
 
+È possibile utilizzare questo modello per la pubblicazione di più versioni dello stesso servizio web. 
+
 ### <a name="list-services"></a>Elencare i servizi
 
-Ottenere un elenco di tutti i servizi web, inclusi quelli creati da altri utenti o in linguaggi diversi.
+In questo esempio Ottiene un elenco di tutti i servizi web, inclusi quelli creati da altri utenti o in linguaggi diversi.
 
 ```python
 #Return the list of all existing web services.
@@ -645,8 +647,6 @@ for service in client.get_all_web_services(headers):
 
 ### <a name="delete-services"></a>Eliminare i servizi
 
-È possibile eliminare i servizi creati. È possibile eliminare i servizi di altri utenti anche se è stato assegnato a un ruolo che disponga delle autorizzazioni appropriate.
-
 In questo esempio si elimina la seconda versione del servizio web che è appena pubblicati.
 
 ```python
@@ -654,3 +654,4 @@ In questo esempio si elimina la seconda versione del servizio web che è appena 
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+È possibile eliminare qualsiasi servizio che è stato creato. È possibile eliminare i servizi di altri utenti solo se è stato assegnato a un ruolo che disponga delle autorizzazioni appropriate.

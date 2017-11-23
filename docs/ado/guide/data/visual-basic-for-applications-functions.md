@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2352c6de536981aee960617ad5afc8f2598721e6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>Le funzioni di Visual Basic
 Data shaping espressioni di calcolo, è possibile utilizzare Visual Basic per le funzioni seguenti:  
@@ -62,5 +59,4 @@ Data shaping espressioni di calcolo, è possibile utilizzare Visual Basic per le
  [Provider desiderati per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Clausola APPEND forma](../../../ado/guide/data/shape-append-clause.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)   
- [Clausola COMPUTE forma](../../../ado/guide/data/shape-compute-clause.md)
-
+ [Clausola COMPUTE di Shape](../../../ado/guide/data/shape-compute-clause.md)

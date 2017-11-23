@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-errors"></a>Errori ADO
 Il **ErrorValueEnum** costante descrive i valori di errore ADO. Per un elenco completo delle costanti enumerate, inclusi i valori, vedere [appendice b: errori di ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In questa sezione verrà esaminare alcuni degli errori più interessanti e vengono descritte alcune situazioni specifiche che possono generare o soluzioni per risolvere il problema. Entrambi i **ErrorValueEnum** costante e il numero di decimale positivo breve sono elencati.
@@ -88,4 +86,3 @@ Il **ErrorValueEnum** costante descrive i valori di errore ADO. Per un elenco co
 |**3749**|**adErrFieldsUpdateFailed**|Impossibile aggiornare i campi. Per ulteriori informazioni, esaminare il **stato** proprietà degli oggetti singoli campi. Questo errore può verificarsi in due casi: quando si modifica un **campo** il valore dell'oggetto in corso la modifica o aggiunta di un record per il database e quando si modificano le proprietà del **campo** oggetto stesso.<br /><br /> Il **Record** o **Recordset** aggiornamento non è riuscito a causa di un problema con uno dei campi nel record corrente. Enumerare i **campi** insieme e verificare il **stato** proprietà di ogni campo per determinare la causa del problema.|
 |**3750**|**adErrDenyNotSupported**|Provider non supporta le restrizioni di condivisione. Si è verificato un tentativo di limitare la condivisione di file e il provider non supporta il concetto.|
 |**3751**|**adErrDenyTypeNotSupported**|Provider non supporta il tipo richiesto restrizione della condivisione. Si è verificato un tentativo di stabilire un particolare tipo di condivisione file restrizione che non è supportato dal provider. Vedere la documentazione del provider per determinare le limitazioni di condivisione file sono supportate.|
-

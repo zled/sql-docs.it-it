@@ -3,26 +3,26 @@ title: Impostazione dei valori di parametro | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter values [ODBC]
+helpviewer_keywords: parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-parameter-values"></a>Impostazione dei valori di parametro
 Per impostare il valore di un parametro, l'applicazione imposta semplicemente il valore della variabile associata al parametro. Non è importante quando questo valore è impostato, fino a quando è impostato prima dell'esecuzione dell'istruzione. L'applicazione può impostare il valore prima o dopo l'associazione della variabile e può cambiare il valore come tutte le volte che desidera. Quando viene eseguita l'istruzione, il driver recupera semplicemente il valore corrente della variabile. Questo è particolarmente utile quando un'istruzione preparata viene eseguita più volte. l'applicazione imposta nuovi valori per alcune o tutte le variabili ogni volta che viene eseguita l'istruzione. Per un esempio, vedere [esecuzione preparata](../../../odbc/reference/develop-app/prepared-execution-odbc.md), più indietro in questa sezione.  
@@ -57,4 +57,3 @@ Per impostare il valore di un parametro, l'applicazione imposta semplicemente il
  [d] driver sempre deve controllare questo valore per verificare se è un valore speciale, ad esempio SQL_NULL_DATA.  
   
  Funzionamento di un driver con un valore di parametro in fase di esecuzione è dipendente dal driver. Se necessario, il driver converte il valore dalla C byte e tipo lunghezza dei dati della variabile di associazione per il tipo di dati SQL, precisione e scala del parametro. Nella maggior parte dei casi, il driver invia quindi il valore per l'origine dati. In alcuni casi, formatta il valore come testo e lo inserisce nell'istruzione SQL prima di inviare l'istruzione per l'origine dati.
-

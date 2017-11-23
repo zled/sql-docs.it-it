@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Catalog
-helpviewer_keywords:
-- Catalog object [ADO MD]
+f1_keywords: Catalog
+helpviewer_keywords: Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9453642b399283477de7caf7ea84ec5e8e19ff6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d16dd3724980cd399366c871cb24015d4b3ad6da
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="catalog-object-ado-md"></a>Oggetto del catalogo (ADO MD)
 Contiene informazioni sullo schema multidimensionale (vale a dire, cubi e sottostante dimensioni, gerarchie, livelli e membri) specifiche per un provider di dati multidimensionali (dati Multidimensionali).  
@@ -49,5 +45,4 @@ Contiene informazioni sullo schema multidimensionale (vale a dire, cubi e sottos
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di catalogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Insieme CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
-
+ [Raccolta CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

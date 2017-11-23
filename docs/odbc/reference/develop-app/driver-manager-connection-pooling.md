@@ -3,10 +3,12 @@ title: Pool di connessioni di Gestione driver | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>Pool di connessioni di Gestione driver
 Il pool di connessioni consente a un'applicazione di utilizzare una connessione da un pool di connessioni che non è necessario ristabilire per ogni utilizzo. Una volta una connessione è stata creata e inserita in un pool, un'applicazione può riutilizzare la connessione senza eseguire il processo di connessione completa.  
@@ -90,4 +91,3 @@ Il pool di connessioni consente a un'applicazione di utilizzare una connessione 
  [Connessione ai dati di un Driver o origine](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Sviluppo di un Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Il pool di Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)
-

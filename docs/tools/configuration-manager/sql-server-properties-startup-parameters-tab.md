@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
   Utilizzare questa finestra di dialogo per aggiungere o rimuovere parametri di avvio per [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/02/2017
  Per rimuovere un parametro, selezionarlo e quindi fare clic su **Rimuovi**.  
   
 ## <a name="parameter-format"></a>Formato dei parametri  
- Non inserire un separatore tra parametri. Il separatore viene aggiunto automaticamente in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager consente di applicare i seguenti requisiti di parametro.  
+ Non inserire un separatore tra parametri. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione aggiunge automaticamente il separatore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione applica i requisiti dei parametri seguenti.  
   
 -   Spazi iniziali e finali vengono tagliati da qualsiasi parametro di avvio.  
   
@@ -85,4 +83,3 @@ ms.lasthandoff: 08/02/2017
  Per informazioni aggiuntive sui parametri di avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere "Procedura: Configurazione delle opzioni di avvio del server (Gestione configurazione[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-

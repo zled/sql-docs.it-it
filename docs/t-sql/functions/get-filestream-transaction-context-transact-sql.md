@@ -3,34 +3,33 @@ title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL
 - GET_FILESTREAM_TRANSACTION_CONTEXT
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
+dev_langs: TSQL
+helpviewer_keywords: GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ca5d2fac23dfa3c74689265915c498a4d6858fbc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5ba8077d0df80044a66da4863bba1dd603d369f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce un token che rappresenta il contesto di transazione corrente di una sessione. Il token viene utilizzato da un'applicazione per associare le operazioni di flusso di file system FILESTREAM alla transazione. Per un elenco di argomenti FILESTREAM, vedere [Binary Large Object &#40; BLOB &#41; Dati &#40; SQL Server &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -285,4 +284,3 @@ End Namespace
  [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   
-

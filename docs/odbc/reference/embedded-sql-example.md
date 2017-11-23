@@ -3,10 +3,12 @@ title: Embedded SQL riportato di seguito | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql-example"></a>Esempio di Embedded SQL
 Il codice seguente è un programma SQL incorporato semplice, scritto in C. Il programma illustra molte, ma non l'intero incorporato tecniche di SQL. Il programma richiede l'immissione di un numero di ordine, recupera il numero cliente, venditore e lo stato dell'ordine e visualizza le informazioni recuperate sullo schermo.  
@@ -78,4 +79,3 @@ bad_number:
 -   **Gestione degli errori** DBMS il report errori di run-time per il programma di applicazioni tramite un SQL Communications Area o SQLCA. Nell'esempio di codice precedente, la prima istruzione SQL incorporata è SQLCA INCLUDONO. In questo modo il precompilatore per includere la struttura SQLCA nel programma. Ciò è necessario ogni volta che il programma elaborerà gli errori restituiti dal sistema DBMS. Il WHENEVER... Istruzione GOTO indica precompilati per generare il codice di gestione degli errori che si verifica rami da un'etichetta specifica quando un errore.  
   
 -   **Singleton selezionare** l'istruzione utilizzata per restituire i dati è un'istruzione SELECT singleton, ovvero, restituisce solo una singola riga di dati. L'esempio di codice, pertanto, non dichiarare o utilizzare i cursori.
-

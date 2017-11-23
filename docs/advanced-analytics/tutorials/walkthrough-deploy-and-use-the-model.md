@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: it-it
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Distribuire il modello R e usarla in SQL
 
@@ -72,7 +68,7 @@ Quando è stato inizialmente eseguito lo script di PowerShell, è stata creata u
 
     + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella **varbinary (max)** dati, archiviati nella variabile SQL  _@lmodel2_ e passato come parametro *mod* al sistema archiviato procedura [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + I dati utilizzati come input per il punteggio è definito come una query SQL e archiviato come una stringa in variabile SQL  _@input_ . Come i dati vengono recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedura; è possibile definire un altro nome variabile, se necessario, utilizzando il parametro  _@input \_dati\_1\_nome_.
+    + I dati utilizzati come input per il punteggio è definito come una query SQL e archiviato come una stringa in variabile SQL  _@input_ . Come i dati vengono recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedura; è possibile definire un altro nome variabile, se necessario, utilizzando il parametro   *_@input_data_1_name_*  .
 
     + Per generare i punteggi, la stored procedure chiama la funzione `rxPredict` dalla libreria **RevoScaleR** .
 
@@ -229,4 +225,3 @@ Ora che si è appreso come utilizzare i [!INCLUDE[ssNoVersion](../../includes/ss
 [Esercitazioni di SQL Server R](sql-server-r-tutorials.md)
 
 [Come creare una stored procedure utilizzando sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

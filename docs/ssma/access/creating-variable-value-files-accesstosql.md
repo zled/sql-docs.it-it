@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a04787fdf99c804a7ec304ae4f022583a192508f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
 Un File di valore di variabile è un file XML che include i valori dei parametri dei comandi (ad esempio il nome di server di origine o di destinazione) che cambiano spesso tra le migrazioni a server. Quando si verifica un numero elevato di migrazioni di database, più file di variabile per archiviare il valore di ogni server di origine vengono creati e a cui fa riferimento in un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere i valori statici, in alcuni file di script con i valori delle variabili in più file di variabile.  
@@ -105,4 +103,3 @@ Il passaggio successivo nella console di gestione è [creare i file di connessio
 ## <a name="see-also"></a>Vedere anche  
 [Creazione dei file di connessione del Server (accesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
-

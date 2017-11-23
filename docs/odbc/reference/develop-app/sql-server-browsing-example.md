@@ -3,10 +3,12 @@ title: Esempio di esplorazione di SQL Server | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a7076a1a1fad871c03c55ef87e87591d45acb3a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f344ce0a3830bbd79d6674cfd4d5961b973939e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-browsing-example"></a>Esempio di esplorazione di SQL Server
 L'esempio seguente mostra come **SQLBrowseConnect** potrebbe essere utilizzato per esplorare le connessioni disponibili con un driver per SQL Server. In primo luogo, l'applicazione richiede un handle di connessione:  
@@ -87,4 +88,3 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  
                   sizeof(ConnStrOut), &ConnStrOutLen, SQL_DRIVER_NOPROMPT);  
 ```
-

@@ -3,10 +3,12 @@ title: Il recupero di dati digitare le informazioni con SQLGetTypeInfo | Documen
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a440ee58a5c59237ee31186beb19d1847e814637
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Durante il recupero delle informazioni sul tipo di dati con SQLGetTypeInfo
 Poiché i mapping dai tipi di dati SQL sottostanti per gli identificatori di tipo ODBC sono approssimativi, ODBC fornisce una funzione (**SQLGetTypeInfo**) tramite un driver possibili completamente descrivere ogni tipo di dati SQL nell'origine dati. Questa funzione restituisce un set di risultati, ogni riga di cui vengono descritte le caratteristiche di un tipo di dati singolo, ad esempio nome, tipo identificatore, precisione, scala e supporto di valori null.  
@@ -39,4 +40,3 @@ Poiché i mapping dai tipi di dati SQL sottostanti per gli identificatori di tip
 -   ODBC non definisce i nomi dei tipi di dati per l'utilizzo in **CREATE TABLE** e **ALTER TABLE** istruzioni. Al contrario, l'applicazione deve utilizzare il nome restituito nella colonna TYPE_NAME del set di risultati restituito da **SQLGetTypeInfo**. Il motivo è che sebbene la maggior parte di SQL non variare molto tra DBMS, nomi dei tipi di dati variare notevolmente. Anziché forzare il driver per analizzare le istruzioni SQL e sostituire i nomi dei tipi di dati standard con nomi di tipi di dati specifici del DBMS, ODBC richiede alle applicazioni di utilizzare i nomi specifici del DBMS in primo luogo.  
   
  Si noti che **SQLGetTypeInfo** non necessariamente descritti tutti i tipi di dati può verificarsi un'applicazione. In particolare, i set di risultati potrebbero contenere tipi di dati non direttamente supportati dall'origine dati. Questi tipi di dati potrebbero non essere supportati dall'origine dati, ad esempio, sono definiti i tipi di dati delle colonne nel set di risultati restituiti dalle funzioni di catalogo da ODBC. Per determinare le caratteristiche dei tipi di dati in un set di risultati, un'applicazione chiama **SQLColAttribute**.
-

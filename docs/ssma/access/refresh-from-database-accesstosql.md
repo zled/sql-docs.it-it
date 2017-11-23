@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a6de6ca5b3eba19675376131ef338a2759e1dc09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 820ed13c81d13d0b80450d9ad8bd08359c8c0d3d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-from-database-accesstosql"></a>Aggiornamento dal Database (AccessToSQL)
 Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di Access. Le righe nella finestra di dialogo sono codificate con colori in base allo stato dei metadati:  
@@ -40,4 +38,3 @@ Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare
   
 Per l'accesso di **aggiornamento dal Database** finestra di dialogo casella destro del mouse su qualsiasi **database** nodo nel Visualizzatore metadati di accesso e fare clic su **aggiornamento dal Database**.  
   
-

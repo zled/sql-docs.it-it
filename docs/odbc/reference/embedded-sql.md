@@ -3,10 +3,12 @@ title: Embedded SQL | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12d0e4edc34ceb02f9b902016eb82b489c4ca71d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7e27c80832143ff9907878ffc35c9479ce39ce1e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 La prima tecnica per l'invio di istruzioni SQL per il sistema DBMS è incorporata SQL. Poiché SQL non utilizza le variabili e le istruzioni del flusso di controllo, viene spesso utilizzato come un sottolinguaggio di database che può essere aggiunti a un programma scritto in un linguaggio di programmazione tradizionale, ad esempio C o COBOL. Si tratta di un'idea centrale di embedded SQL: inserimento di istruzioni SQL in un programma scritto in un host di linguaggio di programmazione. In breve, le tecniche seguenti vengono usate per incorporare le istruzioni SQL in un linguaggio host:  
@@ -45,9 +46,8 @@ La prima tecnica per l'invio di istruzioni SQL per il sistema DBMS è incorporat
   
 -   [Esempio di Embedded SQL](../../odbc/reference/embedded-sql-example.md)  
   
--   [Compila un programma SQL incorporato](../../odbc/reference/compiling-an-embedded-sql-program.md)  
+-   [Compilazione di un programma Embedded SQL](../../odbc/reference/compiling-an-embedded-sql-program.md)  
   
 -   [SQL statico](../../odbc/reference/static-sql.md)  
   
 -   [SQL dinamico](../../odbc/reference/dynamic-sql.md)
-

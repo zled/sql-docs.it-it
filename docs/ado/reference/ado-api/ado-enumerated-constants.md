@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADO]
+helpviewer_keywords: enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-enumerated-constants"></a>Costanti enumerate ADO
 Per semplificare il debug, le enumerazioni ADO specificano un valore per ciascuna costante. Tuttavia, questo valore è puramente indicativo e può variare da una versione di ADO a un altro. Il codice deve dipendere esclusivamente il nome, non il valore effettivo di ogni costante enumerata.  
@@ -43,7 +40,7 @@ Per semplificare il debug, le enumerazioni ADO specificano un valore per ciascun
 |[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Specifica le autorizzazioni disponibili per la modifica dei dati in un **connessione**, aprire un **Record**, o specificando i valori per il **modalità** proprietà del  **Record** e **flusso** oggetti.|  
 |[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)|Specifica se il **aprire** metodo di un **connessione** oggetto deve essere restituito dopo (in modo sincrono) o prima (in modo asincrono) in cui viene stabilita la connessione.|  
 |[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)|Specifica se deve essere visualizzata una finestra di dialogo per la richiesta di parametri mancanti quando si apre una connessione a un'origine dati ODBC.|  
-|[CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|Specifica il comportamento del **CopyRecord** metodo.|  
+|[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|Specifica il comportamento del **CopyRecord** metodo.|  
 |[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)|Specifica la posizione del motore del cursore.|  
 |[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)|Specifica il tipo di funzionalità di **supporta** consigliabile testare il metodo per.|  
 |[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)|Specifica il tipo di cursore utilizzato in un **Recordset** oggetto.|  
@@ -95,4 +92,3 @@ Per semplificare il debug, le enumerazioni ADO specificano un valore per ciascun
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Le interfacce e gli oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Proprietà ADO](../../../ado/reference/ado-api/ado-properties.md)
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [ADO]
+helpviewer_keywords: connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a05c4da49edef0635e95cc5aaf43976ff0753af
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47aa7f058db324c7388801ae6a391b6c0c24ae1d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connecting-to-data-sources"></a>Connessione a origini dati
 Un oggetto ADO **connessione** oggetto rappresenta una sessione univoca con un'origine dati, tra cui un DBMS, un archivio di file o un file di testo delimitato da virgole. Nel caso di un sistema di database client/server, la connessione ADO può essere una connessione di rete effettiva al server.  
@@ -36,13 +33,12 @@ Un oggetto ADO **connessione** oggetto rappresenta una sessione univoca con un'o
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Utilizzo di un oggetto di connessione](../../../ado/guide/data/using-a-connection-object.md)  
+-   [Uso di un oggetto Connection](../../../ado/guide/data/using-a-connection-object.md)  
   
--   [Utilizzo di un oggetto Recordset](../../../ado/guide/data/using-a-recordset-object.md)  
+-   [Uso di un oggetto Recordset](../../../ado/guide/data/using-a-recordset-object.md)  
   
 -   [Creazione di una stringa di connessione](../../../ado/guide/data/creating-a-connection-string.md)  
   
--   [Specifica le proprietà di connessione](../../../ado/guide/data/specifying-connection-properties.md)  
+-   [Specificazione delle proprietà della connessione](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [Controllo delle transazioni](../../../ado/guide/data/controlling-transactions-ado.md)
-

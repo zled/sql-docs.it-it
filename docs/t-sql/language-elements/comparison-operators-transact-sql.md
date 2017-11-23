@@ -3,14 +3,15 @@ title: Gli operatori di confronto (Transact-SQL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], testing
 - operators [Transact-SQL], comparison
@@ -20,26 +21,25 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 45c0e85b89d542dce815104eb8e831169599227b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08cdeecc9dc7da123ae94623a30913ed358de93b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="comparison-operators-transact-sql"></a>Operatori di confronto (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gli operatori di confronto consentono di confrontare due espressioni. Gli operatori di confronto sono utilizzabili in tutte le espressioni, ad eccezione delle espressioni del **testo**, **ntext**, o **immagine** tipi di dati. Nella tabella seguente vengono elencati gli operatori di confronto [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 |Operatore|Significato|  
 |--------------|-------------|  
-|[= (Uguale a)](../../t-sql/language-elements/equals-transact-sql.md)|Uguale a|  
+|[= (uguale a)](../../t-sql/language-elements/equals-transact-sql.md)|Uguale a|  
 |[> (maggiore di)](../../t-sql/language-elements/greater-than-transact-sql.md)|Maggiore di|  
 |[< (minore di)](../../t-sql/language-elements/less-than-transact-sql.md)|Minore di|  
 |[>= (maggiore o uguale a)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Maggiore o uguale a|  
@@ -71,6 +71,6 @@ IF (@MyProduct <> 0)
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

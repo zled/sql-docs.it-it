@@ -3,27 +3,28 @@ title: Restituiscono codici di ODBC | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f51708cf47cf84a33cefee3003e0edb94baaae6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="return-codes-odbc"></a>Codici restituiti ODBC
 Ogni funzione ODBC restituisce un codice, noto come relativo *codice restituito,* che indica l'esito positivo o negativo della funzione complessivo. La logica del programma si basa generalmente sui codici restituiti.  
@@ -58,4 +59,3 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|Nessun altro dato era disponibile. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive. Uno o più record di stato definito dal driver nella classe 02xxx possono essere restituiti. **Nota:** In ODBC 2. *x*, questo restituisce il codice è stato denominato SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Sono necessari più dati, ad esempio l'invio di dati del parametro in fase di esecuzione o sono necessarie informazioni di connessione aggiuntive. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive, se presente.|  
 |SQL_STILL_EXECUTING|Una funzione che è stata avviata in modo asincrono è ancora in esecuzione. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive, se presente.|
-

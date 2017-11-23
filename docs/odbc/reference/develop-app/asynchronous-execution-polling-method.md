@@ -3,26 +3,26 @@ title: Esecuzione asincrona (metodo di Polling) | Documenti Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- asynchronous execution [ODBC]
+helpviewer_keywords: asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67943839b7e7425d22ab32251fd1993faf9552eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d4237eddad4847840d16440fbd4cb0940a61d40
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="asynchronous-execution-polling-method"></a>Esecuzione asincrona (metodo di Polling)
 Prima di ODBC 3.8 e Windows 7 SDK, le operazioni asincrone sono state consentite solo su funzioni a istruzioni. Per ulteriori informazioni, vedere il **esecuzione asincrona delle operazioni istruzione**, più avanti in questo argomento.  
@@ -165,7 +165,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 ||||  
 |-|-|-|  
 |[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
  Per determinare se un driver supporta le operazioni asincrone in queste funzioni, un'applicazione chiama **SQLGetInfo** con SQL_ASYNC_DBC_FUNCTIONS. Se sono supportate le operazioni asincrone, viene restituito SQL_ASYNC_DBC_CAPABLE. SQL_ASYNC_DBC_NOT_CAPABLE viene restituito se non sono supportate le operazioni asincrone.  
   
@@ -300,5 +300,4 @@ BOOL AsyncCommit ()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di istruzioni ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
-
+ [Esecuzione di istruzioni ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
