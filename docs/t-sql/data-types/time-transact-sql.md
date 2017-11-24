@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|hh.mm.ss [. nnnnnnn] per Informatica)<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo|00.00.00.0000000 e 23.59.59.9999999 (00.00.00.000 tramite 23:59:59.999 per Informatica)|  
 |Intervalli di elementi|hh rappresenta un numero di due cifre tra 0 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre tra 0 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre tra 0 e 59 indicante i secondi.<br /><br /> n\*è uguale a zero a sette cifre, compreso tra 0 e 9999999, indicante i secondi frazionari. Per Informatica, n\* è uguale a zero a tre cifre, compreso tra 0 e 999.|  
-|Lunghezza in caratteri|da 8 posizioni minimo (hh.mm.ss) a 16 massimo (. nnnnnnn). Per Informatica, il valore massimo è 12 (hh:mm:ss.nnn).|  
+|Lunghezza in caratteri|da 8 posizioni minimo (hh:mm:ss) a 16 massimo (hh:mm:ss.nnnnnnn) Per Informatica, il valore massimo è 12 (hh:mm:ss.nnn).|  
 |Precisione, scala<br /><br /> (l'utente specifica solo la scala)|Vedere la tabella riportata di seguito.|  
 |Dimensioni dello spazio di archiviazione|5 byte, fisso è l'impostazione predefinita con la precisione in secondi frazionari predefinita pari a 100 ns. In Informatica, il valore predefinito è 4 byte, fissate, con il valore predefinito di 1 ms frazionari secondo precisione.|  
 |Accuratezza|100 nanosecondi (1 millisecondo in Informatica)|  
