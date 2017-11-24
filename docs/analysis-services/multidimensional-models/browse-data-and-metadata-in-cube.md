@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
   Usare la scheda **Esplorazione** di Progettazione cubi per visualizzare i dati di un cubo. Questa vista può essere utilizzata per esaminare la struttura di un cubo e per controllare dati, calcoli, formattazione e sicurezza di oggetti di database. È possibile esaminare rapidamente un cubo quando gli utenti finali lo visualizzano negli strumenti di report o in altre applicazioni client. Quando si visualizzano dati del cubo, è possibile visualizzare dimensioni diverse, eseguire il drill-down dei membri, nonché eseguire sezionamenti tramite dimensioni.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 09/01/2017
  Usare l'elenco **Prospettiva** per scegliere una prospettiva da definire per il cubo. Le prospettive vengono definite nella scheda **Prospettive** di Progettazione cubi. Per passare a una prospettiva diversa, selezionare una qualsiasi prospettiva nell'elenco.  
   
 ##### <a name="specifying-a-translation"></a>Specifica di una traduzione  
- Usare l'elenco **Lingua** per scegliere una traduzione da definire per il cubo. Le traduzioni vengono definite nella relativa scheda di Progettazione cubi. **** La scheda **Esplorazione** visualizza inizialmente le didascalie per la lingua predefinita, specificata dalla proprietà **Lingua** del cubo. Per passare a una lingua diversa, selezionare una qualsiasi lingua nell'elenco.  
+ Usare l'elenco **Lingua** per scegliere una traduzione da definire per il cubo. Le traduzioni vengono definite nella **relativa scheda** di Progettazione cubi. La scheda **Esplorazione** visualizza inizialmente le didascalie per la lingua predefinita, specificata dalla proprietà **Lingua** del cubo. Per passare a una lingua diversa, selezionare una qualsiasi lingua nell'elenco.  
   
 ##### <a name="formatting-the-data-pane"></a>Formattazione del riquadro Dati  
  È possibile formattare didascalie e celle nel riquadro Dati. Fare clic con il pulsante destro del mouse sulle celle o didascalie selezionate che si vuole formattare e quindi fare clic su **Comandi e opzioni**. A seconda della selezione, nella finestra di dialogo **Comandi e opzioni** vengono visualizzate le impostazioni per **Formato**, **Filtra e raggruppa**, **Report**e **Comportamento**.  
@@ -116,4 +115,3 @@ ms.lasthandoff: 09/01/2017
  È possibile nascondere celle vuote nella griglia dati facendo clic su un punto qualsiasi nel riquadro Dati e selezionando **Mostra celle vuote**.  
   
   
-

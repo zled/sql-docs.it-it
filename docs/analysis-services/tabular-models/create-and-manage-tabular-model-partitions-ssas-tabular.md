@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dcf049205f00cf10f4c8dda308911b202c3a3728
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a6acec0d1ee91c553d748a334733faff36bc08
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Creare e gestire partizioni di modelli tabulari
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/01/2017
   
 ###  <a name="bkmk_copy"></a> Per copiare una partizione  
   
-1.  Nell'elenco **Partizioni** della relativa finestra di dialogo selezionare la partizione che si desidera copiare, quindi fare clic sul pulsante **Copia** . ****  
+1.  Nell'elenco **Partizioni** della **relativa finestra** di dialogo selezionare la partizione che si desidera copiare, quindi fare clic sul pulsante **Copia**.   
   
 2.  In **Nome partizione**digitare un nuovo nome per la partizione.  
   
@@ -67,11 +66,10 @@ ms.lasthandoff: 09/01/2017
   
 ###  <a name="bkmk_delete"></a> Per eliminare una partizione  
   
--   Nell'elenco **Partizioni** della relativa finestra di dialogo selezionare la partizione che si desidera eliminare, quindi fare clic sul pulsante **Elimina** . ****  
+-   Nell'elenco **Partizioni** della **relativa finestra** di dialogo selezionare la partizione che si desidera eliminare, quindi fare clic sul pulsante **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Partizioni di modelli tabulari](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Elaborare le partizioni di modelli tabulari](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
+ [Elaborare partizioni di modelli tabulari](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 76a57719a0e6e5fcfe899cfcd96f3187bc11ec30
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 589e282fbe84a37fd9b966a14441fe7885c71285
-ms.contentlocale: it-it
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-attribute-properties-reference"></a>Riferimento alle proprietà degli attributi delle dimensioni
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]esistono molte proprietà che determinano le modalità di funzionamento delle dimensioni e degli attributi delle dimensioni. Nella tabella seguente vengono elencate e descritte queste proprietà degli attributi.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/01/2017
 |**MembersWithData**|Utilizzata dagli attributi padre per determinare se visualizzare i membri dei dati per i membri non foglia nell'attributo padre. Il valore di questa proprietà viene usato solo quando il valore di **Usage** è impostato su Parent. Ciò significa che è stata definita una gerarchia padre-figlio. Sono disponibili le seguenti opzioni:<br /><br /> **NonLeafDataHidden** I dati non foglia sono nascosti.<br /><br /> **NonLeafDataVisible** I dati non foglia sono visibili.|  
 |**MembersWithDataCaption**|Fornisce una stringa modello utilizzata dagli attributi padre per la creazione di didascalie per i membri dei dati generati dal sistema nell'attributo padre. Il valore di questa proprietà viene usato solo quando il valore di **Usage** è impostato su Parent. Ciò significa che è stata definita una gerarchia padre-figlio.|  
 |**Nome**|Contiene il nome descrittivo dell'attributo.|  
-|**NameColumn**|Identifica la colonna che specifica il nome dell'attributo visualizzato agli utenti al posto del valore della colonna chiave per l'attributo. Questa colonna viene utilizzata quando il valore della colonna chiave per un membro dell'attributo è di difficile comprensione o non utile per l'utente oppure quando la colonna chiave è basata su una chiave composta. La proprietà **NameColumn** non viene usata nelle gerarchie padre-figlio, ma viene usata ****  per i membri figlio come nome dei membri in una gerarchia padre-figlio.|  
+|**NameColumn**|Identifica la colonna che specifica il nome dell'attributo visualizzato agli utenti al posto del valore della colonna chiave per l'attributo. Questa colonna viene utilizzata quando il valore della colonna chiave per un membro dell'attributo è di difficile comprensione o non utile per l'utente oppure quando la colonna chiave è basata su una chiave composta. La proprietà **NameColumn** non viene usata nelle gerarchie padre-figlio, ma la proprietà **NameColumn** viene usata per i membri figlio come nome dei membri in una gerarchia padre-figlio.|  
 |**NamingTemplate**|Definisce in che modo vengono denominati i livelli in una gerarchia padre-figlio creata dall'attributo padre. Il valore di questa proprietà viene usato solo quando il valore di **Usage** è impostato su Parent. Ciò significa che è stata definita una gerarchia padre-figlio.|  
 |**OrderBy**|Descrive in che modo ordinare i membri contenuti nella gerarchia dell'attributo. Il valore predefinito è Name, che specifica che l'ordine dei membri dell'attributo si basa sul valore della proprietà **NameColumn** , se disponibile. In caso contrario, i membri vengono ordinati in base al valore della colonna chiave. Sono disponibili le seguenti opzioni:<br /><br /> **NameColumn** L’ordine viene definito in base al valore della proprietà **NameColumn** .<br /><br /> **Key** L'ordinamento avviene in base al valore della colonna chiave del membro dell'attributo.<br /><br /> **AttributeKey** L'ordinamento avviene in base al valore della chiave del membro di un attributo specificato, che deve presentare una relazione tra attributi con l'attributo.<br /><br /> **AttributeName** L'ordinamento avviene in base al valore del nome del membro di un attributo specificato, che deve presentare una relazione tra attributi con l'attributo.|  
 |**OrderByAttribute**|Identifica l'attributo in base al quale vengono ordinati i membri della gerarchia dell'attributo.|  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-
