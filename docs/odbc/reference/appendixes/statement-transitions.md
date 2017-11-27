@@ -476,7 +476,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
 |S8<br /><br /> Dati necessari|S9<br /><br /> Deve essere inserito|S10<br /><br /> Possibile inserire|  
 |----------------------|---------------------|---------------------|  
-|S1 [e] e [1] S2 [e], [nr] e S3 [2] [e], [r], [2] S5 e [e] [4] S6 e [e] e [5] S7 [e] e S9 [3] [d] S11 [x]|HY010|S1 [e] e [1] S2 [e], [nr,] e S3 [2] [e], [r] e S4 [2] [s], [nr,] e ([1] o [2]) S5 [s], [r], e ([1] o [2]) S5 ([s] o [e]) e S6 [4] ([s] o [e]) e [5] S7 ([s] o [e]) e S9 [3] [d] S11 [x]|  
+|S1 [e] e [1] S2 [e], [nr] e S3 [2] [e], [r], [2] S5 e [e] [4] S6 e [e] e [5] S7 [e] e S9 [3] [d] S11 [x]|HY010|S1 [e] e [1] S2 [e], [nr,] e S3 [2] [e], [r] e S4 [2] [s], [nr,] e ([1] o [2]) S5 [s], [r], e ([1] o [2]) S5 ([s] o [e]) e S6 [4]\([s] o [e]) e [5] S7 ([s] o [e]) e S9 [3] [d] S11 [x]|  
   
  [1] **SQLExecDirect** restituito SQL_NEED_DATA.  
   
