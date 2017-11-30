@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Impostare le autorizzazioni di elaborazione per una struttura di data mining  
  È possibile creare un ruolo che conceda l'autorizzazione per l'elaborazione delle strutture di data mining, inclusa l'elaborazione di tutti i modelli di data mining.  
   
- Le autorizzazioni**Drill-through** e **Lettura definizione** permissions used for browsing a mining model e structure are atomic e can be added to the same role, or separated out into a different role.  
+ Le autorizzazioni **Drill-through** e **Lettura definizione** usate per la visualizzazione di un modello e una struttura di data mining sono atomiche e possono essere aggiunte allo stesso ruolo o suddivise in ruoli diversi.  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aprire la cartella Database e selezionare un database.  
   

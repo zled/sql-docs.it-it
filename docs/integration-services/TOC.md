@@ -27,6 +27,7 @@
 ## [Esercitazione: distribuire, eseguire e monitorare un pacchetto in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Connettersi al catalogo SSIS in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Pianificare l'esecuzione di pacchetti in Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Convalidare i pacchetti distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Connettersi a origini dati con l'autenticazione di Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Connettersi a file e condivisioni file](lift-shift/ssis-azure-files-file-shares.md)
 

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61acb31edb1183e4d2d5c48c75c9ed7717cb4a52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f9403bdbdfa9a779651ff11c1342a70a63d4445
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   Mostra gli indici hash correnti e le relative proprietà. Gli indici hash sono supportati solo in [OLTP In memoria &#40; ottimizzazione per la memoria &#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
  La vista hash_indexes contiene le stesse colonne della vista sys. Indexes e una colonna aggiuntiva denominata **bucket_count**. Per ulteriori informazioni sulle altre colonne nella vista hash_indexes, vedere [Sys. Indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
-  
-||  
-|-|  
-|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

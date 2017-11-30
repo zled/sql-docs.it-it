@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Attributo stimabile|Continuous, Cyclical e Ordered|  
   
 > [!NOTE]  
->  Sono supportati i tipi di contenuto**Cyclical** e **Ordered** content types are supported, but the algorithm treats them as discrete values e does not perform special processing.  
+>  Sono supportati i tipi di contenuto**Cyclical** e **Ordered** ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

@@ -24,20 +24,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06c59000c8430a80604785c277dd3a6d3d3b0699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34762896bc35e2eb7dbf79674aca951bceb37a0d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni raccolta di XML Schema. Una raccolta di XML Schema è un set denominato di definizioni XSD. La raccolta di XML Schema è a sua volta contenuta in uno schema relazionale e viene identificata da un nome [!INCLUDE[tsql](../../includes/tsql-md.md)] con ambito schema. Le tuple seguenti sono univoche: xml_collection_id, schema_id e name.  
-  
-||  
-|-|  
-|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
