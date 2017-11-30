@@ -2,11 +2,13 @@
 title: "Aggiungere un failover avanzato del database a un gruppo di disponibilità (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
+ms.reviewer: mikeray
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +20,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Aggiungere un failover avanzato del database a un gruppo di disponibilità (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 e 2014, se un database che fa parte di un gruppo di disponibilità nella replica primaria perde la possibilità di scrivere le transazioni, non attiva un failover anche se le repliche sono sincronizzate e configurate per il failover automatico.
 
@@ -44,7 +45,7 @@ Questo scenario prevede la stessa configurazione del gruppo di disponibilità de
 
 Viene configurato un gruppo di disponibilità tra l'istanza A e l'istanza B che contiene due database: DB1e DB2. La modalità di disponibilità è impostata su commit sincrono con failover automatico ed è abilitato il failover avanzato del database. Viene perso l'accesso al disco contenente i dati di DB2 e i file di log delle transazioni. Quando viene rilevato il problema, il gruppo di disponibilità effettuerà automaticamente il failover nell'istanza B.
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>Configurazione e visualizzazione dell'opzione di failover avanzato del database
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Configurare e visualizzare l'opzione di failover avanzato del database
 
 Il failover avanzato del database può essere configurato con SQL Server Management Studio o Transact-SQL. I cmdlet di PowerShell non prevedono attualmente questa possibilità. Per impostazione predefinita, il failover avanzato del database è disabilitato.
 
@@ -63,20 +64,21 @@ Usare le istruzioni disponibili nell'argomento [Usare la Creazione guidata Grupp
 ### <a name="transact-sql"></a>Transact-SQL
 
 Per configurare il comportamento del failover avanzato del database durante la creazione di un gruppo di disponibilità, DB_FAILOVER deve essere impostato su ON nel modo seguente:
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 Per aggiungere questo comportamento dopo la configurazione di un gruppo di disponibilità, usare il comando ALTER AVAILABILITY GROUP:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 Per disabilitare questo comportamento, eseguire il comando ALTER AVAILABILITY GROUP seguente:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
-### <a name="dynamic-management-view"></a>DMV
+### <a name="dynamic-management-view"></a>Vista a gestione dinamica
 Per vedere se in un gruppo di disponibilità è abilitato il failover avanzato del database, eseguire una query sulla vista a gestione dinamica `sys.availablity_groups`. La colonna `db_failover` conterrà zero se è disabilitato o 1 se è abilitato. 
 
 ## <a name="next-steps"></a>Passaggi successivi 
@@ -88,5 +90,4 @@ Per vedere se in un gruppo di disponibilità è abilitato il failover avanzato d
 - [Usare la finestra di dialogo Nuovo gruppo di disponibilità (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Creare un gruppo di disponibilità con Transact-SQL](create-an-availability-group-transact-sql.md)
-
 

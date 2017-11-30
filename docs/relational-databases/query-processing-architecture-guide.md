@@ -1,32 +1,33 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consente di elaborare le query su diverse architetture di archiviazione dei dati, come tabelle locali, tabelle partizionate e tabelle distribuite su più server. Negli argomenti seguenti viene descritta l'elaborazione delle query e l'ottimizzazione del riutilizzo delle query in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite la memorizzazione nella cache dei piani di esecuzione.
 
@@ -38,7 +39,9 @@ L'elaborazione di una singola istruzione SQL rappresenta la modalità più sempl
 
 Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
 
-I dati di input e di output di Query Optimizer durante l'ottimizzazione di una singola istruzione `SELECT` sono illustrati nel diagramma seguente: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+I dati di input e di output di Query Optimizer durante l'ottimizzazione di una singola istruzione `SELECT` sono illustrati nel diagramma seguente:
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Un'istruzione `SELECT` definisce soltanto gli elementi seguenti:  
 * Il formato del set di risultati. Questo elemento viene nella maggior parte dei casi specificato nell'elenco di selezione. Altre clausole, ad esempio `ORDER BY` e `GROUP BY` , possono tuttavia influire sul formato finale del set di risultati.
@@ -619,7 +622,7 @@ Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoV
   Per l'esecuzione di una query o di un'operazione su un indice è necessario un numero specifico di thread di lavoro. L'esecuzione di un piano parallelo richiede un numero di thread di lavoro maggiore rispetto all'esecuzione di un piano seriale e il numero di thread di lavoro necessari aumenta con il grado di parallelismo. Se non è possibile rispettare i requisiti di thread di lavoro del piano parallelo per un grado di parallelismo specifico, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] riduce automaticamente il grado di parallelismo o ignora completamente il piano parallelo nel contesto del carico di lavoro specificato ed esegue il piano seriale (un solo thread di lavoro). 
 
 3. Tipo di query o di operazione sull'indice eseguita.  
-  Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile, ma non consigliabile, modificare il valore predefinito (pari a 5) usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile modificare il valore predefinito di 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se da un test appropriato risulta che è preferibile usare un valore diverso per il carico di lavoro in esecuzione. 
 
 4. Presenza di un numero sufficiente di righe da elaborare.  
   Se Query Optimizer determina che il numero di righe di un flusso è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
@@ -716,9 +719,9 @@ Di seguito viene riportato un possibile piano parallelo generato per la query in
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) Piano di query con DOP 4, include un join di due tabelle
+Nella figura seguente è illustrato un piano di query eseguito con grado di parallelismo 4 e con un join a due tabelle.
 
-Nella figura è illustrato un piano di Query Optimizer eseguito con grado di parallelismo 4 e con un join a due tabelle.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 Il piano parallelo contiene tre operatori di parallelismo. Sia l'operatore Index Seek dell'indice `o_datkey_ptr` che l'operatore Index Scan dell'indice `l_order_dates_idx` vengono eseguiti in parallelo. In questo modo vengono creati diversi flussi esclusivi. Ciò può essere determinato dagli operatori di parallelismo più vicini sopra gli operatori Index Scan e Index Seek, rispettivamente. Entrambi gli operatori eseguono la ripartizione del tipo di scambio, ovvero ridistribuiscono i dati tra i flussi creando nell'output lo stesso numero di flussi presenti nell'input. Questo numero di flussi equivale al grado di parallelismo.
 
@@ -727,6 +730,8 @@ L'operatore di parallelismo sopra l'operatore Index Scan `l_order_dates_idx` ese
 L'operatore di parallelismo sopra l'operatore Index Seek esegue la ripartizione dei flussi di input utilizzando il valore di `O_ORDERKEY`. Poiché l'input non viene ordinato nei valori della colonna `O_ORDERKEY` , che rappresenta la colonna di join dell'operatore `Merge Join` , l'operatore Sort tra gli operatori di parallelismo e Merge Join assicura che l'input venga ordinato per l'operatore `Merge Join` nelle colonne di join. Analogamente all'operatore Merge Join, l'operatore `Sort` viene eseguito in parallelo.
 
 L'operatore di parallelismo superiore riunisce i risultati di numerosi flussi in un singolo flusso. Le aggregazioni parziali eseguite dall'operatore Stream Aggregate sottostante all'operatore di parallelismo vengono quindi riunite in un singolo valore `SUM` per ogni valore diverso di `O_ORDERPRIORITY` nell'operatore Stream Aggregate sopra l'operatore di parallelismo. Poiché include due segmenti di scambio con grado di parallelismo 4, questo piano usa otto thread di lavoro.
+
+Per altre informazioni sugli operatori usati in questo esempio, vedere [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md).
 
 ### <a name="parallel-index-operations"></a>Operazioni parallele sugli indici
 
@@ -1040,4 +1045,3 @@ GO
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Stima della cardinalità](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Elaborazione di query adattive](../relational-databases/performance/adaptive-query-processing.md)
-

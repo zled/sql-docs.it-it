@@ -1,29 +1,30 @@
 ---
 title: "Funzionalità supportate per i moduli T-SQL compilati in modo nativo | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   Questo argomento contiene un elenco delle superfici di attacco e delle funzionalità supportate di T-SQL nei moduli di T-SQL compilati in modo nativo, ad esempio stored procedure ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), funzioni scalari definite dall'utente, funzioni inline con valori di tabella e trigger.  
@@ -62,7 +63,7 @@ Clausola SELECT:
 
 -   Sottoquery scalari
     - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery scalari sono supportate per i moduli compilati in modo nativo.
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le istruzioni scalari sono supportate per i moduli compilati in modo nativo.
 
 -   TOP*  
 
@@ -143,7 +144,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 Tuttavia, una costante nella clausola **TOP** assicura prestazioni migliori rispetto a una variabile.  
 
-Queste limitazioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] non si applicano all'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato nelle tabelle con ottimizzazione per la memoria.  
+Queste limitazioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] non si applicano all'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato nelle tabelle ottimizzate per la memoria.  
 
 
 ##  <a name="dml"></a> Modifica dei dati  
@@ -167,7 +168,7 @@ Sono supportate le istruzioni DML seguenti.
 
 -   [RETURN &#40;Transact-SQL&#41;](../../t-sql/language-elements/return-transact-sql.md)  
 
--   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md) può usare tutti i [tipi di dati supportati per OLTP in memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md), nonché i tipi di tabella con ottimizzazione per la memoria. Le variabili possono essere dichiarate NULL o NOT NULL.  
+-   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md) può usare tutti i [tipi di dati supportati per OLTP in memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md), nonché i tipi di tabella ottimizzata per la memoria. Le variabili possono essere dichiarate NULL o NOT NULL.  
 
 -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 
@@ -195,19 +196,19 @@ Sono supportate le istruzioni DML seguenti.
 -   Operatori bit per bit ~, &, | e ^  
 
 -   APPLY - operatore
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l'operatore APPLY è supportato nei moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], l'operatore APPLY è supportato in moduli compilati in modo nativo.
 
 ##  <a name="bfncsp"></a> Funzioni integrate nei moduli compilati in modo nativo  
- Le seguenti funzioni sono supportate nei vincoli nelle tabelle con ottimizzazione per la memoria e nei moduli T-SQL compilati in modo nativo.  
+ Le seguenti funzioni sono supportate nei vincoli nelle tabelle ottimizzate per la memoria e nei moduli T-SQL compilati in modo nativo.  
 
 -   Tutte le [funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 
 -   Funzioni di data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
 
 -   Funzioni stringa: LEN, LTRIM, RTRIM e SUBSTRING.  
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, sono supportate anche le funzioni integrate seguenti: TRIM, TRANSLATE e CONCAT_WS.  
+    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], sono supportate anche le funzioni integrate seguenti: TRIM, TRANSLATE e CONCAT_WS.  
 
 -   Funzione di identità: SCOPE_IDENTITY  
 
@@ -216,12 +217,12 @@ Sono supportate le istruzioni DML seguenti.
 -   Funzioni di identificazione univoca: NEWID e NEWSEQUENTIALID  
 
 -   Funzioni JSON  
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le funzioni JSON sono supportate nei moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], le funzioni JSON sono supportate nei moduli compilati in modo nativo.
 
 -   Funzioni di errore: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  
 
--   Funzioni di sistema: @@rowcount.  Le istruzioni all'interno di stored procedure compilate in modo nativo aggiornano @@rowcount ed è possibile usare @@rowcount in una stored procedure compilata in modo nativo per determinare il numero di righe interessate dall'ultima istruzione eseguita all'interno della stored procedure. Tuttavia, @@rowcount viene reimpostato su 0 all'inizio e alla fine dell'esecuzione di una stored procedure compilata in modo nativo.  
+-   Funzioni di sistema: @@rowcount. Le istruzioni all'interno di stored procedure compilate in modo nativo aggiornano @@rowcount ed è possibile usare @@rowcount in una stored procedure compilata in modo nativo per determinare il numero di righe interessate dall'ultima istruzione eseguita all'interno della stored procedure. Tuttavia, @@rowcount viene reimpostato su 0 all'inizio e alla fine dell'esecuzione di una stored procedure compilata in modo nativo.  
 
 -   Funzioni di sicurezza: IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal']), IS_SRVROLEMEMBER ('role' [, 'login']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login']), SUSER_SID(['login'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
@@ -307,6 +308,5 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

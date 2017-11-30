@@ -4,39 +4,39 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-online-index-operations-work"></a>Funzionamento delle operazioni sugli indici online
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In questo argomento vengono descritte le strutture esistenti durante un'operazione sugli indici online e illustra le attività associate a tali strutture.  
   
 ## <a name="online-index-structures"></a>Strutture degli indici online  
- Per consentire attività utente simultanee durante un'operazione DDL (Data Definition Language) sull'indice, durante l'operazione sull'indice online vengono utilizzate le strutture seguenti: indici di origine e preesistente, destinazione e, per la ricompilazione di un heap o l'eliminazione di un indice cluster online, un indice di mapping temporaneo.  
+ Per consentire attività utente simultanee durante un'operazione DDL (Data Definition Language) sull'indice, durante l'operazione sull'indice online vengono usate le strutture seguenti: indici di origine e preesistenti, destinazione e un indice di mapping temporaneo per la ricompilazione di un heap o l'eliminazione di un indice cluster online.  
   
 -   **Indici di origine e preesistenti**  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 06/22/2017
   
 |Fase|Attività di origine|Blocchi di origine|  
 |-----------|---------------------|------------------|  
-|Preparazione<br /><br /> Fase molto breve|Preparazione dei metadati di sistema per la creazione della nuova struttura vuota dell'indice.<br /><br /> Viene definito uno snapshot della tabella, ovvero viene utilizzato il controllo delle versioni delle righe per garantire la consistenza in lettura a livello di transazione.<br /><br /> Le operazioni utente di scrittura simultanee sull'origine vengono bloccate per un breve periodo di tempo.<br /><br /> Non sono consentite operazioni DDL simultanee, ad eccezione della creazione di più indici non cluster.|S (condiviso) nella tabella*<br /><br /> IS (preventivo condiviso)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilazione<br /><br /> Fase principale|I dati vengono sottoposti ad analisi, ordinati, uniti e inseriti nella destinazione in operazioni di caricamento bulk.<br /><br /> Le operazioni utente simultanee di selezione, inserimento, aggiornamento ed eliminazione vengono applicate agli indici preesistenti e ai nuovi indici compilati.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|Finale<br /><br /> Fase molto breve|Prima dell'avvio di questa fase, è necessario che tutte le transazioni di aggiornamento di cui non è stato eseguito il commit vengano completate. A seconda del blocco acquisito, tutte le nuove transazioni utente di lettura o di scrittura vengono bloccate per un breve periodo di tempo finché questa fase non viene completata.<br /><br /> I metadati di sistema vengono aggiornati per sostituire l'origine con la destinazione.<br /><br /> Se necessario, l'origine viene eliminata, ad esempio dopo la ricompilazione o l'eliminazione di un indice cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S nella tabella se viene creato un indice non cluster.\*<br /><br /> SCH-M (modifica dello schema) se viene eliminata la struttura di origine (indice o tabella).\*|  
+|Preparazione<br /><br /> Fase breve|Preparazione dei metadati di sistema per la creazione della nuova struttura vuota dell'indice.<br /><br /> Viene definito uno snapshot della tabella, ovvero viene utilizzato il controllo delle versioni delle righe per garantire la consistenza in lettura a livello di transazione.<br /><br /> Le operazioni di scrittura di utenti simultanei sull'origine vengono bloccate per un breve periodo di tempo.<br /><br /> Non sono consentite operazioni DDL simultanee, ad eccezione della creazione di più indici non cluster.|S (condiviso) nella tabella*<br /><br /> IS (preventivo condiviso)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|Compilazione<br /><br /> Fase principale|I dati vengono sottoposti ad analisi, ordinati, uniti e inseriti nella destinazione in operazioni di caricamento bulk.<br /><br /> Le operazioni di selezione, inserimento, aggiornamento ed eliminazione di utenti simultanei vengono applicate agli indici preesistenti e ai nuovi indici compilati.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Finale<br /><br /> Fase breve|Prima dell'avvio di questa fase, è necessario che tutte le transazioni di aggiornamento di cui non è stato eseguito il commit vengano completate. A seconda del blocco acquisito, tutte le nuove transazioni utente di lettura o di scrittura vengono bloccate per un breve periodo di tempo finché questa fase non viene completata.<br /><br /> I metadati di sistema vengono aggiornati per sostituire l'origine con la destinazione.<br /><br /> Se necessario, l'origine viene eliminata, ad esempio dopo la ricompilazione o l'eliminazione di un indice cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S nella tabella se viene creato un indice non cluster.\*<br /><br /> SCH-M (modifica dello schema) se viene eliminata la struttura di origine (indice o tabella).\*|  
   
- \* Per l'operazione sull'indice si dovrà attendere il completamento delle transazioni di aggiornamento di cui non è stato eseguito il commit prima di acquisire il blocco S o SCH-M nella tabella.  
+ \* L'operazione sull'indice attende il completamento delle transazioni di aggiornamento di cui non è stato eseguito il commit prima di acquisire il blocco S o SCH-M nella tabella.  
   
  ** Con il blocco di risorsa INDEX_BUILD_INTERNAL_RESOURCE viene impedita l'esecuzione di operazioni DDL (Data Definition Language) simultanee sulle strutture di origine e preesistenti mentre è in corso l'operazione sull'indice. Questo blocco impedisce ad esempio la ricompilazione simultanea di due indici nella stessa tabella. Nonostante questo blocco di risorsa sia associato al blocco SCH-M, non impedisce l'esecuzione di istruzioni DML.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
  Con le istruzioni SELECT eseguite dall'utente non è possibile accedere alla destinazione finché l'operazione sull'indice non è stata completata.  
   
- Dopo il completamento della fase preparatoria e della fase finale, i piani di aggiornamento e di query archiviati nella cache delle procedure vengono invalidati e per le query successive verrà utilizzato il nuovo indice.  
+ Dopo il completamento della fase preparatoria e della fase finale, i piani di aggiornamento e di query archiviati nella cache delle procedure vengono invalidati e per le query successive viene usato il nuovo indice.  
   
  La durata di un cursore dichiarato in una tabella oggetto di un'operazione su un indice online è limitata dalle fasi dell'operazione sull'indice. I cursori di aggiornamento vengono invalidati in corrispondenza di ogni fase, mentre i cursori di sola lettura vengono invalidati solo dopo la fase finale.  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Linee guida per operazioni di indice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: Always Encrypted (motore di database) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
@@ -61,7 +61,7 @@ Per accedere ai dati archiviati in una colonna crittografata in testo non critto
 
 Successivamente, il driver contatta l'archivio chiavi, che contiene la chiave master della colonna, per decrittografare il valore della chiave di crittografia della colonna crittografata e usa quindi la chiave di crittografia in testo non crittografato per crittografare il parametro. La risultante chiave di crittografia della colonna in testo non crittografato è memorizzata nella cache per ridurre il numero di round trip all'archivio chiavi nei successivi usi della stessa chiave di crittografia della colonna. Il driver sostituisce i valori di testo non crittografato dei parametri che interessano colonne crittografate con i relativi valori crittografati e invia la query al server per l'elaborazione.
 
-Il server elabora il set di risultati e per ogni dato crittografato incluso nel set dei risultati, il driver allega i metadati di crittografia per la colonna, includendo le informazioni sull'algoritmo di crittografia e sulla chiavi corrispondenti. Il driver tenta innanzitutto di trovare la chiave di crittografia della colonna in testo non crittografato nella cache locale ed esegue solo un round alla chiave master della colonna, se non può trovarla nella cache. Successivamente, il driver decrittografa i risultati e restituisce valori in testo non crittografato per l'applicazione.
+Il server elabora il set di risultati e per ogni colonna crittografata incluso nel set dei risultati, il driver allega i metadati di crittografia per la colonna, includendo le informazioni sull'algoritmo di crittografia e sulla chiavi corrispondenti. Il driver tenta innanzitutto di trovare la chiave di crittografia della colonna in testo non crittografato nella cache locale ed esegue solo un round alla chiave master della colonna, se non può trovarla nella cache. Successivamente, il driver decrittografa i risultati e restituisce valori in testo non crittografato per l'applicazione.
 
  Il driver del client interagisce con un archivio chiavi, che contiene la chiave master di colonna, tramite il provider di archivio chiavi della colonna, il quale è un componente software sul lato client che incapsula un archivio chiavi contenente la chiave master della colonna. I provider dei tipi più comuni di archivi chiavi sono disponibili nelle librerie di driver lato client di Microsoft o come download autonomi. È anche possibile implementare un provider personalizzato. Le funzionalità Always Encrypted, compresi i provider predefiniti di archivio chiavi master della colonna, variano in base a una libreria di driver e alla relativa versione. 
 
@@ -254,4 +254,3 @@ GO
 [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

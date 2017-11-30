@@ -2,30 +2,30 @@
 title: Ottimizzazione del database tramite un carico di lavoro dell'archivio query | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Database Engine Tuning Advisor, Query Store
+helpviewer_keywords: Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4184dc4785b7d53d32c64069d53aef8c6a1e2fa1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ottimizzazione del database tramite un carico di lavoro dell'archivio query
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 La funzionalità [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) di SQL Server acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e conserva queste informazioni nel database. [Ottimizzazione guidata motore di database (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) supporta una nuova opzione che consente di usare l'archivio query per selezionare automaticamente un carico di lavoro appropriato per l'ottimizzazione. Per molti utenti, questo può eliminare la necessità di raccogliere esplicitamente un carico di lavoro per l'ottimizzazione. Questa funzionalità è disponibile solo se nel database è attivata la funzionalità Archivio query. 
@@ -42,7 +42,7 @@ Nella GUI di DTA selezionare il pulsante di opzione **Archivio query** nel riqua
 Dalla riga di comando (dta.exe) scegliere l'opzione **-iq** per selezionare il carico di lavoro dall'archivio query. 
 
 Tramite la riga di comando sono disponibili altre due opzioni che consentono di regolare il comportamento di DTA quando si seleziona il carico di lavoro dall'archivio query. Queste opzioni non disponibili tramite la GUI:
-  1. Numero di eventi del carico di lavoro da ottimizzare: questa opzione, specificata usando l'argomento della riga di comando **-n**, consente all'utente di controllare il numero di eventi da Archivio query ottimizzati. Per impostazione predefinita, DTA usa il valore 1000 per questa opzione. Si noti che DTA sceglie sempre gli eventi con costo più elevato in termini di durata totale. 
+  1. Numero di eventi del carico di lavoro da ottimizzare: questa opzione, specificata usando l'argomento della riga di comando **-n**, consente all'utente di controllare il numero di eventi di Query Store che devono essere ottimizzati. Per impostazione predefinita, DTA usa il valore 1000 per questa opzione. Si noti che DTA sceglie sempre gli eventi con costo più elevato in termini di durata totale. 
   
   2. Intervalli di tempo degli eventi da ottimizzare: poiché l'archivio query può contenere query eseguite molto tempo fa, questa opzione consente all'utente di specificare un intervallo di tempo precedente (in ore) in cui una query deve essere stata eseguita per essere considerata da DTA per l'ottimizzazione. Questa opzione si specifica usando l'argomento della riga di comando **-I**. 
 
@@ -58,4 +58,3 @@ La differenza tra le opzioni Archivio query e Cache dei piani è che il primo co
 [Esercitazione: Strumento Ottimizzazione guidata motore di database](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [Come Archivio query raccoglie i dati](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Archivio query, procedure consigliate](../../relational-databases/performance/best-practice-with-the-query-store.md)
-

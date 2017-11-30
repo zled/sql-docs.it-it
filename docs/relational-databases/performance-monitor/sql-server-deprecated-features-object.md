@@ -2,11 +2,13 @@
 title: Oggetto Deprecated Features di SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -96,7 +98,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |EXT_soap_endpoints|È stata rilevata la vista sys.soap_endpoints. I servizi Web XML nativi sono deprecati. Usare Windows Communications Foundation (WCF) o ASP.NET.|  
 |EXTPROP_LEVEL0TYPE|È stato rilevato TYPE in level0type. Usare SCHEMA come level0type e TYPE come level1type. Si verifica una volta per ogni query.|  
 |EXTPROP_LEVEL0USER|È stato rilevato level0type USER quando è specificato anche level1type. Usare USER solo come level0type per le proprietà estese direttamente in un utente. Si verifica una volta per ogni query.|  
-|FASTFIRSTROW|È stata rilevata la sintassi FASTFIRSTROW. Riscrivere le istruzioni in modo che utilizzino la sintassi OPTION (FAST *n*). Si verifica una volta per ogni compilazione.|  
+|FASTFIRSTROW|È stata rilevata la sintassi FASTFIRSTROW. Riscrivere le istruzioni in modo che usino la sintassi OPTION (FAST *n*). Si verifica una volta per ogni compilazione.|  
 |FILE_ID|È stata rilevata la sintassi FILE_ID. Riscrivere le istruzioni in modo che utilizzino FILE_IDEX. Si verifica una volta per ogni compilazione.|  
 |fn_get_sql|È stata compilata la funzione fn_get_sql. Utilizzare sys.dm_exec_sql_text. Si verifica una volta per ogni compilazione.|  
 |fn_servershareddrives|È stata compilata la funzione fn_servershareddrives. Utilizzare sys.dm_io_cluster_shared_drives. Si verifica una volta per ogni compilazione.|  
@@ -114,7 +116,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |Hindi|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto. Usare Indic_General_90.|  
 |Hint di tabella HOLDLOCK senza parentesi||  
 |IDENTITYCOL|È stata rilevata la sintassi IDENTITYCOL. Riscrivere le istruzioni in modo che utilizzino la sintassi $identity. Si verifica una volta per ogni compilazione.|  
-|Elenco di selezione di una vista indicizzata senza COUNT_BIG(*)|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(*).|  
+|Elenco di selezione di una vista indicizzata senza COUNT_BIG(\*)|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(\*).|  
 |INDEX_OPTION|È stata rilevata la sintassi CREATE TABLE, ALTER TABLE o CREATE INDEX senza parentesi per racchiudere le opzioni. Riscrivere le istruzioni in modo che utilizzino la sintassi corrente. Si verifica una volta per ogni query.|  
 |INDEXKEY_PROPERTY|È stata rilevata la sintassi INDEXKEY_PROPERTY. Riscrivere le istruzioni per eseguire query su sys.index_columns. Si verifica una volta per ogni compilazione.|  
 |Hint di funzione con valori di tabella indiretti|L'applicazione indiretta, tramite una vista, di hint di tabella a una chiamata di una funzione con valori di tabella con istruzioni multiple verrà rimossa in una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -292,4 +294,3 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
  [Utilizzare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

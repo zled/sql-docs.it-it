@@ -1,34 +1,34 @@
 ---
 title: "Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Gli amministratori del database usano il dashboard del gruppo di disponibilità Always On per ottenere una vista immediata dell'integrità di un gruppo di disponibilità e delle relative repliche di disponibilità e database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alcuni degli utilizzi tipici del dashboard del gruppo di disponibilità sono i seguenti:  
   
@@ -123,7 +123,10 @@ ms.lasthandoff: 08/02/2017
  Nome e stato del cluster in cui l'istanza del server connesso e del gruppo di disponibilità è un nodo membro.  
   
 ##  <a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
- Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne seguenti:  
+
+Quando si è connessi alla replica principale, **Dettagli replica di disponibilità** visualizza le informazioni da tutte le repliche nel gruppo di disponibilità. Quando si è connessi a una replica secondaria, vengono visualizzate solo le informazioni della replica connessa.  
+
+Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne seguenti:  
   
  **Nome**  
  Nome dell'istanza del server che ospita la replica di disponibilità. Questa colonna viene visualizzata per impostazione predefinita.  
@@ -362,4 +365,3 @@ ms.lasthandoff: 08/02/2017
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

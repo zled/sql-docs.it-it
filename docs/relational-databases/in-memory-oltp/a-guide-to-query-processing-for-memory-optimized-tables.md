@@ -2,40 +2,41 @@
 title: Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Con OLTP in memoria sono state introdotte le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo articolo viene fornita una panoramica sull'elaborazione delle query per le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo.  
+  Con OLTP in memoria sono state introdotte le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo articolo viene fornita una panoramica sull'elaborazione delle query per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo.  
   
- Nel documento viene illustrato come compilare ed eseguire query sulle tabelle con ottimizzazione per la memoria, tra cui:  
+ Nel documento viene illustrato come compilare ed eseguire query sulle tabelle ottimizzate per la memoria, tra cui:  
   
 -   La pipeline di elaborazione delle query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le tabelle basate su disco.  
   
--   Ottimizzazione query; il ruolo delle statistiche sulle tabelle con ottimizzazione per la memoria e linee guida per la risoluzione dei problemi relativi a piani di query errati.  
+-   Ottimizzazione query; il ruolo delle statistiche sulle tabelle ottimizzate per la memoria e linee guida per la risoluzione dei problemi relativi a piani di query errati.  
   
--   L'uso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato per accedere alle tabelle con ottimizzazione per la memoria.  
+-   L'uso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato per accedere alle tabelle ottimizzate per la memoria.  
   
--   Considerazioni sull'ottimizzazione query per l'accesso alle tabelle con ottimizzazione per la memoria.  
+-   Considerazioni sull'ottimizzazione query per l'accesso alle tabelle ottimizzate per la memoria.  
   
 -   Compilazione ed elaborazione di stored procedure compilate in modo nativo.  
   
@@ -77,7 +78,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Il piano di esecuzione stimato visualizzato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è illustrato di seguito:  
   
- ![Piano di query per il join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![Piano di query per il join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Piano di query per il join di tabelle basate su disco.")  
 Piano di query per il join di tabelle basate su disco.  
   
  Informazioni su questo piano di query:  
@@ -96,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Il piano stimato per la query è il seguente:  
   
- ![Piano di query per un hash join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![Piano di query per il join di tabelle basate su disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Piano di query per il join di tabelle basate su disco.")  
 Piano di query per un hash join di tabelle basate su disco.  
   
  In questa query le righe della tabella Order vengono recuperate utilizzando l'indice cluster. L'operatore fisico **Hash Match** viene ora usato per l'operatore **Inner Join**. L'indice cluster di Order non è ordinato in base a CustomerID, quindi per un operatore **Merge Join** sarebbe necessario un operatore di ordinamento, che influirebbe sulle prestazioni. Si noti il costo relativo dell'operatore **Hash Match** (75%) rispetto al costo dell'operatore **Merge Join** nell'esempio precedente (46%). In Query Optimizer l'operatore **Hash Match** è stato preso in considerazione anche nell'esempio precedente, con la conclusione, tuttavia, che l'operatore **Merge Join** avrebbe offerto prestazioni migliori.  
@@ -104,7 +105,7 @@ Piano di query per un hash join di tabelle basate su disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Elaborazione delle query per tabelle basate su disco  
  Nel diagramma seguente viene illustrato il flusso di elaborazione delle query ad hoc in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
- ![Pipeline di elaborazione delle query di SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![Pipeline di elaborazione delle query di SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "Pipeline di elaborazione delle query di SQL Server.")  
 Pipeline di elaborazione delle query di SQL Server.  
   
  In questo scenario:  
@@ -126,10 +127,10 @@ Pipeline di elaborazione delle query di SQL Server.
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ai batch ad hoc e alle stored procedure si fa riferimento anche con l'espressione " [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato". L'interpretazione si riferisce al fatto che ogni operatore nel piano di query viene interpretato dal motore di esecuzione delle query. Il motore di esecuzione legge l'operatore e i relativi parametri ed esegue l'operazione.  
   
- Il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato può essere utilizzato per accedere sia a tabelle con ottimizzazione per la memoria che a tabelle basate su disco. Nella figura seguente viene illustrata l'elaborazione delle query per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria:  
+ Il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato può essere utilizzato per accedere sia a tabelle ottimizzate per la memoria che a tabelle basate su disco. Nella figura seguente viene illustrata l'elaborazione delle query per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria:  
   
- ![Pipeline di elaborazione query per tsql interpretato.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
-Pipeline di elaborazione delle query per l'accesso del codice Transact-SQL interpretato alle tabelle con ottimizzazione per la memoria.  
+ ![Pipeline di elaborazione delle query per tsql interpretato.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Pipeline di elaborazione delle query per tsql interpretato.")  
+Pipeline di elaborazione delle query per l'accesso del codice Transact-SQL interpretato alle tabelle ottimizzate per la memoria.  
   
  Come illustrato nella figura, la pipeline di elaborazione delle query rimane per lo più invariata:  
   
@@ -139,9 +140,9 @@ Pipeline di elaborazione delle query per l'accesso del codice Transact-SQL inter
   
 -   Il piano di esecuzione viene interpretato dal motore di esecuzione delle query.  
   
- La differenza principale rispetto alla pipeline tradizionale di elaborazione delle query (figura 2) sta nel fatto che le righe delle tabelle con ottimizzazione per la memoria non vengono recuperate dal pool di buffer tramite Access Methods. Al contrario, le righe vengono recuperate dalle strutture dei dati in memoria tramite il motore di OLTP in memoria. Le differenze nelle strutture dei dati provocano in alcuni casi la selezione di piani diversi da parte di Query Optimizer, come illustrato nell'esempio seguente.  
+ La differenza principale rispetto alla pipeline tradizionale di elaborazione delle query (figura 2) sta nel fatto che le righe delle tabelle ottimizzate per la memoria non vengono recuperate dal pool di buffer tramite Access Methods. Al contrario, le righe vengono recuperate dalle strutture dei dati in memoria tramite il motore di OLTP in memoria. Le differenze nelle strutture dei dati provocano in alcuni casi la selezione di piani diversi da parte di Query Optimizer, come illustrato nell'esempio seguente.  
   
- Lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] riportato di seguito contiene versioni con ottimizzazione per la memoria delle tabelle Order e Customer, con indici hash:  
+ Lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] riportato di seguito contiene versioni ottimizzate per la memoria delle tabelle Order e Customer, con indici hash:  
   
 ```tsql  
 CREATE TABLE dbo.[Customer] (  
@@ -158,7 +159,7 @@ CREATE TABLE dbo.[Order] (
 GO  
 ```  
   
- Si consideri la stessa query eseguita su tabelle con ottimizzazione per la memoria:  
+ Si consideri la stessa query eseguita su tabelle ottimizzate per la memoria:  
   
 ```tsql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
@@ -166,8 +167,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Il piano stimato è il seguente:  
   
- ![Piano di query per il join di tabelle con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
-Piano di query per il join di tabelle con ottimizzazione per la memoria.  
+ ![Piano di query per il join di tabelle ottimizzate per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Piano di query per il join di tabelle ottimizzate per la memoria.")  
+Piano di query per il join di tabelle ottimizzate per la memoria.  
   
  Osservare le seguenti differenze del piano per la stessa query su tabelle basate su disco (figura 1):  
   
@@ -175,7 +176,7 @@ Piano di query per il join di tabelle con ottimizzazione per la memoria.
   
     -   La definizione della tabella non include un indice cluster.  
   
-    -   Gli indici cluster non sono supportati con le tabelle con ottimizzazione per la memoria. Ogni tabella con ottimizzazione per la memoria deve invece disporre di almeno un indice non cluster e tutti gli indici delle tabelle con ottimizzazione per la memoria possono accedere in modo efficace a tutte le colonne della tabella senza che sia necessario archiviare tali colonne nell'indice o fare riferimento a un indice cluster.  
+    -   Gli indici cluster non sono supportati con le tabelle ottimizzate per la memoria. Ogni tabella ottimizzata per la memoria deve invece disporre di almeno un indice non cluster e tutti gli indici delle tabelle ottimizzate per la memoria possono accedere in modo efficace a tutte le colonne della tabella senza che sia necessario archiviare tali colonne nell'indice o fare riferimento a un indice cluster.  
   
 -   Questo piano contiene un **Hash Match** anziché un **Merge Join**. Sia gli indici della tabella Order che quelli della tabella Customer sono indici hash, quindi non ordinati. Un **Merge Join** richiederebbe un operatore di ordinamento, che ridurrebbe le prestazioni.  
   
@@ -207,7 +208,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Compilazione ed elaborazione delle query  
  Nel diagramma seguente viene illustrato il processo di compilazione per le stored procedure compilate in modo nativo:  
   
- ![Compilazione nativa delle stored procedure.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![Compilazione nativa delle stored procedure.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Compilazione nativa delle stored procedure.")  
 Compilazione nativa delle stored procedure.  
   
  Il processo è il seguente:  
@@ -276,7 +277,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Si noti che l'operatore Hash Match non è supportato per l'aggregazione. Pertanto, in tutte le aggregazioni nelle stored procedure compilate in modo nativo viene utilizzato l'operatore Stream Aggregate, anche se il piano per la stessa query nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato utilizza l'operatore Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Statistiche di colonna e join  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inoltre possibile creare statistiche sulle colonne chiave non di indice, se create in modo esplicito dall'utente o create da Query Optimizer in risposta a una query con un predicato. La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle con ottimizzazione per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inoltre possibile creare statistiche sulle colonne chiave non di indice, se create in modo esplicito dall'utente o create da Query Optimizer in risposta a una query con un predicato. La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle ottimizzate per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
   
  Per l'esempio nella figura 1:  
   
@@ -310,4 +311,3 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

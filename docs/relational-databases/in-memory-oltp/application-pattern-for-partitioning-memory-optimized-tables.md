@@ -2,56 +2,57 @@
 title: Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 395967f86de07074db3a7c8cad7c49195ed54d86
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello in cui una quantità limitata di dati attivi viene mantenuta in una tabella con ottimizzazione per la memoria, mentre i dati usati meno di frequente vengono elaborati su disco. In genere, si tratta di uno scenario in cui i dati vengono archiviati in base a una chiave **datetime** .  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello in cui una quantità limitata di dati attivi viene mantenuta in una tabella ottimizzata per la memoria, mentre i dati usati meno di frequente vengono elaborati su disco. In genere, si tratta di uno scenario in cui i dati vengono archiviati in base a una chiave **datetime** .  
   
- È possibile emulare tabelle partizionate con tabelle con ottimizzazione per la memoria mantenendo una tabella partizionata e una tabella con ottimizzazione per la memoria con uno schema comune. I dati correnti verranno inseriti e aggiornati nella tabella con ottimizzazione per la memoria, mentre i dati utilizzati meno frequentemente verranno gestiti nella tabella partizionata tradizionale.  
+ È possibile emulare tabelle partizionate con tabelle ottimizzate per la memoria mantenendo una tabella partizionata e una tabella ottimizzata per la memoria con uno schema comune. I dati correnti verranno inseriti e aggiornati nella tabella ottimizzata per la memoria, mentre i dati utilizzati meno frequentemente verranno gestiti nella tabella partizionata tradizionale.  
   
- Un'applicazione che riconosce i dati attivi in una tabella con ottimizzazione per la memoria può utilizzare le stored procedure compilate in modo nativo per accedere ai dati. Le operazioni che devono accedere all'intero intervallo di dati, o che non sono in grado di riconoscere quale tabella contiene i dati rilevanti, utilizzano codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato per creare un join tra la tabella con ottimizzazione per la memoria e la tabella partizionata.  
+ Un'applicazione che riconosce i dati attivi in una tabella ottimizzata per la memoria può utilizzare le stored procedure compilate in modo nativo per accedere ai dati. Le operazioni che devono accedere all'intero intervallo di dati, o che non sono in grado di riconoscere quale tabella contiene i dati rilevanti, utilizzano codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato per creare un join tra la tabella ottimizzata per la memoria e la tabella partizionata.  
   
  Questo cambio di partizione è descritto di seguito:  
   
--   Inserire i dati dalla tabella di OLTP in memoria in una tabella di gestione temporanea, eventualmente utilizzando una data limite.  
+-   Inserire i dati dalla tabella di OLTP in memoria in una tabella di staging, eventualmente utilizzando una data limite.  
   
--   Eliminare gli stessi dati dalla tabella con ottimizzazione per la memoria.  
+-   Eliminare gli stessi dati dalla tabella ottimizzata per la memoria.  
   
--   Passare alla tabella di gestione temporanea.  
+-   Passare alla tabella di staging.  
   
 -   Aggiungere la partizione attiva.  
   
- ![Cambio di partizione.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![Cambio di partizione.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Cambio di partizione.")  
 Manutenzione dei dati attivi  
   
- Le azioni che iniziano con Deleting ActiveOrders devono essere eseguite durante una sessione di manutenzione per evitare che le query non rilevino i dati durante il periodo tra l'eliminazione dei dati e il passaggio alla tabella di gestione temporanea.  
+ Le azioni che iniziano con Deleting ActiveOrders devono essere eseguite durante una sessione di manutenzione per evitare che le query non rilevino i dati durante il periodo tra l'eliminazione dei dati e il passaggio alla tabella di staging.  
   
  Per un esempio correlato, vedere [Partizionamento a livello di applicazione](../../relational-databases/in-memory-oltp/application-level-partitioning.md).  
   
 ## <a name="code-sample"></a>Codice di esempio  
- Nell'esempio seguente viene illustrato come utilizzare una tabella con ottimizzazione per la memoria con una tabella basata su disco partizionata. I dati utilizzati frequentemente vengono archiviati in memoria. Per salvare i dati su disco, creare una nuova partizione e copiare i dati nella tabella partizionata.  
+ Nell'esempio seguente viene illustrato come utilizzare una tabella ottimizzata per la memoria con una tabella basata su disco partizionata. I dati utilizzati frequentemente vengono archiviati in memoria. Per salvare i dati su disco, creare una nuova partizione e copiare i dati nella tabella partizionata.  
   
- Nella prima parte di questo esempio vengono creati il database e gli oggetti necessari. Nella seconda parte di questo esempio viene illustrato come spostare i dati da una tabella con ottimizzazione per la memoria in una tabella partizionata.  
+ Nella prima parte di questo esempio vengono creati il database e gli oggetti necessari. Nella seconda parte di questo esempio viene illustrato come spostare i dati da una tabella ottimizzata per la memoria in una tabella partizionata.  
   
 ```tsql  
 CREATE DATABASE partitionsample;  
@@ -220,4 +221,3 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

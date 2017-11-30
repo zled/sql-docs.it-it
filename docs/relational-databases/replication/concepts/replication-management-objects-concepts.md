@@ -1,16 +1,17 @@
 ---
 title: Concetti di base relativi a RMO (Replication Management Objects) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: c39d933b13d2ab43432d850c0233c2d0e8916142
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   RMO (Replication Management Objects) è un assembly di codice gestito che incapsula le funzionalità di replica per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO viene implementato dallo spazio dei nomi <xref:Microsoft.SqlServer.Replication>.  
   
@@ -187,7 +188,10 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  Sebbene la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> supporti la dichiarazione di transazioni esplicite durante l'impostazione delle proprietà, tali transazioni possono interferire con le transazioni di replica interne e produrre risultati inaspettati. Per questo motivo non devono essere utilizzate con RMO.  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>Abilitazione del supporto TLS 1.2 per i componenti RMO 
+ Il supporto TLS 1.2 per i componenti RMO in Windows 2012 e versioni precedenti può essere abilitato installando l'aggiornamento [KB 3140245](http://support.microsoft.com/help/3140245) e creando le chiavi del Registro di sistema come descritto nell'articolo. In Windows 2012 R2 e versioni successive è necessario creare solo le chiavi del Registro di sistema, come descritto precedentemente nell'articolo.
+ 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata la memorizzazione nella cache delle modifiche alle proprietà. Le modifiche apportate agli attributi di una pubblicazione transazionale rimangono memorizzate nella cache fino a quando non vengono inviate in modo esplicito al server.  
   

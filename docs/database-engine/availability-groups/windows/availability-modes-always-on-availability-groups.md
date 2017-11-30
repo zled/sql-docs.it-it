@@ -1,12 +1,14 @@
 ---
 title: "Modalità di disponibilità (gruppi di disponibilità AlwaysOn) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +19,23 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modalità di disponibilità (gruppi di disponibilità AlwaysOn)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]la *modalità di disponibilità* è una proprietà della replica tramite cui viene determinato se una replica di disponibilità specificata può essere eseguita in modalità con commit sincrono. La modalità di disponibilità per ogni replica di disponibilità deve essere configurata per la modalità con commit sincrono o per quella con commit asincrono.  Se la replica primaria è configurata per la *modalità con commit asincrono*, non attende che una replica secondaria scriva su disco dei record del log delle transazioni in entrata per *finalizzare il log*. Se una replica secondaria specificata viene configurata per la modalità con commit asincrono, tramite la replica primaria non viene attesa la finalizzazione del log da parte della replica secondaria. Se la replica primaria e una replica secondaria specifica vengono entrambe configurate per la *modalità con commit sincrono*, la replica primaria attende la conferma della finalizzazione del log da parte della replica secondaria, a meno che la replica secondaria non sia in grado di eseguire il ping alla replica primaria entro il *periodo di timeout della sessione*della replica primaria.  
+  In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]la *modalità di disponibilità* è una proprietà della replica tramite cui viene determinato se una replica di disponibilità specificata può essere eseguita in modalità con commit sincrono. La modalità di disponibilità per ogni replica di disponibilità deve essere configurata per la modalità con commit sincrono, quella con commit asincrono o per la modalità di sola configurazione.  Se la replica primaria è configurata per la *modalità con commit asincrono*, non attende che una replica secondaria scriva su disco dei record del log delle transazioni in entrata per *finalizzare il log*. Se una replica secondaria specificata viene configurata per la modalità con commit asincrono, tramite la replica primaria non viene attesa la finalizzazione del log da parte della replica secondaria. Se la replica primaria e una replica secondaria specifica vengono entrambe configurate per la *modalità con commit sincrono*, la replica primaria attende la conferma della finalizzazione del log da parte della replica secondaria, a meno che la replica secondaria non sia in grado di eseguire il ping alla replica primaria entro il *periodo di timeout della sessione*della replica primaria. 
   
+
 > [!NOTE]  
 >  Se il periodo di timeout della sessione della replica primaria viene superato da una replica secondaria, la replica primaria passa temporaneamente in modalità con commit asincrono per questa replica secondaria. Quando la replica secondaria si riconnette alla replica primaria, viene ripristinata la modalità con commit sincrono.  
   
@@ -58,6 +61,8 @@ ms.lasthandoff: 08/02/2017
 -   Con la*modalità con commit sincrono* si privilegia la disponibilità elevata rispetto alle prestazioni, aumentando tuttavia la latenza delle transazioni. In modalità con commit sincrono, l'invio della conferma della transazione al client da parte delle transazioni avviene solo dopo la finalizzazione del log su disco da parte della replica secondaria. Quando inizia la sincronizzazione dei dati in un database secondario, viene avviata l'applicazione dei record del log in entrata dal database primario corrispondente da parte della replica secondaria. Non appena è terminata la finalizzazione di tutti i record del log, lo stato del database secondario diventa SYNCHRONIZED. Successivamente, ogni nuova transazione viene finalizzata dalla replica secondaria prima che il record del log venga scritto nel file di log locale. Una volta che tutti i database secondari di una determinata replica secondaria sono sincronizzati, la modalità con commit sincrono supporta il failover manuale e, facoltativamente, quello automatico.  
   
      Per altre informazioni, vedere [Modalità di disponibilità con commit sincrono](#SyncCommitAvMode)più avanti in questo argomento.  
+
+-   La *modalità di sola configurazione* si applica ai gruppi di disponibilità che non sono inclusi in un cluster WSFC (Windows Server Failover Cluster). Una replica in modalità di sola configurazione non contiene dati utente. In modalità di sola configurazione il database master della replica archivia i metadati di configurazione del gruppo di disponibilità. Per altre informazioni, vedere [Availability group with configuration only replica](../../../linux/sql-server-linux-availability-group-ha.md) (Gruppo di disponibilità con replica di sola configurazione).
   
  Nell'illustrazione seguente viene mostrato un gruppo di disponibilità con cinque repliche di disponibilità. La replica primaria e una secondaria sono configurate per la modalità con commit sincrono con failover automatico. Un'altra replica secondaria è configurata per la modalità con commit sincrono con solo failover manuale pianificato e due repliche secondarie sono configurate per la modalità con commit asincrono, che supporta solo il failover manuale forzato, in genere denominato *failover forzato*.  
   
@@ -185,4 +190,3 @@ ms.lasthandoff: 08/02/2017
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

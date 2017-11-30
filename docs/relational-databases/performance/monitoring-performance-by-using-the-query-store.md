@@ -1,47 +1,47 @@
 ---
 title: Monitoraggio delle prestazioni con Query Store | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 11/28/2016
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
-ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   La funzionalità Archivio query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi di prestazioni in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. Archivio query acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva per la consultazione. I dati vengono separati in base a intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. Per configurare l'archivio query, è possibile usare l'opzione [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
- Per informazioni sul funzionamento dell'archivio query nel database SQL di Azure, vedere [Uso dell'archivio query nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
+ Per informazioni sul funzionamento di Query Store nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure, vedere [Uso di Query Store nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
   
 ##  <a name="Enabling"></a> Abilitazione di Archivio query  
  Per impostazione predefinita, la funzionalità Archivio query non è attiva per i nuovi database.  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>Usare la pagina Archivio query in Management Studio  
+#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Usare la pagina Archivio query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un database e quindi scegliere **Proprietà**.  
   
     > [!NOTE]  
-    >  È necessaria almeno la versione [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+    >  È necessaria almeno la versione 16 di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 2.  Nella finestra di dialogo **Proprietà database** selezionare la pagina **Archivio query** .  
   
@@ -82,11 +82,11 @@ ms.lasthandoff: 08/03/2017
 -   Comprendere la natura di attesa per una query o un piano in particolare.
   
 In Query Store sono contenuti tre archivi:
-- a **archivio piani**: per il salvataggio in modo permanente delle informazioni sul piano di esecuzione
-- a **archivio statistiche runtime**: per il salvataggio in modo permanente delle informazioni sulle statistiche di esecuzione. 
+- Un **archivio piani** per il salvataggio in modo permanente delle informazioni sul piano di esecuzione.
+- a **archivio statistiche runtime**: per il salvataggio in modo permanente delle informazioni sulle statistiche di esecuzione.
 - a **archivio statistiche di attesa**: per il salvataggio in modo permanente delle informazioni sulle statistiche di attesa.
  
- Il numero di piani univoci che è possibile archiviare per una query nell'archivio piani è limitato dall'opzione di configurazione **max_plans_per_query** . Per migliorare le prestazioni, le informazioni vengono scritte nei due archivi in modo asincrono. Per ridurre al minimo l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. Per visualizzare le informazioni contenute in questi archivi, è possibile eseguire una query sulle viste del catalogo dell'archivio query.  
+ Il numero di piani univoci che è possibile archiviare per una query nell'archivio piani è limitato dall'opzione di configurazione **max_plans_per_query** . Per migliorare le prestazioni, le informazioni vengono scritte negli archivi in modo asincrono. Per ridurre al minimo l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. Per visualizzare le informazioni contenute in questi archivi, è possibile eseguire una query sulle viste del catalogo dell'archivio query.  
   
  La query seguente restituisce le informazioni sulle query e sui piani inclusi nell'archivio query.  
   
@@ -123,37 +123,38 @@ Di seguito sono descritti alcuni esempi su come ottenere informazioni dettagliat
 |Attese di RESOURCE_SEMAPHORE elevate per database|Attese di memoria elevate in Query Store per query specifiche|Individuare le prime query per utilizzo della memoria in Query Store. È probabile che queste query ritardino il successivo l'avanzamento delle query interessate. È consigliabile usare l'hint per la query MAX_GRANT_PERCENT per queste query o per le query interessate.|
 |Attese di LCK_M_X elevate per database|Attese di blocco elevate in Query Store per query specifiche|Controllare i testi di query per le query interessate e identificare le entità di destinazione. In Query Store cercare altre query che modificano la stessa entità, che vengono eseguite frequentemente e/o hanno una durata elevata. Dopo aver individuato queste query, provare a modificare la logica dell'applicazione per migliorare la concorrenza, oppure usare un livello di isolamento meno restrittivo.|
 |Attese di PAGEIOLATCH_SH elevate per database|Attese di I/O del buffer elevate in Query Store per query specifiche|Individuare le query con un numero elevato di letture fisiche in Query Store. Se corrispondono alle query con attese di I/O elevate, provare a introdurre un indice nell'entità sottostante, in modo da eseguire ricerche anziché analisi e ridurre così al minimo il sovraccarico di I/O delle query.|
-|Attese di SOS_SCHEDULER_YIELD elevate per database|Attese di CPU elevate in Query Store per query specifiche|Individuare la prime query per utilizzo CPU in Query Store. Tra queste query identificare quelle in cui la tendenza di utilizzo CPU elevato è correlata ad attese di CPU elevate per le query interessate. Concentrarsi sull'ottimizzazione di queste query: considerare la possibilità di una regressione del piano o la mancanza di un indice.| 
+|Attese di SOS_SCHEDULER_YIELD elevate per database|Attese di CPU elevate in Query Store per query specifiche|Individuare la prime query per utilizzo CPU in Query Store. Tra queste query identificare quelle in cui la tendenza di utilizzo CPU elevato è correlata ad attese di CPU elevate per le query interessate. Concentrarsi sull'ottimizzazione di queste query: considerare la possibilità di una regressione del piano o la mancanza di un indice.|
+
 ##  <a name="Options"></a> Opzioni di configurazione 
 
 Le opzioni seguenti sono disponibili per la configurazione dei parametri dell'archivio query.
 
  `OPERATION_MODE`  
- Può essere READ_WRITE (impostazione predefinita) o READ_ONLY.  
+ È possibile leggere **READ_WRITE** (impostazione predefinita) o READ_ONLY.  
   
  `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- Configurare l'argomento STALE_QUERY_THRESHOLD_DAYS per specificare il numero di giorni per la conservazione dei dati nell'archivio query. Il valore predefinito è 30. Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è 7 giorni.
+ Configurare l'argomento STALE_QUERY_THRESHOLD_DAYS per specificare il numero di giorni per la conservazione dei dati nell'archivio query. Il valore predefinito è 30. Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è **7** giorni.
   
  `DATA_FLUSH_INTERVAL_SECONDS`  
- Determina la frequenza con cui i dati scritti nell'archivio query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite DATA_FLUSH_INTERVAL_SECONDS. Il valore predefinito 900 (15 min).  
+ Determina la frequenza con cui i dati scritti nell'archivio query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite DATA_FLUSH_INTERVAL_SECONDS. Il valore predefinito **900** (15 min).  
   
  `MAX_STORAGE_SIZE_MB`  
- Consente di configurare le dimensioni massime dell'archivio query. Se i dati nell'archivio query raggiungono il limite impostato in MAX_STORAGE_SIZE_MB, lo stato cambia da lettura/scrittura a sola lettura e la raccolta di nuovi dati viene interrotta.  Il valore predefinito è 100Mb. Per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition il valore predefinito è 1Gb, mentre per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition il valore predefinito è 10Mb.
+ Consente di configurare le dimensioni massime dell'archivio query. Se i dati nell'archivio query raggiungono il limite impostato in MAX_STORAGE_SIZE_MB, lo stato cambia da lettura/scrittura a sola lettura e la raccolta di nuovi dati viene interrotta.  Il valore predefinito è 100Mb. Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium, il valore predefinito è **1 GB**, mentre per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, il valore predefinito è **10 MB**.
   
  `INTERVAL_LENGTH_MINUTES`  
- Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite INTERVAL_LENGTH_MINUTES. Il valore predefinito è 60. 
+ Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite INTERVAL_LENGTH_MINUTES. Il valore predefinito è **60**. 
   
  `SIZE_BASED_CLEANUP_MODE`  
- Determina se il processo di pulizia viene attivato automaticamente quando la quantità totale di dati sta per raggiungere le dimensioni massime. Può essere AUTO (impostazione predefinita) o OFF.  
+ Determina se il processo di pulizia viene attivato automaticamente quando la quantità totale di dati sta per raggiungere le dimensioni massime. Può essere **AUTO** (impostazione predefinita) o OFF.  
   
  `QUERY_CAPTURE_MODE`  
- Determina se Archivio dati acquisisce tutte le query oppure le query pertinenti in base a conteggio esecuzioni e consumo delle risorse oppure se interrompe l'aggiunta delle nuove query e tiene semplicemente traccia delle query correnti. Può essere ALL (acquisire tutte le query), SUTO (ignorare le query poco frequenti e quelle con una durata di compilazione e di esecuzione non significativa) o NONE (arrestare l'acquisizione di nuove query). Il valore predefinito in SQL Server 2016 è ALL, mentre nel database SQL di Azure è AUTO.
+ Determina se Archivio dati acquisisce tutte le query oppure le query pertinenti in base a conteggio esecuzioni e consumo delle risorse oppure se interrompe l'aggiunta delle nuove query e tiene semplicemente traccia delle query correnti. Può essere ALL (acquisire tutte le query), SUTO (ignorare le query poco frequenti e quelle con una durata di compilazione e di esecuzione non significativa) o NONE (arrestare l'acquisizione di nuove query). Il valore predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) è **ALL**, mentre in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure è AUTO.
   
  `MAX_PLANS_PER_QUERY`  
- Intero che rappresenta il numero massimo di piani mantenuti per ogni query. Il valore predefinito è 200.  
+ Intero che rappresenta il numero massimo di piani mantenuti per ogni query. Il valore predefinito è **200**.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- Controlla se Query Store acquisisce informazioni sulle statistiche relative all'attesa. Può essere OFF = 0 o ON = 1 (impostazione predefinita)  
+ Controlla se Query Store acquisisce informazioni sulle statistiche relative all'attesa. Può essere OFF o **ON** (impostazione predefinita).  
  
  Per determinare le opzioni correnti dell'archivio query, eseguire una query sulla vista **sys.database_query_store_options** . Per altre informazioni sui valori, vedere [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
@@ -162,6 +163,9 @@ Le opzioni seguenti sono disponibili per la configurazione dei parametri dell'ar
 ##  <a name="Related"></a> Viste, funzioni e procedure correlate  
  È possibile visualizzare e gestire Archivio query con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oppure usando le viste e le procedure seguenti.  
 
+### <a name="query-store-functions"></a>Funzioni di Query Store  
+ Le funzioni facilitano l'uso di Query Store. 
+ 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
@@ -585,4 +589,3 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
  [Uso dell'archivio query nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   
-

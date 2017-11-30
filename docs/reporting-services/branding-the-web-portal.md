@@ -1,28 +1,23 @@
 ---
-title: Personalizzazione del portale web | Documenti Microsoft
+title: Personalizzazione del portale Web | Microsoft Docs
 ms.custom: 
-ms.date: 07/02/2017
+ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9c78d9480dd8d2bacca80fd06183b9d31f7714d5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -31,7 +26,7 @@ ms.lasthandoff: 08/09/2017
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Creazione del pacchetto del marchio  
+## <a name="creating-the-brand-package"></a>Creazione del pacchetto del marchio
   
 Un pacchetto del marchio per Reporting Services consiste di tre elementi e presenta la forma di un file ZIP.   
   
@@ -41,7 +36,7 @@ Un pacchetto del marchio per Reporting Services consiste di tre elementi e prese
   
 I file devono avere i nomi elencati sopra. Al file ZIP è possibile assegnare il nome che si vuole.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### <a name="metadataxml"></a>metadata.xml
   
 Il file metadata.xml consente di impostare il nome del pacchetto del marchio e ha una voce di riferimento sia per il file colors.json che per il file logo.png.  
   
@@ -64,7 +59,7 @@ Esempio con un file del logo.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### <a name="colorsjson"></a>Colors.json
   
 Quando viene caricato il pacchetto del marchio, il server estrae le coppie nome/valore appropriate dal file colors.json e le unisce con il foglio di stile LESS master, brand.less. Questo file LESS viene quindi elaborato e il file CSS risultante viene servito al client. Tutti i colori del foglio di stile sono indicati nel formato esadecimale e sei caratteri.  
   
@@ -76,7 +71,7 @@ Il foglio di stile LESS contiene blocchi che fanno riferimento ad alcune variabi
         background-color:@primaryButtonBg;   
     }  
   
-Mentre questo è simile alla sintassi CSS, i valori colore, preceduti dal prefisso di @symbol, sono esclusivi di LESS. Si tratta di variabili i cui valori sono impostati dal file json.  
+Nonostante la sintassi sia simile a quella di CSS, i valori colore, che presentano il prefisso @symbol, sono esclusivi di LESS. Si tratta di variabili i cui valori sono impostati dal file json.  
   
 Ad esempio, se il file colors.json avesse i valori seguenti.  
   
@@ -115,13 +110,13 @@ La prima volta che ci si connette a un server con Mobile Report Publisher dove �
   
 È quindi possibile usare quel tema nei report per dispositivi mobili che verranno creati, anche se non sono per lo stesso server su cui il tema è distribuito.   
   
-### <a name="using-a-logo"></a>Uso di un logo  
+### <a name="using-a-logo"></a>Uso di un logo
   
 Se si include un logo nel pacchetto del marchio, esso apparirà nel portale Web al posto del nome che è stato specificato per il portale Web nel menu Impostazioni sito.  
   
 Il file che si include per il logo deve usare il formato di file PNG. Le dimensioni del file saranno scalate dopo il caricamento sul server. Dovrebbe essere scalato a circa 290 x 60 px.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Applicazione del pacchetto del marchio al portale Web  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Applicazione del pacchetto del marchio al portale Web
   
 Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile eseguire le operazioni seguenti.  
   
@@ -141,9 +136,9 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
   
 È anche possibile **scaricare** o **rimuovere** il pacchetto. Rimuovendo il pacchetto, il portale Web sarà reimpostato immediatamente sul marchio predefinito.  
   
-## <a name="metadataxml-example"></a>Esempio metadata.xml  
+## <a name="metadataxml-example"></a>Esempio metadata.xml
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -155,7 +150,7 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>Esempio colors.json  
+## <a name="colorsjson-example"></a>Esempio colors.json
   
     {  
         "name":"Multicolored example brand",  
@@ -249,5 +244,4 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
         }  
     }  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
