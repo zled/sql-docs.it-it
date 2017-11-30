@@ -1,12 +1,11 @@
 ---
-title: Configurare e gestire chiavi di crittografia (Gestione configurazione SSRS) | Documenti Microsoft
+title: Configurare e gestire chiavi di crittografia (Gestione configurazione SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1433e2532fc1deeb8abe5ac0ca71de69956730e0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 798344004af25af275625a88f4569acca84c8eb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS le chiavi di crittografia - gestione delle chiavi di crittografia
+# <a name="ssrs-encryption-keys---manage-encryption-keys"></a>Chiavi di crittografia SSRS - Gestire le chiavi di crittografia
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa le chiavi di crittografia per proteggere le credenziali e le informazioni di connessione archiviate in un database del server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]supporta la crittografia tramite una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati sensibili. La chiave simmetrica viene creata durante l'inizializzazione del server di report al momento dell'installazione o della configurazione dello stesso e viene utilizzata dal server di report per crittografare dati sensibili archiviati in tale server. Le chiavi pubblica e privata vengono create dal sistema operativo e sono utilizzate per proteggere la chiave simmetrica. Per ogni istanza del server di report che contiene dati sensibili in un database del server di report viene creata una coppia di chiavi pubblica e privata.  
   
  La gestione delle chiavi di crittografia consiste nel creare una copia di backup della chiave simmetrica e nell'individuare il momento corretto in cui ripristinare, eliminare o modificare le chiavi, nonché la modalità appropriata per eseguire tali operazioni. Se si esegue la migrazione di un'installazione del server di report o si configura una distribuzione con scalabilità orizzontale, è necessario disporre di una copia di backup della chiave simmetrica per applicarla alla nuova installazione.  
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
 [Gestione configurazione Reporting Services (modalità nativa)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Grafici (Generatore Report e SSRS) | Documenti Microsoft
+title: Grafici (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -21,49 +21,49 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ca57a00afd7256fce9c620099277a9894cbf59a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
-Informazioni sull'utilizzo delle aree dati del grafico per consentire ai lettori del [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginati comprendere grandi volumi di dati aggregati a colpo d'occhio.  
+Informazioni sull'uso delle aree dati dei grafici per consentire agli utenti dei report impaginati [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] di interpretare a colpo d'occhio grandi volumi di dati aggregati.  
 
-Il più tempo di preparazione con attenzione e comprensione dei dati prima di creare un grafico, più facile sarà per progettare i grafici in modo rapido ed efficiente. Per informazioni su come scegliere il grafico da utilizzare, vedere [tipi di grafico](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) per avviare immediatamente la sperimentazione con grafici, vedere la barra, colonna, grafico sparkline e le esercitazioni di grafico a torta in [esercitazioni di Generatore Report](../../reporting-services/report-builder-tutorials.md).  
+Maggiore è la cura dedicata all'interpretazione e alla preparazione dei dati prima della creazione del grafico, più facile sarà progettare i grafici in modo rapido ed efficiente. Per informazioni su come scegliere il grafico da usare, vedere [Tipi di grafico](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md). Per iniziare a lavorare con i grafici vedere le esercitazioni relative a grafici a barre, istogrammi, grafici sparkline e grafici a torta in [Esercitazioni di Generatore Report](../../reporting-services/report-builder-tutorials.md).  
   
  Nella figura seguente sono illustrati molti dei diversi elementi usati nel grafico.  
   
- ![Diagramma degli elementi del grafico](../../reporting-services/report-design/media/rs-chartelementsc.gif "diagramma degli elementi del grafico")  
+ ![Diagramma degli elementi del grafico](../../reporting-services/report-design/media/rs-chartelementsc.gif "Diagramma degli elementi del grafico")  
   
- È possibile pubblicare grafici separatamente da un report come *parti di report*. Per ulteriori informazioni, vedere [parti del Report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
+ È possibile pubblicare grafici separatamente da un report come *parti del report*. Per altre informazioni, vedere [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
   
  
 ##  <a name="DesigningChart"></a> Progettazione di un grafico  
- Dopo avere aggiunto un'area dati del grafico all'area di progettazione, è possibile trascinare campi del set di dati del report relativi a dati numerici e non numerici nel riquadro Dati grafico del grafico. Quando si fa clic sul grafico nell'area di progettazione, viene visualizzato il riquadro Dati grafico con le tre aree Gruppi di categorie, Gruppi di serie e Valori. Se il report dispone di un set di dati condiviso o incorporato, i campi del set di dati vengono visualizzati nel riquadro dei dati del report. Trascinare i campi del set di dati nell'area appropriata del riquadro dati grafico. Per impostazione predefinita, quando si aggiunge un campo a una delle aree del grafico, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene calcolata un'aggregazione per il campo. È inoltre possibile usare il raggruppamento di serie per generare dinamicamente le serie. Un grafico è [organizzati come una matrice](#SimilarMatrix).  
+ Dopo avere aggiunto un'area dati del grafico all'area di progettazione, è possibile trascinare campi del set di dati del report relativi a dati numerici e non numerici nel riquadro Dati grafico del grafico. Quando si fa clic sul grafico nell'area di progettazione, viene visualizzato il riquadro Dati grafico con le tre aree Gruppi di categorie, Gruppi di serie e Valori. Se il report dispone di un set di dati condiviso o incorporato, i campi del set di dati vengono visualizzati nel riquadro dei dati del report. Trascinare i campi dal set di dati all'area appropriata del riquadro Dati grafico. Per impostazione predefinita, quando si aggiunge un campo a una delle aree del grafico, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene calcolata un'aggregazione per il campo. È inoltre possibile usare il raggruppamento di serie per generare dinamicamente le serie. Un grafico è [organizzato come una matrice](#SimilarMatrix).  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  I dati nel grafico nella fase di progettazione sono diversi da quelli disponibili durante l'elaborazione del report. Non si tratta dei dati effettivi, ma piuttosto di dati generati che sono stati aggiunti allo scopo di consentire la progettazione del grafico con un'idea più chiara dell'aspetto che assumerà.  
   
-##  <a name="SimilarMatrix"></a>Come un grafico è simile a una matrice  
+##  <a name="SimilarMatrix"></a> Perché un grafico è simile a una matrice  
  Per comprendere l'utilizzo dei grafici è possibile confrontarli con le matrici.  
   
- ![Nuova matrice aggiunta dalla casella degli strumenti selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nuova matrice aggiunta dalla casella degli strumenti selezionata")  
+ ![Nuova matrice aggiunta dalla casella degli strumenti selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti selezionata")  
   
  Dal punto di vista concettuale, l'organizzazione è identica:  
   
--   Il gruppo di colonne nella matrice è ad esempio area gruppi di categorie nel grafico.  
+-   Il gruppo Colonne nella matrice è analogo all'area Gruppi di categorie nel grafico.  
   
--   Il gruppo di righe nella matrice è ad esempio area gruppi di serie nel grafico.  
+-   Il gruppo Righe nella matrice è analogo all'area Gruppi di serie nel grafico.  
   
--   L'area dati della matrice è ad esempio nell'area valori nel grafico.  
+-   L'area Dati nella matrice è analoga all'area Valori nel grafico.  
   
  
 ##  <a name="AddingData"></a> Aggiunta di dati al grafico  
@@ -144,10 +144,10 @@ Il più tempo di preparazione con attenzione e comprensione dei dati prima di cr
   
 ## <a name="see-also"></a>Vedere anche  
  [Immagini, caselle di testo, rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Ordinamento interattivo, mappe documento e i collegamenti &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Le aree dati nidificate &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un istogramma al Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Esercitazione: Aggiungere un istogramma al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Esercitazione: Aggiungere un grafico a barre al Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un grafico a barre al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

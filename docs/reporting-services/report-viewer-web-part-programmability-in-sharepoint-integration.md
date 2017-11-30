@@ -1,5 +1,5 @@
 ---
-title: "Report di programmabilità della Web Part visualizzatore nell'integrazione con SharePoint | Documenti Microsoft"
+title: "Programmabilità della web part Visualizzatore di report nell'integrazione con SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: fe234d83738bda4dd578d8be0a6d2c4619cd8b70
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9339b0f383efd757e9be49271f4a5bdd2d7a4d4f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programmabilità della web part Visualizzatore report nell'integrazione con SharePoint
-  La Web Part Visualizzatore Report è un controllo server, che contiene un set di pubblico application programming interface (API) che consente agli sviluppatori di creare applicazioni di SharePoint personalizzate. È possibile creare web part personalizzate che forniscono parametri e percorsi di report a web part Visualizzatore report tramite connessioni web part. È inoltre possibile incorporare la web part in una pagina web part di SharePoint personalizzata e personalizzarla usando l'API pubblica.  
+  La web part Visualizzatore di report è un controllo server contenente un set di API pubbliche che consentono agli sviluppatori di creare applicazioni di SharePoint personalizzate. È possibile creare web part personalizzate che forniscono parametri e percorsi di report a web part Visualizzatore report tramite connessioni web part. È inoltre possibile incorporare la web part in una pagina web part di SharePoint personalizzata e personalizzarla usando l'API pubblica.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Connessione a web part Visualizzatore report con web part personalizzate  
- La Web Part Visualizzatore Report è un consumer di connessione di Web part di SharePoint che implementano <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> o T:Microsoft.SharePoint.WebPartPages.IFilterValues. Un <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part, ad esempio il **documenti** può fornire il percorso di un report a una Web Part Visualizzatore Report quando viene inserita nella stessa pagina Web Part della Web Part Visualizzatore Report. Analogamente, un T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part, ad esempio il **testo filtro** o **filtro scelte**, può fornire un parametro di report a una Web Part Visualizzatore Report quando viene inserita nella stessa pagina Web Part della Web Part Visualizzatore Report.  
+ La web part Visualizzatore di report è una connessione dell'utente a web part di SharePoint che implementano <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> o T:Microsoft.SharePoint.WebPartPages.IFilterValues. Una web part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, ad esempio la web part **Documenti**, può fornire il percorso di un report a una web part Visualizzatore di report quando viene inserita nella stessa pagina web part della web part Visualizzatore di report. In modo analogo, una web part T:Microsoft.SharePoint.WebPartPages.IFilterValues, ad esempio **Filtro testo** o **Filtro scelte**, può fornire un parametro del report a una web part Visualizzatore di report quando viene inserita nella stessa pagina web part della web part Visualizzatore di report.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Implementazione di un provider del percorso report con IWebPartRow  
  Per fornire il percorso di un report a una web part Visualizzatore report tramite connessioni web part, eseguire le operazioni seguenti:  
@@ -40,9 +39,9 @@ ms.lasthandoff: 08/12/2017
 3.  Connettere la web part alla web part Visualizzatore report nell'interfaccia utente di progettazione delle web part basata sul Web.  
   
     > [!NOTE]  
-    >  È possibile connettere una sola <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part della Web Part Visualizzatore Report per una volta, è possibile connettere contemporaneamente un <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web e un T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part alla Web Part Visualizzatore Report nello stesso momento.  
+    >  Alla web part Visualizzatore di report è possibile connettere una sola web part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> alla volta e non è possibile connettervi contemporaneamente una web part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> e una web part T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
   
- Per il <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part per funzionare correttamente con T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, è necessario eseguire le operazioni seguenti <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> metodo:  
+ Per consentire il funzionamento corretto della web part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> con la web part T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewer, è necessario eseguire le operazioni seguenti nel metodo <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A>:  
   
 -   Richiamare il metodo di callback con un oggetto <xref:System.Data.DataRowView> come parametro di input.  
   
@@ -52,17 +51,17 @@ ms.lasthandoff: 08/12/2017
     >  La web part Visualizzatore report nel componente aggiuntivo per [!INCLUDE[offSPServ](../includes/offspserv-md.md)] supporta inoltre la ricezione del percorso del report tramite la colonna "FileRef".  
   
 ### <a name="implementing-a-report-parameter-provider-with-ifiltervalues"></a>Implementazione del provider di un parametro di report con IFilterValues  
- Una Web Part che implementa T:Microsoft.SharePoint.WebPartPages.IFilterValues può fornire un valore del parametro per la Web Part Visualizzatore Report. Il valore del parametro inviato alla web part Visualizzatore report è soggetto alle stesse restrizioni esistenti per il parametro del report come specificato nella definizione del report, ad esempio tipo di dati, valori validi e così via.  
+ Una web part che implementa T:Microsoft.SharePoint.WebPartPages.IFilterValues può fornire un unico parametro di report alla web part Visualizzatore di report. Il valore del parametro inviato alla web part Visualizzatore report è soggetto alle stesse restrizioni esistenti per il parametro del report come specificato nella definizione del report, ad esempio tipo di dati, valori validi e così via.  
   
  Per fornire un parametro di report a una web part Visualizzatore report, eseguire le operazioni seguenti:  
   
-1.  Creare una Web Part che implementa l'interfaccia T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
+1.  Creare una web part che implementa l'interfaccia T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
   
-2.  Aggiungere la Web Part alla stessa pagina come il T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart.  
+2.  Aggiungere la web part alla stessa pagina della web part T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewer.  
   
-3.  Connettere la Web Part di T:Microsoft.SharePoint.WebPartPages.IFilterValues per la Web Part Visualizzatore Report nell'interfaccia utente di progettazione Web Part basata sul Web.  
+3.  Connettere la web part T:Microsoft.SharePoint.WebPartPages.IFilterValues alla web part Visualizzatore di report nell'interfaccia utente di progettazione delle web part basata sul Web.  
   
     > [!NOTE]  
-    >  È possibile connettersi più T:Microsoft.SharePoint.WebPartPages.IFilterValues Web part alla Web Part Visualizzatore Report alla volta. Tuttavia, è possibile connettere entrambi un <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web e un T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part alla Web Part Visualizzatore Report nello stesso momento.  
+    >  È possibile connettere più web part T:Microsoft.SharePoint.WebPartPages.IFilterValues alla web part Visualizzatore di report. Tuttavia, non è possibile connettere contemporaneamente una web part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> e una web part T:Microsoft.SharePoint.WebPartPages.IFilterValues alla web part Visualizzatore di report.  
   
   

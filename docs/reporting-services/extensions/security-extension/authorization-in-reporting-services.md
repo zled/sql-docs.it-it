@@ -1,5 +1,5 @@
 ---
-title: Autorizzazione in Reporting Services | Documenti Microsoft
+title: Autorizzazione in Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- authorization [Reporting Services]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: bd7ecdc8e792fe11810affa362ff681bfdf267f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authorization-in-reporting-services"></a>Autorizzazione in Reporting Services
-  L'autorizzazione è il processo tramite cui viene determinato se a un'identità deve essere concesso il tipo di accesso richiesto a una determinata risorsa nel database del server di report. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene utilizzata un'architettura di autorizzazione basata sui ruoli che consente di concedere a un utente l'accesso a una determinata risorsa in base all'assegnazione di ruolo dell'utente per l'applicazione. Le estensioni di sicurezza per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contengono un'implementazione di un componente di autorizzazione utilizzata per concedere l'accesso agli utenti dopo l'autenticazione nel server di report. L'autorizzazione viene richiamata quando un utente tenta di eseguire un'operazione nel sistema o in un elemento del server di report tramite l'API SOAP e l'accesso con URL. Questo è reso possibile tramite l'interfaccia di estensione di sicurezza **IAuthorizationExtension2**. Come indicato in precedenza, tutte le estensioni ereditano da **IExtension** l'interfaccia di base per qualsiasi estensione da distribuire. **IExtension** e **IAuthorizationExtension2** sono membri del **Microsoft.ReportingServices.Interfaces** dello spazio dei nomi.  
+  L'autorizzazione è il processo tramite cui viene determinato se a un'identità deve essere concesso il tipo di accesso richiesto a una determinata risorsa nel database del server di report. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene utilizzata un'architettura di autorizzazione basata sui ruoli che consente di concedere a un utente l'accesso a una determinata risorsa in base all'assegnazione di ruolo dell'utente per l'applicazione. Le estensioni di sicurezza per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contengono un'implementazione di un componente di autorizzazione utilizzata per concedere l'accesso agli utenti dopo l'autenticazione nel server di report. L'autorizzazione viene richiamata quando un utente tenta di eseguire un'operazione nel sistema o in un elemento del server di report tramite l'API SOAP e l'accesso con URL. Ciò è possibile tramite l'interfaccia dell'estensione di sicurezza **IAuthorizationExtension2**. Come dichiarato in precedenza, tutte le estensioni ereditano da **IExtension** l'interfaccia di base per qualsiasi estensione distribuita. **IExtension** e **IAuthorizationExtension2** sono membri dello spazio dei nomi **Microsoft.ReportingServices.Interfaces**.  
   
 ## <a name="checking-access"></a>Controllo dell'accesso  
  Nell'ambito dell'autorizzazione, la chiave per qualsiasi implementazione della sicurezza personalizzata è il controllo dell'accesso, implementato nel metodo <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> viene chiamato ogni volta che un utente tenta un'operazione sul server di report. Il metodo <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> è sottoposto a overload per ogni tipo di operazione. Per le operazioni sulle cartelle, un esempio di controllo dell'accesso potrebbe essere simile al seguente:  
@@ -61,7 +59,7 @@ public bool CheckAccess(
 }  
 ```  
   
- Il server di report chiama il metodo <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> passando il nome dell'utente connesso, un token utente, il descrittore di sicurezza per l'elemento e l'operazione richiesta. In questo caso controllare il descrittore di sicurezza per il nome utente e delle autorizzazioni appropriate per completare la richiesta, quindi tornare **true** per indicare che l'accesso viene concesso o **false** per indicare l'accesso è negato.  
+ Il server di report chiama il metodo <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> passando il nome dell'utente connesso, un token utente, il descrittore di sicurezza per l'elemento e l'operazione richiesta. A questo punto il descrittore di sicurezza viene controllato per verificare se il nome utente e l'autorizzazione sono appropriati per il completamento della richiesta, quindi viene restituito **true** per indicare che l'accesso è concesso o **false** per indicare che l'accesso è negato.  
   
 ## <a name="security-descriptors"></a>Descrittori di sicurezza  
  Quando si impostano i criteri di autorizzazione per gli elementi nel database del server di report, un'applicazione client (ad esempio Gestione report) invia le informazioni utente all'estensione di sicurezza insieme ai criteri di sicurezza per l'elemento. I criteri di sicurezza e le informazioni utente sono collettivamente denominati descrittore di sicurezza. Un descrittore di sicurezza contiene le informazioni seguenti per un elemento nel database del server di report:  
@@ -77,7 +75,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Flusso di autorizzazione  
  L'autorizzazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene controllata dall'estensione di sicurezza attualmente configurata per l'esecuzione nel server. L'autorizzazione è basata sul ruolo ed è limitata alle autorizzazioni e alle operazioni fornite dall'architettura di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Nel diagramma seguente è illustrato il processo di autorizzazione degli utenti per l'utilizzo degli elementi nel database del server di report:  
   
- ![Flusso per Reporting Services security autorizzazione](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "flusso di autorizzazioni di sicurezza di Reporting Services")  
+ ![Flusso dell'autorizzazione di sicurezza di Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Flusso dell'autorizzazione di sicurezza di Reporting Services")  
   
  Come illustrato in questo diagramma, per l'autorizzazione viene applicata la sequenza seguente:  
   

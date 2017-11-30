@@ -1,5 +1,5 @@
 ---
-title: Creare, eliminare o modificare una cartella (gestione Report) | Documenti Microsoft
+title: Creare, eliminare o modificare una cartella (Gestione report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - folders [Reporting Services], deleting
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
-ms.contentlocale: it-it
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Creare, eliminare o modificare una cartella (Gestione report)
   È possibile creare cartelle per organizzare e gestire gli elementi pubblicati in un server di report. La creazione di cartelle consente agli utenti di individuare in modo semplice i report desiderati. Per gli utenti con ruolo di gestione del contenuto, le cartelle costituiscono una struttura per l'applicazione di autorizzazioni. È possibile creare assegnazioni di ruolo su cartelle specifiche per limitare l'accesso a report in fase di sviluppo o che non devono essere distribuiti su larga scala.  
@@ -85,4 +84,3 @@ ms.lasthandoff: 11/07/2017
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

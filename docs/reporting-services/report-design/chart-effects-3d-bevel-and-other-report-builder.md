@@ -1,5 +1,5 @@
 ---
-title: Effetti 3D, smussature e altri effetti in un grafico (Generatore Report e SSRS) | Documenti Microsoft
+title: 3D, Bevel, and Other Effects in a Chart (Report Builder and SSRS) (Effetti 3D, smussature e altri effetti in un grafico (Generatore report e SSRS)) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10156"
+f1_keywords: "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90e2cfecc2090f5d09ac1a7a5fce1e6b4cbcca81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effetti grafico - 3D, smussature e altri (Generatore Report)
+# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effetti per i grafici - 3D, smussatura e altri (Generatore report)
   Gli effetti tridimensionali (3D) possono essere usati per fornire profondità e aggiungere un impatto visivo ai grafici impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio, se si desidera evidenziare una particolare sezione di un grafico a torta esplosa, è possibile ruotare e modificare la prospettiva del grafico in modo che si noti prima di tutto tale sezione. Quando al grafico vengono applicati effetti 3D, tutti i colori delle sfumature e gli stili di tratteggio vengono disabilitati.  
   
  Gli effetti tridimensionali possono essere applicati a singoli grafici ed è possibile visualizzare grafici 2D e 3D nello stesso report.  
   
- Per tutti i tipi di grafico, è possibile aggiungere effetti tridimensionali a un'area del grafico nella finestra di dialogo **Proprietà area grafico** selezionando **Abilita 3D**. Per altre informazioni, vedere [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
+ Per tutti i tipi di grafico, è possibile aggiungere effetti tridimensionali a un'area del grafico nella finestra di dialogo **Proprietà area grafico** selezionando **Abilita 3D**. Per altre informazioni, vedere [Aggiungere effetti 3D a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
  Per aumentare l'impatto visivo dei grafici, è anche possibile aggiungere gli stili smussato, rilievo e trama nei grafici a barre, a torta e ad anello, nonché negli istogrammi. Per altre informazioni, vedere [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -66,9 +64,8 @@ ms.lasthandoff: 08/09/2017
  È possibile aggiungere stili di evidenziazione a un grafico 3D tramite la proprietà **Shading** visualizzata sotto Area3DStyle nel riquadro Proprietà quando si seleziona l'area del grafico. Un semplice stile di illuminazione applica la stessa tonalità agli elementi dell'area del grafico. Uno stile realistico modifica le tonalità degli elementi dell'area del grafico a seconda di un angolo di illuminazione specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione delle etichette dell'asse in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Aggiunta di effetti 3D a un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Aggiungere effetti 3D a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Aggiungere, modificare o eliminare valori predefiniti per un parametro di Report | Documenti Microsoft
+title: Aggiungere, modificare o eliminare valori predefiniti per un parametro di report | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 101d85101333edda1e44ad01f04cf1a330f1f4a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aca61d548532fcb6f61c23130e34bf426c8672c9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>Aggiungere, modificare o eliminare valori predefiniti per un parametro di report
   Dopo aver creato un parametro del report, è possibile specificare un elenco di valori predefiniti. Se tutti i parametri dispongono di un valore predefinito valido, il report viene eseguito automaticamente la prima volta che viene visualizzato o ne viene visualizzata l'anteprima.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Dopo aver pubblicato un report, è possibile eseguire l'override dei valori predefiniti definiti nel report nello strumento di creazione di report, impostando i valori delle proprietà del parametro nel server di report. Inoltre, per fornire più set di valori predefiniti del parametro, è possibile creare report collegati. Per altre informazioni, vedere  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ Dopo aver pubblicato un report, è possibile eseguire l'override dei valori predefiniti definiti nel report nello strumento di creazione di report, impostando i valori delle proprietà del parametro nel server di report. Inoltre, per fornire più set di valori predefiniti del parametro, è possibile creare report collegati. Per altre informazioni, vedere  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>Per aggiungere o modificare i valori predefiniti per un parametro di report  
   
@@ -68,13 +68,13 @@ ms.lasthandoff: 08/09/2017
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Aggiungere parametri di propagazione a un Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un parametro di Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Aggiungere i filtri di set di dati, i filtri di area dati e i filtri di gruppo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Riferimenti alla raccolta di parametri &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Modificare l'ordine di un parametro di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare un parametro di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Aggiunta di parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

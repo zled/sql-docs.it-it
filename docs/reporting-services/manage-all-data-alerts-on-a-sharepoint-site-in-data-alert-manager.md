@@ -1,5 +1,5 @@
 ---
-title: Gestire tutti gli avvisi dati in un sito di SharePoint in Gestione avvisi dati | Documenti Microsoft
+title: Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: c8d04c7c8406b1a1653be71b6e76110e4479fedb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati
 
@@ -32,10 +31,10 @@ ms.lasthandoff: 08/17/2017
 
 Gli amministratori di avvisi di SharePoint possono visualizzare un elenco degli avvisi dati creati da qualsiasi utente del sito e le informazioni sugli avvisi. Gli amministratori di avvisi possono inoltre eliminare avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per gli amministratori di avvisi in Gestione avvisi dati.
 
- ![Gestione di avvisi per gli amministratori del sito SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Gestione avvisi per gli amministratori del sito SharePoint")
+ ![Gestione avvisi per gli amministratori del sito di SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Gestione avvisi per gli amministratori del sito di SharePoint")
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
 ## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>Visualizzare un elenco di avvisi creati da un utente del sito  
   
@@ -65,5 +64,4 @@ Gli amministratori di avvisi di SharePoint possono visualizzare un elenco degli 
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

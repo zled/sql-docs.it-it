@@ -1,5 +1,5 @@
 ---
-title: Modificare l'impostazione predefinita l'estensione di Reporting Services recapito | Documenti Microsoft
+title: Modificare l'estensione per il recapito predefinita di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Manager [Reporting Services], default delivery extension
+helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e46c81c5c96bc3c71eef8a2ca48a89c177ca1700
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modificare l'estensione per il recapito predefinita di Reporting Services
   È possibile modificare le impostazioni di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per modificare l'estensione per il recapito predefinita visualizzata nell'elenco **Recapito** di una pagina di definizione della sottoscrizione. Ad esempio, è possibile modificare la configurazione in modo che, quando viene creata una nuova sottoscrizione, il recapito della condivisione file venga selezionato per impostazione predefinita al posto del recapito tramite posta elettronica. È inoltre possibile modificare l'ordine con cui sono elencate le estensioni per il recapito nell'interfaccia utente.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="default-native-mode-report-server-configuration"></a>Configurazione dei server di report con modalità nativa predefinita  
  L'ordine con cui un'estensione per il recapito viene visualizzata nell'elenco **Recapito** di Gestione report dipende dall'ordine delle voci dell'estensione presenti nel file **RSReportServer.config** . Ad esempio, nell'immagine seguente Posta elettronica è visualizzato per primo ed è selezionato per impostazione predefinita.  
   
- ![elenco predefinito di estensioni per il recapito](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "elenco predefinito di estensioni per il recapito")  
+ ![Elenco predefinito di estensioni per il recapito](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "Elenco predefinito di estensioni per il recapito")  
   
  Di seguito è riportata la sezione predefinita **RSReportServer.config** che controlla l'estensione per il recapito predefinita e l'ordine di visualizzazione in Gestione Report. Si noti che Posta elettronica viene visualizzato per primo nel file ed è impostato come predefinito.  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
      Aprire il file RSReportServer.config in un editor di testo. Per altre informazioni sul file di configurazione, vedere [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md). Dopo la modifica della configurazione, l'interfaccia utente sarà simile all'immagine seguente:  
   
-     ![modificare l'elenco di estensioni per il recapito](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "modificato l'elenco di estensioni per il recapito")  
+     ![Elenco modificato di estensioni per il recapito](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "Elenco modificato di estensioni per il recapito")  
   
 2.  Modificare la sezione DeliveryUI in modo che somigli all'esempio seguente e prendere nota delle principali modifiche:  
   
@@ -125,4 +123,3 @@ ms.lasthandoff: 08/09/2017
  [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

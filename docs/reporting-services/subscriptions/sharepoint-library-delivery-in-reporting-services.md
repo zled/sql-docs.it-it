@@ -1,5 +1,5 @@
 ---
-title: SharePoint Library Delivery in Reporting Services | Documenti Microsoft
+title: Recapito tramite la raccolta di SharePoint in Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Recapito tramite la raccolta di SharePoint in Reporting Services
   In un server di report configurato per l'integrazione con SharePoint è disponibile un'estensione per il recapito che è possibile utili per inviare un report a una raccolta di SharePoint.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
  Specifica una proprietà **Title** facoltativa per il report nella raccolta di destinazione. Si tratta di una proprietà standard di tutti gli elementi archiviati in una raccolta. Gli utenti possono specificare se visualizzare o nascondere tale proprietà quando si visualizzano i contenuti della raccolta in un sito di SharePoint.  
   
  Percorso  
- Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio: `http://mySharePointWeb/MySite/MyDocLib`; dove `http://mySharePointWeb` indica l'applicazione Web, "MySite" è il sito di SharePoint e "MyDocLib" è la raccolta di SharePoint in cui verrà recapitato il report.  
+ Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio `http://mySharePointWeb/MySite/MyDocLib`, dove `http://mySharePointWeb` indica l'applicazione Web, "MySite" il sito di SharePoint e "MyDocLib" la raccolta di SharePoint a cui verrà recapitato il report.  
   
  Non è possibile specificare una pagina, un sito o un elenco. Il contenitore di destinazione deve essere una raccolta nello stesso sito o farm.  
   
@@ -91,9 +90,8 @@ ms.lasthandoff: 08/09/2017
  Se si utilizza la funzionalità di copia automatica per copiare automaticamente l'ultima versione di un file in più percorsi, il file verrà copiato se l'opzione **Sovrascrivi** è abilitata. Se si utilizza **Incremento automatico** o **None**, il recapito avrà esito negativo e si verificherà l'errore **rsDeliveryError** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire sottoscrizioni per server di Report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Specificare le credenziali e informazioni di connessione per origini dati del Report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

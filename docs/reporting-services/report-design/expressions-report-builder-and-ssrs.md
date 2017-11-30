@@ -1,5 +1,5 @@
 ---
-title: Espressioni (Generatore Report e SSRS) | Documenti Microsoft
+title: Espressioni (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 326b542108214956c9ef51bc370d7ee36212a40d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Espressioni (Generatore report e SSRS)
   Le espressioni vengono ampiamente usate nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per recuperare, calcolare, visualizzare, raggruppare, ordinare, filtrare, parametrizzare e formattare i dati. 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Semplice** Espressione contenente un riferimento a un singolo elemento in una raccolta predefinita, ad esempio un campo del set di dati, un parametro oppure un campo predefinito. Un'espressione semplice viene visualizzata tra parentesi nell'area di progettazione. `[FieldName]` , ad esempio, corrisponde all'espressione sottostante `=Fields!FieldName.Value`. Le espressioni semplici vengono create automaticamente quando si crea il layout del report e si trascinano gli elementi dal riquadro dei dati del report nell'area di progettazione. Per altre informazioni sui simboli che rappresentano raccolte predefinite diverse, vedere [Informazioni sui simboli di prefissi in espressioni semplici](#DisplayText).  
   
--   **Complessa** Espressione contenente riferimenti a più riferimenti, operatori e chiamate di funzioni predefiniti. Un'espressione complessa viene visualizzata come <\<Expr >> quando il valore dell'espressione include più di un semplice riferimento. Per visualizzare l'espressione, posizionare il puntatore del mouse su tale espressione e utilizzare la descrizione comando. Per modificare l'espressione, aprirla nella finestra di dialogo **Espressione** .  
+-   **Complessa** Espressione contenente riferimenti a più riferimenti, operatori e chiamate di funzioni predefiniti. Un'espressione complessa viene visualizzata come <\<Expr>> se il valore dell'espressione include più riferimenti semplici. Per visualizzare l'espressione, posizionare il puntatore del mouse su tale espressione e utilizzare la descrizione comando. Per modificare l'espressione, aprirla nella finestra di dialogo **Espressione** .  
   
  Nella figura seguente vengono mostrate espressioni semplici e complesse tipiche sia per le caselle di testo sia per il testo segnaposto.  
   
@@ -125,4 +124,3 @@ ms.lasthandoff: 08/09/2017
 -   [Esercitazione: Introduzione alle espressioni](Tutorial:%20Introducing%20Expressions.md)
 -   [Esempi di report (Generatore report e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
-

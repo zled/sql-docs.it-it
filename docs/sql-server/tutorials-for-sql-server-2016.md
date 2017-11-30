@@ -1,28 +1,27 @@
 ---
 title: Esercitazioni di SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 10/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
-ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
+
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornisce esercitazioni che consentono l'apprendimento di nuove tecnologie e funzionalità. In genere le esercitazioni per le versioni precedenti possono essere usate con le versioni più recenti. Quando le esercitazioni riguardano una nuova funzionalità viene indicata la versione minima necessaria per il completamento dell'esercitazione.  
      
 -   Se in un'esercitazione viene usato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] è necessario scaricare e usare la versione più recente da CodePlex. Per altre informazioni, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Script e database AdventureWorks per SQL Server 2016 CTP3).    
@@ -40,9 +39,9 @@ ms.lasthandoff: 07/31/2017
 |[Esercitazioni su Integration Services](../integration-services/integration-services-tutorials.md)|Viene illustrato come creare e distribuire pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Esercitazioni sulla replica](../relational-databases/replication/replication-tutorials.md)|Viene illustrato come installare ed eseguire le topologie di replica tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  
-|[Esercitazioni di SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Informazioni su come lavorare con i dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando il linguaggio R ed eseguire gli script R da [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutorial SQL Server Machine Learning](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Acquisire familiarità con dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite R o Python. Eseguire gli script R o Python da [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
- ## <a name="previously-published-tutorials"></a>Esercitazioni pubblicate in precedenza:  
+ ## <a name="previously-published-tutorials"></a>Esercitazioni pubblicate in precedenza 
   
  - [Esercitazioni di SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 07/31/2017
  - [Esercitazioni di SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

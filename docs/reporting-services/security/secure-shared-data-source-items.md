@@ -1,5 +1,5 @@
 ---
-title: Proteggere gli elementi di origine dati condivisa | Documenti Microsoft
+title: Proteggere le origini dei dati condivise | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e056f5577c2c569e333f2341060862c06d803f6b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2db280cc30739c09bf406e621cb4166391130b53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-shared-data-source-items"></a>Proteggere le origini dei dati condivise
   È possibile impostare la sicurezza per un'origine dei dati condivisa in modo da abilitarne o disabilitarne l'accesso.  
@@ -46,11 +45,10 @@ ms.lasthandoff: 08/09/2017
 |Impostazione della sicurezza per singoli elementi|Creare e modificare assegnazioni di ruolo che controllano l'accesso all'origine dei dati condivisa. Questa attività deve essere utilizzata con l'attività Visualizzazione di origini dei dati o Gestione di origini dei dati. In caso contrario non avrà alcun effetto, poiché l'utente non potrà selezionare l'elemento.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati del Report](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Cartelle condivise sicure](../../reporting-services/security/secure-folders.md)   
- [Proteggere i report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Archiviare le credenziali in un'origine di dati Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [Proteggere le cartelle](../../reporting-services/security/secure-folders.md)   
+ [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

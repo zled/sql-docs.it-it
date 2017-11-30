@@ -1,5 +1,5 @@
 ---
-title: 'Risolvere i problemi di report: Eseguire il mapping di report (Generatore Report e SSRS) | Documenti Microsoft'
+title: 'Risolvere i problemi relativi ai report: i report mappa (Generatore report e SSRS) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2ed84682cda474d2cba6e7f0854e8cc1cde8d827
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report: report mappa (Generatore report e SSRS)
   È possibile che si verifichino problemi con le mappe in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Usare le informazioni presenti in questo argomento per risolvere questi problemi.  
@@ -164,7 +163,7 @@ ms.lasthandoff: 08/09/2017
   
  Per controllare il titolo e il contenuto di ogni legenda, usare le proprietà della legenda per la regola. È possibile specificare il numero di divisioni da creare, modificare i calcoli che consentono di assegnare valori a ogni divisione, impostare i valori di intervallo minimo e massimo, nonché modificare il formato del testo della legenda.  
   
- Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ## <a name="the-rules-that-i-set-do-not-give-the-results-that-i-expect"></a>Le regole impostate non hanno fornito i risultati previsti.  
  Le regole si applicano ai dati analitici associati agli elementi della mappa su un livello. Usare l'elenco seguente per identificare i problemi riguardanti tutte le regole relative ai colori, alle dimensioni, allo spessore e al tipo di marcatore:  
@@ -181,7 +180,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Quando si esegue il report, la scala dei colori non viene visualizzata.  
  La scala dei colori visualizza informazioni all'utente quando un livello mappa specifica le regole colore per poligoni, linee o punti per tutto il livello o per gli elementi incorporati della mappa. Se nessun elemento della mappa specifica una regola colore o se le regole colore forniscono un'indicazione tramite una legenda anziché la mappa colori, quest'ultima non viene mostrata nel report visualizzabile.  
   
- Per visualizzare la scala dei colori, specificare regole colore per un livello o un elemento incorporato della mappa. Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Per visualizzare la scala dei colori, specificare regole colore per un livello o un elemento incorporato della mappa. Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Tile"></a> Problemi relativi alle sezioni  
  Usare questa sezione per risolvere i problemi relativi alle opzioni dello sfondo a sezioni.  
@@ -197,7 +196,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Per l'anteprima locale, è necessario disporre dell'accesso a Internet. Per un report che è in esecuzione dal server di report, quest'ultimo deve essere configurato per supportare lo sfondo a sezioni. Per altre informazioni, vedere "Pianificazione per il supporto mappe" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
- Per altre informazioni sull'aggiunta di un livello, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'aggiunta di un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ## <a name="how-do-i-control-the-text-on-a-tile-layer"></a>Informazioni sul controllo del testo su un livello sezione.  
  Entrambe le viste **Strada** e **Ibrido** includono del testo. Il testo fa parte delle sezioni che provengono dai servizi Web di Bing Maps.  
@@ -213,8 +212,7 @@ ms.lasthandoff: 08/09/2017
  Per specificare i dati correlati ai dati spaziali che non fanno parte di un set di dati del report, è necessario usare il simbolo # seguito da un'etichetta che specifica il nome dei dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risolvere i problemi relativi a Generatore Report](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Risoluzione dei problemi relativi a Generatore report](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   
-

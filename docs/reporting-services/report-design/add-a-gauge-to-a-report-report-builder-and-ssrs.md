@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un misuratore a un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere un misuratore a un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de434ef80732d2a845fb41c972f0118fee357d14
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: daa8df71bddda27f42cc38e7f6b609208091a930
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Aggiungere un misuratore a un report (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , per riepilogare i dati in formato visivo è possibile usare un'area dati Misuratore. Dopo aver aggiunto tale area dati all'area di progettazione, è possibile trascinare i campi del set di dati del report in un riquadro dei dati nel misuratore.  
@@ -37,9 +36,9 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Diversamente dai grafici, esistono solo due tipi di misuratore: lineare e radiale. I misuratori disponibili nella finestra di dialogo **Seleziona tipo di misuratore** rappresentano i modelli per questi due tipi di misuratore. Per questo motivo, dopo aver aggiunto il misuratore al report non è possibile modificarne il tipo. Per farlo, è necessario eliminare il misuratore e aggiungerlo di nuovo.  
   
-     Se al report non sono associati un'origine dati e un set di dati, viene visualizzata la finestra di dialogo **Proprietà origine dati** che consente di eseguire in modo guidato la procedura per creare entrambi. Per ulteriori informazioni, vedere [aggiungere e verificare una connessione dati &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Se al report non sono associati un'origine dati e un set di dati, viene visualizzata la finestra di dialogo **Proprietà origine dati** che consente di eseguire in modo guidato la procedura per creare entrambi. Per altre informazioni, vedere [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-     Se il report ha un'origine dati, ma non un set di dati, viene visualizzata la finestra di dialogo **Proprietà origine dati** in cui sono descritti i passaggi necessari per la creazione. Per altre informazioni, vedere [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+     Se il report ha un'origine dati, ma non un set di dati, viene visualizzata la finestra di dialogo **Proprietà origine dati** in cui sono descritti i passaggi necessari per la creazione. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
 4.  Fare clic sul misuratore per visualizzare il riquadro dei dati. Per impostazione predefinita, un misuratore dispone di un solo indicatore di misura corrispondente a un unico valore. È tuttavia possibile aggiungere altri indicatori di misura.  
   
@@ -49,7 +48,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [I misuratori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

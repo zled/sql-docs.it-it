@@ -1,5 +1,5 @@
 ---
-title: Stampare i report da un Browser con il controllo di stampa (Generatore Report e SSRS) | Documenti Microsoft
+title: Stampare i report da un browser con il controllo di stampa (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 99405d9622cc89a1605c6aa9ee821f15844bc9ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Stampare i report da un browser con il controllo di stampa (Generatore report e SSRS)
   Benché un browser sia l'applicazione client più comune per visualizzare un report, le funzionalità di stampa dei browser non sono tra le più adatte per la stampa dei report, in quanto sono state progettate per la stampa di pagine Web. Le pagine stampate da un browser includono in genere tutti gli elementi visivi presenti nella pagina Web, più le informazioni dell'intestazione e del piè di pagina che identificano la pagina o il sito Web. Se si avvia la stampa dal browser, viene stampato il contenuto della finestra corrente. Per i report a più pagine, il browser stampa al massimo la prima pagina e, se la pagina del report è più grande delle dimensioni di una pagina stampata, il risultato non risulta completo.  
@@ -43,11 +42,10 @@ ms.lasthandoff: 08/09/2017
  Per visualizzare un'anteprima di un report, fare clic sul pulsante **Anteprima** nella finestra di dialogo **Stampa** . Verrà aperta la prima pagina del report in una finestra di anteprima distinta. Se il rendering del report viene eseguito sul server di report, saranno disponibili alcune pagine aggiuntive. Il rendering dell'anteprima di un report viene eseguito in formato EMF. È possibile passare alla pagina precedente o successiva fino ad arrivare all'ultima pagina, in cui il pulsante **Successiva** risulta disabilitato.  
   
 ### <a name="adjusting-print-margins"></a>Impostazione dei margini di stampa  
- È possibile modificare i margini di stampa del report EMF visualizzato prima di avviare la stampa. Per eseguire questa operazione, fare clic sul pulsante **Anteprima** nella finestra di dialogo **Stampa** . Nella parte superiore della pagina di anteprima fare clic sul pulsante **Margini** . Verrà visualizzata la finestra di dialogo Margini. Impostare i margini superiore, inferiore, destro e sinistro nel modo desiderato. [!INCLUDE[clickOK](../../includes/clickok-md.md)]Chiude la finestra di dialogo e le impostazioni vengono archiviate per la stampa e anteprima del rendering.  
+ È possibile modificare i margini di stampa del report EMF visualizzato prima di avviare la stampa. Per eseguire questa operazione, fare clic sul pulsante **Anteprima** nella finestra di dialogo **Stampa** . Nella parte superiore della pagina di anteprima fare clic sul pulsante **Margini** . Verrà visualizzata la finestra di dialogo Margini. Impostare i margini superiore, inferiore, destro e sinistro nel modo desiderato. [!INCLUDE[clickOK](../../includes/clickok-md.md)] La finestra di dialogo verrà chiusa e le impostazioni verranno archiviate per l'anteprima del rendering e la stampa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stampa di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Stampare un Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [Stampa di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Stampare un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   
-

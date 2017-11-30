@@ -1,5 +1,5 @@
 ---
-title: Modificare l'altezza o larghezza di colonna (Generatore Report e SSRS) | Documenti Microsoft
+title: Modificare l'altezza di riga o la larghezza di colonna (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modificare l'altezza di riga o la larghezza di colonna (Generatore report e SSRS)
   Quando si imposta un'altezza di riga, si specifica l'altezza massima della riga nel report visualizzabile. Per impostazione predefinita, tuttavia, le caselle di testo nella riga sono impostate in modo da ingrandirsi verticalmente per poter contenere i dati immessi in fase di esecuzione. Per questo motivo, può verificarsi che una riga si espanda oltre l'altezza specificata dall'utente. Per impostare un'altezza di riga fissa è necessario modificare le proprietà della casella di testo in modo che non venga espansa automaticamente.  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  In visualizzazione Progettazione fare clic su una cella nella riga di tabella.  
   
-     ![Selezionare una cella in una tabella](../../reporting-services/report-design/media/table-selectcell.png "selezionata una cella in una tabella")  
+     ![Cella selezionata in una tabella](../../reporting-services/report-design/media/table-selectcell.png "Cella selezionata in una tabella")  
   
 2.  Nel riquadro **Proprietà** visualizzato modificare la proprietà **Altezza** , quindi fare clic in un punto qualsiasi all'esterno del riquadro **Proprietà** .  
   
-     ![Riquadro delle proprietà di cella di tabella selezionato](../../reporting-services/report-design/media/cell-propertiespane.png "riquadro delle proprietà di cella di tabella selezionata")  
+     ![Riquadro Proprietà per la cella della tabella selezionata](../../reporting-services/report-design/media/cell-propertiespane.png "Riquadro Proprietà per la cella della tabella selezionata")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>Per impedire che una riga si espanda automaticamente in senso verticale  
   
@@ -71,12 +70,11 @@ ms.lasthandoff: 09/27/2017
 3.  Fare clic per selezionare il bordo della colonna e spostarlo verso sinistra o verso destra per regolare la larghezza della colonna.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Area dati Tablix (Generatore Report e SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [Celle dell'area dati Tablix, righe e colonne (Generatore Report) e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Tabelle (Generatore Report e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrici (Generatore Report e SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [Elenchi (Generatore Report e SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tabelle, matrici ed elenchi (Generatore Report e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Area dati Tablix (Generatore report e SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Tabelle (Generatore report e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrici (Generatore report e SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [Elenchi (Generatore report e SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi (Generatore report e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

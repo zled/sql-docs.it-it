@@ -1,5 +1,5 @@
 ---
-title: Creare, modificare ed eliminare pianificazioni | Documenti Microsoft
+title: Creare, modificare ed eliminare pianificazioni | Microsoft Docs
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>Creare, modificare ed eliminare pianificazioni
   Questo argomento fornisce informazioni sulla creazione, la modifica e l'eliminazione di pianificazioni [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] condivise.  Per gestire le pianificazioni condivise per la modalità nativa, usare la pagina Pianificazioni del portale Web o la cartella Pianificazioni condivise in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per la modalità SharePoint, utilizzare le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -147,8 +146,7 @@ Fare clic su **Annulla**.
 ## <a name="see-also"></a>Vedere anche  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Sospendere e riprendere le pianificazioni condivise](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Memorizzare nella cache un Report &#40; Gestione report &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Aggiunta di uno Snapshot per generare un Report cronologia &#40; Gestione report &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Memorizzare nella cache un report &#40;Gestione report&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
-

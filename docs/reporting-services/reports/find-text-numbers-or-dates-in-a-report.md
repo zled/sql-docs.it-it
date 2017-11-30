@@ -1,5 +1,5 @@
 ---
-title: Individuare testo, numeri o date in un Report | Documenti Microsoft
+title: Individuare testo, numeri o date in un report | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- searching reports
+helpviewer_keywords: searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a486b11b5b64244e5e68086ee9290c634215839
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Individuare testo, numeri o date in un report
   È possibile cercare contenuto in un report digitando la parola o la frase che si desidera trovare (la lunghezza massima di un termine di ricerca è 256 caratteri). La ricerca è una tecnica di navigazione in cui viene trovato un valore corrispondente a un criterio nel report e la selezione viene spostata sulla parte del report che contiene tale valore.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/09/2017
  [Aggiungere la Web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   
-

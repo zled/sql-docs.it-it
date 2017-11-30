@@ -1,5 +1,5 @@
 ---
-title: Inclusione di indicatori e misuratori in un pannello del misuratore (Generatore Report e SSRS) | Documenti Microsoft
+title: Inclusione di indicatori e misuratori in un pannello del misuratore (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4597b87876b52b41810f62423a59fef7b45394b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Inclusione di indicatori e misuratori in un pannello del misuratore (Generatore report e SSRS)
   Il pannello del misuratore è il contenitore di livello superiore in cui sono presenti uno o più misuratori e indicatori. Gli indicatori possono essere incorporati nei misuratori o posizionati accanto a essi nel pannello del misuratore.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Inserire una colonna nella tabella o nella matrice. Per altre informazioni, vedere [Inserire o eliminare una colonna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Nel gruppo **Aree dati** della scheda **Inserisci** fare clic su **Misuratore** e quindi fare clic su una cella nella nuova colonna. Verrà visualizzata la finestra di dialogo **Seleziona tipo di misuratore** .  
+3.  Nel gruppo **Aree dati** della scheda **Inserisci** fare clic su **Misuratore**e quindi fare clic su una cella nella nuova colonna. Verrà visualizzata la finestra di dialogo **Seleziona tipo di misuratore** .  
   
 4.  Fare clic su **Radiale**. Viene selezionato il primo misuratore radiale.  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Inserire una colonna nella tabella o nella matrice. Per altre informazioni, vedere [Inserire o eliminare una colonna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Nel gruppo **Aree dati** della scheda **Inserisci** fare clic su **Misuratore** e quindi fare clic su una cella nella colonna inserita. Verrà visualizzata la finestra di dialogo **Seleziona tipo di misuratore** .  
+3.  Nel gruppo **Aree dati** della scheda **Inserisci** fare clic su **Misuratore**e quindi fare clic su una cella nella colonna inserita. Verrà visualizzata la finestra di dialogo **Seleziona tipo di misuratore** .  
   
 4.  Fare clic su **Radiale**. Viene selezionato il primo misuratore radiale.  
   
@@ -109,4 +108,3 @@ ms.lasthandoff: 08/09/2017
  [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

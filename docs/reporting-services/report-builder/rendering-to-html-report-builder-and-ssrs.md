@@ -1,5 +1,5 @@
 ---
-title: Rendering in formato HTML (Generatore Report e SSRS) | Documenti Microsoft
+title: Rendering in formato HTML (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
   L'estensione per il rendering HTML esegue il rendering di un report impaginato in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  È possibile eseguire il rendering di etichette della mappa documento e passare a esse utilizzando la mappa documento nel controllo visualizzatore. Per le intestazioni omesse dell'area dati, il rendering delle etichette viene eseguito sulla prima cella figlio. Se non è presente alcuna cella figlio, il rendering dell'etichetta viene eseguito sull'elemento figlio che la precede.  
   
 ### <a name="bookmarks"></a>Segnalibri  
- I collegamenti a segnalibro vengono sottoposti a rendering e visualizzati come collegamenti ipertestuali. È possibile eseguire il rendering di destinazioni dei segnalibri e passare a esse facendo clic sui collegamenti a segnalibro. Quando si fa clic su un collegamento a un segnalibro, il report passa alla prima occorrenza dell'etichetta del segnalibro di destinazione. Se possibile, il contenuto della finestra del browser viene fatto scorrere in modo che il collegamento sia visualizzato all'inizio della finestra. Ancoraggio HTML (\<un >) vengono utilizzati tag per contrassegnare destinazioni dei segnalibri.  
+ I collegamenti a segnalibro vengono sottoposti a rendering e visualizzati come collegamenti ipertestuali. È possibile eseguire il rendering di destinazioni dei segnalibri e passare a esse facendo clic sui collegamenti a segnalibro. Quando si fa clic su un collegamento a un segnalibro, il report passa alla prima occorrenza dell'etichetta del segnalibro di destinazione. Se possibile, il contenuto della finestra del browser viene fatto scorrere in modo che il collegamento sia visualizzato all'inizio della finestra. Per contrassegnare le destinazioni dei segnalibri, vengono usati i tag di ancoraggio HTML (\<a>).  
   
 ### <a name="interactive-sorting"></a>Ordinamento interattivo  
  Se per una casella di testo è stato definito l'ordinamento dell'utente, l'estensione per il rendering HTML esegue il rendering delle icone di ordinamento nella casella di testo a destra del relativo contenuto. Se un report contiene una casella di testo in cui è stato definito l'ordinamento dell'utente, viene eseguito il rendering del codice JavaScript che provoca un postback al server quando si fa clic sull'icona di ordinamento.  
   
 ### <a name="hyperlinks-and-drillthrough"></a>Collegamenti ipertestuali e collegamenti drill-through  
- I collegamenti ipertestuali e collegamenti drill-through vengono eseguiti come collegamenti ipertestuali in elementi del report utilizzando il punto di ancoraggio HTML (\<un >) tra l'elemento in cui sono definiti i tag.  
+ Il rendering di collegamenti ipertestuali e collegamenti drill-through restituisce collegamenti ipertestuali in elementi del report racchiudendo l'elemento in cui sono definiti tra tag di ancoraggio HTML (\<a>).  
   
 ### <a name="search"></a>Cerca  
  La caratteristica Cerca consente agli utenti di cercare una stringa di testo all'interno del report.  
@@ -100,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Il rendering elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

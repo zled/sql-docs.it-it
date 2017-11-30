@@ -1,5 +1,5 @@
 ---
-title: "Configurare le proprietà di origine dati per un Report (gestione Report) | Documenti Microsoft"
+title: "Configurare le proprietà delle origini dati per un report (Gestione report) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [Reporting Services], embedded
+helpviewer_keywords: data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ef7246b8413aa3010572290085a3f247e47e0430
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4edfc347b8ad4bb90d807f4f0c9ecc602ca3f2e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurare le proprietà delle origini dati per un report (Gestione report)
   Quando si esegue un report, il server di report recupera informazioni sulla proprietà per determinare come connettersi a un'origine dati. Il tipo di origine dati, la stringa di connessione e le informazioni sulle credenziali sono specificati nelle pagine delle proprietà dell'origine dati del report pubblicato. È possibile impostare le proprietà per modificare le informazioni sulla connessione all'origine dati rispetto ai valori originali specificati al momento della creazione del report.  
@@ -33,9 +32,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  In Gestione report passare alla pagina **Contenuto**. quindi passare al report per il quale si desidera configurare un'origine dei dati specifica del report e aprirlo.  
+2.  In Gestione report passare alla pagina **Contenuto** . quindi passare al report per il quale si desidera configurare un'origine dei dati specifica del report e aprirlo.  
   
-3.  Fare clic sulla scheda **Proprietà** . Verrà visualizzata la pagina delle proprietà **Generale** .  
+3.  Fare clic sulla scheda **Proprietà** . Viene visualizzata la pagina delle proprietà **Generale**.  
   
 4.  Fare clic sulla scheda **Origini dati** . Verrà visualizzata la pagina delle proprietà dell'origine dati del report.  
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. È consigliabile evitare di specificare credenziali nella stringa di connessione.  
   
-     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -64,11 +63,11 @@ ms.lasthandoff: 08/09/2017
  Per altre informazioni sulla configurazione delle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Per altre informazioni sull'account di esecuzione automatica, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina contenuto &#40; Gestione report &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Nuova pagina di origine dati &#40; Gestione report &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [Creare, modificare ed eliminare origini dati condivise &#40; SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Gestire origini dati del Report](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Creare, eliminare o modificare un'origine dati condivisa &#40; Gestione report &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Pagina delle proprietà origini dati &#40; Gestione report &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
+ [Pagina Contenuto &#40;Gestione report&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Pagina Nuova origine dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
+ [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
   
   

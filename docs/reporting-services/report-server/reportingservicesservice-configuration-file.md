@@ -1,5 +1,5 @@
 ---
-title: File di configurazione ReportingServicesService | Documenti Microsoft
+title: File di configurazione ReportingServicesService | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 437760484aa49e7e4a8f806a2fd7bc64ec405f33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService - file di configurazione
  ||  
@@ -38,7 +37,7 @@ Il file ReportingServicesService.exe.config contiene impostazioni di configurazi
  Il file si trova nella cartella \Reporting Services\Report Server\Bin.  
   
 ## <a name="editing-guidelines"></a>Linee guida per la modifica  
- È possibile modificare questo file per rinominare il file di log oppure per aumentare o ridurre i livelli di traccia. Non modificare altre impostazioni. Per le istruzioni vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Per altre informazioni sui log di analisi, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).  
+ È possibile modificare questo file per rinominare il file di log oppure per aumentare o ridurre i livelli di traccia. Non modificare altre impostazioni. Per le istruzioni, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Configurazione di esempio  
  Nell'esempio seguente vengono illustrati i valori predefiniti e le impostazioni contenuti nel file ReportingServicesService.exe.config.  
@@ -96,7 +95,6 @@ Il file ReportingServicesService.exe.config contiene impostazioni di configurazi
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Log di traccia del servizio Server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Gestione di parti di Report | Documenti Microsoft
+title: Gestione di parti di report | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   Le parti del report possono essere inoltre riusate da più utenti e in più report. Gli utenti possono cercare le parti del report nel server e aggiungerle a un report.  Possono inoltre essere informati sugli aggiornamenti apportati alla parte del report nel server e ripubblicare nuove versioni di una parte del report. Queste azioni di creazione di report possono essere interessate e controllate dalle autorizzazioni di sicurezza di Reporting Services.  In questo argomento vengono illustrate le proprietà delle parti del report e viene descritto il comportamento delle parti del report presenti nel server.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  Quando le parti del report vengono pubblicate da un'applicazione di creazione di report come Generatore report in un server di report in modalità integrata SharePoint, viene aggiornato anche il catalogo del server di report e vengono eseguite ricerche nella raccolta per riflettere in maniera accurata la parte del report nuova o aggiornata.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Caricamento diretto di parti del report in una cartella di SharePoint  
- Se una parte del report viene caricata direttamente in una cartella di documenti di SharePoint anziché essere pubblicata da un'applicazione di creazione di report, il catalogo del server di report non viene aggiornato. La parte del report caricata non verrà pertanto trovata mediante le ricerche eseguite nella raccolta di parti del report. Per garantire la sincronizzazione delle cartelle di SharePoint e del catalogo del server di report, è possibile attivare la caratteristica di sincronizzazione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel server SharePoint. Per altre informazioni, vedere [Attivare la funzionalità Sincronizzazione file server di report in Amministrazione centrale SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Se una parte del report viene caricata direttamente in una cartella di documenti di SharePoint anziché essere pubblicata da un'applicazione di creazione di report, il catalogo del server di report non viene aggiornato. La parte del report caricata non verrà pertanto trovata mediante le ricerche eseguite nella raccolta di parti del report. Per garantire la sincronizzazione delle cartelle di SharePoint e del catalogo del server di report, è possibile attivare la caratteristica di sincronizzazione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel server SharePoint. Per altre informazioni, vedere [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  È inoltre possibile sincronizzare i file mediante la chiamata di alcune API di gestione di Reporting Services, ad esempio GetProperties e SetProperties.  
   
@@ -96,9 +95,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Parti di report in Progettazione Report &#40; SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   
-

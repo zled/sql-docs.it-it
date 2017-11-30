@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di un set di dati esterno con Reporting Services | Documenti Microsoft
+title: Using an External Dataset with Reporting Services (Uso di un set di dati esterni con Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilizzo di un set di dati esterno con Reporting Services
-  Il **DataSet** oggetto è fondamentale per il supporto disconnessi e distribuiti gli scenari di dati con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Il **DataSet** oggetto è una rappresentazione residente in memoria dei dati che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati. Questo oggetto può essere utilizzato con più origini dati diverse, con dati XML o per gestire i dati locali dell'applicazione. Il **DataSet** oggetto rappresenta un set completo di dati, incluse le tabelle correlate, vincoli e relazioni tra tabelle. Perché il **set di dati** versatilità dell'oggetto per l'archiviazione e l'esposizione dei dati, i dati possono spesso essere elaborata e trasformata in un **DataSet** dell'oggetto prima che venga eseguita qualsiasi reporting su tali dati.  
+  L'oggetto **DataSet** è fondamentale per il supporto di scenari di dati disconnessi e distribuiti con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L'oggetto **DataSet** è una rappresentazione di dati residente in memoria che offre un modello di programmazione relazionale coerente indipendentemente dall'origine dati. Questo oggetto può essere utilizzato con più origini dati diverse, con dati XML o per gestire i dati locali dell'applicazione. L'oggetto **DataSet** rappresenta un set di dati completo, che include tabelle correlate, vincoli e relazioni tra le tabelle. Grazie alla versatilità dell'oggetto **DataSet** nell'archiviazione e nell'esposizione dei dati, i dati possono spesso essere elaborati e trasformati in un oggetto **DataSet** prima della creazione di qualsiasi report con tali dati.  
   
- Con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensioni per l'elaborazione dati, è possibile integrare qualsiasi personalizzato **DataSet** gli oggetti creati da applicazioni esterne. A tale scopo, si crea un'estensione di elaborazione dati personalizzata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] che funga da ponte tra il **DataSet** oggetto e il server di report. La maggior parte del codice per l'elaborazione di questo **DataSet** nell'oggetto è contenuto il **DataReader** classe creata.  
+ Con le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è possibile integrare qualsiasi oggetto**DataSet** personalizzato creato dalle applicazioni esterne. A tale scopo, è possibile creare un'estensione per l'elaborazione dati personalizzata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] che funga da ponte tra l'oggetto**DataSet** e il server di report. La maggior parte del codice per l'elaborazione di questo oggetto**DataSet** è inclusa nella classe **DataReader** creata.  
   
- Il primo passaggio nell'esposizione del **set di dati** oggetto al server di report consiste nell'implementare un metodo specifico del provider nel **DataReader** classe che è possibile popolare un **DataSet** oggetto. Nell'esempio seguente viene illustrato come caricare dati statici in una **DataSet** oggetto utilizzando un metodo specifico del provider nel **DataReader** classe.  
+ Il primo passaggio nell'esposizione dell'oggetto **DataSet** nel server di report consiste nell'implementare un metodo specifico del provider nella classe **DataReader** che consente di popolare un oggetto **DataSet**. Nell'esempio seguente viene illustrato come caricare dati statici in un oggetto **DataSet** usando un metodo specifico del provider nella classe **DataReader**.  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,12 +166,11 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- Dopo aver creato o recuperare il set di dati, è possibile utilizzare il **DataSet** oggetto nelle implementazioni del **lettura**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, e **FieldCount** i membri del **DataReader** classe.  
+ Dopo aver creato o recuperato il set di dati, è possibile usare l'oggetto **DataSet** nelle implementazioni dei membri **Read**, **GetValue**, **GetName**, **GetOrdinal**,**GetFieldType** e **FieldCount** della classe **DataReader**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementazione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementazione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

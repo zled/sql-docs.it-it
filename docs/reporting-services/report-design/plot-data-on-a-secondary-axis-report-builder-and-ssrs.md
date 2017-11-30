@@ -1,5 +1,5 @@
 ---
-title: Traccia di dati su un asse secondario (Generatore Report e SSRS) | Documenti Microsoft
+title: Tracciare i dati su un asse secondario (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,28 +11,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d4ca3cc183fb405fc9379f29012a92e39b7ad95b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f02788c07d46e045a91599ed6afbcaa7effc6959
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Traccia di dati su un asse secondario (Generatore report e SSRS)
 
 Nel grafico sono inclusi due tipi di asse: principale e secondario. L'asse secondario risulta utile quando si confrontano due set di valori con due intervalli di dati diversi che condividono una categoria comune.  
   
  Si supponga ad esempio che in un grafico vengano calcolati i valori relativi ai ricavi rispetto alle imposte nell'anno 2008. In questo caso, il periodo di tempo 2008 è comune a entrambi i set di valori. Tuttavia, quando le due serie vengono tracciate sullo stesso asse Y, non è possibile effettuare un confronto utile, perché la scala di quest'asse è ottimizzata per i valori maggiori nel set di dati. Indicando i ricavi sull'asse principale e le imposte su quello secondario, è possibile visualizzare ogni serie su un proprio asse Y con una scala di valori specifica. Le serie condividono un asse X comune.  
   
- Nelle situazioni in cui è necessario confrontare più di due serie, è consigliabile un approccio diverso per il confronto e la visualizzazione di più serie in un grafico. Per ulteriori informazioni, vedere [più serie in un grafico](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Nelle situazioni in cui è necessario confrontare più di due serie, è consigliabile un approccio diverso per il confronto e la visualizzazione di più serie in un grafico. Per altre informazioni, vedere [Più serie in un grafico](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Un esempio di questo grafico è disponibile come report di esempio. Per ulteriori informazioni sul download di questo report di esempio e ad altri utenti, vedere [report di Generatore Report e progettazione Report di esempio](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un esempio di questo grafico è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283) (Report di esempio di Generatore report e Progettazione report).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,8 +43,7 @@ Nel grafico sono inclusi due tipi di asse: principale e secondario. L'asse secon
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Formattazione delle etichette degli assi in un grafico](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+[Formattazione delle etichette degli assi di un grafico](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
 [Specificare un intervallo dell'asse](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

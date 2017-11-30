@@ -1,5 +1,5 @@
 ---
-title: Alle raccolte predefinite Globals e Users riferimenti (Generatore Report e SSRS) | Documenti Microsoft
+title: Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: db369d1d9cd1e8767da8dc25a2a2487f138044d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - alle raccolte predefinite Globals e Users riferimenti (Generatore Report)
+# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte predefinite Globals e Users (Generatore report)
   La raccolta di campi predefinita, in cui sono incluse le raccolte **Globals** e **User** , rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta **Globals** fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta **User** fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Utilizzo della raccolta Globals  
- La raccolta **Globals** contiene le variabili globali per il report. Nell'area di progettazione, queste variabili sono precedute dal prefissata un & (e commerciale), ad esempio, `[&ReportName]`. Nella tabella seguente vengono descritti i membri della raccolta **Globals** .  
+ La raccolta **Globals** contiene le variabili globali per il report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&ReportName]`. Nella tabella seguente vengono descritti i membri della raccolta **Globals** .  
   
 |**Membro**|**Tipo**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Utilizzo della raccolta User  
- La raccolta **User** contiene i dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione, queste variabili sono precedute dal prefissata un & (e commerciale), ad esempio, `[&UserID]`.  
+ La raccolta **User** contiene i dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&UserID]`.  
   
  Nella tabella seguente vengono descritti i membri della raccolta **User** .  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Nella finestra di dialogo Espressione &#40; Generatore report &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [Tipi di dati in espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Finestra di dialogo Espressione &#40;Generatore report&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Preparazione all'implementazione di un'estensione per l'elaborazione dati | Documenti Microsoft
+title: Preparazione all'implementazione di un'estensione per l'elaborazione dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,32 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6d516201d8018b1d58b77be8e3cf543745da037a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: cacd1a989748897d369d9e920a5b6e0410d7f063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparazione all'implementazione di un'estensione per l'elaborazione dati
-  Prima di implementare il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensione per l'elaborazione dati, è necessario definire le interfacce da implementare. Si consiglia di fornire implementazioni specifiche dell'estensione dell'intero set di interfacce o si potrebbe semplicemente volere incentrare l'implementazione in un subset, ad esempio il <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfacce in cui i client interagirebbero principalmente con un set di risultati come un **DataReader** dell'oggetto e utilizzare il [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] estensione per l'elaborazione dati che funge da ponte tra il set di risultati e l'origine dati.  
+  Prima di implementare l'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è necessario definire le interfacce da implementare. È possibile fornire implementazioni specifiche dell'estensione dell'intero set di interfacce oppure è possibile incentrare l'implementazione semplicemente su un subset, ad esempio le interfacce <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> in cui i client interagirebbero principalmente con un set di risultati come un oggetto **DataReader** e in cui l'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] verrebbe usata come collegamento tra il set di risultati e l'origine dati.  
   
  È possibile implementare le estensioni per l'elaborazione dati scegliendo tra le due modalità seguenti:  
   
--   Le classi di estensione per l'elaborazione dati possono implementare la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] interfacce del provider di dati e, facoltativamente, le interfacce di estensione per l'elaborazione dati estese fornite da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Le classi dell'estensione per l'elaborazione dati possono implementare le interfacce del provider di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e, facoltativamente, le interfacce dell'estensione per l'elaborazione dati estese offerte da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 -   Le classi dell'estensione per l'elaborazione dati possono implementare le interfacce dell'estensione per l'elaborazione dati fornite da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e, facoltativamente, le interfacce dell'estensione per l'elaborazione dati estese.  
   
- Se l'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non supporterà una proprietà o un metodo specifico, implementare la proprietà o il metodo come elemento senza operazioni. Se un client prevede comportamento specifico, generare un **NotSupportedException** eccezione.  
+ Se l'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non supporterà una proprietà o un metodo specifico, implementare la proprietà o il metodo come elemento senza operazioni. Se un client prevede un comportamento specifico, generare un'eccezione **NotSupportedException**.  
   
 > [!NOTE]  
 >  Un'implementazione senza operazioni di una proprietà o di un metodo si applica solo alle proprietà e ai metodi delle interfacce che si sceglie di implementare. Le interfacce facoltative che si sceglie di non implementare devono essere omesse dall'assembly di estensioni per l'elaborazione dati. Per ulteriori informazioni sul fatto che un'interfaccia sia obbligatoria o facoltativa, vedere la tabella più avanti in questa sezione.  
@@ -90,8 +88,7 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementazione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementazione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

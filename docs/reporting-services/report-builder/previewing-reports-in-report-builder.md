@@ -1,5 +1,5 @@
 ---
-title: Anteprima di report in Generatore Report | Documenti Microsoft
+title: Anteprima di report in Generatore report | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f28003b3e3460e2450c17f68ab944ae2aeab55e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anteprima di report in Generatore report
   Durante la creazione di un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è utile visualizzarne spesso l'anteprima per verificare che il contenuto visualizzato corrisponda a quanto desiderato. Per visualizzare l'anteprima del report, fare clic su **Esegui**. Il report viene visualizzato nella modalità di anteprima.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
  Un altro vantaggio delle sessioni di modifica è la possibilità di modificare report che utilizzano origini dati incorporate o elementi di riferimento, ad esempio immagini o sottoreport archiviati nel server di report.  
   
 > [!NOTE]  
-> Esistono alcune differenze tra la visualizzazione in anteprima in Generatore Report e la visualizzazione in un browser. Ad esempio, un controllo di calendario, che viene aggiunto a un report quando si specifica un parametro di tipo Data/ora, è differente in Generatore Report e in un browser. 
+> Esistono alcune differenze tra l'anteprima in Generatore Report e la visualizzazione in un browser. Ad esempio, un controllo di calendario, che viene aggiunto a un report quando si specifica un parametro di tipo Data/ora, è diverso in Generatore Report e in un browser. 
   
 ## <a name="improving-preview-performance"></a>Miglioramento delle prestazioni di anteprima  
  La modalità di creazione e aggiornamento dei report influisce sulla velocità di visualizzazione dell'anteprima dei report. Alla prima visualizzazione dell'anteprima di un report che si basa su un riferimento al server, viene creata una sessione di modifica e i dati utilizzati durante l'esecuzione del report vengono aggiunti a una cache di dati archiviata sul server di report. Quando si apportano modifiche al report che non influisce sui dati, la copia memorizzata nella cache dei dati viene utilizzata dal report. In questo modo non saranno mostrate le modifiche apportate ai dati ogni volta che si visualizza in anteprima il report. Se si desiderano nuovi dati, fare clic sul pulsante **Aggiorna** sulla barra multifunzione.  
@@ -82,11 +82,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Formattazione di elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Salvataggio di report &#40; Generatore report &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Caricare file in una cartella | Documenti Microsoft
+title: Caricare file in una cartella | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6381fa38e39b7b8730a90eebcdd557f2e30da8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upload-files-to-a-folder"></a>Caricare file in una cartella
   È possibile caricare file dal file system e archiviarli come elementi gestiti in un database del server di report. La funzionalità di un file caricato dipende dal tipo di file.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
  ![Icona di report](../../reporting-services/report-server/media/hlp-16doc.gif "Icona di report")  
 Icona di report  
   
- ![Icona di modello](../../reporting-services/report-server/media/model-icon.gif "sull'icona del modello")  
+ ![Icona di modello](../../reporting-services/report-server/media/model-icon.gif "Icona di modello")  
 Icona di modello di report  
   
  ![Icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.gif "Icona di risorsa generica")  
@@ -65,10 +64,9 @@ Icona di risorsa generica
 |Visualizzazione del contenuto di una cartella|Visualizzazione di risorse, Visualizzazione di report|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)   
- [Caricare un File o un Report &#40; Gestione report &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Caricare un file o un report &#40;Gestione report&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   
-

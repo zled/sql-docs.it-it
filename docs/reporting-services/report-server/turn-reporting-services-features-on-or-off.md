@@ -1,5 +1,5 @@
 ---
-title: "Attiva funzionalità di Reporting Services o disattivare | Documenti Microsoft"
+title: "Abilitare o disabilitare le funzionalità di Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1df708ed8e384371ea97b683b97733e0bcacb6e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Abilitare o disabilitare le funzionalità di Reporting Services
   È possibile disabilitare le funzionalità del server di report non utilizzate come parte di una strategia di blocco per ridurre la superficie di attacco di un server di report di produzione. Nella maggior parte dei casi, è consigliabile eseguire le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente in modo da poter utilizzare tutte le funzionalità disponibili in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Tuttavia, a seconda del modello di distribuzione, è possibile disabilitare le funzionalità che non sono necessarie. Ad esempio, è possibile abilitare solo l'elaborazione in background se tutte le operazioni di elaborazione dei report vengono configurate come operazioni pianificate. Analogamente, se si desidera che la generazione di report venga eseguita solo in modo interattivo e su richiesta, è possibile eseguire solo il servizio Web ReportServer.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Per abilitare o disabilitare il servizio Web ReportServer mediante la modifica della configurazione  
   
-1.  Aprire il file `RsReportServer.config` in un editor di testo. Per altre informazioni vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Aprire il file `RsReportServer.config` in un editor di testo. Per altre informazioni, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Per abilitare il servizio Web ReportServer, impostare **IsWebServiceEnabled** su **true**:  
   
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Per abilitare o disabilitare il recapito e gli eventi pianificati mediante la modifica della configurazione  
   
-1.  Aprire il file RsReportServer.config in un editor di testo. Per altre informazioni vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Aprire il file RsReportServer.config in un editor di testo. Per altre informazioni, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Per abilitare l'elaborazione e il recapito pianificati dei report, impostare **IsSchedulingService**, **IsNotificationService**e **IsEventService** su **true**:  
   
@@ -123,9 +122,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Non è possibile disabilitare completamente l'elaborazione in background, in quanto fornisce funzionalità di manutenzione dei database necessarie per le operazioni del server.  
   
-##  <a name="WebPortal"></a>Portale Web
+##  <a name="WebPortal"></a> Portale Web
   
-Nelle versioni precedenti, è possibile disabilitare Gestione Report impostando **IsReportManagerEnabled** su false. **IsReportManagerEnabled** è stato deprecato a partire da SQL Server 2016 Reporting Services aggiornamento cumulativo 2. Il portale web verrà sempre abilitato.
+Nelle versioni precedenti era possibile disabilitare Gestione Report impostando **IsReportManagerEnabled** su false. **IsReportManagerEnabled** è stata deprecata a partire dall'aggiornamento cumulativo 2 per SQL Server 2016 Reporting Services. Il portale Web verrà sempre abilitato.
   
 ##  <a name="ReportBuilder"></a> Generatore report  
   
@@ -161,7 +160,6 @@ Nelle versioni precedenti, è possibile disabilitare Gestione Report impostando 
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services (modalità nativa SSRS)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
- Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

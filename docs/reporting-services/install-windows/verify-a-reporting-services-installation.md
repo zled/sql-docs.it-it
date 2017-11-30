@@ -1,12 +1,11 @@
 ---
-title: Verificare l'installazione di Reporting Services | Documenti Microsoft
+title: Verificare un'installazione di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 06/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156fe09f98f0afd9a091821e6f810fdcca6bd31a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificare un'installazione di Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati in modalità nativa o in modalità SharePoint. La procedura da seguire per verificare l'installazione dipende dalla modalità del server di report.  
@@ -77,9 +75,9 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="reporting-services-samples"></a>Esempi di Reporting Services  
   
-1.  Completare una delle esercitazioni di Reporting Services. Per ulteriori informazioni, vedere [esercitazioni su Reporting Services &#40; SSRS &#41; ](../../reporting-services/reporting-services-tutorials-ssrs.md).  
+1.  Completare una delle esercitazioni di Reporting Services. Per altre informazioni, vedere [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
-2.  Scaricare il database di esempio Adventure Works e i report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da CodePlex. Per ulteriori informazioni, vedere la pagina relativa agli [esempi di report di AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
+2.  Scaricare il database di esempio Adventure Works e i report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da GitHub. Per ulteriori informazioni, vedere [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 ##  <a name="bkmk_nativemode"></a> Verificare un'installazione in modalità nativa  
  Quando si installa un server di report in modalità nativa utilizzando la configurazione predefinita, verranno eseguite l'installazione e la distribuzione del server. Per verificare se la distribuzione del server di report viene completata, è sufficiente eseguire alcuni semplici test. A tale scopo occorre disporre dei privilegi di amministratore locale. Per consentire l'esecuzione dei test da parte di altri utenti, è necessario configurare l'accesso di tali utenti al server di report.  
@@ -90,29 +88,28 @@ ms.lasthandoff: 08/09/2017
   
 2.  Aprire l'applicazione console Servizi e verificare che il servizio del server di report sia in esecuzione. Per visualizzare lo stato del servizio del server di report, fare clic sul menu **Start**, scegliere **Pannello di controllo**, fare doppio clic su **Strumenti di amministrazione**, quindi su **Servizi**. Attendere che venga visualizzato l'elenco dei servizi e scorrerlo fino a **Report Server (MSSQLSERVER)**. Verificare che lo stato sia **Avviato**.  
   
-3.  Aprire un browser e immettere l'URL del server di report nella barra degli indirizzi. L'indirizzo è composto dal nome del server e dal nome della directory virtuale specificati per il server di report durante l'installazione. Per impostazione predefinita, la directory virtuale del server di report è denominata **ReportServer**. È possibile utilizzare l'URL seguente per verificare l'installazione di server di report: http://*\<nome computer >*/ReportServer*\<_nome istanza >*. L'URL sarà diverso se il server di report è stato installato come istanza denominata. Per ulteriori informazioni sul formato dell'URL, vedere [configurare gli URL Server di Report &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Se sei un amministratore locale in Windows Vista o Windows Server 2008, vedere [configurare un Server di Report in modalità nativa per amministratori locali &#40; SSRS &#41; ](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Aprire un browser e immettere l'URL del server di report nella barra degli indirizzi. L'indirizzo è composto dal nome del server e dal nome della directory virtuale specificati per il server di report durante l'installazione. Per impostazione predefinita, la directory virtuale del server di report è denominata **ReportServer**. Per verificare l'installazione del server di report, è possibile usare l'URL http://*\<nome computer>*/ReportServer*\<_nome istanza>*. L'URL sarà diverso se il server di report è stato installato come istanza denominata. Per altre informazioni sul formato dell'URL, vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Se si è un amministratore locale in Windows Vista o Windows Server 2008, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  Eseguire alcuni report per testare il funzionamento del server di report. Per questo passaggio è possibile creare un report di esempio da un'esercitazione. Per ulteriori informazioni, vedere [creare un Report tabella semplice &#40; Esercitazione su SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  Eseguire alcuni report per testare il funzionamento del server di report. Per questo passaggio è possibile creare un report di esempio da un'esercitazione. Per altre informazioni, vedere [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>Per verificare che il [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] sia installato e in esecuzione  
   
 1.  Aprire un browser e immettere l'URL del portale Web nella barra degli indirizzi. L'indirizzo è composto dal nome del server e dal nome della directory virtuale specificati per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] durante l'installazione o nella pagina URL del portale Web dello strumento di configurazione di Reporting Services. Per impostazione predefinita, la directory virtuale di [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] è **Reports**. Per verificare l'installazione di [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , è possibile usare l'URL seguente:  
   
-     http://*\<nome computer >*/Reports*\<_nome istanza >*.  
+     http://*\<nome computer>*/Reports*\<_nome istanza>*.  
   
 2.  Usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] per creare una nuova cartella o caricare un file per testare se le definizioni vengono passate al database del server di report. L'esito positivo di queste operazioni indica il corretto funzionamento della connessione.  
   
-     Per ulteriori informazioni, vedere [portale Web &#40; Modalità nativa SSRS &#41; ](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Per altre informazioni, vedere [Portale Web &#40;SSRS in modalità nativa&#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Per verificare che Progettazione report sia installato e in esecuzione  
   
-1.  Aprire [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e creare un nuovo progetto basato su un tipo di progetto server di report. Per ulteriori informazioni sull'utilizzo di creazione guidata progetto Server di Report, vedere [Reporting Services in SQL Server Data Tools &#40; SSDT &#41; ](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) nella documentazione Online di SQL Server.  
+1.  Aprire [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e creare un nuovo progetto basato su un tipo di progetto server di report. Per altre informazioni sull'uso della Creazione guidata progetto server di report, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) nella documentazione online di SQL Server.  
   
 2.  Se si sono installati esempi di report, aprire i file di progetto dei report di esempio e pubblicare i report in un server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi di installazione di Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Causa e risoluzione degli errori di servizi di Reporting](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ [Causa e risoluzione degli errori di Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   
-

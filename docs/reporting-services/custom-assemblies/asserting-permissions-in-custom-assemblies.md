@@ -1,5 +1,5 @@
 ---
-title: L'asserzione delle autorizzazioni in assembly personalizzati | Documenti Microsoft
+title: Asserzione di autorizzazioni negli assembly personalizzati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - secure calls [Reporting Services]
 - custom assemblies [Reporting Services], permissions
@@ -21,30 +20,30 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: dc3e6e84c3f0a70a3c794b5cfd803e228e5dcce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: e98c186e950b5f4186aea4057fb63c0f27eaf1b3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Asserzione di autorizzazioni negli assembly personalizzati
-  Per impostazione predefinita, il codice assembly personalizzato viene eseguito con la limitazione **esecuzione** set di autorizzazioni. In alcuni casi, potrebbe essere necessario implementare un assembly personalizzato per l'esecuzione di chiamate protette alle risorse protette all'interno del sistema di sicurezza (ad esempio un file o il Registro di sistema). A tale scopo, è necessario effettuare le operazioni seguenti:  
+  Per impostazione predefinita, il codice degli assembly personalizzati viene eseguito con il set di autorizzazioni **Execution** limitato. In alcuni casi, potrebbe essere necessario implementare un assembly personalizzato per l'esecuzione di chiamate protette alle risorse protette all'interno del sistema di sicurezza (ad esempio un file o il Registro di sistema). A tale scopo, è necessario effettuare le operazioni seguenti:  
   
-1.  Identificare le autorizzazioni esatte necessarie per il codice per effettuare la chiamata protetta. Se questo metodo fa parte di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] libreria, queste informazioni devono essere inclusi nella documentazione del metodo.  
+1.  Identificare le autorizzazioni esatte necessarie per il codice per effettuare la chiamata protetta. Se questo metodo è parte di una libreria [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], queste informazioni devono essere incluse nella documentazione del metodo.  
   
-2.  Modificare i file di configurazione dei criteri del server di report per concedere le autorizzazioni necessarie all'assembly personalizzato. Per ulteriori informazioni sui file di configurazione dei criteri di sicurezza, vedere [tramite Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
+2.  Modificare i file di configurazione dei criteri del server di report per concedere le autorizzazioni necessarie all'assembly personalizzato. Per altre informazioni sui file di configurazione dei criteri di sicurezza, vedere [Uso di file di criteri di sicurezza di Reporting Services](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
   
-3.  Eseguire l'asserzione delle autorizzazioni necessarie come parte del metodo nel quale viene effettuata la chiamata protetta. Questa operazione è necessaria perché il codice assembly personalizzato che viene chiamato dal server di report fa parte di report assembly host delle espressioni, che viene eseguito con **esecuzione** dell'autorizzazione per impostazione predefinita. Il **esecuzione** set di autorizzazioni consente al codice per l'esecuzione, ma non è consigliabile usare risorse protette.  
+3.  Eseguire l'asserzione delle autorizzazioni necessarie come parte del metodo nel quale viene effettuata la chiamata protetta. Questa operazione è necessaria in quanto il codice dell'assembly personalizzato chiamato dal server di report fa parte dell'assembly host delle espressioni di report che, per impostazione predefinita, viene eseguito con l'autorizzazione di **esecuzione**. Il set di autorizzazioni **Execution** consente al codice di essere eseguito, ma non di usare risorse protette.  
   
-4.  Contrassegnare l'assembly personalizzato con **AllowPartiallyTrustedCallersAttribute** se è firmato con un nome sicuro. Questa operazione è necessaria perché gli assembly personalizzati vengono chiamati da un'espressione di report che fa parte di report assembly host delle espressioni, che, per impostazione predefinita, non viene concessa **FullTrust**; pertanto, è un chiamante "parzialmente attendibile". Per ulteriori informazioni, vedere [uso degli assembly personalizzati](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md).  
+4.  Contrassegnare l'assembly personalizzato con **AllowPartiallyTrustedCallersAttribute** se è firmato con un nome sicuro. Questa operazione è necessaria in quanto gli assembly personalizzati vengono chiamati da un'espressione di report che fa parte dell'assembly host delle espressioni di report a cui, per impostazione predefinita, non viene concesso il set di autorizzazioni **FullTrust**. Si tratta quindi di un chiamante "parzialmente attendibile". Per altre informazioni, vedere [Uso di assembly personalizzati con nome sicuro](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md).  
   
 ## <a name="implementing-a-secure-call"></a>Implementazione di una chiamata protetta  
- È possibile modificare i file di configurazione dei criteri per concedere autorizzazioni specifiche all'assembly. Se, ad esempio, si scrive un assembly personalizzato per gestire la conversione delle valute, potrebbe essere necessario leggere i tassi di cambio della valuta correnti da un file. Per recuperare le informazioni sulla frequenza, è necessario aggiungere un'ulteriore autorizzazioni di sicurezza, **FileIOPermission**, al set di autorizzazioni per l'assembly. Nel file di configurazione dei criteri è possibile inserire le seguenti voci aggiuntive:  
+ È possibile modificare i file di configurazione dei criteri per concedere autorizzazioni specifiche all'assembly. Se, ad esempio, si scrive un assembly personalizzato per gestire la conversione delle valute, potrebbe essere necessario leggere i tassi di cambio della valuta correnti da un file. Per recuperare le informazioni sui tassi, aggiungere un'altra autorizzazione di sicurezza **FileIOPermission** al set di autorizzazioni per l'assembly. Nel file di configurazione dei criteri è possibile inserire le seguenti voci aggiuntive:  
   
 ```  
 <PermissionSet class="NamedPermissionSet"  

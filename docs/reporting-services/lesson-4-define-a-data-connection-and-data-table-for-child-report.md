@@ -1,28 +1,25 @@
 ---
-title: 'Lezione 4: Definire una connessione dati e tabella di dati per il Report figlio | Documenti Microsoft'
+title: 'Lesson 4: Define a Data Connection and Data Table for Child Report (Lezione 4: Definire una connessione dati e una tabella dati per il report figlio) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c717fecbc14933bdfaac30e64faa2b8a9ff2940
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio
 Dopo aver progettato il report padre, il passaggio successivo consiste nel creare una connessione dati e una tabella di dati per il report figlio. In questa esercitazione la connessione dati è al database AdventureWorks2014.  
@@ -63,7 +60,7 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    È anche possibile creare la query facendo clic su **Generatore di query**e, successivamente, verificare la query facendo clic su **Esegui query** . Se non vengono restituiti i dati previsti dalla query, è possibile che si stia utilizzando una versione precedente di AdventureWorks. Per altre informazioni su come ottenere il database di esempio **AdventureWorks2014** , vedere la [pagina degli esempi di prodotti database Microsoft SQL Server](http://msftdbprodsamples.codeplex.com/).  
+    È anche possibile creare la query facendo clic su **Generatore di query**e, successivamente, verificare la query facendo clic su **Esegui query** . Se non vengono restituiti i dati previsti dalla query, è possibile che si stia utilizzando una versione precedente di AdventureWorks. Per altre informazioni su come ottenere il database di esempio **AdventureWorks2014**, vedere [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 10. Nella pagina **Scegliere i metodi per generare** deselezionare **Crea metodi per inviare aggiornamenti direttamente al database (GenerateDBDirectMethods)**, quindi fare clic su **Fine**.  
   
@@ -79,5 +76,4 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
 ## <a name="next-task"></a>Attività successiva  
 È stata creata correttamente una connessione dati e una tabella di dati per il report figlio. Successivamente, verrà progettato il report figlio utilizzando la Creazione guidata report. Vedere [Lezione 5: Progettare il report figlio tramite la Creazione guidata report](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
-
 

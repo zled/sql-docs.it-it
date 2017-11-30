@@ -1,5 +1,5 @@
 ---
-title: Aggiungere o eliminare un indicatore (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere o eliminare un indicatore (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a5e6007bafae601a4d0c9fad48a6c62af16d261f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Aggiungere o eliminare un indicatore (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Per altre informazioni in merito, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Inserire una colonna nella tabella o nella matrice. Per altre informazioni, vedere [Inserire o eliminare una colonna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Facoltativamente, nella scheda **Inserisci** fare clic su **Rettangolo** e quindi fare clic su una cella nella nuova colonna.  
+3.  Facoltativamente, nella scheda **Inserisci** fare clic su **Rettangolo**e quindi fare clic su una cella nella nuova colonna.  
   
 4.  Nella scheda **Inserisci** fare clic su **Indicatore**e quindi fare clic su una cella nella nuova colonna.  
   
@@ -80,4 +79,3 @@ ms.lasthandoff: 08/09/2017
  [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Controllo della visualizzazione dell'area dati Tablix in una pagina del Report | Documenti Microsoft
+title: Controllo della visualizzazione dell'area dati Tablix in una pagina del report | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report
 Informazioni sulle proprietà che è possibile impostare in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per le aree dati tabella, matrice o elenco, per modificare l'aspetto del report durante la visualizzazione.  
@@ -31,9 +30,9 @@ Le aree dati tabella, matrice ed elenco sono tutte esempi di aree dati *Tablix* 
   
 -   **Formattazione dei dati.** Per formattare i dati in una tabella, una matrice o un elenco, impostare le proprietà relative al formato della casella di testo nella cella. È possibile impostare contemporaneamente proprietà per più celle. Per formattare i dati in un grafico, impostare le proprietà di formattazione sulla serie. Per altre informazioni, vedere [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md) e [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md).  
   
--   **Scrittura di espressioni**. Per altre informazioni, vedere [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) ed [Esempi di espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
+-   **Scrittura di espressioni**. Per altre informazioni, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) ed [Esempi di espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
--   **Controllo dell'ordinamento**. Per controllare l'ordinamento, definire espressioni di ordinamento nell'area dati. Per controllare l'ordinamento di righe e colonne associate a un gruppo, definire espressioni di ordinamento nel gruppo includendo i gruppi di dettagli. È possibile aggiungere anche pulsanti di ordinamento interattivi per consentire all'utente di ordinare un'area dati Tablix o i rispettivi gruppi. Per altre informazioni, vedere [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Controllo dell'ordinamento**. Per controllare l'ordinamento, definire espressioni di ordinamento nell'area dati. Per controllare l'ordinamento di righe e colonne associate a un gruppo, definire espressioni di ordinamento nel gruppo includendo i gruppi di dettagli. È possibile aggiungere anche pulsanti di ordinamento interattivi per consentire all'utente di ordinare un'area dati Tablix o i rispettivi gruppi. Per altre informazioni, vedere [Ordinare i dati in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Visualizzazione di un messaggio quando non sono presenti dati**. Quando per un set di dati del report non esistono dati in fase di esecuzione, è possibile scrivere un messaggio personalizzato da visualizzare in sostituzione dell'area dati. Per altre informazioni, vedere [Impostazione di una proprietà NoDataMessage per un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
@@ -51,7 +50,7 @@ Le aree dati tabella, matrice ed elenco sono tutte esempi di aree dati *Tablix* 
 ## <a name="controlling-how-a-tablix-data-region-renders-on-a-page"></a>Controllo della visualizzazione di un'area dati Tablix in una pagina  
  Nell'elenco seguente vengono descritte le modalità che è possibile usare per controllare come un'area dati Tablix viene visualizzata in un report:  
   
--   **Controllo della paginazione**. Per controllare la quantità di dati visualizzata in ogni pagina del report, è possibile impostare interruzioni di pagina nelle aree dati. È inoltre possibile impostare interruzioni di pagina nei gruppi. Le interruzioni di pagina possono influire sulle prestazioni del rendering su richiesta riducendo la quantità di dati da elaborare in ogni pagina. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md) e [Aggiunta di un'interruzione di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+-   **Controllo della paginazione**. Per controllare la quantità di dati visualizzata in ogni pagina del report, è possibile impostare interruzioni di pagina nelle aree dati. È inoltre possibile impostare interruzioni di pagina nei gruppi. Le interruzioni di pagina possono influire sulle prestazioni del rendering su richiesta riducendo la quantità di dati da elaborare in ogni pagina. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md) e [Aggiungere un'interruzione di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
 -   **Visualizzazione di dati su entrambi i lati delle intestazioni di riga**. Non è obbligatorio visualizzare le intestazioni di riga di fianco a un'area dati Tablix. È possibile spostare le intestazioni di riga tra le colonne e visualizzare le colonne di dati prima delle intestazioni di riga. A tale scopo, modificare la proprietà GroupsBeforeRowHeaders per la matrice. È possibile accedere a questa proprietà nella finestra Proprietà. Il valore per questa proprietà è un numero intero. Un valore pari a 2, ad esempio, consentirà di visualizzare due istanze di gruppo dei dati di colonna dell'area dati prima di visualizzare la colonna contenente le intestazioni di riga.  
   
@@ -72,18 +71,17 @@ Le aree dati tabella, matrice ed elenco sono tutte esempi di aree dati *Tablix* 
   
 -   **Visualizzazione delle intestazioni di riga e di colonna durante lo scorrimento**. È possibile controllare se visualizzare le intestazioni delle righe e delle colonne quando si scorre un report usando un browser. Per altre informazioni, vedere [Visualizzazione delle intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
- Per altre informazioni sull'impatto che l'esportazione di un report in formati diversi ha sulla modalità di visualizzazione di un'area dati Tablix in una pagina, vedere [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'impatto dell'esportazione di un report in formati diversi sulla modalità di visualizzazione di un'area dati Tablix in una pagina, vedere [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Collegamento più aree di dati allo stesso set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Le aree dati nidificate &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Il controllo di interruzioni di pagina, intestazioni, colonne e righe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Area dati Tablix &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tabelle &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Controllo di interruzioni di pagina, intestazioni, colonne e righe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Creare una matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Creazione di fatture e form con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Creare fatture e moduli con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

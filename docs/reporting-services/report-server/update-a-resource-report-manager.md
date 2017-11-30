@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento di una risorsa (gestione Report) | Documenti Microsoft
+title: Aggiornare una risorsa (Gestione report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 09c43f1eb33ae86935be561c2ef956307092a9e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-a-resource-report-manager"></a>Aggiornare una risorsa (Gestione report)
   L'aggiornamento di una risorsa viene eseguito mediante la sostituzione con una versione più recente. Le risorse sono elementi archiviati in un server di report che includono contenuto da un file caricato dall'utente. È possibile sostituire una risorsa esistente mediante l'importazione di contenuto di file diverso o nuovo nella risorsa esistente. Con l'aggiornamento di una risorsa è possibile aggiornare contenuto mantenendo le proprietà e le impostazioni di sicurezza esistenti nella risorsa.  
@@ -50,10 +49,9 @@ ms.lasthandoff: 08/09/2017
  Se la risorsa in corso di aggiornamento contiene un'immagine utilizzata nel report, per visualizzare l'immagine aggiornata sarà necessario aggiornare il report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina contenuto &#40; Gestione report &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Caricamento File pagina &#40; Gestione report &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Pagina Contenuto &#40;Gestione report&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Pagina Carica file &#40;Gestione report&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Caricare file in una cartella](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Guida F1 di gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Guida sensibile al contesto di Gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   
-

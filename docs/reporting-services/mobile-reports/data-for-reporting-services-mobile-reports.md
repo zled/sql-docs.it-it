@@ -1,34 +1,31 @@
 ---
-title: Dati per report Reporting Services per dispositivi mobili | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Dati per report di Reporting Services per dispositivi mobili | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 68ae16ae7746d414109530a18584277931bea9c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Dati per i report per dispositivi mobili di Reporting Services
 Il modello di dati [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] è semplice. I dati vengono importati in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] come raccolta di set di dati. Non sono necessarie relazioni formali tra i set di dati. È possibile eseguire ricerche da un set di dati a un altro fino a quando i valori chiave corrispondono. Le aggregazioni data/ora vengono gestite dal runtime del report per dispositivi mobili e corrisponderanno tra diversi set di dati, anche se la granularità dei dati data/ora differisce tra i set di dati.   
   
 È possibile importare dati da due tipi di origini:   
   
-* **File di Excel locali**: selezionare un documento di Excel e selezionare uno o più fogli di lavoro da importare. Dopo l'importazione, i dati vengono archiviati all'interno della definizione del report per dispositivi mobili. Per aggiornare i dati dal file di Excel originale, usare il comando **Aggiorna dati** nell'angolo superiore destro della scheda [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Altre informazioni sui [preparazione dei dati di Excel per i report per dispositivi mobili SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
+* **File di Excel locali**: selezionare un documento di Excel e selezionare uno o più fogli di lavoro da importare. Dopo l'importazione, i dati vengono archiviati all'interno della definizione del report per dispositivi mobili. Per aggiornare i dati dal file di Excel originale, usare il comando **Aggiorna dati** nell'angolo superiore destro della scheda [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Per altre informazioni, vedere [Preparare i dati di Excel per i report per dispositivi mobili di Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
 * **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] condivisi**: esplorare l'elenco di set di dati pubblicati nel server e selezionare quelli da aggiungere al report per dispositivi mobili. I report per dispositivi mobili basati sui dati del server restano sempre connessi ai set di dati del server originale e riflettono lo stato più recente dei dati nel server. Vedere un [elenco delle origini dati supportate](https://msdn.microsoft.com/library/ms159219.aspx).   
   
@@ -49,5 +46,4 @@ Il runtime del report per dispositivi mobili fornisce valori aggregati per il mi
 - [Retain date formatting for Analysis Services data in mobile reports (Mantenere la formattazione della data per i dati di Analysis Services nei report per dispositivi mobili)](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 
   
   
-
 

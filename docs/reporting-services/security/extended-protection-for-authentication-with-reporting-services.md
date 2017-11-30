@@ -1,5 +1,5 @@
 ---
-title: Protezione estesa per l'autenticazione con Reporting Services | Documenti Microsoft
+title: Protezione estesa per l'autenticazione con Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,35 +11,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
 
   La protezione estesa consiste in un set di miglioramenti apportati alle versioni recenti del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protezione estesa migliora la protezione di credenziali e autenticazione da parte delle applicazioni. La funzionalità non fornisce direttamente la protezione contro attacchi specifici quale l'inoltro delle credenziali, ma rende disponibile un'infrastruttura per le applicazioni, ad esempio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , per l'imposizione della protezione estesa per l'autenticazione.  
   
  I principali miglioramenti introdotti riguardanti l'autenticazione che fanno parte della protezione estesa sono l'associazione di canale e l'associazione al servizio. Nell'associazione di canale è utilizzato un token CBT (Channel Binding Token) per verificare che il canale stabilito tra due endpoint non sia compromesso. Nell'associazione al servizio sono utilizzati nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. Per informazioni complementari sulla protezione estesa, vedere [Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
-SQL Server Reporting Services (SSRS) supporta e applica la protezione estesa che è stato attivato nel sistema operativo e configurata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta le richieste che specificano l'autenticazione Negotiate o NTLM ed è pertanto in grado di usufruire del supporto della protezione estesa offerto dal sistema operativo e dalle funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+SQL Server Reporting Services (SSRS) supporta e applica la protezione estesa abilitata nel sistema operativo e configurata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta le richieste che specificano l'autenticazione Negotiate o NTLM ed è pertanto in grado di usufruire del supporto della protezione estesa offerto dal sistema operativo e dalle funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Per impostazione predefinita, Windows non abilita la protezione estesa. Per informazioni su come abilitare la protezione estesa in Windows, vedere [Protezione estesa per l'autenticazione](http://go.microsoft.com/fwlink/?LinkID=178431). Per garantire che l'autenticazione abbia esito positivo, è necessario che il sistema operativo e lo stack di autenticazione del client supportino entrambi la protezione estesa. Per i sistemi operativi meno recenti potrebbe essere necessario installare più aggiornamenti per ottenere un computer in grado di utilizzare appieno la protezione estesa. Per informazioni sugli ultimi sviluppi della protezione estesa, vedere la pagina relativa alle [informazioni aggiornate sulla protezione estesa](http://go.microsoft.com/fwlink/?LinkId=183362).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Cenni preliminari sulla protezione estesa di Reporting Services
 
-SSRS supporta e applica la protezione estesa che è stata abilitata nel sistema operativo. Se il sistema operativo non supporta la protezione estesa o la funzionalità non è stata abilitata nel sistema operativo, l'autenticazione eseguita dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La protezione estesa richiede inoltre un certificato SSL. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+SSRS supporta e impone la protezione estesa abilitata nel sistema operativo. Se il sistema operativo non supporta la protezione estesa o la funzionalità non è stata abilitata nel sistema operativo, l'autenticazione eseguita dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La protezione estesa richiede inoltre un certificato SSL. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non abilita la protezione estesa. La funzionalità può essere attivata modificando il file di configurazione **rsreportserver.config** o usando le API di WMI che consentono di aggiornare il file di configurazione. SSRS non fornisce un'interfaccia utente per visualizzare o modificare le impostazioni di protezione di estesa. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
+>  Per impostazione predefinita [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non abilita la protezione estesa. La funzionalità può essere attivata modificando il file di configurazione **rsreportserver.config** o usando le API di WMI che consentono di aggiornare il file di configurazione. SSRS non offre un'interfaccia utente per la modifica o la visualizzazione delle impostazioni relative alla protezione estesa. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
   
  I problemi comuni che si verificano a causa della modifica delle impostazioni relative alla protezione estesa o alla configurazione non corretta delle impostazioni non vengono esposti con messaggi o finestre di dialogo di errore. I problemi correlati alla configurazione e alla compatibilità della protezione estesa causano problemi di autenticazione ed errori nei log di traccia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -53,7 +51,7 @@ SSRS supporta e applica la protezione estesa che è stata abilitata nel sistema 
   
 ### <a name="upgrade"></a>Aggiornamento  
   
--   L'aggiornamento di un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server a SQL Server 2016 aggiunge le impostazioni di configurazione con i valori predefiniti per il **RSReportServer. config** file. Se le impostazioni sono già presenti, l'installazione di SQL Server 2016 verrà mantenute nel **RSReportServer. config** file.  
+-   L'aggiornamento di un server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SQL Server 2016 determina l'aggiunta delle impostazioni di configurazione con i valori predefiniti al file **rsreportserver.config**. Le impostazioni già presenti verranno mantenute nel file **rsreportserver.config** durante l'installazione di SQL Server 2016.  
   
 -   Quando le impostazioni di configurazione vengono aggiunte al file di configurazione **rsreportserver.config** , la funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disattivata per impostazione predefinita ed è necessario abilitarla come descritto in questo argomento. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
   
@@ -179,4 +177,4 @@ SSRS supporta e applica la protezione estesa che è stata abilitata nel sistema 
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Metodo SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

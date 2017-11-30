@@ -1,5 +1,5 @@
 ---
-title: Informazioni sui gruppi (Generatore Report e SSRS) | Documenti Microsoft
+title: Informazioni sui gruppi (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51a3e06f0a4c3ab0dfd26af525a11b52c2d84afb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Informazioni sui gruppi (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] un gruppo è un set di dati denominato che deriva dal set di dati del report associato a un’area dati. In sostanza, organizza una vista di un set di dati del report. Tutti i gruppi in un'area dati specificano viste diverse dello stesso set di dati del report.  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="how-can-i-modify-a-group"></a>Modalità di modifica di un gruppo  
  Dopo aver creato un gruppo, è possibile impostare proprietà specifiche dell'area dati, ad esempio le espressioni di filtro e di ordinamento, le interruzioni di pagina e le variabili di gruppo per conservare i dati specifici dell'ambito. Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
- Per modificare un gruppo esistente, aprire la finestra di dialogo delle proprietà di gruppo appropriata. È possibile modificare il nome del gruppo, nonché specificare espressioni di raggruppamento basate su uno o più campi o su un parametro del report che specifica un valore in fase di esecuzione. È inoltre possibile basare un gruppo su un set di espressioni, ad esempio il set delle espressioni che specificano intervalli di età per i dati demografici. Per altre informazioni, vedere [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
+ Per modificare un gruppo esistente, aprire la finestra di dialogo delle proprietà di gruppo appropriata. È possibile modificare il nome del gruppo, nonché specificare espressioni di raggruppamento basate su uno o più campi o su un parametro del report che specifica un valore in fase di esecuzione. È inoltre possibile basare un gruppo su un set di espressioni, ad esempio il set delle espressioni che specificano intervalli di età per i dati demografici. Per altre informazioni, vedere [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Se si modifica il nome di un gruppo, è necessario aggiornare manualmente qualsiasi espressione di raggruppamento che faccia riferimento al nome precedente.  
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
      Quando si crea un gruppo per un'area dati, tramite Generatore report e Progettazione report vengono aggiunte automaticamente al suo interno righe o colonne e vengono utilizzate queste ultime per visualizzare i dati di gruppo.  
   
--   **Gruppi di gerarchie ricorsive** Un gruppo di gerarchie ricorsive consente di organizzare dati da un singolo set di dati del report in cui sono inclusi più livelli. Ad esempio in un gruppo di gerarchie ricorsive si potrebbe visualizzare la gerarchia di un'organizzazione, quale [Employee] che fa riferimento a [Employee]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce proprietà di gruppo e funzioni predefinite per la creazione di gruppi per questo tipo di dati del report. Per altre informazioni, vedere [Creare un gruppo di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Gruppi di gerarchie ricorsive** Un gruppo di gerarchie ricorsive consente di organizzare dati da un singolo set di dati del report in cui sono inclusi più livelli. Ad esempio in un gruppo di gerarchie ricorsive si potrebbe visualizzare la gerarchia di un'organizzazione, quale [Employee] che fa riferimento a [Employee]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce proprietà di gruppo e funzioni predefinite per la creazione di gruppi per questo tipo di dati del report. Per altre informazioni, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  Nell'elenco seguente vengono riepilogati i diversi utilizzi dei dati per ogni area dati:  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Elenco** Per impostazione predefinita, supporta il gruppo di dettagli. In genere viene utilizzato per supportare un livello del raggruppamento. Per aggiungere i gruppi, trascinare i campi del set di dati nel riquadro di raggruppamento per un elenco selezionato.  
   
- Dopo avere aggiunto un gruppo, gli handle di riga e colonna dell'area dati cambiano per riflettere l'appartenenza a un gruppo. Quando si elimina un gruppo, è possibile scegliere se eliminare solo la definizione di gruppo o il gruppo e tutte le righe e le colonne associate. Per altre informazioni, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report&#41; e SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Dopo avere aggiunto un gruppo, gli handle di riga e colonna dell'area dati cambiano per riflettere l'appartenenza a un gruppo. Quando si elimina un gruppo, è possibile scegliere se eliminare solo la definizione di gruppo o il gruppo e tutte le righe e le colonne associate. Per altre informazioni, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Per limitare i dati da visualizzare o utilizzare in calcoli relativi ai dati di dettaglio o di gruppo, impostare dei filtri sul gruppo. Per altre informazioni, vedere [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
@@ -105,11 +104,10 @@ ms.lasthandoff: 08/09/2017
  Le celle in una riga o colonna di un'area dati Tablix possono appartenere a più gruppi di righe e di colonne. Quando si definisce un'espressione nella casella di testo di una cella che utilizza una funzione di aggregazione (ad esempio `=Sum(Fields!FieldName.Value`), l'ambito del gruppo predefinito per una cella è il gruppo figlio più interno a cui appartiene. Quando una cella appartiene sia a gruppi di righe che di colonne, l'ambito è rappresentato dai gruppi più interni di entrambe le categorie. È possibile anche scrivere espressioni che calcolino i subtotali di aggregazione di cui viene calcolato l'ambito per un gruppo rispetto a un altro set di dati. È possibile ad esempio calcolare la percentuale di un gruppo rispetto al gruppo di colonne e a tutti i dati dell'area dati (ad esempio `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Per altre informazioni, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) e [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere o eliminare un gruppo in un'area dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Aggiungere un totale a un gruppo o area dati Tablix &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [Ordinamento dei dati in un'area dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Azione di drill-down &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Azione di drill-down &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

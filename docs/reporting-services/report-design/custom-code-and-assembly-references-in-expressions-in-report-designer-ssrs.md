@@ -1,5 +1,5 @@
 ---
-title: Codice personalizzato e riferimenti ad Assembly in espressioni nel Report di progettazione (SSRS) | Documenti Microsoft
+title: Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d53894c807b9d9e80be441aa13fb442ea98f5819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report (SSRS)
   È possibile aggiungere riferimenti a codice personalizzato incorporato in un report o ad assembly personalizzati compilati e salvati nel computer in uso e distribuiti nel server di report. Usare codice incorporato per costanti personalizzate, funzioni complesse o funzioni usate più volte in un singolo report. Usare gli assembly di codice personalizzati per mantenere il codice in un'unica posizione e condividerne l'utilizzo in più report. Il codice personalizzato può includere nuove costanti, variabili, funzioni o subroutine personalizzate. È possibile includere riferimenti di sola lettura a raccolte predefinite come ad esempio Parameters. Non è tuttavia possibile passare alle funzioni personalizzate set di valori di dati. In particolare, non sono supportate le aggregazioni personalizzate.  
@@ -197,12 +196,11 @@ End Function
  Poiché il contenuto delle raccolte *Fields* e *ReportItems* può cambiare dinamicamente in fase di esecuzione, non è consigliabile mantenere i riferimenti tra diverse chiamate nell'assembly personalizzato (ad esempio in una variabile membro). Lo stesso consiglio si applica in genere a tutte le raccolte predefinite.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere codice a un Report &#40; SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [Aggiungere codice a un report &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Utilizzo di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Aggiungere un riferimento all'Assembly per un Report &#40; SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Esempi di report (Generatore report e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   
-

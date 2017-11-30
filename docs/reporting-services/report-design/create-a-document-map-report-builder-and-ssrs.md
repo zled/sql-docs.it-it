@@ -1,5 +1,5 @@
 ---
-title: Creare una mappa documento (Generatore Report e SSRS) | Documenti Microsoft
+title: Creare una mappa documento (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e0dc1672f1c03db4e7e5b4d7a6a8e11e9f6a9a66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
 
 Una mappa documento offre un set di collegamenti a elementi di report in un report visualizzabile. Quando si visualizza un report che include una mappa documento, accanto al report viene visualizzato un riquadro distinto. Gli utenti possono fare clic sui collegamenti della mappa documento per passare alla pagina del report in cui viene visualizzato l'elemento specifico. Le sezioni del report e i gruppi sono disposti in una gerarchia di collegamenti. Se si fa clic sugli elementi nella mappa documento, il report viene aggiornato e viene visualizzata l'area del report corrispondente all'elemento nella mappa documento.  
@@ -117,10 +115,9 @@ Una mappa documento offre un set di collegamenti a elementi di report in un repo
 4.  Incollare l'URL in Gestione report, quindi premere INVIO. Verrà avviata l'esecuzione del report e la mappa documento verrà nascosta.  
   
 > [!NOTE]  
->  Per ulteriori informazioni sul download di report di esempio, vedere [report di Generatore Report e progettazione Report di esempio](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Per altre informazioni, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
 
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

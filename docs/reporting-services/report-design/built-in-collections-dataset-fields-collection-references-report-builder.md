@@ -1,5 +1,5 @@
 ---
-title: Riferimenti alla raccolta (Generatore Report e SSRS) campi del set di dati | Documenti Microsoft
+title: Riferimenti alla raccolta di campi del set di dati (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d9c1c724e1b097e842975de2e8095a34fbbbb2d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Raccolte predefinite - riferimenti alla raccolta di campi del set di dati (Generatore Report)
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Raccolte predefinite- Riferimenti alla raccolta di campi del set di dati (Generatore report)
   In ogni set di dati di un report è contenuta una raccolta Campi. La raccolta Campi rappresenta il set di campi specificati dalla query del set di dati, più qualsiasi campo calcolato aggiuntivo creato dall'utente. Dopo la creazione di un set di dati, la raccolta di campi viene visualizzata nel riquadro **Dati report** .  
   
  In un'espressione un riferimento di campo semplice viene visualizzato nell'area di progettazione come un'espressione semplice. Quando ad esempio si trascina il campo `Sales` dal riquadro dei dati del report in una cella della tabella nell'area di progettazione, viene visualizzato `[Sales]` . Questo parametro rappresenta l'espressione `=Fields!Sales.Value` sottostante impostata nella proprietà Value della casella di testo. Durante l'esecuzione del report, questa espressione viene valutata in Elaborazione report e i dati effettivi vengono visualizzati dall'origine dati nella casella di testo nella cella della tabella. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) e [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Rilevamento di campi mancanti per query dinamiche in fase di esecuzione  
- Per impostazione predefinita, agli elementi della raccolta Campi sono associate due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. Ad esempio, la query potrebbe chiamare una stored procedure in cui il set di risultati varia con un parametro di input o la query potrebbe essere `SELECT * FROM`  *\<tabella >* in cui è stata modificata la definizione della tabella.  
+ Per impostazione predefinita, agli elementi della raccolta Campi sono associate due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>*, in cui la definizione della tabella è stata modificata.  
   
 > [!NOTE]  
 >  IsMissing consente di rilevare le modifiche nello schema del set di dati tra la fase di progettazione e quella di runtime per qualsiasi tipo di origine dati. La proprietà IsMissing non può essere usata per rilevare membri vuoti in un cubo multidimensionale e non è correlata ai concetti **EMPTY** e **NON EMPTY**del linguaggio di query MDX.  
@@ -101,4 +100,3 @@ End Function
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

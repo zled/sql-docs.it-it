@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione Anteprima | Documenti Microsoft
+title: Visualizzazione Anteprima | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.previewview.f1
-helpviewer_keywords:
-- Preview view [Reporting Services]
+f1_keywords: sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 55771c2f37d8d9d5913ab96a226f108a6e0f709d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preview-view"></a>Visualizzazione Anteprima
 In Progettazione report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usare la visualizzazione **Anteprima** per visualizzare il report di cui è stato eseguito il rendering. Quando si visualizza l'anteprima di un report, Progettazione report esegue il report localmente e lo visualizza nella visualizzazione Anteprima. Nella modalità di anteprima, il report viene completamente elaborato. Se la query del report è complessa o il report contiene una grande quantità di dati, la visualizzazione dell'anteprima potrebbe impiegare alcuni minuti la prima volta. Per le modifiche successive che riguardano solo il formato del report, l'anteprima utilizza i dati nella cache.
@@ -95,4 +92,3 @@ In Progettazione report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
 + [Guida sensibile al contesto di Progettazione report](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Creare e modificare origini dati incorporate | Documenti Microsoft
+title: Creare e modificare origini dati incorporate | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 50ec28d3a5080187c0bd844dcba364295bcdef35
-ms.contentlocale: it-it
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Creare e modificare origini dati incorporate
   Un'origine dati incorporata viene definita in una definizione del report e viene utilizzata solo dal report specifico,  
@@ -41,13 +40,13 @@ ms.lasthandoff: 11/07/2017
   
     2.  Specificare una stringa di connessione utilizzando una delle alternative seguenti:  
   
-        -   Digitare la stringa di connessione direttamente nella casella di testo **Stringa di connessione** . Per un elenco di stringhe di connessione di esempio, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [connessioni dati, origini dati e le stringhe di connessione &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   Digitare la stringa di connessione direttamente nella casella di testo **Stringa di connessione** . Per un elenco di stringhe di connessione di esempio, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
         -   Fare clic sul pulsante relativo all'espressione (**fx)** ) per creare un'espressione che restituisca una stringa di connessione. Nella finestra di dialogo **Espressione** digitare l'espressione nel riquadro relativo. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
         -   Fare clic su **Modifica** per aprire la finestra di dialogo **Proprietà connessione** per il tipo di origine dati scelto nel passaggio 2.  
   
-             Nei campi della finestra di dialogo **Proprietà connessione** inserire le informazioni appropriate per il tipo di origine dati. Le proprietà della connessione includono il tipo e il nome dell'origine dati e le credenziali da utilizzare. Dopo avere specificato i valori in questa finestra di dialogo, fare clic su **Test connessione** per verificare che l'origine dati sia disponibile e che le credenziali specificate siano corrette. Per ulteriori informazioni sui tipi di origini dati specifiche, vedere gli argomenti in [aggiungere dati da origini dati esterne &#40; SSRS &#41; ](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
+             Nei campi della finestra di dialogo **Proprietà connessione** inserire le informazioni appropriate per il tipo di origine dati. Le proprietà della connessione includono il tipo e il nome dell'origine dati e le credenziali da utilizzare. Dopo avere specificato i valori in questa finestra di dialogo, fare clic su **Test connessione** per verificare che l'origine dati sia disponibile e che le credenziali specificate siano corrette. Per altre informazioni sui tipi di origini dati specifici, vedere [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
     3.  Fare clic su **Credenziali**.  
   
@@ -88,4 +87,3 @@ ms.lasthandoff: 11/07/2017
  [Specifica di credenziali in Generatore report](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
   
-

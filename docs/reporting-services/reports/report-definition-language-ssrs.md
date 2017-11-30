@@ -1,5 +1,5 @@
 ---
-title: Report Definition Language (SSRS) | Documenti Microsoft
+title: Report Definition Language (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bdd500541261f3bf9ce5435113aca70f6c93758d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   Report Definition Language (RDL) è una rappresentazione XML di una definizione di un report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definizione del report contiene informazioni sul layout e sul recupero dei dati per un report. RDL è costituito da elementi XML che corrispondono a una grammatica XML creata per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È possibile aggiungere funzioni personalizzate per il controllo dei valori degli elementi del report, degli stili e della formattazione mediante l'accesso agli assembly di codice all'interno dei file di definizione dei report.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  Ad esempio, lo schema seguente include l'elemento RDL **ReportParameters**che è il tipo complesso **ReportParametersType**. Per convenzione, un tipo complesso per un elemento è il nome dell'elemento seguito dalla parola **Type**. Un elemento **ReportParameters** può essere contenuto dall'elemento **Report** (un tipo complesso) e contenere elementi **ReportParameter** . Un **ReportParameterType** è un tipo semplice che può essere solo uno dei seguenti valori: **Boolean**, **DateTime**, **Integer**, **Float**o **String**. Per altre informazioni sui tipi di dati dell'elemento XML Schema, vedere [XML Schema Parte 2: Tipi di dati Seconda edizione](http://go.microsoft.com/fwlink/?linkid=4871).  
   
- L'XSD RDL è disponibile nel file ReportDefinition.xsd, contenuto nella cartella Extras nel CD-ROM del prodotto. È inoltre disponibile nel server di report tramite l'URL seguente: `http://servername/reportserver/reportdefinition.xsd`.  
+ L'XSD RDL è disponibile nel file ReportDefinition.xsd, contenuto nella cartella Extras nel CD-ROM del prodotto. È anche disponibile nel server di report tramite l'URL seguente: `http://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Creazione di RDL  
  La natura aperta ed estensibile di RDL consente di compilare una varietà di strumenti e applicazioni per la generazione di codice RDL in base al relativo XML Schema.  
@@ -98,4 +97,3 @@ ms.lasthandoff: 08/09/2017
  [Elementi dei report personalizzati](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   
-

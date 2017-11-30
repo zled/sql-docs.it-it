@@ -1,5 +1,5 @@
 ---
-title: Estensioni per l'elaborazione dati e provider di dati .NET Framework (SSRS) | Documenti Microsoft
+title: Estensioni per l'elaborazione dati e provider di dati .NET Framework (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8cfc1828b859435f924b480ed5ae518e5e5ab1fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Estensioni per l'elaborazione dati e provider di dati .NET Framework (SSRS)
   Un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un componente installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], progettato per recuperare i dati da un tipo specifico di origine dati e offrire funzionalità aggiuntive per supportare la progettazione e l'elaborazione dei report. Un'estensione per l'elaborazione dati di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è un componente reso disponibile da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o da terze parti in grado di supportare le interfacce <xref:System.Data> che consentono di recuperare e modificare i dati da un tipo specifico di origine dati.  
@@ -53,8 +52,7 @@ ms.lasthandoff: 08/09/2017
 >  Per poter accedere ai dati di un'origine dati mediante un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] o un'estensione per l'elaborazione dati personalizzata, è necessario che questi ultimi vengano installati e registrati. L'estensione per l'elaborazione dati deve essere installata e registrata nel client per la gestione dei report per creare il report e nel server di report per visualizzare il report pubblicato. Non tutti i provider di dati vengono progettati per il funzionamento in un ambiente server. Per altre informazioni, vedere [Registrare un provider di dati .NET Framework standard &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) e [Distribuzione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulle estensioni di elaborazione dei dati](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
- [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Cenni preliminari sulle estensioni per l'elaborazione dati](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
+ [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

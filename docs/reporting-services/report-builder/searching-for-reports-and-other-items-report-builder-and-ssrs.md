@@ -1,5 +1,5 @@
 ---
-title: Ricerca di report e altri elementi (Generatore Report e SSRS) | Documenti Microsoft
+title: Ricerca di report e altri elementi (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e3c41db09cbe1387545b72fd2942e4b30e71d1fd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 88576d1bab512cb0d8567ef95e6b7ef3a1db124a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Ricerca di report e altri elementi (Generatore report e SSRS)
   È possibile utilizzare Gestione report per cercare elementi specifici in un server di report utilizzando il nome o la descrizione degli elementi come criteri di ricerca. È possibile cercare report pubblicati, modelli di report, cartelle, origini dei dati condivise e risorse. Non è possibile cercare pianificazioni, proprietari, assegnazioni di ruolo, snapshot specifici della cronologia dei report o sottoscrizioni. La ricerca viene eseguita nel database del server di report in cui vengono archiviati gli elementi.  
@@ -39,10 +38,9 @@ ms.lasthandoff: 09/27/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e visualizzazione di report in Gestione Report &#40; Generatore report e SSRS &#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
- [Utilizzando i report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
+ [Ricerca e visualizzazione di report in Gestione report &#40;Generatore report e SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
+ [Uso della cartella Report personali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Apertura e chiusura di un Report &#40; Gestione report &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [Aprire e chiudere un report &#40;Gestione report&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   
-

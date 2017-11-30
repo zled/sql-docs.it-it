@@ -1,5 +1,5 @@
 ---
-title: Introduzione al controllo ReportViewer 2016 | Documenti Microsoft
+title: Introduzione al controllo ReportViewer 2016 |Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -12,42 +12,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: dff598efce33f778359c2b6fb4c3a0184f2b88f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>L'integrazione di Reporting Services utilizzando i controlli ReportViewer - introduzione
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integrazione di Reporting Services tramite i controlli ReportViewer - Introduzione
 
-Informazioni su come gli sviluppatori possono incorporare report impaginati in siti web ASP.NET e App di Windows Form, tramite il controllo ReportViewer di Reporting Services 2016. È possibile aggiungere il controllo a un progetto nuovo o aggiornare un progetto esistente.
+Informazioni su come gli sviluppatori possono incorporare report impaginati in siti Web ASP.NET e app di Windows Form, tramite il controllo ReportViewer di Reporting Services 2016. È possibile aggiungere il controllo a un nuovo progetto o aggiornare un progetto esistente.
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Aggiunta del controllo ReportViewer a un nuovo progetto web
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Aggiunta del controllo ReportViewer a un nuovo progetto Web
 
 1. Creare un nuovo **sito Web ASP.NET vuoto** o aprire un progetto ASP.NET esistente.
 
-    ![Creare-nuova-ASPNET-progetto ssRS](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. Installare il pacchetto nuget di controllo ReportViewer 2016 tramite il **console di gestione pacchetti Nuget**.
+2. Installare il pacchetto NuGet del controllo ReportViewer 2016 tramite la **console di Gestione pacchetti NuGet**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
-3. Aggiungere una nuova pagina aspx al progetto e registrare l'assembly del controllo ReportViewer per l'utilizzo all'interno della pagina.
+3. Aggiungere una nuova pagina ASPX al progetto e registrare l'assembly del controllo ReportViewer per l'uso all'interno della pagina.
 
     ```
     <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
-4. Aggiungere un **ScriptManagerControl** alla pagina.
+4. Aggiungere uno **ScriptManagerControl** alla pagina.
 
-5. Aggiungere il controllo ReportViewer alla pagina. Nel frammento seguente può essere aggiornato per fare riferimento a un report ospitato in un server di report remoto.
+5. Aggiungere il controllo ReportViewer alla pagina. Il frammento seguente può essere aggiornato per fare riferimento a un report ospitato in un server di report remoto.
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -55,7 +54,7 @@ Informazioni su come gli sviluppatori possono incorporare report impaginati in s
     </rsweb:ReportViewer>
     ```
     
-Nella pagina finale dovrebbe essere simile al seguente.
+La pagina finale sarà simile alla seguente.
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
@@ -81,11 +80,11 @@ Nella pagina finale dovrebbe essere simile al seguente.
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Aggiornamento di un progetto esistente per utilizzare il controllo ReportViewer
+## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Aggiornamento di un progetto esistente per usare il controllo ReportViewer
 
-Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente, aggiungere il controllo tramite Nuget e aggiornare i riferimenti all'assembly alla versione *14.0.0.0*. Ciò include l'aggiornamento di Web. config del progetto e tutte le pagine aspx che fa riferimento il controllo ReportViewer.
+Per usare il controllo ReportViewer 2016 in un progetto esistente, aggiungere il controllo tramite NuGet e aggiornare i riferimenti all'assembly alla versione *14.0.0.0*. Ciò include l'aggiornamento del file web.config del progetto e di tutte le pagine ASPX che fanno riferimento al controllo ReportViewer.
 
-### <a name="sample-webconfig-changes"></a>Modifiche di Web. config di esempio
+### <a name="sample-webconfig-changes"></a>Modifiche del file web.config di esempio
 
 ```
 <?xml version="1.0"?>
@@ -132,7 +131,7 @@ Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente,
 </configuration>
 ```
 
-### <a name="sample-aspx"></a>Esempio con estensione aspx
+### <a name="sample-aspx"></a>Pagina ASPX di esempio
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -143,18 +142,18 @@ Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente,
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Aggiunta del controllo ReportViewer a un nuovo progetto Windows Form
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Aggiunta del controllo ReportViewer a un nuovo progetto Windows Forms
 
-1. Creare un nuovo **Windows Forms Application** o aprire un progetto esistente.
+1. Creare una nuova **applicazione Windows Forms** o aprire un progetto esistente.
 
-    ![Creare-nuova-winforms-progetto ssRS](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. Installare il pacchetto nuget di controllo ReportViewer 2016 tramite il **console di gestione pacchetti Nuget**.
+2. Installare il pacchetto NuGet del controllo ReportViewer 2016 tramite la **console di Gestione pacchetti NuGet**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Aggiungere un nuovo controllo dal codice o [aggiungere il controllo della casella degli strumenti](##adding-control-to-visual-studio-toolbar).
+3. Aggiungere un nuovo controllo dal codice o [aggiungere il controllo alla casella degli strumenti](##adding-control-to-visual-studio-toolbar).
 
     ```
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -178,13 +177,13 @@ Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente,
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Come impostare l'altezza di 100% sul controllo Report Viewer 2016
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Come impostare l'altezza 100% sul controllo ReportViewer 2016
 
-Il nuovo controllo Report Viewer 2016 è ottimizzato per pagine in modalità standard di HTML5 e funziona su tutti i browser moderni. In passato, con il controllo RVC precedente, quando si imposta la proprietà height di 100%, funzionava anche se nessuno dei progenitori altezza specificata. Questo comportamento è cambiato in HTML5. Quando si imposta questa proprietà sul nuovo controllo RVC, funzionerà correttamente solo se l'elemento padre ha un'altezza definita, ad esempio, non un valore di auto o tutti i relativi predecessori RVC sono disponibili altezza 100%.
+Il nuovo controllo ReportViewer 2016 è ottimizzato per le pagine in modalità standard HTML5 e funziona su tutti i browser moderni. In passato, con il controllo RVC precedente, quando si impostava la proprietà altezza 100% funzionava anche se nessuno dei predecessori aveva l'altezza specificata. Questo comportamento è stato modificato in HTML5. Quando si imposta questa proprietà sul nuovo controllo RVC, funzionerà correttamente solo se l'elemento padre avrà un'altezza definita, vale a dire un valore diverso da auto, o se anche tutti i predecessori di RVC avranno un'altezza 100%.
 
-Di seguito sono i due esempi per eseguire questa operazione.
+I due esempi seguenti illustrano questa operazione.
 
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Impostando l'altezza del padre tutti gli elementi al 100%
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Tramite l'impostazione dell'altezza di tutti gli elementi padre al 100%
 
 ```
 <!DOCTYPE html>
@@ -210,9 +209,9 @@ Di seguito sono i due esempi per eseguire questa operazione.
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Impostando l'attributo di stile altezza nell'elemento padre del controllo reportviewer
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Tramite l'impostazione dell'attributo di stile dell'altezza nell'elemento padre del controllo reportviewer
 
-Per ulteriori informazioni sulle lunghezze percentuale viewport, vedere [Viewport percentuale lunghezze](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
+Per altre informazioni sulle lunghezze percentuali di Viewport, vedere [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Viewport-lunghezze percentuali).
 
 ```
 <!DOCTYPE html>
@@ -233,55 +232,54 @@ Per ulteriori informazioni sulle lunghezze percentuale viewport, vedere [Viewpor
 
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Aggiunta controllo alla barra degli strumenti di Visual Studio
+## <a name="adding-control-to-visual-studio-toolbar"></a>Aggiunta del controllo alla barra degli strumenti di Visual Studio
 
-Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet. Per questo motivo, non noterai controllo Visualizzatore di Report visualizzati nella casella degli strumenti di Visual Studio per impostazione predefinita. È possibile aggiungere il controllo alla casella degli strumenti nel modo seguente.
+Il controllo ReportViewer è ora disponibile come pacchetto NuGet. Per questo motivo, il controllo ReportViewer non viene visualizzato nella casella degli strumenti di Visual Studio per impostazione predefinita. È possibile aggiungere il controllo alla casella degli strumenti nel modo seguente.
 
 1. Installare il pacchetto NuGet per Windows Form o Web Form, come indicato in precedenza.
 
-2. Rimuovere il controllo ReportViewer che è elencato nella casella degli strumenti. Questo è il controllo con una versione di 12.x.
+2. Rimuovere il controllo ReportViewer elencato nella casella degli strumenti. Si tratta del controllo versione 12.x.
 
-    ![ssRS-remove-vecchio-rvcontrol-della casella degli strumenti](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Fare clic in un punto qualsiasi nella casella degli strumenti e quindi selezionare **Scegli elementi...** .
+3. Fare clic con il pulsante destro del mouse in un punto qualsiasi della casella degli strumenti e scegliere **Scegli elementi**.
 
-    ![ssRS--scegliere-elemento](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
-4. Nel **componenti .NET Framework**selezionare **Sfoglia**.
+4. In **Componenti di .NET Framework** selezionare **Sfoglia**.
 
-    ![ssRS: casella degli strumenti-Sfoglia](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
-5. Selezionare il **Microsoft.ReportViewer.WinForms.dll** o **Microsoft.ReportViewer.WebForms.dll** dal pacchetto NuGet è installato.
+5. Selezionare il file **Microsoft.ReportViewer.WinForms.dll** o **Microsoft.ReportViewer.WebForms.dll** dal pacchetto NuGet installato.
 
     > [!NOTE] 
-    > Il pacchetto NuGet verrà installato nella directory della soluzione del progetto. Il percorso della DLL sarà simile al seguente: `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` o `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`.
+    > Il pacchetto NuGet verrà installato nella directory della soluzione del progetto. Il percorso al file DLL sarà simile al seguente: `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` o `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`.
 
-6. Il nuovo controllo deve essere visualizzato all'interno della casella degli strumenti. È possibile quindi spostarlo in un'altra scheda all'interno della casella degli strumenti se si desidera.
+6. Il nuovo controllo viene visualizzato all'interno della casella degli strumenti. È quindi possibile spostarlo in un'altra scheda all'interno della casella degli strumenti se necessario.
 
-    ![ssRS: casella degli strumenti-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
 ### <a name="things-to-be-aware-of"></a>Aspetti da tenere presenti
 
-- Verrà aggiunto un riferimento per il pacchetto NuGet installato all'interno del progetto corrente. L'elemento della casella degli strumenti verrà mantenuti in altri progetti. Quando si installa il pacchetto NuGet in un nuova soluzione/progetto, l'elemento della casella degli strumenti può fare riferimento a una versione precedente. 
+- Con questa operazione verrà aggiunto un riferimento al pacchetto NuGet installato all'interno del progetto corrente. L'elemento nella casella degli strumenti verrà mantenuto negli altri progetti. Quando si installa il pacchetto NuGet in una nuova soluzione o progetto, l'elemento della casella degli strumenti può fare riferimento a una versione precedente. 
 
-- Il controllo rimane nella casella degli strumenti anche se l'assembly non è più disponibile. Se è stato eliminato il progetto, Visual Studio genererà un errore se si prova e aggiungere il controllo dalla casella degli strumenti. Per correggere l'errore, rimuovere il controllo dalla casella degli strumenti e aggiungerlo di nuovo utilizzando la procedura descritta sopra.
+- Il controllo rimane nella casella degli strumenti anche se l'assembly non è più disponibile. Se il progetto è stato eliminato, Visual Studio genera un errore se si tenta di aggiungere il controllo dalla casella degli strumenti. Per correggere l'errore, rimuovere il controllo dalla casella degli strumenti e aggiungerlo di nuovo usando la procedura descritta sopra.
 
 
 ## <a name="common-issues"></a>Problemi comuni
     
-- Il controllo ReportViewer 2016 è progettato per essere utilizzato con i browser moderni. Il controllo potrebbe non funzionare se browser esegue il rendering della pagina web in una modalità di compatibilità di Internet Explorer. I siti Intranet richieda un tag meta per sostituire le impostazioni che incoraggia la collaborazione il rendering di pagine intranet in modalità di compatibilità.
+- Il controllo ReportViewer 2016 è progettato per essere usato con i browser moderni. Il controllo potrebbe non funzionare se i browser eseguono il rendering della pagina Web in una modalità di compatibilità di Internet Explorer. I siti Intranet potrebbero richiedere un tag META per sostituire le impostazioni che incoraggiano il rendering delle pagine Intranet in modalità di compatibilità.
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>Inviare commenti e suggerimenti
+## <a name="providing-feedback"></a>Invio di commenti
 
-Informare il team sui problemi riscontrati con il controllo sul [forum di Reporting Services MSDN](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) o tramite posta elettronica al [ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com).
+Informare il team sui problemi riscontrati con il controllo sui [forum MSDN su Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) o tramite posta elettronica all'indirizzo [RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Raccolta dei dati nel controllo ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
+[Raccolta di dati nel controllo ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
 

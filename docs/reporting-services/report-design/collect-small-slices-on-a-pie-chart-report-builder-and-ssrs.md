@@ -1,5 +1,5 @@
 ---
-title: Raccogliere piccole sezioni in un grafico a torta (Generatore Report e SSRS) | Documenti Microsoft
+title: Raccogliere piccole sezioni in un grafico a torta (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,26 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e25526de7b4ae194d0aa510c12a9a995208c035a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a791e5bae17ab1259fb664d065a9a13fcde21aa1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Raccogliere piccole sezioni in un grafico a torta (Generatore report e SSRS)
-Grafici a torta con un numero eccessivo di sezioni è possibile esaminare poco chiaro. Viene illustrato come raccogliere molte piccole sezioni in un grafico a torta in un'unica sezione in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginati.
+I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco chiari. In questo articolo viene illustrato come raccogliere molte piccole sezioni in un grafico a torta in un'unica sezione nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
  
  Per raccogliere le piccole sezioni in un'unica sezione, determinare innanzitutto se la soglia deve essere misurata come percentuale del grafico a torta o come valore fisso. 
  
- Il [esercitazione: aggiungere un grafico a torta al Report (Generatore Report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) viene illustrata la raccolta di sezioni piccole in un'unica sezione, se si desidera provare innanzitutto con dati di esempio.
+ L'[Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)spiega come raccogliere più sezioni di piccole dimensioni in un'unica sezione, se per iniziare si preferisce provare con dati di esempio.
  
- ![Report-Builder-Pie-Chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  È anche possibile raccogliere le piccole sezioni in un secondo grafico a torta derivato da una sezione del primo grafico ottenuta tramite raccolta. Il secondo grafico a torta verrà disegnato a destra di quello originale.  
   
@@ -58,7 +57,7 @@ Grafici a torta con un numero eccessivo di sezioni è possibile esaminare poco c
          Impostare la proprietà CollectedThreshold su **10**.  
   
         > [!NOTE]  
-        >  Se si imposta CollectedStyle **SingleSlice**, CollectedThreshold su un valore maggiore di **100**e CollectedThresholdUsePercent a **True**, il grafico verrà generata un'eccezione perché non è possibile calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore minore di **100**.  
+        >  Se si imposta CollectedStyle su **SingleSlice**, CollectedThreshold su un valore maggiore di **100** e CollectedThresholdUsePercent su **True**, il grafico genererà un'eccezione perché non riesce a calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore inferiore a **100**.  
   
     -   **Per valore di dati.** Ad esempio, per raccogliere in un'unica sezione tutte le sezioni del grafico a torta inferiori a 5000:  
   
@@ -87,10 +86,9 @@ Grafici a torta con un numero eccessivo di sezioni è possibile esaminare poco c
 >  Non è possibile formattare il grafico a torta secondario. Per questo motivo, si consiglia di utilizzare il primo approccio per la raccolta delle sezioni della torta.  
   
 ## <a name="see-also"></a>Vedere anche  
-* [Esercitazione: Aggiungere un grafico a torta al Report (Generatore Report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [Grafici a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
 *  [Visualizzare i valori percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)     
   
-

@@ -1,0 +1,1 @@
+<Token>**QUESTO ARGOMENTO SI APPLICA A:** ![sì](media/yes.png)SQL Server per Windows![no](media/no.png)SQL Server in Linux![no](media/no.png)Database SQL di Azure![no](media/no.png)Azure SQL Data Warehouse![no](media/no.png)Parallel Data Warehouse </Token>

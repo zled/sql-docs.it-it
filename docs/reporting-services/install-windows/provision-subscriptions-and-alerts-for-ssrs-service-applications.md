@@ -1,12 +1,11 @@
 ---
-title: Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS | Documenti Microsoft
+title: Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS | Microsoft Docs
 ms.custom: 
 ms.date: 06/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a96245405f8f13de983215100cde3b189e2b0f17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le sottoscrizioni e gli avvisi dati richiedono SQL Server Agent e la configurazione di autorizzazioni per SQL Server Agent. Se vengono visualizzati messaggi di errore indicanti che si richiede SQL Server Agent sebbene sia in esecuzione, aggiornare o verificare le autorizzazioni. L'ambito di questo argomento è [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint e vengono descritti tre modi per aggiornare le autorizzazioni di SQL Server Agent con sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le credenziali utilizzata nei passaggi di questo argomento devono disporre delle autorizzazioni sufficienti per concedere autorizzazioni di esecuzione a RSExecRole per gli oggetti nell'applicazione di servizio, il database msdb e database master.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
- ![Le autorizzazioni di SQL Agent per database dell'applicazione di servizio](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "delle autorizzazioni di SQL Agent per database dell'applicazione di servizio")  
+ ![Autorizzazioni di SQL Agent per database di applicazioni di servizio](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Autorizzazioni di SQL Agent per database di applicazioni di servizio")  
   
 ||Description|  
 |------|-----------------|  
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/09/2017
 5.  Fare clic su **Esegui**.  
   
   
-

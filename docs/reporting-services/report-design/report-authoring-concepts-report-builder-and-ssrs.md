@@ -1,5 +1,5 @@
 ---
-title: Concetti (Generatore Report e SSRS) di creazione di report | Documenti Microsoft
+title: Concetti relativi alla creazione di report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 312291488481b09890f590db58ef416d5967c507
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concetti relativi alla creazione di report (Generatore report e SSRS)
   Questa sezione descrive brevemente alcuni concetti principali usati per descrivere i report impaginati nella documentazione di Generatore report e Progettazione report. Per definizioni di parole o termini specifici, vedere [Glossario &#40;Generatore report&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -42,11 +41,10 @@ ms.lasthandoff: 09/27/2017
  [Aree dati e mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Vengono descritti i tipi di aree dati che è possibile aggiungere a un layout del report. Le aree dati determinano l'aspetto di un report, ovvero tabella, matrice, elenco o grafico.  
   
- [Concetto dei parametri di report (Generatore Report e SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Concetto dei parametri di report (Generatore report e SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Vengono descritte le modalità in cui definire e utilizzare i parametri del report e come questi vengono gestiti in modo indipendente dalla definizione del report nel server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Modificare il testo di un elemento della legenda (Generatore Report e SSRS) | Documenti Microsoft
+title: Modificare il testo di un elemento legenda (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 72238d73c48a7721b8204136c57f14485d30cbb5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-legend---change-item-text-report-builder"></a>La legenda del grafico - Modifica elemento di testo (Generatore Report)
+# <a name="chart-legend---change-item-text-report-builder"></a>Legenda del grafico - Modificare il testo degli elementi (Generatore report)
   Quando un campo viene posizionato nell'area Valori del grafico, viene generato automaticamente un elemento della legenda contenente il nome di tale campo. Ogni elemento della legenda è collegato a una singola serie nel grafico, ad eccezione dei grafici con forme in cui la legenda è collegata a singoli punti dati anziché a singole serie.  
   
  Nei grafici con forme è possibile modificare il testo di un elemento della legenda in modo da visualizzare ulteriori informazioni sui singoli punti dati. Per visualizzare i valori dei punti dati come percentuali nella legenda, ad esempio, è possibile usare una parola chiave quale **#PERCENT**. Per applicare formati numerici e di data, è possibile aggiungere codici di formato .NET Framework con determinate parole chiave. Per altre informazioni sulle parole chiave, vedere [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
- ![Grafico acuto](../../reporting-services/report-design/media/sharpchart.png "acuto grafico")  
+ ![Grafico ottimizzato](../../reporting-services/report-design/media/sharpchart.png "Grafico ottimizzato")  
   
  Nei grafici senza forme è possibile modificare il testo di un elemento della legenda. Se, ad esempio, il nome della serie è "Serie 1", è possibile modificare il testo per renderlo più descrittivo, ad esempio "Vendite anno 2008".  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Fare clic su **Legenda** e digitare una parola chiave nella casella **Testo legenda personalizzato** .  
   
- La tabella seguente include esempi di parole chiave specifiche del grafico da usare per la proprietà **Testo legenda personalizzato**. Per altre informazioni sulle parole chiave, vedere [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ La tabella seguente include esempi di parole chiave specifiche del grafico da usare per la proprietà **Testo legenda personalizzato** . Per altre informazioni sulle parole chiave, vedere [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 |Parola chiave|Description|Esempio di testo visualizzato nella legenda|  
 |-------------|-----------------|---------------------------------------------------|  
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/09/2017
 2.  Fare clic su **Legenda** e digitare un'etichetta di legenda nella casella **Testo legenda personalizzato** . La serie verrà aggiornata con il testo specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione della legenda in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Formattazione dei colori delle serie in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Nascondere elementi legenda nel grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+ [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Nascondere elementi legenda nel grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Codice di sicurezza dall'accesso di Reporting Services | Documenti Microsoft
+title: Sicurezza dall'accesso di codice in Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,23 +19,23 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: d34c2136e148bcd5297160f1776b13b86c343a7f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sicurezza dall'accesso di codice in Reporting Services
-  La sicurezza dall'accesso di codice si basa su tre concetti principali, ovvero evidenza, gruppi di codice e set di autorizzazione denominati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] i componenti Gestione report, Progettazione report e server di report dispongono ognuno di un file di criteri che configura la sicurezza dall'accesso di codice per assembly personalizzati ed estensioni per i dati, il recapito, il rendering e di sicurezza. Nelle sezioni seguenti viene fornita una panoramica sulla sicurezza dall'accesso di codice. Per ulteriori informazioni sugli argomenti trattati in questa sezione, vedere "Modello di criteri di sicurezza" nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] documentazione SDK.  
+  La sicurezza dall'accesso di codice si basa su tre concetti principali, ovvero evidenza, gruppi di codice e set di autorizzazione denominati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] i componenti Gestione report, Progettazione report e server di report dispongono ognuno di un file di criteri che configura la sicurezza dall'accesso di codice per assembly personalizzati ed estensioni per i dati, il recapito, il rendering e di sicurezza. Nelle sezioni seguenti viene fornita una panoramica sulla sicurezza dall'accesso di codice. Per altre informazioni sugli argomenti trattati in questa sezione, vedere la sezione relativa al modello dei criteri di sicurezza nella documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
   
- In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] la sicurezza dall'accesso di codice viene utilizzata perché, anche se il server di report è compilato in base a tecnologia [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], è presente una differenza sostanziale tra un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica e il server di report. Mentre un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica non esegue codice utente, Al contrario, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza un'architettura aperta ed estensibile che consente agli utenti di programmare in base al file di definizione del report utilizzando il **codice** elemento del linguaggio di definizione del Report e di sviluppare funzionalità specifiche in un assembly personalizzato da utilizzare nei report. Gli sviluppatori possono inoltre progettare e distribuire estensioni potenti che consentono di ottimizzare le funzionalità del server di report. Queste caratteristiche di potenza e flessibilità determinano la necessità di utilizzare il maggior livello di sicurezza possibile.  
+ In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] la sicurezza dall'accesso di codice viene utilizzata perché, anche se il server di report è compilato in base a tecnologia [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], è presente una differenza sostanziale tra un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica e il server di report. Mentre un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica non esegue codice utente, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa un'architettura aperta ed estensibile che consente agli utenti di programmare in base ai file di definizione del report usando l'elemento **Code** di Report Definition Language e di sviluppare funzionalità specifiche in un assembly personalizzato da usare nei report. Gli sviluppatori possono inoltre progettare e distribuire estensioni potenti che consentono di ottimizzare le funzionalità del server di report. Queste caratteristiche di potenza e flessibilità determinano la necessità di utilizzare il maggior livello di sicurezza possibile.  
   
- Gli sviluppatori di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] possono utilizzare qualsiasi assembly di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nei report e sfruttare tutte le funzionalità degli assembly distribuiti nella Global Assembly Cache (CAG). L'unico elemento che il server di report può controllare sono le autorizzazioni concesse per le espressioni del report e per gli assembly personalizzati caricati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], assembly personalizzati ricevano **Execute**-solo le autorizzazioni per impostazione predefinita.  
+ Gli sviluppatori di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] possono utilizzare qualsiasi assembly di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nei report e sfruttare tutte le funzionalità degli assembly distribuiti nella Global Assembly Cache (CAG). L'unico elemento che il server di report può controllare sono le autorizzazioni concesse per le espressioni del report e per gli assembly personalizzati caricati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per impostazione predefinita agli assembly personalizzati vengono concesse solo le autorizzazioni **Execute**.  
   
 ## <a name="evidence"></a>Evidenza  
  Per evidenza si intendono le informazioni utilizzate da Common Language Runtime (CLR) per stabilire criteri di sicurezza per gli assembly del codice. In fase di esecuzione l'evidenza indica che al codice sono associate caratteristiche specifiche. Forme comuni di evidenza includono ad esempio le firme digitali e il percorso di un assembly. È possibile inoltre personalizzare l'evidenza per rappresentare altre informazioni significative per l'applicazione.  
@@ -64,10 +63,10 @@ ms.lasthandoff: 08/12/2017
  Per determinare il tipo di sicurezza dall'accesso di codice e i gruppi di codice necessari agli assembly personalizzati o alle estensioni di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è necessario rivolgersi all'amministratore di sistema o agli esperti di distribuzione di applicazioni.  
   
 ## <a name="named-permission-sets"></a>Set di autorizzazioni denominati  
- Un set di autorizzazioni denominato è un set di autorizzazioni che gli amministratori possono associare a un gruppo di codice. La maggior parte dei set di autorizzazioni è costituito almeno da un'autorizzazione, un nome e una descrizione per il set stesso. Gli amministratori possono utilizzare i set di autorizzazioni denominati per stabilire o modificare i criteri di sicurezza per i gruppi di codice. A uno stesso set di autorizzazioni denominati possono essere associati più gruppi di codice. CLR fornisce i set di autorizzazioni denominati incorporati. tra questi vi sono **nulla**, **esecuzione**, **Internet**, **LocalIntranet**, **tutto**, e **FullTrust**.  
+ Un set di autorizzazioni denominato è un set di autorizzazioni che gli amministratori possono associare a un gruppo di codice. La maggior parte dei set di autorizzazioni è costituito almeno da un'autorizzazione, un nome e una descrizione per il set stesso. Gli amministratori possono utilizzare i set di autorizzazioni denominati per stabilire o modificare i criteri di sicurezza per i gruppi di codice. A uno stesso set di autorizzazioni denominati possono essere associati più gruppi di codice. In CLR sono disponibili set di autorizzazioni denominati, ad esempio **Nothing**, **Execution**, **Internet**, **LocalIntranet**, **Everything** e **FullTrust**.  
   
 > [!NOTE]  
->  Le estensioni personalizzate di dati, recapito, rendering e sicurezza in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] deve essere eseguito utilizzando il **FullTrust** set di autorizzazioni. Per aggiungere il gruppo di codice appropriato e le condizioni di appartenenza per le estensioni di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], rivolgersi all'amministratore di sistema.  
+>  Le estensioni per dati personalizzati, recapito, rendering e di sicurezza in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] devono essere eseguite con il set di autorizzazioni **FullTrust**. Per aggiungere il gruppo di codice appropriato e le condizioni di appartenenza per le estensioni di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], rivolgersi all'amministratore di sistema.  
   
  È possibile associare livelli personalizzati di autorizzazioni per assembly personalizzati utilizzati con i report. Se ad esempio si desidera consentire a un assembly di accedere a un file specifico, è possibile creare un nuovo set di autorizzazioni denominato con accesso I/O al file specifico e assegnare quindi il set di autorizzazioni al gruppo di codice. Nel set di autorizzazioni seguente viene concesso l'accesso in sola lettura al file MyFile.xml:  
   
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/12/2017
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proteggere Development &#40; Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+ [Sviluppo sicuro &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

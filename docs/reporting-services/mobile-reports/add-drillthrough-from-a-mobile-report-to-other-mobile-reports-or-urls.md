@@ -1,26 +1,24 @@
 ---
-title: Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL | Documenti Microsoft
+title: Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL | Microsoft Docs
 ms.custom: 
 ms.date: 09/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9133e86862ec5cf234b87e598d152811dced75c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL
 È possibile aggiungere il drill-through da qualsiasi misuratore, grafico o griglia dati di un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a un altro report o URL personalizzato. 
@@ -88,5 +86,4 @@ Gli elementi nascosti vengono visualizzati in un colore più chiaro.
 * [Aggiungere parametri a un report per dispositivi mobili di Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
 * [Portale Web (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
-
 

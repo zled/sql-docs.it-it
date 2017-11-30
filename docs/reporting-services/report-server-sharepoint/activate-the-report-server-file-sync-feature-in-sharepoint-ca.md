@@ -1,5 +1,5 @@
 ---
-title: "Attivare la funzionalità sincronizzazione file server di report in SharePoint | Documenti Microsoft"
+title: "Attivare la funzionalità Sincronizzazione file server di report in SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,21 +14,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5966124a56131529ef8ee76f24f16e96628b1250
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: b85d1541da8aa65bd3912310551cbc5d5ad26eea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>Attivare la funzionalità sincronizzazione file server di report in SharePoint
+# <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>Attivare la funzionalità Sincronizzazione file server di report in SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 La funzionalità Sincronizzazione file server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prevede l'utilizzo di gestori di eventi di SharePoint per sincronizzare il catalogo del server di report con gli elementi nelle raccolte documenti. Questa funzionalità è utile quando gli utenti caricano di frequente elementi di report pubblicati direttamente nelle raccolte documenti di SharePoint. Se la funzionalità di sincronizzazione file non è attivata, il contenuto viene comunque sincronizzato, ma meno frequentemente.
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
  La funzionalità di sincronizzazione file può essere attivata in Amministrazione sito di SharePoint dopo aver installato il componente aggiuntivo [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] per prodotti SharePoint.  
   
@@ -40,7 +39,7 @@ La funzionalità Sincronizzazione file server di report di [!INCLUDE[ssRSnoversi
   
  Per verificare l'installazione, visualizzare l'elenco delle applicazioni installate nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Pannello di controllo **di**Windows. Se il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è installato, seguire le indicazioni fornite in questo argomento per attivare la caratteristica di sincronizzazione file del server di report.  
   
-### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>Per attivare o disattivare la funzionalità sincronizzazione file di Reporting Services in un sito
+### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>Per attivare o disattivare la funzionalità di sincronizzazione file di Reporting Services in un sito
   
 1.  Nella pagina principale del sito scegliere **Impostazioni sito** dal menu **Azioni sito**.  
   
@@ -55,10 +54,9 @@ La funzionalità Sincronizzazione file server di report di [!INCLUDE[ssRSnoversi
 
 ## <a name="see-also"></a>Vedere anche
 
- [Risolvere i problemi relativi a parti del Report (Generatore Report e SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Attivare le funzionalità di integrazione per Power View e server di report in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

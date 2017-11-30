@@ -1,5 +1,5 @@
 ---
-title: Filtrare, raggruppare e ordinare dati (Generatore Report e SSRS) | Documenti Microsoft
+title: Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e9e31e800ebadc67463c8b209ad16a592e85027c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS)
   In un report le espressioni vengono usate per facilitare il controllo, l'organizzazione e l'ordinamento di dati del report. Per impostazione predefinita, mentre si creano set di dati e si progetta il layout del report, le proprietà degli elementi del report vengono impostate automaticamente su espressioni basate su campi del set di dati, parametri e altri elementi visualizzati nel riquadro dei dati del report. È inoltre possibile aggiungere un pulsante di ordinamento interattivo a una tabella o una cella della matrice, in modo da consentire a un utente di modificare in modo interattivo l'ordinamento della riga per gruppi o righe all'interno di gruppi.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
  Per consentire agli utenti di controllare i dati in un report, è possibile includere parametri nelle espressioni di filtro. Per altre informazioni, vedere [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
- Per personalizzare una vista per ogni utente, è possibile includere un riferimento al campo predefinito UserID in un filtro. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e User &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Per personalizzare una vista per ogni utente, è possibile includere un riferimento al campo predefinito UserID in un filtro. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
   
 ##  <a name="Grouping"></a> Raggruppamento di dati nel report  
@@ -95,7 +94,7 @@ ms.lasthandoff: 08/09/2017
   
  Per raggruppare diversi campi del set di dati, aggiungere ogni campo al set di espressioni di raggruppamento. È anche possibile scrivere espressioni di raggruppamento personalizzate in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. È possibile ad esempio eseguire il raggruppamento in base a un intervallo di valori oppure usando un parametro del report per consentire all'utente di selezionare la modalità di raggruppamento dei dati in un'area dati. Per altre informazioni, vedere [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- Per la presentazione del report è possibile aggiungere interruzioni di pagina prima e dopo ogni gruppo o istanza di un gruppo, in modo da ridurre la quantità di dati presenti in ogni pagina e gestire le prestazioni di rendering del report. Per ulteriori informazioni, vedere [Aggiungi un'interruzione di pagina &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ Per la presentazione del report è possibile aggiungere interruzioni di pagina prima e dopo ogni gruppo o istanza di un gruppo, in modo da ridurre la quantità di dati presenti in ogni pagina e gestire le prestazioni di rendering del report. Per altre informazioni, vedere [Aggiungere un'interruzione di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  La creazione di gruppi di aree dati è un modo utile per organizzare dati in un report. Sono disponibili diversi altri modi per organizzare dati, ognuno con vantaggi specifici. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="sorting-data-in-a-dataset-query"></a>Ordinamento dei dati di una query del set di dati  
  Includere l'ordinamento nella query del set di dati per eseguire un preordinamento dei dati prima che vengano recuperati per un report. Quando si ordinano i dati nella query, l'operazione di ordinamento viene eseguita dall'origine dati anziché dal componente Elaborazione report.  
   
- Per un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tipo di origine dati è possibile aggiungere una clausola ORDER BY alla query di set di dati. La query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente, ad esempio, di disporre in ordine decrescente le colonne Sales e Region della tabella SalesOrders in base alle vendite: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Per altre informazioni, vedere "Ordinamento delle righe con la clausola ORDER BY" nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Per un tipo di origine dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile aggiungere una clausola ORDER BY alla query del set di dati. La query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente, ad esempio, di disporre in ordine decrescente le colonne Sales e Region della tabella SalesOrders in base alle vendite: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Per altre informazioni, vedere "Ordinamento delle righe con la clausola ORDER BY" nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Non tutte le origini dati consentono di specificare l'ordinamento nella query.  
@@ -214,12 +213,11 @@ FROM Production.Product
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Grafici sparkline e barre dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [I misuratori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Indicatori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

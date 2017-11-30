@@ -1,5 +1,5 @@
 ---
-title: "Abilitare e disabilitare la funzionalità report personali | Documenti Microsoft"
+title: "Abilitare e disabilitare la funzionalità Report personali | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>Abilitare e disabilitare la funzionalità Report personali
   La caratteristica Report personali consente di assegnare spazio di archiviazione personale nel database del server di report. Gli utenti possono servirsi di tale spazio di archiviazione per salvare i propri report in una cartella privata. L'amministratore del server di report può attivare o disabilitare questa caratteristica oppure modificarne il funzionamento cambiando le impostazioni di sicurezza che determinano i vari tipi di operazioni che gli utenti possono eseguire in questa area di lavoro.  
@@ -57,8 +56,7 @@ ms.lasthandoff: 08/09/2017
  Si noti che, se si attiva la funzionalità Report personali, viene creata automaticamente una cartella Report personali per ogni utente con account di dominio che fa clic sul collegamento Report personali, anche se tale utente non desidera o non necessita di una cartella Report personali. Non esiste una soluzione per determinare quali cartelle sono in uso. È necessario controllare le cartelle manualmente per verificare se contengono dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proteggere i report personali](../../reporting-services/security/secure-my-reports.md)   
- [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Protezione dei report](../../reporting-services/security/secure-my-reports.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

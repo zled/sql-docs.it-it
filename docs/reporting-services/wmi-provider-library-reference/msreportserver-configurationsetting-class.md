@@ -1,5 +1,5 @@
 ---
-title: Classe MSReportServer_ConfigurationSetting | Documenti Microsoft
+title: Classe MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_ConfigurationSetting Class
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_ConfigurationSetting Class
+apilocation: reportingservices.mof
 apitype: MOFDef
 helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5fafb0a0252f8aa4f39a4ada65f1b22490690f95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>classe MSReportServer_ConfigurationSetting
   Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.  
@@ -50,7 +47,7 @@ public class MSReportServer_ConfigurationSetting
  Tutti i membri statici pubblici (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) di questo tipo sono sicuri per le operazioni a thread multipli. Non è invece garantita la sicurezza dei membri dell'istanza.  
   
 ## <a name="example"></a>Esempio  
- Per eseguire il codice seguente, aggiungere il nome del server al posto di ogni \< *servername*>. Aggiornare il percorso in modo che punti al percorso di installazione, se non è l'impostazione predefinita. L'esempio di codice seguente esegue l’iterazione di ogni proprietà nella classe *MSReportServer_ConfigurationSetting* , stampandone il nome e il relativo valore nella console.  
+ Per eseguire il codice seguente, aggiungere al posto di ogni \<*nomeserver*> il nome del server usato. Aggiornare il percorso in modo che punti al percorso di installazione, se non è l'impostazione predefinita. L'esempio di codice seguente esegue l’iterazione di ogni proprietà nella classe *MSReportServer_ConfigurationSetting* , stampandone il nome e il relativo valore nella console.  
   
 ```vb  
 Imports System  
@@ -183,4 +180,3 @@ class Class1
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

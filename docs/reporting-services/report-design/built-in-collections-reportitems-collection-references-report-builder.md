@@ -1,5 +1,5 @@
 ---
-title: Riferimenti alla raccolta ReportItems (Generatore Report e SSRS) | Documenti Microsoft
+title: Riferimenti alla raccolta ReportItems (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f157edb8bb3e562dd89379eb74b8de2de0b06cfb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Raccolte predefinite - riferimenti alla raccolta ReportItems (Generatore Report)
+# <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Raccolte predefinite - Riferimenti alla raccolta ReportItems (Generatore report)
   La raccolta predefinita **ReportItems** è il set di caselle di testo di elementi del report, ad esempio righe di un'area dati o caselle di testo nell'area di progettazione del report. La raccolta **ReportItems** include caselle di testo che si trovano nell'ambito corrente di un'intestazione di pagina, un piè di pagina o il corpo di un report. Questa raccolta viene determinata in fase di esecuzione dal componente Elaborazione report e dal renderer di report. L'ambito corrente cambia quando il componente Elaborazione report combina in successione i dati del report e gli elementi di layout dei relativi elementi mentre l'utente visualizza le pagine di un report. È possibile usare la raccolta predefinita **ReportItems** per produrre intestazioni di pagina in formato dizionario in cui vengono visualizzati il primo e l'ultimo elemento in ogni pagina.  
   
 > [!NOTE]  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
      `=ReportItems!Textbox1.Value`  
   
--   Questa espressione, inserita un **ReportItem** proprietà Color, casella di testo viene visualizzato il testo in nero quando il valore è > 0; in caso contrario, il valore viene visualizzato in rosso:  
+-   Questa espressione, se inserita nella proprietà Color di una casella di testo **ReportItem**, visualizza il testo in nero quando il valore è > 0 e in rosso in tutti gli altri casi:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -57,10 +56,9 @@ ms.lasthandoff: 08/09/2017
  Ad esempio, una casella di testo in una riga appartenente a un gruppo padre non deve contenere un'espressione che fa riferimento al nome di una casella di testo in una riga di un gruppo figlio. Tale espressione non restituisce un valore nel report, perché la casella di testo nella riga figlio si trova al di fuori dell'ambito. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolte predefinite nelle espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-

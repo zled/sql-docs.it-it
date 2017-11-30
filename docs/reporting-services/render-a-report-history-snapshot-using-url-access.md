@@ -1,5 +1,5 @@
 ---
-title: Eseguire il rendering di uno Snapshot della cronologia del Report con accesso tramite URL | Documenti Microsoft
+title: Eseguire il rendering degli snapshot della cronologia dei report tramite l'accesso con URL | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - snapshots [Reporting Services], URL access
 - snapshots [Reporting Services], rendering report history
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38237ef30d403dab78f8fedd00caa97ebdaf0b29
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f52059e27008b5a29bd14f95f6a20d1a1d64d207
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Eseguire il rendering degli snapshot della cronologia dei report tramite l'accesso con URL
   È possibile eseguire il rendering di un report in base allo snapshot della cronologia del report fornendo il parametro *rs:Snapshot* e impostandone il valore su un ID di snapshot valido. Il valore di questo parametro è nel formato AAAA-MM-GGTHH:MM:SS, in base allo standard ISO (International Organization for Standardization) 8601.  
@@ -42,8 +41,7 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso con URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
- [Riferimento ai parametri URL accesso](../reporting-services/url-access-parameter-reference.md)  
+ [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
   
   
-

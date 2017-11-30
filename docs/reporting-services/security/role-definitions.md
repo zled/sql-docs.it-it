@@ -1,5 +1,5 @@
 ---
-title: Le definizioni di ruolo | Documenti Microsoft
+title: Definizioni di ruolo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53968d85370c60720f4d6caf72054a869348b27d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="role-definitions"></a>Definizioni di ruolo
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], per *definizione**di ruolo* si intende una raccolta denominata di attività che definiscono le operazioni disponibili in un server di report. Le definizioni di ruolo rendono disponibili le regole utilizzate dal server di report per implementare la sicurezza. Quando un utente tenta di eseguire un'attività, ad esempio la pubblicazione di un report, nel server di report viene innanzitutto valutata l'assegnazione di ruolo dell'utente per stabilire se questa attività è inclusa nella relativa definizione di ruolo. Se l'attività è inclusa nella definizione di ruolo, la richiesta viene inoltrata.  
@@ -62,11 +61,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Creare, eliminare o modificare un ruolo &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Concessione dell'accesso utente a un Server di Report &#40; Gestione report &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificare o eliminare un'assegnazione di ruolo &#40; Gestione report &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   
-

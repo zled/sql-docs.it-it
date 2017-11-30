@@ -1,5 +1,5 @@
 ---
-title: Configurare un Server di Report per l'amministrazione remota | Documenti Microsoft
+title: Configurare un server di report per l'amministrazione remota | Microsoft Docs
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 9c2bf31935e821aff995fead3f8aa0478114424e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile configurare istanze del server di report in modalità locale o remota. Per configurare un'istanza remota del server di report, è possibile usare lo strumento di configurazione di Reporting Services oppure scrivere codice personalizzato che usi il provider WMI (Windows Management Instrumentation) per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lo strumento Gestione configurazione Reporting Services offre un'interfaccia grafica al provider WMI, per consentire di configurare un server di report senza dover scrivere codice. Quando si avvia lo strumento, è possibile specificare un server remoto a cui connettersi.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Digitare il nome del proprio account utente e quindi fare clic su **OK**.  
   
-10. In **le autorizzazioni per \<utente o gruppo >**, nel **Consenti** colonna, selezionare **avvio remoto** e **attivazione remota**, quindi fare clic su **OK**.  
+10. In **Autorizzazioni per \<Utente o Gruppo>** nella colonna **Consenti** selezionare **Avvio remoto** e **Attivazione remota** e quindi fare clic su **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Per impostare autorizzazioni nello spazio dei nomi WMI del server di report per utenti non amministratori  
   
@@ -145,7 +145,6 @@ ms.lasthandoff: 08/09/2017
 13. Nella colonna **Consenti** selezionare **Abilita account**, **Abilita remoto**e **Sicurezza da lettura**, quindi scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services di Configuration Manager &#40; Modalità nativa &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

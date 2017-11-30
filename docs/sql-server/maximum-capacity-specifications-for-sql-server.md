@@ -1,11 +1,14 @@
 ---
 title: "Specifiche di capacità massima per SQL Server | Microsoft Docs"
-ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.date: 11/6/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3e1a3a30b7018a3c31fa6cd2d97ffda10e43fcaa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Specifiche di capacità massima per SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
 
   Le tabelle seguenti indicano le dimensioni e i numeri massimi dei diversi oggetti definiti nei componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per passare alla tabella per una tecnologia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic sul relativo collegamento:  
@@ -55,11 +57,11 @@ ms.lasthandoff: 08/11/2017
 |Byte per ogni colonna di stringhe brevi||8.000||  
 |Byte per ogni clausola GROUP BY, ORDER BY||8.060||  
 |Byte per ogni chiave di indice||900 byte per un indice cluster. 1700 per un indice non cluster.|Il numero massimo di byte in una chiave di indice cluster non può essere maggiore di 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per una chiave di indice non cluster, il valore massimo è 1700 byte.<br /><br /> È possibile definire una chiave usando colonne a lunghezza variabile le cui dimensioni massime superano il limite. Tuttavia, le dimensioni combinate dei dati di tali colonne non possono mai superare il limite.<br /><br /> In un indice non cluster, è possibile includere colonne non chiave aggiuntive che non vengono incluse nel conteggio per il limite di dimensioni della chiave. Le colonne non chiave potrebbero migliorare le prestazioni di alcune query.|  
-|Byte per ogni chiave di indice per tabelle con ottimizzazione per la memoria||2500 byte per un indice non cluster. Nessun limite per un indice hash purché tutte le chiavi di indice rientrino nella riga.|In una tabella con ottimizzazione per la memoria, un indice non cluster non può contenere colonne chiave le cui dimensioni massime dichiarate superano i 2500 byte. È irrilevante se i dati effettivi nelle colonne chiave sono minori delle dimensioni massime dichiarate.<br /><br /> Per una chiave di indice hash non esiste alcun limite fisico alle dimensioni.<br /><br /> Per gli indici delle tabelle con ottimizzazione per la memoria, non è disponibile alcun concetto di colonne incluse poiché tutti gli indici coprono implicitamente tutte le colonne.<br /><br /> Per una tabella con ottimizzazione per la memoria, anche se le dimensioni delle righe sono di 8060 byte, alcune colonne a lunghezza variabile possono essere fisicamente archiviate all'esterno di tali 8060 byte. Tuttavia, le dimensioni massime dichiarate di tutte le colonne chiave per tutti gli indici in una tabella, oltre a eventuali colonne a lunghezza fissa aggiuntive nella tabella, non devono superare 8060 byte.|  
+|Byte per ogni chiave di indice per tabelle ottimizzate per la memoria||2500 byte per un indice non cluster. Nessun limite per un indice hash purché tutte le chiavi di indice rientrino nella riga.|In una tabella ottimizzata per la memoria, un indice non cluster non può contenere colonne chiave le cui dimensioni massime dichiarate superano i 2500 byte. È irrilevante se i dati effettivi nelle colonne chiave sono minori delle dimensioni massime dichiarate.<br /><br /> Per una chiave di indice hash non esiste alcun limite fisico alle dimensioni.<br /><br /> Per gli indici delle tabelle ottimizzate per la memoria, non è disponibile alcun concetto di colonne incluse poiché tutti gli indici coprono implicitamente tutte le colonne.<br /><br /> Per una tabella ottimizzata per la memoria, anche se le dimensioni delle righe sono di 8060 byte, alcune colonne a lunghezza variabile possono essere fisicamente archiviate all'esterno di tali 8060 byte. Tuttavia, le dimensioni massime dichiarate di tutte le colonne chiave per tutti gli indici in una tabella, oltre a eventuali colonne a lunghezza fissa aggiuntive nella tabella, non devono superare 8060 byte.|  
 |Byte per ogni chiave esterna||900||  
 |Byte per ogni chiave primaria||900||  
 |Byte per ogni riga||8.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'archiviazione dei dati di overflow della riga che consente di spostare le colonne di lunghezza variabile all'esterno delle righe. Solo una radice di 24 byte viene archiviata nel record principale per le colonne di lunghezza variabile spostate all'esterno di righe. Di conseguenza, il limite delle righe effettivo è maggiore di quello delle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere l'argomento "Dati di overflow della riga che superano 8 KB" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
-|Byte per ogni riga nelle tabelle con ottimizzazione per la memoria||8.060|A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] le tabelle con ottimizzazione per la memoria supportano l'archiviazione all'esterno delle righe. Le colonne a lunghezza variabile vengono spostare all'esterno delle righe se le dimensioni massime di tutte le colonne nella tabella superano 8060 byte. La decisione avviene in fase di compilazione. Per le colonne archiviate all'esterno delle righe viene archiviato un solo riferimento a 8 byte. Per altre informazioni, vedere [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
+|Byte per ogni riga nelle tabelle ottimizzate per la memoria||8.060|A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] le tabelle ottimizzate per la memoria supportano l'archiviazione all'esterno delle righe. Le colonne a lunghezza variabile vengono spostare all'esterno delle righe se le dimensioni massime di tutte le colonne nella tabella superano 8060 byte. La decisione avviene in fase di compilazione. Per le colonne archiviate all'esterno delle righe viene archiviato un solo riferimento a 8 byte. Per altre informazioni, vedere [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Byte nel testo di origine di una stored procedure||Minore delle dimensioni batch o 250 MB||  
 |Byte per ogni colonna **varchar(max)**, **varbinary(max)**, **xml**, **text**o **image**||2^31-1||  
 |Caratteri per ogni colonna **ntext** o **nvarchar(max)**||2^30-1||  
@@ -77,16 +79,16 @@ ms.lasthandoff: 08/11/2017
 |Dimensioni di database||524.272 terabytes||  
 |Database per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
 |Filegroup per ogni database||32.767||  
-|Filegroup per ogni database per dati con ottimizzazione per la memoria||1||  
+|Filegroup per ogni database per dati ottimizzati per la memoria||1||  
 |File per ogni database||32.767||  
 |Dimensioni di file (dati)||16 terabyte||  
 |Dimensioni del file (log)||2 terabyte||  
-|File di dati per dati con ottimizzazione per la memoria per ogni database||4.096||  
-|File differenziale per ogni file di dati per dati con ottimizzazione per la memoria||1||  
+|File di dati per dati ottimizzati per la memoria per ogni database||4.096 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Le versioni successive di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non impongono un limite rigido di questo tipo.||  
+|File differenziale per ogni file di dati per dati ottimizzati per la memoria||1||  
 |Riferimenti alla tabella della chiave esterna per ogni tabella||In uscita = 253. In ingresso = 10.000.|Per informazioni sulle restrizioni, vedere [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Lunghezza di identificatore (in caratteri)||128||  
 |Istanze per ogni computer||50 istanze in un server autonomo.<br /><br /> 25 istanze su un cluster di failover durante l'utilizzo di un disco di cluster condiviso come opzione archiviata per l'installazione del cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta 50 istanze su un cluster di failover se si scelgono condivisioni file SMB come opzione di archiviazione per l'installazione del cluster.||  
-|Indici per ogni tabella con ottimizzazione per la memoria||8||  
+|Indici per ogni tabella ottimizzata per la memoria||999 avvio [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] e in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] e [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
 |Lunghezza di una stringa contenente istruzioni SQL (dimensioni batch)||65.536 * dimensioni del pacchetto di rete|Dimensioni pacchetto di rete corrisponde alle dimensioni dei pacchetti del flusso TDS (Tabular Data Stream) usati per le comunicazioni tra applicazioni e [!INCLUDE[ssDE](../includes/ssde-md.md)]relazionale. La dimensione predefinita del pacchetto è 4 KB e viene controllata dall'opzione di configurazione delle dimensioni del pacchetto di rete.|  
 |Blocchi per ogni connessione||Numero massimo di blocchi per ogni server||  
 |Blocchi per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limitato solo dalla memoria|Questo valore si riferisce all'allocazione di blocchi statici. I blocchi dinamici sono limitati solo dalla memoria.|  
@@ -159,4 +161,3 @@ ms.lasthandoff: 08/11/2017
  [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

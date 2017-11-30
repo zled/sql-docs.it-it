@@ -1,26 +1,24 @@
 ---
-title: Aggiungere gli strumenti di navigazione per report Reporting Services per dispositivi mobili | Documenti Microsoft
+title: Aggiungere gli strumenti di spostamento ai report di Reporting Services per dispositivi mobili | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Aggiungere gli strumenti di spostamento ai report di Reporting Services per dispositivi mobili
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], si aggiungono gli *strumenti di spostamento* per filtrare i dati in visualizzazioni in base all'ora o alla selezione. 
@@ -38,7 +36,7 @@ Gli**strumenti di spostamento basati sulla selezione** filtrano le tabelle selez
 Come suggerisce il nome, lo strumento di spostamento temporale viene usato per filtrare un intervallo di dati entro un intervallo di tempo.   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*I grafici a quattro linee a sinistra vengono impostati in predefiniti di intervallo di tempo. Il grafico a linee a destra è il filtro.*  
+*I quattro grafici a linee sulla sinistra sono impostati in Intervalli di tempo preimpostati. Il grafico a linee sulla destra è il filtro.*  
   
 Quando si visualizza il report in anteprima o nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , si trascinano le frecce nello strumento di spostamento temporale per filtrare la parte restante del report.  
   
@@ -132,4 +130,3 @@ I filtri possono anche essere propagati a catena, in modo che il valore selezion
 * [Visualizations to Reporting Services mobile reports (Visualizzazioni nei report per dispositivi mobili di Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Aggiungere indicatori ai report per dispositivi mobili in Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Aggiungere griglie dei dati al report per dispositivi mobili in Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

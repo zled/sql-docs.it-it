@@ -1,5 +1,5 @@
 ---
-title: Risolvere i problemi di rendering dei Report di servizi di Reporting | Documenti Microsoft
+title: Risolvere i problemi di rendering del report di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91629c6d86f1616b19026cbc0e670fff51553dda
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5bd1f634ba25711137db413e2069cd7d9ae328cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Risolvere i problemi di rendering del report di Reporting Services
 Dopo che le informazioni sul layout e i dati del report sono stati combinati, il report compilato viene inviato a un renderer di report. Ad esempio, quando si visualizza in anteprima un report in locale, si utilizza il renderer HTML per visualizzare il report compilato. Utilizzare le informazioni riportate in questo argomento per risolvere i problemi specifici del rendering del report.   
@@ -80,5 +79,4 @@ Quando l'origine dati è configurata per un tipo di connessione Elenco Microsoft
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

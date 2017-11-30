@@ -1,5 +1,5 @@
 ---
-title: Aggiungere tipi di contenuto di Reporting Services in una raccolta di SharePoint | Documenti Microsoft
+title: Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: fe9ffe38667a07a647e5ed23f84cd7039c430f18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Aggiungere tipi di contenuto di Reporting Services in una raccolta di SharePoint
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -32,7 +31,7 @@ ms.lasthandoff: 10/06/2017
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di tipi di contenuto di SharePoint predefiniti usati per gestire file di origini dati condivise (con estensione rsds), modelli di report (con estensione smdl) e file di definizione dei report di Generatore report (con estensione rdl). Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
  Per aggiungere tipi di contenuto a una raccolta, è necessario essere un amministratore del sito o disporre del livello di autorizzazione Controllo completo.  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  Passare a **Impostazioni sito**.  
   
-    -   In SharePoint 2013 fare clic sull'icona **Impostazioni** . ![Le impostazioni di SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "le impostazioni di SharePoint")  
+    -   In SharePoint 2013 fare clic sull'icona **Impostazioni** . ![Impostazioni di SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint")  
   
     -   In SharePoint 2010 fare clic su **Azioni sito**, quindi su **Impostazioni sito**.  
   
@@ -162,7 +161,7 @@ ms.lasthandoff: 10/06/2017
   
 8.  Dopo l'aggiunta dei tipi di contenuto, scegliere **OK**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a>Per abilitare i tipi di contenuto e gestione del contenuto per più siti di Business Intelligence  
+##  <a name="bkmk_enable_multiple_sites"></a> Per abilitare i tipi di contenuto e la gestione del contenuto per più siti di Business Intelligence  
   
 1.  Per i server di report SQL Server Reporting Services 2008 e 2008 R2, è possibile abilitare i tipi di contenuto e la gestione del contenuto per più siti di Centro business intelligence:  
   
@@ -181,4 +180,3 @@ ms.lasthandoff: 10/06/2017
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

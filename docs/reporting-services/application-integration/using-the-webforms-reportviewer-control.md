@@ -1,5 +1,5 @@
 ---
-title: Utilizzo del controllo ReportViewer WebForms | Documenti Microsoft
+title: Using the WebForms ReportViewer Control (Uso del controllo WebForm ReportViewer) | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -10,47 +10,44 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3b92dbd07d94a0e30c93d994c5eaaa28cb7627d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile utilizzare il controllo Web Form ReportViewer per eseguirne il rendering in un'applicazione Web.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Per utilizzare il controllo ReportViewer in un'applicazione Web  
   
-1.  Creare un nuovo [!INCLUDE[msCoName](../../includes/msconame-md.md)] sito Web ASP.NET utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Creare un nuovo sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-O -  
+     \- oppure -  
   
      Aprire un sito Web ASP.NET esistente e aggiungere un nuovo Web Form.  
   
-2.  Individuare il **ScriptManager** controllo il **Estensioni AJAX** gruppo il **della casella degli strumenti** finestra e trascinarlo nell'area di progettazione del Web form.  
+2.  Individuare il controllo **ScriptManager** nel gruppo**AJAX Extensions** nella finestra **Casella degli strumenti** e trascinarlo nell'area di progettazione del Web Form.  
   
-     Se il **della casella degli strumenti** è non è visibile, è possibile accedervi dal **vista** menu selezionando **della casella degli strumenti**.  
+     **Casella degli strumenti** non è visibile, è possibile accedervi scegliendo **Casella degli strumenti** dal menu **Visualizza**.  
   
-3.  Individuare il **ReportViewer** controllo il **della casella degli strumenti** e trascinarlo nell'area di progettazione sotto la **ScriptManager** controllo.  
+3.  Individuare il controllo **ReportViewer** nella **Casella degli strumenti** e trascinarlo nell'area di progettazione sotto il controllo **ScriptManager**.  
   
-     Il **ReportViewer** controllo denominato reportViewer1 verrà aggiunto al form.  
+     Il controllo **ReportViewer** denominato reportViewer1 verrà aggiunto al form.  
   
- Dopo il controllo viene aggiunto al form il **attività di ReportViewer** viene visualizzato smart tag che richiede di selezionare un report. Se il report che si desidera visualizzare è stato distribuito a un server di report selezionare il  **\<Report Server >** opzione il **Scegli Report** elenco a discesa. Una volta il  **\<Report Server >** opzione è selezionata due proprietà aggiuntive verranno visualizzate, **Url Server di Report** e **percorso Report**. Il **Url Server di Report** è l'indirizzo del server di report e **percorso Report** è il percorso completo del report che si desidera eseguire il rendering.  
+ Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **ReportViewer Tasks** in cui viene richiesto di selezionare un report. Se il report da visualizzare è stato distribuito in un server di report, scegliere **\<<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere selezionato l'opzione **\<Server Report>**, verranno visualizzate due proprietà aggiuntive, ovvero **URL server di report** e **Percorso report**. L'**URL server di report** indica l'indirizzo del server di report, mentre **Percorso report** indica il percorso completo del report di cui si vuole eseguire il rendering.  
   
- Se si desidera visualizzare un report in modalità locale, è possibile selezionare l'opzione di **Progetta nuovo report** opzione per avviare Progettazione report oppure selezionare un report che fa già parte del progetto esistente. Dopo aver selezionato un report, assicurarsi di immettere il nome del file RDLC del report nel **ReportPath** proprietà del controllo ReportViewer. Questa proprietà viene visualizzata sotto il **LocalReport** nodo il **proprietà** riquadro.  
+ Per visualizzare un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente. Dopo aver selezionato un report, assicurarsi di immettere il nome del file RDLC del report nella proprietà **ReportPath** del controllo ReportViewer. Questa proprietà viene visualizzata sotto il nodo **LocalReport** nel riquadro **Properties**.  
   
- È possibile nascondere uno o più elementi sulla barra degli strumenti di ReportViewer quando viene eseguito il rendering del report. Ad esempio, è possibile nascondere il pulsante di stampa. Per nascondere gli elementi della barra degli strumenti, impostare le proprietà seguenti di ReportViewer **False** nel **proprietà** riquadro.  
+ È possibile nascondere uno o più elementi sulla barra degli strumenti di ReportViewer quando viene eseguito il rendering del report. Ad esempio, è possibile nascondere il pulsante di stampa. Per nascondere elementi della barra degli strumenti, impostare le proprietà seguenti di ReportViewer su **False** nel riquadro **Proprietà**.  
   
 -   **ShowBackButton**  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Visualizzazione di report in modalità di elaborazione remota  
  Nell'esempio seguente viene illustrato come eseguire il rendering di un report distribuito in un server di report. In questo esempio viene usato il report Sales Order Detail incluso nel progetto di report di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- Nell'esempio viene utilizzata l'autenticazione integrata di Windows, pertanto è innanzitutto necessario abilitare la rappresentazione. Per eseguire questo inserire la riga seguente nel **Web. config** file:  
+ Nell'esempio viene utilizzata l'autenticazione integrata di Windows, pertanto è innanzitutto necessario abilitare la rappresentazione. A tale scopo, inserire la riga seguente nel file **web.config**:  
   
 ```  
 <!-- Web.config file. -->  
@@ -79,7 +76,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Per impostazione predefinita, la rappresentazione è disabilitata.  
 
-**LINGUAGGIO C#**
+**C#**
 ```
 protected void Page_Init(object sender, EventArgs e)  
 {  
@@ -108,7 +105,7 @@ protected void Page_Init(object sender, EventArgs e)
 }  
 ```  
   
-**VISUAL BASIC.NET**
+**VB.NET**
 ```
 Imports Microsoft.Reporting.WebForms  
   
@@ -155,23 +152,23 @@ End Class
   
 1.  Aprire il sito Web a cui verrà aggiunto il report.  
   
-2.  Dal **sito Web** dal menu **Aggiungi elemento esistente**.  
+2.  Scegliere **Aggiungi elemento esistente** dal menu **Sito Web**.  
   
 3.  Passare al percorso di installazione del progetto di report di esempio AdventureWorks.  
   
      Il percorso predefinito è C:\Programmi\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports.  
   
-4.  Selezionare il file Sales Order Detail.rdl e fare clic su di **Aggiungi** pulsante.  
+4.  Selezionare il file Sales Order Detail.rdl e fare clic sul pulsante **Aggiungi**.  
   
      Il file Sales Order Detail.rdl dovrebbe ora far parte del progetto.  
   
-5.  Il file Sales Order Detail.rdl in Esplora soluzioni e selezionare **rinominare**. Rinominare il report in **Sales Order rdlc** e premere INVIO.  
+5.  Fare clic con il pulsante destro del mouse sul file Sales Order Detail.rdl in Esplora soluzioni e scegliere **Rinomina**. Rinominare il report in**Sales Order Detail.rdlc** e premere INVIO.  
   
-     Se Esplora soluzioni non è visibile, è possibile aprirlo dal **vista** menu scegliendo Esplora soluzioni.  
+     Se Esplora soluzioni non è visibile, è possibile aprirlo scegliendo Esplora soluzioni dal menu **Visualizza**.  
   
  Nell'esempio di codice seguente viene creato un set di dati per i dati dell'ordine di vendita, quindi viene eseguito il rendering del report Sales Order Detail in modalità locale.  
 
-**LINGUAGGIO C#**
+**C#**
 ```csharp  
 protected void Page_Init(object sender, EventArgs e)  
 {  
@@ -319,7 +316,7 @@ private void GetSalesOrderDetailData(string salesOrderNumber,
     }  
 }  
 ```  
-**VISUAL BASIC.NET**
+**VB.NET**
 ```vb  
 Imports System.Data  
 Imports System.Data.SqlClient  
@@ -490,8 +487,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integrazione di Reporting Services utilizzando i controlli ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- [Raccolta dei dati 2016 controllo ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+ [Integrazione di Reporting Services tramite i controlli ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Raccolta dati nel controllo ReportViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   
-

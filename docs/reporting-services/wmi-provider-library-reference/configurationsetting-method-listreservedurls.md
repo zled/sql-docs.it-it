@@ -1,5 +1,5 @@
 ---
-title: Metodo ListReservedURLs (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft
+title: Metodo ListReservedURLs (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ListReservedURLs method
+helpviewer_keywords: ListReservedURLs method
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cf6f31340eaba5654e2c5fd125eefba07a39d8e5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e21a068b46b27e02b90217128483bdec15564fc0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---listreservedurls"></a>Metodo ConfigurationSetting - ListReservedURLs
+# <a name="configurationsetting-method---listreservedurls"></a>Metodo di ConfigurationSetting - ListReservedURLs
   Elenca gli URL riservati per tutte le applicazioni presenti nel server di report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -73,4 +71,3 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

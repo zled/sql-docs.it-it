@@ -1,5 +1,5 @@
 ---
-title: Glossario (Generatore Report) | Documenti Microsoft
+title: Glossario (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d58372b901950fa8a7f674a417aa76457e80c466
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 |regole colore|Algoritmo che assegna automaticamente colori a ogni elemento di una mappa in un livello mappa.|  
 |scala dei colori|Tipo di legenda di mappa utilizzato per interpretare i colori rappresentati in una mappa.|  
 |Common Language Runtime (CLR)|Motore alla base dell'esecuzione del codice gestito. Il runtime fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza dall'accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling.|  
-|espressione complessa|Un'espressione che non può essere rappresentata come un riferimento di campo predefinite singola e viene visualizzata nell'area di progettazione come <\<Expr >>.|  
+|espressione complessa|Espressione che non può essere rappresentata come singolo riferimento di campo predefinito e che viene visualizzata sull'area di progettazione come <\<Expr>>.|  
 |Concatenation|Combinazione di due o più stringhe di caratteri o espressioni in un'unica stringa di caratteri o espressione oppure combinazione di due o più stringe o espressioni binarie in un'unica stringa o espressione binaria.|  
 |concorrenza|Processo che consente a più utenti di accedere e modificare contemporaneamente i dati condivisi. In SQL Server vengono utilizzati i blocchi per consentire a più utenti di accedere e modificare contemporaneamente i dati condivisi ed evitare la generazione di conflitti.|  
 |file config|Vedere: file di configurazione|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 08/09/2017
 |istanza utente|Istanza di SQL Server Express generata dall'istanza padre per conto di un utente.|  
 |asse dei valori (y)|Asse in cui vengono visualizzati valori di dati numerici in un grafico. Tale asse è in genere l'asse verticale. Eccezione: nei grafici a barre gli assi sono invertiti e l'asse y consente di visualizzare il raggruppamento di dati.|  
 |espressione valore|Espressione MDX (Multidimensional Expressions) che restituisce un valore. Le espressioni valore possono essere applicate a set, tuple, membri, livelli, numeri o stringhe.|  
-|variabile|1. In Integration Services archivia i valori che possono essere utilizzati in script, espressioni e espressioni di proprietà per impostare i valori di colonna e le proprietà degli oggetti di pacchetto. <br />2. Entità definite che costituiscono valori assegnati. Una variabile locale è definita con un DECLARE@localvariable istruzione e assegnato un valore iniziale all'interno del batch di istruzioni in cui è dichiarata con un'istruzione SELECT o SET@localvariable istruzione.|  
+|variabile|1. In Integration Services archivia i valori che possono essere utilizzati in script, espressioni e espressioni di proprietà per impostare i valori di colonna e le proprietà degli oggetti di pacchetto. <br />2. Entità definite che costituiscono valori assegnati. Una variabile locale viene definita tramite un'istruzione DECLARE@localvariable e ad essa viene assegnato un valore iniziale all'interno del batch di istruzioni in cui è stata dichiarata tramite un'istruzione SELECT o SET@localvariable.|  
 |intervallo variabile|Opzione in un grafico di Reporting Services che può essere specificata per calcolare automaticamente il numero ottimale di etichette che possono essere posizionate su un asse, in base alla larghezza o all'altezza del grafico.|  
 |visualizzazione|In mappe, grafici e misuratori, modo in cui un utente sceglie di visualizzare dati analitici.|  
 |Servizio Web|In Reporting Services, servizio che utilizza Simple Object Access Protocol (SOAP) tramite HTTP e opera come interfaccia per le comunicazioni tra i programmi client e il server di report.|  
@@ -379,4 +378,3 @@ ms.lasthandoff: 08/09/2017
  [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

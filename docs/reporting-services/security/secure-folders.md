@@ -1,5 +1,5 @@
 ---
-title: Proteggere le cartelle | Documenti Microsoft
+title: Proteggere le cartelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0eed722cabb60b072328181e82fe0c55f265d7aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-folders"></a>Proteggere le cartelle
   La sicurezza di tutto il contenuto di un server di report si basa sulle impostazioni di sicurezza delle cartelle. Poiché che la sicurezza viene ereditata tramite la struttura di cartelle, è possibile consentire determinati tipi di accesso a sezioni diverse, grandi o piccole, della gerarchia di cartelle.  
@@ -49,9 +48,8 @@ ms.lasthandoff: 08/09/2017
 |Impostazione della sicurezza per singoli elementi|Creare e modificare assegnazioni di ruolo che controllano l'accesso alla cartella. Questa attività deve essere utilizzata con l'attività "Visualizzazione di cartelle" o "Gestione di cartelle". In caso contrario, non si avrà alcun effetto in quanto l'utente non sarà in grado di selezionare l'elemento.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proteggere i report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
- [Elementi di origine dati condivisa protetta](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Proteggere le origini dei dati condivise](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

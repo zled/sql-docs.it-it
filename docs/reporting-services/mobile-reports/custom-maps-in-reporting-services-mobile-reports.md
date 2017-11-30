@@ -1,31 +1,29 @@
 ---
-title: Personalizzare mappe nei report di Reporting Services per dispositivi mobili | Documenti Microsoft
+title: Mappe personalizzate nei report di Reporting Services per dispositivi mobili | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>mappe personalizzate nei report di Reporting Services per dispositivi mobili
-Mappe geografiche in SQL Server Mobile Report Publisher sono definite in un formato noto come *di forma ESRI*.  
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Esegue il mapping personalizzato nei report di Reporting Services per dispositivi mobili
+Le mappe geografiche in SQL Server Mobile Report Publisher sono definite in un formato noto come *file di forma ESRI*.  
   
-Inizialmente progettato da una società privata, oggi è un formato semi aperto molto diffuso, usato in gran parte delle applicazioni GIS. In conformità con questo formato, Mobile Report Publisher richiede due file deve essere fornito quando si definisce una mappa:  
+Inizialmente progettato da una società privata, oggi è un formato semi aperto molto diffuso, usato in gran parte delle applicazioni GIS. In conformità con questo formato, Mobile Report Publisher richiede di fornire due file durante la definizione di una mappa:  
   
 - Un file SHP per geometrie di forma  
 - Un file DBF per i metadati  
@@ -58,9 +56,8 @@ Molti file di forma esistenti possono essere scaricati dal Web, da siti come i s
 - OpenStreetMap: [http://openstreetmapdata.com/data](http://openstreetmapdata.com/data)  
   
 ### <a name="see-also"></a>Vedere anche  
-- [Esegue il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+- [Eseguire il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Creare e pubblicare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   
   
-

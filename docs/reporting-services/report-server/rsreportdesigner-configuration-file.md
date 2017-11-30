@@ -1,5 +1,5 @@
 ---
-title: File di configurazione RSReportDesigner | Documenti Microsoft
+title: File di configurazione RSReportDesigner | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: debdd3bfd68c202222fcdd153c366b3ff6d70367
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner - file di configurazione
   Nel file RSReportDesigner.config sono archiviate le impostazioni delle estensioni per il rendering e l'elaborazione dati disponibili per Progettazione report. Le informazioni sulle estensioni per l'elaborazione dati sono contenute nell'elemento **Dati** . Le informazioni sulle estensioni per il rendering sono contenute nell'elemento **Rendering** . L'elemento **Progettazione** enumera i generatori di query usati in progettazione report.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
  Sono disponibili istruzioni specifiche per la modifica di file di configurazione se si personalizzano impostazioni di estensione per il rendering. Per altre informazioni, vedere [personalizzare i parametri di estensione per il rendering in RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
- Per istruzioni generali su come modificare i file di configurazione, vedere [modificare un File di configurazione di Reporting Services &#40; RSReportServer. config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Per istruzioni generali su come modificare i file di configurazione, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>File di configurazione di esempio  
  Nell'esempio seguente viene illustrato il formato del file RSReportDesigner.config.  

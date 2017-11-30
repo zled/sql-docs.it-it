@@ -1,5 +1,5 @@
 ---
-title: Report e raggruppare i riferimenti a raccolte di variabili (Generatore Report e SSRS) | Documenti Microsoft
+title: Riferimenti a raccolte di variabili di report e di gruppo (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,19 +20,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b04a9bc443ac284afad9153f5f3196a8c9a4fc1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Raccolte predefinite, Report e riferimenti a variabili di gruppo (Generatore Report)
+# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Raccolte predefinite - Riferimenti a variabili di report e di gruppo (Generatore report)
   Quando un calcolo complesso viene utilizzato più volte nelle espressioni di un report, è possibile creare una variabile che può essere di report o di gruppo. I nomi delle variabili devono essere univoci in un report.  
   
 > [!NOTE]  
@@ -78,9 +77,8 @@ ms.lasthandoff: 08/09/2017
  Per fare riferimento alla variabile in un'espressione, utilizzare la sintassi di raccolta globale, ad esempio `=Variables!GroupDescription.Value`. Nell'area di progettazione il valore viene visualizzato in una casella di testo come `<<Expr>>`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Raccolte predefinite nelle espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

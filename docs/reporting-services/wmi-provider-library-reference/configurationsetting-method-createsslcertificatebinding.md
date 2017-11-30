@@ -1,5 +1,5 @@
 ---
-title: Metodo CreateSSLCertificateBinding (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft
+title: Metodo CreateSSLCertificateBinding (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CreateSSLCertificateBinding
+helpviewer_keywords: CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1d9a797922bc8d7b39e7b7c43897d4ae5ee5bd28
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 68df063c02108366df07867d51cac029218e16c4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---createsslcertificatebinding"></a>Metodo ConfigurationSetting - createsslcertificatebinding-metodo
+# <a name="configurationsetting-method---createsslcertificatebinding"></a>Metodo di ConfigurationSetting - CreateSSLCertificateBinding
   Crea un'associazione certificato SSL.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -92,4 +90,3 @@ public void CreateSSLCertificateBinding(string application,
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

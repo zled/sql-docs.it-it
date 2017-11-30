@@ -1,5 +1,5 @@
 ---
-title: Memorizzare nella cache un Report (gestione Report) | Documenti Microsoft
+title: Memorizzare un report nella cache (Gestione report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe7f91a706a0b65920b3f32bd4fabde48cba31fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cache-a-report-report-manager"></a>Memorizzare un report nella cache (Gestione report)
   Per ottimizzare le prestazioni, è possibile configurare le proprietà relative alla memorizzazione nella cache per un report. Quando un report viene memorizzato nella cache, una copia del report visualizzabile viene salvata per un breve periodo di tempo. Il primo utente che richiede il report deve attendere il completamento di tutte le elaborazioni prima di visualizzare il report. Gli utenti successivi che richiedono il report all'interno del periodo di memorizzazione nella cache possono visualizzarlo immediatamente perché l'elaborazione è già stata eseguita.  
@@ -36,9 +35,9 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>Per pianificare la scadenza di un report memorizzato nella cache  
   
-1.  Avviare [Gestione Report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  In Gestione report passare alla pagina **Contenuto**. quindi passare al report per il quale si desidera impostare le proprietà relative alla memorizzazione nella cache, posizionare il puntatore del mouse sull'elemento e fare clic sulla freccia a discesa.  
+2.  In Gestione report passare alla pagina **Contenuto** . quindi passare al report per il quale si desidera impostare le proprietà relative alla memorizzazione nella cache, posizionare il puntatore del mouse sull'elemento e fare clic sulla freccia a discesa.  
   
 3.  Nel menu a discesa fare clic su **Gestisci**.  
   
@@ -48,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
 6.  Selezionare una delle due opzioni cache seguenti e configurare la scadenza come segue:  
   
-    -   Per configurare una copia memorizzata nella cache in modo che scada dopo un periodo di tempo specifico, fare clic su **Memorizza nella cache una copia temporanea del report. Copia del report scadrà dopo un numero di minuti**. Digitare il numero di minuti alla scadenza del report.  
+    -   Per configurare una copia memorizzata nella cache in modo che scada dopo un periodo di tempo specifico, fare clic su **Memorizza nella cache una copia temporanea del report. La copia del report scadrà dopo il numero di minuti seguente**. Digitare il numero di minuti alla scadenza del report.  
   
-    -   Per configurare una copia memorizzata nella cache affinché scada in base alla pianificazione, fare clic su **memorizzare nella Cache una copia temporanea del report. Copia del report in base alla pianificazione seguente scadrà.** Fare clic su **Configura**oppure selezionare una pianificazione condivisa per controllare la scadenza del report.  
+    -   Per configurare una copia memorizzata nella cache affinché scada in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Fare clic su **Configura**oppure selezionare una pianificazione condivisa per controllare la scadenza del report.  
   
 7.  Fare clic su **Applica**.  
   
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/09/2017
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

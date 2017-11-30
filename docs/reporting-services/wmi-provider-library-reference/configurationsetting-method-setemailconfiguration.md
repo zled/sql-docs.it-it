@@ -1,5 +1,5 @@
 ---
-title: Metodo SetEmailConfiguration (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft
+title: Metodo SetEmailConfiguration (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetEmailConfiguration method
+helpviewer_keywords: SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da1694467a88220546fa8ec8e02ff78564f605ed
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c69a54107955301b2c97aa1bd7c64d156a65c697
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>Metodo ConfigurationSetting - SetEmailConfiguration
   Configura l'estensione per il recapito tramite posta elettronica utilizzata dal server di report per l'invio di messaggi di posta elettronica.  
@@ -75,4 +71,3 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

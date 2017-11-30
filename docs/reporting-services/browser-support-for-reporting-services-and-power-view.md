@@ -1,7 +1,6 @@
 ---
-title: Supporto browser per Reporting Services e Power View | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Supporto browser per Reporting Services e Power View | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -21,30 +20,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6dcf1d4b0423517113345f9ed6532fb6baf07e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Supporto browser per Reporting Services e Power View
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Informazioni su quali browser versioni sono supportate per la gestione e visualizzazione di SQL Server Reporting Services, i controlli ReportViewer e Power View.
+Informazioni su quali versioni dei browser sono supportate per la gestione e la visualizzazione di SQL Server Reporting Services, dei controlli ReportViewer e di Power View.
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
-## <a name="browser-requirements-for-the-web-portal"></a>Requisiti del browser per il portale web
+## <a name="browser-requirements-for-the-web-portal"></a>Requisiti del browser per il portale Web
 
-Di seguito è riportato l'elenco corrente dei browser supportati per il portale web.
+Di seguito è riportato l'elenco corrente dei browser supportati per il portale Web.
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -155,12 +153,11 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Ricerca e visualizzazione dei report nel portale web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Ricerca e visualizzazione di report nel portale Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Portale Web (modalità nativa SSRS)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
 

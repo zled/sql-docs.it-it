@@ -1,37 +1,35 @@
 ---
-title: Personalizzare il riquadro dei parametri in un Report (Generatore Report) | Documenti Microsoft
+title: Personalizzare il riquadro dei parametri in un report (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7e31a23d41c011787960cc662c11f763bab7291b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   Quando si creano report impaginati con parametri in Generatore report, è possibile personalizzare il riquadro Parametri. Nella visualizzazione di progettazione report è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro.  
   
- Quando si trascina un parametro in una nuova colonna e riga del riquadro, l'ordine del parametro nel riquadro **Dati report** viene modificato. Quando si modifica l'ordine del parametro nel riquadro **Dati report**, viene modificata la posizione del parametro stesso nel riquadro. Per informazioni sul motivo per cui l'ordine dei parametri è importante, vedere [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+ Quando si trascina un parametro in una nuova colonna e riga del riquadro, l'ordine del parametro nel riquadro **Dati report** viene modificato. Quando si modifica l'ordine del parametro nel riquadro **Dati report** , viene modificata la posizione del parametro stesso nel riquadro. Per informazioni sul motivo per cui l'ordine dei parametri è importante, vedere [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 ## <a name="to-customize-the-parameters-pane"></a>Per personalizzare il riquadro dei parametri  
   
 1.  Nella scheda **Vista** selezionare la casella di controllo **Parametri** per visualizzare il riquadro dei parametri.  
   
-     ![Riquadro parametri di accesso dalla scheda](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "riquadro parametri di accesso dalla scheda")  
+     ![Riquadro parametri di accesso dalla scheda Vista](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Riquadro parametri di accesso dalla scheda Vista")  
   
      Il riquadro viene visualizzato nella parte superiore dell'area di progettazione.  
   
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Fare clic con il pulsante destro del mouse su una cella vuota nel riquadro dei parametri e quindi scegliere **Aggiungi parametro**.  
   
-         ![Aggiungere un nuovo parametro dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "aggiungere nuovo parametro dal riquadro dei parametri")  
+         ![Aggiungere un nuovo parametro dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Aggiungere un nuovo parametro dal riquadro dei parametri")  
   
     -   Fare clic con il pulsante destro del mouse su **Parametri** nel riquadro **Dati report** e quindi scegliere **Aggiungi parametro**.  
   
@@ -51,13 +49,13 @@ ms.lasthandoff: 08/09/2017
   
     -   Fare clic con il pulsante destro del mouse sul riquadro dei parametri, quindi scegliere **Proprietà parametri**.  
   
-         ![Accedere alle proprietà di parametro dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "accedere alle proprietà di parametro dal riquadro dei parametri")  
+         ![Accedere alle proprietà dei parametri dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Accedere alle proprietà dei parametri dal riquadro dei parametri")  
   
     -   Fare clic con il pulsante destro del mouse sul riquadro **Dati report** e quindi scegliere **Proprietà parametri**.  
   
 5.  Per aggiungere nuove colonne e righe al riquadro o eliminare le colonne e le righe esistenti, fare clic con il pulsante destro del mouse in un punto qualsiasi del riquadro dei parametri e quindi selezionare un comando nel menu visualizzato.  
   
-     ![Aggiungere colonne e righe al riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "aggiungere colonne e righe al riquadro dei parametri")  
+     ![Aggiungere colonne e righe al riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Aggiungere colonne e righe al riquadro dei parametri")  
   
     > [!IMPORTANT]  
     >  Quando si elimina una colonna o una riga contenente parametri, questi vengono eliminati dal report.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Fare clic con il pulsante destro del mouse sul riquadro dei parametri, quindi scegliere  **Elimina**.  
   
-         ![Eliminare i parametri dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "eliminare parametri dal riquadro dei parametri")  
+         ![Eliminare i parametri dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Eliminare i parametri dal riquadro dei parametri")  
   
     -   Fare clic con il pulsante destro del mouse sul riquadro **Dati report** e quindi scegliere **Elimina**.  
   
@@ -74,4 +72,3 @@ ms.lasthandoff: 08/09/2017
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

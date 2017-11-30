@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Active
+ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>File di configurazione RsReportServer.config
 Nel file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** vengono archiviate le impostazioni usate dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
@@ -77,7 +77,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 |**DisableSecureFormsAuthenticationCookie**|Il valore predefinito è False.<br /><br /> Specifica se disabilitare l'applicazione del cookie utilizzato affinché l'autenticazione personalizzata e basata su form venga contrassegnata come sicura. A partire da SQL Server 2012, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i cookie di autenticazione basata su form utilizzati con estensioni di autenticazione personalizzate verranno contrassegnati automaticamente come sicuri quando inviati al client. Se si modifica questa proprietà, gli amministratori del server di report e gli autori delle estensioni di sicurezza personalizzate possono ripristinare il comportamento precedente in base al quale l'autore dell'estensione di sicurezza personalizzata poteva stabilire se contrassegnare il cookie come sicuro. Si consiglia l'utilizzo di cookie sicuri affinché l'autenticazione basata su form consenta di evitare lo sniffing in rete e attacchi di tipo replay.|N|  
 |**CleanupCycleMinutes**|Consente di specificare dopo quanti minuti le sessioni precedenti e gli snapshot scaduti vengono rimossi dai database del server di report. I valori validi sono compresi nell'intervallo da 0 al numero intero massimo. Il valore predefinito è 10. Se si imposta il valore su 0, il processo di pulizia del database viene disabilitato.|N, S|  
 |**MaxActiveReqForOneUser**|Consente di specificare il numero massimo di report che ogni singolo utente può elaborare contemporaneamente. Quando viene raggiunto il limite impostato, vengono negate ulteriori richieste di elaborazione. I valori validi sono compresi tra 1 e il valore integer massimo. Il valore predefinito è 20.<br /><br /> Si noti che la maggior parte delle richieste viene elaborata in tempi molto rapidi, per cui è improbabile che un singolo utente abbia più di 20 connessioni aperte contemporaneamente. Se gli utenti aprono contemporaneamente più di 15 report con requisiti di elaborazione elevati, potrebbe essere necessario aumentare questo valore.<br /><br /> Questa impostazione viene ignorata per i server di report in esecuzione in modalità integrata SharePoint.|N, S|  
-|**MaxActiveReqForAnonymous**|Specifica il numero massimo di richieste anonime che possono essere in corso nello stesso momento. Quando viene raggiunto il limite, vengono negate ulteriori richieste di elaborazione. I valori validi sono compresi tra 1 e il valore integer massimo. Il valore predefinito è 200.
+|**MaxActiveReqForAnonymous**|Specifica il numero massimo di richieste anonime che possono essere elaborate contemporaneamente. Quando viene raggiunto il limite, vengono negate ulteriori richieste di elaborazione. I valori validi sono compresi tra 1 e il valore integer massimo. Il valore predefinito è 200.
 |**DatabaseQueryTimeout**|Consente di specificare quanti secondi devono trascorrere prima del timeout di una connessione al database del server di report. Questo valore viene passato alla proprietà System.Data.SQLClient.SQLCommand.CommandTimeout. I valori validi sono compresi tra 0 e 2147483647. Il valore predefinito è 120. Un valore uguale a 0 specifica un tempo di attesa illimitato e pertanto non è consigliato.|N|  
 |**AlertingCleanupCycleMinutes**|Il valore predefinito è 20.<br /><br /> Determina la frequenza con cui eseguire la pulizia di dati temporanei archiviati nel database di avvisi.|S|  
 |**AlertingDataCleanupMinutes**|Il valore predefinito è 360.<br /><br /> Determina per quanto tempo i dati sessione utilizzati per la creazione o la modifica di una definizione di avviso vengono mantenuti nel database di avvisi. Il valore predefinito è 6 ore.|S|  
@@ -847,7 +847,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Altre domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

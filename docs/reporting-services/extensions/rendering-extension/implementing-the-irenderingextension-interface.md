@@ -1,5 +1,5 @@
 ---
-title: Implementazione dell'interfaccia IRenderingExtension | Documenti Microsoft
+title: Implementazione dell'interfaccia IRenderingExtension | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 60eac755180faaba012c7fbd14001fcb66a37975
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 230c2e5ad4ffb61eb6d3b4d94db4e376b1f04d66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementazione dell'interfaccia IRenderingExtension
   L'estensione per il rendering prende i risultati da una definizione del report combinata con i dati effettivi ed eseguire il rendering dei dati risultanti in un formato che sia possibile utilizzare. La trasformazione dei dati combinati e della formattazione viene eseguita tramite una classe CLR (Common Language Runtime) che implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Ciò consente di trasformare il modello a oggetti in un formato di output che può essere utilizzato da un visualizzatore, una stampante o un'altra destinazione di output.  
@@ -44,20 +42,20 @@ ms.lasthandoff: 08/12/2017
 ## <a name="render-method"></a>Metodo Render  
  Il metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> contiene argomenti che rappresentano gli oggetti seguenti:  
   
--   Il *report* che si desidera eseguire il rendering. Questo oggetto contiene proprietà, dati e informazioni sul layout per il report. Il report costituisce la radice dell'albero del modello a oggetti del report.  
+-   Il *report* di cui si desidera eseguire il rendering. Questo oggetto contiene proprietà, dati e informazioni sul layout per il report. Il report costituisce la radice dell'albero del modello a oggetti del report.  
   
--   Il *ServerParameters* che contengono l'oggetto dizionario di stringhe con i parametri per il server di report, se presente.  
+-   L'oggetto *ServerParameters* contenente l'oggetto dizionario di stringhe con i parametri per il server di report, se disponibili.  
   
--   Il *deviceInfo* parametro contenenti le impostazioni del dispositivo. Per ulteriori informazioni, vedere [passando Device Information Settings per estensioni per il Rendering](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+-   Il parametro *deviceInfo* contenente le impostazioni dei dispositivi. Per altre informazioni, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
--   Il *clientCapabilities* parametro che contiene un <xref:System.Collections.Specialized.NameValueCollection> oggetto dizionario che contiene informazioni sul client a cui si esegue il rendering.  
+-   Il parametro *clientCapabilities* contenente un oggetto dizionario <xref:System.Collections.Specialized.NameValueCollection> con informazioni sul client in cui viene eseguito il rendering.  
   
--   Il *RenderProperties* che contiene informazioni sul risultato del rendering.  
+-   L'oggetto *RenderProperties* contenente le informazioni sul risultato del rendering.  
   
--   Il *createAndRegisterStream* è una funzione di delegato deve essere chiamato per ottenere un flusso per il rendering in.  
+-   *createAndRegisterStream* è una funzione di delegato che deve essere chiamata per ottenere un flusso in cui eseguire il rendering.  
   
 ### <a name="deviceinfo-parameter"></a>Parametro deviceInfo  
- Il *deviceInfo* parametro contiene i parametri di rendering, non i parametri di report. Questi parametri vengono passati all'estensione per il rendering. Il *deviceInfo* valori vengono convertiti in un <xref:System.Collections.Specialized.NameValueCollection> oggetto dal server di report. Gli elementi nel *deviceInfo* parametro vengono trattati come valori tra maiuscole e minuscole. Se la richiesta di rendering deriva da URL di accesso, i parametri URL nel formato `rc:key=value` vengono convertiti in coppie chiave/valore di *deviceInfo* oggetto dizionario. Il codice di rilevamento del browser fornisce inoltre gli elementi seguenti nel *clientCapabilities* dizionario: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, tipo e AcceptLanguage. Qualsiasi coppia di nome/valore di *deviceInfo* parametro che non compresa dall'estensione per il rendering viene ignorato. Nell'esempio di codice seguente viene illustrato un metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> di esempio per il recupero delle icone:  
+ Il parametro *deviceInfo* contiene i parametri di rendering, non i parametri del report. Questi parametri vengono passati all'estensione per il rendering. I valori di *deviceInfo* vengono convertiti in un oggetto <xref:System.Collections.Specialized.NameValueCollection> dal server di report. Gli elementi inclusi nel parametro *deviceInfo* vengono trattati come valori senza distinzione tra maiuscole e minuscole. Se la richiesta di rendering deriva da un accesso con URL, i parametri URL nel formato `rc:key=value` vengono convertiti in coppie chiave/valore nell'oggetto dizionario *deviceInfo*. Il codice di rilevamento del browser include anche gli elementi seguenti nel dizionario *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type e AcceptLanguage. Le coppie nome/valore incluse nel parametro *deviceInfo* che non vengono comprese dall'estensione per il rendering verranno ignorate. Nell'esempio di codice seguente viene illustrato un metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> di esempio per il recupero delle icone:  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -80,11 +78,10 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  Il metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> consente di eseguire il rendering di un flusso specifico dal report. Tutti i flussi vengono creati durante la chiamata a <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> iniziale, ma i flussi non vengono inizialmente restituiti al client. Questo metodo viene utilizzato per flussi secondari, ad esempio immagini nel rendering HTML o pagine aggiuntive di un'estensione per il rendering di più pagine, come Image/EMF.  
   
 ## <a name="getrenderingresource-method"></a>Metodo GetRenderingResource  
- Il metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> consente di recuperare le informazioni senza eseguire l'intero rendering del report. In alcuni casi, il report necessita di informazioni che non richiedono il rendering del report stesso. Ad esempio, se è necessaria l'icona associata all'estensione per il rendering, utilizzare il *deviceInfo* parametro contenente il tag singolo  **\<icona >**. In questi casi, è possibile utilizzare il metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
+ Il metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> consente di recuperare le informazioni senza eseguire l'intero rendering del report. In alcuni casi, il report necessita di informazioni che non richiedono il rendering del report stesso. Se, ad esempio, è necessaria l'icona associata all'estensione per il rendering, usare il parametro *deviceInfo* contenente il tag singolo **\<Icon>**. In questi casi, è possibile utilizzare il metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementazione di un'estensione per il Rendering](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [Implementazione di un'estensione per il rendering](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [Panoramica delle estensioni per il rendering](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
   
   
-

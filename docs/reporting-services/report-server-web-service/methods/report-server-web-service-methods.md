@@ -1,5 +1,5 @@
 ---
-title: Report di metodi del servizio Web ReportServer | Documenti Microsoft
+title: Metodi del servizio Web ReportServer | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, methods
 - Web service [Reporting Services], methods
@@ -20,23 +19,22 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 89804c5a980a3fed4869dca8de1603d42e7b481a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-web-service-methods"></a>Metodi del servizio Web ReportServer
-  I servizi Web ReportServer includono diverse categorie di metodi basate sulle caratteristiche dei componenti. Questi metodi vengono forniti tramite diversi endpoint del servizio Web (tre per la gestione e uno per l'esecuzione dei report) esposti come membri delle classi <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Queste classi possono essere generate tramite uno strumento di classe proxy, ad esempio wsdl.exe, inclusa la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Per ulteriori informazioni sui servizi Web ReportServer e [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vedere [compilazione di applicazioni tramite il servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+  I servizi Web ReportServer includono diverse categorie di metodi basate sulle caratteristiche dei componenti. Questi metodi vengono forniti tramite diversi endpoint del servizio Web (tre per la gestione e uno per l'esecuzione dei report) esposti come membri delle classi <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Queste classi possono essere generate tramite uno strumento della classe proxy, ad esempio wsdl.exe incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Per altre informazioni sui servizi Web ReportServer e [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vedere [Compilazione di applicazioni tramite servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 ## <a name="endpoints-and-methods"></a>Endpoint e metodi  
- Nella tabella seguente vengono elencati gli endpoint del servizio Web ReportServer e le categorie di metodi forniti dall'endpoint <xref:ReportService2010.ReportingService2010>. Per informazioni sui metodi disponibili in altri endpoint, vedere [tecniche &#40; SSRS &#41; ](../../../reporting-services/technical-reference-ssrs.md).  
+ Nella tabella seguente vengono elencati gli endpoint del servizio Web ReportServer e le categorie di metodi forniti dall'endpoint <xref:ReportService2010.ReportingService2010>. Per altre informazioni sui metodi disponibili in altri endpoint, vedere [Riferimento tecnico &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md).  
   
 |Argomento|Description|  
 |-----------|-----------------|  
@@ -53,10 +51,9 @@ ms.lasthandoff: 08/12/2017
 |[Metodi dei report collegati](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire i report collegati.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'accesso all'API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
+ [Accesso all'API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Creazione di applicazioni mediante il servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servizio Web ReportServer](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Riferimento tecnico &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Riferimento tecnico &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
-title: Risparmio energia di integrazione di Server di Report di BI (Gestione configurazione) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Integrazione del server di report di Power BI (Gestione configurazione) | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,14 +16,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 6a99f3051cb4f4cae12c525204387906fbf3d8b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integrazione del server di report e di Power BI (Gestione configurazione)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -36,9 +32,9 @@ La pagina  **Integrazione di Power BI** in Gestione configurazione [!INCLUDE[ssR
 
 Oltre a una connessione Internet attiva per passare al servizio [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , i requisiti per l'integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]sono i seguenti.
 
-- **Azure Active Directory:** l'organizzazione deve usare Azure Active Directory, che consente la gestione di identità e directory per applicazioni Web e servizi Azure. Per ulteriori informazioni, vedere [che cos'è Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** l'organizzazione deve usare Azure Active Directory, che consente la gestione di identità e directory per applicazioni Web e servizi Azure. Per altre informazioni vedere [Informazioni su Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Tenant gestito:** il dashboard di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] al quale si desidera aggiungere gli elementi del report deve far parte di un tenant gestito di Azure AD.  Un tenant gestito viene creato automaticamente la prima volta che l'organizzazione sottoscrive i servizi di Azure, ad esempio Office 365 e Microsoft Intune.   I tenant virali attualmente non supportati.  Per altre informazioni vedere le sezioni "Che cos'è un tenant di Azure AD" e "Come ottenere una directory di Azure AD" in [Che cos'è una directory di Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Tenant gestito:** il dashboard di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] al quale si desidera aggiungere gli elementi del report deve far parte di un tenant gestito di Azure AD.  Un tenant gestito viene creato automaticamente la prima volta che l'organizzazione sottoscrive i servizi di Azure, ad esempio Office 365 e Microsoft Intune.   I tenant virali attualmente non sono supportati.  Per altre informazioni vedere le sezioni "Che cos'è un tenant di Azure AD" e "Come ottenere una directory di Azure AD" in [Che cos'è una directory di Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - L'utente che esegue l'integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] deve essere un membro del tenant di Azure AD, un amministratore di sistema di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e un amministratore di sistema per il database del catalogo ReportServer.
 
@@ -48,7 +44,7 @@ Oltre a una connessione Internet attiva per passare al servizio [!INCLUDE[sspowe
 
         PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
 
-Per ulteriori informazioni su come archiviare le credenziali, vedere la sezione "configurare le credenziali archiviate per un'origine dati specifica del report" in [archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
+Per altre informazioni su come archiviare le credenziali, vedere la sezione "Configurare le credenziali archiviate per un'origine dati specifica del report" in [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Per altre informazioni l'amministratore può leggere i file di registro di  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Vedrà messaggi simili al seguente. Un ottimo modo per esaminare e monitorare i file di registro di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è applicare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query sui file.  Per altre informazioni e un breve filmato vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
@@ -58,7 +54,7 @@ Per altre informazioni l'amministratore può leggere i file di registro di  [!IN
 
 ##  <a name="bkmk_steps2integrate"></a> Per integrare e registrare il server di report
 
-Completare i passaggi seguenti da Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+Completare i passaggi seguenti da Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 1. Selezionare la pagina di integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 
@@ -74,7 +70,7 @@ Completare i passaggi seguenti da Gestione configurazione [!INCLUDE[ssRSnoversio
 
 **Annulla registrazione** : l'annullamento della registrazione del server di report da Azure Active Directory avrà le conseguenze seguenti:
 
-- Il **impostazioni personali** collegamento non sarà visibile nella barra dei menu del portale web.
+- Il collegamento **Impostazioni personali** non sarà più visibile nella barra dei menu del portale Web.
 
 - Gli elementi del report già aggiunti rimarranno comunque aggiunti ai dashboard, ma i riquadri nel dashboard non verranno più aggiornati.
 
@@ -112,9 +108,9 @@ In questa sezione vengono riepilogati i passaggi di base e le tecnologie usate p
 
 3. Il tenant gestito all'interno di Azure Active Directory è quello in cui viene creata l'applicazione Client di Power BI.
 
-4. La registrazione include uno o più URL di reindirizzamento che vengono usati quando gli utenti accedono dal server di report.  L'ID dell'app e gli URL vengono salvati nel database ReportServer. L'URL di reindirizzamento viene usato durante le chiamate di autenticazione ad Azure in modo che la chiamata possa tornare al server di report, Ad esempio, quando gli utenti accedono o aggiungere elementi a un dashboard.
+4. La registrazione include uno o più URL di reindirizzamento che vengono usati quando gli utenti accedono dal server di report.  L'ID dell'app e gli URL vengono salvati nel database ReportServer. L'URL di reindirizzamento viene usato durante le chiamate di autenticazione ad Azure in modo che la chiamata possa tornare al server di report, ad esempio quando gli utenti eseguono l'accesso o aggiungono elementi in un dashboard.
 
-5. L'ID dell'App e gli URL vengono visualizzati in Configuration Manager.
+5. L'ID dell'app e gli URL vengono visualizzati in Gestione configurazione.
 
  ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
@@ -134,7 +130,7 @@ In questa sezione vengono riepilogati i passaggi di base e le tecnologie usate p
 
 7. Viene creata una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire l'aggiornamento pianificato dell'elemento del report nel riquadro del dashboard. La sottoscrizione usa il token di sicurezza che è stato creato quando l'utente ha eseguito l'accesso.
 
-     Il token è utile per **90 giorni**, dopodiché gli utenti che devono accedere di nuovo per creare un nuovo token utente. Alla scadenza del token i riquadri aggiunti vengono comunque visualizzati nel dashboard, ma non i dati vengono più aggiornati.  Le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usate per gli elementi aggiunti genereranno un errore fino alla creazione di un nuovo token utente. Vedere [impostazioni personali per integrazione di Power BI &#40; portale web &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). per ulteriori informazioni.
+     Il token ha una validità di **90 giorni**, dopodiché gli utenti devono accedere di nuovo per creare un nuovo token utente. Alla scadenza del token i riquadri aggiunti vengono comunque visualizzati nel dashboard, ma non i dati vengono più aggiornati.  Le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usate per gli elementi aggiunti genereranno un errore fino alla creazione di un nuovo token utente. Vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). per ulteriori informazioni.
 
 La seconda volta che un utente aggiunge un elemento vengono ignorati i passaggi 1-4 e vengono invece recuperati l'ID dell'app e gli URL dal database ReportServer. Il flusso procede con il passaggio 5.
 
@@ -158,9 +154,8 @@ La seconda volta che un utente aggiunge un elemento vengono ignorati i passaggi 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Impostazioni personali per integrazione di Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Impostazioni personali per Integrazione di Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Aggiungere elementi di Reporting Services ai dashboard di Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Dashboard in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

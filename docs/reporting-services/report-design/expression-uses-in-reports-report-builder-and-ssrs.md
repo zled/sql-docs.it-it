@@ -1,5 +1,5 @@
 ---
-title: Espressione utilizzata nel report (Generatore Report e SSRS) | Documenti Microsoft
+title: Uso delle espressioni nei report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- expressions [Reporting Services], about expressions
+helpviewer_keywords: expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 040dc71113e8db518b1e98420241e1e6f2c3ba19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilizzo delle espressioni nei report (Generatore report e SSRS)
-Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile utilizzare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che viene visualizzata l'espressione (**fx**) pulsante o in un elenco a discesa che visualizza  **\<Expression... >**.  
+Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile utilizzare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che contiene il pulsante di espressione (**fx**) o in un elenco a discesa in cui è visualizzato **\<Espressione...>**.  
   
  Le espressioni possono essere semplici o complesse. Le*espressioni semplici* contengono un riferimento a un solo campo del set di dati, un solo parametro o un solo campo predefinito. Le espressioni complesse possono contenere più riferimenti incorporati, operatori e chiamate di funzione. Ad esempio, un'espressione complessa potrebbe includere la funzione Sum applicata al campo Sales.  
   
@@ -65,7 +63,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 |Formattare i dati in una casella di testo in base al valore.|Colore per un segnaposto in una casella di testo nella riga dei dettagli di una Tablix. Usare la finestra di dialogo **Proprietà casella di testo, Carattere**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcolare un valore una volta per farvi riferimento in tutto il report.|Value per una variabile del report. Usare la finestra di dialogo **Proprietà report, Variabili**.|`=Variables!MyCalculation.Value`|  
 |Includere valori specifici per più campi di un set di dati.|Equazione di filtro per un gruppo in una Tablix. Usare la finestra di dialogo **Proprietà Tablix, Filtri**.|Come tipo di dati selezionare **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Nascondere una casella di testo nell'area di progettazione, la cui visibilità può essere attivata o disattivata dall'utente mediante un parametro booleano denominato *Show*.|Hiddenproperty in una casella di testo. Usare la finestra di dialogo **Proprietà casella di testo, Visibilità**.|`=Not Parameters!`*Mostra\<parametro booleano >*`.Value`|  
+|Nascondere una casella di testo nell'area di progettazione, la cui visibilità può essere attivata o disattivata dall'utente mediante un parametro booleano denominato *Show*.|Hiddenproperty in una casella di testo. Usare la finestra di dialogo **Proprietà casella di testo, Visibilità**.|`=Not Parameters!` *Mostra\<parametro booleano>* `.Value`|  
 |Specificare il contenuto dinamico dell'intestazione o del piè di pagina.|Value per un segnaposto in una casella di testo posizionata nell'intestazione o nel piè di pagina.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Specificare un'origine dati in modo dinamico utilizzando un parametro.|Stringa di connessione nell'origine dati. Usare la finestra di dialogo **Proprietà origine dati, Generale**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identificare tutti i valori per un parametro multivalore scelto dall'utente.|Value per un segnaposto in una casella di testo. Usare la finestra di dialogo **Proprietà Tablix, Filtri**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -75,14 +73,13 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 |Concatenare una stringa e un numero nel formato di percentuale a due cifre decimali.|Value per un segnaposto di una casella di testo in un'area dati. Usare la finestra di dialogo **Proprietà casella di testo, Generale**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Esempi di equazioni di filtro &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Le intestazioni di pagina e piè di pagina &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Nascondere un elemento &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

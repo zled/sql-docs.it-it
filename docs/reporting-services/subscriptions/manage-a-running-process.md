@@ -1,5 +1,5 @@
 ---
-title: Gestire un processo in esecuzione | Documenti Microsoft
+title: Gestire un processo in esecuzione | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di monitorare lo stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Sottoscrizioni standard appartenenti a utenti singoli.  
   
- L'annullamento di un processo comporta l'annullamento solo dei processi in esecuzione nel server di report. Poiché il server di report non gestisce elaborazione di dati su altri computer, è necessario annullare manualmente i processi di query che rimangono di conseguenza isolati su altri sistemi. Per chiudere automaticamente le query con esecuzione eccessivamente prolungata, è possibile specificare valori di timeout delle query. Per ulteriori informazioni, vedere [impostazione valori di timeout per il Report e condivise l'elaborazione di set di dati &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Per altre informazioni sulla sospensione temporanea di un report, vedere [Disabilitare o sospendere l'elaborazione di report e sottoscrizioni](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ L'annullamento di un processo comporta l'annullamento solo dei processi in esecuzione nel server di report. Poiché il server di report non gestisce elaborazione di dati su altri computer, è necessario annullare manualmente i processi di query che rimangono di conseguenza isolati su altri sistemi. Per chiudere automaticamente le query con esecuzione eccessivamente prolungata, è possibile specificare valori di timeout delle query. Per altre informazioni, vedere [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Per altre informazioni sulla sospensione temporanea di un report, vedere [Disabilitare o sospendere l'elaborazione di report e sottoscrizioni](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Per annullare un processo, in rare circostanze potrebbe essere necessario riavviare il server. Per la modalità SharePoint, potrebbe essere necessario riavviare il pool di applicazioni in cui viene ospitata l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -126,11 +125,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Annulla processi server di report &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Proprietà processo &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Modificare un File di configurazione di Reporting Services &#40; RSReportServer. config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Proprietà processo &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Monitoraggio delle prestazioni del server di report](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   
-

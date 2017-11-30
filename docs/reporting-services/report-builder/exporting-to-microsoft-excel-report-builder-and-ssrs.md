@@ -1,5 +1,5 @@
 ---
-title: Esportazione in Microsoft Excel (Generatore Report e SSRS) | Documenti Microsoft
+title: Esportazione in Microsoft Excel (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginato nel formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx). Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo. Per altre informazioni, vedere [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
- Vedere [esportare report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) per informazioni dettagliate su come esportare in Excel.  
+ Per informazioni dettagliate su come esportare in Excel, vedere [Esportazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Quando si definisce un parametro di tipo **String**, viene visualizzata una casella di testo che può accettare qualsiasi valore. Se un parametro di report non è correlato a un parametro di query e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL, uno script o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Il numero massimo di caratteri in una cella è limitato a 32.767. Se tale limite viene superato, nel renderer viene visualizzato un messaggio di errore.  
   
--   L'altezza massima della riga è pari a 409 punti. Se il contenuto della riga provocano l'altezza della riga risulta superiore a 409 punti, nella cella di Excel viene visualizzato una quantità parziale di testo fino a 409 punti. Il resto del contenuto della cella è ancora all'interno della cella (fino a massimo numero Excel di caratteri di 32.767).
+-   L'altezza massima della riga è pari a 409 punti. Se a causa del contenuto della riga l'altezza della riga supera i 409 punti, la cella di Excel visualizza una parte del testo fino a un massimo di 409 punti. La parte rimanente del contenuto della cella rimane all'interno della cella (fino al numero di caratteri massimo di Excel di 32.767).
 
--  Poiché l'altezza massima della riga è pari a 409 punti, se l'altezza della cella nel report definito è superiore a 409 punti, Excel suddivide il contenuto della cella in più righe.
+-  Poiché l'altezza massima della riga è pari a 409 punti, se l'altezza della cella definita nel report è superiore a 409 punti, Excel suddivide il contenuto della cella in più righe.
   
 -   Sebbene in Excel non sia definito un numero massimo di fogli di lavoro, alcuni fattori esterni, quali la memoria e lo spazio su disco, possono comportare l'applicazione di limitazioni.  
   
@@ -116,15 +116,15 @@ ms.lasthandoff: 08/09/2017
 ### <a name="report-row-groups-and-column-groups"></a>Gruppi di righe e di colonne del report  
  I report che includono gruppi di righe o di colonne contengono celle vuote quando vengono esportati in Excel. Si immagini un report che raggruppa righe in distanza dal lavoro. Ogni distanza dal lavoro può contenere più di un cliente. Nell'immagine seguente viene illustrato il report.  
   
- ![Report nel portale web di Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report nel portale web di Reporting Services")  
+ ![Report nel portale Web di Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report nel portale Web di Reporting Services")  
   
  Quando il report viene esportato in Excel,la distanza dal lavoro viene visualizzata solo in una cella della colonna Distanza dal lavoro. A seconda dell'allineamento del testo nel report (in alto, al centro o in basso), il valore si trova nella prima cella, in quella centrale o nell'ultima. Le altre celle sono vuote. La colonna Nome, contenente i nomi dei clienti, non presenta celle vuote. Nell'immagine seguente viene mostrato il report dopo la relativa esportazione in Excel. I bordi rossi della cella sono stati aggiunti per metterla in risalto. Le caselle di colore grigio sono le celle vuote. Le righe rosse e le caselle di colore grigio non fanno parte del report esportato.  
   
- ![Report esportato in Excel, con linee](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report esportati in Excel, con linee")  
+ ![Report esportato in Excel, con linee](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report esportato in Excel, con linee")  
   
  Pertanto i report con gruppi di righe o di colonne devono essere modificati dopo la relativa esportazione in Excel e prima di poter visualizzare i dati esportati in una tabella pivot. Il valore del gruppo deve essere aggiunto alle celle in cui non è disponibile per rendere il foglio di lavoro una tabella bidimensionale con valori in tutte le celle. L'immagine seguente illustra il foglio di lavoro di aggiornamento.  
   
- ![Report esportato in Excel, bidimensionali](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report esportati in Excel, bidimensionale")  
+ ![Report esportato in Excel, bidimensionale](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report esportato in Excel, bidimensionale")  
   
  Se quindi viene creato un report con lo scopo specifico di esportalo in Excel per un'ulteriore analisi dei dati, è necessario considerare di non includervi gruppi di righe o di colonne.  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Generatore report in modalità senza connessione e anteprima di un report in Generatore report. Poiché il file di configurazione RSReportServer si trova nel server di report, gli strumenti o prodotti da cui si esportano i report devono essere connessi a un server di report per la lettura del file di configurazione.  
   
--   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere [vs modalità locale. con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Report in modalità locale e con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Se il renderer dell'opzione di menu **Excel 2003** è configurato per essere visibile, sia le opzioni di Excel sia di Excel 2003 sono disponibili negli scenari seguenti:  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 08/09/2017
   
  I grafici, le barre dei dati, i grafici sparkline, le mappe, i misuratori e gli indicatori vengono esportati come immagini. I dati rappresentati, ad esempio le etichette del valore e del membro per un grafico, non vengono esportati con gli oggetti elencati in precedenza e non sono disponibili nella cartella di lavoro di Excel a meno che non siano inclusi in una colonna o riga di un'area dati all'interno di un report.  
   
- Se si desidera usare i dati di grafici, grafici sparkline, barre dei dati, mappe, misuratori e indicatori esportare il report in un file con estensione csv o generare feed di dati conformi ad Atom dal report. Per ulteriori informazioni, vedere [l'esportazione in un File CSV &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [la generazione di feed di dati da report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Se si desidera usare i dati di grafici, grafici sparkline, barre dei dati, mappe, misuratori e indicatori esportare il report in un file con estensione csv o generare feed di dati conformi ad Atom dal report. Per altre informazioni, vedere [Esportazione in un file CSV &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Ridimensionamento della pagina  
  Nell'estensione per il rendering di Excel vengono usate le impostazioni relative all'altezza e alla larghezza della pagina per determinare l'impostazione del foglio da definire nel foglio di lavoro di Excel. Excel tenta di abbinare le impostazioni delle proprietà PageHeight e PageWidth a uno dei formati carta più comuni.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 08/09/2017
   
  Il rendering della struttura della mappa documento viene eseguito come struttura di Excel comprimibile. Tale struttura corrisponde alla struttura annidata della mappa documento. Lo stato di espansione o compressione della struttura inizia a partire dal secondo livello.  
   
- Il nodo radice della mappa è il nome del report, il \< *reportname*>, con estensione rdl e non è interattivo. Il tipo di carattere dei collegamenti alla mappa documento è Arial, 10pt.  
+ Il nodo radice della mappa corrisponde al nome del report, ovvero \<*nomereport*>.rdl, e non è interattivo. Il tipo di carattere dei collegamenti alla mappa documento è Arial, 10pt.  
   
 ### <a name="drillthrough-links"></a>Collegamenti drill-through  
  Il rendering dei collegamenti drill-through visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti drill-through per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un collegamento drill-through, viene aperto il browser predefinito del client e si passa alla visualizzazione HTML della destinazione.  
@@ -270,14 +270,13 @@ ms.lasthandoff: 08/09/2017
  Il rendering dei collegamenti a segnalibro visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti a segnalibro per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un segnalibro, si passa alla cella di Excel in cui viene eseguito il rendering dell'elemento di report con segnalibro.  
   
 ##  <a name="ConditionalFormat"></a> Modifica dei report in fase di esecuzione  
- Se per un report è necessario eseguire il rendering in più formati e non è possibile creare un layout del report che consenta di eseguire il rendering nel modo desiderato in tutti i formati necessari, considerare la possibilità di usare il valore incluso nell'elemento globale predefinito RenderFormat per modificare in modo condizionale l'aspetto del report in fase di esecuzione. In questo modo è possibile nascondere o rendere visibili gli elementi del report a seconda del renderer usato per ottenere i migliori risultati in ogni formato. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e User &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Se per un report è necessario eseguire il rendering in più formati e non è possibile creare un layout del report che consenta di eseguire il rendering nel modo desiderato in tutti i formati necessari, considerare la possibilità di usare il valore incluso nell'elemento globale predefinito RenderFormat per modificare in modo condizionale l'aspetto del report in fase di esecuzione. In questo modo è possibile nascondere o rendere visibili gli elementi del report a seconda del renderer usato per ottenere i migliori risultati in ogni formato. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Il rendering elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

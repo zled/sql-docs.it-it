@@ -1,5 +1,5 @@
 ---
-title: HTML Device Information Settings | Documenti Microsoft
+title: Impostazioni relative alle informazioni sul dispositivo HTML | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 111e6d65b6c74156b39e81a1b7d9af0cb45501d3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fd4d18001040d87959d8529266724341d9e8fc44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="html-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo HTML
 Nella tabella seguente si elencano le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato HTML.  
@@ -33,7 +32,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
   
 |Impostazione|Valore|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indica se eseguire il rendering con i metadati di accessibilità aggiuntivi per l'utilizzo con le utilità per la lettura dello schermo. I metadati di accessibilità aggiuntivi fanno in modo che il report visualizzabile sia conforme agli standard tecnici riportati di seguito definiti nella sezione 1194.22 relativa alle informazioni e alle applicazioni Intranet e Internet basate sul web nel documento Electronic and Information Technology Accessibility Standards (Sezione 508):<br /><br /> (g) Le intestazioni di riga e colonna devono essere identificate per le tabelle di dati.<br /><br /> (h) Il markup deve essere usato per associare celle di dati e celle di intestazione per le tabelle di dati che dispongono di due o più livelli logici di intestazioni di riga o colonna.<br /><br /> (i) I frame devono disporre di testo che ne faciliti l'identificazione e la navigazione.<br /><br /> <br /><br /> Questo parametro è applicabile solo ai report che contengono strutture di tabelle o matrici semplici con raggruppamento semplice. Il valore predefinito è **false**.<br /><br /> Questo parametro è supportato in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)], ma non in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)].|  
+|**AccessibleTablix**|Indica se eseguire il rendering con i metadati di accessibilità aggiuntivi per l'utilizzo con le utilità per la lettura dello schermo. I metadati di accessibilità aggiuntivi fanno in modo che il report visualizzabile sia conforme agli standard tecnici riportati di seguito definiti nella sezione 1194.22 relativa alle informazioni e alle applicazioni Intranet e Internet basate sul web nel documento Electronic and Information Technology Accessibility Standards (Sezione 508):<br /><br /> (g) Le intestazioni di riga e colonna devono essere identificate per le tabelle di dati.<br /><br /> (h) Il markup deve essere usato per associare celle di dati e celle di intestazione per le tabelle di dati che dispongono di due o più livelli logici di intestazioni di riga o colonna.|  
 |**ActionScript(\*)**|Specifica il nome della funzione JavaScript da usare quando si verifica un evento relativo alla funzione, ad esempio la scelta di un segnalibro o un drill-through. Se viene specificato questo parametro, un evento relativo all'azione genererà la funzione JavaScript anziché un postback al server.|  
 |**BookmarkID**|ID del segnalibro a cui passare nel report.|  
 |**DocMap**|Indica se mostrare o nascondere la mappa documento del report. Il valore predefinito di questo parametro è **true**.|  
@@ -51,7 +50,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
 |**ReplacementRoot(\*)**|Stringa da anteporre a tutti i collegamenti di drill-through, attivazione/disattivazione e segnalibro nel report quando viene eseguito il rendering al di fuori del controllo ReportViewer. Ad esempio, viene usata per il reindirizzamento della selezione di un utente a una pagina personalizzata.|  
 |**ResourceStreamRoot(\*)**|Stringa da anteporre all'URL per tutte le risorse dell'immagine, ad esempio le immagini per l'attivazione o la disattivazione oppure l'ordinamento.|  
 |**Sezione**|Numero di pagina del report di cui eseguire il rendering. Un valore **0** indica che viene eseguito il rendering di tutte le sezioni del report. Il valore predefinito è **1**.|  
-|**StreamRoot (\*)**|Percorso usato per anteporre un prefisso al valore dell'attributo **src** dell'elemento IMG nel report HTML restituito dal server di report. Per impostazione predefinita, il percorso viene fornito dal server di report. È possibile utilizzare questa impostazione per specificare un percorso radice per le immagini in un report (ad esempio, **http://\<nomeserver >/risorse/companyimages**).|  
+|**StreamRoot (\*)**|Percorso usato per anteporre un prefisso al valore dell'attributo **src** dell'elemento IMG nel report HTML restituito dal server di report. Per impostazione predefinita, il percorso viene fornito dal server di report. È possibile usare questa impostazione per specificare un percorso radice per le immagini in un report, ad esempio **http://\<nomeserver>/risorse/immaginiazienda**.|  
 |**StyleStream**|Indica se stili e script vengono creati come flusso separato anziché nel documento. Il valore predefinito è **false**.|  
 |**Barra degli strumenti**|Indica se mostrare o nascondere la barra degli strumenti. Il valore predefinito di questo parametro è **true**. Se il valore di questo parametro è **false**, tutte le opzioni rimanenti (ad eccezione della mappa documento) vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano.<br /><br /> Il rendering della barra degli strumenti del Visualizzatore report viene eseguito quando si usano l'accesso con URL per il rendering di un report, ma non quando si usano l'API SOAP. L'impostazione relativa alle informazioni sul dispositivo **Toolbar** influisce tuttavia sulla modalità di visualizzazione del report in caso di utilizzo del metodo **Render** SOAP. Se il valore di questo parametro è **true** quando si usano SOAP per eseguire il rendering in formato HTML, viene eseguito il rendering solo della prima sezione del report. Se il valore è **false**, viene eseguito il rendering dell'intero report HTML come singola pagina HTML.|  
 |**UserAgent**|La stringa **user-agent** del browser che effettua la richiesta, situata nella richiesta HTTP.|  
@@ -59,9 +58,8 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
 |**DataVisualizationFitSizing**|Indica il comportamento di adattamento della visualizzazione dei dati all'interno di una tablix. Sono inclusi grafici, misuratori e mappe.<br /><br /> I valori possibili sono **Approssimato** ed **Esatto**.<br /><br /> Il valore predefinito è **Approssimato**. Se l'impostazione viene rimossa dal file **rsreportserver.config** il comportamento predefinito è **Esatto**.<br /><br /> L'abilitazione del ridimensionamento **Esatto** può avere impatto sulle prestazioni perché l'elaborazione per determinare la dimensione esatta potrebbe impiegare più molto tempo di un adattamento approssimativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il passaggio di impostazioni informazioni dispositivo a estensioni di Rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il Rendering in RSReportServer. config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Riferimento tecnico &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Guida di riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
-

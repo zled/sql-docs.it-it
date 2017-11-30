@@ -1,5 +1,5 @@
 ---
-title: Creazione di un componente in fase di progettazione dell'elemento del Report personalizzato | Documenti Microsoft
+title: Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0b1f5649db2f99957ad3b2452b02d2f7b2db01cb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
   Un componente dell'elemento del report personalizzato per la fase di progettazione è un controllo che può essere utilizzato nell'ambiente Progettazione report di Visual Studio. Il componente dell'elemento del report personalizzato per la fase di progettazione fornisce un'area di progettazione attivata in grado di accettare operazioni di trascinamento della selezione, integrazione con il Visualizzatore proprietà di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e la possibilità di fornire editor di proprietà personalizzati.  
@@ -35,12 +32,12 @@ ms.lasthandoff: 08/12/2017
  Le proprietà impostate mediante il componente per la fase di progettazione nell'ambiente di sviluppo vengono serializzate e deserializzate dall'ambiente di progettazione host, quindi archiviate come elementi nel file RDL (Report Definition Language). Quando il report viene eseguito dal componente Elaborazione report, le proprietà impostate mediante il componente per la fase di progettazione vengono passate dal componente Elaborazione report a un componente runtime dell'elemento del report personalizzato che esegue il rendering dell'elemento del report personalizzato e lo passa nuovamente a Elaborazione report.  
   
 > [!NOTE]  
->  Il componente in fase di progettazione elemento del report personalizzato viene implementato come un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] componente. In questo documento vengono illustrati dettagli di implementazione specifici del componente dell'elemento del report personalizzato per la fase di progettazione. Per ulteriori informazioni sullo sviluppo di componenti utilizzando il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [componenti di Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) in MSDN library.  
+>  Il componente dell'elemento del report personalizzato per la fase di progettazione viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In questo documento vengono illustrati dettagli di implementazione specifici del componente dell'elemento del report personalizzato per la fase di progettazione. Per altre informazioni sullo sviluppo di componenti tramite [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Components in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) (Componenti in Visual Studio) in MSDN Library.  
   
- Per un esempio di un elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi di prodotto SQL Server Reporting Services).  
   
 ## <a name="implementing-a-design-time-component"></a>Implementazione di un componente per la fase di progettazione  
- La classe principale di un componente in fase di progettazione dell'elemento del report personalizzato ereditata il **Microsoft.ReportDesigner.CustomReportItemDesigner** classe. Oltre agli attributi standard utilizzati per un [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] controllo, la classe del componente deve definire un **CustomReportItem** attributo. Questo attributo deve corrispondere al nome dell'elemento del report personalizzato secondo la definizione presente nel file reportserver.config. Per un elenco di attributi [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere Attributi nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ La classe principale di un componente dell'elemento del report personalizzato per la fase di progettazione viene ereditata dalla classe **Microsoft.ReportDesigner.CustomReportItemDesigner**. Oltre agli attributi standard usati per un controllo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], la classe del componente deve definire un attributo **CustomReportItem**. Questo attributo deve corrispondere al nome dell'elemento del report personalizzato secondo la definizione presente nel file reportserver.config. Per un elenco di attributi [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere Attributi nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
  Nell'esempio di codice seguente vengono illustrati gli attributi applicati a un controllo dell'elemento del report personalizzato per la fase di progettazione:  
   
@@ -58,9 +55,9 @@ namespace PolygonsCRI
 ```  
   
 ### <a name="initializing-the-component"></a>Inizializzazione del componente  
- Le proprietà specificate dall'utente per un elemento del report personalizzato vengono passate mediante una classe <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>. L'implementazione del **CustomReportItemDesigner** classe deve eseguire l'override di **InitializeNewComponent** metodo per creare una nuova istanza del componente <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> classe e impostarlo su valori predefiniti.  
+ Le proprietà specificate dall'utente per un elemento del report personalizzato vengono passate mediante una classe <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>. L'implementazione della classe **CustomReportItemDesigner** deve eseguire l'override del metodo **InitializeNewComponent** per creare una nuova istanza della classe <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> del componente e impostarla su valori predefiniti.  
   
- Esempio di codice seguente viene illustrato un esempio di un report personalizzato elemento componente design-time classe si esegue l'override di **CustomReportItemDesigner.InitializeNewComponent** metodo per inizializzare il componente <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> classe:  
+ Nell'esempio di codice seguente viene illustrata una classe del componente dell'elemento del report personalizzato per la fase di progettazione che esegue l'override del metodo **CustomReportItemDesigner.InitializeNewComponent** per inizializzare la classe del componente <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>:  
   
 ```csharp  
 public override void InitializeNewComponent()  
@@ -94,9 +91,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>Modifica delle proprietà del componente  
- È possibile modificare **CustomData** proprietà nell'ambiente di progettazione in diversi modi. È possibile modificare qualsiasi proprietà esposta dal componente per la fase di progettazione che sia contrassegnata con l'attributo <xref:System.ComponentModel.BrowsableAttribute> tramite il visualizzatore proprietà [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Inoltre, è possibile modificare le proprietà trascinando elementi nell'area di progettazione dell'elemento del report personalizzato o il pulsante destro del controllo nell'ambiente di progettazione e selezionando **proprietà** nel menu di scelta rapida per visualizzare una finestra delle proprietà personalizzate.  
+ È possibile modificare le proprietà **CustomData** nell'ambiente di progettazione in diversi modi. È possibile modificare qualsiasi proprietà esposta dal componente per la fase di progettazione che sia contrassegnata con l'attributo <xref:System.ComponentModel.BrowsableAttribute> tramite il visualizzatore proprietà [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. È anche possibile modificare le proprietà trascinando elementi nell'area di progettazione dell'elemento del report personalizzato o facendo clic con il pulsante destro del mouse sul controllo nell'ambiente di progettazione e scegliendo **Proprietà** dal menu di scelta rapida per visualizzare una finestra delle proprietà personalizzata.  
   
- Nell'esempio di codice riportato di seguito viene illustrato un **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** proprietà con il <xref:System.ComponentModel.BrowsableAttribute> attributo applicato:  
+ Nell'esempio di codice seguente viene illustrata una proprietà **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** alla quale è applicato l'attributo <xref:System.ComponentModel.BrowsableAttribute>:  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -160,7 +157,7 @@ private void EditableCombo_SelectedIndexChanged(object sender,
 ```  
   
 ### <a name="using-designer-verbs"></a>Utilizzo dei verbi di progettazione  
- Un verbo di progettazione è un comando di menu collegato a un gestore evento. È possibile aggiungere verbi di progettazione da visualizzare nel menu di scelta rapida di un componente quando il controllo di runtime di un elemento del report personalizzato viene utilizzato nell'ambiente di progettazione. È possibile restituire l'elenco di verbi di progettazione disponibili dal componente in fase di esecuzione utilizzando il **verbi** proprietà.  
+ Un verbo di progettazione è un comando di menu collegato a un gestore evento. È possibile aggiungere verbi di progettazione da visualizzare nel menu di scelta rapida di un componente quando il controllo di runtime di un elemento del report personalizzato viene utilizzato nell'ambiente di progettazione. È possibile restituire l'elenco dei verbi di progettazione disponibili del componente runtime tramite la proprietà **Verbs**.  
   
  Nell'esempio di codice seguente vengono illustrati un verbo di progettazione e un gestore evento aggiunti a <xref:System.ComponentModel.Design.DesignerVerbCollection>, oltre al codice del gestore evento:  
   
@@ -192,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilizzo delle aree di controllo  
- Le classi di elementi di report personalizzato possono anche implementare un **Microsoft.ReportDesigner.Design.Adornment** classe. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. Il **dell'area di controllo** classe è definita in cui il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** spazio dei nomi è un'implementazione di pass-through la <xref:System.Windows.Forms.Design.Behavior.Adorner> classe trovata in Windows Form. Per informazioni complete sul **Adorner** classe, vedere [Cenni preliminari sul servizio comportamento](http://go.microsoft.com/fwlink/?LinkId=116673) in MSDN library. Per il codice di esempio che implementa un **Microsoft.ReportDesigner.Design.Adornment** classe, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Le classi elemento report personalizzato possono anche implementare una classe **Microsoft.ReportDesigner.Design.Adornment**. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. La classe **Adornment** definita nello spazio dei nomi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** è un'implementazione pass-through della classe <xref:System.Windows.Forms.Design.Behavior.Adorner> presente in Windows Forms. Per la documentazione completa sulla classe **Adorner**, vedere [Cenni preliminari su BehaviorService](http://go.microsoft.com/fwlink/?LinkId=116673) in MSDN Library. Per codice di esempio che implementa una classe **Microsoft.ReportDesigner.Design.Adornment**, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi di prodotto SQL Server Reporting Services).  
   
  Per ulteriori informazioni sulla programmazione e sull'utilizzo di Windows Form in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vedere i seguenti argomenti in MSDN Library:  
   
@@ -203,10 +200,9 @@ private void OnProportionalScaling(object sender, EventArgs e)
 -   Procedura dettagliata: creazione di un controllo di Windows Form che usufruisca delle caratteristiche offerte da Visual Studio in fase di progettazione  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura di un elemento del Report personalizzato](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Creazione di un componente di Run-Time di elemento di Report personalizzato](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Librerie di classi di elemento di Report personalizzato](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Procedura: distribuire un elemento del Report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Architettura di un elemento del report personalizzato](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Creazione di un componente runtime dell'elemento del report personalizzato](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Librerie di classi dell'elemento del report personalizzato](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+ [Procedura: Distribuzione di un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

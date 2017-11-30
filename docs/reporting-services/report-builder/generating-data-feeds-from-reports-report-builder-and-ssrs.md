@@ -1,5 +1,5 @@
 ---
-title: La generazione di dati feed dai report (Generatore Report e SSRS) | Documenti Microsoft
+title: Generazione di feed di dati dai report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e11ab920d6af6f09aa911f237ecf3a7c234b016
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
 
-  L'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di generare un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report impaginato e i feed di dati delle aree dati di un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio, è possibile utilizzare l'estensione per il rendering Atom per generare feed di dati che è quindi possibile usare in Power Pivot o Power BI.  
+  L'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di generare un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report impaginato e i feed di dati delle aree dati di un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio è possibile usare l'estensione per il rendering Atom per generare feed di dati che, in seguito, possono essere usati in Power Pivot o Power BI.  
   
  Il documento di servizio Atom elenca almeno un feed di dati per ogni area dati in un report. A seconda del tipo di area dati e dei dati in essa visualizzati, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] potrebbe generare più feed di dati da un'area dati. Ad esempio una matrice o un grafico può fornire più feed di dati. Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per ogni feed di dati che può essere usato nell'URL per accedere al contenuto del feed di dati.  
   
@@ -85,13 +83,13 @@ ms.lasthandoff: 08/09/2017
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Sezione di dati  
- La sezione di dati dei feed di dati contiene uno \< **voce**> elemento per ogni riga nel set di righe bidimensionale generato dall'estensione per il rendering Atom.  
+ La sezione di dati dei feed di dati contiene un elemento \<**voce**> per ogni riga nel set di righe bidimensionale generato dall'estensione per il rendering Atom.  
   
  Nel diagramma seguente viene mostrato un report che usa gruppi e totali.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Il codice XML seguente viene illustrato un \< **voce**> dell'elemento del report specifico di un feed di dati. Si noti che il \< **voce**> elemento include i totali delle vendite e gli ordini per il gruppo e i totali delle vendite e degli ordini per tutti i gruppi. Il \< **voce**> elemento include tutti i valori nel report.  
+ Il seguente codice XML mostra un elemento \<**voce**> del report specifico di un feed di dati. Si noti che l'elemento \<**voce**> include i totali delle vendite e degli ordini per il gruppo, nonché i totali delle vendite e degli ordini per tutti i gruppi. L'elemento \<**voce**> include tutti i valori sul report.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -120,11 +118,11 @@ ms.lasthandoff: 08/09/2017
   
  Le righe di dati per le aree dati nidificate sono generalmente ampie, specialmente se le tabelle e le matrici nidificate includono gruppi e totali. Potrebbe essere utile esportare il report in un feed di dati e visualizzare quest'ultimo per verificare che i dati generati siano quelli previsti.  
   
- Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per il feed di dati che può essere usato nell'URL per visualizzare il contenuto del feed di dati. Il documento di servizio Atom di esempio, illustrato in precedenza, include l'URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. L'URL identifica il report (Product Sales Summary), il formato di rendering Atom (ATOM) e il nome del feed di dati (xAx0x1).  
+ Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per il feed di dati che può essere usato nell'URL per visualizzare il contenuto del feed di dati. Nel documento di servizio Atom di esempio illustrato in precedenza è incluso l'URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. L'URL identifica il report (Product Sales Summary), il formato di rendering Atom (ATOM) e il nome del feed di dati (xAx0x1).  
   
  I nomi degli elementi del report vengono impostati in modo predefinito sui nomi degli elementi del linguaggio RDL degli elementi del report e, spesso, non sono intuitivi o facili da ricordare. Ad esempio, il nome predefinito della prima matrice presente in un report è Tablix 1. I feed di dati usano questi nomi.  
   
- Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si specifica un valore per DataElementName sottoelemento del feed di dati \< **d**> verrà utilizzato, anziché il nome predefinito dell'area dati. Ad esempio, se il nome predefinito di un area dati è Tablix1 e DataElementName impostato SalesByTerritoryYear il \< **d**> nei dati feed utilizza SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
+ Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si fornisce un valore per DataElementName, il sottoelemento del feed di dati \<**d**> lo userà al posto del nome dell'area dati predefinito. Ad esempio se il nome predefinito di un'area dati è Tablix1 e DataElementName viene impostato su SalesByTerritoryYear, il sottoelemento \<**d**> nel feed di dati userà SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
   
  Se si confrontano i dati mostrati sul report e i dati del feed di dati, è possibile notare alcune differenze. I report spesso mostrano dati numerici formattati e relativi all'ora/data, mentre il feed di dati contiene dati non formattati.  
   
@@ -195,8 +193,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Esportazione in un File CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[Esportazione in un file CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [Esportare report](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

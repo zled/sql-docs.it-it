@@ -1,5 +1,5 @@
 ---
-title: Creare un Report con rientri (Generatore Report e SSRS) | Documenti Microsoft
+title: Creare un report con rientri (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c78e1a3998673851e9860a6e6a6e295cde2d7f3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Creazione di un report con rientri (Generatore report e SSRS)
+# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Creare un report con rientri (Generatore report e SSRS)
 Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che visualizza le righe di dettaglio oppure i gruppi figlio rientrati sotto un gruppo padre nella stessa colonna, come illustrato nell'esempio seguente:  
   
- ![Il rendering di report con rientri](../../reporting-services/report-design/media/steppedreportrendered.gif "report con rientri di rendering")  
+ ![Rendering del report con rientri](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendering del report con rientri")  
   
  Nei tradizionali report tabella il gruppo padre viene inserito in una colonna adiacente del report. La nuova area dati Tablix consente di aggiungere un gruppo e righe di dettaglio o gruppi figlio alla stessa colonna. Per differenziare le righe di gruppo dalle righe di dettaglio o da quelle di gruppi figlio, è possibile applicare una formattazione, ad esempio il colore del carattere, o applicare il rientro alle righe di dettaglio.  
   
@@ -54,15 +53,15 @@ Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversio
   
      A questo punto è disponibile un report tabella di base. Quando si esegue il rendering di tale report, verranno visualizzate una colonna con il valore dell'istanza del gruppo e una o più colonne con i dati di dettaglio raggruppati. Nella figura seguente viene illustrato il possibile aspetto dell'area dati nell'area di progettazione.  
   
-     ![Area dati della tabella con gruppo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "area dati della tabella con gruppo")  
+     ![Area dati della tabella con gruppo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Area dati della tabella con gruppo")  
   
      Nelle figura seguente viene illustrato il possibile aspetto dell'area dati di cui è stato eseguito il rendering quando viene visualizzato il report.  
   
-     ![Il rendering di report raggruppati](../../reporting-services/report-design/media/tablereportrendered.gif "rendering raggruppati report")  
+     ![Rendering di un report raggruppato](../../reporting-services/report-design/media/tablereportrendered.gif "Rendering di un report raggruppato")  
   
 3.  Per un report con rientri, non è necessario utilizzare la prima colonna in cui viene visualizzata l'istanza del gruppo, ma è necessario copiare il valore della cella dell'intestazione di gruppo, eliminare la colonna di gruppo e incollare il valore nella prima casella di testo della riga di intestazione di gruppo. Per rimuovere la colonna di gruppo, fare clic con il pulsante destro del mouse sulla colonna o la cella di gruppo e quindi scegliere **Elimina colonne**. Nella figura seguente viene illustrato il possibile aspetto dell'area dati nell'area di progettazione.  
   
-     ![Area dati con riga di intestazione gruppo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "area dati con riga di intestazione gruppo")  
+     ![Area dati con riga di intestazione di gruppo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Area dati con riga di intestazione di gruppo")  
   
 4.  Per applicare il rientro alle righe di dettaglio sotto la riga di intestazione di gruppo nella stessa colonna, modificare il riempimento della cella dei dati di dettaglio.  
   
@@ -84,7 +83,7 @@ Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversio
   
      L'aspetto dell'area dati sarà simile a quello riportato nell'esempio seguente.  
   
-     ![Area dati per report con rientri](../../reporting-services/report-design/media/steppedreportdataregion.gif "area dati per report con rientri")  
+     ![Area dati per report con rientri](../../reporting-services/report-design/media/steppedreportdataregion.gif "Area dati per report con rientri")  
   
      **Area dati per layout di report con rientri**  
   
@@ -99,7 +98,7 @@ Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversio
     1.  Nel riquadro Gruppi di righe fare clic con il pulsante destro del mouse sul gruppo, scegliere **Aggiungi gruppo**e quindi il tipo di gruppo da aggiungere.  
   
         > [!NOTE]  
-        >  È possibile aggiungere gruppi a un'area dati in modi diversi. Per altre informazioni, vedere [Aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+        >  È possibile aggiungere gruppi a un'area dati in modi diversi. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  Nella finestra di dialogo **Gruppo Tablix** digitare un nome.  
   
@@ -110,13 +109,12 @@ Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversio
 3.  Modificare il riempimento per la cella in cui vengono visualizzati i dati del gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le intestazioni di pagina e piè di pagina &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formattazione di elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Area dati Tablix &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tabelle &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Paginazione in Reporting Services (Generatore Report e SSRS) | Documenti Microsoft
+title: Paginazione in Reporting Services (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ad24564f035952b3bf4834162e1039370efb3f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginazione in Reporting Services (Generatore report e SSRS)
   Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,14 +50,14 @@ ms.lasthandoff: 08/09/2017
   
  L'area della pagina fisica disponibile in seguito all'allocazione dello spazio per margini, spaziatura delle colonne, intestazione e piè di pagina, è denominata *area utilizzabile della pagina*. I margini vengono applicati solo quando si esegue il rendering e si stampano report nei formati dei renderer di interruzioni di pagina manuali. Nell'immagine seguente sono indicati il margine e l'area utilizzabile della pagina di una pagina fisica.  
   
- ![Pagina fisica con margini e area utilizzabile. ] (../../reporting-services/report-design/media/rspagemargins.gif "Pagina fisica con margini e area utilizzabile.")  
+ ![Pagina fisica con margini e area usabile.] (../../reporting-services/report-design/media/rspagemargins.gif "Pagina fisica con margini e area usabile.")  
   
 ### <a name="newsletter-style-columns"></a>Colonne in formato newsletter  
  Il report può essere diviso in colonne, ad esempio le colonne di un giornale, che vengono considerate come pagine logiche di cui viene eseguito il rendering nella stessa pagina fisica. Le colonne vengono disposte da sinistra verso destra e dall'alto verso il basso e sono separate tra loro da spazi vuoti. Se il report è diviso in più colonne, ogni pagina fisica viene divisa verticalmente in colonne, ciascuna delle quali viene considerata come una pagina logica. Si supponga ad esempio che in una pagina fisica siano presenti due colonne. Il contenuto del report verrà inserito nella prima e quindi nella seconda colonna. Se le prime due colonne sono insufficienti per il contenuto del report, verranno riempite la prima e quindi la seconda colonna nella pagina successiva. Le colonne continuano a essere riempite, da sinistra verso destra e dall'alto verso il basso, finché non viene eseguito il rendering di tutti gli elementi del report. Se per le colonne si specificano dimensioni tali che la larghezza orizzontale o verticale sia uguale a zero, il valore predefinito dell'impostazione relativa alla spaziatura tra le colonne sarà uguale a zero.  
   
  Le colonne vengono specificate nella finestra di dialogo **Imposta pagina** o nel riquadro **Proprietà report** oppure modificando le proprietà TopMargin, BottomMargin, LeftMargin e RightMargin nel riquadro **Proprietà** . Se si desidera usare per i margini dimensioni non definite, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report. Le colonne vengono applicate solo quando si esegue il rendering e si stampano report nei formati PDF o Immagine. Nell'immagine seguente è indicata l'area utilizzabile di una pagina contenente colonne.  
   
- ![Pagina fisica con colonne illustrate. ] (../../reporting-services/report-design/media/rspagecolumns.gif "Pagina fisica con colonne illustrate.")  
+ ![Pagina fisica con colonne visualizzate.] (../../reporting-services/report-design/media/rspagecolumns.gif "Pagina fisica con colonne visualizzate.")  
   
 ## <a name="page-breaks-and-page-names"></a>Interruzioni e nomi di pagina  
  La leggibilità di un report, così come il controllo e l'esportazione dei relativi dati potrebbero risultare migliori quando il report dispone di nomi di pagina. Reporting Services offre proprietà per report e aree dati Tablix (tabella, matrice ed elenco), gruppi e rettangoli nel report per controllare la paginazione, reimpostare i numeri di pagina e fornire nuovi nomi di pagina del report in base alle interruzioni di pagina. Tali caratteristiche consentono di migliorare i report indipendentemente dal formato in cui ne viene eseguito il rendering, tuttavia risultano utili soprattutto in caso di esportazione dei report nelle cartelle di lavoro di Excel.  
@@ -78,9 +78,9 @@ ms.lasthandoff: 08/09/2017
   
  È possibile impostare la proprietà BreakLocation nelle finestre di dialogo **Proprietà Tablix**, **Proprietà rettangolo**o **Proprietà gruppo** , ma è necessario impostare le proprietà Disabled, ResetPageNumber e PageName nel riquadro Proprietà di Generatore report. Se le proprietà nel riquadro Proprietà sono organizzate per categoria, sarà possibile trovarle nella categoria **PageBreak** . Per i gruppi, la categoria **PageBreak** si trova all'interno della categoria **Group** .  
   
- È possibile usare costanti ed espressioni semplici o complesse per impostare il valore delle proprietà Disabled e ResetPageNumber. Non è tuttavia possibile usare espressioni con la proprietà BreakLocation. Per altre informazioni sulla scrittura e l'uso delle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ È possibile usare costanti ed espressioni semplici o complesse per impostare il valore delle proprietà Disabled e ResetPageNumber. Non è tuttavia possibile usare espressioni con la proprietà BreakLocation. Per altre informazioni sulla creazione e l'uso delle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
- Nel report è possibile scrivere espressioni che fanno riferimento ai nomi o ai numeri di pagina correnti tramite la raccolta **Globals** . Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e User &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Nel report è possibile scrivere espressioni che fanno riferimento ai nomi o ai numeri di pagina correnti tramite la raccolta **Globals** . Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Denominazione delle schede del foglio di lavoro di Excel  
  Queste proprietà risultano utili quando si esportano report nelle cartelle di lavoro di Excel. Usare la proprietà InitialPage per specificare un nome predefinito per la scheda del foglio di lavoro quando si esporta il report e usare le interruzioni di pagina e la proprietà PageName per fornire nomi diversi per ogni foglio di lavoro. Ogni nuova pagina del report, definita da un'interruzione di pagina, viene esportata in un foglio di lavoro diverso denominato in base al valore della proprietà PageName. Se PageName è vuoto, ma il report dispone di un nome di pagina iniziale, quest'ultimo verrà usato per tutti i fogli di lavoro nella cartella di lavoro di Excel.  
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
  Per altre informazioni sul funzionamento di queste proprietà in caso di esportazione dei report in Excel, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Layout e Rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

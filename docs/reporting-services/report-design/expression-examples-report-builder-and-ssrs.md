@@ -1,5 +1,5 @@
 ---
-title: Esempi di espressioni (Generatore Report e SSRS) | Documenti Microsoft
+title: Esempi di espressioni (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 04/06/2017
 ms.prod: sql-server-2016
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
-Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per ulteriori informazioni sull'editor di espressioni e i tipi di riferimenti che è possibile includere, vedere [espressione viene utilizzata in report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), e [aggiungere un'espressione &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Quando RDL Sandboxing è abilitato, al momento della pubblicazione del report nel testo dell'espressione è possibile utilizzare solo determinati tipi e membri. Per altre informazioni, vedere [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -68,7 +67,7 @@ Per esempi di espressioni per utilizzi specifici, vedere gli argomenti seguenti:
   
 -   [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-Per altre informazioni sulle espressioni semplici e complesse, per sapere dove è possibile usare le espressioni e quali tipi di riferimenti è possibile includere in un'espressione, vedere gli argomenti contenuti in [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Per ulteriori informazioni sul contesto in cui le espressioni vengono valutate per calcolare le aggregazioni, vedere [ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+Per altre informazioni sulle espressioni semplici e complesse, per sapere dove è possibile usare le espressioni e quali tipi di riferimenti è possibile includere in un'espressione, vedere gli argomenti contenuti in [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Per altre informazioni sul contesto in cui le espressioni vengono valutate per calcolare le aggregazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzati molti operatori e funzioni che si utilizzano anche per esempi di espressione in questo argomento, ma nel contesto di scrittura di un report, vedere [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
 
@@ -103,20 +102,20 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
     =Today()  
     ```  
   
--   Utilizzare il **DateInterval** funzione per estrarre una parte di una data specifica. Ecco alcuni validi **DateInterval** parametri:
+-   Usare la funzione **DateInterval** per estrarre una parte specifica di una data. Ecco alcuni parametri **DateInterval** validi:
 
-    -   DateInterval. Second
-    -   DateInterval. Minute
-    -   DateInterval. Hour
-    -   DateInterval
+    -   DateInterval.Second
+    -   DateInterval.Minute
+    -   DateInterval.Hour
+    -   DateInterval.Weekday
     -   DateInterval.Day
-    -   DateInterval
-    -   DateInterval
-    -   DateInterval. Month
-    -   DateInterval
-    -   DateInterval. Year
+    -   DateInterval.DayOfYear
+    -   DateInterval.WeekOfYear
+    -   DateInterval.Month
+    -   DateInterval.Quarter
+    -   DateInterval.Year
 
-    Ad esempio, questa espressione mostrerà il numero della settimana dell'anno corrente per la data corrente:
+    Ad esempio, questa espressione mostrerà il numero della settimana nell'anno corrente per la data corrente:
   
     ```  
     =DatePart(DateInterval.WeekOfYear, today()) 
@@ -170,7 +169,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   L'espressione seguente genera gli anni di intervallo tra SellStartDate e LastReceiptDate. Questi campi si trovano in due set di dati diversi, DataSet1 e DataSet2. Il [prima funzione &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), che è una funzione di aggregazione, restituisce il primo valore di SellStartDate in DataSet1 e il primo valore di LastReceiptDate in DataSet2.  
+-   L'espressione seguente genera gli anni di intervallo tra SellStartDate e LastReceiptDate. Questi campi si trovano in due set di dati diversi, DataSet1 e DataSet2. La funzione di aggregazione [First &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) restituisce il primo valore di SellStartDate in DataSet1 e il primo valore di LastReceiptDate in DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -486,7 +485,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     Per ulteriori informazioni, vedere [aggiungere un collegamento ipertestuale a un URL &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
+     Per altre informazioni, vedere [Aggiunta di un collegamento ipertestuale a un URL &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   L'espressione seguente controlla in base a specifiche condizioni se aggiungere un URL in una casella di testo. L'espressione dipende da un parametro denominato `IncludeURLs` che consente all'utente di decidere se includere o meno URL attivi in un report. Questa espressione viene impostata come azione per una casella di testo. Se si imposta il parametro su False e quindi si visualizza il report, è possibile esportare il report in Microsoft Excel senza collegamenti ipertestuali.  
   
@@ -519,7 +518,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
     ```  
   
 ##  <a name="CustomCode"></a> Codice personalizzato  
- È possibile utilizzare codice personalizzato in un report. Il codice personalizzato può essere incorporato in un report o archiviato in un assembly personalizzato utilizzato nel report. Per ulteriori informazioni sul codice personalizzato, vedere [codice personalizzato e riferimenti ad Assembly in espressioni in Progettazione Report &#40; SSRS &#41; ](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ È possibile utilizzare codice personalizzato in un report. Il codice personalizzato può essere incorporato in un report o archiviato in un assembly personalizzato utilizzato nel report. Per altre informazioni sul codice personalizzato, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Utilizzo delle variabili di gruppo per l'aggregazione personalizzata  
  È possibile inizializzare il valore di una variabile di gruppo locale all'interno di un particolare ambito del gruppo e quindi includere un riferimento a tale variabile nelle espressioni. Una delle modalità di utilizzo di una variabile di gruppo con codice personalizzato consiste nell'implementare un'aggregazione personalizzata. Per ulteriori informazioni, vedere [Using Group Variables in Reporting Services 2008 for Custom Aggregation](http://go.microsoft.com/fwlink/?LinkId=128714).  
@@ -527,7 +526,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
  Per altre informazioni sulle variabili, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>Eliminazione di valori Null o zero in fase di esecuzione  
- Alcuni valori di un'espressione possono restituire un valore Null o non definito in fase di elaborazione del report. In questo modo possono verificarsi errori di run-time che generano la visualizzazione di **#Errore** nella casella di testo anziché dell'espressione valutata. Questo comportamento influisce in modo particolare sulla funzione **IIF** in quanto, a differenza di un'istruzione If-Then-Else, ogni parte dell'istruzione **IIF** (incluse le chiamate di funzione) viene valutata prima di essere passata alla routine che verifica se il risultato è **true** o **false**. L'istruzione `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` genera **#Error** nel report visualizzabile se `Fields!Sales.Value` è NOTHING.  
+ Alcuni valori di un'espressione possono restituire un valore Null o non definito in fase di elaborazione del report. In questo modo possono verificarsi errori di run-time che generano la visualizzazione di **#Errore** nella casella di testo anziché dell'espressione valutata. Questo comportamento influisce in modo particolare sulla funzione **IIF** in quanto, a differenza di un'istruzione If-Then-Else, ogni parte dell'istruzione **IIF** (incluse le chiamate di funzione) viene valutata prima di essere passata alla routine che verifica se il risultato è **true** o **false**. L'istruzione `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` genera **#Errore** nel report visualizzabile se `Fields!Sales.Value` è NOTHING.  
   
  Per evitare questa condizione, utilizzare una delle strategie seguenti:  
   
@@ -561,10 +560,9 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Esempi di espressione di raggruppamento &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Utilizzo delle espressioni nei report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
-

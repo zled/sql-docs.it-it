@@ -1,5 +1,5 @@
 ---
-title: Aggiungere codice a un Report (SSRS) | Documenti Microsoft
+title: Aggiungere codice a un report (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - adding code
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae58ddb9260037fafa37263050e55681944738eb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dad6a1b0a3be940cd3f0d6ecf9a5e62193ee9960
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Aggiungere codice a un report (SSRS)
   In qualsiasi espressione, è possibile chiamare un codice personalizzato. Il codice può essere fornito nei due modi seguenti:  
@@ -64,9 +63,8 @@ ms.lasthandoff: 08/09/2017
      Se si aggiunge questa espressione a una cella della tabella in cui sono visualizzati i valori della categoria, ogni qualvolta la parola "Bike" è nel campo del set di dati per la riga, nella cella della tabella viene visualizzata invece la parola "Bicycle".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà report, codice](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Riferimenti alla raccolta di parametri &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Finestra di dialogo Proprietà report, Codice](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   
-

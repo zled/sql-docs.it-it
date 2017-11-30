@@ -1,39 +1,37 @@
 ---
-title: Creare un report per dispositivi mobili a schede tramite il drill-through | Report di Reporting Services per dispositivi mobili | Documenti Microsoft
+title: Creare un report per dispositivi mobili a schede usando il drill-through | Report per dispositivi mobili di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6554f808c19540d2a3b7cbe3fdf4e86c5fe7a357
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 465c9c79016cf6a4770074bbfdab2b9fbd0a0e41
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Creare un report per dispositivi mobili a schede tramite il drill-through
+# <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Creare un report per dispositivi mobili a schede usando il drill-through
 Informazioni su come creare un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] analogo a un report a schede in termini di aspetto e funzionamento usando il drill-through e parametri.
 
 In questo report, ad esempio, i misuratori nella parte superiore si comportano come le schede. Quando si sceglie il misuratore relativo ai trasporti, i dati nella parte restante del grafico vengono filtrati in base ai dati dei trasporti.
 
 ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
-In realtà si tratta di un set di cinque report separati, ognuno con un parametro diverso che filtra il report in modo che corrisponda al misuratore selezionato nella parte superiore del report. Si crea innanzitutto tutti i cinque report, quindi per ognuno dei cinque report, rendere le altri quattro misuratori drillthroughs quattro report.
+In realtà si tratta di un set di cinque report separati, ognuno con un parametro diverso che filtra il report in modo che corrisponda al misuratore selezionato nella parte superiore del report. Vengono prima creati i cinque report, quindi per ciascuno dei cinque report vengono creati gli altri quattro misuratori nei drill-through agli altri quattro report.
 
-Ecco i passaggi per questo esempio.
+Di seguito sono illustrati i passaggi per questo esempio.
 
-## <a name="create-the-basic-report"></a>Creare report di base
+## <a name="create-the-basic-report"></a>Creare il report di base
 
 1. Creare un report denominato Sales con cinque misuratori:
 
@@ -43,64 +41,64 @@ Ecco i passaggi per questo esempio.
     * Archiviazione
     * Spese varie
 
-   ![01-vendite-Mobile-Report-server di pubblicazione](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. Impostare **accento** a **su** per il misuratore di vendite, pertanto confronteranno con l'il resto del report, ma in questo caso, bianco su sfondo nero.
+2. Impostare **Evidenziatore** su **Attivato** per i misuratori Sales in modo che appaia evidenziato rispetto agli altri elementi del report, in questo caso in bianco su nero.
 
-    ![01a-Sales-Accent-mobile-report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
+    ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
-3. Salvare in un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server di report.
+3. Salvarlo in un server di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
 ## <a name="make-copies-of-the-report"></a>Creare copie del report
 
-1. Quattro copie del report di vendite e assegnare loro un nome: 
+1. Creare quattro copie del report Sales e assegnare loro un nome: 
 
     * Trasporti
     * Carburante
     * Archiviazione
     * Spese varie
 
-3. Per salvare il [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server di report.
+3. Salvare le copie nel server di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
-## <a name="set-the-gauge-as-a-drillthrough"></a>Impostare il misuratore come un drill-through
+## <a name="set-the-gauge-as-a-drillthrough"></a>Impostare il misuratore come drill-through
 
-In questa sezione, impostare ogni misuratore (ad eccezione del misuratore Sales) come un drill-through per il report corrispondente.
+In questa sezione ogni misuratore (ad eccezione del misuratore Sales) vine impostato come drill-through al report corrispondente.
 
-1. Nel report delle vendite, selezionare il misuratore di trasporto.
+1. Nel report Sales selezionare il misuratore Transportation.
 
-    ![02-Sales-create-Drillthrough-mobile-report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
+    ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. Con il **Layout** selezionata, nella scheda il **proprietà visive** riquadro selezionare **destinazione drill-through**.
+2. Con la scheda **Layout** selezionata, nel riquadro **Proprietà visive** selezionare **Destinazione del drill-through**.
 
-3. Selezionare **report per dispositivi mobili**.
+3. Selezionare **Report per dispositivi mobili**.
 
-4. Individuare e selezionare il report che sarà la destinazione per il drill-through, in questo caso, "Financials - trasporto".
+4. Individuare e selezionare il report che sarà la destinazione del drill-through, in questo caso "Financials - Transportation".
 
-    ![03-Sales-Select-dashboard-mobile-report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
+    ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. In **configurare i report di destinazione**, selezionare il parametro per filtrare il report e selezionare **applica**.
+5. In **Configura report di destinazione** selezionare il parametro per applicare un filtro al report e selezionare **Applica**.
 
-   ![04-Sales-Apply-Parameters-mobile-report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
+   ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
-6. Ripetere questi passaggi per ognuna delle altri misuratori del report di vendite. 
+6. Ripetere questi passaggi per ciascuno degli altri misuratori del report Sales. 
 
 ## <a name="set-the-gauges-for-the-other-reports"></a>Impostare i misuratori per gli altri report
 
-1.  Aprire il report di trasporto, impostare il misuratore Sales come un drill-through per il report di vendite e gli altri tre misuratori come drillthroughs ai rispettivi report.
+1.  Aprire il report Transportation, impostare il misuratore Sales come drill-through al report Sales e gli altri tre misuratori come drill-through ai rispettivi report.
 
-2. Ancora nel rapporto di trasporto, impostare **accento** del misuratore di trasporto per **su**, si differenzia il resto del report.
+2. Sempre nel report Transportation impostare **Evidenziatore** per il misuratore Transportation su **Attivato** in modo da evidenziarlo rispetto agli altri elementi del report.
 
-3. Ripetere questi passaggi per i report di carburante, archiviazione e le spese varie. 
+3. Ripetere questi passaggi per i report Fuel, Storage e Misc Expenses. 
 
-## <a name="view-the-report-in-the-web-portal"></a>Visualizzare il report nel portale web
+## <a name="view-the-report-in-the-web-portal"></a>Visualizzare il report nel portale Web
 
-1. Passare al [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server di report e aprire uno dei report. 
+1. Passare al server di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e aprire uno dei report. 
 
-2. Si noti che ogni i misuratori è associata un'icona di drill-through nell'angolo superiore destro.
+2. Si noti che ogni misuratore ha un'icona di drill-through nell'angolo superiore destro.
 
     ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
-3. Selezionare uno dei misuratori per passare al report filtrato in base ai dati che del misuratore.
+3. Selezionare uno dei misuratori per passare al report filtrato con i dati del misuratore.
 
    ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
@@ -113,5 +111,4 @@ In questa sezione, impostare ogni misuratore (ad eccezione del misuratore Sales)
 
 
   
-
 

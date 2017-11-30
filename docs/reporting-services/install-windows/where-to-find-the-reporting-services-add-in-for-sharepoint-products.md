@@ -1,31 +1,26 @@
 ---
-title: Dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 05/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsSharePoint
+helpviewer_keywords: rsSharePoint
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 950b4a8752cacb863b8e345d2e7d96efe6d28b83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint
 
 Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) per Prodotti e tecnologie SharePoint (rssharepoint.msi) può essere scaricato dal Web e offre funzionalità per l'integrazione di un server di report con una distribuzione di SharePoint.  
@@ -66,12 +61,11 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint 2010
 
-Nella versione SQL Server 2016, il componente aggiuntivo può essere installato come parte della procedura guidata di installazione di SQL Server, nella pagina Selezione funzionalità. Se si vuole scaricare e installare separatamente il componente aggiuntivo, la versione più aggiornata di questo file è disponibile online nell'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] nella pagina [Componente aggiuntivo Microsoft® SQL Server® 2012 Reporting Services per le tecnologie Microsoft® SharePoint® 2010](http://go.microsoft.com/fwlink/?LinkID=207242) .
+Nella versione SQL Server 2016 è possibile installare il componente aggiuntivo come parte dell'Installazione guidata di SQL Server, nella pagina Selezione funzionalità. Se si vuole scaricare e installare separatamente il componente aggiuntivo, la versione più aggiornata di questo file è disponibile online nell'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] nella pagina [Componente aggiuntivo Microsoft® SQL Server® 2012 Reporting Services per le tecnologie Microsoft® SharePoint® 2010](http://go.microsoft.com/fwlink/?LinkID=207242) .
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Non si riesce a esplorare pagine di SharePoint in area non predefinita dopo la disinstallazione del componente aggiuntivo di Reporting Services](http://support.microsoft.com/kb/2009212)  
+[Impossibile esplorare pagine di SharePoint in area non predefinita dopo avere disinstallato il componente aggiuntivo di Reporting Services](http://support.microsoft.com/kb/2009212)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: Risolvere i problemi di recupero dei dati con report di Reporting Services | Documenti Microsoft
+title: Risolvere i problemi di recupero dei dati con i report di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Risolvere i problemi di recupero dei dati con i report di Reporting Services
 Il primo passaggio dell'elaborazione del report consiste nel recuperare i dati del report per ogni set di dati tramite la query del set di dati. Quando si visualizza in anteprima un report in locale, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel computer. Quando si esegue un report nel server di report, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel server di report. Utilizzare questo argomento per risolvere i problemi relativi al recupero dei dati del report.   
@@ -73,7 +72,6 @@ Per popolare la raccolta dei campi del set di dati, effettuare le operazioni seg
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

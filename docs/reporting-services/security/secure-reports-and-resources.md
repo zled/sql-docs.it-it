@@ -1,5 +1,5 @@
 ---
-title: Proteggere i report e risorse | Documenti Microsoft
+title: Garantire la sicurezza di report e risorse | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>Garantire la sicurezza di report e risorse
   È possibile impostare la sicurezza per singoli report e risorse e controllare quindi i livelli di accesso concessi ai vari utenti per questi elementi. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono eseguire report, visualizzare risorse, modificare proprietà ed eliminare elementi. Per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un report o a una risorsa.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Il report viene pubblicato in un server di report oppure viene reso disponibile in un modo che potrebbe consentire il controllo del parametro del report dall'URL di una pagina Web.  
   
-3.  Un pirata informatico crea un collegamento alla pagina web o server di report che specifica il valore del parametro nel formato "javascript:\<qui lo script dannoso >" e invia tale collegamento in un attacco luring.  
+3.  Un pirata informatico crea un collegamento alla pagina Web o al server di report specificando il valore del parametro nella forma "javascript:\<script dannoso in questo punto>" e invia tale collegamento a un altro utente nell'ambito di un attacco luring.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Riduzione del rischio di attacchi intrusivi nel codice di script in un collegamento ipertestuale all'interno di un report o documento pubblicato  
  I report possono contenere collegamenti ipertestuali incorporati nel valore della proprietà Action all'interno di un elemento del report o di una parte di un elemento del report. Quando il report viene elaborato, i collegamenti ipertestuali possono essere associati ai dati recuperati da un'origine dati esterna. Se un utente malintenzionato modifica i dati sottostanti, il collegamento ipertestuale potrebbe essere a rischio di attacchi al codice di script. Se un utente fa clic sul collegamento nel report pubblicato o esportato, lo script dannoso potrebbe venire eseguito.  
@@ -80,11 +79,10 @@ ms.lasthandoff: 08/09/2017
  È consigliabile proteggere i report che contengono informazioni riservate in corrispondenza del livello di accesso ai dati, richiedendo agli utenti di specificare le credenziali per l'accesso ai dati riservati. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). È inoltre possibile proteggere una cartella in modo da renderla inaccessibile agli utenti non autorizzati. Per altre informazioni, vedere [Proteggere le cartelle](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire le assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurare l'accesso a Generatore Report](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Elementi di origine dati condivisa protetta](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Archiviare le credenziali in un'origine di dati Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Proteggere le origini dei dati condivise](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

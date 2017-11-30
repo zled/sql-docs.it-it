@@ -1,28 +1,25 @@
 ---
-title: 'Lezione 3: Definizione di una sottoscrizione guidata dai dati | Documenti Microsoft'
+title: 'Lesson 3: Defining a Data-Driven Subscription (Lezione 3: Definizione di una sottoscrizione guidata dai dati) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati dei portali Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e sarà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
@@ -88,7 +85,7 @@ Parametro  |Origine del valore  | Valore/campo
 **Formato di rendering** | Ottieni il valore dal set di dati | Formato
 **Modalità scrittura**| Immettere il valore| Incremento automatico    
 **Estensione file** |Immettere il valore |True
-**Nome utente** | Immettere il valore | Digitare l'account utente di dominio. Immetterlo nel formato: \<dominio >\\\<account >. L'account utente deve avere le autorizzazioni richieste per il percorso configurato. 
+**Nome utente** | Immettere il valore | Digitare l'account utente di dominio. Specificare l'account nel formato \<dominio>\\\<<account>. L'account utente deve avere le autorizzazioni richieste per il percorso configurato. 
 **Password** | Immettere il valore | Digitare la password
 
 ## <a name="report-parameters"></a>Parametri di report
@@ -98,12 +95,12 @@ Parametro  |Origine del valore  | Valore/campo
 ## <a name="next-steps"></a>Passaggi successivi  
 Quando la sottoscrizione viene eseguita, nella condivisione file specificata vengono recapitati quattro file di report, uno per ogni ordine nell'origine dati *Sottoscrittori* . Ogni recapito deve essere univoco in termini di dati (che devono essere specifici dell'ordine), di formato di visualizzazione e di formato di file. È possibile aprire tutti i report dalla cartella condivisa per verificare che ogni versione sia personalizzata in base alle opzioni di sottoscrizione definite.  
   
-![Elenco dei file creati dalla sottoscrizione](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "elenco dei file creati dalla sottoscrizione")  
+![Elenco dei file creati dalla sottoscrizione](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Elenco dei file creati dalla sottoscrizione")  
   
 La pagina di sottoscrizione nel portale Web conterrà la data dell' **Ultima esecuzione** e lo **Stato** della sottoscrizione. 
 **Nota:** aggiornare la pagina dopo l'esecuzione della sottoscrizione per visualizzare le informazioni aggiornate.  
     
-![Risultati di sottoscrizione in Gestione Report](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "risultati di sottoscrizione in Gestione Report")  
+![Risultati della sottoscrizione in Gestione report](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Risultati della sottoscrizione in Gestione report")  
   
 Questo passaggio conclude l'esercitazione relativa alla definizione di una sottoscrizione guidata dai dati.   
   
@@ -115,5 +112,4 @@ Questo passaggio conclude l'esercitazione relativa alla definizione di una sotto
   
   
   
-
 

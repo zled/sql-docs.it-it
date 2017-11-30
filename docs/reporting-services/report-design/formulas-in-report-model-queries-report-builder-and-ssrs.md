@@ -1,5 +1,5 @@
 ---
-title: Le formule in Report modello query (Generatore Report e SSRS) | Documenti Microsoft
+title: Formule nelle query del modello di report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formule nelle query del modello di report (Generatore report e SSRS)
   Le formule sono calcoli eseguiti su valori in un report che utilizzano un modello di report come origine dati. Le formule vengono definite nella finestra di dialogo **Definisci formula** in Progettazione query modelli di report quando si definisce una query per un'origine dati dei modelli di report. Una formula può includere funzioni, operatori, costanti e riferimenti a campi oppure entità. Le formule consentono di combinare, aggregare, filtrare e restituire dati sia numerici sia di testo. È possibile creare formule e salvarle come nuovi campi oppure modificare quelle esistenti.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Le funzioni possono essere utilizzate per eseguire calcoli semplici o complessi. La struttura di una funzione inizia con il nome della funzione, seguito da una parentesi di apertura, dagli argomenti per la funzione separati da virgole e da una parentesi di chiusura.  
   
- ![Un esempio di una funzione. ] (../../reporting-services/report-design/media/functionexample.gif "Un esempio di una funzione.")  
+ ![Esempio di una funzione.](../../reporting-services/report-design/media/functionexample.gif "Esempio di una funzione.")  
   
  Gli argomenti possono essere riferimenti a campi, numeri, testo e valori logici come **TRUE** o **FALSE**. Gli argomenti possono inoltre essere costanti, formule oppure altre funzioni. Gli argomenti immessi devono generare un valore valido per l'argomento. Ad esempio, se la formula consiste nella moltiplicazione di due numeri interi, il risultato non può essere una stringa di testo.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |Funzioni di testo|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
-

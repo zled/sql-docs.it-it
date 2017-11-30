@@ -1,5 +1,5 @@
 ---
-title: Reporting Services in SQL Server Management Studio (SSRS) | Documenti Microsoft
+title: Reporting Services in SQL Server Management Studio (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report servers [Reporting Services], how-to topics
+helpviewer_keywords: report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b5c82bbd8c2ed4b53bba8afca05d0c439b3ff6be
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 11d0fdfbb1ae7848fc47d89915df8f783cefe370
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services di SQL Server Management Studio (SSRS)
   Gli amministratori del server di report possono usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per:  
@@ -40,17 +38,16 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+-   [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
--   [Impostare proprietà Server di Report &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
+-   [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
 -   [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
   
 -   [Annulla processi server di report &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Introduzione a SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   
-

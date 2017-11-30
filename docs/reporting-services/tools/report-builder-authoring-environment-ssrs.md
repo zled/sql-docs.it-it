@@ -1,5 +1,5 @@
 ---
-title: Ambiente (SSRS) di creazione di Generatore report | Documenti Microsoft
+title: Ambiente di creazione di Generatore report (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03a8fc7800821a235076b5652506c2247db1226f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5a5817be0d4f9645d52b27673ed31213bd258d37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente di creazione di Generatore report (SSRS)
   Generatore report [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è un ambiente di creazione e modifica autonomo per la creazione di report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all'esterno di Visual Studio. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile installarlo dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o dall'Area download Microsoft.  
@@ -53,9 +52,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [Configurare l'accesso a Generatore Report](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Progettare report con progettazione Report &#40; SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   
-

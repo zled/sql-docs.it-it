@@ -1,5 +1,5 @@
 ---
-title: Utilizzando i metodi del servizio Web protetto | Documenti Microsoft
+title: Using Secure Web Service Methods (Uso di metodi del servizio Web protetti) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,30 +10,28 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], secure connections
 - Web service [Reporting Services], SOAP
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 1222a4223f54eec0f6083790da4d0afebf353ec9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 2f478e1628eb1ee51087f0cd0d9d8a778fba5350
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-secure-web-service-methods"></a>Utilizzo di metodi del servizio Web protetti
-  Alcuni metodi del servizio Web ReportServer possono richiedere una connessione protetta per essere richiamati. I metodi che richiedono una connessione protetta sono determinati dalle **SecureConnectionLevel** nel file RSReportServer. config. Il valore dell'impostazione è un valore intero con un intervallo valido compreso tra 0 e un numero superiore. Nella tabella seguente vengono descritti questi valori.  
+  Alcuni metodi del servizio Web ReportServer possono richiedere una connessione protetta per essere richiamati. I metodi che richiedono una connessione protetta sono determinati dall'impostazione **SecureConnectionLevel** nel file RSReportServer.config. Il valore dell'impostazione è un valore intero con un intervallo valido compreso tra 0 e un numero superiore. Nella tabella seguente vengono descritti questi valori.  
   
-|Level|Descrizione|  
+|Level|Description|  
 |-----------|-----------------|  
 |**0**|Livello di sicurezza basso. Le chiamate effettuate all'API SOAP di Reporting Services non richiedono una connessione protetta.|  
 |Maggiore di **0**|Livello di sicurezza medio. Tutte le chiamate effettuate all'API SOAP di Reporting Services richiedono una connessione protetta.|  
@@ -45,4 +43,3 @@ ms.lasthandoff: 08/12/2017
  [Servizio Web ReportServer](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

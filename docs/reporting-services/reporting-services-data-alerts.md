@@ -1,5 +1,5 @@
 ---
-title: Gli avvisi dati di Reporting Services | Documenti Microsoft
+title: Avvisi dati di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f2be4b604e088329f719195976903f6dcb516246
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-data-alerts"></a>Avvisi dati di Reporting Services
 
@@ -29,12 +28,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Gli avvisi dati di SQL Server Reporting Services sono una soluzione che consente di essere informati sui dati dei report di proprio interesse o importanti al momento appropriato di guidata dai dati. Utilizzando gli avvisi dati non è più necessario andare in cerca di informazioni, che possono essere ottenute automaticamente.
+Gli avvisi dati di SQL Server Reporting Services rappresentano una soluzione guidata dai dati che consente di essere informati sui dati dei report di proprio interesse o importanti al momento appropriato. Utilizzando gli avvisi dati non è più necessario andare in cerca di informazioni, che possono essere ottenute automaticamente.
 
 I messaggi di avviso dati vengono inviati tramite posta elettronica. A seconda dell'importanza delle informazioni, è possibile scegliere di inviare i messaggi in modo più o meno frequente e solo quando i risultati cambiano. È possibile specificare più destinatari di posta elettronica e tenere così informate altre persone per migliorare l'efficienza e la collaborazione.
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
 ##  <a name="AlertingWF"></a> Architettura e flusso di lavoro degli avvisi dati
 
@@ -56,7 +55,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Nel diagramma seguente viene illustrato il flusso di lavoro per la creazione e il salvataggio di una definizione di avviso dati, tramite la creazione di un processo di SQL Agent per avviare l'elaborazione di un'istanza di avviso dati e l'invio tramite posta elettronica di messaggi di avviso dati contenenti i dati del report da cui è stato attivato l'avviso per uno o più destinatari.  
   
- ![Flusso di lavoro negli avvisi Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "flusso di lavoro negli avvisi Reporting Services")  
+ ![Flusso di lavoro negli avvisi di Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Flusso di lavoro negli avvisi di Reporting Services")  
   
 ### <a name="reports-supported-by-data-alerts"></a>Report supportati dagli avvisi dati  
  È possibile creare avvisi dati per tutti i tipi di report professionali scritti in linguaggio RDL (Report Definition Language) e creati in Progettazione report o Generatore report. Si tratta di report in cui sono incluse aree dati, quali tabelle e grafici, report con sottoreport e report complessi con più gruppi di colonne paralleli e aree dati annidate. Gli unici requisiti sono che il report includa almeno un'area dati di qualsiasi tipo e che l'origine dati del report sia configurata per utilizzare le credenziali archiviate o nessuna credenziale. Se nel report non è disponibile alcuna area dati, non è possibile creare un avviso per questo report.  
@@ -88,7 +87,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Salvare definizioni di avviso dati e metadati di avviso  
  Quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, il database di avvisi di SQL Server viene creato automaticamente.  
   
- Le definizioni di avviso dati e i metadati di avviso vengono salvati nel database di avvisi. Per impostazione predefinita, questo database è denominato ReportingServices\<GUID > alerting.  
+ Le definizioni di avviso dati e i metadati di avviso vengono salvati nel database di avvisi. Per impostazione predefinita, questo database è denominato ReportingServices\<GUID>_Alerting.  
   
  Quando si salva la definizione di avviso dati, tramite l'avviso viene creato un processo di SQL Server Agent per la definizione di avviso. Il processo include una pianificazione. La pianificazione è basata sul criterio di ricorrenza specificato nella definizione di avviso. L'esecuzione del processo consente di avviare l'elaborazione della definizione di avviso dati.  
   
@@ -127,7 +126,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Come illustrato nel diagramma riportato in precedenza in questo argomento, per gli avvisi dati vengono utilizzati processi di SQL Server Agent. Per creare i processi, è necessario che SQL Server Agent sia in esecuzione. SQL Server Agent potrebbe essere stato configurato per l'avvio automatico al momento dell'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In caso contrario, è possibile avviare SQL Server Agent manualmente. Per altre informazioni, vedere [Configurare SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) e [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
- È possibile utilizzare la pagina **Avvisi e sottoscrizioni provisioning** in Amministrazione centrale SharePoint per verificare se SQL Server Agent è in esecuzione e per creare e scaricare script [!INCLUDE[tsql](../includes/tsql-md.md)] personalizzati da eseguire per concedere autorizzazioni a SQL Server Agent. È anche possibile generare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] tramite PowerShell. Per altre informazioni, vedere [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+ È possibile utilizzare la pagina **Avvisi e sottoscrizioni provisioning** in Amministrazione centrale SharePoint per verificare se SQL Server Agent è in esecuzione e per creare e scaricare script [!INCLUDE[tsql](../includes/tsql-md.md)] personalizzati da eseguire per concedere autorizzazioni a SQL Server Agent. È anche possibile generare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] tramite PowerShell. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Configurare avvisi dati  
  A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , le impostazioni per le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , inclusi gli avvisi dati, vengono distribuite tra il file di configurazione del server di report (rsreportserver.config) e un database di configurazione di SharePoint quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint. Quando si crea l'applicazione di servizio come passaggio nell'installazione e nella configurazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], viene creato automaticamente il database di configurazione di SharePoint. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [File di configurazione di Reporting Services](../reporting-services/report-server/reporting-services-configuration-files.md).  
@@ -295,7 +294,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
      Per altre informazioni sulla gestione di tutti gli avvisi dati in un sito, vedere [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gestire tutti gli avvisi dati in un sito di SharePoint](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
--   **Avvisi dati e sottoscrizioni provisioning** , per stabilire se tramite Reporting Services è possibile utilizzare SQL Server Agent per gli avvisi dati e per scaricare script che consentono l'accesso a SQL Server Agent. Per altre informazioni, vedere [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+-   **Avvisi dati e sottoscrizioni provisioning** , per stabilire se tramite Reporting Services è possibile utilizzare SQL Server Agent per gli avvisi dati e per scaricare script che consentono l'accesso a SQL Server Agent. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Globalizzazione degli avvisi dati  
  Determinati script, come l'arabo e l'ebraico, sono scritti da destra a sinistra. Gli avvisi dati supportano script sia da destra a sinistra che da sinistra a destra. Gli avvisi dati sono in grado di rilevare le impostazioni cultura e modificare di conseguenza l'aspetto e il comportamento dell'interfaccia utente e il layout dei messaggi di avviso dati. Le impostazioni cultura sono derivate dalle impostazioni internazionali del sistema operativo nel computer dell'utente. Le impostazioni cultura vengono salvate ogni volta che si aggiorna e quindi si salva di nuovo la definizione di avviso dati.  
@@ -324,9 +323,8 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 ## <a name="see-also"></a>Vedere anche
 
-[Finestra di progettazione avviso dati](../reporting-services/data-alert-designer.md)   
+[Finestra di progettazione Avviso dati](../reporting-services/data-alert-designer.md)   
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Gestione avvisi dati per gli utenti di SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+[Gestione avvisi dati per utenti di SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

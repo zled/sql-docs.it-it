@@ -1,5 +1,5 @@
 ---
-title: Tipo di connessione OLE DB (SSRS) | Documenti Microsoft
+title: Tipo di connessione OLE DB (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 294cddfd0f3cc35c2f4a3b2b6861bc062648d849
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a7a143629b1c201f34b7a481e4b4c14d0a38bc04
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo di connessione OLE DB (SSRS)
   Per includere dati da un provider di dati OLE DB, è necessario disporre di un set di dati basato su un'origine dati del report di tipo OLE DB. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +60,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
   
 ##  <a name="Remarks"></a> Osservazioni  
- OLE DB è una tecnologia nativa per la compilazione di provider di dati per le origini dati specifiche. OLE DB si basa su interfacce COM (Component Object Model). OLE DB è una tecnologia più recente rispetto a ODBC e precedente ai provider di dati ADO.NET. I provider di dati OLE DB sono registrati con il sistema operativo come qualsiasi altro componente COM. I provider di dati OLE DB sono disponibili da Microsoft e fornitori di terze parti. Microsoft fornisce anche MSDASQL, un provider di dati OLE DB che funge da ponte per la comunicazione ai driver ODBC. Per ulteriori informazioni, vedere [tipo di connessione ODBC &#40; SSRS &#41; ](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
+ OLE DB è una tecnologia nativa per la compilazione di provider di dati per le origini dati specifiche. OLE DB si basa su interfacce COM (Component Object Model). OLE DB è una tecnologia più recente rispetto a ODBC e precedente ai provider di dati ADO.NET. I provider di dati OLE DB sono registrati con il sistema operativo come qualsiasi altro componente COM. I provider di dati OLE DB sono disponibili da Microsoft e fornitori di terze parti. Microsoft fornisce anche MSDASQL, un provider di dati OLE DB che funge da ponte per la comunicazione ai driver ODBC. Per altre informazioni, vedere [Tipo di connessione ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
  Per recuperare correttamente i dati desiderati, è necessario fornire la sintassi della query supportata dal provider di dati. Il supporto dei parametri varia in base al provider di dati. Per ulteriori informazioni, vedere gli argomenti specifici del provider di dati selezionato. Esempio:  
   
@@ -81,7 +80,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Aggiungere un filtro a un set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Sezioni correlate  
@@ -90,13 +89,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
- [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sui set di dati incorporati e condivisi.  
   
- [Raccolta di campi del set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -104,9 +103,8 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
   
 ## <a name="see-also"></a>Vedere anche  
- [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

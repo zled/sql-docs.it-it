@@ -1,5 +1,5 @@
 ---
-title: Esportazione in un File CSV (Generatore Report e SSRS) | Documenti Microsoft
+title: Esportazione in un file CSV (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e63d1c2405029118064144d99fc092ec6f4f139a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
   L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report impaginati come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  È possibile impostare il delimitatore del campo su qualsiasi carattere desiderato, incluso TAB, modificando le impostazioni relative alle informazioni sui dispositivi. Per altre informazioni, vedere [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
--   La stringa di delimitazione dei record è il ritorno a capo e avanzamento riga (\<cr >\<lf >).  
+-   La stringa di delimitazione dei record è una sequenza di ritorno a capo e avanzamento riga (\<cr>\<lf>).  
   
 -   Il carattere qualificatore di testo è la virgoletta doppia (").  
   
@@ -150,11 +149,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Il rendering elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

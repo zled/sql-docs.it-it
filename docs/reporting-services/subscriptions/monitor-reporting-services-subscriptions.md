@@ -1,5 +1,5 @@
 ---
-title: Monitoraggio di Reporting Services sottoscrizioni | Documenti Microsoft
+title: Monitorare le sottoscrizioni di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d1d01e4c59bba393ddc713c24f7ba829b3420b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorare le sottoscrizioni di Reporting Services
   È possibile monitorare le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dall'interfaccia utente, da Windows PowerShell o dai file di log. Le opzioni disponibili per il monitoraggio dipendono dalla modalità del server di report in esecuzione.  
@@ -54,18 +53,18 @@ ms.lasthandoff: 08/09/2017
 |Stato|Description|  
 |------------|-----------------|  
 |Nuova sottoscrizione|Viene visualizzato quando viene creata una nuova sottoscrizione.|  
-|Inactive|Viene visualizzato quando una sottoscrizione non può essere elaborata. Per altre informazioni, vedere "Gestione di sottoscrizioni inattive" più avanti in questo argomento.|  
-|Operazione completata: \< *numero*> elaborati di \< *numero*> totali; \< *numero*> errori.|Consente di visualizzare lo stato di esecuzione di una sottoscrizione guidata dai dati. Questo messaggio viene generato da Elaborazione pianificazione e recapito.|  
-|\<*numero*> elaborati|Numero di notifiche che Elaborazione pianificazione e recapito ha recapitato senza errori oppure che non tenterà più di recapitare. Quando viene completata l'operazione di recapito correlata a una sottoscrizione guidata dai dati, il numero di notifiche elaborate dovrebbe corrispondere al numero totale di notifiche generate.|  
+|Inactive|Viene visualizzato quando una sottoscrizione non può essere elaborata. Per altre informazioni, vedere "Gestione di sottoscrizioni inattive" più avanti in questo argomento.For more information, see "Managing Inactive Subscriptions" later in this topic|  
+|Completata: elaborato/i \<*numero*> su un totale di \<*numero*>; \<*numero*> errori.|Consente di visualizzare lo stato di esecuzione di una sottoscrizione guidata dai dati. Questo messaggio viene generato da Elaborazione pianificazione e recapito.|  
+|\<*numero*> elaborato/i|Numero di notifiche che Elaborazione pianificazione e recapito ha recapitato senza errori oppure che non tenterà più di recapitare. Quando viene completata l'operazione di recapito correlata a una sottoscrizione guidata dai dati, il numero di notifiche elaborate dovrebbe corrispondere al numero totale di notifiche generate.|  
 |\<*numero*> totale|Numero totale di notifiche generate per l'ultima operazione di recapito correlata alla sottoscrizione.|  
-|\<*numero*> errore|Numero di notifiche che Elaborazione pianificazione e recapito non ha potuto recapitare oppure che non tenterà più di recapitare.|  
+|\<*numero*> errori|Numero di notifiche che Elaborazione pianificazione e recapito non ha potuto recapitare oppure che non tenterà più di recapitare.|  
 |Errore durante l'invio della posta: il trasporto non è riuscito a connettersi al server.|Indica che il server di report non si è connesso al server di posta elettronica. Questo messaggio viene generato dall'estensione per il recapito tramite posta elettronica.|  
-|File \< *filename*> è stato scritto \<percorso >.|Indica l'avvenuto recapito al percorso di condivisione file. Questo messaggio viene generato dall'estensione per il recapito tramite condivisione file.|  
+|File \<*filename*> was written to \<path>. (Il file <nomefile> è stato scritto in <percorso>).|Indica l'avvenuto recapito al percorso di condivisione file. Questo messaggio viene generato dall'estensione per il recapito tramite condivisione file.|  
 |Errore sconosciuto durante la scrittura del file.|Indica il mancato recapito al percorso di condivisione file. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
-|Errore durante la connessione alla cartella di destinazione, \<percorso >. Verificare che la cartella di destinazione o la condivisione file esista.|Indica che la cartella specificata non è stata trovata. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
-|Il file \<filename > potrebbe non essere scritta \<percorso >. Nuovo tentativo in corso.|Indica il mancato aggiornamento del file a una versione più recente. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
-|Errore durante la scrittura del file \<filename >: \<messaggio >|Indica il mancato recapito al percorso di condivisione file. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
-|\<messaggi di stato personalizzati >|Messaggi di stato relativi all'avvenuto o mancato recapito, generati dalle estensioni per il recapito. Se si utilizza un'estensione per il recapito di terze parti o personalizzata, potrebbero essere visualizzati altri messaggi.|  
+|Failure connecting to the destination folder, \<path> (Errore durante la connessione alla cartella di destinazione, <percorso>). Verificare che la cartella di destinazione o la condivisione file esista.|Indica che la cartella specificata non è stata trovata. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
+|Non è stato possibile scrivere il file \<nomefile> in \<percorso>. Nuovo tentativo in corso.|Indica il mancato aggiornamento del file a una versione più recente. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
+|Errore durante la scrittura del file \<nomefile>: \<messaggio>|Indica il mancato recapito al percorso di condivisione file. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
+|\<messaggi di stato personalizzati>|Messaggi di stato relativi all'avvenuto o mancato recapito, generati dalle estensioni per il recapito. Se si utilizza un'estensione per il recapito di terze parti o personalizzata, potrebbero essere visualizzati altri messaggi.|  
   
  Gli amministratori del server di report possono inoltre monitorare le sottoscrizioni standard in corso di elaborazione. Non è possibile monitorare le sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
  Di seguito è riportato un esempio di un messaggio di errore nel file di log di traccia relativo alle sottoscrizioni:  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error sending email**. Eccezione: System.Net.Mail.SmtpException: Il server SMTP richiede una connessione protetta oppure il client non è stato autenticato. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error sending email**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Il file di log non indica se il report è stato aperto né se il recapito è effettivamente riuscito. Un'operazione di recapito è considerata riuscita quando non vengono generati errori da Elaborazione pianificazione e recapito e il server di report si è connesso al server di posta elettronica. Nel file di log non vengono registrati, ad esempio, gli errori di mancato recapito dei messaggi di posta elettronica nella cassetta postale degli utenti. Per altre informazioni sui file di log, vedere [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Data|Process|Area|Category|Level|Correlation|Message|  
-|5/21/2014 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Eccezione: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2014 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Usare PowerShell per monitorare le sottoscrizioni  
  Per un esempio degli script di PowerShell che è possibile usare per controllare lo stato delle sottoscrizioni in modalità nativa o in modalità SharePoint, vedere [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
@@ -127,7 +126,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

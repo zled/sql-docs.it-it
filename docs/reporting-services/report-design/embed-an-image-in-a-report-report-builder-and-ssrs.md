@@ -1,5 +1,5 @@
 ---
-title: Incorporamento di un'immagine in un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Incorporare un'immagine in un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1825a28cd9939228a73c1a4a6269c717b691ab2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 58b65bbbbb0fd6126ef760bfae5ca25a7a39fc6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Incorporare un'immagine in un report (Generatore report e SSRS)
   Un report può includere un'immagine incorporata. L'incorporamento di un'immagine assicura che l'immagine sia sempre disponibile per il report, ma può influire sulle dimensioni della definizione del report, ovvero il file che definisce il report. Le immagini incorporate in un report sono elencate nel riquadro dei dati del report.  
@@ -69,9 +68,8 @@ ms.lasthandoff: 08/09/2017
 3.  Fare clic nella casella di testo accanto alla proprietà **MIMEType** e selezionare un nuovo tipo MIME nell'elenco a discesa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Immagini &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Aggiungere un'immagine con associazione a dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà immagine, generale &#40; Generatore report e SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [Immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [Aggiungere un'immagine con associazione a dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà immagine, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Visualizzare gli stessi dati in una matrice e un grafico (Generatore Report) | Documenti Microsoft
+title: Visualizzare dati identici in una matrice e in un grafico (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 41f3fa70514ca6c359bbbe01a228d52273406c6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf125e2438d3d79662920c8fbc93faab8e8024d4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Visualizzare dati identici in una matrice e in un grafico (Generatore report)
   Se si desidera visualizzare gli stessi dati in una matrice e in un grafico, è necessario impostare determinate proprietà su entrambe le aree dati per specificare lo stesso set di dati, nonché le stesse espressioni per filtri, gruppi, ordinamenti e dati.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Per utilizzare i valori di gruppo delle colonne della matrice come legenda per il grafico, è necessario specificare i colori per i dati della serie sul grafico e quindi utilizzare gli stessi colori come colori di riempimento per lo sfondo delle caselle di testo nella cella della matrice in cui sono visualizzati i valori di gruppo. Per altre informazioni, vedere [Specifica di colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
- In fase di esecuzione, il report potrebbe apparire poco chiaro se il numero dei valori di gruppo per le definizioni di gruppo è eccessivo. In questo caso, potrebbe essere necessario filtrare i valori, combinare i gruppi o regolare la soglia in modo che il grafico combini i gruppi automaticamente. Per altre informazioni, vedere [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ In fase di esecuzione, il report potrebbe apparire poco chiaro se il numero dei valori di gruppo per le definizioni di gruppo è eccessivo. In questo caso, potrebbe essere necessario filtrare i valori, combinare i gruppi o regolare la soglia in modo che il grafico combini i gruppi automaticamente. Per altre informazioni, vedere [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -101,9 +101,9 @@ ms.lasthandoff: 08/09/2017
 25. Visualizzare il risultato nell'anteprima. Nei gruppi di righe e di colonne della matrice verranno visualizzati gli stessi dati dei gruppi di categorie e di serie del grafico.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Collegamento più aree di dati allo stesso set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Aggiungere i filtri di set di dati, i filtri di area dati e i filtri di gruppo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

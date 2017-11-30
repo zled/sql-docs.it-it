@@ -1,5 +1,5 @@
 ---
-title: In Progettazione Report (SSRS) parti del report | Documenti Microsoft
+title: Parti del report in Progettazione report (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44d4d2ae5bf33c8a35c54659bd89a504e2bb58fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>Parti del report in Progettazione report (SSRS)
 
   In Progettazione report, dopo aver creato tabelle, grafici e altri elementi impaginati del report in un progetto, è possibile pubblicarli come *parti di report* in un server di report o in un sito di SharePoint integrato con un server di report in modo da permetterne il riutilizzo in altri report.  
@@ -82,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Distribuire il report.  
   
- Quando si distribuisce il report, la parte di report viene pubblicata in un sito di SharePoint o in un server di report e altri utenti possono riutilizzarla. Per pubblicare una parte di report, è necessario disporre delle autorizzazioni sufficienti e una connessione a su un server di report quando si distribuisce il report.  
+ Quando si distribuisce il report, la parte di report viene pubblicata in un sito di SharePoint o in un server di report e altri utenti possono riutilizzarla. Per pubblicare una parte di report, è necessario avere effettuato la connessione a un server di report e disporre di autorizzazioni sufficienti per la distribuzione del report.  
   
   
 ##  <a name="SearchReuseComponents"></a> Riutilizzo di parti di report  
@@ -101,5 +98,4 @@ ms.lasthandoff: 08/09/2017
 
 [Gestione di parti di report](../../reporting-services/report-design/managing-report-parts.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

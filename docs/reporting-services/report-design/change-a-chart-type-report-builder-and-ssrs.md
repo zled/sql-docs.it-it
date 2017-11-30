@@ -1,5 +1,5 @@
 ---
-title: Modificare un tipo di grafico (Generatore Report e SSRS) | Documenti Microsoft
+title: Modificare un tipo di grafico (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4e963dc1fbee3ca6c7d035a748fe49708b36a78
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fdc412e2ad4896548d07f4a747cb5e150bb68d4b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modificare un tipo di grafico (Generatore report e SSRS)
 Quando si inserisce un grafico in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la prima volta, viene visualizzata la finestra di dialogo **Seleziona tipo di grafico** . Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  
@@ -44,8 +43,7 @@ Quando si inserisce un grafico in un report impaginato di [!INCLUDE[ssRSnoversio
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [I misuratori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   
-

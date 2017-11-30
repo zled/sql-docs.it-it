@@ -1,5 +1,5 @@
 ---
-title: "Attività e autorizzazioni | Documenti Microsoft"
+title: "Attività e autorizzazioni | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,26 +19,25 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d2ea7df496e47ec31b79557d238fd564a4e7128
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tasks-and-permissions"></a>Attività e autorizzazioni
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il termine *attività* indica tutte le azioni che un utente o un amministratore può eseguire. Le attività sono predefinite. Non è possibile creare attività personalizzate né modificare le attività predefinite a livello di programmazione o tramite altri strumenti. Sono disponibili complessivamente venticinque attività che comprendono l'intero set di operazioni disponibili nella sicurezza basata sui ruoli. I seguenti sono alcuni esempi di attività: "Visualizzazione di report", "Gestione di report" e "Gestione delle proprietà del server di report".  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]il termine *attività* indica tutte le azioni che un utente o un amministratore può eseguire. Le attività sono predefinite. Non è possibile creare attività personalizzate né modificare le attività predefinite a livello di programmazione o tramite altri strumenti. Sono disponibili complessivamente venticinque attività che comprendono l'intero set di operazioni disponibili nella sicurezza basata sui ruoli. I seguenti sono alcuni esempi di attività: "Visualizzazione di report", "Gestione di report" e "Gestione delle proprietà del server di report".  
   
  Ogni attività è rappresentata da un set di autorizzazioni, anch'esse predefinite. L'attività "Gestione di cartelle", ad esempio, contiene le autorizzazioni di creazione e di eliminazione di cartelle oltre a quelle di visualizzazione e aggiornamento delle proprietà delle cartelle. Allo scopo di offrire una descrizione più dettagliata di ogni attività, sono documentate anche le relative autorizzazioni. Non è possibile interagire direttamente con le autorizzazioni o specificarle nelle assegnazioni di ruolo. Le autorizzazioni vengono concesse indirettamente agli utenti tramite le attività incluse nelle definizioni di ruolo.  
   
  Le attività possono essere eseguite solo se sono parte di un ruolo e se quest'ultimo è incluso in un'assegnazione di ruolo. Di conseguenza, se l'attività Visualizzazione di modelli non è inclusa in un ruolo o se il ruolo non è incluso in un'assegnazione di ruolo, gli utenti non possono visualizzare i modelli di report. Nella figura seguente viene illustrato come le autorizzazioni siano combinate in attività e come queste ultime siano combinate in ruoli che possono essere utilizzati per assegnazioni di ruolo specifiche.  
   
- ![Diagramma di attività e autorizzazioni](../../reporting-services/security/media/report-securityobjects.gif "autorizzazioni e attività")  
+ ![Autorizzazioni e attività](../../reporting-services/security/media/report-securityobjects.gif "Autorizzazioni e attività")  
 Autorizzazioni e attività  
   
 ## <a name="system-and-item-level-tasks"></a>Attività a livello di sistema e a livello di elemento  
@@ -51,8 +50,7 @@ Autorizzazioni e attività
   
 ## <a name="see-also"></a>Vedere anche  
  [Definizioni di ruolo](../../reporting-services/security/role-definitions.md)   
- [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

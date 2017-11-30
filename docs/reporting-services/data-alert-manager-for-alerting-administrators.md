@@ -1,5 +1,5 @@
 ---
-title: Gestione avvisi dati per gli amministratori di avvisi | Documenti Microsoft
+title: Gestione avvisi dati per gli amministratori di avvisi | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9df65141967b8e9e0ab4e1f7115986b19674d341
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gestione avvisi dati per gli amministratori di avvisi
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services fornisce gestione avvisi dati per gli amministratori di avvisi di SharePoint gestire gli avvisi dati. Gli amministratori di avvisi possono visualizzare le informazioni relative a tutti gli avvisi salvati nel sito, nonché eliminare avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per i responsabili di avvisi di SharePoint tramite Gestione avvisi dati.
+SQL Server Reporting Services include Gestione avvisi dati per consentire agli amministratori di avvisi di SharePoint di gestire gli avvisi dati. Gli amministratori di avvisi possono visualizzare le informazioni relative a tutti gli avvisi salvati nel sito, nonché eliminare avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per i responsabili di avvisi di SharePoint tramite Gestione avvisi dati.
 
-![Gestione di avvisi per gli amministratori del sito SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Alert Manager per gli amministratori del sito di SharePoint")
+![Gestione avvisi per gli amministratori del sito di SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Gestione avvisi per gli amministratori del sito di SharePoint")
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
  Quando il sito è abilitato per gli avvisi dati, vengono create e aggiunte al sito di SharePoint due pagine, ovvero MyDataAlerts.aspx e SiteDataAlerts.aspx. SiteDataAlerts.aspx rappresenta Gestione avvisi dati per gli amministratori di avvisi. Gli amministratori di avvisi possono aprire Gestione avvisi dati dalla pagina Impostazioni sito di SharePoint. Per aprire Gestione avvisi dati, gli amministratori di avvisi devono disporre dell'autorizzazione Gestione avvisi di SharePoint.  
   
@@ -51,7 +50,7 @@ SQL Server Reporting Services fornisce gestione avvisi dati per gli amministrato
 ##  <a name="ViewingAlerts"></a> Visualizzazione delle informazioni sugli avvisi dati  
  Se Reporting Services viene installato e configurato in SharePoint, nella pagina Impostazioni sito di SharePoint sono incluse le opzioni di **Reporting Services** . Per aprire Gestione avvisi dati, gli amministratori di avvisi possono fare clic sull'opzione **Gestisci avvisi dati** disponibile in Reporting Services. Nella figura seguente viene illustrata la posizione nella pagina Impostazioni sito da cui è possibile aprire Gestione avvisi dati.  
   
- ![Sezione Reporting Services della pagina Impostazioni sito](../reporting-services/media/rs-sitesettings.gif "sezione Reporting Services della pagina Impostazioni sito")  
+ ![Sezione Reporting Services della pagina Impostazioni sito](../reporting-services/media/rs-sitesettings.gif "Sezione Reporting Services della pagina Impostazioni sito")  
   
  In Gestione avvisi dati è inclusa una tabella in cui sono elencati il nome dell'avviso, il nome del report, il nome del proprietario dell'avviso, il numero di volte in cui il messaggio di avviso è stato inviato, l'ultima esecuzione dell'avviso, l'ultima modifica alla definizione di avviso e lo stato del messaggio di avviso. Se l'avviso non può essere generato o inviato, nella colonna relativa allo stato sono incluse informazioni sull'errore che consentono di risolvere i problemi relativi all'avviso. Per altre informazioni, vedere [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
@@ -61,7 +60,7 @@ SQL Server Reporting Services fornisce gestione avvisi dati per gli amministrato
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|L'ultimo avviso è stato eseguito correttamente e l'avviso è stato inviato.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|L'ultimo avviso è stato eseguito correttamente, tuttavia i dati non sono stati modificati e non è stato inviato alcun avviso.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<messaggio di errore > il file di log contiene informazioni dettagliate sull'errore. Fare riferimento alla voce di log con l'identificatore: \<GUID >.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<messaggio di errore>Il file di log contiene informazioni dettagliate sull'errore. Fare riferimento alla voce del log con l'identificatore: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Avviso creato.|  
   
  Per altre informazioni, vedere [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
@@ -86,5 +85,4 @@ SQL Server Reporting Services fornisce gestione avvisi dati per gli amministrato
 
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

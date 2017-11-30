@@ -1,5 +1,5 @@
 ---
-title: "Amministrare un database del Server di Report (modalità nativa SSRS) | Documenti Microsoft"
+title: "Amministrare un database del server di report (modalità nativa SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 3fc4f3adeac32e917b5b218548906ca6a9cb664d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 464f02ee6324db06587ee1c7233f8fcd12026722
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Amministrare un database del server di report (modalità nativa SSRS)
   In una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono utilizzati due database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Per impostazione predefinita, i database sono denominati ReportServer e ReportServerTempdb. ReportServerTempdb viene creato con il database primario del server di report e viene utilizzato per l'archiviazione di dati temporanei, informazioni sulla sessione e report memorizzati nella cache.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili vari strumenti per l'amministrazione dei database del server di report.  
   
--   Per eseguire il backup o il ripristino del database del server di report, per spostare un database del server di report o per recuperare un database del server di report, è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] o le utilità della riga di comando del database. Per istruzioni, vedere [lo spostamento di database Server di Report in un altro Computer &#40; Modalità nativa SSRS &#41; ](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) nella documentazione Online di SQL Server.  
+-   Per eseguire il backup o il ripristino del database del server di report, per spostare un database del server di report o per recuperare un database del server di report, è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] o le utilità della riga di comando del database. Per istruzioni, vedere [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) nella documentazione online di SQL Server.  
   
 -   Per copiare il contenuto del database esistente in un altro database del server di report, è possibile collegare una copia di un database del server di report e utilizzarla con una diversa istanza del server di report. In alternativa, è possibile creare ed eseguire uno script che utilizza le chiamate SOAP per ricreare il contenuto del server di report in un nuovo database. È possibile usare l'utilità **rs** per eseguire lo script.  
   
@@ -81,18 +81,18 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>Informazioni sulle versioni del database  
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]non sono disponibili informazioni esplicite sulla versione del database. Tuttavia, poiché le versioni del database sono sempre sincronizzate con le versioni del prodotto, è possibile utilizzare le informazioni relative alla versione del prodotto per stabilire quando la versione del database è stata modificata. Informazioni sulla versione di prodotto per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è indicata tramite le informazioni sulla versione di file che viene visualizzato nei file di log, nelle intestazioni di tutte le chiamate SOAP, e quando ci si connette all'URL del server di report (ad esempio, quando si apre una finestra del browser `http://localhost/reportserver`).  
+ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]non sono disponibili informazioni esplicite sulla versione del database. Tuttavia, poiché le versioni del database sono sempre sincronizzate con le versioni del prodotto, è possibile utilizzare le informazioni relative alla versione del prodotto per stabilire quando la versione del database è stata modificata. Le informazioni sulla versione del prodotto per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili tramite le informazioni sulla versione di file contenute nei file di log, nelle intestazioni delle chiamate SOAP e quando ci si connette all'URL del server di report (ad esempio quando si apre un browser su `http://localhost/reportserver`).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Creare un database del Server di Report in modalità nativa &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Configurare Account di servizio del Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurare una connessione di Database Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Creare un database del Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Operazioni di backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [Database del Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Archiviare i dati crittografati di Report Server &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

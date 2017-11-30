@@ -1,25 +1,23 @@
 ---
-title: Abilitare un server di report per l'accesso a Power BI per dispositivi mobili | Documenti Microsoft
+title: Abilitare un server di report per l'accesso a Power BI per dispositivi mobili | Microsoft Docs
 ms.date: 12/17/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9c4b3e4ce530f822f28e7a3db52e802c90d492a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ffb3f281925623dac949f42d84a1f6f73588de7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Abilitare un server di report per l'accesso a Power BI per dispositivi mobili
 Per utilizzare i report per dispositivi mobili, è possibile usare l'app Power BI per dispositivi mobili. Per consentire all'app Power BI per dispositivi mobili di connettersi a Reporting Services, è necessario configurare alcuni aspetti.  
@@ -64,5 +62,4 @@ Per altre informazioni su come configurare Windows Firewall, vedere [Configurare
   
   
   
-
 

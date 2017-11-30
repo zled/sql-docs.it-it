@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un parametro multivalore a un Report | Documenti Microsoft
+title: Aggiungere un parametro multivalore a un report | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 44d81cbf6e89d5e3a387f3660417195fdb17c7dd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/12/2017
-
+ms.openlocfilehash: dd7b6d4607b86ec03f2c84fe1f7f8a05d1035885
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Aggiunta di un parametro multivalore a un report
   È possibile aggiungere un parametro a un report che consente all'utente di selezionare più valori per il parametro.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/12/2017
   
 2.  Fare clic con il pulsante destro del mouse sul set di dati del report e quindi scegliere **Proprietà set di dati**.  
   
-3.  Aggiungere una variabile alla query del set di dati modificando il testo della query nella casella **Query** o aggiungendo un filtro mediante la finestra Progettazione query. Per ulteriori informazioni, vedere [compila una Query in Progettazione Query relazionale &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+3.  Aggiungere una variabile alla query del set di dati modificando il testo della query nella casella **Query** o aggiungendo un filtro mediante la finestra Progettazione query. Per altre informazioni, vedere [Compilare una query in Progettazione query relazionale &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
     ```  
     WHERE  
@@ -58,11 +57,10 @@ ms.lasthandoff: 09/12/2017
   
      Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro. Per più valori, la funzionalità **Seleziona tutto** è disponibile all'inizio dell'elenco, in modo che l'utente possa selezionare o deselezionare tutti i valori con un solo clic. Se si sceglie di ottenere i valori disponibili per il parametro del report da una query del set di dati, assicurarsi di selezionare un set di dati che non contenga la variabile di query associata allo stesso parametro del report.  
   
-     Per ulteriori informazioni, vedere [aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
 
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   
-

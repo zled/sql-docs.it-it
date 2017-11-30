@@ -1,5 +1,5 @@
 ---
-title: Messaggi di avviso dati | Documenti Microsoft
+title: Messaggi di avviso dati | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea76fbe6f4b59874270d70efde68b3d3493d7f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-messages"></a>Messaggi di avviso dati
 
@@ -29,23 +28,23 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Gli avvisi dati di SQL Server Reporting Services recapitare due tipi di messaggi di avviso dati tramite posta elettronica: messaggi con i dati di avviso risultati e messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.
+Gli avvisi dati di SQL Server Reporting Services consentono di recapitare tramite posta elettronica due tipi di messaggi di avviso dati: messaggi con risultati degli avvisi dati e messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.
 
 Il proprietario della definizione di avviso dati può inoltre visualizzare le informazioni sull'istanza di avviso dati in Gestione avvisi dati. Per altre informazioni, vedere [Gestione avvisi dati per utenti di SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile dopo SQL Server 2016.
   
 ##  <a name="DataAlertMessages"></a> Messaggi di avviso dati  
  Nelle figure seguenti sono illustrati un messaggio di avviso dati con risultati e un messaggio di avviso con una descrizione di un errore.  
   
  **Messaggio dei risultati**  
   
- ![Messaggio di posta elettronica di avviso dati con risultati](../reporting-services/media/rs-alertmessageresults.gif "messaggio di posta elettronica di avviso dati con risultati")  
+ ![Messaggio di posta elettronica di avviso dati con risultati](../reporting-services/media/rs-alertmessageresults.gif "Messaggio di posta elettronica di avviso dati con risultati")  
   
  **Messaggio di errore**  
   
- ![Messaggio di avviso dati con messaggio di errore](../reporting-services/media/rs-alertmessageerrror.gif "messaggio di avviso dati con messaggio di errore")  
+ ![Messaggio di avviso dati con messaggio di errore](../reporting-services/media/rs-alertmessageerrror.gif "Messaggio di avviso dati con messaggio di errore")  
   
  I messaggi includono gli stessi tipi di informazioni.  
   
@@ -69,14 +68,13 @@ Il proprietario della definizione di avviso dati può inoltre visualizzare le in
 ##  <a name="HowTo"></a> Attività correlate  
  In questa sezione vengono elencate le procedure in cui viene illustrato come creare e modificare le definizioni di avviso dati che forniscono molte delle informazioni incluse nei messaggi di avviso dati.  
   
--   [Crea un avviso dati nella finestra di progettazione avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Modificare un avviso nella finestra di progettazione avviso dati](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestra di progettazione avviso dati](../reporting-services/data-alert-designer.md)   
+[Finestra di progettazione Avviso dati](../reporting-services/data-alert-designer.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

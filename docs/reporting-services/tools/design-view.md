@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione Progettazione | Documenti Microsoft
+title: Visualizzazione Progettazione | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.layoutview.f1
-helpviewer_keywords:
-- Layout View dialog box
+f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
+helpviewer_keywords: Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 461e68458cc754355a172e607bfa638ae1eb2eb0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="design-view"></a>Visualizzazione Progettazione
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Progettazione report usare la visualizzazione Progettazione per disporre gli elementi nel report. Tale visualizzazione viene talvolta denominata superficie di progettazione o visualizzazione Layout.  
@@ -62,8 +59,7 @@ Utilizzare la casella degli strumenti per selezionare gli elementi da inserire n
  Utilizzare il riquadro Proprietà per visualizzare nell'area di progettazione le proprietà dell'elemento del report selezionato o nel Riquadro di raggruppamento le proprietà del gruppo selezionato. In alternativa, è possibile fare clic con il pulsante destro del mouse su un gruppo o elemento del report selezionato, quindi scegliere **Proprietà** per aprire la finestra di dialogo **Proprietà** corrispondente per l'elemento del report o il gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le intestazioni di pagina e piè di pagina &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Suggerimenti sulla progettazione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
-

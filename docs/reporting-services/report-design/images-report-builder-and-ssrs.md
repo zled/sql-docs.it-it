@@ -1,5 +1,5 @@
 ---
-title: Immagini (Generatore Report e SSRS) | Documenti Microsoft
+title: Immagini (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 777cab4f21219aa5b4387c67b264e3769cbf1e59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="images-report-builder-and-ssrs"></a>Immagini (Generatore report e SSRS)
   Un'immagine è un elemento del report in cui è incluso un riferimento a un'immagine incorporata nel report o archiviata in un database, nel server di report o in un'altra posizione nel Web. Un'immagine può essere rappresentata da un'immagine ripetuta con le righe di dati. Inoltre è possibile utilizzare un'immagine come sfondo per determinati elementi del report.  
@@ -86,7 +85,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Esportazione in un file di immagine &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
- [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
-

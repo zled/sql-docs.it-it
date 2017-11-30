@@ -1,5 +1,5 @@
 ---
-title: Gestire gli avvisi dati in Gestione avvisi dati | Documenti Microsoft
+title: Gestire gli avvisi dati personali in Gestione avvisi dati | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: de78105e53535a100792126ff762cdfab2f691c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gestire gli avvisi dati in Gestione avvisi dati
 
@@ -32,10 +31,10 @@ ms.lasthandoff: 08/17/2017
 
 Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati e le informazioni sugli avvisi. Possono inoltre eliminare i propri avvisi, aprire definizioni di avviso per la modifica nella finestra di progettazione Avviso dati ed eseguire i propri avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per gli utenti in Gestione avvisi dati.
 
- ![Funzionalità di gestione per gli utenti di SharePoint avvisi](../reporting-services/media/rs-alertmanageriw.gif "funzionalità di gestione avvisi per gli utenti di SharePoint")
+ ![Funzionalità di Gestione avvisi dati per gli utenti SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Funzionalità di Gestione avvisi dati per gli utenti SharePoint")
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
 ### <a name="to-view-a-list-of-your-alerts"></a>Per visualizzare un elenco di avvisi  
   
@@ -43,7 +42,7 @@ Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati
   
 2.  Fare clic sull'icona per espandere il menu a discesa in un report, quindi fare clic su **Gestisci avvisi dati**. Nella figura seguente è illustrato il menu a discesa.  
   
-     ![Aprire Gestione avvisi dal menu di scelta rapida report](../reporting-services/media/rs-openalertmanager.gif "aprire Alert Manager dal menu di scelta rapida report")  
+     ![Aprire Gestione avvisi dati dal menu di scelta rapida dei report](../reporting-services/media/rs-openalertmanager.gif "Aprire Gestione avvisi dati dal menu di scelta rapida dei report")  
   
      Verrà aperto Gestione avvisi dati. Per impostazione predefinita, vengono elencati gli avvisi per il report selezionati nella raccolta.  
   
@@ -64,7 +63,7 @@ Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati
     >  La definizione di avviso dati può essere modificata solo dall'utente che l'ha creata.  
   
     > [!NOTE]  
-    >  Se il report è cambiato e i feed di dati generati dal report sono cambiati, la definizione di avviso potrebbe non essere più valida. Questa condizione si verifica quando una colonna, a cui fa riferimento l'avviso nelle regole, viene eliminata dal report, quando il tipo di dati contenuto in tale colonna viene modificato, quando la colonna viene inclusa in un feed di dati diverso oppure quando il report viene eliminato o spostato. È possibile aprire una definizione di avviso che non è valida, ma non è possibile salvarla di nuovo fino a quando non diventa valida in base alla versione corrente del feed di dati del report in base a cui è compilata. Per sapere di più sulla modalità di generazione di feed di dati dai report, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+    >  Se il report è cambiato e i feed di dati generati dal report sono cambiati, la definizione di avviso potrebbe non essere più valida. Questa condizione si verifica quando una colonna, a cui fa riferimento l'avviso nelle regole, viene eliminata dal report, quando il tipo di dati contenuto in tale colonna viene modificato, quando la colonna viene inclusa in un feed di dati diverso oppure quando il report viene eliminato o spostato. È possibile aprire una definizione di avviso che non è valida, ma non è possibile salvarla di nuovo fino a quando non diventa valida in base alla versione corrente del feed di dati del report in base a cui è compilata. Per altre informazioni sulla modalità di generazione di feed di dati dai report, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ### <a name="to-delete-an-alert-definition"></a>Per eliminare una definizione di avviso  
   
@@ -83,5 +82,4 @@ Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

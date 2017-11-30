@@ -1,5 +1,5 @@
 ---
-title: "Creare e gestire sottoscrizioni per server di Report in modalità nativa | Documenti Microsoft"
+title: "Creare e gestire sottoscrizioni per server di report in modalità nativa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. In questo argomento vengono fornite informazioni sulle sottoscrizioni standard che vengono create e gestite dai singoli utenti. Le sottoscrizioni guidate dai dati prevedono procedure e requisiti diversi e sono illustrate in un altro argomento. Per altre informazioni, vedere [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -72,13 +71,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  **Aggiungi estensione file alla creazione del file**: questa opzione consente di aggiungere un'estensione di tre caratteri al nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
   
-8.  **Percorso**: digitare un percorso UNC Universal Naming Convention () a una cartella esistente in cui si desidera recapitare il report (ad esempio, \\ \\< nomeserver\>\\< myreports\>). Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
+8.  **Percorso**: digitare il percorso UNC (Universal Naming Convention) di una cartella esistente a cui si vuole che vengano recapitati i report, ad esempio \\\\<nomeserver\>\\<reportpersonali\>. Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
   
      ![sottoscrizione di condivisione di file](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "sottoscrizione di condivisione di file")  
   
 9. **Formato di rendering**: selezionare un formato di output del report per il recapito del file. Selezionare un formato corrispondente all'applicazione desktop che verrà utilizzata per aprire il report. Evitare formati che non eseguono il rendering del report in un singolo flusso o che introducono elementi di interattività non supportati in un file statico, ad esempio il formato HTML 4.0.  
   
-10. **Credenziali**: selezionare questa opzione per usare l'account di condivisione file o le credenziali di un utente di Windows specifico. L'opzione **Usa l'account di condivisione file** è disabilitata se l'amministratore dei report non ha configurato un account di condivisione file. Per altre informazioni, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nel **nome utente** e **Password** caselle di testo, specificare le credenziali necessarie per accedere alla condivisione file, utilizzando il formato  *\<dominio >*\\*\<nome utente >* per il nome utente.  
+10. **Credenziali**: selezionare questa opzione per usare l'account di condivisione file o le credenziali di un utente di Windows specifico. L'opzione **Usa l'account di condivisione file** è disabilitata se l'amministratore dei report non ha configurato un account di condivisione file. Per altre informazioni, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nelle caselle di testo **Nome utente** e **Password** specificare le credenziali richieste per accedere alla condivisione file usando il formato *\<dominio>*\\*\<nome utente>* per il nome utente.  
   
 11. **Opzioni sovrascrittura**:  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
   
-7.  **Oggetto**: valore predefinito è "@ReportName è stato eseguito in @ExecutionTime". È possibile modificare l'oggetto ma si noti che il @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel **soggetto** campo.  
+7.  **Oggetto**: l'impostazione predefinita è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
   
 8.  Selezionare le opzioni di recapito come segue:  
   
@@ -187,11 +186,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Usare PowerShell per modificare e l'elenco di Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Utilizzare la pagina sottoscrizioni personali &#40; Server di Report in modalità nativa &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Usare Sottoscrizioni personali &#40;server di report in modalità nativa&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
-

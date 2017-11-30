@@ -1,14 +1,14 @@
 ---
 title: "Edizioni e funzionalità supportate di SQL Server 2017 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-- SQL2017_New_Updated
-ms.date: 09/14/2017
-ms.prod: sql-server-2017
+ms.custom: 
+ms.date: 11/10/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- server-general
+ms.suite: sql
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,21 +35,19 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2db0c732cfd7fd12e73447cf2a8614e65ad530ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5625df3149ad6386cf903d00a655e56d070bd792
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edizioni e funzionalità supportate di SQL Server 2017
-
-<!---[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]--->
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Questo argomento offre informazioni dettagliate sulle funzionalità supportate dalle diverse edizioni di SQL Server 2017. 
 
@@ -69,13 +67,13 @@ Per le note sulla versione più recenti e informazioni sulle novità, vedere qua
 
 ### <a name="try-sql-server"></a>Per provare SQL Server    
     
-> [![Download da Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Download di SQL Server 2017 CTP da Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![Download da Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) Scaricare SQL Server 2017 da **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
 --->
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edizioni di [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edizioni di[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
  La tabella seguente descrive tali edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definizione|  
@@ -140,7 +138,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Capacità di calcolo massima usata da una singola istanza - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oppure [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|valore massimo del sistema operativo|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
 |Memoria massima per il pool di buffer per ogni istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|valore massimo del sistema operativo|128 GB|64 GB|1410 MB|1410 MB|
 |Memoria massima per la cache dei segmenti Columnstore per ogni istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB| 16 GB| 352 MB| 352 MB|  
-|Dimensione massima dati con ottimizzazione per la memoria per ogni database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB| 16 GB| 352 MB| 352 MB|  
+|Dimensione massima dati ottimizzati per la memoria per ogni database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB| 16 GB| 352 MB| 352 MB|  
 |Memoria massima usata per ogni istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|valore massimo del sistema operativo|Tabella: 16 GB<br /><br /> MOLAP: 64 GB|N/D|N/D|N/D|  
 |Memoria massima usata per ogni istanza di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|valore massimo del sistema operativo|64 GB|64 GB|4 GB|N/D|
 |Dimensione massima del database relazionale|524 PB|524 PB|524 PB|10 GB|10 GB|  
@@ -209,7 +207,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Miglioramenti dell'inserimento bulk|Sì|Sì|Sì|Sì|Sì|
 
 
-<sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo del processo (DOP) per una compilazione indice sono limitati a 2 DOP per l'edizione Standard e 1 DOP per le edizioni Web ed Express. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle con ottimizzazione per la memoria.
+<sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo del processo (DOP) per una compilazione indice sono limitati a 2 DOP per l'edizione Standard e 1 DOP per le edizioni Web ed Express. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle ottimizzate per la memoria.
 
 <sup>2</sup> Questa funzionalità non è inclusa nell'opzione di installazione LocalDB.
 
@@ -407,4 +405,3 @@ Per informazioni sulle funzionalità del client di Business Intelligence support
  
   
   
-

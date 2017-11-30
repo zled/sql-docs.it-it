@@ -1,5 +1,5 @@
 ---
-title: Configurare l'accesso a Generatore Report | Documenti Microsoft
+title: Configurare l'accesso a Generatore report | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d6553ed94b16c1811b4f7b8e8129367acf9c1089
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-report-builder-access"></a>Configurare l'accesso a Generatore report
   Generatore report è uno strumento per il reporting ad hoc installato con un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per la modalità nativa o la modalità integrata SharePoint.  
@@ -54,14 +53,14 @@ ms.lasthandoff: 08/09/2017
   
  Per impostare le proprietà di sistema del server di report, è possibile utilizzare Management Studio o uno script:  
   
--   Per usare Management Studio, connettersi al server di report e usare la pagina delle proprietà avanzate del server per impostare **EnableReportDesignClientDownload** su **false**. Per ulteriori informazioni su come aprire questa pagina, vedere [impostare proprietà Server di Report &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Per usare Management Studio, connettersi al server di report e usare la pagina delle proprietà avanzate del server per impostare **EnableReportDesignClientDownload** su **false**. Per altre informazioni su come aprire questa pagina, vedere [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Per visualizzare uno script di esempio che consente di impostare una proprietà del server di report, vedere [Creare script per le attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Assegnazioni di ruolo che concedono l'accesso a Generatore report in un server di report in modalità nativa  
  In un server di report in modalità nativa creare assegnazioni di ruoli utente che includano attività per l'utilizzo di Generatore report. Per creare o modificare definizioni di ruolo e assegnazioni di ruolo sugli elementi e a livello del sito, è necessario essere assegnati ai ruoli Amministratore sistema e Gestione contenuto.  
   
- Nelle istruzioni seguenti si presuppone che vengano utilizzati ruoli predefiniti. Se le definizioni di ruolo sono state modificate o se è stato eseguito l'aggiornamento da SQL Server 2000, controllare i ruoli per verificare che contengano le attività necessarie. Per ulteriori informazioni sulla creazione di assegnazioni di ruolo, vedere [concedere l'accesso utente a un Server di Report &#40; Gestione report &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ Nelle istruzioni seguenti si presuppone che vengano utilizzati ruoli predefiniti. Se le definizioni di ruolo sono state modificate o se è stato eseguito l'aggiornamento da SQL Server 2000, controllare i ruoli per verificare che contengano le attività necessarie. Per altre informazioni sulla creazione delle assegnazioni di ruolo, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizzazione per effettuare le operazioni seguenti:  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Se esiste già un'assegnazione di ruolo per l'utente o il gruppo per cui si vuole configurare l'accesso a Generatore report, fare clic su **Modifica**.  
   
-     In caso contrario, fare clic su **Nuova assegnazione ruolo**. Nel gruppo o utente, immettere l'utente o gruppo di account di dominio Windows nel formato: \<dominio >\\< account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
+     In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente immettere un account utente o di gruppo di dominio Windows nel formato \<dominio>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
   
 5.  Selezionare **Utente sistema**e quindi fare clic su **OK**.  
   
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Se esiste già un'assegnazione di ruolo per l'utente o il gruppo per cui si vuole configurare l'accesso a Generatore report, fare clic su **Modifica**.  
   
-     In caso contrario, fare clic su **Nuova assegnazione ruolo**. Nel gruppo o utente, immettere l'utente o gruppo di account di dominio Windows nel formato: \<dominio >\\< account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
+     In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente immettere un account utente o di gruppo di dominio Windows nel formato \<dominio>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
   
 10. Selezionare **Generatore report**e quindi fare clic su **Applica**.  
   
@@ -172,9 +171,8 @@ ms.lasthandoff: 08/09/2017
  [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Proprietà di sistema di Server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
-

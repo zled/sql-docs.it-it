@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire le assegnazioni di ruolo | Documenti Microsoft
+title: Creare e gestire assegnazioni di ruolo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-role-assignments"></a>Creare e gestire assegnazioni di ruolo
   Un' *assegnazione di ruolo* rappresenta criteri di sicurezza che determinano se un utente o un gruppo può accedere a un elemento specifico del server di report oppure eseguire una determinata operazione. Un'assegnazione di ruolo è costituita da un unico nome di un account utente o di gruppo e da una o più definizioni di ruolo.  
@@ -69,10 +68,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificare o eliminare un'assegnazione di ruolo &#40; Gestione report &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)   
  [Definizioni di ruolo](../../reporting-services/security/role-definitions.md)   
- [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

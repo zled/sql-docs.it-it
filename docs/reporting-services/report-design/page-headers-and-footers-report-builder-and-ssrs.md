@@ -1,5 +1,5 @@
 ---
-title: "Intestazioni di pagina e piè di pagina (Generatore Report e SSRS) | Documenti Microsoft"
+title: "Intestazioni di pagina e piè di pagina (Generatore report e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
   Un report può contenere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Le intestazioni e i piè di pagina possono contenere testo statico, immagini, linee, rettangoli, bordi, colore di sfondo, immagini di sfondo ed espressioni. Le espressioni includono riferimenti ai campi del set di dati per i report contenenti un solo set di dati e chiamate di funzioni di aggregazione che includono il set di dati come ambito.  
@@ -44,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
  Per impostazione predefinita, i report includono piè di pagina, ma non intestazioni di pagina. Per altre informazioni su come aggiungerli o rimuoverli, vedere [Aggiungere o rimuovere un'intestazione o un piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
- Le intestazioni e i piè di pagina contengono in genere numeri di pagina, titoli del report e altre proprietà del report. Per altre informazioni su come aggiungere questi elementi all'intestazione o piè di pagina, vedere [Visualizzare i numeri di pagina o altre proprietà del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md).  
+ Le intestazioni e i piè di pagina contengono in genere numeri di pagina, titoli del report e altre proprietà del report. Per altre informazioni su come aggiungere questi elementi all'intestazione o al piè di pagina, vedere [Visualizzare i numeri di pagina o altre proprietà del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md).  
   
- In seguito alla creazione, l'intestazione o il piè di pagina viene visualizzato in ogni pagina del report. Per altre informazioni sull'esclusione delle intestazioni e dei piè di pagina nella prima e ultima pagina, vedere [Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md).  
+ In seguito alla creazione, l'intestazione o il piè di pagina viene visualizzato in ogni pagina del report. Per altre informazioni sull'esclusione delle intestazioni e dei piè di pagina nella prima e nell'ultima pagina, vedere [Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -133,8 +132,7 @@ ms.lasthandoff: 08/09/2017
  Per altre informazioni, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Incorporare un'immagine in un Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rettangoli e linee &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Incorporare un'immagine in un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

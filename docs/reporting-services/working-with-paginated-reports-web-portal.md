@@ -1,28 +1,25 @@
 ---
-title: Utilizzo dei report impaginati (portale web) | Documenti Microsoft
+title: Uso di report impaginati (portale Web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -50,7 +47,7 @@ Per gestire un report impaginato esistente, è possibile eseguire le operazioni 
 > [!NOTE]
 > Se il report impaginato non è contenuto nella cartella, assicurarsi che sia attiva la visualizzazione dei report impaginati. È possibile scegliere **Visualizza** nella barra dei menu in alto a destra nel portale Web. Assicurarsi che sia selezionata l'opzione **Report impaginati** .  
   
-1.  Selezionare il **i puntini di sospensione (...)**  per il set di dati che si desidera gestire.  
+1.  Selezionare i **puntini di sospensione (...)** per il set di dati che si vuole gestire.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +124,12 @@ In questo caso, non è necessario specificare alcun tipo di credenziali per l'or
 Per usare questa opzione, è necessario aver prima configurato l'account di esecuzione automatica per il server di report. L'account di esecuzione automatica consente di connettersi a origini dati esterne quando non sono disponibili altri tipi di credenziali. Se si specifica questa opzione e l'account non è configurato, la connessione all'origine dati del report ha esito negativo e il report non viene elaborato. Per altre informazioni su questo account, vedere [Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Sottoscrizioni  
-Una sottoscrizione di Reporting Services è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato di file precedentemente specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report. Per ulteriori informazioni, vedere [utilizzo delle sottoscrizioni di](working-with-subscriptions-web-portal.md).
+Una sottoscrizione di Reporting Services è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato di file precedentemente specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report. Per altre informazioni, vedere [Uso di sottoscrizioni (portale Web)](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Elementi dipendenti  
-La pagina Elementi dipendenti consente di visualizzare l'elenco degli elementi a cui si fa riferimento in questo report. Per ognuno di essi un'icona indica di che tipo di elemento si tratta. È quindi possibile selezionare il **i puntini di sospensione (...)**  su ogni elemento per gestire gli elementi ulteriormente.  
+La pagina Elementi dipendenti consente di visualizzare l'elenco degli elementi a cui si fa riferimento in questo report. Per ognuno di essi un'icona indica di che tipo di elemento si tratta. Facendo clic sui **puntini di sospensione (…)** è possibile eseguire altre operazioni su ogni elemento.  
   
 ## <a name="caching"></a>Memorizzazione nella cache  
 Per la memorizzazione nella cache di un report impaginato sono disponibili varie opzioni. Per iniziare, è necessario effettuare una semplice selezione.  
@@ -149,7 +146,7 @@ Con la selezione di **Memorizzare nella cache copie di questo report e usarle qu
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-Per ulteriori informazioni, vedere [utilizzo snapshot](working-with-snapshots-web-portal.md).
+Per altre informazioni, vedere [Uso degli snapshot (portale Web)](working-with-snapshots-web-portal.md).
   
 ### <a name="cache-expiration"></a>Scadenza della cache  
   
@@ -199,7 +196,6 @@ Selezionare questa opzione per modificare le impostazioni di sicurezza definite 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Usare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

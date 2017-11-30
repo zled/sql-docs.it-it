@@ -1,5 +1,5 @@
 ---
-title: Area dati Tablix (Generatore Report e SSRS) | Documenti Microsoft
+title: Area dati Tablix (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Area dati Tablix (Generatore report e SSRS)
   In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], l'area dati Tablix è un elemento del report di layout generalizzato in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. I dati del report possono essere dati dettaglio recuperati direttamente dall'origine dati o dati dettaglio aggregati organizzati in gruppi specificati dall'utente. Ogni cella della Tablix può contenere qualsiasi elemento del report, ad esempio una casella di testo, un'immagine o un'altra area dati, ad esempio un grafico, un misuratore o un'area Tablix. Per aggiungere più elementi del report a una cella, aggiungere innanzitutto un rettangolo da utilizzare come contenitore. Aggiungere elementi del report al rettangolo.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
  Le celle nell'area dell'angolo della Tablix vengono create automaticamente quando sono definiti sia gruppi di righe che gruppi di colonne. Le celle incluse in questa area possono visualizzare etichette o possono essere unite per creare un titolo.  
   
- Per altre informazioni, vedere [Informazioni sulle aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-static-and-dynamic-rows-and-columns"></a>Informazioni sulle righe e sulle colonne statiche e dinamiche  
  In un'area dati Tablix le celle sono organizzate in righe e colonne associate a gruppi. Le strutture dei gruppi di righe e colonne sono identiche. In questo esempio vengono utilizzati gruppi di righe, ma è possibile applicare gli stessi concetti ai gruppi di colonne.  
@@ -84,10 +83,9 @@ ms.lasthandoff: 08/09/2017
  La caratteristica Aggiungi totale crea automaticamente una riga all'esterno del gruppo corrente nella quale visualizzare i valori che hanno come ambito il gruppo. È anche possibile aggiungere righe statiche e dinamiche manualmente. Gli indicatori visivi consentono di distinguere le righe statiche da quelle dinamiche. Per altre informazioni, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Collegamento più aree di dati allo stesso set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Controllo della visualizzazione dell'area dati Tablix in una pagina del Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Esplorazione della flessibilità di un'area dati Tablix &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Esplorazione della flessibilità di un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

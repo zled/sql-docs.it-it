@@ -1,5 +1,5 @@
 ---
-title: Formattare il testo in una casella di testo (Generatore Report e SSRS) | Documenti Microsoft
+title: Formattare il testo in una casella di testo (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cc81cc2f3f19b6ce326d11db6114deeeb907
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab1c264ec07230bd81769ab2886177552095e636
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formattare il testo in una casella di testo (Generatore report e SSRS)
   È possibile formattare qualsiasi parte del testo all'interno di una casella di testo in modo indipendente e combinare testo segnaposto e testo statico in un'unica casella di testo. La possibilità di combinare i formati e aggiungere testo segnaposto consente di creare stampe unione o modelli per il testo nel report. Qualsiasi espressione può essere definita e formattata separatamente utilizzando un segnaposto.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
          **Testo normale** Il testo selezionato viene visualizzato come testo normale. Il testo in formato HTML verrà gestito come testo letterale.  
   
-         **HTML**  Il testo selezionato viene visualizzato in formato HTML. Se il valore dell'espressione del segnaposto contiene tag HTML validi, questi verranno visualizzati in formato HTML. Per altre informazioni, vedere [Importazione di codice HTML a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
+         **HTML**  Il testo selezionato viene visualizzato in formato HTML. Se il valore dell'espressione del segnaposto contiene tag HTML validi, questi verranno visualizzati in formato HTML. Per altre informazioni, vedere [Importazione di codice HTML in un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
   
 5.  Scegliere **OK**.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Trascinare un campo dal set di dati nella casella di testo. Verrà creato un segnaposto per il campo.  
   
-5.  Per una formattazione di base, selezionare il testo segnaposto, quindi fare clic su una delle opzioni di formattazione nel gruppo **Carattere** della scheda **Home** . Fare clic, ad esempio, sul pulsante **Grassetto** .  
+5.  Per una formattazione di base, selezionare il testo segnaposto, quindi fare clic su una delle opzioni di formattazione nel gruppo **Carattere** della scheda **Home** . Fare clic, ad esempio, sul pulsante **Grassetto**.  
   
      Per applicare più opzioni di formattazione, fare clic con il pulsante destro del mouse sul testo segnaposto, quindi fare clic su **Proprietà segnaposto**.  
   
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/09/2017
  L'elenco viene ripetuto una volta per ogni valore nel campo e il segnaposto *NomeCampo* viene sostituito ogni volta dal valore di quel campo nel set di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caselle di testo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Utilizzo delle espressioni nei report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Aggiungere codice HTML in un Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà segnaposto, generale &#40; Generatore report e SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
+ [Caselle di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Aggiungere il codice HTML a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà segnaposto, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzare un'origine dati esterna per i dati del sottoscrittore (sottoscrizione guidata dai dati) | Documenti Microsoft
+title: Use an External Data Source for Subscriber Data (Data-Driven Subscription) (Usare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)
   In una sottoscrizione guidata dai dati i dati di sottoscrizione dinamici vengono ottenuti tramite una query o un comando che consente di recuperare i dati da un'origine dei dati esterna. I dati di sottoscrizione possono essere recuperati da qualsiasi origine dei dati supportata che soddisfi i requisiti per l'elaborazione della sottoscrizione guidata dai dati. La sintassi della query o del comando deve essere valida per un'estensione per l'elaborazione dati installata con il server di report.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Passaggio di valori dei parametri dal database del Sottoscrittore al report  
  Se si sta creando una sottoscrizione guidata dai dati per un report con parametri, è possibile fornire valori dei parametri variabili per personalizzare l'output di ogni report. Ad esempio, un database del Sottoscrittore potrebbe contenere numeri di identificazione, date di assunzione, titoli professionali e ubicazioni degli uffici dei dipendenti, tutte informazioni utilizzabili per filtrare i dati dei report. Se il report accetta parametri basati su queste o altre colonne di dati disponibili, è possibile eseguire il mapping di ogni parametro alla colonna appropriata.  
   
- Quando si esegue il mapping dei campi del Sottoscrittore ai parametri del report, verificare che i tipi di dati e la lunghezza delle colonne siano compatibili. Nel caso siano presenti tipi di dati non corrispondenti si verificherà un errore durante l'elaborazione della sottoscrizione. Per ulteriori informazioni sull'utilizzo di dati del sottoscrittore in un report con parametri, vedere [creare una sottoscrizione guidata dai dati &#40; Esercitazione su SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Quando si esegue il mapping dei campi del Sottoscrittore ai parametri del report, verificare che i tipi di dati e la lunghezza delle colonne siano compatibili. Nel caso siano presenti tipi di dati non corrispondenti si verificherà un errore durante l'elaborazione della sottoscrizione. Per altre informazioni sull'uso di dati del sottoscrittore in un report con parametri, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modifica dell'origine dei dati del sottoscrittore  
  Le modifiche all'origine dei dati del sottoscrittore descritte di seguito possono impedire l'esecuzione della sottoscrizione:  
@@ -87,7 +86,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vedere anche  
  [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

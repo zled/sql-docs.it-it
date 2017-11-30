@@ -1,5 +1,5 @@
 ---
-title: Sottoreport (Generatore Report e SSRS) | Documenti Microsoft
+title: Sottoreport (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1ef1efaa3eb6e369e4b46766b3ed13fcbd2c0725
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Sottoreport (Generatore report e SSRS)
   Un sottoreport è un elemento del report in cui viene visualizzato un altro report all'interno del corpo del report principale. A livello concettuale, un sottoreport in un report è simile a un frame in una pagina Web. Un sottoreport viene utilizzato per incorporare un report in un altro report. Qualsiasi report può essere utilizzato come sottoreport. Il report visualizzato come sottoreport è archiviato in un server di report, solitamente nella stessa cartella del report padre. È possibile progettare il report padre per il passaggio di parametri al sottoreport. Un sottoreport può essere ripetuto all'interno di aree dati, utilizzando un parametro per filtrare i dati in ogni istanza del sottoreport.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  È possibile inserire un sottoreport nel corpo principale del report o in un'area dati. Se si inserisce un sottoreport in un'area dati, il sottoreport verrà ripetuto per ogni istanza del gruppo o riga dell'area dati. Per passare un valore dal gruppo o dalla riga al sottoreport, nella proprietà del valore del sottoreport utilizzare un'espressione di campo per il campo contenente il valore che si desidera passare al parametro del sottoreport.  
   
- Per ulteriori informazioni sull'utilizzo dei sottoreport, vedere [aggiungere un sottoreport e i parametri &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'uso dei sottoreport, vedere [Aggiunta di un sottoreport e di parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Specifica di nomi e percorsi dei sottoreport  
  È possibile progettare un report principale per specificare un sottoreport in una cartella diversa nello stesso server di report.  
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
  In Generatore report, per visualizzare in anteprima un sottoreport in un report principale, entrambi i report devono trovarsi nello stesso server di report oppure è necessario specificare il percorso completo del sottoreport.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

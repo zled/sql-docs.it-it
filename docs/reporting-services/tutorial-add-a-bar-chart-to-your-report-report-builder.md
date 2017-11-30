@@ -1,27 +1,25 @@
 ---
-title: 'Esercitazione: Aggiungere un grafico a barre al Report (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Aggiungere un grafico a barre al report (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
 In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
@@ -38,7 +36,7 @@ L'illustrazione seguente visualizza il grafico a barre che verrà creato con le 
   
  
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [esercitazione: creazione di un Report tabella semplice &#40; Generatore report &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report di tabelle semplici &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -55,7 +53,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
-     ![Iniziare a Generatore report](../reporting-services/media/rb-getstarted.png "iniziare a Generatore Report")  
+     ![Attività iniziale Generatore report](../reporting-services/media/rb-getstarted.png "Attività iniziale Generatore repor")  
   
      Se non viene visualizzata la finestra di dialogo **Riquadro attività iniziale** , fare clic su **File** >**Nuovo**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** . 
       
@@ -220,7 +218,7 @@ Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori 
   
 2.  Fare clic sull'asse orizzontale lungo il bordo inferiore del grafico per selezionarlo.  
   
-3.  Nel **Home** scheda > **numero** gruppo > **valuta**. Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
+3.  Nella scheda **Home** > gruppo **Numero** > **Valuta**. Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
   
 3.  (Facoltativo) Rimuovere le cifre decimali. Fare clic due volte sul pulsante **Diminuisci decimali** accanto al pulsante **Valuta** .  
   
@@ -308,5 +306,4 @@ Questo passaggio conclude l'esercitazione relativa all'aggiunta di un grafico a 
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

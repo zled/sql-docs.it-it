@@ -1,5 +1,5 @@
 ---
-title: Misuratori (Generatore Report e SSRS) | Documenti Microsoft
+title: Misuratori (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -159,17 +159,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c0b12e57fd5917ee91a4191d87c3e354248928a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
   Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in un'area dati del misuratore viene visualizzato un unico valore del set di dati. Un misuratore viene sempre posizionato in un pannello del misuratore, dove è possibile aggiungere misuratori figlio o adiacenti. In un singolo pannello del misuratore è possibile creare più misuratori che condividono funzioni comuni quali il filtraggio, il raggruppamento o l'ordinamento.  
@@ -184,7 +183,7 @@ ms.lasthandoff: 08/09/2017
   
  Sono disponibili due tipi di misuratore: radiale e lineare. Nell'illustrazione seguente vengono mostrati gli elementi di base di un singolo misuratore radiale nel pannello del misuratore.  
   
- ![Diagramma degli elementi del misuratore](../../reporting-services/report-design/media/gauge-elements-diagram.gif "diagramma degli elementi del misuratore")  
+ ![Diagramma degli elementi del misuratore](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramma degli elementi del misuratore")  
   
  Per altre informazioni sull'uso dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
@@ -198,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  I misuratori lineari sono rettangolari, orientati orizzontalmente o verticalmente, e sono simili a righelli. Gli indicatori di misura del misuratore spesso sono di tipo termometro, ma possono essere marcatori o barre. Per la forma, questo tipo di misuratore risulta utile per l'integrazione nelle aree dati tabella o matrice per la visualizzazione di dati sullo stato di avanzamento.  
   
- Eccetto che per queste differenze, i due tipi di misuratore sono intercambiabili. Tuttavia, se è necessario usare un misuratore semplice nel report, provare a usare un indicatore anziché un misuratore. Per ulteriori informazioni, vedere [indicatori &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Eccetto che per queste differenze, i due tipi di misuratore sono intercambiabili. Tuttavia, se è necessario usare un misuratore semplice nel report, provare a usare un indicatore anziché un misuratore. Per altre informazioni, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Nelle illustrazioni seguenti vengono mostrati i misuratori radiali e lineari. Il misuratore radiale è rotondo e dispone dell'indicatore di misura a lancetta. Il misuratore lineare è orizzontale e dispone dell'indicatore di misura di tipo termometro.  
   
@@ -254,7 +253,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="defining-a-group-on-a-gauge"></a>Definizione di un gruppo su un misuratore  
  Dopo avere aggiunto un campo al misuratore, è possibile aggiungere un gruppo di dati. Il misuratore differisce da tutte le altre aree dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], in quanto consente di visualizzare più gruppi in un'unica area dati. Aggiungere un gruppo mediante la definizione di un'espressione di raggruppamento sul misuratore equivale ad aggiungere un gruppo di righe nell'area dati Tablix. Quando tuttavia viene aggiunto il gruppo, viene visualizzato solo il valore dell'ultimo gruppo come valore dell'indicatore di misura sul misuratore. Se ad esempio si aggiunge un'espressione di raggruppamento relativa all'anno, l'indicatore di misura punterà al valore aggregato relativo alle vendite dell'ultimo anno nel set di dati. Per altre informazioni sui gruppi, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
- Potrebbe essere necessario aggiungere un gruppo al misuratore se, ad esempio, si visualizzano più misuratori in una tabella o in un elenco e si desidera visualizzare i dati aggregati per gruppo. Per altre informazioni, vedere [Aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ Potrebbe essere necessario aggiungere un gruppo al misuratore se, ad esempio, si visualizzano più misuratori in una tabella o in un elenco e si desidera visualizzare i dati aggregati per gruppo. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="PositioningData"></a> Posizionamento di elementi in un misuratore  
  Il pannello del misuratore è il contenitore di livello superiore in cui sono presenti uno o più misuratori. È possibile visualizzare la finestra di dialogo **Proprietà pannello del misuratore** facendo clic all'esterno del misuratore. Ogni misuratore, a sua volta, contiene diversi elementi, ovvero una scala del misuratore, un intervallo del misuratore e un indicatore di misura del misuratore. Per usare il misuratore, è necessario comprendere le modalità di misurazione degli elementi contenuti nel pannello del misuratore per poterne modificare le dimensioni e la posizione.  
@@ -306,10 +305,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

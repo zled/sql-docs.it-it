@@ -1,13 +1,11 @@
 ---
-title: Combinazioni supportate di SharePoint e Reporting Services server | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Combinazioni supportate di SharePoint e server Reporting Services | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 07/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,31 +13,29 @@ helpviewer_keywords:
 - add-in for sharepoint
 - rsSharePoint
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 3728854cebbbfb07b8540c91accc73cfa17649cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinazioni supportate di server di SharePoint e Reporting Services
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinazioni supportate di SharePoint e server Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Un server di report di SQL Server Reporting Services installato in modalità SharePoint richiede una versione di SharePoint e il componente aggiuntivo di SQL Server Reporting Services (rsSharePoint.msi) per prodotti SharePoint, da installare nei server SharePoint. In questo argomento vengono riepilogate le combinazioni supportate.
+Un server di report SQL Server Reporting Services installato in modalità SharePoint richiede una versione di SharePoint e il componente aggiuntivo SQL Server Reporting Services (rsSharePoint.msi) per prodotti SharePoint, da installare nei server SharePoint. In questo argomento vengono riepilogate le combinazioni supportate.
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile dopo SQL Server 2016.
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinazioni supportate dei componenti SharePoint e Reporting Services
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinazioni supportate di SharePoint e componenti Reporting Services
 
  Nella tabella seguente sono riepilogate le combinazioni supportate di server di report, componente aggiuntivo Reporting Services per prodotti SharePoint e prodotti SharePoint. Le combinazioni non elencate nella tabella seguente non sono supportate.
 
@@ -54,7 +50,7 @@ Un server di report di SQL Server Reporting Services installato in modalità Sha
 |5|SQL Server 2012 SP3|SQL Server 2014 e SQL Server 2012 SP3|SharePoint 2013|
 |6|SQL Server 2012 SP2|SQL Server 2014 e SQL Server 2012 SP2|SharePoint 2013|
 |7|SQL Server 2012 SP1|SQL Server 2014 e SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 e SQL Server 2012 SP1 *|SQL Server 2014|SharePoint 2010|
+|8|SQL Server 2012 e SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
 |9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
 |10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
 |11|SQL Server 2008 R2|SQL Server 2012 e SQL Server 2012 SP1 o versione successiva|SharePoint 2010|
@@ -67,7 +63,7 @@ Un server di report di SQL Server Reporting Services installato in modalità Sha
 
  Per i collegamenti alle pagine di download del componente aggiuntivo, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
- **Considerazioni aggiuntive:**
+ **Altre considerazioni:**
 
 - Assicurarsi di aggiornare tutti i server SharePoint all'interno della farm. Sono inclusi i server front-end Web e i server applicazioni.
 
@@ -75,11 +71,11 @@ Un server di report di SQL Server Reporting Services installato in modalità Sha
 
 - Per il supporto di SharePoint 2013, inclusa l'integrazione di Power View, sono necessari il server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e la versione del componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di SQL Server 2012 SP1 o versione successiva.
 
-- Power View è stato introdotto in SQL Server 2012. Pertanto, integrazione di Power View con SharePoint 2010 richiede SQL Server 2012 o versioni successive del componente aggiuntivo.
+- Power View è stato introdotto in SQL Server 2012. L'integrazione di Power View con SharePoint 2010 richiede pertanto la versione SQL Server 2012 o successiva del componente aggiuntivo.
 
 - Il componente aggiuntivo di SQL Server 2008 R2 non è supportato dai server di report SQL Server 2012 o versione successiva. Tramite il programma di installazione essenziale di SharePoint 2010 viene installato automaticamente il componente aggiuntivo di SQL Server 2008 R2. È necessario disinstallarlo prima di installare le versioni più recenti del componente aggiuntivo. L'aggiornamento sul posto del componente aggiuntivo non è supportato.
 
-- **Aggiornamento:** non è possibile eseguire l'aggiornamento sul posto di SharePoint 2010 con il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SharePoint 2013. SharePoint 2013 richiede SQL Server 2012 SP1 o versioni successive del componente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server aggiuntivo e report. Per altre informazioni sull'aggiornamento, vedere [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- **Aggiornamento:** non è possibile eseguire l'aggiornamento sul posto di SharePoint 2010 con il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SharePoint 2013. SharePoint 2013 richiede la versione SQL Server 2012 SP1 o successiva del componente aggiuntivo e del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni sull'aggiornamento, vedere [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -88,4 +84,3 @@ Un server di report di SQL Server Reporting Services installato in modalità Sha
  [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

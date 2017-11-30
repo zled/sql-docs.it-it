@@ -1,5 +1,5 @@
 ---
-title: Sintassi di Query XML per dati del Report XML (SSRS) | Documenti Microsoft
+title: Sintassi di query XML per i dati del report XML (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2505ed537c92255f1291e4f800a49bb070f1149
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintassi di query XML per i dati del report XML (SSRS)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile creare set di dati per origini dati XML. Dopo aver definito un'origine dati, è possibile creare una query per il set di dati. In base al tipo di dati XML a cui punta l'origine dati, è possibile creare la query del set di dati includendo un elemento **Query** XML o un percorso di elemento. Un file XML **Query** inizia con un  **\<Query >** tag, nonché gli spazi dei nomi e gli elementi XML che variano a seconda dell'origine dati. Un percorso di elemento è indipendente dallo spazio dei nomi e specifica i nodi e gli attributi dei nodi dei dati XML sottostanti da utilizzare tramite una sintassi di tipo XPath. Per altre informazioni sui percorsi di elementi, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile creare set di dati per origini dati XML. Dopo aver definito un'origine dati, è possibile creare una query per il set di dati. In base al tipo di dati XML a cui punta l'origine dati, è possibile creare la query del set di dati includendo un elemento **Query** XML o un percorso di elemento. Un elemento **Query** XML inizia con un tag **\<Query>** e include spazi dei nomi ed elementi XML che variano in base all'origine dati. Un percorso di elemento è indipendente dallo spazio dei nomi e specifica i nodi e gli attributi dei nodi dei dati XML sottostanti da utilizzare tramite una sintassi di tipo XPath. Per altre informazioni sui percorsi di elementi, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
  È possibile creare un'origine dei dati XML per i tipi di dati XML seguenti:  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 |Elemento Query XML|Campi risultanti nel set di dati|  
 |-----------------------|-------------------------------------|  
-|\<Query / >|Valore r:`http://schemas.microsoft.com/...`<br /><br /> Valore b:`http://schemas.microsoft.com/...`<br /><br /> Valore c:`http://schemas.microsoft.com/...`|  
+|\<Query/>|Value A: `http://schemas.microsoft.com/...`<br /><br /> Value B: `http://schemas.microsoft.com/...`<br /><br /> Value C: `http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di connessione XML &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

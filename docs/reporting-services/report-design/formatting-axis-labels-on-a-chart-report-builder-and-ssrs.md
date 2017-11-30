@@ -1,5 +1,5 @@
 ---
-title: Formattazione delle etichette degli assi in un grafico (Generatore Report e SSRS) | Documenti Microsoft
+title: Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -25,20 +25,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7cc9e4800d6fd00cd0934bc2c1eeac04f7a68fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
   Nei tipi di grafico basati su coordinate (grafico a barre, ad area, a punti, a linee, con intervalli e istogramma) sono inclusi due assi utilizzati per la classificazione e la visualizzazione di relazioni tra dati. A ogni asse verranno applicati tipi diversi di formattazione.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>Tipi di assi  
  Il grafico include due assi principali: l'asse dei valori e l'asse delle categorie.  
   
- ![Categoria del grafico e il valore di assi](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "organizzato per categorie del grafico e il valore di assi")  
+ ![Asse dei valori e asse delle categorie del grafico](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Asse dei valori e asse delle categorie del grafico")  
   
  Quando si trascina un campo dal set di dati alla superficie del grafico, verrà determinato se tale campo appartiene all'asse delle categorie o dei valori.  
   
@@ -106,14 +104,14 @@ ms.lasthandoff: 08/09/2017
  Nel grafico vengono calcolati circa cinque intervalli di etichette degli assi indipendentemente dalle dimensioni del grafico stesso. Nei grafici di larghezza o di altezza maggiore, se vengono visualizzate solo cinque etichette su un asse, tra un'etichetta e l'altra etichetta appaiono gap più ampi. In questo modo diventa più difficile identificare il valore di ogni punto dati rispetto all'asse. Per evitare questo comportamento nei grafici con tali caratteristiche, è possibile impostare un intervallo variabile degli assi. Verrà calcolato il numero ottimale di etichette che è possibile visualizzare sull'asse in base alla larghezza o all'altezza del grafico, a seconda dell'asse corrispondente. Per altre informazioni, vedere [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Ordinamento dei valori degli assi  
- Le categorie vengono visualizzate lungo l'asse X nell'ordine in cui appaiono nel set di risultati. È possibile modificare l'ordine di raggruppamento aggiungendo un comando SORT alla query oppure ordinando il set di dati tramite un'espressione. Le aree dati del grafico vengono ordinate allo stesso modo di tutte le altre aree dati. Per ulteriori informazioni su come ordinare i dati, vedere [ordinare i dati in un'area dati &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Le categorie vengono visualizzate lungo l'asse X nell'ordine in cui appaiono nel set di risultati. È possibile modificare l'ordine di raggruppamento aggiungendo un comando SORT alla query oppure ordinando il set di dati tramite un'espressione. Le aree dati del grafico vengono ordinate allo stesso modo di tutte le altre aree dati. Per altre informazioni su come ordinare i dati, vedere [Ordinare i dati in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>Specifica di valori scalari sull'asse delle categorie  
  Per impostazione predefinita, le etichette degli assi verranno visualizzate nel grafico solo per i punti dati del set di dati che contengono valori validi. Ad esempio, se sull'asse delle categorie sono riportati i valori 1, 2 e 6, nel grafico verranno visualizzate solo le categorie 1, 2 e 6. Per mantenere la scala di valori delle categorie, è possibile specificare l'utilizzo di un asse scalare. In questo caso, verranno visualizzate le etichette relative a 1-6 sull'asse X del grafico, anche se il set di dati non contiene valori per 3-5.  
   
  È possibile impostare un asse scalare in due modi:  
   
--   Selezionare l'opzione **Asse scalare** nella finestra di dialogo **Proprietà asse** . Verranno aggiunti valori numerici o di tipo data/ora all'asse laddove non esistono valori di raggruppamento dati. Per ulteriori informazioni, vedere [finestra di dialogo Proprietà asse, opzioni asse &#40; Generatore report e SSRS &#41; ](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Selezionare l'opzione **Asse scalare** nella finestra di dialogo **Proprietà asse** . Verranno aggiunti valori numerici o di tipo data/ora all'asse laddove non esistono valori di raggruppamento dati. Per altre informazioni, vedere [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   Selezionare un campo o digitare un'espressione per l'opzione **Campo categoria** nella finestra di dialogo **Proprietà serie** . Verranno aggiunti intervalli dell'asse per tutti i valori nel campo categoria specificato.  
   
@@ -133,8 +131,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

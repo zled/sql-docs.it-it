@@ -1,5 +1,5 @@
 ---
-title: Precaricamento della Cache (gestione Report) | Documenti Microsoft
+title: Precaricare la cache (Gestione report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce5bc7b1e8016eecf227c24e4751c3dee812474d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preload-the-cache-report-manager"></a>Precaricare la cache (Gestione report)
   Per precaricare la cache per un set di dati condiviso, è possibile creare un piano di aggiornamento della cache per il set di dati stesso.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Per precaricare la cache creando un piano di aggiornamento della cache  
   
-1.  Avviare [Gestione Report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Gestione report passare alla pagina **Contenuto** e quindi passare all'elemento che si vuole memorizzare nella cache.  
   
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Per precaricare la cache con un report specifico dell'utente tramite una sottoscrizione guidata dai dati  
   
-1.  Avviare [Gestione Report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Gestione report passare alla pagina **Contenuto** e quindi al report per il quale si vuole creare una sottoscrizione.  
   
@@ -109,7 +108,7 @@ ms.lasthandoff: 08/09/2017
      In alternativa, per creare una pianificazione personalizzata fare clic su **In base a una pianificazione creata per questa sottoscrizione** e quindi su **Avanti**. Configurare la pianificazione e quindi fare clic su **Fine**.  
   
     > [!NOTE]  
-    >  Perché i sottoscrittori possano ricevere il report più recente, è necessario che la pianificazione configurata dall'utente sia coerente con la pianificazione di recapito del report che è stata definita per i sottoscrittori. Per ulteriori informazioni, vedere [gestione Report &#40; Modalità nativa SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Perché i sottoscrittori possano ricevere il report più recente, è necessario che la pianificazione configurata dall'utente sia coerente con la pianificazione di recapito del report che è stata definita per i sottoscrittori. Per altre informazioni, vedere [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configurare le opzioni di esecuzione del report come segue. Nella pagina del report fare clic sulla scheda **Proprietà** .  
   
@@ -119,18 +118,17 @@ ms.lasthandoff: 08/09/2017
   
 17. Selezionare una delle due opzioni della cache e configurare la scadenza come segue:  
   
-    -   Per impostare la scadenza della copia memorizzata nella cache dopo un determinato periodo di tempo, fare clic su **Memorizza nella cache una copia temporanea del report. Copia del report scadrà dopo un numero di minuti.** Digitare il numero di minuti alla scadenza del report.  
+    -   Per impostare la scadenza della copia memorizzata nella cache dopo un determinato periodo di tempo, fare clic su **Memorizza nella cache una copia temporanea del report. La copia del report scadrà dopo il numero di minuti seguente.** Digitare il numero di minuti alla scadenza del report.  
   
-    -   Per eseguire la copia memorizzata nella cache scada in base a una pianificazione, fare clic su **memorizzare nella Cache una copia temporanea del report. Copia del report in base alla pianificazione seguente scadrà.** Per impostare una pianificazione per la scadenza del report, fare clic su **Configura**oppure selezionare una pianificazione condivisa.  
+    -   Per impostare la scadenza della copia memorizzata nella cache in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Per impostare una pianificazione per la scadenza del report, fare clic su **Configura**oppure selezionare una pianificazione condivisa.  
   
 18. Fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Prestazioni, snapshot, memorizzazione nella cache &#40; Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
- [Impostare le proprietà di elaborazione di Report](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

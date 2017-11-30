@@ -1,5 +1,5 @@
 ---
-title: "Utilità RSKEYMGMT (SSRS) | Documenti Microsoft"
+title: "Utilità rskeymgmt (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5e71c6c5cb692355df51b2d9b7e2caa8c330f5b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -155,7 +154,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unione in join di istanze del server di report nello stesso computer  
  È possibile creare una distribuzione con scalabilità orizzontale da più istanze del server di report installate nello stesso computer. Se si esegue l'unione in join di istanze del server di report installate localmente, non impostare gli argomenti **-u** e **-v** . Gli argomenti **-u** e **-v** vengono infatti usati solo per l'unione in join di un'istanza di un computer remoto. Se si specificano tali argomenti, viene visualizzato il messaggio di errore seguente: "Impossibile usare le credenziali dell'utente per le connessioni locali".  
   
- Nell'esempio seguente viene illustrata la sintassi per la creazione di una distribuzione con scalabilità orizzontale utilizzando più istanze locali. In questo esempio, \< **initializedinstance**> è il nome di un'istanza che è già inizializzato per l'utilizzo di database del server di report e \< **newinstance**> è il nome dell'istanza che si desidera aggiungere alla distribuzione:  
+ Nell'esempio seguente viene illustrata la sintassi per la creazione di una distribuzione con scalabilità orizzontale utilizzando più istanze locali. In questo esempio <\<**initializedinstance**> è il nome di un'istanza già inizializzata per usare il database del server di report e \<**newinstance**> è il nome dell'istanza che si vuole aggiungere alla distribuzione:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -171,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Percorso del file  
- RSKEYMGMT.exe è  **\<* unità*>: \Programmi\Microsoft SQL Server\110\Tools\Binn * * o  **\<* unità*>: \Programmi file (x86) \Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
+ Rskeymgmt.exe è disponibile in **\<*unità*>:\Programmi\Microsoft SQL Server\110\Tools\Binn** o **\<*unità*>:\Programmi (x86)\Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il server di report crittografa le informazioni di connessione e le credenziali archiviate. Per la crittografia dei dati vengono utilizzate una chiave pubblica e una chiave simmetrica. Il server di report viene eseguito solo se un database del server di report dispone di chiavi valide. È possibile usare **rskeymgmt** per eseguire il backup, eliminare o ripristinare le chiavi. Se non è possibile ripristinare le chiavi, questo strumento consente di eliminare il contenuto crittografato non più utilizzabile.  
@@ -182,9 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Utilità di prompt dei comandi di Server di report &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Utilità della riga di comando del server di report &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

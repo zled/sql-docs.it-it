@@ -1,5 +1,5 @@
 ---
-title: Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -28,17 +28,16 @@ f1_keywords:
 - "10527"
 - sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 023b512a91e802a0e04e108e59f1c757ddaf74a9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
   Una mappa è una raccolta di livelli. Quando si aggiunge una mappa a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , si definisce il primo livello. È possibile creare livelli aggiuntivi tramite la creazione guidata del livello mappa.  
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="ChangeLayer"></a> Per modificare le opzioni di un livello tramite la Creazione guidata livello mappa  
   
--   Eseguire la Creazione guidata livello mappa. Questa procedura guidata consente di modificare le opzioni per un livello creato tramite la Creazione guidata livello mappa. Nel riquadro della mappa, fare doppio clic sul livello e sulla barra degli strumenti, fare clic su pulsante della procedura guidata del livello (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+-   Eseguire la Creazione guidata livello mappa. Questa procedura guidata consente di modificare le opzioni per un livello creato tramite la Creazione guidata livello mappa. Nel riquadro Mappa fare clic con il pulsante destro del mouse sul livello, quindi fare clic sul pulsante della creazione guidata del livello sulla barra degli strumenti (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Per altre informazioni, vedere [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/09/2017
 2.  Nella barra degli strumenti fare clic sul pulsante **Aggiungi livello** e, dall'elenco a discesa, scegliere il tipo di livello da aggiungere: **Punto**, **Linea**o **Poligono**.  
   
     > [!NOTE]  
-    >  Sebbene sia possibile aggiungere un livello alla mappa e configurarlo manualmente, è consigliabile utilizzare la Creazione guidata livello mappa per aggiungere nuovi livelli. Per avviare la procedura guidata dalla barra degli strumenti riquadro mappa, fare clic su pulsante della procedura guidata del livello (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Sebbene sia possibile aggiungere un livello alla mappa e configurarlo manualmente, è consigliabile utilizzare la Creazione guidata livello mappa per aggiungere nuovi livelli. Per avviare la procedura guidata dal riquadro Mappa della barra degli strumenti, fare clic sul pulsante della creazione guidata del livello (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Fare clic con il pulsante destro del mouse sul livello, quindi scegliere **Dati livello**.  
   
@@ -257,8 +256,7 @@ ms.lasthandoff: 08/09/2017
      Inoltre è possibile nascondere il livello in base a condizioni specifiche. Per altre informazioni, vedere [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risolvere i problemi di report: Eseguire il mapping di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
-

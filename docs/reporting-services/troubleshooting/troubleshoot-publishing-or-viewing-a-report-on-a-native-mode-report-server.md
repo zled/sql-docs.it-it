@@ -1,5 +1,5 @@
 ---
-title: "Risoluzione dei problemi di pubblicazione o visualizzazione di un Report in un Server di Report in modalità nativa | Documenti Microsoft"
+title: "Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa
   
@@ -42,7 +41,7 @@ Verificare che l'URL del server di report sia l'indirizzo del server di report, 
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Non si verifica nulla quando si attivano o disattivano gli elementi nel report pubblicato.  
   Quando si visualizza un report nell'anteprima locale, è possibile attivare o disattivare e mostrare o nascondere gli elementi nel report. Quando si visualizza lo stesso report dopo averlo pubblicato nel server di report, gli elementi Toggle non funzionano più.   
   
-\<nome del server di report > include un carattere di sottolineatura (_)  
+\<nome server di report> include un carattere di sottolineatura (_)  
   
 Se un report viene eseguito senza errori, ma gli elementi Toggle non funzionano, ad esempio si fa clic sull'icona di espansione (+) e non accade nulla, controllare il nome del computer che ospita il server di report. Se il nome del computer include un carattere di sottolineatura, gli elementi Toggle non funzionano. Questo è un problema noto Non esistono soluzioni alternative.   
   
@@ -66,5 +65,4 @@ Verificare di disporre dell'autorizzazione per accedere alle cartelle contenenti
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

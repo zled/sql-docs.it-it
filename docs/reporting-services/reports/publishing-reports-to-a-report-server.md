@@ -1,5 +1,5 @@
 ---
-title: Pubblicazione di report in un Server di Report | Documenti Microsoft
+title: Pubblicazione dei report in un server di report | Microsoft Docs
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c19bf5cffb0330cde3e8f9125c5f1c5cac55ad24
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
   Dopo aver progettato e testato un report o un set di report, è possibile usare le caratteristiche della distribuzione disponibili in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare i report in un server di report. È possibile pubblicare report singoli o un progetto Server di Report che può includere più report e origini dati. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato il termine *distribuire*anziché *pubblicare*. I due termini sono perfettamente equivalenti.  
@@ -58,7 +57,7 @@ L'autorizzazione è determinata dalla sicurezza basata sui ruoli definita dall'a
   
 ## <a name="to-publish-all-reports-in-a-project"></a>Per pubblicare tutti i report di un progetto  
   
-Nel **compilare** menu, fare clic su **Distribuisci \<nome progetto report >**. In alternativa, in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto report e scegliere **Distribuisci**. È possibile visualizzare lo stato del processo di pubblicazione nella finestra Output.  
+Nel menu **Compilazione** fare clic su **Distribuisci \<nome progetto report>**. In alternativa, in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto report e scegliere **Distribuisci**. È possibile visualizzare lo stato del processo di pubblicazione nella finestra Output.  
   
 Quando si distribuisce un progetto server di report, vengono distribuite anche le origini dati condivise nel progetto report. Tutti i report vengono distribuiti utilizzando la stessa configurazione di progetto: lo stesso server di report, la stessa cartella sul server e così via. Affinché i report siano destinati a server diversi, è necessario pubblicarli uno alla volta oppure includere nel progetto server di report solo quelli desiderati. In una soluzione possono essere inclusi più progetti server di report. Quando si utilizzano più progetti, la gestione della distribuzione dei report può risultare più semplice, dal momento che è possibile distribuire progetti diversi tramite una diversa configurazione. 
   
@@ -76,8 +75,7 @@ In Esplora soluzioni fare clic con il pulsante destro del mouse sul report e sce
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

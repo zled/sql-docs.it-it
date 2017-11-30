@@ -1,5 +1,5 @@
 ---
-title: "Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint) | Documenti Microsoft"
+title: "Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)| Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 645e4258f9185f748af496aa37aff13af08ce2a7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be09d11f5a9fcdddc49a092c37be720dad0581c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  È possibile impostare le opzioni di elaborazione di un report di Reporting Services per determinare l'inizio dell'elaborazione di dati. È inoltre possibile impostare un valore di timeout per l'elaborazione del report e opzioni che determinano se attivare o meno la cronologia del report per il report corrente.  
+  È possibile impostare le opzioni di elaborazione di un report Reporting Services per determinare il momento in cui deve avvenire l'elaborazione dei dati. È inoltre possibile impostare un valore di timeout per l'elaborazione del report e opzioni che determinano se attivare o meno la cronologia del report per il report corrente.  
   
 -   È possibile eseguire un report come snapshot per evitare che venga eseguito in momenti indesiderati, ad esempio durante un backup pianificato. Uno snapshot di report viene in genere creato e in seguito aggiornato in base a una pianificazione, consentendo all'utente di determinare esattamente quando verrà eseguita l'elaborazione del report e dei dati. Se un report si basa su query la cui esecuzione richiede molto tempo oppure su query che utilizzano dati di un'origine dati che non si desidera venga utilizzata in determinati orari, è consigliabile eseguire il report come snapshot.  
   
@@ -35,12 +34,12 @@ ms.lasthandoff: 10/06/2017
   
 -   La cronologia di un report è costituita dalla raccolta delle copie di un report eseguite in precedenza. È pertanto possibile usare la cronologia di un report per mantenere una registrazione dei diversi risultati dell'esecuzione del report ottenuti durante un determinato periodo di tempo. Non è consigliabile usare la cronologia del report per i report contenenti informazioni riservate e personali. Per questo motivo, la cronologia del report può essere creata solo per i report che eseguono query su origini dati che utilizzano un unico set di credenziali (credenziali archiviate o credenziali utilizzate per l'esecuzione automatica dei report), che sono disponibili a tutti gli utenti che eseguono il report.  
 
-    Integrazione di Reporting Services con SharePoint utilizza l'estrazione e le funzionalità di gestione del contenuto di SharePoint per salvare gli aggiornamenti per i tipi di contenuto di Reporting Services. tra cui la creazione di snapshot dei report. Pertanto se è stato abilitato il controllo delle versioni su una raccolta documenti, verrà visualizzata la versione del report aggiornata quando viene creato un nuovo snapshot di cronologia del report. Si tratta di un effetto collaterale dell'aggiornamento di snapshot. L'aggiornamento di uno snapshot determina la modifica della proprietà LastExecution del report con una conseguente modifica della versione del report.  
+    L'integrazione di Reporting Services con SharePoint usa le caratteristiche di gestione contenuto di estrazione e archiviazione di SharePoint per salvare gli aggiornamenti nei tipi di contenuto di Reporting Services, tra cui la creazione di snapshot dei report. Pertanto se è stato abilitato il controllo delle versioni su una raccolta documenti, verrà visualizzata la versione del report aggiornata quando viene creato un nuovo snapshot di cronologia del report. Si tratta di un effetto collaterale dell'aggiornamento di snapshot. L'aggiornamento di uno snapshot determina la modifica della proprietà LastExecution del report con una conseguente modifica della versione del report.  
 
 -   È possibile specificare valori di timeout per limitare l'utilizzo delle risorse del sistema.  
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
 ## <a name="set-data-refresh-options"></a>Impostazione delle opzioni relative all'aggiornamento dei dati
   
@@ -99,8 +98,7 @@ ms.lasthandoff: 10/06/2017
 ## <a name="next-steps"></a>Passaggi successivi
 
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Memorizzazione dei report](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Impostazione dei valori di timeout per l'elaborazione di set di dati condiviso e Report](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Memorizzazione dei report nella cache](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

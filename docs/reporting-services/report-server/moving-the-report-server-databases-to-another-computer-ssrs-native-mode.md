@@ -1,5 +1,5 @@
 ---
-title: "Spostare i database del Server di Report in un altro Computer (modalità nativa SSRS) | Documenti Microsoft"
+title: "Spostamento di database del server di report in un altro computer (modalità nativa SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90dc9bb5624c19c282d34782909fb5e168b4a695
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
 
   È possibile spostare i database del server di report usati in un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'istanza di un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Lo spostamento di un database non influisce sulle operazioni pianificate attualmente definite per gli elementi del server di report.  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 >  È consigliabile eseguire la procedura descritta in questo argomento quando lo spostamento del database del server di report è l'unica modifica che si desidera apportare all'installazione esistente. Per la migrazione di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] completa, vale a dire lo spostamento del database e la modifica dell'identità del servizio Windows ReportServer usato dal database, è necessario riconfigurare le informazioni di connessione e reimpostare la chiave di crittografia.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>Scollegamento e collegamento dei database del server di report  
- Se il server di report può essere portato in modalità offline, è possibile scollegare i database per spostarli nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare. In questo modo, è possibile mantenere le autorizzazioni presenti nei database. Se si utilizza un database di SQL Server, è necessario spostarlo in un'altra istanza di SQL Server. Dopo avere spostato i database, è necessario riconfigurare la connessione del server di report al database del server di report. Se si sta eseguendo una distribuzione con scalabilità orizzontale, è necessario riconfigurare la connessione al database del server di report per ogni server di report della distribuzione.  
+ Se il server di report può essere portato in modalità offline, è possibile scollegare i database per spostarli nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare. In questo modo, è possibile mantenere le autorizzazioni presenti nei database. Se si usa un database SQL Server, è necessario spostarlo in un'altra istanza di SQL Server. Dopo avere spostato i database, è necessario riconfigurare la connessione del server di report al database del server di report. Se si sta eseguendo una distribuzione con scalabilità orizzontale, è necessario riconfigurare la connessione al database del server di report per ogni server di report della distribuzione.  
   
  Per spostare i database, eseguire la procedura seguente:  
   
@@ -228,12 +226,11 @@ GO
 
 [Creare RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
 [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
-[Configurare una connessione di Database Server di Report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Configurare l'Account di esecuzione automatica](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Configurare una connessione del database del server di report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configurare l'account di esecuzione automatica](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Utilità RSConfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
-[Configurare e gestire chiavi di crittografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
-[Database del Server di report](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+[Utilità rsconfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[Configurare e gestire le chiavi di crittografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[Database del server di report](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

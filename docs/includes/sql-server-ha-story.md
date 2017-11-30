@@ -77,7 +77,7 @@ Un tipo di cluster None può essere usato con gruppi di disponibilità sia di Wi
 > [!IMPORTANT] 
 > SQL Server 2017 non consente di modificare un tipo di cluster per un gruppo di disponibilità dopo che è stato creato. Non è quindi possibile trasformare un gruppo di disponibilità di tipo None in External o WSFC o viceversa. 
 
-Per gli utenti che vogliono semplicemente aggiungere altre copie di sola lettura di un database o apprezzano le funzionalità offerte dai gruppi di disponibilità per la migrazione o gli aggiornamenti ma non vogliono essere vincolati all'ulteriore complessità di un cluster sottostante o alla replica, un gruppo di disponibilità con un tipo di cluster None è una soluzione ideale. Per altre informazioni, vedere le sezioni [Migrazioni e aggiornamenti](#Migrations) e [Scalabilità orizzontale in lettura](#ReadScaleOut). 
+Per gli utenti che vogliono semplicemente aggiungere altre copie di sola lettura di un database o apprezzano le funzionalità offerte dai gruppi di disponibilità per la migrazione o gli aggiornamenti ma non vogliono essere vincolati all'ulteriore complessità di un cluster sottostante o alla replica, un gruppo di disponibilità con un tipo di cluster None è una soluzione ideale. Per altre informazioni, vedere le sezioni [Migrazioni e aggiornamenti](#Migrations) e [Scalabilità in lettura](#ReadScaleOut). 
 
 La schermata riportata di seguito illustra il supporto per i diversi tipi di cluster in SSMS. È necessario che sia in esecuzione la versione 17.1 o successiva. La schermata seguente è tratta dalla versione 17.2.
 
@@ -226,7 +226,7 @@ Se un gruppo di disponibilità è configurato con un tipo di cluster None, è in
 
 Poiché il log shipping si basa essenzialmente su backup e ripristino, non esistono differenze nei database, nelle strutture di file e così via tra SQL Server in Windows Server e SQL Server in Linux. Ciò significa che è possibile configurare il log shipping tra un'installazione di SQL Server basata su Windows Server e una di Linux nonché tra le distribuzioni Linux. Tutti gli altri elementi rimangono invariati. L'unico problema è che il log shipping, proprio come un gruppo di disponibilità, non funziona se la versione principale di SQL Server dell'origine è successiva alla versione di SQL Server della destinazione. 
 
-## <a name = "ReadScaleOut"></a> Scalabilità orizzontale in lettura
+## <a name = "ReadScaleOut"></a>Scalabilità in lettura
 
 Da quando sono state introdotte in SQL Server 2012, le repliche secondarie possono essere usate per le query di sola lettura. L'operazione può essere eseguita in due modi con un gruppo di disponibilità: consentendo l'accesso diretto alla replica secondaria e [configurando il routing di sola lettura](http://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), che richiede l'uso del listener.  SQL Server 2016 ha introdotto la possibilità di bilanciare il carico delle connessioni di sola lettura attraverso il listener usando un algoritmo round robin, che consente la diffusione delle richieste di sola lettura in tutte le repliche leggibili. 
 
@@ -243,7 +243,7 @@ L'unico problema di una certa entità è che non essendo presente un cluster sot
 
 Un warm standby del log shipping può essere tecnicamente configurato per l'uso dei dati leggibili ripristinando il database con STANDBY. Tuttavia, poiché i log delle transazioni richiedono l'uso esclusivo del database per il ripristino, che gli utenti non possono accedere al database durante tale attività. Per questo motivo il log shipping non è affatto la soluzione ideale, soprattutto se sono richiesti dati near real time. 
 
-Un aspetto da considerare per tutti gli scenari di scalabilità orizzontale in lettura con gruppi di disponibilità è che, a differenza della replica transazionale in cui tutti i dati sono live, ogni replica secondaria non è in uno stato in cui è possibile applicare indici univoci e la replica è una copia esatta di quella primaria. Ciò significa che se gli indici sono necessari per la creazione di report o i dati devono essere modificati, l'operazione deve essere eseguita nei database della replica primaria. Se è necessaria questa flessibilità, la replica è una soluzione migliore per i dati leggibili.
+Un aspetto da considerare per tutti gli scenari di scalabilità in lettura con gruppi di disponibilità è che, a differenza della replica transazionale in cui tutti i dati sono live, ogni replica secondaria non è in uno stato in cui è possibile applicare indici univoci e la replica è una copia esatta di quella primaria. Ciò significa che se gli indici sono necessari per la creazione di report o i dati devono essere modificati, l'operazione deve essere eseguita nei database della replica primaria. Se è necessaria questa flessibilità, la replica è una soluzione migliore per i dati leggibili.
 
 ## <a name="summary"></a>Riepilogo
 

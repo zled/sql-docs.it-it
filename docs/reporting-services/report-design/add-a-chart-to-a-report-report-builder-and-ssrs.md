@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un grafico a un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere un grafico a un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8615ca29e17ae25e04030917049df7e0b3894041
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Aggiungere un grafico a un report (Generatore report e SSRS)
   Per riepilogare i dati in formato visivo in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usare un'area dati del grafico. È importante scegliere un tipo di grafico appropriato per il tipo di dati da visualizzare. Tale scelta influirà sull'interpretazione dei dati visualizzati nel grafico. Per altre informazioni, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>Per aggiungere un grafico a un report  
   
-1.  Creare un report e definire un set di dati. Per ulteriori informazioni, vedere [i set di dati &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
+1.  Creare un report e definire un set di dati. Per altre informazioni, vedere [Set di dati del report&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 2.  Nella scheda **Inserisci** fare clic su **Grafico**, quindi su **Inserisci grafico**.  
   
@@ -70,16 +69,15 @@ ms.lasthandoff: 08/09/2017
   
 10. Nella scheda **Esegui** fare clic su **Progettazione** per continuare a utilizzare il report.  
   
- Su grafici con assi, ad esempio grafici a barra e istogrammi, potrebbe non essere possibile visualizzare tutte le etichette sull'asse delle categorie. Per ulteriori informazioni su come modificare le etichette dell'asse, vedere [specificare un intervallo dell'asse &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Su grafici con assi, ad esempio grafici a barra e istogrammi, potrebbe non essere possibile visualizzare tutte le etichette sull'asse delle categorie. Per altre informazioni su come modificare le etichette dell'asse, vedere [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tipi di grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Punti dati in grafici &#40; vuoti e Null Generatore report e SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiunta di un grafico a barre al Report (Generatore Report)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Esercitazione: Aggiunta di un grafico a barre a un Report (progettazione Report)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Esercitazione: Aggiunta di un grafico a torta al Report (Generatore Report)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Esercitazione: Aggiunta di un grafico a torta a un Report (progettazione Report)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tipi di grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Esercitazione: Aggiunta di un grafico a barre al report (Generatore report)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Esercitazione: Aggiunta di un grafico a barre a un report (Progettazione report)](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Esercitazione: Aggiunta di un grafico a torta al report (Generatore report)](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Esercitazione: Aggiunta di un grafico a torta a un report (Progettazione report)](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   
-

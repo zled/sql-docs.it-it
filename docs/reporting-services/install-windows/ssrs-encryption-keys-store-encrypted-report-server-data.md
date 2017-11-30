@@ -1,12 +1,11 @@
 ---
-title: Archiviare i dati crittografati di Report Server (Gestione configurazione SSRS) | Documenti Microsoft
+title: Archiviare dati crittografati del server di report (Gestione configurazione SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0727e4e4fa6290396d08bedbd1404722c18e6807
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Le chiavi di crittografia SSRS - archiviare dati crittografati di Report Server
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i valori crittografati vengono archiviati nel database del server di report e nei file di configurazione. La maggior parte dei valori crittografati è costituita da credenziali utilizzate per l'accesso a origini dei dati esterne dalle quali vengono recuperati i dati dei report. In questo argomento vengono descritti i valori crittografati, la funzionalità per la crittografia utilizzata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e altri tipi di dati riservati archiviati di cui è importante essere a conoscenza.  
+# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chiavi di crittografia SSRS - Archiviare dati crittografati del server di report
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] archivia i valori crittografati nel database del server di report e nei file di configurazione. La maggior parte dei valori crittografati è costituita da credenziali utilizzate per l'accesso a origini dei dati esterne dalle quali vengono recuperati i dati dei report. In questo argomento vengono descritti i valori crittografati, la funzionalità per la crittografia utilizzata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e altri tipi di dati riservati archiviati di cui è importante essere a conoscenza.  
   
 ## <a name="encrypted-values"></a>Valori crittografati  
  Nell'elenco seguente vengono descritti i valori archiviati in un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -54,7 +52,7 @@ ms.lasthandoff: 08/09/2017
      Questo valore viene creato durante l'installazione o la configurazione del server, quindi viene archiviato come valore crittografato nel database del server di report. Il servizio Windows ReportServer utilizza questa chiave per crittografare e decrittografare i dati che sono archiviati nel database del server di report.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Funzionalità per la crittografia in Reporting Services  
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono utilizzate funzioni di crittografia disponibili nel sistema operativo Windows. Sono supportate sia la crittografia simmetrica sia la crittografia asimmetrica.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funzioni di crittografia disponibili nel sistema operativo Windows. Sono supportate sia la crittografia simmetrica sia la crittografia asimmetrica.  
   
  I dati nel database del server di report vengono crittografati con una chiave simmetrica. È disponibile una sola chiave simmetrica per ogni database del server di report. La chiave simmetrica viene a sua volta crittografata utilizzando la chiave pubblica di una coppia di chiavi asimmetriche generata da Windows. La chiave privata viene mantenuta dall'account del servizio Windows ReportServer.  
   
@@ -67,10 +65,9 @@ ms.lasthandoff: 08/09/2017
  In un server di report sono archiviati altri dati non crittografati, che tuttavia possono contenere informazioni riservate che si desidera proteggere. In particolare, gli snapshot delle cronologie dei report e gli snapshot delle esecuzioni dei report contengono risultati di query che possono includere dati destinati solo a utenti autorizzati. Se si utilizzano snapshot per report che contengono dati riservati, è importante tenere presente che gli utenti in grado di aprire le tabelle di un database del server di report potrebbero visualizzare parti di report archiviati esaminando il contenuto della tabella.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]non supporta la memorizzazione nella cache o identificare cronologia del report per i report che utilizzano parametri basati sulla sicurezza dell'utente.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta la memorizzazione nella cache o la cronologia del report per i report che usano parametri basati sull'ID di sicurezza dell'utente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

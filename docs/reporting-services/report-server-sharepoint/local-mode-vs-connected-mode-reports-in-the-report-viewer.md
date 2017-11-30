@@ -1,5 +1,5 @@
 ---
-title: "Modalità locale e report nel Visualizzatore di Report | Documenti Microsoft"
+title: "Report in modalità locale e con connessione in Visualizzatore di report | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5f8342550dc105fb6d3544e1d8bd65fcd660ff64
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: cbf47d2ec1105b105ea2d2c8102bcd9b71cb2a1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Modalità locale e report nel Visualizzatore di Report
+# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Report in modalità locale e con connessione in Visualizzatore di report
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 10/06/2017
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere configurati per l'esecuzione in *modalità locale* o *modalità connessa*, che usa un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] repot server. In alternativa, è possibile utilizzare il visualizzatore di report per eseguire il rendering dei report direttamente da SharePoint quando l'estensione per i dati supporta la creazione di report in modalità locale. Questo approccio è definito *modalità locale*. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è necessario che la farm di SharePoint sia connessa a un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato in modalità SharePoint per eseguire il rendering dei report tramite il controllo Visualizzatore report. Questo approccio è definito *modalità remota* o *modalità con connessione*.  
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
  In *modalità locale* non è presente un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È necessario installare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint, ma non è richiesto alcun server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Con la modalità locale, gli utenti possono visualizzare report ma non potranno accedere alle funzionalità lato server quali sottoscrizioni e avvisi dati.  
 
@@ -53,7 +52,7 @@ ms.lasthandoff: 10/06/2017
 > [!NOTE]  
 >  Come nelle versioni precedenti, non è possibile incorporare nomi utente e password nel file con estensione rsds.  
   
-## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Configurare i servizi di accesso e la modalità locali con SharePoint 2013
+## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Configurare la modalità locale e Access Services con SharePoint 2013
 
  È possibile configurare la farm di SharePoint 2013 per supportare database Web esistenti di Access 2010 e la modalità locale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere l'articolo relativo all' [installazione e alla configurazione dei servizi di Access 2010 per database Web in SharePoint Server 2013](http://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 10/06/2017
   
 -   [Attività di base per un'app Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
-## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Configurare i report con SharePoint 2010 in modalità locale
+## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Configurare la creazione di report in modalità locale con SharePoint 2010
 
  La modalità locale richiede lo stato della sessione ASP.NET. L'installazione di Access Services abilita lo stato delle sessioni ASP.NET. È inoltre possibile eseguire l'abilitazione tramite PowerShell.  
   
@@ -92,4 +91,3 @@ ms.lasthandoff: 10/06/2017
  [Origini dati supportate da Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

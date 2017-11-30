@@ -1,5 +1,5 @@
 ---
-title: Modifiche di rilievo in SQL Server Reporting Services in SQL Server 2016 | Documenti Microsoft
+title: Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -14,19 +14,17 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 6348d05b8dbe6c8ab1a682388b4e69ce438e6a12
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c82355e6ceb86d20bc17747edf637e4ddd2a440b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2016
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
@@ -47,8 +45,7 @@ Il nome dell'applicazione [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)
 
 [Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 [Novità di Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   
-[Funzionalità deprecate in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)    
+[Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)    
 [Funzionalità non più disponibili di SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

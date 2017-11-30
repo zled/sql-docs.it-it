@@ -1,27 +1,25 @@
 ---
-title: 'Lezione 4: Aggiunta di una tabella al Report (Reporting Services) | Documenti Microsoft'
+title: 'Lezione 4: Aggiunta di una tabella al report (Reporting Services) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: c073de93cfb1abee01a05e207fbce087ec44ade0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lezione 4: Aggiunta di una tabella al report (Reporting Services)
 Dopo aver definito il set di dati, è possibile iniziare la progettazione del report. È possibile creare un layout del report trascinando le aree dati, le caselle di testo, le immagini e altri elementi che si desidera includere nel report e rilasciandoli nell'area di progettazione.  
@@ -64,7 +62,7 @@ Mediante la visualizzazione in anteprima di un report è possibile visualizzare 
   
     Nel diagramma seguente viene mostrata parte del report in visualizzazione Anteprima.  
   
-    ![Anteprima, le righe di dettaglio della tabella con 5 colonne](../reporting-services/media/rs-basictabledetailspreview.png "anteprima, le righe di dettaglio della tabella con 5 colonne")  
+    ![Anteprima, righe di dettaglio della tabella con 5 colonne](../reporting-services/media/rs-basictabledetailspreview.png "Anteprima, righe di dettaglio della tabella con 5 colonne")  
   
     Si noti che per la valuta (nella colonna Line Total) sono presenti sei posizioni dopo il numero decimale e per la data è incluso un timestamp. Nella lezione successiva verrà illustrato come correggere questa formattazione.  
   
@@ -72,9 +70,8 @@ Mediante la visualizzazione in anteprima di un report è possibile visualizzare 
 > Per salvare il report, scegliere **Salva tutti** nel menu **File** .  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-È stata aggiunta un'area dati tabella al report, all'area dati sono stati aggiunti campi ed è stato visualizzato in anteprima il report. Il passaggio successivo consiste nella formattazione delle intestazioni di colonna e dei valori di data e valuta. Vedere [lezione 5: formattazione di un Report &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+È stata aggiunta un'area dati tabella al report, all'area dati sono stati aggiunti campi ed è stato visualizzato in anteprima il report. Il passaggio successivo consiste nella formattazione delle intestazioni di colonna e dei valori di data e valuta. Vedere [Lezione 5: Formattazione di un report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Tabelle &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-

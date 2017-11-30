@@ -1,27 +1,25 @@
 ---
-title: 'Esercitazione: Creazione di drill-through e report principali (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Creazione di report drill-through e report principali (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b42806861fb551463894775d2bf3619ab10bd034
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
 In questa esercitazione verrà illustrato come creare due tipi di report impaginati in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. 
@@ -59,7 +57,7 @@ Nella finestra di dialogo Attività iniziali, creare un report matrice tramite *
 3.  Nel riquadro destro verificare che sia selezionata **Creazione guidata tabella o matrice** .  
   
 ## <a name="DConnection"></a>1a. Specificare una connessione dati  
-Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per ulteriori informazioni sull'utilizzo di un'origine dati condivisa, vedere [alternativa modi per ottenere una connessione dati &#40; Generatore report &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
@@ -114,7 +112,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 6 in [per creare il dataset](#DSkip).  
+    > Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode] (Passa alla modalità progettazione)(../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode(Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 6 in [Per creare il set di dati](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -405,7 +403,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 5 in [per creare il dataset](#MSkip).  
+    > Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode] (Passa alla modalità progettazione)(../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode (Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -691,4 +689,3 @@ Eseguire il report principale, quindi fare clic su valori nella colonna della ca
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazioni sul Generatore report](../reporting-services/report-builder-tutorials.md)  
   
-

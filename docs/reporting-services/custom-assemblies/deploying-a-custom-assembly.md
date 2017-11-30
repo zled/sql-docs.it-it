@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di un Assembly personalizzato | Documenti Microsoft
+title: Distribuzione di un assembly personalizzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,31 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], deploying
 - custom assemblies [Reporting Services], updating
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 44b3944bcef88371e19d01c0e22e5522d62ef645
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 96df35b9463c6138a817a24686422eadfba40864
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-a-custom-assembly"></a>Distribuzione di un assembly personalizzato
-  Per distribuire un assembly personalizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], collocare l'assembly nelle cartelle dell'applicazione di progettazione Report e il server di report. Per impostazione predefinita, gli assembly personalizzati vengono concesse **esecuzione** autorizzazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per concedere agli assembly personalizzati privilegi oltre l'autorizzazione Execute, è necessario modificare il file di configurazione rssrvpolicy. config per il server di report e il file di configurazione rspreviewpolicy. config per la finestra di anteprima di progettazione Report. In alternativa, è possibile installare l'assembly personalizzato nella Global Assembly Cache (GAC).  
+  Per distribuire un assembly personalizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], inserire l'assembly nelle cartelle dell'applicazione sia di Progettazione report che del server di report. Per impostazione predefinita, agli assembly personalizzati viene concessa l'autorizzazione **Execution** in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per concedere agli assembly personalizzati altri privilegi oltre all'autorizzazione Execution, è necessario modificare il file di configurazione rssrvpolicy.config per il server di report e il file di configurazione rspreviewpolicy.config per la finestra di anteprima di Progettazione report. In alternativa, è possibile installare l'assembly personalizzato nella Global Assembly Cache (GAC).  
   
 > [!NOTE]  
->  Esistono due modalità di anteprima per progettazione Report: la scheda Anteprima e la finestra di anteprima popup che viene avviata quando viene avviato il progetto report in **DebugLocal** modalità. Scheda Anteprima esegue tutte le espressioni di report utilizzando il **FullTrust** set di autorizzazioni e non si applica alle impostazioni di sicurezza. La finestra di anteprima popup consente di simulare le funzionalità del server di report e pertanto dispone di un file di configurazione dei criteri che l'utente o un amministratore deve modificare per utilizzare gli assembly personalizzati in Progettazione report. In questa anteprima popup l'assembly personalizzato viene inoltre bloccato. Per modificare o aggiornare il codice dell'assembly personalizzato è pertanto necessario chiudere la finestra di anteprima.  
+>  In Progettazione report sono disponibili due modalità di anteprima, vale a dire la scheda Anteprima e la finestra popup di anteprima visualizzata quando il progetto report viene avviato in modalità **DebugLocal**. Nella scheda Anteprima vengono eseguite tutte le espressioni del report usando il set di autorizzazioni **FullTrust** e non vengono applicate le impostazioni dei criteri di sicurezza. La finestra di anteprima popup consente di simulare le funzionalità del server di report e pertanto dispone di un file di configurazione dei criteri che l'utente o un amministratore deve modificare per utilizzare gli assembly personalizzati in Progettazione report. In questa anteprima popup l'assembly personalizzato viene inoltre bloccato. Per modificare o aggiornare il codice dell'assembly personalizzato è pertanto necessario chiudere la finestra di anteprima.  
   
 ###### <a name="to-deploy-a-custom-assembly-in-reporting-services"></a>Per distribuire un assembly personalizzato in Reporting Services  
   
@@ -46,10 +44,10 @@ ms.lasthandoff: 08/12/2017
   
 2.  Aprire il file di configurazione appropriato. Il percorso predefinito del file rssrvpolicy.config è %Programmi%Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer. Il percorso predefinito del file rspreviewpolicy.config è %Programmi%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-3.  Aggiungere un gruppo di codice per l'assembly personalizzato. Per ulteriori informazioni, vedere [sviluppo protetto &#40; Reporting Services &#41; ](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+3.  Aggiungere un gruppo di codice per l'assembly personalizzato. Per altre informazioni vedere [Sviluppo sicuro &#40;Reporting Services&#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
   
 ## <a name="updating-custom-assemblies"></a>Aggiornamento di assembly personalizzati  
- A un certo punto, potrebbe essere necessario aggiornare una versione di un assembly personalizzato al quale fanno attualmente riferimento diversi report pubblicati. Se tale assembly è già presente nella directory bin del server di report o in Progettazione report e il numero di versione dell'assembly viene incrementato o modificato in altro modo, i report attualmente pubblicati non funzioneranno più correttamente. È necessario aggiornare la versione dell'assembly a cui fa riferimento il **CodeModules** elemento della definizione del report e ripubblicare i report. Se si sa che un assembly personalizzato verrà aggiornato di frequente e i report attualmente pubblicati devono fare riferimento al nuovo assembly, è possibile prendere in considerazione l'utilizzo dello stesso numero di versione per tutti gli aggiornamenti di un assembly specifico.  
+ A un certo punto, potrebbe essere necessario aggiornare una versione di un assembly personalizzato al quale fanno attualmente riferimento diversi report pubblicati. Se tale assembly è già presente nella directory bin del server di report o in Progettazione report e il numero di versione dell'assembly viene incrementato o modificato in altro modo, i report attualmente pubblicati non funzioneranno più correttamente. È necessario aggiornare la versione dell'assembly a cui viene fatto riferimento nell'elemento **CodeModules** della definizione del report e ripubblicare i report. Se si sa che un assembly personalizzato verrà aggiornato di frequente e i report attualmente pubblicati devono fare riferimento al nuovo assembly, è possibile prendere in considerazione l'utilizzo dello stesso numero di versione per tutti gli aggiornamenti di un assembly specifico.  
   
  Se non è necessario che i report attualmente pubblicati facciano riferimento alla nuova versione dell'assembly, è possibile distribuire l'assembly personalizzato nella Global Assembly Cache. La Global Assembly Cache è in grado di gestire più versioni dello stesso assembly, in modo che i report correnti possano fare riferimento alla versione precedente dell'assembly e i nuovi report pubblicati possano fare riferimento all'assembly aggiornato. Un'altra possibilità consiste nell'impostare il reindirizzamento dell'associazione del server di report in modo da forzare un reindirizzamento di tutte le richieste per il vecchio assembly al nuovo assembly. In questo caso, sarebbe necessario modificare il file Web.config e il file ReportService.exe.config del server di report. Il codice può essere simile al seguente:  
   
@@ -71,7 +69,6 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Utilizzo di assembly e Global Assembly Cache](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Uso di assembly e della Global Assembly Cache](http://go.microsoft.com/fwlink/?LinkId=63912)  
   
   
-

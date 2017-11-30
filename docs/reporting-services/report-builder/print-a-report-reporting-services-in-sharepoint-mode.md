@@ -1,5 +1,5 @@
 ---
-title: "Stampare un Report (Reporting Services in modalità SharePoint) | Documenti Microsoft"
+title: "Stampare un report (Reporting Services in modalità SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a2f14906a5c3333c480de32fbcb34a8aaf7e2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Stampare un report (Reporting Services in modalità SharePoint)
   In un server di report in esecuzione in SharePoint è possibile stampare un report da un'applicazione Web di SharePoint nei tre modi seguenti:  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
-

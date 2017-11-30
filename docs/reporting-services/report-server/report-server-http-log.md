@@ -1,5 +1,5 @@
 ---
-title: Log HTTP del Server di report | Documenti Microsoft
+title: Log HTTP del server di report | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- HTTP [Reporting Services]
+helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bea168c6ad15828b44ea5f77f5c7bd3fa05cfb9d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90732a6f209640298ec1776fd5368b26fd2526fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nel file di log HTTP del server di report viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
@@ -35,8 +33,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|Nome file|Per impostazione predefinita, il nome del file è ReportServerService_HTTP_\<timestamp >. log. È possibile personalizzare il prefisso del nome del file modificando l'attributo HttpTraceFileName nel file ReportingServicesService.exe.config. Il timestamp si basa su l'ora UTC (Coordinated Universal Time).|  
-|Percorso del file|Il file si trova in \Microsoft SQL Server\\*\<istanza di SQL Server >*\Reporting.|  
+|Nome file|Per impostazione predefinita, il nome del file è ReportServerService_HTTP_\<timestamp>.log. È possibile personalizzare il prefisso del nome del file modificando l'attributo HttpTraceFileName nel file ReportingServicesService.exe.config. Il timestamp si basa su l'ora UTC (Coordinated Universal Time).|  
+|Percorso del file|Il percorso del file è \Microsoft SQL Server\\*\<Istanza di SQL Server>*\Reporting Services\LogFiles.|  
 |Formato del file|Il file è in formato en-US ed è un file di testo ASCII.|  
 |Creazione e memorizzazione del file|Per creare un log HTTP, è necessario innanzitutto riabilitarlo nel file di configurazione e riavviare il servizio. Il file viene quindi creato quando il server di report gestisce una richiesta HTTP. Se le impostazioni sono state configurate ma il file di log non viene visualizzato, aprire un report o avviare un'applicazione del server di report (ad esempio Gestione report) per generare una richiesta HTTP per creare il file.<br /><br /> Una nuova istanza del file di log verrà creata dopo ogni riavvio del servizio e ogni successiva richiesta HTTP al server di report.<br /><br /> Per impostazione predefinita, i log di traccia possono occupare uno spazio massimo di 32 MB e vengono eliminati dopo 14 giorni.|  
   
@@ -86,8 +84,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
- [Servizi file di Log e origini di Reporting](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Errori e gli eventi riferimento &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

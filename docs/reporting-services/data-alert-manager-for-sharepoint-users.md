@@ -1,5 +1,5 @@
 ---
-title: Gestione avvisi dati per gli utenti di SharePoint | Documenti Microsoft
+title: Gestione avvisi dati per utenti di SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,31 +14,29 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65e857b83f1f9821601492542ef87aa9fa57fddb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gestione avvisi dati per utenti di SharePoint
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fornisce gestione avvisi dati per gli information worker di SharePoint gestire gli avvisi dati. È possibile visualizzare informazioni sugli avvisi creati, eliminare avvisi, aprire definizioni di avviso per la modifica ed eseguire avvisi su richiesta. È possibile scegliere di visualizzare gli avvisi solo per un singolo report o per tutti i report. Nella figura seguente sono illustrate le funzionalità disponibili per gli Information Worker in Gestione avvisi dati.
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Reporting Services include Gestione avvisi dati, per consentire agli Information Worker di SharePoint di gestire gli avvisi dati. È possibile visualizzare informazioni sugli avvisi creati, eliminare avvisi, aprire definizioni di avviso per la modifica ed eseguire avvisi su richiesta. È possibile scegliere di visualizzare gli avvisi solo per un singolo report o per tutti i report. Nella figura seguente sono illustrate le funzionalità disponibili per gli Information Worker in Gestione avvisi dati.
 
-![Funzionalità di gestione per gli utenti di SharePoint avvisi](../reporting-services/media/rs-alertmanageriw.gif "funzionalità di gestione avvisi per gli utenti di SharePoint")  
+![Funzionalità di Gestione avvisi dati per gli utenti SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Funzionalità di Gestione avvisi dati per gli utenti SharePoint")  
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
 Quando un sito di SharePoint è abilitato per gli avvisi dati, vengono create e aggiunte al sito due pagine, ovvero MyDataAlerts.aspx e SiteDataAlerts.aspx. MyDataAlerts.aspx rappresenta Gestione avvisi dati per gli Information Worker di SharePoint. Gli Information Worker possono aprire Gestione avvisi dati dal menu di scelta rapida dei report in cui sono stati creati gli avvisi.  
 
@@ -52,7 +50,7 @@ Quando un sito di SharePoint è abilitato per gli avvisi dati, vengono create e 
 ##  <a name="ViewingAlerts"></a> Visualizzare le informazioni sugli avvisi dati  
  È possibile visualizzare un elenco degli avvisi dati creati nella finestra di progettazione Avviso dati. Per aprire Gestione avvisi dati, fare clic con il pulsante destro del mouse su un report pubblicato in una raccolta di SharePoint. L'immagine seguente illustra l'opzione **Gestisci avvisi dati** nel menu di scelta rapida del report.  
   
- ![Aprire Gestione avvisi dal menu di scelta rapida report](../reporting-services/media/rs-openalertmanager.gif "aprire Alert Manager dal menu di scelta rapida report")  
+ ![Aprire Gestione avvisi dati dal menu di scelta rapida dei report](../reporting-services/media/rs-openalertmanager.gif "Aprire Gestione avvisi dati dal menu di scelta rapida dei report")  
   
  In Gestione avvisi dati è inclusa una tabella in cui sono elencati il nome dell'avviso, il nome del report, il nome dell'utente che ha creato la definizione di avviso, il numero di volte in cui il messaggio di avviso è stato inviato, l'ultima esecuzione dell'avviso, l'ultima modifica alla definizione di avviso e lo stato del messaggio di avviso più recente. Se il messaggio di avviso non può essere generato o inviato, nella colonna relativa allo stato sono incluse informazioni sull'errore che consentono di risolvere i problemi relativi all'avviso. Per altre informazioni, vedere [Gestire gli avvisi dati in Gestione avvisi dati](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
@@ -87,14 +85,13 @@ Quando un sito di SharePoint è abilitato per gli avvisi dati, vengono create e 
   
 -   [Gestire gli avvisi dati in Gestione avvisi dati](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Modificare un avviso nella finestra di progettazione avviso dati](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestra di progettazione avviso dati](../reporting-services/data-alert-designer.md)   
-[Crea un avviso dati nella finestra di progettazione avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
+[Finestra di progettazione Avviso dati](../reporting-services/data-alert-designer.md)   
+[Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

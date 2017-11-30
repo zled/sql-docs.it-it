@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un Report nuovo o esistente a un progetto di Report (SSRS) | Documenti Microsoft
+title: Aggiungere un report nuovo o esistente a un progetto report (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- reports [Reporting Services], creating
+helpviewer_keywords: reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6edee3df21691e6f9e53a167bb1bd1bce502e76a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
   Per aggiungere un nuovo report impaginato di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è possibile usare la Creazione guidata report o aggiungere un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella Report, quindi scegliere **Aggiungi nuovo report**. Verrà visualizzata la finestra di dialogo **Creazione guidata report** .  
   
-     La procedura guidata i passaggi necessari per la creazione di un'origine dati, creazione di un set di dati con una query, definire gruppi, specificare un layout e la creazione del report. I passaggi includono:  
+     I passaggi della procedura guidata consentono di creare un'origine dati, creare un set di dati con una query, definire gruppi, specificare un layout e creare il report. I passaggi includono:  
   
     -   **Selezione un'origine dati.** Il primo passaggio della creazione di un report consiste nel definire un'origine dati. Nella Creazione guidata report viene visualizzato un elenco di tutte le origini dei dati condivise disponibili nel progetto report, nonché un'opzione per la creazione di una nuova origine dei dati.  
   
@@ -67,7 +65,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

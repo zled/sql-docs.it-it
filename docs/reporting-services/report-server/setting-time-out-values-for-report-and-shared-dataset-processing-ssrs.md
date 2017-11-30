@@ -1,5 +1,5 @@
 ---
-title: Impostazione dei valori di timeout per i Report ed elaborazione di set di dati condivisi (SSRS) | Documenti Microsoft
+title: Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - report processing [Reporting Services], time-outs
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 19e7171dbcc26806b0a7dbf96afe5770dcebd826
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7b64cfa425784e7e495b510f960a50109175537b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi (SSRS)
   È possibile fare in modo che [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specifichi valori di timeout per limitare l'uso delle risorse del sistema. Il server di report supporta due valori di timeout:  
@@ -60,9 +60,9 @@ ms.lasthandoff: 08/09/2017
 >  È possibile definire l'impostazione **RunningRequestsDbCycle** nel file RSReportServer.config per modificare la frequenza di valutazione dei processi in esecuzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
+ [Gestione report  &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

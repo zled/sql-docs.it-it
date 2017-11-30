@@ -1,5 +1,5 @@
 ---
-title: "Il Server Database (modalità nativa SSRS) | Documenti Microsoft"
+title: "Database del server di report (modalità nativa SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b580d66daa70a5c358a458a6c8f939f5bdabce48
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 477c4bfb55742102aa08da46a1fa08bf2686b4cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Database del server di report (modalità nativa SSRS)
-  Un server di report è un server senza stato (stateless) che usa il [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare metadati e definizioni di oggetti. In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa vengono usati due database per separare i requisiti per l'archiviazione persistente dei dati da quelli per l'archiviazione temporanea. I database vengono creati assieme e associati in base al nome. Per impostazione predefinita, i nomi dei database sono rispettivamente **reportserver** e **reportservertempdb**.  
+  Un server di report è un server senza stato (stateless) che usa il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] to store metadata and object definitions. In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa vengono usati due database per separare i requisiti per l'archiviazione persistente dei dati da quelli per l'archiviazione temporanea. I database vengono creati assieme e associati in base al nome. Per impostazione predefinita, i nomi dei database sono rispettivamente **reportserver** e **reportservertempdb**.  
   
  Un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint crea anche un database per la funzionalità relativa agli avvisi dei dati. I tre database in modalità SharePoint sono associati alle applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
@@ -40,13 +39,13 @@ ms.lasthandoff: 08/09/2017
  È possibile trasferire o riutilizzare un database del server di report esistente di un'installazione precedente o un'istanza diversa con un'altra istanza del server di report. Lo schema del database del server di report deve essere compatibile con l'istanza del server di report. Se il formato del database è obsoleto, verrà richiesto di eseguire l'aggiornamento al formato corrente. Le versioni più recenti non sono compatibili con una versione precedente. Se si dispone di un database del server di report più recente, non è possibile utilizzarlo con una versione precedente di istanze di un server di report. Per altre informazioni sulla modalità di aggiornamento dei database del server di report ai formati più recenti, vedere [Aggiornare un database del server di report](../../reporting-services/install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
->  La struttura della tabella per i database è ottimizzata per le operazioni server e non deve essere modificata né regolata. [!INCLUDE[msCoName](../../includes/msconame-md.md)]potrebbe cambiare la struttura della tabella da una versione successiva. La modifica o l'estensione del database può impedire o limitare la possibilità di eseguire aggiornamenti o applicare service pack in futuro. Modificando o estendendo il database, inoltre, si potrebbero introdurre modifiche che impediscono il corretto funzionamento del server di report. Ad esempio se si abilita READ_COMMITTED_SNAPSHOT sul database ReportServer, si interromperà la funzionalità dell'ordinamento interattiva.  
+>  La struttura della tabella per i database è ottimizzata per le operazioni server e non deve essere modificata né regolata. [!INCLUDE[msCoName](../../includes/msconame-md.md)] potrebbe modificare la struttura della tabella da una versione a quella successiva. La modifica o l'estensione del database può impedire o limitare la possibilità di eseguire aggiornamenti o applicare service pack in futuro. Modificando o estendendo il database, inoltre, si potrebbero introdurre modifiche che impediscono il corretto funzionamento del server di report. Ad esempio se si abilita READ_COMMITTED_SNAPSHOT sul database ReportServer, si interromperà la funzionalità dell'ordinamento interattiva.  
   
  Tutti gli accessi a un database del server di report devono essere gestiti tramite il server di report. Per accedere al contenuto di un database del server di report, è possibile usare gli strumenti di gestione del server di report, ad esempio Gestione report e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) oppure interfacce programmatiche, ad esempio l'accesso tramite URL, il servizio Web ReportServer o il provider WMI (Windows Management Instrumentation).  
   
  La connessione al database del server di report viene in genere definita tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È tuttavia possibile definire la connessione nel corso dell'installazione se si decide di installare la configurazione predefinita. Per altre informazioni sulla connessione del server di report al database, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="report-server-database"></a>Database del server di report  
+## <a name="report-server-database"></a>database del server di report  
  Il database del server di report è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è archiviato il contenuto seguente:  
   
 -   Gli elementi gestiti da un server di report (report e report collegati, origini dei dati condivise, modelli di report, cartelle e risorse) e tutte le impostazioni di proprietà e sicurezza associate a tali elementi.  
@@ -71,12 +70,11 @@ ms.lasthandoff: 08/09/2017
  Se si esegue il backup del database temporaneo e successivamente lo si ripristina, è necessario eliminare il contenuto. In genere è opportuno eliminare sempre il contenuto del database temporaneo, ma in questo caso è necessario riavviare il servizio Windows ReportServer dopo l'eliminazione del contenuto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ospitare un Database del Server di Report in un Cluster di Failover SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Archiviare i dati crittografati di Report Server &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Server di Report di Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [Amministrare un database del Server di Report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Creare un database del Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Ospitare un database del server di report in un cluster di failover di SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
+ [Amministrare un database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Operazioni di backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   
-

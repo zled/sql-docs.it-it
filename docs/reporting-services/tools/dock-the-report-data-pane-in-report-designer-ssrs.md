@@ -1,5 +1,5 @@
 ---
-title: Ancorare il riquadro dati Report in Progettazione Report (SSRS) | Documenti Microsoft
+title: Ancorare il riquadro dei dati del report in Progettazione report (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Data pane, docking
+helpviewer_keywords: Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69b608f7c673ccd05826c32c173d5cde014937a3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8739191250029846e3ed4e740cc44a0475fc80d7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancorare il riquadro dei dati del report in Progettazione report (SSRS)
   In Progettazione report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nel riquadro Dati report viene visualizzata una vista gerarchica di oggetti dati che è possibile usare in un report, ad esempio origini dati, set di dati, campi, parametri e immagini. Le origini dati presenti in questa vista possono essere incorporate o fare riferimento a origini dati condivise visualizzate in Esplora soluzioni.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/09/2017
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

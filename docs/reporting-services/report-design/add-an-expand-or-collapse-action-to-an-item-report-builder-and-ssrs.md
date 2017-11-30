@@ -1,5 +1,5 @@
 ---
-title: Aggiungi azione un Espandi o Comprimi a un elemento (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dcd1af4aee2c0267f1443d87d80be1e3cc2ad8b3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 24cdcaa5d1596b743f370aead53457358d20490a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
   È possibile permettere a un utente di espandere o comprimere in modo interattivo elementi del report oppure, per una tabella o una matrice, righe e colonne associate a un gruppo. Per consentire agli utenti di espandere o comprimere un elemento, impostare le proprietà di visibilità per tale elemento. L'impostazione della visibilità può essere usata in un visualizzatore di report HTML ed è a volte definita azione *drill-down* .  
@@ -37,13 +36,13 @@ ms.lasthandoff: 08/09/2017
   
 1.  Nella visualizzazione di progettazione report fare clic sulla tabella o sulla matrice per selezionarla. Nel riquadro di raggruppamento verranno visualizzati i gruppi di righe e di colonne.  
   
-     ![Riquadro di raggruppamento](../../reporting-services/report-design/media/groupingpane.png "riquadro di raggruppamento")  
+     ![Riquadro di raggruppamento](../../reporting-services/report-design/media/groupingpane.png "Riquadro di raggruppamento")  
   
      Se il riquadro di raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**.  
   
 2.  Fare clic con il pulsante destro del mouse in un punto qualsiasi sulla barra del titolo del riquadro di raggruppamento e scegliere **Avanzate**. La modalità del riquadro di raggruppamento viene attivata/disattivata per mostrare la struttura di visualizzazione sottostante per righe e colonne nell'area di progettazione.  
   
-     ![Riquadro di raggruppamento con menu modalità avanzata](../../reporting-services/report-design/media/groupingpane-advancedmode.png "riquadro di raggruppamento con menu modalità avanzata")  
+     ![Riquadro di raggruppamento con menu Modalità avanzata](../../reporting-services/report-design/media/groupingpane-advancedmode.png "Riquadro di raggruppamento con menu Modalità avanzata")  
   
 3.  Nel riquadro di gruppo appropriato fare clic sul nome del gruppo di righe o del gruppo di colonne per il quale si desidera nascondere le righe o le colonne associate. Il gruppo viene selezionato e nel riquadro Proprietà vengono visualizzate le proprietà **Membro Tablix** .  
   
@@ -56,24 +55,24 @@ ms.lasthandoff: 08/09/2017
   
     -   Selezionare **True** per nascondere l'elemento del report.  
   
-    -   Selezionare  **\<espressione >** per aprire la **espressione** la finestra di dialogo per creare un'espressione che viene valutata in fase di esecuzione per determinare la visibilità.  
+    -   Selezionare **\<Espressione>** per aprire la finestra di dialogo **Espressione** nella quale è possibile creare un'espressione che viene valutata in fase di runtime per determinare la visibilità.  
   
 5.  Nella casella a discesa in **ToggleItem**selezionare il nome di una casella di testo alla quale aggiungere l'immagine dell'elemento Toggle.  
   
      Nella figura seguente il gruppo Colora riga è configurato per permettere agli utenti a espandere e comprimere le righe associate.  
   
-     ![Configurazione di un gruppo di righe da espandere](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "la configurazione di un gruppo di righe da espandere")  
+     ![Configurazione di un gruppo di righe da espandere](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configurazione di un gruppo di righe da espandere")  
   
     > [!NOTE]  
     >  La casella di testo con l'immagine dell'elemento Toggle non può essere il gruppo di righe o colonne per il quale si desidera nascondere le righe o le colonne associate. Deve trovarsi nello stesso gruppo dell'elemento che viene nascosto o in un gruppo predecessore. Ad esempio, per attivare/disattivare la visibilità di righe associate a un gruppo figlio, selezionare una casella di testo in una riga associata al gruppo padre.  
   
 6.  Per testare l'elemento Toggle, eseguire il report e fare clic sulla casella di testo con l'immagine dell'elemento Toggle. La visualizzazione del report viene aggiornata per mostrare i gruppi di righe e di colonne con la rispettiva visibilità attivata/disattivata.  
   
-     ![Esecuzione di report con gruppo di righe espandibile](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "esecuzione di report con gruppo di righe espandibile")  
+     ![Esecuzione di report con gruppo di righe espandibile](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "Esecuzione di report con gruppo di righe espandibile")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Per aggiungere a un elemento del report un'azione per espandere e comprimere  
   
-1.  Nella visualizzazione Progettazione report, fare doppio clic su elemento del report da visualizzare o nascondere e quindi fare clic su  *\<elemento report >* **proprietà**. Il  *\<elemento report >* **proprietà** verrà visualizzata la finestra di dialogo per l'elemento del report.  
+1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere e scegliere **Proprietà** *\<elemento report*. Viene visualizzata la finestra di dialogo **Proprietà** *\<elemento report>* relativa all'elemento report.  
   
 2.  Fare clic su **Visibilità**.  
   
@@ -92,18 +91,17 @@ ms.lasthandoff: 08/09/2017
   
      Nella figura seguente la tabella è configurata per permettere agli utenti di espanderla e comprimerla. La visualizzazione della tabella è attivata e disattivata dalla casella di testo della tabella Products.  
   
-     ![Configurare una tabella del report da espandere](../../reporting-services/report-design/media/expandcollapse-reporttable.png "configurare una tabella del report da espandere")  
+     ![Configurare una tabella del report da espandere](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Configurare una tabella del report da espandere")  
   
     > [!NOTE]  
     >  La casella di testo utilizzata per l'elemento Toggle deve trovarsi nell'ambito corrente o contenitore di questo elemento di report (tale da includere il corpo del report). Ad esempio, per attivare/disattivare la visibilità di un grafico, selezionare una casella di testo che si trovi nello stesso ambito contenitore del grafico, ad esempio il corpo del report o un rettangolo. La casella di testo deve trovarsi nella stessa gerarchia del contenitore o a un livello superiore.  
   
 5.  Per testare l'elemento Toggle, eseguire il report e fare clic sulla casella di testo con l'immagine dell'elemento Toggle. La visualizzazione del report viene aggiornata per mostrare gli elementi del report con la rispettiva visibilità attivata/disattivata.  
   
-     ![Esecuzione di report con tabella di espansione](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "esecuzione di report con tabella di espansione")  
+     ![Esecuzione di report con tabella di espansione](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "Esecuzione di report con tabella di espansione")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Azione di drill-down &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Nascondere un elemento &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

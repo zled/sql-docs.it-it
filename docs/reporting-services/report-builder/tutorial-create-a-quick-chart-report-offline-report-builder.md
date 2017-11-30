@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creare un Report grafico rapido Offline (Generatore Report) | Documenti Microsoft'
+title: 'Tutorial: Create a Quick Chart Report Offline (Report Builder) (Esercitazione: Creare un report grafico rapido offline (Generatore report)) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,49 +15,47 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df0786cc4863f40a881f7061267eaed8345aca1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
 
   In questa esercitazione viene usata una procedura guidata per creare un grafico a torta in un report impaginato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Aggiungere le percentuali e modificare leggermente il grafico a torta. 
   
 È possibile eseguire questa esercitazione in due modi diversi. Con entrambi i metodi si otterrà lo stesso risultato, ovvero un grafico a torta simile a quello riportato in questa illustrazione:  
   
- ![Report di grafico a torta rapido generatore](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "il grafico a torta rapido di Generatore Report")  
+ ![Grafico a torta rapido di Generatore report](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Grafico a torta rapido di Generatore report")  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Se si utilizzano dati XML o una [!INCLUDE[tsql](../../includes/tsql-md.md)] query, è necessario avere accesso a Generatore Report. È possibile avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] da un server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint, oppure è possibile scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dall'Area download Microsoft. Per altre informazioni, vedere [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
+ Se si usano dati XML o una query [!INCLUDE[tsql](../../includes/tsql-md.md)], è necessario avere accesso a Generatore report. È possibile avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] da un server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint, oppure è possibile scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dall'Area download Microsoft. Per altre informazioni, vedere [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Due modi per eseguire questa esercitazione  
   
 -   [Creare il grafico a torta con dati XML](#CreatePieChartXML)  
   
--   [Creare il grafico a torta con una query Transact-SQL che contiene i dati](#CreatePieQueryData)  
+-   [Creare il grafico a torta con una query Transact-SQL contenente dati](#CreatePieQueryData)  
   
 ### <a name="using-xml-data-for-this-tutorial"></a>Utilizzo di dati XML per l'esercitazione  
- È possibile utilizzare dati XML copiandoli da questo argomento e incollandoli nella procedura guidata. Non è necessario essere connessi a un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità integrata di server di report in modalità nativa o in SharePoint e non è necessario accedere a un'istanza di SQL Server.  
+ È possibile utilizzare dati XML copiandoli da questo argomento e incollandoli nella procedura guidata. Non è necessario essere connessi a un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint e nemmeno accedere a un'istanza di SQL Server.  
   
  [Creare il grafico a torta con dati XML](#CreatePieChartXML)  
   
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Uso di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] contenente dati per l'esercitazione  
- È possibile copiare una query contenente dati da questo argomento e incollarla nella procedura guidata. È necessario il nome di un'istanza di SQL Server e credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. La query del set di dati in questa esercitazione vengono utilizzati dati letterali, ma la query deve essere elaborata da un'istanza di SQL Server per restituire i metadati necessari per un set di dati del report.  
+ È possibile copiare una query contenente dati da questo argomento e incollarla nella procedura guidata. Sarà necessario avere il nome di un'istanza di SQL Server e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. Per la query del set di dati dell'esercitazione vengono usati dati letterali, ma è necessario elaborare la query da un'istanza di SQL Server per restituire i metadati richiesti per un set di dati del report.  
   
  Il vantaggio dell'uso della query [!INCLUDE[tsql](../../includes/tsql-md.md)] è dato dal fatto che in tutte le altre esercitazioni di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] viene usato lo stesso metodo, pertanto durante le altre esercitazioni si conosceranno già le azioni da eseguire.  
   
  Per la query [!INCLUDE[tsql](../../includes/tsql-md.md)] sono necessari pochi altri prerequisiti. Per altre informazioni, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
- [Creare il grafico a torta con una query Transact-SQL che contiene i dati](#CreatePieQueryData)  
+ [Creare il grafico a torta con una query Transact-SQL contenente dati](#CreatePieQueryData)  
   
 ##  <a name="CreatePieChartXML"></a> Creazione del grafico a torta con dati XML  
   
@@ -65,9 +63,9 @@ ms.lasthandoff: 08/09/2017
   
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
-     ![Iniziare a Generatore report](../../reporting-services/media/rb-getstarted.png "iniziare a Generatore Report")  
+     ![Attività iniziale Generatore report](../../reporting-services/media/rb-getstarted.png "Attività iniziale Generatore report")  
   
-     If the **Getting Started** dialog box does not appear, click **File** >**New**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
+     Se la finestra di dialogo **Riquadro attività iniziale** non viene visualizzata, fare clic su **File** >**Nuovo**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Nella casella **Seleziona tipo di connessione** fare clic su **XML**.  
   
-8.  Fare clic sulla scheda **Credenziali**, selezionare **Usa utente di Windows corrente. Potrebbe essere richiesta la delega Kerberos** e fare clic su **OK**.  
+8.  Fare clic sulla scheda **Credenziali**, selezionare **Use current Windows user (Usa utente di Windows corrente). Può essere richiesta la delega Kerberos**, quindi fare clic su **OK**.  
   
 9. Nella pagina **Scegliere una connessione a un'origine dei dati** fare clic su **Grafico a torta**, quindi su **Avanti**.  
   
@@ -114,35 +112,35 @@ ms.lasthandoff: 08/09/2017
     </Query>  
     ```  
   
-11. (Facoltativo) Fare clic su di **eseguire** pulsante (**!**) per visualizzare i dati si baserà il grafico.  
+11. (Facoltativo) Fare clic sul pulsante **Esegui** (**!**) per visualizzare i dati su cui si baserà il grafico.  
   
-     ![Query di progettazione di Generatore report](../../reporting-services/report-builder/media/rb-designquery.png "Query di progettazione di Generatore Report")  
+     ![Query di progettazione di Generatore report](../../reporting-services/report-builder/media/rb-designquery.png "Query di progettazione di Generatore report")  
   
 12. Scegliere **Avanti**.  
   
 13. Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**.  
   
-14. Nel **Disponi campi del grafico** pagina, fare doppio clic su di **Sales** campo il **campi disponibili** casella.  
+14. Nella pagina relativa alla **disposizione dei campi del grafico** fare doppio clic sul campo **Vendite** nella casella **Campi disponibili**.  
   
      Il campo verrà spostato automaticamente nella casella **Valori** perché rappresenta un valore numerico.  
   
-     ![Report Builder guidata Disponi campi](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Creazione guidata di Generatore Report Disponi campi")  
+     ![Procedura guidata disposizione campi di Generatore report](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Procedura guidata disposizione campi di Generatore report")  
   
-15. Trascinare il **FullName** campo il **campi disponibili** casella per il **categorie** casella (o fare doppio clic; spostarlo il **categorie** casella) e quindi fare clic su **Avanti**.  
+15. Trascinare il campo **FullName** dalla casella **Campi disponibili** alla casella **Categorie**. In alternativa è possibile fare doppio clic sul campo per spostarlo nella casella **Categorie**. Al termine fare clic su **Avanti**.  
   
      La pagina di anteprima mostra il nuovo grafico a torta con dati rappresentativi. Nella legenda sono riportate le diciture Full Name 1, Full Name 2 e così via, anziché i nomi dei venditori, e le dimensioni delle sezioni della torta non sono precise. L'esempio serve solo per dare un'idea generale dell'aspetto del report.  
   
-     ![Report Builder nuovo grafico anteprima](../../reporting-services/report-builder/media/rb-newchartpreview.png "Anteprima grafico nuovo generatore di Report")  
+     ![Anteprima nuovo grafico di Generatore report](../../reporting-services/report-builder/media/rb-newchartpreview.png "Anteprima nuovo grafico di Generatore report")  
   
 16. Fare clic su **Fine**.  
   
      È ora possibile visualizzare il nuovo report con grafico a torta nella visualizzazione Progettazione, sempre con dati rappresentativi.  
   
-     ![Report Builder nuovo grafico a torta nella visualizzazione Progettazione](../../reporting-services/report-builder/media/rb-newpiedesign.png "generatore nuovo grafico a torta nella visualizzazione progettazione di Report")  
+     ![Nuovo grafico a torta nella visualizzazione Progettazione di Generatore report](../../reporting-services/report-builder/media/rb-newpiedesign.png "Nuovo grafico a torta nella visualizzazione Progettazione di Generatore report")  
   
 17. Per visualizzare il grafico a torta effettivo, fare clic su **Esegui** nella scheda **Home** della barra multifunzione.  
   
-     ![Report di generatore grafico nuova esecuzione](../../reporting-services/report-builder/media/rb-newchartrun.png "nuova esecuzione grafico di Generatore Report")  
+     ![Anteprima nuovo grafico di Generatore report](../../reporting-services/report-builder/media/rb-newchartrun.png "Anteprima nuovo grafico di Generatore report")  
   
 18. Per continuare la modifica del grafico a torta, vedere [Al termine della procedura guidata](#AfterWizard) in questo articolo.  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 08/09/2017
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  If the **Getting Started** dialog box does not appear, click **File** >**New**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
+    >  Se la finestra di dialogo **Riquadro attività iniziale** non viene visualizzata, fare clic su **File** >**Nuovo**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -184,11 +182,11 @@ ms.lasthandoff: 08/09/2017
   
 10. Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**.  
   
-11. Nel **Disponi campi del grafico** pagina, fare doppio clic su di **Sales** campo il **campi disponibili** casella.  
+11. Nella pagina relativa alla **disposizione dei campi del grafico** fare doppio clic sul campo **Vendite** nella casella **Campi disponibili**.  
   
      Il campo verrà spostato automaticamente nella casella **Valori** perché rappresenta un valore numerico.  
   
-12. Trascinare il **FullName** campo il **campi disponibili** casella per il **categorie** casella (o fare doppio clic; spostarlo il **categorie** casella) e quindi fare clic su **Avanti**.  
+12. Trascinare il campo **FullName** dalla casella **Campi disponibili** alla casella **Categorie**. In alternativa è possibile fare doppio clic sul campo per spostarlo nella casella **Categorie**. Al termine fare clic su **Avanti**.  
   
 13. Fare clic su **Fine**.  
   
@@ -208,17 +206,17 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
   
 ## <a name="add-a-report-title"></a>Aggiungere un titolo al report  
 1. Selezionare le parole **Titolo grafico** nella parte superiore del grafico, quindi digitare un titolo, ad esempio **Grafico a torta - Vendite**.  
-2. Con il titolo selezionato nel riquadro Proprietà modificare **colore** a **nero** e **FontSize** a **12pt**.
+2. Dopo aver selezionato il titolo, nel riquadro Proprietà modificare **Colore** in **Nero** e **FontSize**(Dimensione carattere) in **12 pt**.
   
 ## <a name="add-percentages"></a>Aggiungere percentuali  
  
-1.  Il pulsante destro del grafico a torta e selezionare **Mostra etichette dati**. Le etichette dati vengono visualizzate in ogni sezione del grafico a torta.  
+1.  Fare clic con il pulsante destro del mouse sul grafico a torta e scegliere **Mostra etichette dati**. Le etichette dati vengono visualizzate in ogni sezione del grafico a torta.  
   
-2.  Le etichette di mouse e scegliere **proprietà etichetta serie**. Verrà visualizzata la finestra di dialogo **Proprietà etichetta serie** .  
+2.  Fare clic con il pulsante destro del mouse sulle etichette e scegliere **Proprietà etichetta serie**. Verrà visualizzata la finestra di dialogo **Proprietà etichetta serie** .  
   
-3.  Nel **etichetta dati** digitare **#PERCENT {P0}**.  
+3.  Nella casella **Dati etichetta** digitare **#PERCENT{P0}**.  
   
-     Il testo **{P0}** specifica la percentuale senza cifre decimali. Se si digita solo **#PERCENT**, i numeri avranno due cifre decimali. **#PERCENT** è una parola chiave che esegue un calcolo o una funzione è; esistono molti altri.  
+     Il testo **{P0}** specifica la percentuale senza cifre decimali. Se si digita solo **#PERCENT**, i numeri avranno due cifre decimali. **#PERCENT** è una delle tante parole chiave disponibili che eseguono un calcolo o una funzione.  
      
 4. Fare clic su **Sì** per confermare che si vuole impostare **UseValueAsLabel** su **False**.
 
@@ -231,7 +229,7 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
 ##  <a name="WhatsNext"></a> Operazioni successive  
  Al termine della creazione del primo report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], è necessario disporre dell'autorizzazione per accedere alle origini dati, ad esempio i database, con una *stringa di connessione*che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
   
- Per eseguire le altre esercitazioni, è necessario il nome di un'istanza di SQL Server e credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  
+ Per eseguire le altre esercitazioni, è necessario avere il nome di un'istanza di SQL Server e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  
   
  Per salvare infine i report in un server di report o in un sito di SharePoint integrato con un server di report, è necessario disporre dell'URL e delle autorizzazioni appropriate. Tutti i report creati possono essere eseguiti direttamente dal computer, tuttavia quando vengono eseguiti dal server di report o dal sito di SharePoint i report offrono maggiori funzionalità. Per eseguire i propri report o quelli presenti sul server di report o nel sito di SharePoint in cui vengono pubblicati è necessario disporre delle autorizzazioni appropriate. Per ottenere l'accesso è necessario rivolgersi all'amministratore di sistema.  
   
@@ -242,5 +240,4 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
 [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
 [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

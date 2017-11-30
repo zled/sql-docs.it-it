@@ -1,5 +1,5 @@
 ---
-title: Gli elementi del Server di Report del sito di SharePoint e List Permission Reference for | Documenti Microsoft
+title: Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa4d9916987badd552b6e2317692bd79861dfda8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report
   In questo argomento vengono fornite informazioni di riferimento sulle autorizzazioni disponibili in SharePoint e che possono essere utilizzate per consentire l'accesso alle operazioni di un server di report eseguito in modalità integrata SharePoint. Tali informazioni sono utili per la scelta delle autorizzazioni da utilizzare per creare livelli di autorizzazione personalizzati.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013.|  
+|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>Autorizzazioni relative agli elenchi  
  Le autorizzazioni impostate per la raccolta che contiene gli elementi del server di report determinano la modalità con cui gli utenti potranno accedere a tali elementi.  
@@ -79,8 +78,7 @@ ms.lasthandoff: 08/09/2017
 |Apertura|Consente di aprire un sito Web, un elenco o una cartella per accedere agli elementi disponibili in tale contenitore.|X|X|X|Lettura delle proprietà di elementi e pianificazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Confrontare ruoli e attività di Reporting Services con le autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Concessione di autorizzazioni per elementi di Server di Report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   
-

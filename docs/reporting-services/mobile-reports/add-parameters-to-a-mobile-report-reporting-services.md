@@ -1,26 +1,24 @@
 ---
-title: Aggiungere parametri a un report per dispositivi mobili | Reporting Services | Documenti Microsoft
+title: Aggiungere parametri a un report per dispositivi mobili | Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 11/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6fad62a6549f4b9752bde07e39f53175768a68cb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2acc30da2fa25f1cfedb1f07bcdadc4f9be9d295
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Aggiungere parametri a un report per dispositivi mobili | Reporting Services
 È possibile creare report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con parametri in modo che l'autore e i lettori dei report possano filtrare i report stessi. I report con parametri possono essere anche la destinazione di un [drill-through da un report di origine](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
@@ -68,5 +66,4 @@ Dopo aver aggiunto i parametri a un report per dispositivi mobili, creare un URL
 - [Creare e pubblicare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-
 

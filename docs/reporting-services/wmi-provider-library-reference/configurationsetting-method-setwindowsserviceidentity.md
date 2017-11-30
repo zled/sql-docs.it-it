@@ -1,5 +1,5 @@
 ---
-title: Metodo SetWindowsServiceIdentity (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft
+title: Metodo SetWindowsServiceIdentity (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetWindowsServiceIdentity method
+helpviewer_keywords: SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 935e2d44cbfd0363832eb6401b63d4a0b36623b4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: de67b6f15ce60e377d4e650fd2c43c908b816a62
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setwindowsserviceidentity"></a>Metodo ConfigurationSetting - SetWindowsServiceIdentity
+# <a name="configurationsetting-method---setwindowsserviceidentity"></a>Metodo di ConfigurationSetting - SetWindowsServiceIdentity
   Consente l'esecuzione del servizio Windows ReportServer in base a un utente di Windows specificato e concede a tale account autorizzazioni per il file system sufficienti, in modo da consentire il funzionamento del server di report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -77,4 +73,3 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

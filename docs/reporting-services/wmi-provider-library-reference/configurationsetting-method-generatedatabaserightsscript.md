@@ -1,5 +1,5 @@
 ---
-title: Metodo GenerateDatabaseRightsScript (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft
+title: Metodo GenerateDatabaseRightsScript (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- GenerateDatabaseRightsScript method
+helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2e7e3d80d7e67b3a6e0924f04600860039086c94
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9657229fa2bbdb3e7be35fd385162bf8debb53c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Metodo ConfigurationSetting - GenerateDatabaseRightsScript
   Genera uno script SQL che può essere utilizzato per concedere a un utente i diritti per il database del server di report e per gli altri database richiesti affinché un server di report venga eseguito. Il chiamante deve connettersi al server di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire lo script.  
@@ -72,7 +68,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Osservazioni  
  Se *DatabaseName* è vuoto, *IsRemote* viene ignorato e per il nome del database viene usato il valore del file di configurazione del server di report.  
   
- Se *IsWindowsUser* è impostato su **true**, *UserName* deve essere nel formato \<dominio >\\< nome utente\>.  
+ Se *IsWindowsUser* è impostato su **true**, *UserName* deve essere nel formato \<dominio>\\<nome utente\>.  
   
  Quando *IsWindowsUser* è impostato su **true**, lo script generato concede all'utente i diritti di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostando il database del server di report come database predefinito, e concede il ruolo **RSExec** nel database del server di report, nel database temporaneo del server di report, nel database master e nel database di sistema MSDB.  
   
@@ -82,12 +78,12 @@ out Int32 HRESULT);
   
 |Account / SID convertito|Nome comune|Nome remoto|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Sistema locale|\<Dominio >\\< ComputerName\>$|  
-|.\LocalSystem|Sistema locale|\<Dominio >\\< ComputerName\>$|  
-|ComputerName\LocalSystem|Sistema locale|\<Dominio >\\< ComputerName\>$|  
-|LocalSystem|Sistema locale|\<Dominio >\\< ComputerName\>$|  
-|(S-1-5-20)|Servizio di rete|\<Dominio >\\< ComputerName\>$|  
-|NT AUTHORITY\NetworkService|Servizio di rete|\<Dominio >\\< ComputerName\>$|  
+|(S-1-5-18)|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
+|.\LocalSystem|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
+|ComputerName\LocalSystem|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
+|LocalSystem|Sistema locale|\<Dominio>\\<NomeComputer\>$|  
+|(S-1-5-20)|Servizio di rete|\<Dominio>\\<NomeComputer\>$|  
+|NT AUTHORITY\NetworkService|Servizio di rete|\<Dominio>\\<NomeComputer\>$|  
 |(S-1-5-19)|Servizio locale|Errore, vedere di seguito.|  
 |NT AUTHORITY\LocalService|Servizio locale|Errore, vedere di seguito.|  
   
@@ -103,9 +99,9 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<MachineName >|testlab14|  
-|\<MachineFQDN >|example.redmond.microsoft.com|  
-|\<IPAddress >|180.012.345,678|  
+|\<Nomecomputer>|testlab14|  
+|\<FQDNcomputer>|example.redmond.microsoft.com|  
+|\<IndirizzoIP>|180.012.345,678|  
   
  Quando *IsWindowsUser* è impostato su **true**, il provider WMI chiama LookupAccountName per ottenere il SID per l'account, quindi chiama LookupAccountSID per ottenere il nome da inserire nello script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo modo si garantisce che il nome account utilizzato passerà la convalida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -124,4 +120,3 @@ out Int32 HRESULT);
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

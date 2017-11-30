@@ -1,5 +1,5 @@
 ---
-title: Disinstallare Generatore Report | Documenti Microsoft
+title: Disinstallare Generatore report | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>Disinstallare Generatore report
 
 È possibile disinstallare la versione autonoma di Generatore report dal Pannello di controllo o dalla riga di comando.
@@ -37,7 +36,7 @@ Se le cartelle utilizzate da Generatore report includono file personalizzati, le
   
 2.  Nel Pannello di controllo fare clic su **Programmi e caratteristiche**.  
   
-3.  Individuare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generatore Report di SQL Server 2016 nel **nome** elenco e farvi clic sopra.  
+3.  Individuare Generatore report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 nell'elenco **Nome** e fare clic sul nome del programma.  
   
 4.  Fare clic su **Disinstalla**.  
   
@@ -65,4 +64,4 @@ Se le cartelle utilizzate da Generatore report includono file personalizzati, le
 
 [Installare Generatore report](../../reporting-services/install-windows/install-report-builder.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

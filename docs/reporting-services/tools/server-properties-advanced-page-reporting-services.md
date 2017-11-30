@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 80f962efa995f8f6a5d422f8b470826acddbab58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 Questa pagina consente di impostare le proprietà di sistema nel server di report. Le proprietà di sistema possono essere impostate in diversi modi. Questo strumento fornisce un'interfaccia utente grafica che consente di impostare le proprietà senza dovere scrivere codice.
 
-Per aprire questa pagina, avviare SQL Server Management Studio, connettersi a un'istanza del server di report, fare doppio clic sul nome del server di report e selezionare **proprietà**. Selezionare **avanzate** per aprire questa pagina.
+Per aprire questa pagina, avviare SQL Server Management Studio, connettersi a un'istanza del server di report, fare clic con il pulsante destro del mouse sul nome del server di report e scegliere **Proprietà**. Selezionare **Avanzate** per aprire la pagina.
 
 ## <a name="options"></a>Opzioni
 
@@ -82,7 +79,7 @@ Definisce come vengono compressi gli snapshot. Il valore predefinito è **SQL**.
 |---------|---------|
 |**SQL**|Gli snapshot vengono compressi quando vengono archiviati nel database del server di report. Questa impostazione corrisponde al comportamento corrente.|
 |**Nessuno**|Gli snapshot non vengono compressi.|
-|**Tutto**|Gli snapshot vengono compressi per tutte le opzioni di archiviazione, che includono il database del server di report o nel file system.|
+|**Tutto**|Gli snapshot vengono compressi per tutte le opzioni di archiviazione, incluso il database del server di report o il file system.|
 
 **SystemReportTimeout**  
 Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.  
@@ -95,8 +92,8 @@ Determina se la sicurezza integrata di Windows è supportata per le connessioni 
 
 |Valori|Description|
 |---------|---------|
-|**True**|Sicurezza integrata di Windows è abilitata.|
-|**False**|Sicurezza integrata di Windows non è abilitata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata di Windows non verranno eseguite.|
+|**True**|La sicurezza integrata di Windows è attivata.|
+|**False**|La sicurezza integrata di Windows non è attivata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata di Windows non verranno eseguite.|
 
 **EnableLoadReportDefinition**  
 Selezionare questa opzione per specificare se gli utenti possono eseguire report ad hoc da un report di Generatore report. Selezionando questa opzione si imposta la proprietà **EnableLoadReportDefinition** sul server di report.  
@@ -117,31 +114,34 @@ Consente di specificare il numero di voci della cache di dati che possono essere
 **EditSessionTimeout**  
 Consente di specificare il numero di secondi prima del timeout di una sessione di modifica del report. Il valore predefinito è 7200 secondi (2 ore).  
 
-**EnableCustomVisuals** ***(alimentazione solo Server di Report di Business Intelligence)***  
-PowerBI ReportServer consentono la visualizzazione degli oggetti visivi personalizzati di Power BI. I valori sono True, False.  Il valore predefinito è True.  
+**EnableCustomVisuals** ***(solo Server di report di Microsoft Power BI)***  
+Se i server di report di Microsof Power BI consentono la visualizzazione di oggetti visivi personalizzati di Power BI. I valori sono True e False.  Il valore predefinito è True.  
 
-**EnablePowerBIReportExportData** ***(alimentazione solo Server di Report di Business Intelligence)***  
-PowerBI ReportServer consentono l'esportazione dei dati da oggetti visivi di Power BI. I valori sono True, False.  Il valore predefinito è True.  
+**EnablePowerBIReportExportData** ***(solo Server di report di Microsoft Power BI)***  
+Se i server di report di Microsof Power BI consentono l'esportazione dei dati da oggetti visivi di Power BI. I valori sono True e False.  Il valore predefinito è True.  
+
+**ScheduleRefreshTimeoutMinutes** ***(solo server di report di Microsoft Power BI)***  
+Timeout in minuti per l'aggiornamento dei dati nell'aggiornamento pianificato dei report di Power BI con modelli AS incorporati. Il valore predefinito è 120 minuti.
 
 **EnableTestConnectionDetailedErrors**  
 Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è **true**. Se l'opzione viene impostata su **false**, vengono inviati solo messaggi di errore generici.
 
 **AccessControlAllowCredentials**  
-Indica se la risposta alla richiesta del client può essere esposta quando il flag 'credenziali' è impostato su true. Il valore predefinito è **false**.
+Indica se la risposta alla richiesta del client può essere esposta quando il flag "credenziali" è impostato su true. Il valore predefinito è **false**.
 
-**AccessControlAllowHeaders** un elenco separati da virgole delle intestazioni che il server consentirà quando un client effettua una richiesta. Questa proprietà può essere una stringa vuota, specifica * consentirà tutte le intestazioni.
+**AccessControlAllowHeaders** Elenco separato da virgole delle intestazioni consentite dal server quando un client invia una richiesta. Questa proprietà può essere una stringa vuota. Specificando * si consentono tutte le intestazioni.
 
-**AccessControlAllowMethods** un elenco separati da virgole dei metodi HTTP che il server consentirà quando un client effettua una richiesta. I valori predefiniti sono (GET, PUT, POST, PATCH, DELETE), specificando * consentirà a tutti i metodi.
+**AccessControlAllowMethods** Elenco separato da virgole dei metodi HTTP consentiti dal server quando un client invia una richiesta. I valori predefiniti sono (GET, PUT, POST, PATCH, DELETE). Specificando * si consentono tutte le intestazioni.
 
-**AccessControlAllowOrigin** un elenco separati da virgole di origini che il server consentirà quando un client effettua una richiesta. Il valore predefinito è vuoto che impedisce tutte le richieste, specificando * consentirà tutte le origini quando le credenziali non sono impostate; Se vengono specificate credenziali, è necessario specificare un elenco esplicito di origine.
+**AccessControlAllowOrigin** Elenco separato da virgole delle origini consentite dal server quando un client invia una richiesta. Il valore predefinito è vuoto, il che impedisce tutte le richieste. Specificando * si consentono tutte le origini quando le credenziali non sono impostate; se vengono specificate credenziali, è necessario specificare un elenco esplicito delle origini.
 
-**AccessControlExposeHeaders** un elenco separati da virgole delle intestazioni che il server dovrà esporre ai client. Il valore predefinito è vuoto.
+**AccessControlExposeHeaders** Elenco separato da virgole delle intestazioni che il server esporrà ai client. Il valore predefinito è vuoto.
 
-**AccessControlMaxAge** specifica il numero di secondi che possono essere memorizzati nella cache i risultati della richiesta preliminare. Il valore predefinito è 600 (10 minuti).
+**AccessControlMaxAge** Specifica il numero di secondi durante i quali i risultati della richiesta preliminare possono essere memorizzati nella cache. Il valore predefinito è 600 (10 minuti).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostare proprietà Server di Report &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+[Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
 [Proprietà di Reporting Services](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
 [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
@@ -149,5 +149,4 @@ Indica se la risposta alla richiesta del client può essere esposta quando il fl
 [Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [Abilitare e disabilitare la funzionalità Report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

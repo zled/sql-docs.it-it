@@ -1,5 +1,5 @@
 ---
-title: Finestra di progettazione avviso dati | Documenti Microsoft
+title: Finestra di progettazione Avviso dati | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 Le definizioni di avviso dati vengono create e modificate nella finestra di progettazione Avviso dati. Una definizione di avviso è una raccolta di metadati, inclusi i dati del report a cui si è interessati, le regole che i dati del report devono soddisfare per creare istanze di avviso dati e inviare messaggi di avviso dati, i destinatari del messaggio di avviso e così via.  
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
  Per creare una definizione di avviso si effettuano diverse attività correlate:  
   
@@ -64,7 +64,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ##  <a name="AlertDesigner"></a> Interfaccia utente della finestra di progettazione Avviso dati  
  L'interfaccia della finestra di progettazione Avviso dati è suddivisa in aree. Sono disponibili l'area in cui si seleziona il feed di dati del report, l'area in cui si creano condizioni semplici o complesse aggiungendo regole alle condizioni e così via. Nella figura seguente sono illustrate le aree della finestra di progettazione Avviso dati.  
   
- ![Aree all'interno dell'interfaccia utente di Alert Designer](../reporting-services/media/rs-alertdesigner.gif "aree all'interno dell'interfaccia utente di Alert Designer")  
+ ![Aree all'interno dell'interfaccia utente della finestra di progettazione Avviso dati](../reporting-services/media/rs-alertdesigner.gif "Aree all'interno dell'interfaccia utente della finestra di progettazione Avviso dati")  
   
   
 ### <a name="alert-data"></a>Dati di avviso  
@@ -74,7 +74,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
  Se il report è con parametri e non vengono visualizzati i dati e le colonne previsti nel feed di dati del report, eseguirlo di nuovo utilizzando i valori dei parametri appropriati. Le colonne e i valori devono essere presenti nel report da includere nel feed di dati.  
   
- A seconda del layout del report, potrebbe non risultare intuitivo il numero di feed di dati inclusi nel report stesso, né quali dati sono stati inclusi in ogni feed di dati. L'estensione per il rendering Atom in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]genera i feed di dati utilizzati con gli avvisi. L'estensione per il rendering Atom fornisce dati del report come set di righe bidimensionali, ovvero un formato tabulare in cui tutte le colonne dispongono dello stesso numero di righe. Questi set di righe sono il contenuto dei feed di dati. Poiché il layout del report è spesso complesso e con più peer o aree dati annidate, sono necessari più feed di dati per rendere disponibili tutti i dati del report. Per altre informazioni su come vengono generati i feed di dati per i report, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) e vedere [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ A seconda del layout del report, potrebbe non risultare intuitivo il numero di feed di dati inclusi nel report stesso, né quali dati sono stati inclusi in ogni feed di dati. L'estensione per il rendering Atom in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]genera i feed di dati utilizzati con gli avvisi. L'estensione per il rendering Atom fornisce dati del report come set di righe bidimensionali, ovvero un formato tabulare in cui tutte le colonne dispongono dello stesso numero di righe. Questi set di righe sono il contenuto dei feed di dati. Poiché il layout del report è spesso complesso e con più peer o aree dati annidate, sono necessari più feed di dati per rendere disponibili tutti i dati del report. Per altre informazioni su come vengono generati i feed di dati per i report, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) e [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
  Quando si sceglie un feed di dati, i dati del feed vengono visualizzati in una tabella con righe e colonne nel riquadro dei dati di avviso della finestra di progettazione Avviso dati. Tramite i metadati dell'origine dati utilizzata dal report o il report stesso vengono specificati i nomi delle colonne e l'elenco dei campi utilizzato per definire le regole nella condizione per i dati viene popolato dal feed di dati. Il feed di dati inoltre fornisce metadati quali i tipi di dati di colonne della tabella tramite cui vengono limitati i valori e gli operatori di confronto utilizzabili con i campi quando si creano le regole.  
   
@@ -177,7 +177,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ### <a name="email-settings"></a>Impostazioni posta elettronica  
  L'opzione **Destinatario/i** consente di specificare gli indirizzi di posta elettronica dei destinatari dei messaggi di avviso dati. Separare più indirizzi di posta elettronica tramite punti e virgola, analogamente a quanto avviene nei messaggi di posta elettronica di Microsoft Office Outlook. È anche possibile specificare come destinatari gruppi di distribuzione, in modo da poter gestire l'elenco destinatari in modo più semplice ed efficace. Se in SharePoint è possibile determinare l'indirizzo di posta elettronica personale quando si crea una definizione di avviso, tale indirizzo viene aggiunto automaticamente all'elenco di destinatari; in caso contrario, è necessario aggiungerlo in modo esplicito come destinatario.  
   
- L'oggetto predefinito del messaggio di posta elettronica è **di avviso dati per \<nome avviso >**. È possibile modificare l'oggetto in base alle proprie esigenze.  
+ L'oggetto predefinito del messaggio di posta elettronica è **Avviso dati per \<nome avviso>**. È possibile modificare l'oggetto in base alle proprie esigenze.  
   
  È anche possibile fornire una descrizione da includere nel messaggio di avviso dati nell'opzione **Descrizione** . L'inserimento di una descrizione, in particolare se vi sono avvisi dati simili, è utile per distinguere rapidamente i messaggi di avviso dati e per comprenderli. Oltre al messaggio di avviso inviato quando i dati del report soddisfano le regole specificate, viene inviato un messaggio di avviso a tutti i destinatari quando si verifica un errore. Per altre informazioni, vedere [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
@@ -186,7 +186,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ##  <a name="CreateAlert"></a> Creare una definizione di avviso dati  
  Se all'utente vengono concesse le autorizzazioni Visualizzazione elementi e Creazione avvisi di SharePoint, potrà creare una definizione di avviso dati per qualsiasi report per il quale dispone dell'autorizzazione per la visualizzazione, a condizione che nel report vengano utilizzate credenziali archiviate o nessuna credenziale. Il report viene eseguito da una raccolta di SharePoint. I dati disponibili per l'utilizzo nella finestra di progettazione Avviso dati provengono dal report. Se il report è con parametri, potrebbe essere necessario eseguirlo utilizzando valori dei parametri diversi per assicurarsi che i dati di interesse vengano visualizzati nel report. Dopo aver aperto il report, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report per aprire la finestra di progettazione Avviso dati. Nell'immagine seguente viene illustrato come aprire la finestra di progettazione Avviso dati.  
   
- ![Aprire Alert Designer dalla raccolta di SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "aprire Alert Designer dalla raccolta di SharePoint")  
+ ![Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint")  
   
  Per altre informazioni, vedere [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -205,7 +205,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
  Per modificare una definizione di avviso dati, fare clic con il pulsante destro del mouse su di essa in Gestione avvisi dati, quindi scegliere **Modifica**. Nella figura seguente è illustrato il menu di scelta rapida per un avviso dati in Gestione avvisi dati.  
   
- ![Aprire una finestra di progettazione avviso dati, fare clic su Modifica](../reporting-services/media/rs-alertmanageriwopendesigner.gif "aprire Alert Designer dati facendo clic su Modifica")  
+ ![Aprire la finestra di progettazione Avviso dati facendo clic su Modifica](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Aprire la finestra di progettazione Avviso dati facendo clic su Modifica")  
   
  Per altre informazioni, vedere [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
@@ -213,13 +213,13 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ##  <a name="HowTo"></a> Attività correlate  
  In questa sezione vengono elencate procedure tramite cui viene illustrata la modalità di creazione e di modifica degli avvisi.  
   
--   [Modificare un avviso nella finestra di progettazione avviso dati](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
 ## <a name="see-also"></a>Vedere anche
 
-[Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)   
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

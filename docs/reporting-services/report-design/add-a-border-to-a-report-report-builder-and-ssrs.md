@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un bordo a un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere un bordo a un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 824ca565b87a77add1c547aafb264345a9a63dab
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: baeb498889d0698ec955b76edbf06904a5aad650
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Aggiungere un bordo a un report (Generatore report e SSRS)
   È possibile aggiungere un bordo a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] aggiungendo bordi alle intestazioni, ai piè di pagina e al corpo del report, senza inserire righe o rettangoli.    
@@ -43,4 +42,3 @@ ms.lasthandoff: 08/09/2017
  [Rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   
-

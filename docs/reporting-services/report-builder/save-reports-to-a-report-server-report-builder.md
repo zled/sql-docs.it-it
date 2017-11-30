@@ -1,5 +1,5 @@
 ---
-title: Salvare i report in un Server di Report (Generatore Report) | Documenti Microsoft
+title: Salvare i report in un server di report (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d2a1b09aefaf3baf454edd419e3d1edd8aa575f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 568999bbde67c627167ece4260fdc3365b1ba8ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
   In Generatore report è possibile salvare una definizione del report in un server di report, operazione anche nota come pubblicazione di un report. Quando viene salvato in un server di report, il report può essere visualizzato anche da altri utenti. Ogni volta che si esegue il report pubblicato, verranno recuperati i dati più recenti. Per salvare una copia statica di un report visualizzabile, esportare il report in un formato di file diverso e salvarlo o utilizzare la caratteristica di cronologia dei report per salvare versioni di report visualizzabili.  
@@ -31,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Per salvare un report in un server di report  
   
-1.  Dal pulsante Generatore report fare clic su **Salva**. Il **Salva con nome***\<elemento Report >* verrà visualizzata la finestra di dialogo.  
+1.  Dal pulsante Generatore report fare clic su **Salva**. Verrà visualizzata la finestra di dialogo **Salva con nome***\<Elemento del report>*.  
   
     > [!NOTE]  
     >  Se si sta salvando di nuovo un report, questo viene automaticamente risalvato nel relativo percorso precedente. Utilizzare l'opzione Salva con nome per modificare il percorso.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Per salvare un report con un altro nome  
   
-1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Il **Salva con nome***\<elemento Report >* verrà visualizzata la finestra di dialogo.  
+1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Verrà visualizzata la finestra di dialogo **Salva con nome***\<Elemento del report>*.  
   
 2.  Passare al percorso del server di report o alla condivisione file in cui si desidera salvare il report.  
   
@@ -58,7 +57,6 @@ ms.lasthandoff: 08/09/2017
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Esportare un Report in un altro tipo di File &#40; Generatore report e SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   
-

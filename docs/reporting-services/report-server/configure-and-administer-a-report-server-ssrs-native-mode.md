@@ -1,5 +1,5 @@
 ---
-title: "Configurare e amministrare un Server di Report (modalità nativa SSRS) | Documenti Microsoft"
+title: "Configurare e amministrare un server di report (modalità nativa SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - components [Reporting Services], configuring
 - configuring servers [Reporting Services]
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3896805cf0fef4e5819aa9b127121e1e812c346
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5e86690f19f706ea6c1a499677ff7e7db302ad80
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurare e amministrare un server di report (modalità nativa SSRS)
   In questo argomento vengono riepilogati gli approcci disponibili per la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È inoltre incluso un elenco di argomenti che illustrano come configurare componenti, caratteristiche specifiche o del server. Per configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile:  
@@ -64,9 +63,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vedere anche  
  [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Reporting Services di Configuration Manager &#40; Modalità nativa &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
   
   
-

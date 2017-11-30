@@ -1,7 +1,6 @@
 ---
-title: Configurare un Firewall per l'accesso al Server di Report | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Configurare un firewall per l'accesso al server di report | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4ea69363565456fda2c1adc7d48d60c6a0bef8f7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9954ce3ea11c4925dc5c99f13ccafd12e602d5c6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alle applicazioni del server di report e ai report pubblicati si accede tramite URL che specificano un indirizzo IP, una porta e una directory virtuale. Se Windows Firewall è abilitato, la porta configurata per l'utilizzo da parte del server di report è probabilmente chiusa. La visualizzazione di una pagina vuota quando si cerca di aprire **Gestione report** da un computer client remoto oppure dopo la richiesta di un report indica che una porta potrebbe essere chiusa.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Fare clic su **Regole connessioni in entrata**.  
   
-4.  Fare clic su **nuova regola** nel **azioni** finestra**.**  
+4.  Fare clic su **Nuova regola** nella finestra **Azioni****.**  
   
 5.  Fare clic su **Tipo di regola** in **Porta**.  
   
@@ -78,16 +76,15 @@ ms.lasthandoff: 08/09/2017
 16. Riavviare il computer.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Dopo avere aperto la porta e prima di verificare che gli utenti remoti possano accedere al server di report sulla porta aperta, è necessario concedere accesso utente al server di report tramite assegnazioni di ruolo in Home e a livello di sito. Pur aprendo correttamente una porta, è possibile che le connessioni del server di report non vengano effettuate se gli utenti non dispongono di autorizzazioni sufficienti. Per ulteriori informazioni, vedere [concedere l'accesso utente a un Server di Report &#40; Gestione report &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea.  
+ Dopo avere aperto la porta e prima di verificare che gli utenti remoti possano accedere al server di report sulla porta aperta, è necessario concedere accesso utente al server di report tramite assegnazioni di ruolo in Home e a livello di sito. Pur aprendo correttamente una porta, è possibile che le connessioni del server di report non vengano effettuate se gli utenti non dispongono di autorizzazioni sufficienti. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- È inoltre possibile verificare che la porta sia aperta correttamente avviando Gestione report in un computer diverso. Per ulteriori informazioni, vedere [gestione Report &#40; Modalità nativa SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea.  
+ È inoltre possibile verificare che la porta sia aperta correttamente avviando Gestione report in un computer diverso. Per altre informazioni, vedere [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurare gli URL di Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Creare un database del Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Configurare Account di servizio del Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Gestire un Server di Report di Reporting Services in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Gestire un server di report in modalità nativa di Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
-

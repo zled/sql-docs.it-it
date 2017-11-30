@@ -1,5 +1,5 @@
 ---
-title: Generare feed di dati da un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Generare i feed di dati da un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8a7c1175f67ba636a71d6afa42679c45b5295ea2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generare i feed di dati da un report (Generatore report e SSRS)
 
-È possibile generare feed di dati conformi ad Atom dai report impaginati e quindi utilizzare i feed di dati nelle applicazioni, ad esempio Power Pivot, o Power BI, che può utilizzare dati feed.  
+È possibile generare feed di dati conformi ad Atom da report impaginati e usarli in applicazioni in cui sono supportati, ad esempio Power Pivot o Power BI.  
   
  Tramite l'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene generato un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report. Nel documento è elencato almeno un feed di dati per ogni area dati nel report. A seconda del tipo di area dati e dei dati in essa visualizzati, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] potrebbe generare più feed di dati da un'area dati.  
   
@@ -93,5 +91,4 @@ ms.lasthandoff: 08/09/2017
 
 [Esportare report](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

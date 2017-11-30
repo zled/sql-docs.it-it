@@ -1,5 +1,5 @@
 ---
-title: Formattazione della legenda in un grafico (Generatore Report e SSRS) | Documenti Microsoft
+title: Formattazione della legenda in un grafico (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -28,22 +28,21 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bae3ff2a5111c020fdfaa20c3c3e4fc0d905558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-legend---formatting-report-builder"></a>Legenda del grafico - formattazione (Generatore Report)
+# <a name="chart-legend---formatting-report-builder"></a>Legenda del grafico - Formattazione (Generatore report)
   Nella legenda del grafico sono contenute le descrizioni per ogni categoria del grafico. In una legenda sono contenuti sempre uno o più elementi, ciascuno dei quali è costituito da una casella colorata che rappresenta la serie e da una stringa di testo che la descrive, come indicato nell'illustrazione seguente.  
   
- ![Diagramma di una legenda del grafico](../../reporting-services/report-design/media/rs-legenddiagram.gif "diagramma di una legenda del grafico")  
+ ![Legenda del grafico](../../reporting-services/report-design/media/rs-legenddiagram.gif "Legenda del grafico")  
   
  Un elemento della legenda è collegato a una singola serie nel grafico, ad eccezione dei grafici con forme in cui la legenda è collegata a punti dati singoli. Nel grafico vengono aggiunti automaticamente elementi alla legenda in base alla serie generata dai dati inseriti dall'utente.  
   
@@ -86,12 +85,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà legenda, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
- [Modificare il testo di un elemento della legenda &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formattazione dei colori delle serie in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Nascondere elementi legenda nel grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Nascondere elementi legenda nel grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   
-

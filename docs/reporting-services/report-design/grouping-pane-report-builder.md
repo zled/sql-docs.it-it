@@ -1,5 +1,5 @@
 ---
-title: Riquadro di raggruppamento (Generatore Report) | Documenti Microsoft
+title: Riquadro di raggruppamento (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,45 +10,42 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10033"
-helpviewer_keywords:
-- Grouping Pane dialog box
+f1_keywords: "10033"
+helpviewer_keywords: Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f8017dd30a085519f9dd5d3593aaa3d59329f8c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3766308293310541636462adc6b44de34ca7d703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grouping-pane-report-builder"></a>Riquadro di raggruppamento (Generatore report)
   Nel riquadro Raggruppamento vengono visualizzati i gruppi di righe e di colonne dell'area dati Tablix selezionata. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore. Il riquadro Raggruppamento è costituito da un riquadro Gruppi di righe e da un riquadro Gruppi di colonne e include due modalità: predefinita e avanzata. Nella modalità predefinita è riportata una visualizzazione gerarchica dei membri dinamici dei gruppi di righe e di colonne. Nella modalità avanzata vengono visualizzati sia i membri dinamici che quelli statici dei gruppi di righe e di colonne. Un gruppo è un set di dati denominato che deriva da un set di dati del report visualizzato in un'area dati. I gruppi sono organizzati in gerarchie che includono membri statici e dinamici. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Se non viene visualizzato il riquadro Raggruppamento, scegliere **Mostra/Nascondi** dal menu **Visualizza** e fare clic su **Raggruppamento**.  
+>  Se non viene visualizzato il riquadro Raggruppamento, scegliere **Mostra/Nascondi** dal menu **Visualizza**e fare clic su **Raggruppamento**.  
   
  Le celle nelle aree dei gruppi di colonne e di righe possono essere membri statici o dinamici di un gruppo di righe o di colonne Tablix. I membri statici vengono ripetuti una volta per ogni gruppo e in genere contengono etichette o totali. I membri dinamici vengono ripetuti una volta per ogni istanza di gruppo e in genere contengono i valori univoci dell'espressione di raggruppamento. Quando si selezionano celle della Tablix nell'area dei gruppi di righe o di colonne, viene selezionato il membro di gruppo corrispondente nel riquadro Gruppi di righe o Gruppi di colonne. Viceversa, se si selezionano gruppi nel riquadro di raggruppamento, la cella corrispondente associata al membro del gruppo viene selezionata nell'area di progettazione. Per altre informazioni sulle aree dei gruppi di colonne e righe Tablix, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Il riquadro di raggruppamento supporta le modalità seguenti:  
   
--   **Valore predefinito.** Utilizzare la modalità predefinita per aggiungere, modificare o eliminare gruppi. È possibile aggiungere gruppi padre, figlio e gruppi di dettagli trascinando campi dal riquadro dei dati del report e inserendoli nella gerarchia dei gruppi. Per aggiungere un gruppo adiacente, è necessario usare il collegamento **Aggiungi gruppo**. Per altre informazioni, vedere [Aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Valore predefinito.** Utilizzare la modalità predefinita per aggiungere, modificare o eliminare gruppi. È possibile aggiungere gruppi padre, figlio e gruppi di dettagli trascinando campi dal riquadro dei dati del report e inserendoli nella gerarchia dei gruppi. Per aggiungere un gruppo adiacente, è necessario usare il collegamento **Aggiungi gruppo** . Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Avanzata**. Usare la **Modalità avanzata** per visualizzare tutti i membri dei gruppi di righe e di colonne e per impostare le proprietà sui membri statici. Quando si creano gruppi o si aggiungono totali, vengono impostate automaticamente le proprietà che controllano il rendering delle righe e delle colonne in ogni pagina del report nell'area dati Tablix. Per regolare manualmente queste proprietà, è necessario impostarle sul membro Tablix. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+-   **Avanzate**. Usare la **Modalità avanzata** per visualizzare tutti i membri dei gruppi di righe e di colonne e per impostare le proprietà sui membri statici. Quando si creano gruppi o si aggiungono totali, vengono impostate automaticamente le proprietà che controllano il rendering delle righe e delle colonne in ogni pagina del report nell'area dati Tablix. Per regolare manualmente queste proprietà, è necessario impostarle sul membro Tablix. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ## <a name="default-mode"></a>Modalità predefinita  
  Quando è attiva la modalità predefinita, nei riquadri Gruppi di righe e Gruppi di colonne è riportata una visualizzazione gerarchica di tutti i gruppi padre, i gruppi figlio e i gruppi adiacenti. Un gruppo figlio viene visualizzato in posizione rientrata rispetto al gruppo padre. Un gruppo adiacente viene visualizzato allo stesso livello di rientro dei gruppi di pari livello. Nella figura seguente viene illustrata un'area dati Tablix con gruppi di righe nidificati e gruppi di colonne nidificati e adiacenti.  
   
- ![Riga nidificato e adiacente e gruppi di colonne Tablix](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix, riga nidificato e adiacente e gruppi di colonne")  
+ ![Tablix, gruppi di righe e colonne annidate e adiacenti](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix, gruppi di righe e colonne annidate e adiacenti")  
   
  Nel riquadro di raggruppamento vengono visualizzati i gruppi di righe e di colonne corrispondenti. Nella figura seguente sono stati selezionati il gruppo basato sulla sottocategoria nel riquadro Gruppi di righe e la cella di raggruppamento [Subcat] nell'area dati Tablix:  
   
- ![Riquadro di raggruppamento per gruppi di righe e colonne nidificati](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "riquadro di raggruppamento per gruppi di righe e colonne nidificati")  
+ ![Riquadro di raggruppamento per gruppi di righe e colonne annidate](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e colonne annidate")  
   
  Nel riquadro Gruppi di righe il gruppo basato sulla sottocategoria è un figlio del gruppo basato sulla categoria. Nel riquadro Gruppi di colonne il gruppo Country/Region è un figlio del gruppo Geography. Il gruppo Year e i gruppi Country/Region sono gruppi adiacenti.  
   
@@ -86,8 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

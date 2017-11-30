@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi delle sottoscrizioni e recapito di Reporting Services | Documenti Microsoft
+title: Risolvere i problemi di sottoscrizioni e recapito di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Risolvere i problemi di sottoscrizioni e recapito di Reporting Services
   
@@ -52,7 +51,7 @@ I log di esecuzione sono visualizzazioni presenti nel database del server di rep
 Se si esegue un'applicazione di posta elettronica mediante il protocollo POP3 in Microsoft Windows Server 2003, potrebbe risultare impossibile inviare i report con il server POP3 locale. Se si configura il server di report per inviare messaggi di posta elettronica con il server POP3 locale e si crea una sottoscrizione per l'invio di un report, potrebbe essere visualizzato il messaggio di errore seguente:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-dove \<messaggio di errore > viene sostituito con informazioni sul messaggio di errore restituite da Collaboration Data Objects (CDO).  
+dove \<error message> viene sostituito da altre informazioni sul messaggio di errore restituite da Collaboration Data Objects (CDO).  
   
 ### <a name="to-resolve-this-problem"></a>Per risolvere il problema:  
 * Impostare su 1 il valore dell'elemento `SendUsing` nel file **Rsreportserver.config** .  
@@ -84,5 +83,4 @@ Per altre informazioni, vedere Wiki di TechNet [Troubleshoot issues and errors w
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

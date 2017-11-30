@@ -1,5 +1,5 @@
 ---
-title: Concedere l'accesso utente a un server di report | Documenti Microsoft
+title: Concedere l'accesso utente a un server di report | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Concedere l'accesso utente a un server di report
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
 
  **Server di report in modalità SharePoint** : per un server di report configurato per la modalità integrata SharePoint, l'accesso da un sito di SharePoint viene configurato mediante le autorizzazioni relative. I livelli di autorizzazione sul sito di SharePoint determinano l'accesso al contenuto e alle operazioni del server di report. Per concedere le autorizzazioni a un sito di SharePoint, è necessario disporre dei privilegi di amministratore. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Server di report in modalità nativa:** in questo argomento è incentrato su un server di report configurato per la modalità nativa e l'utilizzo del portale web per assegnare utenti a un ruolo. Sono disponibili due tipi di ruoli:
+ **Server di report in modalità nativa**: questo argomento riguarda un server di report configurato per la modalità nativa e l'uso del portale Web per assegnare utenti a un ruolo. Sono disponibili due tipi di ruoli:
 
 - Ruoli a livello di elemento, utilizzati per visualizzare, aggiungere e gestire contenuto del server di report, sottoscrizioni, elaborazione e cronologia dei report. I ruoli a livello di elemento vengono definiti per il nodo radice, ovvero la cartella Home, oppure per cartelle o elementi specifici nei livelli inferiori della gerarchia.
 
@@ -52,28 +51,28 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 - Per delegare questa attività ad altri utenti, creare assegnazioni di ruolo che eseguono il mapping degli account utente ai ruoli Gestione contenuto e Amministratore sistema. Gli utenti che dispongono di queste autorizzazioni possono aggiungere utenti a un server di report.
 
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]visualizzare i ruoli predefiniti per i ruoli a livello di sistema e i ruoli utente, in modo da acquisire familiarità con i tipi di attività previsti da ogni ruolo. Le descrizioni delle attività non sono visibili nel portale web, pertanto è consigliabile avere familiarità con i ruoli prima di iniziare l'aggiunta di utenti.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]visualizzare i ruoli predefiniti per i ruoli a livello di sistema e i ruoli utente, in modo da acquisire familiarità con i tipi di attività previsti da ogni ruolo. Poiché le descrizioni dell'attività non sono visibili nel portale Web, è necessario conoscere i ruoli prima di iniziare ad aggiungere utenti.
 
 - Facoltativamente, personalizzare i ruoli o definire ruoli aggiuntivi per includere la raccolta di attività necessarie. Se ad esempio si intende utilizzare impostazioni di sicurezza personalizzate per elementi singoli, è necessario creare una nuova definizione di ruolo che consenta di visualizzare le cartelle.
 
 ### <a name="to-add-a-user-or-group-to-a-system-role"></a>Per aggiungere un utente o un gruppo a un ruolo a livello di sistema
 
-1. Avviare il [portale web](../web-portal-ssrs-native-mode.md).
+1. Avviare il [portale Web](../web-portal-ssrs-native-mode.md).
 
-2. Selezionare il *icona dell'ingranaggio* in alto a destra.
+2. Selezionare l' *icona dell'ingranaggio* in alto a destra.
 
 3. Selezionare **Impostazioni sito**.
 
 4. Selezionare **Sicurezza**.
 
-5. Selezionare **Aggiungi gruppo o utente**.
+5. Fare clic su **Aggiungi gruppo o utente**.
 
-6. In **gruppo o utente**, immettere un utente di dominio di Windows o il gruppo di account nel formato: \<dominio >\\< account\>. 
+6. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>. 
 
     > [!NOTE]
     > Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
 
-7. Selezionare un ruolo del sistema, quindi **OK**.
+7. Selezionare un ruolo a livello di sistema e fare clic su **OK**.
 
     Poiché i ruoli sono cumulativi, se si seleziona sia Amministratore sistema che Utente sistema, un utente o un gruppo sarà in grado di eseguire le attività in entrambi ruoli.
 
@@ -81,31 +80,31 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>Per aggiungere un utente o un gruppo a un ruolo a livello di elemento
 
-1. Avviare il **portale web** e individuare l'elemento di report per cui si desidera aggiungere un utente o gruppo.
+1. Avviare il **portale Web** e trovare l'elemento del report per il quale si vuole aggiungere un utente o un gruppo.
 
-2. Selezionare il **...**  (puntini di sospensione) su un elemento.
+2. Selezionare **...** (puntini di sospensione) in corrispondenza di un elemento.
 
-3. Nel menu a discesa, selezionare **Gestisci**.
+3. Nel menu a discesa selezionare **Gestisci**.
 
 4. Selezionare **Sicurezza**.
 
-5. Selezionare **Aggiungi gruppo o utente**.
+5. Fare clic su **Aggiungi gruppo o utente**.
 
     > [!NOTE]
-    > Se un elemento eredita protezione da un elemento padre, selezionare **personalizzare sicurezza** nella barra degli strumenti per modificare le impostazioni di sicurezza. Selezionare quindi **Aggiungi gruppo o utente**.
+    > Se un elemento eredita le impostazioni di sicurezza da un elemento padre, selezionare **Personalizza sicurezza** sulla barra degli strumenti per modificare le impostazioni di sicurezza. Quindi selezionare **Aggiungi gruppo o utente**.
 
-6. In **gruppo o utente**, immettere un utente di dominio di Windows o il gruppo di account nel formato: \<dominio >\\< account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
+6. In **Gruppo o utente** immettere un account utente o gruppo di dominio Windows nel formato \<dominio>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.
 
-7. Selezionare uno o più definizioni di ruolo che descrivono come utente o gruppo deve accedere all'elemento e quindi selezionare **OK**.
+7. Selezionare una o più definizioni di ruolo per descrivere la modalità di accesso all'elemento consentita all'utente o al gruppo e quindi selezionare **OK**.
 
 8. Ripetere le operazioni per creare assegnazioni per utenti o gruppi aggiuntivi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Creare e gestire le assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Nuova assegnazione ruolo: Modifica pagina assegnazione di ruolo &#40; Gestione report &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Pagina delle proprietà sicurezza, gli elementi di &#40; Gestione report &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
+[Pagina Nuova assegnazione ruolo: Modifica assegnazione ruolo &#40;Modifica assegnazione ruolo&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Pagina delle proprietà sicurezza, Elementi&#40;Gestione report&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)   
 [Definizioni di ruolo](../../reporting-services/security/role-definitions.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

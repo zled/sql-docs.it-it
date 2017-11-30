@@ -1,5 +1,5 @@
 ---
-title: "Proprietà DatabaseQueryTimeout (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft"
+title: "Proprietà DatabaseQueryTimeout (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseQueryTimeout Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseQueryTimeout Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseQueryTimeout property
+helpviewer_keywords: DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 67505da58ea80c15c6029d849af594e63340e863
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c56a5f4102236affc6860aea200857509d4e2af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---databasequerytimeout"></a>Proprietà ConfigurationSetting - DatabaseQueryTimeout
+# <a name="configurationsetting-property---databasequerytimeout"></a>Proprietà di ConfigurationSetting - DatabaseQueryTimeout
   Specifica il numero di secondi di attesa prima che il server di report presuma che il comando non sia riuscito e che sia necessaria una quantità di tempo troppo elevata per l'esecuzione. Il server di report calcola il tempo di esecuzione della query rispetto al catalogo SQL e non rispetto a un'origine dati per il report. Proprietà di lettura/scrittura.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -56,4 +52,3 @@ public UInt32 DatabaseQueryTimeout;
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

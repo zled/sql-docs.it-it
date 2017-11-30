@@ -1,5 +1,5 @@
 ---
-title: "Impostare i parametri in un Report pubblicato - modalità integrata SharePoint | Documenti Microsoft"
+title: "Impostare i parametri in un report pubblicato - Modalità integrata SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,18 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57f464054989a20b56b729624d711b6520466d13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Impostare i parametri in un Report pubblicato - modalità integrata SharePoint
+# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Impostare i parametri in un report pubblicato - Modalità integrata SharePoint
   Un report con parametri è un report che accetta valori di input, che verranno utilizzati per filtrare i dati durante l'esecuzione del report. I parametri vengono definiti al momento della creazione del report. A seconda di come sono definiti i parametri nella definizione del report, un report può accettare un solo valore, più valori o valori dinamici, che cambiano in risposta a una selezione precedente. Se ad esempio si sceglie una categoria di prodotti, la selezione successiva dovrà essere un prodotto specifico di tale categoria. Un parametro può avere un valore predefinito, che può essere utilizzato per eseguire automaticamente una versione filtrata del report o essere sostituito da un altro valore.  
   
  Tali proprietà possono essere impostate nella definizione del report o dopo la pubblicazione di quest'ultimo. Sebbene sia possibile modificare alcune proprietà dei parametri in un report pubblicato per cambiare il valore e le proprietà di visualizzazione, non è possibile modificare il tipo di dati o il nome di un parametro. Il tipo di dati e il nome del parametro possono essere modificati solo dall'autore del report nella definizione di quest'ultimo.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
  Per impostare le proprietà dei parametri per un report pubblicato, è necessario disporre dell'autorizzazione Modifica elementi per il report. È possibile modificare alcune o tutte le proprietà dei parametri per un report che viene eseguito da un sito di SharePoint. Non è possibile personalizzare un report salvando una combinazione di valori dei parametri da utilizzare più volte. Tutti i valori predefiniti specificati vengono utilizzati da tutti gli utenti che aprono il report.  
   
- Se il report è incorporato in una web part Visualizzatore report configurata per visualizzare sempre tale report, impostare le proprietà nella web part Visualizzatore report. Per altre informazioni, vedere [Aggiungere la web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md).  
+ Se il report è incorporato in una web part Visualizzatore report configurata per visualizzare sempre tale report, impostare le proprietà nella web part Visualizzatore report. Per altre informazioni, vedere [Aggiungere la web part Visualizzatore di report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md).  
   
 ### <a name="to-run-a-parameterized-report"></a>Per eseguire un report con parametri  
   
@@ -91,4 +90,3 @@ ms.lasthandoff: 08/09/2017
  [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
-

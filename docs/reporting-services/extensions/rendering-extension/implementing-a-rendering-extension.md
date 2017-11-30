@@ -1,5 +1,5 @@
 ---
-title: Implementazione di un'estensione per il Rendering | Documenti Microsoft
+title: Implementazione di un'estensione per il rendering | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rendering extensions [Reporting Services]
 - custom rendering extensions [Reporting Services]
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - extensions [Reporting Services], rendering
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: c6be8db763c82a47d0635169f33a0f0543910abe
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 5c11ea9bc401fe1df849325758fbddeb867168dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementazione di un'estensione per il rendering
   Un'estensione per il rendering è un componente o un modulo di un server di report che consente di trasformare le informazioni sul layout e i dati del report in un formato specifico del dispositivo. SQL Server Reporting Services include sei estensioni per il rendering, ovvero HTML, Excel, Word, CSV o Text, XML, Image e PDF. È possibile creare estensioni per il rendering aggiuntive per generare report in altri formati.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/12/2017
 > [!NOTE]  
 >  Per determinare quali sono le estensioni per il rendering disponibili, è possibile visualizzare l'elenco delle estensioni installate nel file RSReportServer.config.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Panoramica delle estensioni per il rendering](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
  Vengono fornite informazioni introduttive per la scrittura di un'estensione per il rendering personalizzata per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -55,4 +53,3 @@ ms.lasthandoff: 08/12/2017
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

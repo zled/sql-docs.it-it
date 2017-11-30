@@ -1,5 +1,5 @@
 ---
-title: Creare, modificare ed eliminare le sottoscrizioni guidate dai dati | Documenti Microsoft
+title: Creare, modificare ed eliminare le sottoscrizioni guidate dai dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 0c9cdf45f989d471d7454914e7298bb504d20288
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-modify-and-delete-data-driven-subscriptions"></a>Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati
+# <a name="create-modify-and-delete-data-driven-subscriptions"></a>Creare, modificare ed eliminare le sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati è una sottoscrizione basata su query che recupera i valori dei dati utilizzati per l'elaborazione della sottoscrizione in fase di esecuzione. Quando la sottoscrizione viene attivata, viene elaborata una query per recuperare informazioni aggiornate su destinatari, opzioni di recapito di report, formati di rendering e impostazioni dei parametri. I risultati della query vengono combinati con la definizione della sottoscrizione per creare una sottoscrizione dinamica che utilizza i dati già gestiti dall'utente in un database dei dipendenti, un database dei clienti o altri database contenenti informazioni che possono essere utilizzate come dati del sottoscrittore.  
   
- Per creare una nuova sottoscrizione guidata dai dati o modificarne una esistente, utilizzare le pagine relative in Gestione report. Queste pagine consentono di eseguire in modo semplice i vari passaggi per la creazione o la modifica di una sottoscrizione. Per accedere a una sottoscrizione dopo averla creata, utilizzare la pagina Sottoscrizioni personali e l'elenco delle sottoscrizioni di un report. Per informazioni su come creare una sottoscrizione guidata dai dati, vedere [creare una sottoscrizione guidata dai dati &#40; Esercitazione su SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Per creare una nuova sottoscrizione guidata dai dati o modificarne una esistente, utilizzare le pagine relative in Gestione report. Queste pagine consentono di eseguire in modo semplice i vari passaggi per la creazione o la modifica di una sottoscrizione. Per accedere a una sottoscrizione dopo averla creata, utilizzare la pagina Sottoscrizioni personali e l'elenco delle sottoscrizioni di un report. Per informazioni su come creare una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  Contenuto dell'argomento:  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Fare clic sulla scheda **Sottoscrizioni** . In alternativa, fare clic sul collegamento **Sottoscrizioni personali** nella parte superiore di Gestione report.  
   
-3.  Selezionare la sottoscrizione che si desidera modificare. L'icona seguente indica una sottoscrizione guidata dai dati: ![icona sottoscrizione guidata dai dati](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "icona sottoscrizione guidata dai dati")  
+3.  Selezionare la sottoscrizione che si desidera modificare. L'icona seguente indica una sottoscrizione guidata dai dati: ![Icona della sottoscrizione guidata dai dati](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "Icona della sottoscrizione guidata dai dati")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Per modificare una sottoscrizione guidata dai dati esistente (modalità SharePoint)  
   
@@ -107,10 +107,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Pagina sottoscrizioni &#40; Gestione report &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Pagina sottoscrizioni personali &#40; Gestione report &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Pagina Sottoscrizioni &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Pagina Sottoscrizioni personali &#40;Gestione report&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

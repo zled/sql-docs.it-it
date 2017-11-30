@@ -1,50 +1,46 @@
 ---
-title: Creare un Report tabella semplice (esercitazione su SSRS) | Documenti Microsoft
+title: Creare un report tabella semplice (esercitazione su SSRS) | Microsoft Docs
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 658a882ae3c4e907e50b71a5b98137aa009ea4e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
 
-In questa esercitazione, si utilizza Progettazione Report in SQL Server Data Tools per creare un [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] impaginati report con una tabella, sulla base di  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  database. È inoltre possibile creare [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report con Generatore Report impaginati. 
+In questa esercitazione si usa Progettazione report in SQL Server Data Tools per creare un report impaginato [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una tabella a partire dal database **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**. È anche possibile creare report impaginati [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con Generatore Report. 
 
-Durante questa esercitazione, si verrà creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare e totale alcuni campi e visualizzare in anteprima il report.  
+L'esercitazione spiega come creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare e aggiungere totali ad alcuni campi e infine visualizzare il report in anteprima.  
   
 ## <a name="requirements"></a>Requisiti  
 Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Motore di database di SQL Server.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Motore di database di SQL Server.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] in modalità nativa.  
   
--   Database [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Per altre informazioni, vedere la pagina relativa ai [database di esempio AdventureWorks 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
+-   Database [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Per altre informazioni, vedere la pagina relativa ai [database di esempio AdventureWorks 2014](https://github.com/Microsoft/sql-server-samples/releases).  
   
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) con i componenti di "SQL Server Reporting Services" installati in modo che sia la finestra di progettazione di Report.    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) con i componenti di SQL Server Reporting Services installati, per avere Progettazione report.    
   
 Per il recupero dei dati dal database [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] è anche necessario avere autorizzazioni di sola lettura.
 
@@ -68,4 +64,3 @@ Per il recupero dei dati dal database [!INCLUDE[ssSampleDBAdventureworks2014_md]
 [Esercitazioni su Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

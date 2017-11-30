@@ -1,25 +1,24 @@
 ---
-title: Raggruppare i dati per colonne o righe in un report per dispositivi mobili | Reporting Services | Documenti Microsoft
+title: Raggruppare i dati in colonne o righe in un report per dispositivi mobili | Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: de6eddf3b9338ac15f5036c2065df2f82f0c9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Raggruppare i dati in colonne o righe in un report per dispositivi mobili | Reporting Services
 È possibile organizzare i dati per colonne o per righe in diversi tipi di grafici in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Seguire questa procedura dettagliata.
@@ -32,7 +31,7 @@ La procedura seguente usa una tabella di confronto dei totali con i dati simulat
 
 1. Trascinare un **grafico totali di confronto** dalla scheda **Layout** nell'area di progettazione e ingrandirlo.
 
-2. Selezionare la scheda **Dati** . Si noterà che la tabella SimulatedTable contiene una serie di colonne, da **Metrica1** a **Metrica5** e da **Confronto1** a **Confronto5**. 
+2. Selezionare la scheda **Dati** . Si noti che la tabella SimulatedTable contiene una serie di colonne, da **Metrica1** a **Metrica5** e da **Confronto1** a **Confronto5**. 
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
@@ -40,7 +39,7 @@ La procedura seguente usa una tabella di confronto dei totali con i dati simulat
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   Allo stesso modo per **serie di confronto** -- **Comparison1** tramite **Comparison5** sono selezionati.
+   Allo stesso modo, per il valore **Serie di confronto** --  vengono selezionate le colonne da **Confronto1** a **Confronto5**.
    
 4. Selezionare **Anteprima**.
 
@@ -52,7 +51,7 @@ La procedura seguente usa una tabella di confronto dei totali con i dati simulat
 
 6. Nella riquadro **Proprietà visive** della scheda **Layout** modificare il valore **Struttura dei dati** da **Per colonne** a **Per righe**.  
 
-7. Selezionare la scheda **Dati** . A questo punto la tabella SimulatedTable contiene una colonna **Categoria** oltre alle colonne **Metrica** e **Confronto** , con categorie dalla A alla E. 
+7. Selezionare la scheda **Dati** . A questo punto la tabella SimulatedTable contiene una colonna **Categoria** oltre alle colonne **Metrica** e **Confronto**, con categorie dalla A alla E. 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 

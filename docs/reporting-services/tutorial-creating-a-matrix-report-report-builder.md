@@ -1,27 +1,25 @@
 ---
-title: 'Esercitazione: Creazione di un Report matrice (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Creazione di un report tabella semplice (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
 In questa esercitazione viene illustrato come creare un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una matrice di dati di vendita di esempio in gruppi di righe e colonne nidificate. 
@@ -57,7 +55,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 5.  Scegliere **Avanti**.  
   
-6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: creazione di un Report tabella semplice &#40; Generatore report &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per informazioni sulla creazione di un'origine dati incorporata, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Scegliere **Avanti**.  
   
@@ -162,7 +160,7 @@ Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono vi
   
 2.  Premere CTRL e selezionare le nove celle contenenti `[Sum(Sales)]`.  
   
-3.  Nel **Home** scheda > **numero** > **valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
+3.  Nella scheda **Home** scegliere **Numero** > **Valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
     Se la lingua delle impostazioni locali è Inglese - Stati Uniti, il testo di esempio predefinito corrisponderà a [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
     
@@ -170,7 +168,7 @@ Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono vi
   
 4.  Fare clic sulla cella contenente `[SalesDate]`.  
   
-5.  Nel **numero** gruppo > **data**.  
+5.  Nel gruppo **Numero** > **Data**.  
   
     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
@@ -268,7 +266,7 @@ L'area dell'angolo si trova in corrispondenza dell'angolo superiore sinistro del
   
 5.  Fare clic con il pulsante destro del mouse nella cella unita e scegliere **Proprietà casella di testo**.  
   
-6.  Nel **bordo** scheda > **predefiniti** > **Nessuno**.
+6.  Nella scheda **Bordo** > **Bordi predefiniti** > **Nessuno**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +283,7 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 2.  Selezionare la casella di testo nella parte superiore del corpo del report contenente il testo **Fare clic per aggiungere il titolo**, quindi premere il tasto CANC.  
   
-3.  Nel **inserire** scheda > **intestazione** > **Aggiungi intestazione**.  
+3.  Nella scheda **Inserisci** > **Intestazione** > **Aggiungi intestazione**.  
   
     Nella parte superiore del corpo del report verrà aggiunta un'intestazione.  
   
@@ -335,7 +333,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 ## <a name="RotateTextBox"></a>9. (Facoltativo) Ruotare una casella di testo di 270 gradi  
 Al momento dell'esecuzione, un report con matrici può espandersi orizzontalmente e verticalmente. La rotazione verticale, o di 270 gradi, delle caselle di testo consente di risparmiare spazio orizzontale. Il report visualizzabile risulterà quindi più stretto e nel caso venga esportato in un formato quale Microsoft Word si adatterà con maggiore facilità alle dimensioni della pagina stampata.  
   
-Il testo in una casella di testo può inoltre essere visualizzato in senso orizzontale e verticale (dall'alto in basso). Per ulteriori informazioni, vedere [caselle di testo &#40; Generatore report e SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Il testo in una casella di testo può inoltre essere visualizzato in senso orizzontale e verticale (dall'alto in basso). Per altre informazioni, vedere [Caselle di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>Per ruotare una casella di testo di 270 gradi  
   
@@ -371,5 +369,4 @@ L'esercitazione sulla creazione di un report matrice è terminata. Per altre inf
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

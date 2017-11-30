@@ -1,12 +1,11 @@
 ---
-title: "Configurare una distribuzione con scalabilità orizzontale Server Report in modalità nativa | Documenti Microsoft"
+title: "Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,18 +13,17 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 39de4778d781c1d98c93b3ab802c0ca09d39eeb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa
 
   Reporting Services in modalità nativa supporta un modello di distribuzione con scalabilità orizzontale che consente di eseguire più istanze del server di report che condividono un singolo database del server di report. Le distribuzioni con scalabilità orizzontale vengono utilizzate per aumentare la scalabilità di server di report in modo che siano in grado di gestire più utenti simultanei e carichi di esecuzione di report maggiori. Distribuzioni di questo tipo possono essere utilizzate inoltre per dedicare server specifici all'elaborazione di report interattivi o pianificati  
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Utilizzare il programma di installazione per installare ogni istanza del server di report che verrà unita alla distribuzione con scalabilità orizzontale.  
   
-         Per evitare errori di compatibilità a livello di database al momento della connessione delle istanze del server al database condiviso, verificare che tutte le istanze abbiano la stessa versione. Ad esempio, se si crea il database del server di report utilizzando un'istanza di server di report di SQL Server 2016, tutte le altre istanze della stessa distribuzione devono essere SQL Server 2016.  
+         Per evitare errori di compatibilità a livello di database al momento della connessione delle istanze del server al database condiviso, verificare che tutte le istanze abbiano la stessa versione. Se, ad esempio, il database del server di report viene creato usando un'istanza del server di report di SQL Server 2016, anche tutte le altre istanze presenti nella stessa distribuzione dovranno essere istanze di SQL Server 2016.  
   
     -   Utilizzare Gestione configurazione di Reporting Services per connettere ogni server di report al database condiviso. È possibile connettersi e configurare un solo server di report alla volta.  
   
@@ -70,23 +68,23 @@ ms.lasthandoff: 08/09/2017
   
 1.  Installare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer che ospiterà i database del server di report. Installare almeno il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-2.  Se necessario, abilitare il server di report per le connessioni remote. In alcune versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni TCP/IP e Named Pipes remote non sono abilitate per impostazione predefinita. Per verificare se le connessioni remote sono consentite, utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e visualizzare le impostazioni di configurazione di rete dell'istanza di destinazione. Se l'istanza remota è anche un'istanza denominata, verificare che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia abilitato e in esecuzione nel server di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fornisce il numero di porta utilizzato per la connessione all'istanza denominata. 
+2.  Se necessario, abilitare il server di report per le connessioni remote. In alcune versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni TCP/IP e Named Pipes remote non sono abilitate per impostazione predefinita. Per verificare se le connessioni remote sono consentite, utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e visualizzare le impostazioni di configurazione di rete dell'istanza di destinazione. Se l'istanza remota è anche un'istanza denominata, verificare che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia abilitato e in esecuzione nel server di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fornisce il numero di porta usato per la connessione all'istanza denominata. 
 
 ## <a name="service-accounts"></a>Account di servizio
 
-Gli account del servizio utilizzati per l'istanza di Reporting Services sono importanti quando si lavora con una distribuzione con scalabilità orizzontale. È necessario eseguire uno dei seguenti quando si distribuisce le istanze di Reporting Services.
+Gli account del servizio usati per l'istanza di Reporting Services sono importanti quando si lavora con una distribuzione con scalabilità orizzontale. È necessario scegliere una delle opzioni seguenti durante la distribuzione delle istanze di Reporting Services.
 
-**Opzione 1:** tutte le istanze di Reporting Services deve essere configurate con lo stesso account utente di dominio per l'account del servizio.
+**Opzione 1:** tutte le istanze di Reporting Services devono essere configurate con lo stesso account utente di dominio per l'account del servizio.
 
-**Opzione 2:** ogni singolo account del servizio, account di dominio o non, è necessario concedere le autorizzazioni dbadmin all'interno dell'istanza di database di SQL Server che ospita il database del catalogo ReportServer.
+**Opzione 2:** a ogni singolo account del servizio, account di dominio o non di dominio, devono essere concesse le autorizzazioni dbadmin all'interno dell'istanza di database di SQL Server che ospita il database del catalogo ReportServer.
 
-Se è stata configurata una configurazione diversa rispetto a una delle opzioni precedenti, è possibile riscontrare errori intermittenti di modifica di attività con SQL Agent. Questa verrà visualizzata come un errore in entrambi i servizi Reporting del log e sul portale web quando si modifica una sottoscrizione report.
+Se è stata specificata una configurazione diversa dalle due opzioni precedenti, è possibile che si verifichino errori intermittenti delle attività di modifica con SQL Agent. Questi errori vengono visualizzati come errori nel log di Reporting Services e nel portale Web quando si modifica una sottoscrizione report.
 
 ```
 An error occurred within the report server database.  This may be due to a connection failure, timeout or low disk condition within the database.
 ``` 
 
-Il problema sarà intermittente è che solo il server che ha creato l'attività di SQL Agent disporrà dei diritti per visualizzare, eliminare o modificare l'elemento. Se si non effettua una delle opzioni precedenti, le operazioni riuscirà solo quando il servizio di bilanciamento del carico invia tutte le richieste per la sottoscrizione al server che ha creato l'attività di SQL Agent. 
+Il problema sarà intermittente perché solo il server che ha creato l'attività di SQL Agent disporrà dei diritti per visualizzare, eliminare o modificare l'elemento. Se non si sceglie una delle opzioni precedenti, le operazioni avranno esito negativo quando il servizio di bilanciamento del carico invia tutte le richieste per la sottoscrizione al server che ha creato l'attività di SQL Agent. 
   
 ## <a name="to-install-the-first-report-server-instance"></a>Per installare la prima istanza del server di report  
   
@@ -132,7 +130,7 @@ Il problema sarà intermittente è che solo il server che ha creato l'attività 
   
 2.  Fare clic su **Distribuzione con scalabilità orizzontale** per aprire la pagina Distribuzione con scalabilità orizzontale. Verranno visualizzate due voci, una per ciascuna istanza del server di report connessa al database del server di report. La prima istanza del server di report risulterà già unita. Il secondo server di report sarà identificato come "In attesa dell'unione". Se non viene visualizzata alcuna voce simile per la distribuzione, verificare di essere connessi al primo server di report già configurato e inizializzato per l'utilizzo del database del server di report.  
   
-     ![Schermata parziale della pagina distribuzione con scalabilità orizzontale](../../reporting-services/install-windows/media/scaloutscreen.gif "schermata parziale della pagina distribuzione con scalabilità orizzontale")  
+     ![Screenshot parziale della pagina Distribuzione con scalabilità orizzontale](../../reporting-services/install-windows/media/scaloutscreen.gif "Screenshot parziale della pagina Distribuzione con scalabilità orizzontale")  
   
 3.  Nella pagina Distribuzione con scalabilità orizzontale selezionare l'istanza del server di report in attesa dell'aggiunta alla distribuzione, quindi selezionare **Aggiungi server**.  
   
@@ -147,12 +145,12 @@ Il problema sarà intermittente è che solo il server che ha creato l'attività 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare un Account di servizio](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[Configurare un account del servizio](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [Configurare un URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Creare un database del Server di Report in modalità nativa](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Configurare gli URL di Server di Report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configurare una connessione di Database Server di Report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Aggiungere e rimuovere le chiavi di crittografia per la distribuzione con scalabilità orizzontale](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Gestire un Server di Report di Reporting Services in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[Creare un database del server di report in modalità nativa](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Configurare gli URL del server di report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configurare una connessione del database del server di report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+[Gestire un server di report in modalità nativa di Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

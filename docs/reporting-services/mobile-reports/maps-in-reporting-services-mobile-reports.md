@@ -1,26 +1,24 @@
 ---
-title: Mappe nei report di Reporting Services per dispositivi mobili | Documenti Microsoft
+title: Eseguire il mapping nei report di Reporting Services per dispositivi mobili | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Eseguire il mapping nei report di Reporting Services per dispositivi mobili
 Le mappe sono un ottimo modo per visualizzare dati geografici. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] include tre diversi tipi di viste mappa e mappe predefinite per i continenti e per alcuni paesi singoli. È anche possibile [caricare e usare mappe personalizzate](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -63,7 +61,7 @@ Per visualizzare i dati reali nella mappa, è necessario impostare i valori per 
   
 1. Selezionare la scheda **Dati** nell'angolo in alto a sinistra.  
   
-2. Selezionare **aggiungere dati**, quindi su **Excel locale** o **Server SSRS**.  
+2. Selezionare **Aggiungi dati**e quindi **Excel locale** o **Server SSRS**.  
   
    > **Suggerimento**: assicurarsi che i [dati siano in un formato adatto per i report per dispositivi mobili](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
@@ -85,8 +83,7 @@ Per visualizzare i dati reali nella mappa, è necessario impostare i valori per 
 8. Selezionare l'icona **Salva** nell'angolo in alto a sinistra e quindi selezionare **Salva in locale** nel computer o **Salva nel server**.  
   
 ### <a name="see-also"></a>Vedere anche  
--  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Esegue il mapping personalizzato nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Creare e pubblicare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

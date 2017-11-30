@@ -1,5 +1,5 @@
 ---
-title: "Utilità RSConfig (SSRS) | Documenti Microsoft"
+title: "Utilità rsconfig (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 47b99aefb0d115ba9310e6c2e53b1b6f261c3338
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsconfig-utility-ssrs"></a>utilità rsconfig (SSRS)
   L'utilità **rsconfig** consente di crittografare e archiviare i valori relativi alle connessioni e agli account nel file RSReportServer.config. I valori crittografati includono le informazioni sulla connessione al database del server di report e i valori relativi agli account utilizzati per l'elaborazione automatica dei report.  
@@ -61,7 +60,7 @@ rsconfig {-?}
 |**-i**  *nomeistanza*|Obbligatorio in caso di utilizzo di istanze denominate.|Se per ospitare il database del server di report è stata usata un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , questo valore specifica l'istanza denominata.|  
 |**-d**  *nomedatabase*|Obbligatorio.|Specifica il nome del database del server di report.|  
 |**-a**  *metododiautenticazione*|Obbligatorio.|Specifica il metodo di autenticazione utilizzato dal server di report per la connessione al relativo database. I valori validi sono **Windows** o **SQL** . Questo argomento non supporta la distinzione tra maiuscole e minuscole.<br /><br /> **Windows** specifica che il server di report usa l'autenticazione di Windows.<br /><br /> **SQL** specifica che il server di report usa l'autenticazione di SQL Server.|  
-|**-u***[dominio\\] nome utente* |Obbligatorio con **-e** , facoltativo con **-c**.|Consente di specificare un account utente per la connessione al database del server di report o per l'account automatico.<br /><br /> Per **rsconfig -e**, questo argomento è obbligatorio. Deve essere un account utente di dominio.<br /><br /> Per **rsconfig -c** e **-a SQL**, questo argomento deve specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Per **rsconfig -c** e **-a Windows**, questo argomento può specificare un utente di dominio, un account predefinito o le credenziali dell'account del servizio. Se si specifica un account di dominio, specificare *dominio* e *nome utente* nel formato *dominio\nomeutente*. Se si utilizza un account predefinito, questo argomento è facoltativo. Se si desidera utilizzare le credenziali dell'account di servizio, omettere questo argomento.|  
+|**-u** *[dominio\\]nomeutente*|Obbligatorio con **-e** , facoltativo con **-c**.|Consente di specificare un account utente per la connessione al database del server di report o per l'account automatico.<br /><br /> Per **rsconfig -e**, questo argomento è obbligatorio. Deve essere un account utente di dominio.<br /><br /> Per **rsconfig -c** e **-a SQL**, questo argomento deve specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Per **rsconfig -c** e **-a Windows**, questo argomento può specificare un utente di dominio, un account predefinito o le credenziali dell'account del servizio. Se si specifica un account di dominio, specificare *dominio* e *nome utente* nel formato *dominio\nomeutente*. Se si utilizza un account predefinito, questo argomento è facoltativo. Se si desidera utilizzare le credenziali dell'account di servizio, omettere questo argomento.|  
 |**-p**  *password*|Obbligatorio se si specifica **-u** .|Specifica la password da usare con l'argomento *nomeutente* . Se per l'account non è necessaria una password, è possibile non specificare alcun valore per questo argomento. Per gli account di dominio questo valore supporta la distinzione tra maiuscole e minuscole.|  
 |**-t**|Facoltativa.|Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
@@ -128,13 +127,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare una connessione di Database Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurare l'Account di esecuzione automatica &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Archiviare i dati crittografati di Report Server &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Utilità di prompt dei comandi di Server di report &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Utilità della riga di comando del server di report &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

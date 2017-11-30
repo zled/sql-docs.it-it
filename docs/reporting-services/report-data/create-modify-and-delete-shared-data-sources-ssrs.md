@@ -1,5 +1,5 @@
 ---
-title: Creare, modificare ed eliminare origini dati condivise (SSRS) | Documenti Microsoft
+title: Creare, modificare ed eliminare origini dati condivise (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa6fb63a3766dc5f4f40a1a3891119c867b8aaf7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Creare, modificare ed eliminare origini dati condivise (SSRS)
   Un'origine dati condivisa è un set di proprietà di connessione dell'origine dati a cui è possibile fare riferimento in più report, modelli e sottoscrizioni guidate dai dati in esecuzione su un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Le origini dei dati condivise rappresentano una soluzione semplice per gestire proprietà dell'origine dati soggette a frequenti modifiche. Se un account utente o una password viene modificata o se si sposta il database in un server diverso, è possibile aggiornare le informazioni di connessione da una posizione centralizzata.  
@@ -47,7 +46,7 @@ Icona dell'origine dati condivisa
 |----------|-----------------|  
 |Nome|Un nome che identifica l'elemento all'interno della gerarchia di cartelle del server di report.|  
 |Description|Una descrizione che viene visualizzata con l'elemento in Gestione report quando si visualizza il contenuto della cartella.|  
-|Tipo di connessione|L'estensione per l'elaborazione dati utilizzata con l'origine dati. È possibile utilizzare solo estensioni per l'elaborazione dati distribuite sul server di report. Per ulteriori informazioni sulle estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [origini dati supportate da Reporting Services &#40; SSRS &#41; ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
+|Tipo di connessione|L'estensione per l'elaborazione dati utilizzata con l'origine dati. È possibile utilizzare solo estensioni per l'elaborazione dati distribuite sul server di report. Per altre informazioni sulle estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Stringa di connessione|La stringa di connessione per il database. Per altre informazioni e per visualizzare esempi di stringhe di connessione alle origini dati più frequenti, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo di credenziali|Specifica in che modo vengono ottenute le credenziali per la connessione e se devono essere utilizzate quando viene stabilita la connessione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
@@ -97,7 +96,7 @@ Icona dell'origine dati condivisa
   
 7.  Per **Stringa di connessione**specificare la stringa usata dal server di report per la connessione all'origine dati. È consigliabile evitare di specificare credenziali nella stringa di connessione.  
   
-     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -196,7 +195,7 @@ Icona dell'origine dati condivisa
   
     -   Selezionare **Richiedi credenziali** se si vuole che l'utente immetta le proprie credenziali ogni volta che esegue il report. Non selezionare questa opzione se si desidera pianificare una sottoscrizione o l'elaborazione di dati per il report.  
   
-    -   Selezionare **Credenziali archiviate** se si preferisce accedere ai dati usando un unico set di credenziali. Le credenziali vengono crittografate prima dell'archiviazione. È possibile selezionare opzioni che determinano la modalità di autenticazione delle credenziali archiviate. Selezionare Usa come credenziali di Windows se le credenziali archiviate appartengono all'account utente di Windows. Selezionare **Imposta contesto di esecuzione sull'account seguente** se si vuole impostare il contesto di esecuzione sul server di database. Nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER. Per ulteriori informazioni, vedere [SETUSER &#40; Transact-SQL &#41; ](../../t-sql/statements/setuser-transact-sql.md).  
+    -   Selezionare **Credenziali archiviate** se si preferisce accedere ai dati usando un unico set di credenziali. Le credenziali vengono crittografate prima dell'archiviazione. È possibile selezionare opzioni che determinano la modalità di autenticazione delle credenziali archiviate. Selezionare Usa come credenziali di Windows se le credenziali archiviate appartengono all'account utente di Windows. Selezionare **Imposta contesto di esecuzione sull'account seguente** se si vuole impostare il contesto di esecuzione sul server di database. Nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER. Per altre informazioni, vedere [SETUSER &#40;Transact-SQL&#41;](../../t-sql/statements/setuser-transact-sql.md).  
   
     -   Selezionare **Credenziali non necessarie** se si preferisce specificare le credenziali nella stringa di connessione o eseguire il report usando un account con privilegi minimi configurato nel server di report. Se questo account non è configurato nel server di report, verrà visualizzato un messaggio di richiesta delle credenziali ed eventuali operazioni pianificate definite per il report non verranno eseguite.  
   
@@ -237,12 +236,11 @@ Icona dell'origine dati condivisa
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Gestire origini dati del Report](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Pagina delle proprietà origini dati &#40; Gestione report &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Creare, eliminare o modificare un'origine dati condivisa &#40; Gestione report &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurare le proprietà di origine dati per un Report &#40; Gestione report &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Servizio di Reporting Services SharePoint e applicazioni di servizio | Documenti Microsoft
+title: Servizio SharePoint di Reporting Services e applicazioni di servizio | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,27 +14,26 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 3b0351819369c0c17a5f97318b1132c69ec71432
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f46395b33312f778b202c166870cf53d8da8012f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="reporting-services-sharepoint-service-and-service-applications"></a>Servizio di Reporting Services SharePoint e applicazioni di servizio
+# <a name="reporting-services-sharepoint-service-and-service-applications"></a>Servizio SharePoint di Reporting Services e applicazioni di servizio
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Reporting Services in modalità SharePoint è basata sull'architettura del servizio SharePoint e prevede l'utilizzo di un servizio di SharePoint e uno per molte applicazioni di servizio. Creando un'applicazione di servizio si rende disponibile il servizio e si genera il database dell'applicazione di servizio. È possibile creare più applicazioni di servizio Reporting Services, tuttavia un'unica applicazione di servizio è sufficiente per la maggior parte degli scenari di distribuzione.  
+  La modalità SharePoint di Reporting Services è basata sull'architettura del servizio SharePoint e prevede l'uso di un servizio SharePoint e di applicazioni di servizio uno-a-molti. Creando un'applicazione di servizio si rende disponibile il servizio e si genera il database dell'applicazione di servizio. È possibile creare più applicazioni di servizio Reporting Services, tuttavia un'unica applicazione di servizio è sufficiente per la maggior parte degli scenari di distribuzione.  
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
 ## <a name="creating-a-reporting-services-service-application"></a>Creazione di un'applicazione di servizio Reporting Services
 
- È possibile utilizzare Amministrazione centrale SharePoint o script di PowerShell per creare le applicazioni di servizi di Reporting Services. Per ulteriori informazioni sull'utilizzo di amministrazione centrale SharePoint, vedere la sezione "Creare un servizio applicazione di Reporting Services" in [installare Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Per uno script di PowerShell di esempio per la creazione di applicazioni di servizio, vedere la sezione relativa a PowerShell più avanti in questo argomento.  
+ Per creare applicazioni di servizio Reporting Services, è possibile usare Amministrazione centrale SharePoint o script di PowerShell. Per altre informazioni sull'uso di Amministrazione centrale SharePoint, vedere la sezione "Creare un'applicazione di servizio Reporting Services" in [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Per uno script di PowerShell di esempio per la creazione di applicazioni di servizio, vedere la sezione relativa a PowerShell più avanti in questo argomento.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Modifica delle associazioni dell'applicazione di servizio con un gruppo di proxy
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  Nella pagina Associazioni applicazione di servizio modificare la visualizzazione in **Applicazioni di servizio**.  
   
-3.  Individuare e fare clic sul nome della nuova applicazione di servizio Reporting Services. È possibile fare clic anche sull' **impostazione predefinita** del nome del gruppo proxy di applicazione per aggiungere il proxy per impostare il gruppo piuttosto che completare i passaggi seguenti.  
+3.  Trovare e fare clic sul nome della nuova applicazione di servizio Reporting Services. È possibile fare clic anche sull' **impostazione predefinita** del nome del gruppo proxy di applicazione per aggiungere il proxy per impostare il gruppo piuttosto che completare i passaggi seguenti.  
   
 4.  Nella casella di selezione **Modifica il gruppo di connessioni seguente** scegliere **Personalizza**.  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 10/06/2017
   
 3.  Nella barra multifunzione relativa alle applicazioni di servizio fare clic su **Proprietà**.  
   
-## <a name="create-a-reporting-services-service-application-using-powershell"></a>Creare un'applicazione di servizio Reporting Services utilizzando PowerShell
+## <a name="create-a-reporting-services-service-application-using-powershell"></a>Creare un'applicazione di servizio Reporting Services usando PowerShell
 
  È possibile utilizzare PowerShell per creare l'applicazione di servizio e il proxy. Nell'esempio sottostante si presuppone che si conosca quale pool di applicazioni si desidera configurare affinché venga utilizzato dall'applicazione di servizio.  
   
@@ -90,4 +89,3 @@ ms.lasthandoff: 10/06/2017
 |Eseguire il backup e il ripristino dell'applicazione di servizio e dei componenti correlati, quali chiavi di crittografia e proxy.|[Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

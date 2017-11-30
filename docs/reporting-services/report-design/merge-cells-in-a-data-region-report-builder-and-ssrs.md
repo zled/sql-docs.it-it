@@ -1,5 +1,5 @@
 ---
-title: Unione di celle in un'area dati (Generatore Report e SSRS) | Documenti Microsoft
+title: Merge Cells in a Data Region (Report Builder and SSRS) (Unire le celle in un'area dati (Generatore report e SSRS)) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c643b94c86109a99e1448093b4b9744924fcd7f7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 967d5771d1c6a718771fd19080d8b6f508af2f78
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Unire le celle in un'area dati (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile unire celle in un'area dati per combinare più celle, migliorare l'aspetto dell'area dati oppure consentire l'espansione delle etichette per gruppi di colonne e di righe.  
@@ -41,10 +40,9 @@ Le celle possono essere unite solo all'interno delle singole aree di un'area dat
   
 ## <a name="see-also"></a>Vedere anche  
 [Area dati Tablix](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
- [Tabelle &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Creare una matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Creare fatture e moduli con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
 [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Report ExecutionLog Server e la vista ExecutionLog3 | Documenti Microsoft
+title: Vista ExecutionLog ed ExecutionLog3 del server di report | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ccd6c7081233b6d677ad366e7796a03b01d5e13e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Vista ExecutionLog ed ExecutionLog3 del server di report
   Il log di esecuzione del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]include informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
@@ -380,9 +379,8 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|Numero di righe restituite dalle query.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attivare eventi di Reporting Services per il log di traccia SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
- [Servizi file di Log e origini di Reporting](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Errori e gli eventi riferimento &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

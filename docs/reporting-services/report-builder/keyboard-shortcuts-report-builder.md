@@ -1,5 +1,5 @@
 ---
-title: Tasti di scelta rapida (Generatore Report) | Documenti Microsoft
+title: Tasti di scelta rapida (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f8a493830a49bbd083fdea72aa215bd2d084c9a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tasti di scelta rapida (Generatore report)
   Quando si crea e modifica un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Generatore report è possibile usare tutti i tasti di scelta rapida per la navigazione disponibili nell'ambiente Windows, nonché scegliere tra diversi schemi di mappatura della tastiera standard.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Visualizzazione di progettazione di report &#40; Generatore report &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glossario &#40; Generatore report &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Glossario &#40;Generatore report&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

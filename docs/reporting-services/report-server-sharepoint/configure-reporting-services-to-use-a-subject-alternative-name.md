@@ -1,5 +1,5 @@
 ---
-title: Configurare Reporting Services per utilizzare un nome alternativo del soggetto | Documenti Microsoft
+title: Configurare Reporting Services per usare un nome alternativo del soggetto | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,26 +14,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f1ead2884fe5826814d79e869c4c345cbf3d5b6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per utilizzare un nome alternativo del soggetto
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
 
-In questo argomento viene illustrato come configurare Reporting Services (SSRS) per utilizzare un nome alternativo del soggetto (SAN) modificando il file RSReportServer. config e usando lo strumento Netsh.exe.
+Questo argomento descrive come configurare Reporting Services (SSRS) in modo da usare un nome alternativo del soggetto (SAN) modificando il file rsreportserver.config e usando lo strumento Netsh.exe.
 
 Le istruzioni si applicano all'URL Reporting Service nonché all'URL servizio Web.
 
 Per usare un nome alternativo del soggetto, è necessario che il certificato SSL sia registrato nel server, firmato e che contenga la chiave privata. Non è possibile usare un certificato autofirmato.  
   
- Gli URL in Reporting Services possono essere configurati per utilizzare un certificato SSL. In genere, un certificato contiene solo un nome del soggetto che consente un solo URL per una sessione SSL (Secure Sockets Layer). La SAN è un campo aggiuntivo nel certificato che consente a un servizio SSL per l'ascolto per molti URL e di condividere la porta SSL con altre applicazioni. La SAN è simile `www.s2.com`.  
+ Gli URL in Reporting Services possono essere configurati per l'uso di un certificato SSL. In genere, un certificato contiene solo un nome del soggetto che consente un solo URL per una sessione SSL (Secure Sockets Layer). Il nome alternativo del soggetto è un campo aggiuntivo nel certificato che consente a un servizio SSL di essere in ascolto per molti URL nonché di condividere la porta SSL con altre applicazioni. Il nome alternativo del soggetto è simile a `www.s2.com`.  
   
- Per ulteriori informazioni sulle impostazioni SSL per Reporting Services, vedere [configurare connessioni SSL in un Server di Report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Per altre informazioni sulle impostazioni di SSL per Reporting Services, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurare SSRS per usare un nome alternativo del soggetto per l'URL del servizio web
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurare SSRS per usare un nome alternativo del soggetto per l'URL servizio Web
   
 1.  Avviare Gestione configurazione Reporting Services.  
   
@@ -47,7 +46,7 @@ Per usare un nome alternativo del soggetto, è necessario che il certificato SSL
   
 3.  Aprire il file rsreportserver.config.  
   
-     Per la modalità nativa di SSRS, il file si trova per impostazione predefinita nella cartella seguente:  
+     Per impostazione predefinita, nella modalità nativa di SSRS il file si trova nella cartella seguente:  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -55,7 +54,7 @@ Per usare un nome alternativo del soggetto, è necessario che il certificato SSL
   
 4.  Copiare la sezione URL del servizio Web ReportServer.  
   
-     Ad esempio, è la seguente sezione URL originale:  
+     Ad esempio, la sezione URL originale è:  
   
     ```  
         <URL>  
@@ -66,7 +65,7 @@ Per usare un nome alternativo del soggetto, è necessario che il certificato SSL
   
     ```  
   
-     La seguente sezione URL modificata è:
+     La sezione URL modificata è:
   
     ```  
     <URL>  
@@ -96,7 +95,7 @@ Per usare un nome alternativo del soggetto, è necessario che il certificato SSL
     Netsh>http  
     ```  
   
-8.  Mostrare gli urlacl esistenti digitando quanto segue:
+8.  Mostrare gli urlacl esistenti digitando il testo seguente:
   
     ```  
     Netsh http>show urlacl  
@@ -126,10 +125,9 @@ Per usare un nome alternativo del soggetto, è necessario che il certificato SSL
   
 ## <a name="see-also"></a>Vedere anche
 
- [File di configurazione Rsreportserver. config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Modificare un file di configurazione di Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configurare gli URL di Server di Report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Configurare gli URL del server di report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

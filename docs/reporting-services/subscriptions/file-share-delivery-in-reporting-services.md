@@ -1,5 +1,5 @@
 ---
-title: File Share Delivery in Reporting Services | Documenti Microsoft
+title: Recapito tramite condivisione file in Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,22 +14,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d0492a8bc9b5ef61e8ef8b1d237aac1f818abd5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite condivisione file che consente di recapitare un report a una cartella. L'estensione per il recapito tramite condivisione file è disponibile per impostazione predefinita e non richiede alcuna operazione di configurazione. Per fare in modo che il recapito dei file abbia esito positivo, è necessario impostare autorizzazioni di accesso in scrittura sulla cartella condivisa. L'account che richiede le autorizzazioni di scrittura può avere credenziali configurate nella sottoscrizione o un **account di condivisione file** configurato per il server di report. Per altre informazioni sull'account di condivisione file, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Inoltre, gli utenti che richiedono l'accesso ai report devono disporre di autorizzazioni in lettura per la cartella condivisa.  
   
- Per distribuire un report a una condivisione file, è necessario definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. Per informazioni su come utilizzare il recapito tramite condivisione file in una sottoscrizione guidata dai dati, vedere [creare una sottoscrizione guidata dai dati &#40; Esercitazione su SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). L'account che esegue sottoscrizioni con recapito tramite condivisione di file remote deve disporre dei diritti necessari per accedere in locale nel computer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Per distribuire un report a una condivisione file, è necessario definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. Per informazioni su come usare il recapito tramite condivisione file in una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). L'account che esegue sottoscrizioni con recapito tramite condivisione di file remote deve disporre dei diritti necessari per accedere in locale nel computer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
@@ -84,11 +83,10 @@ ms.lasthandoff: 08/09/2017
   
  L'immagine seguente riporta un esempio di impostazioni del file per una sottoscrizione configurata per il recapito della condivisione file.  
   
- ![sottoscrizione di condivisione di file](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "sottoscrizione di condivisione di file")  
+ ![Sottoscrizione per condivisione di file](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Sottoscrizione per condivisione di file")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Le impostazioni di sottoscrizione e un Account di condivisione di File &#40; Gestione configurazione &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   
-

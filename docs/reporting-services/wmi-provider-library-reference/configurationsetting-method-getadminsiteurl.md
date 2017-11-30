@@ -1,5 +1,5 @@
 ---
-title: Metodo GetAdminSiteUrl (WMI) | Documenti Microsoft
+title: Metodo GetAdminSiteUrl (WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetAdminSiteUrl method
+helpviewer_keywords: GetAdminSiteUrl method
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ae40992c6a864a73bb758a3ce336624917a68a96
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 934332c5316c67cca9b84a6a8643012269833c49
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---getadminsiteurl"></a>Metodo ConfigurationSetting - GetAdminSiteUrl
+# <a name="configurationsetting-method---getadminsiteurl"></a>Metodo di ConfigurationSetting - GetAdminSiteUrl
   Ottiene l'URL assoluto per il sito Web di Amministrazione centrale per la farm di Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] con la quale il server di report è integrato.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -56,4 +54,3 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  [Metodi di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
   
   
-

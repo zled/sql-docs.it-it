@@ -1,5 +1,5 @@
 ---
-title: "Esplorazione della flessibilità di un'area dati Tablix (Generatore Report e SSRS) | Documenti Microsoft"
+title: "Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2e6bf4a1dcb406f12eb212380fe09a546a982880
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e0be403fd6cb357449025c1440dd3e1d82da125e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , quando si aggiunge una tabella, una matrice o un'area dati elenco dalla scheda Inserisci sulla barra multifunzione, si può partire con un modello iniziale per un'area dati Tablix. La scelta iniziale del modello, tuttavia, non è vincolante. Per continuare a sviluppare la modalità di visualizzazione dei dati è possibile aggiungere o rimuovere caratteristiche dell'area dati Tablix quali gruppi, righe e colonne.  
   
- Quando si elimina un gruppo di righe o colonne, è possibile scegliere di eliminare le righe e le colonne utilizzate per visualizzare i valori del gruppo. È inoltre possibile aggiungere o rimuovere righe e colonne manualmente. Per informazioni sull'uso di righe e colonne per la visualizzazione di dati dettaglio e dei gruppi, vedere [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
+ Quando si elimina un gruppo di righe o colonne, è possibile scegliere di eliminare le righe e le colonne utilizzate per visualizzare i valori del gruppo. È inoltre possibile aggiungere o rimuovere righe e colonne manualmente. Per informazioni sull'uso di righe e colonne per la visualizzazione di dati dettaglio e dei gruppi, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
   
  Dopo avere modificato la struttura dell'area dati Tablix, è possibile impostare le proprietà per controllare la modalità di rendering dell'area dati nel report. È ad esempio è possibile ripetere intestazioni di colonna all'inizio di ogni pagina o mantenere un'intestazione di gruppo con il gruppo. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -42,7 +41,7 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
  Per impostazione predefinita, una matrice contiene gruppi di righe e di colonne, ma non gruppi dettagli. Per sostituire una matrice con una tabella, rimuovere i gruppi di colonne e aggiungere un gruppo dettagli da visualizzare nella riga di dettaglio. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) e [Aggiungere un gruppo dettagli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md).  
   
 ## <a name="changing-a-default-list-to-a-grouped-list"></a>Sostituzione di un elenco predefinito con un elenco con gruppi  
- Per impostazione predefinita, un elenco contiene righe di dettagli, ma non gruppi. Per modificare l'elenco in modo da utilizzare una riga di gruppo, rinominare il gruppo dettagli e specificare un'espressione di raggruppamento. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ Per impostazione predefinita, un elenco contiene righe di dettagli, ma non gruppi. Per modificare l'elenco in modo da utilizzare una riga di gruppo, rinominare il gruppo dettagli e specificare un'espressione di raggruppamento. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
 ## <a name="creating-stepped-displays"></a>Creazione di visualizzazioni con rientri  
  Per impostazione predefinita, quando si aggiungono gruppi a un'area dati Tablix, le celle presenti nell'area dell'intestazione del gruppo di righe visualizzano valori in colonne. In presenza di gruppi nidificati, ogni gruppo viene visualizzato in una colonna separata. Per creare una visualizzazione con rientri, rimuovere tutte le colonne di gruppo, ad eccezione di una, e formattare la colonna restante per visualizzare la gerarchia di gruppi come visualizzazione di testo rientrata. Per altre informazioni, vedere [Creazione di un report con rientri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
@@ -51,11 +50,10 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
  Per impostazione predefinita, il gruppo dettagli è il gruppo figlio più interno in una gerarchia di gruppi. Non è possibile nidificare un gruppo al di sotto del gruppo dettagli. È ad esempio possibile creare ulteriori gruppi dettagli adiacenti per visualizzare i primi cinque prodotti e gli ultimi cinque 5 prodotti per vendita. Grazie alla possibilità di aggiungere espressioni di filtro e ordinamento su ogni gruppo, possono essere mostrate due viste di dati dettaglio dello stesso set di dati in un'unica area dati Tablix. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md), [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) e [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Area dati Tablix &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Tabelle &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
   
   
-

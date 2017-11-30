@@ -1,5 +1,5 @@
 ---
-title: Esportazione in XML (Generatore Report e SSRS) | Documenti Microsoft
+title: Esportazione in XML (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 808305386a58360dc09ad17acfd4c3e519cc95f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Esportazione in XML (Generatore report e SSRS)
   L'estensione per il rendering XML restituisce un report impaginato in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, utilizzato come messaggio di dati XML o inviato a un'applicazione personalizzata.  
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
  L'elemento del report include anche le definizioni di spazi dei nomi XML e gli attributi di riferimento allo schema. Le variabili sono indicate in grassetto:  
   
- <**Report** xmlns = "**SchemaName**" xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;3aSchema % rc = true" nome = "ReportName" >  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  I valori delle variabili sono i seguenti:  
   
@@ -195,11 +194,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Il rendering elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

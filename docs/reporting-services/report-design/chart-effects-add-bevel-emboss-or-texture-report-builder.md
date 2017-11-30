@@ -1,5 +1,5 @@
 ---
-title: Aggiungere smussato, rilievo e trama stili a un grafico (Generatore Report e SSRS) | Documenti Microsoft
+title: Add Bevel, Emboss, and Texture Styles to a Chart (Aggiungere gli stili smussato, rilievo e trama a un grafico (Generatore report e SSRS)) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 204e67c4b1fb62e3e38188f155196d8edc095356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Effetti grafico - aggiungere smussato, rilievo, o dalla trama (Generatore Report)
+# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Effetti per i grafici - Aggiungere smussatura, rilievo o trama (Generatore report)
   Quando si utilizzano determinati tipi di grafico, è possibile specificare un effetto di disegno per aumentarne l'effetto visivo. Tali effetti vengono applicati solo alle serie, mentre non influiscono su altri elementi del grafico.  
   
  Quando si utilizza una variante di un grafico a torta o ad anello, è possibile specificare uno stile di disegno con contorni sfumati o concavo, simile agli effetti smussato o rilievo applicabili a un'immagine.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Non è possibile disporre di stili 3D e smussato o rilievo nello stesso grafico. Una volta abilitato lo stile 3D per il grafico, la proprietà PieDrawingStyle non verrà visualizzata.  
   
- ![Grafico a torta con stile di disegno concavo](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "grafico a torta con stile di disegno concavo")  
+ ![Grafico a torta con stile di disegno concavo](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Grafico a torta con stile di disegno concavo")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>Per aggiungere gli stili di trama a un grafico a barre o a un istogramma  
   
@@ -63,13 +62,12 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Non è possibile disporre di stili 3D e smussato o rilievo nello stesso grafico. Una volta abilitato lo stile 3D per il grafico, la proprietà PieDrawingStyle non verrà visualizzata.  
   
- ![Grafico a barre con effetto di disegno LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "grafico a barre con effetto di disegno LightToDark")  
+ ![Grafico a barre con effetto di disegno LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Grafico a barre con effetto di disegno LightToDark")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Istogrammi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Grafici a torta &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Grafici a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

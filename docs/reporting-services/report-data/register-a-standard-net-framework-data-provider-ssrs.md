@@ -1,5 +1,5 @@
 ---
-title: Registrare un Provider di dati Standard di .NET Framework (SSRS) | Documenti Microsoft
+title: Registrare un provider di dati .NET Framework standard (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 765da01c8f05b276e5f6e5cc4af55eb96fb5374c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
-  Per usare un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di terze parti per recuperare dati per un set di dati di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario distribuire e registrare l'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in due posizioni, ovvero nel client di creazione dei report e nel server di report. Nel client per la creazione del report, è necessario registrare il provider di dati come tipo di origine dei dati e associarlo a una finestra Progettazione query. Sarà quindi possibile selezionare il provider di dati come tipo di origine dei dati per la creazione di un set di dati di report. La finestra Progettazione query associata verrà aperta per consentire la creazione di query per il tipo di origine dei dati specifico. Nel server di report il provider di dati deve essere registrato come tipo di origine dei dati. Sarà quindi possibile elaborare i report pubblicati che recuperano i dati da un'origine mediante il provider di dati.  
+  Per usare un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di terze parti per recuperare dati per un set di dati di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è necessario distribuire e registrare l'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in due posizioni, ovvero nel client di creazione dei report e nel server di report. Nel client per la creazione del report, è necessario registrare il provider di dati come tipo di origine dei dati e associarlo a una finestra Progettazione query. Sarà quindi possibile selezionare il provider di dati come tipo di origine dei dati per la creazione di un set di dati di report. La finestra Progettazione query associata verrà aperta per consentire la creazione di query per il tipo di origine dei dati specifico. Nel server di report il provider di dati deve essere registrato come tipo di origine dei dati. Sarà quindi possibile elaborare i report pubblicati che recuperano i dati da un'origine mediante il provider di dati.  
   
- I provider di dati di terze parti possono non offrire tutte le funzionalità disponibili nelle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Per informazioni sull'estensione delle funzionalità di un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], provider di dati, vedere [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ I provider di dati di terze parti possono non offrire tutte le funzionalità disponibili nelle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Per informazioni sull'estensione della funzionalità di un[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provider di dati, vedere [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Per installare e registrare i provider di dati è necessario disporre di credenziali di amministratore.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>Per installare l'assembly di un provider di dati nel server di report  
   
-1.  Accedere al percorso predefinito della directory bin nel server di report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Il percorso predefinito della directory bin del server di report è  *\<unità >*: \Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
+1.  Accedere al percorso predefinito della directory bin nel server di report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito della directory bin del server di report è *\<unità>*:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
 2.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report. In alternativa, è possibile caricare l'assembly nella Global Assembly Cache (GAC). Per altre informazioni, vedere [Utilizzo di assembly e della Global Assembly Cache](http://go.microsoft.com/fwlink/?linkid=63912) nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK in MSDN.  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Per installare l'assembly di un provider di dati nel client di Progettazione report  
   
-1.  Accedere al percorso predefinito della directory PrivateAssemblies nel client di Progettazione report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Il percorso predefinito della directory PrivateAssemblies è  *\<unità >*: \Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Accedere al percorso predefinito della directory PrivateAssemblies nel client di Progettazione report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito di questa directory è *\<unità>*:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 2.  Copiare l'assembly dal percorso di gestione temporanea nella directory PrivateAssemblies del client di Progettazione report. In alternativa, è possibile caricare l'assembly nella Global Assembly Cache (GAC). Per altre informazioni, vedere [Utilizzo di assembly e della Global Assembly Cache](http://go.microsoft.com/fwlink/?linkid=63912) nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK in MSDN.  
   
@@ -201,13 +201,13 @@ ms.lasthandoff: 08/09/2017
 ## <a name="platform-considerations"></a>Considerazioni relative alla piattaforma  
  In una piattaforma a 64 bit (x64) [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene eseguito in modalità WOW a 32 bit. Quando si creano report su una piattaforma x64, per visualizzarne l'anteprima è necessario che i provider di dati a 32 bit siano installati nel client per la creazione di report. Se si pubblica il report sul medesimo sistema, per poterlo visualizzare in Gestione report saranno necessari i provider di dati x64.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è supportato per i sistemi con processore [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è supportato per le piattaforme con processore [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   
  Le estensioni per l'elaborazione dati installate con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere compilate in modo nativo per ogni piattaforma e installate nei percorsi corretti. Se si registra un provider di dati personalizzato o un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, sarà necessario compilarlo in modo nativo per la piattaforma appropriata e installarlo nei percorsi adeguati. Se si esegue una piattaforma a 32 bit, il provider di dati deve essere compilato per tale tipo di piattaforma. Se si esegue una piattaforma a 64 bit, il provider di dati deve essere invece compilato di conseguenza per tale tipo di piattaforma. Non è possibile utilizzare un provider di dati a 32 bit di cui è stato eseguito il wrapping con interfacce a 64 bit su una piattaforma a 64 bit. Per informazioni relative al funzionamento del provider di dati sulla piattaforma installata, vedere la documentazione del software di terze parti. Per altre informazioni sui provider di dati e sulle piattaforme supportate, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare e amministrare un Server di Report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Implementazione di un'estensione di elaborazione dei dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+ [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Sicurezza dall'accesso di codice in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
   

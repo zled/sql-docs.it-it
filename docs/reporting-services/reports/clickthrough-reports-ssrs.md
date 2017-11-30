@@ -1,5 +1,5 @@
 ---
-title: Report click-through (SSRS) | Documenti Microsoft
+title: Report click-through (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d38ad40a53843dbc1a1c636e37d3e4d9ada21b40
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clickthrough-reports-ssrs"></a>Report click-through (SSRS)
   Un report click-through è un report in cui vengono fornite informazioni dettagliate sui dati contenuti nel report principale. Il report click-through viene visualizzato quando l'utente fa clic sui dati interattivi visualizzati nel report principale. Questi report vengono generati automaticamente dal server di report. L'utente che progetta il modello può determinare gli elementi visualizzati nei report click-through impostando le proprietà **DefaultDetailAttribute** e **DefaultAggregateAttribute** assegnate a un'entità nel modello di report.  
@@ -39,12 +38,12 @@ ms.lasthandoff: 08/09/2017
 #### <a name="single-instance-templates"></a>Modelli a istanza singola  
  In un modello a istanza singola vengono visualizzati tutti gli attributi dell'entità di destinazione e tutti gli attributi di aggregazione predefiniti specificati per le entità correlate che presentano una relazione uno-a-molti rispetto all'entità di destinazione. Un modello a istanza singola è simile all'immagine seguente.  
   
- ![Molti a 1 report click-through. ] (../../reporting-services/reports/media/manytooneclickthrough.gif "Molti a 1 report click-through.")  
+ ![Report click-through molti-a-uno.](../../reporting-services/reports/media/manytooneclickthrough.gif "Report click-through molti-a-uno.")  
   
 #### <a name="multiple-instance-templates"></a>Modelli a più istanze  
  In un modello a più istanze vengono visualizzati solo gli attributi dettagli predefiniti dell'entità di destinazione e tutti gli attributi di aggregazione predefiniti specificati per le entità correlate che presentano una relazione uno-a-molti rispetto all'entità di destinazione. Un modello a più istanze è simile all'immagine seguente.  
   
- ![Molti a 1 report click-through. ] (../../reporting-services/reports/media/onetomanyclickthrough.gif "Molti a 1 report click-through.")  
+ ![Report click-through molti-a-uno.](../../reporting-services/reports/media/onetomanyclickthrough.gif "Report click-through molti-a-uno.")  
   
 ## <a name="customizing-clickthrough-reports"></a>personalizzazione di report click-through  
  Anziché utilizzare i modelli predefiniti generati dal server di report, è possibile creare un report in Generatore report, utilizzarlo come report click-through personalizzato, quindi collegarlo al modello come report drill-through in Gestione report.  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Collegare un report a un modello come report click-through](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   
-

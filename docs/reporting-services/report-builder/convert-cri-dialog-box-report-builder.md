@@ -1,5 +1,5 @@
 ---
-title: Convertire la finestra di dialogo personalizzati (Generatore Report) | Documenti Microsoft
+title: Finestra di dialogo per la conversione degli elementi del report personalizzati (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- "10008"
+f1_keywords: "10008"
 helpviewer_keywords:
 - CRI
 - custom report items
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37ba742708ded98cd5728a3051a2e7a76b9fa99f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aea5827557571b1b86d4246ce90c984c17d1ec32
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Finestra di dialogo per la conversione degli elementi del report personalizzati (Generatore report)
   In questo report sono contenuti elementi del report personalizzati con funzionalità non supportate. Gli elementi del report personalizzati sono estensioni del linguaggio RDL (Report Definition Language) che supportano gli oggetti personalizzati che consentono di visualizzare i dati in un report e contengono componenti della fase di progettazione e della fase di esecuzione resi disponibili dai fornitori di software di terze parti.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **No** Scegliere **No** se non si desidera convertire gli elementi del report personalizzati nel report. Gli elementi non possono essere visualizzati da Elaborazione report nella versione corrente. Se l'amministratore del sistema prevede di installare una nuova versione dell'elemento del report personalizzato del fornitore di software di terze parti compatibile con il nuovo formato di definizione del report, è necessario scegliere **No**. Fino a quando non diventano disponibili nuove versioni, gli elementi del report personalizzati vengono visualizzati nel report come una casella di testo vuota con una X rossa.  
   
- In entrambi i casi, il report viene aggiornato al nuovo formato di definizione di report e una copia di backup del report originale viene salvata come  *\<Nome Report >* `-` Backup.rdl. Se il report viene salvato nello strumento per la creazione dei report, in pratica viene salvato il report aggiornato nel nuovo formato di definizione del report. Se si pubblica il report, esso viene prima salvato nel computer, quindi pubblicato nel server di report. La versione aggiornata del report viene pubblicata nel server di report.  
+ In entrambi i casi, il report viene aggiornato al nuovo formato di definizione del report e una copia di backup del report originale viene salvata come *\<Nome report>* `-` Backup.rdl. Se il report viene salvato nello strumento per la creazione dei report, in pratica viene salvato il report aggiornato nel nuovo formato di definizione del report. Se si pubblica il report, esso viene prima salvato nel computer, quindi pubblicato nel server di report. La versione aggiornata del report viene pubblicata nel server di report.  
   
  Se non si salva il report, il report originale resta immutato. Non è tuttavia possibile modificare tale report in una versione successiva di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o in un ambiente di creazione di report in cui viene utilizzato questo formato di definizione del report. È possibile continuare a eseguire la versione originale del report caricandolo in un server di report [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o versioni successive tramite Gestione report. Per altre informazioni, vedere [Caricare un file o un report &#40;Gestione report&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/09/2017
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   
-

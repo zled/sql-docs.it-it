@@ -1,5 +1,5 @@
 ---
-title: Esportazione in un File PDF (Generatore Report e SSRS) | Documenti Microsoft
+title: Esportazione in un file PDF (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eac7c54b7b0c610af123a0822de11ddcc931a854
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Esportazione in un file PDF (Generatore report e SSRS)
   L'estensione per il rendering PDF consente di eseguire il rendering di un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 11.0 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. Per visualizzare o stampare i report in formato PDF è tuttavia necessario disporre di visualizzatori PDF, ad esempio Adobe Acrobat.  
   
- L'estensione per il rendering PDF supporta i caratteri ANSI ed è in grado di convertire i caratteri Unicode dalle lingue giapponese, coreana, cinese tradizionale, cinese semplificato, cirillico, ebraico e arabo con alcune limitazioni. Per ulteriori informazioni sulle limitazioni, vedere [esportazione di report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ L'estensione per il rendering PDF supporta i caratteri ANSI ed è in grado di convertire i caratteri Unicode dalle lingue giapponese, coreana, cinese tradizionale, cinese semplificato, cirillico, ebraico e arabo con alcune limitazioni. Per altre informazioni sulle limitazioni, vedere [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
  Il renderer PDF è un renderer di pagine fisiche e, pertanto, presenta un comportamento di paginazione diverso da quello di altri renderer, ad esempio HTML e Excel. In questo argomento vengono fornite informazioni specifiche sul renderer PDF e vengono descritte le eccezioni alle regole.  
   
@@ -109,11 +109,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Il rendering elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

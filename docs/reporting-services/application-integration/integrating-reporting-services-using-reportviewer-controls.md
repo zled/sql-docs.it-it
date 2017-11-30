@@ -1,5 +1,5 @@
 ---
-title: Integrazione di Reporting Services utilizzando i controlli ReportViewer | Documenti Microsoft
+title: Integrazione di Reporting Services tramite i controlli ReportViewer | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6247ce56394aff4f194bf9e452f36663a1112c80
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aca22faca7e80ef9fa509e934380f9168d156498
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls"></a>Integrazione di Reporting Services utilizzando i controlli ReportViewer
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio 2015 fornisce due controlli ReportViewer per l'integrazione di funzionalità nelle applicazioni di visualizzazione dei report. È disponibile una versione per le applicazioni basate su Windows Form e una per le applicazioni Web Form. Ogni controllo offre funzionalità simili, ma ognuno è progettato per un ambiente specifico. Entrambi i controlli possono elaborare i report distribuiti in un server di report (modalità di elaborazione remota) o sono stati copiati in un computer in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è stato installato (modalità di elaborazione locale).  
+# <a name="integrating-reporting-services-using-reportviewer-controls"></a>Integrazione di Reporting Services tramite i controlli ReportViewer
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 sono disponibili due controlli ReportViewer per l'integrazione delle funzionalità di visualizzazione dei report nelle applicazioni. È disponibile una versione per le applicazioni basate su Windows Form e una per le applicazioni Web Form. Ogni controllo offre funzionalità simili, ma ognuno è progettato per un ambiente specifico. Entrambi i controlli consentono di elaborare i report distribuiti in un server di report (modalità di elaborazione remota) o copiati in un computer in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è stato installato (modalità di elaborazione locale).  
   
  Il controllo ReportViewer non include il supporto integrato per l'adattamento dinamico ai diversi dispositivi con risoluzioni dello schermo diverse.  
   
@@ -46,13 +44,12 @@ ms.lasthandoff: 08/09/2017
 >  L'elenco di estensioni disponibili per il controllo ReportViewer quando l'esecuzione avviene in modalità di elaborazione remota dipende dall'edizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installata nel server di report.  
   
 ## <a name="local-processing-mode"></a>Modalità di elaborazione locale  
- La modalità di elaborazione locale offre un metodo alternativo per la visualizzazione e il rendering dei report quando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è installato. A differenza dell'elaborazione remota, nel controllo è disponibile solo un subset delle funzionalità fornite dal server di report. Nella modalità locale l'elaborazione dei dati non viene gestita dal controllo ma implementata dall'applicazione host. Tuttavia, l'elaborazione di report viene gestita dal controllo stesso. Nella modalità di elaborazione locale sono disponibili solo le estensioni per il rendering PDF, Excel, Word e Image.  
+ La modalità di elaborazione locale offre un metodo alternativo per la visualizzazione e il rendering dei report quando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è installato. A differenza dell'elaborazione remota, nel controllo è disponibile solo un subset delle funzionalità fornite dal server di report. Nella modalità locale l'elaborazione dei dati non viene gestita dal controllo ma implementata dall'applicazione host. L'elaborazione dei report viene tuttavia gestita dal controllo. Nella modalità di elaborazione locale sono disponibili solo le estensioni per il rendering PDF, Excel, Word e Image.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Integrazione di Reporting Services nelle applicazioni](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Utilizzo del controllo Web Form ReportViewer](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)   
- [Utilizzo del controllo Windows Form ReportViewer](../../reporting-services/application-integration/using-the-winforms-reportviewer-control.md)  
+ [Uso del controllo Web Form ReportViewer](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)   
+ [Uso del controllo Windows Form ReportViewer](../../reporting-services/application-integration/using-the-winforms-reportviewer-control.md)  
 
   
   
-

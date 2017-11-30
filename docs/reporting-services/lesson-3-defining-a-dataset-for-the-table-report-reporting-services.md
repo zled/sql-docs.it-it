@@ -1,28 +1,25 @@
 ---
-title: 'Lezione 3: Definizione di un set di dati per il Report di tabella (Reporting Services) | Documenti Microsoft'
+title: 'Lesson 3: Defining a Dataset for the Table Report (Reporting Services) (Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8fc3a1ba59c5b795720813a6018c50672ef1d66e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)
 Dopo aver definito l'origine dati, è necessario definire un set di dati. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]i dati utilizzati nei report sono contenuti in un *set di dati*. Un set di dati contiene un puntatore a un'origine dati e la query utilizzata dal report, nonché le variabili e i campi calcolati.  
@@ -86,5 +83,4 @@ In questo modo si è specificata una query che recupera i dati per il report. Il
   
   
   
-
 

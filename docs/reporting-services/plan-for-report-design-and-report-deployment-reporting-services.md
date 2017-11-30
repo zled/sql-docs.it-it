@@ -1,5 +1,5 @@
 ---
-title: Pianificare la distribuzione di report e Progettazione report | Reporting Services | Documenti Microsoft
+title: Pianificare la progettazione e la distribuzione di report | Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 7a70068f6dff7c2304a9faac5a85be10d6e1968b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Pianificare la progettazione e la distribuzione di report | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e la distribuzione di report impaginati. Viene illustrato come pianificare un ambiente di creazione di report e un server di report che interagiscono.
@@ -97,7 +96,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
 -   [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools per Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
+-   [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_reportviewer"></a> Controlli ReportViewer  
  Un controllo ReportViewer di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] può visualizzare un report con estensione RDLC in modalità di anteprima locale o in modalità remota, il controllo può visualizzare un file con estensione RDL ospitato in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nella tabella seguente è riportato l'elenco delle versioni di RDL supportate dai controlli ReportViewer per l'elaborazione locale (con estensione RDLC). Il supporto RDL lato server è riepilogato nella sezione [Server di report e supporto dello schema RDL](#bkmk_report_server_rdl_schema_support).  
@@ -121,4 +120,3 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
-

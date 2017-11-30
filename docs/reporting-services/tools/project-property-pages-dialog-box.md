@@ -1,5 +1,5 @@
 ---
-title: "Finestra di dialogo Pagine delle proprietà del progetto | Documenti Microsoft"
+title: "Finestra di dialogo Pagine delle proprietà del progetto | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.rpt.rptdesigner.projectpropertypages.general.f1
-helpviewer_keywords:
-- Project Property Pages dialog box
+f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62b7abef277143c52d2431e97420812b595347d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="project-property-pages-dialog-box"></a>pagine delle proprietà del progetto - finestra di dialogo
 
-  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo dal **progetto** menu, fare clic su  *\<nome progetto Report >***proprietà**.  
+  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo, dal menu **Progetto** scegliere *\<Nome report progetto>***Proprietà**.  
   
  Dopo aver definito le proprietà di configurazione, è possibile selezionare una configurazione nell'elenco a discesa **Configurazioni soluzione** sulla barra degli strumenti.  
 
@@ -93,8 +89,7 @@ ms.lasthandoff: 08/09/2017
 
 [Pubblicazione di report](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [Pubblicare un report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[Impostare le proprietà di distribuzione &#40; Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Guida sensibile al contesto di Progettazione report](../../reporting-services/tools/report-designer-f1-help.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: Ordinare i dati in un'area dati (Generatore Report e SSRS) | Documenti Microsoft
+title: Ordinamento dei dati in un'area dati (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1bd8061755f4dbacdf16106ecca5e7a22b1101e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordinamento dei dati in un'area dati (Generatore report e SSRS)
   Per modificare l'ordinamento dei dati in un'area dati quando si esegue un report per la prima volta, è necessario impostare l'espressione di ordinamento nel gruppo o nell'area dati. Per impostazione predefinita, l'espressione di ordinamento per un gruppo viene impostata automaticamente su un valore identico a quello dell'espressione di raggruppamento.  
@@ -125,17 +124,16 @@ ms.lasthandoff: 08/09/2017
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   
-    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione**A-Z** consente di disporre l'espressione in ordine crescente. L'opzione **Z-A** consente di disporre l'espressione in ordine decrescente.  
+    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione**A-Z** consente di disporre l'espressione in ordine crescente. L'opzione**Z-A** consente di disporre l'espressione in ordine decrescente.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- Per altre informazioni sul raggruppamenti dei dati in un misuratore, vedere [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
+ Per altre informazioni sul raggruppamento dei dati in un misuratore, vedere [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formattazione delle etichette dell'asse in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Specificare colori coerenti in più grafici con forme &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Specificare i colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
   
-

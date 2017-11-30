@@ -1,30 +1,61 @@
 ---
 title: Log delle modifiche per SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 64583be5bd94e71a52b894c5babd3d29107c56dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
 Questo log delle modifiche è per [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Per i post dettagliati sulle novità e le modifiche, vedere il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT per Visual Studio 2017 (anteprima della versione 15.4.0)
+Numero di build: 14.0.16134.0
+  
+### <a name="whats-new"></a>Novità
+
+Questa versione offre un programma di installazione Web autonoma per progetti relativi a database di SQL Server, Analysis Services, Reporting Services e Integration Services in Visual Studio 2017 15.4 o versioni successive.
+
+### <a name="installer"></a>Programma di installazione
+
+- Consente di impostare un nome alternativo quando si installa una nuova istanza di SSDT per Visual Studio 2017.
+- Consente di nascondere le caselle di controllo per la selezione delle funzionalità del programma di installazione se non è selezionata alcuna istanza di Visual Studio.
+- Consente di perfezionare alcuni messaggi del programma di installazione in base ai suggerimenti dei clienti.
+- Corregge il problema del mancato supporto dell'aggiornamento da parte del programma di installazione.
+
+
+### <a name="ssis"></a>SSIS
+
+- Corregge il problema dell'impossibilità di elencare le origini dati nell'importazione/esportazione guidata se è installato il Feature Pack di Azure.
+- Corregge il problema della generazione di un'eccezione durante la modifica di un'attività di processo di SSIS Analysis Services mentre si passa a un'altra connessione.
+- Corregge il problema dell'interruzione dei componenti CDC dopo l'applicazione della correzione di SQL che aggiunge la colonna __$command_id.
+- Corregge il problema dell'impossibilità di modificare ed eseguire un pacchetto di terze parti se la destinazione è una versione precedente di SQL Server.
+- Corregge il problema della visualizzazione non corretta della finestra di dialogo di configurazione Origine file flat se si fa doppio clic su DTSWizard.exe e si seleziona Origine file flat.
+- Corregge il problema dell'impossibilità di eseguire un pacchetto contenente un'attività o un componente di Azure Feature Pack se la destinazione è SQL Server 2017.
+
+
+**Problemi noti**
+
+- Il programma di installazione non è localizzato.
+- L'attività di esecuzione pacchetti SSIS non supporta il debug quando *ExecuteOutOfProcess* è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 per Visual Studio 2015
 Numero di build: 14.0.61709.290
@@ -550,4 +581,3 @@ Numero di build: 14.0.60525.0
 [Novità di Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
 [Novità di Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
-

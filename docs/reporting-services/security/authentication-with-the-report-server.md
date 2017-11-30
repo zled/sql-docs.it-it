@@ -1,5 +1,5 @@
 ---
-title: L'autenticazione con il Server di Report | Documenti Microsoft
+title: Autenticazione con il server di report | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -17,21 +17,19 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="authentication-with-the-report-server"></a>Autenticazione con il server di report
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) rispetto al server di report offre molte opzioni configurabili per l'autenticazione di utenti e applicazioni client. Per impostazione predefinita, il server di report utilizza l'autenticazione integrata di Windows e presuppone la presenza di relazioni attendibili per cui le risorse client e quelle di rete si trovano nello stesso dominio trusted. A seconda della topologia di rete e delle esigenze specifiche dell'organizzazione, è possibile personalizzare il protocollo di autenticazione usato per l'autenticazione integrata di Windows, usare l'autenticazione di base o l'estensione di autenticazione basata su moduli personalizzata indicata. Ogni tipo di autenticazione può essere singolarmente abilitato o disabilitato. È possibile abilitare più di un tipo di autenticazione se si desidera che il server di report accetti richieste di più tipi.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) offre molte opzioni configurabili per l'autenticazione di utenti e applicazioni client rispetto al server di report. Per impostazione predefinita, il server di report utilizza l'autenticazione integrata di Windows e presuppone la presenza di relazioni attendibili per cui le risorse client e quelle di rete si trovano nello stesso dominio trusted. A seconda della topologia di rete e delle esigenze specifiche dell'organizzazione, è possibile personalizzare il protocollo di autenticazione usato per l'autenticazione integrata di Windows, usare l'autenticazione di base o l'estensione di autenticazione basata su moduli personalizzata indicata. Ogni tipo di autenticazione può essere singolarmente abilitato o disabilitato. È possibile abilitare più di un tipo di autenticazione se si desidera che il server di report accetti richieste di più tipi.
   
  Tutti gli utenti o le applicazioni che richiedono l'accesso al contenuto oppure a operazioni del server di report devono essere autenticati prima che ne venga consentito l'accesso.  
   
@@ -52,9 +50,9 @@ ms.lasthandoff: 08/09/2017
 |Metodo di autenticazione|Spiegazione|  
 |---------------------------|-----------------|  
 |Anonima|Il server di report non accetterà richieste non autenticate da un utente anonimo, tranne nel caso di distribuzioni che includono un'estensione di autenticazione personalizzata.<br /><br /> Generatore report accetterà richieste non autenticate se si abilita l'accesso a Generatore report in un server di report configurato per l'autenticazione di base.<br /><br /> In tutti gli altri casi, le richieste anonime vengono rifiutate con un messaggio di errore di accesso negato con stato HTTP 401 prima che la richiesta raggiunga [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. I client che ricevono l'errore di accesso negato 401 devono riformulare la richiesta con un tipo di autenticazione valido.|  
-|Tecnologie Single Sign-On (SSO)|In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è disponibile il supporto nativo per le tecnologie Single Sign-On. Se si desidera utilizzare una tecnologia di questo tipo, è necessario creare un'estensione di autenticazione personalizzata.<br /><br /> L'ambiente host del server di report non supporta i filtri ISAPI. Se la tecnologia SSO utilizzata è implementata come filtro ISAPI, utilizzare il supporto incorporato di ISA Server per RSASecueID o il protocollo RADIUS. In caso contrario, è possibile creare un filtro ISAPI di ISA Server o un modulo HTTPModule per RS. È tuttavia consigliabile utilizzare direttamente ISA Server.|  
-|Passport|Non è supportata in SQL Server Reporting Services.|  
-|Digest|Non è supportata in SQL Server Reporting Services.|  
+|Tecnologie Single Sign-On (SSO)|In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]non è disponibile il supporto nativo per le tecnologie Single Sign-On. Se si desidera utilizzare una tecnologia di questo tipo, è necessario creare un'estensione di autenticazione personalizzata.<br /><br /> L'ambiente host del server di report non supporta i filtri ISAPI. Se la tecnologia SSO utilizzata è implementata come filtro ISAPI, utilizzare il supporto incorporato di ISA Server per RSASecueID o il protocollo RADIUS. In caso contrario, è possibile creare un filtro ISAPI di ISA Server o un modulo HTTPModule per RS. È tuttavia consigliabile utilizzare direttamente ISA Server.|  
+|Passport|Non supportato in SQL Server Reporting Services.|  
+|Digest|Non supportato in SQL Server Reporting Services.|  
   
 ## <a name="configuration-of-authentication-settings"></a>Configurazione delle impostazioni di autenticazione  
  Le impostazioni di autenticazione vengono configurate per la sicurezza predefinita quando l'URL del server di report è riservato. Se queste impostazioni vengono modificate in modo errato, il server di report restituisce il messaggio di errore di accesso negato HTTP 401 per le richieste HTTP che non possono essere autenticate. Prima di scegliere un tipo di autenticazione, è necessario conoscere il tipo di supporto per l'autenticazione di Windows disponibile nella rete. È necessario specificare almeno un tipo di autenticazione. Per RSWindows, è possibile specificare più tipi di autenticazione. I tipi di autenticazione RSWindows (ovvero, **RSWindowsBasic**, **RSWindowsNTLM**, **RSWindowsKerberos**, e **RSWindowsNegotiate**) si escludono a vicenda con Personalizzato.  
@@ -68,32 +66,32 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Configurare l'autenticazione di Windows nel Server di Report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+-   [Configurare l'autenticazione di Windows nel server di report.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
--   [Configurare l'autenticazione di base nel Server di Report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
+-   [Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
--   [Configurazione personalizzata o autenticazione basata su form nel Server di Report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Configurare l'autenticazione personalizzata o basata su form nel server di report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizioni delle attività|Collegamenti|  
 |-----------------------|-----------|  
-|Configurare il tipo di autenticazione integrata di Windows.|[Configurare l'autenticazione di Windows nel Server di Report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
-|Configurare il tipo di autenticazione di base.|[Configurare l'autenticazione di base nel Server di Report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
+|Configurare il tipo di autenticazione integrata di Windows.|[Configurare l'autenticazione di Windows nel server di report.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
+|Configurare il tipo di autenticazione di base.|[Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configurare l'autenticazione basata su form o un tipo di autenticazione personalizzata.|[Configurare l'autenticazione personalizzata o basata su form nel server di report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |Consentire a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] di gestire lo scenario basato su autenticazione personalizzata.|[Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+[Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Specificare le credenziali e informazioni di connessione per origini dati del Report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implementazione di un'estensione di sicurezza](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
-[Configurare connessioni SSL in un Server di Report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Configurare l'accesso a Generatore Report](../../reporting-services/report-server/configure-report-builder-access.md)   
-[Cenni preliminari sulle estensioni di sicurezza](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
+[Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
+[Panoramica sulle estensioni di sicurezza](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Autenticazione in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Autorizzazione in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

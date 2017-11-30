@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Riconciliare le modifiche apportate da più utenti (Visual Database Tools)
 In un ambiente multiutente può accadere che uno stesso oggetto venga modificato contemporaneamente da più utenti. Questo problema può accadere quando si lavora alla struttura dell'oggetto in Progettazione tabelle o in Progettazione diagrammi di database oppure con i valori dei risultati restituiti nel riquadro Risultati di Progettazione query e Progettazione viste. In questo caso possono verificarsi conflitti che è possibile risolvere.  
@@ -35,7 +34,7 @@ In questa finestra di dialogo viene inoltre visualizzato un elenco degli oggetti
   
 -   Scegliere **Sì** per salvare la tabella e aggiornare il database con tutte le modifiche presenti nell'elenco.  
   
-    Questa operazione potrebbe influire anche su altre tabelle che condividono gli stessi oggetti di database. Si supponga ad esempio di modificare la colonna `au`_`id` nella tabella `titleauthors` e che un altro utente stia usando la tabella `authors` che è correlata alla tabella `titleauthors` dalla colonna `au`\_`id` . Il salvataggio della propria tabella influirà sulla tabella dell'altro utente. In modo analogo, si supponga che un altro utente abbia definito un vincolo CHECK per la colonna `qty` nella tabella `sales` . Se si elimina la colonna `qty` e si salva la tabella `sales` , il vincolo CHECK dell'altro utente verrà influenzato.  
+    Questa operazione potrebbe influire anche su altre tabelle che condividono gli stessi oggetti di database. Si supponga ad esempio di modificare la colonna `au_id` nella tabella `titleauthors` e che un altro utente stia usando la tabella `authors` correlata alla tabella `titleauthors` dalla colonna `au_id`. Il salvataggio della propria tabella influirà sulla tabella dell'altro utente. In modo analogo, si supponga che un altro utente abbia definito un vincolo CHECK per la colonna `qty` nella tabella `sales` . Se si elimina la colonna `qty` e si salva la tabella `sales` , il vincolo CHECK dell'altro utente verrà influenzato.  
   
 -   Scegliere **No** per annullare il salvataggio.  
   
@@ -65,4 +64,3 @@ Si supponga ad esempio di eseguire contemporaneamente a un proprio collega una q
 ## <a name="see-also"></a>Vedere anche  
 [Finestra di dialogo Rilevate modifiche al database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

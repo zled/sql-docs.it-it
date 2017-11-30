@@ -1,5 +1,5 @@
 ---
-title: Nascondere un elemento (Generatore Report e SSRS) | Documenti Microsoft
+title: Nascondere un elemento (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 285d84aaa0f73cb8e366b6c96fcf279883591667
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Nascondere un elemento (Generatore report e SSRS)
   Impostare la visibilità di un elemento del report quando si desidera nascondere in modo condizionale un elemento in base a un parametro del report o ad altre espressioni specificate.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
         > [!NOTE]  
         >  Quando si specifica un'espressione per la visibilità, viene impostata la proprietà Hidden dell'elemento di report, come mostrato nell'immagine seguente. L'espressione valutata consente di mostrare l'elemento di report quando il valore è False e di nasconderlo quando il valore è True.   
-        > ![Finestra di dialogo Properties_Visibility e proprietà nascosta](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "finestra di dialogo Properties_Visibility e proprietà nascosta")  
+        > ![Finestra di dialogo Properties_Visibility e proprietà Hidden](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Finestra di dialogo Properties_Visibility e proprietà Hidden")  
   
 4.  Fare due volte clic su **OK** .  
   
@@ -77,8 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Azione di drill-down &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Aggiungere l'azione un Espandi o Comprimi a un elemento &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Aggiungere un'azione Espandi o Comprimi a un elemento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

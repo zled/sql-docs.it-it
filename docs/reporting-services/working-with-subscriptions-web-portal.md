@@ -1,28 +1,25 @@
 ---
-title: Utilizzo di sottoscrizioni (portale web) | Documenti Microsoft
+title: Uso di sottoscrizioni (portale Web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 131c3a86efc1e3fe2c0e896f726f292ab5e0db55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>Uso di sottoscrizioni (portale Web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +33,7 @@ Prima di creare una nuova sottoscrizione, è necessario verificare che l'origine
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-È possibile ottenere la pagina Sottoscrizioni selezionando il **i puntini di sospensione (...)**  di un report, selezionando **Gestisci** e selezionando **sottoscrizioni**.  
+Per passare alla pagina Sottoscrizioni, selezionare i **puntini di sospensione (...)** di un report, quindi **Gestisci** e infine **Sottoscrizioni**.  
   
 Nella pagina sottoscrizioni è possibile creare nuove sottoscrizioni selezionando **+ Nuova sottoscrizione**. È possibile modificare le sottoscrizioni esistenti o eliminare quelle selezionate.  
   
@@ -93,8 +90,7 @@ Per ottenere risultati migliori, eseguire la query in SQL Server Management Stud
 Al termine della creazione della query, è possibile assegnare valori ai campi obbligatori. È possibile immettere i dati manualmente o selezionare un campo dal set di dati creato.
 
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Utilizzo dei report impaginati](working-with-paginated-reports-web-portal.md)  
-[Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Uso di report impaginati](working-with-paginated-reports-web-portal.md)  
+[Usare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

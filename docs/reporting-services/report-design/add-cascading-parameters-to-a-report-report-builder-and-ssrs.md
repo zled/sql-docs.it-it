@@ -1,5 +1,5 @@
 ---
-title: Aggiungere parametri di propagazione a un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiunta di parametri di propagazione a un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a0d28c5a5210eef5f2f6eea857f9361bbe434ad6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
   I parametri di propagazione consentono di gestire quantità elevate di dati del report. È possibile definire un set di parametri correlati in modo che l'elenco dei valori di un parametro dipenda dal valore scelto per un altro parametro. Il primo parametro può essere ad esempio indipendente e presentare un elenco di categorie di prodotti. Quando l'utente seleziona una categoria, il secondo parametro dipende dal valore del primo parametro. I relativi valori vengono aggiornati con un elenco di sottocategorie all'interno della categoria scelta. Quando l'utente visualizza il report, per filtrarne i dati vengono utilizzati sia i valori dei parametri di categoria che di sottocategoria.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Per creare parametri di propagazione, è innanzitutto necessario definire la query del set di dati e includere un parametro di query per ogni parametro di propagazione necessario. È inoltre necessario creare un set di dati distinto per ogni parametro di propagazione allo scopo di fornire i valori disponibili. Per ulteriori informazioni, vedere [aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+ Per creare parametri di propagazione, è innanzitutto necessario definire la query del set di dati e includere un parametro di query per ogni parametro di propagazione necessario. È inoltre necessario creare un set di dati distinto per ogni parametro di propagazione allo scopo di fornire i valori disponibili. Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  Per i parametri di propagazione l'ordine è importante in quanto la query del set di dati relativa a un parametro riportato più avanti nell'elenco include un riferimento a ciascun parametro riportato in precedenza. In fase di esecuzione l'ordine dei parametri nel riquadro dei dati del report determina l'ordine in cui le query del parametro vengono visualizzate nel report e quindi l'ordine in cui un utente sceglie ogni valore del parametro successivo.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 6.  Fare clic su **Esegui** (**!**). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
   
     > [!NOTE]  
-    >  L'ordine in cui si presentano i parametri della query quando si esegue per la prima volta una query determina anche l'ordine in cui vengono creati nel report. Per modificare l'ordine, vedere [modificare l'ordine di un parametro di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+    >  L'ordine in cui si presentano i parametri della query quando si esegue per la prima volta una query determina anche l'ordine in cui vengono creati nel report. Per modificare l'ordine, vedere [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
     WHERE (Category = @Category)  
     ```  
   
-     Nella clausola WHERE Category è il nome di un campo da \<tabella > e @Category è un parametro di query. Questa istruzione produce un elenco di sottocategorie per la categoria specificata in @Category. In fase di esecuzione tale valore verrà compilato con il valore selezionato dall'utente per il parametro del report con nome identico.  
+     Nella clausola WHERE Category è il nome di un campo di \<tabella> e @Category è un parametro di query. Questa istruzione produce un elenco di sottocategorie per la categoria specificata in @Category. In fase di esecuzione tale valore verrà compilato con il valore selezionato dall'utente per il parametro del report con nome identico.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Esercitazione: Aggiungere un parametro di Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
- [Aggiungere i filtri di set di dati, i filtri di area dati e i filtri di gruppo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

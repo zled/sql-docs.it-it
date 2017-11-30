@@ -1,5 +1,5 @@
 ---
-title: Caricare un File o un Report (gestione Report) | Documenti Microsoft
+title: Caricare un file o un report (Gestione report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 227bef646204cd18d2e96a33d398f00a5bbad314
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4c41372d28a94a2e8bf0ea86a750c15ea29b2abd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Caricare un file o un report (Gestione report)
   In Gestione report è disponibile una caratteristica di caricamento che consente di aggiungere report, modelli e altri file a un server di report senza pubblicarli da un'applicazione client. I file caricati da un file system vengono archiviati come elementi in un server di report. Il tipo di file caricato determina le modalità di archiviazione:  
@@ -40,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-upload-a-file-or-report"></a>Per caricare un file o un report  
   
-1.  Avviare [Gestione Report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  In Gestione report passare alla pagina **Contenuto**. quindi passare alla cartella in cui si desidera aggiungere un elemento.  
+2.  In Gestione report passare alla pagina **Contenuto** . quindi passare alla cartella in cui si desidera aggiungere un elemento.  
   
 3.  Fare clic su **Carica file**.  
   
@@ -55,10 +54,9 @@ ms.lasthandoff: 08/09/2017
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, eliminare o modificare un'origine dati condivisa &#40; Gestione report &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Pagina contenuto &#40; Gestione report &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Caricamento File pagina &#40; Gestione report &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Pagina Contenuto &#40;Gestione report&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Pagina Carica file &#40;Gestione report&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Caricare file in una cartella](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   
-

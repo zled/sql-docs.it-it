@@ -1,13 +1,14 @@
 ---
-title: Database e tabelle di Estensione database - Stretch Database Advisor | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/14/2016
-ms.prod: sql-server-2016
+title: Identificare i database e le tabelle per Stretch Database con Data Migration Assistant | Microsoft Docs
+ms.custom: 
+ms.date: 10/30/2017
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.suite: sql
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,63 +17,62 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e8acd180029f247e7a975c7f2525100ad56ebef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 59608301d353d99eb710a956389fd9f8d8948dfe
-ms.contentlocale: it-it
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="stretch-database-databases-and-tables---stretch-database-advisor"></a>Database e tabelle di Estensione database - Stretch Database Advisor
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificare i database e le tabelle per Stretch Database con Data Migration Assistant
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Per identificare i database e le tabelle candidati per Estensione database, scaricare SQL Server 2016 Upgrade Advisor ed eseguire Stretch Database Advisor. Stretch Database Advisor identifica anche i problemi di blocco.  
+  Per identificare i database e le tabelle candidati per Stretch Database e i problemi di blocco potenziali, scaricare ed eseguire Microsoft Data Migration Assistant.
   
-## <a name="download-and-install-upgrade-advisor"></a>Scaricare e installare Upgrade Advisor  
- Scaricare Upgrade Advisor [qui](https://www.microsoft.com/en-us/download/details.aspx?id=53595)e installarlo. Questo strumento non è incluso nel supporto di installazione [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
+## <a name="get-data-migration-assistant"></a>Ottenere Data Migration Assistant
+ Scaricare e installare Data Migration Assistant da [qui](https://www.microsoft.com/download/details.aspx?id=53595). Questo strumento non è incluso nel supporto di installazione di SQL Server.  
   
-## <a name="run-the-stretch-database-advisor"></a>Eseguire Stretch Database Advisor  
+## <a name="run-data-migration-assistant"></a>Eseguire Data Migration Assistant  
   
-1.  Eseguire Upgrade Advisor.  
-  
-2.  Selezionare **Scenarios**(Scenari) e quindi **RUN STRETCH DATABASE ADVISOR**(ESEGUI STRETCH DATABASE ADVISOR).  
-  
-3.  Nel pannello **Run Stretch Database Advisor** (Esegui Stretch Database Advisor) fare clic su **SELECT DATABASES TO ANALYZE**(SELEZIONA I DATABASE DA ANALIZZARE).  
-  
-4.  Nel pannello **Seleziona database** immettere o selezionare il nome del server e le informazioni di autenticazione. Fare clic su **Connetti**.
+1.  Eseguire Microsoft Data Migration Assistant.  
 
-5.  Viene visualizzato un elenco dei database nel server selezionato. Selezionare i database che si vuole analizzare. Fare clic su **Seleziona**.  
-  
-6.  Nel pannello **Run Stretch Database Advisor** (Esegui Stretch Database Advisor) fare clic su **Run**(Esegui).  Viene eseguita l'analisi.  
-  
+2.  Creare un nuovo progetto di tipo **Valutazione** e assegnargli un nome.
+
+3.  Selezionare **SQL Server** come **Source server type** (Tipo server di origine) e **Target server type** (Tipo server di destinazione).
+
+4.  Selezionare **Crea**. 
+
+5. Nella pagina **Options** (Opzioni) (passaggio 1) selezionare **New features recommendation** (Nuove funzionalità raccomandate). Facoltativamente, deselezionare l'opzione **Compatibility issues** (Problemi di compatibilità).
+
+6.  Nella pagina **Select sources** (Seleziona origini) (passaggio 2) connettersi a un server, selezionare un database e quindi selezionare **Aggiungi**.
+
+7.  Selezionare **Start Assessment** (Avvia valutazione).
+
 ## <a name="review-the-results"></a>Controllare i risultati  
   
-1.  Al termine dell'analisi, nel pannello **Analyzed databases** (Database analizzati) selezionare uno dei database analizzati in modo da visualizzare il pannello **Analysis results** (Risultati analisi).  
-  
-     Il pannello **Analysis results** (Risultati analisi) elenca le tabelle consigliate nel database selezionato che soddisfano i criteri di raccomandazione predefiniti. 
-  
-2.  Nell'elenco delle tabelle consigliate nel pannello **Analysis results** (Risultati analisi) selezionare una delle tabelle consigliate in modo da visualizzare il pannello **Table results** (Risultati tabella).  
-  
-     Se sono presenti problemi di blocco, il pannello **Table results** (Risultati tabella) li elenca per la tabella selezionata. Per informazioni sui problemi di blocco rilevati da Stretch Database Advisor, vedere [Limitazioni per Estensione database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
-  
-3.  Nel pannello **Table results** (Tabella risultati) dell'elenco dei problemi di blocco selezionare uno dei problemi per visualizzare altre informazioni sul problema selezionato e le procedure di attenuazione proposte. Se si desidera configurare la tabella selezionata per Estensione database, implementare i passaggi di attenuazione suggeriti.  
+1.  Al termine dell'analisi, nella pagina **Review results** (Verifica risultati) (passaggio 3) selezionare l'opzione **Funzionalità consigliate** e quindi selezionare la scheda **Archiviazione**.
+
+2.  Esaminare i consigli relativi a Stretch Database. Ogni consiglio elenca le tabelle per cui Stretch Database potrebbe essere appropriato, insieme a eventuali problemi di blocco potenziali.
+
+## <a name="historical-note"></a>Nota storica
+Stretch Database Advisor era in precedenza un componente di Gestione spazio aggiornamenti di SQL Server 2016. Stretch Database Advisor doveva essere eseguito separatamente.
+
+Con il rilascio di Data Migration Assistant, che sostituisce ed estende Gestione spazio aggiornamenti, la funzionalità di Stretch Database Advisor è incorporata nel nuovo strumento. Non è necessario selezionare alcuna opzione per visualizzare i consigli relativi a Stretch Database. Quando si esegue una valutazione in Data Migration Assistant, i risultati relativi a Stretch Database vengono visualizzati nella scheda **Archiviazione** della finestra **Funzionalità consigliate**.
   
 ## <a name="next-step"></a>Passaggio successivo  
- Abilitare Estensione database.  
+ Abilitare Stretch Database.  
   
 -   Per abilitare Estensione database in un **database**, vedere [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
 -   Per abilitare Estensione database in un'altra **tabella**, quando l'estensione è già abilitata nel database, vedere [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
   
 ## <a name="see-also"></a>Vedere anche  
- [Limitazioni per Estensione database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
+ [Limitazioni per Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Enable Stretch Database for a table (Abilitare Estensione database per una tabella)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
-

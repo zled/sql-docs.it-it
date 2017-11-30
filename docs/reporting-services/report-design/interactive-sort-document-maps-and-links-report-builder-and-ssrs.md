@@ -1,5 +1,5 @@
 ---
-title: Ordinamento interattivo, mappe documento e collegamenti (Generatore Report e SSRS) | Documenti Microsoft
+title: Ordinamento interattivo, mappe documento e collegamenti (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 304da15a594fff8a68074b1b1ff172c0b8eac2bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordinamento interattivo, mappe documento e collegamenti (Generatore report e SSRS)
   In ambienti basati sul Web è possibile aggiungere alcune caratteristiche per consentire agli utenti di interagire con i report. Gli utenti possono inoltre modificare l'ordinamento dei valori nel report, visualizzare o nascondere elementi nel report oppure fare clic sui collegamenti che consentono di passare ad altri report o pagine Web. È inoltre possibile aggiungere un sommario o una mappa documento. Gli utenti del report possono fare clic su elementi nel sommario o mappa documento per passare alle aree all'interno di un report.  
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Ordinamento interattivo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [Ordinamento interattivo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere pulsanti di ordinamento interattivi alle intestazioni di colonna.  
   
- [Creare una mappa documento &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Creare una mappa documento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere un sommario per supportare la navigazione all'interno di un report di grandi dimensioni.  
   
- [Aggiungere un segnalibro a un Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Aggiungere un segnalibro a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere segnalibri per creare collegamenti all'interno di un report.  
   
- [Aggiungere un collegamento ipertestuale a un URL &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Aggiungere un collegamento ipertestuale a un URL &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere un collegamento dal report a un URL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Funzione multilookup (Generatore Report e SSRS) | Documenti Microsoft
+title: Funzione Multilookup (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8ddb5eb1fbaf3cdefa3dcef1219e14710fb64797
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2d927faec10cf1e443c6924893ef7964e729e85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---multilookup-function"></a>Funzioni di Generatore report - funzione Multilookup
+# <a name="report-builder-functions---multilookup-function"></a>Funzioni di Generatore report - Funzione Multilookup
   Viene restituito il set di valori di prima corrispondenza per il set di nomi specificato da un set di dati che contiene coppie nome/valore.  
   
 > [!NOTE]  
@@ -59,11 +58,11 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Valuta l'espressione di origine nell'ambito corrente e genera una matrice di oggetti variant.  
   
--   Per ogni oggetto nella matrice, chiama [Funzione Lookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md) e aggiunge il risultato alla matrice restituita.  
+-   Per ogni oggetto nella matrice, chiama la [Funzione Lookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md) e aggiunge il risultato alla matrice restituita.  
   
 -   Restituisce il set di risultati.  
   
- Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare [Funzione Lookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Per recuperare più valori da un set di dati con coppie nome/valore per un nome in cui è presente una relazione uno-a-molti, usare [Funzione LookupSet &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
+ Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare la [Funzione Lookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Per recuperare più valori da un set di dati con coppie nome/valore per un nome in cui è presente una relazione uno-a-molti, usare la [Funzione LookupSet &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
   
  Sono previste le restrizioni seguenti:  
   
@@ -129,10 +128,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle espressioni nei report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tipi di dati in espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

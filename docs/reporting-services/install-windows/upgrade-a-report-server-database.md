@@ -1,5 +1,5 @@
 ---
-title: Aggiornare un database del Server di Report | Documenti Microsoft
+title: Aggiornare un database del server di report | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,26 +15,24 @@ helpviewer_keywords:
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b17eda3ed38778a501f142b56e4f418ec8c21825
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="upgrade-a-report-server-database"></a>Aggiornare un database del server di report
 
 Il database del server di report fornisce archiviazione per una o più istanze del server di report. Poiché lo schema del database del server di report può essere modificato con ogni nuova versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario che la versione del database corrisponda alla versione dell'istanza del server di report in uso. Nella maggior parte dei casi, un database del server di report può essere aggiornato automaticamente senza alcun intervento dell'utente.  
   
  **Modalità nativa:** nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il database del server di report è costituito in realtà da due database i cui nomi predefiniti sono "ReportServer" e "ReportServerTempDB".  
   
- **Modalità SharePoint:** In modalità SharePoint SQL Server 2016 Reporting Services server di report il database è in realtà una raccolta di database creata per ogni istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applicazione del servizio.  
+ **Modalità SharePoint:** nella modalità SharePoint di SQL Server 2016 Reporting Services il database del server di report è in realtà una raccolta di database creata per ogni istanza dell'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Modalità di aggiornamento di un database del server di report in modalità nativa
 
@@ -76,10 +74,9 @@ Il database del server di report fornisce archiviazione per una o più istanze d
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Creare un database del Server di Report](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Procedura guidata cambia Database](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Creare un database del server di report](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+[Procedura guidata Modifica database](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
 [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Eseguire la migrazione di un'installazione di Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: Evidenziazione dei dati del grafico mediante l'aggiunta di strisce (Generatore Report e SSRS) | Documenti Microsoft
+title: Evidenziare i dati del grafico mediante l'aggiunta di strisce (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bfe6d58d3ffc735c47359b94f1c368a1a6c3683
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Evidenziare i dati del grafico mediante l'aggiunta di strisce (Generatore report e SSRS)
   Le strisce o bande sono intervalli orizzontali o verticali che applicano un'ombreggiatura allo sfondo del grafico a intervalli regolari o personalizzati. È possibile utilizzare le strisce per:  
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/09/2017
 >  Per impostazione predefinita, l'intervallo è impostato su Automatico. Per questo motivo, non verrà calcolato un intervallo per le strisce personalizzato. Gli intervalli per le strisce verranno calcolati solo se è impostato un valore di intervallo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione delle etichette dell'asse in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Aggiungere una media mobile per un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   
-

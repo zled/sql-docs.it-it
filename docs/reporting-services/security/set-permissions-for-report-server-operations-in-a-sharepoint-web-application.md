@@ -1,5 +1,5 @@
 ---
-title: Impostare le autorizzazioni per operazioni del Server di Report in un'applicazione Web di SharePoint | Documenti Microsoft
+title: Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a872862355624b84fe792cfccc892f26bf9e3433
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint
   Per un server di report eseguito in modalità integrata SharePoint, le impostazioni di sicurezza definite nel sito di SharePoint determinano le modalità di visualizzazione e gestione di report, modelli di report e origini dei dati condivise. Se si usano le assegnazioni di autorizzazioni, i livelli di autorizzazione e i gruppi di SharePoint predefiniti, sarà possibile usare i report e gli altri documenti tramite le impostazioni di sicurezza correnti.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  Se si usano i livelli di autorizzazione predefiniti, non è necessario alcun intervento perché le autorizzazioni indicate in precedenza sono già incluse nei ruoli Controllo completo, Progettazione, Collaborazione, Lettura e Accesso limitato. Tuttavia, queste autorizzazioni devono essere aggiunte manualmente se si usano livelli di autorizzazione personalizzati o si modificano le autorizzazioni assegnate a un particolare utente o gruppo.  
   
- L'autorizzazione "Visualizzazione informazioni utenti" consente al server di report di restituire informazioni sull'autore dell'elemento e sull'utente che ha eseguito l'ultima modifica dell'elemento. Senza questa autorizzazione, il server di report restituirà gli errori seguenti. Nel caso delle operazioni di visualizzazione, l'errore è il seguente: "Server report: errore di SharePoint. ---> System.UnauthorizedAccessException: Accesso negato." Per le operazioni di pubblicazione, l'errore è: "le autorizzazioni concesse all'utente '\<dominio >\\< utente\>' non sono sufficienti per eseguire questa operazione."  
+ L'autorizzazione "Visualizzazione informazioni utenti" consente al server di report di restituire informazioni sull'autore dell'elemento e sull'utente che ha eseguito l'ultima modifica dell'elemento. Senza questa autorizzazione, il server di report restituirà gli errori seguenti. Nel caso delle operazioni di visualizzazione, l'errore è il seguente: "Server report: errore di SharePoint. ---> System.UnauthorizedAccessException: Accesso negato." Per le operazioni di pubblicazione, l'errore è: "Le autorizzazioni concesse all'utente '<utente\>\<di dominio>\\' non sono sufficienti per eseguire questa operazione".  
   
 ##  <a name="permissionReports"></a> Autorizzazioni per la visualizzazione e la gestione dei report  
  Le autorizzazioni relative alle definizioni dei report sono specificate tramite le autorizzazioni Elenco per la raccolta che contiene il report ma, se si desidera limitare l'accesso, è possibile impostare autorizzazioni per i singoli report. Nella tabella seguente è riportato un elenco di attività, indicando per ognuna le autorizzazioni che la supportano.  
@@ -138,10 +137,9 @@ ms.lasthandoff: 08/09/2017
 >  Non sono disponibili autorizzazioni per la modifica dei modelli di report. Sebbene sia possibile generare o eliminare modelli di report, non è possibile modificarli da un sito di SharePoint. Per modificare modelli di report è necessario Progettazione modelli, uno strumento client di creazione indipendente dalle autorizzazioni impostate in SharePoint.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concessione di autorizzazioni per elementi di Server di Report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Confrontare ruoli e attività di Reporting Services con le autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Concessione di autorizzazioni per elementi di Server di Report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Utilizzare la sicurezza predefinita di Windows SharePoint Services per elementi del Server di Report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Usare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   
-

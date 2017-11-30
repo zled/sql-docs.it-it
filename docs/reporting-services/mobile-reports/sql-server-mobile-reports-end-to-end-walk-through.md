@@ -1,29 +1,26 @@
 ---
-title: 'Report per dispositivi mobili di SQL Server: procedura dettagliata End-to-end | Documenti Microsoft'
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+title: 'Report per dispositivi mobili di SQL Server: procedura dettagliata completa | Microsoft Docs'
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata End-to-end
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
 
 Consente di creare report per dispositivi mobili in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili. È possibile connettersi a un'ampia gamma di origini dati locali, caricare cartelle di lavoro di Excel oppure creare report per dispositivi mobili, quindi salvarli in un portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] e visualizzarli in un browser o nelle app Power BI per dispositivi mobili.  
@@ -38,11 +35,11 @@ Questo argomento illustra le operazioni seguenti:
 ## <a name="before-we-start"></a>Prima di iniziare  
 Per proseguire, sono necessari questi prodotti:  
   
-* Per creare origini dati e indicatori KPI e pubblicare i set di dati e report per dispositivi mobili, è necessario accedere a una [! INCLUDERE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Per creare origini dati e indicatori KPI e per pubblicare set di dati e report per dispositivi mobili, è necessario accedere a [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Per [creare set di dati condivisi](../install-windows/install-report-builder.md).  
 * Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
-* [Script e database di esempio di AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
-*  OR: World Wide Importers database di esempio disponibile il [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) pagina.
+* [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+*  OPPURE: database di esempio World Wide Importers, disponibile nella pagina [Esempi di Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Per visualizzare il risultato: 
   *   [Iscriversi al servizio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) e
   *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
@@ -50,7 +47,7 @@ Per proseguire, sono necessari questi prodotti:
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
   
-È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere il [elenco delle origini dati supportate](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l'[elenco delle origini dati supportate](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Origine dati**.  
   
@@ -236,7 +233,7 @@ Gli elenchi di selezione funzionano come filtri dei dati in Power BI ed Excel. �
   
 Ora che sono stati creati gli oggetti visivi nel layout master, è possibile creare un report per dispositivi mobili con un layout ottimizzato in modo specifico per gli utenti dei telefoni.    
   
-1. Nell'angolo superiore destro, fare clic sull'icona dell'area di disegno > **Phone**.  
+1. Nell'angolo superiore destro fare clic sull'icona dell'area di disegno > **Telefono**.  
   
 2. Nella scheda Layout in **Control Instances**(Istanze di controllo) verranno visualizzati i due grafici creati.   
   
@@ -313,5 +310,4 @@ Gli indicatori KPI e i report per dispositivi mobili vengono visualizzati nelle 
 -  Vedere [Report nell'app Power BI per dispositivi mobili per Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

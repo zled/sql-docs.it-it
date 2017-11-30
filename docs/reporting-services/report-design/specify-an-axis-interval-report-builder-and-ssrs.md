@@ -1,5 +1,5 @@
 ---
-title: Specificare un intervallo dell'asse (Generatore Report e SSRS) | Documenti Microsoft
+title: Specificare un intervallo dell'asse (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e86de97e19273c282f6cfe8d845eb11a20b98a5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Specificare un intervallo dell'asse (Generatore report e SSRS)
 Informazioni su come modificare il numero di etichette e segni di graduazione sull'asse delle categorie (X) in un grafico impostando l'intervallo asse in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -29,7 +29,7 @@ Sull'asse dei valori (di solito l'asse Y) gli intervalli forniscono una misura c
 
 Sull'asse delle categorie (di solito l'asse X), invece, in alcuni casi un intervallo asse automatico determina l'assenza di etichette dell'asse nelle categorie. È possibile specificare il numero di intervalli desiderato nella proprietà intervallo dell'asse. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il numero degli intervalli viene calcolato in fase di esecuzione, in base ai dati nel set di risultati. Per altre informazioni su come vengono calcolati gli intervalli degli assi, vedere [Formattazione delle etichette degli assi di un grafico](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-Per provare a impostare l'intervallo dell'asse con dati di esempio, vedere [esercitazione: aggiungere un istogramma al Report (Generatore Report)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+Per provare a impostare l'intervallo dell'asse con dati di esempio, vedere [Esercitazione: Aggiungere un istogramma al report (Generatore report)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
   
 > [!NOTE]  
 >  L'asse delle categorie è in genere l'asse orizzontale, ovvero l'asse X. Tuttavia, per i grafici a barre, l'asse delle categorie è l'asse verticale, ovvero l'asse y.  
@@ -48,7 +48,7 @@ In questo istogramma, l'intervallo di etichette orizzontali è impostato su Auto
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Nel **proprietà asse orizzontale** la finestra di dialogo > **opzioni asse** scheda, impostare **intervallo** a **1** per visualizzare ogni etichetta di gruppo categoria. Per visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**. 
+2.  Nella scheda **Opzioni asse** della finestra di dialogo **Proprietà asse orizzontale** impostare **Intervallo** su **1** per visualizzare tutte le etichette dei gruppi di categorie. Per visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -85,17 +85,16 @@ Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
   
 1.  Fare clic con il pulsante destro del mouse sull'asse da modificare, quindi scegliere **Proprietà asse**. 
   
-2.  Nel **proprietà asse orizzontale** la finestra di dialogo > **opzioni asse** scheda, impostare **intervallo** a **Auto**. Verrà visualizzato il numero ottimale di etichette di categorie che è possibile adattare lungo l'asse.  
+2.  Nella scheda **Opzioni asse** della finestra di dialogo **Proprietà asse orizzontale** impostare **Intervallo** su **Automatico**. Verrà visualizzato il numero ottimale di etichette di categorie che è possibile adattare lungo l'asse.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati in un grafico (Generatore Report e SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Ordinare i dati in un'area dati (Generatore Report e SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà asse, opzioni asse &#40; Generatore report e SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Specificare una scala logaritmica &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Traccia di dati su un asse secondario &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati di un grafico (Generatore report e SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Ordinamento dei dati in un'area dati (Generatore report e SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Traccia di dati su un asse secondario &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
-

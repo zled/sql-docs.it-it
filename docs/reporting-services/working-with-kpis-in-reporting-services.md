@@ -1,27 +1,24 @@
 ---
-title: Usare gli indicatori KPI in Reporting Services | Documenti Microsoft
+title: Uso di indicatori KPI in Reporting Services | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -75,7 +72,7 @@ Per usare i dati di un nuovo set di dati condiviso, eseguire le operazioni segue
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Selezionare il **i puntini di sospensione (...)**  nella casella dati. Verrà visualizzata la schermata **Scegliere un set di dati** .  
+2.  Selezionare i **puntini di sospensione (…)** nella casella dei dati. Verrà visualizzata la schermata **Scegliere un set di dati** .  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ Per usare i dati di un nuovo set di dati condiviso, eseguire le operazioni segue
   
 Per rimuovere un indicatore KPI eseguire una delle operazioni seguenti.  
   
-1.  Selezionare il **i puntini di sospensione (...)**  dell'indicatore KPI che si desidera rimuovere. Selezionare **Gestisci**.  
+1.  Selezionare i **puntini di sospensione (…)** dell'indicatore KPI da rimuovere. Selezionare **Gestisci**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ Per rimuovere un indicatore KPI eseguire una delle operazioni seguenti.
   
 ## <a name="refreshing-a-kpi"></a>Aggiornamento di un indicatore KPI  
   
-Per aggiornare l'indicatore KPI, è necessario configurare una cache per il set di dati condiviso. Per ulteriori informazioni sulla cache di piani di aggiornamento, vedere [funziona con set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md).  
+Per aggiornare l'indicatore KPI, è necessario configurare una memorizzazione nella cache per il set di dati condiviso. Per altre informazioni sui piani di aggiornamento della cache, vedere [Usare i set di dati condivisi (portale Web)](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="next-steps"></a>Passaggi successivi
   
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Usare i set di dati condivisi (portale Web)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

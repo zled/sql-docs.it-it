@@ -1,30 +1,28 @@
 ---
-title: 'Lezione 1: Creazione di un progetto Server di Report (Reporting Services) | Documenti Microsoft'
+title: 'Lesson 1: Creating a Report Server Project (Reporting Services) (Lezione 1: Creazione di un progetto server report (Reporting Services)) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3968a5183de7cc1ee81c7ee09faba79d06990884
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lezione 1: Creazione di un progetto server report (Reporting Services)
 
- > Per contenuti relativi a versioni precedenti di SQL Server, vedere [lezione 1: creazione di un progetto Server di Report (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > Per contenuti relativi a versioni precedenti di SQL Server Reporting Services, vedere [Lezione 1: Creazione di un progetto server report (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
 
 In questa lezione si creerà un *progetto server report* e un file di *definizione del report (con estensione rdl)* in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] all'interno di Visual Studio. 
 
@@ -38,7 +36,7 @@ Nelle lezioni successive verranno definiti un'origine dati per il report, un set
   
 1.  Aprire [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
   
-2.  Nel **File** menu > **New** > **progetto**.  
+2.  Nel menu **File** > **Nuovo** > **Progetto**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -48,7 +46,7 @@ Nelle lezioni successive verranno definiti un'origine dati per il report, un set
 
 5. Fare clic su **Progetto server di report** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Nota**: se non viene visualizzato il **Business Intelligence** o **progetto Server Report** opzioni, è necessario aggiornare SSDT con i modelli di Business Intelligence. Vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
+   >**Note**: se non vengono visualizzate le opzioni **Business Intelligence** o **Progetto server di report**, è necessario aggiornare SSDT con i modelli di Business Intelligence. Vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 5.  In **Nome**digitare **Esercitazione**.  
 
@@ -81,10 +79,9 @@ Nelle lezioni successive verranno definiti un'origine dati per il report, un set
     I dati vengono definiti nel riquadro **Dati report** . Il layout dei report viene definito nella vista **Progettazione** . Dopo aver eseguito il report, è possibile vederne l'aspetto nella vista **Anteprima** .  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-In questo modo è stato creato un progetto di report denominato Esercitazione, cui è stato aggiunto un file di definizione del report (con estensione rdl). Il passaggio successivo consiste nello specificare un'origine dei dati per il report. Vedere [lezione 2: specificare le informazioni di connessione &#40; Reporting Services &#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+In questo modo è stato creato un progetto di report denominato Esercitazione, cui è stato aggiunto un file di definizione del report (con estensione rdl). Il passaggio successivo consiste nello specificare un'origine dei dati per il report. Vedere [Lezione 2: Specifica delle informazioni di connessione &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
-
 

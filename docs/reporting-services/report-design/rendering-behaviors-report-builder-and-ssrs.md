@@ -1,5 +1,5 @@
 ---
-title: Tipi di rendering (Generatore Report e SSRS) | Documenti Microsoft
+title: Tipi di rendering (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Tipi di rendering (Generatore report e SSRS)
   A seconda del renderer selezionato, vengono applicate regole specifiche al corpo del report e al relativo contenuto durante il rendering di un report. La disposizione degli elementi del report in una pagina dipende dalla combinazione dei seguenti fattori:  
@@ -134,9 +133,8 @@ ms.lasthandoff: 08/09/2017
 -   Le interruzioni di pagina logiche definite su elementi contenuti in celle di tabella o matrice non vengono mantenute. Questo comportamento non viene applicato agli elementi negli elenchi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Esegue il rendering in HTML &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Pagina Layout e Rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

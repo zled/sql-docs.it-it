@@ -1,5 +1,5 @@
 ---
-title: Progettazione Query di elenco SharePoint (Generatore Report) | Documenti Microsoft
+title: Progettazione query di elenco di SharePoint (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10016"
+f1_keywords: "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 80e18350f83053841f3525d2b959272a54d8cd06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Progettazione query di elenco di SharePoint (Generatore report)
   Generatore report e Progettazione report forniscono una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo per la creazione di query in cui vengono specificati i dati da recuperare da un sito di SharePoint per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati dell'elenco SharePoint, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica, modificare una query o digitare i comandi della query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/09/2017
 |**Mostra campi nascosti**|Consente di mostrare o nascondere i campi che sono stati generati automaticamente da SharePoint, quali ProgId e Level per gli elementi collegamento di SharePoint, ma che in genere non sono utilizzati nei report. Nascondendo questi campi, l'elenco dei campi diventa più breve e più facile da utilizzare.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre Progettazione query &#40; Generatore report &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

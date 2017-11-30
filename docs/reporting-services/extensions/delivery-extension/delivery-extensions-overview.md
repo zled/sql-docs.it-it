@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sulle estensioni di recapito | Documenti Microsoft
+title: Panoramica delle estensioni per il recapito | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 07f9b2fcb366ecf1b433917852462766d6cd0951
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delivery-extensions-overview"></a>Cenni preliminari sulle estensioni per il recapito
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che, una volta creati e pubblicati, possono essere recapitati in diverse posizioni. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che dopo la creazione e la pubblicazione possono essere recapitati in diverse posizioni. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Nella tabella seguente sono elencate le estensioni per il recapito incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/12/2017
 |Messaggio di posta elettronica dal server di report|Utilizza un server SMTP per inviare tramite posta elettronica i report a singoli utenti o gruppi.|  
 |Condivisione file server di report|Utilizzata per distribuire i report all'interno dell'organizzazione nelle condivisioni file di rete. Consente di copiare automaticamente un report in una condivisione file in base a una pianificazione definita.|  
   
- ![Architettura di Reporting Services recapito estensione](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "architettura di estensione di recapito di Reporting Services")  
+ ![Architettura delle estensioni per il recapito di Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Architettura delle estensioni per il recapito di Reporting Services")  
 Architettura delle estensioni per il recapito di Reporting Services  
   
  Le estensioni per il recapito sono abbinate alle sottoscrizioni. Al momento della creazione di una sottoscrizione, gli utenti hanno la possibilità di scegliere una delle estensioni per il recapito disponibili che determinano il metodo di recapito del report. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le sottoscrizioni si trovano nel database del server di report. Quando si verifica un evento, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene trovata la corrispondenza tra l'evento e le sottoscrizioni contenute nel database del server di report. Per ogni sottoscrizione collegata all'evento, il server di report crea una notifica. Per le sottoscrizioni guidate dai dati, viene creata una notifica per ogni destinatario. Dopo aver creato la notifica, il server di report richiama una particolare estensione per il recapito e passa i valori per le impostazioni dell'estensione specificate nella notifica. L'estensione per il recapito invia la notifica all'utente come specificato dall'estensione selezionata.  
@@ -55,17 +53,16 @@ Architettura delle estensioni per il recapito di Reporting Services
   
 -   Un computer di distribuzione in cui sia installato un server di report.  
   
--   Un computer di sviluppo [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK).  
+-   Un computer di sviluppo in cui sia installato [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK).  
   
 -   Conoscenza approfondita delle caratteristiche e delle caratteristiche di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], in particolare degli aspetti di sottoscrizione e recapito.  
   
 -   Conoscenza approfondita di [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] e dei controlli Web, se si intende implementare un'interfaccia utente di sottoscrizione personalizzata per Gestione report.  
   
--   Esperienza di sviluppo di un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] linguaggio, ad esempio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual c# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Esperienza di sviluppo in un linguaggio [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ad esempio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementazione di un'estensione di recapito](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Implementazione di un'estensione per il recapito](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

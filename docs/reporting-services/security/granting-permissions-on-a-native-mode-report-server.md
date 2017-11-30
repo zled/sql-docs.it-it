@@ -1,5 +1,5 @@
 ---
-title: "Concessione di autorizzazioni in un Server di Report in modalità nativa | Documenti Microsoft"
+title: "Concessione di autorizzazioni in un server di report in modalità nativa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,23 +23,22 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e587f50e041d42bb09d99fa03d4146216883fce6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 254e3311ee8f54ab80a722ca753de9c99d376b57
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concessione di autorizzazioni in un server di report in modalità nativa
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si utilizzano l'autorizzazione basata sui ruoli e un sottosistema di autenticazione per determinare gli utenti cui è consentito eseguire operazioni e accedere agli elementi in un server di report. L'autorizzazione basata sui ruoli consente di suddividere in ruoli il set di azioni che un utente può eseguire. L'autenticazione è basata sull'autenticazione di Windows incorporata o su un modulo di autenticazione personalizzato fornito dall'utente. È possibile utilizzare ruoli predefiniti o personalizzati con entrambi i tipi di autenticazione.  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>Utilizzo dei ruoli per concedere l'accesso al server di report  
- Tutti gli utenti interagiscono con un server di report all'interno del contesto di un ruolo che definisce un livello specifico di accesso. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sono inclusi ruoli predefiniti che è possibile assegnare a utenti e gruppi per fornire accesso immediato a un server di report. **Gestione contenuto**, **Pubblicazione**e **Visualizzazione** sono esempi di ruoli predefiniti. Ogni ruolo definisce una raccolta di attività correlate. Ad esempio, il ruolo **Pubblicazione** dispone di autorizzazioni per aggiungere report e creare cartelle in cui archiviarli.  
+ Tutti gli utenti interagiscono con un server di report all'interno del contesto di un ruolo che definisce un livello specifico di accesso. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi ruoli predefiniti che è possibile assegnare a utenti e gruppi per fornire accesso immediato a un server di report. **Gestione contenuto**, **Pubblicazione**e **Visualizzazione** sono esempi di ruoli predefiniti. Ogni ruolo definisce una raccolta di attività correlate. Ad esempio, il ruolo **Pubblicazione** dispone di autorizzazioni per aggiungere report e creare cartelle in cui archiviarli.  
   
  Le assegnazioni di ruolo vengono in genere ereditate da un nodo padre, ma è possibile interrompere l'ereditarietà delle autorizzazioni creando una nuova assegnazione di ruolo per un determinato elemento. Un utente membro del ruolo **Gestione contenuto** per un report può essere membro del ruolo **Visualizzazione** per un altro report.  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
 >  Se il server di report è configurato per l'integrazione con SharePoint, è necessario impostare le autorizzazioni nel sito di SharePoint per concedere l'accesso agli elementi del server di report. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## <a name="who-sets-permissions"></a>Responsabili dell'impostazione delle autorizzazioni  
- Inizialmente, solo gli utenti che sono membri del gruppo Administrators locale possono accedere a un server di report. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono incluse due assegnazioni di ruolo predefinite che concedono l'accesso a livello di elemento e a livello di sistema ai membri del gruppo Administrators locale. Con queste assegnazioni di ruolo incorporate, gli amministratori locali possono concedere l'acceso al server di report ad altri utenti e gestire gli elementi del server di report. Le assegnazioni di ruolo incorporate non possono essere eliminate. Un amministratore locale dispone sempre delle autorizzazioni per la gestione completa di un'istanza del server di report.  
+ Inizialmente, solo gli utenti che sono membri del gruppo Administrators locale possono accedere a un server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con due assegnazioni di ruolo predefinite che concedono l'accesso a livello di elemento e a livello di sistema ai membri del gruppo Administrators locale. Con queste assegnazioni di ruolo incorporate, gli amministratori locali possono concedere l'acceso al server di report ad altri utenti e gestire gli elementi del server di report. Le assegnazioni di ruolo incorporate non possono essere eliminate. Un amministratore locale dispone sempre delle autorizzazioni per la gestione completa di un'istanza del server di report.  
   
  Poiché le autorizzazioni complete su un server di report includono autorizzazioni a livello di elemento e a livello di sistema, a un amministratore locale sono assegnati i ruoli seguenti:  
   
@@ -73,16 +72,15 @@ ms.lasthandoff: 08/09/2017
   
 |Strumento|Attività|  
 |----------|-----------|  
-|Management Studio: consente di visualizzare, modificare, creare ed eliminare definizioni di ruolo.|[Creare, eliminare o modificare un ruolo &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Gestione report: consente di assegnare utenti e gruppi a ruoli.|[Concessione dell'accesso utente a un Server di Report &#40; Gestione report &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificare o eliminare un'assegnazione di ruolo &#40; Gestione report &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Management Studio: consente di visualizzare, modificare, creare ed eliminare definizioni di ruolo.|[Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|Gestione report: consente di assegnare utenti e gruppi a ruoli.|[Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Concessione di autorizzazioni per elementi di Server di Report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Autenticazione con il Server di Report](../../reporting-services/security/authentication-with-the-report-server.md)   
- [Creare e gestire le assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

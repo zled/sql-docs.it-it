@@ -1,5 +1,5 @@
 ---
-title: Interfaccia utente di progettazione di Query DMX di Analysis Services | Documenti Microsoft
+title: Interfaccia utente di Progettazione query DMX in Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - DMX [Analysis Services], user interface
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 159e9cfcd9adcb8bd67d04401dcd0861cf3f094e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8787272709b10a8b4d19105eb7560f1c82bd9b21
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Interfaccia utente di Progettazione query DMX in Analysis Services
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili finestre Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) e query DMX (Data Mining Expression) per un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. In questo argomento viene descritta Progettazione query DMX. Per altre informazioni sulla finestra Progettazione query MDX, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include finestre Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) e DMX (Data Mining Expression) per un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In questo argomento viene descritta Progettazione query DMX. Per altre informazioni sulla finestra Progettazione query MDX, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
   
  Nella finestra Progettazione query con interfaccia grafica DMX sono disponibili tre modalità: progettazione, query e risultato. Per passare da una modalità all'altra, fare clic con il pulsante destro del mouse nel riquadro Progettazione query e selezionare la modalità. In ogni modalità è disponibile un riquadro Metadati dal quale è possibile trascinare membri dei cubi selezionati per compilare una query DMX che recupera dati per un set di dati quando il report viene elaborato.  
   
@@ -41,18 +41,18 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |**Modifica come testo**|Disabilitato per questo tipo di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Passare alla visualizzazione di query MDX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "passare alla visualizzazione di query MDX")|Consente di passare alla modalità Progettazione query MDX.|  
-|![Passare alla visualizzazione linguaggio di query DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "passare alla visualizzazione linguaggio di query DMX")|Consente di passare alla modalità Progettazione query DMX.|  
-|![Aggiornare i dati del risultato](../../reporting-services/report-data/media/rsqdicon-refresh.gif "aggiornare i dati di risultati")|Consente di aggiornare i metadati dall'origine dati.|  
+|![Passa alla visualizzazione query MDX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Passa alla visualizzazione query MDX")|Consente di passare alla modalità Progettazione query MDX.|  
+|![Passa alla visualizzazione linguaggio query DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Passa alla visualizzazione linguaggio query DMX")|Consente di passare alla modalità Progettazione query DMX.|  
+|![Aggiorna i dati dei risultati](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Aggiorna i dati dei risultati")|Consente di aggiornare i metadati dall'origine dati.|  
 |![Elimina](../../reporting-services/report-data/media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
-|![Icona per la finestra di dialogo parametri Query](../../reporting-services/report-data/media/iconqueryparameter.gif "icona per la finestra di dialogo parametri Query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si assegna un valore predefinito a una variabile, un parametro del report corrispondente viene creato quando si passa alla visualizzazione Layout in Progettazione report.|  
+|![Icona della finestra di dialogo Parametri query](../../reporting-services/report-data/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si assegna un valore predefinito a una variabile, un parametro del report corrispondente viene creato quando si passa alla visualizzazione Layout in Progettazione report.|  
 |![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di preparare la query.|  
-|![Passare alla modalità progettazione](../../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa. Per passare alla visualizzazione dei risultati, fare clic con il pulsante destro del mouse sul riquadro Progettazione e scegliere **Risultato**.|  
+|![Passa alla modalità progettazione](../../reporting-services/media/rsqdicon-designmode.gif "Passa alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa. Per passare alla visualizzazione dei risultati, fare clic con il pulsante destro del mouse sul riquadro Progettazione e scegliere **Risultato**.|  
   
 ## <a name="graphical-dmx-query-designer-in-design-mode"></a>Progettazione query DMX in modalità progettazione  
  Quando si modifica un set di dati che utilizza un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che non dispone di cubi validi ma dispone di modelli di data mining validi, la finestra Progettazione query con interfaccia grafica si apre in modalità progettazione. Nella figura seguente vengono etichettati i riquadri per la modalità progettazione.  
   
- ![Analysis Services Progettazione query, in visualizzazione Progettazione](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Progettazione query DMX di Analysis Services, in visualizzazione Progettazione")  
+ ![Progettazione query DMX di Analysis Services in visualizzazione Progettazione](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Progettazione query DMX di Analysis Services in visualizzazione Progettazione")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
  Nella figura seguente vengono etichettati i riquadri per la modalità query.  
   
- ![Analysis Services Progettazione query DMX, query visualizzazione](../../reporting-services/report-data/media/rsqd-dsawas-dmx-querymode.gif "DMX di Analysis Services Progettazione query, visualizzazione query")  
+ ![Progettazione query DMX di Analysis Services, visualizzazione query](../../reporting-services/report-data/media/rsqd-dsawas-dmx-querymode.gif "Progettazione query DMX di Analysis Services, visualizzazione query")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   
@@ -84,17 +84,17 @@ ms.lasthandoff: 08/09/2017
   
  Nella figura seguente viene illustrata Progettazione query in modalità risultato.  
   
- ![Analysis Services Progettazione query DMX, risultato visualizzazione](../../reporting-services/report-data/media/rsqd-dsawas-dmx-resultmode.gif "visualizzazione dei risultati Progettazione query DMX di Analysis Services")  
+ ![Progettazione query DMX di Analysis Services, visualizzazione risultati](../../reporting-services/report-data/media/rsqd-dsawas-dmx-resultmode.gif "Progettazione query DMX di Analysis Services, visualizzazione risultati")  
   
  Per tornare alla modalità progettazione o alla modalità query, fare clic con il pulsante destro del mouse nel riquadro Risultato e scegliere **Progettazione** o **Query**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definizione dei parametri in Progettazione Query MDX per Analysis Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Creare un set di dati condiviso o set di dati incorporato &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Tipo di connessione di Analysis Services per DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
- [Recuperare dati da un modello di Data Mining &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
- [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Tipo di connessione di Analysis Services per MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Tipo di connessione di Analysis Services per DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Definizione dei parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Recuperare i dati da un modello di data mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
+ [RSReportDesigner - file di configurazione](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
+ [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

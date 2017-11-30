@@ -1,28 +1,26 @@
 ---
-title: Utilizzo di set di dati condivisi (portale web) | Documenti Microsoft
+title: Uso dei set di dati condivisi (portale Web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c51b1f46f86980d2f756a2a2244c80468b5c28f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Utilizzare i set di dati condivisi - portale web
+# <a name="work-with-shared-datasets---web-portal"></a>Uso dei set di dati condivisi (portale Web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -55,7 +53,7 @@ Per gestire un set di dati condiviso esistente, è possibile eseguire le operazi
 > [!NOTE]
 > Se il set di dati condiviso non è visualizzato nella cartella, assicurarsi che sia attiva la visualizzazione dei set di dati. È possibile scegliere **Visualizza** nella barra dei menu in alto a destra nel portale Web. Assicurarsi che sia selezionato **Set di dati** .  
   
-1.  Selezionare il **i puntini di sospensione (...)**  per il set di dati che si desidera gestire.  
+1.  Selezionare i **puntini di sospensione (...)** per il set di dati che si vuole gestire.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
@@ -111,5 +109,4 @@ Al termine, selezionare **Crea piano di aggiornamento della cache**.
   
 Sarà quindi possibile **modificare** o **eliminare** i piani elencati. L'opzione **Nuovo piano da esistente** viene abilitata quando è selezionato un solo piano di aggiornamento della cache. Consente di creare un nuovo piano di aggiornamento copiato dal piano originale. La pagina del piano di aggiornamento della cache viene aperta con i dettagli dal piano selezionato. È possibile modificare le opzioni del piano di aggiornamento e salvare il piano con una nuova descrizione.  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

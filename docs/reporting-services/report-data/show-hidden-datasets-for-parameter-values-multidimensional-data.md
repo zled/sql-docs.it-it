@@ -1,5 +1,5 @@
 ---
-title: Mostra set di dati nascosti per i valori di parametro - dati multidimensionali | Documenti Microsoft
+title: Visualizzare set di dati nascosti per i valori dei parametri - Dati multidimensionali | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55e44a7468fb08372e5f718fe8fc4bbd1846cb84
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3942f2bac305565ec39f27fad972bdae907724f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Mostra set di dati nascosti per i valori di parametro - dati multidimensionali
+# <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Visualizzare set di dati nascosti per i valori dei parametri - Dati multidimensionali
   Il report potrebbe includere set di dati generati automaticamente (noti anche come set di dati nascosti) che per impostazione predefinita non vengono visualizzati nel riquadro dei dati del report. Tali set di dati vengono creati nei modi seguenti:  
   
 -   In alcune finestre Progettazione query per i database multidimensionali, è possibile specificare i campi da filtrare nell'area del filtro del riquadro Query e scegliere se creare un parametro di query per il filtro. Se si seleziona l'opzione del parametro, i set di dati del report vengono creati automaticamente per fornire i valori validi per il parametro del report.  
@@ -42,10 +41,9 @@ ms.lasthandoff: 08/09/2017
 -   Nel riquadro dei dati del report fare clic con il pulsante destro del mouse sulla cartella Datasets e quindi fare clic su **Mostra set di dati nascosti**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre Progettazione query &#40; Generatore report &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
- [Finestre Progettazione Query di Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
- [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [Strumenti di progettazione query in Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

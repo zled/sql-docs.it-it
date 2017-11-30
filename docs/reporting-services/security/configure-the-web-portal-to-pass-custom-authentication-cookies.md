@@ -1,5 +1,5 @@
 ---
-title: Configurare il portale Web per passare i cookie di autenticazione personalizzato | Documenti Microsoft
+title: Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati | Microsoft Docs
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
@@ -14,26 +14,25 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0f1131c191fa64c6dc6f2a074a9cd5db7a8b0e1b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati
 
-Se si utilizza un'estensione di autenticazione personalizzato, è necessario configurare il portale web per la trasmissione di cookie di autenticazione personalizzati. In caso contrario, il portale web verrà trasmessi solo i cookie tramite richieste HTTP specifiche per il server di report. Se si desidera trasmettere ulteriori cookie, è necessario modificare il file RSReportServer.Config.
+Se si sta usando un'estensione di autenticazione personalizzata, è necessario configurare il portale Web per la trasmissione di cookie di autenticazione personalizzati. In caso contrario, il portale Web trasmetterà i cookie solo mediante richieste HTTP specifiche del server di report. Se si desidera trasmettere ulteriori cookie, è necessario modificare il file RSReportServer.Config.
 
 ## <a name="modifying-the-rsreportserverconfig-file"></a>Modifica del file RSReportServer.config
 
-È possibile abilitare il [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] per trasmettere ulteriori cookie al server di report mediante l'aggiunta di un \< **PassThroughCookies**> elemento per le impostazioni di configurazione del portale web nel file RSReportServer. config. La trasmissione di cookie aggiuntivi è utile in una soluzione di autenticazione Single Sign-On che, insieme ai cookie di autenticazione del server di report, richiede anche cookie di un sistema di autenticazione di terze parti.
+È possibile consentire a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] di trasmettere altri cookie al server di report aggiungendo un elemento \<**PassThroughCookies**> alle impostazioni di configurazione del portale Web nel file RSReportServer.config. La trasmissione di cookie aggiuntivi è utile in una soluzione di autenticazione Single Sign-On che, insieme ai cookie di autenticazione del server di report, richiede anche cookie di un sistema di autenticazione di terze parti.
 
-Per abilitare ulteriori cookie deve essere trasmesso tramite richieste HTTP quando si usa il portale web, impostare gli elementi seguenti nel file RSReportServer. config:
+Per consentire la trasmissione di altri cookie tramite richieste HTTP quando si usa il portale Web, impostare gli elementi seguenti nel file RSReportServer.config:
   
 ```  
 <UI>  
@@ -53,5 +52,5 @@ Per abilitare ulteriori cookie deve essere trasmesso tramite richieste HTTP quan
 [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Panoramica sulle estensioni di sicurezza](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
-[Configurare e amministrare un Server di Report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
-Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+[Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi di elaborazione dei report di Reporting Services | Documenti Microsoft
+title: Risolvere i problemi di elaborazione dei report di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8df3dd891b236ca295a4cc0deebdc5768d06dffa
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a22c557ce2289c950edceff045b1c868d60ef677
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Risolvere i problemi di elaborazione dei report di Reporting Services
 Dopo aver recuperato i dati del report, le informazioni sul layout e i dati vengono combinati dal componente Elaborazione report. Ciascuna proprietà dell'elemento del report contenente un'espressione viene valutata nel contesto dei dati e del layout combinati. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.   
@@ -58,5 +57,4 @@ Nell'anteprima, visualizzare la finestra di output in [!INCLUDE[ssBIDevStudioFul
 ## <a name="see-also"></a>Vedere anche  
 [Errori ed eventi (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

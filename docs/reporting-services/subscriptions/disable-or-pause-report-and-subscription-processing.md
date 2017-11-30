@@ -1,5 +1,5 @@
 ---
-title: Disable or Pause Report and l'elaborazione della sottoscrizione | Documenti Microsoft
+title: Disabilitare o sospendere l'elaborazione di report e sottoscrizioni | Microsoft Docs
 ms.custom: 
 ms.date: 09/29/2015
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7c8a74891d7629293de30b0929e323febec0ac17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Disabilitare o sospendere l'elaborazione di report e sottoscrizioni
   Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo argomento vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono praticabili con entrambe le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le tabelle seguenti riepilogano i metodi e le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supportate:  
@@ -53,9 +52,9 @@ ms.lasthandoff: 08/09/2017
 > [!TIP]  
 >  Novità di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] **Abilitare e disabilitare le sottoscrizioni**. Sono disponibili nuove opzioni dell'interfaccia utente che consentono disabilitare e abilitare rapidamente le sottoscrizioni. Le sottoscrizioni disabilitate mantengono le rispettive proprietà di configurazione, ad esempio la pianificazione, e possono essere abilitate con facilità. È possibile abilitare e disabilitare le sottoscrizioni o controllare le sottoscrizioni disabilitate anche a livello di codice.  
   
- ![barra multifunzione di sottoscrizione di Reporting services](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "della barra multifunzione di sottoscrizione di reporting services")  
+ ![barra multifunzione di sottoscrizione di Reporting Services](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "barra multifunzione di sottoscrizione di Reporting Services")  
   
- In Gestione Report in modalità nativa, passare alla sottoscrizione dalla pagina **Sottoscrizioni personali** o **Gestisci** di una singola sottoscrizione. Selezionare una o più sottoscrizioni e quindi fare clic su Disabilita ![disabilitare una sottoscrizione di servizi di reporting](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "disabilitare una sottoscrizione di servizi di reporting") pulsante o sul pulsante Abilita ![abilitare una sottoscrizione di servizi di reporting](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "abilitare una sottoscrizione di servizi di reporting") sulla barra multifunzione. Le sottoscrizioni disabilitate sono contrassegnate con un'icona di avviso ![avviso di stato di reporting services subscriptio](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "avviso di stato di reporting services subscriptio") e lo stato viene elencato come **disabilitato**.  
+ In Gestione Report in modalità nativa, passare alla sottoscrizione dalla pagina **Sottoscrizioni personali** o **Gestisci** di una singola sottoscrizione. Selezionare una o più sottoscrizioni e quindi fare clic sul pulsante di disabilitazione ![disabilitare una sottoscrizione di Reporting Services](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "disabilitare una sottoscrizione di Reporting Services") o di abilitazione ![abilitare una sottoscrizione di Reporting Services](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "abilitare una sottoscrizione di Reporting Services") sulla barra multifunzione. Le sottoscrizioni disabilitate sono contrassegnate con un'icona di avviso ![avviso di stato di una sottoscrizione di Reporting Services](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "avviso di stato di una sottoscrizione di Reporting Services") e lo stato viene elencato come **Disabilitato**.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scrive una riga nel log di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quando una sottoscrizione viene disabilitata e un'altra voce quando la sottoscrizione viene abilitata. Ad esempio, nel file di log del server di report:  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
  `library!ReportServer_0-1!2eec!10/16/2014-16:44:18:: i INFO: Call to EnableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934).`  
   
- ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell") **utilizzare Windows PowerShell per disabilitare una singola sottoscrizione:** usare lo script di PowerShell seguente per disabilitare una sottoscrizione specifica. Aggiornare il nome del server e l'ID della sottoscrizione.  
+ ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per disabilitare una singola sottoscrizione:** usare lo script di PowerShell seguente per disabilitare una sottoscrizione specifica. Aggiornare il nome del server e l'ID della sottoscrizione.  
   
 ```  
 #disable specific subscription  
@@ -87,7 +86,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell") **utilizzare Windows PowerShell per elencare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per elencare tutte le sottoscrizioni disabilitate nel server di report in modalità nativa corrente. Aggiornare il nome del server.  
+ ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per elencare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per elencare tutte le sottoscrizioni disabilitate nel server di report in modalità nativa corrente. Aggiornare il nome del server.  
   
 ```  
 #list all disabled subscriptions  
@@ -98,7 +97,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell") **utilizzare Windows PowerShell per abilitare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per abilitare tutte le sottoscrizioni che sono attualmente disabilitate. Aggiornare il nome del server.  
+ ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per abilitare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per abilitare tutte le sottoscrizioni attualmente disabilitate. Aggiornare il nome del server.  
   
 ```  
 #enable all subscriptions  
@@ -112,7 +111,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell") **utilizzare Windows PowerShell per DISABILITARE tutte le sottoscrizioni:** usare lo script di PowerShell seguente per disabilitare **tutti** sottoscrizioni.  
+ ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per DISABILITARE tutte le sottoscrizioni:** usare lo script di PowerShell seguente per disabilitare **TUTTE** le sottoscrizioni.  
   
 ```  
 #DISABLE all subscriptions  
@@ -128,7 +127,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> Sospendere una pianificazione condivisa  
  Se una sottoscrizione o un report viene eseguito in base a una pianificazione condivisa, è possibile sospendere la pianificazione per impedire l'elaborazione del report o della sottoscrizione. Tutte le operazioni di elaborazione del report o della sottoscrizione eseguite in base alla pianificazione verranno posticipate fino a quando verrà ripresa la pianificazione.  
   
--   **Modalità SharePoint:** ![impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint") In **Impostazioni sito**selezionare **Gestisci pianificazioni condivise**. Selezionare la pianificazione e fare clic su **Sospendi pianificazioni selezionate**.  
+-   **Modalità SharePoint:** ![Impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni SharePoint") in **Impostazioni sito** selezionare **Gestisci pianificazioni condivise**. Selezionare la pianificazione e fare clic su **Sospendi pianificazioni selezionate**.  
   
 -   **Modalità nativa:** in Gestione report fare clic su **Impostazioni sito**. Selezionare la pianificazione e quindi fare clic su **Sospendi**.  
   
@@ -137,7 +136,7 @@ ForEach ($subscription in $subscriptions)
   
  Si noti che il report viene caricato anche se la relativa origine dati non è disponibile. Il report non conterrà dati, ma gli utenti con le autorizzazioni appropriate potranno accedere alle pagine delle proprietà, alle impostazioni di sicurezza, alla cronologia e alle informazioni di sottoscrizione associate al report.  
   
--   **Modalità SharePoint** : per disabilitare un'origine dati condivisa in un server di report in modalità SharePoint, passare alla raccolta documenti che contiene l'origine dati. ![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "icona di origine dati condivisa") fare clic sull'origine dati e quindi deselezionare la **abilita questa origine dati** casella di controllo.  
+-   **Modalità SharePoint** : per disabilitare un'origine dati condivisa in un server di report in modalità SharePoint, passare alla raccolta documenti che contiene l'origine dati. ![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona di origine dati condivisa") Fare clic sull'origine dati e quindi deselezionare la casella di controllo **Abilita questa origine dati**.  
   
 -   **Modalità nativa:** per disabilitare un'origine dati condivisa in un server di report in modalità nativa, aprire l'origine dati in Gestione report e deselezionare la casella di controllo **Abilita questa origine dati** .  
   
@@ -173,10 +172,9 @@ ForEach ($subscription in $subscriptions)
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Configurare Gestione Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
- [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Pagina delle proprietà sicurezza, gli elementi di &#40; Gestione report &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [Configurare Gestione report &#40;modalità nativa&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Pagina delle proprietà sicurezza, Elementi &#40;Gestione report&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   
-

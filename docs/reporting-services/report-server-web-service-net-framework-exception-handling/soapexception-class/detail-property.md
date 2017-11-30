@@ -1,5 +1,5 @@
 ---
-title: "Dettagli proprietà | Documenti Microsoft"
+title: "Proprietà Detail | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0ec158ac41b62beef9f59b6378633e8926e4116a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="detail-property"></a>Proprietà Detail
-  Il **dettaglio** proprietà del [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** classe è la struttura XML seguente:  
+  La proprietà **Detail** della classe [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** ha la struttura XML seguente:  
   
 ## <a name="elements"></a>Elementi  
- **Dettagli**  
+ **Detail**  
  Elemento di livello principale che contiene tutti gli altri elementi relativi ai dettagli dell'errore.  
   
  **ErrorCode**  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/12/2017
  Messaggio di errore e codice di errore assegnati dal server di report.  
   
  **HelpLink**  
- URL di collegamento alla Guida che rimanda a un sito Web in cui è possibile trovare ulteriori informazioni sull'errore. Per ulteriori informazioni, vedere [elemento HelpLink](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
+ URL di collegamento alla Guida che rimanda a un sito Web in cui è possibile trovare ulteriori informazioni sull'errore. Per altre informazioni, vedere [Elemento HelpLink](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
   
  **LinkID**  
  ID assegnato al collegamento.  
@@ -59,28 +57,27 @@ ms.lasthandoff: 08/12/2017
  **ProductLocaleId**  
  ID delle impostazioni locali o della lingua della DLL INTL dell'applicazione (ad esempio, 0x41A).  
   
- **Sistema operativo**  
- Sistema operativo in cui è installato [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I valori validi includono **0** per sistema operativo indipendente, **1** per [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)], e **16** per Windows XP.  
+ **OperatingSystem**  
+ Sistema operativo in cui è installato [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I valori validi includono **0** per indicare una versione indipendente dal sistema operativo, **1** per [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] e **16** per Windows XP.  
   
  **CountryLocaleId**  
  ID delle impostazioni locali o della lingua del sistema operativo. Il valore della versione francese di Windows è ad esempio 0x040c.  
   
- **Ulteriori informazioni**  
+ **MoreInformation**  
  Stringa XML contenente eccezioni nidificate che si sono verificate durante l'esecuzione del metodo.  
   
  **Origine**  
- Un elemento figlio di **MoreInformation**. Indica l'origine dell'errore.  
+ Elemento figlio di **MoreInformation**. Indica l'origine dell'errore.  
   
  **Message**  
- Un elemento figlio di **MoreInformation**. Indica il messaggio di errore di un'eccezione nidificata. Questa sezione include attributi XML per **ErrorCode** e **HelpLink**.  
+ Elemento figlio di **MoreInformation**. Indica il messaggio di errore di un'eccezione nidificata. Questo elemento include gli attributi XML per **ErrorCode** e **HelpLink**.  
   
  **Avvisi**  
  Stringa XML contenente gli avvisi restituiti dall'elaborazione del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione a gestione delle eccezioni in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Introduzione alla gestione delle eccezioni in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Classe SoapException di Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
- [Utilizzo della proprietà Detail per gestire errori specifici](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Uso della proprietà Detail per la gestione di errori specifici](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   
-

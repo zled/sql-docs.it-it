@@ -1,5 +1,5 @@
 ---
-title: Le pianificazioni | Documenti Microsoft
+title: Pianificazioni | Microsoft Docs
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c4e737163256ada2f5b9188b31deb2671eeb5a6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="schedules"></a>Pianificazioni
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre **pianificazioni condivise** e **pianificazioni in base al report** che consentono di controllare l'elaborazione e la distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.
@@ -140,11 +139,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, modificare ed eliminare snapshot nella cronologia dei report](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [La memorizzazione nella cache di report &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
-

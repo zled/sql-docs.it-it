@@ -1,5 +1,5 @@
 ---
-title: Accesso tramite URL in un'applicazione Web | Documenti Microsoft
+title: Uso dell'accesso con URL in un'applicazione Web | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 123e0ff6bbc5a33214e515401ad38f7af5604b5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrazione Reporting Services Using URL Access - applicazione Web
+# <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrazione di Reporting Services tramite l'accesso con URL - Applicazione Web
   L'accesso con URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è progettato in maniera specifica per consentire l'accesso ai singoli report in una rete. Questo tipo di accesso è ottimale per l'integrazione delle funzionalità di visualizzazione e navigazione del report in un'applicazione Web personalizzata. Per utilizzare l'accesso con URL nelle applicazioni Web, è possibile:  
   
 -   Indirizzare un URL a un server di report specifico da un portale o un sito Web.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/12/2017
 -   Utilizzare un metodo POST di un form e passare i parametri della stringa di query a un URL del server di report utilizzando i campi del form.  
   
 ## <a name="url-access-through-direct-addressing"></a>Accesso con URL tramite indirizzamento diretto  
- Per accedere a un elemento di un server di report o di un database del server di report utilizzando un URL, è sufficiente fornire l'indirizzo dell'URL da un browser o un'applicazione. È inoltre possibile fornire parametri dell'URL che possono influire sull'aspetto del report o della risorsa a cui si accede. Un URL può puntare a un server di report tramite la barra degli indirizzi del browser o un URL può essere l'origine di un **IFrame** che fanno parte di un portale o l'applicazione Web di grandi dimensioni. È possibile includere collegamenti ipertestuali ai report in diverse pagine Web del portale, nonché impostare come destinazione un frame specifico per il report oppure aprire una nuova finestra del browser nel processo.  
+ Per accedere a un elemento di un server di report o di un database del server di report utilizzando un URL, è sufficiente fornire l'indirizzo dell'URL da un browser o un'applicazione. È inoltre possibile fornire parametri dell'URL che possono influire sull'aspetto del report o della risorsa a cui si accede. Un URL può puntare a un server di report tramite la barra degli indirizzi di un browser oppure può essere l'origine di un oggetto **IFrame** che fa parte di un portale o un'applicazione Web di dimensioni più grandi. È possibile includere collegamenti ipertestuali ai report in diverse pagine Web del portale, nonché impostare come destinazione un frame specifico per il report oppure aprire una nuova finestra del browser nel processo.  
   
  Nell'esempio seguente il collegamento ipertestuale punta a un frame denominato "main" che potrebbe essere diverso da quello che include il collegamento ipertestuale. Il collegamento ipertestuale potrebbe fare parte del portale Web.  
   
@@ -51,9 +49,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- Nell'esempio precedente, le informazioni sul dispositivo impostazione **LinkTarget** viene passata con un valore "main" nella stringa di query dell'URL. In questo modo, anche qualsiasi collegamento ipertestuale drill-through nel report punta al frame denominato "main".  
+ Nell'esempio precedente l'impostazione relativa alle informazioni sul dispositivo, **LinkTarget**, viene passata con un valore "main" nella stringa di query dell'URL. In questo modo, anche qualsiasi collegamento ipertestuale drill-through nel report punta al frame denominato "main".  
   
- Per ulteriori informazioni sulle impostazioni informazioni dispositivo, vedere [passando Device Information Settings per estensioni per il Rendering](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  Si noti che in numerosi server e browser il numero di caratteri consentito in un URL è limitato. In alcuni casi, è previsto un limite di 256 caratteri. Per aggirare questa limitazione, è possibile utilizzare richieste POST con invio del form.  
   
@@ -88,9 +86,8 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
   
 ## <a name="see-also"></a>Vedere anche  
  [Integrazione di Reporting Services nelle applicazioni](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integrazione di Reporting Services con accesso tramite URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Accesso tramite URL in un'applicazione Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [Accesso con URL &#40; SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [Integrazione di Reporting Services tramite l'accesso con URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Uso dell'accesso con URL in un'applicazione Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
+ [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

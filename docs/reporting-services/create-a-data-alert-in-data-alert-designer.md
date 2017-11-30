@@ -1,5 +1,5 @@
 ---
-title: Crea un avviso dati nella finestra di progettazione avviso dati | Documenti Microsoft
+title: Creare un avviso dati nella finestra di progettazione Avviso dati | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 Le definizioni di avviso dati vengono create nella finestra di progettazione Avviso dati. Dopo aver salvato le definizioni di avviso, è possibile riaprirle, modificarle, quindi salvare di nuovo nella finestra di progettazione Avviso dati. Per informazioni sulla modifica delle definizioni di avviso, vedere [Gestire gli avvisi dati in Gestione avvisi dati](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) e [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile dopo SQL Server 2016.
 
 ## <a name="create-a-data-alert-definition"></a>Creare una definizione di avviso dati
  
@@ -47,12 +46,12 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
      L'immagine seguente illustra il menu **Azioni** .  
   
-     ![Aprire Alert Designer dalla raccolta di SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "aprire Alert Designer dalla raccolta di SharePoint")  
+     ![Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint")  
   
      La finestra di progettazione Avviso dati viene visualizzata, con le prime 100 righe del primo feed di dati generato dal report in una tabella.  
   
     > [!NOTE]  
-    >  Se l'opzione **Nuovo avviso dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è visualizzata, il servizio avvisi non è configurato nel sito di SharePoint o l'edizione di**  non include avvisi dati. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  Se l'opzione **Nuovo avviso dati** non viene visualizzata, il servizio avvisi non è configurato nel sito di SharePoint oppure l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non include gli avvisi dati. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  Se l'opzione **Nuovo avviso dati** è visualizzata in grigio, l'origine dati del report è configurata per l'utilizzo di credenziali di sicurezza integrata o per la richiesta di credenziali. Per rendere disponibile l'opzione **Nuovo avviso dati** , è necessario aggiornare l'origine dati per usare credenziali archiviate o nessuna credenziale.  
   
@@ -121,17 +120,16 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
 20. Facoltativamente, nella casella di testo **Oggetto** aggiornare la riga dell'oggetto del messaggio di avviso.  
   
-     Il valore predefinito è soggetto **di avviso dati per \<nome avviso dati >**.  
+     L'oggetto predefinito è **Avviso dati per \<nome avviso dati>**.  
   
-21. Facoltativamente, digitare una descrizione per il messaggio di avviso nella casella di testo **Descrizione**.  
+21. Facoltativamente, digitare una descrizione per il messaggio di avviso nella casella di testo **Descrizione** .  
   
 22. Fare clic su **Salva**.  
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestra di progettazione avviso dati](../reporting-services/data-alert-designer.md)   
+[Finestra di progettazione Avviso dati](../reporting-services/data-alert-designer.md)   
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

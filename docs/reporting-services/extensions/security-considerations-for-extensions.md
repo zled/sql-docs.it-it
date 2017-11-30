@@ -1,5 +1,5 @@
 ---
-title: Considerazioni sulla sicurezza per le estensioni | Documenti Microsoft
+title: Considerazioni sulla sicurezza per le estensioni | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,31 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 002356fd21ed4124c9bf49d915081bf0902d71f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-considerations-for-extensions"></a>Considerazioni sulla sicurezza per le estensioni
   È necessario che ogni applicazione destinata a CLR (Common Language Runtime) interagisca con il relativo sistema di sicurezza. L'applicazione viene valutata automaticamente al momento dell'esecuzione e a tale applicazione viene concesso da CLR un set di autorizzazioni. A seconda delle autorizzazioni ricevute, l'applicazione può continuare a essere eseguita oppure viene generata un'eccezione di sicurezza. I criteri e le impostazioni di sicurezza locali nei file di configurazione dei criteri di sicurezza per un server di report specifico definiscono le autorizzazioni per il codice ricevute da un assembly.  
   
  Prima di richiedere le autorizzazioni, è necessario essere a conoscenza delle risorse e delle operazioni protette che verranno utilizzate dal codice dell'estensione, nonché sapere quali autorizzazioni proteggono tali risorse e operazioni. È inoltre necessario tenere traccia di ogni risorsa alla quale accedono i vari metodi della libreria di classi chiamati dai componenti dell'estensione. Per ulteriori informazioni, vedere "Richiesta di autorizzazioni" nella Guida per gli sviluppatori di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Le estensioni distribuite in un server di report è necessario eseguire come completamente attendibile, vale a dire che l'estensione deve far parte di un gruppo di codice che viene concessa la **FullTrust** set di autorizzazioni. Questo significa inoltre che l'estensione può disporre di accesso a determinate operazioni e risorse del server disponibili tramite CLR, a seconda dell'utente autenticato per un report specifico. Per ulteriori informazioni sulle estensioni e i gruppi di codice, vedere [sicurezza dall'accesso di codice in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
+ Le estensioni distribuite in un server di report devono essere eseguite come completamente attendibili, vale a dire che l'estensione deve far parte di un gruppo di codice a cui sia concesso il set di autorizzazioni **FullTrust**. Questo significa inoltre che l'estensione può disporre di accesso a determinate operazioni e risorse del server disponibili tramite CLR, a seconda dell'utente autenticato per un report specifico. Per altre informazioni sui gruppi di codice e sulle estensioni, vedere [Sicurezza dall'accesso di codice in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 > [!IMPORTANT]  
 >  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene applicata la sicurezza di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per tutte le estensioni.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
 -   Solo gli utenti con privilegi dispongono dell'autorizzazione per la modifica dei file dei criteri di sicurezza e l'abilitazione della sicurezza da accesso di codice per un'estensione.  
   
- Per ulteriori informazioni sulla sicurezza di accesso di codice in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [sviluppo protetto &#40; Reporting Services &#41; ](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+ Per altre informazioni sulla sicurezza dall'accesso di codice in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Sviluppo sicuro &#40;Reporting Services&#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
   
  Per ulteriori informazioni sulla sicurezza in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere 'argomento relativo alla sicurezza di .NET Framework nella Guida per gli sviluppatori di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
@@ -59,4 +57,3 @@ ms.lasthandoff: 08/12/2017
  [Libreria di estensioni di Reporting Services](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

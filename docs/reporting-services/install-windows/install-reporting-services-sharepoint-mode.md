@@ -1,13 +1,11 @@
 ---
-title: "Installare la modalità SharePoint di Reporting Services | Documenti Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Installare la modalità SharePoint di Reporting Services | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - installing Reporting Services, SharePoint integrated mode
 - installation options [Reporting Services]
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 0579de9d264d5b81713fd47b25feeb1fb817b8e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-reporting-services-sharepoint-mode"></a>Installare la modalità SharePoint di Reporting Services
 
@@ -33,10 +30,10 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services in SharePoint, Abilita report creazione e la visualizzazione nelle raccolte documenti, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recapito delle sottoscrizioni di report tramite posta elettronica, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], avvisi dati e le funzionalità di gestione di report, tutto in una distribuzione di basano di [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. Per ulteriori informazioni relative alle funzionalità in modalità SharePoint, vedere la sezione "Funzionalità di supporto e comportamento differenze da modalità Server" in [del Server di Report di Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
+SQL Server Reporting Services in SharePoint abilita la creazione e la visualizzazione dei report nelle raccolte documenti, il recapito di report della sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante posta elettronica, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], gli avvisi dati e le funzionalità di gestione report, tutto in un'unica distribuzione basata su [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. Per altre informazioni sulle funzionalità in modalità SharePoint, vedere la sezione relativa al supporto delle funzionalità e alle differenze di comportamento in base alla modalità server in [Server di report di Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
 Ci sono due componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] principali da installare per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint:  
 
@@ -71,4 +68,3 @@ Ci sono due componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
  [Gestione avvisi dati per gli amministratori di avvisi](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

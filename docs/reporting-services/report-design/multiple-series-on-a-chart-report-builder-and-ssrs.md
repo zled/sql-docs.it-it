@@ -1,5 +1,5 @@
 ---
-title: "Più serie in un grafico (Generatore Report e SSRS) | Documenti Microsoft"
+title: "Più serie in un grafico (Generatore report e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd942ab8b1aee3047c693f40a99453cd79981dc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Più serie in un grafico (Generatore report e SSRS)
   Se in un grafico sono presenti più serie, è necessario identificare il sistema ottimale per confrontarle. È possibile utilizzare un grafico in pila per mostrare le proporzioni relative di ogni serie. Se si confrontano solo due serie che condividono un asse delle categorie (x), utilizzare l'asse secondario. Ciò si rivela utile per mostrare due serie correlate di dati, ad esempio, prezzo e volume o reddito e tasse. Se il grafico diventa illeggibile, utilizzare più aree del grafico per creare una maggiore separazione visiva tra le diverse serie.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="using-chart-areas"></a>Utilizzo di aree del grafico  
  Il grafico è il contenitore di livello superiore che include il bordo esterno, il titolo del grafico e la legenda. Per impostazione predefinita, il grafico contiene una sola area predefinita. L'area del grafico non è visibile sulla superficie del grafico, ma è possibile considerarla come un contenitore che include solo le etichette e il titolo degli assi, nonché l'area tracciato di una o più serie. Nell'illustrazione seguente viene mostrato il concetto di aree del grafico all'interno di un singolo grafico.  
   
- ![Viene illustrato un diagramma di un'area grafico](../../reporting-services/report-design/media/chartareasdiagram.gif "viene illustrato un diagramma di un'area del grafico")  
+ ![Visualizza un diagramma di un'area del grafico](../../reporting-services/report-design/media/chartareasdiagram.gif "Visualizza un diagramma di un'area del grafico")  
   
  L'uso della finestra di dialogo **Proprietà area grafico** consente di specificare l'orientamento 2D e 3D di tutte le serie contenute nell'area del grafico, di allineare più aree del grafico all'interno dello stesso grafico e di formattare i colori dell'area tracciato. Quando viene definita una nuova area del grafico in un grafico che contiene solo un area del grafico predefinita, lo spazio disponibile viene diviso orizzontalmente per due e la nuova area del grafico viene posizionata al di sotto della prima.  
   
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/09/2017
  Nei grafici con intervalli sono presenti due valori per ogni punto dati. Se il grafico contiene due serie che condividono lo stesso asse delle categorie (x), è possibile utilizzare un grafico con intervalli per mostrare la differenza tra le due serie. I grafici con intervalli sono più adatti alla visualizzazione delle informazioni relative ai valori massimo e minimo o superiore e inferiore. Se, ad esempio, la prima e la seconda serie contengono rispettivamente la vendita massima e la vendita minima effettuate ogni giorno nel mese di gennaio, è possibile utilizzare un grafico con intervalli per mostrare la differenza tra le due vendite ogni giorno. Per altre informazioni, vedere [Grafici con intervalli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Visualizzazione di una serie con più intervalli di dati in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Tipi di grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Visualizzazione di una serie con più intervalli di dati in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Tipi di grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   
-

@@ -1,29 +1,26 @@
 ---
-title: "Impostazioni - modalità nativa (Gestione configurazione) Reporting Services di posta elettronica | Documenti Microsoft"
+title: "Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords:
-- SQL11.rsconfigtool.emailsettings.F1
+f1_keywords: SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 6ecaee1ba9757745e7d1e884067fa9c06632c6e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)
 Reporting Services include un'estensione per il recapito tramite posta elettronica che consente di distribuire report tramite questa modalità. A seconda di come viene definita la sottoscrizione tramite posta elettronica, un recapito può essere costituito da una notifica, un collegamento, un allegato o un report incorporato. L'estensione per il recapito tramite posta elettronica può essere utilizzata con la tecnologia del server di posta elettronica esistente. Il server di posta elettronica deve essere un server SMTP o un server di inoltro. Il server di report si connette a un server SMTP tramite librerie Collaboration Data Objects, o CDO, (cdosys.dll) fornite dal sistema operativo.
@@ -73,7 +70,7 @@ Per configurare un server di report per il recapito tramite posta elettronica, e
      
      - **Nome utente e password (di base)** consente di specificare un nome utente e una password per connettersi al server di posta elettronica. È anche possibile selezionare **Utilizza connessione protetta** per accedere al server di posta elettronica tramite una connessione crittografata.
      
-          Selezionando questa opzione `<SendUsing>` verrà impostato su un valore di **2** e `<SMTPAuthenticate>` su un valore di **1** nel file rsreportserver.config. Selezionando **Utilizza connessione protetta** `SMTPUseSSL` verrà impostato su **True**. **Nome utente** verrà impostato in `<SendUserName>` come valore crittografato. **Password** verrà impostato in `<SendPassword>` come valore crittografato.
+          Selezionando questa opzione `<SendUsing>` verrà impostato su un valore di **2** e `<SMTPAuthenticate>` su un valore di **1** nel file rsreportserver.config. Se si seleziona **Usa connessione sicura**, `SMTPUseSSL` verrà impostato su **True**. **Nome utente** verrà impostato in `<SendUserName>` come valore crittografato. **Password** verrà impostato in `<SendPassword>` come valore crittografato.
      
      - **Account servizio server di report (NTLM)** userà l'account di servizio specificato per il server di report. Se si usa l'account del servizio del server di report per l'autenticazione, verificare che l'account del servizio disponga delle autorizzazioni **Invia come** per il server SMTP.
      
@@ -134,9 +131,9 @@ Per ovviare a questo problema, è possibile modificare le impostazioni di config
 ## <a name="configuration-options-for-remote-smtp-service"></a>Opzioni di configurazione per il servizio SMTP remoto
 La connessione tra il server di report e un server SMTP o un server d'inoltro viene determinata tramite le impostazioni di configurazione seguenti:
 
-- `<SendUsing>`Specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.
-- `<SMTPServer>`Specifica il server SMTP remoto o server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
-- `<From>`Imposta il valore visualizzato nel **da:** riga di un messaggio di posta elettronica. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
+- `<SendUsing>` specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.
+- `<SMTPServer>` specifica il server SMTP remoto o il server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
+- `<From>` imposta il valore che viene visualizzato nella riga **Da:** di un messaggio di posta elettronica. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
 
 Tra gli altri valori utilizzati per il servizio SMTP remoto sono inclusi quelli indicati di seguito. Si noti che non è necessario specificare tali valori, a meno che non si desideri ignorare i valori predefiniti.
 
@@ -232,4 +229,3 @@ La connessione tra il server di report e un server SMTP locale o un server d'ino
 [File di configurazione Rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   
-

@@ -1,28 +1,25 @@
 ---
-title: "Aggiungere un ulteriore Server di Report a una Farm (scalabilità orizzontale SSRS) | Documenti Microsoft"
+title: "Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d1a4e4da2f35e6bea1acebb686c7395bfc12b25b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
 
   L'aggiunta di un secondo o altri server di report in modalità SharePoint alla farm di SharePoint può migliorare le prestazioni e il tempo di risposta dell'elaborazione del server di report. Se le prestazioni risultano rallentate dopo aver aggiunto altri utenti, report e applicazioni al server di report, l'aggiunta di ulteriori server di report può migliorare le prestazioni. È inoltre consigliabile aggiungere un secondo server di report per aumentare la disponibilità dei server di report in caso di problemi hardware o di manutenzione generale di singoli server di report nell'ambiente. A partire dalla versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , la procedura per la scalabilità orizzontale dell'ambiente [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint segue la distribuzione standard della farm di SharePoint e sfrutta le funzionalità di bilanciamento del carico di SharePoint.  
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   (4) Rappresenta una soluzione software o hardware di bilanciamento del carico di rete.  
   
- ![Aggiunta di un server applicazioni di Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "aggiunta di un server applicazioni di Reporting Services")  
+ ![Aggiunta di un server applicazioni di Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Aggiunta di un server applicazioni di Reporting Services")  
   
  Nei seguenti passaggi si presuppone che l'installazione e la configurazione del server vengano eseguite da un amministratore. Il server verrà configurato come nuovo server applicazioni nella farm e non verrà utilizzato come un front-end Web.  
   
@@ -74,11 +71,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_additional"></a> Configurazione aggiuntiva  
  È possibile ottimizzare singoli server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una distribuzione con scalabilità orizzontale solo per eseguire l'elaborazione in background, in modo da non condividere le risorse con esecuzione interattiva del report. Nell'elaborazione in background sono incluse pianificazioni, sottoscrizioni e avvisi dati.  
   
- Per modificare il comportamento di server di report singoli, impostare  **\<IsWebServiceEnable >** su false nel **RSReportServer. config** file di configurazione.  
+ Per modificare il comportamento di server di report singoli, impostare **\<IsWebServiceEnable>** su false nel file di configurazione **RSreportServer.config**.  
   
- Per impostazione predefinita i server di report vengono configurati con \<IsWebServiceEnable > impostato su TRUE. Quando tutti i server sono configurati per TRUE, l'elaborazione interattiva e in background sarà con carico bilanciato in tutti i nodi nella farm.  
+ Per impostazione predefinita, i server di report vengono configurati con \<IsWebServiceEnable> impostato su TRUE. Quando tutti i server sono configurati per TRUE, l'elaborazione interattiva e in background sarà con carico bilanciato in tutti i nodi nella farm.  
   
- Se si configurano tutti i server di report con \<IsWebServiceEnable > impostato su False, si verrà visualizzato un messaggio di errore simile al seguente quando si tenta di utilizzare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] funzionalità:  
+ Se si configurano tutti i server di report con \<IsWebServiceEnable> impostato su False, verrà visualizzato un messaggio di errore simile al seguente quando si tenterà di usare le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
       The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
  
@@ -89,5 +86,4 @@ ms.lasthandoff: 08/09/2017
 [Aggiungere un server SharePoint a una farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Aggiungere un server SharePoint a una farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

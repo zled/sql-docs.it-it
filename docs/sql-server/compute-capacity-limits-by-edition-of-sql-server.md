@@ -1,12 +1,11 @@
 ---
 title: "Limiti della capacità di calcolo per edizione di SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 06/02/2016
+ms.date: 11/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: ef30b71b10c44d8e09a543e75e7c19e5e85fec02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
   In questo argomento si illustrano i limiti della capacità di calcolo per differenti edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con i processori con l'Hyper-Threading.  
@@ -36,28 +35,25 @@ ms.lasthandoff: 06/22/2017
 |-----------|-----------------|  
 |0..1|Zero o uno|  
 |1|Esattamente uno|  
-|1..*|Uno o più|  
-|0..*|Zero o più|  
+|1..\*|Uno o più|  
+|0..\*|Zero o più|  
 |1..2|Uno o due|  
   
 > [!IMPORTANT]  
->  Per un'ulteriore elaborazione:  
+> Per un'ulteriore elaborazione:  
 >   
->  1.  Una macchina virtuale viene allocata per uno o più processori virtuali.  
-> 2.  Uno o più processori virtuali sono allocati a esattamente una macchina virtuale.  
-> 3.  Viene eseguito il mapping a zero o più processori logici di zero o un processore virtuale. Quando il mapping del processore virtuale al processore logico è:  
->   
->      -   Uno-a-zero, che rappresenta un processore logico non associato non utilizzato dai sistemi operativi guest.  
+> - Una macchina virtuale viene allocata per uno o più processori virtuali.  
+> - Uno o più processori virtuali sono allocati a esattamente una macchina virtuale.  
+> - Viene eseguito il mapping a zero o più processori logici di zero o un processore virtuale. Quando il mapping del processore virtuale al processore logico è: 
+>     -   Uno-a-zero, che rappresenta un processore logico non associato non utilizzato dai sistemi operativi guest.  
 >     -   Uno a molti, che rappresenta un overcommit.  
 >     -   Zero-a-molti, che rappresenta l'assenza di una macchina virtuale sul sistema host, pertanto non è utilizzato alcun processore logico dalle VM.  
-> 4.  Viene eseguito il mapping di un socket a zero o a più core. Quando il mapping da socket a core è:  
->   
->      -   Uno-a-zero, che rappresenta un socket vuoto (alcun chip installato).  
+> - Viene eseguito il mapping di un socket a zero o a più core. Quando il mapping da socket a core è:  
+>     -   Uno-a-zero, che rappresenta un socket vuoto (alcun chip installato).  
 >     -   Uno-a-uno, che rappresenta un chip singole-core installato nel socket (molto raro).  
 >     -   Uno a molti, che rappresenta un multi-core installato nel socket (i valori tipici sono 2,4,8).  
-> 5.  Viene eseguito il mapping di un core a uno o due processori logici. Quando il mapping del core al processore logico è:  
->   
->      -   Uno-a-uno, l'Hyper-Threading è disabilitato.  
+> - Viene eseguito il mapping di un core a uno o due processori logici. Quando il mapping del core al processore logico è:  
+>     -   Uno-a-uno, l'Hyper-Threading è disabilitato.  
 >     -   Uno-a-due, l'Hyper-Threading è abilitato.  
   
  Le definizioni seguenti si riferiscono ai termini utilizzati in tutto questo argomento:  
@@ -68,33 +64,34 @@ ms.lasthandoff: 06/22/2017
   
 -   Un processore fisico può essere costituito da uno o più core. Un processore fisico corrisponde a un pacchetto del processore o a un socket.  
   
- Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Ad esempio, se si dispone di un computer che dispone di due processori quad core con l'Hyper-Threading abilitato e due thread per core, si dispone di 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Vale la pena notare che:  
+Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Ad esempio, se si dispone di un computer che dispone di due processori quad core con l'Hyper-Threading abilitato e due thread per core, si dispone di 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Vale la pena notare che:  
   
 -   La capacità di calcolo di un processore logico da un solo thread di un core con l'Hyper-Threading è inferiore alla capacità di calcolo di un processore logico da quello stesso core con l'Hyper-Threading disabilitato.  
   
 -   Tuttavia, la capacità di calcolo dei 2 processori logici nel core con l'Hyper-Threading è maggiore della capacità di calcolo dello stesso core con l'Hyper-Threading disabilitato.  
   
- Ogni edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone di due limiti di capacità di calcolo:  
+Ogni edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone di due limiti di capacità di calcolo:  
   
-1.  Un numero massimo di socket (uguale al processore fisico o al socket o al pacchetto del processore).  
+- Un numero massimo di socket (uguale al processore fisico o al socket o al pacchetto del processore).  
   
-2.  Un numero massimo di core come riportato dal sistema operativo.  
+- Un numero massimo di core come riportato dal sistema operativo.  
   
- Questi limiti si applicano a una sola istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Rappresentano la capacità di calcolo massima che verrà utilizzata da una sola istanza. Non vincolano il server sul quale potrebbe essere distribuita l'istanza. Infatti la distribuzione di più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sullo stesso server fisico è un modo efficiente di utilizzare la capacità di calcolo di un server fisico con più socket e/o core dei limiti di capacità riportati di seguito.  
+Questi limiti si applicano a una sola istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Rappresentano la capacità di calcolo massima che verrà utilizzata da una sola istanza. Non vincolano il server sul quale potrebbe essere distribuita l'istanza. Infatti la distribuzione di più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sullo stesso server fisico è un modo efficiente di utilizzare la capacità di calcolo di un server fisico con più socket e/o core dei limiti di capacità riportati di seguito.  
   
- Nella tabella seguente vengono specificati i limiti della capacità di calcolo per una sola istanza di ogni edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
+Nella tabella seguente vengono specificati i limiti della capacità di calcolo per una sola istanza di ogni edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edizione|Capacità di calcolo massima utilizzata da una sola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima utilizzata da una sola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: licenze basate su core*|valore massimo del sistema operativo|valore massimo del sistema operativo|  
+|Enterprise Edition: licenze basate su core\*|valore massimo del sistema operativo|valore massimo del sistema operativo|  
 |Sviluppatore|valore massimo del sistema operativo|valore massimo del sistema operativo|  
 |Standard|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 24 core|  
 |Express|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
- *La licenza basata su Enterprise Edition con Server + Licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Non sono previsti limiti nel modello di licenza server basato su core.  
+
+\*La licenza basata su Enterprise Edition con Server + Licenza CAL (Client Access License) (non disponibile per i nuovi contratti) è limitata a un massimo di 20 core per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non sono previsti limiti nel modello di licenza server basato su core.  
   
- In un ambiente virtualizzato, il limite della capacità di calcolo è basato sul numero di processori logici non core, perché l'architettura del processore non è visibile alle applicazioni guest.  Ad esempio, un server con quattro socket popolati con processori quad-core e la capacità di abilitare due Hyper-Thread per core contiene 32 processori logici con l'Hyper-Threading abilitato ma solo 16 processori logici con l'Hyper-Threading disabilitato. È possibile eseguire il mapping di questi processori logici alle macchine virtuali sul server con il caricamento del calcolo delle macchine virtuali su quel processore logico di cui si è eseguito il mapping in un processore fisico nel server host.  
+In un ambiente virtualizzato, il limite della capacità di calcolo è basato sul numero di processori logici non core, perché l'architettura del processore non è visibile alle applicazioni guest.  Ad esempio, un server con quattro socket popolati con processori quad-core e la capacità di abilitare due Hyper-Thread per core contiene 32 processori logici con l'Hyper-Threading abilitato ma solo 16 processori logici con l'Hyper-Threading disabilitato. È possibile eseguire il mapping di questi processori logici alle macchine virtuali sul server con il caricamento del calcolo delle macchine virtuali su quel processore logico di cui si è eseguito il mapping in un processore fisico nel server host.  
   
- È necessario disabilitare l'Hyper-Threading quando le prestazioni per processore virtuale sono importanti. È possibile abilitare o disabilitare l'Hyper-Threading utilizzando una impostazione BIOS per il processore durante l'impostazione del BIOS, ma è in genere un'operazione con ambito server che avrà un impatto su tutti i carichi di lavoro in esecuzione sul server. In tale situazione potrebbe essere consigliabile dividere i carichi di lavoro che saranno in esecuzione negli ambienti virtualizzati da quelli che beneficeranno del miglioramento delle prestazioni dell'Hyper-Threading in un ambiente fisico del sistema operativo.  
+È necessario disabilitare l'Hyper-Threading quando le prestazioni per processore virtuale sono importanti. È possibile abilitare o disabilitare l'Hyper-Threading utilizzando una impostazione BIOS per il processore durante l'impostazione del BIOS, ma è in genere un'operazione con ambito server che avrà un impatto su tutti i carichi di lavoro in esecuzione sul server. In tale situazione potrebbe essere consigliabile dividere i carichi di lavoro che saranno in esecuzione negli ambienti virtualizzati da quelli che beneficeranno del miglioramento delle prestazioni dell'Hyper-Threading in un ambiente fisico del sistema operativo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Edizioni e componenti di SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
@@ -103,5 +100,4 @@ ms.lasthandoff: 06/22/2017
  [Guida introduttiva all'installazione di SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
-
 

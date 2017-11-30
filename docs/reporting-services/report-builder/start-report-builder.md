@@ -1,5 +1,5 @@
 ---
-title: Avviare Generatore Report | Documenti Microsoft
+title: Avviare Generatore report | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,22 +16,20 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 35ea064c1e269af81534a219f093e2f9c47a4a2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="start-report-builder"></a>Avviare Generatore report
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]ambiente di creazione è un report autonomo. Permette di creare report impaginati e di pubblicarli in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità nativa o nella modalità integrata SharePoint.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è un ambiente di creazione di report autonomo. Permette di creare report impaginati e di pubblicarli in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità nativa o nella modalità integrata SharePoint.  
   
  La prima volta che si avvia [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità integrata SharePoint, viene richiesto di scaricarlo dall'Area download Microsoft. 
  
@@ -39,13 +37,13 @@ ms.lasthandoff: 08/09/2017
  
  L'utente o un amministratore può anche [installare Generatore report nel computer dall'Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=219138). Per altri dettagli, vedere "Installare Generatore report con Systems Manager Server" in [Installare Generatore Report](../../reporting-services/install-windows/install-report-builder.md) .
  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]non è installato quando si installa SQL Server Reporting Services; è necessario scaricarlo e installarlo separatamente.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] non viene installato quando si installa SQL Server Reporting Services; è necessario scaricarlo e installarlo separatamente.  
   
  Quando si avvia [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web o dal sito di SharePoint, se si apre una versione precedente di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , contattare l'amministratore, che può aggiornare la versione sul portale Web o sul sito di SharePoint.  
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Per avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  Digitare l'URL per il server di report nella barra degli indirizzi del browser. Per impostazione predefinita, l'URL sarà http://\<*servername*> / reports.  
+1.  Digitare l'URL per il server di report nella barra degli indirizzi del browser. L'URL predefinito è http://\<*nomeserver*>/reports.  
   
 2.  Nella barra superiore del portale Web, selezionare **Nuovo** > **Report impaginato**.  
   
@@ -76,5 +74,4 @@ ms.lasthandoff: 08/09/2017
 [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [Impostare le opzioni predefinite per Generatore Report](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

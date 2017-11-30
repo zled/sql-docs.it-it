@@ -1,5 +1,5 @@
 ---
-title: Distribuzione e supporto della versione di SQL Server Data Tools (SSDT) | Documenti Microsoft
+title: Distribuzione e supporto della versione in SQL Server Data Tools (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 02dc4f34643ca904f04c0f2c1b88fc3bdc202904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Distribuzione e supporto della versione di SQL Server Data Tools (SSDT)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Distribuzione e supporto della versione in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supporta gli scenari seguenti:  
   
--   Aprire le definizioni dei report (*.rdl) e progetti server di report (\*.rptproj).  
+-   Apertura delle definizioni dei report (*.rdl) e dei progetti server di report (\*.rptproj).  
   
 -   Compilazione delle definizioni di report.  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/06/2017
   
 -   OutputPath è una proprietà di compilazione che identifica il percorso delle cartelle per archiviare la definizione del report usata nella verifica della compilazione, nella distribuzione e nell'anteprima dei report.  
   
--   ErrorLevel è una proprietà di compilazione che identifica la gravità dei problemi di compilazione segnalati come errori. I problemi con livelli di gravità minori o uguali al valore di ErrorLevel vengono segnalati come errori; in caso contrario, vengono segnalati come avvisi. Per ulteriori informazioni, vedere la sezione "Convalida di Report e livelli di errore" in [progettare report con progettazione Report &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel è una proprietà di compilazione che identifica la gravità dei problemi di compilazione segnalati come errori. I problemi con livelli di gravità minori o uguali al valore di ErrorLevel vengono segnalati come errori; in caso contrario, vengono segnalati come avvisi. Per altre informazioni, vedere la sezione "Convalida del report e livelli di errore" di [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion è una proprietà di distribuzione che consente di identificare la versione prevista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installata nel server di report di destinazione specificato nella proprietà TargetServerURL.  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/06/2017
 ##  <a name="bkmk_SupportedVersions"></a> Versioni supportate  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti Server di Report, non è progettato per l'esecuzione [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-computer basati su e non è installato nel [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-basato su server. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti server di report, non può essere eseguito in computer basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e non può essere installato nei server basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
   
  Nella tabella seguente sono descritte le versioni supportate per la creazione e la pubblicazione di report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/06/2017
  [Pubblicazione di origini dati e report](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
-

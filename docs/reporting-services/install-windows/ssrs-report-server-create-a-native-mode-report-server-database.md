@@ -1,30 +1,28 @@
 ---
-title: "Creare un database del Server di Report in modalità nativa (Gestione configurazione SSRS) | Documenti Microsoft"
+title: "Creare un database del server di report in modalità nativa (Gestione configurazione SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>Creare un database del server di report in modalità nativa
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -87,7 +85,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
 4.  Connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che verrà utilizzata per creare e ospitare il database del server di report.  
   
-    1.  Immettere l'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che si desidera utilizzare. Nella procedura guidata verrà visualizzato un [!INCLUDE[ssDE](../../includes/ssde-md.md)] locale, se disponibile, eseguito come istanza predefinita. In caso contrario, è necessario immettere il server e l'istanza da utilizzare. Le istanze denominate vengono specificate in questo formato: \<nomeserver >\\< NomeIstanza\>.  
+    1.  Immettere l'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che si desidera utilizzare. Nella procedura guidata verrà visualizzato un [!INCLUDE[ssDE](../../includes/ssde-md.md)] locale, se disponibile, eseguito come istanza predefinita. In caso contrario, è necessario immettere il server e l'istanza da utilizzare. Le istanze denominate vengono specificate nel formato \<nomeserver>\\<nomeistanza\>.  
   
     2.  Immettere le credenziali utilizzate per una connessione occasionale al [!INCLUDE[ssDE](../../includes/ssde-md.md)] allo scopo di creare i database del server di report. Per ulteriori informazioni sull'utilizzo di tali credenziali, vedere [Operazioni preliminari](#rsdbrequirements) in questo argomento.  
   
@@ -155,8 +153,8 @@ In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare una connessione di Database Server di Report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Gestire un Server di Report di Reporting Services in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Configurare una connessione del database del server di report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Altre domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

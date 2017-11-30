@@ -1,31 +1,29 @@
 ---
-title: Installare Generatore Report | Documenti Microsoft
+title: Installare Generatore report | Microsoft Docs
 ms.custom: 
 ms.date: 09/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 03ea560675e5b89228ab3faa99a9d2c37586b4b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-report-builder"></a>Installare Generatore report
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è un'app autonoma, installata nel computer dall'utente o da un amministratore. È possibile installarla dall'Area download Microsoft, da un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- In genere un amministratore installa e configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede l'autorizzazione per scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per ulteriori informazioni su [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] amministrazione, vedere [del Server di Report di Reporting Services &#40; Modalità nativa &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ In genere un amministratore installa e configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede l'autorizzazione per scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per altre informazioni sull'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] da un portale Web o da una raccolta di SharePoint 
   
@@ -114,4 +112,3 @@ ms.lasthandoff: 08/09/2017
  [Disinstallare Generatore report](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
   
-

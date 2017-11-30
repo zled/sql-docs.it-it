@@ -1,5 +1,5 @@
 ---
-title: Sicuro condivise Dataset | Documenti Microsoft
+title: Proteggere gli elementi del set di dati condiviso | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 40a9f5257e09cf35129c0f11d89675fdeb285c94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-shared-dataset-items"></a>Proteggere gli elementi del set di dati condiviso
   In un server di report gli elementi del set di dati condiviso possono essere utilizzati da più report. È possibile proteggere set di dati condivisi per controllare il livello di accesso degli utenti. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono visualizzare set di dati condivisi, modificare proprietà, abilitare la memorizzazione nella cache, creare piani di aggiornamento della cache ed eliminare elementi, mentre per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un set di dati condiviso.  
@@ -55,11 +54,10 @@ ms.lasthandoff: 08/09/2017
  Per altre informazioni, vedere [Attività a livello di elemento](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) e [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)(Ruoli predefiniti).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati condivise](../../reporting-services/report-data/manage-shared-datasets.md)   
- [Cartelle condivise sicure](../../reporting-services/security/secure-folders.md)   
- [Proteggere i report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)   
+ [Proteggere le cartelle](../../reporting-services/security/secure-folders.md)   
+ [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

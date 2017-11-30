@@ -1,5 +1,5 @@
 ---
-title: Creazione di un componente di Run-Time di elemento di Report personalizzato | Documenti Microsoft
+title: Creazione di un componente runtime dell'elemento del report personalizzato | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,33 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: c8da0d4ac6024281315dc2e8b0b398904c8a1e6c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 3f5bb5fdb3975ca40083aa63aca18d9ec32220d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Creazione di un componente runtime dell'elemento del report personalizzato
-  Il componente in fase di esecuzione elemento di report personalizzato viene implementato come un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] componente utilizzando qualsiasi linguaggio conforme a CLS e viene chiamato dall'elaboratore di report in fase di esecuzione. Le proprietà del componente runtime vengono definite nell'ambiente di progettazione modificando il componente della modalità progettazione corrispondente dell'elemento del report personalizzato.  
+  Il componente runtime dell'elemento del report personalizzato viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usando un linguaggio conforme a CLS e viene chiamato in fase di esecuzione dal componente Elaborazione report. Le proprietà del componente runtime vengono definite nell'ambiente di progettazione modificando il componente della modalità progettazione corrispondente dell'elemento del report personalizzato.  
   
- Per un esempio di un elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi di prodotto SQL Server Reporting Services).  
   
 ## <a name="definition-and-instance-objects"></a>Oggetti definizione e oggetti istanza  
- Prima di implementare un elemento del report personalizzato è importante comprendere la differenza tra *oggetti definizione* e *gli oggetti istanza*. Gli oggetti definizione forniscono la rappresentazione RDL dell'elemento del report personalizzato mentre gli oggetti istanza sono le versioni valutate degli oggetti definizione. È presente un solo oggetto definizione per ogni elemento nel report. Quando si accede alle proprietà in un oggetto definizione che contiene espressioni, si otterrà la stringa dell'espressione non valutata. Gli oggetti istanza contengono le versioni valutate degli oggetti definizione e possono avere una relazione uno-a-molti con l'oggetto definizione di un elemento. Ad esempio, se un report presenta un'area dati <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> contenente un <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in una riga dettaglio, saranno presenti un solo oggetto definizione e un oggetto istanza per ogni riga nell'area dati.  
+ Prima di implementare un elemento del report personalizzato, è importante sottolineare la differenza tra *oggetti definizione* e *oggetti istanza*. Gli oggetti definizione forniscono la rappresentazione RDL dell'elemento del report personalizzato mentre gli oggetti istanza sono le versioni valutate degli oggetti definizione. È presente un solo oggetto definizione per ogni elemento nel report. Quando si accede alle proprietà in un oggetto definizione che contiene espressioni, si otterrà la stringa dell'espressione non valutata. Gli oggetti istanza contengono le versioni valutate degli oggetti definizione e possono avere una relazione uno-a-molti con l'oggetto definizione di un elemento. Ad esempio, se un report presenta un'area dati <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> contenente un <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in una riga dettaglio, saranno presenti un solo oggetto definizione e un oggetto istanza per ogni riga nell'area dati.  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>Implementazione dell'interfaccia ICustomReportItem  
- Per creare un **CustomReportItem** componente in fase di esecuzione è necessario implementare la <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> interfaccia definita in Microsoft.ReportingServices.ProcessingCore.dll:  
+ Per creare un componente runtime **CustomReportItem** è necessario implementare l'interfaccia <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> definita in Microsoft.ReportingServices.ProcessingCore.dll:  
   
 ```csharp  
 namespace Microsoft.ReportingServices.OnDemandReportRendering  
@@ -140,10 +137,9 @@ namespace Microsoft.Samples.ReportingServices
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura di un elemento del Report personalizzato](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Creazione di un componente in fase di progettazione dell'elemento del Report personalizzato](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Librerie di classi di elemento di Report personalizzato](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Procedura: distribuire un elemento del Report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Architettura di un elemento del report personalizzato](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Librerie di classi dell'elemento del report personalizzato](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+ [Procedura: Distribuzione di un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Formattazione degli elementi del Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Formatting Report Items (Report Builder and SSRS) (Formattazione degli elementi del report (Generatore report e SSRS)) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10444"
+f1_keywords: "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 01cf1b8dd539eeb7abc2311e765788dbb9655cff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
   La formattazione degli elementi del report consente di migliorare l'aspetto e la leggibilità del report. È possibile formattare le caselle di testo e i singoli elementi contenuti nelle caselle, le immagini, le espressioni e i dati in modalità progettazione report.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  È possibile modificare le opzioni di formattazione selezionando l'elemento che si desidera formattare e quindi aprire la finestra di dialogo Proprietà dell'elemento. Ad esempio, se si desidera formattare il contenuto di un'intera casella di testo oppure una parola selezionata al suo interno, fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà casella di testo**. Sarà quindi possibile applicare gli stili di formattazione desiderati.  
   
- Per iniziare rapidamente, vedere [Esercitazione: formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/09/2017
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

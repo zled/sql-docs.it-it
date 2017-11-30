@@ -1,5 +1,5 @@
 ---
-title: Riferimento ad assembly in un File RDL | Documenti Microsoft
+title: Riferimento agli assembly in un file RDL| Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - RDL [Reporting Services], referencing assemblies
 - referencing custom assemblies
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: fb34fd3f73b8b7451d52c9794697e4a6c3f8b82e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Impostazione di un riferimento agli assembly in un file RDL
-  Per supportare l'uso degli assembly di codice personalizzato nel file di definizione del report, i due elementi di linguaggio RDL (Report Definition) sono inclusi nella specifica RDL: il **CodeModules** elemento e **classi** elemento.  
+  Per supportare l'uso di assembly di codice personalizzati nei file di definizione report, nella specifica RDL (Report Definition Language) sono inclusi due elementi RDL, ovvero l'elemento **CodeModules** e l'elemento **Classes**.  
   
- Il **CodeModules** elemento consente di fare riferimento agli assembly di codice gestito nelle espressioni del report. **CodeModules** è un elemento di primo livello che contiene il riferimento all'assembly da utilizzare nel file di definizione del report per chiamare funzioni specializzate. Una voce in una definizione del report che supporta l'utilizzo di un assembly personalizzato può essere simile alla seguente:  
+ L'elemento **CodeModules** consente di fare riferimento agli assembly di codice gestito nelle espressioni di report. **CodeModules** è un elemento di livello principale che contiene il riferimento all'assembly usato nei file di definizione report per chiamare funzioni specializzate. Una voce in una definizione del report che supporta l'utilizzo di un assembly personalizzato può essere simile alla seguente:  
   
 ```  
 <CodeModules>  
@@ -41,9 +40,9 @@ ms.lasthandoff: 08/12/2017
 </CodeModules>  
 ```  
   
- Anziché chiamare <xref:System.Reflection.Assembly.Load%2A> dal codice personalizzato, registrare gli assembly personalizzati aggiungendo manualmente **CodeModule** elementi nel file RDL o utilizzando il **riferimenti** scheda della finestra di **proprietà Report** finestra di dialogo. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Anziché chiamare <xref:System.Reflection.Assembly.Load%2A> dal codice personalizzato, registrare gli assembly personalizzati aggiungendo manualmente elementi **CodeModule** al file RDL o usando la scheda **Riferimenti** della finestra di dialogo **Proprietà report**. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)sottostante.  
   
- Il **classi** elemento supporta l'utilizzo di membri di istanza in una definizione del report. **Classi** è un elemento di primo livello che contiene un riferimento al nome della classe e un nome di istanza. Una voce in una definizione del report che supporta l'utilizzo di membri dell'istanza può essere simile alla seguente:  
+ L'elemento **Classes** supporta l'uso di membri di istanza in una definizione del report. **Classes** è un elemento di livello principale che contiene un riferimento al nome della classe e un nome dell'istanza. Una voce in una definizione del report che supporta l'utilizzo di membri dell'istanza può essere simile alla seguente:  
   
 ```  
 <Classes>  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/12/2017
 </Classes>  
 ```  
   
- Per ulteriori informazioni, vedere [l'accesso a Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
+ Per altre informazioni, vedere [Accesso agli assembly personalizzati tramite espressioni](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  

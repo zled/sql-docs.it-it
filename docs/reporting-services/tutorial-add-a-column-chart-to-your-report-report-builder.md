@@ -1,28 +1,25 @@
 ---
-title: 'Esercitazione: Aggiungere un istogramma al Report (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Aggiungere un grafico a torta al report (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b1768cbe53155ec37c5f6dd690542b90e22a59cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
 In questa esercitazione si creerà un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria. 
@@ -39,7 +36,7 @@ Nell'illustrazione seguente è mostrato l'istogramma che verrà creato con una m
 > [!NOTE]  
 > In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
+Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -54,7 +51,7 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -130,7 +127,7 @@ Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori 
   
 2.  Fare clic con il pulsante destro del mouse sull'asse orizzontale > **Proprietà asse orizzontale**.  
   
-3.  Nella scheda **Numero**, in **Categoria**  selezionare **Data**.  
+3.  Nella scheda **Numero** , in **Categoria**selezionare **Data**.  
   
 5.  Nella casella **Tipo** selezionare **31 gennaio 2000**.  
   
@@ -152,7 +149,7 @@ La data viene visualizzata nel formato selezionato. Il grafico continua a non as
   
 3.  Fare clic con il pulsante destro del mouse sull'asse orizzontale > **Proprietà asse orizzontale**.  
   
-5.  Nella scheda **Etichette**, in **Modifica opzioni adattamento etichetta asse** selezionare **Disabilita adattamento**.  
+5.  Nella scheda **Etichette** , in **Modifica opzioni adattamento etichetta asse**selezionare **Disabilita adattamento**.  
   
 7.  In **Angolo di rotazione etichetta**selezionare **-90**.  
   
@@ -175,7 +172,7 @@ La legenda viene creata automaticamente dai dati di categoria e serie. È possib
   
 2.  Fare clic con il pulsante destro del mouse sul grafico > **Proprietà legenda**.  
   
-3.  In **Layout e posizione** selezionare una posizione diversa. Ad esempio, selezionare l'opzione centrale inferiore.  
+3.  In **Layout e posizione**selezionare una posizione diversa. Ad esempio, selezionare l'opzione centrale inferiore.  
   
     Quando la legenda viene posizionata alla fine o all'inizio di un grafico, il relativo layout viene modificato da verticale in orizzontale. È possibile selezionare un altro layout nella casella **Layout** .  
   
@@ -208,7 +205,7 @@ Per impostazione predefinita, sull'asse verticale vengono visualizzati valori in
   
 6.  Nella scheda **Numero** osservare che **Valuta** è già selezionata nella casella **Categoria** e che in **Cifre decimali** è già indicato **0** (zero).  
   
-7.  Selezionare **Mostra valori in**. L'opzione **Migliaia** è già selezionata.  
+7.  Selezionare **Mostra valori in**. L'opzione**Migliaia** è già selezionata.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -286,7 +283,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 5.  Selezionare **Gennaio - dicembre 2015** e nella scheda **Home** > sezione **Carattere** > impostare le dimensioni del carattere su **10**.  
   
-6.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo **Titolo**. Tirare verso il basso le doppie frecce quando si fa clic al centro del bordo inferiore. Può anche essere necessario trascinare la parte superiore del grafico in modo che il titolo non si sovrapponga.  
+6.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo **Titolo** . Tirare verso il basso le doppie frecce quando si fa clic al centro del bordo inferiore. Può anche essere necessario trascinare la parte superiore del grafico in modo che il titolo non si sovrapponga.  
   
     Il titolo viene visualizzato nella parte superiore del report. Quando non è definita un'intestazione di pagina, gli elementi nella parte superiore del corpo del report equivalgono a un'intestazione di report.  
   
@@ -313,5 +310,4 @@ Questo passaggio conclude l'esercitazione relativa all'aggiunta di un istogramma
 -    [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
 -    [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

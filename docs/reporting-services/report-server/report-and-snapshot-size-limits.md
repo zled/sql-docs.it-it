@@ -1,5 +1,5 @@
 ---
-title: Limiti di dimensioni di report e Snapshot | Documenti Microsoft
+title: Limiti delle dimensioni di report e snapshot | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0016b55ab5b7a72b8e231a943df6db191bf8b6c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
@@ -87,8 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Database del Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Elaborare report di grandi dimensioni](../../reporting-services/report-server/process-large-reports.md)  
   
   
-

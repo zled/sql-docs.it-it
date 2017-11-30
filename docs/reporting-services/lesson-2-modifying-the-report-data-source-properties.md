@@ -1,27 +1,25 @@
 ---
-title: "Lezione 2: Modificare i dati del Report delle proprietà dell'origine | Documenti Microsoft"
+title: "Lesson 2: Modifying the Report Data Source Properties (Lezione 2: Modifica delle proprietà dell'origine dati del report) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 9a2e755b3aa71ba3792b5be5aa72367a0e218215
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verrà usato il portale Web per selezionare un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
@@ -113,7 +111,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 ## <a name="bkmk_redeploy"></a>Ridistribuire il report  
   
-1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per ulteriori informazioni sulle proprietà di progetto utilizzati nell'esercitazione di tabella, vedere la sezione "Per pubblicare il Report nel Server di Report (facoltativo)" di [lezione 6: aggiunta di raggruppamento e totali &#40; Reporting Services &#41; ](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usate nell'esercitazione relativa alla tabella, vedere la sezione " (Facoltativo) Per pubblicare il report nel server di report" della [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Sulla barra degli strumenti fare clic su **Compila** , quindi scegliere **Distribuisci Tutorial**.  
   
@@ -129,5 +127,4 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
   
   
-
 

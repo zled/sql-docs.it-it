@@ -1,5 +1,5 @@
 ---
-title: Abilitare errori remoti (Reporting Services) | Documenti Microsoft
+title: Abilita errori remoti (Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d409aa01ca3d060068fa9045b0a1fafec8bf3fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Abilita errori remoti (Reporting Services)
   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà **EnableRemoteErrors** per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -120,4 +119,3 @@ ms.lasthandoff: 08/09/2017
     >  È possibile modificare la tabella **ConfigurationInfo** nel database del server di report per impostare **EnableRemoteErrors** su **True**. Se, tuttavia, il server di report viene utilizzato in modo attivo, per modificare le impostazioni è consigliabile utilizzare SQL Server Management Studio o uno script. Se si modifica l'impostazione nel database, è necessario riavviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prima dell'applicazione delle modifiche.  
   
   
-

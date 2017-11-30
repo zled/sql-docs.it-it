@@ -1,5 +1,5 @@
 ---
-title: "Proprietà SendUsingSMTPServer (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft"
+title: "Proprietà SendUsingSMTPServer (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SendUsingSMTPServer
-apilocation:
-- reportingservices.mof
+apiname: SendUsingSMTPServer
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SendUsingSMTPServer property
+helpviewer_keywords: SendUsingSMTPServer property
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6e968b1fb028239144cd43c7a98cff21629c5e9a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fd8ab75ff7cb51547643bba8a7fdae4c3cd2f389
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---sendusingsmtpserver"></a>Proprietà ConfigurationSetting - SendUsingSMTPServer
+# <a name="configurationsetting-property---sendusingsmtpserver"></a>Proprietà di ConfigurationSetting - SendUsingSMTPServer
   Specifica se l'elemento **SendUsing** nella configurazione della posta elettronica per il server di report è impostato su **true**.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -56,4 +52,3 @@ public Boolean SendUsingSMTPServer;
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

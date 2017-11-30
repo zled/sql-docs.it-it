@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade1713f239c5933160ac5b33b8453a7ee859b16
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Creazione di query di creazione tabella (Visual Database Tools)
 Per copiare delle righe in una nuova tabella è possibile utilizzare una query di creazione tabella, che consente di creare subset di dati da utilizzare o di copiare il contenuto di una tabella da un database a un altro. Una query di creazione tabella è analoga a una query di accodamento, con la differenza che viene creata una nuova tabella in cui copiare le righe.  
@@ -44,7 +43,7 @@ Durante la creazione di una query di creazione tabella è necessario specificare
   
 -   Le opzioni di raggruppamento, se si desidera copiare solo le informazioni di riepilogo.  
   
-L'esempio di query fornito di seguito consente di creare una nuova tabella denominata `uk`_`customers` e di copiarvi le informazioni contenute nella tabella `customers` :  
+L'esempio di query visualizzato di seguito consente di creare una nuova tabella con nome `uk_customers` e di copiarvi le informazioni contenute nella tabella `customers`:  
   
 ```  
 SELECT *   
@@ -90,4 +89,3 @@ Quando si esegue una query di creazione tabella, non viene restituito alcun risu
 [Procedure per la progettazione di query e viste (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Tipi di query (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

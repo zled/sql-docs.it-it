@@ -1,5 +1,5 @@
 ---
-title: Accendere il tipo di connessione PowerPivot (SSRS) | Documenti Microsoft
+title: Tipo di connessione PowerPivot (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7a8fe1f1b6dd44f468095502b924c432032cf11d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile usare l'estensione per l'elaborazione dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di SharePoint.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
  Utilizzare il tipo di origine dati del report **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Stringa di connessione  
- La stringa di connessione è l'URL [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro pubblicata in SharePoint nella [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] raccolta o altra libreria, ad esempio, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
+ La stringa di connessione è l'URL alla cartella di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in SharePoint nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o in un'altra libreria, ad esempio `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenziali  
  Specificare le credenziali necessarie per accedere alla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specifica di credenziali in Generatore report](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
@@ -70,7 +69,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

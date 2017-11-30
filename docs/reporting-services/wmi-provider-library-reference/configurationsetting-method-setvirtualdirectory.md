@@ -1,5 +1,5 @@
 ---
-title: Metodo SetVirtualDirectory (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft
+title: Metodo SetVirtualDirectory (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SetVirtualDirectory method
+helpviewer_keywords: SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d86d0c416df4ecc01f940ebabad2e409aa826599
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c035ce144153e64eaa183a2131ffee08518807df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setvirtualdirectory"></a>Metodo ConfigurationSetting - SetVirtualDirectory
+# <a name="configurationsetting-method---setvirtualdirectory"></a>Metodo di ConfigurationSetting - SetVirtualDirectory
   Imposta il nome della directory virtuale di una determinata applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -74,4 +72,3 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

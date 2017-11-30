@@ -1,5 +1,5 @@
 ---
-title: "Le proprietà dell'elemento Server di report | Documenti Microsoft"
+title: "Proprietà degli elementi del server di report | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - item-specific properties [Reporting Services]
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: ae7f1a99b09e4c8fc5f2483e9aa360cce83da2df
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: bf0ed39eff089b93dd67ea5c31e8274949efd9e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="reporting-services-properties---report-server-item-properties"></a>Proprietà di Reporting Services - elemento proprietà Server di Report
+# <a name="reporting-services-properties---report-server-item-properties"></a>Proprietà di Reporting Services - Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  
   
  I nomi di proprietà degli elementi seguenti sono riservati. Non è possibile creare proprietà definite dall'utente con lo stesso nome. È possibile leggere o modificare numerose di queste proprietà usando i metodi del servizio Web ReportServer.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/12/2017
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**Riservato**|Valore restituito dal metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per le cartelle riservate dal server di report. Le cartelle riservate includono Utenti, Report personali e /. Le cartelle riservate non possono essere modificate o rimosse.|  
+|**Reserved**|Valore restituito dal metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per le cartelle riservate dal server di report. Le cartelle riservate includono Utenti, Report personali e /. Le cartelle riservate non possono essere modificate o rimosse.|  
   
 ## <a name="report-properties"></a>Proprietà dei report  
  Oltre alle proprietà degli elementi elencate in precedenza, le proprietà seguenti si applicano ai report nel database del server di report.  
@@ -65,10 +64,10 @@ ms.lasthandoff: 08/12/2017
 |Proprietà|Description|  
 |--------------|-----------------|  
 |**Lingua**|Lingua usata in un report. Il valore è un codice della lingua definito nella specifica Internet Engineering Task Force (IETF) RFC1766. La prima parte è costituita da una designazione di due caratteri della lingua di base. La seconda parte è separata da un trattino e definisce la variazione o il sottolinguaggio della lingua. Se un valore non viene specificato nell'elemento **Style** associato all'elemento **Body** nella definizione del report, il valore predefinito è costituito dalla lingua del server di report.|  
-|**ReportProcessingTimeout**|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, il report non è scaduta durante l'elaborazione. Se il valore è **null**, il valore della proprietà di sistema **ReportProcessingTimeout** viene utilizzato per il timeout di elaborazione di report. Il valore predefinito è **null**. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
+|**ReportProcessingTimeout**|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, durante l'elaborazione non si verifica il timeout del report. Se il valore è **null**, per il timeout per l'elaborazione del report viene usato il valore della proprietà di sistema **ReportProcessingTimeout**. Il valore predefinito è **null**. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Data e ora dell'ultima creazione di uno snapshot del report.|  
-|**CanRunUnattended**|Valore che indica se un report può essere eseguito automaticamente in base a una pianificazione. Se questa proprietà è impostata su **true**, sono definiti valori predefiniti per i parametri del report e le credenziali dell'origine dati vengono archiviate con il report o opzione di recupero delle credenziali è impostata su **Nessuno**. Se questa proprietà è impostata su **false**, non vengono soddisfatti i prerequisiti per l'esecuzione automatica di un report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
-|**HasParameterDefaultValues**|Valore che indica se per il report sono impostati valori predefiniti validi per tutti i parametri. Anche il valore è **true** se un report non dispone di parametri del report. Se questa proprietà è impostata su **false**, uno o più parametri del report non dispongono di un valore predefinito valido.|  
+|**CanRunUnattended**|Valore che indica se un report può essere eseguito automaticamente in base a una pianificazione. Se questa proprietà è impostata su **true**, vengono definiti i valori predefiniti per i parametri del report e le credenziali dell'origine dati vengono archiviate con il report oppure l'opzione per il recupero delle credenziali viene impostata su **None**. Se questa proprietà è impostata su **false**, i prerequisiti per l'esecuzione automatica di un report non sono soddisfatti. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|**HasParameterDefaultValues**|Valore che indica se per il report sono impostati valori predefiniti validi per tutti i parametri. Il valore è **true** anche se un report non dispone di parametri. Se questa proprietà è impostata su **false**, uno o più parametri del report non dispongono di un valore predefinito valido.|  
 |**HasDataSourceCredentials**|Valore che indica che l'opzione per il recupero delle credenziali impostata per tutte le origini dati associate al report è **None** o **Store**. Se questa proprietà è impostata su **false**, un'opzione per il recupero delle credenziali impostata per una delle origini dati associate al report è **Integrate** o **Prompt**.|  
 |**IsSnapshotExecution**|Valore che indica se il report è uno snapshot.|  
 |**HasScheduleReadyDataSources**|Valore che indica se le origini dati di un report sono configurate per supportare l'esecuzione pianificata. Se questa proprietà è impostata su **false**, gli utenti non possono sottoscrivere il report.|  
@@ -78,11 +77,11 @@ ms.lasthandoff: 08/12/2017
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**Tipo MIME**|Tipo MIME di una risorsa nel database del server di report.|  
+|**MimeType**|Tipo MIME di una risorsa nel database del server di report.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di applicazioni mediante il servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servizio Web ReportServer](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Riferimento tecnico &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Riferimento tecnico &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

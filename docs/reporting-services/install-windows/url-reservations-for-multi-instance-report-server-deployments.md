@@ -1,36 +1,33 @@
 ---
-title: Le distribuzioni di Server di Report di prenotazioni URL per multi-istanza | Documenti Microsoft
+title: "Prenotazioni URL per le distribuzioni di più istanze del server di report | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- URL reservations
+helpviewer_keywords: URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 811e58edf8d0b50e83826c94c5f8f5a54b80c17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Prenotazioni URL per le distribuzioni di Server di Report di multi-istanza
+# <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Prenotazioni URL per le distribuzioni di più istanze del server di report
   Se si installano più istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nello stesso computer, è necessario prendere in considerazione le modalità di prenotazione degli URL per ogni istanza. All'interno di ogni istanza, il servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] devono disporre almeno di una prenotazione URL ciascuno. L'intero set di prenotazioni deve essere univoco in HTTP.SYS.  
   
  Eventuali URL duplicati vengono rilevati durante la registrazione dell'URL che viene eseguita all'avvio del servizio. Se si creano prenotazioni URL non univoche, il conflitto di nome potrebbe non essere rilevato fino all'avvio del servizio. Per questa ragione, verificare che si seguano regole o convenzioni di denominazione o regole per garantire che tutti i valori siano univoci.  
   
 ## <a name="default-naming-conventions"></a>Convenzioni di denominazione predefinite  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può essere installato all'interno di un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si installa o si configura un server di report all'interno di un'istanza denominata, il nome dell'istanza viene incluso automaticamente nella directory virtuale nella prenotazione URL predefinita specificata da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Nella tabella seguente vengono illustrate le prenotazioni URL per un'istanza predefinita e per un'istanza denominata.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può essere installato all'interno di un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si installa o si configura un server di report all'interno di un'istanza denominata, il nome dell'istanza viene incluso automaticamente nella directory virtuale nella prenotazione URL predefinita specificata da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Nella tabella seguente vengono illustrate le prenotazioni URL per un'istanza predefinita e per un'istanza denominata.  
   
 |Istanza di SQL Server|Prenotazioni URL predefinita|  
 |-------------------------|-----------------------------|  
@@ -50,11 +47,10 @@ ms.lasthandoff: 08/09/2017
 |`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Ogni istanza risponde a nomi di server diversi (nome completo di dominio e nome del computer).|  
   
 ## <a name="uniqueness-requirements"></a>Requisiti di univocità  
- Le tecnologie sottostanti utilizzate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impongono alcuni requisiti relativi ai nomi univoci. Per HTTP.SYS è necessario che tutti gli URL all'interno del relativo repository siano univoci. È possibile variare la porta, il nome host o nome della directory virtuale per creare un URL univoco. In [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] è necessario che le identità dell'applicazione siano univoche all'interno dello stesso processo. Questo requisito influisce sui nomi delle directory virtuali, poiché specifica che non è possibile duplicare un nome di directory virtuale all'interno della stessa istanza del server di report.  
+ Le tecnologie sottostanti utilizzate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impongono alcuni requisiti relativi ai nomi univoci. Per HTTP.SYS è necessario che tutti gli URL all'interno del relativo repository siano univoci. È possibile variare la porta, il nome host o nome della directory virtuale per creare un URL univoco. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] è necessario che le identità dell'applicazione siano univoche all'interno dello stesso processo. Questo requisito influisce sui nomi delle directory virtuali, poiché specifica che non è possibile duplicare un nome di directory virtuale all'interno della stessa istanza del server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare gli URL di Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurare un URL &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
-

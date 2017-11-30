@@ -1,5 +1,5 @@
 ---
-title: Raccolta di campi del set di dati (Generatore Report e SSRS) | Documenti Microsoft
+title: Raccolta di campi del set di dati (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Campi calcolati del set di dati.** I campi aggiuntivi creati dall'utente per il set di dati. Ogni campo calcolato viene creato valutando un'espressione definita dall'utente.  
   
--   **Campi predefiniti.** I metadati che rappresentano una raccolta dei campi forniti da Generatore report contenenti informazioni sui report quali il nome o l'ora di elaborazione del report. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e User &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+-   **Campi predefiniti.** I metadati che rappresentano una raccolta dei campi forniti da Generatore report contenenti informazioni sui report quali il nome o l'ora di elaborazione del report. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
  I nomi dei campi del set di dati vengono salvati come parte della definizione del set di dati del report. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  Le origini dati che supportano query multidimensionali, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], supportano anche le proprietà di campo per i campi. Tali proprietà vengono visualizzate nel set di risultati per una query, ma non sono visibili nel riquadro **Dati report** . È possibile comunque usarle nel report. Per fare riferimento a una proprietà per un campo, trascinare il campo nel report e modificare la proprietà predefinita **Value** impostandola sul nome del campo della proprietà desiderata. In un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio, è possibile definire formati per i valori presenti nelle celle del cubo. Il valore formattato è disponibile se si usa la proprietà di campo **FormattedValue**. Per usare direttamente il valore anziché usare un valore e impostare la proprietà del formato della casella di testo, trascinare il campo nella casella di testo e impostare l'espressione predefinita `=Fields!FieldName.Value` su `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
->  Solo alcune proprietà **Field** possono essere usate per tutte le origini dati. Le proprietà **Value** e **IsMissing** vengono definite per tutte le origini dati. Altre proprietà predefinite, ad esempio **Key**, **UniqueName**e **ParentUniqueName** per origini dati multidimensionali, sono supportate solo se sono disponibili nell'origine dati. Le proprietà personalizzate sono supportate da alcuni provider di dati. Per altre informazioni, vedere gli argomenti specifici sulle proprietà di campo estese per il tipo di origine dati in [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ad esempio, per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origine dati, vedere [proprietà di campo estese per un Database di Analysis Services &#40; SSRS &#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  Solo alcune proprietà **Field** possono essere usate per tutte le origini dati. Le proprietà **Value** e **IsMissing** vengono definite per tutte le origini dati. Altre proprietà predefinite, ad esempio **Key**, **UniqueName**e **ParentUniqueName** per origini dati multidimensionali, sono supportate solo se sono disponibili nell'origine dati. Le proprietà personalizzate sono supportate da alcuni provider di dati. Per altre informazioni, vedere gli argomenti specifici sulle proprietà di campo estese per il tipo di origine dati in [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ad esempio, per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
 ##  <a name="Defaults"></a> Informazioni sulle espressioni predefinite per i campi  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Parti di report e set di dati in Generatore Report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

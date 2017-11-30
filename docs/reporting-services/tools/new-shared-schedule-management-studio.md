@@ -1,5 +1,5 @@
 ---
-title: Nuova pianificazione condivisa (Management Studio) | Documenti Microsoft
+title: Nuova pianificazione condivisa (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.newschedule.f1
+f1_keywords: sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7d6032fde5bdfba4ba74330d162e25da8e5d8f75
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 37e0b1a6b2e64de4d63456050b094113e288c434
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nuova pianificazione condivisa (Management Studio)
   Questa pagina consente di creare una pianificazione condivisa per l'esecuzione di sottoscrizioni e report pubblicati. È possibile utilizzare le pianificazioni condivise al posto di di pianificazioni specifiche di report o sottoscrizioni. Le informazioni centralizzate sulla pianificazione e la possibilità di sospendere e riprendere le operazioni pianificate costituiscono due funzionalità fondamentali che distinguono le pianificazioni condivise da quelle specifiche degli elementi.  
@@ -70,11 +68,10 @@ ms.lasthandoff: 08/09/2017
  Selezionare questa opzione per creare una pianificazione che viene eseguita una sola volta nella data e all'ora specificate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Creare, modificare ed eliminare pianificazioni](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Pianificazioni](../../reporting-services/subscriptions/schedules.md)   
- [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
-

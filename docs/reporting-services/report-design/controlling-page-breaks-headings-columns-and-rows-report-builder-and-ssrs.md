@@ -1,5 +1,5 @@
 ---
-title: Controllo pagina si interrompe, intestazioni, colonne e righe (Generatore Report e SSRS) | Documenti Microsoft
+title: Controllo di interruzioni di pagina, intestazioni, colonne e righe (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ac87280598390f74af53caa91fe3b0c0a5f49a39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67507b8373f0d7c08bdf9303593d30ef0cb7c027
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controllo di interruzioni di pagina, intestazioni, colonne e righe (Generatore report e SSRS)
   Un'interruzione di pagina consente di suddividere un report in più pagine per la visualizzazione e la stampa. Consentono inoltre di adattare il contenuto alle pagine dei report in modo da ottenere una visualizzazione ottimale quando si visualizza l'anteprima di un report o si esporta il report in un altro formato.  
@@ -35,9 +35,9 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Controllo della visualizzazione dell'area dati Tablix in una pagina del Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Riquadro di raggruppamento &#40; Generatore report &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)   
- [Visualizzazione di intestazioni e piè di pagina con un gruppo di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Riquadro di raggruppamento &#40;Generatore report&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)   
+ [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

@@ -1,28 +1,25 @@
 ---
-title: Le impostazioni di sottoscrizione e una condivisione File Account (Gestione configurazione) | Documenti Microsoft
+title: Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione) | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.subscriptionsettings.F1
+f1_keywords: SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f0f86350f35ccf9843328fc8f8795a0ed2215f7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione)
   Usare la pagina **Impostazioni sottoscrizione** di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni con recapito tramite condivisione file. L'account di condivisione file consente di usare un singolo set di credenziali in più sottoscrizioni che recapitano i report a una condivisione file. Quando è necessario modificare le credenziali, è possibile configurare la modifica per l'account di condivisione file e non è necessario aggiornare ogni sottoscrizione.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  L'immagine seguente illustra le opzioni visualizzate agli utenti per le sottoscrizioni configurate per il recapito tramite condivisione file. L'opzione **Usa l'account di condivisione file** è disabilitata se non è stato configurato un account di condivisione file.  
   
- ![account di condivisione file di configurazione Gestione](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "account di condivisione file di configurazione Gestione")  
+ ![account di condivisione file di Gestione configurazione](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "account di condivisione file di Gestione configurazione")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Evitare l'escalation dei privilegi o privilegi elevati  
   
@@ -107,4 +104,3 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
-

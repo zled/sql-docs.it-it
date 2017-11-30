@@ -1,40 +1,37 @@
 ---
-title: 'Lezione 2: Specifica le informazioni di connessione (Reporting Services) | Documenti Microsoft'
+title: 'Lesson 2: Specifying Connection Information (Reporting Services) (Lezione 2: Specifica delle informazioni di connessione (Reporting Services)) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4d0667dec1b59d5560ca24176634dddc5d6d8d18
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 344cc77269e09ab61806f2093220f834b72329b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specifica delle informazioni di connessione (Reporting Services)
-Dopo aver aggiunto un [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] impaginati report al progetto Tutorial nella lezione 1, è necessario definire un *origine dati*, ovvero le informazioni di connessione, il report utilizza per accedere ai dati da un database relazionale, database multidimensionale o un'altra origine.  
+Dopo aver aggiunto un report impaginato [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] al progetto dell'esercitazione nella Lezione 1, è necessario definire un'*origine dati*, vale a dire informazioni di connessione usate dal report per accedere ai dati da un database relazionale, multidimensionale o da un'altra risorsa.  
   
-In questa lezione, utilizza il [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database di esempio come origine dati. In questa esercitazione si presuppone che il database si trovi in un'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installato nel computer locale.  
+In questa lezione verrà usato come origine dati il database di esempio [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]. Durante l'esercitazione si presuppone che il database si trovi nell'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installata nel computer locale.  
   
 ### <a name="to-set-up-a-connection"></a>Per impostare una connessione  
   
 1.  Nel riquadro **Dati report** , fare clic su **Nuova** , quindi su **Data Source**.  
 Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** dal menu **Visualizza**.  
 
-    ![SSRS-Table-Tutorial-2-New-Data-Source](../reporting-services/media/ssrs-table-tutorial-2-new-data-source.png)
+    ![ssrs-table-tutorial-2-new-data-source](../reporting-services/media/ssrs-table-tutorial-2-new-data-source.png)
   
    2.  Nella casella **Nome**digitare *AdventureWorks2014*.  
   
@@ -70,5 +67,4 @@ Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** da
   
   
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Proprietà server (pagina generale) | Documenti Microsoft"
+title: "Proprietà server (pagina Generale) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/08/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ca680b434f4b483fb2f3cc3d99df5598a0766f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-server-properties-general-page"></a>Proprietà Server di report (pagina generale)
+# <a name="report-server-properties-general-page"></a>Proprietà del server di report (pagina Generale)
   Questa pagina consente di visualizzare o modificare il titolo utilizzato in Gestione report, abilitare o disabilitare la cartella Report personali, selezionare una definizione di ruolo per la sicurezza della cartella Report personali e abilitare o disabilitare il controllo di stampa client.  
   
  **Per aprire la pagina:**
@@ -59,12 +57,11 @@ ms.lasthandoff: 08/09/2017
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare proprietà Server di Report &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Abilitare e disabilitare la funzionalità report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Abilitare e disabilitare la funzionalità Report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Proteggere i report personali](../../reporting-services/security/secure-my-reports.md)  
   
   
-
 

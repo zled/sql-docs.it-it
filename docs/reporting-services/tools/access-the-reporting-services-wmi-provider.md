@@ -1,5 +1,5 @@
 ---
-title: Provider WMI di Reporting di Access Services | Documenti Microsoft
+title: Accedere al provider WMI per Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 11/02/2016
 ms.prod: sql-server-2016
@@ -10,25 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- Reporting Services WMI Provider
-apilocation:
-- reportingservices.mof
+apiname: Reporting Services WMI Provider
+apilocation: reportingservices.mof
 helpviewer_keywords:
 - WMI provider [Reporting Services]
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aa02df2ee2953c1a3f4b02236cd5203ff08cdc3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2e0d74cf74f3693ec16e5efbc6e6e552f171391c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Accedere al provider WMI per Reporting Services
   Nel provider WMI per Reporting Services sono esposte due classi WMI per l'amministrazione di istanze del server di report in modalità nativa tramite scripting:  
@@ -38,8 +35,8 @@ ms.lasthandoff: 08/09/2017
   
 |Classe|Spazio dei nomi|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<NomeIstanzaCodificato>*\v13|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<NomeIstanzaCodificato>*\v13\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
   
  Per ogni istanza del server di report viene creata un'istanza di ognuna delle classi sopra indicate. È possibile utilizzare qualsiasi strumento Microsoft o di terze parti per accedere agli oggetti WMI esposti dal server di report, incluse le interfacce di programmazione WMI esposte da .NET Framework stesso. Questo argomento descrive come accedere e usare le istanze della classe WMI con il comando PowerShell [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx).  
   
@@ -94,4 +91,3 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

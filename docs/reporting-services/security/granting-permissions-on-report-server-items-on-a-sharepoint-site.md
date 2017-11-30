@@ -1,5 +1,5 @@
 ---
-title: Concessione di autorizzazioni per elementi di Server di Report in un sito di SharePoint | Documenti Microsoft
+title: Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: df4d201ba6de1ebda47f12e3c116ef4a7645a59b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornisce funzionalità di sicurezza incorporate che è possibile utilizzare per concedere l'accesso a elementi del server di report cui si accede da librerie e siti di SharePoint. Se sono già state assegnate le autorizzazioni agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e un server di report. È possibile utilizzare le autorizzazioni esistenti per caricare le definizioni dei report e altri documenti, visualizzare report, creare sottoscrizioni e gestire elementi.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] offre caratteristiche di sicurezza predefinite che è possibile usare per concedere l'accesso agli elementi del server di report dai siti e dalle raccolte di SharePoint. Se sono già state assegnate le autorizzazioni agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e un server di report. È possibile utilizzare le autorizzazioni esistenti per caricare le definizioni dei report e altri documenti, visualizzare report, creare sottoscrizioni e gestire elementi.  
   
  Se non sono state assegnate autorizzazioni oppure non si ha familiarità con le caratteristiche di sicurezza di [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], attenersi alle linee guida seguenti:  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 08/09/2017
   
 -   Gli oggetti a sicurezza diretta includono siti, elenchi, raccolte, cartelle e documenti.  
   
--   Le autorizzazioni vengono concesse per consentire l'esecuzione di un'attività specifica. In [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili 33 autorizzazioni predefinite che è possibile combinare in un livello di autorizzazione.  
+-   Le autorizzazioni vengono concesse per consentire l'esecuzione di un'attività specifica. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili 33 autorizzazioni predefinite che è possibile combinare in un livello di autorizzazione.  
   
 -   I livelli di autorizzazione sono costituiti da un set di autorizzazioni che può essere concesso agli utenti o ai gruppi di SharePoint per un oggetto a sicurezza diretta, ad esempio un sito, una raccolta, un elenco, una cartella, un elemento o un documento. È equivalente a una definizione di ruolo in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sono disponibili cinque livelli di autorizzazione predefiniti. Se necessario, è possibile personalizzarli o crearne di nuovi.  
   
--   Un gruppo di SharePoint è costituito da un gruppo di utenti che è possibile creare in un sito di SharePoint per gestire le autorizzazioni del sito stesso e offrire un elenco di distribuzione tramite posta elettronica per i suoi membri. I gruppi di SharePoint sono costituiti da account utente e di gruppo di Windows oppure da account di accesso utente se si utilizza l'autenticazione basata su form. In [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili tre gruppi. Se necessario, è possibile personalizzarli o crearne di nuovi.  
+-   Un gruppo di SharePoint è costituito da un gruppo di utenti che è possibile creare in un sito di SharePoint per gestire le autorizzazioni del sito stesso e offrire un elenco di distribuzione tramite posta elettronica per i suoi membri. I gruppi di SharePoint sono costituiti da account utente e di gruppo di Windows oppure da account di accesso utente se si utilizza l'autenticazione basata su form. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sono disponibili tre gruppi. Se necessario, è possibile personalizzarli o crearne di nuovi.  
   
 -   L'ereditarietà delle autorizzazioni consente di applicare le impostazioni di sicurezza del sito padre a siti, elenchi ed elementi secondari. È possibile utilizzare le autorizzazioni ereditate per accedere agli elementi del server di report archiviati in una raccolta di SharePoint. L'utilizzo dell'ereditarietà delle autorizzazioni e dei gruppi predefiniti di SharePoint consente di semplificare la distribuzione e offre accesso immediato alla maggior parte delle operazioni del server di report.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  Gli amministratori del server o di una raccolta siti possono impostare le opzioni che determinano se altri proprietari del sito possono impostare le autorizzazioni. A seconda del livello di autorizzazione di cui si dispone, potrebbe non essere possibile creare o personalizzare i livelli di autorizzazione o i gruppi di SharePoint.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Utilizzo dei livelli di autorizzazione e dei gruppi di SharePoint predefiniti  
- Nelle indicazioni incluse nella documentazione relativa al prodotto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] viene consigliato di usare i gruppi di SharePoint standard, ovvero *Proprietari* **nome sito**, *Proprietari* **nome sito**e *Proprietari* **nome sito**, e di assegnare le autorizzazioni a livello di sito. La maggio parte degli utenti a cui vengono assegnate autoizzazioni devono essere membri dei gruppi *Visitatoi* **nome sito** o *Visitatoi* **nome sito** . Le autorizzazioni nel sito padre vengono ereditate in tutta la gerarchia dei siti. È possibile disattivare l'ereditarietà delle autorizzazioni su determinati elementi per i quali è necessario impostare limitazioni.  
+ Nelle indicazioni incluse nella documentazione relativa al prodotto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] viene consigliato di usare i gruppi di SharePoint standard, ovvero *Proprietari* **nome sito**, *Proprietari* **nome sito**e *Proprietari* **nome sito**, e di assegnare le autorizzazioni a livello di sito. La maggio parte degli utenti a cui vengono assegnate autorizzazioni devono essere membri dei gruppi *Visitatoi* **nome sito** o *Visitatoi* **nome sito** . Le autorizzazioni nel sito padre vengono ereditate in tutta la gerarchia dei siti. È possibile disattivare l'ereditarietà delle autorizzazioni su determinati elementi per i quali è necessario impostare limitazioni.  
   
  Di seguito vengono illustrati i livelli di autorizzazione predefiniti per i gruppi di SharePoint:  
   
@@ -80,19 +80,19 @@ ms.lasthandoff: 08/09/2017
  Per utilizzare le caratteristiche di sicurezza incorporate, è necessario assegnare account utente e di gruppo di Windows ai gruppi di SharePoint. Ad eccezione dell'amministratore del server e del proprietario del sito portale, i quali dispongono di accesso automatico a [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fin dall'installazione del software, a tutti gli altri utenti devono essere concesse le autorizzazioni affinché possano accedere al server.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Utilizzare la sicurezza predefinita di Windows SharePoint Services per elementi del Server di Report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Illustra le modalità di utilizzo dei livelli di autorizzazione e dei gruppi di SharePoint predefiniti per l'accesso agli elementi del server di report.  
   
- [Sito di SharePoint e List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Offre informazioni di riferimento relative a tutte le autorizzazioni dei prodotti SharePoint utilizzabili per accedere alle operazioni del server di report.  
   
- [Impostare le autorizzazioni per operazioni del Server di Report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Descrive i requisiti di autorizzazione per il reporting ad hoc e suggerisce approcci utili per rendere disponibili le caratteristiche.  
   
- [Confrontare ruoli e attività di Reporting Services con le autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Offre un breve riepilogo di confronto tra i gruppi di SharePoint e le definizioni di ruolo predefinite in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Impostare autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Include istruzioni per la creazione di nuovi gruppi di SharePoint provvisti dell'autorizzazione necessaria per avviare Generatore report e impostare la sicurezza degli elementi dei modelli. In questo argomento sono inoltre incluse linee guida generali relative all'impostazione di autorizzazioni personalizzate per uno o più elementi o operazioni del server di report.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Eseguire il backup e ripristino per Reporting Services | Documenti Microsoft
+title: Operazioni di backup e ripristino per Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -20,24 +20,22 @@ helpviewer_keywords:
 - files [Reporting Services], restoring
 - files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b16289b6455ac596fcc05b58db3793e3c8d5c541
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operazioni di backup e ripristino per Reporting Services
 
   In questo argomento viene fornita una panoramica di tutti i file di dati utilizzato in un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e viene descritto quando e come è necessario eseguire il backup dei file. Lo sviluppo di un piano di backup e ripristino per i file dei database del server di report rappresenta la parte più importante di una strategia di recupero. Una strategia di recupero più completa include tuttavia i backup delle chiavi di crittografia, di estensioni o assembly personalizzati, dei file di configurazione e dei file di origine di report e modelli.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
  Le operazioni di backup e ripristino vengono spesso utilizzate per spostare un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o parte di essa:  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
  Per altre informazioni sul backup e il ripristino dei database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 > [!IMPORTANT]  
->  Se il server di report è in modalità SharePoint, sono disponibili altri database interessati, tra cui i database di configurazione di SharePoint e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database di avvisi. In modalità SharePoint vengono creati tre database per ciascuna applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : **reportserver**, **reportservertempdb**e **dataalerting** . Per altre informazioni, vedere [Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  Se il server di report è in modalità SharePoint, è necessario occuparsi di altri database, tra cui i database di configurazione di SharePoint e il database di avvisi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In modalità SharePoint vengono creati tre database per ciascuna applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : **reportserver**, **reportservertempdb**e **dataalerting** . Per altre informazioni, vedere [Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>Backup delle chiavi di crittografia  
  Quando si configura un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la prima volta, è consigliabile eseguire il backup delle chiavi di crittografia. È inoltre consigliabile eseguire il backup delle chiavi ogni volta che si modifica l'identità degli account di servizio o si rinomina il computer. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Per i server di report in modalità SharePoint, vedere la sezione "Gestione chiavi" in [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
@@ -92,12 +90,11 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Database del Server di report](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Database del server di report](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
-[Utilità RSKEYMGMT](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
+[Utilità rskeymgmt](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
 [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
-[Amministrare un database del Server di Report](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
-[Configurare e gestire chiavi di crittografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+[Amministrare un database del server di report](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+[Configurare e gestire le chiavi di crittografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

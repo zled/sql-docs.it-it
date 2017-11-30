@@ -1,5 +1,5 @@
 ---
-title: Il visualizzatore HTML e barra degli strumenti Report | Documenti Microsoft
+title: Visualizzatore HTML e barra degli strumenti dei report | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d42edc002d7dffe1747c0219e4da4dd48e9ba00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizzatore HTML e barra degli strumenti dei report
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un Visualizzatore HTML usato per visualizzare i report quando vengono richiesti dal server di report. Il Visualizzatore HTML è progettato per la visualizzazione di report in formato HTML e include una barra degli strumenti dei report, una sezione dei parametri, una sezione delle credenziali e una mappa documento. Nella barra degli strumenti dei report nel Visualizzatore HTML sono disponibili funzionalità per l'utilizzo del report oltre a opzioni per l'esportazione che consentono di visualizzare il report in formati diversi da HTML. La sezione dei parametri e la mappa documento vengono visualizzate solo se si aprono report configurati per l'utilizzo dei parametri e di un controllo mappa documento.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="report-toolbar"></a>Barra degli strumenti dei report  
  La barra degli strumenti dei report include funzionalità di navigazione tra le pagine, ingrandimento o riduzione, aggiornamento, ricerca, esportazione, stampa e feed di dati per i report gestiti tramite l'estensione per il rendering HTML.  
   
- La funzionalità di stampa è facoltativa. Se disponibile, sulla barra degli strumenti dei report viene visualizzata l'icona di una stampante. Al primo utilizzo, facendo clic sull'icona della stampante viene scaricato un controllo ActiveX da installare. Dopo aver installato il controllo, quando si fa clic sull'icona della stampante viene aperta una finestra di dialogo Stampa che consente di selezionare una delle stampanti configurate per il computer. La disponibilità della funzionalità di stampa è determinata dalle impostazioni del server e del browser. Per ulteriori informazioni, vedere [stampa di report da un Browser con il controllo di stampa &#40; Generatore report e SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [abilitare e disabilitare la stampa sul lato Client per Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ La funzionalità di stampa è facoltativa. Se disponibile, sulla barra degli strumenti dei report viene visualizzata l'icona di una stampante. Al primo utilizzo, facendo clic sull'icona della stampante viene scaricato un controllo ActiveX da installare. Dopo aver installato il controllo, quando si fa clic sull'icona della stampante viene aperta una finestra di dialogo Stampa che consente di selezionare una delle stampanti configurate per il computer. La disponibilità della funzionalità di stampa è determinata dalle impostazioni del server e del browser. Per altre informazioni, vedere [Stampare report da un browser con il controllo di stampa &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  La barra degli strumenti dei report è simile a quella illustrata nella figura seguente. La barra degli strumenti dei report effettivamente visualizzata può essere diversa rispetto a questa figura, a seconda delle funzionalità per i report o delle opzioni di rendering disponibili.  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
 |![Icona della mappa documento](../reporting-services/media/htmlviewer-docmap.GIF "Icona della mappa documento")|**Icona della mappa documento**|Visualizzare o nascondere il riquadro della mappa documento in un report che include una mappa documento. Una mappa documento è un controllo per la navigazione all'interno del report simile al riquadro di navigazione in un sito Web. È possibile fare clic sugli elementi nella mappa documento per passare a un gruppo, a una pagina o a un sottoreport specifico.|  
 |![Icona della stampante](../reporting-services/media/printer-icon.gif "Icona della stampante")|**Icona della stampante**|Aprire una finestra di dialogo Stampa per specificare le opzioni di stampa e stampare un report. La prima volta che si seleziona questa icona viene richiesto di scaricare il controllo di stampa.|  
 ||**Visualizzare e nascondere le icone**|Visualizzare o nascondere i campi dei valori di parametro e il pulsante **Visualizza report** in un report con parametri.|  
-|![Pulsante Aggiorna del browser sulla barra degli strumenti report](../reporting-services/media/htmlviewer-refresh.GIF "pulsante Aggiorna del Browser sulla barra degli strumenti report")|**Icona per l'aggiornamento del report**|Aggiornare il report. I dati dei report live verranno aggiornati. I report memorizzati nella cache verranno ricaricati dalla posizione di archiviazione.|  
+|![Pulsante di aggiornamento del browser nella barra degli strumenti dei report](../reporting-services/media/htmlviewer-refresh.GIF "Pulsante di aggiornamento del browser nella barra degli strumenti dei report")|**Icona per l'aggiornamento del report**|Aggiornare il report. I dati dei report live verranno aggiornati. I report memorizzati nella cache verranno ricaricati dalla posizione di archiviazione.|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icona Feed di dati**|Feed di dati generati dai report.|  
 |![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Aggiungi al dashboard di Power BI**|Aggiungere elementi dei report di supporto a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Se il pulsante non è visibile, il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
   
@@ -80,8 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

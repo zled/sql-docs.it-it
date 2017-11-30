@@ -1,5 +1,5 @@
 ---
-title: Elaborare report di grandi dimensioni | Documenti Microsoft
+title: Elaborare report di grandi dimensioni | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53bf81960ca2faca6d14be007966a0713166d19e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="process-large-reports"></a>Elaborare report di grandi dimensioni
   La corretta esecuzione di report di grandi dimensioni presenta alcuni aspetti complessi e richiede determinate configurazioni. Non è consigliabile eseguire report di grandi dimensioni su richiesta, a meno che siano configurati per supportare l'impaginazione.  
@@ -76,10 +75,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Impostare le proprietà di elaborazione di Report](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Specificare le credenziali e informazioni di connessione per origini dati del Report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Precaricare la Cache &#40; Gestione report &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Precaricare la cache &#40;Gestione report&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

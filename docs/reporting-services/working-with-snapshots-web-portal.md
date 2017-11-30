@@ -1,33 +1,30 @@
 ---
-title: Utilizzo di snapshot (portale web) | Documenti Microsoft
+title: Uso degli snapshot (portale Web) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7498112d3822d18976ea6482c6014ce7bc69435f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>Uso degli snapshot (portale Web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-È possibile controllare se gli snapshot vengono creati per un report, selezionando il **i puntini di sospensione (...)**  di un report, selezionando **Gestisci** e selezionando **la memorizzazione nella cache** o **gli snapshot della cronologia**.  
+Per verificare se vengono creati snapshot per un report, selezionare i **puntini di sospensione (...)** di un report, scegliere **Gestisci** e infine **Memorizzazione nella cache** o **Snapshot della cronologia**.  
   
 > [!NOTE]
 > È necessario avviare il servizio SQL Server Agent.  
@@ -81,8 +78,7 @@ Se si seleziona questa casella di controllo, gli snapshot del report generati in
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Utilizzo dei report impaginati](working-with-paginated-reports-web-portal.md)  
-[Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Uso di report impaginati (portale Web)](working-with-paginated-reports-web-portal.md)  
+[Usare i set di dati condivisi (portale Web)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

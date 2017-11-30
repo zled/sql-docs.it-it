@@ -1,5 +1,5 @@
 ---
-title: Metodo BackupEncryptionKey (MSReportServer_ConfigurationSetting WMI) | Documenti Microsoft
+title: Metodo BackupEncryptionKey (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- BackupEncryptionKey method
+helpviewer_keywords: BackupEncryptionKey method
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 39fb5683bc8ab9c4e7d7af39ffb98113a8bffb8a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f2a44fe48ac7e72d17757ee461e69473edda3635
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---backupencryptionkey"></a>Metodo ConfigurationSetting - BackupEncryptionKey
+# <a name="configurationsetting-method---backupencryptionkey"></a>Metodo di ConfigurationSetting - BackupEncryptionKey
   Esegue il backup della chiave di crittografia per l'istanza del server di report specificata. Tale chiave viene archiviata crittografata con una password.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -73,4 +69,3 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

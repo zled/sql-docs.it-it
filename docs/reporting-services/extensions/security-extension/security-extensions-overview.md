@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sulle estensioni di sicurezza | Documenti Microsoft
+title: Panoramica delle estensioni di sicurezza| Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- security [Reporting Services], extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7e8c95a478e733722d3c80da4b5e12e992ef4da
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: d56cfaf647b8f54b7535416ead02fcfaa7c3fbac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-extensions-overview"></a>Panoramica sulle estensioni di sicurezza
   Un'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente l'autenticazione e l'autorizzazione di utenti o gruppi, ovvero consente a utenti diversi di accedere a un server di report e, sulla base delle relative identità, di eseguire diverse attività o operazioni. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza un'estensione di autenticazione basata su Windows che verifica le identità degli utenti che dichiarano di avere account nel sistema tramite i protocolli degli account di Windows. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] l'autorizzazione degli utenti viene effettuata tramite un sistema di sicurezza basato sui ruoli. Il modello di sicurezza basato sui ruoli di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è simile ai modelli di sicurezza basati sui ruoli di altre tecnologie.  
   
  Poiché le estensioni di sicurezza si basano su un'API aperta ed estensibile, è possibile creare nuove estensioni di autenticazione e autorizzazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Di seguito viene fornito un esempio di una tipica implementazione dell'estensione di sicurezza in cui l'autenticazione e l'autorizzazione sono basate su form:  
   
- ![Processo di estensione di sicurezza di servizi di reporting](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "processo di estensione di sicurezza di Reporting Services")  
+ ![Processo di estensione della sicurezza di Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Processo di estensione della sicurezza di Reporting Services")  
   
  Come illustrato nella figura, l'autenticazione e l'autorizzazione vengono effettuate nel modo seguente:  
   
@@ -71,7 +68,6 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione di sicurezza](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [Configurare Gestione Report per passare i cookie di autenticazione personalizzati](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
+ [Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Gestire un Server di Report di Reporting Services in modalità nativa | Documenti Microsoft"
+title: "Gestire un server di report in modalità nativa di Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b070f5ee2eaad2fbe831b281505189766a0e4e7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gestione di un server di report in modalità nativa
   In questa sezione sono disponibili le procedure per la configurazione di un'istanza del server di report in modalità nativa utilizzando Gestione configurazione Reporting Services.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
  Viene illustrato come aprire le porte utilizzate per le richieste in ingresso e le risposte in uscita da un server di report.  
   
  [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Vengono descritti i passaggi aggiuntivi necessari per connettersi a gestione Report o un server di report utilizzando `http://localhost`.  
+ Vengono descritti i passaggi aggiuntivi richiesti per connettersi a Gestione report o a un server di report usando `http://localhost`.  
   
  [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Viene illustrato come configurare un'istanza remota del server di report a cui connettersi e da configurare per un computer diverso.  
@@ -73,7 +72,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Configurazione e amministrazione di un Server di Report &#40; Reporting Services con SharePoint &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   
-

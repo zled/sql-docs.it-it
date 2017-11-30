@@ -1,5 +1,5 @@
 ---
-title: Configurazione personalizzata o autenticazione basata su form nel Server di Report | Documenti Microsoft
+title: Configurare l'autenticazione personalizzata o basata su form nel server di report | Microsoft Docs
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurare l'autenticazione personalizzata o basata su form nel server di report
 
@@ -34,7 +33,7 @@ La distribuzione di un'estensione di autenticazione personalizzata richiede sost
 > [!NOTE]
 >  La creazione di un'estensione di autenticazione personalizzata richiede codice personalizzato ed esperienza in materia di sicurezza di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Se non si desidera creare un'estensione di autenticazione personalizzata, è possibile utilizzare gruppi e account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, ma è necessario ridurre notevolmente l'ambito di distribuzione del server di report. Per altre informazioni sull'autenticazione personalizzata, vedere [Implementazione di un'estensione di sicurezza](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).
 
-Inoltre, se si desidera utilizzare l'autenticazione basata su form o un'estensione di autenticazione personalizzata in un ambiente di SQL Server Reporting Services che è integrato con un prodotto SharePoint, è necessario configurare il sito di SharePoint per utilizzare il metodo di autenticazione scelto. Per altre informazioni sulla configurazione dell'autenticazione in SharePoint, vedere [Esempi di autenticazione](http://go.microsoft.com/fwlink/?LinkId=115575) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
+Se si vuole usare anche l'autenticazione basata su form o un'estensione di autenticazione personalizzata in un ambiente SQL Server Reporting Services integrato con un prodotto SharePoint, è necessario configurare il sito di SharePoint per l'uso del metodo di autenticazione scelto. Per altre informazioni sulla configurazione dell'autenticazione in SharePoint, vedere [Esempi di autenticazione](http://go.microsoft.com/fwlink/?LinkId=115575) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
 
 
 
@@ -42,7 +41,7 @@ Inoltre, se si desidera utilizzare l'autenticazione basata su form o un'estensio
 
 1.  Aprire RSReportServer.config in un editor di testo.
 
-2.  Trovare \< **autenticazione**>.
+2.  Trovare \<**Authentication**>.
 
 3.  Copiare la struttura XML seguente:
 
@@ -55,7 +54,7 @@ Inoltre, se si desidera utilizzare l'autenticazione basata su form o un'estensio
     </Authentication>
     ```
 
-4.  Incollare la struttura sulle voci esistenti per \< **autenticazione**>.
+4.  Incollare la struttura sulle voci esistenti per \<**Authentication**>.
 
      Si noti che non è possibile usare **Custom** con altri tipi di autenticazione.
 
@@ -74,7 +73,7 @@ Inoltre, se si desidera utilizzare l'autenticazione basata su form o un'estensio
     ```
     <identity impersonate = "false" />  
     ```
-9. Aggiungere la struttura dell'elemento **PassThroughCookies** al file di configurazione. Per ulteriori informazioni, vedere [configurare il portale Web per passare i cookie di autenticazione personalizzato](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. Aggiungere la struttura dell'elemento **PassThroughCookies** al file di configurazione. Per altre informazioni, vedere [Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
 10. Salvare il file.  
   
@@ -85,9 +84,9 @@ Inoltre, se si desidera utilizzare l'autenticazione basata su form o un'estensio
 ## <a name="see-also"></a>Vedere anche
 
 [Implementazione di un'estensione di sicurezza](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
-[Esempio di sicurezza personalizzato Reporting Services (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
-[Autenticazione con il Server di Report](../../reporting-services/security/authentication-with-the-report-server.md)   
+[Esempio di sicurezza personalizzata di Reporting Services (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
+[Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[Configurare l'autenticazione di Windows nel Server di Report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+[Configurare l'autenticazione di Windows nel server di report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

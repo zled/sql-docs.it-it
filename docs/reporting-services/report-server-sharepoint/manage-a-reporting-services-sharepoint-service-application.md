@@ -1,5 +1,5 @@
 ---
-title: Gestire un'applicazione di servizio SharePoint di Reporting Services | Documenti Microsoft
+title: Gestire un'applicazione di servizio SharePoint di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: it-it
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
 
@@ -27,12 +26,12 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]applicazioni di servizio sono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
+  Le applicazioni di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
 
 > [!NOTE]
-> Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile dopo SQL Server 2016.
 
-## <a name="open-service-application-properties-page"></a>Pagina delle proprietà dell'applicazione di servizio aperto
+## <a name="open-service-application-properties-page"></a>Aprire la pagina delle proprietà delle applicazioni di servizio
 
  Per aprire la pagina delle proprietà di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-## <a name="open-service-application-management-pages"></a>Pagine di gestione dell'applicazione di servizio aperto
+## <a name="open-service-application-management-pages"></a>Aprire le pagine di gestione delle applicazioni di servizio
 
  Per aprire le pagine di gestione di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 10/06/2017
 
  La pagina Impostazioni sistema consente di configurare il comportamento e l'esperienza utente dell'applicazione di servizio, inclusi diversi timeout.
   
-### <a name="report-settings"></a>Impostazioni di report
+### <a name="report-settings"></a>Impostazioni report
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 10/06/2017
 |Durata parametri memorizzati|Il valore predefinito è 180.|  
 |Soglia parametri memorizzati|Il valore predefinito è 1500 giorni.|  
   
-### <a name="session-settings"></a>Impostazioni di sessione
+### <a name="session-settings"></a>Impostazioni sessione
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
@@ -93,12 +92,12 @@ ms.lasthandoff: 10/06/2017
 |Abilita errori remoti|Il valore predefinito è FALSE.|  
 |Abilita errori dettagliati test connessione|Il valore predefinito è TRUE.|  
   
-### <a name="client-settings"></a>Impostazioni client
+### <a name="client-settings"></a>Impostazioni del client
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
 |Abilita download Generatore report|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se i client sono in grado di visualizzare il pulsante per il download dell'applicazione Generatore report.|  
-|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore Report 3.0 come un clic-applicazione ClickOnce, immettere il seguente valore: http://\<computername > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore report 3.0 come applicazione ClickOnce, immettere il valore seguente: http://\<nomecomputer>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Abilita stampa client|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se gli utenti possono scaricare il controllo lato client, che fornisce opzioni di stampa.|  
 |Modifica timeout sessione|Il valore predefinito è 7200 secondi.|  
 |Modifica limite cache di sessione|Il valore predefinito è 5.|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  È possibile visualizzare ed eliminare i processi in esecuzione, ad esempio i processi creati dalle sottoscrizioni del report e da quelle guidate dai dati. La pagina non viene utilizzata per gestire le sottoscrizioni, bensì i processi attivati da una sottoscrizione. Ad esempio, tramite una sottoscrizione pianificata per essere eseguita una volta ogni ora verrà generato un processo una volta ogni ora che verrà visualizzato nella pagina **Gestione processi** .  
   
- ![gestire i processi in esecuzione](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gestire processi in esecuzione")  
+ ![gestire processi in esecuzione](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gestire processi in esecuzione")  
   
 ## <a name="key-management"></a>Gestione delle chiavi
  Nella tabella seguente sono riepilogate le pagine Gestione chiavi  
@@ -136,7 +135,7 @@ ms.lasthandoff: 10/06/2017
 
  È possibile utilizzare qualsiasi account utente di Windows. Per ottenere risultati ottimali, scegliere un account che disponga delle autorizzazioni di lettera e di accesso alla rete per supportare le connessioni ad altri computer. Deve disporre di autorizzazioni di lettura per qualsiasi immagine o file di dati esterno da utilizzare in un report. Non specificare un account locale se tutte le origini dati e tutte le immagini esterne per i report non sono archiviate sul computer del server di report. Utilizzare l'account solo per l'elaborazione automatica dei report.  
 
- ### <a name="powershell-command"></a>Comando di PowerShell
+ ### <a name="powershell-command"></a>Comandi di PowerShell
 
  Di seguito è riportato un esempio del comando PowerShell per restituire l'elenco delle applicazioni di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la proprietà UEAccount:  
 
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Selezionare questa opzione per specificare un account.  
   
  **Account**  
- Immettere un account utente di dominio di Windows. Utilizzare questo formato:  *\<dominio >\\< account utente\>*.  
+ Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>*.  
   
  **Password**  
  Digitare la password.  
@@ -160,7 +159,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **Conferma password**  
  Immettere nuovamente la password.  
 
-## <a name="e-mail-settings"></a>Impostazioni di posta elettronica
+## <a name="e-mail-settings"></a>Impostazioni posta elettronica
 
  Utilizzare questa pagina per specificare le impostazioni SMTP (Simple Mail Transport Protocol) che consentono il recapito tramite posta elettronica dal server di report. È possibile utilizzare l'estensione per il recapito tramite posta elettronica del server di report per distribuire report o notifiche di elaborazione dei report utilizzando sottoscrizioni tramite posta elettronica. L'estensione per il recapito tramite posta elettronica del server di report richiede un server SMTP e un indirizzo di posta elettronica da utilizzare nel campo Da.  
 
@@ -175,7 +174,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **Da indirizzo**  
  Consente di specificare l'indirizzo di posta elettronica da utilizzare nel campo Da di un messaggio di posta elettronica generato. È necessario specificare un account utente che abbia l'autorizzazione per l'invio di posta elettronica dal server SMTP.  
 
-## <a name="provision-subscriptions-and-alerts"></a>Avvisi e sottoscrizioni provisioning
+## <a name="provision-subscriptions-and-alerts"></a>Provisioning di sottoscrizioni e avvisi
 
  Utilizzare questa pagina per verificare se SQL Server Agent è in esecuzione ed effettuare il provisioning dell'accesso per consentire l'utilizzo di SQL Server Agent da parte di Reporting Services. SQL Server Agent è necessario per gli avvisi dati, le pianificazioni e le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
 
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  Selezionare la casella relativa al proxy e fare clic su **OK**.  
   
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

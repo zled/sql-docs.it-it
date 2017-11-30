@@ -1,5 +1,5 @@
 ---
-title: Riferimento dell'espressione (Generatore Report e SSRS) | Documenti Microsoft
+title: Riferimento dell'espressione (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df29e7308bc0992a9de611b2606b2bb2e624597d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Riferimento dell'espressione (Generatore report e SSRS)
   Le espressioni del report supportano vari riferimenti a funzioni e raccolte predefinite. Le espressioni devono disporre di sintassi [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] valida prima che un report possa essere pubblicato o elaborato.  
   
- Per sviluppare espressioni complesse o espressioni che consentono l'utilizzo di codice o assembly personalizzati, si consiglia di usare Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Per sviluppare espressioni complesse o espressioni che consentono l'utilizzo di codice o assembly personalizzati, si consiglia di usare Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)sottostante.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

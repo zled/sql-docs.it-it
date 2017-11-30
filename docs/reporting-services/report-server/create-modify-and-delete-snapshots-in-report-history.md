@@ -1,5 +1,5 @@
 ---
-title: Creare, modificare ed eliminare snapshot nella cronologia del Report | Documenti Microsoft
+title: Creare, modificare ed eliminare snapshot nella cronologia dei report | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9a85cae2bbc12b86357160781596b1730fba7c88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Creare, modificare ed eliminare snapshot nella cronologia dei report
   La cronologia dei report è una raccolta di snapshot dei report. È possibile intervenire sulla cronologia aggiungendo ed eliminando snapshot oppure modificando le proprietà che specificano le modalità di archiviazione della cronologia. È possibile creare la cronologia dei report manualmente o in base a una pianificazione.  
@@ -66,11 +65,10 @@ ms.lasthandoff: 08/09/2017
  Quando si elimina un report, viene eliminata anche la relativa cronologia. Se ad esempio si elimina un report sulle vendite mensili per sostituirlo con una nuova versione, viene eliminata anche la cronologia a esso associata. Se invece si sposta un report, la relativa cronologia viene spostata insieme al report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione della cronologia dei Report &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Aggiunta di uno Snapshot per generare un Report cronologia &#40; Gestione report &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Limitare la cronologia dei Report &#40; Gestione report &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [Creare la cronologia dei report &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Limitare la cronologia dei report &#40;Gestione report&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   
-

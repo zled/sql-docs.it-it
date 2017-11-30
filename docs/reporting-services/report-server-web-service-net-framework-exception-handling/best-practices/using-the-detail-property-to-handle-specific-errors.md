@@ -1,5 +1,5 @@
 ---
-title: "Utilizzo della proprietà Detail per gestire errori specifici | Documenti Microsoft"
+title: "Using the Detail Property to Handle Specific Errors | (Uso della proprietà Detail per la gestione di errori specifici) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], Detail property
 - Detail property
 - InnerText property
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: cbbaf57ce4726bbb16c8cb722f50ac186fe59d81
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 783d3ded7592f60b39e125215d2b8f08d4c533d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Utilizzo della proprietà Detail per la gestione di errori specifici
-  Per classificare ulteriormente le eccezioni, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] restituisce informazioni aggiuntive sull'errore nel **InnerText** proprietà degli elementi figlio dell'eccezione SOAP **dettaglio** proprietà. Poiché il **dettaglio** proprietà è un **XmlNode** dell'oggetto, è possibile accedere il testo interno del **messaggio** elemento figlio utilizzando il codice seguente.  
+  Per classificare ulteriormente le eccezioni, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] restituisce informazioni aggiuntive sull'errore nella proprietà **InnerText** degli elementi figlio nella proprietà **Detail** dell'eccezione SOAP. Poiché la proprietà **Detail** è un oggetto **XmlNode**, è possibile accedere al testo interno dell'elemento figlio **Message** usando il codice seguente.  
   
- Per un elenco di tutti gli elementi figlio disponibili inclusi nel **dettaglio** proprietà, vedere [proprietà Detail](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md). Per ulteriori informazioni, vedere "Proprietà Detail" nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] documentazione SDK.  
+ Per un elenco di tutti gli elementi figlio disponibili inclusi nella proprietà **Detail**, vedere [Detail Property](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md). Per altre informazioni, vedere l'argomento relativo alla proprietà Detail nella documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
   
 ```vb  
 Try  
@@ -91,9 +89,8 @@ Console.WriteLine(ex.Detail["ErrorCode"].InnerXml);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione a gestione delle eccezioni in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Classe SoapException di Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
+ [Presentazione della Gestione eccezioni in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Classe SoapException di Reporting Services ](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
  [Tabella degli errori SoapException](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
   
   
-

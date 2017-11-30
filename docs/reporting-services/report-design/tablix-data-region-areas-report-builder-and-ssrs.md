@@ -1,5 +1,5 @@
 ---
-title: Aree dell'area dati Tablix (Generatore Report e SSRS) | Documenti Microsoft
+title: Aree dell'area dati Tablix (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 61ec2adb507793813554c1ec8c07418354f9e549
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Aree dell'area dati Tablix (Generatore report e SSRS)
  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] un'area dati Tablix può includere quattro aree contenenti celle Tablix:   
@@ -46,21 +45,20 @@ Nell'area di progettazione le linee tratteggiate indicano le quattro aree di un'
   
 -   **Area del corpo della Tablix**. Il corpo della Tablix si trova nell'angolo inferiore destro o nell'angolo inferiore sinistro nel caso di layout da destra a sinistra. Nel corpo della Tablix sono visualizzati dati dettaglio e dati raggruppati. In questo esempio vengono utilizzati solo dati aggregati. L'ambito dell'espressione è determinato dai gruppi più interni ai quali appartiene la casella di testo. Le celle nel corpo della Tablix contengono dati dettaglio quando sono membri di una riga di dettaglio e rappresentano dati di aggregazione quando sono membri di una riga o di una colonna associata a un gruppo. Per impostazione predefinita, le celle di una riga o di una colonna di gruppo che contengono espressioni semplici prive di funzioni di aggregazione restituiscono il primo valore nel gruppo. Nella figura le celle contengono i totali di aggregazione per i totali delle righe di tutti gli ordini di vendita.  
   
- Quando il report viene eseguito, i gruppi di colonne si espandono verso destra o verso sinistra se la proprietà Direction dell'area dati Tablix è impostata su RTL, per un numero di colonne pari ai valori univoci di un'espressione di raggruppamento. Le righe dinamiche si espandono verso la parte inferiore della pagina. Per altre informazioni, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report&#41; e SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Quando il report viene eseguito, i gruppi di colonne si espandono verso destra o verso sinistra se la proprietà Direction dell'area dati Tablix è impostata su RTL, per un numero di colonne pari ai valori univoci di un'espressione di raggruppamento. Le righe dinamiche si espandono verso la parte inferiore della pagina. Per altre informazioni, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Nella figura seguente viene mostrata l'area dati Tablix nel riquadro Anteprima.  
   
- ![Gruppi di anteprima, angolo Tablix, riga e colonna, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "gruppi di anteprima, angolo Tablix, riga e colonna, corpo")  
+ ![Anteprima, angolo Tablix, gruppi di righe di colonne, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Anteprima, angolo Tablix, gruppi di righe di colonne, corpo")  
   
  Nell'area del gruppo di righe vengono visualizzate due istanze del gruppo di categorie relative a Clothing e Components. Il gruppo di colonne contiene un'istanza del gruppo geografia relativa al Nord America, con due istanze del gruppo paese/regione nidificate per Canada (CA) e Stati Uniti (US). Inoltre, nella colonna adiacente sono visualizzate due istanze del gruppo anno relative a 2003 e 2004. La riga della colonna Total contiene i totali delle righe. Nella riga dei totali che si ripete con il gruppo di categorie sono mostrati i totali delle sottocategorie mentre nella riga del totale complessivo sono visualizzati i totali delle categorie una volta per ogni area dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
- [Tabelle &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Creare una matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Creazione di fatture e form con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Creare fatture e moduli con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

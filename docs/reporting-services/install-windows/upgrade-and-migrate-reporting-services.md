@@ -1,5 +1,5 @@
 ---
-title: Eseguire l'aggiornamento e migrazione di Reporting Services | Documenti Microsoft
+title: Eseguire l'aggiornamento e la migrazione di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -16,24 +16,22 @@ helpviewer_keywords:
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 92
+caps.latest.revision: "92"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/25/2017
-
+ms.openlocfilehash: af94ddd1515281c0e6efefce3d3e6e329c8292c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="upgrade-and-migrate-reporting-services"></a>Eseguire l'aggiornamento e la migrazione di Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  In questo argomento viene fornita una panoramica delle opzioni di aggiornamento e migrazione per SQL Server Reporting Services. Esistono due approcci generali per l'aggiornamento di una distribuzione di SQL Server Reporting Services:  
+  Questo argomento offre una panoramica delle opzioni di aggiornamento e migrazione per SQL Server Reporting Services. Sono disponibili due approcci generali per l'aggiornamento di una distribuzione di SQL Server Reporting Services:  
   
 -   **Aggiornamento:** vengono aggiornati i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nei server e nelle istanze in cui sono attualmente installati. Si tratta dell'aggiornamento comunemente definito "sul posto". L'aggiornamento sul posto non è supportato da una modalità all'altra del server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile ad esempio eseguire l'aggiornamento da un server di report in modalità nativa a un server di report in modalità SharePoint. È possibile eseguire la migrazione degli elementi del report da una modalità all'altra. Per ulteriori informazioni, vedere la sezione relativa alla migrazione dalla modalità nativa alla modalità SharePoint più avanti in questo documento.  
   
@@ -45,21 +43,21 @@ ms.lasthandoff: 10/25/2017
  Per un elenco dettagliato delle edizioni e delle versioni supportate che è possibile aggiornare, vedere [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Per informazioni più recenti relative a problemi riguardanti SQL Server, vedere gli argomenti seguenti:  
+>  Per le informazioni più recenti relative a problemi riguardanti SQL Server, vedere gli argomenti seguenti:  
 >   
 >  -   [Note sulla versione di SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Installazioni side-by-side  
- Modalità di SQL Server nativa di Reporting Services può essere installato side-by-side con un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] distribuzione in modalità nativa.  
+ È possibile eseguire l'installazione side-by-side della modalità nativa di SQL Server Reporting Services con una distribuzione in modalità nativa di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- Non è previsto alcun supporto per le distribuzioni side-by-side di SQL Server Reporting Services in modalità SharePoint e le versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componenti della modalità SharePoint.  
+ Le distribuzioni side-by-side di SQL Server Reporting Services in modalità SharePoint e di qualsiasi versione precedente dei componenti della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non sono supportate.  
   
   
 ##  <a name="bkmk_inplace_upgrade"></a> Aggiornamento sul posto  
  L'aggiornamento viene completato tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare uno o tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Durante l'installazione vengono rilevate le istanze esistenti e viene richiesto di eseguire l'aggiornamento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione offre diverse opzioni di aggiornamento che è possibile specificare come argomento della riga di comando o nell'Installazione guidata.  
   
- Quando si esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'installazione, è possibile selezionare l'opzione per eseguire l'aggiornamento da una delle versioni seguenti oppure è possibile installare una nuova istanza di SQL Server Reporting Services che viene eseguito side-by-side installazioni esistenti:  
+ Quando si esegue il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile selezionare l'opzione che consente di eseguire l'aggiornamento da una delle versioni seguenti oppure installare una nuova istanza di SQL Server Reporting Services che esegue le installazioni side-by-side esistenti:  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 10/25/2017
   
 -   Rivedere i requisiti per determinare se l'hardware e il software in uso supportano [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Per altre informazioni, vedere [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   Utilizzare controllo configurazione sistema (SCC) per analizzare il computer del server di report per tutte le condizioni che potrebbero compromettere l'installazione di SQL Server Reporting Services. Per altre informazioni, vedere [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   Usare Controllo configurazione sistema (SCC) per analizzare il computer del server di report per individuare eventuali condizioni che potrebbero compromettere l'installazione di SQL Server Reporting Services. Per altre informazioni, vedere [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
 -   Rivedere le procedure consigliate per la sicurezza e le indicazioni di guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 10/25/2017
   
  È tuttavia necessario eseguire manualmente la **migrazione** di un'installazione del server di report se si verifica una delle condizioni seguenti:  
   
--   Si desidera modificare il tipo di server di report usato nella distribuzione. Non è possibile, ad esempio, eseguire l'aggiornamento o la conversione da un server di report in modalità nativa a un server di report in modalità SharePoint. Per ulteriori informazioni, vedere [nativo per la migrazione di SharePoint &#40; SSRS &#41; ](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Si desidera modificare il tipo di server di report usato nella distribuzione. Non è possibile, ad esempio, eseguire l'aggiornamento o la conversione da un server di report in modalità nativa a un server di report in modalità SharePoint. Per altre informazioni, vedere [Migrazione dalla modalità nativa alla modalità SharePoint &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   Si desidera ridurre la quantità di tempo in cui il server di report viene portato offline durante il processo di aggiornamento. L'installazione corrente rimane online durante la copia dei dati di contenuto in una nuova istanza del server di report e il test dell'installazione senza la modifica dello stato di installazione del server di report esistente.  
   
@@ -115,13 +113,13 @@ ms.lasthandoff: 10/25/2017
   
 1.  Se il database del server di report è installato in un computer remoto e non si dispone dell'autorizzazione necessaria per aggiornarlo, verrà richiesto di specificare le credenziali per l'aggiornamento a un database del server di report remoto. Assicurarsi di fornire credenziali che dispongono di autorizzazioni **sysadmin** o per l'aggiornamento del database.  
   
-2.  Il programma di installazione verifica la presenza di eventuali condizioni o impostazioni che impediscono l'aggiornamento e legge le impostazioni di configurazione. Alcuni esempi sono le estensioni personalizzate distribuite nel server di report. Se l'aggiornamento viene bloccato, è necessario modificare l'installazione in modo che l'aggiornamento non è stato bloccato o eseguire la migrazione a una nuova istanza di SQL Server Reporting Services. Per altre informazioni, vedere la documentazione di Preparazione aggiornamento.  
+2.  Il programma di installazione verifica la presenza di eventuali condizioni o impostazioni che impediscono l'aggiornamento e legge le impostazioni di configurazione. Alcuni esempi sono le estensioni personalizzate distribuite nel server di report. Se l'aggiornamento viene bloccato, è necessario modificare l'installazione per evitare il blocco oppure eseguire la migrazione a una nuova istanza di SQL Server Reporting Services. Per altre informazioni, vedere la documentazione di Preparazione aggiornamento.  
   
 3.  Se è possibile procedere, viene richiesto di continuare con il processo di aggiornamento.  
   
-4.  Programma di installazione crea nuove cartelle per i file di programma di SQL Server Reporting Services. Le cartelle di programma per un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installazione include cartella MSRS13.\< *nome dell'istanza*>.  
+4.  Il programma di installazione crea nuove cartelle per i file di programma di SQL Server Reporting Services. Le cartelle di programma per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includono la cartella MSRS13.\<*nome istanza*>.  
   
-5.  Programma di installazione aggiunge il file di programma server di report di SQL Server Reporting Services, strumenti di configurazione e le utilità della riga di comando che fanno parte della funzionalità del server di report.  
+5.  Vengono anche aggiunti i file di programma del server di report, gli strumenti di configurazione e le utilità della riga di comando di SQL Server Reporting Services che fanno parte della funzionalità del server di report.  
   
     1.  I file di programma della versione precedente vengono rimossi.  
   
@@ -131,30 +129,30 @@ ms.lasthandoff: 10/25/2017
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è un download separato. Per altre informazioni, vedere [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   
-6.  Programma di installazione riutilizza la voce di servizio in Gestione controllo servizi per il servizio SQL Server Reporting Services Report. Tale voce di servizio include l'account del servizio Windows del server di report.  
+6.  Il programma di installazione riutilizza la voce di servizio in Gestione controllo servizi per il servizio del server di report di SQL Server Reporting Services. Tale voce di servizio include l'account del servizio Windows del server di report.  
   
 7.  Nuovi URL vengono riservati in base alle impostazioni delle directory virtuali esistenti in IIS. Poiché le directory virtuali di IIS potrebbero non essere rimosse dal programma di installazione, assicurarsi di rimuoverle manualmente al termine dell'aggiornamento.  
   
 8.  Il programma di installazione unisce le impostazioni nei file di configurazione. Usando come base i file di configurazione dell'installazione corrente, vengono aggiunte nuove voci. Le voci obsolete non vengono rimosse, ma non verranno più lette dal server di report al termine dell'aggiornamento. L'aggiornamento non comporta l'eliminazione dei file di log precedenti, del file RSWebApplication.config obsoleto o delle impostazioni delle directory virtuali in IIS. L'aggiornamento non comporta la rimozione di versioni precedenti di Progettazione report, Management Studio o altri strumenti client. Se non sono più necessari, accertarsi di rimuovere i file e gli strumenti al termine dell'aggiornamento.  
   
- **Migrazione:** la migrazione di una versione precedente di un'installazione in modalità nativa a SQL Server Reporting Services è la stessa procedura per tutte le versioni supportate elencate in precedenza in questo argomento. Per altre informazioni, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migrazione**: la migrazione di una versione precedente di un'installazione in modalità nativa a SQL Server Reporting Services prevede gli stessi passaggi per tutte le versioni supportate elencate in precedenza in questo argomento. Per altre informazioni, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
   
 ##  <a name="bkmk_native_scaleout"></a> Aggiornare una distribuzione con scalabilità orizzontale in modalità nativa di Reporting Services  
  Di seguito viene illustrato come aggiornare una distribuzione in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con scalabilità orizzontale a più di un server di report. Questo processo implica tempi di inattività della distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Eseguire il backup dei database e delle chiavi di crittografia del server di report. Per ulteriori informazioni, vedere [operazioni di Backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [aggiungere e rimuovere le chiavi di crittografia per la distribuzione con scalabilità orizzontale &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Eseguire il backup dei database e delle chiavi di crittografia del server di report. Per altre informazioni, vedere [Operazioni di backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  Utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e rimuovere tutti i server di report dalla distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-3.  Aggiornamento di uno dei server di report a SQL Server Reporting Services.  
+3.  Aggiornare uno dei server di report a SQL Server Reporting Services.  
   
 4.  Utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiungere di nuovo i server di report nella distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Per ogni server, ripetere i passaggi di aggiornamento e scalabilità orizzontale.  
   
 ##  <a name="bkmk_sharePoint_scenarios"></a> Scenari di aggiornamento e migrazione della modalità SharePoint  
- Nelle sezioni seguenti vengono descritti i problemi e i passaggi di base necessari per eseguire l'aggiornamento o la migrazione da versioni specificate di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint di SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint.  
+ Nelle sezioni seguenti vengono descritti i problemi e i passaggi di base necessari per eseguire l'aggiornamento o la migrazione da versioni specificate della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] alla modalità SharePoint di SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Esistono due componenti di installazione per aggiornare una distribuzione della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -165,12 +163,12 @@ ms.lasthandoff: 10/25/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Componente aggiuntivo per prodotti SharePoint. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
- Per informazioni dettagliate sulla migrazione di un'installazione in modalità SharePoint, vedere [eseguire la migrazione di un'installazione di Reporting Services &#40; Modalità SharePoint &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+ Per informazioni dettagliate sulla migrazione di un'installazione in modalità SharePoint, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  Alcuni degli scenari seguenti richiedono l'inattività dell'ambiente SharePoint a causa delle diverse tecnologie che devono essere aggiornate. Se non è possibile rendere inattivo l'ambiente, sarà necessario completare una migrazione anziché un aggiornamento sul posto.  
   
-### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]per SQL Server Reporting Services  
+### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>Da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a SQL Server Reporting Services  
  **Ambiente iniziale:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1, SharePoint 2010 o SharePoint 2013.  
   
  **Ambiente finale:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.   
@@ -179,7 +177,7 @@ ms.lasthandoff: 10/25/2017
   
      Se si dispone di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrata con SharePoint 2010, non è possibile eseguire l'aggiornamento sul posto del server SharePoint. È tuttavia possibile eseguire la migrazione dei database del contenuto e di quelli dell'applicazione di servizio dalla farm di SharePoint 2010 a una di SharePoint 2013/2016.  
   
-### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]per SQL Server Reporting Services  
+### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>Da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a SQL Server Reporting Services  
  **Ambiente iniziale:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
  **Ambiente finale:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.   
@@ -188,7 +186,7 @@ ms.lasthandoff: 10/25/2017
   
      Se si dispone di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrata con SharePoint 2010, non è possibile eseguire l'aggiornamento sul posto del server SharePoint. È tuttavia possibile eseguire la migrazione dei database del contenuto e di quelli dell'applicazione di servizio dalla farm di SharePoint 2010 a una di SharePoint 2013/2016.  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]per SQL Server Reporting Services  
+### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>Da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a SQL Server Reporting Services  
  **Ambiente iniziale:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
  **Ambiente finale:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.  
@@ -197,9 +195,9 @@ ms.lasthandoff: 10/25/2017
 
     Prima di aggiornare Reporting Services, è necessario eseguire la migrazione di SharePoint.
   
--   Installare la versione di SQL Server Reporting Services del [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiuntivo per SharePoint in ogni front-end web nella farm. È possibile installare il componente aggiuntivo utilizzando l'installazione guidata di SQL Server Reporting Services o il download del componente aggiuntivo.  
+-   Installare la versione SQL Server Reporting Services del componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per SharePoint in ogni front-end Web della farm. È possibile installare il componente aggiuntivo mediante l'Installazione guidata di SQL Server Reporting Services oppure è possibile scaricarlo.  
   
--   Eseguire l'installazione di SQL Server Reporting Services per aggiornare la modalità SharePoint per ogni server di report' '. L'installazione guidata di SQL Server installerà il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e creerà una nuova applicazione di servizio. 
+-   Eseguire l'installazione di SQL Server Reporting Services per aggiornare la modalità SharePoint per ogni 'server di report'. L'installazione guidata di SQL Server installerà il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e creerà una nuova applicazione di servizio. 
   
   
 ##  <a name="bkmk_migration_considerations"></a> Considerazioni sulla migrazione  
@@ -254,4 +252,3 @@ ms.lasthandoff: 10/25/2017
 [Eseguire l'aggiornamento a SQL Server 2016 usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

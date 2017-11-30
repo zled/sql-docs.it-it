@@ -1,5 +1,5 @@
 ---
-title: "Visualizzazione dei numeri di pagina o altre proprietà del Report (Generatore Report e SSRS) | Documenti Microsoft"
+title: "Visualizzare i numeri di pagina o altre proprietà del report (Generatore report e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7f3761ae99fd13d1f69ed59719967797d9af0c51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Visualizzare i numeri di pagina o altre proprietà del report (Generatore report e SSRS)
   Aggiungere numeri di pagina, un titolo di report, un nome file e altre proprietà alle intestazioni o ai piè di pagina del report è un'operazione semplice. Queste proprietà sono archiviate come campi nella cartella Campi predefiniti nel riquadro dei dati del report:  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 2.  Trascinare il campo **Numero pagina** dal riquadro dei dati del report nell'intestazione o nel piè di pagina del report.  
   
     > [!NOTE]  
-    >  Il piè di pagina verrà aggiunto automaticamente al report. Per aggiungere un'intestazione di pagina, nella scheda **Inserisci** fare clic su **Intestazione** e quindi su **Aggiungi intestazione**.  
+    >  Il piè di pagina verrà aggiunto automaticamente al report. Per aggiungere un'intestazione di pagina, nella scheda **Inserisci** fare clic su **Intestazione**e quindi su **Aggiungi intestazione**.  
     >   
     >  Verrà aggiunta una casella di testo contenente l'espressione semplice [&PageNumber].  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
      La casella di testo **Imposta espressione per: Valore** contiene l'espressione =Globals!PageNumber.  
   
-2.  Posizionare il cursore dopo il segno = e digitare **"Pagina" &**.  
+2.  Posizionare il cursore dopo il segno = e digitare **"Pagina " &**.  
   
      L'espressione cambierà in ="Pagina "&Globals!PageNumber  
   
@@ -82,15 +81,14 @@ ms.lasthandoff: 08/09/2017
   
 2.  Digitare **&" di "&** alla fine dell'espressione.  
   
-3.  Nel riquadro Categoria espandere **Campi predefiniti**, quindi fare doppio clic **TotalPages**.  
+3.  Nel riquadro Categoria espandere **Campi predefiniti** , quindi fare doppio clic **TotalPages**.  
   
      L'espressione cambierà in ="Page "&Globals!PageNumber &" di "&Globals!TotalPages.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le intestazioni di pagina e piè di pagina &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formattare il testo in una casella di testo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   
-

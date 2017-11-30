@@ -1,5 +1,5 @@
 ---
-title: SQL Server Parallel Data Warehouse del tipo di connessione (SSRS) | Documenti Microsoft
+title: Tipo di connessione a SQL Server Parallel Data Warehouse (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b4cc5365a0d351304f0e4939b20425fec0f97db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo di connessione a SQL Server Parallel Data Warehouse (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] è uno strumento di data warehouse scalabile che offre prestazioni e scalabilità tramite un sistema di elaborazione parallela massiva. [!INCLUDE[ssDW](../../includes/ssdw-md.md)]Usa database di SQL Server per l'archiviazione di dati e l'elaborazione distribuita.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] è uno strumento di data warehouse scalabile che offre prestazioni e scalabilità tramite un sistema di elaborazione parallela massiva. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] vengono utilizzati database di SQL Server per l'elaborazione distribuita e l'archiviazione dei dati.  
   
- Le tabelle di database di grandi dimensioni accessorio partizioni in più nodi fisici, dove ogni nodo esegue la propria istanza di SQL Server. Quando un report si connette a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] per recuperare i dati del report, si connette al nodo di controllo che gestisce l'elaborazione delle query nell'appliance [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Una volta stabilita la connessione, non si noteranno differenze nell'uso di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'interno e all'esterno di un ambiente [!INCLUDE[ssDW](../../includes/ssdw-md.md)] .  
+ Lo strumento consente di partizionare tabelle di database di grandi dimensioni in più nodi fisici, dove ogni nodo esegue la propria istanza di SQL Server. Quando un report si connette a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] per recuperare i dati del report, si connette al nodo di controllo che gestisce l'elaborazione delle query nell'appliance [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Una volta stabilita la connessione, non si noteranno differenze nell'uso di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'interno e all'esterno di un ambiente [!INCLUDE[ssDW](../../includes/ssdw-md.md)] .  
   
  Per includere nel report dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
@@ -79,7 +78,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [Text](#QueryText)  
   
- Utilizzare [!INCLUDE[DWsql](../../includes/dwsql-md.md)] con [!INCLUDE[ssDW](../../includes/ssdw-md.md)] e [!INCLUDE[tsql](../../includes/tsql-md.md)] con SQL Server. I due dialetti del linguaggio SQL sono molto simili. Le query scritte per il tipo di connessione all'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere possono essere utilizzate per il tipo di connessione all'origine dati di [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] .  
+ È possibile utilizzare [!INCLUDE[DWsql](../../includes/dwsql-md.md)] con [!INCLUDE[ssDW](../../includes/ssdw-md.md)] e [!INCLUDE[tsql](../../includes/tsql-md.md)] con SQL Server. I due dialetti del linguaggio SQL sono molto simili. Le query scritte per il tipo di connessione all'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere possono essere utilizzate per il tipo di connessione all'origine dati di [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] .  
   
  Una query che recupera dati del report da un database di grandi dimensioni, che include un data warehouse quale [!INCLUDE[ssDW](../../includes/ssdw-md.md)], potrebbe generare un set di risultati con un numero di righe molto elevato, a meno che i dati vengano aggregati e riepilogati in modo da ridurre il numero di righe restituito dalla query. È possibile scrivere query che includono funzioni di aggregazione e raggruppamento tramite la finestra di Progettazione query con interfaccia grafica o basata su testo.  
   
@@ -87,7 +86,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] fornisce il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati riepilogativi. Le funzionalità relative al linguaggio [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , inclusi il raggruppamento e le aggregazioni.  
   
- Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md) nella [documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
+ Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md) nella [Documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Utilizzo di query di tipo Text  
  Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[DWsql](../../includes/dwsql-md.md)] per definire i dati in un set di dati. Le query utilizzare per recuperare dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] corrispondono a quelle utilizzate per recuperare dati da istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non vengono eseguite all'interno di un'applicazione [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . La query [!INCLUDE[DWsql](../../includes/dwsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:  
@@ -141,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Aggiungere un filtro a un set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Sezioni correlate  
@@ -150,13 +149,13 @@ WHERE EmployeeID = (@EmpID)
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
- [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sui set di dati incorporati e condivisi.  
   
- [Raccolta di campi del set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -168,4 +167,4 @@ WHERE EmployeeID = (@EmpID)
 [Filtro, raggruppamento e ordinamento di dati](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Espressioni](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

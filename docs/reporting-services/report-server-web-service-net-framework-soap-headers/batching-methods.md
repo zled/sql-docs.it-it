@@ -1,5 +1,5 @@
 ---
-title: Metodi di invio in batch | Documenti Microsoft
+title: Metodi di invio in batch | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - methods [Reporting Services], batches
 - BatchHeader SOAP header
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - locking [Reporting Services]
 - multiple Web service methods
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: ff92d909aad4d6de65e74cd4382c49560cf473c1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 5736a128eb5255edb0fa4ef604ddbc7eb4fcd2f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="batching-methods"></a>Metodi di invio in batch
   L'utilizzo di intestazioni SOAP in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di includere più metodi del servizio Web in una singola operazione. I metodi vengono eseguiti nell'ambito di un'unica transazione di database, nell'ordine con cui vengono chiamati.  
@@ -110,8 +108,7 @@ class Sample
 ## <a name="see-also"></a>Vedere anche  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [Riferimento tecnico &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Con Reporting Services le intestazioni SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Uso di intestazioni SOAP di Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

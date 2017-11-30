@@ -1,5 +1,5 @@
 ---
-title: Identificazione dello stato di esecuzione | Documenti Microsoft
+title: Identificazione dello stato di esecuzione | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 83cdd4165f745bd6f2e42e65c8638328c1d41bd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="identifying-execution-state"></a>Identificazione dello stato di esecuzione
   HTTP (Hypertext Transfer Protocol) è un protocollo senza connessione e senza stato, ovvero non indica automaticamente se diverse richieste provengono dallo stesso client o se una singola istanza di un browser continua a visualizzare attivamente una pagina o un sito. Le sessioni creano una connessione logica per gestire lo stato tra server e client tramite HTTP. Le informazioni specifiche dell'utente relative a una particolare sessione sono note come stato della sessione.  
   
  La gestione della sessione implica la correlazione di una richiesta HTTP con le altre richieste precedenti generate dalla stessa sessione. In assenza di gestione della sessione, queste richieste appaiono non correlate al servizio Web ReportServer a causa della natura senza connessione e senza stato del protocollo HTTP.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non espone un concetto olistico di stato della sessione simile a quello esposto da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Tuttavia, durante l'esecuzione di report, il server di report gestisce lo stato tra il metodo chiama sotto forma di un **esecuzione**. Un'esecuzione consente all'utente di interagire con il report in diversi modi, ad esempio caricando il report dal server di report, impostando le credenziali e i parametri per il report ed eseguendo il rendering del report.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non espone un concetto olistico di stato della sessione simile a quello esposto da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Quando, tuttavia, si eseguono i report, il server di report gestisce lo stato tra chiamate ai metodi sotto forma di **esecuzione**. Un'esecuzione consente all'utente di interagire con il report in diversi modi, ad esempio caricando il report dal server di report, impostando le credenziali e i parametri per il report ed eseguendo il rendering del report.  
   
  Mentre comunicano con un server di report, i client utilizzano l'esecuzione per gestire la visualizzazione dei report e la navigazione degli utenti ad altre pagine di un report, nonché per mostrare o nascondere le sezioni di un report. Per ogni report eseguito dall'applicazione client è disponibile un'unica esecuzione.  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  Nel diagramma seguente vengono illustrati i percorsi di elaborazione e di rendering per i report.  
   
- ![Percorso di elaborazione/rendering del report](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "percorso di elaborazione/rendering del Report")  
+ ![Percorso di elaborazione/rendering del report](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Percorso di elaborazione/rendering del report")  
   
  Per supportare le funzioni descritte in precedenza, il metodo di rendering SOAP corrente è stato suddiviso in più metodi che includono le fasi di inizializzazione dell'esecuzione, elaborazione e rendering.  
   
@@ -67,8 +65,7 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Riferimento tecnico &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Con Reporting Services le intestazioni SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Uso di intestazioni SOAP di Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

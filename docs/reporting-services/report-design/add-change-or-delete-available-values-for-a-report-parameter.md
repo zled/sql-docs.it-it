@@ -1,5 +1,5 @@
 ---
-title: Aggiungere, modificare o eliminare valori disponibili per un parametro di Report | Documenti Microsoft
+title: Aggiungere, modificare o eliminare valori disponibili per un parametro di report | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 17df333a21a99d3f25c98cab94a0af7199ecf3a7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49059743233ab5f2f3ba2162b646e1f4013d174a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Aggiungere, modificare o eliminare valori disponibili per un parametro di report
   Dopo aver creato un parametro del report, è possibile specificare un elenco di valori disponibili da visualizzare. Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Fare clic su **Imposta valori** per fornire manualmente un elenco di valori. Facoltativamente, è possibile specificare i nomi descrittivi (etichette) per i valori.  
   
-         Fare clic su **Aggiungi** e quindi immettere il valore nella casella di testo **Valore** . Facoltativamente, immettere anche l'etichetta nella casella di testo **Etichetta** . Se non si specifica un'etichetta verrà utilizzato il valore. È possibile scrivere un'espressione per un valore. Il tipo di dati deve corrispondere al tipo di dati del parametro. Non è possibile utilizzare i nomi di campi in un'espressione per un parametro. Per alcuni esempi, vedere [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md).  
+         Fare clic su **Aggiungi** e quindi immettere il valore nella casella di testo **Valore** . Facoltativamente, immettere anche l'etichetta nella casella di testo **Etichetta** . Se non si specifica un'etichetta verrà utilizzato il valore. È possibile scrivere un'espressione per un valore. Il tipo di dati deve corrispondere al tipo di dati del parametro. Non è possibile utilizzare i nomi di campi in un'espressione per un parametro. Per esempi, vedere [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md).  
   
          Ripetere questo passaggio per il numero desiderato di valori. Gli elementi vengono visualizzati nell'elenco a discesa in base all'ordine in cui appaiono nell'elenco. Per modificare l'ordine di un elemento nell'elenco, fare clic su una casella di testo **Valore** o **Etichetta** per selezionare l'elemento e quindi usare i pulsanti freccia per spostare l'elemento verso l'alto o verso il basso nell'elenco.  
   
@@ -82,13 +81,12 @@ ms.lasthandoff: 08/09/2017
      Nell'anteprima del report l'elenco a discesa con i valori disponibili per il parametro non verrà più visualizzato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modificare l'ordine di un parametro di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare un parametro di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Aggiungere parametri di propagazione a un Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare valori predefiniti per un parametro di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Riferimenti alla raccolta di parametri &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Esercitazione: Aggiungere un parametro di Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Aggiunta di parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare valori predefiniti per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

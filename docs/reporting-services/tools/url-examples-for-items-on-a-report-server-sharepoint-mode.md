@@ -1,5 +1,5 @@
 ---
-title: "Esempi di URL per gli elementi in un Server di Report - modalità SharePoint | Documenti Microsoft"
+title: "Esempi di URL per gli elementi in un server di report - Modalità SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d2dc3f1680651e6bcd0f4e4b714f567d1347e0c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Esempi di URL per gli elementi in un Server di Report - modalità SharePoint
-  Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
+# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Esempi di URL per gli elementi in un server di report - Modalità SharePoint
+  Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
   
  Per i siti di SharePoint vengono usati indirizzi Web diversi rispetto a un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. In una gerarchia Web di un sito di SharePoint sono inclusi l'applicazione Web di SharePoint, un sito principale, eventuali siti secondari e raccolte. È necessario conoscere la procedura per la creazione di un indirizzo URL che specifichi il server di SharePoint, nonché il percorso nella gerarchia dei siti di SharePoint in cui si desidera pubblicare un report o elementi correlati.  
   
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 |Oggetto|Description|  
 |------------|-----------------|  
-|Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web dispone di un URL (ad esempio, `http:*//servername*`) e può contenere più siti.|  
+|Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web possiede un URL, ad esempio `http:*//servername*`, e può contenere più siti.|  
 |Sito|Un sito può essere un sito padre o un sito secondario di un'applicazione Web.|  
 |Raccolta di SharePoint|Una raccolta contiene documenti o cartelle. Gli unici oggetti di un sito nei quali possono essere archiviati report, origini dei dati condivise e immagini esterne sono le raccolte o le cartelle.|  
 |Elemento|Gli elementi del server di report ai quali è possibile fare riferimento in un URL includono definizione di report o sottoreport, modelli di report, origini dei dati condivise o immagini esterne.|  
@@ -50,26 +49,26 @@ ms.lasthandoff: 08/09/2017
 ### <a name="url-for-a-sharepoint-server"></a>URL per un server di SharePoint  
  Quando si distribuisce un progetto modello di report o server di report da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al server di report, è necessario utilizzare un URL del server di SharePoint.  
   
- Per trovare il nome del server da utilizzare, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare un report. Il nome del server si trova immediatamente dopo il prefisso del protocollo, ad esempio, `http:*//servername*`.  
+ Per trovare il nome del server da utilizzare, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare un report. Il nome del server si trova immediatamente dopo il prefisso del protocollo, ad esempio `http:*//servername*`.  
   
- L'utilizzo dell'endpoint proxy dell'URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato. Un endpoint proxy include un numero di porta, ad esempio, `http:*//servername:8080/reportserver*`.  
+ L'utilizzo dell'endpoint proxy dell'URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato. Gli endpoint proxy includono un numero di porta, ad esempio `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL per un sito o un sito secondario di SharePoint Server  
- Quando si distribuisce un report o un'origine dati del report, è necessario utilizzare un URL del sito e dell'eventuale sito secondario di SharePoint. Nell'URL, il nome del sito viene visualizzato immediatamente dopo il nome del server., ad esempio, `http://*servername/site*` o `http://*servername/site/subsite*`.  
+ Quando si distribuisce un report o un'origine dati del report, è necessario utilizzare un URL del sito e dell'eventuale sito secondario di SharePoint. Nell'URL, il nome del sito si trova immediatamente dopo il nome del server, ad esempio `http://*servername/site*` o `http://*servername/site/subsite*`.  
   
  In un'applicazione Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] il sito e il sito secondario corrispondono spesso alle schede nel sito principale. Per trovare il nome del sito o del sito secondario, fare clic su **Home**e quindi su **Tutto il contenuto del sito**. Scorrere fino alla fine e cercare **Siti e aree di lavoro**. L'elenco dei siti si trova in questa sezione.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL di una raccolta di SharePoint  
  Quando si distribuisce un report o un elemento correlato in una raccolta di SharePoint, è necessario utilizzare l'URL di quest'ultima. L'URL da utilizzare per una raccolta varia a seconda della versione di SharePoint in uso.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la libreria si trova dopo il nome del server, ad esempio, `http://*servername/*Shared Documents`.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] la libreria si trova dopo il nome del server, ad esempio `http://*servername/*Shared Documents`.  
   
  In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]la raccolta è invece indicata dopo il sito e il sito secondario. Ad esempio, `http://*servername/site/*Documents`.  
   
  Per trovare le informazioni sul percorso di una nuova raccolta di SharePoint o per un sito con cui non si ha familiarità, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare i report. Se la raccolta è vuota, caricare uno o più file. Fare clic con il pulsante destro del mouse sul file e scegliere **Proprietà** per aprire la finestra **Proprietà** . L'indirizzo del file include i valori dell'URL necessari per l'operazione di pubblicazione.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>URL completi per gli elementi di un sito di SharePoint  
- Gli elementi archiviati in una raccolta di SharePoint sono sempre associati indirizzi rappresentati da URL completi che iniziano con l'applicazione Web (`http://*server*`) come nodo radice e terminano con il nome del file di cui viene fatto riferimento.  
+ Agli elementi archiviati in una raccolta di SharePoint sono sempre associati indirizzi rappresentati da URL completi che iniziano con l'applicazione Web (`http://*server*`) in qualità di nodo radice e terminano con il nome del file a cui viene fatto riferimento.  
   
  I nomi file nell'URL devono includere l'estensione.  
   
@@ -141,9 +140,8 @@ ms.lasthandoff: 08/09/2017
  Quando un server di report viene eseguito in modalità integrata SharePoint, il concetto di risorsa è più limitato. In questo caso il concetto di risorsa viene utilizzato per l'archiviazione di report che fanno riferimento a un'immagine esterna. Ciò è valido se il report è uno snapshot o una copia mantenuta per uso interno.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicare un Report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Pubblicare un report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Pubblicare un'origine dati condivisa in una raccolta di SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Finestra di dialogo Pagine delle proprietà di progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
-

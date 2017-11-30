@@ -1,5 +1,5 @@
 ---
-title: Pubblicare un'origine dati condivisa in una raccolta di SharePoint | Documenti Microsoft
+title: Pubblicare un'origine dati condivisa in una raccolta di SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6fc6dc084a6434a8c0524136ca589a40c4adba41
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9446eee0c8c36cb9a962de16da272c6ba5829891
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
   Per pubblicare un'origine dati condivisa in un server di report eseguito in modalità integrata SharePoint, è necessario impostare le proprietà del progetto report in Progettazione report. Nelle proprietà del progetto tutti i riferimenti a server, report e origini dati condivise devono essere URL completi.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire un progetto del server di report esistente o nuovo.  
   
-2.  Scegliere **Proprietà** dal menu **Progetto**. Il  *\<progetto >***pagine delle proprietà** verrà visualizzata la finestra di dialogo.  
+2.  Scegliere **Proprietà** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo *\<Pagine delle proprietà* **del progetto**.  
   
 3.  Nella casella **Configurazione** scegliere quella da utilizzare per la pubblicazione in un sito di SharePoint.  
   
@@ -62,8 +61,7 @@ ms.lasthandoff: 08/09/2017
  [Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [Pubblicazione dei report in un Server di Report](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [Utilizzare una connessione Office Data Connection &#40;. odc &#41; con i report &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Pubblicazione dei report in un server di report](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
+ [Utilizzare una connessione Office Data Connection &#40;.odc&#41; ai report &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   
-

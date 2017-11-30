@@ -1,5 +1,5 @@
 ---
-title: Ricerca e visualizzazione di report con un Browser (Generatore Report e SSRS) | Documenti Microsoft
+title: Ricerca e visualizzazione di report con un browser (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report con un browser (Generatore report e SSRS)
   È possibile utilizzare qualsiasi browser supportato per visualizzare un report tramite una connessione diretta a un server di report. A ogni report è associato un indirizzo URL che rimanda a un server di report. È possibile immettere l'indirizzo Web di un report per aprirlo in una finestra del browser indipendentemente da un'applicazione Web. Il report viene aperto in formato HTML e include la barra degli strumenti del report, pertanto è possibile navigare tra le pagine o effettuare ricerche nei valori dei dati all'interno del report. È possibile impostare i parametri nell'URL per nascondere la barra degli strumenti o selezionare il formato di output del report.  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Se non si conosce l'indirizzo Web di un report, è possibile utilizzare l'indirizzo Web del server di report e quindi esplorare la gerarchia delle cartelle del server di report per selezionare il report che si desidera visualizzare. Nella figura seguente viene illustrata una gerarchia di cartelle visualizzata in una finestra del browser.  
   
- ![Cartelle visualizzate in un browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Cartelle in un browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Cartelle in un browser")  
 Cartelle visualizzate in un browser  
   
 > [!NOTE]  
@@ -48,9 +47,9 @@ Cartelle visualizzate in un browser
   
 -   Un collegamento senza nessun altro indicatore rappresenta un report o un modello.  
   
--   Il tag \<ds > indica un'origine dati condivisa.  
+-   Il tag \<ds> indica un'origine dati condivisa.  
   
--   Il tag \<dir > rappresenta una cartella.  
+-   Il tag \<dir> indica una cartella.  
   
 -   Un'estensione del nome file rappresenta una risorsa. L'estensione identifica il tipo MIME della risorsa. Ad esempio, l'estensione jpg indica un'immagine in formato JPEG.  
   
@@ -64,4 +63,3 @@ Cartelle visualizzate in un browser
  Per ulteriori informazioni sull'accesso a un report tramite un URL, incluse le informazioni sulla sintassi dell'URL, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) all'interno della documentazione online di SQL Server.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Le assegnazioni di ruolo | Documenti Microsoft
+title: Assegnazioni di ruolo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - groups [Reporting Services]
 - security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d848092b028ce827c1c2c56c5216f6ba3b1f4c45
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="role-assignments"></a>Assegnazioni di ruolo
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le *assegnazioni di ruolo* determinano l'accesso agli elementi archiviati e al server di report. Un'assegnazione di ruolo è composta dalle parti seguenti:  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]le *assegnazioni di ruolo* determinano l'accesso agli elementi archiviati e al server di report. Un'assegnazione di ruolo è composta dalle parti seguenti:  
   
 -   Un elemento a sicurezza diretta per il quale si desidera controllare l'accesso. Cartelle, report e risorse sono esempi di elementi a sicurezza diretta.  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  Nella figura seguente è illustrata un'assegnazione di ruolo in cui viene eseguito il mapping di un gruppo e di un utente specifico al ruolo **Server di pubblicazione** per la cartella B.  
   
- ![Diagramma di assegnazioni di ruolo](../../reporting-services/security/media/report-securityarch.gif "diagramma assegnazioni di ruolo")  
+ ![Diagramma di assegnazioni dei ruoli](../../reporting-services/security/media/report-securityarch.gif "Diagramma di assegnazioni dei ruoli")  
 Diagramma di assegnazione dei ruoli  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Assegnazioni di ruolo a livello di sistema e di elemento  
@@ -67,11 +66,10 @@ Diagramma di assegnazione dei ruoli
  Per altre informazioni sulle assegnazioni di ruolo predefinite che forniscono sicurezza predefinita, vedere [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, eliminare o modificare un ruolo &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Concessione dell'accesso utente a un Server di Report &#40; Gestione report &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificare o eliminare un'assegnazione di ruolo &#40; Gestione report &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Impostare autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

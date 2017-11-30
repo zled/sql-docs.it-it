@@ -1,26 +1,24 @@
 ---
-title: Aggiungere indicatori al report per dispositivi mobili | Reporting Services | Documenti Microsoft
+title: Aggiungere indicatori ai report per dispositivi mobili | Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Aggiungere indicatori ai report per dispositivi mobili | Reporting Services
 I misuratori sono gli oggetti visivi più semplici e più usati nei report per dispositivi mobili. Viene visualizzato un singolo valore in un set di dati: solo il valore oppure il valore rispetto a un obiettivo.
@@ -29,7 +27,7 @@ I misuratori sono gli oggetti visivi più semplici e più usati nei report per d
   
 *Visualizzazioni dei misuratori nella scheda Layout*  
   
-Tutti i misuratori in SQL Server Mobile Report Publisher hanno almeno una proprietà in comune: un valore principale, impostata su un campo numerico in una delle tabelle dati nel report per dispositivi mobili.  
+In SQL Server Mobile Report Publisher tutti i misuratori hanno in comune almeno una proprietà: un valore principale, impostato su un campo numerico in una delle tabelle dati nel report per dispositivi mobili.  
 
 In tutti i misuratori, ad eccezione del misuratore numerico, può essere visualizzato anche un confronto, o valore *delta*, ovvero la relazione tra il valore principale e quello di confronto. Il valore di confronto è spesso l'obiettivo e il misuratore è un indicatore visivo dello stato di avanzamento verso tale obiettivo, oppure il delta tra il valore effettivo e l'obiettivo.
 
@@ -91,8 +89,7 @@ Determina le modalità di formattazione dei numeri visualizzati nel misuratore, 
 ### <a name="see-also"></a>Vedere anche 
 
 * [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
-* [Esegue il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Eseguire il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Aggiungere gli strumenti di navigazione ai report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizations to Reporting Services mobile reports (Visualizzazioni nei report per dispositivi mobili di Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Aggiungere griglie dei dati al report per dispositivi mobili](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

@@ -1,5 +1,5 @@
 ---
-title: Aggirare la limitazione di Excel 2003 riga | Documenti Microsoft
+title: Ovviare alla limitazione di righe di Excel 2003 | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 764b6da1c5ea43d02d7b5b950aa056434acf1a12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   In questo argomento viene illustrato come risolvere il limite di righe di Excel 2003 quando si esportano i report impaginati in Excel. La soluzione alternativa consiste in un report contenente una sola tabella.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Fare clic con il pulsante destro del mouse sulla riga dei dati nella tabella, quindi scegliere **Aggiungi gruppo** > **Gruppo padre** per aggiungere un gruppo di tabelle esterno.  
   
-     ![Selezionare il gruppo padre](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "selezionare il gruppo padre")  
+     ![Selezionare Gruppo padre](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Selezionare Gruppo padre")  
   
 3.  Immettere la formula seguente nella casella dell'espressione **Raggruppa per** , quindi fare clic su **OK** per aggiungere il gruppo padre.  
   
@@ -49,21 +48,20 @@ ms.lasthandoff: 08/09/2017
   
 4.  Per eliminare la colonna di gruppo, fare clic con il pulsante destro del mouse sull'intestazione di colonna, fare clic su **Elimina colonne**, selezionare **Elimina solo colonne**, quindi scegliere **OK**.  
   
-     ![Eliminare una colonna di gruppo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "eliminare una colonna di gruppo")  
+     ![Eliminare una colonna del gruppo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Eliminare una colonna del gruppo")  
   
 5.  Fare clic con il pulsante destro del mouse su **Gruppo 1** nella sezione **Gruppi di righe** , quindi scegliere **Proprietà gruppo**.  
   
-     ![Visualizzare le proprietà del gruppo](../../reporting-services/report-builder/media/groupproperties-updated.png "consente di visualizzare le proprietà del gruppo")  
+     ![Visualizzare le proprietà del gruppo](../../reporting-services/report-builder/media/groupproperties-updated.png "Visualizzare le proprietà del gruppo")  
   
 6.  Nella pagina **Ordinamento** della finestra di dialogo **Proprietà gruppo** selezionare l'opzione di ordinamento predefinita e fare clic su **Elimina**.  
   
-     ![Elimina ordinamento predefinito](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Elimina ordinamento predefinito")  
+     ![Eliminare l'ordinamento predefinito](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Eliminare l'ordinamento predefinito")  
   
 7.  Nella pagina **Interruzioni di pagina** fare clic su **Tra ogni istanza di un gruppo** , quindi scegliere **OK**.  
   
-     ![Impostare interruzioni di pagina](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "impostare interruzioni di pagina")  
+     ![Impostare le interruzioni di pagina](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Impostare le interruzioni di pagina")  
   
 8.  Salvare il report. Quando lo si esporta in Excel, viene esportato in più fogli di lavoro, ognuno con un massimo di 65000 righe.  
   
   
-

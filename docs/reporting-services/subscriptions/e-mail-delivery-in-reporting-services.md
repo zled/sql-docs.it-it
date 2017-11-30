@@ -1,5 +1,5 @@
 ---
-title: Recapito tramite posta elettronica in Reporting Services | Documenti Microsoft
+title: Recapito tramite posta elettronica in Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un'estensione per il recapito tramite posta elettronica che consente di inviare un report a utenti o gruppi tramite posta elettronica. Per distribuire un report usando la posta elettronica, 1) configurare il server di report per il recapito della posta elettronica e 2) definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. Una singola sottoscrizione non può recapitare più report nello stesso messaggio di posta elettronica. È possibile, tuttavia, creare più sottoscrizioni.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/27/2017
  Per un server di report in modalità nativa l'estensione per il recapito della posta elettronica viene configurata con Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa e la modifica dei file di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per un server di report in modalità SharePoint, l'estensione per il recapito della posta elettronica è configurata nella pagine di gestione di SharePoint e negli script di PowerShell.  
   
  
- Per informazioni su come configurare un server di report in modalità nativa, vedere [impostazioni di posta elettronica - modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ Per altre informazioni su come configurare un server di report in modalità nativa, vedere [Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
  
  
  Per informazioni su come configurare un server di report in modalità SharePoint, vedere quanto segue:  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/27/2017
  [Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)  
   
   
-
