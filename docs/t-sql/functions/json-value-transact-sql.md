@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5762af5115dd65b819bc74c3585cfc8275a516b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -107,10 +107,13 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>Esempi  
   
 ### <a name="example-1"></a>Esempio 1  
- L'esempio seguente usa i valori delle proprietà JSON `town` e `state` nei risultati della query. Poiché **JSON_VALUE** mantiene le regole di confronto dell'origine, l'ordinamento dei risultati dipende dalle regole di confronto del `jsonInfo` colonna.  
+ L'esempio seguente usa i valori delle proprietà JSON `town` e `state` nei risultati della query. Poiché **JSON_VALUE** mantiene le regole di confronto dell'origine, l'ordinamento dei risultati dipende dalle regole di confronto del `jsonInfo` colonna. 
+
+> [!NOTE]
+> (In questo esempio si presuppone che una tabella denominata `Person.Person` contiene un `jsonInfo` colonna di testo JSON e che questa colonna contiene la struttura illustrata in precedenza nella spiegazione della modalità lax e la modalità strict. Nel database di esempio AdventureWorks, il `Person` tabella non contiene infatti un `jsonInfo` colonna.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'

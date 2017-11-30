@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  Esistono diversi tipi di oggetti di database gestito dell'integrazione con CLR. Per informazioni generali su questi oggetti, vedere [compilazione di oggetti di Database con l'integrazione di Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Ogni volta che questi oggetti vengono eseguiti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un **AppDomain** in cui viene caricato ed eseguito il codice necessario. Il livello di isolamento per un **AppDomain** uno **AppDomain** per database per proprietario. Vale a dire tutti gli oggetti CLR di proprietà di un utente vengono sempre eseguiti nello stesso **AppDomain** per database (se un utente registra oggetti di database CLR in database diversi, il database CLR gli oggetti verranno eseguiti in domini applicazione diversi). Un **AppDomain** non viene eliminato al termine dell'esecuzione di codice. ma viene memorizzato nella cache per le future esecuzioni. Ciò migliora le prestazioni.  
   
  Per ulteriori informazioni, vedere [domini applicazione](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
-  
-||  
-|-|  
-|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,7 +1,7 @@
 ---
 title: CREARE una tabella esterna (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>CREARE una tabella esterna (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne devono corrispondere ai dati in file esterni. Se è presente una mancata corrispondenza, quando si eseguono query i dati effettivi verranno rifiutate le righe di file.  
   
- Per le tabelle esterne che fanno riferimento a origini dati esterne, è necessario eseguire le definizioni di colonna e digitare il mapping allo schema esatto del file esterno. Quando si definiscono i tipi di dati che fanno riferimento a dati archiviati in Hadoop/Hive, usare i seguenti mapping tra tipi di dati SQL e Hive e il cast del tipo in un tipo di dati SQL quando si seleziona da esso. Se non specificato diversamente, i tipi includono tutte le versioni di Hive.  
-  
+ Per le tabelle esterne che fanno riferimento a origini dati esterne, è necessario eseguire le definizioni di colonna e digitare il mapping allo schema esatto del file esterno. Quando si definiscono i tipi di dati che fanno riferimento a dati archiviati in Hadoop/Hive, usare i seguenti mapping tra tipi di dati SQL e Hive e il cast del tipo in un tipo di dati SQL quando si seleziona da esso. Se non specificato diversamente, i tipi includono tutte le versioni di Hive.
+
+> [!NOTE]  
+>  SQL Server non supporta l'Hive _infinito_ valore dei dati in alcuna conversione. PolyBase avrà esito negativo con un errore di conversione di tipo di dati.
+
+
 |Tipo di dati SQL|Tipo di dati .NET|Tipo di dati hive|Tipo di dati Hadoop/Java|Commenti|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Per i numeri senza segno.|  

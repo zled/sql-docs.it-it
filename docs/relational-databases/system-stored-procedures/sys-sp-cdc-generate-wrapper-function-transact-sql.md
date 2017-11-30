@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbadba2128bad803f56d3b1665332c48eb999beb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b32fc0848943814052a72e4b3f91eb4f5556a4bc
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Genera script per creare funzioni wrapper per funzioni di query Change Data Capture disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'API supportata nei wrapper generati consente l'intervallo di query specificare come un intervallo di data/ora. In questo modo la funzione può essere utilizzata in molte applicazioni di data warehouse, inclusi quelli che sono stati sviluppati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progettisti di pacchetti che utilizzano dati delle modifiche di acquisire la tecnologia per determinare il carico incrementale.  
-  
-||  
-|-|  
-|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
