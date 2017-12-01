@@ -1,5 +1,5 @@
 ---
-title: Gruppo di esempi di espressioni (Generatore Report e SSRS) | Documenti Microsoft
+title: Esempi di espressioni di raggruppamento (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbb4f5f3af2a8986fdc7384ad4da1740f2be6638
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce8b9f9e26b56846aaa2da95533d76ee4c422e8e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni di raggruppamento (Generatore report e SSRS)
-  In un'area dati è possibile raggruppare i dati in base a un solo campo oppure creare espressioni più complesse che consentono di identificare i dati in base a quali eseguire il raggruppamento. Le espressioni complesse includono riferimenti a più campi o parametri, istruzioni condizionali o codice personalizzato. Quando si definisce un gruppo per un'area dati, queste espressioni vengono aggiunte alle proprietà del**** gruppo. Per altre informazioni, vedere [Aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+  In un'area dati è possibile raggruppare i dati in base a un solo campo oppure creare espressioni più complesse che consentono di identificare i dati in base a quali eseguire il raggruppamento. Le espressioni complesse includono riferimenti a più campi o parametri, istruzioni condizionali o codice personalizzato. Quando si definisce un gruppo per un'area dati, queste espressioni vengono aggiunte alle proprietà del **gruppo**. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
  Per unire due o più gruppi basati sulle espressioni di campo semplice, aggiungere ogni campo all'elenco delle espressioni di raggruppamento nella definizione del gruppo.  
   
@@ -49,9 +48,8 @@ ms.lasthandoff: 08/09/2017
 |Raggruppamento in base a molti intervalli di età. Questo esempio contiene codice personalizzato, scritto in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, che restituisce una stringa per gli intervalli seguenti:<br /><br /> 25 o inferiore<br /><br /> Da 26 a 50<br /><br /> Da 51 a 75<br /><br /> Over 75|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> Codice personalizzato:<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Codice personalizzato e riferimenti ad Assembly in espressioni in Progettazione Report &#40; SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
   
   
-

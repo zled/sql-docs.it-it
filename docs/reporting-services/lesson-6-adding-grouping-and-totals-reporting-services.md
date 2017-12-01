@@ -1,28 +1,25 @@
 ---
-title: 'Lezione 6: Aggiunta di gruppi e totali (Reporting Services) | Documenti Microsoft'
+title: 'Lesson 6: Adding Grouping and Totals (Reporting Services) (Lezione 6: Aggiunta di gruppi e totali (Reporting Services)) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 742ebc4024e30ca7f18020ef6d4ffc29e3a3c635
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali al report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per organizzare e riepilogare i dati.  
@@ -34,13 +31,13 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 2.  Se il riquadro **Gruppi di righe** non è visualizzato, fare clic con il pulsante destro del mouse sull'area di progettazione e selezionare **Visualizza** e quindi scegliere **Raggruppamento**.  
   
-3.  Dal riquadro dei dati del report trascinare ****  il campo **Date** nel riquadro **Gruppi di righe** . Posizionarlo al di sopra della riga **(Dettagli)**.
+3.  Dal riquadro dei **dati del report** trascinare il campo **Date** nel riquadro **Gruppi di righe** . Posizionarlo al di sopra della riga **(Dettagli)**.
   
     L'handle di riga contiene ora una parentesi quadra per mostrare un gruppo. La tabella presenta ora due colonne Date, una su ogni lato di una linea verticale tratteggiata.  
   
     ![gruppo data aggiunto](../reporting-services/media/rs-basictablegroups1design.png "gruppo data aggiunto")  
   
-4.  Dal riquadro dei dati del report trascinare ****  il campo **Order** nel riquadro **Gruppi di righe** . Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.
+4.  Dal riquadro dei **dati del report** trascinare il campo **Order** nel riquadro **Gruppi di righe** . Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
@@ -48,7 +45,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 5.  Eliminare le colonne **Date** e **Order** originali a **destra** della linea doppia. Verranno rimossi i singoli valori dei record in modo da visualizzare solo il valore del gruppo. Selezionare gli handle delle due colonne, fare clic con il pulsante destro del mouse e scegliere **Elimina colonne**.  
   
-    ![Selezionare le colonne da eliminare](../reporting-services/media/rs-basictablegroupsdeletecols.gif "selezionare colonne da eliminare")  
+    ![Selezionare le colonne da eliminare](../reporting-services/media/rs-basictablegroupsdeletecols.gif "Selezionare colonne da eliminare")  
   
 6.  Fare clic con il pulsante destro del mouse nella cella contenente l'espressione per il campo `[Date]` e scegliere **Proprietà casella di testo**.  
   
@@ -79,7 +76,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 6.  Nel menu **Formato** selezionare **Colore di sfondo**, fare clic su **Grigio chiaro**e scegliere **OK**.  
   
-    ![Visualizzazione progettazione: tabella di base con totale degli ordini](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "visualizzazione progettazione: tabella di base con totale degli ordini")  
+    ![Visualizzazione progettazione: tabella di base con totale degli ordini](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Visualizzazione progettazione: tabella semplice con totale degli ordini")  
   
 ## <a name="bkmk_adddailytotal"></a>Per aggiungere un totale giornaliero a un report  
   
@@ -107,13 +104,13 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 4.  Nel menu **Formato** selezionare **Colore di sfondo**, fare clic su **Azzurro**e scegliere **OK**.  
   
-    ![Visualizzazione progettazione: totale complessivo in una tabella di base](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "visualizzazione progettazione: totale complessivo in una tabella di base")  
+    ![Visualizzazione progettazione: totale complessivo nella tabella semplice](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "visualizzazione progettazione: totale complessivo nella tabella semplice")  
   
 5.  Fare clic su **Anteprima**.  
   
     L'ultima pagina dovrebbe essere simile all'immagine seguente. Nella barra degli strumenti fare clic su Ultima pagina ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Anteprima: Tabella di base con totale complessivo](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "anteprima: tabella di base con totale complessivo")  
+    ![Anteprima: tabella semplice con totale complessivo](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella semplice con totale complessivo")  
   
 ## <a name="bkmk_publishreport"></a>Per pubblicare il report nel server di report (facoltativo)  
   
@@ -160,12 +157,11 @@ Fare clic sul nome del report **Sales Orders** per visualizzare il report visual
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-* * È stata completata la creazione un Report tabella semplice tutorial.* *  
+**Questo passaggio conclude l'esercitazione relativa alla creazione di un report tabella semplice.**  
   
 ## <a name="see-also"></a>Vedere anche  
 [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

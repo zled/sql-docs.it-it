@@ -1,31 +1,27 @@
 ---
-title: Installazione di Reporting e Internet Information Services Side-by-Side | Documenti Microsoft
+title: Installare Reporting Services e Internet Information Services side-by-side | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- deploying [Reporting Services], IIS
+helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d45e32e12a3f9a4e87afd6557a9c292ea1a26b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installazione di Reporting e Internet Information Services Side-by-Side
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installare Reporting Services e Internet Information Services side-by-side
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -50,32 +46,32 @@ ms.lasthandoff: 08/09/2017
   
 |Esempio|Richiesta|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Riceve tutte le richieste inviate al `http://123.234.345.456/reports` o `http://\<computername>/reports` se il servizio DNS può risolvere l'indirizzo IP in tale nome host.|  
+|`http://123.234.345.456:80/reports`|Riceve tutte le richieste inviate a `http://123.234.345.456/reports` o a `http://\<computername>/reports` se un DNS può risolvere l'indirizzo IP nel nome host.|  
 |`http://+:80/reports`|Riceve tutte le richieste inviate a qualsiasi indirizzo IP o nome host valido per tale computer finché l'URL contiene il nome della directory virtuale "reports".|  
-|`http://123.234.345.456:80`|Riceve qualsiasi richiesta che specifica `http://123.234.345.456` o `http://\<computername>` se il servizio DNS può risolvere l'indirizzo IP in tale nome host.|  
+|`http://123.234.345.456:80`|Riceve tutte le richieste che specificano `http://123.234.345.456` o `http://\<computername>` se un DNS può risolvere l'indirizzo IP nel nome host.|  
 |`http://+:80`|Riceve le richieste che non sono già state ricevute da altre applicazioni, per qualsiasi endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Tutti assegnati**.|  
 |`http://*:80`|Riceve le richieste che non sono già state ricevute da altre applicazioni, per gli endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Non assegnati**.|  
   
  Un'indicazione di un conflitto di porte è la visualizzazione del messaggio di errore seguente: "System.IO.FileLoadException: Il processo non può accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020)".  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Prenotazioni URL per IIS 8.0, 8.5 con SQL Server Reporting Services  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Prenotazioni URL per IIS 8.0, 8.5 con SQL Reporting Services  
  Stabilite le regole di precedenza descritte nella sezione precedente, è possibile iniziare a comprendere in che modo le prenotazioni URL definite per Reporting Services e IIS agevolino l'interoperabilità. Reporting Services riceve le richieste che specificano in modo esplicito i nomi delle directory virtuali per le proprie applicazioni, mentre IIS riceve tutte le richieste rimanenti che possono pertanto essere dirette ad applicazioni eseguite all'interno del modello di processo di IIS.  
   
 |Applicazione|Prenotazione URL|Descrizione|Ricezione richiesta|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Server di report|`http://+:80/ReportServer`|Carattere jolly complesso sulla porta 80, con directory virtuale del server di report.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale del server di report. Il servizio Web ReportServer riceve tutte le richieste a http://\<computername > / reportserver.|  
-|Portale Web|`http://+:80/Reports`|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. Il [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] riceve tutte le richieste a http://\<computername > / reports.|  
+|Server di report|`http://+:80/ReportServer`|Carattere jolly complesso sulla porta 80, con directory virtuale del server di report.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale del server di report. Il servizio Web ReportServer riceve tutte le richieste all'indirizzo http://\<nomecomputer>/reportserver.|  
+|Portale Web|`http://+:80/Reports`|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] riceve tutte le richieste all'indirizzo http://<nomecomputer\</reports.|  
 |IIS|`http://*:80/`|Carattere jolly vulnerabile sulla porta 80.|Riceve sulla porta 80 tutte le richieste rimanenti che non vengono ricevute da un'altra applicazione.|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Distribuzioni side-by-Side di SQL Server Reporting Services in IIS 8.0, 8.5
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Distribuzioni side-by-side di SQL Server Reporting Services in IIS 8.0, 8.5
 
  I problemi di interoperabilità tra IIS e Reporting Services si verificano quando i nomi delle directory virtuali dei siti Web di IIS sono identici a quelli utilizzati da Reporting Services. Si supponga ad esempio di disporre della configurazione seguente:  
   
 -   Un sito Web in IIS assegnato alla porta 80 e una directory virtuale denominata "Reports".  
   
--   Un'istanza del server di report installata nella configurazione predefinita, in cui anche la prenotazione URL specifica la porta 80 e [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] applicazione usa "Reports" come nome della directory virtuale.  
+-   Un'istanza del server di report installata nella configurazione predefinita, in cui anche la prenotazione URL specifica la porta 80 e l'applicazione [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] usa "Reports" come nome della directory virtuale.  
   
- Questa configurazione, di una richiesta inviata a http://\<nomecomputer >: 80/reports viene ricevuta dal [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. L'applicazione cui si accede tramite la directory virtuale Reports in IIS non riceverà più richieste dopo aver installato l'istanza del server di report.  
+ In una configurazione di questo tipo una richiesta inviata all'indirizzo http://<nomecomputer\<:80/reports viene ricevuta da [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. L'applicazione cui si accede con la directory virtuale Reports in IIS non riceverà più richieste dopo l'installazione dell'istanza del server di report.  
   
  Se si eseguono distribuzioni side-by-side di versioni meno recenti e più recenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile che si verifichi il problema di routing descritto in precedenza, perché tutte le versioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usano "ReportServer" e "Reports" come nomi delle directory virtuali per il server di report e le applicazioni di [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , aumentando la probabilità di rilevare directory virtuali denominate "reports" e "reportserver" in IIS.  
   
@@ -87,9 +83,8 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare gli URL di Server di Report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configurare gli URL del server di report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurare un URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Installare Server di Report di Reporting Services in modalità nativa](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
+[Installare un server di report in modalità nativa di Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

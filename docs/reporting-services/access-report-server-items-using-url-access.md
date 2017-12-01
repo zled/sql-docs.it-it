@@ -1,5 +1,5 @@
 ---
-title: Accedere a elementi del Server di Report con accesso tramite URL | Documenti Microsoft
+title: Accedere agli elementi del server di report usando l'accesso con URL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 010d16c1114ea7b8d7a1c7c0274aba2ecd44b8d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accesso agli elementi del server di report utilizzando l'accesso tramite URL
-  In questo argomento descrive la modalità per accedere agli elementi di catalogo di tipi diversi in un report server dati di base o in un sito di SharePoint utilizzando *rs: Command*=*valore*. In realtà non è necessario aggiungere questa stringa del parametro. Se la si omette, il tipo di elemento viene valutato dal server di report e il valore del parametro appropriato viene selezionato automaticamente. Tuttavia, l'uso della stringa *rs:Command*=*Valore* nell'URL migliora le prestazioni del server di report.  
+  Questo argomento descrive come accedere a tipi diversi di elementi del catalogo in un database del server di report o in un sito di SharePoint usando *rs:Command*=*Value*. In realtà non è necessario aggiungere questa stringa del parametro. Se la si omette, il tipo di elemento viene valutato dal server di report e il valore del parametro appropriato viene selezionato automaticamente. Tuttavia, l'uso della stringa *rs:Command*=*Valore* nell'URL migliora le prestazioni del server di report.  
   
  Si noti la sintassi del proxy `_vti_bin` negli esempi riportati di seguito. Per altre informazioni su come usare la sintassi del proxy, vedere [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md).  
   
@@ -79,6 +79,5 @@ ms.lasthandoff: 08/09/2017
  L'interfaccia utente visualizzata è simile alla modalità di esplorazione delle directory utilizzata da [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). Sotto l'elenco della cartella viene visualizzato anche il numero di versione, incluso il numero di build, del server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso con URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
- [Riferimento ai parametri URL accesso](../reporting-services/url-access-parameter-reference.md) 
-
+ [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md) 

@@ -1,5 +1,5 @@
 ---
-title: "Visualizzare intestazioni riga e colonna in più pagine (Generatore Report e SSRS) | Documenti Microsoft"
+title: "Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97fe2b81898c3172db4d387afbac3be4086fac11
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7035884be08ffca7f4bd266d82f2b5696fb402d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report e SSRS)
   È possibile specificare se ripetere le intestazioni di riga e di colonna in ogni pagina di report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per un'area dati Tablix (tabella, matrice o elenco) che si estende su più pagine.
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**. Nel riquadro Gruppi di righe vengono visualizzati i membri statici e dinamici gerarchici per la gerarchia di gruppi di righe, mentre nel riquadro Gruppi di colonne è riportata una visualizzazione simile per la gerarchia di gruppi di colonne.  
   
-3.  Fare clic sul membro statico che corrisponde al membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei membri Tablix **** .  
+3.  Fare clic sul membro statico che corrisponde al membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
   
      Se il riquadro Proprietà non è visualizzato, fare clic sulla scheda **Visualizza** nella parte superiore della finestra di Generatore report, quindi scegliere **Proprietà**.  
   
@@ -73,9 +72,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Il controllo di interruzioni di pagina, intestazioni, colonne e righe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Visualizzazione di intestazioni e piè di pagina con un gruppo di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Controllo di interruzioni di pagina, intestazioni, colonne e righe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Visualizzazione delle intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
-title: Aggiungere elementi di Reporting Services ai dashboard di Power BI | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Aggiungere elementi di Reporting Services ai dashboard di Power BI | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Aggiungere elementi di Reporting Services ai dashboard di Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] consente agli utenti di aggiungere elementi del report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dalla barra degli strumenti di Visualizzatore report a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] come nuovo riquadro.   Per aggiungere elementi, l'amministratore deve innanzitutto integrare il server di report con Azure Active Directory e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -42,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Aggiungere il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Visualizzatore di report in t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]ha, ad esempio `http://myserver/Reports`.  Non è possibile aggiungere elementi da [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], da Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]o da un URL del server di report.  Ad esempio `http://myserver/ReportServer`.  
+-   Aggiungere il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Visualizzatore di report in [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], ad esempio `http://myserver/Reports`.  Non è possibile aggiungere elementi da [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], da Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]o da un URL del server di report.  Ad esempio, `http://myserver/ReportServer`.  
   
 -   Il browser deve essere configurato per consentire i popup dal sito del server di report.  
   
@@ -81,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
 4. Selezionare l'elemento del report che si vuole aggiungere a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. È possibile aggiungere un solo elemento per volta.  Visualizzatore di report presenta una visualizzazione ombreggiata del report. Gli elementi del report che è possibile aggiungere sono evidenziati, mentre quelli che non è possibile aggiungere sono ombreggiati con un colore scuro.  
   
-    **(1)** selezionare il gruppo contenente il dashboard in cui si vuole aggiungere l'elemento, **(2)** selezionare il dashboard a cui si vuole aggiungere l'elemento e **(3)** selezionare la frequenza di aggiornamento del riquadro nel dashboard.   ![Nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") l'aggiornamento è gestito da [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] le sottoscrizioni e dopo l'elemento è bloccato, è possibile modificare la sottoscrizione e configurare una pianificazione di aggiornamento diversi.  
+    **(1)** selezionare il gruppo contenente il dashboard in cui si vuole aggiungere l'elemento, **(2)** selezionare il dashboard a cui si vuole aggiungere l'elemento e **(3)** selezionare la frequenza di aggiornamento del riquadro nel dashboard.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -136,7 +133,7 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
-     È inoltre possibile modificare le proprietà della sottoscrizione e cambiare il **nome dell'elemento visivo del report** con il nome dell'elemento del report appropriato. ![modificare l'oggetto visivo utilizzato per l'aggiornamento di power bi](../reporting-services/media/ssrs-powerbi-subscription-visual.png "modificare l'oggetto visivo utilizzato per l'aggiornamento di power bi")  
+     È inoltre possibile modificare le proprietà della sottoscrizione e cambiare il **nome dell'elemento visivo del report** con il nome dell'elemento del report appropriato. ![modificare la visualizzazione usata per l'aggiornamento di Power BI](../reporting-services/media/ssrs-powerbi-subscription-visual.png "modificare la visualizzazione usata per l'aggiornamento di Power BI")  
   
 -   **Eliminare un riquadro**. Se si elimina un riquadro in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], la sottoscrizione associata non viene eliminata in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e nella pagina **Sottoscrizioni personali**viene visualizzato un errore simile al seguente. È possibile eliminare la sottoscrizione.  
   
@@ -153,5 +150,4 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

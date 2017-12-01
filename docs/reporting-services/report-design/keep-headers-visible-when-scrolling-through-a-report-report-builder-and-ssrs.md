@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione delle intestazioni durante lo scorrimento di un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Mantenere visibili le intestazioni durante lo scorrimento di un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,34 +11,34 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 92092ffce1c4ae2fcd0c3751eb0dcefc9818de6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Visualizzazione delle intestazioni durante lo scorrimento di un report (Generatore report e SSRS)
   Per evitare che le etichette di riga e di colonna scorrano oltre l'area di visualizzazione dopo il rendering di un report, è possibile bloccare le intestazioni di riga o di colonna.  
   
  La modalità di controllo delle righe e delle colonne varia a seconda che si tratta di una tabella o di una matrice. Se si dispone di una tabella, configurare i membri statici (intestazioni di riga e di colonna) in modo che rimangano visibili. Se si dispone di una matrice, configurare le intestazioni di gruppi di riga e di colonna in modo che rimangano visibili.  
   
- Se si esporta il report in Excel, l'intestazione non verrà bloccata automaticamente. È possibile bloccare il riquadro in Excel. Per ulteriori informazioni, vedere il **le intestazioni di pagina e piè di pagina** sezione [l'esportazione in Microsoft Excel &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Se si esporta il report in Excel, l'intestazione non verrà bloccata automaticamente. È possibile bloccare il riquadro in Excel. Per altre informazioni vedere la sezione **Intestazioni di pagina e piè di pagina del report** di [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Anche se una tabella include gruppi di righe e colonne, non è possibile mantenere visibili le intestazioni di gruppo durante lo scorrimento  
   
  Nell'immagine seguente viene illustrata una tabella.  
   
- ![Tabella](../../reporting-services/report-design/media/table.png "tabella")  
+ ![Tabella](../../reporting-services/report-design/media/table.png "Tabella")  
   
  Nell'immagine seguente viene illustrata una matrice.  
   
- ![Matrice](../../reporting-services/report-design/media/matrix.png "matrice")  
+ ![Matrice](../../reporting-services/report-design/media/matrix.png "Matrice")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,15 +55,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  Nell'area di progettazione fare clic in un punto qualsiasi della tabella per visualizzare i membri statici e i gruppi, nel riquadro di raggruppamento.  
   
-     ![Riquadro di raggruppamento](../../reporting-services/report-design/media/grouppane-updated.png "riquadro di raggruppamento")  
+     ![Riquadro di raggruppamento](../../reporting-services/report-design/media/grouppane-updated.png "Riquadro di raggruppamento")  
   
      Nel riquadro Gruppi di righe vengono visualizzati i membri statici e dinamici gerarchici per la gerarchia di gruppi di righe, mentre nel riquadro Gruppi di colonne è riportata una visualizzazione simile per la gerarchia di gruppi di colonne.  
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**.  
   
-3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
+3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
   
-     ![Proprietà membro Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "proprietà membro Tablix")  
+     ![Proprietà membri Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Proprietà membri Tablix")  
   
 4.  Nel riquadro Proprietà impostare **FixedData** su **True**.  
   
@@ -75,10 +75,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Visualizzazione di intestazioni e piè di pagina con un gruppo di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Visualizzazione di riga e intestazioni di colonna in più pagine &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [Riquadro di raggruppamento &#40; Generatore report &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Visualizzare le intestazioni di riga e colonna in più pagine &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Riquadro di raggruppamento &#40;Generatore report&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   

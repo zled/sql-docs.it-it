@@ -1,5 +1,5 @@
 ---
-title: Aggiornare i report | Documenti Microsoft
+title: Aggiornare i report | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -20,19 +20,17 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: bdadf0d9fbbc3ef63716ee1745773de97aa7450f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="upgrade-reports"></a>Aggiornare i report
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/27/2017
   
  Quando si carica un file di definizione del report direttamente nel server di report oppure in un sito di SharePoint, i report non vengono aggiornati. Per aggiornare il file con estensione rdl, è necessario aggiornare una definizione del report in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
- Dopo l'aggiornamento di un report localmente o nel server di report, è possibile riscontrare errori, avvisi e messaggi aggiuntivi. Le modifiche apportate internamente al modello a oggetti e ai componenti di elaborazione interni dei report determinano infatti la visualizzazione di messaggi in caso di rilevamento di problemi sottostanti nel report. Per ulteriori informazioni, vedere [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "compatibilità con le versioni precedenti | Reporting Services").  
+ Dopo l'aggiornamento di un report localmente o nel server di report, è possibile riscontrare errori, avvisi e messaggi aggiuntivi. Le modifiche apportate internamente al modello a oggetti e ai componenti di elaborazione interni dei report determinano infatti la visualizzazione di messaggi in caso di rilevamento di problemi sottostanti nel report. Per altre informazioni, vedere [Compatibilità con le versioni precedenti di Reporting Services][](../../reporting-services/reporting-services-backward-compatibility.md "Compatibilità con le versioni precedenti | Reporting Services").  
   
- Per ulteriori informazioni sulle nuove funzionalità per [! INCLUDERE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Per altre informazioni sulle nuove funzionalità per [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versioni supportate per l'aggiornamento  
  I report creati in qualsiasi versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere aggiornati. Sono incluse le versioni seguenti:  
@@ -67,12 +65,12 @@ ms.lasthandoff: 09/27/2017
   
  Le proprietà di distribuzione impostate possono modificare lo schema in cui è salvato il file di definizione del report. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
- È possibile caricare un file con estensione rdl creato in una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la nuova versione e viene aggiornato automaticamente al primo utilizzo. Nel server di report il file di definizione del report viene archiviato nel formato originale. Il report viene aggiornato automaticamente la prima volta che viene visualizzato, ma il file di definizione del report archiviato rimane invariato.  
+ È possibile caricare un file con estensione rdl creato in una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella nuova versione e al primo uso verrà aggiornato automaticamente. Nel server di report il file di definizione del report viene archiviato nel formato originale. Il report viene aggiornato automaticamente la prima volta che viene visualizzato, ma il file di definizione del report archiviato rimane invariato.  
   
  Per identificare lo schema RDL corrente relativo a un report per un server di report o per Progettazione report, vedere [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ##  <a name="bkmk_publishedreports_and_snapshots"></a> Report pubblicati e snapshot dei report  
- Al primo utilizzo, il server di report tenta di aggiornare i report pubblicati e gli snapshot del report esistenti al nuovo schema di definizione del report, senza richiedere alcun intervento da parte dell'utente. Quando un report o uno snapshot del report viene visualizzato da un utente o quando il server di report elabora una sottoscrizione, viene eseguito il tentativo di aggiornamento. La definizione del report non viene sostituita, ma continua a essere archiviata nel server di report lo schema originale. Se non può essere aggiornato, il report viene eseguito in modalità di compatibilità con le versioni precedenti.  
+ Al primo utilizzo, il server di report tenta di aggiornare i report pubblicati e gli snapshot del report esistenti al nuovo schema di definizione del report, senza richiedere alcun intervento da parte dell'utente. Quando un report o uno snapshot del report viene visualizzato da un utente o quando il server di report elabora una sottoscrizione, viene eseguito il tentativo di aggiornamento. La definizione del report non viene sostituita, ma continua a essere archiviata nel server di report nello schema originale. Se non può essere aggiornato, il report viene eseguito in modalità di compatibilità con le versioni precedenti.  
   
 ##  <a name="bkmk_backcompat"></a> Modalità di compatibilità con le versioni precedenti  
  Un report aggiornato in modo corretto viene elaborato dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Se non può essere aggiornato, il report viene elaborato dal componente Elaborazione report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità di compatibilità con le versioni precedenti. Un report non può essere elaborato da entrambi i componenti di elaborazione. Al primo utilizzo, un report viene aggiornato correttamente o viene contrassegnato per la compatibilità con le versioni precedenti.  
@@ -109,7 +107,7 @@ ms.lasthandoff: 09/27/2017
   
      Per ulteriori informazioni, vedere [Apertura di un report con elementi del report personalizzati in Progettazione report](#OpeningaReport) più avanti in questo argomento.  
   
- Per informazioni sull'identificazione di spazio dei nomi RDL corrente per un server di report, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o un report, vedere [individuare la versione dello Schema di definizione del Report &#40; SSRS &#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Per informazioni su come identificare lo spazio dei nomi RDL corrente per un server di report, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o un report, vedere [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Aggiornamento di report in un server di report  
  La prima volta che un report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene eseguito in un server di report aggiornato a un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , viene aggiornato automaticamente allo spazio dei nomi della definizione del report corrente supportato dal server di report. È possibile che il report fosse presente nel server di report prima dell'aggiornamento, fosse stato caricato con Gestione report o fosse stato pubblicato nel server di report da Progettazione report in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -139,9 +137,9 @@ ms.lasthandoff: 09/27/2017
   
 -   **No** Scegliere **No** se non si desidera convertire gli elementi del report personalizzati nel report. Gli elementi non possono essere visualizzati da Elaborazione report nella versione corrente. Se l'amministratore del sistema prevede di installare una nuova versione dell'elemento del report personalizzato del fornitore di software di terze parti compatibile con il nuovo formato di definizione del report, è necessario scegliere **No**. Fino a quando non diventano disponibili nuove versioni, gli elementi del report personalizzati vengono visualizzati nel report come una casella di testo vuota con una X rossa.  
   
- In entrambi i casi, il report viene aggiornato al nuovo formato di definizione di report e una copia di backup del report originale viene salvata come  *\<Nome Report >* `-` Backup.rdl. Se il report viene salvato nello strumento per la creazione dei report, in pratica viene salvato il report aggiornato nel nuovo formato di definizione del report. Se si pubblica il report, esso viene prima salvato nel computer, quindi pubblicato nel server di report. La versione aggiornata del report viene pubblicata nel server di report.  
+ In entrambi i casi, il report viene aggiornato al nuovo formato di definizione del report e una copia di backup del report originale viene salvata come *\<Nome report>* `-` Backup.rdl. Se il report viene salvato nello strumento per la creazione dei report, in pratica viene salvato il report aggiornato nel nuovo formato di definizione del report. Se si pubblica il report, esso viene prima salvato nel computer, quindi pubblicato nel server di report. La versione aggiornata del report viene pubblicata nel server di report.  
   
- Se non si salva il report, il report originale resta immutato. Tuttavia, è possibile modificare il report nella versione di SQL Server 2016 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o in un ambiente che utilizza un formato di definizione del report più recente di creazione di report. È possibile continuare a eseguire la versione originale del report caricandolo in un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] server di report tramite il portale web. Per ulteriori informazioni, vedere [portale Web](../../reporting-services/web-portal-ssrs-native-mode.md).  
+ Se non si salva il report, il report originale resta immutato. Non è tuttavia possibile modificarlo nella versione SQL Server 2016 di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o in un ambiente di creazione di report in cui viene usato un formato di definizione del report più recente. È possibile continuare a eseguire la versione originale del report caricandolo in un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] tramite il portale Web. Per altre informazioni, vedere [Portale Web](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
  Per i report che vengono caricati anziché pubblicati in un server di report, Elaborazione report determina se è possibile aggiornarli al primo utilizzo. I report non aggiornabili vengono elaborati in modalità di compatibilità con le versioni precedenti e continuano a essere visualizzati come nella versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
@@ -155,4 +153,3 @@ ms.lasthandoff: 09/27/2017
 [Aggiornare un database del server di report](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

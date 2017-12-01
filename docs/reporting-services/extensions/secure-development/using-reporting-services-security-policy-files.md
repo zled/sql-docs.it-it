@@ -1,5 +1,5 @@
 ---
-title: Con Reporting Services Security Policy Files | Documenti Microsoft
+title: Using Reporting Services Security Policy Files (Uso di file di criteri di sicurezza di Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,22 +20,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilizzo di file di criteri di sicurezza di Reporting Services
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le informazioni sui criteri di sicurezza dei componenti sono archiviate in tre file di configurazione che vengono copiati nel file system durante l'installazione. Questi file possono contenere una combinazione di criteri di sicurezza per uso interno e definiti dall'utente per gli assembly del codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I tre file di configurazione corrispondono a tre componenti a sicurezza diretta in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ovvero il server di report e il servizio Windows, l'applicazione Web Gestione report e la finestra di anteprima Progettazione report.  
   
 > [!NOTE]  
->  Esistono due modalità di anteprima per progettazione Report: la scheda Anteprima e la finestra di anteprima popup che viene avviata quando viene avviato il progetto Report in **DebugLocal** modalità. Il **anteprima** scheda non è un componente di entità a protezione diretta e non sono applicabili alle impostazioni di sicurezza. La finestra di anteprima consente di simulare le funzionalità del server di report e pertanto dispone di un file di configurazione di criteri che l'utente o un amministratore deve modificare per utilizzare assembly ed estensioni personalizzati in Progettazione report.  
+>  In Progettazione report sono disponibili due modalità di anteprima, ovvero la scheda di anteprima e la finestra popup di anteprima visualizzate quando il Progetto report viene avviato in modalità **DebugLocal**. La scheda **Anteprima** non è un componente a protezione diretta e non applica alcuna impostazione dei criteri di sicurezza. La finestra di anteprima consente di simulare le funzionalità del server di report e pertanto dispone di un file di configurazione di criteri che l'utente o un amministratore deve modificare per utilizzare assembly ed estensioni personalizzati in Progettazione report.  
   
  I file di configurazione dei criteri di sicurezza contengono informazioni sulle classi di sicurezza, alcuni set di autorizzazioni denominati predefiniti e i gruppi di codice per gli assembly di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I file di configurazione dei criteri di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono simili al file Security.config che determina la gerarchia dei gruppi di codice e i set di autorizzazioni associati al computer e i criteri a livello aziendale in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Il percorso di questo file è C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config.  
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/12/2017
   
 |Nome file|Percorso (installazione predefinita)|Description|  
 |---------------|---------------------------------------|-----------------|  
-|rssrvpolicy.config|C:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer.|File di configurazione dei criteri del server di report. Questi criteri di sicurezza influiscono principalmente sulle espressioni del report e sugli assembly personalizzati dopo che un report è stato distribuito in un server di report. Questo file di criteri influisce inoltre sulle estensioni per i dati personalizzati, il recapito e il rendering e sulle estensioni di sicurezza distribuite nel server di report.|  
+|rssrvpolicy.config|C:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|File di configurazione dei criteri del server di report. Questi criteri di sicurezza influiscono principalmente sulle espressioni del report e sugli assembly personalizzati dopo che un report è stato distribuito in un server di report. Questo file di criteri influisce inoltre sulle estensioni per i dati personalizzati, il recapito e il rendering e sulle estensioni di sicurezza distribuite nel server di report.|  
 |rsmgrpolicy.config|C:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|File di configurazione dei criteri di Gestione report. Questi criteri di sicurezza influiscono su tutti gli assembly che estendono Gestione report; ad esempio estensioni dell'interfaccia utente della sottoscrizione per il recapito personalizzato.|  
 |rspreviewpolicy.config|C:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies|File di configurazione autonomo dei criteri di anteprima di Progettazione report. Questi criteri di sicurezza influiscono sugli assembly personalizzati e sulle espressioni del report utilizzate nei report durante l'anteprima e lo sviluppo. Questi criteri influiscono inoltre su estensioni personalizzate, ad esempio estensioni per l'elaborazione dei dati, distribuite in Progettazione report.|  
   

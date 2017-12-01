@@ -1,28 +1,26 @@
 ---
-title: Aggiungere visualizzazioni a report Reporting Services per dispositivi mobili | Documenti Microsoft
+title: Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 41c6b6c84fba9f3f45795bb953af65aebbf35bb8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Aggiungere le visualizzazioni di report per dispositivi mobili di Reporting Services
+# <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services
 I grafici sono una parte essenziale della visualizzazione dati. Informazioni sui grafici da usare nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per coprire una gamma di scenari. 
 
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)] offre tre tipi di grafici di base: temporale, categorie e totali. A questi tre tipi di grafico corrispondono grafici di confronto, utili per il confronto di due set distinti di serie.  
@@ -200,5 +198,4 @@ I grafici a cascata rappresentano una buona soluzione:
 * [Aggiungere griglie dei dati al report per dispositivi mobili](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Aggiungere indicatori ai report per dispositivi mobili | Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
-
 
