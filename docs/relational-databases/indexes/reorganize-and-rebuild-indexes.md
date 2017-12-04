@@ -1,7 +1,7 @@
 ---
 title: Riorganizzare e ricompilare gli indici | Microsoft Docs
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -37,22 +37,21 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 45e81e0c369f28cd0b10f62766b67413239ce5dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0115a7595476adadb0fc0328a14b01b0476771a
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Riorganizzare e ricompilare gli indici](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
 
-  In questo argomento viene descritto come riorganizzare o ricompilare un indice frammentato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la manutenzione degli indici viene automaticamente eseguita dopo ogni operazione di modifica, inserimento o eliminazione dei dati sottostanti. Nel tempo, queste modifiche possono provocare la frammentazione dell'indice nel database. La frammentazione si verifica quando negli indici sono presenti pagine in cui l'ordinamento logico, basato sul valore chiave, non corrisponde all'ordinamento fisico all'interno del file di dati. Gli indici con un alto grado di frammentazione possono essere causa del calo delle prestazioni delle query e rallentare l'applicazione.  
+  In questo argomento viene descritto come riorganizzare o ricompilare un indice frammentato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la modifica degli indici viene eseguita automaticamente dopo ogni operazione di modifica, inserimento o eliminazione dei dati sottostanti. Nel tempo, queste modifiche possono provocare la frammentazione dell'indice nel database. La frammentazione si verifica quando negli indici sono presenti pagine in cui l'ordinamento logico, basato sul valore chiave, non corrisponde all'ordinamento fisico all'interno del file di dati. Gli indici con un alto grado di frammentazione possono essere causa del calo delle prestazioni delle query e rallentare l'applicazione, in particolare le operazioni di scansione.  
   
- È possibile porre rimedio alla frammentazione eseguendo la riorganizzazione o la ricompilazione dell'indice. Per gli indici partizionati compilati in base a uno schema di partizione è possibile procedere in uno dei metodi seguenti sull'intero indice o su una singola partizione. La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione dell'indice. Questa operazione consente di rimuovere la frammentazione, rendere disponibile spazio su disco grazie alla compattazione delle pagine in base all'impostazione del fattore di riempimento esistente o specificata e riordinare le righe dell'indice in pagine contigue. Quando viene specificata la parola chiave ALL, tutti gli indici della tabella vengono eliminati e ricompilati in una singola transazione. La riorganizzazione di un indice richiede una quantità minima di risorse di sistema. Questa operazione deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico, da sinistra verso destra, dei nodi foglia. La riorganizzazione consente inoltre di compattare le pagine di indice in base al valore del fattore di riempimento esistente.  
-  
-  
+ È possibile porre rimedio alla frammentazione eseguendo la riorganizzazione o la ricompilazione dell'indice. Per gli indici partizionati compilati in base a uno schema di partizione è possibile procedere in uno dei metodi seguenti sull'intero indice o su una singola partizione. La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione dell'indice. Questa operazione consente di rimuovere la frammentazione, rendere disponibile spazio su disco grazie alla compattazione delle pagine in base all'impostazione del fattore di riempimento esistente o specificata e riordinare le righe dell'indice in pagine contigue. Quando viene specificata la parola chiave `ALL`, tutti gli indici della tabella vengono eliminati e ricompilati in una singola transazione. La riorganizzazione di un indice richiede una quantità minima di risorse di sistema. Questa operazione deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico, da sinistra verso destra, dei nodi foglia. La riorganizzazione consente inoltre di compattare le pagine di indice in base al valore del fattore di riempimento esistente.  
+   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Fragmentation"></a> Rilevamento della frammentazione  
@@ -71,34 +70,34 @@ ms.lasthandoff: 11/17/2017
 |Valore di**avg_fragmentation_in_percent** |Istruzione correttiva|  
 |-----------------------------------------------|--------------------------|  
 |> 5% e < = 30%|ALTER INDEX REORGANIZE|  
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
+|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|  
   
- \* È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.  
+<sup>1</sup> È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.  
   
- Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da ALTER INDEX REORGANIZE a ALTER INDEX REBUILD. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Non è consigliabile usare questi comandi per livelli ridotti di frammentazione (inferiori al 5%) poiché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono praticamente annullati dal costo della riorganizzazione o della ricompilazione dell'indice.  
+ Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Non è consigliabile usare questi comandi per livelli ridotti di frammentazione (inferiori al 5%) poiché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono praticamente annullati dal costo della riorganizzazione o della ricompilazione dell'indice. Per altre informazioni su `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).   
   
 > [!NOTE]
->  In generale, non è possibile controllare la frammentazione sugli indici di dimensioni ridotte. Le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione di un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dello stesso.
+> In generale, non è possibile controllare la frammentazione sugli indici di dimensioni ridotte. Le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione di un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dello stesso.
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+### <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Gli indici con più di 128 extent vengono ricompilati in due fasi separate, logica e fisica. Nella fase logica, le unità di allocazione esistenti usate dall'indice vengono contrassegnate per la deallocazione, le righe di dati vengono copiate e ordinate, quindi spostate nelle nuove unità di allocazione create per archiviare l'indice ricompilato. Nella fase fisica, le unità di allocazione precedentemente contrassegnate per la deallocazione vengono fisicamente eliminate nelle transazioni brevi eseguite in background e non richiedono molti blocchi.  
+-   Gli indici con più di 128 extent vengono ricompilati in due fasi separate, logica e fisica. Nella fase logica, le unità di allocazione esistenti usate dall'indice vengono contrassegnate per la deallocazione, le righe di dati vengono copiate e ordinate, quindi spostate nelle nuove unità di allocazione create per archiviare l'indice ricompilato. Nella fase fisica, le unità di allocazione precedentemente contrassegnate per la deallocazione vengono fisicamente eliminate nelle transazioni brevi eseguite in background e non richiedono molti blocchi. Per altre informazioni sugli extent, vedere la [Guida all'architettura di pagine ed extent](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
 -   Durante la riorganizzazione, non è possibile specificare le opzioni relative a un indice.  
   
--   L'istruzione `ALTER INDEX REORGANIZE` richiede che nel file di dati che include l'indice sia disponibile spazio, perché l'operazione può allocare solo pagine di lavoro temporanee nello stesso file, non in un altro file nel filegroup.  Anche se nel filegroup possono essere disponibili pagine libere, è comunque possibile che l'utente riceva l'errore 1105 "Impossibile allocare spazio per l'oggetto \<NomeIndice>.\<NomeTabella> nel database \<NomeDatabase>. Il filegroup 'PRIMARY' è pieno".
+-   L'istruzione `ALTER INDEX REORGANIZE` richiede che nel file di dati che include l'indice sia disponibile spazio, perché l'operazione può allocare solo pagine di lavoro temporanee nello stesso file, non in un altro file nel filegroup. Anche se nel filegroup possono essere disponibili pagine libere, è tuttavia possibile che l'utente incontri l'errore 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
   
--   La creazione e la ricompilazione di indici non allineati per una tabella con oltre 1.000 partizioni sono possibili, ma non supportate. Questo tipo di operazioni può causare riduzioni delle prestazioni e un eccessivo consumo della memoria.
+-   La creazione e la ricompilazione di indici non allineati per una tabella con oltre 1.000 partizioni sono possibili, ma non consigliate. Questo tipo di operazioni può causare riduzioni delle prestazioni e un eccessivo consumo della memoria.
   
-> [!NOTE]
->  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le statistiche non vengono create analizzando tutte le righe nella tabella quando viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, utilizzare CREATE STATISTICS o UPDATE STATISTICS con la clausola FULLSCAN.
+> [!IMPORTANT]
+> A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le statistiche non vengono create analizzando tutte le righe nella tabella quando viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare `CREATE STATISTICS` o `UPDATE STATISTICS` con la clausola `FULLSCAN`.
   
-###  <a name="Security"></a> Sicurezza  
+### <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+#### <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedureFrag"></a> Utilizzo di SQL Server Management Studio  
+## <a name="SSMSProcedureFrag"></a> Controllare la frammentazione dell'indice tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Per controllare la frammentazione di un indice  
   
@@ -155,7 +154,7 @@ ms.lasthandoff: 11/17/2017
      **Righe fantasma versione**  
      Numero di record fantasma mantenuti a causa di una transazione di isolamento dello snapshot in attesa.  
   
-##  <a name="TsqlProcedureFrag"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedureFrag"></a> Controllare la frammentazione dell'indice tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Per controllare la frammentazione di un indice  
   
@@ -165,7 +164,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -195,7 +194,7 @@ ms.lasthandoff: 11/17/2017
   
  Per altre informazioni, vedere [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-##  <a name="SSMSProcedureReorg"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedureReorg"></a> Rimuovere la frammentazione tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>Per riorganizzare o ricompilare un indice  
   
@@ -249,9 +248,9 @@ ms.lasthandoff: 11/17/2017
   
 8.  Scegliere **OK.**  
   
-##  <a name="TsqlProcedureReorg"></a> Utilizzo di Transact-SQL  
+## <a name="TsqlProcedureReorg"></a> Rimuovere la frammentazione tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] 
   
-#### <a name="to-reorganize-a-defragmented-index"></a>Per riorganizzare un indice deframmentato  
+#### <a name="to-reorganize-a-fragmented-index"></a>Per riorganizzare un indice frammentato  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -259,7 +258,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -279,7 +278,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  
@@ -288,7 +287,7 @@ ms.lasthandoff: 11/17/2017
     GO  
     ```  
   
-#### <a name="to-rebuild-a-defragmented-index"></a>Per ricompilare un indice deframmentato  
+#### <a name="to-rebuild-a-fragmented-index"></a>Per ricompilare un indice frammentato  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -309,7 +308,15 @@ ms.lasthandoff: 11/17/2017
      [!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_2.sql)]  
   
  Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+ 
+#### <a name="automatic-index-and-statistics-management"></a>Gestione automatica dell'indice e delle statistiche
+
+Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), per gestire automaticamente la deframmentazione dell'indice e gli aggiornamenti delle statistiche per uno o più database. Questa procedura sceglie automaticamente se ricompilare o riorganizzare un indice in base al relativo livello di frammentazione, tra gli altri parametri, e aggiornare le statistiche con una soglia lineare.
   
 ## <a name="see-also"></a>Vedere anche  
   [Guida per la progettazione di indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
+  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
+  [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  (Deframmentazione dell'indice adattativo)  
+  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
   

@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0e71ab1057f1147ce34d049494aa313967daa114
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="json-data-sql-server"></a>Dati JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-JSON è un popolare formato di dati testuali usato per lo scambio di dati in applicazioni per dispositivi mobili e Web moderne. JSON viene usato anche per archiviare dati non strutturati nei file di log o nei database NoSQL come Microsoft Azure DocumentDB. Molti servizi Web REST restituiscono risultati formattati come testo JSON oppure accettano dati formattati come JSON. La maggior parte dei servizi Azure, come Ricerca di Azure, Archiviazione di Azure e Azure DocumentDb, include ad esempio endpoint REST che restituiscono o usano JSON. JSON è anche il formato principale per lo scambio di dati tra le pagine Web e i server Web che usano le chiamate AJAX.  
+JSON è un popolare formato di dati testuali usato per lo scambio di dati in applicazioni per dispositivi mobili e Web moderne. JSON viene usato anche per archiviare dati non strutturati nei file di log o nei database NoSQL come Microsoft Cosmos DB. Molti servizi Web REST restituiscono risultati formattati come testo JSON oppure accettano dati formattati come JSON. La maggior parte dei servizi Azure, come Ricerca di Azure, Archiviazione di Azure e Azure Cosmos DB, include ad esempio endpoint REST che restituiscono o usano JSON. JSON è anche il formato principale per lo scambio di dati tra le pagine Web e i server Web che usano le chiamate AJAX.  
   
  Ecco un esempio di testo JSON:  
   
@@ -176,7 +176,7 @@ Ogni **FOR JSON** formatta i risultati SQL come testo JSON che può essere forni
  
 Il testo JSON è in genere archiviato in colonne varchar o nvarchar e viene indicizzato come testo normale. Qualsiasi funzionalità o componente di SQL Server che supporta testo supporta anche JSON, quindi non esiste quasi nessun vincolo nell'interazione tra JSON e altre funzionalità di SQL Server. I dati JSON possono essere archiviati in tabelle in memoria o temporali, i predicati della sicurezza a livello di riga possono essere applicati al testo JSON e così via.
 
-Se si hanno semplici carichi di lavoro JSON in cui si vuole usare un linguaggio di query personalizzato per l'elaborazione di documenti JSON, prendere in considerazione Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/).  
+Se si hanno semplici carichi di lavoro JSON in cui si vuole usare un linguaggio di query personalizzato per l'elaborazione di documenti JSON, prendere in considerazione Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).  
   
  Ecco alcuni casi d'uso che mostrano come usare il supporto JSON integrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
