@@ -1,12 +1,14 @@
 ---
 title: Regole di confronto e supporto Unicode | Microsoft Docs
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,20 +29,19 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collation-and-unicode-support"></a>Regole di confronto e supporto Unicode
-  Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto usate con dati di tipo carattere, quali **char** e **varchar** , definiscono la tabella codici e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offrono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto usate con dati di tipo carattere, quali **char** e **varchar** , definiscono la tabella codici e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
  Selezionando le regole di confronto per un server, un database, una colonna o un'espressione, vengono assegnate determinate caratteristiche ai dati che influiscono sui risultati di molte operazioni eseguite nel database. Ad esempio, quando viene costruita una query tramite ORDER BY, l'ordinamento del set di risultati può dipendere dalle regole di confronto applicate al database o specificate in una clausola COLLATE al livello di espressione della query.    
     
@@ -133,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  È anche possibile tentare di usare regole di confronto diverse per i dati nel server. Scegliere regole di confronto con mapping a una tabella codici nel client.    
     
- Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è possibile selezionare una delle regole di confronto `_SC` dei caratteri supplementari (solo regole di confronto di Windows) per migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode.    
+ Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è possibile selezionare una delle regole di confronto dei caratteri supplementari (_SC) o una delle regole di confronto versione 140.    
     
  Per valutare i problemi relativi all'utilizzo di tipi di dati Unicode o non Unicode, è necessario eseguire il test dello scenario per verificare le differenze di prestazioni nell'ambiente specifico. È consigliabile standardizzare le regole di confronto usate nei sistemi presenti nell'ambito dell'organizzazione, quindi distribuire server e client Unicode laddove possibile.    
     
@@ -155,35 +156,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> Caratteri supplementari    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce tipi di dati come **nchar** e **nvarchar** per archiviare i dati Unicode. Questi tipi di dati codificano il testo in un formato denominato *UTF-16*. L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo compreso tra 0x0000 e 0x10FFFF. I caratteri usati più di frequente sono associati a valori di punti di codice compresi in una parola a 16 bit in memoria e su disco, mentre i caratteri con valori di punti di codice maggiori di 0xFFFF richiedono due parole a 16 bit consecutive. Questi caratteri sono denominati *caratteri supplementari*e le due parole a 16 bit consecutive sono denominate *coppie di surrogati*.    
     
+ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è possibile usare una nuova famiglia di regole di confronto per caratteri supplementari (_SC) con i tipi di dati **nchar**, **nvarchar** e **sql_variant**. Ad esempio: `Latin1_General_100_CI_AS_SC`o, se si utilizzano regole di confronto giapponesi, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
+
+ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tutte le nuove regole di confronto supportano automaticamente i caratteri supplementari.
+
  Se si utilizzano caratteri supplementari:    
     
 -   I caratteri supplementari possono essere usati in operazioni di ordinamento e confronto solo con le versioni delle regole di confronto 90 o successive.    
     
--   Tutte le regole di confronto di livello _100 supportano l'ordinamento linguistico con caratteri supplementari.    
+-   Tutte le regole di confronto versione 100 supportano l'ordinamento linguistico con caratteri supplementari.    
     
 -   L'utilizzo dei caratteri supplementari in metadati, ad esempio in nomi di oggetti di database, non è supportato.    
     
--   A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è possibile usare una nuova famiglia di regole di confronto per caratteri supplementari (SC) con i tipi di dati **nchar**, **nvarchar** e **sql_variant**. Ad esempio: `Latin1_General_100_CI_AS_SC`o, se si utilizzano regole di confronto giapponesi, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
-  > [!NOTE]    
-  >  I database che usano le regole di confronto con caratteri supplementari (\_SC) non possono essere abilitati per la replica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo perché alcune delle tabelle di sistema e delle stored procedure create per la replica usano il tipo di dati legacy **ntext**, che non supporta i caratteri supplementari.  
+-   I database che usano le regole di confronto con caratteri supplementari (\_SC) non possono essere abilitati per la replica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo perché alcune delle tabelle di sistema e delle stored procedure create per la replica usano il tipo di dati legacy **ntext**, che non supporta i caratteri supplementari.  
     
-     Il flag SC può essere applicato a:    
+-   Il flag SC può essere applicato a:    
     
-    -   Regole di confronto di Windows versione 90    
+    -   Regole di confronto versione 90    
     
-    -   Regole di confronto di Windows versione 100    
+    -   Regole di confronto versione 100    
     
-     Il flag SC non può essere applicato a:    
+-   Il flag SC non può essere applicato a:    
     
     -   Regole di confronto di Windows senza versione, versione 80    
     
     -   Regole di confronto binarie BIN o BIN2    
     
-    -   Regole di confronto SQL*    
+    -   Regole di confronto di SQL \*    
     
- Nella tabella seguente viene confrontato il comportamento di alcune funzioni per i valori stringa e di alcuni operatori di stringa quando vengono usati caratteri supplementari con e senza regole di confronto SC.    
+    -   Regole di confronto versione 140. Non devono necessariamente avere il flag SC perché supportano già i caratteri supplementari    
     
-|Funzione per i valori stringa o operatore di stringa|Con regole di confronto SC|Senza regole di confronto SC|    
+ Nella tabella seguente viene confrontato il comportamento di alcune funzioni per i valori stringa e di alcuni operatori di stringa quando vengono usati caratteri supplementari con e senza regole di confronto che supportano caratteri complementari:    
+    
+|Funzione per i valori stringa o operatore di stringa|Con regole di confronto che supportano caratteri complementari|Senza regole di confronto che supportano caratteri complementari|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|La coppia di surrogati UTF-16 viene conteggiata come singolo punto di codice.|La coppia di surrogati UTF-16 viene conteggiata come due punti di codice.|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|Queste funzioni considerano ogni coppia di surrogati un singolo punto di codice e funzionano come previsto.|Queste funzioni possono dividere qualsiasi coppia di surrogati e provocare risultati imprevisti.|    
@@ -205,7 +210,7 @@ Le applicazioni di database che interagiscono con [!INCLUDE[ssNoVersion](../../i
 
 ##  <a name="Japanese_Collations"></a> aggiunte in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] sono supportate due nuove famiglie di regole di confronto per il giapponese, con permutazioni di varie opzioni (_CS, _AS, _KS, _WS, _VSS e così via). 
+A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] sono supportate due nuove famiglie di regole di confronto per il giapponese, con permutazioni di varie opzioni (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
 Per elencare queste regole di confronto, è possibile eseguire una query nel motore di database di SQL Server:
 ``` 
@@ -213,7 +218,9 @@ SELECT Name, Description FROM fn_helpcollations()
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-Queste regole di confronto sono supportate negli indici del motore di database, nelle tabelle con ottimizzazione per la memoria, negli indici columnstore e nei moduli compilati in modo nativo.
+Tutte le nuove regole di confronto supportano in modo predefinito i caratteri supplementari. Per nessuna nuova regola di confronto esiste o è necessario il flag SC.
+
+Queste regole di confronto sono supportate negli indici del motore di database, nelle tabelle ottimizzate per la memoria, negli indici columnstore e nei moduli compilati in modo nativo.
     
 ##  <a name="Related_Tasks"></a> Attività correlate    
     
@@ -239,5 +246,4 @@ Queste regole di confronto sono supportate negli indici del motore di database, 
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

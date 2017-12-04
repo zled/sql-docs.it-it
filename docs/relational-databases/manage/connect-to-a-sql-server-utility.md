@@ -2,27 +2,29 @@
 title: "Effettuare la connessione a Utilità SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 456ae933f5c94e11a80e2748254dbd020490a8f6
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 674fe5cd2246c1d437477fd0b6e0494905518dd4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Effettuare la connessione a Utilità SQL Server.
-  Prima di connettersi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario creare un punto di controllo dell'utilità. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Prima di connettersi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario creare un punto di controllo dell'utilità. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  Per visualizzare e gestire l'integrità delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) per connettersi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

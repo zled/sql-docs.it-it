@@ -2,11 +2,13 @@
 title: Pubblicare dati e oggetti di database | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
-  Quando si crea una pubblicazione, è possibile scegliere le tabelle e gli altri oggetti di database che si desidera pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si crea una pubblicazione è possibile scegliere le tabelle e gli altri oggetti di database che si vuole pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
   
 |Oggetto di database|Replica snapshot e replica transazionale|Replica di tipo merge|  
 |---------------------|--------------------------------------------------------|-----------------------|  
@@ -121,7 +123,7 @@ ms.lasthandoff: 06/22/2017
   
  Quando si pubblica una tabella per la replica, è possibile specificare gli oggetti dello schema da copiare nel Sottoscrittore, ad esempio l'integrità referenziale dichiarata (vincoli di chiave primaria, di riferimento o UNIQUE), indici, trigger DML dell'utente (i trigger DDL non possono essere replicati), proprietà estese e regole di confronto. Le proprietà estese vengono replicate solo nella sincronizzazione iniziale tra il server di pubblicazione e il Sottoscrittore. Se si aggiungono o si modificano proprietà estese dopo la sincronizzazione iniziale, le modifiche apportate non vengono replicate.  
   
- Per specificare le opzioni dello schema, vedere [Specificare le opzioni dello schema](../../../relational-databases/replication/publish/specify-schema-options.md) o <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
+ Per specificare le opzioni dello schema, vedere [Specificare le opzioni dello schema](../../../relational-databases/replication/publish/specify-schema-options.md) oppure <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
 ### <a name="partitioned-tables-and-indexes"></a>Tabelle e indici partizionati  
  La replica supporta la pubblicazione di tabelle e indici partizionati. Il livello di supporto dipende dal tipo di replica utilizzato, nonché dalle opzioni specificate per la pubblicazione e dagli articoli associati alle tabelle partizionate. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
@@ -262,4 +264,3 @@ ms.lasthandoff: 06/22/2017
  [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Guida sensibile al contesto di Gestione Utilità | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4b004cbaba4cab6d83680ce0d7b827366c3e8a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
-  Le sezioni seguenti includono informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le sezioni seguenti includono informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Dashboard Utilità (Utilità SQL Server)
  Per visualizzare i dati inclusi nel dashboard Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'albero Gestione Utilità selezionare il nodo principale, con l'etichetta "Utilità<Nome_PuntoDiControlloUtilità">\\(NomeComputer\PuntoDiControlloUtilità)". Il dashboard include i dati di riepilogo e i dettagli relativi a tutte le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a tutte le applicazioni di livello dati nell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiornare dati nel dashboard, fare clic con il pulsante destro del mouse sul nodo principale nell'albero Esplora utilità e selezionare **Aggiorna**.  
@@ -127,11 +128,11 @@ ms.lasthandoff: 08/03/2017
  Visualizzazione Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati sulle singole applicazioni di livello dati. Le icone di stato di integrità forniscono lo stato riepilogativo per ogni applicazione del livello dati in base alle categorie di utilizzo:  
   
--   Segno di spunta verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia in giù verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
+-   Freccia verde rivolta verso il basso ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): le risorse sono sottoutilizzate.  
   
--   Freccia in su rossa - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
+-   Freccia rossa rivolta verso l'alto ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
@@ -269,11 +270,11 @@ ms.lasthandoff: 08/03/2017
   
  Le icone di stato di integrità forniscono lo stato riepilogativo per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base alla categoria di utilizzo:  
   
--   Segno di spunta verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Numero di istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non stanno violando i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): numero di istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia in giù verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
+-   Freccia verde rivolta verso il basso ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): le risorse sono sottoutilizzate.  
   
--   Freccia in su rossa - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
+-   Freccia rossa rivolta verso l'alto ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
@@ -518,4 +519,3 @@ Scheda **Data warehouse** - Consente di visualizzare i dettagli relativi alla co
  [Risoluzione dei problemi relativi a Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

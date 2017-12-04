@@ -2,11 +2,13 @@
 title: "Creare un punto di controllo di Utilità SQL Server (Utilità SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eaf3148fba4a949d937b725fe4f860f1bb228674
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f06506dffa7c0d8497a6fc0986e8a29a701d0415
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Creazione di un punto di controllo dell'utilità di SQL Server (Utilità SQL Server)
-  Un'organizzazione può avere più istanze di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire molte istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazioni livello dati. Ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha soltanto un punto di controllo dell'utilità. È necessario creare un nuovo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni applicazione livello dati è membro di una sola istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è gestita da un singolo punto di controllo dell'utilità.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un'organizzazione può avere più istanze di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire molte istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazioni livello dati. Ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha soltanto un punto di controllo dell'utilità. È necessario creare un nuovo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni applicazione livello dati è membro di una sola istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è gestita da un singolo punto di controllo dell'utilità.  
   
  Il punto di controllo dell'utilità raccoglie informazioni sulla configurazione e sulle prestazioni delle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni 15 minuti. Queste informazioni vengono archiviate nel data warehouse di gestione dell'utilità (UMDW) nel punto di controllo dell'utilità; il nome del file UMDW è sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono confrontati con i criteri per consentire l'identificazione di colli di bottiglia nell'utilizzo delle risorse e le possibilità di consolidamento.  
   
@@ -106,7 +107,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Passaggi della procedura guidata  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- Nelle sezioni seguenti sono fornite le informazioni su ogni pagina del flusso di lavoro della procedura guidata per creare un nuovo punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per avviare la procedura guidata per creare un nuovo punto di controllo dell'utilità, aprire il riquadro Esplora utilità dal menu Visualizza in SSMS, quindi fare clic sul pulsante ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Crea punto di controllo dell'utilità** nella parte superiore del riquadro Esplora utilità.  
+ Nelle sezioni seguenti sono fornite le informazioni su ogni pagina del flusso di lavoro della procedura guidata per creare un nuovo punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per avviare la procedura guidata di creazione per nuovo punto di controllo dell'utilità, aprire il riquadro Esplora utilità dal menu Visualizza in SSMS, quindi fare clic sul pulsante![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Crea punto di controllo dell'utilità** nella parte superiore del riquadro Esplora utilità.  
   
  Fare clic su un collegamento nell'elenco riportato di seguito per passare ai dettagli per una pagina della procedura guidata.  
   
@@ -129,9 +130,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introduzione alla procedura guidata Crea punto di controllo dell'utilità  
  Se si apre Esplora utilità e non è presente alcun punto di controllo dell'utilità connesso, è necessario connettersi a uno di quelli presenti o crearne uno nuovo.  
   
- **Connessione a un punto di controllo dell'utilità esistente** : se è già presente un punto di controllo dell'utilità nella distribuzione, è possibile connettersi a questo punto di controllo dell'utilità facendo clic sul pulsante ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connetti a utilità** nella parte superiore del riquadro Esplora utilità. Per connettersi a un punto di controllo dell'utilità esistente, è necessario disporre delle credenziali di amministratore o essere membro del ruolo Utility Reader. Si noti che può esistere un solo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è possibile essere connessi a un solo punto di controllo dell'utilità da un'istanza di SSMS.  
+ **Connessione a un punto di controllo dell'utilità esistente**: se è già presente un punto di controllo dell'utilità nella distribuzione, è possibile connettersi a questo punto di controllo dell'utilità facendo clic sul pulsante ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connetti a utilità** nella parte superiore del riquadro Esplora utilità. Per connettersi a un punto di controllo dell'utilità esistente, è necessario disporre delle credenziali di amministratore o essere membro del ruolo Utility Reader. Si noti che può esistere un solo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è possibile essere connessi a un solo punto di controllo dell'utilità da un'istanza di SSMS.  
   
- **Creazione di un nuovo punto di controllo dell'utilità** : per creare un nuovo punto di controllo dell'utilità, fare clic sul pulsante ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Crea punto di controllo dell'utilità** nella parte superiore del riquadro Esplora utilità. Per creare un nuovo punto di controllo dell'utilità, è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornire le credenziali di amministratore nella finestra di dialogo della connessione. Si tenga presente che per ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può esistere un solo punto di controllo dell'utilità.  
+ **Creazione di un nuovo punto di controllo dell'utilità**: per creare un nuovo punto di controllo dell'utilità, fare clic sul pulsante ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Crea punto di controllo dell'utilità** nella parte superiore del riquadro Esplora utilità. Per creare un nuovo punto di controllo dell'utilità, è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornire le credenziali di amministratore nella finestra di dialogo della connessione. Si tenga presente che per ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può esistere un solo punto di controllo dell'utilità.  
   
 ##  <a name="Instance_name"></a> Specifica istanza  
  Specificare le informazioni seguenti sul punto di controllo dell'utilità che si desidera creare:  
@@ -235,4 +236,3 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  [Risoluzione dei problemi relativi a Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

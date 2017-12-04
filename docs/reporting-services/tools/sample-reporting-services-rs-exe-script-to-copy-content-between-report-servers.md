@@ -135,7 +135,7 @@ ms.lasthandoff: 11/09/2017
 |Impostazioni di cronologia|<xref:ReportService2010.ReportingService2010.GetItemHistoryOptions%2A>|<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|  
 |Criteri degli elementi|<xref:ReportService2010.ReportingService2010.GetPolicies%2A>|<xref:ReportService2010.ReportingService2010.SetPolicies%2A>|  
   
- Per altre informazioni, vedere [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Per altre informazioni, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ##  <a name="bkmk_how_to_use_the_script"></a> Come utilizzare lo script  
   
@@ -361,7 +361,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  Eseguire nuovamente lo script con il flag **–t** per visualizzare un messaggio simile al seguente:  
   
--   System.Exception: Impossibile connettersi al server: http://\<nomeserver>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Richiesta non riuscita con stato HTTP 401: Non autorizzato**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- Fine della traccia dello stack dell'eccezione interna ---  
+-   System.Exception: Impossibile connettersi al server: http://\<nomeserver>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Richiesta non riuscita con stato HTTP 401: Non autorizzato**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage messaggio risposta WebResponse, Stream responseStream, Boolean asyncCall) in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password Il dominio di stringa, Int32 timeout) in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fine dell'analisi dello stack dell'eccezione interna--  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

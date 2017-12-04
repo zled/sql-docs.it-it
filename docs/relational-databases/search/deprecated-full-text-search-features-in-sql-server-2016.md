@@ -2,11 +2,13 @@
 title: "Funzionalità deprecate della ricerca full-text in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7492b1c26c21a2cbc831c2bed39be165310bf51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Funzionalità deprecate della ricerca full-text in SQL Server 2016
-  Questo argomento descrive le funzionalità deprecate della ricerca full-text ancora disponibili in SQL Server. Tali funzionalità verranno rimosse a partire da una delle prossime versioni. Non usare funzionalità deprecate nelle nuove applicazioni.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento descrive le funzionalità deprecate della ricerca full-text ancora disponibili in SQL Server. Tali funzionalità verranno rimosse a partire da una delle prossime versioni. Non usare funzionalità deprecate nelle nuove applicazioni.  
   
 È possibile monitorare l'uso delle funzionalità deprecate usando il contatore delle prestazioni dell'oggetto **SQL Server:Deprecated Features** e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
@@ -62,4 +63,3 @@ ms.lasthandoff: 06/22/2017
  *L'oggetto **SQL Server:Deprecated Features** non monitora le occorrenze di CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
   
   
-

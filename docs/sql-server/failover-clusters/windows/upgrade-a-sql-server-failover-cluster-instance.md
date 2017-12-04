@@ -2,9 +2,12 @@
 title: Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 10/01/2017
-ms.prod: sql-server-2017
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7edcc0b0142562d998d3c7c1b2774b47716a4a06
-ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
+ms.openlocfilehash: b4cc4c589c9b30d3ae05ec4c273e5376da29dbcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Aggiornare un'istanza del cluster di failover di SQL Server
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta l'aggiornamento di un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], oppure quando si esegue l'installazione in un nuovo Service Pack o aggiornamento cumulativo di Windows separatamente in tutti i nodi cluster di failover, con tempo di inattività limitato a un singolo failover manuale (o due failover manuali in caso di failback alla replica primaria originale).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta l'aggiornamento di un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], oppure quando si esegue l'installazione in un nuovo Service Pack o aggiornamento cumulativo di Windows separatamente in tutti i nodi cluster di failover, con tempo di inattività limitato a un singolo failover manuale (o due failover manuali in caso di failback alla replica primaria originale).  
   
  L'aggiornamento del sistema operativo Windows di un cluster di failover non è supportato per i sistemi operativi precedenti a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Per aggiornare un nodo del cluster in esecuzione in [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] o versioni successive, vedere [Eseguire un aggiornamento o un aggiornamento in sequenza](#perform-a-rolling-upgrade-or-update).  
   

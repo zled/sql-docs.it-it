@@ -121,7 +121,7 @@ Nei grafici di confronto è possibile scegliere gli stessi colori per i valori p
 ## <a name="pie-and-funnel-charts"></a>Grafici a torta e a imbuto  
   
 I grafici a torta e a imbuto sono tra le visualizzazioni più semplici. È possibile strutturare i dati per righe o per colonne. 
-* I**grafici a torta** nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total nei report per dispositivi mobili di the center. I grafici a torta sono utili per visualizzare le dimensioni relative delle varie parti di un intero. Se è presente un numero eccessivo di sezioni, risultano difficili da leggere.
+* I **grafici a torta** nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] possono essere a torta, ad anello o ad anello con un totale al centro. I grafici a torta sono utili per visualizzare le dimensioni relative delle varie parti di un intero. Se è presente un numero eccessivo di sezioni, risultano difficili da leggere.
 * I**grafici a imbuto** vengono spesso usati per mostrare le fasi di un processo, ad esempio le vendite.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)

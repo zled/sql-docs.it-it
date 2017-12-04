@@ -2,30 +2,30 @@
 title: Colonne provviste di un nome | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- names [SQL Server], columns with
+helpviewer_keywords: names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7153d16bd547d5fc596037c17e31f69eaf0881fe
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
-ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
-ms.contentlocale: it-it
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columns-with-a-name"></a>Colonne provviste di un nome
-  Di seguito vengono illustrate le condizioni specifiche in cui viene eseguito il mapping tra le colonne del set di righe provviste di nome e il codice XML risultante, con distinzione tra maiuscole e minuscole:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Di seguito vengono illustrate le condizioni specifiche in cui viene eseguito il mapping tra le colonne del set di righe provviste di nome e il codice XML risultante, con distinzione tra maiuscole e minuscole:  
   
 -   Il nome di colonna inizia con un simbolo di chiocciola (@)  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/08/2017
 -   Una colonna ha un nome diverso.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Il nome di colonna inizia con un simbolo di chiocciola (@)  
- Se il nome di colonna inizia con un simbolo di chiocciola (@) e non contiene una barra (/), un attributo del `row` viene creato l'elemento con il valore della colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (@PmId, Name). Nel codice XML risultante, un **PmId** viene aggiunto un attributo corrispondente `row` elemento e un valore di ProductModelID viene assegnato a esso.  
+ Se il nome della colonna inizia con un simbolo di chiocciola (@) e non contiene una barra (/), viene creato un attributo dell'elemento `row` con il valore di colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (@PmId, Name). Nel codice XML risultante viene aggiunto un attributo **PmId** all'elemento `row` corrispondente e gli viene assegnato un valore di ProductModelID.  
   
 ```  
   
@@ -71,9 +71,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (@)  
- Se il nome della colonna non inizia con un simbolo di chiocciola (@), non è uno dei test di nodo XPath e non contiene una barra (/), un elemento XML che è un sottoelemento dell'elemento riga, `row` per impostazione predefinita, viene creato.  
+ Se il nome di colonna non inizia con un simbolo di chiocciola (@), non è uno dei test di nodo XPath e non contiene una barra (/), viene creato un elemento XML che è un sottoelemento dell'elemento riga, per impostazione predefinita `row`.  
   
- La query seguente specifica il nome della colonna, il risultato. Pertanto, un `result` elemento figlio viene aggiunto per il `row` elemento.  
+ La query seguente specifica il nome della colonna, il risultato. Un elemento figlio `result` viene pertanto aggiunto all'elemento `row`.  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +88,7 @@ for xml PATH
 </row>  
 ```  
   
- La query seguente specifica il nome della colonna, ManuWorkCenterInformation, per il codice XML restituito dall'espressione XQuery specificata sulla colonna Instructions di tipo **xml**. Pertanto, un `ManuWorkCenterInformation` elemento viene aggiunto come elemento figlio di `row` elemento.  
+ La query seguente specifica il nome della colonna, ManuWorkCenterInformation, per il codice XML restituito dall'espressione XQuery specificata sulla colonna Instructions di tipo **xml**. Un elemento `ManuWorkCenterInformation` viene pertanto aggiunto come figlio dell'elemento `row`.  
   
 ```  
 SELECT   
@@ -133,7 +133,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- I nomi di colonna vengono usati come un percorso nella creazione del codice XML in modalità PATH. Il nome della colonna che contiene i valori ID dipendente inizia con '\@'. Pertanto, un attributo, **EmpID**, viene aggiunto per il `row` elemento. I nomi di tutte le altre colonne contengono una barra ("/"), che indica la gerarchia. Il codice XML risultante avrà il `EmpName` figlio sotto il `row` elemento e `EmpName` figlio avrà `First`, `Middle` e `Last` gli elementi figlio.  
+ I nomi di colonna vengono usati come un percorso nella creazione del codice XML in modalità PATH. Il nome della colonna che contiene i valori ID dipendente inizia con il simbolo '\@'. Viene pertanto aggiunto un attributo **EmpID** all'elemento `row`. I nomi di tutte le altre colonne contengono una barra ("/"), che indica la gerarchia. Il codice XML risultante avrà l'elemento figlio `EmpName` sotto l'elemento `row` e l'elemento figlio `EmpName` avrà gli elementi figlio `First`, `Middle` e `Last`.  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +172,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Per impostazione predefinita, la modalità PATH genera XML incentrato sugli elementi. Specificare la direttiva ELEMENTS in una query in modalità PATH pertanto non produce effetti. Come illustrato nell'esempio precedente tuttavia, la direttiva ELEMENTS risulta utile con XSINIL per la generazione di elementi per i valori Null.  
   
- Oltre all'ID e al nome, la query seguente recupera l'indirizzo di un dipendente. Come per il percorso nei nomi di colonna per le colonne degli indirizzi, un `Address` elemento figlio viene aggiunto per il `row` elemento e i dettagli relativi agli indirizzi vengono aggiunti come elementi figlio del `Address` elemento.  
+ Oltre all'ID e al nome, la query seguente recupera l'indirizzo di un dipendente. Come per il percorso nei nomi di colonna per le colonne degli indirizzi, un elemento figlio `Address` viene aggiunto all'elemento `row` e i dettagli relativi agli indirizzi vengono aggiunti come elementi figlio dell'elemento `Address`.  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +205,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>Più colonne condividono lo stesso prefisso di percorso  
- Se più colonne successive condividono lo stesso prefisso di percorso, vengono raggruppate sotto lo stesso nome. Se vengono utilizzati prefissi degli spazi dei nomi diversi, anche se associati allo stesso spazio dei nomi, un percorso viene considerato diverso. Nella query precedente, le colonne FirstName, MiddleName e LastName condividono lo stesso prefisso EmpName. Pertanto, vengono aggiunti come elementi figlio del `EmpName` elemento. Ciò avviene anche quando si crea il `Address` elemento nell'esempio precedente.  
+ Se più colonne successive condividono lo stesso prefisso di percorso, vengono raggruppate sotto lo stesso nome. Se vengono utilizzati prefissi degli spazi dei nomi diversi, anche se associati allo stesso spazio dei nomi, un percorso viene considerato diverso. Nella query precedente le colonne FirstName, MiddleName e LastName condividono lo stesso prefisso EmpName. Vengono pertanto aggiunte come elementi figlio dell'elemento `EmpName`. Ciò si verifica anche nell'esempio precedente, nella fase di creazione dell'elemento `Address`.  
   
 ## <a name="one-column-has-a-different-name"></a>Una colonna ha un nome diverso  
  Se è presente una colonna con un nome diverso, interromperà il raggruppamento, come illustrato nella query modificata seguente. La query interrompe il raggruppamento di FirstName, MiddleName e LastName, come specificato nella query precedente, aggiungendo colonne di indirizzi fra le colonne FirstName e MiddleName.  
@@ -225,7 +225,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Di conseguenza, la query crea due `EmpName` elementi. Il primo `EmpName` elemento ha il `FirstName` elemento figlio e il secondo `EmpName` elemento ha il `MiddleName` e `LastName` gli elementi figlio.  
+ Di conseguenza, la query crea due elementi `EmpName`. Il primo elemento `EmpName` ha l'elemento figlio `FirstName` e il secondo elemento `EmpName` ha gli elementi figlio `MiddleName` e `LastName`.  
   
  Risultato:  
   
@@ -248,4 +248,3 @@ FOR XML PATH
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

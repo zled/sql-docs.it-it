@@ -2,9 +2,12 @@
 title: Scaricare SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 39a840f8a28c40b9bea33608f754532954f5db7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb7f31d4af338702182bed66cc7053fb3cefb784
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Scaricare SQL Server Data Tools (SSDT)
-
-**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** è un moderno strumento di sviluppo scaricabile gratuitamente per compilare database relazionali SQL Server, database Azure SQL, pacchetti di Integration Services, modelli di dati di Analysis Services e report di Reporting Services. Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio. 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** è un moderno strumento di sviluppo scaricabile gratuitamente, che consente di compilare database relazionali SQL Server, database Azure SQL, pacchetti di Integration Services, modelli di dati di Analysis Services e report di Reporting Services. Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio. 
 
 SSDT per Visual Studio 2017 (anteprima 15.4.0) è ora disponibile. Questa versione introduce un'esperienza di installazione Web autonoma per i progetti SQL Server Database, Analysis Services, Reporting Services e Integration Services in Visual Studio 2017 15.4 o versioni successive.
 

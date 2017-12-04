@@ -2,29 +2,30 @@
 title: Accedere alle tabelle FileTable con API di input/output dei file | Microsoft Docs
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 726ad4c57ce295c4317132333f50867d9466151a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
-  Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
   
 ##  <a name="accessing"></a> Iniziare a utilizzare le API di I/O dei file con tabelle FileTable  
  L'utilizzo principale delle tabelle FileTable avviene tramite il file system di Windows e l'API di I/O dei file. Le tabelle FileTable supportano l'accesso non transazionale tramite la vasta gamma di API di I/O dei file disponibili.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> Eliminazione di file e directory in una tabella FileTable  
  Tutta la semantica delle API di I/O dei file di Windows viene applicata quando si elimina un file o una directory.  
   
--   L'eliminazione di una directory non riesce se la directory contiene sottodirectory di file.  
+-   L'eliminazione di una directory non riesce se la directory contiene file o sottodirectory.  
   
 -   L'eliminazione di un file o di una directory comporta la rimozione della riga corrispondente dalla tabella FileTable. Questa operazione equivale a eliminare la riga tramite un'operazione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -131,9 +132,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricamento di file in FileTable](../../relational-databases/blob/load-files-into-filetables.md)   
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [DDL FileTable, funzioni, stored Procedure e viste](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

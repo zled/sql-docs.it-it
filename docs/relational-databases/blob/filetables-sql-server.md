@@ -2,11 +2,13 @@
 title: FileTable (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d8d5ce9a3a0ab49fb62fd434fe523ecfa937c6ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
-  La funzionalità FileTable fornisce supporto per lo spazio dei nomi dei file di Windows e la compatibilità con le applicazioni di Windows ai dati dei file archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable consente l'integrazione dei componenti di archiviazione e gestione dei dati da parte di un'applicazione e fornisce servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrati, incluse la ricerca full-text e la ricerca semantica, su dati e metadati non strutturati.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La funzionalità FileTable include supporto per lo spazio dei nomi dei file di Windows e compatibilità con le applicazioni di Windows ai dati dei file archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable consente l'integrazione dei componenti di archiviazione e gestione dei dati da parte di un'applicazione e fornisce servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrati, incluse la ricerca full-text e la ricerca semantica, su dati e metadati non strutturati.  
   
  In altre parole, è possibile archiviare file e documenti in speciali tabelle denominate FileTable in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma accedere a tali file e documenti da applicazioni di Windows come se questi fossero archiviati nel file system, senza apportare alcuna modifica alle applicazioni del client.  
   
@@ -63,9 +64,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Ogni riga contiene i seguenti elementi. Per altre informazioni sullo schema di una tabella FileTable, vedere [Schema delle tabelle FileTable](../../relational-databases/blob/filetable-schema.md).  
   
-    -   Una colonna**file_stream** per dati del flusso e un identificatore **stream_id** (GUID). La colonna **file_stream** è NULL per una directory.  
+    -   Una colonna **file_stream** per dati del flusso e un identificatore **stream_id** (GUID). La colonna **file_stream** è NULL per una directory.  
   
-    -   Entrambe le colonne **path_locator** e **parent_path_locator** per la rappresentazione e la gestione della gerarchia di file e directory.  
+    -   Entrambe le colonne **path_locator** e **parent_path_locator** per la rappresentazione e la gestione dell'elemento corrente (file o directory) e della gestione di directory.  
   
     -   10 attributi di file, quali data di creazione e data di modifica, utili con le API di I/O dei file.  
   
@@ -138,4 +139,3 @@ ms.lasthandoff: 06/22/2017
  Vengono elencate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunti o modificati per supportare la funzione FileTable.  
   
   
-

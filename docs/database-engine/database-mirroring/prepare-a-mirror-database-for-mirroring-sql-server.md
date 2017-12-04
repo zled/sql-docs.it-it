@@ -1,12 +1,14 @@
 ---
 title: Preparazione di un database mirror per il mirroring (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 869a784fe82f1a142fd2a9792bd79784b5fe3959
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
-ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparazione di un database mirror per il mirroring (SQL Server)
-  Prima di avviare una sessione di mirroring del database, è necessario che il proprietario del database o l'amministratore del sistema verifichi che il database mirror sia stato creato e sia pronto per il mirroring. La creazione di un nuovo database mirror richiede l'esecuzione di un backup completo del database principale e di un backup del log successivo. Entrambi i backup devono quindi essere ripristinati sull'istanza del server mirror tramite WITH NORECOVERY.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Prima di avviare una sessione di mirroring del database, il proprietario del database o l'amministratore del sistema deve verificare che il database mirror sia stato creato e sia pronto per il mirroring. La creazione di un nuovo database mirror richiede l'esecuzione di un backup completo del database principale e di un backup del log successivo. Entrambi i backup devono quindi essere ripristinati sull'istanza del server mirror tramite WITH NORECOVERY.  
   
  In questo argomento viene descritto come preparare un database mirror in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Le istanze del server principale e del server mirror devono essere eseguite nella stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sebbene sia possibile che la versione di SQL Server del server mirror sia successiva, questa configurazione è consigliata solo per processi di aggiornamento accuratamente pianificati. In questo tipo di configurazione si corre il rischio che venga effettuato un failover automatico durante il quale lo spostamento dei dati viene automaticamente sospeso in quanto non è possibile spostare i dati in una versione precedente di SQL Server. Per altre informazioni, vedere [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)(Aggiornamento di istanze con mirroring).  
   
--   Le istanze del server principale e del server mirror devono essere eseguite nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+-   Le istanze del server principale e del server mirror devono essere eseguite nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   Il database deve utilizzare il modello di recupero con registrazione completa.  
   
@@ -276,5 +277,4 @@ ms.lasthandoff: 08/02/2017
  [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
-
 

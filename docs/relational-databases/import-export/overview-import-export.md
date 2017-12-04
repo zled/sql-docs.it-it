@@ -1,27 +1,28 @@
 ---
 title: Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure | Microsoft Docs
 ms.custom: 
-ms.date: 10/17/2017
-ms.prod: sql-server-2016
+ms.date: 10/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure
-È possibile usare diversi metodi per importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure. Tali metodi includono istruzioni Transact-SQL, strumenti da riga di comando e procedure guidate.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile usare diversi metodi per importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure. Tali metodi includono istruzioni Transact-SQL, strumenti da riga di comando e procedure guidate.
 
 È anche possibile importare ed esportare dati in una vasta gamma di formati. Tali formati includono file flat, Excel, database relazionali principali e vari servizi cloud.
 
@@ -35,6 +36,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="use-the-import-flat-file-wizard"></a>Usare la procedura guidata Importa file flat
 Se non sono necessarie tutte le opzioni di configurazione disponibili nell'Importazione/Esportazione guidata e in altri strumenti, è possibile importare un file di testo in SQL Server usando la **procedura guidata Importa file flat** in SQL Server Management Studio (SSMS). Per altre informazioni, vedere gli articoli seguenti:
+- [Procedura guidata per l'importazione di file flat in SQL](import-flat-file-wizard.md)
 - [What’s new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novità di SQL Server Management Studio 17.3)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introduzione alla nuova procedura guidata Importa file flat in SSMS 17.3)
 
@@ -65,4 +67,3 @@ Sono disponibili esempi e considerazioni speciali per alcuni formati di dati di 
 
 ## <a name="next-steps"></a>Passaggi successivi
 Se non si è certi su come cominciare l'attività di importazione o esportazione, valutare la possibilità di eseguire l'Importazione/esportazione guidata SQL Server. Per una breve introduzione, vedere [Iniziare con questo semplice esempio di importazione/esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
-

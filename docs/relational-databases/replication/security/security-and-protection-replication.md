@@ -2,11 +2,13 @@
 title: Sicurezza e protezione (replica) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,29 +19,29 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], security
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8e9675b71eaadc2e86015c4de49be55d026fd02
-ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 53e3c9e5da3240ec81b4cf64cc89361f0ef67926
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-and-protection-replication"></a>Sicurezza e protezione (replica)
-  Consente di proteggere gli scenari di replica distribuiti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da attacchi dannosi e di garantire una maggiore sicurezza dei dati.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Protezione degli scenari di replica distribuiti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da attacchi dannosi e implementazione di una maggior sicurezza dei dati.  
   
- ![Icona della cartella file piccola](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Panoramica della sicurezza**  
+ ![Icona cartella file di piccole dimensioni](../../../analysis-services/media/filefolder-small.png "Icona cartella file di piccole dimensioni") **Panoramica sicurezza**  
  [Attenuazione di minacce e vulnerabilità &#40;replica&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
   
  [Controllo di identità e accesso &#40;replica&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
  [Altro...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
- ![Icona della cartella file piccola](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Sviluppo sicuro**  
- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ ![Icona cartella file di piccole dimensioni](../../../analysis-services/media/filefolder-small.png "Icona cartella file di piccole dimensioni") **Sviluppo sicuro**  
+ [Modello di sicurezza dell'agente di replica](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  [Altro...](../../../relational-databases/replication/security/secure-development-replication.md)  
   
- ![Icona della cartella file piccola](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Distribuzione sicura**  
+ ![Icona cartella file di piccole dimensioni](../../../analysis-services/media/filefolder-small.png "Icona cartella file di piccole dimensioni") **Distribuzione sicura**  
  [Proteggere il database di distribuzione](../../../relational-databases/replication/security/secure-the-distributor.md)  
   
  [Proteggere il server di pubblicazione](../../../relational-databases/replication/security/secure-the-publisher.md)  
@@ -60,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
  [Altro...](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
- ![Icona della cartella file piccola](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Utilizzo sicuro**  
+ ![Icona cartella file di piccole dimensioni](../../../analysis-services/media/filefolder-small.png "Icona cartella file di piccole dimensioni") **Funzionamento sicuro**  
  [Gestire gli account di accesso e le password nella replica](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   
 ## <a name="see-also"></a>Vedere anche  

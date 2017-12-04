@@ -2,10 +2,13 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: "Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure."
 ms.custom: 
-ms.date: 10/13/2017
-ms.prod: sql-server-2017
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,17 +18,14 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: it-it
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/28/2017
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Questo articolo presenta funzionalità per l'elaborazione di query adattive che consentono di migliorare le prestazioni delle query in SQL Server e nel database SQL di Azure:
 - Feedback delle concessioni di memoria in modalità batch.
@@ -71,7 +71,7 @@ Con il feedback delle concessioni di memoria attivato la durata della seconda es
 Per risultati ottimali, valori dei parametri diversi possono richiedere piani di query diversi. Le query di questo tipo sono definite "sensibili ai parametri". Per i piani sensibili ai parametri il feedback delle concessioni di memoria si disattiva quando una query registra requisiti di memoria non stabili.  Il piano viene disattivato dopo varie ripetizioni dell'esecuzione della query e la disattivazione può essere rilevata monitorando l'evento XEvent *memory_grant_feedback_loop_disabled*.
 
 ### <a name="memory-grant-feedback-caching"></a>Memorizzazione nella cache del feedback delle concessioni di memoria
-Il feedback può essere archiviato nel piano memorizzato nella cache per una singola esecuzione. Tuttavia i vantaggi del feedback delle concessioni di memoria appaiono in caso di esecuzioni consecutive dell'istruzione. Questa funzionalità si applica all'esecuzione ripetuta di istruzioni. Il feedback delle concessioni di memoria modifica solo il piano memorizzato nella cache. Attualmente le modifiche non vengono acquisite nell'elemento Ssore della query.
+Il feedback può essere archiviato nel piano memorizzato nella cache per una singola esecuzione. Tuttavia i vantaggi del feedback delle concessioni di memoria appaiono in caso di esecuzioni consecutive dell'istruzione. Questa funzionalità si applica all'esecuzione ripetuta di istruzioni. Il feedback delle concessioni di memoria modifica solo il piano memorizzato nella cache. Attualmente le modifiche non vengono acquisite in Query Store.
 Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedback va perduto anche nel caso di un failover. Un'istruzione che usa OPTION(RECOMPILE) crea un nuovo piano e non lo memorizza nella cache. Dato che il piano non è memorizzato nella cache il feedback delle concessioni di memoria non viene generato e non viene archiviato per la compilazione e l'esecuzione.  Se tuttavia un'istruzione equivalente (con lo stesso hash di query) che *non* ha usato OPTION(RECOMPILE) è stata memorizzata nella cache e quindi rieseguita, l'istruzione consecutiva può trarre vantaggio dal feedback delle concessioni di memoria.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Rilevamento delle attività di feedback delle concessioni di memoria
@@ -183,7 +183,7 @@ Confrontare il piano precedente al piano reale generato con l'esecuzione interle
 1. Si noti anche che gli avvisi di distribuzione su disco non sono più presenti, in quanto viene allocata una maggior quantità di memoria sulla base del conteggio reale delle righe del flusso della scansione di tabella MSTVF.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Istruzioni idonee per l'esecuzione interleaved
-Attualmente le funzioni MSTVF che fanno riferimento a istruzioni nell'esecuzione interleaved devono essere di sola lettura e non far parte di un'operazione di modifica dei dati. Inoltre le funzioni MSTVF non sono idonee per l'esecuzione interleaved se vengono usate all'interno di un operatore CROSS APPLY.
+Attualmente le funzioni MSTVF che fanno riferimento a istruzioni nell'esecuzione interleaved devono essere di sola lettura e non far parte di un'operazione di modifica dei dati. Le funzioni MSTV, poi, sono idonee per l'esecuzione interleaved solo se non usano costanti di runtime.
 
 ### <a name="interleaved-execution-benefits"></a>Vantaggi dell'esecuzione interleaved
 In generale, maggiore è lo scarto tra il numero di righe stimato e il numero reale (associato al numero di operazioni del piano downstream), maggiore è l'impatto sulle prestazioni.
@@ -231,5 +231,4 @@ Un'istruzione che usa OPTION(RECOMPILE) crea un nuovo piano usando l'esecuzione 
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md) (Dimostrazione dell'elaborazione di query adattive)      
-
 

@@ -7,43 +7,51 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: sql-server
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: 
 ms.date: 11/02/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
 ms.author: mikeray
-ms.openlocfilehash: 8f87a7096099356b6480302e2b08592b8e76d917
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ca2610369beb92f557656c2cee88e87d5ebeb77
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-monitoring-partners"></a>Partner di monitoraggio per SQL Server
-Per monitorare i servizi di SQL Server, è possibile scegliere tra una vasta gamma di strumenti leader nel settore.  In questo articolo vengono evidenziate le aziende partner Microsoft con soluzioni di monitoraggio che supportano Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per monitorare i servizi di SQL Server è possibile scegliere tra una vasta gamma di strumenti leader del settore. In questo articolo vengono evidenziate le aziende partner Microsoft con soluzioni di monitoraggio che supportano Microsoft SQL Server.
 
 <!--
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
-## <a name="our-monitoring-partners"></a>Partner di monitoraggio Microsoft
+## <a name="microsoft-monitoring-partners"></a>Partner di monitoraggio Microsoft
 | Partner | Description | Collegamenti |
 | --- | --- | --- | --- |
-|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager è una potente soluzione di monitoraggio e diagnostica delle prestazioni in grado di avvisare in modo proattivo gli amministratori se vengono rilevati problemi di integrità, disponibilità e prestazioni negli ambienti SQL Server da una console centrale.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
+|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager è una potente soluzione di monitoraggio e diagnostica delle prestazioni in grado di avvisare in modo proattivo gli amministratori da una console centrale se vengono rilevati problemi di integrità, disponibilità e prestazioni negli ambienti SQL Server.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight in SQL Server Enterprise - Prestazioni ottimali in ogni momento con capacità avanzate di monitoraggio, diagnostica e ottimizzazione degli ambienti SQL Server. Spotlight consente l'accesso ai dettagli necessari per l'ottimizzazione dei database di SQL Server. È possibile ottenere una panoramica intuitiva di integrità e prestazioni, avvisi e azioni automatizzate e supporto per i dispositivi mobili.|[Marketplace][quest_marketplace]<br>[Sito Web][quest_website]<br>[Video][quest_video] | |
 |[![redgate][4]][redgate_website]| **Redgate**<br>SQL Monitor di Redgate è uno strumento per il monitoraggio di SQL Server che migliora le prestazioni dei team di gestione di SQL Server. Oltre a segnalare i problemi correnti, SQL Monitor offre le informazioni necessarie per evitare problemi futuri. Ideale per gruppi SQL Server di grandi dimensioni, SQL Monitor offre sempre la risposta ottimale alle richieste di informazioni sulle prestazioni. |[Sito Web][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[Video][redgate_video]| |
 |[![sentryone][2]][sentryone_website] |**SentryOne**<br>Le soluzioni SentryOne offrono ai professionisti della gestione di dati Microsoft prestazioni all'avanguardia negli ambienti fisici, virtuali e cloud. Con SentryOne gli operatori della gestione dati possono consolidare i set di strumenti, ridurre i costi dell'infrastruttura e aumentare la velocità e l'efficienza dei database, ottenendo prestazioni ottimali negli ambienti piattaforma dati Microsoft di qualsiasi dimensione o complessità.|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][sentryone_website]<br>[Foglio dati][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
+|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>Database Performance Analyzer offre visibilità sulle prestazioni relative a richieste dell'applicazione, istruzioni SQL, risorse del database, host/sistemi operativi, rete, virtualizzazione e archiviazione. DPA incorpora l'analisi del tempo di attesa, per cui rileva non solo il funzionamento corretto ma anche la velocità di risposta del database alle richieste dell'applicazione. Indipendentemente dalla modalità di distribuzione, DPA garantisce una copertura completa dei database. Una sola schermata consente di visualizzare lo stato di database fisici, virtuali, cloud o DBaaS.|[Marketplace][solarwinds_marketplace]<br>[Sito Web][solarwinds_website]<br>[Foglio dati][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[Video][solarwinds_video]| |
+
+
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per saperne di più su alcuni altri partner Microsoft, vedere i [partner di disponibilità elevata e ripristino di emergenza][hadr_partners], i [partner di gestione][management_partners] e i [partner di sviluppo][dev_partners].
+Per saperne di più su altri partner Microsoft, vedere i [partner di disponibilità elevata e ripristino di emergenza][hadr_partners], i [partner di gestione][management_partners] e i [partner di sviluppo][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]:  ./media/partner-hadr-sql-server/sentryone.png
-[3]:  ./media/partner-hadr-sql-server/quest.png
-[4]:  ./media/partner-hadr-sql-server/redgate.png
+[2]: ./media/partner-hadr-sql-server/sentryone.png
+[3]: ./media/partner-hadr-sql-server/quest.png
+[4]: ./media/partner-hadr-sql-server/redgate.png
+[5]: ./media/partner-hadr-sql-server/solarwinds.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -56,14 +64,18 @@ Per saperne di più su alcuni altri partner Microsoft, vedere i [partner di disp
 [sentryone_website]:http://www.sentryone.com 
 [quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
 [redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
+[solarwinds_website]:https://www.solarwinds.com/database-performance-analyzer
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
 [sentryone_datasheet]:https://www.sentryone.com/platform 
+[solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
 [quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
+
 <!--Press links-->
 <!--[idera_press]:-->
 
@@ -71,6 +83,8 @@ Per saperne di più su alcuni altri partner Microsoft, vedere i [partner di disp
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/an-overview-of-sql-diagnostic-manager
 [quest_video]:https://www.quest.com/webcast-ondemand/optimizing-and-tuning-sql-server8122701/
 [redgate_video]:https://youtu.be/EYCLM9hTyME 
+[solarwinds_video]:https://www.solarwinds.com/resources/video/database-performance-analyzer-overview
+
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
 [sentryone_twitter]:https://twitter.com/sentryone
@@ -82,3 +96,4 @@ Per saperne di più su alcuni altri partner Microsoft, vedere i [partner di disp
 <!--LinkedIn-->
 [sentryone_linkedin]:https://www.linkedin.com/company/sentryone 
 [redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/
+[solarwinds_linkedin]:https://linkedin.com/showcase/solarwinds-database-performance
