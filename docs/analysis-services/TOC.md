@@ -3,7 +3,7 @@
 # Panoramica
 ## [Novità di SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
 ## [Novità di SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
-## [Articoli nuovi e aggiornati di recente](new-updated-analysis-services.md)
+## [Articoli nuovi e aggiornati](new-updated-analysis-services.md)
 ## [Strumenti e applicazioni](tools-and-applications-used-in-analysis-services.md)   
 ## [Confronto tra soluzioni tabulari e multidimensionali](comparing-tabular-and-multidimensional-solutions-ssas.md)  
 ## [Funzionalità di Analysis Services supportate dalle edizioni di SQL Server 2016](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
