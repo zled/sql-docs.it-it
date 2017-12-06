@@ -2,7 +2,7 @@
 title: Configurazione di SQL Server (R Services) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
 
@@ -70,7 +70,7 @@ Il sistema operativo Windows usa un file di paging per gestire i dump di arresto
 
 Anche la velocità del disco in cui è archiviato il file di paging può influire sulle prestazioni. L'archiviazione del file di paging in un'unità SSD o l'uso di più file di paging su più SSD può migliorare le prestazioni.
 
-Per informazioni sulla definizione delle dimensioni del file di paging, vedere [come determinare le dimensioni del file di pagina appropriata per le versioni a 64 bit di Windows](https://support.microsoft.com/en-us/kb/2860880).
+Per informazioni sulla definizione delle dimensioni del file di paging, vedere [come determinare le dimensioni del file di pagina appropriata per le versioni a 64 bit di Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Ottimizzazioni a livello di istanza o del database
 
@@ -167,7 +167,7 @@ Per informazioni dettagliate, incluso il codice di esempio, vedere l'esercitazio
 
 **Altre risorse:**
 
-+ [Soft-NUMA in SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Come eseguire il mapping di nodi soft-NUMA alle CPU
 

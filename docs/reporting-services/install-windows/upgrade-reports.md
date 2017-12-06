@@ -2,9 +2,12 @@
 title: Aggiornare i report | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: bdadf0d9fbbc3ef63716ee1745773de97aa7450f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e254e5338ef80143d5444ea0c4b4365b957c514
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-reports"></a>Aggiornare i report
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/09/2017
   
  Quando si carica un file di definizione del report direttamente nel server di report oppure in un sito di SharePoint, i report non vengono aggiornati. Per aggiornare il file con estensione rdl, è necessario aggiornare una definizione del report in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
- Dopo l'aggiornamento di un report localmente o nel server di report, è possibile riscontrare errori, avvisi e messaggi aggiuntivi. Le modifiche apportate internamente al modello a oggetti e ai componenti di elaborazione interni dei report determinano infatti la visualizzazione di messaggi in caso di rilevamento di problemi sottostanti nel report. Per altre informazioni, vedere [Compatibilità con le versioni precedenti di Reporting Services][](../../reporting-services/reporting-services-backward-compatibility.md "Compatibilità con le versioni precedenti | Reporting Services").  
+ Dopo l'aggiornamento di un report localmente o nel server di report, è possibile riscontrare errori, avvisi e messaggi aggiuntivi. Le modifiche apportate internamente al modello a oggetti e ai componenti di elaborazione interni dei report determinano infatti la visualizzazione di messaggi in caso di rilevamento di problemi sottostanti nel report. Per altre informazioni, vedere [[Compatibilità con le versioni precedenti di Reporting Services]](../../reporting-services/reporting-services-backward-compatibility.md "Compatibilità con le versioni precedenti | Reporting Services").  
   
  Per altre informazioni sulle nuove funzionalità per [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 

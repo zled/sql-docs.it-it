@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f5291dc17a1109a7f734ec302eae9db2fac2a1e9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29da4f824b83a09ed839e469a4788ce42e7d92a4
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Esempio: Script di installazione automatica di SQL Server per Ubuntu
 
@@ -31,7 +31,7 @@ Questo script di esempio Bash installa SQL Server 2017 in Ubuntu 16.04 senza inp
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- È necessario almeno 3,25 GB di memoria per l'esecuzione di SQL Server in Linux.
+- È necessario almeno 2 GB di memoria per l'esecuzione di SQL Server in Linux.
 - Il file system deve essere **XFS** o **EXT4**. Altri file System, ad esempio **BTRFS**, non sono supportati.
 - Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in Linux](sql-server-linux-setup.md#system).
 

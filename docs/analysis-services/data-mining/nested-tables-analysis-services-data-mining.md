@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelle nidificate (Analysis Services - Data mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i dati devono essere inseriti in un algoritmo di data mining come serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] In *è disponibile un metodo univoco per la gestione di questi casi,*tramite tabelle annidate. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Ad esempio, se la tabella annidata contiene le colonne **Product**, **ProductQuantity**e **ProductPrice**, è possibile scegliere **Product** come chiave della tabella annidata, ma aggiungere **ProductQuantity** alla struttura di data mining da usare come input.  
   
 ## <a name="filtering-nested-table-data"></a>Filtro di dati della tabella nidificata  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile creare filtri sui dati da utilizzare per il training o il test del modello di data mining. Un filtro può essere utilizzato per influire sulla composizione del modello oppure per sottoporlo a test in un subset di case. I filtri possono anche essere applicati alle tabelle nidificate. Sono tuttavia presenti limitazioni per la sintassi che è possibile utilizzare con le tabelle nidificate.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile creare filtri sui dati da utilizzare per il training o il test del modello di data mining. Per testare il modello su un subset di case o per influire sulla composizione del modello, è possibile utilizzare un filtro. I filtri possono anche essere applicati alle tabelle nidificate. Sono tuttavia presenti limitazioni per la sintassi che è possibile utilizzare con le tabelle nidificate.  
   
  Spesso, quando si applica un filtro a una tabella nidificata, si verifica l'esistenza o la non esistenza di un attributo. Ad esempio, è possibile applicare un filtro che limita i case utilizzati nel modello solo a quelli con un valore specificato nella tabella nidificata. Oppure è possibile limitare i case utilizzati nel modello ai clienti che non hanno acquistato un determinato elemento.  
   

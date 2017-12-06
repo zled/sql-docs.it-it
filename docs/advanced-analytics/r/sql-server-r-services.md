@@ -1,7 +1,7 @@
 ---
 title: Computer SQL Server servizi di apprendimento | Documenti Microsoft
-ms.date: 11/09/2017
-ms.prod: sql-server-2017
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,22 +13,25 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: fb770b52f2cacfc527f6bb89955acfbda243c18a
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 25f508a20cc3e4ff619cc65de67eaae4d9f80bdc
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning Services
 
-  SQL Server 2017 Machine Learning Services (precedentemente SQL Server 2016 R Services) offre una piattaforma per lo sviluppo e distribuzione di applicazioni intelligenti che apre nuove prospettive. È possibile usare il linguaggio R, potente e ricco di funzionalità, e i numerosi pacchetti per creare modelli e generare stime tramite i dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+SQL Server 2017 Machine Learning Services (precedentemente SQL Server 2016 R Services) offre una piattaforma per lo sviluppo e distribuzione di applicazioni intelligenti che apre nuove prospettive. Poiché l'apprendimento è integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile mantenere analitica dati ed eliminare i costi e i rischi di protezione associati allo spostamento dei dati.
   
-  Poiché l'apprendimento è integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile mantenere analitica dati ed eliminare i costi e i rischi di protezione associati allo spostamento dei dati.
-  
-SQL Server supporta il linguaggio R open source con un set completo di strumenti e tecnologie che offrono prestazioni superiori, sicurezza, affidabilità e gestibilità. È possibile distribuire soluzioni R con strumenti SQL semplice e familiari e le applicazioni di produzione possono chiamare il runtime di R e recuperare le stime e gli elementi visivi usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. È anche possibile ottenere il [Microsoft R](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) raccolte per migliorare la scalabilità e prestazioni delle soluzioni R, tra cui RevoScaleR, revoscalepy e MicrososftML.
-  
-Con l'installazione di SQL Server è possibile installare sia i componenti server che client.
-  
++ In SQL Server 2016, è possibile sviluppare e distribuire facilmente soluzioni basate sul popolare linguaggio R per analisi scientifica dei dati. 
+
+    Le funzionalità includono la [Microsoft R](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) librerie, che forniscono nuove scalabilità e prestazioni per le soluzioni R e algoritmi avanzati di [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package).
++ In SQL Server 2017, è possibile utilizzare sia R e Python per sviluppare e rendere operative le soluzioni di analisi scientifica dei dati. 
+
+    Il [revoscalepy](../python/what-is-revoscalepy.md) libreria per Python fornisce scalabilità simili a quelli di RevoScaleR e contesti di calcolo remoto.
+
+SQL Server supporta miglioramento delle prestazioni, sicurezza e gestibilità per i carichi di lavoro di machine learning tramite un set completo di strumenti e tecnologie. È possibile distribuire R o soluzioni utilizzo pratico di Python, familiarità metodologia SQL e gli strumenti. Usare semplicemente [!INCLUDE[tsql](../../includes/tsql-md.md)] per chiamare i runtime R o Python da applicazioni di produzione, per compilare modelli o recuperare gli oggetti visivi. Se già stato eseguito un modello, è possibile generare stime da esso utilizzando solo T-SQL, tramite [punteggio nativo](../sql-native-scoring.md).
+
 ## <a name="machine-learning-in-sql-server-2017"></a>Machine learning in SQL Server 2017
 
 + Installare **Machine Learning Services (In-Database)** durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programma di installazione per attivare l'esecuzione sicura degli script R o Python di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
@@ -37,7 +40,7 @@ Con l'installazione di SQL Server è possibile installare sia i componenti serve
   
 + Installare **Microsoft Machine Learning Server (Standalone)** in un computer separato, se non è necessario utilizzare SQL Server come contesto di calcolo. Server di Machine Learning include gli stessi componenti di machine learning, nonché la possibilità di eseguire i processi di apprendimento macchina scalabile e distribuita come servizio web.
   
-+    Installare [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client) in computer remoti per lo sviluppo di soluzioni che possono essere distribuite in SQL Server o al Server di Machine Learning in Windows, Linux o Hadoop.
++ Installare [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) in computer remoti per lo sviluppo di soluzioni che possono essere distribuite in SQL Server o al Server di Machine Learning in Windows, Linux o Hadoop.
 
 ## <a name="machine-learning-in-sql-server-2016"></a>Machine learning in SQL Server 2016
 
@@ -45,29 +48,33 @@ Con l'installazione di SQL Server è possibile installare sia i componenti serve
   
     Quando si seleziona questa funzionalità, viene visualizzato il possibilità di eseguire script R con SQL Server come contesto di calcolo, o di eseguire script R in una stored procedure.
   
-+   Installare **Microsoft R Server (Standalone)** dal programma di installazione di SQL Server 2016, installare i componenti di R in un computer separato che è possibile utilizzare per lo sviluppo o distribuzione di soluzioni R.
++ Installare **Microsoft R Server (Standalone)** dal programma di installazione di SQL Server 2016, installare i componenti di R in un computer separato che è possibile utilizzare per lo sviluppo o distribuzione di soluzioni R.
 
+## <a name="how-to-get-started"></a>Come iniziare
 
-## <a name="which-type-of-machine-learning-service-do-i-need"></a>Il tipo di servizio di machine learning necessario
+Installazione di SQL Server sono disponibili due opzioni:
 
-+ Se è necessario eseguire il codice R nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzando stored procedure oppure utilizzando l'istanza di SQL Server come contesto di calcolo, è necessario installare [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] come descritto [qui](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
++ Installazione di analitica nel database di funzionalità che è integrato con SQL Server, o
++ Installare la versione autonoma di Machine Learning Server (o Microsoft R Server) che supporta l'apprendimento su larga scala senza un'istanza di SQL Server.
 
-+ Microsoft Machine Learning Server (Standalone) è un'opzione separata progettata per l'utilizzo di [Microsoft R](https://docs.microsoft.com/r-server/r-reference/introducing-r-server-r-package-reference) e [relative librerie Python](../python/what-is-revoscalepy.md) in un computer Windows che non è in esecuzione SQL Server. Tuttavia, richiede una licenza Enterprise Edition per SQL Server.
+Se è necessario eseguire il codice R nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzando stored procedure oppure utilizzando l'istanza di SQL Server come contesto di calcolo, è necessario installare [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] come descritto nel [Guida all'installazione](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md). Questa opzione offre la protezione dei dati massima e l'integrazione con strumenti di SQL Server.
+
+Microsoft Machine Learning Server (Standalone) è un'opzione separata progettata per l'utilizzo di [Microsoft R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) e [relative librerie Python](../python/what-is-revoscalepy.md) in un computer Windows che non è in esecuzione SQL Server. Questa opzione richiede una licenza Enterprise Edition per SQL Server.
     
-    Si consiglia di installare Microsoft Machine Learning Server (Standalone) in un computer portatile o un altro computer remoto utilizzato per lo sviluppo e utilizzare tale computer per creare e testare le soluzioni di machine learning che possono facilmente essere distribuite in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che esegue servizi di Machine Learning \(In Database\) o altro contesto di calcolo è supportato.
+È consigliabile installare Machine Learning Server (Standalone) in un computer portatile o un altro computer remoto utilizzato per lo sviluppo e utilizzare tale computer per creare e testare le soluzioni di apprendimento che possono facilmente essere distribuite in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ovvero in esecuzione servizi di Machine Learning \(In Database\) o altro contesto di calcolo è supportato.
   
-    È inoltre possibile utilizzare il **mrsdeploy** pacchetto installato con Server di Machine Learning per pubblicare e distribuire i processi R e Python come un servizio web.
+È inoltre possibile utilizzare il **mrsdeploy** pacchetto installato con Server di Machine Learning per pubblicare e distribuire i processi R e Python come un servizio web.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-+ [Introduzione a SQL Server R Services](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
++ [Introduzione a servizi di SQL Server Machine Learning](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
  
     Vengono descritti scenari comuni per utilizzi di R con SQL Server
 
-+ [Configurare Servizi R per SQL Server (In-Database)](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
++ [Configurare servizi di SQL Server Machine Learning o i servizi R nel Database](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
     Installare R e i componenti di database associato come parte del programma di installazione di SQL Server
   
-+ [Esercitazioni su SQL Server R](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
++ [Esercitazioni di SQL Server e R](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     Informazioni su come creare origini dati di SQL Server nel codice R e come usare contesti di calcolo remoti. Altre esercitazioni destinate agli sviluppatori SQL illustrano come eseguire il training e distribuire un modello R in SQL Server.

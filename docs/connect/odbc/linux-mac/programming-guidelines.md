@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -75,21 +75,36 @@ Le funzionalità seguenti non sono disponibili in questa versione del driver ODB
 
 ## <a name="character-set-support"></a>Supporto del Set di caratteri
 
-Il client la codifica può essere uno dei valori seguenti:
+I dati SQLCHAR in uno dei seguenti set di caratteri sono supportati dal driver:
+
   -  UTF-8
-  -  ISO-8859-1
-  -  ISO-8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO-8859-1 / CP1252
+  -  ISO-8859-2 / CP1250
   -  ISO-8859-3
   -  ISO-8859-4
   -  ISO-8859-5
   -  ISO-8859-6
   -  ISO-8859-7
-  -  ISO-8859-8
-  -  ISO-8859-9
+  -  ISO-8859-8 / CP1255
+  -  ISO-8859-9 / CP1254
   -  ISO-8859-13.
   -  ISO-8859-15
-  
-I dati SQLCHAR devono essere uno dei set di caratteri supportati. I dati SQLWCHAR devono essere in formato UTF-16LE (Little Endian).  
+
+Al momento della connessione, il driver rileva le impostazioni locali correnti del processo che viene caricato. Se è una delle codifiche supportate sopra, il driver utilizzerà la codifica per i dati SQLCHAR (carattere "narrow"); in caso contrario, il valore predefinito UTF-8. Poiché tutti i processi avviati nelle impostazioni locali "C" per impostazione predefinita (e pertanto che il driver per impostazione predefinita in UTF-8), se un'applicazione deve utilizzare una delle codifiche descritte sopra, è necessario utilizzare il **setlocale** per impostare in modo appropriato prima che le impostazioni locali (funzione) la connessione; specificare le impostazioni locali desiderate in modo esplicito o tramite una stringa vuota, ad esempio `setlocale(LC_ALL, "")`, utilizzare le impostazioni locali dell'ambiente.
+
+I dati SQLWCHAR devono essere in formato UTF-16LE (Little Endian).
 
 Se SQLDescribeParameter non specifica un tipo SQL nel server, il driver usa il tipo SQL specificato nel parametro *ParameterType* di SQLBindParameter. Se in SQLBindParameter viene specificato un tipo SQL di carattere "narrow", ad esempio SQL_VARCHAR, il driver converte i dati forniti dalla tabella codici del client sul valore predefinito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] codici. (Il valore predefinito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tabella codici è in genere 1252.) Se la tabella codici del client non è supportata, verrà impostata su UTF-8. In questo caso, il driver converte quindi i dati UTF-8 per la tabella codici predefinita. Tuttavia è possibile che si verifichi una perdita di dati. Se la tabella codici 1252 non riesce a rappresentare un carattere, il driver converte il carattere in un punto interrogativo (?). Per evitare questo tipo di perdita di dati, specificare in SQLBindParameter un tipo di carattere SQL Unicode, ad esempio SQL_NVARCHAR. In questo caso, il driver converte i dati Unicode forniti nella codifica UTF-8 a UTF-16 senza perdita di dati.
 

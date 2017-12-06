@@ -2,9 +2,12 @@
 title: Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 41c6b6c84fba9f3f45795bb953af65aebbf35bb8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c068430c44eaad1df894fc5c67849ff438ffcbc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services
 I grafici sono una parte essenziale della visualizzazione dati. Informazioni sui grafici da usare nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per coprire una gamma di scenari. 
@@ -121,7 +124,7 @@ Nei grafici di confronto è possibile scegliere gli stessi colori per i valori p
 ## <a name="pie-and-funnel-charts"></a>Grafici a torta e a imbuto  
   
 I grafici a torta e a imbuto sono tra le visualizzazioni più semplici. È possibile strutturare i dati per righe o per colonne. 
-* I **grafici a torta** nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] possono essere a torta, ad anello o ad anello con un totale al centro. I grafici a torta sono utili per visualizzare le dimensioni relative delle varie parti di un intero. Se è presente un numero eccessivo di sezioni, risultano difficili da leggere.
+* I**grafici a torta** nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total nei report per dispositivi mobili di the center. I grafici a torta sono utili per visualizzare le dimensioni relative delle varie parti di un intero. Se è presente un numero eccessivo di sezioni, risultano difficili da leggere.
 * I**grafici a imbuto** vengono spesso usati per mostrare le fasi di un processo, ad esempio le vendite.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)

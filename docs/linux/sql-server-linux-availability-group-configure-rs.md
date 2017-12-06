@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 84fe8851a6ff3ad71e9ad9007bddc8715efc8829
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: 96be9d968286f44b23748041b2beeb1383f63964
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="configure-a-read-scale-availability-group-for-sql-server-on-linux"></a>Configurare un gruppo di disponibilità a livello di lettura per SQL Server in Linux
 
@@ -80,7 +80,7 @@ Esistono due modi per connettersi a repliche secondarie di sola lettura. Le appl
 * [Repliche secondarie leggibili](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 * [Routing di sola lettura](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
-## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Eseguire il failover la replica primaria in un gruppo di disponibilità a livello di lettura
+## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Eseguire il failover della replica primaria in un gruppo di disponibilità per scalabilità in lettura
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
