@@ -1,7 +1,7 @@
 ---
 title: SET ARITHABORT (Transact-SQL) | Documenti Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 977cf066d10f3318497720da7b32b1caad16e0fc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 372e4ff2a6f1c89395f30a7e1d6a000ec5ebea7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,19 +47,17 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-SET ARITHABORT { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHABORT ON   
-[ ; ]  
-```  
+SET ARITHABORT { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ARITHABORT ON
+```
   
 ## <a name="remarks"></a>Osservazioni  
  Impostare sempre ARITHABORT su ON nelle sessioni di accesso. L'impostazione ARITHABORT su OFF può influire negativamente sull'ottimizzazione delle query causando problemi di prestazioni.  
@@ -82,13 +80,13 @@ SET ARITHABORT ON
   
  Se l'opzione SET ARITHABORT o SET ARITHIGNORE è impostata su OFF e l'opzione SET ANSI_WARNINGS è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce comunque un messaggio di errore quando si verificano errori di divisione per zero o di overflow.  
   
- Se SET ARITHABORT è impostata su OFF e si verifica un errore di interruzione durante la valutazione della condizione booleana di un'istruzione IF, verrà eseguito il segmento di codice associato alla valutazione FALSE.  
+ Se SET ARITHABORT è impostata su OFF e si verifica un errore di interruzione durante la valutazione della condizione booleana di un'istruzione IF, viene eseguito il ramo FALSE.
   
- È necessario che l'opzione SET ARITHABORT sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate. Se l'opzione è impostata su OFF, le istruzioni CREATE, UPDATE, INSERT e DELETE eseguite nelle tabelle che includono indici in colonne calcolate o viste indicizzate hanno esito negativo.  
+ È necessario che l'opzione SET ARITHABORT sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate. Se l'opzione è impostata su OFF, le istruzioni CREATE, UPDATE, INSERT e DELETE eseguite nelle tabelle che includono indici in colonne calcolate o viste indicizzate hanno esito negativo.
   
  L'opzione SET ARITHABORT viene impostata in fase di esecuzione, non in fase di analisi.  
   
- Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query riportata di seguito.  
+ Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query seguente:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  

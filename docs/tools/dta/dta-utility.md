@@ -2,9 +2,12 @@
 title: "Utilità DTA | Documenti Microsoft"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dta-utility"></a>dta - utilità
-  L'utilità **dta** è la versione per il prompt dei comandi dello strumento Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **dta** utilità è la versione del prompt dei comandi di ottimizzazione guidata motore di Database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
  In modo analogo a Ottimizzazione guidata motore di database, l'utilità **dta** analizza il carico di lavoro e propone strutture di progettazione fisica per ottimizzare le prestazioni a livello di server per il carico di lavoro specifico. Il carico di lavoro può essere una cache dei piani, un file o una tabella di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le strutture di progettazione fisica includono indici, viste indicizzate e schemi di partizionamento. Dopo aver analizzato un carico di lavoro, l'utilità **dta** visualizza un'indicazione di progettazione fisica dei database e quindi genera lo script necessario per implementare tale indicazione. I carichi di lavoro possono essere specificati dal prompt dei comandi con gli argomenti **-if** o **-it** . È anche possibile specificare un file di input XML dal prompt dei comandi con l'argomento **-ix** . In quest'ultimo caso, il carico di lavoro viene specificato nel file di input XML.  
   

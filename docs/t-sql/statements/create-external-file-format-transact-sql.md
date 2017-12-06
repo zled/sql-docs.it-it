@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREARE un formato di FILE esterno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER = '0x7E0x7E' - due tildas (ad esempio ~ ~)
   
  DATE_FORMAT = *datetime_format*  
- Specifica un formato personalizzato per tutti i dati di data e ora che potrebbero essere visualizzati in un file di testo delimitato da virgole. Se il file di origine utilizza formati datefime predefiniti, questa opzione non è più necessaria. Solo il formato datetime personalizzato è consentito per ogni file. È possibile specificare più formati di data e ora personalizzate per ogni file. Tuttavia, è possibile utilizzare più formati di data/ora se ciascuna di esse è il formato predefinito per il tipo di dati corrispondente nella definizione della tabella esterna.
+ Specifica un formato personalizzato per tutti i dati di data e ora che potrebbero essere visualizzati in un file di testo delimitato da virgole. Se il file di origine utilizza formati di data/ora predefiniti, questa opzione non è più necessaria. Solo il formato datetime personalizzato è consentito per ogni file. È possibile specificare più formati di data e ora personalizzate per ogni file. Tuttavia, è possibile utilizzare più formati di data/ora se ciascuna di esse è il formato predefinito per il tipo di dati corrispondente nella definizione della tabella esterna.
  
  
 PolyBase utilizza solo il formato della data personalizzato per l'importazione dei dati. Non utilizza il formato personalizzato per la scrittura di dati in un file esterno.

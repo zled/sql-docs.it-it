@@ -22,16 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec112810e691aceac5085f3ded941564331f74b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Apre un cursore. sp_cursoropen definisce l'istruzione SQL associata al cursore e le opzioni del cursore e quindi popola il cursore. sp_cursoropenis equivale alla combinazione del [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni DECLARE_CURSOR e OPEN. Questa routine viene richiamata specificando ID = 2 in un pacchetto del flusso TDS.  
+  Apre un cursore. sp_cursoropen definisce l'istruzione SQL associata al cursore e le opzioni del cursore e quindi popola il cursore. sp_cursoropen equivale alla combinazione del [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni DECLARE_CURSOR e OPEN. Questa routine viene richiamata specificando ID = 2 in un pacchetto del flusso TDS.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

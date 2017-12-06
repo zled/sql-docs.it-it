@@ -1,6 +1,6 @@
 ---
-title: Aggiornato - ODBC per i documenti del Server SQL | Documenti Microsoft
-description: Visualizzare i frammenti di contenuto aggiornato per la documentazione modificato di recente in, per ODBC (Open Database Connectivity) per Microsoft SQL Server.
+title: Aggiornato - DMA per i documenti del Server SQL | Documenti Microsoft
+description: Visualizzare i frammenti di contenuto aggiornato per la documentazione modificato di recente in, per dati Migration Assistant (DMA) per Microsoft SQL Server.
 services: na
 documentationcenter: 
 author: MightyPen
@@ -14,14 +14,14 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: odbc
-ms.openlocfilehash: ee82ccdafe5ab61a7ddb83578965be08fffcd8e8
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
 ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-odbc-for-sql-server"></a>Nuovi e aggiornati: ODBC per SQL Server
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>Nuovi e aggiornati: dati Migration Assistant (DMA) per SQL Server
 
 
 
@@ -34,7 +34,7 @@ Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di in
 
 
 - *Intervallo degli aggiornamenti di date:* &nbsp; **2017-09-28** &nbsp; - a - &nbsp; **2017-02-12**
-- *Area di interesse:* &nbsp; **ODBC (Open Database Connectivity) per SQL Server**.
+- *Area di interesse:* &nbsp; **dati Migration Assistant (DMA) per SQL Server**.
 
 
 

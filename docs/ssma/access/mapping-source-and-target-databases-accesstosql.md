@@ -1,10 +1,13 @@
 ---
 title: Mapping di database di origine e destinazione (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3871ac3aa30e788841b0fef27d4134640aac5ad4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 30bd89da25adeabe2ef4ce3d0d0da249515595c8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mapping di database di origine e destinazione (AccessToSQL)
 Quando si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario specificare un database di destinazione per la migrazione. Se si dispone di più database di Access è possibile eseguirne il mapping a più [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database (o gli schemi) o a più schemi del database di SQL Azure connesso.  

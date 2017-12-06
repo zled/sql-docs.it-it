@@ -2,9 +2,12 @@
 title: Arrestare una traccia (SQL Server Profiler) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8b605d80549ef3ca5fcccfa77ed01e19fe3eb2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16eabbfd71cb37fead35013cd53871e1f8b9ca32
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>Arrestare una traccia (SQL Server Profiler)
-  In questo argomento viene illustrato l'arresto di una traccia in esecuzione utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come arrestare una traccia che è in esecuzione utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  L'arresto di una traccia comporta l'arresto dell'acquisizione dei dati. Dopo l'arresto, non è possibile riavviare una traccia senza perdere i dati acquisiti in precedenza, a meno che non siano stati acquisiti in un file o in una tabella. È inoltre possibile salvare i dati raccolti in una tabella o file dopo l'arresto di una traccia. Tutte le proprietà della traccia precedentemente impostate vengono mantenute. In caso di arresto di una traccia, sarà possibile modificarne il nome, gli eventi, le colonne e i filtri.  
   

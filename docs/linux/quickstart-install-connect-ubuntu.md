@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 3cf5b554da4a01fd52aa2ae0766b1379bab1acfb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d708c0711c1b1fd4ccf79d9c4bfbd382c8d97486
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Installazione di SQL Server e creare un database in Ubuntu
 
@@ -32,7 +32,7 @@ In questa esercitazione introduttiva, installare innanzitutto 2017 di SQL Server
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario disporre di un computer con Ubuntu 16.04 **almeno 3,25 GB** di memoria.
+È necessario disporre di un computer con Ubuntu 16.04 **almeno 2 GB** di memoria.
 
 Per installare Ubuntu sul proprio computer, accedere a [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). È anche possibile creare macchine virtuali Ubuntu in Azure. Vedere [creare e gestire le macchine virtuali Linux con l'interfaccia CLI di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 

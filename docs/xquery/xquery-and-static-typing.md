@@ -3,8 +3,11 @@ title: XQuery e statico digitando | Documenti Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 473b3e2fc020778b1d91f75935a46f50f0e886de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2861a4b1460bebf51ea138678dd797e5f0048a41
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e tipizzazione statica
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], XQuery è un linguaggio tipizzato in modo statico, ovvero genera errori di tipo durante la compilazione della query quando un'espressione restituisce un valore con una cardinalità o un tipo non accettato da una funzione o da un operatore specifico. Il controllo dei tipi statici può inoltre rilevare se un'espressione di percorso in un documento XML tipizzato è stata tipizzata in modo non corretto. Il compilatore XQuery applica innanzitutto la fase di normalizzazione che aggiunge le operazioni implicite, ad esempio l'atomizzazione, e quindi esegue l'inferenza e il controllo dei tipi statici.  
   
