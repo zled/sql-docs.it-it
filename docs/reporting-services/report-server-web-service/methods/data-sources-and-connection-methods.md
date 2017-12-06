@@ -2,9 +2,12 @@
 title: Origini dati e metodi di connessione | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0160a520275477f829cc0e0d742fd1300c3c9261
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e8039303a6d21a3979a76d1a37aa0e041ba8eaa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-sources-and-connection-methods"></a>Origini dati e metodi di connessione
   È possibile utilizzare questi metodi per impostare e gestire le connessioni all'origine dati e le credenziali.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Esegue il test di una connessione per un'origine dati. Questo metodo supporta il test di origini dati pubblicate utilizzate da report o modelli e origini dati condivise.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di applicazioni mediante il servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Compilazione di applicazioni tramite servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servizio Web ReportServer](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Metodi del servizio Web ReportServer](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

@@ -2,9 +2,12 @@
 title: Tabelle, matrici ed elenchi (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -41,11 +44,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: fe304f126caffb096e5cd5a4610225f373fde504
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 310e1f5c45187d5065203f86cafd384318d72ed3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelle, matrici ed elenchi (Generatore report e SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], tabelle, matrici ed elenchi sono *aree dati* in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. Nelle celle sono contenuti in genere dati di testo, ad esempio testo, date e numeri ma possono essere contenuti anche misuratori, grafici o elementi del report come le immagini. Di frequente, tabelle, matrici ed elenchi sono definiti collettivamente aree dati *Tablix* .  
@@ -92,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="List"></a> Elenco  
  Utilizzare un elenco per creare un layout in formato libero. Non è obbligatorio usare un layout griglia ma è possibile posizionare liberamente i campi all'interno dell'elenco. È possibile usare un elenco per progettare un form per la visualizzazione di molti campi di set di dati o come contenitore per la visualizzazione di più aree dati affiancate per i dati raggruppati. Si può ad esempio definire un gruppo per un elenco, aggiungere una tabella, un grafico e un'immagine, nonché visualizzare i valori in formato tabella e grafico per ogni valore di gruppo, come si farebbe per un record di un dipendente o di un paziente.  
   
- ![Nuovo elenco aggiunto dalla casella degli strumenti selezionato](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nuovo elenco aggiunto dalla casella degli strumenti selezionato")  
+ ![Nuovo elenco aggiunto dalla casella degli strumenti e selezionato](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nuovo elenco aggiunto dalla casella degli strumenti e selezionato")  
   
  Per altre informazioni, vedere [Creare fatture e moduli con elenchi].  
   
