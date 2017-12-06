@@ -2,9 +2,12 @@
 title: Personalizzazione del portale Web | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9c78d9480dd8d2bacca80fd06183b9d31f7714d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a3f7f0f6e67ffb9c3b9460241f84f46ada29e746
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 
@@ -40,7 +43,7 @@ I file devono avere i nomi elencati sopra. Al file ZIP è possibile assegnare il
   
 Il file metadata.xml consente di impostare il nome del pacchetto del marchio e ha una voce di riferimento sia per il file colors.json che per il file logo.png.  
   
-Per cambiare il nome del pacchetto del marchio, modificare l'attributo **name** dell'elemento **SystemResourcePackage** .  
+Per cambiare il nome del pacchetto del marchio, modificare l'attributo **name** dell'elemento **SystemResourcePackage**.  
   
     name="Multicolored example brand"  
   
@@ -120,7 +123,7 @@ Il file che si include per il logo deve usare il formato di file PNG. Le dimensi
   
 Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile eseguire le operazioni seguenti.  
   
-1.  Selezionare l' **ingranaggio** in alto a destra.  
+1.  Selezionare l'**ingranaggio** in alto a destra.  
   
 2.  Selezionare **Impostazioni sito**.  
   

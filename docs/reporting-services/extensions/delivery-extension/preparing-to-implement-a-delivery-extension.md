@@ -2,9 +2,12 @@
 title: Preparazione all'implementazione di un'estensione per il recapito | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0c6131647a38abb2eddf8856b5a86bfff2287e86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a39af44dae25fa31e377ffd0d43509b5d83fb6b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>Preparazione all'implementazione di un'estensione per il recapito
   Prima di implementare l'estensione per il recapito di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è necessario definire le interfacce da implementare. È innanzitutto necessario stabilire in che modo verrà utilizzata l'estensione per il recapito, quali impostazioni sono necessarie per l'estensione per il recapito e le funzionalità specifiche da implementare per il recapito delle notifiche dei report.  
@@ -45,14 +48,14 @@ ms.lasthandoff: 11/09/2017
   
 |Interfaccia o classe|Description|  
 |------------------------|-----------------|  
-|<xref:Microsoft.ReportingServices.Interfaces.IExtension> Interfaccia|Rappresenta un'estensione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Interfaccia|Rappresenta un'estensione per il recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|<xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> Interfaccia|Contiene informazioni sul server di report richieste dalle estensioni per il recapito (ad esempio, un elenco delle estensioni per il rendering disponibili).|  
+|Interfaccia <xref:Microsoft.ReportingServices.Interfaces.IExtension>|Rappresenta un'estensione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|Interfaccia <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>|Rappresenta un'estensione per il recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|Interfaccia <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation>|Contiene informazioni sul server di report richieste dalle estensioni per il recapito (ad esempio, un elenco delle estensioni per il rendering disponibili).|  
 |Classe <xref:Microsoft.ReportingServices.Interfaces.Setting>|Rappresenta un'impostazione per un'estensione.|  
 |Classe <xref:Microsoft.ReportingServices.Interfaces.Notification>|Contiene informazioni sulle sottoscrizioni utilizzate dalle estensioni per il recapito dei report.|  
 |Classe <xref:Microsoft.ReportingServices.Interfaces.Report>|Rappresenta informazioni e metodi specifici del report che consentono alle estensioni per il recapito di recapitare i report agli utenti.|  
 |Classe <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile>|Rappresenta l'output di un'estensione per il rendering. Un oggetto <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> contiene il nome file associato e le informazioni sul tipo richiesti dall'estensione per il recapito per elaborare il flusso restituito dall'estensione per il rendering.|  
-|<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> Interfaccia|Controllo utente che rappresenta il mezzo per il recupero delle informazioni sulla sottoscrizione specifiche dell'estensione dall'utente in Gestione report (ad esempio, un indirizzo di posta elettronica o il percorso di una condivisione file).|  
+|Interfaccia <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>|Controllo utente che rappresenta il mezzo per il recupero delle informazioni sulla sottoscrizione specifiche dell'estensione dall'utente in Gestione report (ad esempio, un indirizzo di posta elettronica o il percorso di una condivisione file).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

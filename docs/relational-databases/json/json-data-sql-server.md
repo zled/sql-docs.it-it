@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="json-data-sql-server"></a>Dati JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -279,7 +279,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   Se i file JSON delimitati da righe vengono archiviati in Archiviazione BLOB Azure o nel file system di Hadoop, è possibile usare PolyBase per caricare il testo JSON, analizzarlo nel codice Transact-SQL e caricarlo nelle tabelle.  
   
 ## <a name="test-drive-built-in-json-support"></a>Test drive del supporto JSON integrato  
- **Test drive del supporto JSON integrato con il database di esempio AdventureWorks.** Per ottenere il database di esempio AdventureWorks, è necessario scaricare almeno il file di database e il file di script ed esempi da [qui](https://www.microsoft.com/en-us/download/details.aspx?id=49502). Dopo aver ripristinato il database di esempio in un'istanza di SQL Server 2016, decomprimere il file di esempi e aprire il file "JSON Sample Queries procedures views and indexes.sql" dalla cartella JSON. Eseguire gli script in questo file per riformattare alcuni dati esistenti come dati JSON, eseguire report e query di esempio sui dati JSON, indicizzare i dati JSON e importare ed esportare JSON.  
+ **Test drive del supporto JSON integrato con il database di esempio AdventureWorks.** Per ottenere il database di esempio AdventureWorks, è necessario scaricare almeno il file di database e il file di script ed esempi da [qui](https://www.microsoft.com/download/details.aspx?id=49502). Dopo aver ripristinato il database di esempio in un'istanza di SQL Server 2016, decomprimere il file di esempi e aprire il file "JSON Sample Queries procedures views and indexes.sql" dalla cartella JSON. Eseguire gli script in questo file per riformattare alcuni dati esistenti come dati JSON, eseguire report e query di esempio sui dati JSON, indicizzare i dati JSON e importare ed esportare JSON.  
   
  Di seguito sono elencate le operazioni possibili con gli script inclusi nel file.  
   

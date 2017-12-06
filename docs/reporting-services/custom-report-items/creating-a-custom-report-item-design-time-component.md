@@ -2,9 +2,12 @@
 title: Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 746ca3586d58f561278eb25ad9459e6102b8b55a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
   Un componente dell'elemento del report personalizzato per la fase di progettazione è un controllo che può essere utilizzato nell'ambiente Progettazione report di Visual Studio. Il componente dell'elemento del report personalizzato per la fase di progettazione fornisce un'area di progettazione attivata in grado di accettare operazioni di trascinamento della selezione, integrazione con il Visualizzatore proprietà di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e la possibilità di fornire editor di proprietà personalizzati.  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Il componente dell'elemento del report personalizzato per la fase di progettazione viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In questo documento vengono illustrati dettagli di implementazione specifici del componente dell'elemento del report personalizzato per la fase di progettazione. Per altre informazioni sullo sviluppo di componenti tramite [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Components in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) (Componenti in Visual Studio) in MSDN Library.  
   
- Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi di prodotto SQL Server Reporting Services).  
+ Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
   
 ## <a name="implementing-a-design-time-component"></a>Implementazione di un componente per la fase di progettazione  
  La classe principale di un componente dell'elemento del report personalizzato per la fase di progettazione viene ereditata dalla classe **Microsoft.ReportDesigner.CustomReportItemDesigner**. Oltre agli attributi standard usati per un controllo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], la classe del componente deve definire un attributo **CustomReportItem**. Questo attributo deve corrispondere al nome dell'elemento del report personalizzato secondo la definizione presente nel file reportserver.config. Per un elenco di attributi [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere Attributi nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  

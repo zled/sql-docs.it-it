@@ -2,9 +2,12 @@
 title: Creare un report per dispositivi mobili di Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 800aa539255c937b089c13999d57f64bf0ec6558
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6325133adefc387c9fbcd59a5b7b32547ead4909
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creare un report per dispositivi mobili di Reporting Services
 Con SQL Server Mobile Report Publisher è possibile creare rapidamente report per dispositivi mobili di SQL Server 2016 Reporting Services che si adattano alle dimensioni di qualsiasi schermo, in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili.  
@@ -55,11 +58,11 @@ La prima volta che si crea un report per dispositivi mobili è possibile install
     
      ![SSMRP_AddExcelData](../../reporting-services/mobile-reports/media/ssmrp-addexceldata.png)  
   
-8. Sempre nella scheda **Dati** , nella casella **Proprietà dati** selezionare la tabella e i campi da includere nel grafico.  
+8. Sempre nella scheda **Dati**, nella casella **Proprietà dati** selezionare la tabella e i campi da includere nel grafico.  
   
    ![SSMRP_DataProps](../../reporting-services/mobile-reports/media/ssmrp-dataprops.png)  
   
-9. Tornare alla scheda **Layout** . Nella casella **Proprietà visive** è possibile impostare proprietà quali **Titolo**, **Unità di tempo**e **Formato numeri**.  
+9. Tornare alla scheda **Layout**. Nella casella **Proprietà visive** è possibile impostare proprietà quali **Titolo**, **Unità di tempo** e **Formato numeri**.  
   
    ![SSMRP_ChartVizProps](../../reporting-services/mobile-reports/media/ssmrp-chartvizprops.png)  
     

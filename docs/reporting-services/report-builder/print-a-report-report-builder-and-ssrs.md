@@ -2,9 +2,12 @@
 title: Stampare un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 98680d72888f7c5bea47a6b1d7bf8e81d90bc06c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 213841fc0b070baeee085683c028e815814053d0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Stampare un report (Generatore report e SSRS)
   Dopo avere salvato un report in un server di report, è possibile visualizzarlo e stamparlo da un browser, dal portale Web di Reporting Services o da qualsiasi applicazione usata per visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="to-print-a-report-from-a-web-browser-application"></a>Per stampare un report da un'applicazione browser  
   
-1.  Nel portale web di Reporting Services, passare al report da stampare. quindi aprirlo.  
+1.  Nel portale web di Reporting Services passare al report da stampare. quindi aprirlo.  
   
 3.  Fare clic su **Stampa**sulla barra degli strumenti nella parte superiore del report.  
   

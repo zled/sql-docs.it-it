@@ -1,10 +1,13 @@
 ---
 title: Attestazioni per il servizio token Windows (c2WTS) e Reporting Services | Microsoft Docs
-ms.custom: The Claims to Windows Token Service (C2WTS) is used by SharePoint and needs to be configured for Kerberos constrained delegation to work with SQL Server Reporting Services properly.
+ms.custom: 
 ms.date: 09/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7c5c7adfdfc1774da8f8b2a9d89e712f4902e4d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 26cd4774a97365950e28bc1011d3a0203886659f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
 
@@ -27,7 +30,7 @@ La visualizzazione di report in modalità nativa all'interno della [web part Vis
 C2WTS è inoltre necessario con la modalità SharePoint di SQL Server Reporting Services se si vuole usare l'autenticazione di Windows per le origini dati all'esterno della farm di SharePoint. Il servizio C2WTS è necessario anche se l'origine dati si trova nello stesso computer del servizio condiviso, sebbene in questo scenario la delega vincolata non sia richiesta.
 
 > [!NOTE]
-> L'integrazione di Reporting Services con SharePoint non è più disponibile dopo SQL Server 2016.
+> L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
 ## <a name="report-viewer-web-part-configuration"></a>Configurazione della web part Visualizzatore di report
 
