@@ -2,12 +2,12 @@
 title: I contatori delle prestazioni (SSAS) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performance-counters-ssas"></a>Contatori delle prestazioni (SSAS)
-  Con Performance Monitor è possibile monitorare le prestazioni di un'istanza di Microsoft SQL Server Analysis Services (SSAS) tramite i contatori delle prestazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzo di Performance Monitor, è possibile monitorare le prestazioni di un'istanza di Microsoft SQL Server Analysis Services (SSAS) tramite i contatori delle prestazioni.  
   
  Performance Monitor è uno snap-in di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) che consente di tenere traccia dell'utilizzo delle risorse. È possibile avviare lo snap-in MMC digitando **PerfMon** al prompt dei comandi o dal Pannello di controllo facendo clic su **Strumenti di amministrazione**, quindi su **Performance Monitor**. Performance Monitor consente di tenere traccia delle prestazioni e delle attività del server e dei processi tramite oggetti e contatori predefiniti, nonché monitorare eventi tramite contatori definiti dall'utente. Tramite Performance Monitor vengono raccolti i conteggi anziché i dati sugli eventi, ad esempio l'utilizzo della memoria, il numero di transazioni attive o l'attività della CPU. È inoltre possibile impostare valore soglia per contatori specifici allo scopo di generare avvisi per la notifica agli operatori.  
   

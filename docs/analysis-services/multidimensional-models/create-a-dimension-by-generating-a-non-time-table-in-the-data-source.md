@@ -2,12 +2,12 @@
 title: Creare una dimensione generando una tabella Non temporale nell'origine dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c9ceffb0bf846992b020722a2a47ebd7106634
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Creare una dimensione generando una tabella non temporale nell'origine dati
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione senza usare un'origine dati esistente. A questo scopo, selezionare l'opzione **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** della pagina **Seleziona metodo di creazione** della procedura guidata. Per creare una nuova tabella della dimensione nell'origine dati sottostanti è necessario disporre delle autorizzazioni per creare oggetti nell'origine dati sottostanti. In caso di definizione di una dimensione senza una vista origine dati predefinita, è possibile sia definire la dimensione da zero sia definirla in base a un modello di dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione senza utilizzare un'origine dati esistente. A questo scopo, selezionare l'opzione **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** della pagina **Seleziona metodo di creazione** della procedura guidata. Per creare una nuova tabella della dimensione nell'origine dati sottostanti è necessario disporre delle autorizzazioni per creare oggetti nell'origine dati sottostanti. In caso di definizione di una dimensione senza una vista origine dati predefinita, è possibile sia definire la dimensione da zero sia definirla in base a un modello di dimensione.  
   
  Creazione guidata dimensione offre modelli di dimensione in base ai quali è possibile compilare un tipo di dimensione comune. È possibile scegliere tra i tipi di dimensione seguenti:  
   

@@ -2,12 +2,12 @@
 title: Creare una dimensione di tipo Data | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b3be92a4572e464d23c24c0f7152a7a106e1932c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Le dimensioni del database - creazione di una dimensione di tipo Data
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una dimensione temporale è un tipo di dimensione i cui attributi rappresentano periodi di tempo, ovvero anni, semestri, trimestri, mesi e giorni. Questi periodi in una dimensione temporale offrono livelli di granularità basati sul tempo per l'analisi e la generazione di report. Gli attributi sono organizzati in gerarchie e la granularità della dimensione temporale è determinata principalmente dalle necessità aziendali e di generazione di report per i dati cronologici. Per la maggior parte dei dati finanziari e sulle vendite, ad esempio, nelle applicazioni di Business Intelligence viene utilizzata una granularità mensile o trimestrale.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una dimensione temporale è un tipo di dimensione i cui attributi rappresentano periodi di tempo, ad esempio anni, semestri, trimestri, mesi e giorni. Questi periodi in una dimensione temporale offrono livelli di granularità basati sul tempo per l'analisi e la generazione di report. Gli attributi sono organizzati in gerarchie e la granularità della dimensione temporale è determinata principalmente dalle necessità aziendali e di generazione di report per i dati cronologici. Per la maggior parte dei dati finanziari e sulle vendite, ad esempio, nelle applicazioni di Business Intelligence viene utilizzata una granularità mensile o trimestrale.  
   
  In genere, nei cubi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è inclusa una forma di dimensione temporale. Un cubo può includere più di una dimensione temporale oppure diverse gerarchie dello stesso tipo di dimensione temporale, in base ai requisiti di granularità dei dati e di generazione di report. Non tutti i cubi, tuttavia, necessitano di una dimensione temporale. Alcune applicazioni OLAP, ad esempio quelle per la determinazione dei costi in base alle attività, non richiedono una dimensione temporale, perché in questo caso la determinazione dei costi è basata sulle attività e non sul tempo.  
   

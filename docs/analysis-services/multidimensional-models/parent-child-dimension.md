@@ -2,12 +2,12 @@
 title: Dimensioni padre-figlio | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6835612c0b7ea9a6e42217366e8d745897300bfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 982fbe970e85718c943ab0c8e31077f90d291606
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension"></a>Dimensione padre-figlio
-  Una gerarchia padre-figlio è una gerarchia in una dimensione standard contenente un attributo padre. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. La posizione di un membro in una gerarchia padre-figlio è determinata dalle proprietà **KeyColumns** e **RootMemberIf** dell'attributo padre, mentre la posizione di un membro in un livello è determinata dalla proprietà **OrderBy** dell'attributo padre. Per altre informazioni sulle proprietà degli attributi, vedere [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una gerarchia padre-figlio è una gerarchia in una dimensione standard contenente un attributo padre. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. La posizione di un membro in una gerarchia padre-figlio è determinata dalle proprietà **KeyColumns** e **RootMemberIf** dell'attributo padre, mentre la posizione di un membro in un livello è determinata dalla proprietà **OrderBy** dell'attributo padre. Per altre informazioni sulle proprietà degli attributi, vedere [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
  A causa delle relazioni padre-figlio tra livelli in una gerarchia padre-figlio, alcuni membri non foglia potrebbero includere anche dati derivati dalle origini dei dati sottostanti oltre ai dati aggregati dai membri figlio.  
   

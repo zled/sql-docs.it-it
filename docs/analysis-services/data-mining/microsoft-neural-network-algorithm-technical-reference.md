@@ -2,12 +2,12 @@
 title: Riferimento tecnico l'algoritmo Microsoft Neural Network | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato* , chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network utilizza un *Perceptron multistrato* rete, denominata anche un *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o  *i percettroni*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
   
  Una descrizione dettagliata delle reti neurali perceptron multistrato esula dagli argomenti trattati nella presente documentazione. In questo argomento viene illustrata l'implementazione di base dell'algoritmo, inclusi il metodo utilizzato per normalizzare i valori di input e output e i metodi relativi alla caratteristica di selezione degli attributi utilizzati per ridurre la cardinalità degli attributi. Vengono inoltre descritti i parametri e altre impostazioni che è possibile utilizzare per personalizzare il comportamento dell'algoritmo e vengono forniti collegamenti a informazioni aggiuntive relative all'esecuzione di query sul modello.  
   

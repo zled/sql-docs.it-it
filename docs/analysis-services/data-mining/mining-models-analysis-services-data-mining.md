@@ -2,12 +2,12 @@
 title: Modelli di data mining (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelli di data mining (Analysis Services - Data mining)
-  Un *modello di data mining* viene creato applicando un algoritmo ai dati, ma è molto più di un algoritmo o di un contenitore di metadati: è un set di dati, statistiche e modelli che possono essere applicati a nuovi dati per generare stime ed eseguire inferenze sulle relazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *modello di data mining* viene creato applicando un algoritmo a dati, ma è più di un algoritmo o di un contenitore di metadati: è un set di dati, le statistiche e modelli che possono essere applicati ai nuovi dati per generare stime e inferenze sulle relazioni.  
   
  In questa sezione viene presentato un modello di data mining e vengono illustrati i relativi utilizzi, l'architettura di base di modelli e strutture, le proprietà dei modelli di data mining, nonché le modalità per creare e utilizzare tali modelli.  
   

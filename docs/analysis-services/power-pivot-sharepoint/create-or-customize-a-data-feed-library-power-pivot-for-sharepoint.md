@@ -2,12 +2,12 @@
 title: Creare o personalizzare una libreria di Feed di dati (PowerPivot per SharePoint) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4304b6b25595bab37df01bdada4a046411cc3f4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Creare o personalizzare una libreria di feed di dati (Power Pivot per SharePoint)
-  Una *libreria feed di dati* è una raccolta di SharePoint speciale che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *libreria feed di dati* è una raccolta di SharePoint con scopi speciali che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
   
 -   Creare o modificare un *documento di servizio dati*usato per specificare una connessione HTTP a un feed specifico.  
   

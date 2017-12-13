@@ -2,12 +2,12 @@
 title: Creare una dimensione utilizzando una tabella esistente | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eeabc8b64e3d5450373fb1235a78a27a8aff5a5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27073cb4276e73ed4e28507d2c3ae55fd956945
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
   
  Durante l’utilizzo di una tabella esistente per creare una dimensione, Creazione guidata dimensione consente di effettuare in modo semplificato i seguenti passaggi:  
   

@@ -2,12 +2,12 @@
 title: Distribuzione di soluzioni di modelli multidimensionali | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cba427cba20a443179621758dabc8d56b1104152
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Distribuzione di soluzioni di modelli multidimensionali
-  Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver completato lo sviluppo di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto, è possibile distribuire il database a un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   

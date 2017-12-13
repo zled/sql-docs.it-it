@@ -2,12 +2,12 @@
 title: Esempi di Query del modello di rete neurale | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13781c0cce77831d0a33553fec137f61761e5d7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4d13b5801cbf011723fa0ec9272819a83364f3f8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="neural-network-model-query-examples"></a>Esempi di query sul modello di rete neurale
-  Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto che consente di ottenere dettagli sui criteri individuati durante l'analisi oppure una query di stima in cui vengono utilizzati i criteri presenti nel modello per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello di rete neurale potrebbe ad esempio recuperare metadati del modello, quale il numero di livelli nascosti. In alternativa, una query di stima potrebbe suggerire classificazioni basate su un input e, facoltativamente, indicare le probabilità per ogni classificazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, o una query di stima che utilizza i criteri del modello per eseguire stime per i nuovi dati. Una query sul contenuto per un modello di rete neurale potrebbe ad esempio recuperare metadati del modello, quale il numero di livelli nascosti. In alternativa, una query di stima potrebbe suggerire classificazioni basate su un input e, facoltativamente, indicare le probabilità per ogni classificazione.  
   
  In questa sezione viene illustrato come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network.  
   

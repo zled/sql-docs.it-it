@@ -2,12 +2,12 @@
 title: Utilizzando una versione modificata dell'analisi di servizi progetto Tutorial | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lezione 4-1-utilizzo di una versione modificata del progetto Analysis Services Tutorial
-Le lezioni rimanenti di questa esercitazione sono basate su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Le lezioni rimanenti di questa esercitazione si basano su una versione avanzata del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
   
 Per continuare l'esercitazione è necessario scaricare, estrarre, caricare ed elaborare la versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  Utilizzare le istruzioni riportate in questa lezione per verificare di avere eseguito tutti i passaggi.  
   

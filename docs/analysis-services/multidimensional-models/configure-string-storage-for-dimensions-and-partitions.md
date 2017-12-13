@@ -2,12 +2,12 @@
 title: Configurare l'archiviazione delle stringhe per partizioni e dimensioni | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b593a2de59682d400c72d5242b078b3b7f2fadb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurare l'archivio di stringhe per dimensioni e partizioni
-  È possibile riconfigurare l'archiviazione di stringhe per contenere stringhe molto grandi in attributi di dimensione o partizioni che superano il limite di dimensioni del file di 4 GB impostato per gli archivi di stringhe. Se nelle dimensioni o partizioni sono inclusi archivi di stringhe di queste dimensioni, è possibile risolvere il problema del vincolo delle dimensioni file modificando la proprietà **StringStoresCompatibilityLevel** a livello di dimensione o di partizione, per oggetti locali nonché collegati (locali o remoti).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile riconfigurare l'archiviazione di stringhe per contenere stringhe molto grandi in attributi di dimensione o partizioni che superano il limite di dimensioni di file di 4 GB per gli archivi stringa. Se nelle dimensioni o partizioni sono inclusi archivi di stringhe di queste dimensioni, è possibile risolvere il problema del vincolo delle dimensioni file modificando la proprietà **StringStoresCompatibilityLevel** a livello di dimensione o di partizione, per oggetti locali nonché collegati (locali o remoti).  
   
  Si noti che è possibile aumentare l'archivio di stringhe solo per gli oggetti che richiedono una capacità aggiuntiva. Nella maggior parte dei modelli multidimensionali i dati di tipo stringa sono associati alle dimensioni. Tuttavia, anche le partizioni che contengono misure Distinct Count basate su stringhe possono trarre vantaggio da questa impostazione. Poiché l'impostazione è relativa alle stringhe, i dati numerici non sono interessati.  
   

@@ -2,12 +2,12 @@
 title: 'Lezione 7: Definizione di indicatori di prestazioni chiave (KPI) | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9c700456926c466776c1a7049efc65ece929449
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03ae0a4bfe3c764cc0d541f99714be872029e867
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lezione 7: Definizione degli indicatori di prestazioni chiave (KPI)
-In questa lezione verranno descritte le procedure per definire gli indicatori di prestazioni chiave (KPI) in un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Gli indicatori KPI offrono un'infrastruttura per definire calcoli sul lato server che misurano l'attività aziendale e standardizzano la visualizzazione delle informazioni risultanti. Gli indicatori KPI possono essere visualizzati all'interno di report, portali e dashboard, tramite API di accesso ai dati e tramite strumenti di [!INCLUDE[msCoName](../includes/msconame-md.md)] e di terze parti. Gli indicatori KPI sono wrapper di metadati che racchiudono misure regolari e altre espressioni MDX (Multidimensional Expressions). Per altre informazioni, vedere [Indicatori KPI nei modelli multidimensionali](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione viene illustrato come definire gli indicatori di prestazioni chiave (KPI) nei [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto. Gli indicatori KPI offrono un'infrastruttura per definire calcoli sul lato server che misurano l'attività aziendale e standardizzano la visualizzazione delle informazioni risultanti. Gli indicatori KPI possono essere visualizzati all'interno di report, portali e dashboard, tramite API di accesso ai dati e tramite strumenti di [!INCLUDE[msCoName](../includes/msconame-md.md)] e di terze parti. Gli indicatori KPI sono wrapper di metadati che racchiudono misure regolari e altre espressioni MDX (Multidimensional Expressions). Per altre informazioni, vedere [Indicatori KPI nei modelli multidimensionali](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
   
 > [!NOTE]  
 > I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  

@@ -2,12 +2,12 @@
 title: Definizione di un tipo di dati di origine vista (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c73c6b68b7fb9f108b96732a7e30bb48f8404ba8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4331bf4de9efa68338e509976b534549bd3506d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definizione di una vista origine dati (Analysis Services)
-  Una vista origine dati include il modello logico dello schema usato dagli oggetti di database multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una vista origine dati contiene il modello logico dello schema utilizzato da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti di database multidimensionali, ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
   
 -   Include i metadati che rappresentano oggetti selezionati da una o più origini dati sottostanti oppure i metadati che verranno utilizzati per generare un archivio dati relazionale sottostante, se per la generazione dello schema viene seguito l'approccio dall'alto verso il basso.  
   

@@ -2,12 +2,12 @@
 title: Utilizzare i feed di dati (PowerPivot per SharePoint) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Usare feed di dati (PowerPivot per SharePoint)
-  I feed di dati rappresentano uno o più flussi di dati generati da un'origine dati online e trasmessi a un documento o a un'applicazione di destinazione. Se si usa [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel, i feed di dati consentono di trasferire dati di business o aziendali esistenti da origini dati arbitrarie alla finestra di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella cartella di lavoro di Excel 2010. Dopo aver importato un feed di dati in una cartella di lavoro, è possibile farvi riferimento successivamente in qualsiasi operazione pianificata di aggiornamento dati in un server SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Feed di dati rappresentano uno o più flussi di dati che vengono generati da un'origine dati online e trasmessi a un documento di destinazione o l'applicazione. Se si usa [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel, i feed di dati consentono di trasferire dati di business o aziendali esistenti da origini dati arbitrarie alla finestra di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella cartella di lavoro di Excel 2010. Dopo aver importato un feed di dati in una cartella di lavoro, è possibile farvi riferimento successivamente in qualsiasi operazione pianificata di aggiornamento dati in un server SharePoint.  
   
  La modalità di utilizzo di un feed di dati varia a seconda che si utilizzino funzionalità di esportazione predefinite in applicazioni che supportano feed di dati Atom oppure si creino e si utilizzino servizi di dati personalizzati. Le applicazioni che sono in grado di pubblicare e leggere i dati XML Atom offrono un trasferimento di dati continuo che nasconde agli utenti il metodo dei feed di dati e dei servizi dati. Per gli utenti si verifica un semplice spostamento di dati da un'applicazione a un'altra.  
   

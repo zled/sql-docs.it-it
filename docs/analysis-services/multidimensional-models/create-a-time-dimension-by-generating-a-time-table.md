@@ -2,12 +2,12 @@
 title: Creare una dimensione temporale generando una tabella dei tempi | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 023c54c55fde8b75af335f29c20d9d0135c905c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: efd1341424c3be0bfd3aad5cf7c216c5303e250b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione temporale quando non sono disponibili tabelle tempo nel database di origine. È possibile eseguire questa operazione selezionando una delle opzioni seguenti nella pagina **Seleziona metodo di creazione** :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione temporale quando nessuna tabella ora è disponibile nel database di origine. È possibile eseguire questa operazione selezionando una delle opzioni seguenti nella pagina **Seleziona metodo di creazione** :  
   
 -   Se si dispone delle autorizzazioni per creare oggetti nell'origine dati sottostante, utilizzare l'opzione**Genera una tabella dei tempi nell'origine dei dati** . La procedura guidata consente di generare una tabella dei tempi e di archiviare questa tabella nell'origine dati. La procedura guidata consente di creare la dimensione temporale dalla tabella dei tempi.  
   

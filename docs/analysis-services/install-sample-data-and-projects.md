@@ -2,12 +2,12 @@
 title: Installare dati di esempio e progetti | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0e675845383c3e54c8477a8e0866231ac302cd1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-sample-data-and-projects"></a>Installare dati di esempio e progetti 
-Utilizzare le istruzioni e i collegamenti forniti in questo argomento per installare tutti i file di dati e di progetto utilizzati nelle esercitazioni su Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Utilizzare le istruzioni e i collegamenti forniti in questo argomento per installare tutti i file di dati e di progetto utilizzati nelle esercitazioni di Analysis Services.  
   
 ## <a name="step-1-install-sql-server-software"></a>Passaggio 1: Installare il software SQL Server  
 Nelle lezioni di questa esercitazione si presuppone che siano installati i programmi software seguenti: Tutti i programmi software indicati di seguito vengono installati tramite il supporto di installazione di SQL Server. Per semplificare la distribuzione, è possibile installare tutte le funzionalità in un solo computer. Per installare queste funzionalità, eseguire il programma di installazione di SQL Server e selezionarle dalla pagina Selezione funzionalità. Per altre informazioni, vedere [Installare SQL Server 2016 dall'Installazione guidata &#40;programma di installazione&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  

@@ -2,12 +2,12 @@
 title: Esercitazioni sul Data Mining (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Esercitazioni sul data mining (Analysis Services)
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di creare soluzioni di data mining usando le procedure guidate e le visualizzazioni integrate. In particolare, se non si ha dimestichezza con Machine Learning, gli strumenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono un modo semplice per progettare, provare ed esplorare i modelli di data mining. I dati nei modelli possono essere archiviati in un cubo, un database relazionale o qualsiasi altro supporto di origine da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Dopo aver creato un modello, è possibile inserirlo nell'ambiente di produzione eseguendo l'accesso al modello per creare stime usando più client, tra cui [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ASP.NET.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] semplifica la creazione di soluzioni di data mining utilizzando le procedure guidate e le visualizzazioni integrate. In particolare, se non si ha dimestichezza con Machine Learning, gli strumenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono un modo semplice per progettare, provare ed esplorare i modelli di data mining. I dati nei modelli possono essere archiviati in un cubo, un database relazionale o qualsiasi altro supporto di origine da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Dopo aver creato un modello, è possibile inserirlo nell'ambiente di produzione eseguendo l'accesso al modello per creare stime usando più client, tra cui [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ASP.NET.  
   
 > [!NOTE]  
 >Le esercitazioni descritte di seguito non sono state aggiornate per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. È possibile usare le esercitazioni create per SQL Server 2014. Dal punto di vista funzionale, non sono state apportate modifiche alle funzioni di data mining per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. I passaggi dovrebbero essere identici.  

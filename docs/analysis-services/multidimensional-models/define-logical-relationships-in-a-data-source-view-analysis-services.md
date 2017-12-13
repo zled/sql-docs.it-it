@@ -2,12 +2,12 @@
 title: Definire relazioni logiche in una vista origine dati (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7ebf28e254d90e0d617c2b3319770e91c54e9a16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definire relazioni logiche in una vista origine dati (Analysis Services)
-  Creazione guidata vista origine dati e Progettazione vista origine dati consentono di definire automaticamente le relazioni tra le tabelle aggiunte a una vista origine dati, in base alle relazioni di database sottostanti o ai criteri di corrispondenza nomi specificati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La creazione guidata vista origine di dati e progettazione vista origine dati definire automaticamente le relazioni tra tabelle aggiunte a una vista origine dati (DSV) in base alle relazioni di database sottostanti o nome corrispondente ai criteri specificati.  
   
  Nei casi in cui si utilizzano dati da più origini dati, può essere necessario definire manualmente le relazioni logiche nella vista origine dati per integrare le relazioni definite automaticamente. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le relazioni sono necessarie per identificare le tabelle dei fatti e delle dimensioni, per costruire query per il recupero di dati e metadati dalle origini dati sottostanti, nonché per sfruttare i vantaggi delle funzionalità avanzate di Business Intelligence.  
   

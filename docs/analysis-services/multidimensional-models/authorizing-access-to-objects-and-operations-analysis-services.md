@@ -2,12 +2,12 @@
 title: Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cff9bdcefc19729ed8f29a1fe8f04267e03ddf4a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services)
-  L'accesso degli utenti non amministratori a cubi, dimensioni e modelli di data mining all'interno di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene concesso tramite l'appartenenza a uno o più ruoli del database. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gli amministratori creano questi ruoli del database, concedendo le autorizzazioni di Lettura o Lettura/Scrittura sugli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi assegnando utenti e gruppi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a ciascun ruolo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Accesso di utenti non amministratori a cubi, dimensioni e modelli di data mining all'interno di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database viene concessa tramite l'appartenenza a uno o più ruoli di database. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gli amministratori creano questi ruoli del database, concedendo le autorizzazioni di Lettura o Lettura/Scrittura sugli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi assegnando utenti e gruppi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a ciascun ruolo.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina le autorizzazioni valide per un utente o un gruppo di Windows specifico combinando le autorizzazioni associate a ogni ruolo del database a cui l'utente o il gruppo appartiene. Di conseguenza, se un ruolo del database non concede a un utente o a un gruppo l'autorizzazione per visualizzare una dimensione, una misura o un attributo, ma l'autorizzazione viene concessa a tale utente o gruppo da un ruolo del database diverso, l'utente o il gruppo disporrà comunque di questa autorizzazione.  
   

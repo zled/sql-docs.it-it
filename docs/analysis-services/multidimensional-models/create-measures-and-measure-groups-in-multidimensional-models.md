@@ -2,12 +2,12 @@
 title: Creare misure e gruppi di misure nei modelli multidimensionali | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa140461d48e1059c4eed74a3308b0b70a1e6c10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Creare misure e gruppi di misure nei modelli multidimensionali
-  Una *misura* è un'aggregazione di valori di dati numerici, ad esempio somme, conteggi, valori minimi, valori massimi, medie o un'espressione MDX personalizzata creata. Un *gruppo di misure* è un contenitore per una o più misure. Tutte le misure sono disponibili in un gruppo di misure, anche se esiste una sola misura. Un cubo deve avere almeno una misura e un gruppo di misure.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *misura* è un'aggregazione di valori di dati numerici, ad esempio sum, count, minimo, massimo, medio o un'espressione MDX personalizzata creata. Un *gruppo di misure* è un contenitore per una o più misure. Tutte le misure sono disponibili in un gruppo di misure, anche se esiste una sola misura. Un cubo deve avere almeno una misura e un gruppo di misure.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   

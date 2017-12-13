@@ -2,12 +2,12 @@
 title: Esempi di Query sul modello Association | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25c3f04c7ae61788f10cc488e5680107fb4e9a3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b176b73816fb01ff7659e00f58dd4441bc689866
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="association-model-query-examples"></a>Esempi di query sul modello di associazione
-  Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, tramite cui vengono forniti dettagli sulle regole e i set di elementi individuati durante l'analisi oppure una query di stima, in cui vengono utilizzate le associazioni individuate nei dati per eseguire stime. Per un modello di associazione, le stime sono in genere basate su regole e possono essere utilizzate per fornire indicazioni, mentre le query sul contenuto solitamente esplorano la relazione tra set di elementi. È anche possibile recuperare metadati relativi al modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce informazioni dettagliate sulle regole e set di elementi individuati durante l'analisi, oppure è possibile creare una query di stima che utilizza le associazioni individuate nei dati per eseguire stime. Per un modello di associazione, le stime sono in genere basate su regole e possono essere utilizzate per fornire indicazioni, mentre le query sul contenuto solitamente esplorano la relazione tra set di elementi. È anche possibile recuperare metadati relativi al modello.  
   
  Questa sezione illustra come creare questi tipi di query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  
   

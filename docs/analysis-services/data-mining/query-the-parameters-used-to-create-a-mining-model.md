@@ -2,12 +2,12 @@
 title: Eseguire query sui parametri utilizzati per creare un modello di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 701f440bb015f1de1fbe20dbf60cd09d21343527
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e3cc7c1a84556874c25d50514d2f7c16403e629
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Eseguire query sui parametri utilizzati per creare un modello di data mining
-  La composizione di un modello di data mining non è interessata solo dai case di training, ma anche dai parametri impostati alla creazione del modello. Pertanto, è possibile recuperare le impostazioni dei parametri di un modello esistente per comprendere meglio il comportamento dello stesso. Il recupero dei parametri può essere utile anche per documentare una determinata versione del modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La composizione di un modello di data mining dipende non solo dai case di training, ma anche dai parametri impostati quando è stato creato il modello. Pertanto, è possibile recuperare le impostazioni dei parametri di un modello esistente per comprendere meglio il comportamento dello stesso. Il recupero dei parametri può essere utile anche per documentare una determinata versione del modello.  
   
  Per trovare i parametri utilizzati alla creazione del modello, creare una query su uno dei set di righe dello schema del modello di data mining. Questi set di righe dello schema sono esposti come set di viste di sistema che è possibile eseguire facilmente query tramite la sintassi Transact-SQL. In questa procedura viene descritto come creare una query che restituisce i parametri utilizzati per creare il modello di data mining specificato.  
   

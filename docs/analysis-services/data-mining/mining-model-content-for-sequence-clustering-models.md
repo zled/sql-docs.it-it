@@ -2,12 +2,12 @@
 title: Contenuto del modello per Sequence Clustering i modelli di data mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d0cc7b52ecffbc7a85be31047a8db97e7a1922b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 336dd3cc52fc72576c60c20c0e324f177b488837
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenuto dei modelli di data mining per i modelli Sequence Clustering
-  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Sequence Clustering. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano l'algoritmo Microsoft Sequence Clustering. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Informazioni sulla struttura di un modello Sequence Clustering  
  Un modello Sequence Clustering include un singolo nodo padre (NODE_TYPE = 1) che rappresenta il modello e i relativi metadati. Il nodo padre, identificato con **(All)**, include un nodo di sequenza correlato (NODE_TYPE = 13) che elenca tutte le transizioni rilevate nei dati di training.  

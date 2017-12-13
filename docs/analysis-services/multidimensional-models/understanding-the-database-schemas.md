@@ -2,12 +2,12 @@
 title: Comprendere gli schemi di Database | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
-  La Generazione guidata schema consente di generare uno schema relazionale denormalizzato per il database dell'area di interesse in base alle dimensioni e ai gruppi di misure in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La procedura guidata genera una tabella relazionale per ogni dimensione, denominata tabella della dimensione, in cui vengono archiviati i dati della dimensione e una tabella relazionale per ogni gruppo di misure, denominata tabella dei fatti, in cui vengono archiviati i fatti. Durante la generazione di queste tabelle relazionali, la procedura guidata ignora dimensioni collegate, gruppi di misure collegati e dimensioni temporali del server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La generazione guidata Schema genera uno schema relazionale denormalizzato per database dell'area di interesse in base alle dimensioni e gruppi di misure in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La procedura guidata genera una tabella relazionale per ogni dimensione, denominata tabella della dimensione, in cui vengono archiviati i dati della dimensione e una tabella relazionale per ogni gruppo di misure, denominata tabella dei fatti, in cui vengono archiviati i fatti. Durante la generazione di queste tabelle relazionali, la procedura guidata ignora dimensioni collegate, gruppi di misure collegati e dimensioni temporali del server.  
   
 ## <a name="validation"></a>Convalida  
  Prima di iniziare a generare lo schema relazionale sottostante, la Generazione guidata schema convalida i cubi e le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se vengono rilevati alcuni errori, la procedura guidata viene arrestata e gli errori vengono visualizzati nella finestra Elenco attività di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Di seguito sono riportati alcuni esempi di errori che impediscono la generazione:  

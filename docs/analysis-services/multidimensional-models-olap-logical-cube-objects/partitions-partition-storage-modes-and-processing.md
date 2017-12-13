@@ -2,12 +2,12 @@
 title: "Modalità di archiviazione e l'elaborazione di partizione | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 66d7906862ef10fe5e2f9aa93a143d0655c84971
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: eab4af44192304701687c7796448407eaacdaa96
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partizioni - l'elaborazione e modalità di archiviazione delle partizioni
-  La modalità di archiviazione di una partizione influisce sulle prestazioni di esecuzione delle query e di elaborazione e su requisiti e percorsi di archiviazione della partizione e del relativo cubo e gruppo di misure padre. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La modalità di archiviazione di una partizione influisce sulla query e l'elaborazione delle prestazioni, i requisiti di archiviazione e percorsi di archiviazione della partizione e il relativo gruppo di misure padre e il cubo. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
   
  Una partizione può utilizzare una delle tre modalità di archiviazione di base seguenti:  
   

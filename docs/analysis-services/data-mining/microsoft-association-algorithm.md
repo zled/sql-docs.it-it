@@ -2,12 +2,12 @@
 title: Algoritmo Microsoft Association Rules | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,14 +39,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Microsoft Association Rules
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo di associazione spesso usato per i motori dei suggerimenti. Un motore dei suggerimenti consiglia articoli ai clienti in base agli articoli che hanno già acquistato o a cui sono interessati. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è utile anche per analisi di mercato sugli acquisti.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo che viene spesso utilizzato per i motori di raccomandazione. Un motore dei suggerimenti consiglia articoli ai clienti in base agli articoli che hanno già acquistato o a cui sono interessati. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è utile anche per analisi di mercato sugli acquisti.   
   
  I modelli di associazione vengono compilati in base a set di dati che includono sia gli indicatori dei singoli case che gli indicatori degli elementi contenuti nei case. Un gruppo di elementi in un case viene chiamato *set di elementi*. Un modello di associazione è costituito da una serie di set di elementi e di regole che descrivono la modalità di raggruppamento di tali elementi all'interno dei case. È possibile utilizzare le regole identificate dall'algoritmo per stimare i probabili acquisti futuri di un cliente, in base agli elementi già esistenti nel relativo carrello acquisti. Nel diagramma seguente viene illustrata una serie di regole all'interno di un set di elementi.  
   

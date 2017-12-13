@@ -2,12 +2,12 @@
 title: Configurare i tipi di attributo | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ccef2ddc36c4a8dda691526cb3209eb6737c6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Attributo di proprietà: configurare i tipi di attributo
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i tipi di attributi consentono di classificare un attributo in termini di funzionalità aziendali. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tipi di attributo consentono di classificare un attributo in termini di funzionalità di business. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
   
 ##  <a name="setting_attibute_types"></a> Impostazione dei tipi di attributi  
  Il valore della proprietà **Type** per un attributo determina il tipo dell'attributo stesso. Diverse procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono di impostare i tipi di attributi durante la definizione di dimensioni o attributi. Tali procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono inoltre di impostare i tipi di attributi durante l'aggiunta di funzionalità alle dimensioni. Tramite la Configurazione guidata funzionalità di Business Intelligence, ad esempio, vengono applicati numerosi tipi di attributi agli attributi in una dimensione durante l'aggiunta di funzionalità di Business Intelligence per la contabilità, per identificare attributi contenenti nomi, codici, numeri e struttura dei conti nella dimensione. Nella Configurazione guidata funzionalità di Business Intelligence vengono inoltre utilizzati i tipi di attributi, ad esempio per la conversione di valuta. Per altre informazioni, vedere [Creare una dimensione di tipo Valuta](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  

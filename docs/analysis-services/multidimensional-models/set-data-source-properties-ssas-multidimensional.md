@@ -2,12 +2,12 @@
 title: "Impostare le proprietà di origine dati (SSAS multidimensionale) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Impostare proprietà origine dati (SSAS multidimensionale)
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un'origine dati consente di specificare una connessione a un data warehouse esterno o a un database relazionale che fornisce dati a un modello multidimensionale. Le proprietà sull'origine dati determinano la stringa di connessione, un intervallo di timeout, il numero massimo di connessioni e il livello di isolamento delle transazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un oggetto origine dati specifica una connessione a un data warehouse esterno o di un database relazionale che fornisce dati a un modello multidimensionale. Le proprietà sull'origine dati determinano la stringa di connessione, un intervallo di timeout, il numero massimo di connessioni e il livello di isolamento delle transazioni.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>Impostare le proprietà dell'origine dati in SQL Server Data Tools  
   

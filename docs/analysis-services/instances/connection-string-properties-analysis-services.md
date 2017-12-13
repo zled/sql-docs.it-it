@@ -2,12 +2,12 @@
 title: "Proprietà della stringa di connessione (Analysis Services) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>Proprietà delle stringhe di connessione (Analysis Services)
-  In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento vengono documentate le proprietà di stringa di connessione è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono a ed eseguono query sui dati Analysis Services. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
   
  È consigliabile che gli sviluppatori responsabili della compilazione di stringhe di connessione nel codice delle applicazioni consultino la documentazione dell'API per client ADOMD.NET in cui è disponibile un elenco più dettagliato: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   

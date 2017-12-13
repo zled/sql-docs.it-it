@@ -2,12 +2,12 @@
 title: Riferimento tecnico l'algoritmo Microsoft Logistic Regression | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cfb1b20bed865c750ed5a29ff94fd4136830c18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, in cui il parametro *HIDDEN_NODE_RATIO* è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Logistic Regression è una variante del [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network, in cui il *HIDDEN_NODE_RATIO* parametro è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementazione dell'algoritmo Microsoft Logistic Regression  
  Si supponga che la colonna stimabile contenga solo due stati e che tuttavia si intenda eseguire comunque un'analisi di regressione, stabilendo una relazione tra le colonne di input e la probabilità che la colonna stimabile includa uno stato specifico. Nel diagramma seguente sono illustrati i risultati che si otterranno se si assegnano i valori 1 e 0 agli stati della colonna stimabile, si calcola la probabilità che la colonna contenga uno stato specifico e si esegue una regressione lineare in base a una variabile di input.  

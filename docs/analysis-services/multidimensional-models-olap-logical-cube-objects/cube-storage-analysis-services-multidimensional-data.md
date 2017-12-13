@@ -2,12 +2,12 @@
 title: Archiviazione (Analysis Services - dati multidimensionali) del cubo | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Archiviazione di cubi (Analysis Services - Dati multidimensionali)
-  L'archiviazione può coinvolgere solo i metadati del cubo oppure tutti i dati di origine della tabella dei fatti nonché le aggregazioni definite dalle dimensioni correlate al gruppo di misure. La quantità di dati archiviata dipende dalla modalità di archiviazione selezionata e dal numero di aggregazioni. La quantità di dati archiviata direttamente influisce sulle prestazioni di esecuzione delle query. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono utilizzate diverse tecniche per ridurre al minimo lo spazio necessario per l'archiviazione dei dati del cubo e le aggregazioni:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L'archiviazione può includere solo i metadati del cubo, oppure può includere tutti i dati di origine della tabella dei fatti nonché le aggregazioni definite dalle dimensioni correlate al gruppo di misure. La quantità di dati archiviata dipende dalla modalità di archiviazione selezionata e dal numero di aggregazioni. La quantità di dati archiviata direttamente influisce sulle prestazioni di esecuzione delle query. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono utilizzate diverse tecniche per ridurre al minimo lo spazio necessario per l'archiviazione dei dati del cubo e le aggregazioni:  
   
 -   Le opzioni di archiviazione consentono di selezionare le modalità e le posizioni di archiviazione appropriate per i dati del cubo.  
   

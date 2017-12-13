@@ -2,12 +2,12 @@
 title: "Configurare proprietà di progetto di Analysis Services (SSDT) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 310906f7fa8ddc07f5643121e5120acf1135cb39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurare proprietà di progetti di Analysis Services (SSDT)
-  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene definito con determinate proprietà predefinite che influiscono sulla compilazione e sulla distribuzione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto viene definito con determinate proprietà predefinite che influiscono sulla compilazione e distribuzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto.  
   
  Per modificare le proprietà del progetto, fare clic con il pulsante destro del mouse sul progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , quindi scegliere **Proprietà**. In alternativa, è possibile fare clic su **Proprietà** nel menu Progetto.  
   

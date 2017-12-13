@@ -2,12 +2,12 @@
 title: Utilizzare la generazione guidata Schema (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a52799da2610aa55a0e045b2192b46ffd5f85f15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utilizzare la Generazione guidata schema (Analysis Services)
-  Durante la fase di generazione con Generazione guidata schema è necessario disporre di una quantità ridotta di informazioni. La maggior parte delle informazioni richieste dalla Generazione guidata schema per la generazione di schemi relazionali vengono estratte dai cubi e dalle dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] già creati nel progetto. Inoltre, è possibile personalizzare come viene generato lo schema del database dell'area di interesse, nonché come vengono denominati gli oggetti nello schema.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La generazione guidata Schema richiede una quantità limitata di informazioni durante la fase di generazione. La maggior parte delle informazioni richieste dalla Generazione guidata schema per la generazione di schemi relazionali vengono estratte dai cubi e dalle dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] già creati nel progetto. Inoltre, è possibile personalizzare come viene generato lo schema del database dell'area di interesse, nonché come vengono denominati gli oggetti nello schema.  
   
 ## <a name="start-the-wizard"></a>Avviare la procedura guidata  
  È possibile aprire la Generazione guidata schema da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] in diversi modi:  

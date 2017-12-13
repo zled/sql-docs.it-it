@@ -2,12 +2,12 @@
 title: Impostare tabelle writeback delle partizioni | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
-  Se si abilita un gruppo di misure per la scrittura, gli utenti finali possono modificare i dati del cubo durante la relativa esplorazione; tuttavia, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nei dati del cubo o nei dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se si abilita la scrittura un gruppo di misure, gli utenti finali possono modificare i dati del cubo durante l'esplorazione, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nel cubo dati o dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  
   
  È possibile esplorare o eliminare i dati writeback, nonché convertirli in una partizione. In una partizione abilitata per la scrittura, è possibile utilizzare i ruoli dei cubi per concedere l'accesso in lettura/scrittura a singoli utenti e gruppi di utenti, nonché per limitare l'accesso a celle o gruppi di celle specifici nella partizione.  
   

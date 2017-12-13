@@ -2,12 +2,12 @@
 title: Esecuzione di transazioni in ADOMD.NET | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c78445de3ed3b17805bc458ce6078e0d9587eed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: abe2e4bcc48a86e26e9a70e4f39e6bfbf7ba13ee
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Connessioni in ADOMD.NET - esecuzione di transazioni
-  In ADOMD.NET utilizzare l'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> per gestire il contesto di transazione per un oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> specifico. Questa funzionalità consente di eseguire numerosi comandi all'interno dello stesso contesto. Ogni comando leggerà gli stessi dati senza modificarli tra ogni esecuzione dei comandi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In ADOMD.NET, utilizzare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> oggetto per gestire il contesto di transazione per un determinato <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto. Questa funzionalità consente di eseguire numerosi comandi all'interno dello stesso contesto. Ogni comando leggerà gli stessi dati senza modificarli tra ogni esecuzione dei comandi.  
   
 > [!NOTE]  
 >  Il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> è un'implementazione della classe di **System.Data.IDbTransaction** interfaccia, parte del [!INCLUDE[msCoName](../../includes/msconame-md.md)] libreria di classi .NET Framework e implementata da tutti i provider di dati .NET Framework che supportano transazioni.  

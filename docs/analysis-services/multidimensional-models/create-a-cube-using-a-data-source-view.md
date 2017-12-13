@@ -2,12 +2,12 @@
 title: Creare un cubo tramite una vista origine dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c5514b6ef512855ff718740fc7b7ea7342a1258
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Creare un cubo tramite una vista origine dati
-  Utilizzare questo metodo di compilazione di un nuovo cubo se si desidera utilizzare una vista origine dati esistente. Con questo metodo, è possibile specificare la vista origine dati, nonché selezionare le tabelle dei fatti e delle dimensioni che si desidera utilizzare nella vista origine dati. Successivamente è possibile scegliere le dimensioni e le misure che si desidera includere nel cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare questo metodo di creazione di un nuovo cubo se si prevede di utilizzare una vista origine dati esistente. Con questo metodo, è possibile specificare la vista origine dati, nonché selezionare le tabelle dei fatti e delle dimensioni che si desidera utilizzare nella vista origine dati. Successivamente è possibile scegliere le dimensioni e le misure che si desidera includere nel cubo.  
   
  Per creare un cubo con un'origine dati, in Esplora soluzioni fare clic con il pulsante destro del mouse su **Cubi** , quindi scegliere **Nuovo cubo**. Verrà aperta la Creazione guidata cubo.  
   

@@ -2,12 +2,12 @@
 title: I valori mancanti (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valori mancanti (Analysis Services - Data mining)
-  Una gestione corretta dei  *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gestione *valori mancanti* correttamente è una parte importante di modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definizione dei valori mancanti nel data mining  
  Un valore mancante può avere diversi significati. È possibile che il campo non fosse applicabile, che l'evento non si sia verificato o che i dati non fossero disponibili. Potrebbe essere accaduto che la persona che ha immesso i dati non conoscesse il valore corretto o non abbia verificato l'effettiva compilazione di un campo.  

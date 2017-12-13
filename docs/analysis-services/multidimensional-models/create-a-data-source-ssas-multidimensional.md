@@ -2,12 +2,12 @@
 title: Creare un'origine dati (SSAS multidimensionale) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8fbcb252ca94f94eef82cbb2b19a3c15dcf7a38f
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crea un' origine dati (SSAS multidimensionale)
-  In un modello multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un oggetto di origine dati rappresenta una connessione all'origine dati dalla quale si elaborano o si importano dati. Un modello multidimensionale deve contenere almeno un oggetto di origine dati, tuttavia è possibile aggiungerne altri per combinare dati provenienti da diversi data warehouse. Utilizzare le istruzioni in questo argomento per creare un oggetto di origine dati per il modello. Per altre informazioni sull'impostazione delle proprietà per questo oggetto, vedere [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello multidimensionale, un oggetto origine dati rappresenta una connessione all'origine dati da cui sono l'elaborazione (o l'importazione) dei dati. Un modello multidimensionale deve contenere almeno un oggetto di origine dati, tuttavia è possibile aggiungerne altri per combinare dati provenienti da diversi data warehouse. Utilizzare le istruzioni in questo argomento per creare un oggetto di origine dati per il modello. Per altre informazioni sull'impostazione delle proprietà per questo oggetto, vedere [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  In questo argomento sono contenute le sezioni seguenti:  
   

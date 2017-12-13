@@ -2,12 +2,12 @@
 title: Algoritmi di Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmi di data mining (Analysis Services - Data mining)
-  Un *algoritmo* in data mining (o Machine Learning) è un set di approcci euristici e calcoli che consente di creare un modello dai dati. Per creare un modello, tramite l'algoritmo vengono innanzitutto analizzati i dati forniti, ricercando tipi specifici di modelli o tendenze. I risultati dell'analisi vengono usati dall'algoritmo su più interazioni per definire i parametri ottimali per la creazione del modello di data mining. Questi parametri vengono quindi applicati all'intero set di dati per estrarre modelli utilizzabili e statistiche dettagliate.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un *algoritmo* nei dati di data mining (o apprendimento) è un set di approcci euristici e calcoli che crea un modello di dati. Per creare un modello, tramite l'algoritmo vengono innanzitutto analizzati i dati forniti, ricercando tipi specifici di modelli o tendenze. I risultati dell'analisi vengono usati dall'algoritmo su più interazioni per definire i parametri ottimali per la creazione del modello di data mining. Questi parametri vengono quindi applicati all'intero set di dati per estrarre modelli utilizzabili e statistiche dettagliate.  
   
  Il modello di data mining creato da un algoritmo con i dati in uso può avere forme diverse, tra cui:  
   

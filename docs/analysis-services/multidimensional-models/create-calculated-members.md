@@ -2,12 +2,12 @@
 title: Creare membri calcolati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
-  È possibile creare misure o membri di dimensioni personalizzati, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile creare misure personalizzate o i membri della dimensione, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
   
  Le definizioni dei membri calcolati vengono archiviate, mentre i relativi valori sono presenti solo in memoria. Nell'esempio precedente, i valori convertiti vengono visualizzati agli utenti finali, ma non sono archiviati come dati del cubo.  
   

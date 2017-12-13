@@ -2,12 +2,12 @@
 title: Chiamata di Stored procedure | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa00161709980550644f07a7330198d9369b706e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 48c35e5583369335f5d9ab6215faa4fd86d66f6a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calling-stored-procedures"></a>Chiamata di stored procedure
-  È possibile chiamare stored procedure nel server o da un'applicazione client. In entrambi i casi le stored procedure vengono sempre eseguite nel server, nel contesto del server o di un database. Non sono richieste autorizzazioni speciali per eseguire una stored procedure. Dopo che una stored procedure viene aggiunta da un assembly al contesto del server o del database, qualsiasi utente può eseguire la stored procedure purché il ruolo di quell'utente consenta le operazioni eseguite dalla stored procedure.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Stored procedure possono essere chiamate sul server o dall'applicazione client. In entrambi i casi le stored procedure vengono sempre eseguite nel server, nel contesto del server o di un database. Non sono richieste autorizzazioni speciali per eseguire una stored procedure. Dopo che una stored procedure viene aggiunta da un assembly al contesto del server o del database, qualsiasi utente può eseguire la stored procedure purché il ruolo di quell'utente consenta le operazioni eseguite dalla stored procedure.  
   
  La chiamata di una stored procedure in MDX viene eseguita allo stesso modo della chiamata di una funzione MDX intrinseca. Per una stored procedure che non prevede parametri, vengono utilizzati il nome della stored procedure e una coppia vuota di parentesi:  
   

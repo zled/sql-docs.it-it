@@ -2,12 +2,12 @@
 title: Opzioni di elaborazione e le impostazioni (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Opzioni e impostazioni di elaborazione (Analysis Services)
-  Quando si elaborano oggetti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile selezionare un'opzione di elaborazione che consente di controllare il tipo di elaborazione eseguita per ogni oggetto. I tipi di elaborazione si differenziano l'uno dall'altro e in base alle modifiche apportate all'oggetto dall'ultima elaborazione. Se si imposta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la selezione automatica di un metodo di elaborazione, verrà usato il metodo che restituisce l'oggetto in uno stato di elaborazione completa nel minor tempo possibile.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si elaborano oggetti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile selezionare un'opzione di elaborazione per controllare il tipo di elaborazione che si verifica per ogni oggetto. I tipi di elaborazione si differenziano l'uno dall'altro e in base alle modifiche apportate all'oggetto dall'ultima elaborazione. Se si imposta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la selezione automatica di un metodo di elaborazione, verrà usato il metodo che restituisce l'oggetto in uno stato di elaborazione completa nel minor tempo possibile.  
   
  Le impostazioni di elaborazione consentono di controllare gli oggetti elaborati e i metodi di elaborazione utilizzati. Alcune impostazioni di elaborazione vengono utilizzate principalmente per processi di elaborazione batch. Per altre informazioni sull'elaborazione batch, vedere [Elaborazione batch &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   

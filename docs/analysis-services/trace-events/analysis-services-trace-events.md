@@ -2,12 +2,12 @@
 title: Eventi di traccia di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 72e9e9352f5eaba5ca528cebfcd45fb6ca2917de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bda0bd4dac6b7f60bbda2fd9562af9fa2ebe9abb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-trace-events"></a>Eventi di traccia di Analysis Services
-  È possibile seguire l'attività di un'istanza di Microsoft SQL Server Analysis Services (SSAS) acquisendo e analizzando gli eventi di traccia generati dall'istanza.  Gli eventi di traccia vengono raggruppati in modo da trovare più facilmente gli eventi di traccia correlati.  Ogni evento di traccia contiene un set di dati attinente all'evento. Non tutti i dati sono attinenti a tutti gli eventi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile seguire l'attività di un'istanza di Microsoft SQL Server Analysis Services (SSAS) acquisendo e successivamente, analizzando gli eventi di traccia generati dall'istanza di.  Gli eventi di traccia vengono raggruppati in modo da trovare più facilmente gli eventi di traccia correlati.  Ogni evento di traccia contiene un set di dati attinente all'evento. Non tutti i dati sono attinenti a tutti gli eventi.  
   
  Gli eventi di traccia possono essere avviati e acquisiti usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, vedere [Utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)oppure possono essere avviati da un comando XMLA come **SQL Server Extended Events** e analizzati in un secondo momento, vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   

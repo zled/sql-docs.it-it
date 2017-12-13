@@ -2,12 +2,12 @@
 title: Aggiungere MSOLAP. 5 come Provider di dati attendibile in Excel Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64b3ea1f946e73a3f56cd70b5e88d9752d74a238
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 146b61a544dfc91585cde88bbdb54d2f43375b0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services
-  MSOLAP.5 si riferisce al provider OLE DB di Analysis Services per SQL Server 2012. Excel Services deve considerare attendibile questo provider prima di effettuare la richiesta di connessione che comporta la disponibilità di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]MSOLAP. 5 si riferisce al provider OLE DB per Analysis Services per SQL Server 2012. Excel Services deve considerare attendibile questo provider prima di effettuare la richiesta di connessione che comporta la disponibilità di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un server.  
   
  Se [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è stato configurato usando lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , MSOLAP.5 potrebbe già essere un provider attendibile perché lo strumento include un'azione che soddisfa questo requisito. Se tuttavia si usa PowerShell o Amministrazione centrale oppure se l'azione del provider attendibile è stata esclusa nello strumento di configurazione, il provider potrebbe essere mancante ed è quindi necessario aggiungerlo durante la configurazione della farm per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

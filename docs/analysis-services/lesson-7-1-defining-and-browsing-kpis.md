@@ -2,12 +2,12 @@
 title: Definizione ed esplorazione dei KPI | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 786633c9ef5ff8c1814b1622b1349734286b2312
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8361308afe6ffabf33fd152f308ad12c9bedd479
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lezione 7-1-definizione ed esplorazione dei KPI
-Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome per l'indicatore KPI e il gruppo di misure a cui è associato. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome di indicatore KPI e il gruppo di misure a cui è associato l'indicatore KPI. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:  
   
 -   L'espressione valore  
   

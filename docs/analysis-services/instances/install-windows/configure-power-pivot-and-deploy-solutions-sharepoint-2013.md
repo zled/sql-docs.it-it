@@ -2,12 +2,12 @@
 title: Configurare PowerPivot e distribuire soluzioni (SharePoint 2013) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: power-view
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: abdb6547c70842f0aa223aee2d35755a2a22e69b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurare Power Pivot e distribuire soluzioni (SharePoint 2013)
-  Questo argomento descrive la distribuzione e la configurazione di miglioramenti di livello intermedio alle funzionalità di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , tra cui la raccolta [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la pianificazione dell'aggiornamento dei dati, il dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013** per eseguire queste operazioni:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questo argomento vengono descritte la distribuzione e la configurazione di miglioramenti di livello intermedio per la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le caratteristiche in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] inclusi [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] raccolta pianificazione aggiornamento dati, Dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013** per eseguire queste operazioni:  
   
 -   Distribuire i file di soluzione SharePoint.  
   

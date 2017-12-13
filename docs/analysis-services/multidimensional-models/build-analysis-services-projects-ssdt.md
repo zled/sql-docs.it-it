@@ -2,12 +2,12 @@
 title: Compilare i progetti di Analysis Services (SSDT) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 70af992dc3b712536efd55053465096a6b477509
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a8e6a7d40efc5c2b6a6dc6a5e7721c2cf999c17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Compilare progetti di Analysis Services (SSDT)
-  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]la compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è molto simile alla compilazione di qualsiasi progetto di programmazione in Visual Studio. Quando si compila il progetto, nella directory di output viene creato un set di file XML. Questi file XML sono basati su Analysis Services Scripting Language (ASSL), il sottolinguaggio XML utilizzato dalle applicazioni client come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per comunicare con un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] allo scopo di creare o modificare oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi file XML permettono di distribuire definizioni di oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], si compila un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto molto simile alla compilazione di qualsiasi progetto di programmazione in Visual Studio. Quando si compila il progetto, nella directory di output viene creato un set di file XML. Questi file XML sono basati su Analysis Services Scripting Language (ASSL), il sottolinguaggio XML utilizzato dalle applicazioni client come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per comunicare con un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] allo scopo di creare o modificare oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi file XML permettono di distribuire definizioni di oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="building-a-project"></a>Compilazione di un progetto  
  Quando si compila un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene compilato un set completo di file XML nella cartella di output con tutti i comandi ASSL necessari per compilare tutti gli oggetti di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel progetto. Se il progetto è stato compilato in precedenza ed è stata specificata la distribuzione incrementale per la configurazione attiva, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene inoltre compilato un file XML contenente i comandi ASSL per l'esecuzione di un aggiornamento incrementale agli oggetti distribuiti. Questo file XML viene scritto nella cartella ..\obj\\\<configurazione attiva>\> del progetto. Le compilazioni incrementali consentono un risparmio di tempo in caso di distribuzione ed elaborazione di un database o un progetto di dimensioni estremamente elevate.  

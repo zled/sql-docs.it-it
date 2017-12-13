@@ -2,12 +2,12 @@
 title: Definire formule personalizzate membro | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2d802623b470077ba46326c7650e30013d07534
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e82a27d94e0a964921bc54918e4d0e54a9eba35f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Attributo di proprietà: definire formule personalizzate membro
-  È possibile definire un'espressione MDX (MultiDimensional Expression), denominata formula personalizzata membro, per indicare i valori dei membri di un attributo specificato. L'espressione utilizzata per specificare il valore di ogni membro di un attributo è indicata in una colonna di una tabella di una vista origine dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile definire un'espressione MDX (Multidimensional Expressions), denominata formula personalizzata membro, per fornire i valori per i membri di un attributo specificato. L'espressione utilizzata per specificare il valore di ogni membro di un attributo è indicata in una colonna di una tabella di una vista origine dati.  
   
  Le formule personalizzate membro determinano i valori delle celle associati ai membri e hanno priorità rispetto alle funzioni di aggregazione delle misure. Le formule personalizzate membro sono scritte in MDX. Ogni formula personalizzata membro viene applicata a un singolo membro. Le formule personalizzate membro vengono archiviate nella tabella della dimensione o in un'altra tabella collegata tramite una relazione di chiave esterna alla tabella della dimensione.  
   

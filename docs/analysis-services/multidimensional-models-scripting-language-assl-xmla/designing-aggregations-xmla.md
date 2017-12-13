@@ -2,12 +2,12 @@
 title: Progettazione di aggregazioni (XMLA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-xmla"></a>Progettazione di aggregazioni (XMLA)
-  Le progettazioni delle aggregazioni sono associate alle partizioni di un gruppo di misure specifico per garantire che utilizzino la stessa struttura nell'archiviazione delle aggregazioni. Utilizzando la stessa struttura di archiviazione per le partizioni consente di definire in modo semplice partizioni che possono essere unite in un secondo momento utilizzando il [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Per ulteriori informazioni sulle progettazioni delle aggregazioni, vedere [aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le progettazioni delle aggregazioni sono associate alle partizioni di un determinato gruppo di misure per assicurarsi che le partizioni utilizzano la stessa struttura nell'archiviazione delle aggregazioni. Utilizzando la stessa struttura di archiviazione per le partizioni consente di definire in modo semplice partizioni che possono essere unite in un secondo momento utilizzando il [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Per ulteriori informazioni sulle progettazioni delle aggregazioni, vedere [aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Per definire le aggregazioni per una progettazione delle aggregazioni, è possibile utilizzare il [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) comando XML for Analysis (XMLA). Il **DesignAggregations** comando dispone di proprietà che identificano quale progettazione delle aggregazioni da usare come riferimento e il modo controllare il processo di progettazione in base a tale riferimento. Utilizzo di **DesignAggregations** comando e le relative proprietà, è possibile progettare le aggregazioni in modo iterativo o in un batch e quindi visualizzare le statistiche relative alla progettazione risultanti per valutare il processo di progettazione.  
   

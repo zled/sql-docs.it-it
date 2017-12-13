@@ -2,12 +2,12 @@
 title: Il tipo di dati ReferenceMeasureGroupDimension (ASSL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c14e0750b4f012a9229ee938b033a059070a2e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69b36af420a3cfbc8866e741d9b0a35739501c4f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Tipo di dati ReferenceMeasureGroupDimension (ASSL)
-  Definisce un tipo di dati derivato che rappresenta una dimensione indirettamente correlata alla tabella dei fatti tramite una dimensione intermedia. Un gruppo di misure Sales può, ad esempio, fare riferimento a una dimensione Geography, correlata tramite la dimensione Customer.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definisce un tipo di dati derivato che rappresenta una dimensione indirettamente correlata alla tabella dei fatti tramite una dimensione intermedia. Un gruppo di misure Sales può, ad esempio, fare riferimento a una dimensione Geography, correlata tramite la dimensione Customer.  
   
 ## <a name="syntax"></a>Sintassi  
   

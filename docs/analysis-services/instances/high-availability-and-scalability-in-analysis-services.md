@@ -2,12 +2,12 @@
 title: "Disponibilità elevata e scalabilità in Analysis Services | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1a1f8208a30e1ff24e76465fd9210a60ef1ec849
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Disponibilità elevata e scalabilità in Analysis Services
-  Questo articolo descrive le tecniche usate più di frequente per garantire ai database di Analysis Services disponibilità elevata e scalabilità. Ognuno di questi obiettivi potrebbe essere affrontato separatamente ma, in realtà, questi sono spesso correlati: una distribuzione scalabile per carichi di lavoro di elaborazione o di query di grandi dimensioni in genere prevede una disponibilità elevata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo articolo descrive le tecniche utilizzate più di frequente per garantire ai database di Analysis Services elevati disponibilità e scalabilità. Ognuno di questi obiettivi potrebbe essere affrontato separatamente ma, in realtà, questi sono spesso correlati: una distribuzione scalabile per carichi di lavoro di elaborazione o di query di grandi dimensioni in genere prevede una disponibilità elevata.  
   
  Non è sempre vero il contrario, tuttavia. La disponibilità elevata, senza scalabilità, può essere l'unico obiettivo nel caso di contratti di servizio rigidi per carichi di lavoro di query di importanza critica, ma con volumi moderati.  
   

@@ -2,12 +2,12 @@
 title: Informazioni sulla generazione incrementale | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-incremental-generation"></a>Informazioni sulla generazione incrementale
-  Dopo la generazione iniziale dello schema, è possibile modificare le definizioni dei cubi e delle dimensioni mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e quindi eseguire di nuovo la Generazione guidata schema. La procedura guidata aggiorna lo schema nel database dell'area di interesse e nella vista origine dati associata in base alle modifiche apportate, mantenendo i dati attualmente esistenti nelle tabelle da rigenerare nella misura massima consentita. Se dopo la generazione iniziale le tabelle sono state modificate, la Generazione guidata schema mantiene tali modifiche in base alle regole seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo la generazione dello schema iniziale, è possibile modificare le definizioni di cubo e dimensione utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], quindi eseguire nuovamente la generazione guidata Schema. La procedura guidata aggiorna lo schema nel database dell'area di interesse e nella vista origine dati associata in base alle modifiche apportate, mantenendo i dati attualmente esistenti nelle tabelle da rigenerare nella misura massima consentita. Se dopo la generazione iniziale le tabelle sono state modificate, la Generazione guidata schema mantiene tali modifiche in base alle regole seguenti:  
   
 -   Le tabelle generate in precedenza dalla procedura guidata vengono sovrascritte. Per evitare che una tabella generata dalla procedura guidata venga sovrascritta, impostare la proprietà **AllowChangesDuringGeneration** della tabella nella vista origine dati su **false**. Le tabelle di cui si assume il controllo tramite questa proprietà vengono trattate come qualsiasi altra tabella definita dall'utente e non subiscono modifiche durante la rigenerazione. Dopo avere escluso una tabella dalla generazione, è possibile reimpostare la proprietà **AllowChangesDuringGeneration** della tabella nella vista origine dati su **true** e riaprire la tabella in modo che la procedura guidata implementi di nuovo le modifiche. Per altre informazioni, vedere [Modificare le proprietà in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   

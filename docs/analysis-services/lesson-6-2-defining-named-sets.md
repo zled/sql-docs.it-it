@@ -2,12 +2,12 @@
 title: Definizione dei set denominati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d14d16deabb83c9eedc448e9b8e063aa56b662cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 68f500896e8dffa6982c2f15ac3e431bebc4df87
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lezione 6-2 - definizione di set denominati
-Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.  
   
 I set denominati semplificano le query MDX e generano alias utili per espressioni set complesse utilizzate spesso. È possibile ad esempio definire un set denominato chiamato Large Resellers contenente il set di membri nella dimensione Reseller con il numero più elevato di dipendenti. Gli utenti finali potrebbero quindi utilizzare il set denominato Large Resellers nelle query, oppure utilizzarlo per definire un set in un sottocubo. Le definizioni dei set denominati vengono archiviate nei cubi, ma i loro valori si trovano solo nella memoria. Per creare un set denominato usare il comando **Nuovo set denominato** nella scheda **Calcoli** di Progettazione cubi. Per altre informazioni, vedere [Calcoli](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)e [Creare set denominati](../analysis-services/multidimensional-models/create-named-sets.md).  
   

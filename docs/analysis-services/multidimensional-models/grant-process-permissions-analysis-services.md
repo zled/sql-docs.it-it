@@ -2,12 +2,12 @@
 title: Concedere le autorizzazioni di elaborazione (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33582b08bd8579d7c2c3318594dcbf877c186757
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccb2f4ebb1db848d62f470ed2e37230a95916cb9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Concedere le autorizzazioni di elaborazione (Analysis Services)
-  L'amministratore può creare un ruolo dedicato alle operazioni di elaborazione di Analysis Services, consentendo di delegare tale attività specifica ad altri utenti o ad applicazioni usate per l'elaborazione automatica pianificata. Le autorizzazioni di elaborazione possono essere concesse a livello del database, del cubo, della dimensione o della struttura di data mining. A meno che non si usi un cubo o un database tabulare di grandi dimensioni è consigliabile concedere i diritti di elaborazione a livello di database, compresi tutti gli oggetti, anche quelli con dipendenze tra di loro.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Come amministratore, è possibile creare un ruolo dedicato alle operazioni di elaborazione di Analysis Services, consentendo di delegare tale attività specifica ad altri utenti o ad applicazioni usate per l'elaborazione automatica pianificata. Le autorizzazioni di elaborazione possono essere concesse a livello del database, del cubo, della dimensione o della struttura di data mining. A meno che non si usi un cubo o un database tabulare di grandi dimensioni è consigliabile concedere i diritti di elaborazione a livello di database, compresi tutti gli oggetti, anche quelli con dipendenze tra di loro.  
   
  Le autorizzazioni vengono concesse tramite i ruoli che associano gli oggetti alle autorizzazioni e gli account utente e di gruppo di Windows. Tenere presente che le autorizzazioni si sommano tra loro. Si supponga, ad esempio, uno scenario in cui un ruolo concede l'autorizzazione per l'elaborazione di un cubo, mentre un secondo ruolo concede allo stesso utente l'autorizzazione per l'elaborazione di una dimensione. Le autorizzazioni concesse dai due diversi ruoli si sommano, assegnando all'utente l'autorizzazione sia per l'elaborazione del cubo che per l'elaborazione della dimensione specifica all'interno del database.  
   

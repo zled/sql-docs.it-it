@@ -2,12 +2,12 @@
 title: Utilizzo di drill-through per recuperare i dati di origine (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d7eecd743e66ad33e029e5d575b9ab4a8b2a988
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 30587e46a4ac54d2ac2825649f25cb321c05eba4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>Manipolazione dei dati MDX - recuperare i dati di origine utilizzando il drill-through
-  Nel linguaggio MDX (Multidimensional Expressions) è disponibile l'istruzione [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md), che consente di recuperare un set di righe dai dati di origine per una cella di un cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) utilizza il [drill-through](../../../mdx/mdx-data-manipulation-drillthrough.md)istruzione per recuperare un set di righe dall'origine dei dati per una cella del cubo.  
   
  Per eseguire un'istruzione **DRILLTHROUGH** su un cubo, è necessario definire un'azione drill-through per tale cubo. Per definire un'azione drill-through, in Progettazione cubi di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]nel riquadro **Azioni** fare clic sul pulsante **Nuova azione drill-through**della barra degli strumenti. Nella nuova azione drill-through specificare il nome, la destinazione e la condizione dell'azione, nonché le colonne restituite dall'istruzione **DRILLTHROUGH** .  
   

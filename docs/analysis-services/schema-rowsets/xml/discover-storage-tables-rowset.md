@@ -2,12 +2,12 @@
 title: Set di righe DISCOVER_STORAGE_TABLES | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ceaff6d458686f33a7e32126f3f46c1e5675b144
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42b139004de7a10c073991613abcbafb84a31688
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverstoragetables-rowset"></a>Set di righe DISCOVER_STORAGE_TABLES
-  Consente al client di determinare le tabelle incluse in un database di Analysis Services in esecuzione in modalità tabulare o SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Consente al client determinare le tabelle in cui sono incluse in un database di Analysis Services in esecuzione in modalità tabulare o SharePoint.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_STORAGE_TABLES** set di righe contiene le colonne seguenti.  

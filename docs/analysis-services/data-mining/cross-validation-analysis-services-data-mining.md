@@ -2,12 +2,12 @@
 title: La convalida incrociata (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 89484271e1424efafef7e5b1956c4d0ec4825efa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Convalida incrociata (Analysis Services - Data mining)
-  *Convalida incrociata* è un strumento standard di analisi e costituisce un'importante funzionalità per lo sviluppo e l'ottimizzazione dei modelli di data mining. Viene utilizzata dopo la creazione di una struttura di data mining e dei relativi modelli per determinare la validità del modello e  prevede le applicazioni seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Convalida incrociata* è uno strumento standard di analitica ed è un'importante funzionalità che consentono di sviluppare e ottimizzare i modelli di data mining. Viene utilizzata dopo la creazione di una struttura di data mining e dei relativi modelli per determinare la validità del modello e  prevede le applicazioni seguenti:  
   
 -   Convalida dell'affidabilità di un determinato modello di data mining.  
   

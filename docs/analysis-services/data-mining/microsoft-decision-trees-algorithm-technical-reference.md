@@ -2,12 +2,12 @@
 title: Microsoft Decision Trees riferimento tecnico per l'algoritmo | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo ibrido che incorpora diversi metodi per la creazione di un albero e supporta più attività analitiche, tra le quali sono incluse la regressione, la classificazione e l'associazione. Tale algoritmo supporta la modellazione di attributi discreti e continui.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees è un algoritmo ibrido che incorpora diversi metodi per la creazione di una struttura ad albero e supporta più attività analitiche, tra cui regressione, classificazione e l'associazione. Tale algoritmo supporta la modellazione di attributi discreti e continui.  
   
  In questo argomento viene illustrata l'implementazione dell'algoritmo, viene mostrato come personalizzarne il comportamento in base alle diverse attività e vengono forniti collegamenti a ulteriori informazioni sull'esecuzione di query sui modelli di albero delle decisioni.  
   

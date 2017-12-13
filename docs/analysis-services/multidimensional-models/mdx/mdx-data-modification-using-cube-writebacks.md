@@ -2,12 +2,12 @@
 title: Utilizzo dei writeback dei cubi (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 02cce6cea072f9d9258dc52221397506840fd492
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3306e20389ece189a8f40c449ea88aa640af4f0e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>Modifica dei dati MDX - utilizzo dei writeback dei cubi
-  È possibile aggiornare un cubo usando l'istruzione [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Aggiornamento di un cubo utilizzando la [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) istruzione. Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
   
 ## <a name="update-cube-statement-syntax"></a>Sintassi dell'istruzione UPDATE CUBE  
  La sintassi dell'istruzione UPDATE CUBE è la seguente:  

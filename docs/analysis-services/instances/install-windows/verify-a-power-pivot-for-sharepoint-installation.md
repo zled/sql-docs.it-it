@@ -2,12 +2,12 @@
 title: Verificare di PowerPivot per SharePoint | Documenti Microsoft
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f3ff72bc10a222ddd5d5ed8ee8a7748fcaa2d47
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Verificare un'installazione Power Pivot per SharePoint
-  Per amministrare un'istanza di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint installata in una farm di SharePoint, usare Amministrazione centrale SharePoint. Come minimo, è possibile controllare le pagine in Amministrazione centrale e nei siti di SharePoint per verificare che le funzionalità e i componenti server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] siano disponibili. Tuttavia, per verificare completamente un'installazione, è necessario disporre di una cartella di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pubblicabile in SharePoint e accessibile da una raccolta. A scopo di test, è possibile pubblicare una cartella di lavoro di esempio già contenente dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usarla per confermare la corretta configurazione dell'integrazione SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Oggetto [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint viene amministrato istanza installata in una farm di SharePoint tramite Amministrazione centrale SharePoint. Come minimo, è possibile controllare le pagine in Amministrazione centrale e nei siti di SharePoint per verificare che le funzionalità e i componenti server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] siano disponibili. Tuttavia, per verificare completamente un'installazione, è necessario disporre di una cartella di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pubblicabile in SharePoint e accessibile da una raccolta. A scopo di test, è possibile pubblicare una cartella di lavoro di esempio già contenente dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usarla per confermare la corretta configurazione dell'integrazione SharePoint.  
   
 ||  
 |-|  

@@ -2,12 +2,12 @@
 title: 'Elenco di controllo: Utilizzare PowerShell per verificare PowerPivot per SharePoint | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c782994144077979f52eaa732618277b57c42ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 98c99d91fcbd0452f0873c32e2ef6f4fbe7d356d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint
-  Senza il superamento della prova di verifica con cui viene confermata l'operatività dei servizi e dei dati in uso, non vengono completate né le installazioni di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] né le operazioni di recupero. In questo articolo viene illustrata la modalità di esecuzione di queste procedure tramite Windows PowerShell. Ogni passaggio è inserito nella relativa sezione in modo da poter accedere direttamente ad attività specifiche. Ad esempio, eseguire lo script nella sezione [Database](#bkmk_databases) di questo argomento per verificare il nome dell'applicazione di servizio e i database del contenuto, se si desidera programmarli per la manutenzione o il backup.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Non [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installazione o ripristino viene completata senza un test di verifica a tinta unita che conferma i servizi e dati siano operativi. In questo articolo viene illustrata la modalità di esecuzione di queste procedure tramite Windows PowerShell. Ogni passaggio è inserito nella relativa sezione in modo da poter accedere direttamente ad attività specifiche. Ad esempio, eseguire lo script nella sezione [Database](#bkmk_databases) di questo argomento per verificare il nome dell'applicazione di servizio e i database del contenuto, se si desidera programmarli per la manutenzione o il backup.  
   
 |||  
 |-|-|  
-|![Contenuto correlato di PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell")|Alla fine dell'argomento è disponibile uno script completo di PowerShell. Utilizzare questo script come punto di partenza per compilarne uno personalizzato per il controllo della distribuzione completa di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
+|![Contenuto correlato di PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")|Alla fine dell'argomento è disponibile uno script completo di PowerShell. Utilizzare questo script come punto di partenza per compilarne uno personalizzato per il controllo della distribuzione completa di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
   
 ||  
 |-|  

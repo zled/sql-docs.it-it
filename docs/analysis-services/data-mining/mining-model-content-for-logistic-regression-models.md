@@ -2,12 +2,12 @@
 title: Contenuto dei modelli di regressione logistica modelli di data mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c49ae086aba41c6b023a1cbd395e6ddd8fc8f29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
-  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Informazioni sulla struttura di un modello di regressione logistica  
  Un modello di regressione logistica viene creato tramite l'algoritmo Microsoft Neural Network con parametri che impongono al modello l'eliminazione del nodo nascosto. La struttura globale di un modello di regressione logistica è pertanto quasi identica a quella di una rete neurale, in cui ogni modello ha un solo nodo padre che rappresenta il modello e i relativi metadati e un nodo speciale delle statistiche marginali (NODE_TYPE = 24) che fornisce statistiche descrittive sugli input utilizzati nel modello.  

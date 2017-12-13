@@ -2,12 +2,12 @@
 title: Impossibile caricare il file o assembly Microsoft ODS | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 175e7b5645a022dd7c840ae3065b4569bdf7a10f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1ee173d82bbc6ebe40475868c8771c5609c7a5ba
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Impossibile caricare il file o assembly di servizi di dati Microsoft
-  Negli ambienti SharePoint 2010 in cui è disponibile [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint questo errore si verifica se si prova un'esportazione del feed di dati e nel sistema non è installata la versione richiesta di Microsoft ADO.NET Data Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In ambienti SharePoint 2010 con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, questo errore si verifica se si tentano un'esportazione dei feed di dati e il sistema è presente la versione richiesta di Microsoft ADO.NET Data Services.  
   
 ## <a name="details"></a>Dettagli  
   

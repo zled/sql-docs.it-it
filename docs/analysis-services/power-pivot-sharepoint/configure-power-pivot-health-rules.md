@@ -2,12 +2,12 @@
 title: "Configurare le regole di integrità di Power Pivot | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configurare le regole di integrità di Power Pivot
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint include regole di integrità di SharePoint che consentono di monitorare e risolvere i problemi di disponibilità e configurazione. Le regole di integrità che si applicano a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint vengono visualizzate nella pagina Controlla definizioni regole.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]per SharePoint include regole di integrità SharePoint che consentono di monitorare e porre rimedio ai problemi di disponibilità e configurazione di server. Le regole di integrità che si applicano a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint vengono visualizzate nella pagina Controlla definizioni regole.  
   
  Le regole di integrità consentono di rilevare in anticipo problemi relativi al server che potrebbero eventualmente comportare interruzioni del servizio. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] per SharePoint include diverse regole per l'identificazione e la risoluzione dei problemi prima che questi abbiano un impatto sugli utenti. È possibile personalizzare molte di queste regole per adattarle alle caratteristiche univoche della distribuzione in uso. Se si desidera ad esempio più tempo per risolvere avvisi relativi allo spazio su disco, è possibile aumentare la percentuale di spazio su disco disponibile dal 5% al 10% in modo da ricevere prima l'avviso.  
   

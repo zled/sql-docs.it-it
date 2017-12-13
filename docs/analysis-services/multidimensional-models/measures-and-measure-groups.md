@@ -2,12 +2,12 @@
 title: Le misure e gruppi di misure | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-and-measure-groups"></a>Misure e gruppi di misure
-  Un cubo include *misure* in *gruppi di misure*, logica di business e una raccolta di dimensioni che forniscono il contesto per la valutazione dei dati numerici specificati da una misura. Misure e gruppi di misure sono componenti essenziali di un cubo. Un cubo non può esistere senza almeno una misura e un gruppo di misure.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un cubo include *misure* in *gruppi di misure*, logica di business, insieme a una raccolta di dimensioni che forniscono il contesto per la valutazione dei dati numerici che fornisce una misura. Misure e gruppi di misure sono componenti essenziali di un cubo. Un cubo non può esistere senza almeno una misura e un gruppo di misure.  
   
  Questo argomento descrive le [misure](#bkmk_measure) e i [gruppi di misure](#bkmk_mg). Include anche la tabella seguente, con collegamenti alle procedure per la creazione e configurazione di misure e di gruppi di misure.  
   

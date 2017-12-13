@@ -2,12 +2,12 @@
 title: Eliminare una raccolta Power Pivot | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b297cef8904e71629d644171082ba93efb28b8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d5c41c13232807dd492d7297a67d9061f8f1bc8b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-power-pivot-gallery"></a>Eliminare una raccolta Power Pivot
-  Con l'eliminazione di una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono eliminati tutti i relativi elementi, inclusa la cronologia dell'aggiornamento dati per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configurate per l'aggiornamento dati pianificato.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L'eliminazione di un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono eliminati tutti i relativi elementi, inclusa la cronologia dell'aggiornamento dati per raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] le cartelle di lavoro configurati per l'aggiornamento dati pianificato.  
   
 > [!NOTE]  
 >  In questo argomento vengono fornite istruzioni per l'eliminazione di una raccolta di SharePoint. Per istruzioni sull'eliminazione di singoli documenti dalla raccolta, vedere [Usare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  

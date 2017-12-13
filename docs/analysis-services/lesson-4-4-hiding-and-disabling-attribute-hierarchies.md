@@ -2,12 +2,12 @@
 title: Come nascondere e disabilitare le gerarchie di attributi | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0e234bf68aee7907a2b40e381ecbe43af5267026
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b1ae1a57e05d8953c4bd5f93b9e247419ee986c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lezione 4-4-come nascondere e disabilitare le gerarchie di attributi
-Per impostazione predefinita, una gerarchia dell'attributo viene creata per ogni attributo di una dimensione e ogni gerarchia è disponibile per il dimensionamento dei dati delle tabelle dei fatti. Questa gerarchia include un livello Totale e un livello di dettaglio contenente tutti i membri della gerarchia. Come illustrato in precedenza, è possibile organizzare gli attributi in gerarchie definite dall'utente per offrire percorsi di navigazione in un cubo. In alcuni casi è possibile disabilitare o nascondere determinati attributi o le rispettive gerarchie. Alcuni attributi, ad esempio i numeri della previdenza sociale o il codice fiscale, le retribuzioni, le date di nascita e le informazioni di accesso non sono attributi in base ai quali gli utenti dimensionano le informazioni sul cubo. Queste informazioni vengono invece generalmente visualizzate come dettagli di un particolare membro dell'attributo. È possibile nascondere queste gerarchie degli attributi lasciando gli attributi visibili come proprietà del membro di un attributo specifico. È inoltre possibile rendere visibili i membri di altri attributi, come ad esempio i nomi dei clienti o i codici postali, solo quando vengono visualizzati tramite una gerarchia utente anziché indipendentemente tramite una gerarchia dell'attributo. Ciò può essere determinato dal numero dei membri distinti nella gerarchia dell'attributo. Per migliorare le prestazioni di elaborazione, è infine consigliabile disabilitare le gerarchie degli attributi non utilizzate dagli utenti a fini di esplorazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Per impostazione predefinita, viene creata una gerarchia dell'attributo per ogni attributo in una dimensione e ogni gerarchia è disponibile per dimensionare le tabelle dei fatti. Questa gerarchia include un livello Totale e un livello di dettaglio contenente tutti i membri della gerarchia. Come illustrato in precedenza, è possibile organizzare gli attributi in gerarchie definite dall'utente per offrire percorsi di navigazione in un cubo. In alcuni casi è possibile disabilitare o nascondere determinati attributi o le rispettive gerarchie. Alcuni attributi, ad esempio i numeri della previdenza sociale o il codice fiscale, le retribuzioni, le date di nascita e le informazioni di accesso non sono attributi in base ai quali gli utenti dimensionano le informazioni sul cubo. Queste informazioni vengono invece generalmente visualizzate come dettagli di un particolare membro dell'attributo. È possibile nascondere queste gerarchie degli attributi lasciando gli attributi visibili come proprietà del membro di un attributo specifico. È inoltre possibile rendere visibili i membri di altri attributi, come ad esempio i nomi dei clienti o i codici postali, solo quando vengono visualizzati tramite una gerarchia utente anziché indipendentemente tramite una gerarchia dell'attributo. Ciò può essere determinato dal numero dei membri distinti nella gerarchia dell'attributo. Per migliorare le prestazioni di elaborazione, è infine consigliabile disabilitare le gerarchie degli attributi non utilizzate dagli utenti a fini di esplorazione.  
   
 Il valore della proprietà **AttributeHierarchyEnabled** determina se viene creata una gerarchia dell'attributo. Se la proprietà è impostata su **False**, la gerarchia dell'attributo non viene creata e l'attributo non rappresenta un livello nella gerarchia utente; la gerarchia dell'attributo esiste solo come proprietà del membro. È tuttavia possibile utilizzare una gerarchia dell'attributo disabilitata per ordinare i membri di un altro attributo. Se il valore della proprietà **AttributeHierarchyEnabled** è impostato su **True**, il valore della proprietà **AttributeHierarchyVisible** determina se la gerarchia dell'attributo è visibile indipendentemente dall'uso in una gerarchia definita dall'utente.  
   

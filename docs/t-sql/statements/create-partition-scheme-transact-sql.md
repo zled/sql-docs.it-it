@@ -34,19 +34,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c97264457e575aa076e6b10f3454f0d8cf6e2d7
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea uno schema nel database corrente per l'esecuzione del mapping tra le partizioni di una tabella o un indice partizionato e i filegroup. Il numero e il dominio delle partizioni di una tabella o un indice partizionato vengono determinati da una funzione di partizione. Una funzione di partizione deve essere creata prima in un [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) istruzione prima di creare uno schema di partizione.  
 
-[!NOTE]
-Nel Database di SQL Azure sono supportati solo i filegroup primari.  
+>[!NOTE]
+>Nel Database di SQL Azure sono supportati solo i filegroup primari.  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

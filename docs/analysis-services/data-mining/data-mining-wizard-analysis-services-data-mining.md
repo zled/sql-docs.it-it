@@ -2,12 +2,12 @@
 title: Creazione guidata di Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ad9dd40bb7f7f8da0820d9ccbefafed9079650b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffd9987c39cdffda3052ed075cb3abb137e4d1b2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Creazione guidata modello di data mining (Analysis Services - Data mining)
-  La Creazione guidata modello di data mining di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene avviata ogni volta che si aggiunge una nuova struttura di data mining a un progetto di data mining. La procedura guidata consente di scegliere un'origine dati e di configurare una vista origine dati per definire i dati da utilizzare per l'analisi, quindi consente di creare un modello iniziale.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Creazione guidata di Data Mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene avviato ogni volta che si aggiunge una nuova struttura di data mining a un progetto di data mining. La procedura guidata consente di scegliere un'origine dati e di configurare una vista origine dati per definire i dati da utilizzare per l'analisi, quindi consente di creare un modello iniziale.  
   
  Nella fase finale della procedura guidata, è possibile dividere facoltativamente i dati in set di training e di testing e abilitare funzionalità quali il drill-through.  
   

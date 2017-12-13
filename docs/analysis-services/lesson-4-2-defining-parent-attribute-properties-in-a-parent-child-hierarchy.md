@@ -2,12 +2,12 @@
 title: "Definizione di proprietà dell'attributo padre in una gerarchia padre-figlio | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e742a280ac4828cd708a3702545e9168cf8b0f73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7d8a8e45d9785d9eb4b449ad36689aadd8e454c6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lezione 4-2-definizione di proprietà dell'attributo padre in una gerarchia padre-figlio
-Una gerarchia padre-figlio è una gerarchia in una dimensione basata su due colonne di tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Una gerarchia padre-figlio è una gerarchia in una dimensione che si basa su due colonne della tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
   
 Per altre informazioni, vedere [Dimensioni padre-figlio](../analysis-services/multidimensional-models/parent-child-dimension.md), [Attributi nelle gerarchie padre-figlio](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   

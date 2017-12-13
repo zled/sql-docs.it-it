@@ -2,12 +2,12 @@
 title: Impostare le opzioni di rappresentazione (SSAS - multidimensionale) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
-  Quando si crea un oggetto **origine dati** in un modello di Analysis Services, una delle impostazioni da configurare è l'opzione di rappresentazione. Con questa opzione è possibile determinare se in Analysis Services viene acquisita l'identità di uno specifico account utente di Windows quando si eseguono operazioni locali correlate alla connessione, ad esempio il caricamento di un provider di dati OLE DB o la risoluzione di informazioni sul profilo utente in ambienti che supportano profili mobili.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea un **origine dati** dell'oggetto in un modello di Analysis Services, una delle impostazioni che è necessario configurare è un'opzione di rappresentazione. Con questa opzione è possibile determinare se in Analysis Services viene acquisita l'identità di uno specifico account utente di Windows quando si eseguono operazioni locali correlate alla connessione, ad esempio il caricamento di un provider di dati OLE DB o la risoluzione di informazioni sul profilo utente in ambienti che supportano profili mobili.  
   
  Per le connessioni in cui viene utilizzata l'autenticazione di Windows, con l'opzione di rappresentazione è possibile inoltre determinare l'identità utente con cui vengono eseguite le query nell'origine dati esterna. Ad esempio, se l'opzione di rappresentazione viene impostata su **contoso\dbuser**, le query usate per recuperare i dati durante l'elaborazione saranno eseguite come **contoso\dbuser** nel server di database.  
   

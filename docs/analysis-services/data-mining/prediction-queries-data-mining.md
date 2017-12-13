@@ -2,12 +2,12 @@
 title: Query di stima (Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
-  L'obiettivo di un progetto di data mining tipico consiste nell'utilizzare il modello di data mining per eseguire stime. Ad esempio, potrebbe essere necessario stimare la quantità di tempo di inattività prevista per un determinato cluster di server o generare un punteggio che indichi se è probabile che segmenti di clienti rispondano a una campagna pubblicitaria. Per effettuare tutte queste operazioni, è necessario creare una query di stima.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L'obiettivo di un progetto di data mining tipico consiste nell'utilizzare il modello di data mining per eseguire stime. Ad esempio, potrebbe essere necessario stimare la quantità di tempo di inattività prevista per un determinato cluster di server o generare un punteggio che indichi se è probabile che segmenti di clienti rispondano a una campagna pubblicitaria. Per effettuare tutte queste operazioni, è necessario creare una query di stima.  
   
  A livello funzionale esistono diversi tipi di query di stima supportati in SQL Server, a seconda del tipo di input per la query:  
   

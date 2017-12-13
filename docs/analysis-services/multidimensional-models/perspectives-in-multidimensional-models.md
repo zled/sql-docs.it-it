@@ -2,12 +2,12 @@
 title: Prospettive nei modelli multidimensionali | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9961af8c7f6edef8ed330d70df42dc63ff5b9d9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 65c85b108905cbfecd1f52234af7d33745e8e681
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Prospettive nei modelli multidimensionali
-  Una prospettiva è un subset di un cubo creato per una determinata applicazione o un determinato gruppo di utenti. La prospettiva predefinita è costituita dal cubo. Una prospettiva viene esposta a un client come un cubo. Quando viene visualizzata da un utente, una prospettiva si presenta come un altro cubo. Qualsiasi modifica apportata ai dati del cubo tramite writeback nella prospettiva viene apportata al cubo originale. Per altre informazioni sulle viste in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [Prospettive](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una prospettiva è un subset di un cubo creato per una particolare applicazione o un gruppo di utenti. La prospettiva predefinita è costituita dal cubo. Una prospettiva viene esposta a un client come un cubo. Quando viene visualizzata da un utente, una prospettiva si presenta come un altro cubo. Qualsiasi modifica apportata ai dati del cubo tramite writeback nella prospettiva viene apportata al cubo originale. Per altre informazioni sulle viste in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [Prospettive](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
   
  Usare la scheda **Prospettive** di Progettazione cubi per creare o modificare prospettive in un cubo. Nella prima colonna **Oggetti cubo** della scheda **Prospettive** sono elencati tutti gli oggetti del cubo. Corrisponde alla prospettiva predefinita per il cubo, costituita dal cubo stesso.  
   

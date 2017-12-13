@@ -2,12 +2,12 @@
 title: Introduzione alle dimensioni (Analysis Services - dati multidimensionali) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb0acf4e658ca1184cfb7a019454b89e72221e46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 726344198c74d36a0d31368980f305c1426f1607
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions---introduction"></a>Dimensioni: introduzione
-  Tutti i Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le dimensioni sono gruppi di attributi basati su colonne di tabelle o viste in una vista origine dati. Le dimensioni esistono indipendentemente da un cubo, possono essere utilizzate in più cubi, possono essere utilizzate più volte in un singolo cubo e possono essere collegate tra istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una dimensione indipendente da un cubo viene denominata dimensione del database e un'istanza di una dimensione del database all'interno di un cubo viene denominata dimensione del cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tutti i Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le dimensioni sono gruppi di attributi basati su colonne di tabelle o viste in una vista origine dati. Le dimensioni esistono indipendentemente da un cubo, possono essere utilizzate in più cubi, possono essere utilizzate più volte in un singolo cubo e possono essere collegate tra istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una dimensione indipendente da un cubo viene denominata dimensione del database e un'istanza di una dimensione del database all'interno di un cubo viene denominata dimensione del cubo.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimensione basata su una progettazione con schema star  
  La struttura di una dimensione è per lo più determinata dalla struttura della tabella della dimensione o delle tabelle delle dimensioni sottostanti. La struttura più semplice è detta schema star, dove ogni dimensione è basata su un'unica tabella delle dimensioni direttamente collegata alla tabella dei fatti tramite una relazione chiave primaria/chiave esterna.  

@@ -2,12 +2,12 @@
 title: Backup e ripristino di database di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una funzionalità di backup e ripristino per poter eseguire il recupero temporizzato di un database e dei relativi oggetti. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include backup e ripristino in modo che è possibile ripristinare un database e i relativi oggetti da un determinato punto nel tempo. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
   
  I comandi di backup e ripristino vengono eseguiti su un database di Analysis Services distribuito. Per progetti e soluzioni disponibili in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è necessario utilizzare il controllo del codice sorgente per assicurarsi di poter recuperare versioni specifiche dei file di origine e quindi creare un piano di recupero dati per il repository del sistema di controllo del codice sorgente che si utilizza.  
   

@@ -2,12 +2,12 @@
 title: Esempi di Query sul modello di clustering | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
-  Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello o creare una query sul contenuto che forniscono informazioni dettagliate sui modelli individuati durante l'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
   
  Questa sezione illustra come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering.  
   

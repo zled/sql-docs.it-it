@@ -2,12 +2,12 @@
 title: Esplorazione del cubo | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00dee701e3bea7e30924352e136c6202d6a10ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0dbee75cc8ac8550df25d47265796d4526442787
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>Lezione 2-6-esplorazione del cubo
-Dopo aver distribuito un cubo, è possibile visualizzarne i dati nella scheda **Esplorazione** di Progettazione cubi, mentre i dati della dimensione possono essere visualizzati nella scheda **Esplorazione** di Progettazione dimensioni. L'esplorazione dei dati del cubo e delle dimensioni consente di controllare il lavoro in modo incrementale. È possibile verificare che le piccole modifiche a proprietà, relazioni e altri oggetti abbiano l'effetto desiderato dopo l'elaborazione dell'oggetto. Sebbene la scheda Esplorazione venga utilizzata per visualizzare sia i dati del cubo che quelli delle dimensioni, le funzionalità da essa fornite variano a seconda dell'oggetto visualizzato.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver distribuito un cubo, i dati del cubo sono visibili nella **Browser** è visibile nella scheda della finestra di Progettazione cubi e i dati della dimensione di **Browser** scheda in Progettazione dimensioni. L'esplorazione dei dati del cubo e delle dimensioni consente di controllare il lavoro in modo incrementale. È possibile verificare che le piccole modifiche a proprietà, relazioni e altri oggetti abbiano l'effetto desiderato dopo l'elaborazione dell'oggetto. Sebbene la scheda Esplorazione venga utilizzata per visualizzare sia i dati del cubo che quelli delle dimensioni, le funzionalità da essa fornite variano a seconda dell'oggetto visualizzato.  
   
 Per le dimensioni la scheda Esplorazione consente di visualizzare i membri o di spostarsi nella gerarchia fino al nodo foglia. È possibile esplorare i dati della dimensione in diverse lingue, a condizione che siano state aggiunte le traduzioni al modello.  
   

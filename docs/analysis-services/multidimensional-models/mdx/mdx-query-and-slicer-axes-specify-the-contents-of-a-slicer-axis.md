@@ -2,12 +2,12 @@
 title: Impostazione del contenuto di un asse di sezionamento (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c88d724873a7e2a7e811a4a28c9b76b5c9b12ccd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Query MDX e assi di sezionamento - specificare il contenuto di un asse di sezionamento
-  L'asse di sezionamento filtra i dati restituiti dall'istruzione SELECT di MDX (Multidimensional Expression), limitando la restituzione ai soli dati che si intersecano con i membri specificati. Può essere considerato un asse aggiuntivo invisibile in una query. L'asse di sezionamento è definito nella clausola WHERE dell'istruzione SELECT in MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'asse di sezionamento Filtra i dati restituiti dall'istruzione SELECT MDX (Multidimensional Expressions), limitare i dati restituiti in modo che verranno restituiti solo i dati che si intersecano con i membri specificati. Può essere considerato un asse aggiuntivo invisibile in una query. L'asse di sezionamento è definito nella clausola WHERE dell'istruzione SELECT in MDX.  
   
 ## <a name="slicer-axis-syntax"></a>Sintassi dell'asse di sezionamento  
  Per specificare in modo esplicito un asse di sezionamento, è necessario utilizzare `<SELECT slicer axis clause>` in MDX, come descritto nella sintassi seguente:  

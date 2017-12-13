@@ -2,12 +2,12 @@
 title: Definire i calcoli di Intelligence temporali mediante la procedura guidata di Business Intelligence | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d40605d85444307073de84d7fb8c8e4bbeea163d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c0a46098b9f1793309ae31417f29f2b23772de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definire calcoli delle funzionalità di Business Intelligence per le gerarchie temporali mediante la Configurazione guidata funzionalità di Business Intelligence
-  La funzionalità avanzata di Business Intelligence per le gerarchie temporali corrisponde alla funzionalità avanzata a livello di cubo basata sull'aggiunta di calcoli temporali o viste temporali a una gerarchia selezionata. Questa funzionalità avanzata supporta le categorie di calcolo seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La funzionalità di business intelligence di tempo è un miglioramento del cubo che aggiunge i calcoli temporali (o viste temporali) a una gerarchia selezionata. Questa funzionalità avanzata supporta le categorie di calcolo seguenti:  
   
 -   Da inizio periodo fino alla data specificata.  
   

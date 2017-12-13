@@ -2,12 +2,12 @@
 title: Le formule di convalida incrociata | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 041206471791fe8be8b06e407854f96fc021eedd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-formulas"></a>Formule per la convalida incrociata
-  Quando viene generato, un report di convalida incrociata contiene misure di accuratezza per ogni modello, a seconda del tipo di modello di data mining (ovvero dell'algoritmo utilizzato per creare il modello), del tipo di dati dell'attributo stimabile e del valore dell'attributo stimabile, se presente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si genera un report di convalida incrociata, contiene le misure di accuratezza per ogni modello, a seconda del tipo di modello di data mining (ovvero, l'algoritmo utilizzato per creare il modello), il tipo di dati dell'attributo stimabile e l'attributo stimabile valore, se presente.  
   
  In questa sezione vengono elencate le misure utilizzate nel report di convalida incrociata e viene descritto il metodo di calcolo.  
   

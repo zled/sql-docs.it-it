@@ -2,12 +2,12 @@
 title: Per i modelli Naive Bayes contenuto del modello di data mining (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdf21e47900f66d564ff209261fb0b3533f2d9cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0e6fb2186671be3fee4132ee67d39e7ea2c8c824
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Naive Bayes (Analysis Services - Data mining)
-  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento descrive contenuto del modello di data mining che è specifico dei modelli che utilizzano il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Naive Bayes. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Informazioni sulla struttura di un modello Naive Bayes  
  La struttura di un modello Naive Bayes è data da un solo nodo padre, che rappresenta il modello e i metadati, e da un numero qualsiasi di alberi indipendenti che rappresentano gli attributi stimabili selezionati. Oltre agli alberi per gli attributi, ogni modello contiene un nodo delle statistiche marginali (NODE_TYPE = 26) che fornisce statistiche descrittive sul set di case di training. Per ulteriori informazioni, vedere [Informazioni nel nodo delle statistiche marginali](#bkmk_margstats).  

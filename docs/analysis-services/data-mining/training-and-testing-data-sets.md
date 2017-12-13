@@ -2,12 +2,12 @@
 title: Set di training e set di dati di Testing | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
-  La separazione dei dati in set di training e set di testing rappresenta una parte importante della valutazione dei modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Separazione dei dati in set di training e set di testing è una parte importante della valutazione di modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  
   
  Dopo aver elaborato il modello tramite il set di training, il modello viene testato eseguendo stime sul set di test. Poiché nei dati nel set di testing sono contenuti già valori noti per l'attributo di cui si desidera eseguire la stima, la correttezza delle ipotesi del modello può essere determinata facilmente.  
   

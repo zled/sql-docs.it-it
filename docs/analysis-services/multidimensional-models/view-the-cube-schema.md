@@ -2,12 +2,12 @@
 title: Visualizzare lo Schema del cubo | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2489ce5465afcbbb42ffaa9403d75a7d42d68ca4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-cube-schema"></a>Visualizzare lo schema del cubo
-  Lo schema del cubo viene visualizzato nel riquadro **Vista origine dati** della scheda **Struttura cubo** in **Progettazione cubi** . Lo schema è il set di tabelle da cui derivano le misure e le dimensioni per un cubo. Ogni schema del cubo è costituito da una o più tabelle dei fatti e da una o più tabelle delle dimensioni su cui sono basate le misure e le dimensioni nel cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il **vista origine dati** riquadro del **struttura cubo** scheda **Progettazione cubi** consente di visualizzare lo schema del cubo. Lo schema è il set di tabelle da cui derivano le misure e le dimensioni per un cubo. Ogni schema del cubo è costituito da una o più tabelle dei fatti e da una o più tabelle delle dimensioni su cui sono basate le misure e le dimensioni nel cubo.  
   
  Nel riquadro **Vista origine dati** della scheda **Struttura cubo** viene visualizzato un diagramma vista origine dati su cui è basato il cubo. Questo diagramma è un subset del diagramma principale della vista origine dati. È possibile nascondere e mostrare tabelle nel riquadro **Vista origine dati** , nonché visualizzare tutti i diagrammi esistenti. Tuttavia, non è possibile apportare modifiche, ad esempio aggiungere nuove relazioni o query denominate, allo schema sottostante. Per apportare modifiche allo schema, utilizzare Progettazione vista origine dati.  
   

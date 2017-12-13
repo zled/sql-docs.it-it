@@ -2,12 +2,12 @@
 title: Gli indicatori KPI (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2e5c74ba7ae5a96646364ffebf4895af1999319b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="kpis"></a>KPI
-  In un modello tabulare un indicatore di prestazioni chiave ( *KPI* ) viene usato per misurare le prestazioni di un valore, definito da una misura di *base* , rispetto a un valore di *destinazione* , definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *KPI* (Key Performance Indicator), in un modello tabulare, viene utilizzato per misurare le prestazioni di un valore, definito mediante un *Base* misura, contro un *destinazione* valore, definito anche da un misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Nella terminologia aziendale un indicatore KPI rappresenta una misurazione quantificabile per la valutazione degli obiettivi aziendali e viene stimato con una frequenza spesso elevata. Il reparto vendite di un'organizzazione può ad esempio utilizzare un indicatore KPI per misurare il profitto lordo mensile rispetto al profitto lordo previsto. Il reparto contabilità può misurare le spese mensili rispetto ai ricavi per valutare i costi, mentre un reparto risorse umane può misurare l'avvicendamento trimestrale dei dipendenti. Ognuno di questi rappresenta un esempio di utilizzo di un indicatore KPI. I professionisti aziendali utilizzano spesso gli indicatori di prestazioni chiave raggruppati in una scorecard aziendale per ottenere un riepilogo cronologico immediato e accurato del successo aziendale o per identificare le tendenze.  

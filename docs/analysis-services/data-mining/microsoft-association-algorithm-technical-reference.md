@@ -2,12 +2,12 @@
 title: Riferimento tecnico per l'algoritmo Microsoft Association Rules | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un'implementazione semplice del noto algoritmo Apriori.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Association Rules è un'implementazione semplice del noto algoritmo Apriori.  
   
  Sia l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees che l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules possono essere usati per analizzare associazioni, ma le regole individuate da ognuno di essi possono essere diverse. In un modello di albero delle decisioni le divisioni che portano a regole specifiche sono basate su Information Gain, mentre in un modello di associazione le regole sono interamente basate sulla confidenza. Pertanto, in un modello di associazione una regola efficace o caratterizzata da una confidenza elevata può non essere necessariamente interessante, in quanto non fornisce nuove informazioni.  
   

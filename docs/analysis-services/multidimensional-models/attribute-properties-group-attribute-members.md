@@ -2,12 +2,12 @@
 title: Raggruppare i membri dell'attributo (discretizzazione) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6779eda5faf42a64a6d6f87494f57ac0166ab31c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Proprietà dell'attributo - gruppo i membri dell'attributo
-  Un gruppo di membri è una raccolta generata dal sistema di membri consecutivi di una dimensione. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], i membri di un attributo possono essere raggruppati in gruppi di membri tramite un processo denominato "discretizzazione". Un livello di una gerarchia contiene gruppi di membri o membri, ma non entrambi. Esplorando un livello contenente gruppi di membri, gli utenti aziendali visualizzano i nomi e i valori delle celle dei gruppi di membri. I membri generati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare i gruppi di membri vengono denominati membri di raggruppamento e vengono visualizzati come membri ordinari.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un gruppo di membro è una raccolta generato dal sistema di membri consecutivi di una dimensione. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], i membri di un attributo possono essere raggruppati in gruppi di membri tramite un processo denominato "discretizzazione". Un livello di una gerarchia contiene gruppi di membri o membri, ma non entrambi. Esplorando un livello contenente gruppi di membri, gli utenti aziendali visualizzano i nomi e i valori delle celle dei gruppi di membri. I membri generati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare i gruppi di membri vengono denominati membri di raggruppamento e vengono visualizzati come membri ordinari.  
   
  La proprietà **DiscretizationMethod** di un attributo controlla la modalità di raggruppamento dei membri.  
   

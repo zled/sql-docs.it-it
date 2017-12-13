@@ -2,12 +2,12 @@
 title: Riferimento tecnico per l'algoritmo di Clustering Microsoft | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fbf3b08a21782434702dad4383a797293156593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffca0c4aa4879d5732831113308c26a9032a7dff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
-  In questa sezione viene illustrata l'implementazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, inclusi i parametri che è possibile utilizzare per controllare il comportamento dei modelli di clustering. Vengono inoltre fornite istruzioni su come migliorare le prestazioni durante la creazione e l'elaborazione di modelli di clustering.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questa sezione viene illustrata l'implementazione del [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo di Clustering, inclusi i parametri che è possibile utilizzare per controllare il comportamento dei modelli di clustering. Vengono inoltre fornite istruzioni su come migliorare le prestazioni durante la creazione e l'elaborazione di modelli di clustering.  
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
   

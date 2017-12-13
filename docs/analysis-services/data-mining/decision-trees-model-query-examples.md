@@ -2,12 +2,12 @@
 title: Esempi di Query del modello Decision Trees | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1b441eb4718e5f362fb1ef6f6a3a889cf5dc812
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f38e76e522a4b062e27379533c22b540311f4c34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="decision-trees-model-query-examples"></a>Esempi di query sul modello di alberi delle decisioni
-  Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello Decision Trees, ad esempio, può fornire statistiche sul numero di case a ogni livello dell'albero o le regole che consentono di distinguere i case. In alternativa, una query di stima esegue il mapping del modello ai nuovi dati per generare indicazioni, classificazioni e così via. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, o è possibile creare una query di stima che utilizza i criteri del modello per eseguire stime per i nuovi dati. Una query sul contenuto per un modello Decision Trees, ad esempio, può fornire statistiche sul numero di case a ogni livello dell'albero o le regole che consentono di distinguere i case. In alternativa, una query di stima esegue il mapping del modello ai nuovi dati per generare indicazioni, classificazioni e così via. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
   
  In questa sezione viene illustrato come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees.  
   

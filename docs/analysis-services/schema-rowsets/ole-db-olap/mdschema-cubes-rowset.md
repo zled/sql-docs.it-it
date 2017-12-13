@@ -2,12 +2,12 @@
 title: Set di righe MDSCHEMA_CUBES | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ff85f0461a9ca0abc7c9acdfdd4cb2b23722c41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b436b82e46b95d545788f4885a52b20ed81cbffd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdschemacubes-rowset"></a>Set di righe MDSCHEMA_CUBES
-  Descrive la struttura dei cubi all'interno di un database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descrive la struttura dei cubi all'interno di un database.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **MDSCHEMA_CUBES** set di righe contiene le colonne seguenti.  

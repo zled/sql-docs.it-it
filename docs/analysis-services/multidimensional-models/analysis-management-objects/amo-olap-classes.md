@@ -2,12 +2,12 @@
 title: Classi OLAP in AMO | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 837acf180e08c995461a96ae027480f5175e17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d2d64c16bac9814a78a525c43693c6fb10507b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-olap-classes"></a>Classi OLAP di AMO
-  Le classi OLAP della libreria AMO (Analysis Management Objects) consentono di creare, modificare, eliminare ed elaborare cubi, dimensioni e oggetti correlati, ad esempio indicatori di prestazioni chiave (KPI), azioni e memorizzazione nella cache attiva.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Management Objects (AMO) OLAP classi consentono di creare, modificare, eliminare ed elaborare cubi, dimensioni e oggetti correlati, ad esempio indicatori di prestazioni chiave (KPI), azioni e la memorizzazione nella cache.  
   
  Per ulteriori informazioni sull'impostazione di ambiente di programmazione AMO, come origini per stabilire una connessione con un server, l'accesso a un database o la definizione dei dati e viste origine dati, vedere [le classi fondamentali AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
   

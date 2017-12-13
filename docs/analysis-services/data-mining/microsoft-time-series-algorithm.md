@@ -2,12 +2,12 @@
 title: Algoritmo Microsoft Time Series | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 245c39d7ff9366e43b1faad07fec64befa5aea0e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo Microsoft Time Series
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series rende disponibili numerosi algoritmi ottimizzati per prevedere valori continui, ad esempio vendite di prodotti, nel corso del tempo. Altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] , come ad esempio gli alberi delle decisioni, richiedono colonne aggiuntive di nuove informazioni come input per stimare una tendenza contrariamente a quanto accade con un modello Time Series. Un modello Time Series può stimare le tendenze basate solo sul set di dati originale utilizzato per creare il modello. È anche possibile aggiungere nuovi dati al modello quando viene eseguita una stima e vengono incorporati automaticamente i nuovi dati nell'analisi della tendenza.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series fornisce più algoritmi ottimizzati per la previsione di valori continui, ad esempio le vendite del prodotto, nel corso del tempo. Altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] , come ad esempio gli alberi delle decisioni, richiedono colonne aggiuntive di nuove informazioni come input per stimare una tendenza contrariamente a quanto accade con un modello Time Series. Un modello Time Series può stimare le tendenze basate solo sul set di dati originale utilizzato per creare il modello. È anche possibile aggiungere nuovi dati al modello quando viene eseguita una stima e vengono incorporati automaticamente i nuovi dati nell'analisi della tendenza.  
   
  Nel diagramma seguente viene illustrato un modello tipico per la previsione delle vendite di un prodotto nel tempo, in quattro diverse regioni di vendita. Il modello visualizzato nel diagramma illustra le vendite di ogni regione rappresentate con righe rosse, gialle, viola e blu. La riga per ogni regione è composta da due parti:  
   

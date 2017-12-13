@@ -2,12 +2,12 @@
 title: Registrare le operazioni in Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 546e28af279bd62018f54a7f1bff33c6e27b8883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
-  Un'istanza di Analysis Services registrerà le notifiche, gli errori e gli avvisi del server nel file msmdsrv.log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](http://support.microsoft.com/kb/2965035).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un'istanza di Analysis Services registrerà le notifiche di server, errori e avvisi per il file msmdsrv.log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](http://support.microsoft.com/kb/2965035).  
   
  Oltre alla funzionalità di registrazione predefinita, molti amministratori e sviluppatori usano anche gli strumenti forniti dalla community di Analysis Services, ad esempio **ASTrace**, per raccogliere i dati relativi alle operazioni del server. Vedere [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Esempi della community di Microsoft SQL Server: Analysis Services) per i collegamenti per il download.  
   

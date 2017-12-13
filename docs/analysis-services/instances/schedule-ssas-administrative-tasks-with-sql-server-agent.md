@@ -2,12 +2,12 @@
 title: "Pianificare le attività amministrative SSAS con SQL Server Agent | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28be70a8fe43d1c22ba3e7787d507c694b09750a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Pianificare attività amministrative SSAS con SQL Server Agent
-  Usando il servizio SQL Server Agent, è possibile pianificare l'esecuzione delle attività amministrative di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'ordine e agli orari necessari. Le attività pianificate consentono di automatizzare processi eseguiti in cicli regolari o prevedibili. È possibile pianificare l'esecuzione di attività amministrative, ad esempio l'elaborazione di cubi, nei periodi in cui l'attività aziendale è ridotta. È inoltre possibile determinare l'ordine di esecuzione delle attività creando passaggi di processo in un processo di SQL Server Agent. È possibile ad esempio elaborare un cubo ed eseguirne quindi un backup.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usa il servizio Agente SQL Server, è possibile pianificare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attività amministrative da eseguire nell'ordine e gli orari in cui è necessario. Le attività pianificate consentono di automatizzare processi eseguiti in cicli regolari o prevedibili. È possibile pianificare l'esecuzione di attività amministrative, ad esempio l'elaborazione di cubi, nei periodi in cui l'attività aziendale è ridotta. È inoltre possibile determinare l'ordine di esecuzione delle attività creando passaggi di processo in un processo di SQL Server Agent. È possibile ad esempio elaborare un cubo ed eseguirne quindi un backup.  
   
  I passaggi di processo consentono di controllare il flusso dell'esecuzione. Se uno dei processi ha esito negativo, è possibile configurare SQL Server Agent per continuare a eseguire le attività rimanenti o per arrestare l'esecuzione. È inoltre possibile configurare SQL Server Agent per l'invio di notifiche relative all'esito positivo o negativo dell'esecuzione di un processo.  
   

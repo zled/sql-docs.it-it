@@ -2,12 +2,12 @@
 title: Creazione di Query con ambito di set denominati (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a05d52185020b6906469f3244e3ae1a6b1fc7a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e5f201c0cb07527083985d8de46a2ac3f8431b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Denominata set - creazione con ambito Query MDX di set denominati
-  Se un set denominato è richiesto esclusivamente per una sola query MDX (Multidimensional Expressions), è possibile definirlo specificando la parola chiave WITH. Un set denominato creato specificando questa parola chiave non esiste più dopo l'esecuzione della query.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Se un set denominato è solo necessario per una singola query MDX (Multidimensional Expressions), è possibile definire che set denominato tramite la parola chiave WITH. Un set denominato creato specificando questa parola chiave non esiste più dopo l'esecuzione della query.  
   
  Come descritto in questo argomento, la sintassi della parola chiave WITH è piuttosto flessibile e consente addirittura di definire un set denominato tramite l'utilizzo di funzioni.  
   

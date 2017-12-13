@@ -2,12 +2,12 @@
 title: Creare una struttura di Data Mining OLAP | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 011c1527e135a7326d54b0268d9e2fcb070fb6e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-olap-mining-structure"></a>Creare una struttura di data mining OLAP
-  La creazione di un modello di data mining basato su un cubo OLAP o un altro archivio dati multidimensionale presenta numerosi vantaggi. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esistono numerosi vantaggi per la creazione di un modello di data mining in base a un cubo OLAP o un altro archivio dati multidimensionale. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
   
  In questo argomento viene descritto come creare una struttura di data mining OLAP, basata su una dimensione e misure correlate in una soluzione multidimensionale esistente.  
   

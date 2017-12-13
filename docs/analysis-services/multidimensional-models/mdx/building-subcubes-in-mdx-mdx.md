@@ -2,12 +2,12 @@
 title: Compilazione di sottocubi in MDX (MultiDimensional Expression) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d56fe149317939cfb0b184dcd20b1411514f2ca9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a84f574abdac7490ce4dad5683dd800f474ca59c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Compilazione di sottocubi in MDX (MDX)
-  Un sottocubo è un subset di un cubo che rappresenta una vista filtrata dei dati sottostanti. Riducendo il cubo a un sottocubo, è possibile migliorare le prestazioni delle query.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un sottocubo è un subset di un cubo che rappresenta una visualizzazione filtrata dei dati sottostanti. Riducendo il cubo a un sottocubo, è possibile migliorare le prestazioni delle query.  
   
  Per definire un sottocubo, è possibile usare l'istruzione [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) , come descritto in questo argomento.  
   

@@ -2,12 +2,12 @@
 title: I membri dell'attributo di ordinamento in base a un attributo secondario | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55680946738ce1317a0c71397d7a0fe90c959e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lezione 4-5 - ordinamento dei membri dell'attributo in base a un attributo secondario
-Nella lezione 3 è stato illustrato l'ordinamento dei membri dell'attributo in base al nome o al valore di chiave. È stato inoltre descritto come utilizzare una chiave composta del membro per influire sui membri dell'attributo e sul tipo di ordinamento. Per altre informazioni, vedere [Modifica della dimensione Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Tuttavia, se il nome o la chiave dell'attributo non forniscono il tipo di ordinamento desiderato, è possibile utilizzare un attributo secondario per ottenere i risultati richiesti. Definendo una relazione tra gli attributi, è possibile utilizzare il secondo attributo per ordinare i membri del primo attributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nella lezione 3 è stato descritto come ordinare i membri dell'attributo in base al nome o al valore della chiave. È stato inoltre descritto come utilizzare una chiave composta del membro per influire sui membri dell'attributo e sul tipo di ordinamento. Per altre informazioni, vedere [Modifica della dimensione Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Tuttavia, se il nome o la chiave dell'attributo non forniscono il tipo di ordinamento desiderato, è possibile utilizzare un attributo secondario per ottenere i risultati richiesti. Definendo una relazione tra gli attributi, è possibile utilizzare il secondo attributo per ordinare i membri del primo attributo.  
   
 Le relazioni tra attributi definiscono le relazioni o le dipendenze che intercorrono tra gli attributi. In una dimensione basata su una singola tabella relazionale tutti gli attributi sono in genere correlati tra loro mediante l'attributo chiave poiché tutti gli attributi relativi a una dimensione includono informazioni sui membri collegati mediante l'attributo chiave della dimensione ai fatti della tabella dei fatti per ogni gruppo di misure correlato. In una dimensione basata su più tabelle, gli attributi sono in genere collegati in base alla chiave di join tra le tabelle. Se supportato dai dati sottostanti, gli attributi correlati possono essere utilizzati per specificare un ordinamento. Ad esempio, è possibile creare un nuovo attributo tramite cui viene fornita la logica di ordinamento per un attributo correlato.  
   

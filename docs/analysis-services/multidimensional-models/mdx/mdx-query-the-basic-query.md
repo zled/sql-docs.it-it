@@ -2,12 +2,12 @@
 title: La Query MDX di base (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91f450be525f7ec0d019a3f17f28ee25886c44aa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>Query MDX, la Query di base
-  La query MDX (Multidimensional Expressions) di base corrisponde all'istruzione SELECT, la query eseguita più di frequente in MDX. Se si conosce la sintassi dell'istruzione MDX SELECT, si sa creare una semplice query tramite questa istruzione e si capisce perché in un'istruzione SELECT è necessario specificare un set di risultati, si avrà la padronanza dell'utilizzo di MDX per l'esecuzione di query in dati multidimensionali.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]La query MDX (Multidimensional Expressions) di base è l'istruzione SELECT, query vengono utilizzati più di frequente in MDX. Se si conosce la sintassi dell'istruzione MDX SELECT, si sa creare una semplice query tramite questa istruzione e si capisce perché in un'istruzione SELECT è necessario specificare un set di risultati, si avrà la padronanza dell'utilizzo di MDX per l'esecuzione di query in dati multidimensionali.  
   
 ## <a name="specifying-a-result-set"></a>Impostazione di un set di risultati  
  In MDX l'istruzione SELECT specifica un set di risultati contenente un subset dei dati multidimensionali di un cubo che sono stati restituiti. Per specificare un set di risultati, una query MDX deve contenere le informazioni seguenti:  

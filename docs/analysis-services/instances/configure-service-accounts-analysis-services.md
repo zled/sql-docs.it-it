@@ -2,12 +2,12 @@
 title: Configurare gli account di servizio (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurare gli account del servizio (Analysis Services)
-  Il provisioning dell'account a livello di prodotto è documentato in [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un argomento che fornisce informazioni complete sull'account del servizio per tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tra cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Fare riferimento a questo argomento per ottenere informazioni sui tipi di account validi, sui privilegi di Windows assegnati dal programma di installazione, sulle autorizzazioni per il file system e il Registro di sistema e altro ancora.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Provisioning dell'account a livello di prodotto è documentato [configurare account di servizio Windows e le autorizzazioni](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un argomento che fornisce informazioni sull'account di servizio completo per tutti i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizi, tra cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Fare riferimento a questo argomento per ottenere informazioni sui tipi di account validi, sui privilegi di Windows assegnati dal programma di installazione, sulle autorizzazioni per il file system e il Registro di sistema e altro ancora.  
   
  Questo argomento fornisce informazioni aggiuntive per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tra cui le autorizzazioni aggiuntive necessarie per le installazioni tabulari e cluster. Descrive inoltre le autorizzazioni necessarie per supportare le operazioni del server. Ad esempio, è possibile configurare operazioni di elaborazione e query da eseguire con l'account del servizio, nel qual caso però sarà necessario concedere alcune autorizzazioni aggiuntive.  
   

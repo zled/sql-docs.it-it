@@ -2,12 +2,12 @@
 title: Programmazione di oggetti di Data Mining AMO | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmazione di oggetti di data mining AMO
-  La programmazione di oggetti di data mining tramite AMO è un'operazione estremamente semplice. Il primo passaggio consiste nella creazione del modello della struttura dei dati per supportare il progetto di data mining. Successivamente viene creato il modello di data mining che supporta l'algoritmo di data mining da utilizzare per stimare o individuare le relazioni non visibili sottostanti ai dati. Dopo avere creato il progetto di data mining, inclusi la struttura e gli algoritmi, è possibile elaborare i modelli di data mining per ottenere i modelli di cui è stato eseguito il training da utilizzare in un secondo momento durante l'esecuzione di query e di stime dall'applicazione client.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Programmazione di oggetti di data mining tramite AMO è semplice e lineare. Il primo passaggio consiste nella creazione del modello della struttura dei dati per supportare il progetto di data mining. Successivamente viene creato il modello di data mining che supporta l'algoritmo di data mining da utilizzare per stimare o individuare le relazioni non visibili sottostanti ai dati. Dopo avere creato il progetto di data mining, inclusi la struttura e gli algoritmi, è possibile elaborare i modelli di data mining per ottenere i modelli di cui è stato eseguito il training da utilizzare in un secondo momento durante l'esecuzione di query e di stime dall'applicazione client.  
   
  È importante tenere presente che AMO non è un modello per l'esecuzione di query, ma consente di gestire e amministrare le strutture e i modelli di data mining. Per eseguire query sui dati, utilizzare [allo sviluppo con ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   

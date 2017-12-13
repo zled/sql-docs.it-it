@@ -2,12 +2,12 @@
 title: Progetto di servizi di distribuzione di un'analisi | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lezione 2-5-distribuisce un progetto di Analysis Services
-Per visualizzare i dati del cubo e delle dimensioni relativi agli oggetti del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, è necessario distribuire il progetto in un'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi elaborare il cubo e le relative dimensioni. La *distribuzione* di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la creazione degli oggetti definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. L'*elaborazione* degli oggetti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la copia dei dati delle origini dati sottostanti negli oggetti cubo. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Per visualizzare i dati di cubi e dimensioni per gli oggetti nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo esercitazione il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto dell'esercitazione, è necessario distribuire il progetto in un'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi elaborare il cubo e le relative dimensioni. La *distribuzione* di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la creazione degli oggetti definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. L'*elaborazione* degli oggetti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la copia dei dati delle origini dati sottostanti negli oggetti cubo. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 In questa fase del processo di sviluppo il cubo viene in genere distribuito in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in un server di sviluppo. Al termine dello sviluppo del progetto di Business Intelligence, si utilizza in genere la Distribuzione guidata [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per distribuire il progetto dal server di sviluppo a un server di produzione. Per altre informazioni, vedere [Distribuzione di soluzioni di modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) e [Distribuire soluzioni di modelli tramite la Distribuzione guidata](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
