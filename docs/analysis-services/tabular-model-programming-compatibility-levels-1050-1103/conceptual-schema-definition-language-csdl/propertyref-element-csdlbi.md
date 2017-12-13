@@ -2,12 +2,12 @@
 title: Elemento PropertyRef (CSDLBI) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bebac79077aed4065b9468396740462d9844fda6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a1793ff1c0f7094ad8b63a2f0365ec90f6b05c57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="propertyref-element-csdlbi"></a>Elemento PropertyRef (CSDLBI)
-  L'elemento PropertyRef è un tipo semplice che fornisce un riferimento a una colonna che specifica un valore richiesto da un'altra proprietà.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento PropertyRef è un tipo semplice che fornisce un riferimento a una colonna che fornisce un valore richiesto da un'altra proprietà.  
   
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento PropertyRef.  

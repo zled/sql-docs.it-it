@@ -2,12 +2,12 @@
 title: Algoritmo Microsoft Sequence Clustering | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo Microsoft Sequence Clustering
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo di tipo unico che combina l'analisi delle sequenze con il clustering. È possibile usare questo algoritmo per esplorare i dati contenenti eventi da collegare in una *sequenza*. L'algoritmo consente di individuare le sequenze più comuni ed esegue il clustering per individuare le sequenze simili. Gli esempi seguenti illustrano i tipi di sequenze che possono essere acquisite come dati per il Machine Learning, al fine di ottenere informazioni su problemi o scenari aziendali comuni:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo univoco che combina l'analisi delle sequenze con il clustering. È possibile usare questo algoritmo per esplorare i dati contenenti eventi da collegare in una *sequenza*. L'algoritmo consente di individuare le sequenze più comuni ed esegue il clustering per individuare le sequenze simili. Gli esempi seguenti illustrano i tipi di sequenze che possono essere acquisite come dati per il Machine Learning, al fine di ottenere informazioni su problemi o scenari aziendali comuni:  
   
 -   Clickstream or percorsi di navigazione generati dagli utenti durante l'uso di un sito Web.  
   

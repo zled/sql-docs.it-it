@@ -2,12 +2,12 @@
 title: "Aggiungere dati di esempio per un modello DirectQuery in modalità progettazione | Documenti Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff618d97a65c7143dda513d38d66dd72d1459022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 962cadeac40c4cd450265d6c617a2bdcf1afa9ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Aggiungere dati di esempio a un modello DirectQuery in modalità progettazione
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
- In modalità DirectQuery è possibile usare le partizioni di tabella per creare subset di dati di esempio durante la progettazione di modelli oppure per creare alternative di una visualizzazione completa di dati.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nella modalità DirectQuery, le partizioni della tabella vengono utilizzate per creare subset di dati di esempio utilizzato durante la progettazione del modello o creare alternative di una visualizzazione completa di dati.
  
  Quando si distribuisce un modello tabulare di DirectQuery, è consentita una sola partizione per tabella. Tale partizione deve essere necessariamente una visualizzazione completa di dati. Una qualsiasi altra partizione sostituisce una visualizzazione completa di dati o dati di esempio. Questo argomento illustra come creare una partizione di esempio con un subset di dati.
  

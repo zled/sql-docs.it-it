@@ -2,12 +2,12 @@
 title: Le tabelle nidificate (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: HT
+ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelle nidificate (Analysis Services - Data mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i dati devono essere inseriti in un algoritmo di data mining come serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] In *è disponibile un metodo univoco per la gestione di questi casi,*tramite tabelle annidate. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dati devono essere inseriti in un algoritmo di data mining come una serie di casi in cui sono contenuti all'interno di una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] In *è disponibile un metodo univoco per la gestione di questi casi,*tramite tabelle annidate. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
   
  ![Due tabelle combinate tramite una tabella nidificata](../../analysis-services/data-mining/media/nested-tables.gif "due tabelle combinate tramite una tabella nidificata")  
   

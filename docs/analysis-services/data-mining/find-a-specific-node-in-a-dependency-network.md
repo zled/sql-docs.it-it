@@ -2,12 +2,12 @@
 title: Trovare un nodo specifico in una rete di dipendenze | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f95a58a73030375534a202dd0c6a6d24a449e373
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Trovare un nodo specifico in una rete di dipendenze
-  Una rete di dipendenze in un modello di data mining di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può contenere molti nodi, rendendo difficile l'individuazione dei dati desiderati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una rete di dipendenze in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello di data mining può contenere molti nodi, rendendo difficile individuare i dati si è interessati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Per trovare un nodo specifico in una rete di dipendenze  
   

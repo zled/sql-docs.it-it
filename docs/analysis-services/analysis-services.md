@@ -1,12 +1,12 @@
 ---
 title: Analysis Services | Documenti Microsoft
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what-is-analysis-services"></a>Che cos'è Analysis Services?
-  Analysis Services è un motore dati analitici utilizzato per il supporto decisionale e analitica di business, fornisce i dati analitici per i report di business e applicazioni client quali Power BI, Excel, report di Reporting Services e altri strumenti di visualizzazione di dati.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services è un motore dati analitici utilizzato per il supporto decisionale e analitica di business, fornisce i dati analitici per i report di business e applicazioni client quali Power BI, Excel, report di Reporting Services e altri strumenti di visualizzazione di dati.  
   
  Un tipico flusso di lavoro include la creazione di un modello di dati tabulari o multidimensionali, distribuzione del modello come database in un'istanza del server SQL Server Analysis Services o Azure Analysis Services locale, l'impostazione ricorrente l'elaborazione dati e l'assegnazione autorizzazioni per consentire l'accesso ai dati per gli utenti finali. Quando è pronto, il modello di dati sono accessibili da qualsiasi applicazione client che supporta Analysis Services come origine dati.  
  

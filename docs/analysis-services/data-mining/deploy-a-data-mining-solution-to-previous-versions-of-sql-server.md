@@ -2,12 +2,12 @@
 title: Distribuire una soluzione di Data Mining in versioni precedenti di SQL Server | Documenti Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6abe08512e8ff66299a7d50e0fcc90b7355a54ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 834b8ceae72e00eea7bf989ea9583068551bfc92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Distribuire una soluzione di data mining in versioni precedenti di SQL Server
-  In questa sezione vengono descritti i problemi di compatibilità noti che possono verificarsi quando si tenta di distribuire in un database che utilizza SQL Server 2005 Analysis Services una struttura o un modello di data mining creato in un'istanza di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] oppure quando si distribuiscono in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]modelli creati in SQL Server 2005.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questa sezione vengono descritti i problemi di compatibilità noti che possono verificarsi quando si tenta di distribuire un modello di data mining o una struttura di data mining che è stato creato in un'istanza di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] a un database che utilizza SQL Server 2005 Analysis Services, oppure quando si distribuiscono i modelli creati in SQL Server 2005 a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  La distribuzione in un'istanza di SQL Server 2000 Analysis Services non è supportata.  
   

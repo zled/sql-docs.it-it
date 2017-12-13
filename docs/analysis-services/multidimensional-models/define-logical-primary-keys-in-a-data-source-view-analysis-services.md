@@ -2,12 +2,12 @@
 title: Definire chiavi primarie logiche in una vista origine dati (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6ba2ab3a2fb37400a47b9d54981d48190f7f0e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d38773feb45ada119da338ccf022630b4a781b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definire chiavi primarie logiche in una vista origine dati (Analysis Services)
-  La Creazione guidata vista origine dati e Progettazione vista origine dati consentono di definire automaticamente una chiave primaria per una tabella che viene aggiunta a una vista origine dati in base alla tabella di database sottostante.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La creazione guidata vista origine di dati e progettazione vista origine dati definiscono automaticamente una chiave primaria per una tabella che viene aggiunto a una vista origine dati basata sulla tabella di database sottostante.  
   
  Talvolta, può essere necessario definire manualmente una chiave primaria nella vista origine dati. Ad esempio, per motivi correlati alle prestazioni o alla progettazione, nelle tabelle di un'origine dati potrebbero non essere incluse colonne chiave primarie definite in modo esplicito. La colonna chiave primaria per una tabella può inoltre essere omessa in viste e query denominate. Se in una tabella, in una vista o in una query denominata non è inclusa una chiave primaria fisica definita, è possibile definire manualmente una chiave primaria logica tramite Progettazione vista origine dati.  
   

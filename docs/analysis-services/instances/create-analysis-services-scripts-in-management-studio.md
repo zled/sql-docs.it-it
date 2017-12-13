@@ -2,12 +2,12 @@
 title: Creare script per Analysis Services in Management Studio | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 22811448d173c9f55229557dfed64e16ead18706
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55f3f1485ba2e684371444ec6f40696b3f853fcd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Creare script per Analysis Services in Management Studio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include funzionalità di generazione di script, modelli ed editor che è possibile usare per generare script per oggetti e attività di Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include editor che è possibile utilizzare per creare script di oggetti di Analysis Services e le attività, modelli e le funzionalità di generazione di script.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Generare script per attività di Analysis Services in Management Studio  
  La generazione di script per attività in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene effettuata facendo clic su una delle opzioni Script in una finestra di dialogo orientata all'attività. Tutte le finestre di dialogo utilizzate per eseguire attività quali backup o ripristino del database, elaborazione di un oggetto o progettazione di un'aggregazione includono un'opzione Script nella parte superiore. La selezione di una di queste opzioni consente di generare uno script XMLA basato sulle informazioni e le impostazioni nella finestra di dialogo.  

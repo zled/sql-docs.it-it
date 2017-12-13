@@ -2,12 +2,12 @@
 title: Matrice di classificazione (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8882fb1235b4d8beeb819833c76c872f1a4df76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice di classificazione (Analysis Services - Data mining)
-  Una *matrice di classificazione* consente di ordinare tutti i case del modello in categorie, determinando se il valore stimato corrisponde a quello effettivo. Vengono calcolati tutti i case di ogni categoria, quindi vengono visualizzati i totali nella matrice. La matrice di classificazione è uno strumento standard per la valutazione di modelli statistici, talvolta definita *matrice di confusione*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *matrice di classificazione* Ordina tutti i case del modello in categorie, determinando se il valore stimato corrisponde al valore effettivo. Vengono calcolati tutti i case di ogni categoria, quindi vengono visualizzati i totali nella matrice. La matrice di classificazione è uno strumento standard per la valutazione di modelli statistici, talvolta definita *matrice di confusione*.  
   
  Nel grafico creato quando si sceglie l'opzione **Matrice di classificazione** è possibile confrontare i valori effettivi con quelli stimati per ogni stato stimato specificato. Le righe nella matrice rappresentano i valori stimati per il modello, mentre le colonne rappresentano i valori effettivi. Le categorie usate nell'analisi sono *falso positivo*, *vero positivo*, *falso negativo*e *vero negativo*.  
   

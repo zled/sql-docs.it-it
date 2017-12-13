@@ -2,12 +2,12 @@
 title: Strumenti Query di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tools"></a>Strumenti query di data mining
-  Tutte le query di data mining usano il linguaggio DMX (Data Mining Extensions). Il linguaggio DMX può essere usato per creare modelli per tutti i tipi di attività di apprendimento automatico, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È anche possibile scrivere query DMX per recuperare informazioni sui modelli e le statistiche generati durante l'elaborazione del modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tutte le query di data mining utilizzano il linguaggio di Data Mining Extensions (DMX). Il linguaggio DMX può essere usato per creare modelli per tutti i tipi di attività di apprendimento automatico, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È anche possibile scrivere query DMX per recuperare informazioni sui modelli e le statistiche generati durante l'elaborazione del modello.  
   
  Si possono scrivere query DMX oppure è possibile compilare query DMX di base usando uno strumento come il **generatore delle query di stima** e quindi modificarle. Sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sono disponibili strumenti che consentono di compilare query di stima DMX. Questo argomento descrive come creare ed eseguire query di data mining usando questi strumenti.  
   

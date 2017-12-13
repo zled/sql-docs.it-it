@@ -2,12 +2,12 @@
 title: "La modalità DirectQuery | Documenti Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,17 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9bd8eb8e3bd0f313fec3e2d0228fb04e08cb6199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="directquery-mode"></a>Modalità DirectQuery
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Questo argomento viene descritto *modalità DirectQuery* di modelli tabulari di Analysis Services con i livelli di compatibilità 1200 e versioni successive. È possibile attivare la modalità DirectQuery per i modelli realizzati in SSDT o, per i modelli tabulari già distribuiti, è possibile passare alla modalità DirectQuery in SSMS. Prima di scegliere la modalità DirectQuery, è importante comprendere i vantaggi e restrizioni.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Questo argomento viene descritto *modalità DirectQuery* di modelli tabulari di Analysis Services con i livelli di compatibilità 1200 e versioni successive. È possibile attivare la modalità DirectQuery per i modelli realizzati in SSDT o, per i modelli tabulari già distribuiti, è possibile passare alla modalità DirectQuery in SSMS. Prima di scegliere la modalità DirectQuery, è importante comprendere i vantaggi e restrizioni.
   
 ##  <a name="bkmk_Benefits"></a> Vantaggi
  Per impostazione predefinita, i modelli tabulari utilizzano una cache in memoria per l'archiviazione dei dati e l'esecuzione di query. Se i modelli tabulari eseguono query sui dati residenti in memoria, anche le query più complesse possono essere molto veloci. Esistono tuttavia alcune limitazioni legate all'uso dei dati memorizzati nella cache. In particolare, i set di dati di grandi dimensioni possono superare la memoria disponibile e i requisiti di aggiornamento dei dati possono essere difficili se non impossibili da soddisfare sulla base di una pianificazione di elaborazione regolare.  

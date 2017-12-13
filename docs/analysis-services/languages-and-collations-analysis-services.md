@@ -2,12 +2,12 @@
 title: Lingue e regole di confronto (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e le regole di confronto fornite dai sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Le proprietà**Language** e **Collation** vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e regole di confronto fornite da [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemi operativi Windows. Le proprietà**Language** e **Collation** vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  
   
  Solo in un modello multidimensionale è possibile impostare queste proprietà in un database o un cubo. È anche possibile impostarle nelle traduzioni create per gli oggetti all'interno di un cubo. In un modello tabulare la lingua e le regole di confronto vengono ereditate dal sistema operativo host.  
   

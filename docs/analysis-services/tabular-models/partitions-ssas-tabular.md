@@ -2,12 +2,12 @@
 title: Partizioni (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0f9c22476a7005ed5eee055c6c95f078e743f90
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions"></a>Partizioni
-  Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le nuove partizioni create utilizzando la finestra di dialogo partizioni in SSDT durante la creazione di modelli si applicano al database dell'area di lavoro modello. Quando il modello viene distribuito, le partizioni definite per il database dell'area di lavoro modello vengono duplicate nel database modello distribuito. È inoltre possibile creare e gestire partizioni per un database modello distribuito tramite la finestra di dialogo partizioni in SQL Server Management Studio.  In questo argomento vengono descritte le nuove partizioni create durante la creazione di modelli tramite la finestra di dialogo Gestione partizioni in SSDT. Per informazioni sulla creazione e la gestione delle partizioni per un modello distribuito, vedere [creare e gestire partizioni di modelli tabulari](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le nuove partizioni create utilizzando la finestra di dialogo partizioni in SSDT durante la creazione di modelli si applicano al database dell'area di lavoro modello. Quando il modello viene distribuito, le partizioni definite per il database dell'area di lavoro modello vengono duplicate nel database modello distribuito. È inoltre possibile creare e gestire partizioni per un database modello distribuito tramite la finestra di dialogo partizioni in SQL Server Management Studio.  In questo argomento vengono descritte le nuove partizioni create durante la creazione di modelli tramite la finestra di dialogo Gestione partizioni in SSDT. Per informazioni sulla creazione e la gestione delle partizioni per un modello distribuito, vedere [creare e gestire partizioni di modelli tabulari](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Le partizioni, nei modelli tabulari, consentono di dividere una tabella in oggetti partizione logici. Ogni partizione può quindi essere elaborata indipendentemente dalle altre. Ad esempio, è possibile che in una tabella siano inclusi determinati set di righe contenenti dati che raramente vengono modificati, a differenza di altri set i cui dati vengono invece modificati spesso. In questi casi, non è necessario elaborare tutti i dati quando in realtà si desidera effettuare tale operazione solo per una parte. Le partizioni consentono di dividere parti di dati che devono essere elaborati di frequente dai dati che possono invece essere elaborati meno frequentemente.  

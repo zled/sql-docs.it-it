@@ -2,12 +2,12 @@
 title: Scenario dell'esercitazione di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: deb268dde13782f6ffe6d3481e004d6b8cae17b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 332b9e9e84ac25637186655de533624449ac3a01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scenario di Analysis Services Tutorial
-Questa esercitazione si riferisce alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa esercitazione si basa sul [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una società fittizia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
   
 Negli ultimi anni [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha acquistato un piccolo impianto di produzione in Messico, Importadores Neptuno, presso il quale vengono realizzati diversi componenti di assemblaggio essenziali per la gamma di prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Tali componenti vengono quindi consegnati alla sede di Bothell per l'assemblaggio finale dei prodotti. Nel 2005, tutte le attività di produzione e distribuzione relative al gruppo di prodotti delle biciclette da turismo sono state concentrate nell'impianto Importadores Neptuno.  
   

@@ -2,12 +2,12 @@
 title: Importare da Power Pivot (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66ca9811b808ac3ef6b282479972482e78a083e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>Importare da Power Pivot (SSAS tabulare)
-  Questo argomento descrive come creare un nuovo progetto di modello tabulare importando i metadati e i dati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con il modello di progetto Importa da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento viene descritto come creare un nuovo progetto di modello tabulare importando i metadati e dati da un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro tramite l'importazione da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modello di progetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Creare un nuovo modello tabulare da un file di Power Pivot per Excel  
  Quando si crea un nuovo progetto di modello tabulare eseguendo un'importazione da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , i metadati medianti i quali viene definita la struttura della cartella di lavoro vengono usati per creare e definire la struttura del progetto di modello tabulare in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Oggetti quali tabelle, colonne, misure e relazioni vengono mantenuti e la relativa visualizzazione nel progetto di modello tabulare sarà uguale a quella della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Non viene apportata alcuna modifica al file della cartella di lavoro con estensione xlsx.  

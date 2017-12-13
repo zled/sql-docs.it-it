@@ -2,12 +2,12 @@
 title: Progetti di modello tabulare (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d6422eb1648f33f699525edbc944f3bc0b4c5519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Progetti di modello tabulare (SSAS tabulare)
-  Per creare un nuovo modello tabulare, è necessario innanzitutto creare un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando si installa [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vengono forniti tre nuovi modelli di progetto di Business Intelligence per la creazione di progetti di modelli tabulari. In ogni modello di progetto è disponibile un framework in base al quale è possibile iniziare a creare il modello. Negli argomenti di questa sezione viene descritto come creare un nuovo progetto di modello tabulare utilizzando i modelli di progetto.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Per creare un nuovo modello tabulare, è innanzitutto necessario creare un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando si installa [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vengono forniti tre nuovi modelli di progetto di Business Intelligence per la creazione di progetti di modelli tabulari. In ogni modello di progetto è disponibile un framework in base al quale è possibile iniziare a creare il modello. Negli argomenti di questa sezione viene descritto come creare un nuovo progetto di modello tabulare utilizzando i modelli di progetto.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

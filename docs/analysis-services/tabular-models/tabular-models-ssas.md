@@ -2,12 +2,12 @@
 title: I modelli tabulari (SSAS) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1d770b114a708301f884de76d7c6a4cc39227195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 569cd3ff914f7b758fb1cfaf1a8c631e8c3d9c4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-modeling-ssas"></a>Modellazione tabulare (SSAS)
-  I modelli tabulari sono database di Analysis Services eseguiti in memoria in o in modalità DirectQuery, che accedono ai dati direttamente dalle origini dati relazionali di back-end.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]I modelli tabulari sono database di Analysis Services eseguiti in memoria o in modalità DirectQuery, accesso ai dati direttamente da origini dati relazionali di back-end.  
   
  Il valore predefinito è in memoria. Usando un processore di query multithreading e algoritmi di compressione all'avanguardia, il motore di analisi in memoria offre accesso rapido ai dati e agli oggetti del modello tabulare con applicazioni client di creazione di report quali Microsoft Excel e Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   

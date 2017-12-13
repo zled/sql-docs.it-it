@@ -2,12 +2,12 @@
 title: Power Pivot con privilegi minimi esempio - SharePoint 2016 | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae8b2b882204fa6940a5e4827ca3a5a0b1344dbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f86e52576c3a145042741c1a1ecc012b7c4941f3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot con privilegi minimi esempio - SharePoint 2016
-  Questo argomento illustra una configurazione di esempio di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016 con privilegi minimi. Nella configurazione viene utilizzato un account diverso per ognuno dei tre componenti e ogni account dispone del livello minimo di privilegi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Questo argomento viene illustrato un esempio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per la configurazione di SharePoint 2016 con privilegi minimi. Nella configurazione viene utilizzato un account diverso per ognuno dei tre componenti e ogni account dispone del livello minimo di privilegi.  
   
 ||  
 |-|  

@@ -2,12 +2,12 @@
 title: Scripting Language (TMSL) riferimento del modello tabulare | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 02d8617161c4d2a023ea5b91e5e4fc2074c6c07d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a897c2cc561d5a313f2f7c7b30d987c5ad21d01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Scripting Language (TMSL) riferimento del modello tabulare
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Tabular Model Scripting Language (TMSL) è la sintassi di definizione del modello di comando e oggetti per i database modello tabulare di Analysis Services a livello di compatibilità 1200 o superiore. TMSL comunica con Analysis Services tramite il protocollo XMLA, in cui il [XMLA. Eseguire](../analysis-services/xmla/xml-elements-methods-execute.md) metodo accetta sia basata su JSON **istruzione** script TMSL, nonché gli script tradizionale basato su XML in [Analysis Services Scripting Language &#40; ASSL per XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Tabular Model Scripting Language (TMSL) è la sintassi di definizione del modello di comando e oggetti per i database modello tabulare di Analysis Services a livello di compatibilità 1200 o superiore. TMSL comunica con Analysis Services tramite il protocollo XMLA, in cui il [XMLA. Eseguire](../analysis-services/xmla/xml-elements-methods-execute.md) metodo accetta sia basata su JSON **istruzione** script TMSL, nonché gli script tradizionale basato su XML in [Analysis Services Scripting Language &#40; ASSL per XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Gli elementi chiave del linguaggio TMSL, tra cui:  
   

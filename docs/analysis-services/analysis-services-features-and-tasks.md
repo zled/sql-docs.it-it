@@ -2,12 +2,12 @@
 title: "Caratteristiche e attività di Analysis Services | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82a302c5d7ef97038ae7d15e8478a9551189e416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72bf28a40f2314ec696eae6ce8b758010a0ad78e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-features-and-tasks"></a>Funzionalità e attività di Analysis Services
-  La documentazione fondamentale per Analysis Services è organizzata in base al tipo di modello e alla modalità server affinché sia possibile soffermarsi solo sugli strumenti, sulle attività e sulle funzionalità disponibili nella modalità installata. Le attività amministrative del server estese a più modalità si trovano nella gestione delle istanze.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]La documentazione fondamentale di Analysis Services è organizzata dalla modalità server e di tipo di modello in modo che sia possibile concentrarsi su solo gli strumenti, attività e le funzionalità disponibili nelle modalità installata. Le attività amministrative del server estese a più modalità si trovano nella gestione delle istanze.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Confronto tra soluzioni tabulari e multidimensionali &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  

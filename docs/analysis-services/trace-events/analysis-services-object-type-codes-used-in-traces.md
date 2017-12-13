@@ -2,12 +2,12 @@
 title: Oggetto di Analysis Services usati nelle tracce di tipi di codice | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Codici del tipo di oggetto di Analysis Services usati nelle tracce
-  Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto disponibile in un modello di dati di Analysis Services. Questi codici vengono visualizzati nei log di traccia e vengono usati per identificare il tipo di oggetto associato a un blocco specifico. Ad esempio, un timeout di blocco su un database indicherà il tipo di oggetto 100002, ovvero il tipo di oggetto Database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto in un modello di dati di Analysis Services. Questi codici vengono visualizzati nei log di traccia e vengono usati per identificare il tipo di oggetto associato a un blocco specifico. Ad esempio, un timeout di blocco su un database indicherà il tipo di oggetto 100002, ovvero il tipo di oggetto Database.  
   
 > [!NOTE]  
 >  I codici elencati di seguito sono più numerosi rispetto a quelli effettivamente visualizzati in un log di traccia. L'elenco seguente è un elenco completo di tipi di codice per ogni oggetto, ma solo gli oggetti che accettano un blocco presenteranno un codice del tipo di oggetto in un log di traccia.  

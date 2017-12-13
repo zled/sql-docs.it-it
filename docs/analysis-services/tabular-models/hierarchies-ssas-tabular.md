@@ -2,12 +2,12 @@
 title: Gerarchie | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchies"></a>Gerarchie
-  Nei modelli tabulari le gerarchie sono metadati che consentono di definire le relazioni tra due o più colonne di una tabella. Le gerarchie possono essere visualizzate separatamente dalle altre colonne in un elenco di campi client per la creazione di report, semplificando l'esplorazione e l'inserimento di tali gerarchie in un report.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nei modelli tabulari, le gerarchie sono metadati che definiscono le relazioni tra due o più colonne in una tabella. Le gerarchie possono essere visualizzate separatamente dalle altre colonne in un elenco di campi client per la creazione di report, semplificando l'esplorazione e l'inserimento di tali gerarchie in un report.  
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Nelle tabelle sono incluse decine, se non addirittura centinaia, di colonne con nomi insoliti senza nessun ordine apparente. Questa situazione può comportare una visualizzazione non ordinata negli elenchi di campi del client di creazione report, rendendo difficile per gli utenti il rilevamento e l'inclusione dei dati in un report. Le gerarchie possono consentire una visualizzazione semplice e intuitiva di una struttura dei dati altrimenti complessa.  

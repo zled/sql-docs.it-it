@@ -2,12 +2,12 @@
 title: Algoritmo Microsoft Naive Bayes | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ec33ea83457850aed338c46534ca3cb85d53c61
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Microsoft Naive Bayes
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione basato su teoremi di Bayes e può essere usato sia per la modellazione predittiva che per quella esplorativa. La parola naive nel nome Naive Bayes deriva dal fatto che nell'algoritmo vengono utilizzate tecniche di Bayes, ma non vengono considerate le dipendenze eventualmente presenti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Naive Bayes è un algoritmo di classificazione basato su teoremi di Bayes e può essere utilizzato per la modellazione predittiva sia esplorativo. La parola naive nel nome Naive Bayes deriva dal fatto che nell'algoritmo vengono utilizzate tecniche di Bayes, ma non vengono considerate le dipendenze eventualmente presenti.  
   
  Questo algoritmo include funzionalità di calcolo più semplici di quelle di altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] ed è utile pertanto per generare rapidamente i modelli di data mining al fine di individuare le relazioni tra colonne di input e colonne stimabili. È possibile utilizzare questo algoritmo per eseguire l'esplorazione iniziale dei dati e applicare successivamente i risultati ottenuti per creare modelli di data mining aggiuntivi con altri algoritmi dotati di funzionalità di calcolo più avanzate e accurate.  
   

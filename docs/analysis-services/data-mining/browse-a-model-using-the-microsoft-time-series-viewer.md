@@ -2,12 +2,12 @@
 title: Visualizzare un modello utilizzando il visualizzatore Microsoft Time Series | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e68da2956ad2b507b3212569c32e33dcb876de9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 649539e20bab921b7bfef3903cf53f9920fdbbde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series
-  Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series è un algoritmo di regressione che consente di creare modelli di data mining per la stima di colonne continue, relative ad esempio alle vendite di un prodotto, in uno scenario di previsione. Questi modelli Time Series possono includere informazioni in base ad algoritmi diversi:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizzatore Time Series in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series è un algoritmo di regressione che consente di creare modelli di data mining per la stima di colonne continue, relative ad esempio alle vendite di un prodotto, in uno scenario di previsione. Questi modelli Time Series possono includere informazioni in base ad algoritmi diversi:  
   
 -   Algoritmo ARTxp, ottimizzato per le stime a breve termine.  
   

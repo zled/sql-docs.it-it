@@ -2,12 +2,12 @@
 title: Aggiungere colonne a una tabella (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Aggiungere colonne a una tabella (SSAS tabulare)
-  In questo argomento viene descritto come aggiungere colonne a una tabella esistente.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento viene descritto come aggiungere colonne a una tabella esistente.  
   
 ## <a name="add-columns-from-the-data-source"></a>Aggiungere colonne dall'origine dati  
  Quando si utilizza l'Importazione guidata tabella per importare dati da una tabella dell'origine dati, viene creata una nuova tabella del modello in cui sono incluse tutte le colonne nella tabella di origine oppure, se si sceglie di escludere determinate colonne utilizzando la funzionalità Visualizza anteprima e applica filtro, solo quelle colonne e quei dati filtrati vengono selezionati. È inoltre possibile scrivere una query SQL che consente di specificare solo determinate colonne da importare. Tuttavia, successivamente è possibile determinare che una tabella di origine disponga di colonne aggiuntive da aggiungere al modello oppure che sia necessario aggiungere una colonna calcolata con i valori derivati da una formula DAX.  

@@ -2,12 +2,12 @@
 title: "Novità &#39; s New in Analysis Services | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>Novità &#39; s New in Analysis Services
-SQL Server 2016 Analysis Services include molti miglioramenti fornisce prestazioni migliori, più facile la creazione di soluzioni, gestione automatica del database, relazioni avanzate con, il filtro incrociato bidirezionale parallela l'elaborazione della partizione, e molto altro ancora. L'elemento centrale per la maggior parte dei miglioramenti apportati in questa versione è il nuovo livello di compatibilità 1200 per i database modello tabulari.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services include molti miglioramenti fornisce prestazioni migliori, più facile la creazione di soluzioni, gestione automatica del database, relazioni avanzate con, il filtro incrociato bidirezionale parallela l'elaborazione della partizione, e molto altro ancora. L'elemento centrale per la maggior parte dei miglioramenti apportati in questa versione è il nuovo livello di compatibilità 1200 per i database modello tabulari.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 Annunciato in occasione della 2016 SQL PASS Conference, Analysis Services è ora disponibile nel cloud come servizio di Azure. **Azure Analysis Services** supporta i modelli tabulari con i livelli di compatibilità 1200 e versioni successive. DirectQuery, partizioni, sicurezza a livello di riga, relazioni bidirezionali e traduzioni sono tutte funzioni supportate. Per altre informazioni e per una prova gratuita, vedere [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 

@@ -2,12 +2,12 @@
 title: Supporto delle traduzioni in Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translation-support-in-analysis-services"></a>Supporto delle traduzioni in Analysis Services
-  In un modello di dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è possibile incorporare più traduzioni di una didascalia o di una descrizione per fornire stringhe specifiche delle impostazioni cultura in base all'identificatore LCID. Per i modelli multidimensionali, è possibile aggiungere traduzioni per il nome del database, gli oggetti cubo e gli oggetti dimensione del database. Per i modelli tabulari, è possibile tradurre le descrizioni e le didascalie di tabella e colonna.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] modelli di dati, è possibile incorporare più traduzioni di una didascalia o una descrizione per fornire stringhe specifiche delle impostazioni cultura in base all'identificatore LCID. Per i modelli multidimensionali, è possibile aggiungere traduzioni per il nome del database, gli oggetti cubo e gli oggetti dimensione del database. Per i modelli tabulari, è possibile tradurre le descrizioni e le didascalie di tabella e colonna.  
   
  La definizione di una traduzione crea i metadati e la didascalia tradotta all'interno del modello, ma per eseguire il rendering delle stringhe localizzate in un'applicazione client, è necessario impostare la proprietà **Language** per l'oggetto o passare un parametro **Culture** o **Locale Identifier** nella stringa di connessione, ad esempio impostando `LocaleIdentifier=1036` per restituire le stringhe in francese.  
   

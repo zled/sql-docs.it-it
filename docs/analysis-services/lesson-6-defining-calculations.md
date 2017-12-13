@@ -2,12 +2,12 @@
 title: 'Lezione 6: Definizione di calcoli | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 124ccfaa310ac6bc356cfaf30a7dc5c331b563a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ad53ac85c3ea996714684d4cc0fb114f5317697
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-defining-calculations"></a>Lezione 6: Definizione di calcoli
-In questa lezione verranno descritte le procedure per definire calcoli, che sono espressioni MDX (Multidimensional Expressions) o script. I calcoli consentono di definire membri calcolati e set denominati, nonché di eseguire altri comandi script per estendere le capacità di un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È ad esempio possibile eseguire un comando script per definire un sottocubo e quindi assegnare un calcolo alle celle incluse nel sottocubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In questa lezione vengono definiti i calcoli, che sono espressioni MDX (Multidimensional Expressions) o gli script. I calcoli consentono di definire membri calcolati e set denominati, nonché di eseguire altri comandi script per estendere le capacità di un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È ad esempio possibile eseguire un comando script per definire un sottocubo e quindi assegnare un calcolo alle celle incluse nel sottocubo.  
   
 Quando si definisce un nuovo calcolo in Progettazione cubi, il calcolo viene aggiunto al riquadro **Libreria script** della scheda **Calcoli** di Progettazione cubi e i campi relativi al tipo di calcolo specifico vengono visualizzati in un form di calcoli nel riquadro **Espressione** . L'esecuzione dei calcoli segue lo stesso ordine di visualizzazione all'interno del riquadro **Libreria script** . È possibile riordinare i calcoli facendo clic con il pulsante destro del mouse su un calcolo specifico e quindi scegliendo **Sposta su** o **Sposta giù**oppure facendo clic su un calcolo specifico e quindi facendo clic sull'icona **Sposta su** o **Sposta giù** nella barra degli strumenti della scheda **Calcoli** .  
   

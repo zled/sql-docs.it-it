@@ -2,12 +2,12 @@
 title: Drill-Through nei dati del Case da un modello di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7b636ccf4c39f90a356e8b7289453afb61bbac7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3c8baf27751f67ee124acc1736dc91cb1724ce7c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Eseguire il drill-through sui dati del case da un modello di data mining
-  Se il modello di data mining è stato configurato per consentire il drill-through sui case del modello, quando si esplora il modello è possibile recuperare informazioni dettagliate sui case utilizzati per creare il modello. Inoltre, se la struttura di data mining sottostante è stata configurata per consentire il drill-through sui case della struttura e si dispone delle autorizzazioni appropriate, è possibile restituire informazioni sulla struttura di data mining. Possono anche essere incluse colonne non incluse nel modello di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se un modello di data mining è stato configurato per consentire di drill-through nei case del modello, quando si Esplora il modello, è possibile recuperare informazioni dettagliate sui case utilizzati per creare il modello. Inoltre, se la struttura di data mining sottostante è stata configurata per consentire il drill-through sui case della struttura e si dispone delle autorizzazioni appropriate, è possibile restituire informazioni sulla struttura di data mining. Possono anche essere incluse colonne non incluse nel modello di data mining.  
   
  Se la struttura di data mining non consente il drill-through sui dati sottostanti, mentre il modello di data mining lo consente, è possibile visualizzare le informazioni dai case del modello ma non dalla struttura di data mining.  
   

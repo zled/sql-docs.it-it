@@ -2,12 +2,12 @@
 title: "Le proprietà per la struttura di Data Mining e le colonne della struttura | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
-  Nella scheda **Struttura di data mining** della finestra di progettazione di data mining è possibile impostare o modificare le proprietà di una struttura di data mining e delle colonne e tabelle annidate associate. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile impostare o modificare le proprietà per una struttura di data mining e delle colonne associate e tabelle nidificate tramite il **struttura di Data Mining** scheda Progettazione modelli di Data Mining. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
   
 > [!NOTE]  
 >  Se si modifica il valore di una proprietà nella struttura di data mining, anche di metadati come, ad esempio, un nome o descrizione, la struttura di data mining e i relativi modelli devono essere rielaborati prima che sia possibile visualizzare o eseguire una query sul modello.  

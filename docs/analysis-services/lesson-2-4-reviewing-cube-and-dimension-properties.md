@@ -2,12 +2,12 @@
 title: "Esame delle proprietà di dimensione e cubo | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73dea5a137a6ae685d36f06a4e4497e976133819
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0831f70668a453f811b2b330e6593d6ac23dd1f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>Lezione 2-4 - esaminare proprietà del cubo e dimensione
-Dopo avere definito un cubo, è possibile verificare i risultati tramite Progettazione cubi. Nell'attività seguente si esaminerà la struttura del cubo nel progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver definito un cubo, è possibile esaminare i risultati tramite Progettazione cubi. Nell'attività seguente si esaminerà la struttura del cubo nel progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>Per verificare le proprietà del cubo e delle dimensioni in Progettazione cubi  
   

@@ -2,12 +2,12 @@
 title: Creare e gestire partizioni nel Database dell'area di lavoro (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13beb940c74b269a15fcae447e144a4767288848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 094dc11c2d13ec23575a40ce41c1369080f11d40
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Creare e gestire partizioni nel database dell'area di lavoro (SSAS tabulare)
-  Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente o in parallelo ad altre. Le partizioni possono consentire di migliorare la scalabilità e la facilità di gestione di database grandi. Per impostazione predefinita, ogni tabella dispone di una partizione in cui sono incluse tutte le colonne. Nelle attività di questo argomento viene descritto come creare e gestire partizioni nel database dell'area di lavoro modello tramite la finestra di dialogo **Gestione partizioni** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente o in parallelo ad altre. Le partizioni possono consentire di migliorare la scalabilità e la facilità di gestione di database grandi. Per impostazione predefinita, ogni tabella dispone di una partizione in cui sono incluse tutte le colonne. Nelle attività di questo argomento viene descritto come creare e gestire partizioni nel database dell'area di lavoro modello tramite la finestra di dialogo **Gestione partizioni** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Dopo aver distribuito un modello in un'altra istanza di Analysis Services, gli amministratori di database possono creare e gestire partizioni nel modello (distribuito) utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Creare e gestire partizioni di modelli tabulari &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   

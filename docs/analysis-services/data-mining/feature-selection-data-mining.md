@@ -2,12 +2,12 @@
 title: "Funzionalità di selezione (Data Mining) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
-  La*selezione delle caratteristiche* è una parte importante del Machine Learning. La selezione delle caratteristiche si riferisce al processo di riduzione degli input per l'elaborazione e l'analisi o di individuazione degli input più significativi. Un termine correlato, *progettazione delle caratteristiche* (o *estrazione delle caratteristiche*), si riferisce al processo di estrazione di informazioni o caratteristiche utili dai dati esistenti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Selezione delle caratteristiche* è una parte importante di machine learning. La selezione delle caratteristiche si riferisce al processo di riduzione degli input per l'elaborazione e l'analisi o di individuazione degli input più significativi. Un termine correlato, *progettazione delle caratteristiche* (o *estrazione delle caratteristiche*), si riferisce al processo di estrazione di informazioni o caratteristiche utili dai dati esistenti.  
   
 ## <a name="why-do-feature-selection"></a>Perché eseguire la selezione delle caratteristiche?  
  La selezione delle caratteristiche è fondamentale per la creazione di un modello funzionale per diversi motivi. Uno è che la selezione delle caratteristiche implica un certo livello di *riduzione della cardinalità*, per imporre un limite al numero di attributi che possono essere considerati durante la creazione di un modello. I dati contengono quasi sempre più informazioni di quelle necessarie per creare il modello oppure il tipo di informazioni sbagliate. Ad esempio, in un set di dati potrebbero essere contenute 500 colonne in cui vengono descritte le caratteristiche dei clienti. Tuttavia, se i dati di alcune colonne sono di tipo sparse, non sarebbe molto vantaggioso aggiungerli al modello e, se alcune colonne sono duplicate tra loro, l'uso di entrambe le colonne potrebbe influire negativamente sul modello.  

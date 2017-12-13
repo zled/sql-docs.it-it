@@ -2,12 +2,12 @@
 title: Rinominare un attributo | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6a77edcfe011502f3c863c873135f86163e9eb11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: da652fbd1c97f09e35c67fba4c7bec798f67a38f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---rename-an-attribute"></a>Attributo di proprietà: rinominare un attributo
-  Il nome di un attributo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene identificato tramite la proprietà **Name** . Per rinominare un attributo, fare clic con il pulsante destro del mouse su di esso nel riquadro **Attributi** della scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], quindi scegliere **Rinomina**. Se nel riquadro **Attributi** è attivata la visualizzazione griglia, fare clic sul nome dell'attributo e modificarlo direttamente nella griglia. È inoltre possibile selezionare un attributo e impostare la proprietà **Name** nella finestra **Proprietà** .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il nome di un attributo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è definito dal relativo **nome** proprietà. Per rinominare un attributo, fare clic con il pulsante destro del mouse su di esso nel riquadro **Attributi** della scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], quindi scegliere **Rinomina**. Se nel riquadro **Attributi** è attivata la visualizzazione griglia, fare clic sul nome dell'attributo e modificarlo direttamente nella griglia. È inoltre possibile selezionare un attributo e impostare la proprietà **Name** nella finestra **Proprietà** .  
   
  Per altre informazioni sulla ridenominazione di un attributo, vedere [Associare un attributo a una colonna chiave](../../analysis-services/multidimensional-models/attribute-properties-bind-an-attribute-to-a-key-column.md).  
   

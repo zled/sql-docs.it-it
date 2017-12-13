@@ -2,12 +2,12 @@
 title: Definizione di un cubo | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 16cc78325be6d6c2759d630740f54045b02f6bb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 17fde2d95fb202712610a31769b1a50623bac7c7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>Lezione 2-2-definizione di un cubo
-La Creazione guidata cubo consente di definire i gruppi di misure e le dimensioni per un cubo. Nell'attività seguente si utilizzerà la Creazione guidata cubo per compilare un cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]La creazione guidata cubo consente di definire i gruppi di misure e dimensioni di un cubo. Nell'attività seguente si utilizzerà la Creazione guidata cubo per compilare un cubo.  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Per definire un cubo e le relative proprietà  
   

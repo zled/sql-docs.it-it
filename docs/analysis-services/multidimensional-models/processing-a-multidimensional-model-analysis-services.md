@@ -2,12 +2,12 @@
 title: Elaborazione di un modello multidimensionale (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Elaborazione di un modello multidimensionale (Analysis Services)
-  L'elaborazione è un passaggio, o una serie di passaggi, durante i quali tramite Analysis Services vengono caricati i dati da un'origine dati relazionale in un modello multidimensionale. Per gli oggetti in cui viene utilizzata l'archiviazione MOLAP, i dati vengono salvati su disco nella cartella dei file di database. Per l'archiviazione ROLAP, l'elaborazione avviene su richiesta, in risposta a una query MDX su un oggetto. Per gli oggetti in cui viene utilizzata l'archiviazione ROLAP, l'elaborazione si riferisce all'aggiornamento della cache prima della restituzione dei risultati della query.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L'elaborazione è il passaggio o serie di passaggi, in cui Analysis Services carica i dati da un'origine dati relazionale in un modello multidimensionale. Per gli oggetti in cui viene utilizzata l'archiviazione MOLAP, i dati vengono salvati su disco nella cartella dei file di database. Per l'archiviazione ROLAP, l'elaborazione avviene su richiesta, in risposta a una query MDX su un oggetto. Per gli oggetti in cui viene utilizzata l'archiviazione ROLAP, l'elaborazione si riferisce all'aggiornamento della cache prima della restituzione dei risultati della query.  
   
  Per impostazione predefinita, l'elaborazione viene eseguita quando si distribuisce una soluzione nel server. È anche possibile elaborare tutta o parte di una soluzione, ad hoc tramite strumenti quali [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o in base a una pianificazione tramite [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e SQL Server Agent. Quando si apporta una modifica strutturale al modello, ad esempio la rimozione di una dimensione o la modifica del relativo livello di compatibilità, sarà necessario eseguire di nuovo l'elaborazione per sincronizzare gli aspetti fisici e logici del modello.  
   

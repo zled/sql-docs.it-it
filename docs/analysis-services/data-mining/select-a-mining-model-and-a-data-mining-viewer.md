@@ -2,12 +2,12 @@
 title: Selezionare un modello di Data Mining e un visualizzatore di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 712e8e501d3f1a8a37b2627d2356ff542af8bd08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Selezionare un modello di data mining e un visualizzatore data mining
-  È possibile esplorare il contenuto di un modello di data mining usando uno dei visualizzatori disponibili nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. È facile passare tra i modelli o modificare il visualizzatore utilizzato.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile esplorare un modello di data mining utilizzando uno dei visualizzatori disponibili nella **visualizzatore modello di Data Mining** scheda Progettazione modelli di Data Mining. È facile passare tra i modelli o modificare il visualizzatore utilizzato.  
   
 -   L'elenco a discesa **Modello di data mining** nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene un elenco di tutti i modelli di data mining presenti nella struttura di data mining corrente.  
   

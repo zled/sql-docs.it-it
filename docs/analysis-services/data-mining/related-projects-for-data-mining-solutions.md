@@ -2,12 +2,12 @@
 title: Progetti correlati per soluzioni di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da5beda0118e0eb281a84c9d0f675b94e3a9d067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
-  Come minimo, per una soluzione di data mining è richiesto il progetto di data mining, in cui si definiscono origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il valore minimo richiesto per una soluzione di data mining è il progetto di data mining, che definisce le origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
   
 -   Preparazione e selezione di dati e variabili. Include pulizia dei dati, gestione di metadati e integrazione di più origini dati, nonché la conversione, l'unione e il caricamento di dati in un data warehouse.  
   

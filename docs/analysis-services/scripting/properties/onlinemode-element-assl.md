@@ -2,12 +2,12 @@
 title: Elemento OnlineMode (ASSL) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c8a38c9882484335fefdfe1e7b8f155b27a84fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 614c6650c8fd2e543f640c3670348d25d617c8f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="onlinemode-element-assl"></a>Elemento OnlineMode (ASSL)
-  Specifica se il database ritorna immediatamente online quando la ricompilazione della cache è iniziata, o solo quando la ricompilazione della cache è completa.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Specifica se il database viene portato nuovamente online immediatamente quando viene avviata la ricompilazione della cache o solo quando la ricompilazione della cache è stata completata.  
   
 ## <a name="syntax"></a>Sintassi  
   

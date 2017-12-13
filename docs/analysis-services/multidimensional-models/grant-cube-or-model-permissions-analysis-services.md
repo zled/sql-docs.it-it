@@ -2,12 +2,12 @@
 title: Concedere le autorizzazioni del cubo o modello (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb36f978c414a1ef5916cb0ebd78971c001940e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Concedere le autorizzazioni per un cubo o un modello (Analysis Services)
-  Un cubo o un modello tabulare è l'oggetto query primario in un modello di dati di Analysis Services. Quando un utente si connette ai dati tabulari o multidimensionali da Excel per l'esplorazione ad hoc dei dati, in genere inizia selezionando un cubo o un modello tabulare specifico come struttura di dati necessaria per l'oggetto report Pivot. Questo argomento illustra come concedere le autorizzazioni necessarie per l'accesso ai dati tabulari o del cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un cubo o un modello tabulare è l'oggetto query primario in un modello di dati di Analysis Services. Quando un utente si connette ai dati tabulari o multidimensionali da Excel per l'esplorazione ad hoc dei dati, in genere inizia selezionando un cubo o un modello tabulare specifico come struttura di dati necessaria per l'oggetto report Pivot. Questo argomento illustra come concedere le autorizzazioni necessarie per l'accesso ai dati tabulari o del cubo.  
   
  Per impostazione predefinita, solo l'amministratore del server o l'amministratore del database dispone delle autorizzazioni per eseguire le query sui cubi in un database. L'accesso ai cubi da parte di un utente non amministratore richiede l'appartenenza a un ruolo creato per il database contenente il cubo. L'appartenenza è supportata per gli account di gruppo o utente di Windows, definiti in Active Directory o nel computer locale. Prima di iniziare, identificare gli account a cui verrà assegnata l'appartenenza ai ruoli che verranno creati.  
   

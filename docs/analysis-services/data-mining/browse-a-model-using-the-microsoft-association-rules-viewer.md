@@ -2,12 +2,12 @@
 title: Visualizzare un modello utilizzando il visualizzatore Microsoft Association Rules | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41ef2091d63d1a4e5f2f3bf294e590be5cd173e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a30bdbe56a78d1bb9b09f0ff179646496bb4afdd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Association Rules
-  Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo di associazione per la creazione dei modelli di data mining che è possibile utilizzare per l'analisi di mercato sugli acquisti. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] visualizzatore Microsoft Association Rules in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo di associazione. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo di associazione per la creazione dei modelli di data mining che è possibile utilizzare per l'analisi di mercato sugli acquisti. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
   
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules viene utilizzato principalmente per gli scopi seguenti:  
   

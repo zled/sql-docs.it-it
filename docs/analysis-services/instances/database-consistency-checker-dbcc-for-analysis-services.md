@@ -2,12 +2,12 @@
 title: Database di controllo di coerenza informazioni (DBCC) per Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Database Consistency Checker (DBCC) per Analysis Services
-  DBCC fornisce la convalida su richiesta dei database multidimensionali e tabulari in un'istanza di Analysis Services. È possibile eseguire DBCC in una finestra di query MDX o XMLA in SQL Server Management Studio (SSMS) e tracciare l'output di DBCC in SQL Server Profiler o in sessioni xEvent di SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC fornisce la convalida del database su richiesta per i database multidimensionali e tabulari in un'istanza di Analysis Services. È possibile eseguire DBCC in una finestra di query MDX o XMLA in SQL Server Management Studio (SSMS) e tracciare l'output di DBCC in SQL Server Profiler o in sessioni xEvent di SSMS.  
 Il comando accetta una definizione di oggetto e restituisce un set di risultati vuoto o informazioni dettagliate sull'errore se l'oggetto è danneggiato.   Questo articolo illustra come eseguire il comando, interpretare i risultati e risolvere eventuali problemi.  
   
  Per i database tabulari, le verifiche di coerenza eseguite da DBCC equivalgono alla convalida predefinita eseguita automaticamente ogni volta che si ricarica, si sincronizza o si ripristina un database.  Al contrario, le verifiche di coerenza per i database multidimensionali si verificano solo quando si esegue DBCC su richiesta.  

@@ -2,12 +2,12 @@
 title: Creare una Query sul contenuto su un modello di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cff8211d13fe5ddf5fd1128f0fd53a0ab013ae1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecd15e1d0fd84c1a359d49c70f736b6c44856c1e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Creare una query sul contenuto di un modello di data mining
-  È possibile eseguire una query a livello di codice sul contenuto del modello di data mining utilizzando AMO o XML/A, ma è più facile creare query mediante DMX. È anche possibile creare query sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e creando una query tramite le viste a gestione dinamica fornite da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile eseguire una query contenuto del modello di data mining a livello di programmazione tramite AMO o XML/A, ma è più facile creare query mediante DMX. È anche possibile creare query sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e creando una query tramite le viste a gestione dinamica fornite da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Nelle procedure riportate di seguito viene illustrato come creare le query su un modello di data mining utilizzando DMX e come eseguire una query sui set di righe dello schema di data mining.  
   

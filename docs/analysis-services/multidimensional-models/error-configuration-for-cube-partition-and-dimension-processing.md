@@ -2,12 +2,12 @@
 title: Configurazione errori per cubi, partizioni e l'elaborazione della dimensione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configurazione errori per cubi, partizioni e l'elaborazione della dimensione
-  Con le proprietà di configurazione degli errori in oggetti dimensione, cubi o partizioni viene determinata la modalità di risposta del server in caso di errori di integrità dei dati durante l'elaborazione. L'attivazione di errori di questo tipo è in genere dovuta a chiavi duplicate, chiavi mancanti e valori Null in una colonna chiave e, anche se il record che causa l'errore non viene aggiunto al database, è possibile impostare le proprietà con cui vengono determinate le operazioni successive. Per impostazione predefinita, l'elaborazione viene arrestata. Tuttavia, durante lo sviluppo di un cubo, è possibile che l'elaborazione continui quando si verificano degli errori, in modo da poter testare i comportamenti del cubo con i dati importati, anche se incompleti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Proprietà di configurazione degli errori in oggetti dimensione, cubi o partizioni determinano la modalità di risposta del server quando si verificano errori di integrità dei dati durante l'elaborazione. L'attivazione di errori di questo tipo è in genere dovuta a chiavi duplicate, chiavi mancanti e valori Null in una colonna chiave e, anche se il record che causa l'errore non viene aggiunto al database, è possibile impostare le proprietà con cui vengono determinate le operazioni successive. Per impostazione predefinita, l'elaborazione viene arrestata. Tuttavia, durante lo sviluppo di un cubo, è possibile che l'elaborazione continui quando si verificano degli errori, in modo da poter testare i comportamenti del cubo con i dati importati, anche se incompleti.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   

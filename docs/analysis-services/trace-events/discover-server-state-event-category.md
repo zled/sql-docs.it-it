@@ -2,12 +2,12 @@
 title: Individuare la categoria di eventi dello stato di Server | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f553fc692cb15d5393718c3b40d2c5d33dbcf222
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 744cf73bdbdf1389ce7f9a67d10f2a90232606b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discover-server-state-event-category"></a>Individuazione stato del server - categoria di eventi
-  La categoria di eventi Individuazione stato del server include le classi di evento descritte nella tabella seguente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi individuazione stato del Server include le classi di eventi descritte nella tabella seguente.  
   
 |Event Class|ID evento|Description|  
 |-----------------|--------------|-----------------|  

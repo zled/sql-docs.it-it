@@ -2,12 +2,12 @@
 title: Tabelle e colonne (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 205dce73a6fb5940be83c5082b730ddbd753ce3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelle e colonne (SSAS tabulare)
-  Dopo aver aggiunto tabelle e dati in un modello tramite l'Importazione guidata tabella, è possibile iniziare a utilizzare le tabella aggiungendo nuove colonne di dati, creando relazioni tra tabelle, definendo calcoli che consentono di estendere i dati, nonché filtrando e ordinando i dati nelle tabelle per una visualizzazione più semplice.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dopo aver aggiunto le tabelle e i dati in un modello utilizzando l'importazione guidata tabella, potete iniziare a lavorare con le tabelle dall'aggiunta di nuove colonne di dati, creando relazioni tra tabelle, definendo i calcoli che estendono i dati, e il filtro e ordinamento dei dati in le tabelle per semplificare la visualizzazione.  
   
  Sezioni dell'argomento:  
   

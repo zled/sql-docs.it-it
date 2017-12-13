@@ -2,12 +2,12 @@
 title: Connettersi ad Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 45b056f7b2d109396a114a7d8459bcc4db95c1ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-analysis-services"></a>Connetti ad Analysis Services
-  In questa sezione sono contenute le informazioni sulle proprietà della stringa di connessione, sulle librerie client usate per le connessioni, quali metodi di autenticazione sono supportati da Analysis Services e come impostare o cancellare le connessioni prima di disconnettere un server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usare le informazioni in questa sezione per informazioni sulle proprietà della stringa di connessione, le librerie client utilizzate per le connessioni, i metodi di autenticazione supportati da Analysis Services e come impostare o cancellare le connessioni prima di portare offline un server.  
   
 ## <a name="analysis-services-connections"></a>Connessioni ad Analysis Services  
  In Analysis Services TCP e XML for Analysis (XMLA) vengono utilizzati rispettivamente come protocollo di rete e protocollo di comunicazione. Tutte le librerie client fornite con Analysis Services implementano almeno XMLA-over-TCP. Sebbene sia possibile compilare applicazioni basate su XMLA non elaborato, la maggior parte delle applicazioni e degli sviluppatori di applicazioni utilizza librerie client per sfruttare i modelli a oggetti e i relativi vantaggi per quanto concerne la scrittura di codice. Per le connessioni client di Analysis Services, è possibile usare IIS come connessione intermedia se non è possibile usare TCP attraverso lo stack. Uno dei vantaggi dell'usare l'accesso HTTP tramite IIS consiste nella possibilità di connettersi da applicazioni che passano le credenziali nella stringa di connessione.  

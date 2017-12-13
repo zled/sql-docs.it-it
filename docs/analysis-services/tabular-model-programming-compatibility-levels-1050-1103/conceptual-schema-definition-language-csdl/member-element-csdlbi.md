@@ -2,12 +2,12 @@
 title: Elemento member (CSDLBI) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a97b171f1205b2718b5786ae92fce826c2c6316c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 351cd8c622454626b8caa7547a4e8c73c4c49438
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="member-element-csdlbi"></a>Elemento Member (CSDLBI)
-  L'elemento Member è un tipo complesso che funge da base per altri elementi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento Member è un tipo complesso che funge da base per gli altri elementi.  
   
  Gli attributi vengano visualizzati in colonne, misure, proprietà di navigazione, gerarchie e livelli.  
   

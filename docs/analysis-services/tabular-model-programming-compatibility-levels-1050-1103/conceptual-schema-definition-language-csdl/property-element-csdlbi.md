@@ -2,12 +2,12 @@
 title: Elemento Property (CSDLBI) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b71657fa8ff566b36e93b8c2bacfe3fb05630d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ff62bf4280fb1e01c6df47e2f748038ec92378fd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="property-element-csdlbi"></a>Elemento Property (CSDLBI)
-  L'elemento Property in CSDLBI è un tipo complesso che fornisce le aggiunte all'elemento Property di CSDL, a supporto dei modelli di dati di Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento Property in CSDLBI è un tipo complesso che fornisce le aggiunte all'elemento Property di CSDL, per supportare modelli di dati di business intelligence.  
   
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento Property di CSDLBI.  

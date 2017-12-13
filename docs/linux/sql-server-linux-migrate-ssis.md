@@ -15,17 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Estrarre, trasformare e caricare i dati in Linux con SSIS
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In questo argomento viene descritto come eseguire i pacchetti di SQL Server Integration Services (SSIS) in Linux. SSIS consente di risolvere i problemi di integrazione di dati complessi estrarre dati da più origini e formati, trasformazione e pulizia dei dati e caricare i dati in più destinazioni. 
+In questo articolo viene descritto come eseguire i pacchetti di SQL Server Integration Services (SSIS) in Linux. SSIS consente di risolvere i problemi di integrazione di dati complessi estrarre dati da più origini e formati, trasformazione e pulizia dei dati e caricare i dati in più destinazioni. 
 
 Pacchetti SSIS in esecuzione in Linux possono connettersi a Microsoft SQL Server in esecuzione su Windows locale o nel cloud, in Linux o in Docker. Anche possano connettersi a Database SQL di Azure, Azure SQL Data Warehouse, origini dati ODBC, file flat e altre origini dati, incluse le origini ADO.NET, i file XML e servizi OData.
 
@@ -47,17 +47,17 @@ Per eseguire un pacchetto SSIS in un computer Linux, eseguire le operazioni segu
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>Altre attività comuni di SSIS
+## <a name="design-packages"></a>Progettazione di pacchetti
 
--   **Progettare pacchetti**.
+**Connettersi a origini dati ODBC**. Con SSIS in aggiornamento di Linux CTP 2.1 e versioni successive, i pacchetti SSIS possono utilizzare connessioni di ODBC in Linux. Questa funzionalità è stata testata con SQL Server e i driver ODBC di MySQL, ma anche dovrebbe funzionare con qualsiasi driver ODBC Unicode che osserva la specifica ODBC. In fase di progettazione, è possibile fornire un DSN o una stringa di connessione per connettersi ai dati ODBC; è inoltre possibile utilizzare l'autenticazione di Windows. Per altre informazioni, vedere il [post del blog annuncia il supporto ODBC in Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-    -   **Connettersi a origini dati ODBC**. Con SSIS in aggiornamento di Linux CTP 2.1 e versioni successive, i pacchetti SSIS possono utilizzare connessioni di ODBC in Linux. Questa funzionalità è stata testata con SQL Server e i driver ODBC di MySQL, ma anche dovrebbe funzionare con qualsiasi driver ODBC Unicode che osserva la specifica ODBC. In fase di progettazione, è possibile fornire un DSN o una stringa di connessione per connettersi ai dati ODBC; è inoltre possibile utilizzare l'autenticazione di Windows. Per altre informazioni, vedere il [post del blog annuncia il supporto ODBC in Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Percorsi**. Specificare percorsi di stile di Windows nei pacchetti SSIS. SSIS in Linux non supporta i percorsi di stile di Linux, ma esegue il mapping di percorsi di stile di Windows per i percorsi di stile di Linux in fase di esecuzione. Quindi, ad esempio, SSIS in Linux esegue il mapping di stile di Windows percorso `C:\test` al percorso di Linux stile `/test`.
 
-    -   **Percorsi**. Specificare percorsi di stile di Windows nei pacchetti SSIS. SSIS in Linux non supporta i percorsi di stile di Linux, ma esegue il mapping di percorsi di stile di Windows per i percorsi di stile di Linux in fase di esecuzione. Quindi, ad esempio, SSIS in Linux esegue il mapping di stile di Windows percorso `C:\test` al percorso di Linux stile `/test`.
+## <a name="deploy-packages"></a>Distribuire i pacchetti
+È possibile archiviare solo i pacchetti nel file system su Linux in questa versione. Il database del catalogo SSIS e il servizio SSIS legacy non sono disponibili in Linux per l'archiviazione e distribuzione del pacchetto.
 
--   **Distribuire i pacchetti**. È possibile archiviare solo i pacchetti nel file system su Linux in questa versione. Il database del catalogo SSIS e il servizio SSIS legacy non sono disponibili in Linux per l'archiviazione e distribuzione del pacchetto.
-
--   **Pianificare i pacchetti**. È possibile utilizzare il sistema Linux, ad esempio gli strumenti di pianificazione `cron` per pianificare i pacchetti. Per pianificare l'esecuzione del pacchetto in questa versione, è possibile utilizzare SQL Agent in Linux. Per altre informazioni, vedere [pacchetti SSIS di pianificazione in Linux con cron](sql-server-linux-schedule-ssis-packages.md).
+## <a name="schedule-packages"></a>Pacchetti di pianificazione
+È possibile utilizzare il sistema Linux, ad esempio gli strumenti di pianificazione `cron` per pianificare i pacchetti. Per pianificare l'esecuzione del pacchetto in questa versione, è possibile utilizzare SQL Agent in Linux. Per altre informazioni, vedere [pacchetti SSIS di pianificazione in Linux con cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Limitazioni e problemi noti
 

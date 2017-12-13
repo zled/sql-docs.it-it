@@ -2,12 +2,12 @@
 title: Documentazione per sviluppatori di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Guida per gli sviluppatori (Analysis Services)
-In Analysis Services, quasi tutti gli oggetti e un carico di lavoro è programmabile ed è spesso più approcci tra cui scegliere.  Le opzioni includono scrittura di codice gestito, script o mediante standard aperti come XMLA e MSOLAP se i requisiti della soluzione precludono l'utilizzo di .NET framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In Analysis Services, quasi tutti gli oggetti e un carico di lavoro è programmabile ed è spesso più approcci tra cui scegliere.  Le opzioni includono scrittura di codice gestito, script o mediante standard aperti come XMLA e MSOLAP se i requisiti della soluzione precludono l'utilizzo di .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>Cosa è possibile eseguire nel codice
 Gli scenari di programmazione tipici includono server e la distribuzione del database, amministrazione, modello e la creazione del database e accesso ai dati dai report che utilizzano dati di Analysis Services e applicazioni personalizzate. Comune a tutti questi scenari è una fisso architettura e oggetto definizione gerarchia, con operazioni ben definite che comprendono la definizione di dati, elaborazione e i carichi di lavoro di query.

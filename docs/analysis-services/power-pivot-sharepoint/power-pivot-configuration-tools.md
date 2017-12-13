@@ -2,12 +2,12 @@
 title: Power Pivot Configuration Tools | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 093e9a77dccdf8b01383152601ceadcdff816db9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 51bfbb7fa3cbfad5c8415fcda1fab0e54643ec62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-tools"></a>Strumenti di configurazione di Power Pivot
-  Configurare, ripristinare o rimuovere [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con gli strumenti di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Configurare, ripristinare o rimuovere un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] strumenti di configurazione.  
   
  L'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non installa gli strumenti di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Gli strumenti di configurazione saranno disponibili per il download nelle versioni future di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

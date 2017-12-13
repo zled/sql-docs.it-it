@@ -2,12 +2,12 @@
 title: Database dell'area di lavoro (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2e26606a2f84abea1caed7032a80d2e2de7e45
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="workspace-database-ssas-tabular"></a>Database dell'area di lavoro (SSAS tabulare)
-  Il database dell'area di lavoro modello tabulare, usato durante la creazione del modello, viene creato quando si crea un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Il database dell'area di lavoro modello tabulare, utilizzato durante la creazione del modello, viene creato quando si crea un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Specifica di un'istanza dell'area di lavoro  
   Quando si crea un nuovo progetto di modello tabulare in SSDT, è possibile specificare un'istanza di Analysis Services da usare durante la creazione del progetto. A partire dal rilascio di settembre 2016 (14.0.60918.0) di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], sono disponibili due modalità per specificare un'istanza dell'area di lavoro quando si crea un nuovo progetto di modello tabulare. 

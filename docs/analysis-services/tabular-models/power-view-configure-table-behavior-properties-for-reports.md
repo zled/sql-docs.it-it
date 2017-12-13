@@ -2,12 +2,12 @@
 title: "Configurare le proprietà comportamento tabella per i report di Power View (SSAS tabulare) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurare le proprietà comportamento tabella per i report
-  Se si usa un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà del comportamento delle tabelle che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Se si utilizza un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà comportamento tabella che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] differisce dalle altre applicazioni di creazione report in quanto raggruppa automaticamente gli elementi durante la progettazione del report, tenendo conto di quali colonne sono state inserite nell'elenco dei campi del report rispetto al formato di presentazione usato. Nella maggior parte dei casi, il raggruppamento predefinito produce un risultato ottimale. Per alcune tabelle, tuttavia, principalmente quelle che contengono dati di dettaglio, il comportamento di raggruppamento predefinito prevede talvolta il raggruppamento di righe che non dovrebbero essere raggruppate. Per queste tabelle, è possibile impostare proprietà per modificare la modalità di valutazione dei gruppi.  
   

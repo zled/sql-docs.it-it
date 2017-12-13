@@ -2,12 +2,12 @@
 title: Usare la raccolta Power Pivot | Documenti Microsoft
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>Usare la Raccolta Power Pivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La Raccolta è una speciale raccolta documenti di SharePoint che offre un'anteprima dettagliata e la gestione dei documenti per le cartelle di lavoro pubblicate di Excel e per i report di Reporting Services contenenti dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La raccolta è una speciale raccolta documenti di SharePoint che fornisce dettagliata anteprima e gestione documenti per cartelle di lavoro di Excel pubblicate e i report di Reporting Services che contengono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dati.  
   
 > [!NOTE]  
 >  A seconda della configurazione del server, si potrebbero visualizzare avvisi o messaggi di errore nell'area di anteprima per documenti specifici. I messaggi possono essere visualizzati quando una cartella di lavoro di Excel è impostata per aggiornare automaticamente i dati ad ogni apertura. I messaggi di avviso dell'aggiornamento dati vengono visualizzati come immagine di anteprima se Excel Services è configurato per mostrare i messaggi di errore Avvisa in caso di aggiornamento. Gli amministratori di farm o di servizi possono modificare le impostazioni di configurazione per consentire la visualizzazione di un'anteprima del foglio di lavoro effettivo. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  

@@ -2,12 +2,12 @@
 title: Definizione di un'origine dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d54f8f04c4e67a81fc1da4c47c6e995ac98ff84d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lezione 1-2-definizione di un'origine dati
-Dopo aver creato un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la prima operazione consiste nel definire una o più origini dati da usare. Quando si definisce un'origine dei dati si specificano le informazioni sulla stringa di connessione che verrà utilizzata per connettersi all'origine dei dati. Per altre informazioni, vedere [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver creato un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto, in genere iniziare a usare il progetto definendo una o più origini dati che verrà utilizzato il progetto. Quando si definisce un'origine dei dati si specificano le informazioni sulla stringa di connessione che verrà utilizzata per connettersi all'origine dei dati. Per altre informazioni, vedere [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
 Nell'attività seguente il database di esempio AdventureWorksDWSQLServer2012 verrà definito come origine dati del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Ai fini di questa esercitazione questo database si trova nel computer locale. Tuttavia, i database di origine sono spesso ospitati in uno o più computer remoti.  
   

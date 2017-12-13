@@ -1,6 +1,6 @@
 ---
 title: Installare SQL Server Integration Services in Linux | Documenti Microsoft
-description: In questo argomento viene descritto come installare SQL Server Integration Services (SSIS) in Linux.
+description: In questo articolo viene descritto come installare SQL Server Integration Services (SSIS) in Linux.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 851d8dc5121eb12b7d754a95db73494adcc632b4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installare SQL Server Integration Services (SSIS) in Linux
 
@@ -117,21 +117,11 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>Rimuovere SSIS
 Per rimuovere `mssql-server-is`, è possibile eseguire il seguente comando:
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
-
-
-
-
-## <a name="run-a-package"></a>Eseguire un pacchetto
-Copiare il pacchetto SSIS nel computer Linux. Utilizzare quindi il comando seguente per eseguire il pacchetto.
-
-```bash
-dtexec /F <package name> /DE <protection password>
-```
-
-
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sull'utilizzo di SSIS in Linux per estrarre, trasformare e caricare i dati, vedere [estrarre, trasformare e caricare i dati per SQL Server in Linux con SSIS](sql-server-linux-migrate-ssis.md).
+Per eseguire pacchetti SSIS in Linux, vedere [di estrazione, trasformazione e caricare i dati per SQL Server in Linux con SSIS](sql-server-linux-migrate-ssis.md).
+
+Per configurare impostazioni aggiuntive di SSIS in Linux, vedere [configurare SQL Server Integration Services in Linux con ssis-conf](sql-server-linux-configure-ssis.md).

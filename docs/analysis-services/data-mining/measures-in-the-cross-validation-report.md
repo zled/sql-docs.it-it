@@ -2,12 +2,12 @@
 title: Misure nel Report di convalida incrociata | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52d3932d577ed93c3c1ab4122323a04a1c27771e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Misure nel report di convalida incrociata
-  Durante la convalida incrociata, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di dividere i dati di una struttura di data mining in più sezioni trasversali e quindi di eseguire il test della struttura e di tutti i modelli di data mining associati in modo iterativo. In base a questa analisi, viene restituito un set di misure di accuratezza standard per la struttura e ciascun modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Durante la convalida incrociata, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suddivide i dati in una struttura di data mining in più sezioni trasversali e quindi in modo iterativo test della struttura e modelli di data mining associati. In base a questa analisi, viene restituito un set di misure di accuratezza standard per la struttura e ciascun modello.  
   
  Nel report sono contenute alcune informazioni di base sul numero di riduzioni nei dati e la quantità di dati in ciascuna riduzione, nonché un set di metriche generali che consentono di descrivere la distribuzione dei dati. Confrontando la metrica generale per ogni sezione trasversale, è possibile valutare l'affidabilità della struttura o del modello.  
   

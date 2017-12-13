@@ -2,12 +2,12 @@
 title: Test e convalida (Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-data-mining"></a>Test e convalida (Data mining)
-  La convalida è il processo che consente di valutare le prestazioni dei modelli di data mining rispetto ai dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La convalida è il processo di valutare l'accuratezza di eseguire modelli di data mining con dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  
   
  Questa sezione introduce alcuni concetti di base relativi alla qualità dei modelli e descrive le strategie per la convalida dei modelli fornite in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per una panoramica sullo scopo della convalida dei modelli nel contesto più ampio del processo di data mining, vedere [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md).  
   

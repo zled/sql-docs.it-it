@@ -2,12 +2,12 @@
 title: Set di righe dello Schema OLE DB | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>Set di righe dello schema OLE DB
-  I set di righe dello schema OLE DB seguenti sono supportati dal provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Utilizzare il **DISCOVER_ENUMERATORS** set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati supporta un set di righe.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]I rowset dello schema di OLE DB seguenti sono supportati dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML per il provider Analysis (XMLA). Utilizzare il **DISCOVER_ENUMERATORS** set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati supporta un set di righe.  
   
  Per ottenere informazioni dettagliate su questi set di righe, è inoltre possibile cercare l'argomento "Set di righe dello schema" nella parte relativa alla OLE DB Programmer's Reference in MSDN® Library nel sito Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   

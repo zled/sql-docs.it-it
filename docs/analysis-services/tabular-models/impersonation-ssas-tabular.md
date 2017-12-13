@@ -2,12 +2,12 @@
 title: Rappresentazione nei modelli tabulari di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonation"></a>Rappresentazione 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  In questo argomento fornisce agli autori di modelli tabulari una conoscenza di come credenziali di accesso vengono utilizzate da Analysis Services quando ci si connette a un'origine dati per importare ed elaborare (aggiornare) i dati.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento fornisce agli autori di modelli tabulari una conoscenza di come credenziali di accesso vengono utilizzate da Analysis Services quando ci si connette a un'origine dati per importare ed elaborare (aggiornare) i dati.  
 
 ##  <a name="bkmk_conf_imp_info"></a>Configurazione della rappresentazione  
  La posizione e il contesto di un modello esistente determina la configurazione di rappresentazione. Quando si crea un nuovo progetto di modello, la rappresentazione è configurata in SQL Server Data Tools (SSDT) quando ci si connette a un'origine dati per importare i dati. Dopo aver distribuito un modello, la rappresentazione può configurata nella proprietà di stringa di connessione di database modello tramite SQL Server Management Studio (SSMS). Per i modelli tabulari in Azure Analysis Services, è possibile utilizzare SQL Server Management Studio o **visualizzare come: Script** modalità nella finestra di progettazione basata su browser per modificare il file Model.bim in JSON.

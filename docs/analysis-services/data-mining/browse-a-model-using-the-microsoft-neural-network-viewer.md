@@ -2,12 +2,12 @@
 title: Visualizzare un modello utilizzando il visualizzatore Microsoft Neural Network | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cc0dddf9fd02a618cbc687e2f9cab385ab9d9f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf3960aa4308b921cb0c9da01ddfdb1bb52e6f0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network
-  Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, che consente di creare modelli di data mining di classificazione e regressione in grado di analizzare più input e output, è molto utile a scopo di analisi ed esplorazione. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizzatore Neural Network in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Neural Network. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, che consente di creare modelli di data mining di classificazione e regressione in grado di analizzare più input e output, è molto utile a scopo di analisi ed esplorazione. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
   
  Quando si esplora un modello utilizzando il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network Viewer, si sceglie in genere un attributo di destinazione e uno stato, quindi si utilizza il visualizzatore per determinare in che modo gli attributi di input influiscono sul risultato.  
   

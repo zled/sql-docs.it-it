@@ -2,12 +2,12 @@
 title: Partizione di rappresentazione (tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a1478d3a38081dffefef764ffe15c4cd13b09b0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4fa1b2fea26b7b1d7d4efd08afd5f32e0e9eeae7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---partition-representation"></a>Tabelle - rappresentazione di una partizione
-  Per scopi operativi una tabella può essere divisa in diversi subset di righe che, quando vengono combinate formano la tabella. Ognuno di tali subset è una partizione della tabella.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Per scopi operativi una tabella può essere divisa in diversi subset di righe che, se combinati insieme, formano la tabella. ognuno di tali subset è una partizione della tabella.  
   
 ## <a name="partition-representation"></a>Rappresentazione di una partizione  
  In termini di oggetti AMO, una rappresentazione di partizione dispone di una relazione di mapping uno-a-uno con <xref:Microsoft.AnalysisServices.Partition> e non sono richiesti altri oggetti AMO principali.  

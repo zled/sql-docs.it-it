@@ -2,12 +2,12 @@
 title: 'Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure
-Nelle lezioni precedenti di questa esercitazione è stato spiegato che le dimensioni del database aggiunte a un cubo possono essere utilizzate come base per una o più dimensioni del cubo. In questa lezione verranno illustrate le procedure per definire tipi diversi di relazioni tra dimensioni e gruppi di misure del cubo, nonché per specificare le proprietà di tali relazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nelle lezioni precedenti in questa esercitazione, è stato aggiunte a un cubo le dimensioni del database possono essere utilizzate come base per uno o più dimensioni del cubo. In questa lezione verranno illustrate le procedure per definire tipi diversi di relazioni tra dimensioni e gruppi di misure del cubo, nonché per specificare le proprietà di tali relazioni.  
   
 Per altre informazioni, vedere [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

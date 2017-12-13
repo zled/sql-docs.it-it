@@ -2,12 +2,12 @@
 title: Specificare contrassegna come tabella data | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b8d4a4ab8b48b8d18a32023902b24132831b97c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9a37e946ba4a660b205b948a7f52d2dc84e6f39
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Specificare contrassegna come tabella data per l'utilizzo con Business intelligence
-  Per utilizzare le funzioni di business intelligence nelle formule DAX, è necessario specificare una tabella di data e una colonna identificatore univoco (datetime) del tipo di dati Data. Una volta specificata una colonna nella tabella relativa alla data come identificatore univoco, è possibile creare le relazioni tra le colonne nella tabella in questione e tutte le tabelle dei fatti.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Per utilizzare le funzioni di business intelligence nelle formule DAX, è necessario specificare una tabella di data e una colonna identificatore univoco (datetime) del tipo di dati Data. Una volta specificata una colonna nella tabella relativa alla data come identificatore univoco, è possibile creare le relazioni tra le colonne nella tabella in questione e tutte le tabelle dei fatti.  
   
  Quando si utilizzano funzioni di business intelligence, si applicano le regole seguenti:  
   

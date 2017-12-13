@@ -2,12 +2,12 @@
 title: La definizione di membri calcolati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lezione 6-1-definizione di membri calcolati
-I membri calcolati sono membri di una dimensione o di un gruppo di misure definiti in base a una combinazione di dati del cubo, di operatori aritmetici, di numeri e di funzioni. È possibile ad esempio creare un membro calcolato che calcoli la somma di due misure fisiche del cubo. Le definizioni dei membri calcolati vengono archiviate nei cubi, ma i loro valori vengono calcolati in fase di query.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]I membri calcolati sono membri di una dimensione o un gruppo di misure definiti in base a una combinazione di dati del cubo, operatori aritmetici, numeri e funzioni. È possibile ad esempio creare un membro calcolato che calcoli la somma di due misure fisiche del cubo. Le definizioni dei membri calcolati vengono archiviate nei cubi, ma i loro valori vengono calcolati in fase di query.  
   
 Per creare un membro calcolato, usare il comando **Nuovo membro calcolato** nella scheda **Calcoli** di Progettazione cubi. È possibile creare un membro calcolato all'interno di qualsiasi dimensione, inclusa la dimensione di tipo misure. È anche possibile inserire un membro calcolato in una cartella di visualizzazione nella finestra di dialogo **Proprietà calcolo** . Per altre informazioni, vedere [Calcoli](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Calcoli nei modelli multidimensionali](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)e [Creare membri calcolati](../analysis-services/multidimensional-models/create-calculated-members.md).  
   

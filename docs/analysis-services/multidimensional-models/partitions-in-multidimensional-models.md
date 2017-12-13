@@ -2,12 +2,12 @@
 title: Partizioni nei modelli multidimensionali | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partizioni nei modelli multidimensionali
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una *partizione* consente l'archiviazione fisica delle tabelle dei fatti in un gruppo di misure. Per ogni gruppo di misure viene automaticamente creata una singola partizione, ma è frequente creare partizioni aggiuntive per l'ulteriore segmentazione dei dati, con il conseguente miglioramento dell'elaborazione e delle prestazioni delle query.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], *partizione* fornisce l'archiviazione fisica delle tabelle dei fatti in un gruppo di misure. Per ogni gruppo di misure viene automaticamente creata una singola partizione, ma è frequente creare partizioni aggiuntive per l'ulteriore segmentazione dei dati, con il conseguente miglioramento dell'elaborazione e delle prestazioni delle query.  
   
  L'elaborazione diventa più efficiente poiché le partizioni possono essere elaborate in modo indipendente e in parallelo su uno o più server. Le query vengono eseguite più velocemente poiché ogni partizione può essere configurata con le modalità di archiviazione e le ottimizzazioni di aggregazione che assicurano tempi di risposta più brevi. Ad esempio, l'archiviazione MOLAP per le partizioni che contengono dati più recenti è in genere più veloce dell'archiviazione ROLAP. In modo analogo, se si effettua il partizionamento in base alla data, le partizioni che contengono dati più recenti possono includere più ottimizzazioni delle partizioni contenenti dati più vecchi a cui si accede con minore frequenza. Tenere presente che la scelta di impostazioni di archiviazione e aggregazione diverse in base alla partizione influirà negativamente sulle operazioni di unione successive. Valutare attentamente se l'unione è un componente fondamentale della strategia di gestione delle partizioni prima di ottimizzare le singole partizioni.  
   

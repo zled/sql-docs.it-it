@@ -2,12 +2,12 @@
 title: Aggiungere un modello di Data Mining a una struttura di Data Mining esistente | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07a1f5deb7fc82fbe6021691417addf00414b3a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79d2c8b506cd42bd04ae4fb95f28fa2b3a07f613
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Aggiungere un modello di data mining a una struttura di data mining esistente
-  È possibile aggiungere più modelli di data mining a una struttura, dopo avere aggiunto il modello iniziale. Ogni modello deve contenere le colonne presenti nella struttura, ma è possibile definire l'utilizzo delle colonne in modo diverso per ogni modello di data mining. Per altre informazioni sulla definizione delle colonne dei modelli di data mining, vedere [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile aggiungere più modelli di data mining a una struttura di data mining, dopo aver aggiunto il modello iniziale. Ogni modello deve contenere le colonne presenti nella struttura, ma è possibile definire l'utilizzo delle colonne in modo diverso per ogni modello di data mining. Per altre informazioni sulla definizione delle colonne dei modelli di data mining, vedere [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md).  
   
 ### <a name="to-add-a-mining-model-to-the-structure"></a>Per aggiungere un modello di data mining alla struttura  
   

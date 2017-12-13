@@ -2,12 +2,12 @@
 title: Eseguire il ripristino da PowerPivot | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88cd0379f0d23f819ab362a273c58bb40db81fa9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2cc8322e9a7208189ec7a8630e79a47baecaeb92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="restore-from-power-pivot"></a>Eseguire il ripristino da PowerPivot
-  È possibile usare la funzionalità Ripristina da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SQL Server Management Studio per creare un nuovo database modello tabulare in un'istanza di Analysis Services in esecuzione in modalità tabulare oppure per eseguire il ripristino a un database esistente da una cartella di lavoro con estensione xlsx di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]È possibile utilizzare il ripristino da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funzionalità in SQL Server Management Studio per creare un nuovo database modello tabulare in un'istanza di Analysis Services (in esecuzione in modalità tabulare) o ripristinare un database esistente da un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartella di lavoro (con estensione xlsx).  
   
 > [!NOTE]  
 >  Il modello di progetto Importa da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SQL Server Data Tools offre funzionalità simili. Per altre informazioni, vedere [Importare da Power Pivot &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  

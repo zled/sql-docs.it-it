@@ -2,12 +2,12 @@
 title: AMO altri metodi e classi | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d201ea38ed360b35b5b19daf945cc11ffe45f849
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-other-classes-and-methods"></a>Altre classi e altri metodi AMO
-  In questa sezione contiene le classi comuni che non sono specifiche per OLAP o di data mining e che sono utili per l'amministrazione o gestione di oggetti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Tali classi riguardano caratteristiche quali stored procedure, traccia, eccezioni e backup e ripristino.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questa sezione contiene le classi comuni che non sono specifiche per OLAP o di data mining e che sono utili per l'amministrazione o gestione di oggetti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Tali classi riguardano caratteristiche quali stored procedure, traccia, eccezioni e backup e ripristino.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   

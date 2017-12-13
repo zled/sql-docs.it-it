@@ -17,24 +17,24 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4ee223a3c27ee35a823917f9d1aefcd8fb86e80e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 235240ef5b49e0fb08ac86e215e98907dd42880a
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Come creare query MDX utilizzando olapR
 
-Il [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) pacchetto supporta le query nei modelli multidimensionali ospitati in SQL Server Analysis Services. Consente di compilare una query su un cubo esistente tramite MDX, esplorare le dimensioni e altri oggetti cubo e incollare le query MDX per recuperare i dati esistenti.
+Il [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) pacchetto supporta le query MDX su cubi ospitati in SQL Server Analysis Services. Consente di compilare una query su un cubo esistente, esplorare le dimensioni e altri oggetti cubo e incollare le query MDX per recuperare i dati esistenti.
 
-In questo articolo vengono descritti i due utilizzi principali del pacchetto olapR:
+Questo articolo vengono descritti i due utilizzi principali del **olapR** pacchetto:
 
-+ [Compilare una query da R, usando i costruttori forniti nel pacchetto olapR](#buildMDX)
++ [Compilare una query MDX da R, usando i costruttori forniti nel pacchetto olapR](#buildMDX)
 + [Eseguire una query MDX valida esistente utilizzando olapR e un provider OLAP](#executeMDX)
 
 Non sono supportate le operazioni seguenti:
 
-+ Query su un modello tabulare
++ Query DAX su un modello tabulare
 + Creazione di nuovi oggetti OLAP
 + Writeback per le partizioni, incluse le misure o somme
 
@@ -48,7 +48,7 @@ Non sono supportate le operazioni seguenti:
 
 4. Usare le funzioni helper seguenti per fornire altri dettagli sulle dimensioni e sulle misure da includere nella query MDX:
 
-     + `cube()` Specificare il nome del database SSAS.
+     + `cube()` Specificare il nome del database SSAS. Se la connessione a un'istanza denominata, specificare il nome del computer e il nome di istanza. 
      + `columns()`Specificare i nomi delle misure da utilizzare nel **colonne ON** argomento.
      + `rows()`Specificare i nomi delle misure da utilizzare nel **righe ON** argomento.
      + `slicers()` Specificare un campo o i membri da usare come filtro dei dati. Si tratta di un filtro che viene applicato a tutti i dati delle query MDX.
@@ -59,7 +59,7 @@ Non sono supportate le operazioni seguenti:
          
          Se la query è relativamente semplice, è possibile usare le funzioni `columns`, `rows`e così via per crearla. È tuttavia possibile usare anche la funzione `axis()` con un valore di indice diverso da zero per creare una query MDX con molti qualificatori o aggiungere altre dimensioni come qualificatori.
 
-5. Passare l'handle e la query MDX completata nelle funzioni `executeMD` o `execute2D`, a seconda della forma dei risultati.
+5. Passare l'handle e la query MDX completata, in una delle seguenti funzioni, a seconda della forma dei risultati: 
 
   + `executeMD` restituisce una matrice multidimensionale
   + `execute2D` restituisce un frame di dati bidimensionale (tabulare)
@@ -81,7 +81,7 @@ Non sono supportate le operazioni seguenti:
 
 Negli esempi seguenti sono basati sul data mart e del cubo progetto AdventureWorks, poiché tale progetto è ampiamente disponibile in più versioni, inclusi i file di backup possono essere ripristinati con facilità ad Analysis Services. Se non si dispone di un cubo esistente, è possibile ottenere un cubo di esempio tramite una delle seguenti opzioni:
 
-+ Creare il cubo che viene usato in questi esempi seguendo l'esercitazione Analysinotes servizi fino a lezione 4: [la creazione di un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Creare il cubo che viene usato in questi esempi seguendo l'esercitazione di Analysis Services fino a lezione 4: [la creazione di un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Scaricare un cubo esistente come backup e ripristinare un'istanza di Analysis Services. Ad esempio, questo sito fornisce un cubo elaborato in formato compresso: [Adventure Works multidimensionali modello SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Estrarre il file e quindi ripristinarlo all'istanza di SSAS. Per ulteriori informazioni, vedere [Backup e ripristino](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), o [Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
@@ -98,7 +98,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + Nelle colonne è possibile specificare più misure come elementi di una stringa con valori delimitati da virgole.
 + L'asse Row usa tutti i valori possibili (tutti i MEMBERS) della dimensione "Product Line". 
-+ Questa query restituisce una tabella con tre colonne, che contiene un riepilogo di _rollup_ delle vendite Internet relative a tutti i paesi.
++ Questa query restituisce una tabella con tre colonne, che contiene un _rollup_ riepilogo delle vendite Internet di tutti i paesi.
 + La clausola WHERE specifica i _asse di sezionamento_. In questo esempio, il filtro dei dati utilizza un membro del **SalesTerritory** dimensione per filtrare la query in modo che solo le vendite Australia utilizzate nei calcoli.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>Per compilare la query con le funzioni di olapR
@@ -115,6 +115,12 @@ slicers(qry) <- c("[Sales Territory].[Sales Territory Country].[Australia]")
 
 result1 <- executeMD(ocs, qry)
 
+```
+
+Per un'istanza denominata, assicurarsi di eseguire l'escape di caratteri che possono essere considerati caratteri di controllo in R.  Ad esempio, la stringa di connessione seguente fa riferimento a un'istanza OLAP01, in un server denominato ContosoHQ:
+
+```R
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>Per eseguire la query come stringa MDX predefinita
@@ -156,7 +162,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| Risultati  |  
+| Risultati  |
 | ----|
 | _Analysis Services Tutorial_|
 |_Internet Sales_|
@@ -174,7 +180,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| Risultati  |  
+| Risultati  |
 | ----|
 | _Customer_|
 |_Date_|
@@ -183,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>Per restituire tutti i membri della dimensione e della gerarchia specificate
 
-Dopo aver definito l'origine e la creazione dell'handle, specificare il cubo, la dimensione e la gerarchia da restituire.
+Dopo aver definito l'origine e la creazione dell'handle, specificare il cubo, la dimensione e la gerarchia da restituire. Nei risultati restituiti, gli elementi che sono preceduti  **->**  rappresentano gli elementi figlio del membro precedente.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -191,7 +197,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| Risultati  |  
+| Risultati  |
 | ----|
 | _Accessories_|
 |_Bikes_|
@@ -200,8 +206,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 |-> Assembly Components|
 
-
-Gli elementi nei risultati restituiti con prefisso  **->**  rappresentano gli elementi figlio del membro precedente.
 
 ## <a name="see-also"></a>Vedere anche
 

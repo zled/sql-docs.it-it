@@ -2,12 +2,12 @@
 title: Creare e personalizzare la raccolta Power Pivot | Documenti Microsoft
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Creare e personalizzare la Raccolta Power Pivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La Raccolta è un tipo particolare di raccolta documenti di SharePoint che fornisce un'anteprima dettagliata e la gestione dei documenti per le cartelle di lavoro pubblicate di Excel e per i report di Reporting Services contenenti dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La raccolta è un tipo speciale di raccolta documenti di SharePoint che fornisce dettagliata anteprima e gestione documenti per cartelle di lavoro di Excel pubblicate e i report di Reporting Services che contengono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dati.  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   

@@ -2,12 +2,12 @@
 title: Aggiungere modelli di Data Mining a una struttura (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining)
-  Una struttura di data mining può supportare più modelli di data mining. Pertanto dopo avere completato la procedura guidata è possibile aprire la struttura e aggiungere nuovi modelli di data mining. Ogni volta che si crea un modello, è possibile utilizzare un algoritmo diverso, modificare i parametri o applicare filtri per utilizzare un subset di dati diverso.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una struttura di data mining può supportare più modelli di data mining. Pertanto dopo avere completato la procedura guidata è possibile aprire la struttura e aggiungere nuovi modelli di data mining. Ogni volta che si crea un modello, è possibile utilizzare un algoritmo diverso, modificare i parametri o applicare filtri per utilizzare un subset di dati diverso.  
   
 ## <a name="adding-new-mining-models"></a>Aggiunta di nuovi modelli di data mining  
  Quando si utilizza Creazione guidata modello di data mining per creare un nuovo modello di data mining, per impostazione predefinita è sempre necessario creare prima una struttura di data mining. Tramite la procedura guidata è quindi possibile aggiungere un modello di data mining iniziale alla struttura. Tuttavia, non è necessario creare immediatamente un modello. Se si crea solo la struttura, non è necessario prendere una decisione in merito alla colonna da utilizzare come attributo stimabile o su come utilizzare i dati in un determinato modello. Al contrario, è sufficiente impostare la struttura dei dati generale da utilizzare in futuro e in seguito utilizzare [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) per aggiungere nuovi modelli di data mining basati su tale struttura.  

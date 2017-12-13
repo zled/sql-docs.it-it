@@ -2,12 +2,12 @@
 title: Set di righe DMSCHEMA_MINING_MODELS | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae35f0d1de25ed1551b4368009c4be28e2ea3ea5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 275be85ca3a85147767166ac49cd1d1ee288cf5e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Set di righe DMSCHEMA_MINING_MODELS
-  Enumera i modelli di data mining nel catalogo corrente. Il **DMSCHEMA_MINING_MODELS** set di righe include informazioni quali i nomi di modello, data di elaborazione e l'algoritmo di data mining associato a ogni modello di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera i modelli di data mining nel catalogo corrente. Il **DMSCHEMA_MINING_MODELS** set di righe include informazioni quali i nomi di modello, data di elaborazione e l'algoritmo di data mining associato a ogni modello di data mining.  
   
  . Il **DMSCHEMA_MINING_MODELS** è molto simile a set di righe dello schema di [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) set di righe dello schema e può essere usato nello stesso modo.  
   

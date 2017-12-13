@@ -2,12 +2,12 @@
 title: Tipi di dati (Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 275fddacc7d5d24be9581613863e81d2a061c92d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-types-data-mining"></a>Tipi di dati (data mining)
-  Quando si crea un modello di data mining o una struttura di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario definire i tipi di dati per ogni colonna della struttura. Il tipo di dati indica al motore di analisi se i dati presenti nell'origine dati sono numerici o di testo e il modo in cui devono essere elaborati. Se nei dati di origine ad esempio sono contenuti dati numerici, è possibile specificare se i numeri devono essere considerati come numeri interi o se devono essere utilizzate posizioni decimali.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea un modello di data mining o una struttura di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario definire i tipi di dati per ognuna delle colonne nella struttura di data mining. Il tipo di dati indica al motore di analisi se i dati presenti nell'origine dati sono numerici o di testo e il modo in cui devono essere elaborati. Se nei dati di origine ad esempio sono contenuti dati numerici, è possibile specificare se i numeri devono essere considerati come numeri interi o se devono essere utilizzate posizioni decimali.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta i tipi di dati riportati di seguito per le colonne della struttura di data mining:  
   

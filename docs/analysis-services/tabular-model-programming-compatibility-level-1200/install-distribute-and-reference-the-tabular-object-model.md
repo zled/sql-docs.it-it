@@ -2,12 +2,12 @@
 title: Installare, distribuire e fare riferimento al modello a oggetti tabulare | Documenti Microsoft
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Installare, distribuire e fare riferimento al modello a oggetti tabulare
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-In questo articolo viene illustrato come scaricare, fare riferimento e ridistribuire Analysis Services tabulare oggetto modello TOM (), una libreria di c# per la creazione e gestione di database nel codice gestito e i modelli tabulari.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo articolo viene illustrato come scaricare, fare riferimento e ridistribuire Analysis Services tabulare oggetto modello TOM (), una libreria di c# per la creazione e gestione di database nel codice gestito e i modelli tabulari.  
   
 TOM è un'estensione della libreria client AMO (Microsoft.AnalysisServices.dll) fornito con SQL Server 2016. Funziona con i modelli tabulari di destinazione è il motore di metadati tabulari nella versione SQL Server 2016. Per utilizzare TOM, il modello e il database deve essere a livello di compatibilità 1200 o superiore.  
 

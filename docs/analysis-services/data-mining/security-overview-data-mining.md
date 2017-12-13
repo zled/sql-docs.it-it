@@ -2,12 +2,12 @@
 title: Cenni preliminari sulla sicurezza (Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e41132d9c98186073c67799bea6e9d677f5b3c82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1292f8fc828d938d59bd9ceafe8cbc467da8e02d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="security-overview-data-mining"></a>Panoramica della sicurezza (data mining)
-  Il processo di protezione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avviene su più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il processo di protezione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si verifica a più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
   
 ##  <a name="bkmk_Architecture"></a> Architettura di sicurezza  
  Per ulteriori informazioni sull'architettura di sicurezza di base di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluso il modo in cui in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene utilizzata l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per autenticare l'accesso utente, vedere le risorse seguenti.  

@@ -2,12 +2,12 @@
 title: Il contenuto di FORMAT_STRING (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Proprietà di cella MDX - contenuto di FORMAT_STRING
-  La proprietà **FORMAT_STRING** di una cella determina la formattazione della proprietà **VALUE** della cella, creando il valore della proprietà **FORMATTED_VALUE** della cella. La proprietà **FORMAT_STRING** della cella è in grado di gestire valori non elaborati di tipo stringa e numerici, applicando un'espressione di formato a un valore per restituire un valore formattato per la proprietà **FORMATTED_VALUE** . Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il **FORMAT_STRING** formati di proprietà delle celle di **valore** proprietà della cella, creando il valore per il **FORMATTED_VALUE** proprietà di cella. La proprietà **FORMAT_STRING** della cella è in grado di gestire valori non elaborati di tipo stringa e numerici, applicando un'espressione di formato a un valore per restituire un valore formattato per la proprietà **FORMATTED_VALUE** . Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
   
 ## <a name="string-values"></a>Valori stringa  
  Un'espressione di formato per le stringhe può includere una sezione oppure due sezioni separate da un punto e virgola (;).  

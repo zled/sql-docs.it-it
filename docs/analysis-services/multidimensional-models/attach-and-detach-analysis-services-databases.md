@@ -2,12 +2,12 @@
 title: Collegamento e scollegamento di database di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7cc88be76e8ad64d81465543ab4f463c98687e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f882dfe4979beeb7fa162c7bc649fd01440291d1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Collegamento e scollegamento di database di Analysis Services
-  Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole portare un database offline per un determinato periodo e quindi riportarlo online nella stessa istanza del server o in una diversa. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. In questi e in molti altri casi, i comandi **Attach** e **Detach** consentono agli amministratori di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di portare il database offline e di riportarlo online con pochi passaggi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Spesso quando un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore del database (dba) desidera portare un database offline per un periodo e quindi riportare online il database nell'istanza del server stesso o in un altro. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. In questi e in molti altri casi, i comandi **Attach** e **Detach** consentono agli amministratori di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di portare il database offline e di riportarlo online con pochi passaggi.  
   
 ## <a name="attach-and-detach-commands"></a>Comandi Attach e Detach  
  Il comando **Attach** consente di portare online un database in precedenza portato offline. È possibile collegare il database all'istanza del server originale o a un'altra istanza. Quando si collega un database, l'utente può specificare l'impostazione **ReadWriteMode** per il database. Il comando **Detach** consente di portare un database offline dal server.  

@@ -2,12 +2,12 @@
 title: "Le proprietà della memoria | Documenti Microsoft"
 ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3c8b8f8e94f95174b2d4038454d834b1427cb56c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcf950fc7219996bfc60f56797f52a5ed6d49fc8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prealloca una modesta quantità di memoria all'avvio in modo che le richieste possano essere gestite immediatamente. La memoria aggiuntiva viene allocata come query e i carichi di lavoro di elaborazione aumentano. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prealloca una quantità una quantità di memoria all'avvio adeguata backup in modo che le richieste possono essere gestite immediatamente. La memoria aggiuntiva viene allocata come query e i carichi di lavoro di elaborazione aumentano. 
   
   Tramite la specifica delle impostazioni di configurazione è possibile controllare le soglie di rilascio della memoria. L'impostazione **HardMemoryLimit** consente ad esempio di specificare una condizione di memoria esaurita imposta automaticamente (per impostazione predefinita, questa soglia non è abilitata), in cui le nuove richieste vengono rifiutate completamente finché non diventano disponibili altre risorse.
   

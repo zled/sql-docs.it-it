@@ -2,12 +2,12 @@
 title: Gestione di soluzioni di Data Mining e gli oggetti | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestione degli oggetti e delle soluzioni di data mining
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] include strumenti client che è possibile utilizzare per gestire strutture e modelli di data mining esistenti. In questa sezione vengono descritte le operazioni di gestione che è possibile eseguire utilizzando ciascun ambiente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornisce gli strumenti client che è possibile utilizzare per gestire le strutture di data mining esistenti e i modelli di data mining. In questa sezione vengono descritte le operazioni di gestione che è possibile eseguire utilizzando ciascun ambiente.  
   
  Oltre a questi strumenti, è possibile gestire a livello di programmazione oggetti di data mining mediante una libreria AMO o utilizzare gli altri client che si connettono a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio i componenti aggiuntivi Data mining per [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   

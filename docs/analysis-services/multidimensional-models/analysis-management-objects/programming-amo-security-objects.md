@@ -2,12 +2,12 @@
 title: Programmazione di oggetti di sicurezza AMO | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b81d5b81df182309384c5d647a4251688bb1489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8733a0255c22701009baf79892d7ff6f83b9c87
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-security-objects"></a>Programmazione di oggetti di sicurezza AMO
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], gli oggetti di sicurezza di programmazione o si eseguono applicazioni che utilizzano oggetti di sicurezza AMO è necessario essere un membro del gruppo amministratore del Server o il gruppo amministratore del Database. Amministratore del server e amministratore del Database sono un accesso livelli forniti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], gli oggetti di sicurezza di programmazione o si eseguono applicazioni che utilizzano oggetti di sicurezza AMO è necessario essere un membro del gruppo amministratore del Server o il gruppo amministratore del Database. Amministratore del server e amministratore del Database sono un accesso livelli forniti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] l'utente può accedere a un oggetto tramite la combinazione di ruoli e autorizzazioni assegnati all'oggetto specifico. Per ulteriori informazioni, vedere [classi di sicurezza AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   

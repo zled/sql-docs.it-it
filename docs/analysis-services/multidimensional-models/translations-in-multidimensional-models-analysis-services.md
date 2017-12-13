@@ -2,12 +2,12 @@
 title: Traduzioni nei modelli multidimensionali (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97c2f9950f050c1e737eebfd0f684ad8cd1e5850
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 07e038b7f959df1a7b3f53c5a1de6360b47a2b4b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Traduzioni nei modelli multidimensionali (Analysis Services)
-  È possibile definire le traduzioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mediante la finestra di progettazione appropriata per l'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da tradurre. Mediante la definizione di una traduzione viene creato un oggetto **Translation** associato all'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appropriato con i valori letterali espliciti specificati, nella lingua indicata, per le proprietà dell'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] correlato.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile definire le traduzioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilizzando la finestra di progettazione appropriata per il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto da convertire. Mediante la definizione di una traduzione viene creato un oggetto **Translation** associato all'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appropriato con i valori letterali espliciti specificati, nella lingua indicata, per le proprietà dell'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] correlato.  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>Elementi di un modello di dati multilingue  
  Un modello di dati usato in una soluzione multilingue non richiede solo le etichette tradotte (nomi di campo e descrizioni), ma è necessario fornire anche i valori dei dati articolati in vari alfabeti. Per ottenere una soluzione multilingue è necessario che i singoli attributi associati alle colonne in un database esterno restituiscano i dati.  

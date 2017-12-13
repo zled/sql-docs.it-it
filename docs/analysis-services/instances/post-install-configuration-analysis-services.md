@@ -2,12 +2,12 @@
 title: Post-configurazione installazione (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configurazione successiva all'installazione (Analysis Services)
-  Dopo aver installato Analysis Services, è necessario eseguire ulteriori attività di configurazione per rendere il server completamente operativo e disponibile per l'utilizzo generale. In questa sezione vengono illustrate le attività aggiuntive per completare l'installazione. A seconda dei requisiti di connessione, potrebbe essere inoltre necessario configurare l'autenticazione (vedere [Connessione a un database di Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo l'installazione di Analysis Services, un'ulteriore configurazione è necessario per rendere il server completamente operativo e disponibile per uso generale. In questa sezione vengono illustrate le attività aggiuntive per completare l'installazione. A seconda dei requisiti di connessione, potrebbe essere inoltre necessario configurare l'autenticazione (vedere [Connessione a un database di Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
  In seguito saranno necessarie altre operazioni dopo aver preparato i database per la distribuzione. In particolare, sarà necessario configurare le appartenenze ai ruoli nel database per concedere l'accesso utente ai dati, progettare una strategia di backup e ripristino di un database e stabilire se è necessario un carico di lavoro di elaborazione pianificato per aggiornare i dati a intervalli regolari. Altre informazioni sulla distribuzione dei database e l'amministrazione sono disponibili mediante questi collegamenti: [Database di modelli multidimensionali &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [Database modello tabulare &#40;SSAS tabulare&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   

@@ -2,12 +2,12 @@
 title: Scegliere ed eseguire il mapping di dati di Input per una Query di stima | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e055a4ef5a23e08a7b8147cfd746c48b304aa3b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
-  Quando si creano stime da un modello di data mining, generalmente si procede inserendo nuovi dati nel modello. (L'eccezione è rappresentata dai modelli Time Series che eseguono stime unicamente in base ai dati cronologici.) Per fornire al modello nuovi dati, è necessario assicurarsi che i dati siano disponibili in una vista origine dati. Se si sa in anticipo quali dati si utilizzeranno per la stima, è possibile includerli nella vista origine dati utilizzata per la creazione del modello. In caso contrario, potrebbe essere necessario creare una nuova vista origine dati. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si creano stime da un modello di data mining, generalmente si procede inserendo nuovi dati nel modello. (L'eccezione è rappresentata dai modelli Time Series che eseguono stime unicamente in base ai dati cronologici.) Per fornire al modello nuovi dati, è necessario assicurarsi che i dati siano disponibili in una vista origine dati. Se si sa in anticipo quali dati si utilizzeranno per la stima, è possibile includerli nella vista origine dati utilizzata per la creazione del modello. In caso contrario, potrebbe essere necessario creare una nuova vista origine dati. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  È talvolta possibile che i dati necessari siano contenuti in più di una tabella in un join uno-a-molti. È il caso dei dati utilizzati per i modelli di associazione o Sequence Clustering che utilizzano una tabella del case collegata a una tabella nidificata che contiene i dettagli sul prodotto o la transazione. Se il modello utilizza una struttura di tabelle del case nidificate, i dati utilizzati per la stima devono anch'essi presentare una struttura di tabelle del case nidificate.  
   

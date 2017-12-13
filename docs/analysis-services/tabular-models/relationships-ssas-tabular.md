@@ -2,12 +2,12 @@
 title: Relazioni (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
-  Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati. e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
   
  Se si utilizza l'Importazione guidata tabella per importare dalla stessa origine dati, le relazioni già presenti nelle tabelle (a livello di origine dati) che si sceglie di importare saranno ricreate nel modello. È possibile visualizzare le relazioni rilevate e ricreate automaticamente tramite Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. È inoltre possibile creare manualmente nuove relazioni tra tabelle tramite Progettazione modelli nella Vista diagramma o la finestra di dialogo Crea relazione o Gestisci relazioni.  
   

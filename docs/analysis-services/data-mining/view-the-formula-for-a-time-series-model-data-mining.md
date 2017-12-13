@@ -2,12 +2,12 @@
 title: Visualizzare la Formula per una serie temporale (Data Mining) modello | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Visualizzare la formula per un modello Time Series (Data Mining)
-  Se è stato creato un modello Time Series con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, il modo più semplice per visualizzare l'equazione di regressione per il modello è usare la **Legenda data mining** del [Visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), che presenta tutte le costanti in un formato leggibile.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se è stato creato un modello serie di tempo utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, il modo più semplice per visualizzare l'equazione di regressione per il modello è possibile utilizzare il **legenda Data Mining** del [visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), che Visualizza tutte le costanti in un formato leggibile.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Per visualizzare la formula di regressione ARTXP per un modello Time Series  
   

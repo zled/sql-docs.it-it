@@ -2,12 +2,12 @@
 title: "Risparmio energia consente di visualizzare proprietà del report (SSAS tabulare) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c7a6d7bc2008e1532a302f68c6db93123a24b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8ef26565ff777cf7f280408d08791364c136225
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>-Proprietà report Power View (SSAS tabulare)
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] fornisce intuitive funzionalità di report ad hoc per utenti aziendali quali analisti dei dati, decisori aziendali e Information Worker. Questi utenti potranno creare e interagire facilmente con le visualizzazioni dei dati da modelli tabulari basati su cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicate in un raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o da modelli tabulari creati usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e distribuiti nelle istanze di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] è un'applicazione Silverlight basata su browser avviata da SharePoint Server 2010 o versione successiva.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] fornisce intuitiva di reporting ad hoc per utenti aziendali quali analisti dei dati, decisori aziendali e information worker. Questi utenti potranno creare e interagire facilmente con le visualizzazioni dei dati da modelli tabulari basati su cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicate in un raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o da modelli tabulari creati usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e distribuiti nelle istanze di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] è un'applicazione Silverlight basata su browser avviata da SharePoint Server 2010 o versione successiva.  
   
  Quando si creano progetti di modelli tabulari in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è possibile configurare determinate proprietà del report univoche dei report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Negli argomenti di questa sezione viene spiegata la modalità di ottimizzazione di un modello per migliorare l'esperienza di creazione dei report in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   

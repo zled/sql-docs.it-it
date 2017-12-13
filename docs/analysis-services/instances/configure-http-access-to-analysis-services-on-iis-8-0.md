@@ -2,12 +2,12 @@
 title: Configurare l'accesso HTTP ad Analysis Services in IIS 8.0 | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 02c1e956d40ed9a4b69e0606f5a273ecab814e83
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2926b71ccc00d178c9a60aa5c8fc9856e6c8a81
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in IIS 8.0
-  In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo articolo viene illustrato come configurare un endpoint HTTP per accedere a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
   
 -   L'accesso client viene eseguito tramite connessioni Internet o Extranet, con restrizioni relativamente alle porte che è possibile abilitare.  
   

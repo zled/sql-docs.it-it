@@ -2,12 +2,12 @@
 title: Pianificazione dell'aggiornamento di dati e origini dati - Nessuna autenticazione di Windows | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c165409874271ef7ab60428976f74212a3b3f431
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Pianificazione dell'aggiornamento di dati e origini dati - Nessuna autenticazione di Windows
-  Questo argomento descrive un flusso di lavoro della pianificazione di un aggiornamento dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in cui si possono usare origini dati che **NON** supportano l'autenticazione di Windows, ad esempio origini dati Oracle o IDM DB2. Le illustrazioni e i passaggi presenti in questo argomento fanno riferimento alle origini dati Oracle ma lo stesso flusso di lavoro è valido anche per altre origini dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento viene descritto un flusso di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint pianificazione aggiornamento dati che è possono utilizzare dati di origini che **non** supportano l'autenticazione di Windows. ad esempio origini dati Oracle o IDM DB2. Le illustrazioni e i passaggi presenti in questo argomento fanno riferimento alle origini dati Oracle ma lo stesso flusso di lavoro è valido anche per altre origini dati.  
   
 ||  
 |-|  

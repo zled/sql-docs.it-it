@@ -2,12 +2,12 @@
 title: Traduzioni nei modelli tabulari (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traduzioni in modelli tabulari (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Aggiunge il supporto di stringa di traduzione per i modelli tabulari. Un singolo oggetto nel modello può avere più traduzioni di un nome o di una descrizione, rendendo possibile supportare versioni multilingue all'interno della definizione di modello.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aggiunge il supporto di stringa di traduzione per i modelli tabulari. Un singolo oggetto nel modello può avere più traduzioni di un nome o di una descrizione, rendendo possibile supportare versioni multilingue all'interno della definizione di modello.  
   
  Le stringhe tradotte valgono esclusivamente per i metadati dell'oggetto (nomi e descrizioni di tabelle e colonne) che vengono visualizzati in uno strumento client come un elenco di tabella pivot di Excel.  Per usare le stringhe tradotte, la connessione client specifica le impostazioni cultura. Nella funzionalità **Analisi in Excel** è possibile scegliere la lingua da un elenco a discesa. Per altri strumenti, potrebbe essere necessario specificare le impostazioni cultura nella stringa di connessione.  
   

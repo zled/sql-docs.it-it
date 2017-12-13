@@ -2,12 +2,12 @@
 title: Creare un Report di convalida incrociata | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47368a14a07f9ab0a42df11d29dbca6404b19463
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cross-validation-report"></a>Creare un report di convalida incrociata
-  In questo argomento viene illustrata la creazione di un report di convalida incrociata utilizzando la scheda Grafico di accuratezza in Progettazione modelli di data mining. Per informazioni generali sui report di convalida incrociata e sulle misure statistiche in esso contenute, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento illustra la creazione di un report di convalida incrociata utilizzando la scheda grafico di accuratezza in Progettazione modelli di Data Mining. Per informazioni generali sui report di convalida incrociata e sulle misure statistiche in esso contenute, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Un report di convalida incrociata è fondamentalmente diverso da un grafico di accuratezza, ad esempio una matrice di classificazione.  
   

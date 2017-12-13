@@ -2,12 +2,12 @@
 title: Rinominare un'istanza di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45ccdebbfaa2ca30bd6d5cd6c02bb7f869aa6496
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c08828062b6434b29e91c217af652f6445b75b19
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="rename-an-analysis-services-instance"></a>Rinominare un'istanza di Analysis Services
-  È possibile rinominare un'istanza esistente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite lo strumento **Rinomina istanza** installato con Management Studio (installazione Web).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile rinominare un'istanza esistente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando il **Rinomina istanza** strumento, installato con Management Studio (installazione Web).  
   
 > [!IMPORTANT]  
 >  Mentre si rinomina l'istanza, lo strumento Rinomina istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito con privilegi elevati, aggiornando il nome del servizio Windows, gli account di sicurezza e le voci del Registro di sistema associati a quell'istanza. Per accertarsi che queste azioni vengono effettuate, eseguire questo strumento come amministratore di sistema locale.  

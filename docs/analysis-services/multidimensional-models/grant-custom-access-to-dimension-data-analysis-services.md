@@ -2,12 +2,12 @@
 title: Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
-  Dopo avere abilitato l'accesso in lettura a un cubo, è possibile impostare ulteriori autorizzazioni che consentono o negano in modo esplicito l'accesso ai membri della dimensione, comprese le misure presenti all'interno della Dimensione di tipo misure in cui sono contenute tutte le misure usate in un cubo. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver abilitato l'accesso in lettura a un cubo, è possibile impostare autorizzazioni aggiuntive che consentiranno o negare l'accesso a membri di dimensione, inclusi misure contenute nella dimensione Measures che contiene tutte le misure usate in un cubo, in modo esplicito. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  
   
  ![Le tabelle pivot con e senza un membro della dimensione](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "tabelle pivot con e senza un membro della dimensione")  
   

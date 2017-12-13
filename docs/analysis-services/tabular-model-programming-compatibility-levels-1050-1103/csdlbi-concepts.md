@@ -2,12 +2,12 @@
 title: Concetti di CSDLBI | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 16688e8f3f87e8ca9e2e95e4d2200a3a1bf03342
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8b75857391d8c5298db654469ada8c117926dc89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-concepts"></a>Concetti di CSDLBI
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Il linguaggio CSDL (Conceptual Schema Definition Language) con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo da rendere possibile l'accesso, l'esecuzione di query o l'esportazione di set di dati diversi a livello di programmazione. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Conceptual Schema Definition Language con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo che consente a un set di dati diversi da a livello di codice accessibile, eseguire una query o esportare. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
   
  In questa sezione viene illustrato come la rappresentazione CSDLBI esegue il mapping ai modelli di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (tabulari e multidimensionali), insieme a esempi per ogni tipo di modello.  
   

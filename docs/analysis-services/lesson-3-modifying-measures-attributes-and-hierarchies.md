@@ -2,12 +2,12 @@
 title: 'Lezione 3: Modifica di misure, attributi e gerarchie | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a4d500a76930c46f15b36f352787edf4e01199f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a65107e5281bfa85e92a1c1ca27f9213fdd69ded
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lezione 3: Modifica di misure, attributi e gerarchie
-Dopo aver definito il cubo iniziale, è possibile rendere il cubo maggiormente utile e semplice. A tale scopo, aggiungere le gerarchie che supportano la navigazione e l'aggregazione a vari livelli, applicare formati a una misura specifica e definire calcoli e relazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dopo aver definito il cubo iniziale, si è pronti per migliorare maggiormente utile e semplice del cubo. A tale scopo, aggiungere le gerarchie che supportano la navigazione e l'aggregazione a vari livelli, applicare formati a una misura specifica e definire calcoli e relazioni.  
   
 > [!NOTE]  
 > I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  

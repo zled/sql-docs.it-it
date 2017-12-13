@@ -2,12 +2,12 @@
 title: "Definire una relazione molti-a-molti e le proprietà della relazione molti-a-molti | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f9f9807ecfe195dc38d1d953092775e1b648adb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definire una relazione molti-a-molti e le relative proprietà
-  In questo argomento vengono illustrate le dimensioni molti-a-molti in Analysis Services, quando utilizzarle e come crearle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Questo argomento illustra le dimensioni molti-a-molti in Analysis Services, ad esempio quando utilizzarle e come crearli.  
   
 ## <a name="introduction"></a>Introduzione  
  In Analysis Services sono supportate le dimensioni molti-a-molti ed è possibile ottenere un'analisi più complessa rispetto a quella di uno schema star classico. In uno schema star classico tutte le dimensioni hanno una relazione uno-a-molti con la tabella dei fatti. Ogni fatto è associato a un solo membro della dimensione e un singolo membro della dimensione è associato a molti fatti.  

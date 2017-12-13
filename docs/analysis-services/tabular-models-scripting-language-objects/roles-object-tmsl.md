@@ -2,12 +2,12 @@
 title: Oggetto ruoli (TMSL) | Documenti Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8db20290efa59425ff28d0ab3ff0b816abf6709
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 46bc8ff36d396cc0b95f0b2364c8e049e26a9319
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles-object-tmsl"></a>Oggetto ruoli (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Definisce un ruolo del modello che specifica una raccolta di autorizzazioni. L'appartenenza al ruolo è costituito da principi di sicurezza di Windows. È possibile impostare filtri su un ruolo per limitare l'accesso a oggetti specifici.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce un ruolo del modello che specifica una raccolta di autorizzazioni. L'appartenenza al ruolo è costituito da principi di sicurezza di Windows. È possibile impostare filtri su un ruolo per limitare l'accesso a oggetti specifici.  
   
 ## <a name="object-definition"></a>Definizione dell'oggetto  
  Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Ruolo** gli oggetti dispongono anche le proprietà seguenti.  

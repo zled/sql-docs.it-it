@@ -2,12 +2,12 @@
 title: Contenuto del modello per i modelli Time Series di data mining (Analysis Services - Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
-  Tutti i modelli di data mining utilizzano la stessa struttura per archiviare i propri contenuti. Tale struttura viene definita secondo il set di righe dello schema relativo al contenuto di data mining. Tuttavia, all'interno della struttura standard i nodi che contengono informazioni vengono disposti in modi diversi per rappresentare vari tipi di albero. In questo argomento vengono descritti l'organizzazione e il significato dei nodi per i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tutti i modelli di data mining utilizzano la stessa struttura per archiviare i propri contenuti. Tale struttura viene definita secondo il set di righe dello schema relativo al contenuto di data mining. Tuttavia, all'interno della struttura standard i nodi che contengono informazioni vengono disposti in modi diversi per rappresentare vari tipi di albero. In questo argomento vengono descritti l'organizzazione e il significato dei nodi per i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series.  
   
  Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   

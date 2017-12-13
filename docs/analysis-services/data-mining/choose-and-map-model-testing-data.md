@@ -2,12 +2,12 @@
 title: Scegliere ed eseguire il mapping dei dati di test del modello | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-model-testing-data"></a>Scegliere ed eseguire il mapping dei dati di test del modello
-  Per creare un grafico di accuratezza in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario scegliere i dati che verranno utilizzati per il test del modello ed eseguire il mapping dei dati al modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Per creare un grafico di accuratezza in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario scegliere i dati che verranno utilizzati per testare il modello ed eseguire il mapping dei dati del modello.  
   
  Per impostazione predefinita, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verranno utilizzati i dati di test del modello di data mining, a condizione che sia stato creato un set di dati di controllo al momento della compilazione della struttura di data mining. La creazione di un set di test di controllo rappresenta il modo più semplice per testare i modelli basati sulla stessa struttura di data mining perché i nomi delle colonne e i tipi di dati corrisponderanno sempre al modello e si può essere ragionevolmente certi che la distribuzione dei dati sia simile. Nella finestra di progettazione verranno inoltre create automaticamente le relazioni tra le colonne di input e le colonne del modello.  
   

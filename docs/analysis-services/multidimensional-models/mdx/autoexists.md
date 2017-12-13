@@ -2,12 +2,12 @@
 title: Auto Exist | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d7f38c656ff153989d16844fccf13e6598c69008
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a3f930db51b869d4f504ee282aeaae6e4a12061c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="autoexists"></a>Auto Exist
-  Il concetto di *Auto Exist* limita lo spazio del cubo a quelle celle che esistono effettivamente nel cubo, in contrapposizione con quelle che potrebbero esistere come risultato della creazione di tutte le possibili combinazioni di membri delle gerarchie di attributi dalla medesima gerarchia. La distinzione è necessaria perché i membri di una gerarchia di attributi non possono coesistere con membri di un'altra gerarchia di attributi nella stessa dimensione. Quando in un'istruzione SELECT si utilizzano due o più gerarchie di attributi della medesima dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Il concetto di *Auto Exist* limita lo spazio del cubo alle celle effettivamente esistenti nel cubo, in contrapposizione con quelle che potrebbero esistere come risultato la creazione di membri della gerarchia tutte le possibili combinazioni di attributi dalla stessa gerarchia. La distinzione è necessaria perché i membri di una gerarchia di attributi non possono coesistere con membri di un'altra gerarchia di attributi nella stessa dimensione. Quando in un'istruzione SELECT si utilizzano due o più gerarchie di attributi della medesima dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi.  
   
  Si supponga ad esempio di utilizzare gli attributi della dimensione Geografia. Se una delle espressioni restituisce tutti i membri dell'attributo Città e un'altra limita i membri dell'attributo Paese a tutti i paesi europei, allora i membri di Città saranno limitati alle sole città che appartengono a paesi europei. Ciò è dovuto alla caratteristica Auto Exist in Analysis Services. un quanto tenta di impedire che i record di dimensioni esclusi nell'espressione di un attributo vengano inclusi dalle espressioni di altri attributi. La caratteristica Auto Exist può inoltre essere interpretata come l'intersezione risultante da diverse espressioni di attributi su righe di dimensioni.  
   

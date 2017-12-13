@@ -2,12 +2,12 @@
 title: Esportare e importare oggetti di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>Esportare e importare gli oggetti di data mining
-  Oltre alle funzionalità fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per il backup, il ripristino e la migrazione di soluzioni, il componente Data mining di SQL Server offre la possibilità di trasferire rapidamente strutture e modelli di data mining tra server diversi tramite DMX (Data Mining Extensions).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oltre alle funzionalità disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per il backup, ripristino e migrazione di soluzioni, Data Mining di SQL Server offre la possibilità di trasferire rapidamente strutture di data mining e modelli tra server diversi tramite Data Mining Extensions (DMX).  
   
  Se la soluzione di data mining usa dati relazionali anziché un database multidimensionale, il trasferimento dei modelli mediante **EXPORT** e **IMPORT** risulta molto più veloce e semplice rispetto all'uso della funzione di ripristino del database o alla distribuzione di un'intera soluzione.  
   

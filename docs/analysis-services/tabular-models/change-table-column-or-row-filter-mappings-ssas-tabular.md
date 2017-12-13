@@ -2,12 +2,12 @@
 title: Modifica tabella, colonna o il mapping dei filtri di riga (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a88238ef377de669f3100852272c9cdbee8987c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 055b4415c1b7c60a1f22047d8e7ac95c7bc0e8cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Modificare i mapping di filtri tabella, colonna o riga (SSAS tabulare)
-  Questo argomento descrive come modificare i mapping di filtri tabella, colonna o riga tramite la finestra di dialogo **Modifica proprietà tabella** di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In questo argomento viene descritto come modificare i mapping dei filtri di riga, colonna o tabella utilizzando il **Modifica proprietà tabella** nella finestra di dialogo [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Le opzioni disponibili nella finestra di dialogo **Modifica proprietà tabella** sono diverse, a seconda che i dati siano stati originariamente importati selezionando tabelle da un elenco o usando una query SQL. Se i dati sono stati originariamente importati selezionandoli da un elenco, nella finestra di dialogo **Modifica proprietà tabella** viene visualizzata la modalità Anteprima tabella. Questa modalità consente di visualizzare solo un subset limitato alle prime cinquanta righe della tabella di origine. Se i dati sono stati originariamente importati usando un'istruzione SQL, nella finestra di dialogo **Modifica proprietà tabella** viene visualizzata solo un'istruzione SQL. Utilizzando un'istruzione di query SQL è possibile recuperare un subset di righe progettando un filtro o modificando manualmente l'istruzione SQL.  
   

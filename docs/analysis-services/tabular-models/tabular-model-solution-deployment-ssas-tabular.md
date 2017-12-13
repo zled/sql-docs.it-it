@@ -2,12 +2,12 @@
 title: Distribuzione della soluzione di modello tabulare (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5766323ffd6f50fff6f6b73bddf52e665f9bcab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Distribuzione di una soluzione del modello tabulare (SSAS tabulare)
-  Una volta creato, un progetto di modello tabulare deve essere distribuito affinché gli utenti esplorino il modello tramite un'applicazione client di creazione report. In questo argomento vengono illustrate le varie proprietà e i diversi metodi che è possibile utilizzare in caso di distribuzione di soluzioni di modelli tabulari nell'ambiente.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dopo la creazione di un progetto di modello tabulare, è necessario distribuirlo per consentire agli utenti di esplorare il modello utilizzando un'applicazione client di creazione di report. In questo argomento vengono illustrate le varie proprietà e i diversi metodi che è possibile utilizzare in caso di distribuzione di soluzioni di modelli tabulari nell'ambiente.  
   
  Sezioni dell'argomento:  
   

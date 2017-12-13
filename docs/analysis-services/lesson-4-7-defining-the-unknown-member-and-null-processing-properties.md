@@ -2,12 +2,12 @@
 title: "Che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85b07e5b292632403a719ef6deee92acffce658c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b0d3f7c19e44f271f921a4be15a9072f03c61203
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lezione 4-7-che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null
-Quando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] elabora una dimensione, tutti i valori distinti delle colonne sottostanti delle tabelle o viste incluse nella vista origine dati popolano gli attributi della dimensione. Se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rileva un valore Null durante l'elaborazione, per impostazione predefinita quest'ultimo viene convertito in un valore zero per le colonne di tipo numerico o in una stringa vuota per le colonne di tipo stringa. È possibile modificare le impostazioni predefinite oppure convertire i valori Null nell'eventuale processo di estrazione, trasformazione e caricamento del data warehouse relazionale sottostante. È anche possibile configurare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che converta il valore Null in un valore designato impostando tre proprietà, ovvero **UnknownMember** e **UnknownMemberName** per la dimensione e **NullProcessing** per l'attributo chiave della dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Quando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] elabora una dimensione, tutti i valori distinti delle colonne sottostanti le tabelle o viste nella vista origine dati, popola gli attributi nella dimensione. Se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rileva un valore Null durante l'elaborazione, per impostazione predefinita quest'ultimo viene convertito in un valore zero per le colonne di tipo numerico o in una stringa vuota per le colonne di tipo stringa. È possibile modificare le impostazioni predefinite oppure convertire i valori Null nell'eventuale processo di estrazione, trasformazione e caricamento del data warehouse relazionale sottostante. È anche possibile configurare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che converta il valore Null in un valore designato impostando tre proprietà, ovvero **UnknownMember** e **UnknownMemberName** per la dimensione e **NullProcessing** per l'attributo chiave della dimensione.  
   
 La Creazione guidata dimensione e la Creazione guidata cubo consentono di abilitare tali proprietà in modo appropriato a seconda che l'attributo chiave di una dimensione ammetta valori Null oppure che l'attributo radice di una dimensione con schema snowflake sia basato su una colonna che ammette valori Null. In questi casi la proprietà **NullProcessing** dell'attributo chiave viene impostata su **UnknownMember** e la proprietà **UnknownMember** su **Visible**.  
   

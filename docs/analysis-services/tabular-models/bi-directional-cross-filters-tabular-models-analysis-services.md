@@ -2,12 +2,12 @@
 title: -Modelli tabulari - Analysis Services i filtri incrociati bidirezionali | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>-Modelli tabulari - Analysis Services i filtri incrociati bidirezionali
-  La novità di SQL Server 2016 è un approccio predefinito per l'abilitazione dei *filtri incrociati bidirezionali* nei modelli tabulari, eliminando in questo modo la necessità di prevedere soluzioni DAX personalizzate per la propagazione del contesto di filtro nelle relazioni tra tabelle.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Novità in SQL Server 2016 è un approccio predefinito per l'abilitazione di *filtri incrociati bidirezionali* nei modelli tabulari, eliminando la necessità di prevedere soluzioni DAX personalizzate per propagare il contesto di filtro nelle relazioni tra tabelle.  
   
  Suddividendo il concetto nelle sue parti componenti, il *filtro incrociato* è la possibilità di impostare un contesto di filtro in una tabella in base ai valori contenuti in una tabella correlata, mentre con *bidirezionale* si intende il trasferimento di un contesto di filtro alla seconda tabella correlata all'altra estremità di una relazione tra tabelle. Come suggerisce il nome, è possibile sezionare in entrambe le direzioni della relazione piuttosto che in una sola.  Internamente, il filtro bidirezionale espande il contesto di filtro in modo da eseguire la query di un superset dei dati.  
   

@@ -2,12 +2,12 @@
 title: Algoritmo Microsoft Clustering | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb57075143154d8e317350625b6ac602dc241597
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è un algoritmo di *segmentazione* o *clustering* che esegue l'iterazione dei case in un set di dati per raggrupparli in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Clustering è un *segmentazione* o *clustering* algoritmo che scorre i case in un set di dati per raggrupparli in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
   
  I modelli di clustering identificano in un set di dati le relazioni che non è possibile derivare mediante l'osservazione casuale. Ad esempio, è possibile desumere per logica che le persone che si recano sul posto di lavoro in bicicletta in genere non abitano lontano. Tuttavia l'algoritmo può individuare altre caratteristiche non altrettanto ovvie sulle persone che si recano a lavoro in bicicletta. Nel diagramma seguente, il cluster A rappresenta i dati relativi alla persone che tendono a usare l'automobile per recarsi a lavoro, mentre il cluster B rappresenta i dati relativi alle persone che tendono a recarsi a lavoro in bicicletta.  
   

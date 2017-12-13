@@ -2,12 +2,12 @@
 title: Definire query denominate in una vista origine dati (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a6db35f9ab119025bf5b7d60aed0b27747adaa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definire query denominate in una vista origine dati (Analysis Services)
-  Una query denominata è un'espressione SQL rappresentata come tabella. In una query denominata è possibile specificare un'espressione SQL per la selezione di righe e colonne restituite da una o più tabelle in una o più origini dati. Una query denominata è simile a qualsiasi altra tabella in una vista origine dati con righe e relazioni, con la differenza che la query denominata è basata su un'espressione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una query denominata è un'espressione SQL rappresentata come una tabella. In una query denominata è possibile specificare un'espressione SQL per la selezione di righe e colonne restituite da una o più tabelle in una o più origini dati. Una query denominata è simile a qualsiasi altra tabella in una vista origine dati con righe e relazioni, con la differenza che la query denominata è basata su un'espressione.  
   
  Una query denominata consente di estendere lo schema relazionale delle tabelle esistenti in una vista origine dati senza modificare l'origine dati sottostante. Una serie di query denominate può, ad esempio, essere utilizzata per suddividere una tabella delle dimensioni complessa in tabelle delle dimensioni più piccole e più semplici, da utilizzare nelle dimensioni del database. È inoltre possibile utilizzare una query denominata per unire in join più tabelle di database di una o più origini dati in una singola tabella della vista origine dati.  
   

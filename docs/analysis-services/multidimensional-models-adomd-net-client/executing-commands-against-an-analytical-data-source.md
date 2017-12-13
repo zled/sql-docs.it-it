@@ -2,12 +2,12 @@
 title: Esecuzione di comandi su un'origine dati analitici | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 450d3553509ee3358711705bbc3f5e8a10874820
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 810c6e8bd489bac42a3f4d90d4dbe9990f5ca038
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>Esecuzione di comandi in un'origine dati analitici
-  Dopo avere stabilito una connessione a un'origine dati analitica, è possibile utilizzare un oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> per eseguire comandi e restituire risultati da tale origine dati. Tali comandi possono recuperare dati tramite istruzioni MDX (Multidimensional Expressions) o DMX (Data Mining Extensions) o tramite una sintassi limitata di SQL. È inoltre possibile utilizzare comandi ASSL (Analysis Services Scripting Language) per modificare il database sottostante.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una volta stabilita una connessione a un'origine dati analitici, è possibile utilizzare un <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> oggetto per eseguire comandi e restituire risultati da tale origine dati. Tali comandi possono recuperare dati tramite istruzioni MDX (Multidimensional Expressions) o DMX (Data Mining Extensions) o tramite una sintassi limitata di SQL. È inoltre possibile utilizzare comandi ASSL (Analysis Services Scripting Language) per modificare il database sottostante.  
   
 ## <a name="creating-a-command"></a>Creazione di un comando  
  Prima di eseguire un comando, è necessario crearlo. Per creare un comando, utilizzare uno dei due elementi seguenti:  

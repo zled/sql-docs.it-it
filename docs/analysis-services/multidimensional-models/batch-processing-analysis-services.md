@@ -2,12 +2,12 @@
 title: Batch di elaborazione (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d9ed1a3c1c832a1ceb34d96f0df44030da2e33cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34082c3567e1050be6e72992387435ec9ef0c22b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="batch-processing-analysis-services"></a>Elaborazione batch (Analysis Services)
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare il comando Batch per inviare al server più comandi di elaborazione in una sola richiesta. Tramite l'elaborazione batch è possibile determinare gli oggetti da elaborare e l'ordine di elaborazione. Un batch può inoltre essere eseguito come una serie di processi autonomi o come una transazione nella quale l'esito negativo di un processo causa il rollback dell'intero batch.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile utilizzare il comando Batch per inviare più comandi di elaborazione al server in una singola richiesta. Tramite l'elaborazione batch è possibile determinare gli oggetti da elaborare e l'ordine di elaborazione. Un batch può inoltre essere eseguito come una serie di processi autonomi o come una transazione nella quale l'esito negativo di un processo causa il rollback dell'intero batch.  
   
  L'elaborazione batch consente di aumentare al massimo la disponibilità dei dati consolidando e riducendo la quantità di tempo necessaria per eseguire il commit delle modifiche. Quando una dimensione viene elaborata completamente, qualsiasi partizione in cui viene utilizzata tale dimensione viene contrassegnata come non elaborata e, di conseguenza, i cubi contenenti le partizioni non elaborate non sono disponibili per l'esplorazione. È possibile ottenere questo risultato con un processo di elaborazione batch elaborando le dimensioni insieme alle partizioni interessate. L'esecuzione del processo di elaborazione batch come transazione consente di verificare che tutti gli oggetti inclusi nella transazione rimangano disponibili per l'esecuzione di query fino al completamento dell'elaborazione. Durante il commit delle modifiche da parte della transazione, vengono applicati blocchi agli oggetti interessati, rendendoli temporaneamente non disponibili; tuttavia il tempo necessario per eseguire il commit delle modifiche è inferiore rispetto a quello per elaborare singolarmente gli oggetti.  
   

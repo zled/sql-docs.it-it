@@ -2,12 +2,12 @@
 title: "Determinare la modalità del Server di un'analisi Services istanza | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 05e11407da93e269ca8766d94df4820e54e43ecc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7242643ec7ac3869f245b069218205ad425692a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinare la modalità server di un'istanza di Analysis Services
-  Sono disponibili tre diverse modalità server per installare Analysis Services: multidimensionale e data mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services può essere installato in una delle tre modalità server: multidimensionale e di Data Mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
   
  La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per altre informazioni sulla disponibilità delle funzionalità in una modalità specifica, vedere [Confronto tra soluzioni tabulari e multidimensionali &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

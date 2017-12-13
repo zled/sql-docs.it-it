@@ -2,12 +2,12 @@
 title: Specificare una colonna da utilizzare come regressore in un modello | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f818532f51fa5fbbec6b6688709173849eae063
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d21033d8d839a11f4c511d7913f94b809a64881f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Specificare una colonna da utilizzare come regressore in un modello
-  Un modello di regressione lineare rappresenta il valore dell'attributo stimabile come il risultato di una formula che consente di combinare gli input in modo che i dati si adattino il più possibile a una retta di regressione stimata. L'algoritmo accetta come input sono valori numerici e rileva automaticamente gli input che si adattano meglio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un modello di regressione lineare rappresenta il valore dell'attributo stimabile come risultato di una formula che consente di combinare gli input in modo che i dati si adattino il più possibile a una linea di regressione stimata. L'algoritmo accetta come input sono valori numerici e rileva automaticamente gli input che si adattano meglio.  
   
  Per specificare che una colonna può essere inclusa come regressore, è possibile tuttavia aggiungere il parametro FORCE_REGRESSOR al modello e indicare i regressori da utilizzare. Questa operazione può essere eseguita nei casi in cui l'attributo è significativo anche se l'effetto è insufficiente per essere rilevato dal modello o quando si desidera garantire che l'attributo venga incluso nella formula.  
   

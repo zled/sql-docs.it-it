@@ -2,12 +2,12 @@
 title: Dati di SQL Server, componenti aggiuntivi Data Mining per Office | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2682484f535bbc98e75c072e1a75243ab78ccd3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Componenti aggiuntivi Data mining di SQL Server per Office 2007
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componenti aggiuntivi Data mining di SQL Server per Office è un semplice set di strumenti per l'analisi predittiva che consente l'utilizzo dei dati in Excel al fine di compilare modelli analitici per stima, indicazioni o esplorazione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Aggiuntivi di data Mining per Office è un semplice set di strumenti per analitica predittiva che consente di utilizzare i dati in Excel per compilare modelli analitici per stima, indicazioni o esplorazione.  
   
  Le procedure guidate e gli strumenti per la gestione dei dati nei componenti aggiuntivi forniscono istruzioni dettagliate per le seguenti attività comuni di data mining:  
   

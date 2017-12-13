@@ -2,12 +2,12 @@
 title: Recupero di dati tramite XmlReader | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb85566c9ed1533e35e2f108dd61f50dc20a5a23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Recupero di dati tramite XmlReader
-  Il **XmlReader** parte della classe di **System. XML** spazio dei nomi per la libreria di classi Microsoft .NET Framework, è simile al <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> classe in cui il **XmlReader**classe fornisce anche veloce, non in cache e forward-only ai dati. Se non è necessario per la visualizzazione in memoria, analisi dei dati mediante il <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> oggetto, il **XmlReader** oggetto è perfetto per il recupero dei dati XML, in particolare per grandi quantità di dati. Poiché **XmlReader** flussi di dati, **XmlReader** non è necessario recuperare e memorizzare nella cache di tutti i dati prima di esporli al chiamante, come nel caso un <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> oggetti utilizzati per convertire il Risposta XML for Analysis in una rappresentazione del modello oggetto analitici.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il **XmlReader** parte della classe di **System. XML** spazio dei nomi per la libreria di classi Microsoft .NET Framework, è simile al <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> classe in cui il **XmlReader**classe fornisce anche veloce, non in cache e forward-only ai dati. Se non è necessario per la visualizzazione in memoria, analisi dei dati mediante il <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> oggetto, il **XmlReader** oggetto è perfetto per il recupero dei dati XML, in particolare per grandi quantità di dati. Poiché **XmlReader** flussi di dati, **XmlReader** non è necessario recuperare e memorizzare nella cache di tutti i dati prima di esporli al chiamante, come nel caso un <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> oggetti utilizzati per convertire il Risposta XML for Analysis in una rappresentazione del modello oggetto analitici.  
   
  Il **XmlReader** classe fornisce accesso diretto al codice XML per la risposta XMLA ricevuta da ADOMD.NET quando il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> metodo il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> viene chiamato l'oggetto. Poiché i dati recuperati sono rappresentati da codice XML non elaborato, è necessario analizzare manualmente i dati e i metadati. Non appena i dati sono stati recuperati, il **XmlReader** oggetto deve essere chiuso.  
   

@@ -2,12 +2,12 @@
 title: Le colonne della struttura di data mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11ccfc309d772d3b26a5a0e72a77c094e2624282
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structure-columns"></a>Colonne della struttura di data mining
-  In una struttura di data mining si definiscono le colonne al momento della creazione della struttura, scegliendo colonne di dati esterni e specificando quindi la modalità di utilizzo dei dati per la modellazione. Pertanto, le colonne della struttura di data mining non sono semplici copie dei dati di un'origine dati, ma definiscono la modalità in cui i dati dell'origine devono essere utilizzati dal modello di data mining. È possibile assegnare proprietà che determinano come vengono discretizzati i dati, proprietà che descrivono come sono distribuiti i valori dei dati  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si definiscono le colonne in una struttura di data mining quando si crea la struttura di data mining, scegliendo colonne di dati esterni e quindi che specifica i dati da utilizzare per la modellazione. Pertanto, le colonne della struttura di data mining non sono semplici copie dei dati di un'origine dati, ma definiscono la modalità in cui i dati dell'origine devono essere utilizzati dal modello di data mining. È possibile assegnare proprietà che determinano come vengono discretizzati i dati, proprietà che descrivono come sono distribuiti i valori dei dati  
   
  Le colonne della struttura di data mining sono state progettate in modo da risultare flessibili ed estensibili, in quanto ogni algoritmo utilizzato per compilare un modello di data mining può utilizzare colonne diverse della struttura allo scopo di interpretare i dati. Anziché disporre di un set di dati per ogni modello, è possibile utilizzare una sola struttura di data mining e le colonne che contiene per personalizzare i dati per ciascun modello.  
   

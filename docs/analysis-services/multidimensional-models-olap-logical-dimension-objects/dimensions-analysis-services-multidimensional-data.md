@@ -2,12 +2,12 @@
 title: Dimensioni (Analysis Services - dati multidimensionali) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffb3b3a3ef069be26ff6d3812d52ff4d18a7dc9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9f876ad9e6b7627b22322604d406a189b6c03834
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensioni (Analysis Services - Dati multidimensionali)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le dimensioni sono un componente essenziale dei cubi. Le dimensioni consentono di organizzare i dati in relazione a un'area di interesse per gli utenti, ad esempio relativa a clienti, archivi o dipendenti. Le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includono attributi corrispondenti a colonne nelle tabelle delle dimensioni. Questi attributi consistono in gerarchie degli attributi e possono essere organizzati in strutture gerarchiche definite dall'utente oppure possono essere definite come gerarchie padre-figlio basate su colonne nella tabella delle dimensioni sottostante. Queste gerarchie sono utilizzate per organizzare le misure incluse in un cubo. Negli argomenti seguenti viene fornita una panoramica di dimensioni, attributi e gerarchie.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le dimensioni sono un componente essenziale dei cubi. Le dimensioni consentono di organizzare i dati in relazione a un'area di interesse per gli utenti, ad esempio relativa a clienti, archivi o dipendenti. Le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includono attributi corrispondenti a colonne nelle tabelle delle dimensioni. Questi attributi consistono in gerarchie degli attributi e possono essere organizzati in strutture gerarchiche definite dall'utente oppure possono essere definite come gerarchie padre-figlio basate su colonne nella tabella delle dimensioni sottostante. Queste gerarchie sono utilizzate per organizzare le misure incluse in un cubo. Negli argomenti seguenti viene fornita una panoramica di dimensioni, attributi e gerarchie.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

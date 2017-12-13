@@ -2,12 +2,12 @@
 title: Tipi di dimensione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimension-properties---types"></a>Proprietà dimensione - tipi di database
-  Il **tipo** l'impostazione della proprietà fornisce informazioni sul contenuto di una dimensione alle applicazioni client e server. In alcuni casi, il **tipo** impostazione solo vengono fornite indicazioni per le applicazioni client ed è facoltativo. In altri casi, ad esempio **account** o **ora** dimensioni, il **tipo** impostazioni delle proprietà per la dimensione e i relativi attributi determinano comportamenti specifici basati su server e può essere richiesto per implementare determinati comportamenti nel cubo. Ad esempio, il **tipo** di una dimensione può essere impostata su **account** per indicare alle applicazioni client che la dimensione standard contiene attributi conto. Per ulteriori informazioni sull'ora, l'account e dimensioni di tipo valuta, vedere [creare una dimensione di tipo data](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [creare un conto finanziario della dimensione di tipo padre-figlio](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [creare una valuta tipo di dimensione](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il **tipo** l'impostazione della proprietà fornisce informazioni sul contenuto di una dimensione alle applicazioni client e server. In alcuni casi, il **tipo** impostazione solo vengono fornite indicazioni per le applicazioni client ed è facoltativo. In altri casi, ad esempio **account** o **ora** dimensioni, il **tipo** impostazioni delle proprietà per la dimensione e i relativi attributi determinano comportamenti specifici basati su server e può essere richiesto per implementare determinati comportamenti nel cubo. Ad esempio, il **tipo** di una dimensione può essere impostata su **account** per indicare alle applicazioni client che la dimensione standard contiene attributi conto. Per ulteriori informazioni sull'ora, l'account e dimensioni di tipo valuta, vedere [creare una dimensione di tipo data](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [creare un conto finanziario della dimensione di tipo padre-figlio](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [creare una valuta tipo di dimensione](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  L'impostazione predefinita per il tipo di dimensione è **regolare**, che non vi sono presupposizioni sul contenuto della dimensione. Questo è l'impostazione predefinita per tutte le dimensioni quando si definisce inizialmente una dimensione a meno che non si specifica **ora** quando si definisce una dimensione utilizzando la creazione guidata dimensione. È inoltre consigliabile lasciare **regolare** come tipo di dimensione, se la creazione guidata dimensione non è elencato un tipo appropriato per il tipo di dimensione.  
   

@@ -2,12 +2,12 @@
 title: Gerarchie incomplete | Documenti Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Gerarchie definite dall'utente - gerarchie incomplete
-  Una gerarchia incompleta è una gerarchia definita dall'utente contenente un numero di livelli ineguale. Sono esempi comuni un organigramma in cui un responsabile di alto livello ha sia responsabili di reparto sia non responsabili come subalterni oppure le gerarchie geografiche composte da Paese-Regione-Città, in cui alcune città non presentano un elemento padre Stato o Provincia, ad esempio Washington D.C., Città del Vaticano o Nuova Delhi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una gerarchia incompleta è una gerarchia definita dall'utente che ha un numero di livelli ineguale. Sono esempi comuni un organigramma in cui un responsabile di alto livello ha sia responsabili di reparto sia non responsabili come subalterni oppure le gerarchie geografiche composte da Paese-Regione-Città, in cui alcune città non presentano un elemento padre Stato o Provincia, ad esempio Washington D.C., Città del Vaticano o Nuova Delhi.  
   
  Nella maggior parte delle gerarchie di una dimensione, ciascun livello presenta lo stesso numero di membri di livello superiore di tutti gli altri membri allo stesso livello. In una gerarchia incompleta, invece, il membro padre logico di almeno un membro non si trova nel livello immediatamente superiore rispetto al membro. Quando si verifica questa situazione, il numero di livelli di nidificazione della gerarchia varia in base ai percorsi di drill-down. In un'applicazione client, questo può rendere i percorsi di drill-down inutilmente complicati.  
   

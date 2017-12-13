@@ -2,12 +2,12 @@
 title: Esempi di Query del modello Time Series | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="time-series-model-query-examples"></a>Esempi di query sul modello di serie temporale
-  Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che consente di fornire dettagli sui criteri individuati durante l'analisi, o una query di stima, che consente di utilizzare i criteri presenti nel modello di data mining per eseguire stime relative ai nuovi dati. Una query sul contenuto per un modello Time Series, ad esempio, potrebbe fornire dettagli aggiuntivi sulle strutture periodiche rilevate, mentre una query di stima potrebbe fornire stime per i 5-10 intervalli di tempo successivi. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, o è possibile creare una query di stima che utilizza i criteri del modello per eseguire stime per i nuovi dati. Una query sul contenuto per un modello Time Series, ad esempio, potrebbe fornire dettagli aggiuntivi sulle strutture periodiche rilevate, mentre una query di stima potrebbe fornire stime per i 5-10 intervalli di tempo successivi. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
   
  In questa sezione viene illustrato come creare entrambi i tipi di query per i modelli basati sull'algoritmo Microsoft Time Series.  
   

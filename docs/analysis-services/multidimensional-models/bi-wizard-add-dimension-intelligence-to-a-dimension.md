@@ -2,12 +2,12 @@
 title: "Aggiungere funzionalità di Business Intelligence a una dimensione | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4109707f30b6569c9d67bf6259e61958ff1a6251
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Creazione guidata BI - aggiungere funzionalità di Business Intelligence a una dimensione
-  L'aggiunta delle funzionalità avanzate di Business Intelligence per le dimensioni a un cubo o una dimensione consente di specificare un tipo di attività standard per una dimensione. Queste funzionalità avanzate specificano inoltre i tipi corrispondenti per gli attributi dimensione. Queste specifiche del tipo possono essere utilizzate dalle applicazioni client per l'analisi dei dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aggiungere la funzionalità di business intelligence di dimensione a un cubo o una dimensione consente di specificare un tipo aziendale standard per una dimensione. Queste funzionalità avanzate specificano inoltre i tipi corrispondenti per gli attributi dimensione. Queste specifiche del tipo possono essere utilizzate dalle applicazioni client per l'analisi dei dati.  
   
  Per aggiungere funzionalità di Business Intelligence per le dimensioni, usare Configurazione guidata funzionalità di Business Intelligence e quindi selezionare l'opzione **Definizione funzionalità di Business Intelligence per le dimensioni** nella pagina **Scelta funzionalità avanzata** . Questa procedura guidata consente di eseguire in modo semplificato i passaggi relativi alla selezione di una dimensione alla quale si desidera applicare la funzionalità di Business Intelligence per le dimensioni e all'identificazione degli attributi per la dimensione selezionata.  
   

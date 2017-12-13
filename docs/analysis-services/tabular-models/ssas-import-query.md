@@ -2,12 +2,12 @@
 title: Importare dati utilizzando una query nativa (Analysis Services) | Documenti Microsoft
 ms.custom: 
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,17 +16,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b4d0672b30747729d324386e1f761a377e15ad2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50db699cc1db1af428524c3f9c263569d7a7bbc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importare dati utilizzando una query nativa
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-Per i modelli tabulari 1400, la nuova esperienza di recupera dati nei progetti di Visual Studio Analysis Services fornisce un'enorme flessibilità per la modalità è possibile combinare i dati durante l'importazione. Questo articolo descrive la creazione di una connessione a un'origine dati e quindi la creazione di una query SQL nativa per specificare l'importazione dei dati.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Per i modelli tabulari 1400, la nuova esperienza di recupera dati nei progetti di Visual Studio Analysis Services fornisce un'enorme flessibilità per la modalità è possibile combinare i dati durante l'importazione. Questo articolo descrive la creazione di una connessione a un'origine dati e quindi la creazione di una query SQL nativa per specificare l'importazione dei dati.
 
 Per completare le attività descritte in questo articolo, assicurarsi che si utilizza la versione più recente di SSDT. Se si utilizza Visual Studio 2017, assicurarsi che è stato scaricato e installato il 2017 settembre o versioni successive Microsoft Analysis Services progetti VSIX.
 

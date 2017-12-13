@@ -2,12 +2,12 @@
 title: Utilizzare i modelli di Analysis Services in SQL Server Management Studio | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9775571e489c2f950bf50fb3c62386fba13e90dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utilizzare i modelli di Analysis Services in SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce un set di modelli che aiutano a creare rapidamente script XMLA, query MDX o DMX oppure indicatori KPI in un cubo o in un modello tabulare, a generare script per operazioni di backup e ripristino, nonché a eseguire numerose altre attività. I modelli si trovano in **Esplora modelli** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce un set di modelli che consentono di creare rapidamente script XMLA, query DMX o MDX, creare gli indicatori KPI in un cubo o un modello tabulare, un backup di script e le operazioni di ripristino ed eseguire molte altre attività. I modelli si trovano in **Esplora modelli** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  In questo argomento è incluso un elenco dei modelli per i modelli multidimensionali e tabulari e vengono forniti esempi di come compilare una query MDX e un'istruzione XMLA tramite Visualizzatore metadati ed Esplora modelli.  
   

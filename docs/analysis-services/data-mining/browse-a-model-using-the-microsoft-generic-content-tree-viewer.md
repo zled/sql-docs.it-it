@@ -2,12 +2,12 @@
 title: Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32b4ed8b3b8c440fc6f8ca276c4f0e27d5fbc5d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dde53f8f124ece496278cb77229f740344e1f06a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer visualizza informazioni dettagliate sui modelli individuati dall'algoritmo di data mining e fornisce anche l'accesso a varie statistiche generate durante il processo di analisi. La quantità e il tipo di informazioni variano a seconda dell'algoritmo utilizzato, ma è possibile includere le categorie seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Mining Model Content Viewer vengono fornite informazioni dettagliate sui modelli individuati dall'algoritmo di data mining e fornisce l'accesso a varie statistiche generate durante il processo di analisi. La quantità e il tipo di informazioni variano a seconda dell'algoritmo utilizzato, ma è possibile includere le categorie seguenti:  
   
 -   Segmenti di dati e relative caratteristiche.  
   

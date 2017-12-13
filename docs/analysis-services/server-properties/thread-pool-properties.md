@@ -2,12 +2,12 @@
 title: "Proprietà dei Pool di thread | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afc7c7e8464661b6d853715c98f6cc61b00bf6b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 25a741e35b7efa0b3bb13047853f6f39d8300c3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="thread-pool-properties"></a>Proprietà dei pool di thread
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il multithreading viene usato per molte operazioni, con il conseguente miglioramento delle prestazioni complessive del server dovuto all'esecuzione di più processi in parallelo. Per gestire i thread in modo più efficiente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono usati i pool di thread per preallocare i thread e semplificarne la disponibilità per il processo successivo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il multithreading viene usato per molte operazioni, il miglioramento delle prestazioni complessive del server tramite l'esecuzione di più processi in parallelo. Per gestire i thread in modo più efficiente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono usati i pool di thread per preallocare i thread e semplificarne la disponibilità per il processo successivo.  
   
  Ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene il proprio set di pool di thread. Esistono differenze significative nel modo in cui i pool di thread vengono usati dalle istanze tabulari e da quelle multidimensionali. Ad esempio, solo le istanze multidimensionali usano il pool di thread **IOProcess** . Di conseguenza, la proprietà **PerNumaNode** , descritta in questo argomento, non è significativa per le istanze tabulari. Nella sezione [Guida di riferimento alle proprietà](#bkmk_propref) seguente, i requisiti di modalità sono indicati per ogni proprietà.
   

@@ -2,12 +2,12 @@
 title: Definizione e identificazione di oggetti (XMLA) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f04bf324a3434c9806f27ab15a32e3c53d962d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb3185b6c95807fa4adb383844a62dcb14342a7c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Definizione e identificazione di oggetti (XMLA)
-  Nei comandi XMLA (XML for Analysis) gli oggetti vengono identificati tramite identificatori e riferimenti all'oggetto e vengono definiti tramite comandi XMLA relativi a elementi ASSL (Analysis Services Scripting Language).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gli oggetti vengono identificati nel codice XML per i comandi Analysis (XMLA) utilizzando gli identificatori di oggetto e i riferimenti agli oggetti e vengono definiti tramite comandi XMLA gli elementi di Analysis Services Scripting Language (ASSL).  
   
 ## <a name="object-identifiers"></a>Identificatori di oggetto  
  Un oggetto viene identificato tramite l'identificatore univoco dell'oggetto come definito in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Gli identificatori di oggetto possono essere specificati in modo esplicito o determinati dall'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando l'oggetto viene creato in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile utilizzare il [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) metodo per recuperare gli identificatori di oggetto per successive **Discover** o [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamate al metodo.  

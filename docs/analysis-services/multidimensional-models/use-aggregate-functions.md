@@ -2,12 +2,12 @@
 title: Utilizzare le funzioni di aggregazione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
-  Quando una dimensione viene usata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è **Sum**. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando una dimensione viene utilizzata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è **Sum**. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  
   
  In Analysis Services, ogni misura creata è supportata da una funzione di aggregazione che determina l'operazione della misura. I tipi di aggregazione predefiniti sono **Sum**, **Min**, **Max**, **Count**, **Distinct Count**oltre a diverse altre funzioni più specialistiche. In alternativa, se sono necessarie aggregazioni basate su formule complesse o personalizzate, è possibile creare un calcolo MDX anziché una funzione di aggregazione predefinita. Se ad esempio si vuole definire una misura per un valore percentuale, si procede in MDX, usando una misura calcolata. Vedere [Istruzione CREATE MEMBER &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   

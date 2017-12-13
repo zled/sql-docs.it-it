@@ -2,12 +2,12 @@
 title: Creare una Query Singleton in Progettazione modelli di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd960d2d0f0628e2c8a8c568cf7e5bb065caa2a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a311450bae77c533860c09c06f53497dbba4035e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Creare una query singleton in Progettazione modelli di data mining
-  Una query singleton è utile quando si desidera creare una stima per un singolo case. Per altre informazioni sulle query singleton, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una query singleton è utile se si desidera creare una stima per un singolo case. Per altre informazioni sulle query singleton, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
   
  Nella scheda **Stima modello di data mining** della Progettazione modelli di data mining è possibile creare diversi tipi di query. È possibile creare una query utilizzando la finestra di progettazione oppure digitando istruzioni Data Mining Extensions (DMX). È anche possibile iniziare con la finestra di progettazione e modificare la query creata cambiando le istruzioni DMX o aggiungendo una clausola WHERE o ORDER BY.  
   

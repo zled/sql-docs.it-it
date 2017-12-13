@@ -2,12 +2,12 @@
 title: Registrazione del nome SPN per un'istanza di Analysis Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53dd8aa711b2d9ba4a565f86ee66572e523fa78a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registrazione del nome SPN per un'istanza di Analysis Services
-  Un nome SPN (Service Principle Name) identifica in modo univoco un'istanza del servizio in un dominio Active Directory quando Kerberos viene usato per l'autenticazione reciproca delle identità del servizio e del client. Il nome SPN è associato all'account di accesso con cui viene eseguita l'istanza del servizio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un provider di servizi Internet (SPN, Service Principle Name) identifica in modo univoco un'istanza del servizio in un dominio di Active Directory quando Kerberos viene utilizzato per l'autenticazione reciproca delle identità del client e servizio. Il nome SPN è associato all'account di accesso con cui viene eseguita l'istanza del servizio.  
   
  Per le applicazioni client che si connettono ad Analysis Services tramite l'autenticazione Kerberos, le librerie client di Analysis Services creano un nome SPN usando il nome host dalla stringa di connessione e altre variabili note, ad esempio la classe del servizio, che vengono risolte in qualsiasi versione specificata di Analysis Services.  
   

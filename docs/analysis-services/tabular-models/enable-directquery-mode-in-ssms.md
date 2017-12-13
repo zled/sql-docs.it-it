@@ -2,12 +2,12 @@
 title: "Abilitare la modalità DirectQuery in SQL Server Management Studio | Documenti Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Abilitare la modalità DirectQuery in SSMS
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  È possibile modificare le proprietà di accesso ai dati di un modello tabulare già distribuito abilitando la modalità DirectQuery, con la quale le query vengono eseguite su un'origine dati relazionale di back-end e non sui dati memorizzati nella cache che risiedono in memoria.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]È possibile modificare le proprietà di accesso ai dati di un modello tabulare che è già stata distribuita, l'attivazione della modalità DirectQuery, in cui le query eseguite su un'origine dati relazionale di back-end anziché essere memorizzati nella cache di dati che risiedono in memoria.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], i passaggi per la configurazione di DirectQuery variano in base al livello di compatibilità del modello. Di seguito sono elencati i passaggi validi per tutti i livelli di compatibilità.  
   

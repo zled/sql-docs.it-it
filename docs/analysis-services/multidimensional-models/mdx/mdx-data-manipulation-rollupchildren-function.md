@@ -2,12 +2,12 @@
 title: Utilizzo della funzione RollupChildren (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2b5133c23454a8281e028a848403e18f5d89eae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c913406650e267cb715267f4a2a91235b6259b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipolazione dei dati MDX - funzione RollupChildren
-  La funzione MDX (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) esegue il rollup degli elementi figlio di un membro, applicando un operatore unario diverso a ogni elemento figlio, e restituisce il valore di tale rollup sotto forma di numero. L'operatore unario utilizzato può essere specificato da una proprietà del membro associata al membro figlio oppure può essere costituito da un'espressione stringa fornita direttamente alla funzione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Le espressioni MDX (Multidimensional) [RollupChildren](../../../mdx/rollupchildren-mdx.md) funzione rollup degli elementi figlio di un membro, applicando un operatore unario diverso per ogni elemento figlio e restituisce il valore di tale rollup sotto forma di numero. L'operatore unario utilizzato può essere specificato da una proprietà del membro associata al membro figlio oppure può essere costituito da un'espressione stringa fornita direttamente alla funzione.  
   
 ## <a name="rollupchildren-function-examples"></a>Esempi sulla funzione RollupChildren  
  L'uso della funzione **RollupChildren** nelle istruzioni MDX (Multidimensional Expressions) è semplice da spiegare, ma questa funzione può avere un'ampia gamma di effetti sulle query MDX.  

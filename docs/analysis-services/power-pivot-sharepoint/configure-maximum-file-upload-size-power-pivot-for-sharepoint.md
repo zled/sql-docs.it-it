@@ -2,12 +2,12 @@
 title: Configurare le dimensioni di caricamento massime del File (PowerPivot per SharePoint) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c52d3ad3556021c7f4d37c08dc0456733457cb87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 68e7aa514a63f6bce6ddcff33c1b7a6a2616beed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configurare la dimensione massima per il caricamento dei file (PowerPivot per SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nelle cartelle di lavoro sono spesso contenute grandi quantità di dati che comportano il superamento della dimensione massima di file consentita per il caricamento in SharePoint. Quando si tenta di caricare un file che supera il limite massimo, verrà visualizzato l'errore seguente in SharePoint:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] le cartelle di lavoro spesso contengono grandi quantità di dati che producono file che superano le dimensioni massime consentite per i caricamenti di SharePoint. Quando si tenta di caricare un file che supera il limite massimo, verrà visualizzato l'errore seguente in SharePoint:  
   
 -   "Le dimensioni del file specificato superano le dimensioni massime supportate".  
   

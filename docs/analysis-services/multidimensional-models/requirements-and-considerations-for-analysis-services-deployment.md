@@ -2,12 +2,12 @@
 title: La distribuzione di servizi di requisiti e considerazioni per l'analisi | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisiti e considerazioni per la distribuzione di Analysis Services
-  Le prestazioni e la disponibilità di una soluzione dipendono da molti fattori, tra cui le funzionalità dell'hardware sottostante, la topologia della distribuzione server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o usando l'archiviazione ROLAP per la quale è richiesto l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le prestazioni e la disponibilità di una soluzione dipende da molti fattori, tra le funzionalità dell'hardware sottostante, la topologia della distribuzione di server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o tramite archiviazione ROLAP che richiede l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisiti relativi a memoria e processore  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è necessaria una quantità maggiore di risorse di memoria e processore nei casi seguenti:  

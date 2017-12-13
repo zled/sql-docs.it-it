@@ -2,12 +2,12 @@
 title: Set di righe DISCOVER_CSDL_METADATA | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Set di righe DISCOVER_CSDL_METADATA
-  Restituisce informazioni su un modello di dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (tabulare o multidimensionale), fornendo la definizione del modello nel formato CSDLBI (Conceptual Schema Definition Language) con annotazioni Business Intelligence. CSDLBI si basa su CSDL, un XML Schema utilizzato da Entity Data Framework per la comunicazione tra un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e il client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)]. Le annotazioni Business Intelligence forniscono metadati aggiuntivi sui modelli tabulari e sugli oggetti in essi contenuti. Per altre informazioni sui modelli di dati tabulari, vedere [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce informazioni su un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modello di dati (tabulare o multidimensionale), fornendo la definizione del modello nel formato CSDLBI (Conceptual Schema Definition Language con annotazioni Business Intelligence). CSDLBI si basa su CSDL, un XML Schema utilizzato da Entity Data Framework per la comunicazione tra un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e il client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)]. Le annotazioni Business Intelligence forniscono metadati aggiuntivi sui modelli tabulari e sugli oggetti in essi contenuti. Per altre informazioni sui modelli di dati tabulari, vedere [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  Il contesto di sicurezza del comando influisce sul set di righe restituito. Le autorizzazioni di lettura nell'istanza di Analysis Services sono necessarie per ottenere la definizione CSDL dal server.  
   

@@ -2,12 +2,12 @@
 title: Applicare funzioni di stima a un modello | Documenti Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
-  Per creare una query di stima in Data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario selezionare prima di tutto il modello di data mining su cui sarà basata la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Per creare una query di stima in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, è innanzitutto necessario selezionare il modello di data mining su cui basare la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
   
  Dopo avere selezionato un modello, aggiungere una *funzione di stima* alla query. Una funzione di stima può essere usata per ottenere una stima, ma è anche possibile aggiungere funzioni di stima che restituiscono le statistiche correlate, come la probabilità del valore stimato, o le informazioni usate per generare la stima.  
   

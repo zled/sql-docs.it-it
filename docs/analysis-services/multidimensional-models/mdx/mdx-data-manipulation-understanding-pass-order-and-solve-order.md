@@ -2,12 +2,12 @@
 title: Informazioni sull'ordine di calcolo e valutazione (MDX) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>La modifica dei dati MDX - informazioni sulla sessione ordinamento e l'ordine di valutazione
-  L'operazione di calcolo di un cubo, risultante da uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo delle varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Quando un cubo viene calcolato come risultato di uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo di varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
   
  Per fare riferimento a una sessione di calcolo è possibile specificare una posizione ordinale, denominata numero della sessione di calcolo. Il numero di sessioni di calcolo necessario per elaborare completamente tutte le celle di un cubo è noto come livello di nidificazione della sessione di calcolo del cubo.  
   

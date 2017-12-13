@@ -2,12 +2,12 @@
 title: Riferimento (PowerPivot per SharePoint) dell'impostazione di configurazione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Documentazione di riferimento per le impostazioni di configurazione (Power Pivot per SharePoint)
-  Questo argomento include la documentazione di riferimento per le impostazioni di configurazione usate dalle applicazioni di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm di SharePoint. Nelle informazioni incluse in questo argomento vengono fornite descrizioni dettagliate per gli utenti che utilizzano uno script di PowerShell per configurare un server o che desiderano cercare informazioni per un'impostazione specifica.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In questo argomento fornisce la documentazione di riferimento per impostazioni di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] applicazioni in una farm di SharePoint del servizio. Nelle informazioni incluse in questo argomento vengono fornite descrizioni dettagliate per gli utenti che utilizzano uno script di PowerShell per configurare un server o che desiderano cercare informazioni per un'impostazione specifica.  
   
  Le impostazioni di configurazione vengono specificate per ogni applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . All'interno di una farm è possibile creare più applicazioni di servizio per configurare istanze logiche indipendenti della stessa istanza fisica del servizio. Le impostazioni di configurazione vengono archiviate nel database dell'applicazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creato per ogni applicazione di servizio configurata.  
   

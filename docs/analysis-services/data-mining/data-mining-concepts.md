@@ -2,12 +2,12 @@
 title: Concetti di Data Mining | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 167d150c65f8fcdfb16417c204eebac22f2ddc40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 905a45d6852a7e5e1ed469e65f6082f0282de985
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
-  Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Data mining è il processo di individuazione informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
   
  I modelli e le tendenze possono essere raccolti e definiti in un *modello di data mining*. È possibile applicare i modelli di data mining a scenari specifici, ad esempio:  
   

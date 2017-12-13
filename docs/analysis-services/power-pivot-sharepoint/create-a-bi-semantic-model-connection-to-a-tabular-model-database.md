@@ -2,12 +2,12 @@
 title: Creare una connessione BI Semantic Model in un Database modello tabulare | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: feb8740550ba5488ff07425ce20036140d84e3dc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Creare una connessione BISM a un database modello tabulare
-  Utilizzare le informazioni fornite in questo argomento per impostare una connessione BISM che esegue il reindirizzamento a un database modello tabulare in esecuzione in un'istanza di Analysis Services esterna alla farm di SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizzare le informazioni in questo argomento per impostare una connessione BI semantic model che reindirizza a un database modello tabulare in esecuzione in un'istanza di Analysis Services all'esterno della farm di SharePoint.  
   
  Dopo avere creato una connessione BISM e configurato le autorizzazioni di SharePoint e Analysis Services, sarà possibile utilizzare la connessione come origine dati per i report di Excel o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   

@@ -2,12 +2,12 @@
 title: Introduzione al modello a oggetti tabulare (TOM) in Analysis Services AMO | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introduzione al modello a oggetti tabulare (TOM) in Analysis Services AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Il modello a oggetti tabulare (TOM) è un'estensione della libreria client servizi oggetto AMO (Analysis Management), creata per supportare scenari di programmazione per modelli tabulari compilati a livello di compatibilità 1200 e versioni successiva. Come con gli oggetti AMO, TOM fornisce un modo programmatico per gestire le funzioni amministrative quali la creazione di modelli, importazione e aggiornamento dei dati e l'assegnazione di ruoli e autorizzazioni.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Il modello a oggetti tabulare (TOM) è un'estensione della libreria client servizi oggetto AMO (Analysis Management), creata per supportare scenari di programmazione per modelli tabulari compilati a livello di compatibilità 1200 e versioni successiva. Come con gli oggetti AMO, TOM fornisce un modo programmatico per gestire le funzioni amministrative quali la creazione di modelli, importazione e aggiornamento dei dati e l'assegnazione di ruoli e autorizzazioni.  
   
 TOM espone metadati tabulari nativo, ad esempio **modello**, **tabelle**, **colonne**, e **relazioni** oggetti.  Una vista di alto livello dell'albero del modello oggetto riportata di seguito viene illustrato come correlazione tra le parti componenti.  
   

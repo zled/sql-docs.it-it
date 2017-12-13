@@ -2,12 +2,12 @@
 title: Esempi di Query sul modello di Clustering delle sequenze | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
-  Quando si crea una query su un modello di data mining, è possibile scegliere tra due tipi: una query sul contenuto, che fornisce dettagli sulle informazioni archiviate nel modello o una query di stima, che utilizza i criteri presenti nel modello per eseguire stime basate sui nuovi dati forniti. Per un modello Sequence Clustering, le query sul contenuto in genere forniscono dettagli aggiuntivi sui cluster trovati o sulle transizioni all'interno di tali cluster. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sulle informazioni archiviate nel modello, oppure è possibile creare una query di stima che utilizza i criteri del modello per eseguire stime basate sui nuovi dati fornire. Per un modello Sequence Clustering, le query sul contenuto in genere forniscono dettagli aggiuntivi sui cluster trovati o sulle transizioni all'interno di tali cluster. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
   
  Le query di stima su un modello Sequence Clustering di solito generano indicazioni basate sulle sequenze e sulle transizioni, su attributi fuori sequenza inclusi nel modello o su una combinazione di attributi di sequenza e fuori sequenza.  
   

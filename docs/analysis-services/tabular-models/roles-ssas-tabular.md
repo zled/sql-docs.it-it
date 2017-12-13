@@ -2,12 +2,12 @@
 title: Ruoli (SSAS tabulare) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles"></a>Ruoli
-  I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ruoli nei modelli tabulari, definiscono le autorizzazioni di membro per un modello. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri. 
   
  Per SQL Server Analysis Services, i ruoli contengono membri di un utente dal nome utente di Windows o dal gruppo di Windows e le autorizzazioni (lettura, process, amministratore). Per Azure Analysis Services, gli utenti devono essere in Azure Active Directory e i nomi utente e i gruppi specificati devono essere dall'indirizzo di posta elettronica aziendale o UPN. 
   

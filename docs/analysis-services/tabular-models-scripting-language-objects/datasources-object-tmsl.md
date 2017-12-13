@@ -2,12 +2,12 @@
 title: Oggetto di origini dati (TMSL) | Documenti Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1a28cf4fcb0f9cd7ba5d00f74e6957302768c17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasources-object-tmsl"></a>Oggetto di origini dati (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Definisce una connessione a un'origine dati utilizzata dal modello durante l'importazione per aggiungere dati al modello o in pass-through query tramite la modalità DirectQuery.  I modelli in modalità DirectQuery possono avere solo uno **DataSource** oggetto.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce una connessione a un'origine dati utilizzata dal modello durante l'importazione per aggiungere dati al modello o in pass-through query tramite la modalità DirectQuery.  I modelli in modalità DirectQuery possono avere solo uno **DataSource** oggetto.  
   
  A meno che non si sta creando, sostituendo, o modificare l'oggetto di origine dati stessa, qualsiasi origine dati a cui fa riferimento nello script (ad esempio script partizione) deve essere un oggetto esistente **DataSource** oggetto nel modello.  
   

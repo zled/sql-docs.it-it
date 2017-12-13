@@ -2,12 +2,12 @@
 title: Creare una nuova struttura di Data Mining OLAP | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1aceaa55b007eaf43a9a44540284ba95786fca63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Creare una nuova struttura di data mining OLAP
-  È possibile usare la Creazione guidata modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare una struttura di data mining che usa dati da un modello multidimensionale. I modelli di data mining basati su cubi OLAP possono utilizzare la colonna e i valori di tabelle dei fatti, dimensioni e gruppi di misure come attributi per l'analisi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile utilizzare Creazione guidata di Data Mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare una struttura di data mining che utilizza i dati da un modello multidimensionale. I modelli di data mining basati su cubi OLAP possono utilizzare la colonna e i valori di tabelle dei fatti, dimensioni e gruppi di misure come attributi per l'analisi.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Per creare una nuova struttura di data mining OLAP  
   

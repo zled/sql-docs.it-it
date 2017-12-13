@@ -2,12 +2,12 @@
 title: Origini dati e associazioni (SSAS multidimensionale) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -43,14 +43,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64aee5ba79973ea7ceca7020a4ee7dda04a12637
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9140c9870866538b4f9b192300e41278fdddd8a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
-  È possibile associare cubi, dimensioni e altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un'origine dati. Un'origine dati può essere rappresentata da uno dei seguenti oggetti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cubi, dimensioni e altri [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti possono essere associati a un'origine dati. Un'origine dati può essere rappresentata da uno dei seguenti oggetti:  
   
 -   Un'origine dati relazionale.  
   

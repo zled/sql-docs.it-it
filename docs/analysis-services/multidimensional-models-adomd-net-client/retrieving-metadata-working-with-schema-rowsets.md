@@ -2,12 +2,12 @@
 title: Working with Schema Rowsets in ADOMD.NET | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Il recupero dei metadati - Working with Schema Rowsets
-  Quando è necessario utilizzare un numero di metadati maggiore rispetto a quello disponibile nel modello a oggetti ADOMD.NET, è possibile utilizzare la funzionalità presente in ADOMD.NET per recuperare l'intervallo completo di set di righe dello schema XMLA (XML for Analysis), OLE DB, OLE DB per OLAP e OLE DB per il data mining:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando è necessaria una maggiore quantità di metadati non disponibili nel modello a oggetti ADOMD.NET, ADOMD.NET offre la possibilità di recuperare l'intervallo completo di XML per Analysis (XMLA), OLE DB, OLE DB per OLAP e OLE DB per i rowset dello schema di Data Mining:  
   
  **XML per i metadati di analisi**  
  I set di righe dello schema di XML for Analysis consentono di recuperare informazioni di basso livello relative al server. Le informazioni disponibili includono le origini dati disponibili nel server, le parole chiave riservate dal provider, i valori letterali supportati dal provider e altre informazioni. È possibile inoltre utilizzare un set di righe dello schema di XML for Analysis per individuare tutti i set di righe dello schema supportati dal provider.  

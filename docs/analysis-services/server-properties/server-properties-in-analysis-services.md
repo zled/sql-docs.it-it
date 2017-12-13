@@ -2,12 +2,12 @@
 title: "Le proprietà del server in Analysis Services | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4ca49040080552d3492b98510daef87df75781c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6da7af04e852c5fff10a6d33e1ab69723d79e014
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="server-properties-in-analysis-services"></a>proprietà server in Analysis Services
-  Un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può modificare le proprietà di configurazione del server predefinite di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ogni istanza ha proprietà di configurazione proprie, impostate in modo indipendente rispetto ad altre istanze presenti nello stesso server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore può modificare le proprietà di configurazione server predefinite di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza. Ogni istanza ha proprietà di configurazione proprie, impostate in modo indipendente rispetto ad altre istanze presenti nello stesso server.  
   
  Per configurare il server, usare SQL Server Management Studio oppure modificare il file msmdsrv.ini di un'istanza specifica.  
  

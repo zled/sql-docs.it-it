@@ -2,12 +2,12 @@
 title: Aggiungere un'aggregazione personalizzata a una dimensione | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63ad6f1d9e72fae70997c87aca194f7437c62d07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbc1152fa705c8b470165feee3aa936e0c61a76c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Creazione guidata BI - aggiungere un'aggregazione personalizzata a una dimensione
-  È possibile aggiungere una funzionalità avanzata di aggregazione personalizzata a un cubo o una dimensione per sostituire le aggregazioni predefinite associate a un membro di una dimensione con un operatore unario diverso. Questa funzionalità consente di specificare nella tabella della dimensione una colonna dell'operatore unario che definisce il rollup per i membri di una gerarchia padre-figlio. L'operatore unario funge da attributo padre nella gerarchia padre-figlio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aggiungere una funzionalità avanzata di aggregazione personalizzata a un cubo o dimensione per sostituire le aggregazioni predefinite associate a un membro della dimensione con un operatore unario diverso. Questa funzionalità consente di specificare nella tabella della dimensione una colonna dell'operatore unario che definisce il rollup per i membri di una gerarchia padre-figlio. L'operatore unario funge da attributo padre nella gerarchia padre-figlio.  
   
 > [!NOTE]  
 >  Un'aggregazione personalizzata è disponibile solo per le dimensioni basate su origini dei dati esistenti. Per le dimensioni create senza utilizzare un'origine dei dati, prima di aggiungere l'aggregazione personalizzata è necessario eseguire la Generazione guidata schema per creare una vista origine dati.  

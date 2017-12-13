@@ -2,12 +2,12 @@
 title: Annotazioni CSDL per Business Intelligence (CSDLBI) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cf3fd7bb1f6e5bf907e6550fe48a3e87c6be5af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f41d6d697299ad964912fe1df86db9b0581cdda
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotazioni CSDL per Business Intelligence (CSDLBI)
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la presentazione della definizione di un modello tabulare in un formato XML denominato Conceptual Schema Definition Language con annotazioni Business Intelligence (CSDLBI). In questo argomento viene fornita una panoramica di CSDLBI e viene descritto come utilizzarlo con i modelli di dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la presentazione della definizione di un modello tabulare in un formato XML denominato Conceptual Schema Definition Language con annotazioni Business Intelligence (CSDLBI). In questo argomento viene fornita una panoramica di CSDLBI e viene descritto come utilizzarlo con i modelli di dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="understanding-the-role-of-csdl"></a>Informazioni sul ruolo del linguaggio CSDL  
  Conceptual Schema Data Language (CSDL) è un linguaggio basato su XML tramite cui vengono descritte entità, relazioni e funzioni. CSDL è definito come parte di Entity Data Framework. Le annotazioni di Business Intelligence sono un'estensione progettata per supportare la modellazione dati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

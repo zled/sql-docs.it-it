@@ -2,12 +2,12 @@
 title: Prospettive | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b3d6af2d4a6248926773e78dbf366b6c6d9ee5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives"></a>Prospettive
-  Una prospettiva è una definizione che consente agli utenti di visualizzare un cubo in modo più semplice. Una prospettiva rappresenta un subset delle caratteristiche di un cubo e consente agli amministratori di creare viste di un cubo, in modo tale che gli utenti possano concentrarsi su dati per loro più importanti. Una prospettiva contiene subset di tutti gli oggetti di un cubo, ma non può includere elementi non definiti nel cubo padre.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una prospettiva è una definizione che consente agli utenti di visualizzare un cubo in modo più semplice. Una prospettiva rappresenta un subset delle caratteristiche di un cubo e consente agli amministratori di creare viste di un cubo, in modo tale che gli utenti possano concentrarsi su dati per loro più importanti. Una prospettiva contiene subset di tutti gli oggetti di un cubo, ma non può includere elementi non definiti nel cubo padre.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Perspective> semplice è composto da informazioni di base, dimensioni, gruppi di misure, calcoli, indicatori KPI e azioni. Le informazioni di base includono il nome e la misura predefinita della prospettiva. Le dimensioni sono un subset delle dimensioni del cubo. I gruppi di misure sono un subset dei gruppi di misure del cubo. I calcoli sono un subset dei calcoli relativi al cubo. Gli indicatori KPI sono un subset degli indicatori KPI del cubo. Le azioni sono un subset delle azioni del cubo.  
   

@@ -2,12 +2,12 @@
 title: Contenuto di tipi (Data Mining) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene usata in un modello.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile definire il sia il tipo di dati fisico per una colonna in una struttura di data mining e un tipo di contenuto logico per la colonna quando viene utilizzata in un modello,  
   
  Il *tipo di dati* determina il modo in cui gli algoritmi elaborano i dati in tali colonne quando si creano modelli di data mining. La definizione del tipo di dati di una colonna indica all'algoritmo le informazioni sul tipo di dati delle colonne e le modalità di elaborazione dei dati. Ogni tipo di dati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta uno o più tipi di contenuto per il data mining.  
   

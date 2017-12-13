@@ -2,12 +2,12 @@
 title: Elemento KPI (CSDLBI) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8941555a0768f80a30947c043aea639469ec8df3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10ddf679eb9ede1302120eae9274b79927c3dc9a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="kpi-element-csdlbi"></a>Elemento KPI (CSDLBI)
-  L'elemento KPI definisce un calcolo che può essere utilizzato come indicatore di prestazioni di chiave. In un modello di dati di Business Intelligence, gli indicatori KPI sono basati sulle misure e per questo la relativa definizione contiene tutti i metadati associati alle misure, nonché le informazioni necessarie per la presentazione dei valori KPI, incluso un grafico predefinito.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L'elemento Kpi definisce un calcolo che può essere utilizzato come un indicatore di prestazioni chiave (KPI). In un modello di dati di Business Intelligence, gli indicatori KPI sono basati sulle misure e per questo la relativa definizione contiene tutti i metadati associati alle misure, nonché le informazioni necessarie per la presentazione dei valori KPI, incluso un grafico predefinito.  
   
  L'elemento KPI non specifica la formula, contenuta nella definizione della misura, ma i metadati aggiuntivi associati alle misure utilizzate come indicatori di prestazioni chiave. Dopo avere definito una misura come KPI, non è più possibile utilizzarla come misura in altri contesti.  
   

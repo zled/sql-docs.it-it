@@ -2,12 +2,12 @@
 title: Condividere feed di dati utilizzando una libreria di Feed di dati (PowerPivot per SharePoint) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b345b289e396d62565f9fee76a72c0cf9cb9d04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 70d102f069894aec4e6286e3bdc590f41fcdbbea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Condividere feed di dati usando una libreria di feed di dati (PowerPivot per SharePoint)
-  Un feed di dati è un flusso di dati XML generato da un servizio o da un'applicazione che espone i dati nel formato wire Atom. Viene utilizzato sempre più frequentemente per trasferire dati tra applicazioni e visualizzatori lato client. In una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint i feed di dati vengono usati per popolare un'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con dati provenienti da un'applicazione o da un servizio specifico di Atom.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un feed di dati è un flusso di dati XML generato da un servizio o applicazione che espone i dati in formato wire Atom. Viene utilizzato sempre più frequentemente per trasferire dati tra applicazioni e visualizzatori lato client. In una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint i feed di dati vengono usati per popolare un'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con dati provenienti da un'applicazione o da un servizio specifico di Atom.  
   
  In presenza di una combinazione di applicazioni specifiche di Atom, potrebbe non essere mai necessario sapere come i feed vengono generati e utilizzati perché il trasferimento dei dati avviene in modo continuo tra le applicazioni. Tuttavia, le organizzazioni che utilizzano soluzioni personalizzate per pubblicare feed Atom richiedono spesso la possibilità di rendere disponibili i feed agli Information Worker. A tal fine è possibile, ad esempio, creare e condividere file di documenti di servizio dati (con estensione atomsvc) tramite cui vengono fornite le connessioni alle origini online che consentono di produrre i feed. Una libreria specifica, chiamata libreria di feed di dati, supporta la creazione e la condivisione dei documenti di servizio dati in un'applicazione Web di SharePoint.  
   
