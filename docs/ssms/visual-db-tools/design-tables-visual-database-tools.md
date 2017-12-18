@@ -3,8 +3,11 @@ title: Creare e aggiornare le tabelle (SSMS) | Microsoft Docs
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47869f706f615cf32b3a80bcfc872c2aebe7964f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 28e181751426bf7169693973ca9c974e1d130e9f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-update-database-tables"></a>Creare e aggiornare le tabelle di database
-
-Progettazione tabelle è uno strumento visivo che consente di progettare e visualizzare le [tabelle di database](../../relational-databases/tables/tables.md). È possibile usare Progettazione tabelle di SQL Server Management Studio (SSMS) per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Progettazione tabelle è uno strumento visivo che consente di progettare e visualizzare le [tabelle di database](../../relational-databases/tables/tables.md). È possibile usare Progettazione tabelle di SQL Server Management Studio (SSMS) per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  
 
   
 ## <a name="create-a-table"></a>Creare una tabella  

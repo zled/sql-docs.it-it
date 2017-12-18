@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ Per eseguire la ricompilazione di un indice online ripristinabile, attenersi all
 - Recupero da errori di ricompilazione degli indici, ad esempio failover del database o esaurimento dello spazio su disco.
 - Quando un'operazione sull'indice è sospesa, sia l'indice originale sia quello appena creato richiedono spazio su disco e devono essere aggiornati durante le operazioni DML.
 
-- Sono consentiti troncamenti dei log durante le operazioni di ricompilazione dell'indice (non possono invece essere eseguiti per le normali operazioni sull'indice online).
+- È consentito il troncamento dei log delle transazioni durante le operazioni di ricompilazione dell'indice (non possono invece essere eseguiti per le normali operazioni sull'indice online).
 - L'opzione SORT_IN_TEMPDB=ON non è supportata
 
 > [!IMPORTANT]
-> Per la ricompilazione ripristinabile non è necessario tenere aperto un troncamento con esecuzione prolungata ed è possibile eseguire il troncamento del log durante l'operazione ottimizzando la gestione dello spazio del log. Con la nuova progettazione è possibile mantenere i dati necessari in un database insieme a tutti i riferimenti richiesti per riavviare l'operazione ripristinabile.
+> Per la ricompilazione ripristinabile non è necessario tenere aperta una transazione con esecuzione prolungata ed è possibile eseguire il troncamento del log durante l'operazione ottimizzando la gestione dello spazio del log. Con la nuova progettazione è possibile mantenere i dati necessari in un database insieme a tutti i riferimenti richiesti per riavviare l'operazione ripristinabile.
 >
 
 In generale non vi sono differenze di prestazioni tra la ricompilazione degli indici online ripristinabili e quella degli indici non ripristinabili. Quando si aggiorna un indice ripristinabile mentre un'operazione di ricompilazione di indice è in pausa:

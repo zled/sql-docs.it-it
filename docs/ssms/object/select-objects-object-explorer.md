@@ -3,8 +3,11 @@ title: Seleziona oggetti (Esplora oggetti) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-objects-object-explorer"></a>Seleziona oggetti (Esplora oggetti)
-Usare la finestra di dialogo **Seleziona oggetti** per aggiungere un oggetto a un elenco in un'altra finestra di dialogo. Il titolo della finestra di dialogo e le opzioni disponibili nella finestra di dialogo dipendono dalla modalità utilizzata per la sua apertura. Vengono visualizzate solo le opzioni disponibili. Ad esempio, quando si seleziona un proprietario per un nuovo oggetto sono disponibili solo gli account di accesso.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare la finestra di dialogo **Seleziona oggetti** per aggiungere un oggetto a un elenco in un'altra finestra di dialogo. Il titolo della finestra di dialogo e le opzioni disponibili nella finestra di dialogo dipendono dalla modalità utilizzata per la sua apertura. Vengono visualizzate solo le opzioni disponibili. Ad esempio, quando si seleziona un proprietario per un nuovo oggetto sono disponibili solo gli account di accesso.  
   
 ## <a name="options"></a>Opzioni  
 **Selezionare i tipi di oggetti seguenti**  

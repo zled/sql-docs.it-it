@@ -3,8 +3,11 @@ title: Cancellare i risultati di una query (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34c9f0c6283b05a06c0b7671b8aa008899a560c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 30c1aa87c77ce0a3f60c690d24eb563c524b7739
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Cancella i risultati di una query (Visual Database Tools)
-Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**, è possibile cancellare il contenuto del riquadro Risultati. Questa procedura è valida per le query create usando le opzioni **Open View** (Apri vista) o **Apri tabella** di Esplora oggetti. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]dopo l'esecuzione di una query nell'editor di query, è possibile cancellare il contenuto del riquadro Risultati solo chiudendo la finestra dell'editor di query o eseguendo un'altra query.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**, è possibile cancellare il contenuto del riquadro Risultati. Questa procedura è valida per le query create usando le opzioni **Open View** (Apri vista) o **Apri tabella** di Esplora oggetti. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]dopo l'esecuzione di una query nell'editor di query, è possibile cancellare il contenuto del riquadro Risultati solo chiudendo la finestra dell'editor di query o eseguendo un'altra query.  
   
 > [!NOTE]  
 > Con questa operazione non verranno annullate le modifiche apportate al database. Per altre informazioni sul funzionamento del riquadro Risultati, vedere [Utilizzo dei dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

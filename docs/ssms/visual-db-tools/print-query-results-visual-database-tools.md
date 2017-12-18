@@ -3,8 +3,11 @@ title: Stampare i risultati delle query (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0e4347b0c336d750d5e2cd08aa744cb03fca9210
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>Stampa dei risultati di query (Visual Database Tools)
-Per stampare i risultati di una query, è possibile copiare il contenuto del [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in un altro programma per Windows, ad esempio un elaboratore di testi, quindi applicare il formato ed eseguire la stampa.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per stampare i risultati di una query, è possibile copiare il contenuto del [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in un altro programma per Windows, ad esempio un elaboratore di testi, quindi applicare il formato ed eseguire la stampa da quel programma.  
   
 In Progettazione query e Progettazione viste i risultati delle query vengono inseriti negli Appunti utilizzando le tabulazioni come delimitatori di colonna e i caratteri di ritorno a capo e di avanzamento riga come delimitatori di riga.  
   

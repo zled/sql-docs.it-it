@@ -18,15 +18,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base
 
- > Per contenuti relativi a versioni precedenti di SQL Server, vedere [Lezione 1: Creazione del progetto e del pacchetto di base](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+ > Per contenuti relativi a versioni precedenti di SQL Server, vedere [Lezione 1: Creazione del progetto e del pacchetto di base](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx).
 
 In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
   
@@ -36,7 +36,7 @@ In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono es
 ## <a name="understanding-the-package-requirements"></a>Informazioni sui requisiti del pacchetto  
 Per questa esercitazione è richiesto Microsoft SQL Server Data Tools.  
   
-Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/en-us/data/hh297027).  
+Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/data/hh297027).  
   
 Prima di creare un pacchetto è necessario conoscere bene la formattazione usata nei dati di origine e nella destinazione. Dopo avere acquisito familiarità con questi due formati di dati sarà possibile definire le trasformazioni necessarie per eseguire il mapping tra i dati di origine e la destinazione.  
   

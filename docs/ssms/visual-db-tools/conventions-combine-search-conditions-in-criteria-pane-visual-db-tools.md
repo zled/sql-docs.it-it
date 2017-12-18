@@ -3,8 +3,11 @@ title: Convenzioni per la combinazione delle condizioni di ricerca nel riquadro 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b40c9f61780760655373d160e3c6c9ee52545d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7b0d8e0ec4d73c564b9cd9db14fac961c310f48
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri (Visual Database Tools)
-È possibile creare query con qualsiasi numero di condizioni di ricerca, collegate con qualsiasi numero di operatori AND e OR. Poiché una query con una combinazione di clausole AND e OR può diventare complessa, è utile capire come viene interpretata durante la sua esecuzione e come viene rappresentata nel [riquadro Criteri](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) e nel [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare query con qualsiasi numero di condizioni di ricerca, collegate con qualsiasi numero di operatori AND e OR. Poiché una query con una combinazione di clausole AND e OR può diventare complessa, è utile capire come viene interpretata durante la sua esecuzione e come viene rappresentata nel [riquadro Criteri](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) e nel [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 > [!NOTE]  
 > Per altre informazioni sulle condizioni di ricerca che contengono solo un operatore AND o OR, vedere [Definizione di più condizioni di ricerca per una sola colonna &#40;Visual Database Tools &#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) e [Definizione di più condizioni di ricerca per più colonne &#40;Visual Database Tools &#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  

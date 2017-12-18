@@ -3,8 +3,11 @@ title: Aprire una soluzione esistente | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a63eca54b74b39f29911109f5a80d86f70f07737
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 706877c1c5a65d7c5122750f431602a82e7bd28a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-an-existing-solution"></a>Apertura di una soluzione esistente
-In Esplora soluzioni è possibile tenere aperta una sola soluzione alla volta.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In Esplora soluzioni è possibile tenere aperta una sola soluzione alla volta.  
   
 ### <a name="to-open-an-existing-solution"></a>Per aprire una soluzione esistente  
   

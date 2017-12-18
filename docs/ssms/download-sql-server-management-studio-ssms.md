@@ -3,8 +3,11 @@ title: Scaricare SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: 
 ms.date: 10/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,15 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0c9f20a8c5f251728ce8050e9c6fc2cab4b55a55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 550f91939f2ab6b8e16455a6a5dea2a4ac519c5d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
-
-SSMS è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. Offre gli strumenti per configurare, monitorare e amministrare le istanze di SQL. SSMS permette di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, nonché creare query e script.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. Offre gli strumenti per configurare, monitorare e amministrare le istanze di SQL. SSMS permette di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, nonché creare query e script.
 
 È possibile usare SQL Server Management Studio (SSMS) per eseguire query, progettare e gestire database e data warehouse in qualsiasi posizione, nel computer locale o nel cloud.
 

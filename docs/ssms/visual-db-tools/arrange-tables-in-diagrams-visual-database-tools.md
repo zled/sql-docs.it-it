@@ -3,8 +3,11 @@ title: Disporre le tabelle in diagrammi (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c955812c8033d26a37df66bfe596e3d0153d1e08
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6a5505e26e46786a461dbf7d48538c01da6e253a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Disposizione di tabelle in diagrammi (Visual Database Tools)
-È possibile disporre rapidamente le tabelle in un diagramma di database in modo da avere una visione chiara di ogni tabella e delle relative relazioni.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile disporre rapidamente le tabelle in un diagramma di database in modo da avere una visione chiara di ogni tabella e delle relative relazioni.  
   
 ### <a name="to-arrange-tables-in-diagrams"></a>Per disporre le tabelle nei diagrammi  
   

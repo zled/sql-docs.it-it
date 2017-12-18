@@ -3,8 +3,11 @@ title: Finestra di dialogo Salva (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a568b3dae2f510365d1db4a838ae58a02eb177a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ecfaae0da3917b08db87173dfc2b7842e2972ae0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Finestra di dialogo Salva (Visual Database Tools)
-Viene visualizzata quando in Progettazione tabelle si salva un lavoro che influisce su altre tabelle. Questa finestra di dialogo consente di confermare le tabelle che verranno salvate.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Viene visualizzata quando in Progettazione tabelle si salva un lavoro che influisce su altre tabelle. Questa finestra di dialogo consente di confermare le tabelle che verranno salvate.  
   
 > [!NOTE]  
 > Le modifiche apportate a una tabella in Progettazione tabelle vengono sottoposte a commit nel database solo al momento del salvataggio della tabella. Dopo il salvataggio della tabella, non sarà più possibile annullare le modifiche. Per annullare le modifiche non salvate, chiudere tutte le tabelle aperte senza salvarle.  

@@ -3,8 +3,11 @@ title: Personalizzare i menu e i tasti di scelta rapida | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
-Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante premendo ALT+*<single letter>*. Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante premendo ALT+*<single letter>*. Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
   
 È possibile creare tasti di scelta rapida per stored procedure tramite CTRL dalla pagina **Tastiera** della finestra di dialogo **Strumenti**/**Opzioni** .  
   

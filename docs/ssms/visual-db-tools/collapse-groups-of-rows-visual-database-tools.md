@@ -3,8 +3,11 @@ title: Comprimere i gruppi di righe (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11ab34e9c5651be1dc771d71a738f49bb230262a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6afdaa463c3a7e1ac427af43156343e7ab7dcee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Compressione di gruppi di righe (Visual Database Tools)
-È possibile creare un risultato di query in cui ogni riga di risultati corrisponda a un intero gruppo di righe dei dati originali. Quando si comprimono le righe, è necessario tenere presenti alcune considerazioni:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare un risultato della query in cui ogni riga di risultati corrisponda a un intero gruppo di righe dei dati originali. Quando si comprimono le righe, è necessario tenere presenti alcune considerazioni:  
   
 -   **È possibile eliminare le righe duplicate** Alcune query possono creare set di risultati in cui sono presenti più righe identiche. È possibile, ad esempio, creare un set di risultati in cui ogni riga contiene la città in cui risiede un autore e il nome dello stato a cui tale città appartiene. Se però in una città risiedono più autori, esisteranno numerose righe identiche. Il codice SQL risultante potrebbe essere simile al seguente:  
   

@@ -22,15 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5bcd54dcbbf171b74855f5d48a7af113dd12ee43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c54f2e961abc3ec9bbbc3b19214e78d58208104
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Avviare l'Importazione/Esportazione guidata SQL Server
 
- > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Esecuzione dell'Importazione/Esportazione guidata SQL Server](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Esecuzione dell'Importazione/Esportazione guidata SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
 
 Avviare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno dei modi descritti in questo argomento per importare ed esportare dati da qualsiasi origine dati supportata.
 

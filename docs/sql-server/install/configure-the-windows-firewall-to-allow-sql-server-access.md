@@ -2,10 +2,10 @@
 title: Configurare Windows Firewall per consentire l'accesso a SQL Server |Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b3474499df5f06198377ff824c14358a86900b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 90d281884a092adda6f50777dd5403e275611bf4
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ Configurare le impostazioni di Windows Firewall con **Microsoft Management Conso
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione su un endpoint HTTP.|Può essere specificata quando viene creato un endpoint HTTP. Le impostazioni predefinite sono la porta TCP 80 per il traffico CLEAR_PORT e la porta 443 per il traffico SSL_PORT.|Utilizzata per una connessione HTTP tramite un URL.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione su un endpoint HTTPS.|Porta TCP 443|Utilizzata per una connessione HTTPS tramite un URL. HTTPS è una connessione HTTP che utilizza il protocollo SSL (Secure Sockets Layer).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Porta TCP 4022. Per verificare la porta utilizzata, eseguire la query seguente:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]non sono disponibili porte predefinite, ma questa è la configurazione convenzionale usata negli esempi della documentazione online.|  
-|Mirroring del database|Porta scelta dall'amministratore. Per determinare la porta, eseguire la query seguente:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Per il mirroring del database non sono disponibili porte predefinite, tuttavia negli esempi della documentazione online viene utilizzata la porta TCP 7022. È molto importante evitare di interrompere un endpoint del mirroring in uso, soprattutto in modalità a protezione elevata con failover automatico. La configurazione del firewall deve evitare di interrompere il quorum. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Mirroring del database|Porta scelta dall'amministratore. Per determinare la porta, eseguire la query seguente:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Per il mirroring del database non sono disponibili porte predefinite, tuttavia negli esempi della documentazione online viene usata la porta TCP 5022 o 7022. È molto importante evitare di interrompere un endpoint del mirroring in uso, soprattutto in modalità a protezione elevata con failover automatico. La configurazione del firewall deve evitare di interrompere il quorum. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replica|Per le connessioni di replica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono utilizzate le tipiche porte standard del [!INCLUDE[ssDE](../../includes/ssde-md.md)] (porta TCP 1433 per l'istanza predefinita e così via).<br /><br /> La sincronizzazione Web e l'accesso FTP/UNC per snapshot di replica richiedono l'apertura di porte aggiuntive sul firewall. Per trasferire lo schema e i dati iniziali da una posizione all'altra, per la replica possono essere utilizzati il protocollo FTP (porta TCP 21), la sincronizzazione su HTTP (porta TCP 80) o la condivisione di file. Nella condivisione di file vengono utilizzate le porte UDP 137 e 138 a la porta TCP 139 in caso di utilizzo di NetBios. La condivisione file utilizza la porta TCP 445.|Per la sincronizzazione su HTTP, la replica utilizza l'endpoint IIS, ovvero le porte per le quali è configurabile, anche se la porta 80 rappresenta l'impostazione predefinita, ma il processo IIS si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di back-end tramite le porte standard (1433 per l'istanza predefinita).<br /><br /> Durante la sincronizzazione Web tramite FTP, il trasferimento FTP avviene tra IIS e il server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non tra il sottoscrittore e IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] debugger|Porta TCP 135<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)<br /><br /> Potrebbe essere necessaria anche l'eccezione [IPsec](#BKMK_IPsec) .|Se si utilizza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], nel computer host di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , è necessario aggiungere anche **Devenv.exe** all'elenco di eccezioni e aprire la porta TCP 135.<br /><br /> Se si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], nel computer host di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , è necessario aggiungere anche **ssms.exe** all'elenco di eccezioni e aprire la porta TCP 135. Per altre informazioni, vedere [Configurare le regole del firewall prima di eseguire il debugger TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   

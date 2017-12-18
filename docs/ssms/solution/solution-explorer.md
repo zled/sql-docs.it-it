@@ -3,8 +3,11 @@ title: Esplora soluzioni | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c561819367b6e61a1ccfc977a9533efdc95009e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
-Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
   
 Una soluzione include uno o più progetti, oltre ai file e ai metadati che contribuiscono a definire la soluzione nel suo complesso. Un progetto è composto da un set di file e da metadati correlati, ad esempio le informazioni di connessione. Le soluzioni e i progetti contengono elementi che rappresentano gli script, le query, le informazioni di connessione e i file necessari per creare la soluzione di database.  
   

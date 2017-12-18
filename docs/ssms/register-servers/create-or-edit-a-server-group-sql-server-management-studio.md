@@ -2,9 +2,12 @@
 title: Creare o modificare un gruppo di server (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc405a4a6302f687d6bec832832d64c87e6bb1c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7e91da011789c674e8169a3ef3eb68630ac2b111
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Creare o modificare un gruppo di server (SQL Server Management Studio)
-  In questo argomento viene illustrato come organizzare i server in Server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] creando gruppi di server e inserendoli all'interno dei gruppi. È possibile creare gruppi di server in Server registrati in qualsiasi momento oppure quando si esegue la registrazione dei server.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come organizzare i server in Server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] creando gruppi di server e inserendoli all'interno dei gruppi. È possibile creare gruppi di server in Server registrati in qualsiasi momento oppure quando si esegue la registrazione dei server.  
   
 ##  <a name="SSMSProcedure"></a>  
   

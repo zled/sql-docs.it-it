@@ -16,11 +16,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,6 +32,10 @@ La procedura guidata per l'importazione di file flat consente di copiare facilme
 Questa procedura guidata è stata creata per migliorare l'esperienza di importazione corrente sfruttando un framework intelligente noto come Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Per un utente senza una conoscenza specializzata dei domini, l'importazione dei dati può risultare un'attività complessa, soggetta a errori e impegnativa. Questa procedura guidata semplifica il processo di importazione: è sufficiente selezionare un file di input e un nome di tabella univoco e il framework PROSE gestisce il resto.
 
 PROSE analizza i modelli di dati nel file di input per dedurre nomi di colonne, tipi, delimitatori e altro ancora. Questo framework apprende la struttura del file ed esegue l'intero lavoro al posto degli utenti.
+
+Per comprendere meglio il miglioramento dell'esperienza utente della procedura guidata Importa file flat, vedere questo video:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>Prerequisiti
 Questa funzionalità è disponibile solo in SQL Server Management Studio (SSMS) v17.3 o versioni successive. Verificare che sia in uso la versione più recente. La versione più recente è disponibile [qui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).

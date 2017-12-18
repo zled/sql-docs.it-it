@@ -3,8 +3,11 @@ title: "Pagine delle proprietà in SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94c531a2fa9fd1c654329c6120906dda1abe7c46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c4c23da504c70c1139705c514d3b95631fa1ac0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Pagine delle proprietà in SQL Server Management Studio
-Tutte le finestre di dialogo Proprietà in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] usano un formato comune per visualizzare le informazioni con categorie che è possibile espandere e comprimere. I campi visualizzati dipendono dalla proprietà. Le proprietà visualizzate in grigio sono di sola lettura. Nella parte superiore di ogni pagina delle proprietà si trovano i pulsanti Per categoria e Per nome.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Tutte le finestre di dialogo Proprietà in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] usano un formato comune per visualizzare le informazioni con categorie che è possibile espandere e comprimere. I campi visualizzati dipendono dalla proprietà. Le proprietà visualizzate in grigio sono di sola lettura. Nella parte superiore di ogni pagina delle proprietà si trovano i pulsanti Per categoria e Per nome.  
   
 Nella tabella seguente vengono descritti gli elementi comuni delle finestre di dialogo Proprietà di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
   

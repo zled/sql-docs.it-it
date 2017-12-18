@@ -3,8 +3,11 @@ title: Opzioni (Finestre di progettazione - pagina Piani di manutenzione) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87e5c7771dfa5bdb1f49633b08625de0302b69d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be7de4f323b1f4351ad851c04222e0513d73a93c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Opzioni (Finestre di progettazione - pagina Piani di manutenzione)
-Utilizzare la finestra di dialogo **Opzioni** per determinare il comportamento predefinito della finestra di progettazione quando si aggiungono nuove forme all'area di progettazione. Scegliere **Opzioni** dal menu **Strumenti**, espandere **Finestre di progettazione**e selezionare **Piani di manutenzione**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare la finestra di dialogo **Opzioni** per determinare il comportamento predefinito della finestra di progettazione quando si aggiungono nuove forme all'area di progettazione. Scegliere **Opzioni** dal menu **Strumenti**, espandere **Finestre di progettazione**e selezionare **Piani di manutenzione**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
 **Per impostazione predefinita connetti la nuova forma alla forma selezionata**  

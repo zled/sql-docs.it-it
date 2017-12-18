@@ -3,8 +3,11 @@ title: "Riconciliare le modifiche apportate da più utenti (Visual Database Tool
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00eeab1dbe74e77189136b200b4f1ddfe50e218b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Riconciliare le modifiche apportate da più utenti (Visual Database Tools)
-In un ambiente multiutente può accadere che uno stesso oggetto venga modificato contemporaneamente da più utenti. Questo problema può accadere quando si lavora alla struttura dell'oggetto in Progettazione tabelle o in Progettazione diagrammi di database oppure con i valori dei risultati restituiti nel riquadro Risultati di Progettazione query e Progettazione viste. In questo caso possono verificarsi conflitti che è possibile risolvere.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In un ambiente multiutente può accadere che uno stesso oggetto venga modificato contemporaneamente da più utenti. Questo problema può accadere quando si lavora alla struttura dell'oggetto in Progettazione tabelle o in Progettazione diagrammi di database oppure con i valori dei risultati restituiti nel riquadro Risultati di Progettazione query e Progettazione viste. In questo caso possono verificarsi conflitti che è possibile risolvere.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflitti in Progettazione tabelle o Progettazione diagrammi di database  
 È possibile ad esempio che un altro utente elimini o rinomini una tabella mentre si sta utilizzando la stessa tabella o una tabella correlata in Progettazione tabelle. Quando si prova a salvare la tabella, si viene avvisati dalla [Finestra di dialogo Rilevate modifiche al database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) che il database è stato aggiornato dopo l'apertura della tabella.  

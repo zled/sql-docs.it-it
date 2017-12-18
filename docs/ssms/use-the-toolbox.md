@@ -3,8 +3,11 @@ title: Usare la casella degli strumenti | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3f8899fed233516fce93277a48f2ceb652212ff8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-the-toolbox"></a>Utilizzo della casella degli strumenti
-Gli elementi, il testo e i controlli presenti nella casella degli strumenti possono essere selezionati e trascinati in form, pagine e finestre di progettazione. È inoltre possibile trascinare gli elementi nuovamente da tali origini alla casella degli strumenti, in modo da poterli riutilizzare in seguito. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , ad esempio, è possibile trascinare un'attività in un piano di manutenzione.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Gli elementi, il testo e i controlli presenti nella casella degli strumenti possono essere selezionati e trascinati in form, pagine e finestre di progettazione. È inoltre possibile trascinare gli elementi nuovamente da tali origini alla casella degli strumenti, in modo da poterli riusare in seguito. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , ad esempio, è possibile trascinare un'attività in un piano di manutenzione.  
   
 Gli elementi della casella degli strumenti sono raggruppati in sezioni denominate schede. Di seguito è riportato un elenco di riferimento delle attività più comuni che è possibile eseguire nella casella degli strumenti, insieme alla relativa procedura:  
   

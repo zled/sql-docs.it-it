@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d6049d82cb551c1614f4ea9f76528e53cd29942c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Con l'aumento delle dimensioni del database, i backup completi del database richiedono più tempo e più spazio di archiviazione. Per un database di grandi dimensioni, provare ad aggiungere a un backup completo del database una serie di [backup differenziali del database] ((... /.. / relational-databases/backup-restore/differential-backups-sql-server.md). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   Con l'aumento delle dimensioni del database, i backup completi del database richiedono più tempo e più spazio di archiviazione. Per un database di grandi dimensioni, provare a integrare un backup completo del database con una serie di [backup di database differenziali](../../relational-databases/backup-restore/differential-backups-sql-server.md). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Stimare la dimensione di un backup del database completo tramite la stored procedure di sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   

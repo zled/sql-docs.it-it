@@ -3,8 +3,11 @@ title: Opzioni (Ambiente - Guida - pagina Generale) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 043ab8f89e389dbd940ca3e34039747e2dbf2d27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fc966f121da19eb546c9950f2f852d0d37fc9a96
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---help---general-page"></a>Opzioni (Ambiente - Guida - Generale)
-Usare la finestra di dialogo **Opzioni** per selezionare i set di documenti e indicare se gli argomenti devono essere visualizzati all'interno di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] o in una finestra separata esterna. Per accedere a questa finestra di dialogo, scegliere **Opzioni** dal menu **Strumenti** , espandere **Guida** nel nodo **Ambiente** e fare clic su **Generale**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare la finestra di dialogo **Opzioni** per selezionare i set di documenti e indicare se gli argomenti devono essere visualizzati all'interno di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] o in una finestra separata esterna. Per accedere a questa finestra di dialogo, scegliere **Opzioni** dal menu **Strumenti** , espandere **Guida** nel nodo **Ambiente** e fare clic su **Generale**.  
   
 > [!NOTE]  
 > Le modifiche apportate alle opzioni di questa pagina non diventeranno effettive finché l'ambiente non viene riavviato.  

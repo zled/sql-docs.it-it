@@ -3,8 +3,11 @@ title: Salva con nome | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9feab44925e6c973b712e0d85e07912c00f91cd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2f86afead1c6eca201a6669e8f64e89425f0cb1c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-as"></a>Save As
-Questa finestra di dialogo viene usata per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Fare clic su **Salva** *<file>* **come** nel menu **File** (in cui *<file>* è il nome dell'elemento corrente) oppure premere ALT+F, A nell'editor del codice.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa finestra di dialogo viene usata per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Fare clic su **Salva** *<file>* **come** nel menu **File** (in cui *<file>* è il nome dell'elemento corrente) oppure premere ALT+F, A nell'editor del codice.  
   
 ## <a name="central-panel"></a>Pannello centrale  
 **Salva in**  

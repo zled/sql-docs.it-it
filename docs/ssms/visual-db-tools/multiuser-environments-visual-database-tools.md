@@ -3,8 +3,11 @@ title: Ambienti multiutente (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 751293d6a9993d8d68650857e62e0e589850f3bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b698bbf209cc7f30c6b5c13b90104e1cadd752be
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Ambienti multiutente (Visual Database Tools)
-Un ambiente multiutente è un ambiente in cui altri utenti possono connettersi e apportare modifiche allo stesso database sul quale si sta lavorando. È quindi possibile che numerosi utenti modifichino contemporaneamente gli stessi oggetti di database. In un ambiente multiutente è pertanto possibile che sul database in cui si stanno apportando le proprie modifiche incidano le modifiche apportate contemporaneamente da altri utenti e viceversa.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un ambiente multiutente è un ambiente in cui altri utenti possono connettersi e apportare modifiche allo stesso database sul quale si sta lavorando. È quindi possibile che numerosi utenti modifichino contemporaneamente gli stessi oggetti di database. In un ambiente multiutente è pertanto possibile che sul database in cui si stanno apportando le proprie modifiche incidano le modifiche apportate contemporaneamente da altri utenti e viceversa.  
   
 Un aspetto fondamentale quando si utilizza un database in un ambiente multiutente è rappresentato dalle autorizzazioni di accesso. Le autorizzazioni di cui si dispone per il database determinano la gamma di attività che è possibile eseguire sul database. Per apportare, ad esempio, modifiche a oggetti in un database, è necessario disporre delle autorizzazioni di scrittura appropriate per il database. Per ulteriori informazioni sulle autorizzazioni per il database in uso, vedere la documentazione del database. Per altre informazioni, vedere [Autorizzazioni e Visual Database Tools &#40;Visual Database Tools&#41](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md).  
   

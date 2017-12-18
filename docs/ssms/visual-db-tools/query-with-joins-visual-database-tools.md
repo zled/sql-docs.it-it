@@ -3,8 +3,11 @@ title: Eseguire query con join (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c22ecdbe76b036bbf78810db4d2a18729b184757
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4d46c668c5654155783c3cc70a1ad23b33c5c82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Esecuzione di query con join (Visual Database Tools)
-Il risultato di una query può includere dati tratti da più tabelle o oggetti con valori di tabella. Per combinare i dati di più oggetti con valori di tabella, è possibile utilizzare l'operazione JOIN di SQL.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il risultato di una query può includere dati da più tabelle o oggetti con valori di tabella. Per combinare i dati di più oggetti con valori di tabella, è possibile utilizzare l'operazione JOIN di SQL.  
   
 Per informazioni sulla creazione di query con più tabelle, vedere i seguenti argomenti:  
   

@@ -2,10 +2,10 @@
 title: Installare strumenti client in un cluster di failover di SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39097940dfa5022ee6e9b20eb6049d7e07631bb1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ceab14497f719a8bac3ee44c855f7f1f870d0d6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installare strumenti client in un cluster di failover di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli strumenti client, ad esempio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], sono funzionalità condivise comuni a tutte le istanze dello stesso computer. Sono compatibili con le versioni precedenti e consentono l'installazione affiancata delle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportate. In un nodo può esistere solo una versione dello strumento client alla volta.  

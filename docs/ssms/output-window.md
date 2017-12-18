@@ -3,8 +3,11 @@ title: Finestra di output di SSMS | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: shueybubbles
 ms.author: davidshi
 manager: kenvh
 ms.workload: Inactive
-ms.openlocfilehash: 3f080cb10b5dd78078eddf6dce6e94fe72ac8d99
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 68fedd92d79f508e0b85f369019a886356ed8475
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>Finestra di output in SQL Server Management Studio
-La finestra di output può essere aperta dal menu Visualizza o tramite la combinazione di tasti CTRL+ALT+O. Sono disponibili più canali di output.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra di output può essere aperta dal menu Visualizza o tramite la combinazione di tasti CTRL+ALT+O. Sono disponibili più canali di output.
 
 La tabella seguente fornisce una panoramica dei tipi di messaggi associati a ogni canale di output.
 

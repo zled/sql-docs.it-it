@@ -3,8 +3,11 @@ title: Usare i dati nel riquadro Risultati (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7b1a7f29bcba95aeb1af83746df29a5bee8ebff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7493784bc506c454ab0c230d549d0accae58c7c4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)
-Dopo l'esecuzione di una query o di una vista, i risultati ottenuti vengono visualizzati nel riquadro Risultati e su di essi è possibile eseguire numerose operazioni, ad esempio aggiungere ed eliminare righe, immettere o modificare dati e navigare con facilità nell'ambito di set di risultati estesi.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dopo l'esecuzione di una query o di una vista, i risultati ottenuti vengono visualizzati nel riquadro Risultati e su di essi è possibile eseguire numerose operazioni, ad esempio aggiungere ed eliminare righe, immettere o modificare dati e navigare con facilità nell'ambito di set di risultati estesi.  
   
 Le informazioni riportate di seguito consentono di evitare problemi e di utilizzare in modo ottimale i set di risultati ottenuti.  
   

@@ -3,8 +3,11 @@ title: Strumenti di progettazione di Visual Database Tools | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0dd9803b8a53023baa09ec8d05e075a642105388
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="visual-database-tool-designers"></a>Strumenti di progettazione di Visual Database Tools
-Visual Database Tools è una combinazione di strumenti di progettazione che consentono di lavorare con un'origine dati creando query, progettando o modificando una struttura di database o aggiornando dati. Tali strumenti sono Progettazione diagrammi di database, Progettazione tabelle e Progettazione query e Progettazione viste.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools è una combinazione di strumenti di progettazione che consentono di lavorare con un'origine dati creando query, progettando o modificando una struttura di database o aggiornando dati. Tali strumenti sono Progettazione diagrammi di database, Progettazione tabelle e Progettazione query e Progettazione viste.  
   
 ## <a name="properties-window"></a>Finestra Proprietà  
 La finestra delle proprietà non è specifica di Visual Database Tools, ma è l'area in cui è possibile eseguire gran parte delle modifiche. Visualizza le proprietà dell'elemento attualmente selezionato, ad esempio una tabella, e consente di eseguire numerose operazioni, dalla modifica del nome delle proprietà al confronto di una colonna. Alcune proprietà sono visibili nella finestra delle proprietà, ma possono essere modificate solo tramite un altro strumento.  

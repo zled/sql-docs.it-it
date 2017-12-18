@@ -3,8 +3,11 @@ title: Rimuovere colonne da query (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ad39311ed0e63b93ae5b93bc97967ec913cd2d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fdffb968590c41dd6a0158c5777dad3c38483411
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Rimozione di colonne da query (Visual Database Tools)
-Le colonne non più necessarie in una query possono essere eliminate. In questo caso, Progettazione Query e Viste rimuoverà i riferimenti alla colonna nell'elenco di selezione, le preferenze di ordinamento, i criteri di ricerca, il **riquadro SQL**e tutte le specifiche di raggruppamento.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le colonne non più necessarie in una query possono essere eliminate. In questo caso, Progettazione Query e Viste rimuoverà i riferimenti alla colonna nell'elenco di selezione, le preferenze di ordinamento, i criteri di ricerca, il **riquadro SQL**e tutte le specifiche di raggruppamento.  
   
 > [!NOTE]  
 > Per eliminare una colonna solo dall'output di una query di selezione, non è necessario rimuoverla del tutto dalla query. Per informazioni dettagliate, vedere [Rimuovere colonne dai risultati della query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md).  

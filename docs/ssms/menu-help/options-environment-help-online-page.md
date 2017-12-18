@@ -3,8 +3,11 @@ title: Opzioni (Ambiente - Guida - pagina Online) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---help---online-page"></a>Opzioni (Ambiente - Guida - pagina Online)
-La finestra di dialogo **Opzioni** consente di specificare le origini della Guida da usare per le ricerche di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , tra cui la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra di dialogo **Opzioni** consente di specificare le origini della Guida da usare per le ricerche di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], tra cui la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  
   
 **Al caricamento della Guida**  
 Impostare l'ordine di utilizzo delle origini della Guida sensibile al contesto e specifica le origini della Guida utilizzate.  

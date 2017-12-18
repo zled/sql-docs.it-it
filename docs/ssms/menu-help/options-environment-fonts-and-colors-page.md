@@ -3,8 +3,11 @@ title: Opzioni (Ambiente - pagina Tipi di carattere e colori) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 522dd3d6c6428c722ced50d677543ae91ef545b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae02d8e4c6639555fe79ceca82ca46361648ddee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opzioni (Ambiente- pagina Tipi di carattere e colori)
-La finestra di dialogo **Opzioni** consente di specificare una combinazione colori e un tipo di carattere personalizzati per vari elementi dell'interfaccia utente in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e selezionare **Tipi di carattere e colori**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra di dialogo **Opzioni** consente di specificare una combinazione colori e un tipo di carattere personalizzati per vari elementi dell'interfaccia utente in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e selezionare **Tipi di carattere e colori**.  
   
 Le modifiche apportate alla combinazione colori non diventano effettive durante la sessione in cui vengono eseguite. Per valutare le modifiche dei colori, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] e riprodurre le condizioni in cui si prevede che tali modifiche vengano applicate.  
   

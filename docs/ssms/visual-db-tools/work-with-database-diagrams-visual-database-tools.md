@@ -3,8 +3,11 @@ title: Usare diagrammi di database (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2480ce8d2efb0a700c2c067640ef92a2d0f39119
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ab3f8d06ac812b63c86e763ab1f9dd077c35f4fb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Utilizzare diagrammi di database (Visual Database Tools)
-È possibile creare una rappresentazione grafica del database, o diagramma, utilizzando Progettazione database. Negli argomenti riportati di seguito vengono fornite le nozioni fondamentali per l'utilizzo di tale strumento di progettazione con i diagrammi di database.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare una rappresentazione grafica del database, o diagramma, usando Progettazione database. Negli argomenti riportati di seguito vengono fornite le nozioni fondamentali per l'utilizzo di tale strumento di progettazione con i diagrammi di database.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
 [Creazione di un nuovo diagramma di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  

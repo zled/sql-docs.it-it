@@ -1,10 +1,13 @@
 ---
 title: Grafici mappa ad albero e radiali in SQL Server Reporting Services | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ece2ccbf6f9c67789d5d248a9ad92b2acf0a7f36
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Grafici mappa ad albero e radiali in Reporting Services
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-Le visualizzazioni mappa ad albero e radiali di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono ideali per la rappresentazione visiva dei dati gerarchici. Questo argomento offre una panoramica su come aggiungere un grafico mappa ad albero o radiale a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'articolo include anche una query di esempio AdventureWorks per iniziare.  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] Le visualizzazioni mappa ad albero e radiali di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono ideali per la rappresentazione visiva dei dati gerarchici. Questo argomento offre una panoramica su come aggiungere un grafico mappa ad albero o radiale a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'articolo include anche una query di esempio AdventureWorks per iniziare.  
   
 ##  <a name="bkmk_treemap_chart"></a> Grafico mappa ad albero  
 

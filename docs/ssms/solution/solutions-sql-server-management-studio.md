@@ -3,8 +3,11 @@ title: Soluzioni (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f9d66e69535af5c4811d9ac6f038d6fa0a2ee78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluzioni (SQL Server Management Studio)
-Una soluzione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] è una raccolta di uno o più progetti correlati. I progetti sono contenitori che gli sviluppatori utilizzano per organizzare file correlati, ad esempio set di script di amministrazione di uso comune.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una soluzione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] è una raccolta di uno o più progetti correlati. I progetti sono contenitori che gli sviluppatori utilizzano per organizzare file correlati, ad esempio set di script di amministrazione di uso comune.  
   
 ## <a name="solution-overview"></a>Panoramica della soluzione  
 È possibile utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] come piattaforma per lo sviluppo di script per [!INCLUDE[ssDE](../../includes/ssde_md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Utilizzare gli editor di codice di [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] per sviluppare script e query per database relazionali e multidimensionali e per raccogliere script e query correlati in progetti.  

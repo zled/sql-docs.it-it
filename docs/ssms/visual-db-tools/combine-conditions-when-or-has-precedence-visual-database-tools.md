@@ -3,8 +3,11 @@ title: Combinare condizioni quando OR ha la precedenza (Visual Database Tools) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56714e86553346cc53125ad90d2140df502179e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f8852df6a617323c69741eebd7c9c1475f4f054
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Combinare condizioni quando OR ha la precedenza (Visual Database Tools)
-Per collegare condizioni con OR e attribuire loro la precedenza sulle condizioni collegate con AND, è necessario ripetere la condizione AND per ogni condizione OR.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per collegare condizioni con OR e attribuire loro la precedenza sulle condizioni collegate con AND, è necessario ripetere la condizione AND per ogni condizione OR.  
   
 Per trovare, ad esempio, i dipendenti che hanno lavorato nell'azienda per più di cinque anni con mansioni di basso livello o che sono in pensione, occorre creare una query con tre condizioni, un'unica condizione collegata ad altre due mediante AND:  
   

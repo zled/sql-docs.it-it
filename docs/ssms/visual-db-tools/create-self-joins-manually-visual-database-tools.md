@@ -3,8 +3,11 @@ title: Creare self-join in modo manuale (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 830f65d92ec3c8b96a57944b044f6ef61303e5b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d1b1d10f031ba4f794e2590dee5561deb1570ed9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Creazione di self-join in modo manuale (Visual Database Tools)
-È possibile unire in join una tabella con se stessa anche se questa non ha una relazione riflessiva nel database. È ad esempio possibile utilizzare un self-join per individuare coppie di autori che risiedono nella stessa città.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare un join di una tabella con se stessa anche se questa non ha una relazione riflessiva nel database. È ad esempio possibile utilizzare un self-join per individuare coppie di autori che risiedono nella stessa città.  
   
 Come per tutti i tipi di join, un self-join richiede almeno due tabelle, con la differenza che, anziché aggiungere una seconda tabella alla query, si aggiungerà una seconda istanza della stessa tabella. Sarà così possibile confrontare una colonna nella prima istanza della tabella con la stessa colonna nella seconda istanza, in modo da confrontare fra loro i valori contenuti in una colonna. In [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) verrà assegnato un alias alla seconda istanza della tabella.  
   

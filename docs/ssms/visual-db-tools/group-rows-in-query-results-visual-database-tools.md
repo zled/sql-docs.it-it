@@ -3,8 +3,11 @@ title: Raggruppare righe nei risultati di una query (Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a879bdc95cda0812fcc7d3f43f4d7e99c183337f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Raggruppare righe nei risultati di una query (Visual Database Tools)
-Se si desidera creare dei subtotali o visualizzare altre informazioni riepilogative per i subset di una tabella, è possibile utilizzare una query di aggregazione. Ciascun gruppo creato riepiloga i dati per tutte le righe della tabella con lo stesso valore.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per creare subtotali o visualizzare altre informazioni di riepilogo per i subset di una tabella, è possibile creare gruppi usando una query di aggregazione. Ciascun gruppo creato riepiloga i dati per tutte le righe della tabella con lo stesso valore.  
   
 Può essere necessario, ad esempio, visualizzare il prezzo medio di un libro nella tabella `titles` , suddividendo i risultati in base all'editore. Per ottenere questo risultato, è necessario raggruppare la query in base all'editore (ad esempio, `pub_id`). L'output della query potrebbe essere analogo al seguente:  
   

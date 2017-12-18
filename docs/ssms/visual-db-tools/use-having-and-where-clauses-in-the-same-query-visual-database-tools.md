@@ -3,8 +3,11 @@ title: Usare clausole HAVING e WHERE nella stessa query | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44b656aff64222d86d80fd7ef68a08267c15ffe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4bfd62f245d9f2c46324fc437483fb379a2faa7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utilizzo delle clausole HAVING e WHERE nella stessa query (Visual Database Tools)
-In alcuni casi può essere necessario escludere singole righe dai gruppi (utilizzando una clausola WHERE) prima di applicare una condizione ai gruppi (utilizzando una clausola HAVING).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In alcuni casi può essere necessario escludere singole righe dai gruppi (usando una clausola WHERE) prima di applicare una condizione ai gruppi nel loro complesso (usando una clausola HAVING).  
   
 La clausola HAVING è analoga alla clausola WHERE ma è applicabile solo ai gruppi come insieme, ossia alle righe nel set di risultati che rappresentano i gruppi, mentre la clausola WHERE è applicabile a righe singole. Una query può contenere sia una clausola WHERE che una clausola HAVING. In questo caso:  
   

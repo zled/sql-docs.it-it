@@ -3,8 +3,11 @@ title: Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7bdc3ea0d960d2bb2e4abbe2f16ec2ff2a3db62b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio)
-Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  
   
 Aggiungere cartelle all'elenco **Cartelle selezionate** , digitare un nome per il set di cartelle corrente nel campo **Insieme di cartelle** e fare clic su **Applica** per salvarlo. Questo ambito di ricerca personalizzato può quindi essere selezionato in base al nome nell'elenco a discesa **Cerca in** delle schede **Cerca nei file** e **Sostituisci nei file**. Per eliminare un insieme personalizzato di cartelle dagli elenchi **Cerca in** , selezionarne il nome nel campo **Insieme di cartelle** e fare clic su **Elimina**.  
   

@@ -3,8 +3,11 @@ title: Finestra di dialogo Scegli nome (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b77cc551ac361367c4007669f46a672fca7d11fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 12ffe1100786f9e31c7036f6a7efb8e79542ca21
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Finestra di dialogo Scegli nome (Visual Database Tools)
-Questa finestra di dialogo viene visualizzata quando si sceglie **Salva \<NomeTabella**> , **Salva <DiagramName>** o **Salva <ViewName>** dal menu **File**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa finestra di dialogo viene visualizzata quando si sceglie **Salva \<TableName**>, **Salva<DiagramName>** o **Salva<ViewName>** dal menu **File**.  
   
 **Digitare un nome per la tabella/Immettere un nome per il diagramma/Digitare un nome per la vista**  
 Rende disponibile una casella di testo in cui è possibile digitare un nome per la tabella, il diagramma o la vista.  

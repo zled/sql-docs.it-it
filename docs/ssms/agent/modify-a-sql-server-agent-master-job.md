@@ -3,8 +3,11 @@ title: Modificare un processo master di SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 02/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d12119c3b45967927604208270bb34971b268da3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 88b38032866ef191a41cbec5fe5d326280b949c0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificare un processo master di SQL Server Agent
-Negli argomenti seguenti viene descritto come modificare un processo master di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli argomenti seguenti descrivono come modificare un processo master di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[Modificare i dettagli della pianificazione per un processo master di SQL Server Agent](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
 [Aggiungere passaggi a un processo master di SQL Server Agent](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   

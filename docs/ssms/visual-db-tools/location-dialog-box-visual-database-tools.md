@@ -3,8 +3,11 @@ title: Finestra di dialogo Percorso (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Finestra di dialogo Percorso (Visual Database Tools)
-Utilizzare questa finestra di dialogo per individuare e selezionare la cartella contenente i file desiderati. Questa finestra di dialogo restituisce alla finestra di dialogo chiamante il percorso della cartella selezionata. È possibile accedere alla finestra di dialogo nel modo seguente:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare questa finestra di dialogo per individuare e selezionare la cartella contenente i file desiderati. Questa finestra di dialogo restituisce alla finestra di dialogo chiamante il percorso della cartella selezionata. È possibile accedere alla finestra di dialogo nel modo seguente:  
   
 -   Scegliere **Nuovo** dal menu **File** , quindi selezionare **Progetto**. Quando viene visualizzata la finestra di dialogo **Nuovo progetto** , scegliere **Sfoglia**. Viene visualizzata la finestra di dialogo **Percorso** con il titolo **Percorso progetto**.  
   

@@ -2,9 +2,12 @@
 title: Spostare un server registrato o di un gruppo di server registrati | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61e9c463554b142b052a5a7d1b40d6905d30c178
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Spostare un server registrato o di un gruppo di server registrati
-  In questo argomento viene illustrato come organizzare i server in Server registrati spostando un server registrato o gruppi di server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I gruppi di server possono contenere server registrati o altri gruppi di server. Sia i server che i gruppi di server possono essere spostati da un gruppo di server a un altro.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questo argomento descrive come organizzare i server in Server registrati spostando un server registrato o gruppi di server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I gruppi di server possono contenere server registrati o altri gruppi di server. Sia i server che i gruppi di server possono essere spostati da un gruppo di server a un altro.  
   
 ##  <a name="SSMSProcedure"></a>  
   

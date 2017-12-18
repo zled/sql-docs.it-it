@@ -3,8 +3,11 @@ title: Usare i token nei passaggi dei processi | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a4cef9cc3d5a72bba4b818c89acfe6e15878ebff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent consente di usare token negli script per passaggi di processi [!INCLUDE[tsql](../../includes/tsql_md.md)] . L'utilizzo di token quando si scrivono passaggi di processo offre la stessa flessibilità assicurata dalle variabili quando si scrivono programmi software. Dopo aver inserito un token nello script di un passaggio di processo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent sostituisce il token in fase di esecuzione, prima che il passaggio di processo venga eseguito dal sottosistema [!INCLUDE[tsql](../../includes/tsql_md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent consente di usare token negli script dei passaggi di processo di [!INCLUDE[tsql](../../includes/tsql_md.md)]. L'utilizzo di token quando si scrivono passaggi di processo offre la stessa flessibilità assicurata dalle variabili quando si scrivono programmi software. Dopo aver inserito un token nello script di un passaggio di processo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent sostituisce il token in fase di esecuzione, prima che il passaggio di processo venga eseguito dal sottosistema [!INCLUDE[tsql](../../includes/tsql_md.md)] .  
   
 > [!IMPORTANT]  
 > In [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 la sintassi del token dei passaggi del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent è stata modificata. Di conseguenza, è necessario inserire una macro di escape con tutti i token utilizzati nei passaggi di processo. In caso contrario, questi passaggi avranno esito negativo. L'utilizzo delle macro di escape e l'aggiornamento dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent che utilizzano token sono illustrati nelle sezioni "Informazioni sull'utilizzo dei token", "Token e macro di[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent" e "Aggiornamento dei passaggi di processo per l'utilizzo di macro" riportate di seguito. È inoltre cambiata la sintassi di [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] che prevedeva l'utilizzo delle parentesi quadre per chiamare i token dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, ad esempio "`[DATE]`". È ora necessario racchiudere tra parentesi i nomi dei token e inserire il simbolo di dollaro (`$`) all'inizio della sintassi del token, Esempio:  
