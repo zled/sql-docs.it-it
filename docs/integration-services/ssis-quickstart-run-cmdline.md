@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c2b83605714e01961c50d71e83ba57691bc3833
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33293b17caff5d5c71b58bff3f34ed130ab19ba3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Eseguire un pacchetto SSIS dal prompt dei comandi con DTExec.exe
 Questa esercitazione introduttiva illustra come eseguire un pacchetto SSIS dal prompt dei comandi eseguendo `DTExec.exe` con i parametri appropriati.
@@ -25,7 +25,7 @@ Questa esercitazione introduttiva illustra come eseguire un pacchetto SSIS dal p
 > [!NOTE]
 > Il metodo descritto in questo articolo non è stato testato con i pacchetti distribuiti in un server di database SQL di Azure.
 
-Per altre informazioni su `DTExec.exe`, vedere [Utilità dtexec](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility).
+Per altre informazioni su `DTExec.exe`, vedere [Utilità dtexec](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
 
 ## <a name="run-a-package-with-dtexec"></a>Eseguire un pacchetto con dtexec
 

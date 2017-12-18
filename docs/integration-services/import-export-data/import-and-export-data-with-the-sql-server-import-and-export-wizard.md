@@ -30,15 +30,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac2dd0d5907c2fc0f06713b49c79db5ad548f32f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2bb672edb72392a8ae215160719aa3476c2452f1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
 
- > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Esecuzione dell'Importazione/Esportazione guidata SQL Server](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Esecuzione dell'Importazione/Esportazione guidata SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
 
  L'Importazione/Esportazione guidata[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare facilmente i dati da un'origine a una destinazione. Questa panoramica descrive le origini dati che la procedura guidata può usare come origini e destinazioni, nonché le autorizzazioni necessarie per eseguirla.
 

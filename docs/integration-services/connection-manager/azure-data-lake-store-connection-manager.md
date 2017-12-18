@@ -20,11 +20,11 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a5520dc00083bdd4522e10a2479e69fa000dc65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 556f0efa1ce15ee23acc190e547e3700e64eca4d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestione connessioni di Azure Data Lake Store
 Un pacchetto di SQL Server Integration Services (SSIS) è in grado di usare Gestione connessione di Azure Data Lake Store per connettersi a un servizio di Azure Data Lake Store con uno dei due tipi di autenticazione seguenti:
@@ -47,7 +47,7 @@ Gestione connessione di Azure Data Lake Store è un componente del [Feature Pack
     1.  Se si seleziona l'opzione di autenticazione **Identità utente Azure AD**, eseguire le operazioni seguenti:
         1. Specificare i valori per i campi **Nome utente** e **Password**. 
     
-        2. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore tenant non ha precedentemente autorizzato il consenso a SSIS per accedere ai dati di Azure Data Lake Store, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore tenant non ha precedentemente autorizzato il consenso a SSIS per accedere ai dati di Azure Data Lake Store, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
         >   [!NOTE] 
         > Quando si seleziona l'autenticazione dell'**identità del servizio di Azure AD** l'autenticazione a più fattori e l'autenticazione dell'account Microsoft non sono supportate.
@@ -55,7 +55,7 @@ Gestione connessione di Azure Data Lake Store è un componente del [Feature Pack
     2. Se si seleziona l'autenticazione dell'**identità del servizio di Azure AD**, eseguire le operazioni seguenti:
         1. Creare un'applicazione Azure Active Directory (AAD) e l'entità servizio per accedere ai dati di Azure Data Lake.
     
-        2. Assegnare le autorizzazioni appropriate per consentire all'applicazione AAD di accedere alle risorse di Azure Data Lake. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).
+        2. Assegnare le autorizzazioni appropriate per consentire all'applicazione AAD di accedere alle risorse di Azure Data Lake. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) (Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).
     
         3. Specificare i valori per **ID client**, **Chiave privata** e **Nome del tenant**.
     

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3391c69ccf0d3b31499d0cf18713847d3a88fc5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire, eseguire e monitorare un pacchetto SSIS in Azure
 Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.
@@ -26,7 +26,7 @@ Questa esercitazione illustra come distribuire un progetto di SQL Server Integra
 
 Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Server Management Studio. Per scaricare la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Verificare inoltre se il database SSISDB è configurato e se è stato eseguito il provisioning del runtime di integrazione SSIS di Azure. Per informazioni su come eseguire il provisioning di SSIS in Azure, vedere [Distribuire pacchetti SQL Server Integration Services in Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Verificare inoltre se il database SSISDB è configurato e se è stato eseguito il provisioning del runtime di integrazione SSIS di Azure. Per informazioni su come eseguire il provisioning di SSIS in Azure, vedere [Distribuire pacchetti SQL Server Integration Services in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Connettersi al database SSISDB
 
@@ -100,7 +100,7 @@ Per visualizzare lo stato delle operazioni di Integration Services attualmente i
 
 È anche possibile selezionare un pacchetto in Esplora oggetti, fare clic con il pulsante destro del mouse e selezionare **Report**, quindi **Report standard** e infine **Tutte le esecuzioni**.
 
-Per altre informazioni su come monitorare i pacchetti in esecuzione in SQL Server Management Studio, vedere [Esecuzione di pacchetti e altre operazioni di monitoraggio](https://docs.microsoft.com/en-us/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+Per altre informazioni su come monitorare i pacchetti in esecuzione in SQL Server Management Studio, vedere [Esecuzione di pacchetti e altre operazioni di monitoraggio](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Monitorare il runtime di integrazione SSIS di Azure
 
