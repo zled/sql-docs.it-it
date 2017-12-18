@@ -1,44 +1,44 @@
 ---
-title: Salvare ed eseguire pacchetti (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Salvare ed eseguire il pacchetto (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 02/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.saveschedule.f1
+f1_keywords: sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 40b8677cddf363e8789a2fc15b1c2aab5f49f58c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 84d128eafce53fb4de337d0a835155850a09c2e5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Salvare ed eseguire pacchetti (SQL Server importazione / esportazione guidata)
-  Dopo aver specificato e configurato l'origine dati e la destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare le impostazioni come un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti (SSIS) per personalizzarlo e riutilizzarla in seguito.
+# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Salvare ed eseguire il pacchetto (Importazione/Esportazione guidata SQL Server)
+  Dopo aver specificato e configurato l'origine dati e la destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare le proprie informazioni come pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) per personalizzarlo e usarlo di nuovo in seguito.
   
 **Cos'è un pacchetto?** La procedura guidata usa SQL Server Integration Services (SSIS) per copiare i dati. In SSIS il pacchetto rappresenta l'unità di base. La procedura guidata crea un pacchetto SSIS in memoria mentre ci si sposta tra le pagine della procedura guidata e si specificano le opzioni.
   
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>Screenshot della pagina Salvare ed eseguire il pacchetto  
 L'immagine seguente illustra la pagina **Salvare ed eseguire il pacchetto** della procedura guidata. 
    
-![Salvare ed eseguire la pagina pacchetto di importazione / esportazione guidata](../../integration-services/import-export-data/media/save-and-run.png "salvare ed eseguire la pagina pacchetto di importazione / esportazione guidata") 
+![Pagina Salva ed esegui pacchetto dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/save-and-run.png "Pagina Salva ed esegui pacchetto dell'Importazione/Esportazione guidata") 
   
 ## <a name="run-and-save-the-package"></a>Eseguire e salvare il pacchetto 
  Per continuare è necessario selezionare almeno una delle due opzioni seguenti.  
   
  **Run immediately**  
- Selezionare questa opzione per importare ed esportare i dati immediatamente. Per impostazione predefinita, questa casella di controllo è selezionata e l'operazione viene eseguita immediatamente.
+ Selezionare questa opzione per importare ed esportare i dati immediatamente. Per impostazione predefinita, questa casella di controllo è selezionata e l'operazione viene immediatamente eseguita.
   
  **Salva pacchetto SSIS**  
  Salvare le impostazioni come un pacchetto SSIS. In un secondo momento è facoltativamente possibile personalizzare il pacchetto ed eseguirlo nuovamente. Se si sceglie di salvare il pacchetto, sono disponibili opzioni aggiuntive nella pagina successiva, **Salva pacchetto SSIS**.
@@ -46,16 +46,16 @@ L'immagine seguente illustra la pagina **Salvare ed eseguire il pacchetto** dell
 L'opzione per salvare il pacchetto è disponibile solo se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition o un'edizione superiore.   
   
 > [!NOTE]
-> Se terminare la procedura guidata, eseguire l'operazione, ma arrestare l'operazione prima di esso al termine dell'esecuzione, il pacchetto non è salvato, anche se si seleziona il **Salva pacchetto SSIS** casella di controllo.  
+> Se si completa la procedura guidata, si esegue l'operazione ma la si interrompe prima del completamento, il pacchetto non viene salvato, anche se si seleziona la casella di controllo **Salva pacchetto SSIS** in questa pagina.  
 
-### <a name="if-you-started-the-wizard-from-visual-studio"></a>Se è stata avviata la procedura guidata da Visual Studio
-Se è stata avviata da un progetto di Integration Services in Visual Studio con SQL Server Data Tools (SSDT):
--   Non è possibile **eseguire** il pacchetto fino a dopo chiudere la procedura guidata. È quindi possibile eseguire il pacchetto da Visual Studio.
--   La procedura guidata **Salva** il pacchetto nel progetto di Integration Services da cui iniziare la procedura guidata.
+### <a name="if-you-started-the-wizard-from-visual-studio"></a>Se la procedura guidata è stata avviata da Visual Studio
+Se la procedura guidata è stata avviata da un progetto di Integration Services in Visual Studio con SQL Server Data Tools (SSDT):
+-   Non è possibile **eseguire** il pacchetto se non dopo aver chiuso la procedura guidata. È quindi possibile eseguire il pacchetto da Visual Studio.
+-   La procedura guidata **salva** il pacchetto nel progetto di Integration Services da cui la procedura è stata avviata.
 
 ## <a name="specify-options-for-saving-the-package"></a>Specificare le opzioni di salvataggio del pacchetto
 **SQL Server**  
- Selezionare questa opzione per salvare il pacchetto in SQL Server nel **msdb** database il **sysssispackages** tabella.
+ Selezionare questa opzione per salvare il pacchetto in SQL Server nel database **msdb** nella tabella **sysssispackages**.
  
 > [!IMPORTANT]
 > Questa opzione non salva il pacchetto nel database del catalogo SSIS (SSISDB).  
@@ -63,7 +63,7 @@ Se è stata avviata da un progetto di Integration Services in Visual Studio con 
  È possibile selezionare il server di destinazione e fornire le credenziali per connettersi al server nella pagina successiva, **Salva pacchetto SSIS**. Per altre informazioni, vedere [Salva pacchetto SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
  **File system**  
- Selezionare questa opzione per salvare il pacchetto come file con il **dtsx** estensione.  
+ Selezionare questa opzione per salvare il pacchetto come file con estensione **dtsx**.  
   
  È possibile selezionare la cartella e il nome file di destinazione per il pacchetto nella pagina successiva, **Salva pacchetto SSIS**. Per altre informazioni, vedere [Salva pacchetto SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
  
@@ -80,7 +80,7 @@ Se è stata avviata da un progetto di Integration Services in Visual Studio con 
  Digitare di nuovo la password.  
   
 > [!NOTE]
-> Sono disponibili le opzioni password solo se specificare un **livello di protezione del pacchetto** che richiede una password, vale a dire, se si specifica una **crittografare dati riservati con una password** o **crittografare tutti i dati con password**.  
+> Le opzioni per la password sono disponibili solo se viene specificato un **Livello di protezione pacchetto** che richiede una password, ovvero se si specifica **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Informazioni sulle due pagine di opzioni per il salvataggio del pacchetto  
  La pagina **Salvare ed eseguire il pacchetto** è una delle due pagine in cui è possibile selezionare le opzioni per il salvataggio del pacchetto SSIS.  
@@ -102,8 +102,7 @@ Se è stata avviata da un progetto di Integration Services in Visual Studio con 
 [Salvare i pacchetti](../../integration-services/save-packages.md)  
 [Eseguire pacchetti di Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-[Iniziare con questo semplice esempio di importazione / esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
   
-
 

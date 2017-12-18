@@ -1,43 +1,44 @@
 ---
-title: Connettersi a un'origine dati di Excel (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: b4411fdd2337d93f15b149febf845fb7b0762c40
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 2aeb225037970b8a77169db18c204ecf6d4c19d6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati di Excel (SQL Server importazione / esportazione guidata)
-In questo argomento viene illustrato come connettersi a un **Microsoft Excel** dell'origine dati dal **scegliere un'origine dati** o **scegliere una destinazione** pagina di SQL Server di importazione / esportazione guidata.
+# <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQL Server)
+Questo argomento illustra come connettersi a un'origine dati **Microsoft Excel** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
 
 La schermata seguente mostra una connessione di esempio a una cartella di lavoro di Microsoft Excel.
 
 ![Connessione di Excel](../../integration-services/import-export-data/media/excel-connection.png) 
 
-## <a name="options-to-specify"></a>Opzioni per specificare
+## <a name="options-to-specify"></a>Opzioni da specificare
 
 > [!NOTE]
-> Le opzioni di connessione per il provider di dati sono gli stessi se Excel è l'origine o destinazione. Ovvero le opzioni disponibili sono gli stessi in entrambi i **scegliere un'origine dati** e **scegliere una destinazione** pagine della procedura guidata.
+> Le opzioni di connessione per il provider di dati sono le stesse sia nel caso in cui Excel rappresenti l'origine sia nel caso in cui rappresenti la destinazione. Ovvero, le opzioni visualizzate sono le stesse in entrambe le pagine **Scelta origine dati** e **Scelta destinazione** della procedura guidata.
 
 **Percorso file di Excel**  
- Specificare il percorso e il nome del file di Excel. Esempio:
--   Per un file nel computer locale, **c:\\MyData.xlsx**.
--   Per un file in una condivisione di rete,  **\\ \\Sales\\Database\\Northwind.xlsx**.
+ Specificare il percorso e il nome del file Excel. Esempio:
+-   Per un file nel computer locale, **C:\\MyData.xlsx**.
+-   Per un file in una condivisione di rete, **\\\\Sales\\Database\\Northwind.xlsx**.
 
 In alternativa, fare clic su **Sfoglia**.  
   
@@ -51,34 +52,33 @@ In alternativa, fare clic su **Sfoglia**.
 Selezionare la versione di Excel usata dalla cartella di lavoro di origine.
 
 > [!IMPORTANT]
-> È possibile scaricare e installare i file aggiuntivi per connettersi al file di Excel. Vedere [ottenere i file necessari per connettersi a Excel](#officeDownloads) in questa pagina per altre informazioni.
+> Per connettersi ai file Excel, può essere necessario scaricare e installare file aggiuntivi. Per altre informazioni, vedere [Ottenere i file necessari per connettersi a Excel](#officeDownloads) in questa pagina.
 
 **Nomi di colonna nella prima riga**  
-Indica se la prima riga dei dati contiene nomi di colonna.
--   Se i dati non contengono nomi di colonna, ma si abilita questa opzione, la procedura guidata considera la prima riga di dati di origine come i nomi di colonna.
--   Se i dati contengano nomi di colonna, ma si disabilita questa opzione, la riga di nomi di colonna verrà considerata come prima riga di dati.
+Specificare se la prima riga di dati contiene nomi di colonna.
+-   Se i dati non contengono nomi di colonna e si abilita questa opzione, la procedura guidata considera la prima riga dei dati di origine come nomi di colonna.
+-   Se i dati contengono nomi di colonna e si disabilita questa opzione, la procedura guidata considera la riga dei nomi di colonna come prima riga di dati.
 
-Se si specifica che i dati non dispone di nomi di colonna, la procedura guidata utilizza F1, F2 e così via, come intestazioni di colonna.
+Se si specifica che i dati non contengono nomi di colonna, la procedura guidata usa F1, F2 e così via come intestazioni di colonna.
 
-## <a name="i-dont-see-excel-in-the-list-of-data-sources"></a>Excel non viene visualizzato nell'elenco delle origini dati
-Se Excel non viene visualizzato nell'elenco delle origini dati, si esegue la procedura guidata a 64 bit? I provider per Excel e Access sono in genere a 32 bit e non sono visibili nella procedura guidata a 64 bit. Eseguire la procedura guidata a 32 bit.
+## <a name="i-dont-see-excel-in-the-list-of-data-sources"></a>Excel non è incluso nell'elenco delle origini dati
+Se Excel non è incluso nell'elenco delle origini dati, controllare se è in esecuzione la procedura guidata a 64 bit. I provider per Excel e Access sono in genere a 32 bit e non sono visibili nella procedura guidata a 64 bit. Eseguire la procedura guidata a 32 bit.
 
 > [!NOTE]
-> Per utilizzare la versione a 64 bit di SQL Server di importazione / esportazione guidata, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installare solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
+> Per usare la versione a 64 bit dell'Importazione/Esportazione guidata SQL Server, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installano solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
 
-## <a name="officeDownloads"></a>Ottenere i file che necessari per connettersi a Excel  
-È possibile scaricare i componenti di connettività per le origini dati di Microsoft Office, tra cui Excel e Access, se non è già non sono installati. Scaricare la versione più recente dei componenti di connettività per qui file di Excel e di accesso: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+## <a name="officeDownloads"></a>Ottenere i file necessari per connettersi a Excel  
+Se non sono già stati installati, potrebbe essere necessario scaricare i componenti di connettività per le origini dati Microsoft Office, incluse le origini dati Excel e Access. Scaricare la versione più recente dei componenti di connettività per i file di Excel e Access qui: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
-La versione più recente dei componenti è possibile aprire i file creati con versioni precedenti di Excel.
+La versione più recente dei componenti può aprire file creati da versioni precedenti di Excel.
 
-Se il computer dispone di una versione a 32 bit di Office, quindi è necessario installare la versione a 32 bit dei componenti ed è inoltre necessario assicurarsi di eseguire il pacchetto in modalità a 32 bit.
+Se il computer ha una versione a 32 bit di Office, è necessario installare la versione a 32 bit dei componenti e verificare anche di eseguire il pacchetto in modalità a 32 bit.
 
-Se si dispone di una sottoscrizione Office 365, assicurarsi di scaricare il pacchetto ridistribuibile di 2016 del motore di accesso Database e non Microsoft Access 2016 Runtime. Quando si esegue il programma di installazione, è possibile vedere un messaggio di errore che non è possibile installare il download side-by-side con componenti di Office a portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva, aprendo una finestra del prompt dei comandi ed eseguire il. File EXE scaricato con il `/quiet` passare. Esempio:
+Se si ha un abbonamento a Office 365, assicurarsi di scaricare Access Database Engine 2016 Redistributable e non Microsoft Access 2016 Runtime. Durante l'esecuzione del programma di installazione potrebbe essere visualizzato un messaggio di errore che indica non è possibile installare il download side-by-side con i componenti di Office a portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Esempio:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="see-also"></a>Vedere anche
-[Scegliere un'origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

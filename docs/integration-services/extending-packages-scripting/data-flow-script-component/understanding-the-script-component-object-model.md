@@ -1,52 +1,50 @@
 ---
-title: Informazioni sul modello di oggetto del componente Script | Documenti Microsoft
+title: Informazioni sul modello a oggetti del componente script | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
-helpviewer_keywords:
-- Script component [Integration Services], object model
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
+helpviewer_keywords: Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 09de00344fe94087b6287b07c4b1ffe933d27b7c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8fd9402f5ec9cdd85f2ccf45e09e4984b98ea1cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-the-script-component-object-model"></a>Informazioni sul modello a oggetti del componente script
-  Come descritto in [la codifica e debug del componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), il progetto di componente Script contiene tre elementi di progetto:  
+  Come illustrato in [Codifica e debug del componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), il progetto del componente script contiene tre elementi:  
   
-1.  Il **la classe ScriptMain** elemento, che contiene il **la classe ScriptMain** classe in cui scrivere il codice. Il **la classe ScriptMain** classe eredita il **UserComponent** classe.  
+1.  L'elemento **ScriptMain** che contiene la classe **ScriptMain** in cui viene scritto il codice. La classe **ScriptMain** eredita dalla classe **UserComponent**.  
   
-2.  Il **ComponentWrapper** elemento, che contiene il **UserComponent** un'istanza della classe <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> che contiene i metodi e proprietà che verrà utilizzato per elaborare i dati e di interagire con il pacchetto. Il **ComponentWrapper** elemento contiene inoltre **connessioni** e **variabili** classi di raccolte.  
+2.  L'elemento **ComponentWrapper**, che contiene la classe **UserComponent**, un'istanza di <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> che contiene i metodi e le proprietà da usare per elaborare i dati e interagire con il pacchetto. L'elemento **ComponentWrapper** contiene anche le classi delle raccolte **Connections** e **Variables**.  
   
-3.  Il **BufferWrapper** item, che contiene le classi che eredita da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> per ogni proprietà di input e output e tipizzate per ogni colonna.  
+3.  L'elemento **BufferWrapper**, che contiene le classi che ereditano da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> per ogni input e output, nonché le proprietà tipizzate per ogni colonna.  
   
- Quando si scrive codice nel **la classe ScriptMain** elemento, si utilizzerà oggetti, metodi e proprietà trattate in questo argomento. Ogni componente non utilizzerà tutti i metodi elencati, ma se li utilizza la sequenza sarà quella illustrata.  
+ Quando si scrive il codice nell'elemento **ScriptMain** si useranno gli oggetti, i metodi e le proprietà illustrati in questo argomento. Ogni componente non utilizzerà tutti i metodi elencati, ma se li utilizza la sequenza sarà quella illustrata.  
   
  La classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> non contiene codice di implementazione per i metodi descritti in questo argomento. Pertanto, non è necessario aggiungere una chiamata all'implementazione della classe di base nell'implementazione del metodo, anche se questa operazione non genera errori.  
   
- Per informazioni su come usare i metodi e proprietà di queste classi in un determinato tipo di componente Script, vedere la sezione [ulteriori esempi di componente Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Negli argomenti di esempio vengono inoltre presentati esempi di codice completi.  
+ Per informazioni su come usare i metodi e le proprietà di queste classi in un tipo di componente script specifico, vedere la sezione [Ulteriori esempi di componente script](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Negli argomenti di esempio vengono inoltre presentati esempi di codice completi.  
   
 ## <a name="acquireconnections-method"></a>Metodo AcquireConnections  
  Le origini e le destinazioni devono in genere connettersi a un'origine dati esterna. Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> per recuperare la connessione o le informazioni di connessione dalla gestione connessione appropriata.  
   
- Nell'esempio seguente viene restituito un **SqlConnection** da una gestione connessione ADO.NET.  
+ Nell'esempio seguente viene restituito **System.Data.SqlClient.SqlConnection** da una gestione connessione ADO.NET.  
   
 ```vb  
 Dim connMgr As IDTSConnectionManager100  
@@ -60,7 +58,7 @@ Public Overrides Sub AcquireConnections(ByVal Transaction As Object)
 End Sub  
 ```  
   
- Nell'esempio seguente restituisce un percorso completo e nome del file dalla gestione connessione File Flat e quindi apre il file utilizzando un **System.IO**.  
+ Nell'esempio seguente vengono restituiti un percorso completo e un nome file da una gestione connessione file flat, quindi il file viene aperto usando **System.IO.StreamReader**.  
   
 ```vb  
 Private textReader As StreamReader  
@@ -118,35 +116,35 @@ public override void PreExecute()
  I componenti script configurati come trasformazioni o destinazioni prevedono un unico input.  
   
 #### <a name="what-the-bufferwrapper-project-item-provides"></a>Contenuto dell'elemento di progetto BufferWrapper  
- Per ogni input che è stato configurato, il **BufferWrapper** elemento di progetto contiene una classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e ha lo stesso nome come input. Ogni classe del buffer di input contiene le proprietà, le funzioni e i metodi seguenti:  
+ Per ogni input configurato, l'elemento di progetto **BufferWrapper** contiene una classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e ha lo stesso nome dell'input. Ogni classe del buffer di input contiene le proprietà, le funzioni e i metodi seguenti:  
   
--   Proprietà delle funzioni di accesso denominate e tipizzate per ogni colonna di input selezionata. Queste proprietà sono di sola lettura o lettura/scrittura a seconda di **tipo di utilizzo** specificato per la colonna nel **colonne di Input** pagina del **Editor trasformazione Script**.  
+-   Proprietà delle funzioni di accesso denominate e tipizzate per ogni colonna di input selezionata. Queste proprietà sono di sola lettura o di lettura/scrittura a seconda del **Tipo di utilizzo** specificato per la colonna nella pagina **Colonne di input** di **Editor trasformazione Script**.  
   
--   Oggetto  **\<colonna > _IsNull** colonna delle proprietà per ogni selezionato di input. Questa proprietà è di sola lettura o lettura/scrittura a seconda di **tipo di utilizzo** specificato per la colonna.  
+-   Una proprietà **\<column>_IsNull** per ogni colonna di input selezionata. Anche questa proprietà è di sola lettura o di lettura/scrittura a seconda del **Tipo di utilizzo** specificato per la colonna.  
   
--   Oggetto **DirectRowTo\<outputbuffer >** metodo per ogni output configurato. Questi metodi vengono utilizzati per filtrare le righe a uno di output diversi nello stesso **ExclusionGroup**.  
+-   Un metodo **DirectRowTo\<outputbuffer>** per ogni output configurato. Questi metodi verranno usati per filtrare le righe in uno dei diversi output dello stesso elemento **ExclusionGroup**.  
   
--   Oggetto **NextRow** funzione per ottenere la riga di input successiva e un **EndOfRowset** funzione per determinare se è stato elaborato l'ultimo buffer di dati. In genere non è necessario queste funzioni quando si utilizzano i metodi implementati nell'elaborazione dell'input di **UserComponent** classe di base. La sezione successiva vengono fornite ulteriori informazioni sul **UserComponent** classe di base.  
+-   Una funzione **NextRow** per ottenere la riga di input successiva e una funzione **EndOfRowset** per determinare se è stato elaborato l'ultimo buffer di dati. Queste funzioni non sono in genere necessarie quando si usano i metodi di elaborazione dell'input implementati nella classe di base **UserComponent**. La sezione seguente contiene altre informazioni sulla classe di base **UserComponent**.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Contenuto dell'elemento di progetto ComponentWrapper  
- L'elemento di progetto ComponentWrapper contiene una classe denominata **UserComponent** che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Il **la classe ScriptMain** classe in cui scrivere il codice personalizzato deriva a sua volta da **UserComponent**. Il **UserComponent** classe contiene i metodi seguenti:  
+ L'elemento di progetto ComponentWrapper contiene una classe denominata **UserComponent** che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe **ScriptMain** in cui si scrive il codice personalizzato deriva a sua volta da **UserComponent**. La classe **UserComponent** contiene i metodi seguenti:  
   
--   Un'implementazione dell'override di **ProcessInput** metodo. Si tratta del metodo che i dati chiamato dal motore flusso in fase di esecuzione dopo il **PreExecute** (metodo) e può essere chiamato più volte. **ProcessInput** trasferisce l'elaborazione per il  **\<inputbuffer > _ProcessInput** metodo. Il **ProcessInput** metodo verifica la fine del buffer di input e, se è stata raggiunta la fine del buffer, chiama il sottoponibile a override **FinishOutputs** metodo e privato **MarkOutputsAsFinished** metodo. Il **MarkOutputsAsFinished** chiama quindi **SetEndOfRowset** sull'ultimo buffer di output.  
+-   Un'implementazione sottoposta a override del metodo **ProcessInput**. Si tratta del metodo chiamato in fase di esecuzione dal motore flusso di dati dopo il metodo **PreExecute** e può essere chiamato più volte. **ProcessInput** passa l'elaborazione al metodo **\<inputbuffer>_ProcessInput**. Il metodo **ProcessInput** verifica quindi se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo **FinishOutputs** sottoponibile a override e il metodo **MarkOutputsAsFinished** privato. Il metodo **MarkOutputsAsFinished** chiama quindi **SetEndOfRowset** sull'ultimo buffer di output.  
   
--   Un'implementazione sottoponibile a override del  **\<inputbuffer > _ProcessInput** metodo. Questa implementazione predefinita esegue il ciclo di ogni riga di input e chiama  **\<inputbuffer > _ProcessInputRow**.  
+-   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInput**. Questa implementazione predefinita esegue il ciclo di ogni riga di input e chiama **\<inputbuffer>_ProcessInputRow**.  
   
--   Un'implementazione sottoponibile a override del  **\<inputbuffer > _ProcessInputRow** metodo. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.  
+-   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInputRow**. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.  
   
 #### <a name="what-your-custom-code-should-do"></a>Funzione del codice personalizzato  
- È possibile utilizzare i metodi seguenti per elaborare l'input nel **la classe ScriptMain** classe:  
+ Per elaborare l'input nella classe **ScriptMain** è possibile usare i metodi seguenti:  
   
--   Eseguire l'override  **\<inputbuffer > _ProcessInputRow** per elaborare i dati in ogni riga di input durante il passaggio attraverso.  
+-   Eseguire l'override di **\<inputbuffer>_ProcessInputRow** per elaborare i dati in ogni riga di input non appena vengono passati.  
   
--   Eseguire l'override  **\<inputbuffer > _ProcessInput** solo se è necessario eseguire operazioni aggiuntive durante lo scorrimento in ciclo tra le righe di input. (Ad esempio, è necessario verificare la presenza di **EndOfRowset** per eseguire altre azioni dopo tutte le righe sono state elaborate.) Chiamare  **\<inputbuffer > _ProcessInputRow** per eseguire l'elaborazione delle righe.  
+-   Eseguire l'override di **\<inputbuffer>_ProcessInput** solo se è necessario eseguire operazioni aggiuntive mentre si esegue il ciclo delle righe di input, ad esempio se è necessario verificare la presenza di **EndOfRowset** per eseguire un'altra azione dopo l'elaborazione di tutte le righe. Chiamare **\<inputbuffer>_ProcessInputRow** per eseguire l'elaborazione delle righe.  
   
--   Eseguire l'override **FinishOutputs** se è necessario eseguire operazioni sugli output prima che vengano chiusi.  
+-   Eseguire l'override di **FinishOutputs** se è necessario eseguire operazioni sugli output prima che vengano chiusi.  
   
- Il **ProcessInput** metodo assicura che questi metodi vengono chiamati in momenti appropriati.  
+ Il metodo **ProcessInput** assicura che questi metodi vengano chiamati nel momento appropriato.  
   
 ### <a name="processing-outputs"></a>Elaborazione degli output  
  I componenti script configurati come origini o trasformazioni includono uno o più output.  
@@ -156,33 +154,33 @@ public override void PreExecute()
   
 -   Proprietà delle funzioni di accesso di sola scrittura, denominate e tipizzate per ogni colonna di output.  
   
--   Sola scrittura  **\<colonna > _IsNull** proprietà per ogni colonna di output selezionato che è possibile utilizzare per impostare il valore della colonna su **null**.  
+-   Una proprietà **\<column>_IsNull** di sola scrittura per ogni colonna di output selezionata che è possibile usare per impostare il valore della colonna su **Null**.  
   
--   Un **AddRow** metodo per aggiungere una nuova riga vuota al buffer di output.  
+-   Un metodo **AddRow** per aggiungere una nuova riga vuota nel buffer di output.  
   
--   Oggetto **SetEndOfRowset** metodo per informare il motore del flusso di dati che non sono previsti più buffer di dati. È inoltre disponibile un **EndOfRowset** funzione per determinare se il buffer corrente è l'ultimo buffer di dati. In genere non è necessario queste funzioni quando si utilizzano i metodi implementati nell'elaborazione dell'input di **UserComponent** classe di base.  
+-   Un metodo **SetEndOfRowset** per indicare al motore flusso di dati che non sono previsti altri buffer di dati. È inoltre disponibile una funzione **EndOfRowset** per determinare se il buffer corrente è l'ultimo buffer di dati. Queste funzioni non sono in genere necessarie quando si usano i metodi di elaborazione dell'input implementati nella classe di base **UserComponent**.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Contenuto dell'elemento di progetto ComponentWrapper  
- L'elemento di progetto ComponentWrapper contiene una classe denominata **UserComponent** che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Il **la classe ScriptMain** classe in cui scrivere il codice personalizzato deriva a sua volta da **UserComponent**. Il **UserComponent** classe contiene i metodi seguenti:  
+ L'elemento di progetto ComponentWrapper contiene una classe denominata **UserComponent** che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe **ScriptMain** in cui si scrive il codice personalizzato deriva a sua volta da **UserComponent**. La classe **UserComponent** contiene i metodi seguenti:  
   
--   Un'implementazione dell'override di **PrimeOutput** metodo. Il motore del flusso di dati chiama questo metodo prima **ProcessInput** in fase di esecuzione e viene chiamato solo una volta. **PrimeOutput** trasferisce l'elaborazione per il **CreateNewOutputRows** metodo. Quindi, se il componente è un'origine (ovvero, il componente non include input), **PrimeOutput** chiama il sottoponibile a override **FinishOutputs** metodo e privato **MarkOutputsAsFinished** metodo. Il **MarkOutputsAsFinished** chiamate al metodo **SetEndOfRowset** sull'ultimo buffer di output.  
+-   Un'implementazione sottoposta a override del metodo **PrimeOutput**. Il motore flusso di dati chiama questo metodo prima di **ProcessInput** in fase di esecuzione e viene chiamato solo una volta. **PrimeOutput** passa l'elaborazione al metodo **CreateNewOutputRows**. Quindi, se il componente è un'origine, ovvero non include input, **PrimeOutput** chiama il metodo **FinishOutputs** sottoponibile a override e il metodo **MarkOutputsAsFinished** privato. Il metodo **MarkOutputsAsFinished** chiama **SetEndOfRowset** sull'ultimo buffer di output.  
   
--   Un'implementazione sottoponibile a override del **CreateNewOutputRows** metodo. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.  
+-   Un'implementazione sottoponibile a override del metodo **CreateNewOutputRows**. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.  
   
 #### <a name="what-your-custom-code-should-do"></a>Funzione del codice personalizzato  
- È possibile utilizzare i metodi seguenti per elaborare gli output nel **la classe ScriptMain** classe:  
+ Per elaborare gli output nella classe **ScriptMain** è possibile usare i metodi seguenti:  
   
--   Eseguire l'override **CreateNewOutputRows** solo quando è possibile aggiungere e popolare le righe di output prima di elaborare le righe di input. Ad esempio, è possibile utilizzare **CreateNewOutputRows** in un'origine, ma in una trasformazione con output asincroni, è necessario chiamare **AddRow** durante o dopo l'elaborazione di dati di input.  
+-   Eseguire l'override di **CreateNewOutputRows** solo quando è possibile aggiungere e popolare le righe di output prima dell'elaborazione delle righe di input. Ad esempio, è possibile usare **CreateNewOutputRows** in un'origine, ma in una trasformazione con output asincroni è necessario chiamare **AddRow** durante o dopo l'elaborazione dei dati di input.  
   
--   Eseguire l'override **FinishOutputs** se è necessario eseguire operazioni sugli output prima che vengano chiusi.  
+-   Eseguire l'override di **FinishOutputs** se è necessario eseguire operazioni sugli output prima che vengano chiusi.  
   
- Il **PrimeOutput** metodo assicura che questi metodi vengono chiamati in momenti appropriati.  
+ Il metodo **PrimeOutput** assicura che questi metodi vengano chiamati nel momento appropriato.  
   
 ## <a name="postexecute-method"></a>Metodo PostExecute  
- Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> quando è necessario eseguire un'elaborazione un'unica volta solo dopo aver elaborato le righe di dati. Ad esempio, un'origine, si consiglia di chiudere il **System.Data.SqlClient.SqlDataReader** utilizzato per caricare i dati nel flusso di dati.  
+ Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> quando è necessario eseguire un'elaborazione un'unica volta solo dopo aver elaborato le righe di dati. In un'origine, ad esempio, può essere opportuno chiudere l'oggetto **System.Data.SqlClient.SqlDataReader** usato per caricare i dati nel flusso di dati.  
   
 > [!IMPORTANT]  
->  La raccolta di **ReadWriteVariables** è disponibile solo nel **PostExecute** metodo. Pertanto, non è possibile incrementare direttamente il valore di una variabile del pacchetto durante l'elaborazione di ogni riga di dati. Al contrario, incrementare il valore di una variabile locale e impostare il valore della variabile del pacchetto per il valore della variabile locale nel **PostExecute** metodo dopo tutti i dati è stata elaborata.  
+>  La raccolta di **ReadWriteVariables** è disponibile solo nel metodo **PostExecute**. Pertanto, non è possibile incrementare direttamente il valore di una variabile del pacchetto durante l'elaborazione di ogni riga di dati. Incrementare invece il valore di una variabile locale e impostare il valore della variabile del pacchetto sul valore della variabile locale nel metodo **PostExecute** dopo che tutti i dati sono stati elaborati.  
   
 ## <a name="releaseconnections-method"></a>Metodo ReleaseConnections  
  Le origini e le destinazioni devono in genere connettersi a un'origine dati esterna. Eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> per chiudere e rilasciare la connessione aperta in precedenza nel metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>.  
@@ -209,8 +207,7 @@ public override void ReleaseConnections()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione del componente Script nell'Editor del componente di Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)   
- [La codifica e debug del componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
+ [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)   
+ [Codifica e debug del componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) connessioni | Documenti Microsoft
+title: Connessioni in Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +25,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
+caps.latest.revision: "92"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: 2f257448e90c82a2cd29e082fe6321401c889e37
-ms.contentlocale: it-it
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
@@ -71,15 +72,15 @@ ms.lasthandoff: 11/07/2017
   
 -   Se le gestioni connessioni esistenti non soddisfano le proprie esigenze, è possibile creare una gestione connessione personalizzata.  
 
-### <a name="package-level-and-project-level-connection-managers"></a>Livello di pacchetto e le gestioni connessioni a livello del progetto
+### <a name="package-level-and-project-level-connection-managers"></a>Gestioni connessioni al livello del pacchetto e del progetto
 Una gestione connessione può essere creata al livello del pacchetto o al livello del progetto. La gestione connessione creata al livello del progetto è disponibile per tutti i pacchetti nel progetto. La gestione connessione creata al livello del pacchetto è invece disponibile per quel pacchetto specifico.  
   
- È possibile utilizzare le gestioni connessioni create a livello di progetto al posto delle origini dati per condividere le connessioni alle origini. Per aggiungere una gestione connessione a livello del progetto, nel progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve essere utilizzato il modello di distribuzione del progetto. Quando un progetto viene configurato per usare questo modello, in **Esplora soluzioni** viene aggiunta la cartella **Gestioni connessioni** e rimossa la cartella **Origini dati**.  
+ È possibile utilizzare le gestioni connessioni create a livello di progetto al posto delle origini dati per condividere le connessioni alle origini. Per aggiungere una gestione connessione a livello del progetto, nel progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve essere utilizzato il modello di distribuzione del progetto. Quando un progetto viene configurato per usare questo modello, in **Esplora soluzioni** viene aggiunta la cartella **Gestioni connessioni** e rimossa la cartella **Origini dati** dal **Esplora soluzioni**.  
   
 > [!NOTE]  
 >  Se si desidera utilizzare le origini dati del pacchetto, è necessario convertire il progetto nel modello di distribuzione del pacchetto.  
 >   
->  Per ulteriori informazioni sui due modelli e informazioni sulla conversione di un progetto modello di distribuzione del progetto, vedere [distribuire Integration Services (SSIS) progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
+>  Per altre informazioni sui due modelli e sulla conversione di un progetto nel modello di distribuzione del progetto, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### <a name="built-in-connection-managers"></a>Gestioni connessioni predefinite  
  Nella tabella seguente sono elencati i tipi di gestione connessione disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -114,9 +115,9 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
 |Tipo|Description|Argomento|  
 |----------|-----------------|-----------|  
-|ORACLE|Si connette a un Oracle \<informazioni sulla versione\> server.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Consente di connettersi a un server Oracle \<informazioni versione\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Si connette a un Teradata \<informazioni sulla versione\> server.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+|TERADATA|Consente di connettersi a un server Teradata \<informazioni versione\>.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Gestioni connessioni personalizzate  
  È inoltre possibile scrivere gestioni connessioni personalizzate. Per ulteriori informazioni, vedere [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -135,7 +136,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
  Nella figura seguente viene illustrata l'area **Gestioni connessioni** della scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
- ![Schermata di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "schermata di progettazione del flusso di controllo con pacchetto")    
+ ![Schermata della finestra di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "Schermata della finestra di progettazione del flusso di controllo con pacchetto")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>Provider a 32 e 64 bit per le gestioni connessioni  
  Molti dei provider utilizzati dalle gestioni connessioni sono disponibili sia in versione a 32 bit che in versione a 64 bit. Poiché l'ambiente di progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è a 32 bit, durante la progettazione dei pacchetti in tale ambiente sono disponibili solo provider a 32 bit. Pertanto è possibile solo configurare una gestione connessione in modo da utilizzare uno specifico provider a 64 bit, se nel computer è installata anche la versione a 32 bit dello stesso provider.  
@@ -145,13 +146,13 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   Entrambe le versioni del provider hanno lo stesso ID. Per specificare se il runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve usare la versione a 64 bit del provider, è necessario impostare la proprietà Run64BitRuntime del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se la proprietà Run64BitRuntime è impostata su **true**, il runtime trova e usa il provider a 64 bit, se invece Run64BitRuntime è impostata su **false**, il runtime trova e usa il provider a 32 bit. Per altre informazioni sulle proprietà che è possibile impostare in progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Integration Services (SSIS) e ambienti Studio](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Aggiungere una gestione connessione
-###  <a name="wizard"></a>Aggiungere una gestione connessione quando si crea un pacchetto  
+###  <a name="wizard"></a> Aggiungere una gestione connessione durante la creazione di un pacchetto  
   
 -   Utilizzare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Oltre a creare e configurare una gestione connessione, tramite la procedura guidata è anche possibile creare e configurare le origini e le destinazioni in cui è utilizzata la gestione connessione. Per altre informazioni, vedere [Creare pacchetti in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a>Aggiungere una gestione connessione a un pacchetto esistente  
+###  <a name="package"></a> Aggiungere una gestione connessione a un pacchetto esistente  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -195,7 +196,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
 6.  Per salvare il pacchetto aggiornato scegliere **Salva elementi selezionati** dal menu **File** .  
   
-###  <a name="project"></a>Aggiungere una gestione connessione a livello di progetto  
+###  <a name="project"></a> Aggiungere una gestione connessione al livello del progetto  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -232,26 +233,26 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
     > [!NOTE]  
     >  Nella scheda **Gestioni connessioni** della finestra **Progettazione SSIS** non sarà possibile sovrascrivere il prefisso **(progetto)** dal nome della gestione connessione. Questo si verifica per motivi strutturali.  
 
-### <a name="add-ssis-connection-manager-dialog-box"></a>Aggiungere la finestra di dialogo Gestione connessione SSIS
+### <a name="add-ssis-connection-manager-dialog-box"></a>Finestra di dialogo Aggiungi gestione connessione SSIS
 Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per selezionare il tipo di connessione da aggiungere a un pacchetto.  
   
  Per altre informazioni sulle gestioni connessioni, vedere [Connessioni di Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
 #### <a name="options"></a>Opzioni  
- **Tipo di gestione connessione**  
+ **Tipo gestione connessione**  
  Selezionare un tipo di connessione e quindi fare clic su **Aggiungi**oppure fare doppio clic su un tipo di connessione per specificare le proprietà della connessione usando l'editor specifico per ogni tipo di connessione.  
   
  **Aggiungi**  
  Consente di specificare le proprietà della connessione utilizzando l'editor per ogni tipo di connessione.  
    
-##  <a name="parameter"></a>Creare un parametro per una proprietà della gestione connessione  
+##  <a name="parameter"></a> Creare un parametro per una proprietà della gestione connessione  
   
 1.  Nell'area **Gestioni connessioni** fare clic con il pulsante destro del mouse sulla gestione connessione per cui creare un parametro e scegliere **Imposta parametri**.  
   
 2.  Configurare le impostazioni dei parametri nella finestra di dialogo **Imposta parametri** . Per altre informazioni, vedere [Finestra di dialogo Imposta parametri](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Eliminare una gestione connessione 
-###  <a name="DeletePackageLevel"></a>Eliminare una gestione connessione da un pacchetto  
+###  <a name="DeletePackageLevel"></a> Eliminare una gestione connessione da un pacchetto  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -271,9 +272,9 @@ Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per sel
   
 5.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-###  <a name="DeleteProjectLevel"></a>Eliminare una gestione connessione condivisa (Gestione connessioni a livello di progetto)  
+###  <a name="DeleteProjectLevel"></a> Eliminare una gestione connessione condivisa (gestione connessione al livello del progetto)  
   
-1.  Per eliminare una gestione connessione al livello del progetto, fare clic con il pulsante destro del mouse sotto il nodo **Gestioni connessioni** nella finestra **Esplora soluzioni** , quindi scegliere **Elimina**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Visualizza il messaggio di avviso seguente:  
+1.  Per eliminare una gestione connessione al livello del progetto, fare clic con il pulsante destro del mouse sotto il nodo **Gestioni connessioni** nella finestra **Esplora soluzioni** , quindi scegliere **Elimina**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] visualizza il messaggio di avviso seguente:  
   
     > [!WARNING]  
     >  Quando si elimina una gestione connessione del progetto, è possibile che i pacchetti che utilizzano la gestione connessione non vengano eseguiti. Non è possibile annullare questa azione. Eliminare la gestione connessione?  
@@ -286,9 +287,9 @@ Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per sel
 ## <a name="set-the-properties-of-a-connection-manager"></a>Impostazione delle proprietà di una gestione connessione
 Tutti i tipi di gestione connessione possono essere configurati nella finestra **Proprietà** .  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]inoltre fornisce finestre di dialogo personalizzate per la modifica di diversi tipi di gestioni connessioni in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Queste finestre di dialogo includono opzioni diverse a seconda del tipo di gestione connessione.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include anche finestre di dialogo personalizzate per la modifica dei vari tipi di gestione connessione in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Queste finestre di dialogo includono opzioni diverse a seconda del tipo di gestione connessione.  
   
-### <a name="modify-a-connection-manager-using-the-properties-window"></a>Modificare una gestione connessione utilizzando la finestra proprietà  
+### <a name="modify-a-connection-manager-using-the-properties-window"></a>Modificare una gestione connessione usando la finestra Proprietà  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -304,7 +305,7 @@ Tutti i tipi di gestione connessione possono essere configurati nella finestra *
   
 7.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>Modificare una gestione connessione utilizzando una finestra di dialogo Gestione connessione  
+### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>Modificare una gestione connessione tramite la relativa finestra di dialogo  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -349,4 +350,3 @@ Tutti i tipi di gestione connessione possono essere configurati nella finestra *
 -   Articolo tecnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](http://go.microsoft.com/fwlink/?LinkId=233696)(Visualizzazione del messaggio di errore "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" quando si utilizza la gestione connessione Oracle in SSIS) sul sito support.microsoft.com.  
   
   
-

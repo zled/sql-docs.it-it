@@ -1,12 +1,14 @@
 ---
-title: Importare ed esportare i dati con il Server importazione / esportazione guidata SQL | Documenti Microsoft
+title: Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,63 +25,62 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-caps.latest.revision: 160
+caps.latest.revision: "160"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 6cd388215de02072522011b149a9cecc3239b64c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: ac2dd0d5907c2fc0f06713b49c79db5ad548f32f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
 
- > Per contenuti relativi a versioni precedenti di SQL Server, vedere [eseguire SQL Server di importazione / esportazione guidata](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Esecuzione dell'Importazione/Esportazione guidata SQL Server](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
 
- L'Importazione/Esportazione guidata[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare facilmente i dati da un'origine a una destinazione. Questa panoramica descrive le origini dati che la procedura guidata è possibile utilizzare come origini e destinazioni, nonché le autorizzazioni che necessarie per eseguire la procedura guidata.
+ L'Importazione/Esportazione guidata[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare facilmente i dati da un'origine a una destinazione. Questa panoramica descrive le origini dati che la procedura guidata può usare come origini e destinazioni, nonché le autorizzazioni necessarie per eseguirla.
 
 ## <a name="get-the-wizard"></a>Ottenere la procedura guidata
 Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
-## <a name="what-happens-when-i-run-the-wizard"></a>Cosa accade quando si esegue la procedura guidata?
--    **Vedere l'elenco dei passaggi.** Per una descrizione dei passaggi della procedura guidata, vedere [i passaggi in SQL Server importazione / esportazione guidata](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). È inoltre disponibile una pagina separata della documentazione per ogni pagina della procedura guidata.  
+## <a name="what-happens-when-i-run-the-wizard"></a>Cosa accade durante l'esecuzione della procedura guidata?
+-    **Vedere l'elenco dei passaggi.** Per una descrizione dei passaggi della procedura guidata, vedere [Passaggi dell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Per ogni pagina della procedura guidata è anche disponibile una pagina di documentazione separata.  
     \- o \-
--   **Visualizzare un esempio.** Per un rapido controllo le schermate visualizzate diverse in una sessione tipica, esaminiamo questo semplice esempio in una singola pagina - [iniziare con questo semplice esempio di importazione / esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
+-   **Vedere un esempio.** Per esaminare rapidamente le diverse schermate visualizzate durante una normale sessione, vedere questo semplice esempio illustrato in una singola pagina: [Introduzione a un esempio semplice di importazione/esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
-##  <a name="wizardSources"></a>Informazioni sulle origini e destinazioni è possibile utilizzare?  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata possibile copiare i dati da e verso le origini dati elencate nella tabella seguente. Per connettersi ad alcune di queste origini dati, è necessario scaricare e installare i file aggiuntivi.
+##  <a name="wizardSources"></a> Quali origini e destinazioni è possibile usare?  
+ L'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare dati dalle e nelle origini dati elencate nella tabella seguente. Per connettersi ad alcune di queste origini dati potrebbe essere necessario scaricare e installare file aggiuntivi.
  
 | Origine dati | È necessario scaricare file aggiuntivi? |
 |-------------|-----------------------------------------|
-|**Database aziendali**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 e altri.|SQL Server o SQL Server Data Tools (SSDT) vengono installati i file che si devono connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ma SSDT non installa tutti i file necessari per connettersi ad altri database aziendali, ad esempio Oracle o IBM DB2.<br/><br/>Per connettersi a un database dell'organizzazione, in genere è necessario disporre di due operazioni:<br/><br/>1. **Il software client**. Se il software client relativo al proprio database aziendale è già installato, non sono generalmente necessari altri componenti per eseguire la connessione. Se invece il software client non è installato, chiedere all'amministratore del database come poterne installare una copia con licenza.<br/><br/>2. **I driver o provider**. Microsoft consente di installare i driver e provider per la connessione a Oracle. Per connettersi a IBM DB2, ottenere il Provider di Microsoft® OLE DB per DB2 v 5.0 per Microsoft SQL Server dal [Feature Pack di Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Per altre informazioni, vedere [connettersi a un'origine dati di SQL Server](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) o [connettersi a un'origine dati Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
-|**File di testo** (file flat)|Non sono necessari file aggiuntivi.<br/><br/>Per altre informazioni, vedere [connettersi a un'origine dati File Flat](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
-|**File di Microsoft Excel e Microsoft Access**|Microsoft Office non installa tutti i file necessari per eseguire la connessione a file Excel e Access come origini dati. Scarica il programma seguente - [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Per altre informazioni, vedere [Connetti a un'origine dati di Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) o [connessione a un'origine dati accesso](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
-|**Origini dati di Azure**<br/>Attualmente solo Archiviazione BLOB di Azure.|SQL Server Data Tools non installare i file che si devono connettersi all'archiviazione Blob di Azure come origine dati. È necessario scaricare [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Per altre informazioni, vedere [Connect per l'archiviazione BLOB di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
-|**Database open source**<br/>PostgreSQL, MySql e altri.|Per connettersi a queste origini dati, è necessario scaricare file aggiuntivi.<br/><br/>-Per **PostgreSQL**, vedere [connessione a un'origine dati PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>-Per **MySql**, vedere [connessione a un'origine dati MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
-|**Qualsiasi altra origine dati per cui è disponibile un driver o un provider**|In genere è necessario scaricare file aggiuntivi per eseguire la connessione ai tipi di origine dati seguenti.<br/><br/>- Qualsiasi origine per la quale è disponibile un **driver ODBC** . Per altre informazioni, vedere [connettersi a un'origine dati ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- Qualsiasi origine per la quale è disponibile un **provider di dati .NET Framework** .<br/>- Qualsiasi origine per la quale è disponibile un **provider OLE DB** .<br/><br/>Componenti di terze parti che forniscono funzionalità di origine e di destinazione per le altre origini dati sono a volte commercializzati come prodotti aggiuntivi per SQL Server Integration Services (SSIS).|
+|**Database aziendali**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 e altri.|SQL Server o SQL Server Data Tools (SSDT) installa i file necessari per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ma SSDT non installa tutti i file necessari per connettersi ad altri database aziendali, ad esempio Oracle o IBM DB2.<br/><br/>Per connettersi a un database aziendale sono in genere necessari due elementi:<br/><br/>1. **Software client**. Se il software client relativo al proprio database aziendale è già installato, non sono generalmente necessari altri componenti per eseguire la connessione. Se invece il software client non è installato, chiedere all'amministratore del database come poterne installare una copia con licenza.<br/><br/>2. **Driver o provider**. Microsoft installa i driver e i provider per la connessione a Oracle. Per connettersi a IBM DB2, scaricare il provider Microsoft® OLEDB per DB2 v5.0 per Microsoft SQL Server da [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati SQL Server ](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) o [Connettersi a un'origine dati Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
+|**File di testo** (file flat)|Non sono necessari file aggiuntivi.<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati file flat](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
+|**File di Microsoft Excel e Microsoft Access**|Microsoft Office non installa tutti i file necessari per eseguire la connessione a file Excel e Access come origini dati. Scaricare [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Per altre informazioni, vedere [Connettersi a un'origine dati Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) o [Connettersi a un'origine dati Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
+|**Origini dati di Azure**<br/>Attualmente solo Archiviazione BLOB di Azure.|SQL Server Data Tools non installa i file necessari per connettersi ad Archiviazione BLOB di Azure come origine dati. È necessario scaricare [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Per altre informazioni, vedere [Connettersi ad Archiviazione BLOB di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
+|**Database open source**<br/>PostgreSQL, MySQL e altri.|Per connettersi a queste origini dati è necessario scaricare file aggiuntivi.<br/><br/>- Per **PostgreSQL**, vedere [Connettersi a un'origine dati PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>- Per **MySQL**, vedere [Connettersi a un'origine dati MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
+|**Altre origini dati per le quali sia disponibile un driver o un provider**|In genere è necessario scaricare file aggiuntivi per eseguire la connessione ai tipi di origine dati seguenti.<br/><br/>- Qualsiasi origine per la quale è disponibile un **driver ODBC** . Per altre informazioni, vedere [Connettersi a un'origine dati ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- Qualsiasi origine per la quale è disponibile un **provider di dati .NET Framework** .<br/>- Qualsiasi origine per la quale è disponibile un **provider OLE DB** .<br/><br/>I componenti di terze parti che offrono funzionalità di origine e destinazione per altre origini dati vengono talvolta commercializzati come prodotti aggiuntivi per SQL Server Integration Services (SSIS).|
 
-## <a name="how-do-i-connect-to-my-data"></a>Come connettersi a dati?
-Per informazioni su come connettersi a un'origine dati di uso comune, vedere una delle seguenti pagine:
+## <a name="how-do-i-connect-to-my-data"></a>Come connettersi ai dati?
+Per informazioni su come connettersi a un'origine dati di uso comune, vedere una delle pagine seguenti:
 -   [Connettersi a SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi a Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
--   [Connettersi ai file flat (file di testo)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+-   [Connettersi a file flat (file di testo)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi a Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
--   [Connettersi a accesso](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Connettersi all'archiviazione Blob di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [Connettersi ad Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
+-   [Connettersi ad Archiviazione BLOB di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [Connettersi con ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [Connettersi a PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
--   [La connessione a MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
+-   [Connettersi a MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
-Per informazioni su come connettersi a un'origine dati che non è elencata, vedere [al riferimento di stringhe di connessione](https://www.connectionstrings.com/). In questo sito di terze parti sono stringhe di connessione di esempio e altre informazioni sui provider di dati e le informazioni di connessione che richiedono.
+Per informazioni su come connettersi a un'origine dati non elencata qui, vedere [The Connection Strings Reference](https://www.connectionstrings.com/). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste da questi.
 
 ## <a name="what-permissions-do-i-need"></a>Quali autorizzazioni sono necessarie?  
  Per eseguire l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario avere almeno le autorizzazioni seguenti. Se si usano già un'origine dati e una destinazione, è probabile che si abbiano già le autorizzazioni necessarie.
   
-|Azioni per le quali sono necessarie autorizzazioni|Se ci si connette a SQL Server, è necessario che queste autorizzazioni |  
+|Azioni per le quali sono necessarie autorizzazioni|Autorizzazioni necessarie se ci si connette a SQL Server |  
 |-------------------------|----------------------------------------------------|  
 |Eseguire la connessione a database di origine e di destinazione o a condivisioni file.|Diritti di accesso al server e al database.|  
 |Esportare o leggere dati dal file o dal database di origine.|Autorizzazioni SELECT nelle viste e nelle tabelle di origine.|  
@@ -106,6 +107,5 @@ Per altre informazioni su SSIS, vedere [SQL Server Integration Services](../../i
 ## <a name="see-also"></a>Vedere anche
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [Mapping dei tipi di dati nell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-
 
 

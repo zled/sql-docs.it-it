@@ -1,33 +1,32 @@
 ---
-title: "Scalabilità orizzontale eseguire i pacchetti in SQL Server Integration Services (SSIS) | Documenti Microsoft"
+title: Eseguire pacchetti in SQL Server Integration Services Scale Out (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-f1_keywords:
-- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire i pacchetti di Integration Services (SSIS) Scale Out
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
 Dopo aver distribuito i pacchetti nel server di Integration Services, è possibile eseguirli nel servizio di scalabilità orizzontale.
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Eseguire i pacchetti con una finestra di dialogo Esegui pacchetto In Scale Out 
+## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Eseguire i pacchetti con la finestra di dialogo Esegui pacchetto Scale Out 
 
 1. Aprire la finestra di dialogo Execute Package In Scale Out (Esegui pacchetto nel servizio di scalabilità orizzontale)
 
@@ -40,7 +39,7 @@ Dopo aver distribuito i pacchetti nel server di Integration Services, è possibi
     Nella scheda **Avanzate** impostare un'opzione per Scale Out denominata **Numero di tentativi**. Questa opzione consente di impostare il numero di tentativi di esecuzione di un pacchetto in caso di errore.
 
     > [!Note]
-    > Il **Dump su errori** opzione ha effetto solo quando l'account che esegue il servizio di scala il lavoro è un amministratore del computer locale.
+    > L'opzione **Dump su errori** ha effetto solo quando l'account che esegue il servizio Scale Out Worker è l'account di un amministratore del computer locale.
 
 3. Selezionare i computer
 
@@ -50,7 +49,7 @@ Dopo aver distribuito i pacchetti nel server di Integration Services, è possibi
    > I pacchetti vengono eseguiti con le credenziali degli account utente del servizio Ruolo di lavoro di scalabilità orizzontale, visualizzati nella pagina **Machine Selection** (Selezione computer). Per impostazione predefinita, l'account è NT Service\SSISScaleOutWorker140. È possibile modificarlo in base ai propri account di laboratorio.
 
    >[!WARNING]
-   >Attivato da utenti diversi nel processo di lavoro stesso esecuzioni del pacchetto vengono eseguite con lo stesso account. Non sussiste alcun limite di sicurezza tra di essi. 
+   >Le esecuzioni dei pacchetti attivate da utenti diversi sullo stesso ruolo di lavoro sono eseguite dallo stesso account. Non c'è alcun limite di sicurezza tra di essi. 
 
 4. Eseguire i pacchetti e visualizzare i report 
 
@@ -106,16 +105,15 @@ L'esecuzione dei pacchetti nel servizio di scalabilità orizzontale richiede una
   
 -   Appartenenza al ruolo del server **sysadmin**  
 
-## <a name="set-default-execution-mode"></a>Impostare la modalità di esecuzione predefinito
-Per impostare la modalità di esecuzione predefinito per "Scale Out", fare doppio clic su di **SSISDB** nodo in Esplora oggetti di SQL Server Management Studio e selezionare **proprietà**.
-Nel **proprietà catalogo** finestra di dialogo, impostare **modalità di esecuzione predefinito a livello di Server** a **orizzontale**.
+## <a name="set-default-execution-mode"></a>Impostare la modalità di esecuzione predefinita
+Per impostare la modalità di esecuzione predefinita su "Scale Out", fare doppio clic sul nodo **SSISDB** in Esplora oggetti di SQL Server Management Studio e selezionare **Proprietà**.
+Nella finestra di dialogo **Proprietà catalogo** impostare **modalità di esecuzione predefinita a livello di Server** su **Scale Out**.
 
-Dopo questa impostazione, non è necessario specificare il  **@runinscaleout**  parametro per [catalog]. [ create_execution]. Esecuzioni vengono eseguite automaticamente in orizzontale. 
+Dopo questa impostazione, non è necessario specificare il parametro **@runinscaleout** [catalog].[ create_execution]. Le esecuzioni avvengono automaticamente in Scale Out. 
 
 ![Modalità file exe](media\exe-mode.PNG)
 
-Per cambiare la modalità di esecuzione predefinito tornare alla modalità non - scalabile, è sufficiente impostare **modalità di esecuzione a livello di Server predefinito** a **Server**.
+Per impostare la modalità di esecuzione predefinita sulla modalità non Scale Out, impostare **Modalità di esecuzione predefinita a livello di server** su **Server**.
 
-## <a name="run-package-in-sql-agent-job"></a>Eseguire un pacchetto nel processo dell'agente SQL
-Nel processo di Sql agent, è possibile scegliere di eseguire un pacchetto SSIS come un passaggio del processo. Per eseguire il pacchetto in orizzontale, è possibile utilizzare la modalità di esecuzione predefinito precedente. Dopo l'impostazione della modalità di esecuzione predefinito per "Scale Out", verranno eseguiti i pacchetti di processi di Sql agent in orizzontale.
-
+## <a name="run-package-in-sql-agent-job"></a>Eseguire un pacchetto nel processo SQL agent
+Nel processo di SQL agent, è possibile scegliere di eseguire un pacchetto SSIS come un passaggio del processo. Per eseguire il pacchetto con Scale Out, è possibile usare la modalità di esecuzione per impostazione predefinita. Dopo l'impostazione della modalità di esecuzione predefinita su "Scale Out", verranno eseguiti i pacchetti dei processi di SQL agent in Scale Out.

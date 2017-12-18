@@ -1,71 +1,72 @@
 ---
-title: "Novità &#39; s New in Integration Services in SQL Server 2017 | Documenti Microsoft"
+title: "Novità&#39; di Integration Services in SQL Server 2017 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/29/2017
-
+ms.openlocfilehash: 76cced5552daf87bffa6ac234f54c3ee780349a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novità &#39; s New in Integration Services in SQL Server 2017
+# <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novità&#39; di Integration Services in SQL Server 2017
 Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
 >   [!NOTE]
-> SQL Server 2017 include anche le funzionalità di SQL Server 2016 e le funzionalità aggiunte negli aggiornamenti di SQL Server 2016. Per informazioni sulle nuove funzionalità di SSIS in SQL Server 2016, vedere [Novità di Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
+> SQL Server 2017 include anche le funzionalità di SQL Server 2016 e quelle introdotte negli aggiornamenti di SQL Server 2016. Per informazioni sulle nuove funzionalità di SSIS in SQL Server 2016, vedere [Novità di Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
 
-## <a name="highlights-of-this-release"></a>Caratteristiche salienti di questa versione
+## <a name="highlights-of-this-release"></a>Elementi da evidenziare in questa versione
 
-Ecco le principali nuove funzionalità di Integration Services in SQL Server 2017.
+Di seguito sono elencate le principali nuove funzionalità di Integration Services in SQL Server 2017.
 
--   **Scalabilità orizzontale**. Distribuire più facilmente di esecuzione del pacchetto SSIS tra più computer di lavoro e gestire le esecuzioni e processi di lavoro da un singolo computer master. Per altre informazioni, vedere [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+-   **Scale Out**. Consente di distribuire più facilmente l'esecuzione di pacchetti SSIS su più computer del ruolo di lavoro e gestire le esecuzioni e i ruoli di lavoro da un singolo computer master. Per altre informazioni, vedere [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
 
--   **Integration Services in Linux**. Eseguire pacchetti SSIS nel computer Linux. Per altre informazioni, vedere [di estrazione, trasformazione e caricamento dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
+-   **Integration Services in Linux**. Consente di eseguire pacchetti SSIS in computer Linux. Per altre informazioni, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
--   **Miglioramenti di connettività**. Connettersi al feed OData di Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online con i componenti aggiornati di OData. 
+-   **Miglioramenti di connettività**. È possibile connettersi ai feed OData di Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online grazie ai componenti OData aggiornati. 
 
-## <a name="new-in-azure-data-factory"></a>Novità di Data Factory di Azure
+## <a name="new-in-azure-data-factory"></a>Novità in Azure Data Factory
 
-Con l'anteprima pubblica di Azure Data Factory versione 2 nel mese di settembre 2017, è ora possibile eseguire le operazioni seguenti:
--   Distribuire i pacchetti per il database del catalogo SSIS (SSISDB) nel Database SQL Azure.
--   Eseguire i pacchetti distribuiti in Azure nel Runtime di integrazione di Azure SSIS, un componente di Data Factory di Azure versione 2.
+Con l'anteprima pubblica di Azure Data Factory versione 2 del mese di settembre 2017, è ora possibile eseguire le operazioni seguenti:
+-   Distribuire i pacchetti al database del catalogo SSIS (SSISDB) nel database SQL di Azure.
+-   Eseguire i pacchetti distribuiti in Azure in SSIS Integration Runtime di Azure, un componente di Azure Data Factory versione 2.
 
-Per altre informazioni, vedere [accuratezza MAIUSC SQL Server Integration Services carichi di lavoro e nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+Per altre informazioni, vedere [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
-Queste nuove funzionalità richiedono SQL Server Data Tools (SSDT) 17.2 per o versione successiva, ma non richiedono 2017 di SQL Server o SQL Server 2016. Quando si distribuiscono pacchetti in Azure, la distribuzione guidata pacchetto Aggiorna sempre i pacchetti per il formato più recente del pacchetto.
+Per queste nuove funzionalità è necessario SQL Server Data Tools (SSDT) versione 17.2 o successiva. Non è invece richiesto SQL Server 2017 o SQL Server 2016. Quando i pacchetti vengono distribuiti in Azure, la distribuzione guidata aggiorna sempre i pacchetti al formato del pacchetto più recente.
 
-## <a name="new-in-the-azure-feature-pack"></a>Novità di Azure Feature Pack
+## <a name="new-in-the-azure-feature-pack"></a>Novità nel Feature Pack di Azure
 
-Oltre ai miglioramenti di connettività in SQL Server, Integration Services Feature Pack per Azure ha aggiunto il supporto per l'archivio Azure Data Lake. Per altre informazioni, vedere il post di blog [nuovo Azure Feature Pack versione rafforzare ADLS connettività](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/). Vedere anche [Azure Feature Pack per Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+Oltre ai miglioramenti di connettività in SQL Server, in Integration Services Feature Pack per Azure è stato aumentato il supporto per Azure Data Lake Store. Per altre informazioni, vedere il post di blog [New Azure Feature Pack Release Strengthening ADLS Connectivity](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/) (Connettività ADSL potenziata con la nuova versione del Feature Pack di Azure). Vedere anche [Feature Pack di Integration Services (SSIS) per Azure](azure-feature-pack-for-integration-services-ssis.md).
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>Novità di SQL Server Data Tools (SSDT)
 
-È ora possibile sviluppare progetti SSIS e i pacchetti destinati a versioni di SQL Server 2012 tramite 2017 in Visual Studio 2017 o in Visual Studio 2015. Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+È ora possibile sviluppare progetti SSIS e i pacchetti destinati alle versioni di SQL comprese tra 2012 e 2017 in Visual Studio 2017 o in Visual Studio 2015. Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>Novità di SSIS in SQL Server 2017 RC1
 
 ### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Funzionalità nuove e modificate in Scale Out per SSIS
 
--   Il master di scalabilità orizzontale supporta ora la disponibilità elevata. È possibile abilitare Always On per SSISDB e configurare Windows Server failover clustering per il server che ospita il servizio di scala Out Master. Applicando questa modifica scala Out master, evitare un singolo punto di errore e garantire un'elevata disponibilità per l'intera distribuzione orizzontale.
--   La gestione del failover dei log di esecuzione dai ruoli di lavoro di scalabilità orizzontale è stata migliorata. I log di esecuzione vengono rese persistenti su disco locale, nel caso in cui la scala Out lavoro imprevisto. In un secondo momento, quando il processo di lavoro viene riavviato, ricarica i log persistenti e continua il relativo salvataggio in SSISDB.
--   Il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità. Questa modifica del nome di parametro con le seguenti conseguenze:
-    -   Se si dispone di script esistenti per eseguire pacchetti in orizzontale, è necessario modificare il nome del parametro da *runincluster* a *runinscaleout* per fare in modo che gli script nella versione RC1.
-    -   SQL Server Management Studio (SSMS) 17,1 e nelle versioni precedenti non possono attivare esecuzione del pacchetto in Scale Out nella versione RC1. Messaggio di errore: " *@runincluster*  non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. 17.2 per e versioni successive di SQL Server Management Studio supporta la nuova esecuzione pacchetto e il nome di parametro in orizzontale. Fino a quando non 17,2 versione SQL Server Management Studio è disponibile, in alternativa, è possibile utilizzare la versione esistente di SQL Server Management Studio per generare lo script di esecuzione del pacchetto, quindi modificare il nome del *runincluster* parametro *runinscaleout* nel script, eseguire lo script.
--   Il catalogo SSIS include una nuova proprietà globale che consente di specificare la modalità predefinita per l'esecuzione dei pacchetti SSIS. Questa nuova proprietà si applica quando si chiama il **[catalog]. [ create_execution]** stored procedure con il *runinscaleout* parametro impostato su null. Questa modalità si applica anche ai processi di agente SQL SSIS. È possibile impostare la nuova proprietà globale nella finestra di dialogo proprietà per il nodo SSISDB in SQL Server Management Studio o con il comando seguente:
+-   Il master di scalabilità orizzontale supporta ora la disponibilità elevata. È possibile abilitare Always On per SSISDB e configurare Windows Server Failover Clustering per il server che ospita il servizio Scale Out Master. Applicando questa modifica a Scale Out Master, è possibile evitare un singolo punto di errore e garantire una disponibilità elevata per l'intera distribuzione di Scale Out.
+-   La gestione del failover dei log di esecuzione dai ruoli di lavoro di scalabilità orizzontale è stata migliorata. I log di esecuzione vengono resi persistenti su disco locale in caso di arresto improvviso di Scale Out Worker. Al riavvio del ruolo di lavoro, i log persistenti saranno ricaricati e salvati in SSISDB.
+-   Il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità. Questa modifica del nome del parametro ha le conseguenze seguenti:
+    -   Se esistono script che eseguono pacchetti in Scale Out, è necessario modificare il nome del parametro da *runincluster* a *runinscaleout* affinché gli script possano essere usati nella versione RC1.
+    -   In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: " *@runincluster*  non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e successiva di SSMS supportano il nuovo nome del parametro ed eseguono i pacchetti in Scale Out. Finché la versione 17.2 di SSMS sarà disponibile, è possibile usare come soluzione alternativa la versione esistente di SSMS per generare lo script che esegue i pacchetti, modificare il nome del parametro *runincluster* in *runinscaleout* nello script ed eseguire lo script.
+-   Il catalogo SSIS include una nuova proprietà globale che consente di specificare la modalità predefinita per l'esecuzione dei pacchetti SSIS. Questa nuova proprietà si applica quando si chiama la stored procedure **[catalog]. [ create_execution]** con il parametro *runinscaleout* impostato su Null. Questa modalità si applica anche ai processi di SQL Agent SSIS. È possibile impostare la nuova proprietà globale nella finestra di dialogo Proprietà per il nodo SSISDB in SSMS oppure con il comando seguente:
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1
     ```
@@ -74,31 +75,31 @@ Oltre ai miglioramenti di connettività in SQL Server, Integration Services Feat
 
 ### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Funzionalità nuove e modificate in Scale Out per SSIS
 
--   È ora possibile usare il **Use32BitRuntime** parametro quando si attiva l'esecuzione in orizzontale.
--   Le prestazioni di registrazione per SSISDB per esecuzioni del pacchetto in orizzontale sono stata migliorata. I registri eventi messaggio e il contesto del messaggio vengono ora scritti SSISDB in modalità batch anziché singolarmente. Ecco alcune note aggiuntive su questo miglioramento:        
-    - Alcuni report nella versione corrente di SQL Server Management Studio (SSMS) attualmente non vengono visualizzati questi registri per le esecuzioni in orizzontale. Si prevede che saranno supportati nella prossima versione di SQL Server Management Studio. I report interessati includono le *tutte le connessioni* report, il *contesto errore* report e *informazioni di connessione* sezione nel Dashboard di servizi di integrazione.
-    - Una nuova colonna **event_message_guid** è stato aggiunto. Utilizzare questa colonna per creare un join [catalog]. visualizzazione [event_message_context] e [catalog]. Consente di visualizzare [event_messages] anziché **event_message_id** quando si esegue una query questi registri di esecuzioni in orizzontale.
--   Per ottenere l'applicazione di gestione per SSIS Scale Out [scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,1 o versione successiva.
+-   È ora possibile usare il parametro **Use32BitRuntime** quando si attiva l'esecuzione in Scale Out.
+-   Le prestazioni di registrazione in SSISDB dei pacchetti eseguiti in Scale Out sono state ottimizzate. I log Messaggio evento e Contesto messaggio vengono ora scritti in SSISDB in modalità batch anziché singolarmente. Di seguito alcune note aggiuntive su questo miglioramento:        
+    - Attualmente alcuni report della versione corrente di SQL Server Management Studio (SSMS) non visualizzano questi registri per le esecuzioni in Scale Out. Saranno supportati nella prossima versione di SSMS. Sono interessati i report *Tutte le connessioni* e *Contesto errore* nonché la sezione *Informazioni di connessione* nel dashboard di Integration Service.
+    - È stata aggiunta una nuova colonna **event_message_guid**. È possibile usare questa colonna per unire le viste [catalog].[event_message_context] e [catalog].[event_messages] anziché usare **event_message_id** quando si esegue una query di questi log di esecuzione in Scale Out.
+-   Per ottenere l'applicazione di gestione per SSIS Scale Out, [scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,1 o versione successiva.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>Novità di SSIS in SQL Server 2017 CTP 2.0
 
-Non esistono alcuna nuova funzionalità SSIS in SQL Server 2017 CTP 2.0.
+In SQL Server 2017 CTP 2.0 non sono presenti nuove funzionalità di SSIS.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-14"></a>Novità di SSIS in SQL Server 2017 CTP 1.4
 
-Non esistono alcuna nuova funzionalità SSIS in SQL Server 2017 CTP 1.4.
+In SQL Server 2017 CTP 1.4 non sono presenti nuove funzionalità di SSIS.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-13"></a>Novità di SSIS in SQL Server 2017 CTP 1.3
 
-Non esistono alcuna nuova funzionalità SSIS in SQL Server 2017 CTP 1.3.
+In SQL Server 2017 CTP 1.3 non sono presenti nuove funzionalità di SSIS.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-12"></a>Novità di SSIS in SQL Server 2017 CTP 1.2
 
-Non esistono alcuna nuova funzionalità SSIS in SQL Server 2017 CTP 1.2.
+In SQL Server 2017 CTP 1.2 non sono presenti nuove funzionalità di SSIS.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-11"></a>Novità di SSIS in SQL Server 2017 CTP 1.1
 
-Non esistono alcuna nuova funzionalità SSIS in SQL Server 2017 CTP 1.1.
+In SQL Server 2017 CTP 1.1 non sono presenti nuove funzionalità di SSIS.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-10"></a>Novità di SSIS in SQL Server 2017 CTP 1.0
 
@@ -113,5 +114,4 @@ Per altre informazioni, vedere [Scalabilità orizzontale di Integration Services
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Supporto per le risorse di Microsoft Dynamics Online
 
 L'origine OData e la gestione connessione OData supportano ora la connessione ai feed OData di Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online.
-
 

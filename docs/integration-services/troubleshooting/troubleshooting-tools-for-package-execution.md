@@ -1,13 +1,14 @@
 ---
-title: Risoluzione dei problemi di strumenti per l'esecuzione del pacchetto | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti | Microsoft Docs
+ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi quando si eseguono i pacchetti dopo averli completati e distribuiti.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **Verifica dell'integrità dei dati tramite transazioni**. Per altre informazioni, vedere [Transazioni di Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Riavvio dei pacchetti dal punto di errore tramite checkpoint**. Per ulteriori informazioni, vedere [Riavvio dei pacchetti tramite checkpoint](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Riavvio dei pacchetti dal punto di errore tramite checkpoint**. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Intercettazione e gestione degli errori dei pacchetti tramite gestori di eventi  
  I gestori degli eventi consentono di rispondere ai molti eventi generati dal pacchetto e dai relativi oggetti.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **Aggiunta di informazioni descrittive agli output degli errori**. Per semplificare l'analisi dell'output degli errori, oltre ai due identificatori numerici specificati dall'output stesso è possibile aggiungere il messaggio di errore e il nome della colonna. Per un esempio di come aggiungere queste due colonne supplementari mediante scripting, vedere [Ottimizzazione di un output degli errori con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
--   **In alternativa, ottenere i nomi delle colonne registrando l'evento DiagnosticEx**. Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna in questa mappa di derivazione usando l'identificatore della colonna acquisito da un output degli errori.  Per ulteriori informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).  
+-   **In alternativa, ottenere i nomi delle colonne registrando l'evento DiagnosticEx**. Questo evento scrive una mappa di derivazione del flusso di dati nel log. È quindi possibile cercare il nome della colonna in questa mappa di derivazione usando l'identificatore della colonna acquisito da un output degli errori.  Per altre informazioni, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).  
   
      Il valore della colonna di messaggio per **DiagnosticEx** è testo XML. Per visualizzare il testo del messaggio per l'esecuzione del pacchetto, eseguire una query nella vista [catalog.operation_messages &#40;database SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notare che l'evento **DiagnosticEx** non mantiene gli spazi vuoti nel relativo output XML per ridurre le dimensioni del log. Per migliorare la leggibilità, copiare il log in un editor XML come Visual Studio, che supporta la formattazione XML e l'evidenziazione della sintassi.  
   
@@ -116,4 +116,3 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog relativo all' [aggiunta del nome della colonna di errore a un output degli errori](http://go.microsoft.com/fwlink/?LinkId=261546)nel sito dougbert.com.  
-

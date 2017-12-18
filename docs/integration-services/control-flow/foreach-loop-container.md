@@ -1,13 +1,14 @@
 ---
-title: Contenitore ciclo foreach | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Contenitore Ciclo Foreach | Microsoft Docs
+ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +32,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 72a38ba6fa45a5b7d6c6003100b27398c60ed522
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 10/10/2017
   
 -   Foreach ADO Enumerator, per enumerare righe nelle tabelle. Consente ad esempio di ottenere le righe in un recordset ADO.  
   
-     Con la destinazione recordset è possibile salvare i dati in memoria in un recordset archiviato in una variabile del pacchetto il cui tipo di dati è **Object** . In genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. Il tipo di dati della variabile specificata per l'enumeratore Foreach ADO deve essere Object. Per ulteriori informazioni sulla destinazione Recordset, vedere [utilizzare una destinazione Recordset](../../integration-services/data-flow/use-a-recordset-destination.md).  
+     Con la destinazione recordset è possibile salvare i dati in memoria in un recordset archiviato in una variabile del pacchetto il cui tipo di dati è **Object** . In genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. Il tipo di dati della variabile specificata per l'enumeratore Foreach ADO deve essere Object. Per altre informazioni sulla destinazione recordset, vedere [Usare una destinazione recordset](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
 -   Foreach ADO.NET Schema Rowset Enumerator, per enumerare le informazioni dello schema relative a un'origine dei dati. Consente ad esempio di enumerare e ottenere un elenco delle tabelle presenti nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 10/10/2017
   
 -   Enumeratore BLOB di Azure Foreach per enumerare i BLOB in un contenitore BLOB di Archiviazione di Azure.  
 
--   File di ADLS di foreach enumerator per enumerare i file in una directory in un archivio Azure Data Lake.
+-   Enumeratore Foreach file di ADLS per enumerare i file in una directory in Azure Data Lake Store.
   
  Nella figura seguente viene illustrato un contenitore Ciclo Foreach che include un'attività File system. Il ciclo Foreach utilizza Foreach File Enumerator e l'attività File system è configurata per la copia di un file. Se la cartella specificata dall'enumeratore contiene quattro file, il ciclo si ripeterà quattro volte e copierà quattro file.  
   
- ![Un contenitore ciclo Foreach che enumera una cartella](../../integration-services/control-flow/media/ssis-foreachloop.gif "contenitore ciclo Foreach di oggetto che enumera una cartella")  
+ ![Contenitore Ciclo Foreach che enumera una cartella](../../integration-services/control-flow/media/ssis-foreachloop.gif "Contenitore Ciclo Foreach che enumera una cartella")  
   
  È possibile utilizzare una combinazione di variabili ed espressioni di proprietà per aggiornare la proprietà dell'oggetto pacchetto con il valore della raccolta dell'enumeratore. È innanzitutto necessario eseguire il mapping del valore della raccolta a una variabile definita dall'utente e quindi implementare un'espressione di proprietà sulla proprietà che utilizza la variabile. Si supponga, ad esempio, che venga eseguito il mapping del valore della raccolta dell'enumeratore Foreach File a una variabile di nome **MyFile** e che la variabile venga usata nell'espressione di proprietà per la proprietà Oggetto di un'attività Invia messaggi. Quando il pacchetto viene eseguito, la proprietà Oggetto viene aggiornata con il nome di un file ogni volta che il ciclo si ripete. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -98,16 +98,16 @@ ms.lasthandoff: 10/10/2017
 |Foreach SMO|Specificare una connessione a un database e gli oggetti SMO da enumerare.|  
 |Foreach HDFS File Enumerator|Specificare una cartella, i file da enumerare e il formato del nome dei file recuperati e indicare se includere le sottocartelle nell'enumerazione.|  
 |Blob di Azure Foreach|Specificare il contenitore BLOB di Azure che contiene i BLOB da enumerare.|  
-|File di ADLS foreach|Specificare la directory di archivio Azure Data Lake che contiene i file da enumerare.|
+|Foreach file di ADLS|Specificare la directory di Azure Data Lake Store che contiene i file da enumerare.|
 
-## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Aggiunta di un'enumerazione a un flusso di controllo con un contenitore ciclo Foreach
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]include il contenitore ciclo Foreach, un elemento del flusso di controllo che rende più semplice per includere un costrutto di ciclo che enumera i file e gli oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
+## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Aggiungere l'enumerazione a un flusso di controllo con il contenitore Ciclo Foreach
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include il contenitore Ciclo Foreach, un elemento del flusso di controllo che semplifica l'integrazione di un costrutto di ciclo per l'enumerazione di file e oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
  Il contenitore Ciclo Foreach non offre funzionalità, ma solo una struttura in cui è possibile compilare un flusso di controllo ripetibile, nonché specificare e configurare un tipo di enumeratore. Per aggiungere funzionalità al contenitore Ciclo Foreach è necessario includervi almeno un'attività. Per altre informazioni, vedere [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
  Il contenitore Ciclo Foreach può includere un flusso di controllo con più attività e può includere altri contenitori. L'aggiunta di attività e contenitori a un contenitore Ciclo Foreach è analoga all'aggiunta di tali elementi a un pacchetto, con la differenza che è necessario trascinare attività e contenitori nel contenitore Ciclo Foreach anziché nel pacchetto. Se il contenitore Ciclo Foreach include più di un contenitore o attività, sarà possibile connettere tali elementi utilizzando vincoli di precedenza, come avviene nei pacchetti. Per altre informazioni, vedere [Vincoli di precedenza](../../integration-services/control-flow/precedence-constraints.md).  
   
-### <a name="add-and-configure-a-foreach-loop-container"></a>Aggiungere e configurare un contenitore ciclo Foreach
+### <a name="add-and-configure-a-foreach-loop-container"></a>Aggiungere e configurare un contenitore Ciclo Foreach
   
 1.  Aggiungere il contenitore Ciclo Foreach al pacchetto. Per altre informazioni, vedere [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
@@ -130,7 +130,7 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
   
 5.  Specificare un enumeratore e impostarne le opzioni nel modo seguente:  
   
-    -   Per utilizzare Foreach File enumerator, specificare la cartella che contiene i file da enumerare, specificare un filtro per il nome del file e il tipo e specificare se il nome file completo deve essere restituito. Indicare inoltre se ricercare ulteriori file nelle sottocartelle.  
+    -   Per usare l'enumeratore Foreach File, specificare la cartella che contiene i file da enumerare, specificare un filtro per il nome e il tipo di file e quindi specificare se deve essere restituito il nome completo del file. Indicare inoltre se ricercare ulteriori file nelle sottocartelle.  
   
     -   Per usare l'enumeratore Foreach Item, fare clic su **Colonne**e, nella finestra di dialogo **Colonne For Each Item** , fare clic su **Aggiungi** per aggiungere le colonne. Selezionare un tipo di dati nell'elenco **Tipo di dati** per ogni colonna e quindi fare clic su **OK**.  
   
@@ -156,18 +156,18 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
   
          Fare quindi clic su EnumerationType e selezionare un tipo di enumeratore nell'elenco. Se è EnumerationType è **Navigator, Node o NodeText**, fare clic su OuterXPathStringSourceType e selezionare il tipo di origine, quindi fare clic su OuterXPathString. A seconda del valore impostato per OuterXPathStringSourceType, selezionare una variabile o una connessione file nell'elenco, creare una nuova variabile o connessione file oppure digitare la stringa per l'espressione XPath (XML Path Language) esterna.  
   
-         Se è EnumerationType **ElementCollection**, impostare OuterXPathStringSourceType e OuterXPathString come descritto in precedenza. Fare quindi clic su InnerElementType, selezionare un tipo di enumerazione per gli elementi interni e quindi fare clic su InnerXPathStringSourceType. A seconda del valore impostato per InnerXPathStringSourceType, selezionare una variabile o una connessione file, creare una nuova variabile o connessione file oppure digitare la stringa per l'espressione XPath interna.  
+         Se EnumerationType è **ElementCollection**, impostare OuterXPathStringSourceType e OuterXPathString come descritto in precedenza. Fare quindi clic su InnerElementType, selezionare un tipo di enumerazione per gli elementi interni e quindi fare clic su InnerXPathStringSourceType. A seconda del valore impostato per InnerXPathStringSourceType, selezionare una variabile o una connessione file, creare una nuova variabile o connessione file oppure digitare la stringa per l'espressione XPath interna.  
   
     -   Per usare l'enumeratore Foreach SMO, selezionare una connessione ADO.NET esistente oppure fare clic su **Nuova connessione** nell'elenco **Connessione** e quindi digitare la stringa da usare oppure fare clic su **Sfoglia**. Se si fa clic su **Sfoglia**, nella finestra di dialogo **Seleziona enumerazione SMO** selezionare il tipo di oggetto da enumerare e il tipo di enumerazione e quindi fare clic su **OK**.  
   
 6.  Facoltativamente, fare clic sul pulsante Sfoglia **(…)** nella casella di testo **Espressioni** della pagina **Raccolta** per creare le espressioni che aggiornano i valori delle proprietà. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
-    >  Le proprietà elencate nella **proprietà** elenco diverso dall'enumeratore.  
+    >  Le proprietà incluse nell'elenco **Proprietà** variano a seconda dell'enumeratore.  
   
-7.  Facoltativamente, fare clic su **mapping variabili** per eseguire il mapping di proprietà dell'oggetto al valore della raccolta e quindi eseguire le operazioni seguenti:  
+7.  Facoltativamente, fare clic su **Mapping variabili** per eseguire il mapping delle proprietà degli oggetti ai valori della raccolta e quindi eseguire le operazioni seguenti:  
   
-    1.  Nel **variabili** elenco, selezionare una variabile oppure fare clic su  **\<nuova variabile >** per creare una nuova variabile.  
+    1.  Nell'elenco **Variabili** selezionare una variabile oppure fare clic su **\<Nuova variabile>** per creare una nuova variabile.  
   
     2.  Se si aggiunge una nuova variabile, impostarne le proprietà nella finestra di dialogo **Aggiungi variabile** e fare clic su **OK**.  
   
@@ -180,7 +180,7 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
   
 9. Scegliere **OK**.  
 
-## <a name="general-page---foreach-loop-editor"></a>Pagina generale - Editor ciclo Foreach
+## <a name="general-page---foreach-loop-editor"></a>Pagina Generale - Editor ciclo Foreach
 Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** per assegnare un nome e una descrizione al contenitore Ciclo Foreach che utilizza un enumeratore specificato per ripetere un flusso di lavoro per ogni membro di una raccolta.  
   
  Per informazioni sul contenitore Ciclo Foreach e su come configurarlo, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
@@ -196,7 +196,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Consente di digitare una descrizione del contenitore Ciclo Foreach.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Pagina Raccolta - Editor ciclo Foreach
- Utilizzare il **raccolta** pagina del **Editor ciclo Foreach** la finestra di dialogo per specificare il tipo di enumeratore e configurare l'enumeratore.  
+ Usare la pagina **Raccolta** della finestra di dialogo **Editor ciclo Foreach** per specificare il tipo di enumeratore e configurare l'enumeratore.  
   
  Per informazioni sul contenitore Ciclo Foreach e su come configurarlo, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
@@ -206,16 +206,16 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Foreach File Enumerator**|Consente di enumerare i file. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
-|**Foreach Item Enumerator**|Consente di enumerare i valori in un elemento. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
-|**Foreach ADO Enumerator**|Consente di enumerare tabelle o righe nelle tabelle. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach ADO Enumerator**.|  
-|**Foreach ADO.NET Schema Rowset Enumerator**|Consente di enumerare uno schema. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach ADO.NET Enumerator**.|  
-|**Enumeratore foreach da variabile**|Consente di enumerare il valore in una variabile. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach From Variable Enumerator**.|  
-|**Enumeratore foreach Nodelist**|Consente di enumerare i nodi in un documento XML. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
-|**Foreach SMO Enumerator**|Consente di enumerare un oggetto SMO. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach SMO Enumerator**.|  
+|**Enumeratore Foreach File**|Consente di enumerare i file. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
+|**Enumeratore Foreach Item**|Consente di enumerare i valori in un elemento. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
+|**Enumeratore Foreach ADO**|Consente di enumerare tabelle o righe nelle tabelle. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach ADO Enumerator**.|  
+|**Enumeratore Foreach ADO.NET set di righe dello schema**|Consente di enumerare uno schema. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach ADO.NET Enumerator**.|  
+|**Enumeratore Foreach da variabile**|Consente di enumerare il valore in una variabile. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach From Variable Enumerator**.|  
+|**Enumeratore Foreach NodeList**|Consente di enumerare i nodi in un documento XML. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
+|**Enumeratore Foreach SMO**|Consente di enumerare un oggetto SMO. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach SMO Enumerator**.|  
 |**Foreach HDFS File Enumerator**|Enumerare i file HDFS nel percorso HDFS specificato. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach HDFS File Enumerator**.|  
-|**Enumeratore Blob di Azure foreach**|Enumerare i file BLOB nel percorso BLOB specificato. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach Azure Blob Enumerator**.|  
-|**ADLS foreach File Enumerator**|Enumerare i file nella directory di archivio Data Lake specificato. Selezionando questo valore consente di visualizzare le opzioni dinamiche nella sezione **ADLS di Foreach File Enumerator**.|
+|**Enumeratore Foreach BLOB di Azure**|Enumerare i file BLOB nel percorso BLOB specificato. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach Azure Blob Enumerator**.|  
+|**Enumeratore Foreach file di ADLS**|Enumerare i file nella directory di Data Lake Store specificata. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Enumeratore Foreach file di ADLS**.|
   
  **Espressioni**  
  Fare clic su **Espressioni** o espandere questa voce per visualizzare l'elenco delle espressioni di proprietà esistenti. Fare clic sul pulsante con i puntini di sospensione **(…)** per aggiungere un'espressione di proprietà per una proprietà dell'enumeratore oppure per modificare o valutare un'espressione di proprietà esistente.  
@@ -229,11 +229,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  Il contenuto delle cartelle e delle sottocartelle che sono enumerate da Foreach File Enumerator potrebbe cambiare durante l'esecuzione del ciclo, in quanto in questa fase le attività o i processi esterni nel ciclo possono aggiungere, rinominare o eliminare file. Queste modifiche possono generare un numero di situazioni impreviste:  
   
--   Se i file vengono eliminati, le azioni di un'attività nel ciclo Foreach influisca su un set diverso di file diverso dai file utilizzati dalle attività successive.  
+-   Se i file vengono eliminati, le azioni di un'attività nel Ciclo Foreach potrebbero operare su un set di file diverso dai file usati dalle attività successive.  
   
--   Se i file vengono rinominati e un processo esterno aggiunge automaticamente altri file per sostituire quelli rinominati, le azioni di attività nel ciclo Foreach possono influire sugli stessi file due volte.  
+-   Se i file vengono rinominati e un processo esterno aggiunge automaticamente altri file per sostituire quelli rinominati, le azioni delle attività nel Ciclo Foreach potrebbero interessare due volte lo stesso file.  
   
--   Se i file vengono aggiunti, potrebbe essere difficile determinare per il quale il ciclo Foreach file interessati.  
+-   Se i file vengono aggiunti, potrebbe essere difficile determinare per quali file ha avuto effetto il Ciclo Foreach.  
   
  **Cartella**  
  Consente di specificare il percorso della cartella radice da enumerare.  
@@ -247,17 +247,17 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 > [!NOTE]  
 >  Utilizzare i caratteri jolly (*) per specificare i file da includere nella raccolta. Ad esempio, per includere file con nomi che contengono "abc", usare il filtro seguente: \*abc\*.  
 >   
->  Quando si specifica un'estensione per il nome di file, l'enumeratore restituisce anche i file che presentano la stessa estensione con altri caratteri aggiunti. Si tratta dello stesso comportamento del comando **dir** del sistema operativo, che prevede anch'esso il confronto dei nomi di file 8.3 per la compatibilità con le versioni precedenti. Questo comportamento dell'enumeratore può provocare risultati imprevisti. Se, ad esempio, si desidera enumerare solo file di Excel 2003 e si specifica "* .xls", Tuttavia, l'enumeratore restituisce anche file di Excel 2007 perché questi file presentano l'estensione ". xlsx".  
+>  Quando si specifica un'estensione per il nome di file, l'enumeratore restituisce anche i file che presentano la stessa estensione con altri caratteri aggiunti. Si tratta dello stesso comportamento del comando **dir** del sistema operativo, che prevede anch'esso il confronto dei nomi di file 8.3 per la compatibilità con le versioni precedenti. Questo comportamento dell'enumeratore può provocare risultati imprevisti. Se, ad esempio, si desidera enumerare solo file di Excel 2003 e si specifica "* .xls", l'enumeratore restituisce anche i file di Excel 2007 perché presentano l'estensione xlsx.  
 >   
 >  È possibile usare un'espressione per specificare i file da includere in una raccolta, espandendo **Espressioni** nella pagina **Raccolta** , selezionando la proprietà **FileSpec** e facendo clic sul pulsante con i puntini di sospensione (...) per aggiungere l'espressione di proprietà.  
   
- **Nome completo**  
- Selezionare questa opzione per recuperare il percorso completo dei nomi di file. Se nell'opzione file si specificano caratteri jolly, i percorsi completi restituiti corrisponderanno al filtro.  
+ **Completo**  
+ Selezionare questa opzione per recuperare il percorso completo dei nomi di file. Se nell'opzione File si specificano caratteri jolly, i percorsi completi restituiti corrisponderanno al filtro.  
   
  **Solo nome**  
  Selezionare questa opzione per recuperare solo i nomi di file. Se nell'opzione File si specificano caratteri jolly, i nomi di file restituiti corrisponderanno al filtro.  
   
- **Nome e l'estensione**  
+ **Nome ed estensione**  
  Selezionare questa opzione per recuperare i nomi di file e le estensioni corrispondenti. Se nell'opzione File si specificano caratteri jolly, il nome e l'estensione dei file restituiti corrisponderanno al filtro.  
   
  **Attraversa sottocartelle**  
@@ -292,17 +292,17 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Foreach ADO Enumerator consente di enumerare le righe o le tabelle in un oggetto ADO o ADO.NET archiviato in una variabile. Se il Ciclo Foreach include ad esempio un'attività Script che scrive un set di dati in una variabile, è possibile utilizzare Foreach ADO Enumerator per enumerare le righe nel set di dati. Se la variabile contiene un set di dati ADO.NET, è possibile configurare l'enumeratore in modo da enumerare le righe in più tabelle o in modo da enumerare le tabelle.  
   
  **Variabile di origine oggetto ADO**  
- Selezionare una variabile definita dall'utente nell'elenco oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+ Selezionare una variabile definita dall'utente nell'elenco oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
 > [!NOTE]  
 >  Il tipo di dati della variabile deve essere Oggetto. In caso contrario si verificherà un errore.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **Righe nella prima tabella**  
+ **Rows in first table** (Righe nella prima tabella)  
  Selezionare questa opzione per enumerare solo le righe nella prima tabella.  
   
- **Righe in tutte le tabelle (solo set di dati ADO.NET)**  
+ **Rows in all tables** (Righe in tutte le tabelle) (solo set di dati ADO.NET)  
  Selezionare questa opzione per enumerare le righe in tutte le tabelle. Questa opzione è disponibile solo se gli oggetti da enumerare sono tutti membri dello stesso set di dati ADO.NET.  
   
  **Tutte le tabelle (solo set di dati ADO.NET)**  
@@ -312,7 +312,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Foreach ADO.NET Schema Rowset Enumerator consente di enumerare uno schema per un'origine dei dati specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile utilizzare Foreach ADO.NET Schema Rowset Enumerator per enumerare gli schemi, ad esempio le colonne nel database **AdventureWorks** , e utilizzare l'attività Esegui SQL per ottenere le autorizzazioni dello schema.  
   
  **Connessione**  
- Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova connessione ADO.NET di gestione.  
+ Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione ADO.NET.  
   
 > [!IMPORTANT]  
 >  La gestione connessione ADO.NET deve utilizzare necessariamente un provider .NET per OLE DB. In caso di connessione a SQL Server, il provider consigliato è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluso nell'elenco della sezione **Provider .Net per OleDb** nella finestra di dialogo **Gestione connessione** .  
@@ -322,7 +322,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Schema**  
  Consente di selezionare lo schema da enumerare.  
   
- **Impostare le restrizioni**  
+ **Imposta restrizioni**  
  Consente di impostare le restrizioni da applicare allo schema specificato.  
   
  **Argomenti correlati** [Finestra di dialogo Restrizioni schema](http://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
@@ -331,7 +331,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Foreach From Variable Enumerator consente di enumerare gli oggetti enumerabili nella variabile specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL che esegue una query e archivia il risultato in una variabile, è possibile utilizzare Foreach From Variable Enumerator per enumerare i risultati della query.  
   
  **Variabile**  
- Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -354,11 +354,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **DocumentSource**  
  Se la proprietà **DocumentSourceType** è impostata su **Input diretto**, indicare il codice XML oppure fare clic sul pulsante con i puntini di sospensione (…) per specificare il codice XML tramite la finestra di dialogo **Editor origine documento**.  
   
- Se **DocumentSourceType** è impostato su **File connessione**, selezionare una gestione connessione File oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+ Se la proprietà **DocumentSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DocumentSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+ Se la proprietà **DocumentSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -367,8 +367,8 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Strumento di navigazione**|Consente di eseguire l'enumerazione utilizzando uno strumento di spostamento XPathNavigator.|  
-|**Nodo**|Consente di enumerare i nodi restituiti da un'operazione XPath.|  
+|**Navigator**|Consente di eseguire l'enumerazione utilizzando uno strumento di spostamento XPathNavigator.|  
+|**Node**|Consente di enumerare i nodi restituiti da un'operazione XPath.|  
 |**NodeText**|Consente di enumerare i nodi di testo restituiti da un'operazione XPath.|  
 |**ElementCollection**|Consente di enumerare i nodi degli elementi restituiti da un'operazione XPath.|  
   
@@ -384,11 +384,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **OuterXPathString**  
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Input diretto**, indicare la stringa XPath.  
   
- Se **OuterXPathStringSourceType** è impostato su **File connessione**, selezionare una gestione connessione File oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+ Se la proprietà **OuterXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **OuterXPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+ Se la proprietà **OuterXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -407,19 +407,19 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **InnerXPathString**  
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Input diretto**, indicare la stringa XPath.  
   
- Se **InnerXPathStringSourceType** è impostato su **File connessione**, selezionare una gestione connessione File oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+ Se la proprietà **InnerXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **InnerXPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+ Se la proprietà **InnerXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumeratore = Foreach SMO Enumerator  
- Foreach SMO Enumerator consente di enumerare gli oggetti SQL Server Management Objects (SMO). Ad esempio, se il ciclo Foreach include un'attività Esegui SQL, è possibile utilizzare Foreach SMO enumerator per enumerare le tabelle di **AdventureWorks** database ed eseguire query che contare il numero di righe in ogni tabella.  
+ Foreach SMO Enumerator consente di enumerare gli oggetti SQL Server Management Objects (SMO). Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile usare l'enumeratore Foreach SMO per enumerare le tabelle nel database **AdventureWorks** ed eseguire query che contino il numero di righe in ogni tabella.  
   
  **Connessione**  
- Selezionare una gestione connessione ADO.NET esistente oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  Argomenti correlati: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -431,7 +431,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  **Argomenti correlati:** [Finestra di dialogo Seleziona enumerazione SMO](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a>Enumeratore = Foreach HDFS File Enumerator  
+####  <a name="ForeachHDFSFile"></a> Enumeratore = Enumeratore Foreach di file HDFS  
  **Foreach HDFS File Enumerator** consente a un pacchetto SSIS di enumerare i file HDFS nel percorso HDFS specificato. Il nome di ogni file HDFS può essere archiviato in una variabile e usato nelle attività interne al contenitore Ciclo Foreach.  
   
  **Gestione connessione Hadoop**  
@@ -441,44 +441,44 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Specificare il nome della directory HDFS che contiene i file HDFS da enumerare.  
   
  **Filtro nome file**  
- Specificare un filtro di nome per selezionare i file con un determinato modello di nome. Ad esempio, Mysheet\* include file quali MySheet001.xls e MySheetABC.xlsx.  
+ Specificare un filtro di nome per selezionare i file con un determinato modello di nome. Ad esempio, MySheet*.xls\* include file come MySheet001.xls e MySheetABC.xlsx.  
   
  **Recupero nome file**  
  Specificare il tipo di nome file recuperato da SSIS.  
   
--   **Nome completo** indica il nome completo, che contiene il nome di file e percorso di directory.  
+-   **Nome completo** indica il nome completo, che contiene il percorso di directory e il nome file.  
   
--   **Solo nome** indica che viene recuperato il nome del file senza percorso.  
+-   **Solo nome** indica che viene recuperato il nome file senza il percorso.  
   
  **Attraversa sottocartelle**  
  Specificare se eseguire un ciclo in modo ricorsivo sulle sottocartelle.  
   
  Nella pagina **Mapping variabili** dell'editor selezionare o creare una variabile per archiviare il nome del file HDFS enumerato.  
   
-####  <a name="ForeachAzureBlob"></a>Enumeratore = Foreach Azure Blob Enumerator  
- **Azure Blob Enumerator** consente a un pacchetto SSIS di enumerare i file BLOB nel percorso BLOB specificato. È possibile archiviare il nome del file blob enumerato in una variabile e utilizzarlo nelle attività interne al contenitore ciclo Foreach.  
+####  <a name="ForeachAzureBlob"></a> Enumeratore = Enumeratore Foreach BLOB di Azure  
+ **Azure Blob Enumerator** consente a un pacchetto SSIS di enumerare i file BLOB nel percorso BLOB specificato. È possibile archiviare il nome del file BLOB enumerato in una variabile e usarlo nelle attività interne al Contenitore Ciclo Foreach.  
   
  **Azure Blob Enumerator** è un componente del Feature Pack di SQL Server Integration Services (SSIS) per Azure per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Scaricare il Feature Pack [qui](http://go.microsoft.com/fwlink/?LinkID=626967).  
   
- **Gestione connessione di archiviazione di Azure**  
+ **Azure storage connection manager** (Gestione connessione di Archiviazione di Azure)  
  Selezionare una gestione connessione di archiviazione di Azure esistente o crearne una nuova che si riferisca a un Account di archiviazione Azure.  
   
  Argomenti correlati: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Nome del contenitore BLOB**  
- Specificare il nome del contenitore blob che contiene i file blob da enumerare.
+ Specificare il nome del contenitore BLOB che contiene i file BLOB da enumerare.
   
- **Directory BLOB**  
- Specificare la directory blob che contiene i file blob da enumerare. La directory BLOB è una struttura gerarchica virtuale.  
+ **Blob directory** (Directory BLOB)  
+ Specificare la directory BLOB che contiene i file BLOB da enumerare. La directory BLOB è una struttura gerarchica virtuale.  
   
- **Filtro del nome BLOB**  
- Specificare un filtro di nome per enumerare i file con un determinato modello di nome. Ad esempio, `MySheet*.xls\*` include file quali MySheet001.xls e MySheetABC.xlsx.  
+ **Blob name filter** (Filtro del nome BLOB)  
+ Specificare un filtro di nome per enumerare i file con un determinato modello di nome. Ad esempio, `MySheet*.xls\*` include file come MySheet001.xls e MySheetABC.xlsx.  
   
- **Intervallo di tempo BLOB da/a filtro**  
- Specificare un filtro di intervallo di tempo. I file modificati dopo **TimeRangeFrom** e prima **TimeRangeTo** vengono enumerate. 
+ **Blob time range from/to filter** (Filtro Intervallo di tempo BLOB da/a)  
+ Specificare un filtro di intervallo di tempo. I file modificati dopo **TimeRangeFrom** e prima di **TimeRangeTo** saranno enumerati. 
 
-####  <a name="ForeachAdlsFile"></a>Enumeratore = ADLS Foreach File Enumerator 
-Il **ADLS File enumeratore** consente a un pacchetto SSIS di enumerare i file di archivio Azure Data Lake. È possibile archiviare il percorso completo del file enumerato (preceduto da una barra - `/`) in una variabile e usare il percorso del file nelle attività interne al contenitore ciclo Foreach.
+####  <a name="ForeachAdlsFile"></a> Enumeratore = Enumeratore Foreach file di ADLS 
+L'**Enumeratore file di ADLS** consente a un pacchetto SSIS di enumerare file in Azure Data Lake Store. È possibile archiviare il percorso completo del file enumerato (preceduto da una barra - `/`) in una variabile e usare il percorso del file nelle attività interne al contenitore Ciclo Foreach.
   
 **AzureDataLakeConnection**  
 Specifica una gestione connessione di Azure Data Lake o crea una nuova istanza che fa riferimento a un account ADLS.   
@@ -487,21 +487,21 @@ Specifica una gestione connessione di Azure Data Lake o crea una nuova istanza c
 Specifica la directory ADLS che contiene i file da enumerare.
   
 **FileNamePattern**  
-Specifica un filtro di nome file. Vengono enumerati solo i file i cui nomi corrispondono al modello specificato. I caratteri jolly `*` e `?` sono supportati. 
+Specifica un filtro per il nome file. Vengono enumerati solo i file i cui nomi corrispondono al modello specificato. Sono supportati i caratteri jolly `*` e `?`. 
   
 **SearchRecursively**  
 Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory specificata.  
 
-## <a name="variable-mappings-page---foreach-loop-editor"></a>Pagina mapping variabili - Editor ciclo Foreach
+## <a name="variable-mappings-page---foreach-loop-editor"></a>Pagina Mapping variabili - Editor ciclo Foreach
  Utilizzare la pagina **Mapping variabili** della finestra di dialogo **Editor ciclo Foreach** per eseguire il mapping delle variabili al valore della raccolta. Il valore della variabile viene aggiornato con i valori della raccolta in ogni iterazione del ciclo.  
   
- Per ulteriori informazioni su come usare il contenitore ciclo Foreach in un pacchetto di Integration Services, vedere [contenitore ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md). Per informazioni su come configurarlo, vedere [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Per informazioni sull'uso del contenitore Ciclo Foreach in un pacchetto di Integration Services, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md). Per informazioni su come configurarlo, vedere [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  Nell'esercitazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la creazione di un pacchetto ETL semplice è inclusa una lezione in cui vengono descritte le procedure di aggiunta e di configurazione di un ciclo Foreach.  
   
 ### <a name="options"></a>Opzioni  
  **Variabile**  
- Selezionare una variabile esistente oppure fare clic su **nuova variabile...**  per creare una nuova variabile.  
+ Selezionare una variabile esistente oppure fare clic su **Nuova variabile** per creare una nuova variabile.  
   
 > [!NOTE]  
 >  Dopo il mapping di una variabile, viene aggiunta automaticamente una nuova riga all'elenco **Variabile**.  
@@ -564,13 +564,13 @@ Usare la finestra di dialogo **Seleziona enumerazione SMO** per specificare l'og
  **Nomi**  
  Consente di utilizzare il tipo di enumerazione Nomi.  
   
- **Urn**  
+ **URN**  
  Consente di utilizzare il tipo di enumerazione URN.  
   
  **Percorsi**  
  Consente di utilizzare il tipo di enumerazione Percorsi. Questa opzione è disponibile solo per i file.  
 
-## <a name="use-property-expressions-with-foreach-loop-containers"></a>Utilizzare le espressioni di proprietà con i contenitori ciclo Foreach  
+## <a name="use-property-expressions-with-foreach-loop-containers"></a>Usare espressioni di proprietà con i contenitori Ciclo Foreach  
  Un pacchetto può essere configurato in modo da eseguire più eseguibili contemporaneamente. Questo tipo di configurazione deve essere tuttavia utilizzato con cautela, se il pacchetto include un contenitore Ciclo Foreach che implementa espressioni di proprietà.  
   
  È spesso utile implementare un'espressione di proprietà per impostare il valore della proprietà ConnectionString delle gestioni connessioni usate dagli enumeratori del ciclo Foreach. L'espressione di proprietà di ConnectionString viene impostata da una variabile della quale viene eseguito il mapping al valore della raccolta dell'enumeratore e che viene aggiornata a ogni iterazione del ciclo.  
@@ -582,4 +582,3 @@ Usare la finestra di dialogo **Seleziona enumerazione SMO** per specificare l'og
  [Contenitori in Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   
   
-

@@ -1,11 +1,14 @@
 ---
-title: Connettori Microsoft per Oracle e Teradata di attunity (SSIS) | Documenti Microsoft
+title: Connettori Microsoft per Oracle e Teradata di Attunity (SSIS) | Microsoft Docs
 ms.date: 05/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -14,38 +17,36 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: fd8b0177227167f6caa3417029bb2acb974fe181
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d7e5ca02e2e4f7ee2e1a2e7044f522048a6fb196
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Connettori Microsoft per Oracle e Teradata di attunity per Integration Services (SSIS)
+# <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Connettori Microsoft per Oracle e Teradata di Attunity per Integration Services (SSIS)
 
-È possibile scaricare i connettori per i servizi di integrazione di Attunity che ottimizzare le prestazioni durante il caricamento di dati da Oracle o Teradata in un pacchetto SSIS.
+È possibile scaricare connettori per Integration Services di Attunity che ottimizzano le prestazioni quando si caricano i dati in o da Oracle o Teradata in un pacchetto SSIS.
 
-## <a name="download-the-latest-attunity-connectors"></a>Scaricare i più recenti connettori di Attunity
+## <a name="download-the-latest-attunity-connectors"></a>Scaricare i connettori di Attunity più recenti
 
-Ottenere la versione più recente dei connettori di:  
-[V 5.0 connettori Microsoft per Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179)
+Ottenere qui la versione più recente dei connettori:  
+[Connettori Microsoft v5.0 per Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179)
 
-## <a name="issue---the-attunity-connectors-arent-visible-in-the-ssis-toolbox"></a>Problema: I connettori di Attunity non sono visibili nella casella degli strumenti SSIS
+## <a name="issue---the-attunity-connectors-arent-visible-in-the-ssis-toolbox"></a>Problema: i connettori di Attunity non sono visibili nella casella degli strumenti SSIS
 
-Per visualizzare i connettori di Attunity nella casella degli strumenti SSIS, è sempre necessario installare la versione dei connettori che destinazioni la stessa versione di SQL Server la versione di SQL Server Data Tools (SSDT) installato nel computer in uso. (L'utente potrebbe avere versioni precedenti dei connettori di cui è installati.) Questo requisito è indipendente dalla versione di SQL Server che si desidera indirizzare i progetti SSIS e pacchetti.
+Per visualizzare i connettori di Attunity nella casella degli strumenti SSIS, è sempre necessario installare la versione dei connettori che ha come destinazione la versione di SQL Server corrispondente a quella di SQL Server Data Tools (SSDT) installato nel computer in uso. (L'utente potrebbe avere versioni precedenti dei connettori installati.) Questo requisito è indipendente dalla versione di SQL Server che si vuole avere come destinazione per i progetti e pacchetti SSIS.
 
-Ad esempio, se è installata la versione più recente di SSDT, è necessario versione 17 di SSDT con un numero di build che inizia con 14. Questa versione di SSDT aggiunge il supporto per SQL Server 2017. Per visualizzare e utilizzare il Attunity connettori SSIS pacchetto development - anche se si desidera destinazione una versione precedente di SQL Server, inoltre necessario installare la versione più recente dei connettori di Attunity, versione 5.0. Questa versione dei connettori aggiunge inoltre supporto per SQL Server 2017.
+Se ad esempio è installata la versione più recente di SSDT, si ha la versione 17 di SSDT con un numero di build che inizia con 14. Questa versione di SSDT aggiunge il supporto per SQL Server 2017. Per visualizzare e usare i connettori di Attunity nello sviluppo del pacchetto SSIS, anche se si vuole avere come destinazione una versione precedente di SQL Server, è necessario installare anche la versione più recente dei connettori di Attunity, la versione 5.0. Questa versione dei connettori aggiunge anche il supporto per SQL Server 2017.
 
-Controllare la versione installata di SSDT in Visual Studio da **Guida** | **su Microsoft Visual Studio**, o in **programmi e funzionalità** nel Pannello di controllo. Quindi installare la versione corrispondente dei connettori di Attunity dalla tabella seguente.
+Controllare la versione installata di SSDT in Visual Studio da **Guida** | **Informazioni su Microsoft Visual Studio** o in **Programmi e funzionalità** nel Pannello di controllo. Installare quindi la versione corrispondente dei connettori di Attunity dalla tabella seguente.
 
-|Versione SSDT|Numero di build SSDT|Versione di SQL Server di destinazione|Versione richiesta di connettori|
+|Versione SSDT|Numero di build SSDT|Versione di SQL Server di destinazione|Versione richiesta dei connettori|
 |---------|---------|---------|---------|
-|17|Inizia con 14|SQL Server 2017|[V 5.0 connettori Microsoft per Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
-|16|Inizia con 13|SQL Server 2016|[V 4.0 connettori Microsoft per Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
+|17|Inizia con 14|SQL Server 2017|[Connettori Microsoft v5.0 per Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
+|16|Inizia con 13|SQL Server 2016|[Connettori Microsoft v4.0 per Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
 ||||
 
-## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>Scaricare il più recente SQL Server Data Tools (SSDT)
+## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>Scaricare la versione più recente di SQL Server Data Tools (SSDT)
 
-Ottenere la versione più recente di SSDT di seguito:  
+Ottenere la versione più recente di SSDT qui:  
 [Scaricare SQL Server Data Tools (SSDT)](..//ssdt/download-sql-server-data-tools-ssdt.md)
-

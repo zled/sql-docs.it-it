@@ -1,18 +1,18 @@
 ---
-title: "La codifica e debug dell'attività Script | Documenti Microsoft"
+title: "Codifica e debug dell'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -23,50 +23,49 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
+caps.latest.revision: "81"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
-  Dopo aver configurato lo Script delle attività nella **Editor attività Script**, si scrive codice personalizzato nell'ambiente di sviluppo di attività Script.  
+  Dopo avere configurato l'attività Script in **Editor attività Script**, scrivere il codice personalizzato nell'ambiente di sviluppo corrispondente.  
   
 ## <a name="script-task-development-environment"></a>Ambiente di sviluppo dell'attività Script  
- L'attività Script utilizza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di sviluppo per lo script stesso.  
+ Per l'attività Script viene usato [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di sviluppo per lo script stesso.  
   
- Il codice di script viene scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Per specificare il linguaggio di scripting, impostare il **ScriptLanguage** proprietà il **Editor attività Script**. Se si preferisce utilizzare un altro linguaggio di programmazione, è possibile sviluppare un assembly personalizzato nel linguaggio desiderato e chiamarne la funzionalità dal codice nell'attività Script.  
+ Il codice di script viene scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Specificare il linguaggio di script impostando la proprietà **ScriptLanguage** in **Editor attività Script**. Se si preferisce utilizzare un altro linguaggio di programmazione, è possibile sviluppare un assembly personalizzato nel linguaggio desiderato e chiamarne la funzionalità dal codice nell'attività Script.  
   
  Lo script creato nell'attività Script viene archiviato nella definizione del pacchetto. Non viene creato un file script separato. Pertanto, l'utilizzo dell'attività Script non ha effetto sulla distribuzione del pacchetto.  
   
 > [!NOTE]  
 >  Quando si progetta il pacchetto e si esegue il debug dello script, il codice di script viene scritto temporaneamente in un file di progetto. Poiché l'archiviazione di informazioni riservate in un file costituisce un potenziale rischio per la sicurezza, è consigliabile non inserire nel codice di script informazioni di questo tipo, ad esempio le password.  
   
- Per impostazione predefinita, **Option Strict** è disabilitato nell'IDE.  
+ Per impostazione predefinita, nell'ambiente IDE **Option Strict** è disabilitato.  
   
 ## <a name="script-task-project-structure"></a>Struttura di progetto dell'attività Script  
  Quando si crea o si modifica lo script contenuto in un'attività Script, VSTA apre un nuovo progetto vuoto o riapre il progetto esistente. La creazione di questo progetto VSTA non influisce sulla distribuzione del pacchetto, perché il progetto viene salvato nel file del pacchetto; l'attività Script non crea file aggiuntivi.  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Elementi e classi del progetto dell'attività Script  
- Per impostazione predefinita, il progetto dell'attività Script visualizzato nella finestra Esplora progetti VSTA contiene un singolo elemento, **la classe ScriptMain**. Il **la classe ScriptMain** elemento, a sua volta, contiene un'unica classe, denominata anche **la classe ScriptMain**. Gli elementi di codice nella classe variano a seconda del linguaggio di programmazione selezionato per l'attività Script:  
+ Per impostazione predefinita, il progetto dell'attività Script visualizzato nella finestra Esplora progetti in VSTA contiene un unico elemento, **ScriptMain**. L'elemento **ScriptMain** contiene a sua volta un'unica classe, anch'essa denominata **ScriptMain**. Gli elementi di codice nella classe variano a seconda del linguaggio di programmazione selezionato per l'attività Script:  
   
--   Quando l'attività Script è configurato per il [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguaggio di programmazione il **la classe ScriptMain** classe dispone di una subroutine pubblica, **Main**. Il **ScriptMain.Main** subroutine è il metodo chiamato dal runtime quando si esegue l'attività Script.  
+-   Se l'attività Script è configurata per il linguaggio di programmazione [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)], la classe **ScriptMain** include una subroutine pubblica, **Main**. La subroutine **ScriptMain.Main** è il metodo chiamato dal runtime quando si esegue l'attività Script.  
   
-     Per impostazione predefinita, l'unico codice nel **Main** subroutine di un nuovo script è la riga `Dts.TaskResult = ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita. Il **Dts.TaskResult** verrà discusso proprietà [restituzione di risultati dall'attività Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Per impostazione predefinita, nella subroutine **Main** di un nuovo script è presente solo la riga `Dts.TaskResult = ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita. La proprietà **Dts.TaskResult** viene trattata in [Risultati restituiti dall'attività Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
--   Quando l'attività Script è configurato per Visual c#, linguaggio di programmazione il **la classe ScriptMain** classe dispone di un metodo pubblico, **Main**. Il metodo viene chiamato durante l'esecuzione dell'attività Script.  
+-   Se l'attività Script è configurata per il linguaggio di programmazione Visual C#, la classe **ScriptMain** include un metodo pubblico, **Main**. Il metodo viene chiamato durante l'esecuzione dell'attività Script.  
   
-     Per impostazione predefinita, il **Main** metodo include la riga `Dts.TaskResult = (int)ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita.  
+     Per impostazione predefinita, il metodo **Main** include la riga `Dts.TaskResult = (int)ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita.  
   
- Il **la classe ScriptMain** elemento può contenere classi diverse di **la classe ScriptMain** classe. Le classi sono disponibili solo per l'attività Script in cui risiedono.  
+ L'elemento **ScriptMain** può contenere classi diverse dalla classe **ScriptMain**. Le classi sono disponibili solo per l'attività Script in cui risiedono.  
   
- Per impostazione predefinita, il **la classe ScriptMain** elemento di progetto contiene il seguente codice generato automaticamente. Nel modello del codice sono inoltre disponibili una panoramica dell'attività Script, nonché informazioni aggiuntive su come recuperare e modificare oggetti SSIS, quali variabili, eventi e connessioni.  
+ Per impostazione predefinita, l'elemento di progetto **ScriptMain** contiene il codice seguente, generato automaticamente. Nel modello del codice sono inoltre disponibili una panoramica dell'attività Script, nonché informazioni aggiuntive su come recuperare e modificare oggetti SSIS, quali variabili, eventi e connessioni.  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Task  
@@ -204,28 +203,28 @@ To open Help, press F1.
 ```  
   
 ### <a name="additional-project-items-in-the-script-task-project"></a>Altri elementi di progetto dell'attività Script  
- Il progetto dell'attività Script può includere elementi diverso da quello predefinito **la classe ScriptMain** elemento. È possibile aggiungere classi, moduli e file di codice al progetto. È anche possibile utilizzare cartelle per organizzare gruppi di elementi. Tutti gli elementi aggiunti vengono salvati in modo permanente nel pacchetto.  
+ Il progetto dell'attività Script può includere elementi diversi dall'elemento **ScriptMain** predefinito. È possibile aggiungere classi, moduli e file di codice al progetto. È anche possibile utilizzare cartelle per organizzare gruppi di elementi. Tutti gli elementi aggiunti vengono salvati in modo permanente nel pacchetto.  
   
 ### <a name="references-in-the-script-task-project"></a>Riferimenti nel progetto dell'attività Script  
- È possibile aggiungere riferimenti agli assembly gestiti facendo clic con il progetto dell'attività Script in **Esplora progetti**e quindi fare clic su **Aggiungi riferimento**. Per ulteriori informazioni, vedere [riferimento altri assembly nelle soluzioni di Scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
+ Per aggiungere riferimenti agli assembly gestiti, fare clic con il pulsante destro del mouse sul progetto di attività script in **Esplora progetti** e quindi scegliere **Aggiungi riferimento**. Per altre informazioni, vedere [Riferimenti ad altri assembly nelle soluzioni di scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
->  È possibile visualizzare i riferimenti al progetto nell'IDE di VSTA in **Visualizzazione classi** o in **Esplora progetti**. Si apre una di queste finestre di **vista** menu. È possibile aggiungere un nuovo riferimento dal **progetto** menu da **Esplora progetti**, o da **Visualizzazione classi**.  
+>  È possibile visualizzare i riferimenti al progetto nell'ambiente IDE di VSTA in **Visualizzazione classi** o in **Esplora progetti**. Queste finestre possono essere aperte dal menu **Visualizza**. È possibile aggiungere un nuovo riferimento dal menu **Progetto**, da **Esplora progetti** o da **Visualizzazione classi**.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>Interazione con il pacchetto nell'attività Script  
- L'attività Script utilizza globale **Dts** oggetto, ovvero un'istanza del <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> , classe e i relativi membri per interagire con il pacchetto contenitore e con il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime.  
+ L'attività Script usa l'oggetto **Dts** globale, che è un'istanza della classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, e i relativi membri per interagire con il pacchetto contenitore e con il runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
- Nella tabella seguente sono elencati i principali membri pubblici del <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> (classe), che viene esposta al codice dell'attività Script tramite globale **Dts** oggetto. Negli argomenti di questa sezione verrà descritto in maggior dettaglio l'utilizzo di questi membri.  
+ La tabella seguente elenca i principali membri pubblici della classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, che viene esposta al codice di attività Script tramite l'oggetto **Dts** globale. Negli argomenti di questa sezione verrà descritto in maggior dettaglio l'utilizzo di questi membri.  
   
 |Membro|Scopo|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Fornisce accesso alle gestioni connessioni definite nel pacchetto.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Fornisce un'interfaccia degli eventi per consentire all'attività Script di generare errori, avvisi e messaggi informativi.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Fornisce un modo semplice per restituire un oggetto per il runtime (oltre al **TaskResult**) che può essere utilizzato anche per la diramazione del flusso di lavoro.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Fornisce un modo semplice per restituire al runtime un singolo oggetto (in aggiunta a **TaskResult**) che può anche essere usato per la diramazione del flusso di lavoro.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|Registra informazioni quali lo stato e i risultati dell'attività nei provider di log abilitati.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|Indica l'esito positivo o negativo dell'attività.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|Fornisce la transazione, se presente, in cui è in esecuzione il contenitore dell'attività.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Fornisce l'accesso alle variabili elencate nel **ReadOnlyVariables** e **ReadWriteVariables** attività proprietà per l'utilizzo all'interno dello script.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Fornisce accesso alle variabili elencate nelle proprietà **ReadOnlyVariables** e **ReadWriteVariables** dell'attività per l'uso all'interno dello script.|  
   
  La classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> contiene anche alcuni membri pubblici che probabilmente non verranno utilizzati.  
   
@@ -250,11 +249,10 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Post di blog, [VSTA il programma di installazione e configurazione di VSTA per le installazioni di SSIS 2008 e R2](http://go.microsoft.com/fwlink/?LinkId=215661), su blogs.msdn.com.  
+-   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ad altri assembly nelle soluzioni di Scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
- [Configurazione dell'attività Script nell'Editor attività Script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Riferimenti ad altri assembly nelle soluzioni di scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
+ [Configurazione dell'attività Script nell'editor attività Script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
-

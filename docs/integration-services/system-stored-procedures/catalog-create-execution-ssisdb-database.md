@@ -1,29 +1,30 @@
 ---
-title: Catalog. create_execution (Database SSISDB) | Documenti Microsoft
+title: catalog.create_execution (database SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
-ms.contentlocale: it-it
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (database SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Crea un'istanza di esecuzione nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -43,40 +44,40 @@ catalog.create_execution [@folder_name = folder_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@folder_name =] *nome_cartella*  
- Nome della cartella contenente il pacchetto che deve essere eseguito. Il *nome_cartella* è **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ Nome della cartella contenente il pacchetto che deve essere eseguito. *folder_name* è di tipo **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Nome del progetto contenente il pacchetto che deve essere eseguito. Il *project_name* è **nvarchar (128)**.  
+ Nome del progetto contenente il pacchetto che deve essere eseguito. *project_name* è di tipo **nvarchar(128)**.  
   
- [@package_name =] *nome_pacchetto*  
- Nome del pacchetto che deve essere eseguito. Il *nome_pacchetto* è **nvarchar (260)**.  
+ [@package_name =] *package_name*  
+ Nome del pacchetto che deve essere eseguito. *package_name* è di tipo **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
- Identificatore univoco per un riferimento all'ambiente. Questo parametro è facoltativo. Il *reference_id* è **bigint**.  
+ Identificatore univoco per un riferimento all'ambiente. Questo parametro è facoltativo. *reference_id* è di tipo **bigint**.  
   
  [@use32bitruntime =] *use32bitruntime*  
- Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Utilizzare il valore 1 per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a 0 per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. Il *Use32bitruntime* è **bit**.  
+ Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore 1 per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a 0 per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. *use32bitruntime* è di tipo **bit**.  
  
  [@runinscaleout =] *runinscaleout*  
- Indica se l'esecuzione in orizzontale. Utilizzare il valore 1 per eseguire il pacchetto in orizzontale. Utilizzare il valore 0 per eseguire il pacchetto senza orizzontale. Questo parametro è facoltativo. Se non specificato, il relativo valore è impostato su DEFAULT_EXECUTION_MODE in [SSISDB]. [catalog]. [catalog_properties]. Il *runinscaleout* è **bit**. 
+ Indica se l'esecuzione è in Scale Out. Usare il valore 1 per eseguire il pacchetto in Scale Out. Usare il valore 0 per eseguire il pacchetto senza Scale Out. Questo parametro è facoltativo. Se non specificato, il valore di questo è impostato su DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties]. *runinscaleout* è di tipo **bit**. 
  
  [@useanyworker =] *useanyworker*  
-  Indica se qualsiasi scala i thread di lavoro è consentito effettuare l'esecuzione. Utilizzare il valore 1 per eseguire il pacchetto con qualsiasi scala i thread di lavoro. Utilizzare il valore 0 per indicare che scala non tutti i lavori sono autorizzati a eseguire il pacchetto. Questo parametro è facoltativo. Se non specificato, il valore è impostato su 1. Il *useanyworker* è **bit**. 
+  Indica se a un qualsiasi ruolo di lavoro Scale Out è consentita l'esecuzione. Usare il valore 1 per eseguire il pacchetto con un ruolo di lavoro Scale Out. Usare il valore 0 per indicare che non tutti i ruoli di lavoro Scale Out sono autorizzati a eseguire il pacchetto. Questo parametro è facoltativo. Se non specificato, il valore viene impostato su 1. *useanyworker* è di tipo **bit**. 
   
- [@execution_id =] *valore di execution_id*  
- Viene restituito l'identificatore univoco per un'istanza di esecuzione. Il *valore di execution_id* è **bigint**.  
+ [@execution_id =] *execution_id*  
+ Viene restituito l'identificatore univoco per un'istanza di esecuzione. *execution_id* è di tipo **bigint**.  
 
   
 ## <a name="remarks"></a>Osservazioni  
  Un'esecuzione viene utilizzata per specificare i valori del parametro utilizzati da un pacchetto durante una singola istanza di esecuzione del pacchetto.  
   
- Se viene specificato un riferimento all'ambiente con il *reference_id* parametro, la stored procedure consente di popolare i parametri di progetto e di pacchetto con valori letterali o valori di cui viene fatto riferimenti dalle variabili di ambiente corrispondente. Se viene specificato il riferimento all'ambiente, durante l'esecuzione del pacchetto vengono utilizzati i valori di parametro predefiniti. Per determinare esattamente quali valori vengono utilizzati per una particolare istanza di esecuzione, utilizzare il *valore di execution_id* valore del parametro da questa stored procedure e query di output di [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) visualizzazione.  
+ Se viene specificato un riferimento all'ambiente con il parametro *reference_id*, i parametri di progetto e di pacchetto vengono popolati dalla stored procedure con valori letterali o valori di riferimento dalle variabili di ambiente corrispondenti. Se viene specificato il riferimento all'ambiente, durante l'esecuzione del pacchetto vengono utilizzati i valori di parametro predefiniti. Per determinare esattamente quali valori vengono usati per un'istanza di esecuzione specifica, usare il valore del parametro di output *execution_id* di questa stored procedure ed eseguire una query sulla vista [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
   
  In un'esecuzione possono essere specificati solo i pacchetti contrassegnati come pacchetti del punto di ingresso. In caso contrario, l'esecuzione non viene completata.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene chiamato Catalog. create_execution per creare un'istanza di esecuzione per il pacchetto child1, che non è in orizzontale. Il pacchetto è incluso in Project1 di Integration Services. Nell'esempio viene chiamato catalog.set_execution_parameter_value per impostare i valori per i parametri Parameter1, Parameter2 e LOGGING_LEVEL. Inoltre viene chiamato catalog.start_execution per avviare un'istanza di esecuzione.  
+ Nell'esempio seguente viene effettuata una chiamata a catalog.create_execution per creare un'istanza di esecuzione del pacchetto Child1.dtsx, non in Scale Out. Il pacchetto è incluso in Project1 di Integration Services. Nell'esempio viene chiamato catalog.set_execution_parameter_value per impostare i valori per i parametri Parameter1, Parameter2 e LOGGING_LEVEL. Inoltre viene chiamato catalog.start_execution per avviare un'istanza di esecuzione.  
   
 ```sql  
 Declare @execution_id bigint  
@@ -103,17 +104,17 @@ GO
   
 -   Autorizzazioni READ e EXECUTE sul progetto e, se applicabile, autorizzazioni READ sull'ambiente a cui si fa riferimento  
   
--   L'appartenenza al **ssis_admin** ruolo del database  
+-   Appartenenza al ruolo del database **ssis_admin**  
   
--   L'appartenenza al **sysadmin** ruolo del server  
+-   Appartenenza al ruolo del server **sysadmin**  
 
- Se @runinscaleout è 1, la stored procedure richiede una delle seguenti autorizzazioni:
+ Se @runinscaleout è uguale a 1, per questa stored procedure è necessaria una delle autorizzazioni seguenti:
  
--   L'appartenenza al **ssis_admin** ruolo del database
+-   Appartenenza al ruolo del database **ssis_admin**
 
--   L'appartenenza al **ssis_cluster_executor** ruolo del database
+-   Appartenenza al ruolo del database **ssis_cluster_executor**
 
--   L'appartenenza al **sysadmin** ruolo del server
+-   Appartenenza al ruolo del server **sysadmin**
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  
@@ -122,7 +123,7 @@ GO
   
 -   Utente senza autorizzazioni appropriate.  
   
--   Il riferimento all'ambiente, *reference_id*, non è valido.  
+-   L'ambiente di riferimento, *reference_id*, non è valido.  
   
 -   Specificato pacchetto che non è un pacchetto del punto di ingresso.  
   
@@ -130,11 +131,10 @@ GO
   
 -   Progetto o pacchetto in cui sono contenuti parametri che richiedono valori, ma non è stato assegnato alcun valore.  
   
--   Impossibile trovare le variabili di ambiente a cui fa riferimento nell'ambiente che fa riferimento l'ambiente, *reference_id*, specifica.  
+-   Non è possibile trovare le variabili di ambiente a cui si fa riferimento nell'ambiente specificato dal riferimento all'ambiente, *reference_id*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Catalog. start_execution &#40; Database SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
+ [catalog.start_execution &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
- [Catalog.add_execution_worker &#40; Database SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
+ [catalog.add_execution_worker &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
   
-

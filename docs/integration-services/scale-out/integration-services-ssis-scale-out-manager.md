@@ -1,101 +1,101 @@
 ---
-title: "SQL Server Integration Services con scalabilità Manager | Documenti Microsoft"
+title: SQL Server Integration Services Scale Out Manager | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96748296acd1b2f5ba98558335fece9637eadb87
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 84fe58d4dc7894728c43cb19d17d3444b5b84820
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-scale-out-manager"></a>Servizi di integrazione scalabilità Manager
+# <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
 
-Scala Out Manager è uno strumento di gestione che consente di gestire la topologia completa SSIS scalabile in un'unica posizione. Rimuove il carico di lavoro di gestione su più computer e occupa comandi TSQL. 
+Scala Out Manager è uno strumento che consente di gestire l'intera topologia di SSIS Scale Out in un'unica posizione. In questo modo non sono necessari più computer ed è possibile usare comandi TSQL. 
 
-Esistono due modi per attivare la gestione di timeout di scala.
+Scale Out Manager può essere attivato in due modi.
 
-## <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1. Aprire Gestione di scalabilità da SQL Server Management Studio
-Aprire SQL Server Management Studio e connettersi all'istanza di SQL Server di scalabilità Out Master.
+## <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1. Aprire Scale Out Manager da SQL Server Management Studio
+Aprire SQL Server Management Studio e connettersi all'istanza di SQL Server di Scale Out Master.
 
-Fare doppio clic su **SSISDB** in Esplora oggetti e selezionare **gestire Scale Out...** . 
-![Gestire la scalabilità orizzontale](media/manage-scale-out.PNG)
+Fare clic con il pulsante destro del mouse su **SSISDB** in Esplora oggetti e selezionare **Gestisci Scale Out...**. ![Gestisci Scale Out](media/manage-scale-out.PNG)
 
 > [!NOTE]
-> Si consiglia di eseguire SQL Server Management Studio come amministratore di alcune delle operazioni di gestione orizzontale, ad esempio "aggiunta di una scalabilità lavoratore" richiede privilegi amministrativi.
+> È consigliabile eseguire SQL Server Management Studio come amministratore. Per alcune operazioni di gestione di Scale Out, ad esempio l'aggiunta di un'istanza di Scale Out Worker, sono necessari privilegi amministrativi.
 
 
-## <a name="2-open-scale-out-manager-by-runing-ismanagerexe-directly"></a>2. Aprire direttamente scala Out Manager in esecuzione ISManager.exe
+## <a name="2-open-scale-out-manager-by-runing-ismanagerexe-directly"></a>2. Aprire direttamente Scale Out Manager eseguendo il file ISManager.exe
 
-ISManager.exe individua in %systemdrive%\Programmi\Microsoft file (x86) \Microsoft SQL Server\140\DTS\Binn\Management. Fare clic destro **ISManager.exe** e selezionare "Esegui come amministratore". 
+Il file ISManager.exe si trova in %systemdrive%\Programmi (x86)\Microsoft SQL Server\140\DTS\Binn\Gestione. Fare clic con il pulsante destro del mouse su **ISManager.exe** e selezionare "Esegui come amministratore". 
 
-Dopo che viene aperta, è necessario immettere il nome di Sql Server di scalabilità Out Master e connettersi ad esso prima di gestire le Scale Out.
+Dopo averlo aperto, immettere il nome SQL Server di Scale Out Master e connettersi prima di gestire Scale Out.
 
 ![Connessione nel portale](media/portal-connect.PNG)
 
-Scala Out Manager offre varie funzionalità, come indicato di seguito. 
+Di seguito sono elencate le varie funzionalità di Scale Out Manager. 
 
-## <a name="enable-scale-out"></a>Abilitare la scalabilità orizzontale
-Dopo la connessione a SQL Server, se orizzontale non è abilitato, è possibile fare clic sul pulsante "Abilita" per abilitarlo.
+## <a name="enable-scale-out"></a>Abilitare Scale Out
+Dopo aver eseguito la connessione a SQL Server, fare clic sul pulsante "Abilita" per abilitare Scale Out se non è abilitato.
 
-![Attiva portale con scalabilità](media/portal-enable-scale-out.PNG) 
-## <a name="view-scale-out-master-status"></a>Visualizzare lo stato di scala Out Master
-Verrà visualizzato lo stato del database Master Out di scala sul **Dashboard** pagina.
+![Abilitare Scale Out nel portale](media/portal-enable-scale-out.PNG) 
+## <a name="view-scale-out-master-status"></a>Visualizzare lo stato di Scale Out Master
+Lo stato di Scale Out Master viene visualizzato nella pagina **Dashboard**.
 
 ![Dashboard del portale](media/portal-dashboard.PNG)
-## <a name="view-scale-out-worker-status"></a>Visualizzare lo stato del lavoro Out di scala
-Verrà visualizzato lo stato del processo di lavoro Out di scala sul **responsabile** pagina. È possibile fare clic su ogni thread di lavoro per visualizzare lo stato.
+## <a name="view-scale-out-worker-status"></a>Visualizzare lo stato di Scale Out Worker
+Lo stato di Scale Out Worker viene visualizzato nella pagina **Dashboard**. È possibile fare clic su ogni ruolo di lavoro per visualizzare il singolo stato.
 
-![Portale di gestione di lavoro](media/portal-worker-manager.PNG)
+![Strumento di gestione dei ruoli di lavoro del portale](media/portal-worker-manager.PNG)
 
-## <a name="add-scale-out-worker"></a>Aggiungere scalabilità lavoro
-Per aggiungere una scala il lavoro, fare clic sul pulsante "+" nella parte inferiore dell'elenco di scala il lavoro. 
+## <a name="add-scale-out-worker"></a>Aggiungere Scale Out Worker
+Per aggiungere un'istanza di Scale Out Worker, fare clic sul pulsante "+" nella parte inferiore dell'elenco di Scale Out Worker. 
 
-Immettere il nome del computer di scala il lavoro che si desidera aggiungere e fare clic su "Convalida". La scala Out gestione controllerà se l'utente corrente disponga di accesso per gli archivi di certificati nei computer del scala Out Master e scala il lavoro.
+Immettere il nome del computer dell'istanza di Scale Out Worker che si vuole aggiungere e fare clic su "Convalida". Scale Out Manager controllerà se l'utente corrente ha accesso agli archivi certificati nei computer di Scale Out Master e Scale Out Worker.
 
-![La connessione di lavoro](media/connect-worker.PNG)
+![Connessione di un ruolo di lavoro](media/connect-worker.PNG)
 
-Se la convalida viene eseguita, scala Out Manager tenterà di leggere il file di configurazione del lavoro e ottenere l'identificazione personale del thread di lavoro. Per ulteriori informazioni, vedere [scala Out lavoro](integration-services-ssis-scale-out-worker.md). Se non è in grado di leggere il thread di lavoro del file di configurazione, sono disponibili due metodi alternativi di fornire il certificato di lavoro. 
+Se viene eseguita la convalida, Scale Out Manager tenterà di leggere il file di configurazione del ruolo di lavoro e ottenerne l'identificazione personale certificato. Per altre informazioni, vedere [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md). Se non è possibile leggere il file di configurazione del ruolo di lavoro, esistono due alternative per ottenere il certificato del ruolo di lavoro. 
 
-È possibile immettere l'identificazione personale del certificato di lavoro direttamente 
+È possibile immettere direttamente l'identificazione personale certificato del ruolo di lavoro 
 
-![Certificato di lavoro 1](media/portal-cert1.PNG)
+![Certificato del ruolo di lavoro 1](media/portal-cert1.PNG)
 
-oppure fornire il file del certificato. 
+oppure specificare il file del certificato. 
 
-![Certificato di lavoro 2](media/portal-cert2.PNG)
+![Certificato del ruolo di lavoro 2](media/portal-cert2.PNG)
 
-Dopo aver raccolto tutte le informazioni, scala Out Manager forniscono le azioni da eseguire. Tyically, include installazione del certificato, l'aggiornamento file di configurazione di lavoro e riavviare il servizio di lavoro. 
+Dopo aver raccolto tutte le informazioni, Scale Out Manager indicherà le operazioni da eseguire, che generalmente includono l'installazione del certificato, l'aggiornamento del file di configurazione del ruolo di lavoro e il riavvio del servizio del ruolo di lavoro. 
 
-![Portale aggiungere confermare 1](media/portal-add-confirm1.PNG)
+![Aggiungere conferma 1 del portale](media/portal-add-confirm1.PNG)
 
-Nel caso in cui il certificato di lavoro non è accessibile, è necessario aggiornarlo manualmente per se stessi e riavviare il servizio di lavoro.
+Nel caso in cui il certificato del ruolo di lavoro non sia accessibile, aggiornarlo manualmente e riavviare il servizio del ruolo di lavoro.
 
-![Portale aggiungere confermare 2](media/portal-add-confirm2.PNG)
+![Aggiungere conferma 2 del portale](media/portal-add-confirm2.PNG)
 
-Selezionare la casella di controllo di conferma e iniziare ad aggiungere scala il lavoro.
+Selezionare la casella di controllo di conferma e iniziare ad aggiungere istanze di Scale Out Worker.
 
-## <a name="delete-scale-out-worker"></a>Eliminare la scalabilità orizzontale di lavoro
-Per eliminare una scala il lavoro, selezionare la scala il lavoro e scegliere il "-" nella parte inferiore dell'elenco di scala il lavoro.
+## <a name="delete-scale-out-worker"></a>Eliminare Scale Out Worker
+Per eliminare un'istanza di Scale Out Worker, selezionare Scale Out Worker e fare clic sul pulsante "-" nella parte inferiore dell'elenco di Scale Out Worker.
 
 
-## <a name="enabledisable-scale-out"></a>Abilitare o disabilitare la scalabilità orizzontale
-Per abilitare o disabilitare una scala il lavoro, selezionare la scala il lavoro e fare clic sul "Consentono di lavoro" o "Disabilita di lavoro". Lo stato di lavoro in scala Out Manager cambierà di conseguenza se il thread di lavoro non è in linea.
+## <a name="enabledisable-scale-out"></a>Abilitare/disabilitare Scale Out
+Per abilitare o disabilitare un'istanza di Scale Out Worker, selezionare Scale Out Worker e fare clic sul pulsante "Abilita ruolo di lavoro" e "Disabilita ruolo di lavoro". Lo stato del ruolo di lavoro in Scale Out Manager cambierà a seconda che il ruolo di lavoro sia o meno offline.
 
-## <a name="edit-scale-out-worker-description"></a>Modificare la descrizione scala Out lavoro
-Per modificare la descrizione di una scala il lavoro, selezionare la scala il lavoro e fare clic sul pulsante "Modifica". Al termine della modifica, fare clic sul pulsante "Salva".
+## <a name="edit-scale-out-worker-description"></a>Modificare la descrizione di Scale Out Worker
+Per modificare la descrizione di un'istanza di Scale Out Worker, selezionare l'istanza e fare clic sul pulsante "Modifica". Al termine della modifica, fare clic sul pulsante "Salva".
 
-![Portale di salvataggio lavoro](media/portal-save-worker.PNG)
-
+![Salvare il ruolo di lavoro nel portale](media/portal-save-worker.PNG)
 

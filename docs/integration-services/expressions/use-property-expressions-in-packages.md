@@ -1,12 +1,14 @@
 ---
-title: "Utilizzare le espressioni di proprietà nei pacchetti | Documenti Microsoft"
+title: "Usare espressioni di proprietà nei pacchetti | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +21,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 87cdbcf3158e3bbcc76233ff48f0ec90d5372c64
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-property-expressions-in-packages"></a>Utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
@@ -62,17 +63,17 @@ ms.lasthandoff: 08/03/2017
 ## <a name="property-expression-user-interface"></a>Interfaccia utente delle espressioni di proprietà  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre un set di strumenti per la compilazione e la gestione delle espressioni di proprietà.  
   
--   Pagina **Espressioni** degli editor personalizzati delle attività e dei contenitori Ciclo For e Ciclo Foreach. In questa pagina **** è possibile modificare espressioni e visualizzare un elenco delle espressioni di proprietà usate da un'attività o da un contenitore Ciclo Foreach o Ciclo For.  
+-   Pagina **Espressioni** degli editor personalizzati delle attività e dei contenitori Ciclo For e Ciclo Foreach. In pagina **Espressioni** è possibile modificare espressioni e visualizzare un elenco delle espressioni di proprietà usate da un'attività o da un contenitore Ciclo Foreach o Ciclo For.  
   
 -   Finestra **Proprietà** per la modifica di espressioni e la visualizzazione di un elenco delle espressioni di proprietà usate da un pacchetto o dagli oggetti di pacchetto.  
   
 -   Finestra di dialogo **Editor espressioni di proprietà** per la creazione, l'aggiornamento e l'eliminazione di espressioni di proprietà.  
   
--   Finestra di dialogo **Generatore di espressioni** per la compilazione di espressioni tramite strumenti grafici. In questa finestra di dialogo **** le espressioni possono venire valutate senza assegnare il risultato alla proprietà in modo da consentirne prima la revisione.  
+-   Finestra di dialogo **Generatore di espressioni** per la compilazione di espressioni tramite strumenti grafici. In finestra di dialogo **Generatore di espressioni** le espressioni possono venire valutate senza assegnare il risultato alla proprietà in modo da consentirne prima la revisione.  
   
  Nella figura seguente si illustrano i componenti dell'interfaccia utente che consentono di aggiungere, modificare e rimuovere espressioni di proprietà.  
   
- ![L'interfaccia utente per espressioni di proprietà](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "l'interfaccia utente per espressioni di proprietà")  
+ ![Interfaccia utente per espressioni di proprietà](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Interfaccia utente per espressioni di proprietà")  
   
  Nella finestra **Proprietà** e nella pagina **Espressioni** fare clic sul pulsante Sfoglia **(…)** al livello della raccolta **Espressioni** per aprire la finestra di dialogo **Editor espressioni di proprietà** . Nella finestra Editor espressioni di proprietà è possibile eseguire il mapping una proprietà a un'espressione e digitare espressioni di proprietà. Se per creare e convalidare l'espressione si desidera usare gli strumenti grafici, fare clic sul pulsante Sfoglia **(…)** al livello dell'espressione per aprire la finestra di dialogo **Generatore di espressioni** , quindi creare o modificare e facoltativamente convalidare l'espressione.  
   
@@ -180,4 +181,3 @@ ms.lasthandoff: 08/03/2017
  [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: "Impostare le proprietà del pacchetto | Documenti Microsoft"
+title: "Impostare le proprietà di un pacchetto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,22 +27,21 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
   
- In tale finestra **** le proprietà possono essere elencate per categorie o in ordine alfabetico. Per elencare gli elementi della finestra **Proprietà** per categoria, fare clic sull'icona Per categoria.  
+ In tale finestra **le proprietà** possono essere elencate per categorie o in ordine alfabetico. Per elencare gli elementi della finestra **Proprietà** per categoria, fare clic sull'icona Per categoria.  
   
  Quando si utilizza questa modalità, le proprietà visualizzate nella finestra **Proprietà** vengono raggruppate nelle categorie seguenti:  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|Nome del computer in cui è stato creato il pacchetto.|  
 |**CreatorName**|Nome dell'utente che ha creato il pacchetto.|  
 |**Description**|Descrizione delle funzionalità del pacchetto.|  
-|**ID**|GUID del pacchetto, assegnato al momento della creazione. Questa proprietà è di sola lettura. Per generare un nuovo valore casuale per il **ID** proprietà, selezionare  **\<Genera nuovo ID\>**  nell'elenco a discesa.|  
+|**ID**|GUID del pacchetto, assegnato al momento della creazione. Questa proprietà è di sola lettura. Per generare un nuovo valore casuale per la proprietà **ID**, selezionare **\<Genera nuovo ID\>** nell'elenco a discesa.|  
 |**Nome**|Nome del pacchetto.|  
 |**PackageType**|Tipo di pacchetto. I possibili valori sono **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**e **SQLReplication**. Il valore predefinito di questa proprietà è **Default**. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|Versione principale più recente del pacchetto.|  
 |**VersionMinor**|Versione secondaria più recente del pacchetto.|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>Impostare le proprietà del pacchetto nella finestra proprietà 
+## <a name="set-package-properties-in-the-properties-window"></a>Impostare le proprietà di un pacchetto nella finestra Proprietà 
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenente il pacchetto che si desidera configurare.  
   
 2.  In **Esplora soluzioni**fare doppio clic sul pacchetto per aprirlo in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] oppure fare clic su di esso con il pulsante destro del mouse e scegliere **Visualizza finestra di progettazione**.  
@@ -173,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  Scegliere **Salva elementi selezionati** dal menu **File** per salvare il pacchetto aggiornato.  
   
-

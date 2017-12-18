@@ -1,40 +1,40 @@
 ---
-title: Salva pacchetto SSIS (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Salvare il pacchetto SSIS (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 6ebbab742350e6874b86213c1fbf516e095a1e9a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
-  Se è specificato nel **Salva ed Esegui pacchetto** pagina che si desidera salvare le impostazioni come un pacchetto di SQL Server Integration Services (SSIS), il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata mostra **Salva pacchetto SSIS**. In questa pagina specificare opzioni aggiuntive per il salvataggio del pacchetto creato dalla procedura guidata.  
+  Se nella pagina **Salvare ed eseguire il pacchetto** l'utente ha specificato di voler salvare le proprie impostazioni come pacchetto di SQL Server Integration Services (SSIS), l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Salva pacchetto SSIS**. In questa pagina è necessario specificare opzioni aggiuntive per il salvataggio del pacchetto creato dalla procedura guidata.  
 
 Le opzioni presenti nella pagina **Salva pacchetto SSIS** dipendono dalle scelte effettuate in precedenza nella pagina **Salvare ed eseguire il pacchetto** per salvare il pacchetto in SQL Server o nel file system. Per esaminare di nuovo la pagina **Salvare ed eseguire il pacchetto** , vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
 **Cos'è un pacchetto?** La procedura guidata usa SQL Server Integration Services (SSIS) per copiare i dati. In SSIS il pacchetto rappresenta l'unità di base. La procedura guidata crea un pacchetto SSIS in memoria mentre ci si sposta tra le pagine della procedura guidata e si specificano le opzioni.
 
-## <a name="screen-shot---common-options"></a>Schermata - opzioni comuni
-La schermata seguente mostra la prima parte di **Salva pacchetto SSIS** pagina della procedura guidata. Il resto della pagina presenta un numero variabile di opzioni che variano a seconda della destinazione del pacchetto che si è scelto.
+## <a name="screen-shot---common-options"></a>Schermata - Opzioni comuni
+L'immagine seguente illustra la prima parte della pagina **Salva pacchetto SSIS** della procedura guidata. Il resto della pagina presenta un numero variabile di opzioni che variano a seconda della destinazione del pacchetto scelta.
 
-![Salva pacchetto - opzioni comuni](../../integration-services/import-export-data/media/save-package-common-options.png)
+![Salva pacchetto - Opzioni comuni](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>Specificare un nome e una descrizione per il pacchetto  
  **Nome**  
@@ -48,14 +48,14 @@ La schermata seguente mostra la prima parte di **Salva pacchetto SSIS** pagina d
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>Screenshot del salvataggio del pacchetto in SQL Server
 
- L'immagine seguente mostra il **Salva pacchetto SSIS** pagina della procedura guidata se è stata selezionata la **SQL Server** opzione il **Salva ed Esegui pacchetto** pagina. 
+ L'immagine seguente illustra la pagina **Salva pacchetto SSIS** della procedura guidata se è stata selezionata l'opzione **SQL Server** nella pagina **Salvare ed eseguire il pacchetto**. 
   
-![Salva pacchetto SSIS pagina dell'importazione / esportazione guidata](../../integration-services/import-export-data/media/save-package2.png "pagina Salva pacchetto SSIS dell'importazione / esportazione guidata")  
+![Pagina Salva pacchetto SSIS dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/save-package2.png "Pagina Salva pacchetto SSIS dell'Importazione/Esportazione guidata")  
 
-## <a name="options-to-specify-target--sql-server"></a>Le opzioni per specificare (destinazione = SQL Server) 
+## <a name="options-to-specify-target--sql-server"></a>Opzioni da specificare (destinazione = SQL Server) 
 
  > [!NOTE]
- > La procedura guidata consente di salvare il pacchetto nel **msdb** database il **sysssispackages** tabella. Questa opzione non **non** salvare il pacchetto per il database del catalogo SSIS (SSISDB).  
+ > La procedura guidata salva il pacchetto nel database **msdb** nella tabella **sysssispackages**. Questa opzione **non** salva il pacchetto nel database del catalogo SSIS (SSISDB).  
  
  **Nome server**  
  Digitare o selezionare il nome del server di destinazione.  
@@ -66,7 +66,7 @@ Connettersi al server tramite l'autenticazione integrata di Windows. Questo è i
  **Usa autenticazione di SQL Server**  
 Connettersi al server tramite l'autenticazione di SQL Server.  
   
- **Nome utente**  
+ **User name**  
 Se è stata specificata l'autenticazione di SQL Server, immettere il nome utente.  
   
  **Password**  
@@ -74,22 +74,22 @@ Se è stata specificata l'autenticazione di SQL Server, immettere la password.
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>Screenshot del salvataggio del pacchetto nel file system
  
-L'immagine seguente mostra il **Salva pacchetto SSIS** pagina della procedura guidata se è stata selezionata la **File system** opzione il **Salva ed Esegui pacchetto** pagina. 
+L'immagine seguente illustra la pagina **Salva pacchetto SSIS** della procedura guidata se è stata selezionata l'opzione **File system** nella pagina **Salvare ed eseguire il pacchetto**. 
   
-![Salva pacchetto SSIS pagina dell'importazione / esportazione guidata](../../integration-services/import-export-data/media/save-package1.png "pagina Salva pacchetto SSIS dell'importazione / esportazione guidata")  
+![Pagina Salva pacchetto SSIS dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/save-package1.png "Pagina Salva pacchetto SSIS dell'Importazione/Esportazione guidata")  
 
-## <a name="options-to-specify-target--file-system"></a>Le opzioni per specificare (destinazione = File system)
+## <a name="options-to-specify-target--file-system"></a>Opzioni da specificare (destinazione = file system)
 
  **Nome file**  
- Immettere il percorso e il nome del file di destinazione oppure utilizzare il **Sfoglia** pulsante per selezionare una destinazione.  
+ Immettere il percorso e il nome del file di destinazione. In alternativa usare il pulsante **Sfoglia** per selezionare una destinazione.  
   
 > [!TIP]
-> Assicurarsi di specificare una cartella di destinazione per un elenco o tramite l'esplorazione. Se si immette solo il nome del file senza percorso, non si conosce in cui la procedura guidata consente di salvare il pacchetto. Inoltre, la procedura guidata potrebbe provare a salvare il pacchetto in un percorso di cui non dispone dell'autorizzazione per il salvataggio dei file e generare un errore.  
+> Assicurarsi di specificare una cartella di destinazione, digitandola o sfogliandola. Se si immette solo il nome del file senza percorso, l'utente non saprà la destinazione in cui la procedura guidata salverà il pacchetto. Inoltre, la procedura guidata potrebbe provare a salvare il pacchetto in un percorso di cui non dispone dell'autorizzazione per il salvataggio dei file e generare un errore.  
 >   
 >  Tenere presente la destinazione di salvataggio del file del pacchetto.  
   
  **Sfoglia**  
- Facoltativamente, esplorare per selezionare il percorso del file di destinazione nel **Salva pacchetto** la finestra di dialogo.  
+ Facoltativamente usare la funzione Sfoglia per selezionare il percorso del file di destinazione nella finestra di dialogo **Salvataggio pacchetto**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Informazioni sulle due pagine di opzioni per il salvataggio del pacchetto  
  La pagina **Salva pacchetto SSIS** è una delle due pagine in cui è possibile selezionare le opzioni per il salvataggio del pacchetto SSIS.  
@@ -121,4 +121,3 @@ L'immagine seguente mostra il **Salva pacchetto SSIS** pagina della procedura gu
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  
  
-

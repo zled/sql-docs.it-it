@@ -1,145 +1,146 @@
 ---
-title: Connettersi a un'origine dati ODBC (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Connettersi a un'origine dati ODBC (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: ab3783ac708dcf3d8f683af6958ec43087303136
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati ODBC (SQL Server importazione / esportazione guidata)
-In questo argomento viene illustrato come connettersi a un **ODBC** dell'origine dati dal **scegliere un'origine dati** o **scegliere una destinazione** pagina di SQL Server di importazione / esportazione guidata.
+# <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati ODBC (Importazione/Esportazione guidata SQL Server)
+Questo argomento illustra come connettersi a un'origine dati **ODBC** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
 
-È possibile scaricare il driver ODBC è necessario Microsoft o da terze parti.
+Può essere necessario scaricare il driver ODBC da Microsoft o da terze parti.
 
-Inoltre è possibile cercare le informazioni necessarie per la connessione è necessario fornire. Questo sito di terze parti - [al riferimento di stringhe di connessione](https://www.connectionstrings.com/) -contiene le stringhe di connessione di esempio e altre informazioni sui provider di dati e le informazioni di connessione necessarie.
+Può essere necessario anche cercare le informazioni di connessione che devono essere specificate. Il sito di terze parti [The Connection Strings Reference](https://www.connectionstrings.com/) (Riferimenti alle stringhe di connessione) contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="make-sure-the-driver-you-want-is-installed"></a>Verificare che il driver desiderato è installato
-1.  Cercare o sfogliare il **origini dati ODBC (64 bit)** applet del Pannello di controllo. Se si dispone solo di un driver a 32 bit, o che è necessario utilizzare un driver a 32 bit, una ricerca per **origini dati ODBC (32 bit)** invece.
-2.  Avviare l'applet. Il **Amministrazione origine dati ODBC** verrà visualizzata la finestra.
-3.  Nel **driver** scheda, è possibile trovare un elenco di tutti i driver ODBC installati nel computer. (I nomi di alcuni driver potrebbero essere indicati in più lingue).
+## <a name="make-sure-the-driver-you-want-is-installed"></a>Verificare che il driver desiderato sia installato
+1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)**.
+2.  Avviare l'applet. Viene visualizzata la finestra **Amministrazione origine dati ODBC**.
+3.  Nella scheda **Driver** è disponibile un elenco di tutti i driver ODBC installati nel computer. È possibile che i nomi di alcuni driver siano visualizzati in più lingue.
 
-    Di seguito è riportato un esempio dell'elenco di driver a 64 bit installato.
+    Di seguito è riportato un esempio dell'elenco di driver a 64 bit installati.
 
-    ![Installare i driver ODBC a 64 bit](../../integration-services/import-export-data/media/installed-64-bit-odbc-drivers.png)
+    ![Driver ODBC a 64 bit installati](../../integration-services/import-export-data/media/installed-64-bit-odbc-drivers.png)
 
 > [!TIP]
-> Se è noto che il driver installato e non è visibile nell'applet a 64 bit, esaminare invece l'applet di 32 bit. Questo inoltre indica se è necessario eseguire a 64 bit o 32 bit SQL Server di importazione / esportazione guidata.
+> Se il driver è installato ma non viene visualizzato nell'applet a 64-bit, cercarlo nell'applet a 32 bit. Queste informazioni indicano anche se eseguire l'Importazione/Esportazione guidata SQL Server a 64 bit o a 32 bit.
 >
-> Per utilizzare la versione a 64 bit di SQL Server di importazione / esportazione guidata, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installare solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
+> Per usare la versione a 64 bit dell'Importazione/Esportazione guidata SQL Server, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installano solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
     
-## <a name="step-1---select-the-data-source"></a>Passaggio 1: selezionare l'origine dati
-Il driver ODBC installati nel computer non sono elencati nell'elenco a discesa delle origini dati. Per connettersi con un driver ODBC, selezionare innanzitutto il **il Provider di dati .NET Framework per ODBC** come origine dati nel **scegliere un'origine dati** o **scegliere una destinazione** pagina della procedura guidata. Questo provider funge da wrapper per il driver ODBC.
+## <a name="step-1---select-the-data-source"></a>Passaggio 1 - Selezionare l'origine dati
+I driver ODBC installati nel computer non sono presenti nell'elenco a discesa delle origini dati. Per connettersi con un driver ODBC, selezionare innanzitutto **Provider di dati .NET Framework per ODBC** come origine dati nella pagina **Scelta origine dati** o **Scelta destinazione** della procedura guidata. Questo provider funge da wrapper per il driver ODBC.
 
-Di seguito è riportata la schermata generica che viene visualizzato subito dopo aver selezionato il Provider di dati .NET Framework per ODBC.
+Di seguito è riportata la schermata generica che viene visualizzata dopo aver selezionato il Provider di dati .NET Framework per ODBC.
 
-![Connettersi a SQL con ODBC prima](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![Connettersi a SQL con ODBC (prima)](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-## <a name="step-2---provide-the-connection-info"></a>Passaggio 2: fornire le informazioni di connessione
-Il passaggio successivo è per fornire le informazioni di connessione per il driver ODBC e l'origine dati. Sono disponibili due opzioni.
-1.  Fornire un **DSN** (nome origine dati) già esistente o creato con il **Amministrazione origine dati ODBC** applet del Pannello di controllo. Un DSN viene salvato insieme di impostazioni necessarie per connettersi a un'origine dati ODBC.
+## <a name="step-2---provide-the-connection-info"></a>Passaggio 2 - Specificare le informazioni di connessione
+Nel passaggio successivo vengono specificate le informazioni di connessione per il driver ODBC e l'origine dati. Sono disponibili due opzioni.
+1.  Specificare un **DSN** (nome dell'origine dati) già esistente o creato con l'applet **Amministrazione origine dati ODBC** nel Pannello di controllo. Il DSN è l'insieme di impostazioni salvate necessarie per connettersi a un'origine dati ODBC.
 
-    Se già si conosce il nome DSN, o appreso come creare un nuovo nome origine dati a questo punto, è possibile ignorare il resto di questa pagina. Immettere il nome DSN nel **Dsn** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina, quindi continuare con il passaggio successivo della procedura guidata.
+    Se si conosce il nome DSN o si sa come creare un nuovo DSN, è possibile ignorare la parte rimanente di questa pagina. Immettere il nome DSN nel campo **Dsn** nella pagina **Scelta origine dati** o **Scelta destinazione**, quindi procedere con il passaggio successivo della procedura guidata.
 
-    [Fornire un DSN](#odbc_dsn)
+    [Specificare un DSN](#odbc_dsn)
     
-2.  Fornire un **stringa di connessione**, che è possibile cercare online, oppure creare e testare nel computer con il **Amministrazione origine dati ODBC** applet.
+2.  Specificare una **stringa di connessione** che è possibile cercare online o creare e testare nel computer con l'applet **Amministrazione origine dati ODBC**.
 
-    Se è già la stringa di connessione o come crearlo, è possibile ignorare il resto di questa pagina. Immettere la stringa di connessione nella **ConnectionString** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina, quindi continuare con il passaggio successivo della procedura guidata.
+    Se la stringa di connessione è già stata specificata o si conosce già la procedura per creare la stringa, è possibile ignorare la parte rimanente della pagina. Immettere la stringa di connessione nel campo **ConnectionString** nella pagina **Scelta origine dati** o **Scelta destinazione**, quindi procedere con il passaggio successivo della procedura guidata.
 
-    [Fornire una stringa di connessione](#odbc_connstring)
+    [Specificare una stringa di connessione](#odbc_connstring)
 
-Se si specifica una stringa di connessione, il **scegliere un'origine dati** o **scegliere una destinazione** pagina vengono visualizzate tutte le informazioni di connessione che la procedura guidata che verrà utilizzata per la connessione all'origine dati, ad esempio di metodo di nome e l'autenticazione server e database. Se si specifica un DSN, queste informazioni non è visibile.
+Se si specifica una stringa di connessione, la pagina **Scelta origine dati** o **Scelta destinazione** visualizza tutte le informazioni di connessione che verranno usate dalla procedura guidata per la connessione all'origine dati, ad esempio il nome del server e del database e il metodo di autenticazione. Se si specifica un DSN, queste informazioni non sono visibili.
 
-## <a name="odbc_dsn"></a>Opzione 1: specificare un nome DSN
-Se si desidera fornire le informazioni di connessione con un DSN (nome dell'origine dati), utilizzare il **Amministrazione origine dati ODBC** applet per trovare il nome dell'origine dati esistente o creare un nuovo nome.
-1.  Cercare o sfogliare il **origini dati ODBC (64 bit)** applet del Pannello di controllo. Se si dispone di un driver a 32 bit, o solo è necessario utilizzare un driver a 32 bit, cercare o selezionare **origini dati ODBC (32 bit)** invece.
-2.  Avviare l'applet. Il **Amministrazione origine dati ODBC** verrà visualizzata la finestra. Ecco come appare l'applet.
+## <a name="odbc_dsn"></a> Opzione 1 - Specificare un DSN
+Se si vuole specificare le informazioni di connessione con un DSN (nome dell'origine dati), usare l'applet **Amministrazione origine dati ODBC** per trovare il nome del DSN esistente o creare un nuovo DSN.
+1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)**.
+2.  Avviare l'applet. Viene visualizzata la finestra **Amministrazione origine dati ODBC**. L'applet ha l'aspetto seguente.
 
-    ![Applet del Pannello di controllo Amministratore ODBC](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
+    ![Applet del Pannello di controllo Amministrazione origine dati ODBC](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
     
-3.  Se si desidera **utilizzare un DSN esistente** per l'origine dati, è possibile utilizzare qualsiasi DSN visualizzate sul **DSN utente**, **DSN di sistema**, o **DSN su File** scheda. Controllare il nome, quindi tornare alla procedura guidata e immetterlo nel **Dsn** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina. Ignorare il resto di questa pagina e andare al passaggio successivo della procedura guidata.
-4.  Se si desidera **creare un nuovo DSN**, decidere se si desidera che sia visibile solo all'utente (DSN utente), visibili a tutti gli utenti del computer tra cui servizi Windows (DSN di sistema) o salvata in un file (DSN su File). Questo esempio crea un nuovo DSN di sistema.
-5. Nel **DSN di sistema** scheda, fare clic su **Aggiungi**.
+3.  Se si vuole **usare un DSN esistente** per l'origine dati, è possibile usare qualsiasi DSN visualizzato nella scheda **DSN utente**, **DSN di sistema** o **DSN su file**. Selezionare il nome, quindi tornare alla procedura guidata e immetterlo nel campo **Dsn** nella pagina **Scelta origine dati** o **Scelta destinazione**. Ignorare la parte rimanente della pagina e procedere con il passaggio successivo della procedura guidata.
+4.  Se si vuole **creare un nuovo DSN**, decidere se il DSN deve essere visibile solo all'utente (DSN utente), visibile a tutti gli utenti del computer inclusi i servizi Windows (DSN di sistema) o salvato in un file (DSN su file). L'esempio seguente crea un nuovo DSN di sistema.
+5. Nella scheda **DSN di sistema** fare clic su **Aggiungi**.
 
     ![Aggiungere un nuovo DSN di sistema ODBC](../../integration-services/import-export-data/media/add-a-new-odbc-system-dsn.png)
     
-6.  Nel **creare una nuova origine dati** la finestra di dialogo, selezionare il driver per l'origine dati, quindi fare clic su **fine**.
+6.  Nella finestra di dialogo **Crea nuova origine dati** selezionare il driver per l'origine dati, quindi fare clic su **Fine**.
 
-    ![Selezionare i driver per nuovo DSN di sistema](../../integration-services/import-export-data/media/pick-driver-for-new-system-dsn.png)
+    ![Selezionare il driver per nuovo DSN di sistema](../../integration-services/import-export-data/media/pick-driver-for-new-system-dsn.png)
     
-7. Il driver verrà visualizzato uno o più schermi specifici del driver dove si immetteranno le informazioni necessarie per la connessione all'origine dati. (Per il driver SQL Server, ad esempio, esistono quattro pagine di impostazioni personalizzate.) Al termine, nell'elenco viene visualizzato il nuovo sistema DSN.
+7. Il driver visualizzerà una o più schermate specifiche del driver in cui immettere le informazioni necessarie per la connessione all'origine dati. Per il driver SQL Server, ad esempio, vengono visualizzate quattro pagine di impostazioni personalizzate. Al termine, il nuovo DSN di sistema apparirà incluso nell'elenco.
 
     ![Nuovo DSN di sistema nell'elenco](../../integration-services/import-export-data/media/new-system-dsn-in-list.png)
     
-8.  Tornare alla procedura guidata e immettere il nome DSN nel **Dsn** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina. Andare al passaggio successivo della procedura guidata.
+8.  Tornare alla procedura guidata e immettere il nome DSN nel campo Dsn nella pagina Scelta origine dati o Scelta destinazione. Continuare con il passaggio successivo della procedura guidata.
 
-## <a name="odbc_connstring"></a>Opzione 2: fornire una stringa di connessione
-Se si desidera fornire le informazioni di connessione con una stringa di connessione, il resto di questo argomento contiene di ottenere la stringa di connessione che è necessario.
+## <a name="odbc_connstring"></a> Opzione 2 - Specificare una stringa di connessione
+Se si vuole specificare le informazioni di connessione con una stringa di connessione, la parte rimanente di questo argomento descrive come ottenere la stringa di connessione necessaria.
 
-In questo esempio verrà utilizzata la seguente stringa di connessione, si connette a Microsoft SQL Server.
+L'esempio seguente usa la stringa di connessione seguente che stabilisce la connessione a Microsoft SQL Server.
 
     ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
     ```
 
-Immettere la stringa di connessione nella **ConnectionString** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.
+Immettere la stringa di connessione nel campo **ConnectionString** nella pagina **Scelta origine dati** o **Scelta destinazione**. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.
 
-Di seguito è riportata la schermata che viene visualizzato dopo aver immesso la stringa di connessione.
+Di seguito è riportata la schermata che viene visualizzata dopo aver immesso la stringa di connessione.
 
-![Connettersi a SQL con ODBC dopo](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
+![Connettersi a SQL con ODBC (dopo)](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
 > [!NOTE]
-> Se si configura l'origine o destinazione, le opzioni di connessione per un driver ODBC sono gli stessi. Ovvero le opzioni disponibili sono gli stessi in entrambi i **scegliere un'origine dati** e **scegliere una destinazione** pagine della procedura guidata.
+> Le opzioni di connessione per il driver ODBC sono le stesse sia nel caso in cui venga configurata l'origine sia nel caso in cui venga configurata la destinazione. Ovvero, le opzioni visualizzate sono le stesse in entrambe le pagine **Scelta origine dati** e **Scelta destinazione** della procedura guidata.
 
-## <a name="get-the-connection-string-online"></a>Ottenere la stringa di connessione in linea
-Per trovare stringhe di connessione per il driver ODBC in linea, vedere [al riferimento di stringhe di connessione](https://www.connectionstrings.com/). In questo sito di terze parti sono stringhe di connessione di esempio e altre informazioni sui provider di dati e le informazioni di connessione che richiedono.
+## <a name="get-the-connection-string-online"></a>Ottenere la stringa di connessione online
+Per trovare stringhe di connessione per il driver ODBC online, vedere [The Connection Strings Reference](https://www.connectionstrings.com/) (Riferimenti alle stringhe di connessione). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="get-the-connection-string-with-an-app"></a>Ottenere la stringa di connessione a un'app
-Per compilare e testare la stringa di connessione per il driver ODBC nel proprio computer, è possibile utilizzare il **Amministrazione origine dati ODBC** applet del Pannello di controllo. Creare un DSN su File per la connessione, quindi copiare le impostazioni di DSN su File per assemblare la stringa di connessione. Richiede diversi passaggi, ma consente di assicurarsi di disporre di una stringa di connessione valido.
+## <a name="get-the-connection-string-with-an-app"></a>Ottenere la stringa di connessione con un'app
+Per compilare e testare la stringa di connessione per il driver ODBC nel computer, è possibile usare l'applet **Amministrazione origine dati ODBC** del Pannello di controllo. Creare un DSN su file per la connessione, quindi copiare le impostazioni del DSN su file per assemblare la stringa di connessione. Questa operazione richiede diversi passaggi, ma offre una stringa di connessione valida.
 
-1.  Cercare o sfogliare il **origini dati ODBC (64 bit)** applet del Pannello di controllo. Se si dispone di un driver a 32 bit, o solo è necessario utilizzare un driver a 32 bit, cercare o selezionare **origini dati ODBC (32 bit)** invece.
-2.  Avviare l'applet. Il **Amministrazione origine dati ODBC** verrà visualizzata la finestra.
-3.  Passare quindi al **DSN su File** dell'applet. Scegliere **Aggiungi**.
+1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)**.
+2.  Avviare l'applet. Viene visualizzata la finestra **Amministrazione origine dati ODBC**.
+3.  Passare alla scheda **DSN su file** dell'applet. Scegliere **Aggiungi**.
 
-    Per questo esempio, creare un DSN su File anziché un DSN utente o DSN di sistema, poiché il DSN su File Salva le coppie nome-valore nel formato specifico richiesto per la stringa di connessione.
+    Per questo esempio, creare un DSN su file anziché un DSN utente o DSN di sistema poiché il DSN su file salva le coppie nome-valore nel formato specifico richiesto per la stringa di connessione.
 
-    ![Aggiungere un nuovo file ODBC DSN](../../integration-services/import-export-data/media/add-a-new-odbc-file-dsn.png)
+    ![Aggiungere un nuovo DSN su file ODBC](../../integration-services/import-export-data/media/add-a-new-odbc-file-dsn.png)
 
-4.  Nel **Crea nuova origine dati** nella finestra di dialogo selezionare i driver nell'elenco e quindi fare clic su **Avanti**. In questo esempio sta per creare un DSN che contiene gli argomenti di stringa di connessione che è necessario connettersi a Microsoft SQL Server.
+4.  Nella finestra di dialogo **Crea nuova origine dati** selezionare il driver nell'elenco e quindi fare clic su **Avanti**. Questo esempio crea un DSN che contiene gli argomenti della stringa di connessione necessari per la connessione a Microsoft SQL Server.
 
     ![Creare una nuova origine dati ODBC](../../integration-services/import-export-data/media/create-new-odbc-data-source.png)
     
-5.  Selezionare un percorso e immettere un nome per il nuovo DSN su File e quindi fare clic su **Avanti**. Tenere presente che in cui salvare il file in modo è possibile individuarlo e aprirlo in un passaggio successivo.
+5.  Selezionare un percorso e immettere un nome per il nuovo DSN su file e quindi fare clic su **Avanti**. Prendere nota del percorso in cui viene salvato il file per poterlo individuare e aprire nei passaggi successivi.
 
-    ![Salvare di nuovo DSN su File](../../integration-services/import-export-data/media/save-new-file-dsn.png)
+    ![Salvare un nuovo DSN su file](../../integration-services/import-export-data/media/save-new-file-dsn.png)
 
-6.  Esaminare il riepilogo delle selezioni e quindi fare clic su **fine**.
+6.  Esaminare il riepilogo delle selezioni e quindi fare clic su **Fine**.
 
-7.  Dopo aver fatto clic **fine**, il driver selezionato vengono visualizzati uno o più schermi proprietari per raccogliere le informazioni necessarie per la connessione. In genere queste info include server, informazioni di accesso e database per le origini dati basate su server e file di formato e versione per le origini dati basate su file.
+7.  Dopo aver fatto clic su **Fine**, il driver selezionato visualizza una o più schermate proprietarie per raccogliere le informazioni necessarie per la connessione. In genere queste informazioni includono server, informazioni di accesso e database per le origini dati basate su server e file, formato e versione per le origini dati basate su file.
 
-8. Dopo aver configurato l'origine dati e fare clic su **fine**, in genere di visualizzare un riepilogo delle selezioni e avere la possibilità di eseguirne il test.
+8. Dopo aver configurato l'origine dati e fatto clic su **Fine**, viene visualizzato un riepilogo delle selezioni che è possibile testare.
 
-    ![DSN File nuovo test](../../integration-services/import-export-data/media/test-new-file-dsn.png)
+    ![Testare un nuovo DSN su file](../../integration-services/import-export-data/media/test-new-file-dsn.png)
 
-9. Dopo aver verificato l'origine dati e chiudere le finestre di dialogo, è possibile trovare il DSN su File in cui è stato salvato nel file system. Se si non modifica l'estensione di file, l'estensione predefinita è. DSN.
+9. Dopo aver testato l'origine dati e aver chiuso le finestre di dialogo, trovare il DSN su file nel percorso in cui è stato salvato nel file system. Se l'estensione del file non è stata modificata, l'estensione predefinita è DSN.
 
-10. Aprire il file salvato con blocco note o un altro editor di testo. Ecco il contenuto di questo esempio di SQL Server.
+10. Aprire il file salvato con Blocco note o un altro editor di testo. Di seguito è riportato il contenuto dell'esempio SQL Server.
 
     ```   
     [ODBC]  
@@ -154,24 +155,23 @@ Per compilare e testare la stringa di connessione per il driver ODBC nel proprio
         
 11. Copiare e incollare i valori necessari in una stringa di connessione in cui le coppie nome-valore sono separate da punti e virgola.
 
-    Dopo assemblare i valori necessari dal file di esempio DSN, è necessario la seguente stringa di connessione.
+    Dopo aver assemblato i valori necessari del DSN su file di esempio, la stringa di connessione è la seguente.
     
         ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
         ```
 
-    Non è in genere necessario tutte le impostazioni in un DSN creati dall'amministratore origine dati ODBC per creare una stringa di connessione appropriata.  
+    Per creare una stringa di connessione valida non sono in genere necessarie tutte le impostazioni di un DSN creato da Amministrazione origine dati ODBC.  
     -   È sempre necessario specificare il driver ODBC.
-    -   Per un'origine dati basata su server ad esempio SQL Server, è necessario in genere Server, Database e informazioni di accesso. Nell'esempio di DSN, è necessario TrustServerCertificate, WSID o APP.
-    -   Per un'origine dati basata su file, è necessario almeno nome file e percorso.
+    -   Per un'origine dati basata su server come SQL Server, è necessario specificare il server, il database e le informazioni di accesso. Di conseguenza, nel DSN di esempio non è necessario TrustServerCertificate, WSID o APP.
+    -   Per un'origine dati basata su file, è necessario specificare almeno il nome del file e il percorso.
     
-12. Incollare la stringa di connessione nel **ConnectionString** nel campo di **scegliere un'origine dati** o **scegliere una destinazione** pagina della procedura guidata. La procedura guidata analizza la stringa e si è pronti per continuare.
+12. Incollare la stringa di connessione nel campo **ConnectionString** nella pagina **Scelta origine dati** o **Scelta destinazione** della procedura guidata. La procedura guidata analizza la stringa ed è possibile continuare.
 
-    ![Connettersi a SQL con ODBC dopo](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
+    ![Connettersi a SQL con ODBC (dopo)](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
 ## <a name="see-also"></a>Vedere anche
-[Scegliere un'origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 
 

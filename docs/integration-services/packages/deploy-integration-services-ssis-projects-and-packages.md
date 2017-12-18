@@ -1,12 +1,14 @@
 ---
-title: Integration Services (SSIS) di distribuire progetti e pacchetti | Documenti Microsoft
+title: Distribuire progetti e pacchetti di Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +20,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/27/2017
 Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Se è stato usato questo modello, non è stato possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.  
+>  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Se è stato usato questo modello, non è stato possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Confrontare il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy  
  Il tipo di modello di distribuzione scelto determina le opzioni di sviluppo e amministrazione disponibili per il progetto. Nella tabella seguente vengono illustrate le differenze e le similitudini tra l'utilizzo del modello di distribuzione del progetto e quello del pacchetto.  
@@ -55,7 +56,7 @@ Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere
 |I pacchetti vengono eseguiti in un processo di Windows separato.|I pacchetti vengono eseguiti in un processo di Windows separato.|  
 |Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|  
   
- Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Se è stato usato questo modello, non è stato possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.   
+ Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Se è stato usato questo modello, non è stato possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.   
   
 ## <a name="features-of-project-deployment-model"></a>Funzionalità del modello di distribuzione del progetto  
  Nella tabella seguente sono elencate le funzionalità disponibili per i progetti sviluppati solo per il modello di distribuzione del progetto.  
@@ -71,25 +72,25 @@ Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere
 ## <a name="project-deployment"></a>Distribuzione del progetto  
  Al centro del modello di distribuzione del progetto si trova il file di distribuzione con estensione ispac. Il file di distribuzione del progetto è un'unità di distribuzione autonoma che include solo le informazioni essenziali sui pacchetti e i parametri del progetto. Il file di distribuzione del progetto non acquisisce tutte le informazioni contenute nel file di progetto di Integration Services (estensione dtproj). Ad esempio, i file di testo aggiuntivi che si utilizzano per la scrittura di note non vengono archiviati nel file di distribuzione del progetto, pertanto non vengono distribuiti nel catalogo.  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Autorizzazioni necessarie per distribuire SSIS progetti e pacchetti
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Autorizzazioni necessarie per distribuire progetti e pacchetti SSIS
 
-Se si modifica l'account del servizio SSIS da quello predefinito, è possibile assegnare autorizzazioni aggiuntive all'account del servizio non predefinito, prima di poter distribuire correttamente i pacchetti. Se l'account del servizio non predefinito non dispone delle autorizzazioni necessarie, è possibile vedere il seguente messaggio di errore.
+Se si modifica l'account del servizio SSIS in un account diverso da quello predefinito, per distribuire i pacchetti può essere necessario concedere autorizzazioni aggiuntive all'account del servizio non predefinito. Se l'account del servizio non predefinito non ha le autorizzazioni necessarie, può essere visualizzato il messaggio di errore seguente.
 
-*Si è verificato un errore di .NET Framework durante l'esecuzione della routine definita dall'utente o l'aggregazione "deploy_project_internal": Win32Exception: non dispone di un privilegio richiesto dal client.*
+*Errore di .NET durante l'esecuzione dell'aggregazione o routine definita dall'utente "deploy_project_internal": System.ComponentModel.Win32Exception: Il privilegio richiesto non appartiene al client.*
 
-Questo errore è in genere il risultato di mancano le autorizzazioni DCOM. Per correggere l'errore, eseguire le operazioni seguenti.
+Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per correggere l'errore, eseguire le operazioni seguenti.
 
-1.  Aprire il **Servizi componenti** console (o eseguire Dcomcnfg.exe).
-2.  Nel **Servizi componenti** espandere **Servizi componenti** > **computer** > **risorse del Computer** > **Config DCOM**.
-3.  Nell'elenco, individuare **xx.0 di Microsoft SQL Server Integration Services** per la versione di SQL Server in uso. Ad esempio, SQL Server 2016 è la versione 13.
-4.  Mouse e scegliere **proprietà**.
-5.  Nel **proprietà di Microsoft SQL Server Integration Services 13.0** la finestra di dialogo, seleziona il **sicurezza** scheda.
-6.  Per ognuno dei tre set di autorizzazioni - avvio e attivazione, l'accesso e configurazione - selezionare **Personalizza**, quindi selezionare **modifica** per aprire la **autorizzazione** la finestra di dialogo.
-7.  Nel **autorizzazione** finestra di dialogo casella, aggiungere l'account del servizio non predefinito e concedere **Consenti** le autorizzazioni necessarie. In genere, un account ha **avvio locale** e **attivazione locale** autorizzazioni.
-8.  Fare clic su **OK** due volte, quindi chiudere il **Servizi componenti** console.
+1.  Aprire la console di **Servizi componenti** (o eseguire Dcomcnfg.exe).
+2.  Nella console di **Servizi componenti** espandere **Servizi componenti** > **Computer** > **Risorse del computer** > **Configurazione DCOM**.
+3.  Nell'elenco individuare **Microsoft SQL Server Integration Services xx.0** per la versione di SQL Server in uso. Per SQL Server 2016, ad esempio, la versione corretta è la 13.
+4.  Fare clic con il pulsante destro del mouse e selezionare **Proprietà**.
+5.  Nella finestra di dialogo **Proprietà Microsoft SQL Server Integration Services 13.0** selezionare la scheda **Sicurezza**.
+6.  Per ognuno dei tre set di autorizzazioni (Avvio e attivazione, Accesso e Configurazione) selezionare **Personalizza** e quindi **Modifica** per aprire la finestra di dialogo**Autorizzazioni**.
+7.  Nella finestra di dialogo **Autorizzazioni** aggiungere l'account del servizio non predefinito e concedere autorizzazioni **Consenti** secondo le esigenze. In genere, un account ha le autorizzazioni **Avvio locale** e **Attivazione locale**.
+8.  Fare clic su **OK** due volte e quindi chiudere la console di **Servizi componenti**.
 
-Per altre informazioni sull'errore descritti in questa sezione e sulle autorizzazioni richieste dall'account del servizio SSIS, vedere il blog seguente post.  
-[Win32Exception: Non dispone di un privilegio richiesto dal client durante la distribuzione di progetto SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Per altre informazioni sull'errore descritto in questa sezione e sulle autorizzazioni richieste dall'account del servizio SSIS, vedere il post di blog seguente.  
+[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/) (System.ComponentModel.Win32Exception: Privilegio obbligatorio non disponibile per il client durante la distribuzione di un progetto SSIS)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
   Nella versione corrente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile gestire ed eseguire pacchetti, nonché configurare i valori di runtime per i pacchetti tramite ambienti.  
@@ -99,11 +100,11 @@ Per altre informazioni sull'errore descritti in questa sezione e sulle autorizza
   
  Per distribuire un progetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , completare le attività seguenti:  
   
-1.  Se necessario, creare un catalogo SSISDB. Per ulteriori informazioni, vedere [catalogo SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Se necessario, creare un catalogo SSISDB. Per altre informazioni, vedere [Catalogo SSIS](../../integration-services/service/ssis-catalog.md).  
   
 2.  Convertire il progetto nel modello di distribuzione del progetto eseguendo la **Conversione guidata progetto di Integration Services** . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per convertire un progetto nel modello di distribuzione del progetto](#convert)  
   
-    -   Se il progetto è stato creato in [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], per impostazione predefinito il progetto utilizza il modello di distribuzione del progetto.  
+    -   Se il progetto è stato creato in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] o versione successiva, per impostazione predefinita il progetto usa il modello di distribuzione del progetto.  
   
     -   Se il progetto è stato creato in una versione precedente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], dopo aver aperto il file di progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convertirlo nel modello di distribuzione del progetto.  
   
@@ -142,7 +143,7 @@ Per altre informazioni sull'errore descritti in questa sezione e sulle autorizza
   
      oppure  
   
-     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  >  **SSISDB** nodo in Esplora oggetti e individuare la cartella progetti per il progetto che si desidera distribuire. Fare clic con il pulsante destro del mouse sulla cartella **Progetti** , quindi scegliere **Distribuzione progetto**.  
+     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere il nodo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** in Esplora oggetti e individuare la cartella Progetti per il progetto da distribuire. Fare clic con il pulsante destro del mouse sulla cartella **Progetti** , quindi scegliere **Distribuzione progetto**.  
   
      oppure  
   
@@ -157,7 +158,7 @@ Per altre informazioni sull'errore descritti in questa sezione e sulle autorizza
 3.  Completare la procedura guidata. 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>Distribuire pacchetti nel server Integration Services
-  La funzionalità di distribuzione dei pacchetti incrementale introdotta in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] consente di distribuire uno o più pacchetti in un progetto nuovo o esistente senza distribuire l'intero progetto.  
+  La funzionalità di distribuzione dei pacchetti incrementale introdotta in  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] consente di distribuire uno o più pacchetti in un progetto nuovo o esistente senza distribuire l'intero progetto.  
   
 ###  <a name="DeployWizard"></a> Distribuire pacchetti con la Distribuzione guidata Integration Services  
   
@@ -310,7 +311,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
  La pagina consente di controllare le impostazioni selezionate. È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro. Fare clic su **Distribuisci** per avviare il processo di distribuzione.  
   
 #### <a name="results"></a>Risultati  
- Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **salvare Report...**  per salvare i risultati in un file XML oppure fare clic su **Chiudi** chiudere la procedura guidata.
+ Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **Salva report...** per salvare i risultati in un file XML oppure su **Chiudi** per uscire dalla procedura guidata.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -729,4 +730,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **Salva report**  
  Fare clic su questa opzione per salvare un riepilogo della conversione del progetto in un file con estensione xml.  
-

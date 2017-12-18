@@ -1,45 +1,45 @@
 ---
-title: "Raccolta di un elenco per il ciclo ForEach con l'attività Script | Documenti Microsoft"
+title: "Raccolta di un elenco per il ciclo ForEach con l'attività Script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 526d0a36a1be48f9437e9a9d9ad2b341d4320bb6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Raccolta di un elenco per il ciclo ForEach con l'attività Script
-  L'enumeratore Foreach da variabile enumera gli elementi in un elenco passato in una variabile ed esegue le stesse attività su ogni elemento. È possibile utilizzare codice personalizzato in un'attività Script per popolare un elenco a questo scopo. Per ulteriori informazioni sull'enumeratore, vedere [contenitore ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
+  L'enumeratore Foreach da variabile enumera gli elementi in un elenco passato in una variabile ed esegue le stesse attività su ogni elemento. È possibile utilizzare codice personalizzato in un'attività Script per popolare un elenco a questo scopo. Per altre informazioni sull'enumeratore, vedere [Contenitore ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- L'esempio seguente usa i metodi di **System.IO** dello spazio dei nomi per raccogliere un elenco di cartelle di lavoro di Excel nel computer che sono più recenti o precedenti rispetto al numero di giorni specificato dall'utente in una variabile. Nelle directory dell'unità C viene eseguita una ricerca ricorsiva dei file con estensione xls e viene esaminata la data dell'ultima modifica di ogni file per determinare se il file fa parte dell'elenco. Aggiunge i file risultanti per un **ArrayList** e Salva il **ArrayList** a una variabile per utilizzarle successivamente in un contenitore ciclo Foreach. Il contenitore Ciclo Foreach è configurato per utilizzare l'enumeratore Foreach da variabile.  
+ Nell'esempio seguente vengono usati i metodi dello spazio dei nomi **System.IO** per raccogliere un elenco di cartelle di lavoro di Excel sul computer, più o meno recenti di un numero di giorni specificati dall'utente in una variabile. Nelle directory dell'unità C viene eseguita una ricerca ricorsiva dei file con estensione xls e viene esaminata la data dell'ultima modifica di ogni file per determinare se il file fa parte dell'elenco. I file risultanti vengono aggiunti a un oggetto **ArrayList** che viene quindi salvato in una variabile per uso successivo in un contenitore Ciclo Foreach. Il contenitore Ciclo Foreach è configurato per utilizzare l'enumeratore Foreach da variabile.  
   
 > [!NOTE]  
->  La variabile che si utilizza con l'enumeratore Foreach da variabile deve essere di tipo **oggetto**. L'oggetto inserito nella variabile deve implementare una delle interfacce seguenti: **IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System. ComponentModel IListSource**, o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un **matrice** o **ArrayList** viene in genere utilizzato. Il **ArrayList** richiede un riferimento e un **importazioni** istruzione per il **System. Collections** dello spazio dei nomi.  
+>  La variabile che si usa con l'enumeratore Foreach da variabile deve essere di tipo **Oggetto**. L'oggetto inserito nella variabile deve implementare una delle interfacce seguenti: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource**, o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Viene usato comunemente un oggetto **Array** o **ArrayList**. **ArrayList** richiede un riferimento e un'istruzione **Imports** per lo spazio dei nomi **System.Collections**.  
   
  È possibile provare a utilizzare questa attività utilizzando valori diversi positivi e negativi per la variabile del pacchetto `FileAge`. È possibile, ad esempio, immettere 5 per cercare i file creati negli ultimi cinque giorni oppure immettere -3 per cercare i file creati più di tre giorni fa. L'esecuzione di questa attività può richiedere alcuni minuti su un'unità con numerose cartelle in cui eseguire la ricerca.  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  Creare una variabile del pacchetto denominata `FileAge` di tipo integer e immettere un valore integer positivo o negativo. Quando il valore è positivo, il codice cerca i file più recenti del numero specificato di giorni. Quando invece è negativo, cerca i file più obsoleti del numero specificato di giorni.  
   
-2.  Creare una variabile del pacchetto denominata `FileList` di tipo **oggetto** per ricevere l'elenco di file raccolti dall'attività Script per un utilizzo futuro da Foreach da variabile enumeratore.  
+2.  Creare una variabile del pacchetto denominata `FileList` di tipo **Oggetto** per ricevere l'elenco di file raccolti dall'attività Script per un uso successivo da parte dell'enumeratore Foreach da variabile.  
   
-3.  Aggiungere il `FileAge` variabile dell'attività Script **ReadOnlyVariables** , proprietà e aggiungere il `FileList` variabile il **ReadWriteVariables** proprietà.  
+3.  Aggiungere la variabile `FileAge` alla proprietà **ReadOnlyVariables** dell'attività Script e aggiungere la variabile `FileList` alla proprietà **ReadWriteVariables**.  
   
-4.  Nel codice, importare il **System. Collections** e **System.IO** gli spazi dei nomi.  
+4.  Importare nel codice lo spazio dei nomi **System.Collections** e lo spazio dei nomi **System.IO**.  
   
 ### <a name="code"></a>Codice  
   
@@ -253,8 +253,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenitore ciclo foreach](../../integration-services/control-flow/foreach-loop-container.md)   
+ [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md)   
  [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

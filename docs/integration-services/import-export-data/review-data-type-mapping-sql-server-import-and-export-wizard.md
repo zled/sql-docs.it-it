@@ -1,49 +1,49 @@
 ---
-title: Esaminare il tipo di dati di Mapping (SQL Server importazione / esportazione guidata) | Documenti Microsoft
+title: Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9ddeba48bde846c4c3494fef62d946bab792984
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
-Se nell'elenco **Mapping** della finestra di dialogo **Mapping colonne** è stato specificato un mapping tra i tipi di dati che può avere esito negativo, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata mostra la pagina **Verifica mapping tra i tipi di dati** . In questa pagina è possibile esaminare le informazioni dettagliate sulle conversioni dei tipi di dati da eseguire tramite la procedura guidata per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi per distinguere le conversioni di tipo di dati che dovrebbero avere esito positivo da quelle che possono causare errori o troncamenti. Per ogni conversione, decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.   
+Se nell'elenco **Mapping** della finestra di dialogo **Mapping colonne** è stato specificato un mapping tra i tipi di dati che può avere esito negativo, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata mostra la pagina **Verifica mapping tra i tipi di dati** . In questa pagina è possibile esaminare le informazioni dettagliate sulle conversioni dei tipi di dati da eseguire tramite la procedura guidata per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi che consentono di distinguere le conversioni dei tipi di dati per cui si prevede un esito positivo da quelle che possono provocare errori o troncamenti. Per ogni conversione, decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.   
   
 > [!TIP]
 > Nella pagina **Verifica mapping tra i tipi di dati** non è possibile modificare i mapping tra i tipi di dati. È tuttavia possibile fare clic su **Indietro** per tornare alla pagina **Seleziona tabelle e viste di origine** e quindi fare clic su **Modifica mapping** per aprire di nuovo la finestra di dialogo **Mapping colonne** . Nella finestra di dialogo **Mapping colonne** è possibile specificare i mapping tra i tipi di dati che con maggiore probabilità avranno esito positivo. Per altre informazioni sulla finestra **Mapping colonne** , vedere [Mapping colonne](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
   
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>Screenshot della pagina Verifica mapping tra i tipi di dati
- La schermata seguente mostra un esempio del **revisione Data Type Mapping** pagina della procedura guidata.
+ Nella schermata riportata di seguito è presente un esempio della pagina **Verifica mapping tra i tipi di dati** della procedura guidata.
  
  In questo esempio:
- -   L'utente ha specificato un mapping nel **i mapping delle colonne** la finestra di dialogo che potrebbe non riuscire.
+ -   L'utente ha specificato un mapping nella finestra di dialogo **Mapping colonne** la cui esecuzione potrebbe non riuscire.
  -   L'icona di avviso sulla riga dell'elenco **Tabella** indica che è presente un problema per la conversione di almeno una colonna di dati dai risultati della query a un tipo di dati compatibile nella tabella di destinazione.
- -   L'icona di avviso nella prima riga nel **mapping dei tipi di dati** elenco indica che il mapping tra il **int** il tipo di dati della colonna di origine per il **smalldatetime** tipo di dati di la colonna di destinazione può causare una perdita di dati.
+ -   L'icona di avviso sulla prima riga dell'elenco **Mapping dei tipi di dati** indica che il mapping tra il tipo di dati **int** della colonna di origine e il tipo di dati **smalldatetime** della colonna di destinazione può determinare una perdita di dati.
  
- ![Pagina Mapping tipi di dati di verifica dell'importazione / esportazione guidata](../../integration-services/import-export-data/media/review-mapping.png "pagina revisione Data Type Mapping dell'importazione / esportazione guidata") 
+ ![Pagina Verifica mapping tra i tipi di dati dell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/media/review-mapping.png "Pagina Verifica mapping tra i tipi di dati dell'Importazione/Esportazione guidata SQL Server") 
  
 ## <a name="review-the-source-and-destination-tables"></a>Rivedere le tabelle di origine e di destinazione  
- La sezione superiore della pagina **Verifica mapping tra i tipi di dati** è costituita da un elenco **Tabella** contenente le tabelle da copiare dall'origine alla destinazione. Per visualizzare le informazioni di conversione relative a una singola tabella, selezionare una tabella dall'elenco **Tabella** . Le informazioni sulla conversione per le singole colonne della tabella selezionata viene visualizzata nella parte inferiore della pagina di **mapping dei tipi di dati** della griglia.
+ La sezione superiore della pagina **Verifica mapping tra i tipi di dati** è costituita da un elenco **Tabella** contenente le tabelle da copiare dall'origine alla destinazione. Per visualizzare le informazioni di conversione relative a una singola tabella, selezionare una tabella dall'elenco **Tabella** . Le informazioni di conversione relative alle colonne individuali della tabella selezionata vengono visualizzate nella griglia **Mapping dei tipi di dati** nella parte inferiore della pagina.
 
-In questo esempio, i risultati della query fornito dall'utente verranno copiati nella tabella Sales.CustomerNew2 nella destinazione. L'icona di avviso indica che si verifica un problema di conversione almeno una colonna di dati dai risultati della query in un tipo di dati compatibili nella tabella di destinazione.
+In questo esempio, i risultati della query dell'utente verranno copiati nella tabella Sales.CustomerNew2 nella destinazione. L'icona di avviso indica che è presente un problema per la conversione di almeno una colonna di dati dai risultati della query a un tipo di dati compatibile nella tabella di destinazione.
 
 ![Verifica mapping - Tabelle](../../integration-services/import-export-data/media/review-mapping-tables.png)
   
@@ -56,10 +56,10 @@ In questo esempio, i risultati della query fornito dall'utente verranno copiati 
 |(Icona di destinazione)|Indica se la destinazione è già presente o se verrà creata dalla procedura guidata:<br /> -   Un'icona di tabella indica che la destinazione è costituita da una tabella esistente.<br />-   Un'icona di tabella con un riflesso di luce indica che la destinazione è costituita da una nuova tabella che verrà creata dalla procedura guidata.|  
 |**Destinazione**|Nome della tabella di destinazione.|  
   
-## <a name="review-the-data-type-mappings"></a>Esaminare i mapping dei tipi di dati  
- La parte centrale della pagina **Verifica mapping tra i tipi di dati** è costituita dall'elenco **Mapping dei tipi di dati** . Questa griglia fornisce informazioni dettagliate sulle colonne nella tabella di origine selezionato nella conversione di **tabella** elenco nella parte superiore della pagina.
+## <a name="review-the-data-type-mappings"></a>Verifica mapping tra i tipi di dati  
+ La parte centrale della pagina **Verifica mapping tra i tipi di dati** è costituita dall'elenco **Mapping dei tipi di dati** . Questa griglia specifica informazioni dettagliate sulla conversione per le colonne della tabella di origine selezionata nell'elenco **Tabella** nella parte superiore della pagina.
 
-In questo esempio, ogni colonna di origine verrà copiato a una colonna con lo stesso nome e tipo di dati nella destinazione. L'icona di avviso nella prima riga nel **mapping dei tipi di dati** elenco indica che il mapping tra il **int** il tipo di dati della colonna di origine per il **smalldatetime** tipo di dati di la colonna di destinazione può causare una perdita di dati.
+In questo esempio, ogni colonna di origine verrà copiata in una colonna con lo stesso nome e tipo di dati nella destinazione. L'icona di avviso sulla prima riga dell'elenco **Mapping dei tipi di dati** indica che il mapping tra il tipo di dati **int** della colonna di origine e il tipo di dati **smalldatetime** della colonna di destinazione può determinare una perdita di dati.
  
 ![Verifica mapping - Mapping](../../integration-services/import-export-data/media/review-mapping-mappings.png)  
 
@@ -82,7 +82,7 @@ La tabella seguente descrive le colonne dell'elenco **Mapping dei tipi di dati**
 ## <a name="specify-global-error-handling-options"></a>Specificare le opzioni di gestione degli errori globali  
  Nella sezione inferiore della pagina **Verifica mapping tra i tipi di dati** è possibile specificare le opzioni di gestione degli errori che verranno applicate per impostazione predefinita a tutte le colonne. Queste impostazioni vengono applicate a tutte le conversioni per cui nella colonna **In caso di errore** o **In caso di troncamento** dell'elenco **Mapping dei tipi di dati** è stata selezionata l'opzione **Usa valore globale** .   
 
-Questo esempio mostra i valori predefiniti per le due opzioni di gestione degli errori globale.
+Questo esempio visualizza i valori predefiniti per le due opzioni di gestione degli errori globali.
 
 ![Verifica mapping - Errori](../../integration-services/import-export-data/media/review-mapping-errors.png)
 
@@ -101,5 +101,4 @@ Questo esempio mostra i valori predefiniti per le due opzioni di gestione degli 
  
  ## <a name="see-also"></a>Vedere anche
 [Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-
 

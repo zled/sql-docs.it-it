@@ -1,10 +1,13 @@
 ---
 title: Risoluzione dei problemi relativi ai cluster di failover | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/21/2015
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cd7bcdf3515d6c8f88ef870494c4f6f8b5545fb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 939d5060ff55faa6267bc8944d2201c2dc0887d9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="failover-cluster-troubleshooting"></a>Risoluzione dei problemi relativi al clustering di failover
-  In questo argomento sono disponibili informazioni sugli argomenti seguenti:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento fornisce informazioni sugli argomenti seguenti:  
   
 -   Procedura di base per la risoluzione dei problemi.  
   
@@ -86,7 +89,7 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
  Di seguito vengono elencati alcuni problemi comuni relativi all'utilizzo e le rispettive modalità di risoluzione.  
   
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problema: uso non corretto della sintassi del prompt dei comandi per installare SQL Server  
- **Problema 1** : è difficile diagnosticare problemi di installazione quando si usa l'opzione **/qn** dal prompt dei comandi, perché **** tale opzione determina l'eliminazione di tutte le finestre di dialogo dell'interfaccia utente e dei messaggi di errore del programma di installazione. Se l'opzione **/qn** viene specificata, tutti i messaggi del programma di installazione, compresi i messaggi di errore, vengono inseriti nei file di log del programma. Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+ **Problema 1** : è difficile diagnosticare problemi di installazione quando si usa l'opzione **/qn** dal prompt dei comandi, perché **tale opzione** determina l'eliminazione di tutte le finestre di dialogo dell'interfaccia utente e dei messaggi di errore del programma di installazione. Se l'opzione **/qn** viene specificata, tutti i messaggi del programma di installazione, compresi i messaggi di errore, vengono inseriti nei file di log del programma. Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
  **Risoluzione 1**: usare l'opzione **/qb** anziché l'opzione **/qn** . Se si usa l'opzione **/qb** , per ogni passaggio verrà visualizzata l'interfaccia utente di base, inclusi i messaggi di errore.  
   

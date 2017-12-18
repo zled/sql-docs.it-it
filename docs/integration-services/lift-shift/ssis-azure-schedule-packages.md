@@ -1,46 +1,49 @@
 ---
-title: Pianificare l'esecuzione del pacchetto SSIS in Azure | Documenti Microsoft
+title: Pianificare l'esecuzione del pacchetto SSIS in Azure | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: it-it
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Pianificare l'esecuzione di un pacchetto SSIS in Azure
-È possibile pianificare l'esecuzione di pacchetti archiviati nel database del catalogo di SSISDB in un server di Database SQL di Azure scegliendo una delle opzioni di pianificazione seguenti:
+È possibile pianificare l'esecuzione dei pacchetti archiviati nel database del catalogo SSISDB in un server di database SQL di Azure scegliendo una delle opzioni di pianificazione seguenti:
 -   [SQL Server Agent](#agent)
--   [Processi elastici di Database SQL](#elastic)
--   [L'attività di Azure Data Factory Stored Procedure SQL Server](#sproc)
+-   [Processi elastici del database SQL](#elastic)
+-   [Attività stored procedure di SQL Server di Azure Data Factory](#sproc)
 
-## <a name="agent"></a>Pianificare un pacchetto con SQL Server Agent
+## <a name="agent"></a> Pianificare un pacchetto con SQL Server Agent
 
 ### <a name="prerequisite"></a>Prerequisiti
 
-È possibile utilizzare SQL Server Agent in locale per pianificare l'esecuzione di pacchetti archiviati in un server di Database SQL di Azure, è necessario aggiungere il server di Database SQL come un server collegato. Per altre informazioni, vedere [creare server collegati](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) e [server collegati](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Prima di usare SQL Server Agent in locale per pianificare l'esecuzione di pacchetti archiviati in un server di database SQL di Azure, è necessario aggiungere il server di database SQL come server collegato. Per altre informazioni, vedere [Creazione di server collegati](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) e [Server collegati](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### <a name="create-a-sql-server-agent-job"></a>Creare un processo di SQL Server Agent
 
-Per pianificare un pacchetto con SQL Server Agent in locale, creare un processo con un passaggio di processo che chiama il catalogo SSIS stored procedure `[catalog].[create_execution]` e quindi `[catalog].[start_execution]`. Per altre informazioni, vedere [processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
+Per pianificare un pacchetto con SQL Server Agent in locale, creare un processo con un passaggio di processo che chiami le stored procedure del catalogo SSIS `[catalog].[create_execution]` e quindi `[catalog].[start_execution]`. Per altre informazioni, vedere [Processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
 
-1.  In SQL Server Management Studio, connettersi al database di SQL Server locale in cui si desidera creare il processo.
+1.  In SQL Server Management Studio connettersi al database di SQL Server locale in cui si vuole creare il processo.
 
-2.  Fare clic su di **SQL Server Agent** nodo, seleziona **New**e quindi selezionare **processo** per aprire la **nuovo processo** la finestra di dialogo.
+2.  Fare clic con il pulsante destro del mouse sul nodo **SQL Server Agent**, selezionare **Nuovo** e quindi selezionare **Processo** per aprire la finestra di dialogo **Nuovo processo**.
 
-3.  Nel **nuovo processo** la finestra di dialogo, seleziona il **passaggi** pagina e quindi selezionare **New** per aprire la **nuovo passaggio di processo** la finestra di dialogo.
+3.  Nella finestra di dialogo **Nuovo processo** selezionare la pagina **Passaggi** e quindi selezionare **Nuovo** per aprire la finestra di dialogo **Nuovo passaggio di processo**.
 
-4.  Nel **nuovo passaggio di processo** nella finestra di dialogo `SSISDB` come il **Database.**
+4.  Nella finestra di dialogo **Nuovo passaggio di processo** selezionare `SSISDB` come **Database.**
 
-5.  Nella casella comando, immettere uno script Transact-SQL simile allo script illustrato nell'esempio seguente:
+5.  Nel campo del comando immettere uno script Transact-SQL simile allo script riportato nell'esempio seguente:
 
     ```sql
     DECLARE @return_value int, @exe_id bigint 
@@ -55,23 +58,23 @@ Per pianificare un pacchetto con SQL Server Agent in locale, creare un processo 
     GO
     ```
 
-6.  Completare la configurazione e pianificazione del processo.
+6.  Completare la configurazione e la pianificazione del processo.
 
-## <a name="elastic"></a>Pianificare un pacchetto con i processi di SQL Database elastico
+## <a name="elastic"></a> Pianificare un pacchetto con i processi elastici del database SQL
 
-Per ulteriori informazioni sui processi elastici nel Database SQL, vedere [i database di gestione dei cloud di scalabilità orizzontale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Per altre informazioni sui processi elastici del database SQL, vedere [Gestione dei database cloud con scalabilità orizzontale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Prerequisiti
 
-È possibile utilizzare processi elastici per pianificare i pacchetti SSIS archiviati nel database del catalogo SSISDB in un server di Database SQL di Azure, è necessario eseguire le operazioni seguenti:
+Per poter usare i processi elastici per pianificare i pacchetti SSIS archiviati nel database del catalogo SSISDB in un server di database SQL di Azure, è necessario eseguire queste operazioni:
 
-1.  Installare e configurare i componenti di processi di Database elastico. Per altre informazioni, vedere [Panoramica di processi di installazione di Database elastico](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Installare e configurare i componenti dei processi di database elastico. Per altre informazioni, vedere [Installazione dei processi di database elastico (panoramica)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
-2. Creare le credenziali con ambito database processi è possono utilizzare per inviare comandi al database del catalogo SSIS. Per altre informazioni, vedere [creare CREDENZIALI con ambito DATABASE (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+2. Creare le credenziali con ambito database che i processi possono usare per inviare comandi al database del catalogo SSIS. Per altre informazioni, vedere [CREARE le CREDENZIALI nell'ambito del DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 ### <a name="create-an-elastic-job"></a>Creare un processo elastico
 
-Creare il processo tramite uno script Transact-SQL simile allo script illustrato nell'esempio seguente:
+Creare il processo usando uno script Transact-SQL simile allo script riportato nell'esempio seguente:
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -103,24 +106,24 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>Pianificare un pacchetto con l'attività di Azure Data Factory Stored Procedure SQL Server
+## <a name="sproc"></a> Pianificare un pacchetto con l'attività stored procedure di SQL Server di Azure Data Factory
 
 > [!IMPORTANT]
-> Usare gli script JSON nell'esempio seguente con Data Factory di Azure versione 1 attività Stored Procedure.
+> Usare gli script JSON dell'esempio seguente con l'attività stored procedure di Azure Data Factory versione 1.
 
-Per pianificare un pacchetto con l'attività di Azure Data Factory Stored Procedure SQL Server, eseguire le operazioni seguenti:
+Per pianificare un pacchetto con l'attività stored procedure di SQL Server di Azure Data Factory, eseguire queste operazioni:
 
-1.  Creare una Data Factory.
+1.  Creare una data factory.
 
-2.  Creare un servizio collegato per il Database SQL che ospita il database SSISDB.
+2.  Creare un servizio collegato per il database SQL che ospita SSISDB.
 
 3.  Creare un set di dati di output che controlla la pianificazione.
 
-4.  Creare una pipeline di Data Factory che usa l'attività di Stored Procedure di SQL Server per eseguire il pacchetto SSIS.
+4.  Creare una pipeline della data factory che usa l'attività stored procedure di SQL Server per eseguire il pacchetto SSIS.
 
-In questa sezione viene fornita una panoramica dei passaggi. Un'esercitazione di Data Factory completa non rientra nell'ambito di questo articolo. Per altre informazioni, vedere [attività di SQL Server Stored Procedure](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+Questa sezione contiene una panoramica dei vari passaggi. Un'esercitazione completa su Data Factory non rientra nell'ambito di questo articolo. Per altre informazioni, vedere [Attività stored procedure di SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Creare un servizio collegato per il Database SQL che ospita il database SSISDB
+### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Creare un servizio collegato per il database SQL che ospita SSISDB
 Il servizio collegato consente a Data Factory di connettersi a SSISDB.
 
 ```json
@@ -155,8 +158,8 @@ Il set di dati di output contiene le informazioni di pianificazione.
     }
 }
 ```
-### <a name="create-a-data-factory-pipeline"></a>Creare una pipeline di Data Factory
-La pipeline utilizza l'attività di Stored Procedure di SQL Server per eseguire il pacchetto SSIS.
+### <a name="create-a-data-factory-pipeline"></a>Creare una pipeline della data factory
+La pipeline usa l'attività stored procedure di SQL Server per eseguire il pacchetto SSIS.
 
 ```json
 {
@@ -186,7 +189,7 @@ La pipeline utilizza l'attività di Stored Procedure di SQL Server per eseguire 
 }
 ```
 
-Non è necessario creare una nuova stored procedure per incapsulare i comandi Transact-SQL necessari per creare e avviare l'esecuzione del pacchetto SSIS. È possibile specificare l'intero script come il valore di `stmt` parametro nell'esempio precedente JSON. Di seguito è riportato uno script di esempio:
+Non è necessario creare una nuova stored procedure per incapsulare i comandi Transact-SQL richiesti per creare e avviare l'esecuzione del pacchetto SSIS. È possibile specificare l'intero script come il valore del parametro `stmt` nell'esempio di JSON precedente. Di seguito è riportato un esempio di script:
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
@@ -222,10 +225,9 @@ END
 GO
 ```
 
-Per ulteriori informazioni sul codice in questo script, vedere [distribuire ed eseguire pacchetti SSIS utilizzando Stored procedure](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+Per altre informazioni sul codice in questo script, vedere [Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per ulteriori informazioni su SQL Server Agent, vedere [processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
+Per altre informazioni su SQL Server Agent, vedere [Processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
 
-Per ulteriori informazioni sui processi elastici nel Database SQL, vedere [i database di gestione dei cloud di scalabilità orizzontale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
-
+Per altre informazioni sui processi elastici del database SQL, vedere [Gestione dei database cloud con scalabilità orizzontale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

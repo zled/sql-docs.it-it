@@ -1,13 +1,14 @@
 ---
-title: "Attività Esegui SQL | Documenti Microsoft"
-ms.custom:
-- ssisdev020617
+title: "Attività Esegui SQL | Microsoft Docs"
+ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 115
+caps.latest.revision: "115"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c6e8206cfceb0fe643fc537fa4e343731e7c21cb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Active
+ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -57,7 +58,7 @@ ms.lasthandoff: 08/03/2017
 |ODBC|[Gestione connessione ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gestione connessione ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
-|SQLMOBILE|[Gestione di connessione di SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
+|SQLMOBILE|[Gestione connessione SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## <a name="create-sql-statements"></a>Creare istruzioni SQL  
  L'origine delle istruzioni SQL utilizzate da questa attività può essere una proprietà dell'attività che contiene un'istruzione, una connessione a un file che contiene una o più istruzioni oppure il nome di una variabile che contiene un'istruzione. Le istruzioni SQL devono essere scritte nel sottolinguaggio del sistema di gestione di database (DBMS) di origine. Per altre informazioni, vedere [Query di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-queries.md).  
@@ -87,13 +88,13 @@ ms.lasthandoff: 08/03/2017
   
 -   Se l'attività utilizza un'associazione di parametri, tutte le query incluse nel batch dovranno avere lo stesso numero e gli stessi tipi di parametri.  
   
-## <a name="run-parameterized-sql-commands"></a>Eseguire i comandi SQL con parametri  
+## <a name="run-parameterized-sql-commands"></a>Eseguire comandi SQL con parametri  
  Le istruzioni SQL e le stored procedure utilizzano spesso parametri di input, parametri di output e codici restituiti. L'attività Esegui SQL supporta parametri di tipo **Input**, **Output**e **ReturnValue** . Il tipo **Input** viene usato per i parametri di input, il tipo **Output** per i parametri di output e il tipo **ReturnValue** per i codici restituiti.  
   
 > [!NOTE]  
 >  È possibile utilizzare parametri in un'attività Esegui SQL solo se il provider di dati li supporta.  
   
-## <a name="specify-a-result-set-type"></a>Specificare che un set di risultati tipo  
+## <a name="specify-a-result-set-type"></a>Specificare un tipo di set di risultati  
  A seconda del tipo di comando SQL, all'attività Esegui SQL può essere restituito o meno un set di risultati. Se si utilizzano ad esempio le istruzioni SELECT, viene in genere restituito un set di risultati, mentre questo non avviene per le istruzioni INSERT. Il set di risultati restituito da un'istruzione SELECT può contenere zero, una o più righe. Le stored procedure possono restituire anche un valore intero, detto codice restituito, che indica lo stato dell'esecuzione della procedura. In questo caso il set di risultati è costituito da una sola riga.  
   
 ## <a name="configure-the-execute-sql-task"></a>Configurare l'attività Esegui SQL  
@@ -113,7 +114,7 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
 
-## <a name="general-page---execute-sql-task-editor"></a>Pagina generale - Editor attività Esegui SQL
+## <a name="general-page---execute-sql-task-editor"></a>Pagina Generale - Editor attività Esegui SQL
  Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui SQL** per configurare l'attività Esegui SQL e specificare l'istruzione SQL eseguita dall'attività.  
 
 Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
@@ -122,7 +123,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **Nome**  
  Consente di specificare un nome univoco per l'attività Esegui SQL nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Descrizione**  
+ **Description**  
  Consente di immettere una descrizione per l'attività Esegui SQL. È consigliabile includere nella descrizione informazioni sugli scopi dell'attività, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **TimeOut**  
@@ -140,7 +141,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **TypeConversionMode**  
  Se si imposta questa proprietà su **Allowed**, l'attività Esegui SQL tenterà di convertire il parametro di output e i risultati della query nel tipo di dati della variabile a cui sono assegnati i risultati. Si applica al tipo di set di risultati **Riga singola** .  
   
- **Set di risultati**  
+ **ResultSet**  
  Consente di specificare il tipo di risultati previsto per un'istruzione SQL in fase di esecuzione. È possibile scegliere tra **Riga singola**, **Set dei risultati completo**, **XML**o **Nessuno**.  
   
  **ConnectionType**  
@@ -149,7 +150,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestione connessione ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestione connessione ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestione connessione SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connessione**  
- Consente di scegliere una connessione da un elenco di gestioni connessione definite. Per creare una nuova connessione, selezionare \< **nuova connessione...** >.  
+ Consente di scegliere una connessione da un elenco di gestioni connessione definite. Per creare una nuova connessione, selezionare \<**Nuova connessione**>.  
   
  **SQLSourceType**  
  Consente di selezionare il tipo di origine dell'istruzione SQL eseguita dall'attività.  
@@ -191,13 +192,13 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
- Selezionare una gestione connessione File esistente oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variabile  
  **SourceVariable**  
- Selezionare una variabile esistente oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+ Selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -206,7 +207,7 @@ Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attivit
   
 ### <a name="options"></a>Opzioni  
  **Nome variabile**  
- Dopo aver aggiunto un mapping dei parametri facendo **Aggiungi**, selezionare un sistema o una variabile definita dall'utente dall'elenco oppure fare clic su \< **nuova variabile...** > per aggiungere una nuova variabile tramite la **Aggiungi variabile** la finestra di dialogo.  
+ Dopo aver aggiunto un mapping dei parametri facendo clic su **Aggiungi**, selezionare una variabile di sistema o una variabile definita dall'utente nell'elenco oppure fare clic su \<**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -219,9 +220,9 @@ Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attivit
  **Nome parametro**  
  Consente di specificare un nome per il parametro.  
   
- A seconda del tipo di gestione connessione utilizzata dall'attività, è necessario specificare numeri o nomi di parametri. Alcuni tipi di Gestore connessione è necessario che il primo carattere del nome del parametro sia il simbolo @, nomi specifici come @Param1, o nomi di colonna come nomi di parametro.  
+ A seconda del tipo di gestione connessione utilizzata dall'attività, è necessario specificare numeri o nomi di parametri. Alcuni tipi di gestioni delle connessioni prevedono che il primo carattere del nome del parametro sia il segno @, nomi specifici come @Param1 oppure nomi di colonna come nomi di parametri.  
   
- **Il parametro di dimensione**  
+ **Dimensioni parametro**  
  Fornisce le dimensioni dei parametri a lunghezza variabile, ad esempio stringhe e campi binario.  
   
  Tale impostazione assicura che il provider allochi spazio sufficiente per i valori dei parametri a lunghezza variabile.  
@@ -245,7 +246,7 @@ La pagina **Set dei risultati** della finestra di dialogo **Editor attività Ese
  
   
  **Nome variabile**  
- Eseguire il mapping di set di risultati a una variabile selezionando una variabile oppure fare clic su \< **nuova variabile...** > per aggiungere una nuova variabile tramite la **Aggiungi variabile** la finestra di dialogo.  
+ Eseguire il mapping del set di risultati a una variabile selezionando una variabile o facendo clic su \<**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
   
  **Aggiungi**  
  Fare clic su questo pulsante per aggiungere un mapping del set di risultati.  
@@ -253,7 +254,7 @@ La pagina **Set dei risultati** della finestra di dialogo **Editor attività Ese
  **Rimuovi**  
  Selezionare un mapping del set di risultati e quindi fare clic su **Rimuovi**.  
  
-## <a name="parameters-in-the-execute-sql-task"></a>Parametri di attività Esegui SQL
+## <a name="parameters-in-the-execute-sql-task"></a>Parametri nell'attività Esegui SQL
 Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , parametri di **output** e codici restituiti. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'attività Esegui SQL supporta i tipi di parametro **Input**, **Output** e **ReturnValue**. Usare il tipo **Input** per parametri di input, **Output** per parametri di output e **ReturnValue** per i codici restituiti.  
   
 > [!NOTE]  
@@ -263,18 +264,18 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
  Tuttavia, l'utilizzo di parametri e di codici restituiti in un'attività Esegui SQL non si limita solo alla conoscenza dei tipi di parametro supportati dall'attività e del modo in cui si esegue il mapping di questi parametri. Sono previsti ulteriori requisiti e linee guida per utilizzare correttamente i parametri e i codici restituiti nell'attività Esegui SQL. Nella parte restante di questo argomento vengono illustrati tali requisiti e linee guida:  
   
--   [Utilizzo di indicatori e i nomi dei parametri](#Parameter_names_and_markers)  
+-   [Uso di nomi e marcatori di parametro](#Parameter_names_and_markers)  
   
--   [Utilizzo di parametri con tipi di dati data e ora](#Date_and_time_data_types)  
+-   [Uso di parametri con i tipi di dati di data e ora](#Date_and_time_data_types)  
   
--   [Utilizzo di parametri nelle clausole WHERE](#WHERE_clauses)  
+-   [Uso di parametri nelle clausole WHERE](#WHERE_clauses)  
   
--   [Utilizzo di parametri con stored procedure](#Stored_procedures)  
+-   [Uso di parametri con le stored procedure](#Stored_procedures)  
   
 -   [Recupero dei valori dei codici restituiti](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a>Gli indicatori e i nomi dei parametri  
- Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Ad esempio, il [!INCLUDE[vstecado](../../includes/vstecado-md.md)] tipo gestione connessione è necessario che il comando SQL di un marcatore di parametro nel formato  **@varParameter** , mentre il tipo di connessione OLE DB richiede il marcatore di parametro punto interrogativo (?).  
+###  <a name="Parameter_names_and_markers"></a> Nomi e marcatori di parametro  
+ Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Per il tipo di gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ad esempio, il marcatore di parametro usato nel comando SQL deve avere il formato **@varParameter**, mentre per il tipo di connessione OLE DB tale marcatore deve essere costituito da un punto interrogativo (?).  
   
  Anche i nomi che è possibile utilizzare come nomi di parametro nei mapping tra variabili e parametri variano a seconda del tipo di gestione connessione. Il tipo di gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utilizza ad esempio un nome definito dall'utente con prefisso @, mentre il tipo di gestione connessione OLE DB richiede nomi di parametro costituiti dal valore numerico di un ordinale in base 0.  
   
@@ -283,34 +284,34 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 |Tipo di connessione|Marcatore di parametro|Nome parametro|Comando SQL di esempio|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<Nome parametro >|@\<Nome parametro >|Selezionare FirstName, LastName, spostare il titolo da Person. Contact in cui ContactID =@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nome parametro>|@\<nome parametro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
-#### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Utilizzare i parametri con ADO.NET e le gestioni connessioni ADO  
- [!INCLUDE[vstecado](../../includes/vstecado-md.md)]e le gestioni connessioni ADO hanno requisiti specifici per i comandi SQL che utilizzano parametri:  
+#### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri con le gestioni connessioni ADO.NET e ADO  
+ [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e le gestioni connessioni ADO hanno requisiti specifici per i comandi SQL che usano parametri:  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]gestioni connessioni richiedono che il comando SQL utilizzi nomi di parametro come marcatori di parametro. È pertanto possibile eseguire il mapping direttamente delle variabili ai parametri. Se ad esempio sulla variabile `@varName` viene eseguito il mapping a un parametro di nome `@parName` , fornirà il valore per il parametro `@parName`.  
+-   Le gestioni connessioni [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiedono che il comando SQL usi nomi di parametro come indicatori di parametro. È pertanto possibile eseguire il mapping direttamente delle variabili ai parametri. Se ad esempio sulla variabile `@varName` viene eseguito il mapping a un parametro di nome `@parName` , fornirà il valore per il parametro `@parName`.  
   
 -   Per le gestioni connessioni ADO, è necessario che il comando SQL utilizzi punti interrogativi (?) come marcatori di parametro. Tuttavia, come nomi di parametro è possibile utilizzare qualsiasi nome definito dall'utente, ad eccezione dei valori interi.  
   
  Per fornire i valori ai parametri sulle variabili viene eseguito il mapping ai nomi di parametro. L'attività Esegui SQL utilizza quindi il valore ordinale del nome di parametro nell'elenco dei parametri per caricare i valori dalle variabili ai parametri.  
   
-#### <a name="use-parameters-with-excel-odbc-and-ole-db-connection-managers"></a>Utilizzare i parametri con EXCEL, ODBC e gestioni connessioni OLE DB  
+#### <a name="use-parameters-with-excel-odbc-and-ole-db-connection-managers"></a>Usare parametri con le gestioni connessioni EXCEL, ODBC e OLE DB  
  Per le gestioni connessioni EXCEL, ODBC e OLE DB, è necessario che il comando SQL utilizzi punti interrogativi (?) come marcatori di parametro e valori numerici in base 0 o in base 1 come nomi di parametro. Se l'attività Esegui SQL utilizza la gestione connessione ODBC, il nome del parametro di cui viene eseguito il mapping al primo parametro nella query è 1, altrimenti è 0. Per i parametri successivi, il valore numerico del nome del parametro indica il parametro del comando SQL a cui viene eseguito il mapping del nome di parametro. Sul parametro di nome 3, ad esempio, viene eseguito il mapping al terzo parametro, rappresentato dal terzo punto interrogativo (?) nel comando SQL.  
   
  Per fornire i valori ai parametri, sulle variabili viene eseguito il mapping ai nomi di parametro e l'attività Esegui SQL utilizza il valore ordinale del nome di parametro per caricare i valori dalle variabili ai parametri.  
   
  A seconda del provider utilizzato dalla gestione connessione, alcuni tipi di dati OLE DB potrebbero non essere supportati. Il driver per Excel, ad esempio, riconosce solo un set limitato di tipi di dati. Per altre informazioni sul comportamento del provider Jet usato insieme al driver per Excel, vedere [Origine Excel](../../integration-services/data-flow/excel-source.md).  
   
-#### <a name="use-parameters-with-ole-db-connection-managers"></a>Utilizzare i parametri con le gestioni connessioni OLE DB  
+#### <a name="use-parameters-with-ole-db-connection-managers"></a>Usare parametri con le gestioni connessioni OLE DB  
  Quando l'attività Esegui SQL usa la gestione connessione OLE DB, è disponibile la proprietà BypassPrepare dell'attività. Questa proprietà deve essere impostata su **true** se l'attività Esegui SQL usa istruzioni SQL con parametri.  
   
  Quando si utilizza una gestione connessione OLE DB, non è possibile utilizzare sottoquery con parametri, perché l'attività Esegui SQL non può derivare le informazioni sui parametri tramite il provider OLE DB. Tuttavia, è possibile utilizzare un'espressione per concatenare i valori dei parametri nella stringa di query e impostare la proprietà SqlStatementSource dell'attività.  
   
-###  <a name="Date_and_time_data_types"></a>Utilizzare i parametri con tipi di dati data e ora  
+###  <a name="Date_and_time_data_types"></a> Usare parametri con i tipi di dati di data e ora  
   
-#### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Utilizzare i parametri di data e ora con le gestioni connessioni ADO e ADO.NET  
+#### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni ADO.NET e ADO  
  Durante la lettura dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **time** and **datetimeoffset**, un'attività Esegui SQL che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADO prevede i requisiti aggiuntivi seguenti:  
   
 -   Per i dati **time**, una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiede che i dati vengano archiviati in un parametro con tipo di parametro **Input** o **Output** e con tipo di dati **string**.  
@@ -325,7 +326,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
  Per altre informazioni sui tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul relativo mapping nei tipi di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) e [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-#### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Utilizzare i parametri di data e ora con le gestioni connessioni OLE DB  
+#### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni OLE DB  
  Quando si usa una gestione connessione OLE DB, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2** e **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di input del tipo di dati NVARCHAR.  
@@ -341,7 +342,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
   
-#### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Utilizzare i parametri di data e ora con le gestioni connessioni ODBC  
+#### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni ODBC  
  Quando si usa una gestione connessione ODBC, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2** o **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di **input** del tipo di dati SQL_WVARCHAR  
@@ -357,7 +358,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
   
-###  <a name="WHERE_clauses"></a>Utilizzare i parametri nelle clausole WHERE  
+###  <a name="WHERE_clauses"></a> Usare parametri nelle clausole WHERE  
  I comandi SELECT, INSERT, UPDATE e DELETE includono spesso la clausola WHERE per specificare filtri che definiscono le condizioni che ogni riga nelle tabelle di origine deve soddisfare per essere qualificata per un comando SQL. I parametri specificano i valori del filtro per la clausola WHERE.  
   
  È possibile utilizzare marcatori di parametro per specificare dinamicamente i valori dei parametri. Le regole che determinano se è possibile utilizzare marcatori di parametro e nomi di parametro in un'istruzione SQL dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  
@@ -376,9 +377,9 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
 -   Per il tipo di connessione ADO è possibile utilizzare qualsiasi nome per i due parametri, ad esempio Param1 e Param2, ma è necessario eseguire il mapping di entrambi i parametri in base alla relativa posizione ordinale nell'elenco di parametri.  
   
--   Il [!INCLUDE[vstecado](../../includes/vstecado-md.md)] tipo di connessione vengono utilizzati i nomi di parametro @parmMinProductID e @parmMaxProductID.  
+-   Il tipo di connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa i nomi di parametro @parmMinProductID e @parmMaxProductID.  
   
-###  <a name="Stored_procedures"></a>Utilizzare i parametri con stored procedure  
+###  <a name="Stored_procedures"></a> Usare parametri con le stored procedure  
  Anche i comandi SQL che eseguono stored procedure possono utilizzare il mapping dei parametri. Come avviene per le regole delle query con parametri, anche le regole che determinano la modalità di utilizzo di marcatori di parametro e nomi di parametro dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  
   
  Nella tabella seguente sono elencati esempi di comandi EXEC per tipo di gestione connessione. Gli esempi eseguono la stored procedure **uspGetBillOfMaterials** nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. Tale stored procedure usa i parametri di `@StartProductID` e `@CheckDate` **e** .  
@@ -387,15 +388,15 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
-|ADO|Se IsQueryStoredProcedure è impostata su **False**,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostata su **True**,`uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostata su **False**,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostata su **True**,`uspGetBillOfMaterials`|  
+|ADO|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
   
  La sintassi per l'utilizzo dei parametri di output richiede che dopo ogni marcatore di parametro venga specificata la parola chiave OUTPUT. Ad esempio, la sintassi del parametro di output seguente è corretta: `EXEC myStoredProcedure ? OUTPUT`.  
   
  Per altre informazioni sull'utilizzo di parametri di input e di output con le stored procedure Transact-SQL, vedere [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
  
-### <a name="map-query-parameters-to-variables"></a>Mapping dei parametri di query a variabili
-In questa sezione viene descritto come utilizzare un'istruzione SQL con parametri nell'attività Esegui SQL e creare i mapping tra variabili e parametri nell'istruzione SQL.  
+### <a name="map-query-parameters-to-variables"></a>Eseguire il mapping di parametri di query a variabili
+In questa sezione viene descritto come usare un'istruzione SQL con parametri nell'attività Esegui SQL e come creare mapping tra variabili e parametri dell'istruzione SQL.  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che si desidera utilizzare.  
   
@@ -422,7 +423,7 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
     |Tipo di connessione|Marcatore di parametro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET e SQLMOBILE|@\<Nome parametro >|  
+    |ADO.NET e SQLMOBILE|@\<nome parametro>|  
     |ODBC|?|  
     |EXCEL e OLE DB|?|  
   
@@ -445,7 +446,7 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
     |Tipo di connessione|Nome parametro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET e SQLMOBILE|@\<Nome parametro >|  
+    |ADO.NET e SQLMOBILE|@\<nome parametro>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL e OLE DB|0, 1, 2, 3, …|  
   
@@ -465,7 +466,7 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
   
 14. Scegliere **OK**.  
 
-##  <a name="Return_codes"></a>Ottenere i valori dei codici restituiti  
+##  <a name="Return_codes"></a> Recuperare i valori dei codici restituiti  
  Una stored procedure può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per implementare codici restituiti nell'attività Esegui SQL, è necessario usare parametri di tipo **ReturnValue** .  
   
  Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene usato un parametro di **input** . Le regole che determinano la modalità di utilizzo di indicatori di parametro e nomi di parametro sono identiche per tutti i tipi di parametro:**Input**, **Output**e **ReturnValue**.  
@@ -476,7 +477,7 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
-|ADO|Se IsQueryStoreProcedure è impostata su **False**,`EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure è impostata su **True**,`myStoredProcedure`|  
+|ADO|Se IsQueryStoreProcedure è impostato su **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure è impostato su **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure è impostato su **True**.<br /><br /> `myStoredProcedure`|  
   
  Nella sintassi illustrata nella tabella precedente, l'attività Esegui SQL usa il tipo di origine **Input diretto** per eseguire la stored procedure. L'attività Esegui SQL può usare anche il tipo di origine **Connessione file** per eseguire una stored procedure. Indipendentemente dal fatto che l'attività Esegui SQL utilizzi il tipo di origine **Input diretto** o **Connessione file** , usare un parametro del tipo **ReturnValue** per implementare il codice restituito.
@@ -494,7 +495,7 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
   
 -   [Popolamento di una variabile con un set di risultati](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a>Specificare che un set di risultati tipo  
+###  <a name="Result_set_type"></a> Specificare un tipo di set di risultati  
  L'attività Esegui SQL supporta i tipi di set di risultati seguenti:  
   
 -   Se la query non restituisce risultati, sarà usato il set di risultati **Nessuno** . Questo set di risultati può essere usato ad esempio per le query che aggiungono, modificano ed eliminano record in una tabella.  
@@ -507,12 +508,12 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
   
  Se nell'attività Esegui SQL è usato il **Set dei risultati completo** e la query restituisce più set di righe, l'attività restituisce solo il primo di tali set. Se questo set di righe genera un errore, l'attività segnala l'errore. Se altri set di righe generano errori, l'attività non li segnala.  
   
-###  <a name="Populate_variable_with_result_set"></a>Popolare una variabile con un set di risultati  
+###  <a name="Populate_variable_with_result_set"></a> Popolare una variabile con un set di risultati  
  Se il set di risultati restituito da una query è una riga singola, un set di righe o di tipo XML, sarà possibile associarlo a una variabile definita dall'utente.  
   
  Se il tipo di set di risultati è **Riga singola**, è possibile associare una colonna nel risultato restituito a una variabile usando il nome della colonna come nome del set di risultati oppure usare la posizione ordinale della colonna nell'elenco di colonne come nome del set di risultati. Il nome del set di risultati per la query `SELECT Color FROM Production.Product WHERE ProductID = ?` , ad esempio, potrebbe essere **Color** o **0**. Se la query restituisce più colonne e si desidera accedere ai valori in tutte le colonne, è necessario associare ogni colonna a una variabile diversa. Se si esegue il mapping delle colonne alle variabili usando numeri come nomi del set di risultati, i numeri riflettono l'ordine in cui le colonne vengono visualizzate nell'elenco di colonne della query. Nella query `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, ad esempio, viene usato 0 per la colonna **Color** e 1 per la colonna **ListPrice** . La possibilità di usare un nome di colonna come nome di un set di risultati dipende dal provider per il quale l'attività è configurata. Non tutti i provider permettono l'uso di nomi di colonna.  
   
- Alcune query che restituiscono un singolo valore non includono nomi di colonna. L'istruzione `SELECT COUNT (*) FROM Production.Product` non restituisce ad esempio alcun nome di colonna. Per accedere al risultato restituito è possibile usare la posizione ordinale, 0, come nome del risultato. Per accedere al risultato restituito dal nome della colonna, la query deve includere un AS \<nome alias > clausola per fornire un nome di colonna. Nell'istruzione `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`è specificato il nome di colonna **CountOfProduct** . Per accedere alla colonna del risultato restituito è quindi possibile usare il nome di colonna, **CountOfProduct** , o la posizione ordinale, 0.  
+ Alcune query che restituiscono un singolo valore non includono nomi di colonna. L'istruzione `SELECT COUNT (*) FROM Production.Product` non restituisce ad esempio alcun nome di colonna. Per accedere al risultato restituito è possibile usare la posizione ordinale, 0, come nome del risultato. Per accedere al risultato restituito in base al nome della colonna, la query deve includere una clausola AS \<nome alias> che specifichi un nome di colonna. Nell'istruzione `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`è specificato il nome di colonna **CountOfProduct** . Per accedere alla colonna del risultato restituito è quindi possibile usare il nome di colonna, **CountOfProduct** , o la posizione ordinale, 0.  
   
  Se il set di risultati è di tipo **Set dei risultati completo** o **XML**, sarà necessario usare 0 come nome del set di risultati.  
   
@@ -527,7 +528,7 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
 |Tipo di set di risultati|Tipo di dati della variabile|Tipo di oggetto|  
 |---------------------|---------------------------|--------------------|  
 |Riga singola|Qualunque tipo compatibile con la colonna del tipo nel set di risultati.|Non applicabile|  
-|Set dei risultati predefinito|**Oggetto**|Se l'attività usa una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto **Recordset**ADO.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l'oggetto restituito è un oggetto **System.Data.DataSet**.<br /><br /> È possibile usare un'attività Script per accedere all'oggetto **System.Data.DataSet** , come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|Set dei risultati completo|**Oggetto**|Se l'attività usa una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto **Recordset**ADO.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l'oggetto restituito è un oggetto **System.Data.DataSet**.<br /><br /> È possibile usare un'attività Script per accedere all'oggetto **System.Data.DataSet** , come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
 |XML|**String**|**String**|  
 |XML|**Oggetto**|Se nell'attività è usata una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto **MSXML6.IXMLDOMDocument**.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l'oggetto restituito è un oggetto **System.Xml.XmlDocument**.|  
   
@@ -540,7 +541,7 @@ In questa sezione viene descritto come utilizzare un'istruzione SQL con parametr
 -   La conversione non comporterà il troncamento dei dati.  
   
 ## <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapping di set di risultati a variabili in un'attività Esegui SQL
-In questa sezione viene descritto come creare un mapping tra un set di risultati e una variabile in un'attività Esegui SQL. Se su un set di risultati viene eseguito il mapping a una variabile, sarà disponibile anche per altri elementi nel pacchetto. Si consideri ad esempio un'attività Script contenente uno script in grado di leggere la variabile e quindi utilizzare i valori del set di risultati oppure un'origine XML in grado di utilizzare il set di risultati archiviato in una variabile. Se viene generato da un pacchetto padre, il set di risultati potrà essere reso disponibile a un pacchetto figlio chiamato da un'attività Esegui pacchetto mappando tale set di risultati a una variabile nel pacchetto padre e quindi creando nel pacchetto figlio una configurazione Variabile pacchetto padre, per l'archiviazione del valore della variabile padre.  
+Questa sezione descrive la procedura per il mapping di un set di risultati a una variabile in un'attività Esegui SQL. Se su un set di risultati viene eseguito il mapping a una variabile, sarà disponibile anche per altri elementi nel pacchetto. Si consideri ad esempio un'attività Script contenente uno script in grado di leggere la variabile e quindi utilizzare i valori del set di risultati oppure un'origine XML in grado di utilizzare il set di risultati archiviato in una variabile. Se viene generato da un pacchetto padre, il set di risultati potrà essere reso disponibile a un pacchetto figlio chiamato da un'attività Esegui pacchetto mappando tale set di risultati a una variabile nel pacchetto padre e quindi creando nel pacchetto figlio una configurazione Variabile pacchetto padre, per l'archiviazione del valore della variabile padre.  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -581,5 +582,4 @@ In questa sezione viene descritto come creare un mapping tra un set di risultati
 |Voce di log|Description|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Fornisce informazioni sulle fasi di esecuzione dell'istruzione SQL. Vengono scritte voci di log quando l'attività acquisisce la connessione al database, quando inizia a preparare l'istruzione SQL e al termine dell'esecuzione dell'istruzione SQL. La voce di log per la fase di preparazione include l'istruzione SQL utilizzata dall'attività.|  
-
 

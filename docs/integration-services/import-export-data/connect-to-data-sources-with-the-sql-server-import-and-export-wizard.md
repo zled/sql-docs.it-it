@@ -1,68 +1,68 @@
 ---
-title: Connettersi a origini dati con il Server importazione / esportazione guidata SQL | Documenti Microsoft
+title: Connettersi a origini dati con l'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 02/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: d4107dab192ae5f0bfa3c221dcb7997f83642eb8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f159ce073c8da9dae02d80e0d93728036c774182
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Connettersi a origini dati con SQL Server importazione / esportazione guidata
-Negli argomenti di questa sezione viene illustrato come connettersi a molte origini dati di uso comune quando si esegue SQL Server di importazione / esportazione guidata. È necessario fornire le informazioni di connessione per le origini dati sul **scegliere un'origine dati** e **scegliere una destinazione** pagine della procedura guidata.
+# <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Connettersi a origini dati con l'Importazione/Esportazione guidata SQL Server
+Gli argomenti di questa sezione descrivono come connettersi a molte origini dati di uso comune quando si esegue Importazione/Esportazione guidata SQL Server. È necessario specificare le informazioni di connessione per le origini dati nelle pagine **Scelta origine dati** e **Scelta destinazione** della procedura guidata.
 
-Gli argomenti di questa sezione descrivono solo la modalità di **connettersi alle origini dati** dal **scegliere un'origine dati** e **scegliere una destinazione** pagine della procedura guidata. Se si sta cercando un altro elemento, vedere [correlati e i contenuti](#related).
+Gli argomenti di questa sezione descrivono solo come **connettersi alle origini dati** dalle pagine **Scelta origine dati** e **Scelta destinazione** della procedura guidata. Per altre informazioni, vedere [Attività e contenuti correlati](#related).
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>Connettersi a un'origine dati di uso comune
-Fare clic su un collegamento per ulteriori informazioni sulla connessione in genere a una delle seguenti origini dati.
+Fare clic su un collegamento per altre informazioni sulla connessione a una delle origini dati di uso comune seguenti.
 -   [SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [File flat (file di testo)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Accesso](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Archiviazione Blob di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [Archiviazione BLOB di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 ## <a name="connect-to-other-data-providers"></a>Connettersi ad altri provider di dati
-Per informazioni su come connettersi a un'origine dati che non è elencata, vedere [al riferimento di stringhe di connessione](https://www.connectionstrings.com/). In questo sito di terze parti sono stringhe di connessione di esempio e altre informazioni sui provider di dati e le informazioni di connessione che richiedono.
+Per informazioni su come connettersi a un'origine dati non elencata qui, vedere [The Connection Strings Reference](https://www.connectionstrings.com/) (Riferimenti alle stringhe di connessione). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="related"></a>Contenuto e le attività correlate  
-Ecco alcune semplici attività.
--   **Vedere un esempio semplice di funzionamento della procedura guidata.**
+## <a name="related"></a> Attività e argomenti correlati  
+Ecco alcune altre attività di base.
+-   **Vedere un rapido esempio sul funzionamento della procedura guidata.**
 
-    -   **Se si preferisce visualizzare schermate.** Esaminiamo questo semplice esempio end-to-end in una singola pagina - [iniziare con questo semplice esempio di importazione / esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+    -   **Se si preferisce visualizzare screenshot.** Esaminare questo semplice esempio end-to-end in una singola pagina: [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-    -   **Se si preferisce guardare un video.** Guardare questo video di quattro minuti dal YouTube che illustra la procedura guidata e viene spiegato chiaramente in modo semplice e come esportare i dati in Excel - [utilizzando SQL Server di importazione / esportazione guidata per l'esportazione in Excel](https://go.microsoft.com/fwlink/?linkid=829049).
+    -   **Se si preferisce guardare un video.** Questo video di YouTube della durata di quattro minuti illustra la procedura guidata e descrive come importare ed esportare dati in Excel con istruzioni chiare e semplici: [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049) (Uso dell'Importazione/Esportazione guidata SQL Server per l'esportazione in Excel).
 
--   **Ulteriori informazioni sul funzionamento della procedura guidata.**
+-   **Altre informazioni sul funzionamento della procedura guidata.**
 
-    -   **Ulteriori informazioni sulla procedura guidata.** Per una panoramica della procedura guidata, vedere [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+    -   **Altre informazioni sulla procedura guidata.** Per una panoramica della procedura guidata, vedere [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-    -   **Informazioni sui passaggi della procedura guidata.** Se si sta cercando informazioni sui passaggi della procedura guidata, vedere [i passaggi in SQL Server importazione / esportazione guidata](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). È inoltre disponibile una pagina separata della documentazione per ogni pagina della procedura guidata.
+    -   **Informazioni sui passaggi della procedura guidata.** Per informazioni sui passaggi della procedura guidata, vedere [Passaggi dell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Per ogni pagina della procedura guidata è anche disponibile una pagina di documentazione separata.
 
 -   **Avviare la procedura guidata.** Se si è pronti per eseguire la procedura guidata e servono solo le istruzioni per iniziare, vedere [Avviare l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
 -   **Ottenere la procedura guidata.** Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="see-also"></a>Vedere anche
-[Scegliere un'origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 
 
